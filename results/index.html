@@ -441,12 +441,16 @@
       return prefix + n.toLocaleString() + suffix;
     }
 
-    function tierFromRisk(level, strategyOverall) {
-      if (!level) return 'watch';
-      const l = level.toUpperCase();
-      if (l === 'LOW') return 'hot';
-      if (l === 'MODERATE') return strategyOverall === 'MISS' ? 'watch' : 'strong';
-      return 'watch';
+    // Tier is based on buy box fit (strategy match), not risk.
+    // Risk is a separate investor preference — some want value-add (higher risk),
+    // others want turnkey (lower risk). Both can be HOT deals.
+    function tierFromStrategy(strategyOverall) {
+      switch ((strategyOverall || '').toUpperCase()) {
+        case 'STRONG MATCH': return 'hot';
+        case 'MATCH':        return 'strong';
+        case 'PARTIAL':      return 'watch';
+        default:             return 'watch';
+      }
     }
 
     function riskClass(level) {
@@ -480,7 +484,7 @@
       const bd = parseBreakdown(deal.score_breakdown);
       const risk = bd.risk || {};
       const strategy = bd.strategy || {};
-      const tier = tierFromRisk(risk.level, strategy.overall);
+      const tier = tierFromStrategy(strategy.overall);
       const tierLabel = { hot: 'HOT', strong: 'STRONG', watch: 'WATCH' }[tier];
 
       const price = fmt(deal.price, '$');
@@ -572,7 +576,7 @@
         const screened = allDeals.filter(d => !d.passed_hard_filters);
         const hotCount = survivors.filter(d => {
           const bd = parseBreakdown(d.score_breakdown);
-          return bd.risk && bd.risk.level === 'LOW';
+          return bd.strategy && bd.strategy.overall === 'STRONG MATCH';
         }).length;
 
         // Stats
