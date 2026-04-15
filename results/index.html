@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Deal Scan Results — Deal Hound</title>
+  <meta name="description" content="Your personalized micro resort and boutique hotel deal scan results, powered by Deal Hound." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F8F5EF;
+      --surface:   #FFFFFF;
+      --surface2:  #F0EDE4;
+      --border:    rgba(0,0,0,0.08);
+      --cream:     #1D1D1B;
+      --cream-dim: rgba(29,29,27,0.62);
+      --cream-sub: rgba(29,29,27,0.38);
+      --gold:      #243D35;
+      --gold-dim:  rgba(36,61,53,0.10);
+      --gold-glow: rgba(36,61,53,0.04);
+      --green:     #1a7f37;
+      --green-dim: rgba(26,127,55,0.08);
+      --amber:     #b45309;
+      --amber-dim: rgba(180,83,9,0.08);
+      --red:       #b91c1c;
+      --red-dim:   rgba(185,28,28,0.08);
+      --sans:      'Outfit', system-ui, sans-serif;
+      --serif:     'Cormorant Garamond', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.4;
+    }
+
+    .orb {
+      position: fixed; border-radius: 50%;
+      filter: blur(120px); pointer-events: none; z-index: 0;
+    }
+    .orb-1 { width: 600px; height: 600px; top: -200px; left: -150px; background: rgba(36,61,53,0.05); }
+    .orb-2 { width: 400px; height: 400px; bottom: 10%; right: -100px; background: rgba(26,127,55,0.03); }
+
+    .page-wrap {
+      position: relative; z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── NAV ─────────────────────────────────────────────────── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0 40px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 48px;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--cream);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .nav-badge {
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-dim);
+      border: 1px solid rgba(36,61,53,0.2);
+      padding: 4px 12px; border-radius: 100px;
+    }
+
+    /* ── HEADER ──────────────────────────────────────────────── */
+    .page-header { margin-bottom: 40px; }
+    .page-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400; line-height: 1.15;
+      color: var(--cream); margin-bottom: 12px;
+    }
+    .page-header h1 em { font-style: italic; color: var(--gold); }
+    .page-header p { font-size: 0.92rem; color: var(--cream-dim); max-width: 540px; }
+    .run-meta {
+      display: flex; align-items: center; gap: 16px;
+      margin-top: 16px; flex-wrap: wrap;
+    }
+    .run-meta-item {
+      font-size: 0.75rem; color: var(--cream-sub);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .run-meta-item strong { color: var(--cream-dim); font-weight: 500; }
+
+    /* ── EMAIL GATE ──────────────────────────────────────────── */
+    #email-gate {
+      display: none;
+      max-width: 520px; margin: 80px auto; text-align: center;
+    }
+    #email-gate h2 {
+      font-family: var(--serif); font-size: 2rem;
+      font-weight: 400; margin-bottom: 12px;
+    }
+    #email-gate p { color: var(--cream-dim); font-size: 0.9rem; margin-bottom: 28px; }
+    .email-form { display: flex; gap: 10px; justify-content: center; }
+    .email-form input {
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--cream); padding: 12px 16px; border-radius: 4px;
+      font-family: var(--sans); font-size: 0.9rem; width: 260px; outline: none;
+    }
+    .email-form input:focus { border-color: var(--gold); }
+    .btn-gold {
+      background: var(--gold); color: #FFFFFF; border: none;
+      padding: 12px 20px; border-radius: 4px;
+      font-family: var(--sans); font-size: 0.85rem;
+      font-weight: 500; letter-spacing: 0.04em; cursor: pointer; white-space: nowrap;
+    }
+    .btn-gold:hover { opacity: 0.88; }
+
+    /* ── STATS BAR ───────────────────────────────────────────── */
+    #stats-bar {
+      display: none;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px; margin-bottom: 48px;
+    }
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px 24px; text-align: center;
+    }
+    .stat-num {
+      font-family: var(--serif); font-size: 2.2rem;
+      font-weight: 400; color: var(--gold);
+      line-height: 1; margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 0.72rem; font-weight: 400;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--cream-sub);
+    }
+
+    /* ── SECTION LABEL ───────────────────────────────────────── */
+    .section-label {
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-label::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
+    }
+
+    /* ── DEAL CARD ───────────────────────────────────────────── */
+    #survivors-section { display: none; margin-bottom: 56px; }
+    .deals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .deal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px; padding: 24px;
+      position: relative;
+      transition: border-color 0.2s;
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .deal-card:hover { border-color: rgba(36,61,53,0.2); }
+    .deal-card.hot { border-color: rgba(36,61,53,0.3); background: linear-gradient(135deg, var(--surface) 0%, rgba(36,61,53,0.03) 100%); }
+
+    .tier-badge {
+      position: absolute; top: 16px; right: 16px;
+      font-size: 0.65rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 100px;
+    }
+    .tier-hot { background: var(--green-dim); color: var(--green); border: 1px solid rgba(26,127,55,0.2); }
+    .tier-strong { background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(36,61,53,0.2); }
+    .tier-watch { background: var(--amber-dim); color: var(--amber); border: 1px solid rgba(180,83,9,0.2); }
+
+    .deal-source {
+      font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--cream-sub); margin-bottom: 8px;
+    }
+    .deal-name {
+      font-family: var(--serif);
+      font-size: 1.25rem; font-weight: 500;
+      color: var(--cream); margin-bottom: 4px;
+      line-height: 1.25; padding-right: 72px;
+    }
+    .deal-location {
+      font-size: 0.85rem; color: var(--cream-dim); margin-bottom: 16px;
+    }
+    .deal-meta {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px;
+    }
+    .deal-meta-item {
+      font-size: 0.78rem; color: var(--cream-dim);
+      background: var(--surface2); border: 1px solid var(--border);
+      padding: 3px 10px; border-radius: 6px;
+    }
+    .deal-meta-item strong { color: var(--cream); font-weight: 500; }
+
+    .risk-row {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 14px; flex-wrap: wrap;
+    }
+    .risk-pill {
+      font-size: 0.7rem; font-weight: 500;
+      padding: 3px 10px; border-radius: 100px;
+    }
+    .risk-low    { background: var(--green-dim); color: var(--green); border: 1px solid rgba(26,127,55,0.2); }
+    .risk-moderate { background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(36,61,53,0.2); }
+    .risk-high   { background: var(--amber-dim); color: var(--amber); border: 1px solid rgba(180,83,9,0.2); }
+    .risk-very-high { background: var(--red-dim); color: var(--red); border: 1px solid rgba(185,28,28,0.2); }
+
+    .strategy-pill {
+      font-size: 0.7rem; font-weight: 500;
+      padding: 3px 10px; border-radius: 100px;
+      background: rgba(0,0,0,0.04); color: var(--cream-dim);
+      border: 1px solid var(--border);
+    }
+
+    .deal-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: auto; padding-top: 14px;
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--gold); text-decoration: none;
+      letter-spacing: 0.04em;
+      border-top: 1px solid var(--border);
+      width: 100%;
+    }
+    .deal-link:hover { text-decoration: underline; }
+
+    /* ── SCREENED OUT TABLE ──────────────────────────────────── */
+    #screened-section { display: none; margin-bottom: 56px; }
+    .screened-table {
+      width: 100%; border-collapse: collapse; font-size: 0.84rem;
+    }
+    .screened-table th {
+      text-align: left; font-size: 0.68rem;
+      font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--cream-sub); padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .screened-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      color: var(--cream-dim); vertical-align: top;
+    }
+    .screened-table tr:hover td { background: rgba(0,0,0,0.02); }
+    .screened-table td:first-child { color: var(--cream); font-weight: 400; }
+    .miss-tag {
+      font-size: 0.68rem; font-weight: 500; padding: 2px 8px;
+      border-radius: 4px; background: rgba(0,0,0,0.05);
+      color: var(--cream-sub); white-space: nowrap;
+    }
+    .show-more-wrap { text-align: center; margin-top: 20px; }
+    .btn-ghost {
+      background: transparent; border: 1px solid var(--border);
+      color: var(--cream-dim); padding: 10px 20px; border-radius: 4px;
+      font-family: var(--sans); font-size: 0.82rem; cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--cream); }
+
+    /* ── LOADING / EMPTY ─────────────────────────────────────── */
+    #loading {
+      text-align: center; padding: 80px 24px;
+      color: var(--cream-sub); font-size: 0.9rem;
+    }
+    .spinner {
+      width: 28px; height: 28px;
+      border: 2px solid var(--border);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #empty-state { display: none; text-align: center; padding: 80px 24px; }
+    .empty-h { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: var(--cream-dim); margin-bottom: 8px; }
+    .empty-p { font-size: 0.88rem; color: var(--cream-sub); }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    footer {
+      text-align: center; padding-top: 40px;
+      border-top: 1px solid var(--border);
+      margin-top: 24px; font-size: 0.78rem; color: var(--cream-sub);
+    }
+    footer a { color: var(--cream-sub); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      #stats-bar { grid-template-columns: repeat(2, 1fr); }
+      .deals-grid { grid-template-columns: 1fr; }
+      .email-form { flex-direction: column; align-items: stretch; }
+      .email-form input { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="page-wrap">
+    <nav>
+      <a href="/" class="nav-logo">🐾 Deal Hound</a>
+      <span class="nav-badge">Your Scan Results</span>
+    </nav>
+
+    <div class="page-header">
+      <h1>Your <em>deal scan</em><br>results.</h1>
+      <p id="header-sub">Every listing screened against your buy box. The ones worth your time, surfaced and ranked.</p>
+      <div class="run-meta" id="run-meta" style="display:none">
+        <div class="run-meta-item">Run: <strong id="run-date">—</strong></div>
+        <div class="run-meta-item">Market: <strong id="run-market">—</strong></div>
+      </div>
+    </div>
+
+    <!-- Loading -->
+    <div id="loading">
+      <div class="spinner"></div>
+      <p>Loading your scan results…</p>
+    </div>
+
+    <!-- Email gate -->
+    <div id="email-gate">
+      <h2>Enter your email<br>to view results</h2>
+      <p>Results are linked to the email used when your scan was requested.</p>
+      <form class="email-form" onsubmit="handleEmailSubmit(event)">
+        <input type="email" id="gate-email" placeholder="your@email.com" required autocomplete="email" />
+        <button type="submit" class="btn-gold">View Results</button>
+      </form>
+    </div>
+
+    <!-- Stats -->
+    <div id="stats-bar">
+      <div class="stat-card">
+        <div class="stat-num" id="stat-total">—</div>
+        <div class="stat-label">Total Scanned</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="stat-eliminated">—</div>
+        <div class="stat-label">Eliminated</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="stat-survivors">—</div>
+        <div class="stat-label">Survivors</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="stat-hot">—</div>
+        <div class="stat-label">HOT Deals</div>
+      </div>
+    </div>
+
+    <!-- Survivors -->
+    <div id="survivors-section">
+      <div class="section-label" id="survivors-label">Deals Worth Pursuing</div>
+      <div class="deals-grid" id="survivors-grid"></div>
+    </div>
+
+    <!-- Screened out -->
+    <div id="screened-section">
+      <div class="section-label">Screened Out</div>
+      <div id="screened-summary" style="margin-bottom:16px; font-size:0.84rem; color:var(--cream-dim)"></div>
+      <table class="screened-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Location</th>
+            <th>Type</th>
+            <th>Reason Out</th>
+          </tr>
+        </thead>
+        <tbody id="screened-tbody"></tbody>
+      </table>
+      <div class="show-more-wrap" id="show-more-wrap" style="display:none">
+        <button class="btn-ghost" onclick="showAllScreened()">Show all screened-out deals</button>
+      </div>
+    </div>
+
+    <!-- Empty state -->
+    <div id="empty-state">
+      <div class="empty-h">No scan results found</div>
+      <p class="empty-p">We couldn't find a scan linked to that email. <a href="/">Request a scan →</a></p>
+    </div>
+
+    <footer>
+      <p>Powered by <a href="https://incredibleai.pro" target="_blank">Incredible AI</a> &nbsp;·&nbsp; Framework by <a href="https://instagram.com/gideonspencer_" target="_blank">Gideon Spencer</a> &nbsp;·&nbsp; <a href="/">Get your own agent →</a></p>
+    </footer>
+  </div>
+
+  <script>
+    const SB_URL = 'https://gggmmjvwbbfvrtjjlqvr.supabase.co';
+    const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdnz21tanZ3YmJmdnJ0ampscXZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwODg0MTMsImV4cCI6MjA5MTY2NDQxM30.D9V0R18p1WEf4DTv9zPYezgkJYpgNXZD-Fd3bMw4u8U';
+
+    let allScreened = [];
+    let screenedLimit = 25;
+
+    async function sb(path, params = {}) {
+      const url = new URL(SB_URL + '/rest/v1/' + path);
+      Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
+      const r = await fetch(url, {
+        headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Accept': 'application/json' }
+      });
+      if (!r.ok) throw new Error('Supabase ' + r.status);
+      return r.json();
+    }
+
+    function fmt(val, prefix = '', suffix = '') {
+      if (val == null || val === '') return null;
+      const n = typeof val === 'number' ? val : parseFloat(val);
+      if (isNaN(n)) return String(val);
+      return prefix + n.toLocaleString() + suffix;
+    }
+
+    function tierFromRisk(level, strategyOverall) {
+      if (!level) return 'watch';
+      const l = level.toUpperCase();
+      if (l === 'LOW') return 'hot';
+      if (l === 'MODERATE') return strategyOverall === 'MISS' ? 'watch' : 'strong';
+      return 'watch';
+    }
+
+    function riskClass(level) {
+      if (!level) return 'risk-moderate';
+      switch (level.toUpperCase()) {
+        case 'LOW':       return 'risk-low';
+        case 'MODERATE':  return 'risk-moderate';
+        case 'HIGH':      return 'risk-high';
+        case 'VERY HIGH': return 'risk-very-high';
+        default: return 'risk-moderate';
+      }
+    }
+
+    function strategyLabel(overall) {
+      const map = {
+        'STRONG MATCH': '⭐ Strong Match',
+        'MATCH': '✓ Strategy Match',
+        'PARTIAL': '~ Partial Match',
+        'MISS': '✗ Strategy Miss'
+      };
+      return map[overall] || overall || '';
+    }
+
+    function parseBreakdown(raw) {
+      if (!raw) return {};
+      try { return typeof raw === 'string' ? JSON.parse(raw) : raw; }
+      catch { return {}; }
+    }
+
+    function renderDeal(deal) {
+      const bd = parseBreakdown(deal.score_breakdown);
+      const risk = bd.risk || {};
+      const strategy = bd.strategy || {};
+      const tier = tierFromRisk(risk.level, strategy.overall);
+      const tierLabel = { hot: 'HOT', strong: 'STRONG', watch: 'WATCH' }[tier];
+
+      const price = fmt(deal.price, '$');
+      const acreage = deal.acreage ? fmt(deal.acreage, '', ' ac') : null;
+      const keys = deal.rooms_keys ? `${deal.rooms_keys} keys` : null;
+
+      const metaPills = [price, acreage, keys].filter(Boolean).map(v =>
+        `<div class="deal-meta-item">${v}</div>`
+      ).join('');
+
+      const stratLabel = strategy.overall ? strategyLabel(strategy.overall) : '';
+
+      return `
+        <div class="deal-card ${tier}">
+          <div class="tier-badge tier-${tier}">${tierLabel}</div>
+          <div class="deal-source">${deal.source || ''}</div>
+          <div class="deal-name">${deal.title || 'Unnamed Property'}</div>
+          <div class="deal-location">${deal.location || '—'}</div>
+          ${metaPills ? `<div class="deal-meta">${metaPills}</div>` : ''}
+          <div class="risk-row">
+            ${risk.level ? `<span class="risk-pill ${riskClass(risk.level)}">${risk.level} Risk</span>` : ''}
+            ${stratLabel ? `<span class="strategy-pill">${stratLabel}</span>` : ''}
+          </div>
+          ${deal.property_type ? `<div style="font-size:0.78rem;color:var(--cream-sub);margin-bottom:12px;">${deal.property_type}</div>` : ''}
+          <a href="${deal.url || '#'}" target="_blank" rel="noopener" class="deal-link">
+            View Listing →
+          </a>
+        </div>`;
+    }
+
+    function renderScreenedRow(deal) {
+      return `<tr>
+        <td>${deal.title || '—'}</td>
+        <td>${deal.location || '—'}</td>
+        <td><span class="miss-tag">${deal.property_type || '—'}</span></td>
+        <td>${deal.miss_reason || '—'}</td>
+      </tr>`;
+    }
+
+    function showAllScreened() {
+      document.getElementById('screened-tbody').innerHTML = allScreened.map(renderScreenedRow).join('');
+      document.getElementById('show-more-wrap').style.display = 'none';
+    }
+
+    async function loadResults(email) {
+      try {
+        // Most recent search for this email
+        const searches = await sb('deal_searches', {
+          'user_email': `eq.${email}`,
+          'order': 'run_at.desc',
+          'limit': '1',
+          'select': '*'
+        });
+
+        if (!searches || searches.length === 0) {
+          document.getElementById('loading').style.display = 'none';
+          document.getElementById('empty-state').style.display = 'block';
+          return;
+        }
+
+        const search = searches[0];
+
+        // Run metadata
+        if (search.run_at) {
+          const d = new Date(search.run_at);
+          document.getElementById('run-date').textContent = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+        if (search.buy_box) {
+          const bb = typeof search.buy_box === 'string' ? JSON.parse(search.buy_box) : search.buy_box;
+          const loc = bb.location_filter || bb.market_pref || '';
+          if (loc) document.getElementById('run-market').textContent = loc;
+        }
+        document.getElementById('run-meta').style.display = 'flex';
+
+        // All deals for this search
+        const allDeals = await sb('deals', {
+          'search_id': `eq.${search.id}`,
+          'select': '*',
+          'order': 'score.asc'
+        });
+
+        if (!allDeals || allDeals.length === 0) {
+          document.getElementById('loading').style.display = 'none';
+          document.getElementById('empty-state').style.display = 'block';
+          return;
+        }
+
+        const survivors = allDeals.filter(d => d.passed_hard_filters);
+        const screened = allDeals.filter(d => !d.passed_hard_filters);
+        const hotCount = survivors.filter(d => {
+          const bd = parseBreakdown(d.score_breakdown);
+          return bd.risk && bd.risk.level === 'LOW';
+        }).length;
+
+        // Stats
+        document.getElementById('stat-total').textContent = allDeals.length.toLocaleString();
+        document.getElementById('stat-eliminated').textContent = screened.length.toLocaleString();
+        document.getElementById('stat-survivors').textContent = survivors.length.toLocaleString();
+        document.getElementById('stat-hot').textContent = hotCount;
+        document.getElementById('stats-bar').style.display = 'grid';
+
+        // Survivors
+        if (survivors.length > 0) {
+          document.getElementById('survivors-label').textContent =
+            `${survivors.length} Deal${survivors.length !== 1 ? 's' : ''} Worth Pursuing`;
+          document.getElementById('survivors-grid').innerHTML = survivors.map(renderDeal).join('');
+          document.getElementById('survivors-section').style.display = 'block';
+        }
+
+        // Screened out
+        if (screened.length > 0) {
+          allScreened = screened;
+          document.getElementById('screened-summary').textContent =
+            `${screened.length} listings eliminated by buy box gates.`;
+          const firstBatch = screened.slice(0, screenedLimit);
+          document.getElementById('screened-tbody').innerHTML = firstBatch.map(renderScreenedRow).join('');
+          document.getElementById('screened-section').style.display = 'block';
+          if (screened.length > screenedLimit) {
+            document.getElementById('show-more-wrap').style.display = 'block';
+          }
+        }
+
+        if (survivors.length === 0 && screened.length === 0) {
+          document.getElementById('empty-state').style.display = 'block';
+        }
+
+        document.getElementById('loading').style.display = 'none';
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById('loading').innerHTML =
+          '<p style="color:var(--cream-sub)">Could not load results. Please refresh and try again.</p>';
+      }
+    }
+
+    function handleEmailSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('gate-email').value.trim();
+      if (!email) return;
+      sessionStorage.setItem('dh_email', email);
+      document.getElementById('email-gate').style.display = 'none';
+      document.getElementById('loading').style.display = 'block';
+      loadResults(email);
+    }
+
+    // Init
+    (function init() {
+      const params = new URLSearchParams(window.location.search);
+      const email = params.get('email') || sessionStorage.getItem('dh_email');
+      if (email) {
+        loadResults(email);
+      } else {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('email-gate').style.display = 'block';
+      }
+    })();
+  </script>
+</body>
+</html>
