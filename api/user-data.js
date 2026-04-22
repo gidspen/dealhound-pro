@@ -54,9 +54,9 @@ module.exports = async function handler(req, res) {
     // Scans with deal counts
     const { data: scans } = await supabase
       .from('deal_searches')
-      .select('id, buy_box, status, run_at, created_at')
+      .select('id, buy_box, status, run_at')
       .eq('user_email', email)
-      .order('created_at', { ascending: false })
+      .order('run_at', { ascending: false })
       .limit(20);
 
     // Get conversation_ids for scan debriefs
