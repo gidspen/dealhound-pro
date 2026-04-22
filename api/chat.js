@@ -77,6 +77,53 @@ const TOOLS = [
   }
 ];
 
+async function buildDebriefPrompt(searchId, agentName) {
+  const { data: deals } = await supabase
+    .from('deals')
+    .select('title, location, price, acreage, rooms_keys, score_breakdown, source, url, passed_hard_filters')
+    .eq('search_id', searchId)
+    .eq('passed_hard_filters', true)
+    .order('id', { ascending: false });
+
+  const { data: search } = await supabase
+    .from('deal_searches')
+    .select('buy_box')
+    .eq('id', searchId)
+    .single();
+
+  const dealSummaries = (deals || []).map((d, i) => {
+    const bd = typeof d.score_breakdown === 'string' ? JSON.parse(d.score_breakdown) : (d.score_breakdown || {});
+    const tier = bd.strategy?.overall || 'UNKNOWN';
+    const risk = bd.risk?.level || 'UNKNOWN';
+    return `Deal ${i + 1}: ${d.title || 'Unnamed'}
+  Location: ${d.location || '?'} | Price: ${d.price ? '$' + Number(d.price).toLocaleString() : '?'} | Acreage: ${d.acreage || '?'} | Keys: ${d.rooms_keys || '?'}
+  Source: ${d.source || '?'} | Tier: ${tier} | Risk: ${risk}
+  Listing: ${d.url || 'N/A'}
+  Score: ${JSON.stringify(bd)}`;
+  }).join('\n\n');
+
+  const buyBox = search?.buy_box ? JSON.stringify(search.buy_box, null, 2) : 'Not available';
+
+  return `You are ${agentName}, an AI deal hunting agent. You just finished scanning marketplaces and are debriefing the investor on what you found.
+
+Your personality: Direct, knowledgeable, confident. You sound like a sharp deal analyst sitting across the table. Keep responses concise.
+
+INVESTOR'S BUY BOX:
+${buyBox}
+
+DEALS FOUND (${(deals || []).length} survived the buy box filter):
+${dealSummaries || 'No deals survived the filter.'}
+
+Instructions:
+- Present the deals with your honest assessment. Lead with the strongest match.
+- For each deal, give a one-liner on why it made the cut and what the main risk is.
+- End with a clear recommendation: which one to call about first and why.
+- If the investor asks to compare deals, be specific — reference numbers, not generalities.
+- If they ask to drill into a deal, give detailed analysis using the score breakdown.
+- Be brief. No filler. No cheerleading. Sharp opinions backed by data.
+${(deals || []).length === 0 ? '\nNo deals matched. Suggest adjusting the buy box — be specific about which criteria are too narrow.' : ''}`;
+}
+
 module.exports = async function handler(req, res) {
   if (req.method === 'OPTIONS') {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -91,7 +138,7 @@ module.exports = async function handler(req, res) {
 
   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  const { email, messages, conversation_id } = req.body;
+  const { email, messages, conversation_id, mode, search_id, agent_name } = req.body;
 
   if (!email || !messages || !Array.isArray(messages)) {
     return res.status(400).json({ error: 'Missing email or messages' });
@@ -105,11 +152,29 @@ module.exports = async function handler(req, res) {
     res.setHeader('Cache-Control', 'no-cache');
     res.setHeader('Connection', 'keep-alive');
 
+    // Build system prompt based on mode
+    const isDebrief = mode === 'scan_debrief';
+    let systemPrompt = SYSTEM_PROMPT;
+    let tools = TOOLS;
+
+    if (isDebrief) {
+      if (!search_id) {
+        return res.status(400).json({ error: 'search_id required for scan_debrief mode' });
+      }
+      systemPrompt = await buildDebriefPrompt(search_id, agent_name || 'Scout');
+      tools = undefined;
+    } else if (agent_name) {
+      systemPrompt = SYSTEM_PROMPT.replace(
+        'You are Deal Hound, an AI deal hunting agent',
+        `You are ${agent_name}, an AI deal hunting agent`
+      );
+    }
+
     const stream = await client.messages.stream({
       model: 'claude-sonnet-4-20250514',
       max_tokens: 1024,
-      system: SYSTEM_PROMPT,
-      tools: TOOLS,
+      system: systemPrompt,
+      ...(tools ? { tools } : {}),
       messages: messages.map(m => ({
         role: m.role,
         content: m.content
@@ -181,8 +246,9 @@ module.exports = async function handler(req, res) {
         .from('conversations')
         .insert({
           user_email: email,
-          conversation_type: 'buy_box_intake',
-          messages: [...messages, { role: 'assistant', content: fullText, timestamp: new Date().toISOString() }]
+          conversation_type: isDebrief ? 'scan_debrief' : 'buy_box_intake',
+          messages: [...messages, { role: 'assistant', content: fullText, timestamp: new Date().toISOString() }],
+          ...(isDebrief && search_id ? { search_id } : {})
         })
         .select('id')
         .single();
