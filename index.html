@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Deal Hound — Your AI Deal Hunting Agent</title>
-  <meta name="description" content="Your personal AI agent that scans 400+ micro resort, glamping, and boutique hotel listings against your buy box. Weekly deal reports delivered to you. $29/month." />
+  <meta name="description" content="Your personal AI deal hunting agent. Define your buy box — price, location, asset type — and Deal Hound scans 30+ marketplaces weekly, delivering only the deals worth your time. First scan free." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -803,7 +803,7 @@
         <span class="nav-powered">Powered by <a href="https://incredibleai.pro" target="_blank">Incredible AI</a></span>
         <a href="#how-it-works" class="nav-link">How It Works</a>
         <a href="#pricing" class="nav-link">Pricing</a>
-        <a href="#get-started" class="btn-nav">Get Started</a>
+        <a href="/chat/" class="btn-nav">Get Started</a>
       </div>
     </div>
   </nav>
@@ -820,17 +820,15 @@
         <h1>Meet your<br><em>AI deal hunting</em><br>agent.</h1>
 
         <p class="hero-sub">
-          Stop manually scrolling 10 marketplaces. Your personal Deal Hound scans 400+ micro resort, glamping, and boutique hotel listings against your exact buy box — and delivers only the deals worth your time.
+          Stop manually scrolling dozens of marketplaces. Your personal Deal Hound scans 30+ sources across every asset class — commercial, residential, hospitality, and small businesses — filtered against your exact buy box. Only the deals worth your time, delivered weekly.
         </p>
 
-        <form class="hero-capture" id="hero-form" onsubmit="handleSignup(event, 'hero')">
-          <input type="email" id="hero-email" placeholder="your@email.com" required autocomplete="email" />
-          <button type="submit" class="btn-primary">Get My First Scan Free</button>
-        </form>
+        <div class="hero-capture">
+          <a href="/chat/" class="btn-primary" style="padding:16px 32px; font-size:0.9rem;">Set Up My Buy Box &rarr;</a>
+        </div>
         <p class="hero-disclaimer">
-          <strong>First scan is free.</strong> Then $29/mo for weekly scans personalized to your buy box.
+          <strong>First scan is free.</strong> Takes 2 minutes. No credit card required.
         </p>
-        <p class="success-msg" id="hero-success">You're in. We'll reach out within 24 hours to get your buy box set up.</p>
       </div>
     </div>
   </section>
@@ -1037,7 +1035,7 @@
             <li>Ranked deal report delivered to you</li>
             <li>Suggested next steps for each deal</li>
           </ul>
-          <a href="#get-started" class="btn-full ghost">Claim My Free Scan</a>
+          <a href="/chat/" class="btn-full ghost">Claim My Free Scan</a>
         </div>
 
         <div class="pricing-card featured">
@@ -1053,7 +1051,7 @@
             <li>Suggested next steps + risk flags per deal</li>
             <li>New markets added as they go live</li>
           </ul>
-          <a href="#get-started" class="btn-full">Start My Free Scan →</a>
+          <a href="/chat/" class="btn-full">Start My Free Scan &rarr;</a>
         </div>
       </div>
     </div>
@@ -1063,13 +1061,11 @@
   <section class="final-cta" id="get-started">
     <div class="container">
       <h2>Stop scrolling.<br><em>Start closing.</em></h2>
-      <p>Tell us your buy box. Your agent starts hunting this week.</p>
-      <form class="final-capture" id="final-form" onsubmit="handleSignup(event, 'final')">
-        <input type="email" id="final-email" placeholder="your@email.com" required autocomplete="email" />
-        <button type="submit" class="btn-primary">Get My First Scan Free</button>
-      </form>
-      <p class="success-msg" id="final-success">You're in. We'll reach out within 24 hours to get your buy box set up.</p>
-      <p style="font-size:0.78rem; color:var(--cream-sub); margin-top:12px;">First scan free. Then $29/mo. Cancel anytime.</p>
+      <p>Tell your agent what to hunt. First scan is free.</p>
+      <div style="margin-top:8px;">
+        <a href="/chat/" class="btn-primary" style="padding:16px 36px; font-size:0.9rem; display:inline-block; text-decoration:none;">Set Up My Buy Box &rarr;</a>
+      </div>
+      <p style="font-size:0.78rem; color:var(--cream-sub); margin-top:16px;">2 minutes to set up. No credit card required.</p>
     </div>
   </section>
 
@@ -1092,37 +1088,6 @@
       nav.classList.toggle('scrolled', window.scrollY > 20);
     }, { passive: true });
 
-    // Waitlist signup
-    async function handleSignup(e, form) {
-      e.preventDefault();
-      const email = document.getElementById(form === 'hero' ? 'hero-email' : 'final-email').value.trim();
-      if (!email) return;
-
-      const btn = e.target.querySelector('button');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-
-      try {
-        // Save to Supabase waitlist
-        const res = await fetch('https://gggmmjvwbbfvrtjjlqvr.supabase.co/rest/v1/deal_hound_waitlist', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdnz21tanZ3YmJmdnJ0ampscXZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwODg0MTMsImV4cCI6MjA5MTY2NDQxM30.D9V0R18p1WEf4DTv9zPYezgkJYpgNXZD-Fd3bMw4u8U',
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdnz21tanZ3YmJmdnJ0ampscXZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwODg0MTMsImV4cCI6MjA5MTY2NDQxM30.D9V0R18p1WEf4DTv9zPYezgkJYpgNXZD-Fd3bMw4u8U',
-            'Prefer': 'return=minimal'
-          },
-          body: JSON.stringify({ email, source: form, created_at: new Date().toISOString() })
-        });
-
-        document.getElementById(form + '-success').style.display = 'block';
-        e.target.style.display = 'none';
-      } catch(err) {
-        // Fallback — still show success (we'll catch it via notification)
-        document.getElementById(form + '-success').style.display = 'block';
-        e.target.style.display = 'none';
-      }
-    }
   </script>
 </body>
 </html>
