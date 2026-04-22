@@ -17,9 +17,11 @@ function EmailGate() {
     try {
       await loadUserData();
       const completedScans = scans.value.filter(s => s.status === 'complete');
-      if (completedScans.length > 0) {
+      // Prefer scan with deals, fall back to newest completed
+      const bestScan = completedScans.find(s => s.deal_count > 0) || completedScans[0];
+      if (bestScan) {
         view.value = 'scan';
-        await switchThread(completedScans[0].id, 'scan', completedScans[0].conversation_id);
+        await switchThread(bestScan.id, 'scan', bestScan.conversation_id);
       } else {
         view.value = 'onboarding';
       }
@@ -47,9 +49,10 @@ export function App() {
       email.value = stored;
       loadUserData().then(() => {
         const completedScans = scans.value.filter(s => s.status === 'complete');
-        if (completedScans.length > 0) {
+        const bestScan = completedScans.find(s => s.deal_count > 0) || completedScans[0];
+        if (bestScan) {
           view.value = 'scan';
-          switchThread(completedScans[0].id, 'scan', completedScans[0].conversation_id);
+          switchThread(bestScan.id, 'scan', bestScan.conversation_id);
         } else {
           view.value = 'onboarding';
         }
