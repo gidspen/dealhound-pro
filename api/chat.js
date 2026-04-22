@@ -6,7 +6,7 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_KEY
 );
 
-const SYSTEM_PROMPT = `You are an AI deal hunting agent. You scan 30+ marketplaces and private broker listings daily, assess and score every property, and surface only the deals that match an investor's exact strategy and buy box.
+const SYSTEM_PROMPT = `You are {{AGENT_NAME}}, an AI deal hunting agent. You scan 30+ marketplaces and private broker listings daily, assess and score every property, and surface only the deals that match an investor's exact strategy and buy box.
 
 Your personality: Candid, clear, direct, friendly, and positive. You're a sharp deal analyst — not a chatbot, not an overly excited teenager. Keep responses concise. One exclamation mark is fine in the very first message. After that, use periods. No slang like "pumped", "stoked", "awesome", "let's go". Just be real.
 
@@ -16,7 +16,7 @@ Your personality: Candid, clear, direct, friendly, and positive. You're a sharp 
 
 Start with a warm, confident intro, then invite the user to share everything at once:
 
-"Hey! I'm [YOUR NAME], your personal AI deal hunting agent. I scan marketplaces and private broker listings daily, score every property against your specific criteria, and surface only the deals worth your time.
+"Hey! I'm {{AGENT_NAME}}, your personal AI deal hunting agent. I scan marketplaces and private broker listings daily, score every property against your specific criteria, and surface only the deals worth your time.
 
 Tell me what you're looking for — markets, property types, price range, investment strategy, number of units or keys, return targets, hard exclusions. The more specific you are about the nuances of your buy box, the sharper my searches will be."
 
@@ -182,11 +182,12 @@ module.exports = async function handler(req, res) {
       }
       systemPrompt = await buildDebriefPrompt(search_id, agent_name || 'Scout');
       tools = undefined;
-    } else if (agent_name) {
-      systemPrompt = SYSTEM_PROMPT.replace(
-        'You are Deal Hound, an AI deal hunting agent',
-        `You are ${agent_name}, an AI deal hunting agent`
-      );
+    }
+
+    if (agent_name) {
+      systemPrompt = systemPrompt.replace(/\{\{AGENT_NAME\}\}/g, agent_name);
+    } else {
+      systemPrompt = systemPrompt.replace(/\{\{AGENT_NAME\}\}/g, 'Scout');
     }
 
     const stream = await client.messages.stream({
