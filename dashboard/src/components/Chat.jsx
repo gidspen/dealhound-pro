@@ -34,7 +34,25 @@ export function Chat() {
   }, [view.value, activeThreadId.value]);
 
   useEffect(() => {
-    const handler = async () => {
+    const handler = async (e) => {
+      const { search_id, buy_box } = e.detail;
+      // Add confirmation message to chat
+      const summary = [];
+      if (buy_box.locations) summary.push(`Markets: ${buy_box.locations.join(', ')}`);
+      if (buy_box.price_min || buy_box.price_max) {
+        const min = buy_box.price_min ? '$' + (buy_box.price_min >= 1000000 ? (buy_box.price_min/1000000).toFixed(1)+'M' : Math.round(buy_box.price_min/1000)+'k') : 'No min';
+        const max = buy_box.price_max ? '$' + (buy_box.price_max >= 1000000 ? (buy_box.price_max/1000000).toFixed(1)+'M' : Math.round(buy_box.price_max/1000)+'k') : 'No max';
+        summary.push(`Price: ${min} – ${max}`);
+      }
+      if (buy_box.property_types) summary.push(`Types: ${buy_box.property_types.join(', ')}`);
+
+      const msgs = [...chatMessages.value];
+      msgs.push({
+        role: 'buybox_saved',
+        content: summary.join('\n'),
+        search_id
+      });
+      chatMessages.value = msgs;
       await loadUserData();
     };
     window.addEventListener('buybox-saved', handler);
@@ -72,18 +90,26 @@ export function Chat() {
       <div class="chat-messages" ref={msgsRef}>
         <div class="chat-messages-inner">
           {chatMessages.value.map((msg, i) => (
-            <div key={i} class={`msg msg-${msg.role}`}>
-              {msg.role === 'assistant' ? (
-                <>
-                  <div class="msg-label"><span class="msg-dot" />{agentName.value || 'Agent'}</div>
-                  <div class="msg-body">{msg.content}</div>
-                </>
-              ) : msg.role === 'system' ? (
-                <div class="msg-system">{msg.content}</div>
-              ) : (
-                msg.content
-              )}
-            </div>
+            msg.role === 'buybox_saved' ? (
+              <div key={i} class="buybox-confirmed">
+                <div class="buybox-confirmed-label">Buy Box Saved</div>
+                <div class="buybox-confirmed-body">{msg.content}</div>
+                <a href={`/scan/?id=${msg.search_id}`} class="buybox-confirmed-cta">Run First Scan →</a>
+              </div>
+            ) : (
+              <div key={i} class={`msg msg-${msg.role}`}>
+                {msg.role === 'assistant' ? (
+                  <>
+                    <div class="msg-label"><span class="msg-dot" />{agentName.value || 'Agent'}</div>
+                    <div class="msg-body">{msg.content}</div>
+                  </>
+                ) : msg.role === 'system' ? (
+                  <div class="msg-system">{msg.content}</div>
+                ) : (
+                  msg.content
+                )}
+              </div>
+            )
           ))}
           {chatStreaming.value && chatMessages.value[chatMessages.value.length - 1]?.role !== 'assistant' && (
             <TypingIndicator />

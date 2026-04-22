@@ -424,3 +424,27 @@ body::before {
   transition: color 0.12s;
 }
 .settings-signout:hover { color: var(--red); }
+
+/* BUY BOX CONFIRMATION */
+.buybox-confirmed {
+  background: var(--gold-glow); border: 1px solid rgba(36,61,53,0.2);
+  border-radius: 10px; padding: 18px 22px; animation: fadeIn 0.3s ease;
+}
+.buybox-confirmed-label {
+  font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 6px;
+}
+.buybox-confirmed-body {
+  font-size: 0.85rem; color: var(--cream-dim);
+  line-height: 1.7; white-space: pre-line;
+}
+.buybox-confirmed-cta {
+  display: inline-block; margin-top: 14px;
+  background: var(--gold); color: #FFF;
+  padding: 10px 24px; border-radius: 4px;
+  font-family: var(--sans); font-size: 0.82rem; font-weight: 500;
+  letter-spacing: 0.04em; text-decoration: none;
+  transition: opacity 0.2s;
+}
+.buybox-confirmed-cta:hover { opacity: 0.88; }
