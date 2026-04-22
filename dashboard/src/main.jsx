@@ -1,7 +1,5 @@
 import { render } from 'preact';
-
-function App() {
-  return <div style={{ padding: '40px', fontFamily: 'Outfit, sans-serif' }}>Preact works</div>;
-}
+import { App } from './app.jsx';
+import './styles.css';
 
 render(<App />, document.getElementById('app'));
