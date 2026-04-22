@@ -56,7 +56,7 @@ export function Sidebar() {
         <div class="sidebar-logo-icon">
           <svg width="13" height="13" viewBox="0 0 16 16" fill="white"><path d="M8 0 L9.6 6.4 L16 8 L9.6 9.6 L8 16 L6.4 9.6 L0 8 L6.4 6.4 Z"/></svg>
         </div>
-        <span class="sidebar-logo-text">{agentName.value || 'Deal Hound'}</span>
+        <span class="sidebar-logo-text">Deal Hound</span>
       </div>
 
       <div class="sidebar-scroll">
