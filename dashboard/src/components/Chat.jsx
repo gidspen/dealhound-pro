@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'preact/hooks';
 import { view, agentName, chatMessages, chatStreaming, activeThreadId, scans, currentDeal } from '../lib/state.js';
-import { sendMessage, loadUserData } from '../lib/api.js';
+import { sendMessage, loadUserData, switchThread } from '../lib/api.js';
 
 function TypingIndicator() {
   return (
@@ -35,25 +35,25 @@ export function Chat() {
 
   useEffect(() => {
     const handler = async (e) => {
-      const { search_id, buy_box } = e.detail;
-      // Add confirmation message to chat
-      const summary = [];
-      if (buy_box.locations) summary.push(`Markets: ${buy_box.locations.join(', ')}`);
-      if (buy_box.price_min || buy_box.price_max) {
-        const min = buy_box.price_min ? '$' + (buy_box.price_min >= 1000000 ? (buy_box.price_min/1000000).toFixed(1)+'M' : Math.round(buy_box.price_min/1000)+'k') : 'No min';
-        const max = buy_box.price_max ? '$' + (buy_box.price_max >= 1000000 ? (buy_box.price_max/1000000).toFixed(1)+'M' : Math.round(buy_box.price_max/1000)+'k') : 'No max';
-        summary.push(`Price: ${min} – ${max}`);
-      }
-      if (buy_box.property_types) summary.push(`Types: ${buy_box.property_types.join(', ')}`);
-
+      const { search_id } = e.detail;
+      // Buy box saved — trigger scan automatically
       const msgs = [...chatMessages.value];
-      msgs.push({
-        role: 'buybox_saved',
-        content: summary.join('\n'),
-        search_id
-      });
+      msgs.push({ role: 'system', content: 'Buy box saved. Starting your scan...' });
       chatMessages.value = msgs;
+
+      // Trigger the scan
+      try {
+        await fetch('/api/scan-start', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ search_id })
+        });
+      } catch { /* scan-start may not be fully wired yet */ }
+
+      // Reload user data then navigate to scan view
       await loadUserData();
+      view.value = 'scan';
+      await switchThread(search_id, 'scan', null);
     };
     window.addEventListener('buybox-saved', handler);
     return () => window.removeEventListener('buybox-saved', handler);
@@ -90,26 +90,18 @@ export function Chat() {
       <div class="chat-messages" ref={msgsRef}>
         <div class="chat-messages-inner">
           {chatMessages.value.map((msg, i) => (
-            msg.role === 'buybox_saved' ? (
-              <div key={i} class="buybox-confirmed">
-                <div class="buybox-confirmed-label">Buy Box Saved</div>
-                <div class="buybox-confirmed-body">{msg.content}</div>
-                <a href={`/scan/?id=${msg.search_id}`} class="buybox-confirmed-cta">Run First Scan →</a>
-              </div>
-            ) : (
-              <div key={i} class={`msg msg-${msg.role}`}>
-                {msg.role === 'assistant' ? (
-                  <>
-                    <div class="msg-label"><span class="msg-dot" />{agentName.value || 'Agent'}</div>
-                    <div class="msg-body">{msg.content}</div>
-                  </>
-                ) : msg.role === 'system' ? (
-                  <div class="msg-system">{msg.content}</div>
-                ) : (
-                  msg.content
-                )}
-              </div>
-            )
+            <div key={i} class={`msg msg-${msg.role}`}>
+              {msg.role === 'assistant' ? (
+                <>
+                  <div class="msg-label"><span class="msg-dot" />{agentName.value || 'Agent'}</div>
+                  <div class="msg-body">{msg.content}</div>
+                </>
+              ) : msg.role === 'system' ? (
+                <div class="msg-system">{msg.content}</div>
+              ) : (
+                msg.content
+              )}
+            </div>
           ))}
           {chatStreaming.value && chatMessages.value[chatMessages.value.length - 1]?.role !== 'assistant' && (
             <TypingIndicator />
