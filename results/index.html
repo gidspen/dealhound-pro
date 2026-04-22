@@ -88,6 +88,16 @@
       letter-spacing: 0.02em;
       display: flex; align-items: center; gap: 8px;
     }
+    .nav-logo-icon {
+      width: 26px; height: 26px;
+      background: var(--gold);
+      border-radius: 5px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+    }
+    .nav-right {
+      display: flex; align-items: center; gap: 16px;
+    }
     .nav-badge {
       font-size: 0.7rem; font-weight: 500;
       letter-spacing: 0.12em; text-transform: uppercase;
@@ -96,6 +106,14 @@
       border: 1px solid rgba(36,61,53,0.2);
       padding: 4px 12px; border-radius: 100px;
     }
+    .btn-nav-sm {
+      font-size: 0.78rem; font-weight: 500;
+      color: #FFFFFF; background: var(--gold);
+      padding: 8px 18px; border-radius: 3px;
+      text-decoration: none; letter-spacing: 0.04em;
+      transition: opacity 0.2s;
+    }
+    .btn-nav-sm:hover { opacity: 0.85; }
 
     /* ── HEADER ──────────────────────────────────────────────── */
     .page-header { margin-bottom: 40px; }
@@ -174,6 +192,29 @@
       content: ''; flex: 1; height: 1px; background: var(--border);
     }
 
+    /* ── SORT CONTROLS ───────────────────────────────────────── */
+    .sort-bar {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .sort-bar .sort-label {
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--cream-sub); margin-right: 4px;
+    }
+    .sort-btn {
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--cream-dim); padding: 5px 14px;
+      border-radius: 100px; font-family: var(--sans);
+      font-size: 0.75rem; font-weight: 400;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .sort-btn:hover { border-color: var(--gold); color: var(--cream); }
+    .sort-btn.active {
+      background: var(--gold-dim); color: var(--gold);
+      border-color: rgba(36,61,53,0.25); font-weight: 500;
+    }
+
     /* ── DEAL CARD ───────────────────────────────────────────── */
     #survivors-section { display: none; margin-bottom: 56px; }
     .deals-grid {
@@ -246,19 +287,82 @@
       border: 1px solid var(--border);
     }
 
+    /* Score breakdown mini bar */
+    .score-breakdown {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      margin-bottom: 12px;
+      font-size: 0.72rem; color: var(--cream-sub);
+    }
+    .score-item {
+      display: flex; align-items: center; gap: 4px;
+    }
+    .score-item .bar {
+      width: 32px; height: 4px;
+      background: var(--border); border-radius: 2px;
+      overflow: hidden;
+    }
+    .score-item .bar-fill {
+      height: 100%; border-radius: 2px;
+      background: var(--gold);
+    }
+
+    .deal-actions {
+      display: flex; align-items: center; gap: 12px;
+      margin-top: auto; padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
     .deal-link {
       display: inline-flex; align-items: center; gap: 6px;
-      margin-top: auto; padding-top: 14px;
       font-size: 0.8rem; font-weight: 500;
       color: var(--gold); text-decoration: none;
       letter-spacing: 0.04em;
-      border-top: 1px solid var(--border);
-      width: 100%;
     }
     .deal-link:hover { text-decoration: underline; }
+    .deal-ask {
+      font-size: 0.75rem; font-weight: 500;
+      color: var(--cream-dim); background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 6px 14px; border-radius: 100px;
+      text-decoration: none; transition: all 0.2s;
+      margin-left: auto;
+    }
+    .deal-ask:hover { border-color: var(--gold); color: var(--gold); }
 
-    /* ── SCREENED OUT TABLE ──────────────────────────────────── */
-    #screened-section { display: none; margin-bottom: 56px; }
+    /* ── WORK SECTION (collapsed) ────────────────────────────── */
+    #work-section { display: none; margin-bottom: 56px; }
+    .work-toggle {
+      display: flex; align-items: center; justify-content: space-between;
+      cursor: pointer; padding: 16px 20px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; margin-bottom: 0;
+      transition: border-radius 0.2s;
+      user-select: none;
+    }
+    .work-toggle.open { border-radius: 12px 12px 0 0; border-bottom-color: transparent; }
+    .work-toggle-left {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .work-toggle-count {
+      font-family: var(--serif); font-size: 1.4rem;
+      font-weight: 400; color: var(--gold);
+    }
+    .work-toggle-text {
+      font-size: 0.85rem; color: var(--cream-dim);
+    }
+    .work-toggle-arrow {
+      font-size: 0.8rem; color: var(--cream-sub);
+      transition: transform 0.2s;
+    }
+    .work-toggle.open .work-toggle-arrow { transform: rotate(180deg); }
+    .work-body {
+      display: none;
+      background: var(--surface); border: 1px solid var(--border);
+      border-top: none; border-radius: 0 0 12px 12px;
+      padding: 0 20px 20px;
+      max-height: 500px; overflow-y: auto;
+    }
+    .work-body.open { display: block; }
+
     .screened-table {
       width: 100%; border-collapse: collapse; font-size: 0.84rem;
     }
@@ -267,6 +371,7 @@
       font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--cream-sub); padding: 10px 12px;
       border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; background: var(--surface);
     }
     .screened-table td {
       padding: 10px 12px;
@@ -280,14 +385,6 @@
       border-radius: 4px; background: rgba(0,0,0,0.05);
       color: var(--cream-sub); white-space: nowrap;
     }
-    .show-more-wrap { text-align: center; margin-top: 20px; }
-    .btn-ghost {
-      background: transparent; border: 1px solid var(--border);
-      color: var(--cream-dim); padding: 10px 20px; border-radius: 4px;
-      font-family: var(--sans); font-size: 0.82rem; cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .btn-ghost:hover { border-color: var(--gold); color: var(--cream); }
 
     /* ── LOADING / EMPTY ─────────────────────────────────────── */
     #loading {
@@ -322,6 +419,8 @@
       .deals-grid { grid-template-columns: 1fr; }
       .email-form { flex-direction: column; align-items: stretch; }
       .email-form input { width: 100%; }
+      .deal-actions { flex-wrap: wrap; }
+      .deal-ask { margin-left: 0; }
     }
   </style>
 </head>
@@ -331,23 +430,29 @@
 
   <div class="page-wrap">
     <nav>
-      <a href="/" class="nav-logo">🐾 Deal Hound</a>
-      <span class="nav-badge">Your Scan Results</span>
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon">🐾</div>
+        Deal Hound
+      </a>
+      <div class="nav-right">
+        <span class="nav-badge">Your Results</span>
+        <a href="/chat/" class="btn-nav-sm">New Scan</a>
+      </div>
     </nav>
 
     <div class="page-header">
       <h1>Your <em>deal scan</em><br>results.</h1>
       <p id="header-sub">Every listing screened against your buy box. The ones worth your time, surfaced and ranked.</p>
       <div class="run-meta" id="run-meta" style="display:none">
-        <div class="run-meta-item">Run: <strong id="run-date">—</strong></div>
-        <div class="run-meta-item">Market: <strong id="run-market">—</strong></div>
+        <div class="run-meta-item">Run: <strong id="run-date"></strong></div>
+        <div class="run-meta-item">Market: <strong id="run-market"></strong></div>
       </div>
     </div>
 
     <!-- Loading -->
     <div id="loading">
       <div class="spinner"></div>
-      <p>Loading your scan results…</p>
+      <p>Loading your scan results...</p>
     </div>
 
     <!-- Email gate -->
@@ -363,57 +468,71 @@
     <!-- Stats -->
     <div id="stats-bar">
       <div class="stat-card">
-        <div class="stat-num" id="stat-total">—</div>
+        <div class="stat-num" id="stat-total">-</div>
         <div class="stat-label">Total Scanned</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num" id="stat-eliminated">—</div>
+        <div class="stat-num" id="stat-eliminated">-</div>
         <div class="stat-label">Eliminated</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num" id="stat-survivors">—</div>
+        <div class="stat-num" id="stat-survivors">-</div>
         <div class="stat-label">Survivors</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num" id="stat-hot">—</div>
+        <div class="stat-num" id="stat-hot">-</div>
         <div class="stat-label">HOT Deals</div>
       </div>
     </div>
 
-    <!-- Survivors -->
+    <!-- Top Matches (prominent) -->
     <div id="survivors-section">
-      <div class="section-label" id="survivors-label">Deals Worth Pursuing</div>
+      <div class="section-label" id="survivors-label">Top Matches</div>
+
+      <div class="sort-bar">
+        <span class="sort-label">Sort:</span>
+        <button class="sort-btn active" onclick="sortDeals('match')" data-sort="match">Match</button>
+        <button class="sort-btn" onclick="sortDeals('price-low')" data-sort="price-low">Price (Low)</button>
+        <button class="sort-btn" onclick="sortDeals('price-high')" data-sort="price-high">Price (High)</button>
+        <button class="sort-btn" onclick="sortDeals('risk')" data-sort="risk">Risk</button>
+        <button class="sort-btn" onclick="sortDeals('acreage')" data-sort="acreage">Acreage</button>
+      </div>
+
       <div class="deals-grid" id="survivors-grid"></div>
     </div>
 
-    <!-- Screened out -->
-    <div id="screened-section">
-      <div class="section-label">Screened Out</div>
-      <div id="screened-summary" style="margin-bottom:16px; font-size:0.84rem; color:var(--cream-dim)"></div>
-      <table class="screened-table">
-        <thead>
-          <tr>
-            <th>Property</th>
-            <th>Location</th>
-            <th>Type</th>
-            <th>Reason Out</th>
-          </tr>
-        </thead>
-        <tbody id="screened-tbody"></tbody>
-      </table>
-      <div class="show-more-wrap" id="show-more-wrap" style="display:none">
-        <button class="btn-ghost" onclick="showAllScreened()">Show all screened-out deals</button>
+    <!-- The Work (collapsed) -->
+    <div id="work-section">
+      <div class="work-toggle" id="work-toggle" onclick="toggleWork()">
+        <div class="work-toggle-left">
+          <span class="work-toggle-count" id="work-count">0</span>
+          <span class="work-toggle-text" id="work-text">listings reviewed across marketplaces</span>
+        </div>
+        <span class="work-toggle-arrow">&#9660;</span>
+      </div>
+      <div class="work-body" id="work-body">
+        <table class="screened-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Source</th>
+              <th>Price</th>
+              <th>Reason Out</th>
+            </tr>
+          </thead>
+          <tbody id="screened-tbody"></tbody>
+        </table>
       </div>
     </div>
 
     <!-- Empty state -->
     <div id="empty-state">
       <div class="empty-h">No scan results found</div>
-      <p class="empty-p">We couldn't find a scan linked to that email. <a href="/">Request a scan →</a></p>
+      <p class="empty-p">We couldn't find results for this scan. <a href="/chat/">Start a new scan</a></p>
     </div>
 
     <footer>
-      <p>Powered by <a href="https://incredibleai.pro" target="_blank">Incredible AI</a> &nbsp;·&nbsp; Framework by <a href="https://instagram.com/gideonspencer_" target="_blank">Gideon Spencer</a> &nbsp;·&nbsp; <a href="/">Get your own agent →</a></p>
+      <p>Powered by <a href="https://incredibleai.pro" target="_blank">Incredible AI</a> &nbsp;·&nbsp; <a href="/">dealhound.pro</a></p>
     </footer>
   </div>
 
@@ -421,8 +540,8 @@
     const SB_URL = 'https://gggmmjvwbbfvrtjjlqvr.supabase.co';
     const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdnz21tanZ3YmJmdnJ0ampscXZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwODg0MTMsImV4cCI6MjA5MTY2NDQxM30.D9V0R18p1WEf4DTv9zPYezgkJYpgNXZD-Fd3bMw4u8U';
 
-    let allScreened = [];
-    let screenedLimit = 25;
+    let survivorDeals = [];
+    let currentSearchId = null;
 
     async function sb(path, params = {}) {
       const url = new URL(SB_URL + '/rest/v1/' + path);
@@ -441,9 +560,6 @@
       return prefix + n.toLocaleString() + suffix;
     }
 
-    // Tier is based on buy box fit (strategy match), not risk.
-    // Risk is a separate investor preference — some want value-add (higher risk),
-    // others want turnkey (lower risk). Both can be HOT deals.
     function tierFromStrategy(strategyOverall) {
       switch ((strategyOverall || '').toUpperCase()) {
         case 'STRONG MATCH': return 'hot';
@@ -451,6 +567,15 @@
         case 'PARTIAL':      return 'watch';
         default:             return 'watch';
       }
+    }
+
+    function tierOrder(tier) {
+      return { hot: 0, strong: 1, watch: 2 }[tier] ?? 3;
+    }
+
+    function riskOrder(level) {
+      const map = { 'LOW': 0, 'MODERATE': 1, 'HIGH': 2, 'VERY HIGH': 3 };
+      return map[(level || '').toUpperCase()] ?? 1;
     }
 
     function riskClass(level) {
@@ -466,10 +591,10 @@
 
     function strategyLabel(overall) {
       const map = {
-        'STRONG MATCH': '⭐ Strong Match',
-        'MATCH': '✓ Strategy Match',
-        'PARTIAL': '~ Partial Match',
-        'MISS': '✗ Strategy Miss'
+        'STRONG MATCH': 'Strong Match',
+        'MATCH': 'Strategy Match',
+        'PARTIAL': 'Partial Match',
+        'MISS': 'Strategy Miss'
       };
       return map[overall] || overall || '';
     }
@@ -495,43 +620,130 @@
         `<div class="deal-meta-item">${v}</div>`
       ).join('');
 
-      const stratLabel = strategy.overall ? strategyLabel(strategy.overall) : '';
+      // Score breakdown mini bars
+      let breakdownHtml = '';
+      if (strategy.market_match !== undefined || strategy.revenue_match !== undefined) {
+        const items = [
+          { label: 'Market', val: strategy.market_match },
+          { label: 'Revenue', val: strategy.revenue_match },
+          { label: 'Fit', val: strategy.property_fit },
+        ].filter(i => i.val !== undefined && i.val !== null);
+
+        if (items.length) {
+          breakdownHtml = `<div class="score-breakdown">
+            ${items.map(i => `
+              <span class="score-item">
+                ${i.label}
+                <span class="bar"><span class="bar-fill" style="width:${Math.min(100, (i.val / 30) * 100)}%"></span></span>
+              </span>
+            `).join('')}
+          </div>`;
+        }
+      }
+
+      const askUrl = `/chat/?deal_id=${deal.id}&search_id=${deal.search_id}`;
 
       return `
-        <div class="deal-card ${tier}">
+        <div class="deal-card ${tier}" data-tier="${tier}" data-price="${deal.price || 0}" data-acreage="${deal.acreage || 0}" data-risk="${riskOrder(risk.level)}">
           <div class="tier-badge tier-${tier}">${tierLabel}</div>
           <div class="deal-source">${deal.source || ''}</div>
           <div class="deal-name">${deal.title || 'Unnamed Property'}</div>
-          <div class="deal-location">${deal.location || '—'}</div>
+          <div class="deal-location">${deal.location || ''}</div>
           ${metaPills ? `<div class="deal-meta">${metaPills}</div>` : ''}
           <div class="risk-row">
             ${risk.level ? `<span class="risk-pill ${riskClass(risk.level)}">${risk.level} Risk</span>` : ''}
-            ${stratLabel ? `<span class="strategy-pill">${stratLabel}</span>` : ''}
+            ${strategy.overall ? `<span class="strategy-pill">${strategyLabel(strategy.overall)}</span>` : ''}
           </div>
+          ${breakdownHtml}
           ${deal.property_type ? `<div style="font-size:0.78rem;color:var(--cream-sub);margin-bottom:12px;">${deal.property_type}</div>` : ''}
-          <a href="${deal.url || '#'}" target="_blank" rel="noopener" class="deal-link">
-            View Listing →
-          </a>
+          <div class="deal-actions">
+            <a href="${deal.url || '#'}" target="_blank" rel="noopener" class="deal-link">View Listing &rarr;</a>
+            <a href="${askUrl}" class="deal-ask">Ask AI about this deal</a>
+          </div>
         </div>`;
     }
 
     function renderScreenedRow(deal) {
+      const price = deal.price ? '$' + Number(deal.price).toLocaleString() : '';
       return `<tr>
-        <td>${deal.title || '—'}</td>
-        <td>${deal.location || '—'}</td>
-        <td><span class="miss-tag">${deal.property_type || '—'}</span></td>
-        <td>${deal.miss_reason || '—'}</td>
+        <td>${deal.title || ''}</td>
+        <td><span class="miss-tag">${deal.source || ''}</span></td>
+        <td>${price}</td>
+        <td>${deal.miss_reason || ''}</td>
       </tr>`;
     }
 
-    function showAllScreened() {
-      document.getElementById('screened-tbody').innerHTML = allScreened.map(renderScreenedRow).join('');
-      document.getElementById('show-more-wrap').style.display = 'none';
+    // Sort
+    function sortDeals(mode) {
+      document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+      document.querySelector(`[data-sort="${mode}"]`).classList.add('active');
+
+      const sorted = [...survivorDeals];
+      switch (mode) {
+        case 'match':
+          sorted.sort((a, b) => {
+            const ta = tierFromStrategy(parseBreakdown(a.score_breakdown)?.strategy?.overall);
+            const tb = tierFromStrategy(parseBreakdown(b.score_breakdown)?.strategy?.overall);
+            return tierOrder(ta) - tierOrder(tb);
+          });
+          break;
+        case 'price-low':
+          sorted.sort((a, b) => (a.price || 0) - (b.price || 0));
+          break;
+        case 'price-high':
+          sorted.sort((a, b) => (b.price || 0) - (a.price || 0));
+          break;
+        case 'risk':
+          sorted.sort((a, b) => {
+            const ra = riskOrder(parseBreakdown(a.score_breakdown)?.risk?.level);
+            const rb = riskOrder(parseBreakdown(b.score_breakdown)?.risk?.level);
+            return ra - rb;
+          });
+          break;
+        case 'acreage':
+          sorted.sort((a, b) => (b.acreage || 0) - (a.acreage || 0));
+          break;
+      }
+
+      document.getElementById('survivors-grid').innerHTML = sorted.map(renderDeal).join('');
     }
 
-    async function loadResults(email) {
+    function toggleWork() {
+      const toggle = document.getElementById('work-toggle');
+      const body = document.getElementById('work-body');
+      toggle.classList.toggle('open');
+      body.classList.toggle('open');
+    }
+
+    async function loadResultsById(searchId) {
       try {
-        // Most recent search for this email
+        currentSearchId = searchId;
+
+        // Get search metadata
+        const searches = await sb('deal_searches', {
+          'id': `eq.${searchId}`,
+          'select': '*'
+        });
+
+        if (!searches || searches.length === 0) {
+          document.getElementById('loading').style.display = 'none';
+          document.getElementById('empty-state').style.display = 'block';
+          return;
+        }
+
+        const search = searches[0];
+        renderSearchMeta(search);
+        await loadDeals(search.id);
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById('loading').innerHTML =
+          '<p style="color:var(--cream-sub)">Could not load results. Please refresh and try again.</p>';
+      }
+    }
+
+    async function loadResultsByEmail(email) {
+      try {
         const searches = await sb('deal_searches', {
           'user_email': `eq.${email}`,
           'order': 'run_at.desc',
@@ -546,78 +758,87 @@
         }
 
         const search = searches[0];
-
-        // Run metadata
-        if (search.run_at) {
-          const d = new Date(search.run_at);
-          document.getElementById('run-date').textContent = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-        }
-        if (search.buy_box) {
-          const bb = typeof search.buy_box === 'string' ? JSON.parse(search.buy_box) : search.buy_box;
-          const loc = bb.location_filter || bb.market_pref || '';
-          if (loc) document.getElementById('run-market').textContent = loc;
-        }
-        document.getElementById('run-meta').style.display = 'flex';
-
-        // All deals for this search
-        const allDeals = await sb('deals', {
-          'search_id': `eq.${search.id}`,
-          'select': '*',
-          'order': 'score.asc'
-        });
-
-        if (!allDeals || allDeals.length === 0) {
-          document.getElementById('loading').style.display = 'none';
-          document.getElementById('empty-state').style.display = 'block';
-          return;
-        }
-
-        const survivors = allDeals.filter(d => d.passed_hard_filters);
-        const screened = allDeals.filter(d => !d.passed_hard_filters);
-        const hotCount = survivors.filter(d => {
-          const bd = parseBreakdown(d.score_breakdown);
-          return bd.strategy && bd.strategy.overall === 'STRONG MATCH';
-        }).length;
-
-        // Stats
-        document.getElementById('stat-total').textContent = allDeals.length.toLocaleString();
-        document.getElementById('stat-eliminated').textContent = screened.length.toLocaleString();
-        document.getElementById('stat-survivors').textContent = survivors.length.toLocaleString();
-        document.getElementById('stat-hot').textContent = hotCount;
-        document.getElementById('stats-bar').style.display = 'grid';
-
-        // Survivors
-        if (survivors.length > 0) {
-          document.getElementById('survivors-label').textContent =
-            `${survivors.length} Deal${survivors.length !== 1 ? 's' : ''} Worth Pursuing`;
-          document.getElementById('survivors-grid').innerHTML = survivors.map(renderDeal).join('');
-          document.getElementById('survivors-section').style.display = 'block';
-        }
-
-        // Screened out
-        if (screened.length > 0) {
-          allScreened = screened;
-          document.getElementById('screened-summary').textContent =
-            `${screened.length} listings eliminated by buy box gates.`;
-          const firstBatch = screened.slice(0, screenedLimit);
-          document.getElementById('screened-tbody').innerHTML = firstBatch.map(renderScreenedRow).join('');
-          document.getElementById('screened-section').style.display = 'block';
-          if (screened.length > screenedLimit) {
-            document.getElementById('show-more-wrap').style.display = 'block';
-          }
-        }
-
-        if (survivors.length === 0 && screened.length === 0) {
-          document.getElementById('empty-state').style.display = 'block';
-        }
-
-        document.getElementById('loading').style.display = 'none';
+        currentSearchId = search.id;
+        renderSearchMeta(search);
+        await loadDeals(search.id);
 
       } catch (err) {
         console.error(err);
         document.getElementById('loading').innerHTML =
           '<p style="color:var(--cream-sub)">Could not load results. Please refresh and try again.</p>';
       }
+    }
+
+    function renderSearchMeta(search) {
+      if (search.run_at) {
+        const d = new Date(search.run_at);
+        document.getElementById('run-date').textContent = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      }
+      if (search.buy_box) {
+        const bb = typeof search.buy_box === 'string' ? JSON.parse(search.buy_box) : search.buy_box;
+        const loc = bb.locations ? bb.locations.join(', ') : (bb.location_filter || bb.market_pref || '');
+        if (loc) document.getElementById('run-market').textContent = loc;
+      }
+      document.getElementById('run-meta').style.display = 'flex';
+    }
+
+    async function loadDeals(searchId) {
+      const allDeals = await sb('deals', {
+        'search_id': `eq.${searchId}`,
+        'select': '*',
+        'order': 'score.asc'
+      });
+
+      if (!allDeals || allDeals.length === 0) {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('empty-state').style.display = 'block';
+        return;
+      }
+
+      survivorDeals = allDeals.filter(d => d.passed_hard_filters);
+      const screened = allDeals.filter(d => !d.passed_hard_filters);
+
+      // Sort survivors by tier (HOT first)
+      survivorDeals.sort((a, b) => {
+        const ta = tierFromStrategy(parseBreakdown(a.score_breakdown)?.strategy?.overall);
+        const tb = tierFromStrategy(parseBreakdown(b.score_breakdown)?.strategy?.overall);
+        return tierOrder(ta) - tierOrder(tb);
+      });
+
+      const hotCount = survivorDeals.filter(d => {
+        const bd = parseBreakdown(d.score_breakdown);
+        return bd.strategy && bd.strategy.overall === 'STRONG MATCH';
+      }).length;
+
+      // Stats
+      document.getElementById('stat-total').textContent = allDeals.length.toLocaleString();
+      document.getElementById('stat-eliminated').textContent = screened.length.toLocaleString();
+      document.getElementById('stat-survivors').textContent = survivorDeals.length.toLocaleString();
+      document.getElementById('stat-hot').textContent = hotCount;
+      document.getElementById('stats-bar').style.display = 'grid';
+
+      // Top Matches
+      if (survivorDeals.length > 0) {
+        document.getElementById('survivors-label').textContent =
+          `${survivorDeals.length} Deal${survivorDeals.length !== 1 ? 's' : ''} Worth Pursuing`;
+        document.getElementById('survivors-grid').innerHTML = survivorDeals.map(renderDeal).join('');
+        document.getElementById('survivors-section').style.display = 'block';
+      }
+
+      // The Work (collapsed)
+      if (screened.length > 0 || survivorDeals.length > 0) {
+        const sources = new Set(allDeals.map(d => d.source).filter(Boolean));
+        document.getElementById('work-count').textContent = allDeals.length;
+        document.getElementById('work-text').textContent = `listings reviewed across ${sources.size} marketplace${sources.size !== 1 ? 's' : ''}`;
+        document.getElementById('screened-tbody').innerHTML = screened.map(renderScreenedRow).join('');
+        document.getElementById('work-section').style.display = 'block';
+      }
+
+      if (survivorDeals.length === 0 && screened.length === 0) {
+        document.getElementById('empty-state').style.display = 'block';
+      }
+
+      document.getElementById('loading').style.display = 'none';
     }
 
     function handleEmailSubmit(e) {
@@ -627,15 +848,19 @@
       sessionStorage.setItem('dh_email', email);
       document.getElementById('email-gate').style.display = 'none';
       document.getElementById('loading').style.display = 'block';
-      loadResults(email);
+      loadResultsByEmail(email);
     }
 
     // Init
     (function init() {
       const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
       const email = params.get('email') || sessionStorage.getItem('dh_email');
-      if (email) {
-        loadResults(email);
+
+      if (id) {
+        loadResultsById(id);
+      } else if (email) {
+        loadResultsByEmail(email);
       } else {
         document.getElementById('loading').style.display = 'none';
         document.getElementById('email-gate').style.display = 'block';

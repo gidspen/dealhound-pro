@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scanning — Deal Hound</title>
+  <meta name="description" content="Your AI agent is scanning marketplaces for deals matching your buy box." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F8F5EF;
+      --surface:   #FFFFFF;
+      --surface2:  #F0EDE4;
+      --border:    rgba(0,0,0,0.08);
+      --cream:     #1D1D1B;
+      --cream-dim: rgba(29,29,27,0.62);
+      --cream-sub: rgba(29,29,27,0.38);
+      --gold:      #243D35;
+      --gold-dim:  rgba(36,61,53,0.10);
+      --gold-glow: rgba(36,61,53,0.04);
+      --green:     #1a7f37;
+      --green-dim: rgba(26,127,55,0.08);
+      --sans:      'Outfit', system-ui, sans-serif;
+      --serif:     'Cormorant Garamond', Georgia, serif;
+    }
+
+    html { height: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.4;
+    }
+
+    .orb { position: fixed; border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0; }
+    .orb-1 { width: 700px; height: 700px; top: -250px; left: -200px; background: radial-gradient(circle, rgba(36,61,53,0.07) 0%, transparent 70%); }
+    .orb-2 { width: 500px; height: 500px; top: 40%; right: -150px; background: radial-gradient(circle, rgba(26,127,55,0.04) 0%, transparent 70%); }
+
+    /* ── NAV ─────────────────────────────────────── */
+    nav {
+      padding: 16px 32px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(248,245,239,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+      flex-shrink: 0;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--cream);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-logo-icon {
+      width: 26px; height: 26px;
+      background: var(--gold);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
+    .nav-step {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-sub);
+    }
+
+    /* ── MAIN ─────────────────────────────────────── */
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 48px 32px;
+      z-index: 1;
+      position: relative;
+    }
+    .content {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .scan-header {
+      margin-bottom: 40px;
+    }
+    .scan-header h1 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+    .scan-header h1 em { font-style: italic; color: var(--gold); }
+    .scan-header p {
+      font-size: 0.88rem;
+      color: var(--cream-dim);
+    }
+
+    /* Buy box summary pill */
+    .buybox-summary {
+      background: var(--gold-glow);
+      border: 1px solid rgba(36,61,53,0.12);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 36px;
+      font-size: 0.82rem;
+      color: var(--cream-dim);
+      line-height: 1.6;
+    }
+    .buybox-summary .label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    /* ── PROGRESS FEED ────────────────────────────── */
+    .progress-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .progress-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      animation: fadeIn 0.3s ease;
+    }
+    .progress-step:last-child { border-bottom: none; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-icon {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-icon.running {
+      background: var(--gold-dim);
+      color: var(--gold);
+      animation: spin 1.5s linear infinite;
+    }
+    .step-icon.complete {
+      background: var(--green-dim);
+      color: var(--green);
+    }
+    .step-icon.error {
+      background: rgba(220,38,38,0.08);
+      color: #dc2626;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .step-text {
+      font-size: 0.88rem;
+      color: var(--cream);
+      line-height: 1.5;
+    }
+    .step-text.dim { color: var(--cream-dim); }
+    .step-count {
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin-left: 4px;
+    }
+
+    /* ── COMPLETION STATE ──────────────────────────── */
+    .scan-complete {
+      display: none;
+      text-align: center;
+      padding: 48px 0;
+      animation: fadeIn 0.4s ease;
+    }
+    .scan-complete.visible { display: block; }
+
+    .scan-complete .check {
+      width: 56px; height: 56px;
+      background: var(--green-dim);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin: 0 auto 20px;
+    }
+    .scan-complete h2 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+    .scan-complete p {
+      font-size: 0.9rem;
+      color: var(--cream-dim);
+      margin-bottom: 28px;
+    }
+    .btn-results {
+      display: inline-block;
+      background: var(--gold);
+      color: #FFFFFF;
+      padding: 14px 32px;
+      border-radius: 4px;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-results:hover { opacity: 0.88; }
+
+    /* ── WAITING STATE ─────────────────────────────── */
+    .scan-waiting {
+      display: none;
+      text-align: center;
+      padding: 36px 0;
+      animation: fadeIn 0.4s ease;
+    }
+    .scan-waiting.visible { display: block; }
+    .scan-waiting p {
+      font-size: 0.88rem;
+      color: var(--cream-dim);
+      line-height: 1.7;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    .scan-waiting .email-note {
+      margin-top: 12px;
+      font-size: 0.82rem;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 12px 16px; }
+      .main { padding: 32px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">🐾</div>
+      Deal Hound
+    </a>
+    <span class="nav-step" id="nav-step">Step 2 — Scanning</span>
+  </nav>
+
+  <div class="main">
+    <div class="content">
+      <div class="scan-header">
+        <h1>Your agent is <em>hunting...</em></h1>
+        <p>Scanning marketplaces against your buy box. This takes a moment.</p>
+      </div>
+
+      <div class="buybox-summary" id="buybox-summary" style="display:none;">
+        <div class="label">Your Buy Box</div>
+        <div id="buybox-text"></div>
+      </div>
+
+      <div class="progress-feed" id="progress-feed"></div>
+
+      <!-- Shows when scan pipeline is running but waiting on manual completion -->
+      <div class="scan-waiting" id="scan-waiting">
+        <p>Your agent is deep in the hunt — analyzing listings, scoring against your buy box, and building your deal report. This usually takes a few hours for your first scan.</p>
+        <div class="email-note">We'll email you when your results are ready.</div>
+      </div>
+
+      <!-- Shows when scan is fully complete -->
+      <div class="scan-complete" id="scan-complete">
+        <div class="check">✓</div>
+        <h2>Scan complete.</h2>
+        <p id="complete-summary">Your agent reviewed hundreds of listings and found deals worth your attention.</p>
+        <a href="/results/" class="btn-results" id="results-link">View My Results →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const searchId = new URLSearchParams(window.location.search).get('id');
+    let lastStepCount = 0;
+    let scanStarted = false;
+    let pollInterval = null;
+
+    if (!searchId) {
+      document.querySelector('.scan-header h1').innerHTML = 'No scan found.';
+      document.querySelector('.scan-header p').textContent = 'Go back to the homepage to start a new scan.';
+    } else {
+      startScan();
+    }
+
+    async function startScan() {
+      // Kick off the scan
+      try {
+        await fetch('/api/scan-start', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ search_id: searchId })
+        });
+      } catch (e) {
+        // Continue anyway — might already be scanning
+      }
+
+      scanStarted = true;
+      pollProgress();
+      pollInterval = setInterval(pollProgress, 2500);
+    }
+
+    async function pollProgress() {
+      try {
+        const res = await fetch(`/api/scan-progress?id=${searchId}`);
+        const data = await res.json();
+
+        // Show buy box summary
+        if (data.buy_box && !document.getElementById('buybox-summary').style.display !== 'none') {
+          showBuyBox(data.buy_box);
+        }
+
+        // Render progress steps
+        renderSteps(data.steps || []);
+
+        // Handle completion
+        if (data.status === 'complete') {
+          clearInterval(pollInterval);
+          showComplete(data.summary);
+        } else if (data.steps && data.steps.length > 3 && !document.getElementById('scan-waiting').classList.contains('visible')) {
+          // After a few steps, show the waiting message
+          const lastStep = data.steps[data.steps.length - 1];
+          if (lastStep.step === 'screening' || data.steps.length >= 5) {
+            document.getElementById('scan-waiting').classList.add('visible');
+          }
+        }
+
+      } catch (e) {
+        // Silently retry on next poll
+      }
+    }
+
+    function showBuyBox(buyBox) {
+      const el = document.getElementById('buybox-summary');
+      el.style.display = 'block';
+
+      const parts = [];
+      if (buyBox.locations) parts.push(buyBox.locations.join(', '));
+      if (buyBox.price_max) {
+        const min = buyBox.price_min ? `$${(buyBox.price_min/1000).toFixed(0)}k` : 'No min';
+        const max = `$${(buyBox.price_max/1000000).toFixed(1)}M`;
+        parts.push(`${min} – ${max}`);
+      }
+      if (buyBox.property_types) parts.push(buyBox.property_types.map(t => t.replace(/_/g, ' ')).join(', '));
+
+      document.getElementById('buybox-text').textContent = parts.join(' · ');
+    }
+
+    function renderSteps(steps) {
+      if (steps.length <= lastStepCount) return;
+
+      const feed = document.getElementById('progress-feed');
+
+      // Only render new steps
+      for (let i = lastStepCount; i < steps.length; i++) {
+        const step = steps[i];
+        const div = document.createElement('div');
+        div.className = 'progress-step';
+
+        const icon = step.status === 'complete' ? '✓'
+                   : step.status === 'error' ? '✕'
+                   : '⟳';
+        const iconClass = step.status === 'complete' ? 'complete'
+                        : step.status === 'error' ? 'error'
+                        : 'running';
+
+        div.innerHTML = `
+          <div class="step-icon ${iconClass}">${icon}</div>
+          <div class="step-text${step.status === 'running' ? '' : ' dim'}">
+            ${escapeHtml(step.message)}
+            ${step.listing_count ? `<span class="step-count">(${step.listing_count})</span>` : ''}
+          </div>
+        `;
+
+        feed.appendChild(div);
+      }
+
+      lastStepCount = steps.length;
+
+      // Update any previously "running" steps to "complete" if they now are
+      const allStepEls = feed.querySelectorAll('.progress-step');
+      steps.forEach((step, i) => {
+        if (i < allStepEls.length) {
+          const iconEl = allStepEls[i].querySelector('.step-icon');
+          if (step.status === 'complete' && iconEl.classList.contains('running')) {
+            iconEl.className = 'step-icon complete';
+            iconEl.textContent = '✓';
+          }
+        }
+      });
+    }
+
+    function showComplete(summary) {
+      document.getElementById('scan-waiting').classList.remove('visible');
+      document.getElementById('scan-complete').classList.add('visible');
+      document.getElementById('nav-step').textContent = 'Scan Complete';
+
+      document.querySelector('.scan-header h1').innerHTML = 'Hunt <em>complete.</em>';
+      document.querySelector('.scan-header p').textContent = 'Your agent finished scanning. Here\'s what it found.';
+
+      if (summary) {
+        document.getElementById('complete-summary').textContent =
+          `Your agent found ${summary.total_deals} deals worth your attention${summary.hot_deals ? `, including ${summary.hot_deals} HOT matches` : ''}.`;
+      }
+
+      document.getElementById('results-link').href = `/results/?id=${searchId}`;
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+  </script>
+</body>
+</html>
