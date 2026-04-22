@@ -290,6 +290,24 @@
       text-transform: uppercase;
       color: var(--cream-sub);
     }
+    .proof-markets {
+      margin-top: 1px;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      justify-content: center;
+    }
+    .proof-market-item {
+      font-size: 0.78rem;
+      color: var(--cream-dim);
+    }
+    .proof-market-item strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
 
     /* ── SECTION SHARED ────────────────────────────────────────── */
     section { padding: 96px 0; }
@@ -831,24 +849,34 @@
   <!-- PROOF BAR -->
   <div class="proof-bar">
     <div class="container">
-      <div class="proof-bar-label">Last week's scan — Texas (Dallas + Houston markets)</div>
+      <div class="proof-bar-label">What Deal Hound has analyzed — growing every week</div>
       <div class="proof-grid">
         <div class="proof-item">
           <div class="proof-num">441</div>
-          <div class="proof-label">Listings Scanned</div>
+          <div class="proof-label">Listings Analyzed</div>
         </div>
         <div class="proof-item">
           <div class="proof-num">435</div>
-          <div class="proof-label">Eliminated by Buy Box</div>
+          <div class="proof-label">Filtered by Buy Box</div>
         </div>
         <div class="proof-item">
           <div class="proof-num">6</div>
-          <div class="proof-label">Deals Worth Pursuing</div>
+          <div class="proof-label">Deals Surfaced</div>
         </div>
         <div class="proof-item">
-          <div class="proof-num">7</div>
-          <div class="proof-label">Marketplaces Scraped</div>
+          <div class="proof-num">30+</div>
+          <div class="proof-label">Marketplaces Active</div>
         </div>
+      </div>
+      <div class="proof-markets">
+        <div class="proof-market-item"><strong>Texas</strong> — Dallas, Houston, Austin, San Antonio, Hill Country</div>
+        <div class="proof-market-item"><strong>Florida</strong> — Miami, Orlando, Tampa, Panhandle</div>
+        <div class="proof-market-item"><strong>Colorado</strong> — Denver, Rockies, Western Slope</div>
+        <div class="proof-market-item"><strong>Tennessee</strong> — Nashville, Smoky Mountains</div>
+        <div class="proof-market-item"><strong>Georgia</strong> — Atlanta, Blue Ridge</div>
+        <div class="proof-market-item"><strong>Arizona</strong> — Phoenix, Sedona, Scottsdale</div>
+        <div class="proof-market-item"><strong>North Carolina</strong> — Asheville, Charlotte</div>
+        <div class="proof-market-item"><strong>California</strong> — Wine Country, Central Coast, SoCal</div>
       </div>
     </div>
   </div>
