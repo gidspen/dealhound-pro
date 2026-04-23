@@ -1,6 +1,15 @@
+import { useEffect } from 'preact/hooks';
 import { settingsOpen, email } from '../lib/state.js';
 
 export function Settings() {
+  // Close on Escape key
+  useEffect(() => {
+    if (!settingsOpen.value) return;
+    const handler = (e) => { if (e.key === 'Escape') settingsOpen.value = false; };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [settingsOpen.value]);
+
   if (!settingsOpen.value) return null;
 
   const digestOn = localStorage.getItem('dh_notif_digest') !== 'false';
