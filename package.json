@@ -2,7 +2,9 @@
   "name": "dealhound-pro",
   "private": true,
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "test": "vitest run tests/integration",
+    "test:smoke": "vitest run tests/smoke"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
@@ -12,6 +14,7 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.5",
-    "vite": "^8.0.9"
+    "vite": "^8.0.9",
+    "vitest": "^3.2.4"
   }
 }
