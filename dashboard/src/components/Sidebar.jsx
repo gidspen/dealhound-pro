@@ -81,6 +81,19 @@ function GroupedDeals({ dealList }) {
     if (grouped[tier]) grouped[tier].push(deal);
   });
 
+  const scanMap = new Map();
+  scans.value.forEach(s => scanMap.set(s.id, s));
+
+  const sortByRecency = (a, b) => {
+    const timeA = scanMap.get(a.search_id)?.run_at ? new Date(scanMap.get(a.search_id).run_at).getTime() : 0;
+    const timeB = scanMap.get(b.search_id)?.run_at ? new Date(scanMap.get(b.search_id).run_at).getTime() : 0;
+    return timeB - timeA;
+  };
+
+  grouped.hot.sort(sortByRecency);
+  grouped.strong.sort(sortByRecency);
+  grouped.watch.sort(sortByRecency);
+
   return (
     <>
       {grouped.hot.length > 0 && (
