@@ -79,7 +79,7 @@ module.exports = async function handler(req, res) {
     if (scanIds.length > 0) {
       const { data } = await supabase
         .from('deals')
-        .select('id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters')
+        .select('id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description')
         .in('search_id', scanIds)
         .eq('passed_hard_filters', true)
         .order('id', { ascending: false })
@@ -97,6 +97,28 @@ module.exports = async function handler(req, res) {
         .eq('user_email', email)
         .in('deal_id', dealIds);
       starredIds = new Set((stars || []).map(s => s.deal_id));
+    }
+
+    // Viewed status
+    let viewedIds = new Set();
+    if (dealIds.length > 0) {
+      const { data: views } = await supabase
+        .from('user_deal_views')
+        .select('deal_id')
+        .eq('user_email', email)
+        .in('deal_id', dealIds);
+      viewedIds = new Set((views || []).map(v => v.deal_id));
+    }
+
+    // Archived status
+    let archivedIds = new Set();
+    if (dealIds.length > 0) {
+      const { data: archives } = await supabase
+        .from('user_deal_archives')
+        .select('deal_id')
+        .eq('user_email', email)
+        .in('deal_id', dealIds);
+      archivedIds = new Set((archives || []).map(a => a.deal_id));
     }
 
     // Active deal threads
@@ -134,7 +156,13 @@ module.exports = async function handler(req, res) {
         source: d.source,
         url: d.url,
         search_id: d.search_id,
-        starred: starredIds.has(d.id)
+        starred: starredIds.has(d.id),
+        viewed: viewedIds.has(d.id),
+        archived: archivedIds.has(d.id),
+        brief: d.brief || null,
+        days_on_market: d.days_on_market || null,
+        property_type: d.property_type || null,
+        raw_description: d.raw_description ? d.raw_description.substring(0, 300) : null
       })),
       active_threads: (threadConvos || []).map(c => ({
         deal_id: c.deal_id,
