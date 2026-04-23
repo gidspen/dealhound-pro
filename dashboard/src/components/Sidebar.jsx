@@ -1,7 +1,7 @@
 import { batch } from '@preact/signals';
 import {
   email, view, activeThreadId, scans, activeThreads,
-  settingsOpen, sidebarOpen, sidebarTab, sidebarGroupBy,
+  settingsOpen, sidebarOpen, sidebarTab, unreadFilter,
   starredDealIds, viewedDealIds, archivedDealIds,
   inboxDeals, trackingDeals, newDealCount, previewOpen
 } from '../lib/state.js';
@@ -73,46 +73,7 @@ function DealRow({ deal }) {
 // ── GroupedDeals ──────────────────────────────────────────────────────────────
 
 function GroupedDeals({ dealList }) {
-  if (sidebarGroupBy.value === 'date') {
-    // Group by scan, newest scan first
-    const scanMap = new Map();
-    scans.value.forEach(s => scanMap.set(s.id, s));
-
-    const byDate = new Map();
-    dealList.forEach(deal => {
-      const scanId = deal.search_id || '__none__';
-      if (!byDate.has(scanId)) byDate.set(scanId, []);
-      byDate.get(scanId).push(deal);
-    });
-
-    // Sort scan groups newest first using run_at
-    const sortedGroups = [...byDate.entries()].sort((a, b) => {
-      const scanA = scanMap.get(a[0]);
-      const scanB = scanMap.get(b[0]);
-      const timeA = scanA?.run_at ? new Date(scanA.run_at).getTime() : 0;
-      const timeB = scanB?.run_at ? new Date(scanB.run_at).getTime() : 0;
-      return timeB - timeA;
-    });
-
-    return (
-      <>
-        {sortedGroups.map(([scanId, groupDeals]) => {
-          const scan = scanMap.get(scanId);
-          const label = scan?.run_at
-            ? new Date(scan.run_at).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
-            : 'Unsorted';
-          return (
-            <>
-              <div class="sidebar-section-hdr">{label} · {groupDeals.length}</div>
-              {groupDeals.map(deal => <DealRow key={deal.id} deal={deal} />)}
-            </>
-          );
-        })}
-      </>
-    );
-  }
-
-  // Default: group by tier strength
+  // Group by tier strength
   const grouped = { hot: [], strong: [], watch: [] };
   dealList.forEach(deal => {
     const bd = parseBreakdown(deal.score_breakdown);
@@ -238,14 +199,6 @@ export function Sidebar() {
           </svg>
           New Scan
         </button>
-        <select
-          class="sidebar-group-select"
-          value={sidebarGroupBy.value}
-          onChange={(e) => { sidebarGroupBy.value = e.target.value; }}
-        >
-          <option value="strength">By Strength</option>
-          <option value="date">By Date</option>
-        </select>
       </div>
 
       {/* Deal list */}

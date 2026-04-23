@@ -8,7 +8,7 @@ export const settingsOpen = signal(false);
 export const previewOpen = signal(false);
 export const sidebarOpen = signal(true);
 export const sidebarTab = signal('inbox');
-export const sidebarGroupBy = signal('strength');
+export const unreadFilter = signal(false);
 
 export const scans = signal([]);
 export const deals = signal([]);
