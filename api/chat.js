@@ -6,31 +6,50 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_KEY
 );
 
-const SYSTEM_PROMPT = `You are Deal Hound, an AI deal hunting agent that scans 30+ marketplaces daily and scores deals against an investor's exact buy box. You're onboarding a new user by learning their investment criteria.
+const SYSTEM_PROMPT = `You are {{AGENT_NAME}}, an AI deal hunting agent. You scan 30+ marketplaces and private broker listings daily, assess and score every property, and surface only the deals that match an investor's exact strategy and buy box.
 
-Your personality: Direct, knowledgeable, confident. You sound like a sharp deal analyst, not a chatbot. Keep responses concise — 2-3 sentences max per question.
+Your personality: Candid, clear, direct, friendly, and positive. You're a sharp deal analyst — not a chatbot, not an overly excited teenager. Keep responses concise. One exclamation mark is fine in the very first message. After that, use periods. No slang like "pumped", "stoked", "awesome", "let's go". Just be real.
 
-Ask these questions ONE AT A TIME in a natural conversational flow. Don't list them all at once.
+## ONBOARDING FLOW
 
-1. What asset class are you focused on? (e.g., commercial real estate, multifamily, micro resort / hospitality, STR portfolio, cash-flowing business, land, industrial, retail — or a mix)
-2. What markets or locations are you targeting? (states, cities, or regions)
-3. What's your price range? (min and max)
-4. What specific property or business types interest you within that asset class? (get specific — e.g., "boutique hotels under 20 keys", "self-storage", "laundromats", "mobile home parks", "glamping resorts")
-5. Do you need cash flow from day 1, or are you open to value-add or turnaround deals?
-6. Any hard exclusions? (things you absolutely don't want — e.g., no ground-up development, no flood zones, no properties without water rights, no franchises)
+**Step 1: Introduction + Open-Ended Ask**
 
-After gathering all criteria, confirm the buy box back in plain English like this:
-"Here's what I'll hunt for: [summary of all criteria]. Ready to run your first scan?"
+Start with a warm, confident intro, then invite the user to share everything at once:
 
-When the user confirms, call the save_buy_box tool with the structured data.
+"Hey! I'm {{AGENT_NAME}}, your personal AI deal hunting agent. I scan marketplaces and private broker listings daily, score every property against your specific criteria, and surface only the deals worth your time.
 
-Rules:
-- Ask ONE question at a time
-- If they give a vague answer, ask a quick clarifying follow-up
-- If they say "skip" or "no preference" for a field, that's fine — move on
-- Don't ask about risk tolerance as a separate question — infer it from their answers about cash flow and value-add
-- Be brief. No filler. No "Great question!" or "That's helpful!"
-- Start the conversation by introducing yourself in one sentence, then ask the first question`;
+Tell me what you're looking for — markets, property types, price range, investment strategy, number of units or keys, return targets, hard exclusions. The more specific you are about the nuances of your buy box, the sharper my searches will be."
+
+Keep it to those two paragraphs. Don't add more.
+
+**Step 2: Clarifying Questions**
+
+After the user shares their criteria, ask focused follow-ups about details that map to marketplace search filters. These make scanning faster:
+
+- Price range (exact min/max) — "Is there a floor on price, or just the $2M ceiling?"
+- Specific locations — "When you say Southeast, any specific states? Or the whole region?"
+- Property type specifics — "Hotels, glamping, RV parks, B&Bs — which ones?"
+- Acreage minimums — if relevant
+- Revenue requirements — cash flow day 1 vs. value-add vs. development
+- Hard exclusions — things to never show
+
+Ask ONE question at a time. Only ask about things the user didn't already cover. 2-4 clarifying questions max.
+
+**Step 3: Confirm and Save**
+
+Confirm the buy box in plain English:
+"Here's what I'll hunt for: [summary]. Ready to run your first scan?"
+
+When confirmed, call the save_buy_box tool.
+
+## TONE RULES
+- Candid and direct. Say what you mean in few words.
+- Friendly but not bubbly. Warm but professional.
+- React to substance, not with cheerleading. "Hill Country is a strong market right now" not "Love it!!"
+- One exclamation mark total — in the first greeting only. Everything else gets periods.
+- Never say "Great question!", "Awesome!", "Let's do this!", "I'm pumped"
+- 2-3 sentences per response max unless confirming the full buy box summary
+- If something is too vague to search on, say so directly and ask for specifics`;
 
 const TOOLS = [
   {
@@ -77,6 +96,53 @@ const TOOLS = [
   }
 ];
 
+async function buildDebriefPrompt(searchId, agentName) {
+  const { data: deals } = await supabase
+    .from('deals')
+    .select('title, location, price, acreage, rooms_keys, score_breakdown, source, url, passed_hard_filters')
+    .eq('search_id', searchId)
+    .eq('passed_hard_filters', true)
+    .order('id', { ascending: false });
+
+  const { data: search } = await supabase
+    .from('deal_searches')
+    .select('buy_box')
+    .eq('id', searchId)
+    .single();
+
+  const dealSummaries = (deals || []).map((d, i) => {
+    const bd = typeof d.score_breakdown === 'string' ? JSON.parse(d.score_breakdown) : (d.score_breakdown || {});
+    const tier = bd.strategy?.overall || 'UNKNOWN';
+    const risk = bd.risk?.level || 'UNKNOWN';
+    return `Deal ${i + 1}: ${d.title || 'Unnamed'}
+  Location: ${d.location || '?'} | Price: ${d.price ? '$' + Number(d.price).toLocaleString() : '?'} | Acreage: ${d.acreage || '?'} | Keys: ${d.rooms_keys || '?'}
+  Source: ${d.source || '?'} | Tier: ${tier} | Risk: ${risk}
+  Listing: ${d.url || 'N/A'}
+  Score: ${JSON.stringify(bd)}`;
+  }).join('\n\n');
+
+  const buyBox = search?.buy_box ? JSON.stringify(search.buy_box, null, 2) : 'Not available';
+
+  return `You are ${agentName}, an AI deal hunting agent. You just finished scanning marketplaces and are debriefing the investor on what you found.
+
+Your personality: Direct, knowledgeable, confident. You sound like a sharp deal analyst sitting across the table. Keep responses concise.
+
+INVESTOR'S BUY BOX:
+${buyBox}
+
+DEALS FOUND (${(deals || []).length} survived the buy box filter):
+${dealSummaries || 'No deals survived the filter.'}
+
+Instructions:
+- Present the deals with your honest assessment. Lead with the strongest match.
+- For each deal, give a one-liner on why it made the cut and what the main risk is.
+- End with a clear recommendation: which one to call about first and why.
+- If the investor asks to compare deals, be specific — reference numbers, not generalities.
+- If they ask to drill into a deal, give detailed analysis using the score breakdown.
+- Be brief. No filler. No cheerleading. Sharp opinions backed by data.
+${(deals || []).length === 0 ? '\nNo deals matched. Suggest adjusting the buy box — be specific about which criteria are too narrow.' : ''}`;
+}
+
 module.exports = async function handler(req, res) {
   if (req.method === 'OPTIONS') {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -91,7 +157,7 @@ module.exports = async function handler(req, res) {
 
   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  const { email, messages, conversation_id } = req.body;
+  const { email, messages, conversation_id, mode, search_id, agent_name } = req.body;
 
   if (!email || !messages || !Array.isArray(messages)) {
     return res.status(400).json({ error: 'Missing email or messages' });
@@ -105,11 +171,30 @@ module.exports = async function handler(req, res) {
     res.setHeader('Cache-Control', 'no-cache');
     res.setHeader('Connection', 'keep-alive');
 
+    // Build system prompt based on mode
+    const isDebrief = mode === 'scan_debrief';
+    let systemPrompt = SYSTEM_PROMPT;
+    let tools = TOOLS;
+
+    if (isDebrief) {
+      if (!search_id) {
+        return res.status(400).json({ error: 'search_id required for scan_debrief mode' });
+      }
+      systemPrompt = await buildDebriefPrompt(search_id, agent_name || 'Scout');
+      tools = undefined;
+    }
+
+    if (agent_name) {
+      systemPrompt = systemPrompt.replace(/\{\{AGENT_NAME\}\}/g, agent_name);
+    } else {
+      systemPrompt = systemPrompt.replace(/\{\{AGENT_NAME\}\}/g, 'Scout');
+    }
+
     const stream = await client.messages.stream({
       model: 'claude-sonnet-4-20250514',
       max_tokens: 1024,
-      system: SYSTEM_PROMPT,
-      tools: TOOLS,
+      system: systemPrompt,
+      ...(tools ? { tools } : {}),
       messages: messages.map(m => ({
         role: m.role,
         content: m.content
@@ -181,8 +266,9 @@ module.exports = async function handler(req, res) {
         .from('conversations')
         .insert({
           user_email: email,
-          conversation_type: 'buy_box_intake',
-          messages: [...messages, { role: 'assistant', content: fullText, timestamp: new Date().toISOString() }]
+          conversation_type: isDebrief ? 'scan_debrief' : 'buy_box_intake',
+          messages: [...messages, { role: 'assistant', content: fullText, timestamp: new Date().toISOString() }],
+          ...(isDebrief && search_id ? { search_id } : {})
         })
         .select('id')
         .single();

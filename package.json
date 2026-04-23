@@ -1,8 +1,17 @@
 {
   "name": "dealhound-pro",
   "private": true,
+  "scripts": {
+    "build": "vite build"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
-    "@supabase/supabase-js": "^2.49.0"
+    "@preact/signals": "^2.9.0",
+    "@supabase/supabase-js": "^2.49.0",
+    "preact": "^10.29.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.5",
+    "vite": "^8.0.9"
   }
 }
