@@ -78,7 +78,28 @@ body::before {
   width: var(--sidebar-w); flex-shrink: 0;
   background: var(--surface); border-right: 1px solid var(--border);
   display: flex; flex-direction: column; overflow: hidden;
+  transition: width 0.2s ease;
 }
+#sidebar.sidebar-collapsed {
+  width: 48px; align-items: center;
+}
+.sidebar-toggle {
+  background: none; border: none; cursor: pointer;
+  color: var(--cream-sub); padding: 2px;
+  border-radius: 4px; display: flex; align-items: center;
+  justify-content: center; margin-left: auto; flex-shrink: 0;
+  transition: color 0.15s, background 0.15s;
+}
+.sidebar-toggle:hover { color: var(--gold); background: var(--surface2); }
+.sidebar-toggle-collapsed {
+  margin: 12px auto 8px; padding: 6px;
+}
+.sidebar-collapsed-icon {
+  width: 26px; height: 26px; background: var(--gold);
+  border-radius: 5px; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; margin-bottom: 12px;
+}
+.sidebar-collapsed-spacer { flex: 1; }
 .sidebar-logo {
   padding: 20px 16px 16px;
   display: flex; align-items: center; gap: 8px;
@@ -91,20 +112,10 @@ body::before {
   justify-content: center;
 }
 .sidebar-logo-text { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; }
-/* Sidebar tally */
+/* Sidebar tally — subtle caption */
 .sidebar-tally {
-  padding: 10px 16px; border-bottom: 1px solid var(--border);
-  cursor: pointer; transition: background 0.12s; flex-shrink: 0;
-}
-.sidebar-tally:hover { background: var(--surface2); }
-.sidebar-tally-num {
-  font-family: var(--serif); font-size: 1.5rem; font-weight: 400;
-  color: var(--gold); line-height: 1;
-}
-.sidebar-tally-label {
-  display: block; font-size: 0.65rem; font-weight: 500;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--cream-sub); margin-top: 2px;
+  font-size: 0.68rem; color: var(--cream-sub);
+  padding: 6px 12px 0; letter-spacing: 0.02em;
 }
 
 /* Tier-colored section headers */
@@ -125,6 +136,40 @@ body::before {
   transition: background 0.15s; letter-spacing: 0.03em;
 }
 .sidebar-new-scan:hover { background: rgba(36,61,53,0.15); }
+
+/* Sidebar tabs */
+.sidebar-tabs {
+  display: flex; border-bottom: 1px solid var(--border); flex-shrink: 0;
+}
+.sidebar-tab {
+  flex: 1; padding: 10px 8px; text-align: center;
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.03em;
+  color: var(--cream-sub); background: none; border: none;
+  cursor: pointer; transition: color 0.12s, box-shadow 0.12s;
+  border-bottom: 2px solid transparent;
+}
+.sidebar-tab:hover { color: var(--cream); }
+.sidebar-tab.active {
+  color: var(--gold); border-bottom-color: var(--gold); font-weight: 600;
+}
+
+/* Sidebar controls row */
+.sidebar-controls {
+  display: flex; gap: 6px; padding: 8px 12px;
+  border-bottom: 1px solid var(--border); flex-shrink: 0;
+}
+.sidebar-controls .sidebar-new-scan { flex: 1; }
+.sidebar-group-select {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; padding: 6px 8px; font-family: var(--sans);
+  font-size: 0.72rem; color: var(--cream-dim); cursor: pointer;
+  outline: none; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%231D1D1B' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 6px center;
+  padding-right: 22px;
+}
+.sidebar-group-select:focus { border-color: var(--gold); }
+
 .sidebar-section-hdr {
   padding: 14px 16px 6px; font-size: 0.72rem; font-weight: 700;
   letter-spacing: 0.06em; text-transform: uppercase; color: var(--cream-dim);
@@ -155,6 +200,31 @@ body::before {
   padding: 1px 5px; border-radius: 100px;
 }
 .sidebar-deal-meta { font-size: 0.72rem; color: var(--cream-sub); margin-top: 2px; }
+
+/* New dot indicator */
+.new-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green); flex-shrink: 0; margin-right: 6px;
+}
+
+/* Deal row title truncation */
+.sidebar-deal-title {
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  min-width: 0; flex: 1;
+}
+
+/* Deal row inline actions */
+.sidebar-deal-actions {
+  display: flex; gap: 2px; opacity: 0; transition: opacity 0.12s; flex-shrink: 0;
+}
+.sidebar-deal-row:hover .sidebar-deal-actions { opacity: 1; }
+.sidebar-action-btn {
+  background: none; border: none; cursor: pointer;
+  font-size: 0.78rem; color: var(--cream-sub); padding: 0 3px;
+  transition: color 0.12s; line-height: 1;
+}
+.sidebar-action-btn:hover { color: var(--gold); }
+.sidebar-action-btn.starred { color: var(--amber); }
 
 .sidebar-scan-row {
   padding: 8px 16px; cursor: pointer;
@@ -261,11 +331,13 @@ body::before {
   flex-shrink: 0; background: var(--surface);
   border-left: 1px solid var(--border);
   display: flex; flex-direction: column;
-  transition: width 0.22s ease, opacity 0.22s ease;
+  transition: width 0.2s ease;
   overflow: hidden;
 }
-#preview-panel.preview-open { width: var(--preview-w); opacity: 1; }
-#preview-panel.preview-collapsed { width: 0; opacity: 0; border-left: none; }
+#preview-panel.preview-open { width: var(--preview-w); }
+#preview-panel.preview-collapsed-strip {
+  width: 36px; align-items: center; justify-content: flex-start;
+}
 
 .preview-header {
   padding: 14px 16px; border-bottom: 1px solid var(--border);
@@ -273,14 +345,17 @@ body::before {
   font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--cream-sub); flex-shrink: 0;
 }
-.preview-close {
-  width: 24px; height: 24px; border-radius: 4px;
-  border: 1px solid var(--border); background: none;
-  cursor: pointer; color: var(--cream-dim); font-size: 1rem;
-  display: flex; align-items: center; justify-content: center;
-  transition: background 0.15s;
+.preview-toggle {
+  background: none; border: none; cursor: pointer;
+  color: var(--cream-sub); padding: 2px;
+  border-radius: 4px; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0;
+  transition: color 0.15s, background 0.15s;
 }
-.preview-close:hover { background: var(--surface2); }
+.preview-toggle:hover { color: var(--gold); background: var(--surface2); }
+.preview-toggle-collapsed {
+  margin: 12px auto 0; padding: 6px;
+}
 .preview-body { flex: 1; overflow-y: auto; padding: 12px; }
 .preview-body::-webkit-scrollbar { width: 3px; }
 .preview-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
@@ -387,7 +462,7 @@ body::before {
 .risk-very-high { color: var(--red); font-weight: 500; }
 
 /* DEAL DETAIL (preview) */
-.deal-detail { padding: 4px 0; }
+.deal-detail { padding: 4px 16px 0; }
 .deal-detail-top {
   display: flex; justify-content: space-between; align-items: start;
   margin-bottom: 14px;
@@ -421,6 +496,100 @@ body::before {
   padding: 8px; text-decoration: none; transition: border-color 0.15s;
 }
 .deal-detail-listing-link:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Tier accent bar */
+.deal-detail-accent {
+  height: 3px; border-radius: 3px 3px 0 0; margin: -4px -16px 12px -16px;
+}
+.accent-hot { background: var(--green); }
+.accent-strong { background: var(--gold); }
+.accent-watch { background: var(--amber); }
+
+/* Large tier badge */
+.deal-tier-badge-lg {
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 3px 10px; border-radius: 100px;
+}
+
+/* Badges row */
+.deal-detail-badges {
+  display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;
+}
+.detail-badge {
+  font-size: 0.65rem; font-weight: 500; letter-spacing: 0.04em;
+  text-transform: capitalize; padding: 2px 8px; border-radius: 4px;
+  background: var(--surface2); color: var(--cream-dim);
+  border: 1px solid var(--border);
+}
+
+/* Section labels */
+.deal-detail-section-label {
+  font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--cream-sub); margin-bottom: 6px;
+}
+
+/* Strategy match pills */
+.deal-detail-strategy { margin-bottom: 14px; }
+.deal-detail-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.strategy-pill {
+  font-size: 0.65rem; font-weight: 500; padding: 2px 8px;
+  border-radius: 100px; letter-spacing: 0.03em;
+}
+.strategy-strong-match { background: var(--green-dim); color: var(--green); border: 1px solid rgba(26,127,55,0.2); }
+.strategy-match { background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(36,61,53,0.2); }
+.strategy-weak-match { background: var(--amber-dim); color: var(--amber); border: 1px solid rgba(180,83,9,0.2); }
+.strategy-no-match { background: var(--red-dim); color: var(--red); border: 1px solid rgba(185,28,28,0.2); }
+
+/* Risk breakdown bars */
+.deal-detail-risks { margin-bottom: 14px; }
+.risk-bar-row {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 4px;
+}
+.risk-bar-label {
+  font-size: 0.65rem; color: var(--cream-sub); width: 56px;
+  text-align: right; flex-shrink: 0;
+}
+.risk-bar-track {
+  flex: 1; height: 4px; background: var(--surface2);
+  border-radius: 2px; overflow: hidden;
+}
+.risk-bar-fill {
+  height: 100%; border-radius: 2px; transition: width 0.3s ease;
+}
+.risk-bar-low { background: var(--green); }
+.risk-bar-mid { background: var(--amber); }
+.risk-bar-high { background: var(--red); }
+.risk-bar-val {
+  font-size: 0.62rem; color: var(--cream-sub); width: 24px; flex-shrink: 0;
+}
+
+/* Agent assessment with tier tint */
+.deal-detail-assessment { margin-bottom: 14px; padding: 10px 12px; border-radius: 6px; }
+.assessment-hot { background: var(--green-dim); border: 1px solid rgba(26,127,55,0.12); }
+.assessment-strong { background: var(--gold-dim); border: 1px solid rgba(36,61,53,0.12); }
+.assessment-watch { background: var(--surface2); border: 1px solid var(--border); }
+.deal-detail-assessment p {
+  font-size: 0.82rem; color: var(--cream-dim); line-height: 1.5;
+}
+
+/* Description excerpt */
+.deal-detail-description { margin-bottom: 14px; }
+.deal-detail-desc-text {
+  font-size: 0.78rem; color: var(--cream-sub); line-height: 1.5;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Breakdown button for watch deals */
+.btn-breakdown {
+  display: inline-block; margin-top: 10px;
+  background: var(--gold-dim); color: var(--gold);
+  border: 1px solid rgba(36,61,53,0.2); border-radius: 6px;
+  padding: 8px 16px; font-family: var(--sans);
+  font-size: 0.78rem; font-weight: 500; cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-breakdown:hover { background: rgba(36,61,53,0.15); }
 
 /* SETTINGS */
 #settings-overlay {

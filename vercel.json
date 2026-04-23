@@ -8,7 +8,9 @@
     "api/user-data.js": { "maxDuration": 10 },
     "api/deal-chat.js": { "maxDuration": 60 },
     "api/conversation.js": { "maxDuration": 10 },
-    "api/star-deal.js": { "maxDuration": 10 }
+    "api/star-deal.js": { "maxDuration": 10 },
+    "api/view-deal.js": { "maxDuration": 10 },
+    "api/archive-deal.js": { "maxDuration": 10 }
   },
   "rewrites": [
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },
