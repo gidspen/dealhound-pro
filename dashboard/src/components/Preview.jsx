@@ -1,5 +1,5 @@
 import { useEffect } from 'preact/hooks';
-import { view, previewOpen, currentDeal, dealsForCurrentScan, currentScan, scans, starredDealIds, activeThreads, deals, activeThreadId } from '../lib/state.js';
+import { view, previewOpen, previewWidth, currentDeal, dealsForCurrentScan, currentScan, scans, starredDealIds, activeThreads, deals, activeThreadId } from '../lib/state.js';
 import { switchThread, loadUserData, toggleStar } from '../lib/api.js';
 import { fmtPrice, tierFromStrategy, tierLabel, riskClass, parseBreakdown, fmtDaysOnMarket, riskDimensions, strategyLabels } from '../lib/utils.js';
 
@@ -260,7 +260,7 @@ export function Preview() {
   }
 
   return (
-    <div id="preview-panel" class="preview-open">
+    <div id="preview-panel" class="preview-open" style={`width: ${previewWidth.value}px`}>
       {view.value === 'scan' && <ScanDealList />}
       {view.value === 'deal' && <DealDetail />}
     </div>

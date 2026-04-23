@@ -1,7 +1,7 @@
 import { batch } from '@preact/signals';
 import {
   email, view, activeThreadId, scans, activeThreads,
-  settingsOpen, sidebarOpen, sidebarTab, unreadFilter,
+  settingsOpen, sidebarOpen, sidebarWidth, sidebarTab, unreadFilter,
   starredDealIds, viewedDealIds, archivedDealIds,
   inboxDeals, trackingDeals, newDealCount, previewOpen
 } from '../lib/state.js';
@@ -171,7 +171,7 @@ export function Sidebar() {
   const trackCount = trackingDeals.value.length;
 
   return (
-    <div id="sidebar">
+    <div id="sidebar" style={`width: ${sidebarWidth.value}px`}>
       {/* Logo header */}
       <div class="sidebar-logo">
         <div class="sidebar-logo-icon">

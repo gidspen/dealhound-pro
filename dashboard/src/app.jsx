@@ -1,10 +1,40 @@
 import { useEffect } from 'preact/hooks';
-import { email, view, scans } from './lib/state.js';
+import { email, view, scans, sidebarOpen, sidebarWidth, previewOpen, previewWidth } from './lib/state.js';
 import { loadUserData, switchThread } from './lib/api.js';
 import { Sidebar } from './components/Sidebar.jsx';
 import { Chat } from './components/Chat.jsx';
 import { Preview } from './components/Preview.jsx';
 import { Settings } from './components/Settings.jsx';
+
+function ResizeHandle({ edge, widthSignal, minW, maxW }) {
+  const onPointerDown = (e) => {
+    e.preventDefault();
+    const startX = e.clientX;
+    const startW = widthSignal.value;
+    const dir = edge === 'left' ? -1 : 1;
+
+    document.getElementById('app-shell').classList.add('resizing');
+
+    const onMove = (e) => {
+      const delta = (e.clientX - startX) * dir;
+      widthSignal.value = Math.min(maxW, Math.max(minW, startW + delta));
+    };
+    const onUp = () => {
+      document.removeEventListener('pointermove', onMove);
+      document.removeEventListener('pointerup', onUp);
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+      document.getElementById('app-shell').classList.remove('resizing');
+    };
+
+    document.body.style.cursor = 'col-resize';
+    document.body.style.userSelect = 'none';
+    document.addEventListener('pointermove', onMove);
+    document.addEventListener('pointerup', onUp);
+  };
+
+  return <div class={`resize-handle resize-${edge}`} onPointerDown={onPointerDown} />;
+}
 
 function EmailGate() {
   const handleSubmit = async (e) => {
@@ -70,7 +100,9 @@ export function App() {
     <div id="app-shell">
       <Settings />
       <Sidebar />
+      {sidebarOpen.value && <ResizeHandle edge="right" widthSignal={sidebarWidth} minW={180} maxW={480} />}
       <Chat />
+      {previewOpen.value && <ResizeHandle edge="left" widthSignal={previewWidth} minW={280} maxW={600} />}
       <Preview />
     </div>
   );

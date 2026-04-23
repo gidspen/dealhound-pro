@@ -6,7 +6,9 @@ export const view = signal('gate');
 export const activeThreadId = signal(null);
 export const settingsOpen = signal(false);
 export const previewOpen = signal(false);
+export const previewWidth = signal(400);
 export const sidebarOpen = signal(true);
+export const sidebarWidth = signal(220);
 export const sidebarTab = signal('inbox');
 export const unreadFilter = signal(false);
 
