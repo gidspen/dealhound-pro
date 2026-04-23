@@ -1,5 +1,6 @@
 import {
   email, agentName, scans, deals, activeThreads, starredDealIds,
+  viewedDealIds, archivedDealIds,
   chatMessages, chatConversationId, chatStreaming,
   cacheGet, cacheSet, activeThreadId
 } from './state.js';
@@ -16,6 +17,8 @@ export async function loadUserData() {
   deals.value = data.deals || [];
   activeThreads.value = data.active_threads || [];
   starredDealIds.value = new Set(data.deals.filter(d => d.starred).map(d => d.id));
+  viewedDealIds.value = new Set(data.deals.filter(d => d.viewed).map(d => d.id));
+  archivedDealIds.value = new Set(data.deals.filter(d => d.archived).map(d => d.id));
 }
 
 export async function loadConversation(conversationId) {
@@ -28,6 +31,11 @@ export async function loadConversation(conversationId) {
 
 export async function switchThread(threadId, type, conversationId) {
   activeThreadId.value = threadId;
+
+  // Auto-mark deal as viewed when selected
+  if (type === 'deal') {
+    viewDeal(threadId);
+  }
 
   const cached = cacheGet(threadId);
   if (cached) {
@@ -155,5 +163,48 @@ export async function toggleStar(dealId) {
     const reverted = new Set(starredDealIds.value);
     if (currentlyStarred) reverted.add(dealId); else reverted.delete(dealId);
     starredDealIds.value = reverted;
+  }
+}
+
+export async function viewDeal(dealId) {
+  if (viewedDealIds.value.has(dealId)) return;
+
+  const updated = new Set(viewedDealIds.value);
+  updated.add(dealId);
+  viewedDealIds.value = updated;
+
+  try {
+    const res = await fetch(`${API_BASE}/api/view-deal`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.value, deal_id: dealId })
+    });
+    if (!res.ok) throw new Error();
+  } catch {
+    const reverted = new Set(viewedDealIds.value);
+    reverted.delete(dealId);
+    viewedDealIds.value = reverted;
+  }
+}
+
+export async function archiveDeal(dealId) {
+  const currentlyArchived = archivedDealIds.value.has(dealId);
+  const newArchived = !currentlyArchived;
+
+  const updated = new Set(archivedDealIds.value);
+  if (newArchived) updated.add(dealId); else updated.delete(dealId);
+  archivedDealIds.value = updated;
+
+  try {
+    const res = await fetch(`${API_BASE}/api/archive-deal`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.value, deal_id: dealId, archived: newArchived })
+    });
+    if (!res.ok) throw new Error();
+  } catch {
+    const reverted = new Set(archivedDealIds.value);
+    if (currentlyArchived) reverted.add(dealId); else reverted.delete(dealId);
+    archivedDealIds.value = reverted;
   }
 }

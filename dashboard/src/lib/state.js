@@ -6,11 +6,16 @@ export const view = signal('gate');
 export const activeThreadId = signal(null);
 export const settingsOpen = signal(false);
 export const previewOpen = signal(false);
+export const sidebarOpen = signal(true);
+export const sidebarTab = signal('inbox');
+export const sidebarGroupBy = signal('strength');
 
 export const scans = signal([]);
 export const deals = signal([]);
 export const activeThreads = signal([]);
 export const starredDealIds = signal(new Set());
+export const viewedDealIds = signal(new Set());
+export const archivedDealIds = signal(new Set());
 
 export const chatMessages = signal([]);
 export const chatConversationId = signal(null);
@@ -42,9 +47,18 @@ export function cacheSet(threadId, data) {
   }
 }
 
-export const activeDeals = computed(() => {
-  const threadDealIds = new Set(activeThreads.value.map(t => t.deal_id));
-  return deals.value.filter(d => threadDealIds.has(d.id));
+export const inboxDeals = computed(() => {
+  return deals.value.filter(d =>
+    !archivedDealIds.value.has(d.id) && !starredDealIds.value.has(d.id)
+  );
+});
+
+export const trackingDeals = computed(() => {
+  return deals.value.filter(d => starredDealIds.value.has(d.id));
+});
+
+export const newDealCount = computed(() => {
+  return inboxDeals.value.filter(d => !viewedDealIds.value.has(d.id)).length;
 });
 
 export const currentScan = computed(() => {
