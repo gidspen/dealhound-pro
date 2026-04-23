@@ -1,4 +1,4 @@
-import { email, agentName, view, activeThreadId, scans, activeDeals, activeThreads, settingsOpen } from '../lib/state.js';
+import { email, agentName, view, activeThreadId, scans, deals, activeThreads, settingsOpen } from '../lib/state.js';
 import { switchThread } from '../lib/api.js';
 import { tierFromStrategy, tierLabel, fmtPrice, parseBreakdown } from '../lib/utils.js';
 
@@ -17,37 +17,40 @@ function SidebarDealRow({ deal }) {
     <div class={`sidebar-deal-row ${isActive ? 'active' : ''}`} onClick={handleClick}>
       <div class="sidebar-deal-name">
         <span>{deal.title || 'Untitled'}</span>
-        <span class={`sidebar-tier tier-${tier}`}>{tierLabel(tier)}</span>
       </div>
       <div class="sidebar-deal-meta">{fmtPrice(deal.price)} · {deal.location?.split(',')[0] || ''}</div>
     </div>
   );
 }
 
-function SidebarScanRow({ scan }) {
-  const isActive = view.value === 'scan' && activeThreadId.value === scan.id;
-  const date = scan.run_at ? new Date(scan.run_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '';
-
-  const handleClick = () => {
-    view.value = 'scan';
-    switchThread(scan.id, 'scan', scan.conversation_id);
-  };
-
-  return (
-    <div class={`sidebar-scan-row ${isActive ? 'active' : ''}`} onClick={handleClick}>
-      <div class="sidebar-scan-name">{date} Scan</div>
-      <div class="sidebar-scan-meta">{scan.deal_count || 0} deals</div>
-    </div>
-  );
-}
-
 export function Sidebar() {
-  const activeDealsList = activeDeals.value;
-  const completedScans = scans.value.filter(s => s.status === 'complete');
+  const allDeals = deals.value;
+
+  // Group deals by tier
+  const grouped = { hot: [], strong: [], watch: [] };
+  allDeals.forEach(deal => {
+    const bd = parseBreakdown(deal.score_breakdown);
+    const tier = tierFromStrategy(bd.strategy?.overall);
+    if (grouped[tier]) grouped[tier].push(deal);
+  });
+
+  // Total deals analyzed = all deals across all scans (including filtered)
+  // For now, use the deals we have + a rough multiplier for filtered ones
+  const totalAnalyzed = scans.value.reduce((sum, s) => sum + (s.deal_count || 0), 0);
 
   const startNewScan = () => {
     view.value = 'onboarding';
     activeThreadId.value = null;
+  };
+
+  // Open the most recent scan debrief
+  const openLatestScan = () => {
+    const completedScans = scans.value.filter(s => s.status === 'complete');
+    const best = completedScans.find(s => s.deal_count > 0) || completedScans[0];
+    if (best) {
+      view.value = 'scan';
+      switchThread(best.id, 'scan', best.conversation_id);
+    }
   };
 
   return (
@@ -59,6 +62,14 @@ export function Sidebar() {
         <span class="sidebar-logo-text">Deal Hound</span>
       </div>
 
+      {/* Running tally */}
+      {totalAnalyzed > 0 && (
+        <div class="sidebar-tally" onClick={openLatestScan}>
+          <span class="sidebar-tally-num">{totalAnalyzed.toLocaleString()}</span>
+          <span class="sidebar-tally-label">deals analyzed</span>
+        </div>
+      )}
+
       <div class="sidebar-scroll">
         <div class="sidebar-section-pad">
           <button class="sidebar-new-scan" onClick={startNewScan}>
@@ -69,20 +80,32 @@ export function Sidebar() {
           </button>
         </div>
 
-        <div class="sidebar-section-hdr">Active Deals</div>
-        {activeDealsList.length === 0 ? (
-          <div class="sidebar-empty">None yet</div>
-        ) : (
-          activeDealsList.map(deal => <SidebarDealRow key={deal.id} deal={deal} />)
+        {/* HOT */}
+        {grouped.hot.length > 0 && (
+          <>
+            <div class="sidebar-section-hdr sidebar-hdr-hot">Hot · {grouped.hot.length}</div>
+            {grouped.hot.map(deal => <SidebarDealRow key={deal.id} deal={deal} />)}
+          </>
         )}
 
-        <div class="sidebar-divider" />
+        {/* STRONG */}
+        {grouped.strong.length > 0 && (
+          <>
+            <div class="sidebar-section-hdr sidebar-hdr-strong">Strong · {grouped.strong.length}</div>
+            {grouped.strong.map(deal => <SidebarDealRow key={deal.id} deal={deal} />)}
+          </>
+        )}
 
-        <div class="sidebar-section-hdr">Scans</div>
-        {completedScans.length === 0 ? (
-          <div class="sidebar-empty">No scans yet</div>
-        ) : (
-          completedScans.map(scan => <SidebarScanRow key={scan.id} scan={scan} />)
+        {/* WATCH */}
+        {grouped.watch.length > 0 && (
+          <>
+            <div class="sidebar-section-hdr sidebar-hdr-watch">Watch · {grouped.watch.length}</div>
+            {grouped.watch.map(deal => <SidebarDealRow key={deal.id} deal={deal} />)}
+          </>
+        )}
+
+        {allDeals.length === 0 && (
+          <div class="sidebar-empty">No deals yet — run a scan</div>
         )}
 
         <div class="sidebar-divider" />
