@@ -20,3 +20,16 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      - name: WhatsApp alert on failure
+        if: failure()
+        run: |
+          curl -s -X POST "https://api.twilio.com/2010-04-01/Accounts/$TWILIO_ACCOUNT_SID/Messages.json" \
+            -u "$TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN" \
+            -d "From=$TWILIO_WHATSAPP_FROM" \
+            -d "To=$GIDEON_WHATSAPP" \
+            -d "Body=Deal Hound CI failed on ${GITHUB_REF_NAME}. Check: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+        env:
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_WHATSAPP_FROM: ${{ secrets.TWILIO_WHATSAPP_FROM }}
+          GIDEON_WHATSAPP: ${{ secrets.GIDEON_WHATSAPP }}
