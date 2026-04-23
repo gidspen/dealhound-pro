@@ -163,7 +163,10 @@ export function Sidebar() {
   }
 
   // ── Expanded state ─────────────────────────────────────────────────────────
-  const activeDeals = sidebarTab.value === 'tracking' ? trackingDeals.value : inboxDeals.value;
+  let activeDeals = sidebarTab.value === 'tracking' ? trackingDeals.value : inboxDeals.value;
+  if (sidebarTab.value === 'inbox' && unreadFilter.value) {
+    activeDeals = activeDeals.filter(d => !viewedDealIds.value.has(d.id));
+  }
   const newCount = newDealCount.value;
   const trackCount = trackingDeals.value.length;
 
@@ -204,7 +207,7 @@ export function Sidebar() {
         </button>
       </div>
 
-      {/* Controls: New Scan + Group By */}
+      {/* Controls: New Scan + Unread filter (inbox only) */}
       <div class="sidebar-controls">
         <button class="sidebar-new-scan" style="flex: 1;" onClick={startNewScan}>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -212,6 +215,16 @@ export function Sidebar() {
           </svg>
           New Scan
         </button>
+        {sidebarTab.value === 'inbox' && (
+          <button
+            class={`sidebar-filter-btn ${unreadFilter.value ? 'active' : ''}`}
+            onClick={() => { unreadFilter.value = !unreadFilter.value; }}
+            title={unreadFilter.value ? 'Show all deals' : 'Show unread only'}
+          >
+            <span class="filter-dot" />
+            Unread
+          </button>
+        )}
       </div>
 
       {/* Deal list */}
