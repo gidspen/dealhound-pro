@@ -1,5 +1,5 @@
 import { useEffect } from 'preact/hooks';
-import { view, previewOpen, currentDeal, dealsForCurrentScan, currentScan, starredDealIds, activeThreads, deals, activeThreadId } from '../lib/state.js';
+import { view, previewOpen, currentDeal, dealsForCurrentScan, currentScan, scans, starredDealIds, activeThreads, deals, activeThreadId } from '../lib/state.js';
 import { switchThread, loadUserData, toggleStar } from '../lib/api.js';
 import { fmtPrice, tierFromStrategy, tierLabel, riskClass, parseBreakdown, fmtDaysOnMarket, riskDimensions, strategyLabels } from '../lib/utils.js';
 
@@ -46,6 +46,19 @@ function ScanDealList() {
     const tier = tierFromStrategy(bd.strategy?.overall);
     if (grouped[tier]) grouped[tier].push(deal);
   });
+
+  const scanMap = new Map();
+  scans.value.forEach(s => scanMap.set(s.id, s));
+
+  const sortByRecency = (a, b) => {
+    const timeA = scanMap.get(a.search_id)?.run_at ? new Date(scanMap.get(a.search_id).run_at).getTime() : 0;
+    const timeB = scanMap.get(b.search_id)?.run_at ? new Date(scanMap.get(b.search_id).run_at).getTime() : 0;
+    return timeB - timeA;
+  };
+
+  grouped.hot.sort(sortByRecency);
+  grouped.strong.sort(sortByRecency);
+  grouped.watch.sort(sortByRecency);
 
   return (
     <>
