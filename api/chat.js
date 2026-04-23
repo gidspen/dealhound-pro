@@ -224,7 +224,17 @@ module.exports = async function handler(req, res) {
         }
       } else if (event.type === 'content_block_stop' && toolUse && toolUse.name === 'save_buy_box') {
         // Tool call complete — save the buy box
-        const buyBox = JSON.parse(toolUse.partial);
+        let buyBox;
+        try {
+          buyBox = JSON.parse(toolUse.partial);
+        } catch (parseErr) {
+          console.error('Buy box JSON parse error:', parseErr.message, 'raw:', toolUse.partial);
+          res.write(`data: ${JSON.stringify({ type: 'error', error: 'Failed to save buy box: invalid tool response' })}\n\n`);
+          toolUse = null;
+          continue;
+        }
+
+        console.log('Saving buy box for:', email, 'data:', JSON.stringify(buyBox));
 
         // Create the deal_search record
         const { data: search, error: searchError } = await supabase
@@ -239,7 +249,8 @@ module.exports = async function handler(req, res) {
           .single();
 
         if (searchError) {
-          res.write(`data: ${JSON.stringify({ type: 'error', error: 'Failed to save buy box' })}\n\n`);
+          console.error('Buy box save error:', JSON.stringify(searchError));
+          res.write(`data: ${JSON.stringify({ type: 'error', error: 'Failed to save buy box: ' + searchError.message })}\n\n`);
         } else {
           res.write(`data: ${JSON.stringify({
             type: 'buy_box_saved',
