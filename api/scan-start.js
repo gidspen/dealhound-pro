@@ -1,4 +1,5 @@
 const { createClient } = require('@supabase/supabase-js');
+const runPipeline = require('./scan-pipeline');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -52,20 +53,17 @@ module.exports = async function handler(req, res) {
       { search_id, step: 'init', status: 'complete', message: 'Buy box loaded — starting scan', listing_count: null },
     ]);
 
-    // Fire the real scan pipeline (non-blocking)
-    // The pipeline function scrapes marketplaces, filters, scores with Claude,
-    // and updates scan_progress + deal_searches as it goes
-    const pipelineUrl = `https://${req.headers.host}/api/scan-pipeline`;
-    fetch(pipelineUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ search_id }),
-    }).catch(err => console.error('Pipeline trigger failed:', err.message));
+    // Send response immediately so the frontend starts polling
+    res.json({ status: 'scanning', search_id });
 
-    return res.json({ status: 'scanning', search_id });
+    // Run the pipeline inline after the response is sent
+    // Vercel keeps the function alive for maxDuration (300s) after res.end()
+    await runPipeline(search_id);
 
   } catch (err) {
     console.error('Scan start error:', err);
-    return res.status(500).json({ error: 'Internal server error' });
+    if (!res.headersSent) {
+      return res.status(500).json({ error: 'Internal server error' });
+    }
   }
 };
