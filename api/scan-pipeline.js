@@ -9,138 +9,83 @@ const supabase = createClient(
 const anthropic = new Anthropic();
 
 // ── Marketplace scrapers ────────────────────────────────────────────
+// Tested against live sites 2026-04-23. LandSearch/BizBuySell/Crexi/LoopNet
+// all return 403 (bot protection). LandWatch and LandAndFarm work via
+// direct HTTP fetch — they share the same platform and HTML structure.
 
 const SOURCES = [
   {
-    name: 'LandSearch',
-    step: 'scrape_landsearch',
-    message: 'Searching LandSearch for resort & cabin listings...',
-    scrape: scrapeLandSearch,
-  },
-  {
     name: 'LandWatch',
     step: 'scrape_landwatch',
-    message: 'Searching LandWatch for hospitality properties...',
+    message: 'Searching LandWatch for land & hospitality properties...',
     scrape: scrapeLandWatch,
   },
   {
-    name: 'BizBuySell',
-    step: 'scrape_bizbuysell',
-    message: 'Searching BizBuySell for operating businesses...',
-    scrape: scrapeBizBuySell,
+    name: 'Land And Farm',
+    step: 'scrape_landandfarm',
+    message: 'Searching Land And Farm for rural properties...',
+    scrape: scrapeLandAndFarm,
   },
 ];
 
-// ── LandSearch scraper ──────────────────────────────────────────────
+// ── LandWatch / LandAndFarm shared parser ───────────────────────────
+// Both sites share the same platform. Listing cards use:
+//   - href="/county-state-type-for-sale/pid/123456" for listing URLs
+//   - <span class="_47a280d">$1,234,567</span> for prices
+//   - Acreage in nearby text as "123 Acres" or "42.7 ac"
+// Verified against live HTML 2026-04-23.
 
-async function scrapeLandSearch(buyBox) {
+function parseListingCards(html, state, sourceName, baseUrl) {
   const listings = [];
 
-  for (const location of buyBox.locations || []) {
-    const state = extractState(location);
-    if (!state) continue;
-
-    const slug = state.toLowerCase().replace(/\s+/g, '-');
-    // LandSearch supports property type filters in the URL
-    const propertyTypes = mapToLandSearchTypes(buyBox.property_types);
-
-    for (const pType of propertyTypes) {
-      const url = `https://www.landsearch.com/${slug}/${pType}`;
-      try {
-        const html = await fetchPage(url);
-        const parsed = parseLandSearchListings(html, state);
-        listings.push(...parsed);
-      } catch (e) {
-        console.error(`LandSearch fetch failed for ${url}:`, e.message);
-      }
-    }
-  }
-
-  return dedupeListings(listings, 'LandSearch');
-}
-
-function mapToLandSearchTypes(propertyTypes) {
-  const mapping = {
-    micro_resort: ['recreational-land', 'hunting-land', 'lakefront-land'],
-    glamping: ['recreational-land', 'lakefront-land'],
-    boutique_hotel: ['commercial-land'],
-    campground: ['recreational-land'],
-    land: ['land'],
-  };
-
-  const result = new Set();
-  for (const pt of propertyTypes || []) {
-    const mapped = mapping[pt] || ['commercial-land'];
-    mapped.forEach(m => result.add(m));
-  }
-  return result.size > 0 ? [...result] : ['recreational-land'];
-}
-
-function parseLandSearchListings(html, state) {
-  const listings = [];
-  // LandSearch listing cards have a consistent pattern
-  const cardRegex = /<a[^>]*class="[^"]*result[^"]*"[^>]*href="([^"]*)"[^>]*>[\s\S]*?<\/a>/gi;
-  const titleRegex = /<h2[^>]*>([\s\S]*?)<\/h2>/i;
-  const priceRegex = /\$[\d,]+/;
-  const acresRegex = /([\d,.]+)\s*(?:acres?|ac)/i;
-  const locationRegex = /<span[^>]*class="[^"]*location[^"]*"[^>]*>([\s\S]*?)<\/span>/i;
-
+  // Both LandWatch and LandAndFarm use span._47a280d for prices.
+  // LandWatch links: /county-state-type-for-sale/pid/123456
+  // LandAndFarm links: /property/property-name-12345678/
+  // Match: listing href followed by price span within the same card area
+  const cardPattern = /href="(\/(?:property\/[^"]+|[^"]*\/pid\/\d+))"[\s\S]*?<span[^>]*class="_47a280d"[^>]*>(\$[\d,]+)<\/span>/gi;
   let match;
-  while ((match = cardRegex.exec(html)) !== null) {
-    const card = match[0];
+
+  while ((match = cardPattern.exec(html)) !== null) {
     const url = match[1];
+    const price = parsePrice(match[2]);
+    if (!price) continue;
 
-    const title = titleRegex.exec(card)?.[1]?.replace(/<[^>]*>/g, '').trim() || '';
-    const priceMatch = priceRegex.exec(card);
-    const price = priceMatch ? parsePrice(priceMatch[0]) : null;
-    const acresMatch = acresRegex.exec(card);
+    // Extract title from URL slug
+    let title;
+    if (url.includes('/property/')) {
+      // LandAndFarm: /property/luxury-equestrian-estate-41050259/
+      title = url.split('/property/')[1]?.replace(/[-/]/g, ' ').replace(/\d{6,}/, '').trim();
+    } else {
+      // LandWatch: /county-state-type-for-sale/pid/123
+      title = url.split('/').filter(Boolean)[0] || '';
+      title = title.replace(/-for-sale$/, '').replace(/-/g, ' ');
+    }
+    title = title.replace(/\b\w/g, c => c.toUpperCase()).trim();
+
+    // Look for acreage in the surrounding 500 chars after this match
+    const after = html.substring(match.index, match.index + 500);
+    const acresMatch = after.match(/([\d,.]+)\s*(?:Acres?|ac\b)/i);
     const acreage = acresMatch ? parseFloat(acresMatch[1].replace(',', '')) : null;
-    const loc = locationRegex.exec(card)?.[1]?.replace(/<[^>]*>/g, '').trim() || state;
 
-    if (title && price) {
-      listings.push({
-        title,
-        price,
-        acreage,
-        location: loc,
-        url: url.startsWith('http') ? url : `https://www.landsearch.com${url}`,
-        source: 'LandSearch',
-        property_type: 'land',
-      });
-    }
+    // Extract county from URL (LandWatch pattern)
+    const countyMatch = url.match(/\/([a-z-]+)-county-/i);
+    const county = countyMatch
+      ? countyMatch[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) + ' County'
+      : null;
+
+    listings.push({
+      title: title || `Property in ${state}`,
+      price,
+      acreage,
+      location: county ? `${county}, ${state}` : state,
+      url: `${baseUrl}${url}`,
+      source: sourceName,
+      property_type: 'land',
+    });
   }
 
-  // Fallback: try a more generic parsing approach if regex found nothing
-  if (listings.length === 0) {
-    const jsonLdRegex = /<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
-    let jsonMatch;
-    while ((jsonMatch = jsonLdRegex.exec(html)) !== null) {
-      try {
-        const data = JSON.parse(jsonMatch[1]);
-        if (data['@type'] === 'ItemList' && data.itemListElement) {
-          for (const item of data.itemListElement) {
-            const thing = item.item || item;
-            if (thing.name && thing.offers?.price) {
-              listings.push({
-                title: thing.name,
-                price: parseFloat(thing.offers.price),
-                acreage: null,
-                location: thing.address?.addressLocality || state,
-                url: thing.url || '',
-                source: 'LandSearch',
-                property_type: 'land',
-              });
-            }
-          }
-        }
-      } catch (e) { /* skip invalid JSON-LD */ }
-    }
-  }
-
-  return listings;
+  return dedupeListings(listings, sourceName);
 }
-
-// ── LandWatch scraper ───────────────────────────────────────────────
 
 async function scrapeLandWatch(buyBox) {
   const listings = [];
@@ -154,84 +99,17 @@ async function scrapeLandWatch(buyBox) {
 
     try {
       const html = await fetchPage(url);
-      const parsed = parseLandWatchListings(html, state);
+      const parsed = parseListingCards(html, state, 'LandWatch', 'https://www.landwatch.com');
       listings.push(...parsed);
     } catch (e) {
-      console.error(`LandWatch fetch failed for ${url}:`, e.message);
-    }
-  }
-
-  return dedupeListings(listings, 'LandWatch');
-}
-
-function parseLandWatchListings(html, state) {
-  const listings = [];
-
-  // Try JSON-LD structured data first
-  const jsonLdRegex = /<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
-  let jsonMatch;
-  while ((jsonMatch = jsonLdRegex.exec(html)) !== null) {
-    try {
-      const data = JSON.parse(jsonMatch[1]);
-      const items = data['@type'] === 'ItemList' ? data.itemListElement :
-                    Array.isArray(data) ? data : [];
-      for (const item of items) {
-        const thing = item.item || item;
-        if (thing.name && thing.offers) {
-          listings.push({
-            title: thing.name,
-            price: parseFloat(thing.offers.price || thing.offers.lowPrice || 0),
-            acreage: null,
-            location: thing.address?.addressLocality
-              ? `${thing.address.addressLocality}, ${thing.address.addressRegion || state}`
-              : state,
-            url: thing.url || '',
-            source: 'LandWatch',
-            property_type: 'land',
-          });
-        }
-      }
-    } catch (e) { /* skip */ }
-  }
-
-  // Fallback: HTML card parsing
-  if (listings.length === 0) {
-    const cardRegex = /<article[^>]*>[\s\S]*?<\/article>/gi;
-    const titleRegex = /<h2[^>]*>([\s\S]*?)<\/h2>/i;
-    const priceRegex = /\$[\d,]+/;
-    const acresRegex = /([\d,.]+)\s*(?:acres?|ac)/i;
-    const hrefRegex = /href="([^"]*listing[^"]*)"/i;
-
-    let match;
-    while ((match = cardRegex.exec(html)) !== null) {
-      const card = match[0];
-      const title = titleRegex.exec(card)?.[1]?.replace(/<[^>]*>/g, '').trim() || '';
-      const priceMatch = priceRegex.exec(card);
-      const price = priceMatch ? parsePrice(priceMatch[0]) : null;
-      const acresMatch = acresRegex.exec(card);
-      const acreage = acresMatch ? parseFloat(acresMatch[1].replace(',', '')) : null;
-      const href = hrefRegex.exec(card)?.[1] || '';
-
-      if (title && price) {
-        listings.push({
-          title,
-          price,
-          acreage,
-          location: state,
-          url: href.startsWith('http') ? href : `https://www.landwatch.com${href}`,
-          source: 'LandWatch',
-          property_type: 'land',
-        });
-      }
+      console.error(`LandWatch failed for ${url}:`, e.message);
     }
   }
 
   return listings;
 }
 
-// ── BizBuySell scraper ──────────────────────────────────────────────
-
-async function scrapeBizBuySell(buyBox) {
+async function scrapeLandAndFarm(buyBox) {
   const listings = [];
 
   for (const location of buyBox.locations || []) {
@@ -239,79 +117,15 @@ async function scrapeBizBuySell(buyBox) {
     if (!state) continue;
 
     const slug = state.toLowerCase().replace(/\s+/g, '-');
-    // BizBuySell hospitality category
-    const url = `https://www.bizbuysell.com/${slug}-businesses-for-sale/hospitality-and-recreation/`;
+    const stateAbbrev = getStateAbbrev(state);
+    const url = `https://www.landandfarm.com/search/${stateAbbrev}/all-land/`;
 
     try {
       const html = await fetchPage(url);
-      const parsed = parseBizBuySellListings(html, state);
+      const parsed = parseListingCards(html, state, 'Land And Farm', 'https://www.landandfarm.com');
       listings.push(...parsed);
     } catch (e) {
-      console.error(`BizBuySell fetch failed for ${url}:`, e.message);
-    }
-  }
-
-  return dedupeListings(listings, 'BizBuySell');
-}
-
-function parseBizBuySellListings(html, state) {
-  const listings = [];
-
-  // BizBuySell uses listing cards with specific classes
-  const cardRegex = /<div[^>]*class="[^"]*listing[^"]*"[^>]*>[\s\S]*?(?=<div[^>]*class="[^"]*listing[^"]*"|$)/gi;
-  const titleRegex = /<h3[^>]*>([\s\S]*?)<\/h3>|<a[^>]*class="[^"]*listingTitle[^"]*"[^>]*>([\s\S]*?)<\/a>/i;
-  const priceRegex = /(?:Asking Price|Price)[:\s]*\$[\d,]+|\$[\d,]+/i;
-  const priceNumRegex = /\$[\d,]+/;
-  const hrefRegex = /href="([^"]*\/businesses-for-sale\/[^"]*)"/i;
-  const locRegex = /(?:Location|City)[:\s]*([^<\n]+)/i;
-
-  let match;
-  while ((match = cardRegex.exec(html)) !== null) {
-    const card = match[0];
-    const titleMatch = titleRegex.exec(card);
-    const title = (titleMatch?.[1] || titleMatch?.[2] || '').replace(/<[^>]*>/g, '').trim();
-    const priceSection = priceRegex.exec(card)?.[0] || '';
-    const priceMatch = priceNumRegex.exec(priceSection);
-    const price = priceMatch ? parsePrice(priceMatch[0]) : null;
-    const href = hrefRegex.exec(card)?.[1] || '';
-    const loc = locRegex.exec(card)?.[1]?.trim() || state;
-
-    if (title && price) {
-      listings.push({
-        title,
-        price,
-        acreage: null,
-        location: loc,
-        url: href.startsWith('http') ? href : `https://www.bizbuysell.com${href}`,
-        source: 'BizBuySell',
-        property_type: 'cash_flowing_business',
-      });
-    }
-  }
-
-  // Also try JSON-LD
-  if (listings.length === 0) {
-    const jsonLdRegex = /<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
-    let jsonMatch;
-    while ((jsonMatch = jsonLdRegex.exec(html)) !== null) {
-      try {
-        const data = JSON.parse(jsonMatch[1]);
-        const items = data.itemListElement || (Array.isArray(data) ? data : []);
-        for (const item of items) {
-          const thing = item.item || item;
-          if (thing.name) {
-            listings.push({
-              title: thing.name,
-              price: parseFloat(thing.offers?.price || 0),
-              acreage: null,
-              location: thing.address?.addressLocality || state,
-              url: thing.url || '',
-              source: 'BizBuySell',
-              property_type: 'cash_flowing_business',
-            });
-          }
-        }
-      } catch (e) { /* skip */ }
+      console.error(`LandAndFarm failed for ${url}:`, e.message);
     }
   }
 
@@ -344,32 +158,38 @@ function parsePrice(str) {
   return parseInt(str.replace(/[$,]/g, ''), 10) || null;
 }
 
-function extractState(location) {
-  // Map common location descriptions to state names
-  const stateAbbrevs = {
-    'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas',
-    'CA': 'California', 'CO': 'Colorado', 'CT': 'Connecticut', 'DE': 'Delaware',
-    'FL': 'Florida', 'GA': 'Georgia', 'HI': 'Hawaii', 'ID': 'Idaho',
-    'IL': 'Illinois', 'IN': 'Indiana', 'IA': 'Iowa', 'KS': 'Kansas',
-    'KY': 'Kentucky', 'LA': 'Louisiana', 'ME': 'Maine', 'MD': 'Maryland',
-    'MA': 'Massachusetts', 'MI': 'Michigan', 'MN': 'Minnesota', 'MS': 'Mississippi',
-    'MO': 'Missouri', 'MT': 'Montana', 'NE': 'Nebraska', 'NV': 'Nevada',
-    'NH': 'New Hampshire', 'NJ': 'New Jersey', 'NM': 'New Mexico', 'NY': 'New York',
-    'NC': 'North Carolina', 'ND': 'North Dakota', 'OH': 'Ohio', 'OK': 'Oklahoma',
-    'OR': 'Oregon', 'PA': 'Pennsylvania', 'RI': 'Rhode Island', 'SC': 'South Carolina',
-    'SD': 'South Dakota', 'TN': 'Tennessee', 'TX': 'Texas', 'UT': 'Utah',
-    'VT': 'Vermont', 'VA': 'Virginia', 'WA': 'Washington', 'WV': 'West Virginia',
-    'WI': 'Wisconsin', 'WY': 'Wyoming',
-  };
+const STATE_ABBREVS = {
+  'AL': 'Alabama', 'AK': 'Alaska', 'AZ': 'Arizona', 'AR': 'Arkansas',
+  'CA': 'California', 'CO': 'Colorado', 'CT': 'Connecticut', 'DE': 'Delaware',
+  'FL': 'Florida', 'GA': 'Georgia', 'HI': 'Hawaii', 'ID': 'Idaho',
+  'IL': 'Illinois', 'IN': 'Indiana', 'IA': 'Iowa', 'KS': 'Kansas',
+  'KY': 'Kentucky', 'LA': 'Louisiana', 'ME': 'Maine', 'MD': 'Maryland',
+  'MA': 'Massachusetts', 'MI': 'Michigan', 'MN': 'Minnesota', 'MS': 'Mississippi',
+  'MO': 'Missouri', 'MT': 'Montana', 'NE': 'Nebraska', 'NV': 'Nevada',
+  'NH': 'New Hampshire', 'NJ': 'New Jersey', 'NM': 'New Mexico', 'NY': 'New York',
+  'NC': 'North Carolina', 'ND': 'North Dakota', 'OH': 'Ohio', 'OK': 'Oklahoma',
+  'OR': 'Oregon', 'PA': 'Pennsylvania', 'RI': 'Rhode Island', 'SC': 'South Carolina',
+  'SD': 'South Dakota', 'TN': 'Tennessee', 'TX': 'Texas', 'UT': 'Utah',
+  'VT': 'Vermont', 'VA': 'Virginia', 'WA': 'Washington', 'WV': 'West Virginia',
+  'WI': 'Wisconsin', 'WY': 'Wyoming',
+};
 
+function getStateAbbrev(stateName) {
+  for (const [abbrev, name] of Object.entries(STATE_ABBREVS)) {
+    if (name === stateName) return abbrev;
+  }
+  return stateName.substring(0, 2).toUpperCase();
+}
+
+function extractState(location) {
   // Check for state abbreviation (e.g., "NC", "TX")
   const abbrevMatch = location.match(/\b([A-Z]{2})\b/);
-  if (abbrevMatch && stateAbbrevs[abbrevMatch[1]]) {
-    return stateAbbrevs[abbrevMatch[1]];
+  if (abbrevMatch && STATE_ABBREVS[abbrevMatch[1]]) {
+    return STATE_ABBREVS[abbrevMatch[1]];
   }
 
   // Check for full state name
-  const allStates = Object.values(stateAbbrevs);
+  const allStates = Object.values(STATE_ABBREVS);
   for (const state of allStates) {
     if (location.toLowerCase().includes(state.toLowerCase())) {
       return state;
