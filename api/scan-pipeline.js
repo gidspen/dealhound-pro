@@ -10,11 +10,11 @@
  * Called by scan-start.js.
  */
 
-const { writeProgress, supabase } = require('./lib/progress');
-const { discoverListings } = require('./lib/discover');
-const { scrapeMarketplaces } = require('./lib/scrape');
-const { applyHardFilters } = require('./lib/filters');
-const { scoreDeals } = require('./lib/score');
+const { writeProgress, supabase } = require('./_lib/progress');
+const { discoverListings } = require('./_lib/discover');
+const { scrapeMarketplaces } = require('./_lib/scrape');
+const { applyHardFilters } = require('./_lib/filters');
+const { scoreDeals } = require('./_lib/score');
 
 module.exports = async function runPipeline(search_id) {
   try {
