@@ -350,16 +350,13 @@
     }
 
     async function startScan() {
-      // Kick off the scan
-      try {
-        await fetch('/api/scan-start', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ search_id: searchId })
-        });
-      } catch (e) {
-        // Continue anyway — might already be scanning
-      }
+      // Fire scan-start without awaiting — it runs the full pipeline (up to 5 min)
+      // We start polling immediately so the user sees progress in real time
+      fetch('/api/scan-start', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ search_id: searchId })
+      }).catch(() => {});
 
       scanStarted = true;
       pollProgress();
