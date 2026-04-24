@@ -47,45 +47,20 @@ module.exports = async function handler(req, res) {
       .update({ status: 'scanning' })
       .eq('id', search_id);
 
-    // Seed progress steps to give the user something to watch
-    // In production, these would be written by the actual scan pipeline
-    const steps = [
+    // Seed the init progress step
+    await supabase.from('scan_progress').insert([
       { search_id, step: 'init', status: 'complete', message: 'Buy box loaded — starting scan', listing_count: null },
-      { search_id, step: 'scrape_landsearch', status: 'running', message: 'Searching LandSearch for resort & cabin listings...', listing_count: null },
-    ];
+    ]);
 
-    await supabase.from('scan_progress').insert(steps);
-
-    // Simulate progress over time — in production this would be the real pipeline
-    // For MVP, we seed initial steps and Gideon runs the scan manually
-    // The scan page polls and picks up new rows as they appear
-    setTimeout(async () => {
-      await supabase.from('scan_progress').insert([
-        { search_id, step: 'scrape_landsearch', status: 'complete', message: 'LandSearch — 238 listings found', listing_count: 238 },
-        { search_id, step: 'scrape_campground', status: 'running', message: 'Searching Campground Marketplace...', listing_count: null },
-      ]);
-    }, 3000);
-
-    setTimeout(async () => {
-      await supabase.from('scan_progress').insert([
-        { search_id, step: 'scrape_campground', status: 'complete', message: 'Campground Marketplace — 71 listings found', listing_count: 71 },
-        { search_id, step: 'scrape_nai', status: 'running', message: 'Searching NAI Outdoor Hospitality...', listing_count: null },
-      ]);
-    }, 6000);
-
-    setTimeout(async () => {
-      await supabase.from('scan_progress').insert([
-        { search_id, step: 'scrape_nai', status: 'complete', message: 'NAI Outdoor Hospitality — 22 listings found', listing_count: 22 },
-        { search_id, step: 'scrape_misc', status: 'complete', message: 'Parks & Places, B&B Team — 110 listings found', listing_count: 110 },
-        { search_id, step: 'screening', status: 'running', message: 'Screening 441 listings against your buy box...', listing_count: null },
-      ]);
-    }, 8000);
-
-    // Note: The scan doesn't actually complete here.
-    // When Gideon manually runs the scan and populates results,
-    // he updates deal_searches.status to 'complete' and adds final progress rows.
-    // The scan page will show "Your agent is working..." until then,
-    // with a note that results will be emailed.
+    // Fire the real scan pipeline (non-blocking)
+    // The pipeline function scrapes marketplaces, filters, scores with Claude,
+    // and updates scan_progress + deal_searches as it goes
+    const pipelineUrl = `https://${req.headers.host}/api/scan-pipeline`;
+    fetch(pipelineUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ search_id }),
+    }).catch(err => console.error('Pipeline trigger failed:', err.message));
 
     return res.json({ status: 'scanning', search_id });
 

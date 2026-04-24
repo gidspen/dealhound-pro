@@ -44,6 +44,11 @@ module.exports = async function handler(req, res) {
       .eq('search_id', searchId)
       .order('created_at', { ascending: true });
 
+    // Detect stale scans (no new progress in 5 minutes)
+    const isStale = search.status === 'scanning' &&
+      steps && steps.length > 0 &&
+      (new Date() - new Date(steps[steps.length - 1].created_at)) > 5 * 60 * 1000;
+
     // If complete, get deal count
     let dealCount = 0;
     let hotCount = 0;
@@ -70,9 +75,10 @@ module.exports = async function handler(req, res) {
     }
 
     return res.json({
-      status: search.status,
+      status: isStale ? 'error' : search.status,
       buy_box: search.buy_box,
       steps: steps || [],
+      stale: isStale,
       summary: search.status === 'complete' ? {
         total_deals: dealCount,
         hot_deals: hotCount
