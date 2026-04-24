@@ -309,10 +309,17 @@
 
       <div class="progress-feed" id="progress-feed"></div>
 
-      <!-- Shows when scan pipeline is running but waiting on manual completion -->
+      <!-- Shows when scan pipeline is running but waiting on completion -->
       <div class="scan-waiting" id="scan-waiting">
-        <p>Your agent is deep in the hunt — analyzing listings, scoring against your buy box, and building your deal report. This usually takes a few hours for your first scan.</p>
-        <div class="email-note">We'll email you when your results are ready.</div>
+        <p>Your agent is deep in the hunt — scraping marketplaces, filtering listings, and scoring matches against your buy box. This usually takes 1-3 minutes.</p>
+      </div>
+
+      <!-- Shows when scan appears stalled -->
+      <div class="scan-waiting" id="scan-stalled" style="display:none;">
+        <p>Your scan seems to have stalled. This can happen if a marketplace source is temporarily unavailable.</p>
+        <div class="email-note" style="margin-top: 16px;">
+          <a href="#" id="retry-scan" style="color: var(--gold); text-decoration: underline; cursor: pointer;">Refresh and try again</a>
+        </div>
       </div>
 
       <!-- Shows when scan is fully complete -->
@@ -330,6 +337,10 @@
     let lastStepCount = 0;
     let scanStarted = false;
     let pollInterval = null;
+    let lastNewStepTime = Date.now();
+    let pollCount = 0;
+    const MAX_POLL_MINUTES = 5;
+    const MAX_POLLS = (MAX_POLL_MINUTES * 60 * 1000) / 2500; // 120 polls
 
     if (!searchId) {
       document.querySelector('.scan-header h1').innerHTML = 'No scan found.';
@@ -356,6 +367,8 @@
     }
 
     async function pollProgress() {
+      pollCount++;
+
       try {
         const res = await fetch(`/api/scan-progress?id=${searchId}`);
         const data = await res.json();
@@ -365,24 +378,51 @@
           showBuyBox(data.buy_box);
         }
 
+        // Track if we got new steps
+        const steps = data.steps || [];
+        if (steps.length > lastStepCount) {
+          lastNewStepTime = Date.now();
+        }
+
         // Render progress steps
-        renderSteps(data.steps || []);
+        renderSteps(steps);
 
         // Handle completion
         if (data.status === 'complete') {
           clearInterval(pollInterval);
           showComplete(data.summary);
-        } else if (data.steps && data.steps.length > 3 && !document.getElementById('scan-waiting').classList.contains('visible')) {
-          // After a few steps, show the waiting message
-          const lastStep = data.steps[data.steps.length - 1];
-          if (lastStep.step === 'screening' || data.steps.length >= 5) {
-            document.getElementById('scan-waiting').classList.add('visible');
+        } else if (data.status === 'error') {
+          clearInterval(pollInterval);
+          showStalled();
+        } else {
+          // Check for stall: no new steps for 5 minutes or max polls exceeded
+          const stalledMs = Date.now() - lastNewStepTime;
+          if (stalledMs > MAX_POLL_MINUTES * 60 * 1000 || pollCount > MAX_POLLS) {
+            clearInterval(pollInterval);
+            showStalled();
+          } else if (steps.length > 3 && !document.getElementById('scan-waiting').classList.contains('visible')) {
+            const lastStep = steps[steps.length - 1];
+            if (lastStep.step === 'screening' || lastStep.step === 'scoring' || steps.length >= 5) {
+              document.getElementById('scan-waiting').classList.add('visible');
+            }
           }
         }
 
       } catch (e) {
         // Silently retry on next poll
       }
+    }
+
+    function showStalled() {
+      document.getElementById('scan-waiting').classList.remove('visible');
+      document.getElementById('scan-stalled').style.display = 'block';
+      document.querySelector('.scan-header h1').innerHTML = 'Scan <em>stalled.</em>';
+      document.querySelector('.scan-header p').textContent = 'Something went wrong during the scan.';
+
+      document.getElementById('retry-scan').addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.reload();
+      });
     }
 
     function showBuyBox(buyBox) {
