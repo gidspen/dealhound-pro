@@ -3,8 +3,7 @@
   "outputDirectory": ".",
   "functions": {
     "api/chat.js": { "maxDuration": 60 },
-    "api/scan-start.js": { "maxDuration": 10 },
-    "api/scan-pipeline.js": { "maxDuration": 300 },
+    "api/scan-start.js": { "maxDuration": 300 },
     "api/scan-progress.js": { "maxDuration": 10 },
     "api/user-data.js": { "maxDuration": 10 },
     "api/deal-chat.js": { "maxDuration": 60 },

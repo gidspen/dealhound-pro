@@ -549,29 +549,8 @@ async function writeProgress(searchId, step, status, message, listingCount = nul
 
 // ── Main pipeline ───────────────────────────────────────────────────
 
-module.exports = async function handler(req, res) {
-  if (req.method === 'OPTIONS') {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    return res.status(200).end();
-  }
-
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  res.setHeader('Access-Control-Allow-Origin', '*');
-
-  const { search_id } = req.body;
-  if (!search_id) {
-    return res.status(400).json({ error: 'Missing search_id' });
-  }
-
-  // Respond immediately — the pipeline runs in the background of this request
-  // Vercel keeps the function alive for maxDuration even after res.end()
-  res.json({ status: 'pipeline_started' });
-
+// Direct function export — called inline by scan-start.js after sending the response
+module.exports = async function runPipeline(search_id) {
   try {
     // Load buy box
     const { data: search, error: searchError } = await supabase
