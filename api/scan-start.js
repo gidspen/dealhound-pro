@@ -53,12 +53,11 @@ module.exports = async function handler(req, res) {
       { search_id, step: 'init', status: 'complete', message: 'Buy box loaded — starting scan', listing_count: null },
     ]);
 
-    // Send response immediately so the frontend starts polling
-    res.json({ status: 'scanning', search_id });
-
-    // Run the pipeline inline after the response is sent
-    // Vercel keeps the function alive for maxDuration (300s) after res.end()
+    // Run the full pipeline — scrape, filter, score, complete
+    // The frontend doesn't await this response; it polls scan-progress instead
     await runPipeline(search_id);
+
+    return res.json({ status: 'complete', search_id });
 
   } catch (err) {
     console.error('Scan start error:', err);
