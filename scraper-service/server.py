@@ -10,18 +10,15 @@ GET /health
   Returns: { "status": "ok" }
 """
 
-import asyncio
 import json
 import os
-import tempfile
 import traceback
-from pathlib import Path
 
 import httpx
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-from scraper import SCRAPERS, run, create_browser, scrape_site_with_claude
+from scraper import create_browser, scrape_site_with_claude
 
 app = FastAPI(title="Deal Hound Scraper", version="2.0")
 
@@ -197,8 +194,15 @@ class ScrapeRequest(BaseModel):
     token: str = ""
 
 
-# Sites that need ScraperAPI proxy (blocked by Cloudflare/Akamai)
+# Sites scraped via ScraperAPI proxy + Claude extraction.
+# LandSearch is included here because Railway's datacenter IPs get blocked
+# by LandSearch's bot detection even though the CSS selectors work locally.
 PROXY_SITES = {
+    "landsearch": [
+        "https://www.landsearch.com/resort/{slug}",
+        "https://www.landsearch.com/lodge/{slug}",
+        "https://www.landsearch.com/cabin/{slug}",
+    ],
     "bizbuysell": [
         "https://www.bizbuysell.com/{slug}/campgrounds-and-rv-parks-for-sale/",
         "https://www.bizbuysell.com/{slug}/travel-businesses-for-sale/",
@@ -238,32 +242,18 @@ async def scrape(req: ScrapeRequest):
     all_listings = []
     sources_scraped = set()
 
-    # Phase 1: LandSearch via native sync scraper (no proxy needed, saves API cost)
-    await _write_progress(req.search_id, "scraping", "running", "Scraping LandSearch (native)...")
-    try:
-        landsearch_listings = await asyncio.to_thread(
-            _run_sync_scraper, "landsearch", states
-        )
-        if landsearch_listings:
-            sources_scraped.add("landsearch")
-            all_listings.extend(landsearch_listings)
-            await _write_progress(
-                req.search_id, "scraping", "running",
-                f"LandSearch: {len(landsearch_listings)} listings found",
-                len(landsearch_listings),
-            )
-    except Exception as e:
-        print(f"[server] LandSearch sync scraper error: {e}")
-        await _write_progress(req.search_id, "scraping", "running",
-                              f"LandSearch error: {str(e)[:200]}")
-
-    # Phase 2: Blocked sites via ScraperAPI proxy + Claude extraction
+    # Scrape all sites via ScraperAPI proxy + Claude extraction.
+    # LandSearch is included here because Railway's datacenter IPs are blocked
+    # by LandSearch's bot detection (selectors work locally but fail on Railway).
     for site_name, url_templates in PROXY_SITES.items():
         await _write_progress(req.search_id, "scraping", "running",
                               f"Scraping {site_name} (proxy + Claude)...")
         try:
             browser = await create_browser(use_proxy=True)
-            page = await browser.new_page()
+            # ignore_https_errors at context level is the reliable fix for
+            # ERR_CERT_AUTHORITY_INVALID when ScraperAPI does SSL interception.
+            context = await browser.new_context(ignore_https_errors=True)
+            page = await context.new_page()
 
             site_listings = []
             for state in states:
@@ -315,7 +305,8 @@ async def scrape(req: ScrapeRequest):
                               f"Scraping {site_name} (discovered site)...")
         try:
             browser = await create_browser(use_proxy=True)
-            page = await browser.new_page()
+            context = await browser.new_context(ignore_https_errors=True)
+            page = await context.new_page()
             listings = await scrape_site_with_claude(
                 page=page, site_url=listings_url, site_name=site_name,
                 max_pages=3,
@@ -351,21 +342,3 @@ async def scrape(req: ScrapeRequest):
         "sources_scraped": list(sources_scraped),
         "total": len(all_listings),
     }
-
-
-def _run_sync_scraper(site_name: str, states: set) -> list[dict]:
-    """Run the sync Playwright scraper for a single site across all states.
-    Called via asyncio.to_thread() to avoid blocking the event loop."""
-    all_listings = []
-    with tempfile.TemporaryDirectory() as tmpdir:
-        output_dir = Path(tmpdir)
-        for state in states:
-            slug = STATE_SLUGS.get(state, state.lower().replace(" ", "-"))
-            try:
-                results = run([site_name], slug, output_dir)
-                for site, listings in results.items():
-                    if listings:
-                        all_listings.extend(listings)
-            except Exception as e:
-                print(f"[server] Sync scraper error for {site_name}/{state}: {e}")
-    return all_listings

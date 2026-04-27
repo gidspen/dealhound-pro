@@ -501,8 +501,9 @@ async def create_browser(use_proxy: bool = True):
     launch_args = {
         "headless": True,
         "args": [
+            "--no-sandbox",               # required in Docker / Railway
+            "--disable-dev-shm-usage",    # prevents Chromium OOM in containers
             "--disable-blink-features=AutomationControlled",
-            "--ignore-certificate-errors",
         ],
     }
     if use_proxy and SCRAPER_API_KEY:
@@ -534,8 +535,11 @@ async def scrape_site_with_claude(
             break
 
         try:
-            await page.goto(current_url, wait_until="networkidle", timeout=30000)
-            await page.wait_for_timeout(2000)
+            # domcontentloaded is much more reliable than networkidle through
+            # a proxy — networkidle waits for all inflight requests to settle
+            # and can hang indefinitely when ScraperAPI has background connections.
+            await page.goto(current_url, wait_until="domcontentloaded", timeout=45000)
+            await page.wait_for_timeout(3000)  # let JS render after DOMContentLoaded
         except Exception as e:
             print(f"[scraper] Failed to load {current_url}: {e}")
             break
@@ -605,6 +609,7 @@ def run(sites, location, output_dir):
             headless=True,
             args=[
                 "--no-sandbox",
+                "--disable-dev-shm-usage",
                 "--disable-blink-features=AutomationControlled",
                 "--disable-infobars",
             ]
