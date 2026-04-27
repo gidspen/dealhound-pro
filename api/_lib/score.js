@@ -18,7 +18,7 @@ const anthropic = new Anthropic();
 
 async function classifyWithSonnet(deals, buyBox) {
   const results = [];
-  const batchSize = 10; // conservative for reliability
+  const batchSize = 25;
 
   for (let i = 0; i < deals.length; i += batchSize) {
     const batch = deals.slice(i, i + batchSize);
@@ -58,7 +58,7 @@ For each property return a JSON array. Each element:
   "brief": "2-3 sentence analysis"
 }
 
-IMPORTANT: When uncertain between PARTIAL and MISS, default to PARTIAL. Only use MISS when a deal clearly fails.
+CRITICAL FALSE-NEGATIVE PROTECTION: When you are uncertain between PARTIAL and MISS for any criterion, ALWAYS default to PARTIAL. Only use MISS when a deal CLEARLY and UNAMBIGUOUSLY fails that criterion. A false positive (weak deal proceeds to review) costs $0.05 in API calls. A false negative (good deal dropped forever) costs the investor a real opportunity they will never see. When in doubt, keep the deal alive.
 
 Return ONLY the JSON array.`;
 
@@ -126,26 +126,36 @@ async function writeMitigations(deals, buyBox) {
 
   if (needsMitigation.length === 0) return deals;
 
-  const batchSize = 5;
+  const batchSize = 10;
 
   for (let i = 0; i < needsMitigation.length; i += batchSize) {
     const batch = needsMitigation.slice(i, i + batchSize);
 
-    const prompt = `You are an experienced hospitality real estate investor. For each property below, write specific mitigation prescriptions for risk factors rated 3 or higher. Not generic advice — specific to what the listing data tells you.
+    const prompt = `You are an experienced hospitality real estate investor writing mitigation prescriptions for an investor evaluating deals.
 
+Write specific mitigation prescriptions for each risk factor rated 3 or higher. Not generic advice — specific to what THIS listing's data tells you. Reference actual details from the listing (price, location, acreage, condition signals, revenue data).
+
+Examples of the quality expected:
+- "Information risk (4): 148 leased acres — verify USACE lease terms, renewal timeline, and improvement restrictions before making an offer. Leased land = no equity."
+- "Execution risk (3): Multi-revenue ops (marina + motel + cabins + fuel). Retain the existing manager for 90 days minimum post-close or you lose operational continuity."
+- "Capital risk (4): At $2.1M with no revenue data shown, you need a T12 before LOI. If seller can't produce one, walk — the price assumes income that may not exist."
+
+PROPERTIES:
 ${batch.map((d, idx) => `[${idx + 1}] ${d.title} | ${d.location} | ${d.price ? '$' + d.price.toLocaleString() : 'unknown'}
+  Acreage: ${d.acreage || 'unknown'} | Rooms/Keys: ${d.rooms_keys || 'unknown'}
+  Revenue hint: ${d.revenue_hint || 'none'} | Condition: ${d.condition_hint || 'unknown'}
   Risk: Capital=${d.risk.capital_risk} Market=${d.risk.market_risk} Revenue=${d.risk.revenue_risk} Execution=${d.risk.execution_risk} Info=${d.risk.information_risk}
-  Description: ${(d.description || d.raw_description || d.brief || '').substring(0, 200)}`).join('\n\n')}
+  Description: ${(d.description || d.raw_description || d.brief || '').substring(0, 300)}`).join('\n\n')}
 
 Return a JSON array. Each element:
-{"index": 1, "mitigations": ["Capital risk (4): specific advice...", "Info risk (3): specific advice..."]}
+{"index": 1, "mitigations": ["Capital risk (4): specific advice referencing listing data...", "Info risk (3): specific advice..."]}
 
 Only include mitigations for factors rated 3+. Return ONLY the JSON array.`;
 
     try {
       const response = await anthropic.messages.create({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 2000,
+        model: 'claude-opus-4-20250514',
+        max_tokens: 4000,
         messages: [{ role: 'user', content: prompt }],
       });
 
