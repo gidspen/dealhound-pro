@@ -89,7 +89,7 @@ async def _write_raw_listings(search_id: str, listings: list[dict]):
         for i in range(0, len(rows), 50):
             sb.table("raw_listings").insert(rows[i:i+50]).execute()
     except Exception as e:
-        print(f"[server] Raw listings write failed: {e}")
+        print(f"[server] Raw listings write failed ({len(rows)} rows, search_id={search_id}): {e}")
 
 
 async def _fire_callback(callback_url: str, search_id: str, callback_secret: str = ""):
