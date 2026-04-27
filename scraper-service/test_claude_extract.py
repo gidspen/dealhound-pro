@@ -2,6 +2,7 @@ import pytest
 import json
 from pathlib import Path
 from claude_extract import extract_listings_from_page_text
+from scraper import scrape_site_with_claude, create_browser
 
 FIXTURES = Path(__file__).parent.parent / "tests" / "fixtures"
 
@@ -64,3 +65,23 @@ async def test_all_fields_present():
     for listing in listings:
         missing = required_keys - set(listing.keys())
         assert not missing, f"Missing keys: {missing} in listing: {listing.get('title')}"
+
+
+@pytest.mark.asyncio
+async def test_scrape_site_with_claude_integration():
+    """Integration test: Playwright fetches a real page, Claude extracts."""
+    browser = await create_browser(use_proxy=False)  # No proxy for LandSearch (not blocked)
+    page = await browser.new_page()
+
+    listings = await scrape_site_with_claude(
+        page=page,
+        site_url="https://www.landsearch.com/properties/resort/texas",
+        site_name="landsearch",
+        max_pages=1,
+    )
+
+    await browser.close()
+
+    assert len(listings) >= 5
+    assert all("title" in l for l in listings)
+    assert all(l["source"] == "landsearch" for l in listings)

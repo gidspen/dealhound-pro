@@ -21,13 +21,20 @@ Output schema per listing (matches raw-listings-*.json format):
 """
 
 import argparse
+import asyncio
 import json
+import os
 import re
 import time
 import sys
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
+
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
+from playwright.async_api import async_playwright
+
+from claude_extract import extract_listings_from_page_text
 
 # ── State lookup ─────────────────────────────────────────────────────────────
 
@@ -481,6 +488,102 @@ def scrape_crexi(page, location="texas"):
         time.sleep(DELAY)
 
     return listings
+
+# ── Async / Universal (ScraperAPI proxy + Claude extraction) ─────────────────
+
+SCRAPER_API_KEY = os.environ.get("SCRAPER_API_KEY", "")
+PROXY_SERVER = "http://proxy-server.scraperapi.com:8001"
+
+
+async def create_browser(use_proxy: bool = True):
+    """Launch Playwright Chromium with optional ScraperAPI residential proxy."""
+    p = await async_playwright().start()
+    launch_args = {
+        "headless": True,
+        "args": ["--disable-blink-features=AutomationControlled"],
+    }
+    if use_proxy and SCRAPER_API_KEY:
+        launch_args["proxy"] = {
+            "server": PROXY_SERVER,
+            "username": "scraperapi",
+            "password": SCRAPER_API_KEY,
+        }
+    browser = await p.chromium.launch(**launch_args)
+    return browser
+
+
+async def scrape_site_with_claude(
+    page,
+    site_url: str,
+    site_name: str,
+    max_pages: int = MAX_PAGES,
+    max_listings: int = MAX_LISTINGS,
+) -> list[dict]:
+    """
+    Universal scraper. Playwright fetches the page, Claude extracts listings.
+    Works on ANY site — no CSS selectors, no per-site configuration.
+    """
+    all_listings = []
+    current_url = site_url
+
+    for page_num in range(1, max_pages + 1):
+        if len(all_listings) >= max_listings:
+            break
+
+        try:
+            await page.goto(current_url, wait_until="networkidle", timeout=30000)
+            await page.wait_for_timeout(2000)
+        except Exception as e:
+            print(f"[scraper] Failed to load {current_url}: {e}")
+            break
+
+        page_text = await page.evaluate("document.body.innerText")
+
+        if not page_text or len(page_text.strip()) < 100:
+            print(f"[scraper] Empty page at {current_url}")
+            break
+
+        page_listings = await extract_listings_from_page_text(
+            page_text=page_text,
+            source_url=current_url,
+            source_name=site_name,
+        )
+
+        if not page_listings:
+            print(f"[scraper] No listings found on page {page_num} of {site_name}")
+            break
+
+        all_listings.extend(page_listings)
+        print(f"[scraper] {site_name} page {page_num}: {len(page_listings)} listings (total: {len(all_listings)})")
+
+        next_url = await _find_next_page(page, current_url)
+        if not next_url:
+            break
+
+        current_url = next_url
+        await asyncio.sleep(DELAY)
+
+    return all_listings[:max_listings]
+
+
+async def _find_next_page(page, current_url: str) -> str | None:
+    """Find the next page URL. Tries common pagination patterns."""
+    try:
+        next_link = await page.query_selector(
+            'a:has-text("Next"), a:has-text("next"), a[aria-label="Next"], '
+            'a.next, a.pagination-next, [class*="next"] a'
+        )
+        if next_link:
+            href = await next_link.get_attribute("href")
+            if href and href != current_url:
+                if href.startswith("/"):
+                    parsed = urlparse(current_url)
+                    return f"{parsed.scheme}://{parsed.netloc}{href}"
+                return href
+    except Exception:
+        pass
+    return None
+
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
