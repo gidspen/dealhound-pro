@@ -45,6 +45,8 @@ async function processListings(searchId, listings, buyBox, markComplete = true) 
     passed_hard_filters: true,
     score: d.priority_score, score_breakdown: d.score_breakdown,
     brief: d.brief, raw_description: (d.description || '').substring(0, 500),
+    also_listed_on: d.also_listed_on || [],
+    possible_duplicate: d.possible_duplicate || false,
     scraped_at: new Date().toISOString(),
   }));
   if (scoredRows.length > 0) {
@@ -58,6 +60,8 @@ async function processListings(searchId, listings, buyBox, markComplete = true) 
     location: d.location, property_type: d.property_type,
     passed_hard_filters: false,
     miss_reason: d.miss_reason || 'strategy_miss',
+    also_listed_on: d.also_listed_on || [],
+    possible_duplicate: d.possible_duplicate || false,
     scraped_at: new Date().toISOString(),
   }));
   if (elimRows.length > 0) {
