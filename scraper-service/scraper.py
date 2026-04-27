@@ -550,10 +550,30 @@ async def scrape_site_with_claude(
             print(f"[scraper] Empty page at {current_url}")
             break
 
+        # Extract links separately — innerText strips href attributes,
+        # so Claude can't see URLs. We grab them via JS and pass them
+        # alongside the page text so Claude can associate listings with
+        # their detail page URLs.
+        page_links = await page.evaluate("""() => {
+            const seen = new Set();
+            return Array.from(document.querySelectorAll('a[href]'))
+                .map(a => {
+                    const href = a.getAttribute('href');
+                    const text = (a.textContent || '').trim().substring(0, 80);
+                    return { href, text };
+                })
+                .filter(l => {
+                    if (!l.href || l.href.startsWith('javascript:') || seen.has(l.href)) return false;
+                    seen.add(l.href);
+                    return l.text.length > 0;
+                });
+        }""")
+
         page_listings = await extract_listings_from_page_text(
             page_text=page_text,
             source_url=current_url,
             source_name=site_name,
+            page_links=page_links,
         )
 
         if not page_listings:

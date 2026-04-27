@@ -27,7 +27,7 @@ For each listing, extract these fields (use null if not visible on the page):
 - price_raw: original price text exactly as shown (e.g. "$1,200,000")
 - location: "City, State" format
 - address: street address if visible. null if not shown.
-- url: full URL to the individual listing page. If relative, prefix with the site domain.
+- url: full URL to the individual listing detail page. Match each listing to a link from the PAGE LINKS section below using location, price, or address cues in the link text or URL path. If relative, prefix with the site domain. null only if no link can be matched.
 - acreage: number (float). null if not shown.
 - rooms_keys: number of rooms, units, or keys (integer). null if not shown.
 - revenue_hint: any revenue, income, or cash flow text. null if none.
@@ -40,6 +40,7 @@ Return ONLY a JSON array of objects. No markdown, no explanation, no preamble.
 If zero listings found, return: []
 
 PAGE URL: {source_url}
+{links_section}
 PAGE TEXT:
 {page_text}"""
 
@@ -55,6 +56,7 @@ async def extract_listings_from_page_text(
     page_text: str,
     source_url: str,
     source_name: str,
+    page_links: list[dict] | None = None,
     max_text_chars: int = 100_000,
 ) -> list[dict]:
     """
@@ -64,6 +66,8 @@ async def extract_listings_from_page_text(
         page_text: Raw text from document.body.innerText (no HTML tags)
         source_url: The URL this page was loaded from
         source_name: Slug for the source site (e.g. "bizbuysell")
+        page_links: List of {href, text} dicts extracted from <a> tags on the page.
+                    Passed separately because innerText strips href attributes.
         max_text_chars: Truncate page text to this length to control token cost
 
     Returns:
@@ -72,9 +76,22 @@ async def extract_listings_from_page_text(
     """
     truncated = page_text[:max_text_chars]
 
+    # Build links section for the prompt so Claude can match listings to URLs
+    links_section = ""
+    if page_links:
+        link_lines = []
+        for link in page_links[:200]:  # cap at 200 to control token cost
+            href = link.get("href", "")
+            text = link.get("text", "")
+            if href and text:
+                link_lines.append(f"  {href}  |  {text}")
+        if link_lines:
+            links_section = "PAGE LINKS (href | link text):\n" + "\n".join(link_lines)
+
     prompt = EXTRACTION_PROMPT.format(
         source_url=source_url,
         page_text=truncated,
+        links_section=links_section,
     )
 
     try:
