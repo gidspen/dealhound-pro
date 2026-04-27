@@ -92,13 +92,16 @@ async def _write_raw_listings(search_id: str, listings: list[dict]):
         print(f"[server] Raw listings write failed: {e}")
 
 
-async def _fire_callback(callback_url: str, search_id: str):
+async def _fire_callback(callback_url: str, search_id: str, callback_secret: str = ""):
     """POST search_id to the Vercel webhook when scraping completes."""
     if not callback_url:
         return
     try:
+        headers = {}
+        if callback_secret:
+            headers["X-Webhook-Secret"] = callback_secret
         async with httpx.AsyncClient(timeout=30) as client:
-            resp = await client.post(callback_url, json={"search_id": search_id})
+            resp = await client.post(callback_url, json={"search_id": search_id}, headers=headers)
             print(f"[server] Callback to {callback_url}: {resp.status_code}")
     except Exception as e:
         print(f"[server] Callback failed: {e}")
@@ -190,6 +193,7 @@ class ScrapeRequest(BaseModel):
     sites: list[dict] = []           # Discovered sites with listings_url
     search_id: str = ""              # For Supabase progress + raw listing writes
     callback_url: str = ""           # Vercel webhook to POST when done
+    callback_secret: str = ""        # Sent as X-Webhook-Secret header in callback
     token: str = ""
 
 
@@ -340,7 +344,7 @@ async def scrape(req: ScrapeRequest):
     )
 
     # Fire callback to Vercel webhook
-    await _fire_callback(req.callback_url, req.search_id)
+    await _fire_callback(req.callback_url, req.search_id, req.callback_secret)
 
     return {
         "listings": all_listings,

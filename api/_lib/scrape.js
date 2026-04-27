@@ -1,18 +1,21 @@
-// api/lib/scrape.js
+// api/_lib/scrape.js
 
 const SCRAPER_URL = process.env.SCRAPER_SERVICE_URL || 'http://localhost:8080';
 const SCRAPER_TOKEN = process.env.SCRAPER_API_TOKEN || '';
+const WEBHOOK_SECRET = process.env.SCRAPER_WEBHOOK_SECRET || '';
 
 /**
  * Phase 2: Call Railway Playwright scraper service.
  *
- * Sends buy box locations and property types to the scraper,
- * which runs headless Chromium against marketplace sites.
- *
- * Reference: ~/.claude/skills/find-deals/scrape-site.md
- * Scraper source: scraper-service/scraper.py (from /find-deals skill)
+ * Sends buy box locations, property types, discovered sites, and search_id
+ * to the scraper. The scraper writes raw listings to Supabase, then calls
+ * back to /api/scan-continue when done.
  */
-async function scrapeMarketplaces(buyBox) {
+async function scrapeMarketplaces(buyBox, sites, searchId) {
+  const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : 'http://localhost:3000';
+
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 120000);
 
@@ -24,6 +27,10 @@ async function scrapeMarketplaces(buyBox) {
       body: JSON.stringify({
         locations: buyBox.locations || [],
         property_types: buyBox.property_types || [],
+        sites: sites || [],
+        search_id: searchId || '',
+        callback_url: `${baseUrl}/api/scan-continue`,
+        callback_secret: WEBHOOK_SECRET,
         token: SCRAPER_TOKEN,
       }),
     });
