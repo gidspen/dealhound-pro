@@ -5,9 +5,15 @@ with zero per-site configuration.
 """
 import json
 import os
+import re
 from anthropic import AsyncAnthropic
 
-client = AsyncAnthropic(api_key=os.environ.get("ANTHROPIC_API_KEY", ""))
+_api_key = os.environ.get("ANTHROPIC_API_KEY")
+if not _api_key:
+    raise EnvironmentError("ANTHROPIC_API_KEY is not set")
+client = AsyncAnthropic(api_key=_api_key)
+
+EXTRACTION_MODEL = "claude-sonnet-4-20250514"
 
 EXTRACTION_PROMPT = """You are extracting real estate property listings from a webpage.
 Extract EVERY listing visible on this page. Do not filter or skip any listing.
@@ -71,17 +77,15 @@ async def extract_listings_from_page_text(
 
     try:
         response = await client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=4096,
+            model=EXTRACTION_MODEL,
+            max_tokens=8192,
             messages=[{"role": "user", "content": prompt}],
         )
 
         raw_text = response.content[0].text.strip()
         # Handle markdown code blocks if model wraps response
-        if raw_text.startswith("```"):
-            raw_text = raw_text.split("\n", 1)[1]
-            if raw_text.endswith("```"):
-                raw_text = raw_text[:-3].strip()
+        raw_text = re.sub(r"^```[a-z]*\n?", "", raw_text)
+        raw_text = re.sub(r"\n?```$", "", raw_text).strip()
 
         listings = json.loads(raw_text)
 
@@ -113,6 +117,7 @@ async def extract_listings_from_page_text(
 
         return normalized
 
-    except (json.JSONDecodeError, Exception) as e:
-        print(f"[claude_extract] Extraction failed for {source_url}: {e}")
+    except (json.JSONDecodeError, IndexError, KeyError) as e:
+        print(f"[claude_extract] Parse error for {source_url}: {e}")
         return []
+    # Anthropic API errors (AuthenticationError, RateLimitError, etc.) propagate
