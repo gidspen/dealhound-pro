@@ -51,10 +51,10 @@ async def _write_progress(search_id: str, phase: str, status: str, message: str,
     try:
         sb.table("scan_progress").insert({
             "search_id": search_id,
-            "phase": phase,
+            "step": phase,
             "status": status,
             "message": message,
-            "count": count,
+            "listing_count": count if count else None,
         }).execute()
     except Exception as e:
         print(f"[server] Progress write failed: {e}")

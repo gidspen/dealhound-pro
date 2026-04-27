@@ -500,7 +500,10 @@ async def create_browser(use_proxy: bool = True):
     p = await async_playwright().start()
     launch_args = {
         "headless": True,
-        "args": ["--disable-blink-features=AutomationControlled"],
+        "args": [
+            "--disable-blink-features=AutomationControlled",
+            "--ignore-certificate-errors",
+        ],
     }
     if use_proxy and SCRAPER_API_KEY:
         launch_args["proxy"] = {
