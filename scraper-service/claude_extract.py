@@ -8,10 +8,12 @@ import os
 import re
 from anthropic import AsyncAnthropic
 
-_api_key = os.environ.get("ANTHROPIC_API_KEY")
-if not _api_key:
-    raise EnvironmentError("ANTHROPIC_API_KEY is not set")
-client = AsyncAnthropic(api_key=_api_key)
+def _get_client():
+    """Lazy-init the Anthropic client so imports don't fail without a key."""
+    key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not key:
+        raise EnvironmentError("ANTHROPIC_API_KEY is not set")
+    return AsyncAnthropic(api_key=key)
 
 EXTRACTION_MODEL = "claude-sonnet-4-20250514"
 
@@ -76,7 +78,7 @@ async def extract_listings_from_page_text(
     )
 
     try:
-        response = await client.messages.create(
+        response = await _get_client().messages.create(
             model=EXTRACTION_MODEL,
             max_tokens=8192,
             messages=[{"role": "user", "content": prompt}],

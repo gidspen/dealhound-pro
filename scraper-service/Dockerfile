@@ -5,7 +5,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY scraper.py server.py ./
+COPY scraper.py server.py claude_extract.py ./
 
 EXPOSE 8080
 
