@@ -11,8 +11,7 @@
     "api/star-deal.js": { "maxDuration": 10 },
     "api/view-deal.js": { "maxDuration": 10 },
     "api/archive-deal.js": { "maxDuration": 10 },
-    "api/health.js": { "maxDuration": 5 },
-
+    "api/health.js": { "maxDuration": 5 }
   },
   "rewrites": [
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },
