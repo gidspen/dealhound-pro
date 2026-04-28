@@ -3,7 +3,7 @@
   "outputDirectory": ".",
   "functions": {
     "api/chat.js": { "maxDuration": 60 },
-    "api/scan-start.js": { "maxDuration": 300 },
+    "api/scan-start.js": { "maxDuration": 10 },
     "api/scan-progress.js": { "maxDuration": 10 },
     "api/user-data.js": { "maxDuration": 10 },
     "api/deal-chat.js": { "maxDuration": 60 },
@@ -12,7 +12,7 @@
     "api/view-deal.js": { "maxDuration": 10 },
     "api/archive-deal.js": { "maxDuration": 10 },
     "api/health.js": { "maxDuration": 5 },
-    "api/scan-continue.js": { "maxDuration": 300 }
+
   },
   "rewrites": [
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },

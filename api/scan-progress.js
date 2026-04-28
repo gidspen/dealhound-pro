@@ -47,7 +47,7 @@ module.exports = async function handler(req, res) {
     // Detect stale scans (no new progress in 5 minutes)
     const isStale = search.status === 'scanning' &&
       steps && steps.length > 0 &&
-      (new Date() - new Date(steps[steps.length - 1].created_at)) > 5 * 60 * 1000;
+      (new Date() - new Date(steps[steps.length - 1].created_at)) > 120 * 60 * 1000;
 
     // If complete, get deal count
     let dealCount = 0;

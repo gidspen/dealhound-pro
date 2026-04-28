@@ -1,5 +1,5 @@
+// api/scan-start.js
 const { createClient } = require('@supabase/supabase-js');
-const runPipeline = require('./scan-pipeline');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -27,7 +27,6 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    // Get the search record
     const { data: search, error: searchError } = await supabase
       .from('deal_searches')
       .select('*')
@@ -42,22 +41,23 @@ module.exports = async function handler(req, res) {
       return res.json({ status: search.status, search_id });
     }
 
-    // Mark as scanning
     await supabase
       .from('deal_searches')
       .update({ status: 'scanning' })
       .eq('id', search_id);
 
-    // Seed the init progress step
     await supabase.from('scan_progress').insert([
-      { search_id, step: 'init', status: 'complete', message: 'Buy box loaded — starting scan', listing_count: null },
+      { search_id, step: 'init', status: 'complete', message: 'Buy box loaded - queuing scan job' },
+      { search_id, step: 'queued', status: 'running', message: 'Waiting for deal scanner to pick up your request...' },
     ]);
 
-    // Run the full pipeline — scrape, filter, score, complete
-    // The frontend doesn't await this response; it polls scan-progress instead
-    await runPipeline(search_id);
+    await supabase.from('scrape_jobs').insert({
+      search_id,
+      buy_box: search.buy_box,
+      status: 'pending',
+    });
 
-    return res.json({ status: 'complete', search_id });
+    return res.json({ status: 'queued', search_id });
 
   } catch (err) {
     console.error('Scan start error:', err);
