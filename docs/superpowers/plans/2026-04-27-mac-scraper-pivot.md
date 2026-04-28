@@ -131,8 +131,8 @@ function runClaude(prompt, env = {}) {
 
     const timeout = setTimeout(() => {
       child.kill('SIGTERM');
-      reject(new Error('Skill timed out after 90 minutes'));
-    }, 90 * 60 * 1000);
+      reject(new Error('Skill timed out after 150 minutes'));
+    }, 150 * 60 * 1000);  // 150 min -- 2.5x typical runtime, covers slow runs
 
     child.on('close', code => {
       clearTimeout(timeout);
@@ -208,6 +208,9 @@ git commit -m "feat: add daily deal scrape pipeline via /find-deals skill"
 
 ```javascript
 // pipelines/on-demand-scrape.js
+const fs = require('fs');
+const path = require('path');
+const os = require('os');
 const { runClaude } = require('./daily-scrape');
 const memory = require('../data/memory');
 
@@ -215,41 +218,27 @@ const memory = require('../data/memory');
  * Run /find-deals with a custom buy box from a scrape_jobs row.
  * Called by the polling loop when a pending job is found.
  *
- * Passes DEALHOUND_SEARCH_ID as an env var so the skill links deals
- * to the dashboard's search_id instead of creating a new one.
+ * Passes structured data via env vars (not prompt engineering):
+ * - DEALHOUND_SEARCH_ID: links deals to dashboard's search record
+ * - DEALHOUND_BUY_BOX_FILE: path to temp JSON file with user's buy box
+ *
+ * The skill's buy-box.md reads from DEALHOUND_BUY_BOX_FILE if set,
+ * otherwise uses hardcoded defaults. Scales to N users with N buy boxes.
  */
 async function run(job) {
   console.log(`[Sophie] On-demand scrape: job ${job.id}, search ${job.search_id}`);
 
-  const bb = job.buy_box;
-
-  // Build a natural-language override string from the buy box
-  const overrides = [];
-  if (bb.locations && bb.locations.length > 0) {
-    overrides.push(`in ${bb.locations.join(', ')}`);
-  }
-  if (bb.price_max) {
-    overrides.push(`under $${(bb.price_max / 1000000).toFixed(1)}M`);
-  }
-  if (bb.price_min) {
-    overrides.push(`above $${(bb.price_min / 1000).toFixed(0)}k`);
-  }
-  if (bb.property_types && bb.property_types.length > 0) {
-    overrides.push(`property types: ${bb.property_types.join(', ')}`);
-  }
-
-  const prompt = overrides.length > 0
-    ? `/find-deals full -- ${overrides.join(', ')}`
-    : '/find-deals full';
+  // Write buy box to temp file -- runtime bridge, deleted after run.
+  // Source of truth stays in Supabase (deal_searches.buy_box).
+  const buyBoxFile = path.join(os.tmpdir(), `dealhound-buybox-${job.id}.json`);
+  fs.writeFileSync(buyBoxFile, JSON.stringify(job.buy_box, null, 2));
 
   const startTime = Date.now();
 
   try {
-    // DEALHOUND_SEARCH_ID tells the skill to skip creating a new search record
-    // and use the existing one from the dashboard. This is the deterministic
-    // bridge between the dashboard's search_id and the skill's Supabase writes.
-    const { output } = await runClaude(prompt, {
+    const { output } = await runClaude('/find-deals full', {
       DEALHOUND_SEARCH_ID: job.search_id,
+      DEALHOUND_BUY_BOX_FILE: buyBoxFile,
     });
 
     const durationMin = ((Date.now() - startTime) / 60000).toFixed(1);
@@ -263,6 +252,9 @@ async function run(job) {
     console.error(`[Sophie] On-demand scrape failed for job ${job.id}:`, err.message);
     memory.appendToDailyNote(`On-demand scrape: job ${job.id} FAILED after ${durationMin}min`);
     return { success: false, duration: durationMin, error: err.message };
+  } finally {
+    // Clean up temp file
+    try { fs.unlinkSync(buyBoxFile); } catch (_) {}
   }
 }
 
@@ -325,7 +317,25 @@ setInterval(async () => {
   if (jobRunning) return; // Don't overlap
 
   try {
-    // Claim the oldest pending job (atomic: only one poller wins)
+    // Recover stuck jobs: if a job has been 'running' for >120 min,
+    // Sophie probably crashed mid-scan. Reset to 'pending' for retry.
+    const { data: stuck } = await jobSupabase
+      .from('scrape_jobs')
+      .select('id, search_id')
+      .eq('status', 'running')
+      .lt('picked_up_at', new Date(Date.now() - 120 * 60 * 1000).toISOString());
+
+    for (const s of (stuck || [])) {
+      await jobSupabase.from('scrape_jobs')
+        .update({ status: 'pending', picked_up_at: null })
+        .eq('id', s.id);
+      await jobSupabase.from('deal_searches')
+        .update({ status: 'draft' })
+        .eq('id', s.search_id);
+      console.log(`[Sophie] Recovered stuck job ${s.id}`);
+    }
+
+    // Claim the oldest pending job
     const { data: jobs } = await jobSupabase
       .from('scrape_jobs')
       .select('*')
@@ -356,14 +366,15 @@ setInterval(async () => {
     console.log(`[Sophie] Picked up scrape job ${job.id}`);
 
     // Write heartbeat progress every 5 min so dashboard doesn't show stale
+    const jobStart = Date.now();
     const heartbeat = setInterval(async () => {
-      const elapsed = ((Date.now() - Date.now()) / 60000).toFixed(0);
+      const elapsed = ((Date.now() - jobStart) / 60000).toFixed(0);
       try {
         await jobSupabase.from('scan_progress').insert({
           search_id: job.search_id,
           step: 'scraping',
           status: 'running',
-          message: `Still scanning... deal finder is working`,
+          message: `Still scanning... ${elapsed}min elapsed`,
         });
       } catch (_) { /* non-fatal */ }
     }, 5 * 60 * 1000);
@@ -572,9 +583,9 @@ rm api/_lib/filters.js
 
 Note: `filters.js` has no remaining callers after removing `process-listings.js` and `scan-pipeline.js`. The skill handles all filtering internally. Keep it only if you plan to add query-time filtering on the Vercel side later.
 
-- [ ] **Step 3: Update vercel.json — remove scan-continue function config**
+- [ ] **Step 3: Update vercel.json**
 
-Read `vercel.json`, remove any reference to `scan-continue.js` from the functions config.
+Read `vercel.json`. Remove `scan-continue.js` entry. Change `scan-start.js` maxDuration from 300 to 10.
 
 - [ ] **Step 4: Check for broken imports**
 
@@ -605,14 +616,16 @@ process-listings.js, discover.js, score.js, scrape.js"
 
 ---
 
-## Task 7: Bridge Skill Output → Dashboard search_id
+## Task 7: Bridge Skill → Dashboard (search_id + buy box + brief)
 
-The `/find-deals` skill writes scored deals to `deal_searches` + `deals` tables, but it creates its own `search_id` (Step 0 of apply-buybox.md). The on-demand job has a `search_id` from the dashboard. We need the skill's output to be linked to the dashboard's `search_id`.
-
-The fix is deterministic (env var), not prompt engineering. `on-demand-scrape.js` (Task 3) already passes `DEALHOUND_SEARCH_ID` as an env var. This task modifies the skill's `apply-buybox.md` to check for it.
+Three skill modifications to support dashboard integration:
+1. `DEALHOUND_SEARCH_ID` env var: skip creating a new search record for on-demand scans
+2. `DEALHOUND_BUY_BOX_FILE` env var: read buy box from temp JSON file instead of defaults
+3. Write `brief` field to Supabase so dashboard deal cards have summaries
 
 **Files:**
 - Modify: `/Users/gideonspencer/.claude/skills/find-deals/apply-buybox.md`
+- Modify: `/Users/gideonspencer/.claude/skills/find-deals/buy-box.md`
 
 - [ ] **Step 1: Update Step 0 in apply-buybox.md**
 
@@ -657,12 +670,54 @@ unset DEALHOUND_SEARCH_ID
 
 Expected: Prints "Using: test-123".
 
-- [ ] **Step 3: Commit**
+- [ ] **Step 3: Add DEALHOUND_BUY_BOX_FILE support to buy-box.md**
+
+At the top of `buy-box.md`, add a note:
+
+```markdown
+**Runtime override:** If `$DEALHOUND_BUY_BOX_FILE` is set (path to a JSON file),
+read the buy box config from that file instead of the defaults below. The JSON
+file has the same structure as `deal_searches.buy_box` in Supabase:
+`{"locations":["Texas"],"price_min":300000,"price_max":3000000,"property_types":["micro_resort"],...}`
+
+Check this env var before using any hardcoded values in this file.
+```
+
+- [ ] **Step 4: Add brief field to Step 5b Supabase write**
+
+In `apply-buybox.md` Step 5b, add `brief` to the patch object. The brief is a 1-2 sentence summary constructed from the deal data:
+
+```python
+    # Build brief from deal data
+    brief_parts = []
+    if deal.get("rooms_keys"):
+        brief_parts.append(f"{deal['rooms_keys']}-key")
+    if deal.get("property_type"):
+        brief_parts.append(deal["property_type"])
+    if deal.get("location"):
+        brief_parts.append(f"in {deal['location']}")
+    if deal.get("score_breakdown", {}).get("strategy", {}).get("revenue_match") == "STRONG MATCH":
+        brief_parts.append("cash flowing")
+    elif deal.get("score_breakdown", {}).get("strategy", {}).get("revenue_match") == "MATCH":
+        brief_parts.append("revenue signals")
+    brief = ", ".join(brief_parts) if brief_parts else deal.get("title", "")[:100]
+
+    patch = {
+        "score": deal["priority_score"],
+        "score_breakdown": deal["score_breakdown"],
+        "property_type": deal.get("property_type"),
+        "days_on_market": deal.get("dom_hint"),
+        "passed_hard_filters": True,
+        "brief": brief,  # dashboard deal card summary
+    }
+```
+
+- [ ] **Step 5: Commit**
 
 ```bash
 cd /Users/gideonspencer/.claude/skills/find-deals
-git add apply-buybox.md
-git commit -m "feat: support DEALHOUND_SEARCH_ID env var for dashboard integration"
+git add apply-buybox.md buy-box.md
+git commit -m "feat: DEALHOUND_SEARCH_ID + BUY_BOX_FILE env vars + brief field for dashboard"
 ```
 
 ---
