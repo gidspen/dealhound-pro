@@ -298,9 +298,17 @@ module.exports = async function handler(req, res) {
                   const locMatch = locations.some(loc => {
                     if (loc === 'us' || loc === 'usa' || loc === 'nationwide') return true;
                     if (dealLoc.includes(loc)) return true;
-                    // Also match state abbreviation: "Texas" matches "TX"
+                    // State name lookup: "Texas" -> matches ", tx" in deal
                     const abbrev = stateAbbrevs[loc];
                     if (abbrev && dealLoc.includes(`, ${abbrev}`)) return true;
+                    // Free-text buy box: check if any city/state word from buy box appears in deal
+                    // "Within 2 hours of Houston, TX" -> check "houston", "tx"
+                    const locWords = loc.replace(/[,]/g, ' ').split(/\s+/).filter(w => w.length >= 2);
+                    const cityMatch = locWords.some(w => {
+                      if (['in', 'of', 'the', 'and', 'within', 'near', 'from', 'hours', 'minutes', 'hour', 'minute'].includes(w)) return false;
+                      return dealLoc.includes(w);
+                    });
+                    if (cityMatch) return true;
                     return false;
                   });
                   if (!locMatch) return false;
