@@ -92,25 +92,18 @@ module.exports = async function handler(req, res) {
     const latestBuyBox = (scans || []).find(s => s.buy_box)?.buy_box;
 
     if (latestBuyBox && scanIds.length >= 0) {
-      // Find the most recent scan with scored deals (the daily pool).
-      // Don't exclude user's own scans -- the daily cron runs under Gideon's
-      // email, so excluding by scanId would hide the entire pool from him.
-      // URL dedup later prevents duplicates.
-      const { data: poolCandidates } = await supabase
+      // Query ALL recent scored deals across all scans from the last 7 days.
+      // Multiple scans may cover different regions. Filter by buy box after.
+      // URL dedup prevents duplicates.
+      const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+      const { data: rawPoolDeals } = await supabase
         .from('deals')
-        .select('search_id')
+        .select('id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description')
         .eq('passed_hard_filters', true)
-        .order('scraped_at', { ascending: false })
-        .limit(1);
+        .gte('scraped_at', sevenDaysAgo)
+        .limit(500);
 
-      const poolSearchId = poolCandidates?.[0]?.search_id;
-
-      if (poolSearchId) {
-        const { data: rawPoolDeals } = await supabase
-          .from('deals')
-          .select('id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description')
-          .eq('search_id', poolSearchId)
-          .eq('passed_hard_filters', true);
+      if (rawPoolDeals && rawPoolDeals.length > 0) {
 
         // Filter by user's buy box
         const priceMax = latestBuyBox.price_max;

@@ -252,25 +252,21 @@ module.exports = async function handler(req, res) {
           console.error('Buy box save error:', JSON.stringify(searchError));
           res.write(`data: ${JSON.stringify({ type: 'error', error: 'Failed to save buy box: ' + searchError.message })}\n\n`);
         } else {
-          // Query shared pool for matching deals
+          // Query ALL recent scored deals (not just one pool scan).
+          // Multiple scans may cover different regions. Grab everything
+          // from the last 7 days and filter by the user's buy box.
           let poolMatchCount = 0;
           try {
-            const { data: poolCandidates } = await supabase
+            const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+            const { data: rawPoolDeals } = await supabase
               .from('deals')
-              .select('search_id')
+              .select('url, price, location')
               .eq('passed_hard_filters', true)
               .not('search_id', 'eq', search.id)
-              .order('scraped_at', { ascending: false })
-              .limit(1);
+              .gte('scraped_at', sevenDaysAgo)
+              .limit(500);
 
-            const poolSearchId = poolCandidates?.[0]?.search_id;
-
-            if (poolSearchId) {
-              const { data: rawPoolDeals } = await supabase
-                .from('deals')
-                .select('url, price, location')
-                .eq('search_id', poolSearchId)
-                .eq('passed_hard_filters', true);
+            if (rawPoolDeals && rawPoolDeals.length > 0) {
 
               const priceMax = buyBox.price_max;
               const priceMin = buyBox.price_min;
