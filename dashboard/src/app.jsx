@@ -1,5 +1,6 @@
 import { useEffect } from 'preact/hooks';
-import { email, view, scans, sidebarOpen, sidebarWidth, previewOpen, previewWidth } from './lib/state.js';
+import { batch } from '@preact/signals';
+import { email, view, scans, deals, activeThreadId, sidebarOpen, sidebarWidth, previewOpen, previewWidth } from './lib/state.js';
 import { loadUserData, switchThread } from './lib/api.js';
 import { Sidebar } from './components/Sidebar.jsx';
 import { Chat } from './components/Chat.jsx';
@@ -46,14 +47,24 @@ function EmailGate() {
 
     try {
       await loadUserData();
-      const completedScans = scans.value.filter(s => s.status === 'complete');
-      // Prefer scan with deals, fall back to newest completed
-      const bestScan = completedScans.find(s => s.deal_count > 0) || completedScans[0];
-      if (bestScan) {
-        view.value = 'scan';
-        await switchThread(bestScan.id, 'scan', bestScan.conversation_id);
+      // If user has deals (from pool or own scans), go straight to deals
+      if (deals.value.length > 0) {
+        const topDeal = deals.value[0];
+        batch(() => {
+          activeThreadId.value = topDeal.id;
+          view.value = 'deal';
+          previewOpen.value = true;
+        });
+        await switchThread(topDeal.id, 'deal', null);
       } else {
-        view.value = 'onboarding';
+        const completedScans = scans.value.filter(s => s.status === 'complete');
+        const bestScan = completedScans.find(s => s.deal_count > 0) || completedScans[0];
+        if (bestScan) {
+          view.value = 'scan';
+          await switchThread(bestScan.id, 'scan', bestScan.conversation_id);
+        } else {
+          view.value = 'onboarding';
+        }
       }
     } catch {
       view.value = 'onboarding';
@@ -78,13 +89,23 @@ export function App() {
     if (stored) {
       email.value = stored;
       loadUserData().then(() => {
-        const completedScans = scans.value.filter(s => s.status === 'complete');
-        const bestScan = completedScans.find(s => s.deal_count > 0) || completedScans[0];
-        if (bestScan) {
-          view.value = 'scan';
-          switchThread(bestScan.id, 'scan', bestScan.conversation_id);
+        if (deals.value.length > 0) {
+          const topDeal = deals.value[0];
+          batch(() => {
+            activeThreadId.value = topDeal.id;
+            view.value = 'deal';
+            previewOpen.value = true;
+          });
+          switchThread(topDeal.id, 'deal', null);
         } else {
-          view.value = 'onboarding';
+          const completedScans = scans.value.filter(s => s.status === 'complete');
+          const bestScan = completedScans.find(s => s.deal_count > 0) || completedScans[0];
+          if (bestScan) {
+            view.value = 'scan';
+            switchThread(bestScan.id, 'scan', bestScan.conversation_id);
+          } else {
+            view.value = 'onboarding';
+          }
         }
       }).catch(() => {
         view.value = 'onboarding';
