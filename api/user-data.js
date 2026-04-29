@@ -92,16 +92,14 @@ module.exports = async function handler(req, res) {
     const latestBuyBox = (scans || []).find(s => s.buy_box)?.buy_box;
 
     if (latestBuyBox && scanIds.length >= 0) {
-      // Find most recent scored deal not in user's own scans
-      const scanIdList = scanIds.length > 0
-        ? scanIds.map(id => `"${id}"`).join(',')
-        : '"00000000-0000-0000-0000-000000000000"';
-
+      // Find the most recent scan with scored deals (the daily pool).
+      // Don't exclude user's own scans -- the daily cron runs under Gideon's
+      // email, so excluding by scanId would hide the entire pool from him.
+      // URL dedup later prevents duplicates.
       const { data: poolCandidates } = await supabase
         .from('deals')
         .select('search_id')
         .eq('passed_hard_filters', true)
-        .not('search_id', 'in', `(${scanIdList})`)
         .order('scraped_at', { ascending: false })
         .limit(1);
 
