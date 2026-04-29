@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'preact/hooks';
-import { view, agentName, chatMessages, chatStreaming, activeThreadId, scans, currentDeal } from '../lib/state.js';
+import { batch } from '@preact/signals';
+import { view, agentName, chatMessages, chatStreaming, activeThreadId, scans, deals, currentDeal, previewOpen } from '../lib/state.js';
 import { sendMessage, loadUserData, switchThread } from '../lib/api.js';
 import { parseBreakdown, tierFromStrategy } from '../lib/utils.js';
 
@@ -62,8 +63,21 @@ export function Chat() {
       chatMessages.value = msgs;
 
       await loadUserData();
-      view.value = 'scan';
-      await switchThread(search_id, 'scan', null);
+
+      if (pool_match_count > 0 && deals.value.length > 0) {
+        // Pool has deals -- go straight to the first deal, skip scan debrief
+        const topDeal = deals.value[0];
+        batch(() => {
+          activeThreadId.value = topDeal.id;
+          view.value = 'deal';
+          previewOpen.value = true;
+        });
+        await switchThread(topDeal.id, 'deal', null);
+      } else {
+        // No pool deals -- show scan progress view
+        view.value = 'scan';
+        await switchThread(search_id, 'scan', null);
+      }
     };
     window.addEventListener('buybox-saved', handler);
     return () => window.removeEventListener('buybox-saved', handler);
