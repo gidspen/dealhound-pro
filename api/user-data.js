@@ -119,14 +119,32 @@ module.exports = async function handler(req, res) {
         const priceMin = latestBuyBox.price_min;
         const locations = (latestBuyBox.locations || []).map(l => l.toLowerCase());
 
+        // State name to abbreviation map for location matching
+        const stateAbbrevs = {
+          'alabama':'al','alaska':'ak','arizona':'az','arkansas':'ar','california':'ca',
+          'colorado':'co','connecticut':'ct','delaware':'de','florida':'fl','georgia':'ga',
+          'hawaii':'hi','idaho':'id','illinois':'il','indiana':'in','iowa':'ia','kansas':'ks',
+          'kentucky':'ky','louisiana':'la','maine':'me','maryland':'md','massachusetts':'ma',
+          'michigan':'mi','minnesota':'mn','mississippi':'ms','missouri':'mo','montana':'mt',
+          'nebraska':'ne','nevada':'nv','new hampshire':'nh','new jersey':'nj','new mexico':'nm',
+          'new york':'ny','north carolina':'nc','north dakota':'nd','ohio':'oh','oklahoma':'ok',
+          'oregon':'or','pennsylvania':'pa','rhode island':'ri','south carolina':'sc',
+          'south dakota':'sd','tennessee':'tn','texas':'tx','utah':'ut','vermont':'vt',
+          'virginia':'va','washington':'wa','west virginia':'wv','wisconsin':'wi','wyoming':'wy',
+        };
+
         poolDeals = (rawPoolDeals || []).filter(d => {
           if (d.price && priceMax && Number(d.price) > priceMax) return false;
           if (d.price && priceMin && Number(d.price) < priceMin) return false;
           if (locations.length > 0 && d.location) {
             const dealLoc = d.location.toLowerCase();
-            const locMatch = locations.some(loc =>
-              dealLoc.includes(loc) || loc === 'us' || loc === 'usa' || loc === 'nationwide'
-            );
+            const locMatch = locations.some(loc => {
+              if (loc === 'us' || loc === 'usa' || loc === 'nationwide') return true;
+              if (dealLoc.includes(loc)) return true;
+              const abbrev = stateAbbrevs[loc];
+              if (abbrev && dealLoc.includes(`, ${abbrev}`)) return true;
+              return false;
+            });
             if (!locMatch) return false;
           }
           return true;
