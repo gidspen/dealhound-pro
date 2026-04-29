@@ -51,18 +51,15 @@ export function Chat() {
 
   useEffect(() => {
     const handler = async (e) => {
-      const { search_id } = e.detail;
+      const { search_id, pool_match_count } = e.detail;
       const msgs = [...chatMessages.value];
-      msgs.push({ role: 'system', content: 'Buy box saved. Starting your scan...' });
-      chatMessages.value = msgs;
 
-      try {
-        await fetch('/api/scan-start', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ search_id })
-        });
-      } catch { /* scan-start may not be fully wired yet */ }
+      if (pool_match_count > 0) {
+        msgs.push({ role: 'system', content: 'Buy box saved. Loading your deals...' });
+      } else {
+        msgs.push({ role: 'system', content: 'Buy box saved. Your agent is scanning the market...' });
+      }
+      chatMessages.value = msgs;
 
       await loadUserData();
       view.value = 'scan';

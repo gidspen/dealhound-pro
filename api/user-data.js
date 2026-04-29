@@ -87,6 +87,60 @@ module.exports = async function handler(req, res) {
       deals = data || [];
     }
 
+    // Shared pool: also show deals from the latest daily scan matching user's buy box
+    let poolDeals = [];
+    const latestBuyBox = (scans || []).find(s => s.buy_box)?.buy_box;
+
+    if (latestBuyBox && scanIds.length >= 0) {
+      // Find most recent scored deal not in user's own scans
+      const scanIdList = scanIds.length > 0
+        ? scanIds.map(id => `"${id}"`).join(',')
+        : '"00000000-0000-0000-0000-000000000000"';
+
+      const { data: poolCandidates } = await supabase
+        .from('deals')
+        .select('search_id')
+        .eq('passed_hard_filters', true)
+        .not('search_id', 'in', `(${scanIdList})`)
+        .order('scraped_at', { ascending: false })
+        .limit(1);
+
+      const poolSearchId = poolCandidates?.[0]?.search_id;
+
+      if (poolSearchId) {
+        const { data: rawPoolDeals } = await supabase
+          .from('deals')
+          .select('id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description')
+          .eq('search_id', poolSearchId)
+          .eq('passed_hard_filters', true);
+
+        // Filter by user's buy box
+        const priceMax = latestBuyBox.price_max;
+        const priceMin = latestBuyBox.price_min;
+        const locations = (latestBuyBox.locations || []).map(l => l.toLowerCase());
+
+        poolDeals = (rawPoolDeals || []).filter(d => {
+          if (d.price && priceMax && Number(d.price) > priceMax) return false;
+          if (d.price && priceMin && Number(d.price) < priceMin) return false;
+          if (locations.length > 0 && d.location) {
+            const dealLoc = d.location.toLowerCase();
+            const locMatch = locations.some(loc =>
+              dealLoc.includes(loc) || loc === 'us' || loc === 'usa' || loc === 'nationwide'
+            );
+            if (!locMatch) return false;
+          }
+          return true;
+        });
+
+        // URL dedup: remove pool deals already in user's own deals
+        const userUrls = new Set(deals.map(d => d.url).filter(Boolean));
+        poolDeals = poolDeals.filter(d => !d.url || !userUrls.has(d.url));
+      }
+    }
+
+    // Merge pool deals after user's own deals
+    deals = [...deals, ...poolDeals];
+
     // Star status
     const dealIds = deals.map(d => d.id);
     let starredIds = new Set();

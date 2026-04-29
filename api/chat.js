@@ -252,10 +252,73 @@ module.exports = async function handler(req, res) {
           console.error('Buy box save error:', JSON.stringify(searchError));
           res.write(`data: ${JSON.stringify({ type: 'error', error: 'Failed to save buy box: ' + searchError.message })}\n\n`);
         } else {
+          // Query shared pool for matching deals
+          let poolMatchCount = 0;
+          try {
+            const { data: poolCandidates } = await supabase
+              .from('deals')
+              .select('search_id')
+              .eq('passed_hard_filters', true)
+              .not('search_id', 'eq', search.id)
+              .order('scraped_at', { ascending: false })
+              .limit(1);
+
+            const poolSearchId = poolCandidates?.[0]?.search_id;
+
+            if (poolSearchId) {
+              const { data: rawPoolDeals } = await supabase
+                .from('deals')
+                .select('url, price, location')
+                .eq('search_id', poolSearchId)
+                .eq('passed_hard_filters', true);
+
+              const priceMax = buyBox.price_max;
+              const priceMin = buyBox.price_min;
+              const locations = (buyBox.locations || []).map(l => l.toLowerCase());
+
+              const matching = (rawPoolDeals || []).filter(d => {
+                if (d.price && priceMax && Number(d.price) > priceMax) return false;
+                if (d.price && priceMin && Number(d.price) < priceMin) return false;
+                if (locations.length > 0 && d.location) {
+                  const dealLoc = d.location.toLowerCase();
+                  const locMatch = locations.some(loc =>
+                    dealLoc.includes(loc) || loc === 'us' || loc === 'usa' || loc === 'nationwide'
+                  );
+                  if (!locMatch) return false;
+                }
+                return true;
+              });
+
+              poolMatchCount = matching.length;
+            }
+          } catch (poolErr) {
+            console.error('Pool query error:', poolErr.message);
+          }
+
+          if (poolMatchCount > 0) {
+            // Deals available from pool -- mark search as complete
+            await supabase
+              .from('deal_searches')
+              .update({ status: 'complete' })
+              .eq('id', search.id);
+          } else {
+            // No pool matches -- trigger on-demand scan
+            await supabase.from('scrape_jobs').insert({
+              search_id: search.id,
+              buy_box: buyBox,
+              status: 'pending',
+            });
+            await supabase
+              .from('deal_searches')
+              .update({ status: 'scanning' })
+              .eq('id', search.id);
+          }
+
           res.write(`data: ${JSON.stringify({
             type: 'buy_box_saved',
             search_id: search.id,
-            buy_box: buyBox
+            buy_box: buyBox,
+            pool_match_count: poolMatchCount,
           })}\n\n`);
         }
 
