@@ -4,6 +4,7 @@ import preact from '@preact/preset-vite';
 export default defineConfig({
   plugins: [preact({ devToolsEnabled: false })],
   root: 'dashboard',
+  base: '/dashboard-dist/',
   build: {
     outDir: '../dashboard-dist',
     emptyOutDir: true
