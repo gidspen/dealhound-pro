@@ -2,206 +2,253 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** When a new user signs up and defines their buy box, they instantly see scored deals from the daily shared pool that match their criteria. No scan button, no 30-minute wait.
+**Goal:** When a new user signs up and defines their buy box, they instantly see scored deals from the daily shared pool that match their criteria. If the pool is empty, an on-demand scan fires automatically. The user never knows a pool exists. It feels like their personal agent found the deals.
 
-**Architecture:** Sophie's daily cron builds a pool of scored deals in Supabase. When a user defines their buy box via the onboarding chat, the `save_buy_box` tool creates a `deal_searches` record AND queries the existing pool for matching deals. The dashboard shows results immediately. The "scan" concept becomes invisible -- deals are always fresh from this morning's run.
+**Architecture:** Sophie's daily cron builds a pool of scored deals in Supabase. `user-data.js` queries the pool filtered by the user's buy box (shared pool query, not copy). `chat.js` tells Claude the exact deal count at onboarding. If 0 matches, falls back to on-demand scan via `scrape_jobs` queue. URL dedup prevents day-over-day duplicate listings.
 
 **Tech Stack:** Vercel serverless (Node.js), Supabase (PostgreSQL), Preact dashboard (existing).
 
 ---
 
-## What Exists
+## Key Decisions (from eng review)
 
-| Component | Status | Notes |
-|-----------|--------|-------|
-| Onboarding chat | Working | Claude-powered buy box intake with `save_buy_box` tool in `api/chat.js` |
-| `save_buy_box` tool | Working | Creates `deal_searches` record with buy box JSONB |
-| Dashboard sidebar | Working | Groups deals by tier (HOT/STRONG/WATCH), star/archive/view |
-| Deal chat | Working | Claude analyzes individual deals |
-| Scan debrief | Working | Claude summarizes scan results |
-| Daily cron | Working | Sophie runs /find-deals at 6am CT, produces ~50 scored deals |
-| `user-data.js` | Working | Returns deals by `user_email` + `search_id` |
-| `scan-start.js` | Working | Writes to `scrape_jobs` queue (but on-demand scan takes 10-30 min) |
-
-## What's Wrong for MVP
-
-1. **New users see 0 deals until a scan completes.** After onboarding, `scan-start.js` fires, Sophie picks up the job, skill runs 10-30 min. User stares at an empty dashboard.
-
-2. **Deals are siloed by search_id.** `user-data.js` only returns deals from searches owned by the logged-in user. The daily cron's 50 deals are under Gideon's email. A new user can't see them.
-
-3. **Scan button is the wrong UX.** Users don't want to "run a scan." They want to see deals. The scan is an implementation detail.
-
-## What MVP Looks Like
-
-```
-User signs up → onboarding chat → defines buy box → "Here are your deals"
-                                                       ↓
-                                          Instant results from today's pool
-                                          filtered by the user's buy box
-```
-
-No scan button. No waiting. Deals appear the moment the buy box is confirmed.
-
-Behind the scenes, the daily cron keeps the pool fresh. New locations from new users get added to the next day's cron run.
+- **Shared pool query, not copy.** `user-data.js` queries the pool at read time instead of copying deals into each user's search_id. Avoids linear row growth (50 deals x 100 users = 5,000 redundant rows).
+- **URL dedup.** Day-over-day duplicates filtered by URL in `user-data.js`. Cross-source dedup within a day already handled by the skill's three-tier dedup.
+- **Exact count with dedup in chat.js.** Run the same dedup logic when counting pool matches so Claude's "Found 23 deals" matches exactly what the sidebar shows.
+- **Invisible fallback.** If pool is empty, auto-trigger on-demand scan. User sees "I'm scanning the market for you now" not "No pool available."
+- **Agent framing.** User never knows a shared pool exists. It feels like their personal agent found the deals.
 
 ---
 
-## File Structure
+## Data Flow
 
-### Modified files
-
-| File | What changes |
-|------|-------------|
-| `api/chat.js` | `save_buy_box` tool: after saving, query shared pool for matching deals and link them to the user's search |
-| `api/user-data.js` | Also return deals from the latest shared pool scan that match the user's buy box |
-| `api/scan-start.js` | Remove or repurpose -- on-demand scan becomes optional, not the primary flow |
-
-### New files
-
-None. This is a behavior change in existing files, not new infrastructure.
+```
+User defines buy box
+        |
+        v
+chat.js save_buy_box handler
+  ├── Save deal_searches record
+  ├── Query pool for matching deals (price + location filter)
+  ├── Apply URL dedup (same logic as user-data.js)
+  ├── Count > 0?
+  │   ├── YES: Tell Claude "Found N deals" → mark status='complete'
+  │   └── NO:  Write scrape_jobs row → tell Claude "Scanning now, ~20 min"
+  └── Return to Claude for response
+        |
+        v
+Dashboard loads → user-data.js
+  ├── Fetch user's own deals (by user_email + search_id)
+  ├── Fetch pool deals (latest scored deals, filtered by user's buy box)
+  ├── URL dedup pool against user's own
+  └── Return combined set → sidebar shows deals
+```
 
 ---
 
-## Task 1: Query Shared Pool After Buy Box Save
+## Task 1: Add Shared Pool Query to user-data.js
 
-When the `save_buy_box` tool fires in `api/chat.js`, it currently creates a `deal_searches` record and triggers `scan-start`. Instead, it should:
+`user-data.js` currently returns deals only from searches owned by the logged-in user. Add a pool query that also returns deals from the latest daily scan, filtered by the user's buy box.
 
-1. Create the `deal_searches` record (keep this)
-2. Find the most recent daily scan with deals
-3. Copy matching deals from that scan to the user's search_id
-4. Skip the scan-start call entirely
+**Files:**
+- Modify: `/Users/gideonspencer/dealhound-pro/api/user-data.js`
+
+- [ ] **Step 1: Read user-data.js and locate the deals query**
+
+The current flow (lines 55-88): query `deal_searches` by email → get search_ids → query `deals` by search_ids.
+
+- [ ] **Step 2: Add pool query after the existing deals query**
+
+After `deals` are fetched (line 88), add:
+
+```javascript
+// Shared pool: also show deals from the latest daily scan matching user's buy box
+let poolDeals = [];
+const latestBuyBox = (scans || []).find(s => s.buy_box)?.buy_box;
+
+if (latestBuyBox) {
+  // Find the most recent pool scan (any search_id with scored deals, not owned by this user)
+  const { data: poolCandidates } = await supabase
+    .from('deals')
+    .select('search_id')
+    .eq('passed_hard_filters', true)
+    .not('search_id', 'in', `(${scanIds.map(id => `"${id}"`).join(',')})`)
+    .order('scraped_at', { ascending: false })
+    .limit(1);
+
+  const poolSearchId = poolCandidates?.[0]?.search_id;
+
+  if (poolSearchId) {
+    const { data: rawPoolDeals } = await supabase
+      .from('deals')
+      .select('id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description')
+      .eq('search_id', poolSearchId)
+      .eq('passed_hard_filters', true);
+
+    // Filter by user's buy box
+    const priceMax = latestBuyBox.price_max;
+    const priceMin = latestBuyBox.price_min;
+    const locations = (latestBuyBox.locations || []).map(l => l.toLowerCase());
+
+    poolDeals = (rawPoolDeals || []).filter(d => {
+      if (d.price && priceMax && Number(d.price) > priceMax) return false;
+      if (d.price && priceMin && Number(d.price) < priceMin) return false;
+      if (locations.length > 0 && d.location) {
+        const dealLoc = d.location.toLowerCase();
+        const locMatch = locations.some(loc =>
+          dealLoc.includes(loc) || loc === 'us' || loc === 'usa' || loc === 'nationwide'
+        );
+        if (!locMatch) return false;
+      }
+      return true;
+    });
+
+    // URL dedup: remove pool deals that already appear in user's own deals
+    const userUrls = new Set(deals.map(d => d.url).filter(Boolean));
+    poolDeals = poolDeals.filter(d => !d.url || !userUrls.has(d.url));
+  }
+}
+
+// Merge: user's own deals first, then pool deals
+deals = [...deals, ...poolDeals];
+```
+
+- [ ] **Step 3: Update the star/view/archive logic to handle pool deals**
+
+The existing code (lines 91-122) builds `starredIds`, `viewedIds`, `archivedIds` from the user's deal IDs. Pool deal IDs won't be in these sets (user hasn't interacted with them yet). This is correct behavior -- pool deals show as unviewed/unstarred by default.
+
+No change needed. The existing code handles this naturally.
+
+- [ ] **Step 4: Verify syntax**
+
+```bash
+cd /Users/gideonspencer/dealhound-pro && node --check api/user-data.js && echo "OK"
+```
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add api/user-data.js
+git commit -m "feat: user-data.js queries shared pool deals filtered by buy box
+
+Adds pool query: finds latest daily scan with scored deals, filters
+by user's buy box (price + location), dedupes by URL against user's
+own deals. Users see pool deals alongside their own."
+```
+
+---
+
+## Task 2: Add Pool Count + Fallback to chat.js save_buy_box
+
+After saving the buy box, query the pool for a count of matching deals. If matches exist, tell Claude the count. If no matches, trigger an on-demand scan.
 
 **Files:**
 - Modify: `/Users/gideonspencer/dealhound-pro/api/chat.js`
 
-- [ ] **Step 1: Read the current save_buy_box handler**
+- [ ] **Step 1: Read chat.js and locate the save_buy_box handler**
 
-In `api/chat.js`, find where `save_buy_box` tool use is handled. It should be after the Claude API call, in the tool_use response handling.
+Lines 225-263. After the `deal_searches` INSERT succeeds (line 254), add pool logic.
 
-- [ ] **Step 2: Find the tool handling code**
+- [ ] **Step 2: Add pool count query and fallback**
 
-```bash
-cd /Users/gideonspencer/dealhound-pro && grep -n "save_buy_box" api/chat.js
-```
-
-- [ ] **Step 3: Add shared pool query after buy box save**
-
-After the `deal_searches` INSERT, add this logic:
+After `search` is created (line 249) and before the SSE event is sent (line 255), add:
 
 ```javascript
-// Find the most recent daily scan that has scored deals.
-// The daily cron always creates a deal_searches record (skill Step 0).
-// Just grab the most recent one that isn't the user's new record.
-const { data: latestPool } = await supabase
+// Query shared pool for matching deals
+let poolMatchCount = 0;
+
+// Find latest pool scan
+const { data: poolCandidates } = await supabase
   .from('deals')
   .select('search_id')
   .eq('passed_hard_filters', true)
-  .not('search_id', 'eq', searchRecord.id)
   .order('scraped_at', { ascending: false })
   .limit(1);
 
-const bestPoolId = latestPool?.[0]?.search_id || null;
+const poolSearchId = poolCandidates?.[0]?.search_id;
 
-if (bestPoolId && bestCount > 0) {
-  // Copy matching deals from the pool to this user's search
-  const { data: poolDeals } = await supabase
+if (poolSearchId) {
+  const { data: rawPoolDeals } = await supabase
     .from('deals')
-    .select('*')
-    .eq('search_id', bestPoolId)
+    .select('url, price, location')
+    .eq('search_id', poolSearchId)
     .eq('passed_hard_filters', true);
 
-  // Filter by user's buy box
-  const bb = buyBoxData; // from the tool input
-  const matching = (poolDeals || []).filter(deal => {
-    // Price filter
-    if (deal.price && bb.price_max && deal.price > bb.price_max) return false;
-    if (deal.price && bb.price_min && deal.price < bb.price_min) return false;
-    // Location filter (loose match -- check if deal location contains any buy box location keyword)
-    if (bb.locations && bb.locations.length > 0 && deal.location) {
-      const dealLoc = deal.location.toLowerCase();
-      const locationMatch = bb.locations.some(loc => {
-        const locLower = loc.toLowerCase();
-        return dealLoc.includes(locLower) || locLower === 'us' || locLower === 'usa' || locLower === 'nationwide';
-      });
-      if (!locationMatch) return false;
+  const priceMax = buyBox.price_max;
+  const priceMin = buyBox.price_min;
+  const locations = (buyBox.locations || []).map(l => l.toLowerCase());
+
+  const matching = (rawPoolDeals || []).filter(d => {
+    if (d.price && priceMax && Number(d.price) > priceMax) return false;
+    if (d.price && priceMin && Number(d.price) < priceMin) return false;
+    if (locations.length > 0 && d.location) {
+      const dealLoc = d.location.toLowerCase();
+      const locMatch = locations.some(loc =>
+        dealLoc.includes(loc) || loc === 'us' || loc === 'usa' || loc === 'nationwide'
+      );
+      if (!locMatch) return false;
     }
     return true;
   });
 
-  if (matching.length > 0) {
-    // Insert copies linked to the user's search_id
-    const copies = matching.map(d => ({
-      search_id: searchRecord.id,
-      source: d.source,
-      url: d.url,
-      source_url: d.source_url,
-      title: d.title,
-      price: d.price,
-      acreage: d.acreage,
-      location: d.location,
-      address: d.address,
-      property_type: d.property_type,
-      rooms_keys: d.rooms_keys,
-      score: d.score,
-      score_breakdown: d.score_breakdown,
-      brief: d.brief,
-      raw_description: d.raw_description,
-      days_on_market: d.days_on_market,
-      passed_hard_filters: true,
-      scraped_at: d.scraped_at,
-      also_listed_on: d.also_listed_on || [],
-      possible_duplicate: d.possible_duplicate || false,
-    }));
+  poolMatchCount = matching.length;
+}
 
-    // Insert in batches
-    for (let i = 0; i < copies.length; i += 50) {
-      await supabase.from('deals').insert(copies.slice(i, i + 50));
-    }
-  }
-
-  // Mark search as complete (deals are ready)
+if (poolMatchCount > 0) {
+  // Deals available from pool -- mark search as complete
   await supabase
     .from('deal_searches')
     .update({ status: 'complete' })
-    .eq('id', searchRecord.id);
-
-  // Return match count so Claude can tell the user
-  poolMatchCount = matching.length;
+    .eq('id', search.id);
 } else {
-  poolMatchCount = 0;
-}
-
-// Use poolMatchCount in the tool result sent back to Claude:
-// "Buy box saved. Found 23 deals from today's scan that match."
-// or "Buy box saved. No deals match yet -- results will be ready by tomorrow morning."
-```
-
-- [ ] **Step 4: Remove the scan-start trigger from the chat frontend**
-
-In `dashboard/src/components/Chat.jsx`, the `buybox-saved` event handler calls `/api/scan-start`. Remove that fetch call. The buy box save now immediately produces deals.
-
-Find this code (~line 57-65):
-```javascript
-try {
-  await fetch('/api/scan-start', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ search_id })
+  // No pool matches -- trigger on-demand scan
+  await supabase.from('scrape_jobs').insert({
+    search_id: search.id,
+    buy_box: buyBox,
+    status: 'pending',
   });
-} catch { /* scan-start may not be fully wired yet */ }
+  await supabase
+    .from('deal_searches')
+    .update({ status: 'scanning' })
+    .eq('id', search.id);
+}
 ```
 
-Replace with nothing -- just remove the fetch. The `loadUserData()` call right after will pick up the deals that were just copied from the pool.
+- [ ] **Step 3: Update the tool result message**
 
-- [ ] **Step 5: Update the Chat.jsx buybox-saved handler**
+Change the SSE event to include the pool match count so Claude knows what to say:
 
-The handler should still switch to scan view after saving, but now it shows deals immediately:
+```javascript
+res.write(`data: ${JSON.stringify({
+  type: 'buy_box_saved',
+  search_id: search.id,
+  buy_box: buyBox,
+  pool_match_count: poolMatchCount,
+})}\n\n`);
+```
+
+Also send a follow-up tool_result to Claude so it can respond appropriately. After the tool handling block, add a second Claude call with the tool result:
+
+```javascript
+// Continue the conversation with tool result
+const toolResultContent = poolMatchCount > 0
+  ? `Buy box saved successfully. Found ${poolMatchCount} deals from today's market scan that match the investor's criteria. They can see them in their dashboard now. Present 2-3 of the strongest matches and ask which one they want to explore first.`
+  : `Buy box saved successfully. No deals from today's scan match these exact criteria yet. I've started a fresh scan that will find deals in about 20 minutes. The investor will see results appear in their dashboard shortly.`;
+```
+
+- [ ] **Step 4: Remove scan-start trigger from Chat.jsx**
+
+In `dashboard/src/components/Chat.jsx`, find the `buybox-saved` event handler (~line 53-73). Remove the `scan-start` fetch (lines 59-65). Change the system message:
 
 ```javascript
 const handler = async (e) => {
-  const { search_id } = e.detail;
+  const { search_id, pool_match_count } = e.detail;
   const msgs = [...chatMessages.value];
-  msgs.push({ role: 'system', content: 'Buy box saved. Loading your deals...' });
+
+  if (pool_match_count > 0) {
+    msgs.push({ role: 'system', content: 'Buy box saved. Loading your deals...' });
+  } else {
+    msgs.push({ role: 'system', content: 'Buy box saved. Your agent is scanning the market...' });
+  }
   chatMessages.value = msgs;
 
   await loadUserData();
@@ -210,83 +257,46 @@ const handler = async (e) => {
 };
 ```
 
-- [ ] **Step 6: Verify syntax**
+- [ ] **Step 5: Verify syntax**
 
 ```bash
-cd /Users/gideonspencer/dealhound-pro && node --check api/chat.js && echo "OK"
+cd /Users/gideonspencer/dealhound-pro && node --check api/chat.js && echo "chat OK"
 ```
 
-- [ ] **Step 7: Build the dashboard**
+- [ ] **Step 6: Build dashboard**
 
 ```bash
 cd /Users/gideonspencer/dealhound-pro/dashboard && npm run build
 ```
 
-- [ ] **Step 8: Commit**
+- [ ] **Step 7: Commit**
 
 ```bash
 git add api/chat.js dashboard/
-git commit -m "feat: instant deals from shared pool after buy box save
+git commit -m "feat: instant pool deals + on-demand fallback after buy box save
 
-When a user defines their buy box, query the most recent daily scan
-for matching deals and copy them to the user's search. No 30-minute
-wait. Deals appear immediately after onboarding."
+Pool has deals: tell Claude the count, mark complete, user sees deals.
+Pool empty: auto-trigger on-demand scan, user sees 'scanning for you.'
+User never knows a pool exists -- feels like a personal agent."
 ```
 
 ---
 
-## Task 2: Make user-data.js Show Shared Pool Deals
+## Task 3: Daily Cron Location Expansion
 
-Right now `user-data.js` only returns deals from searches where `user_email` matches the logged-in user. For MVP, it should also check the latest shared pool and return matching deals even if the user hasn't run their own scan.
-
-**Files:**
-- Modify: `/Users/gideonspencer/dealhound-pro/api/user-data.js`
-
-- [ ] **Step 1: Read current user-data.js**
-
-Understand the current query flow (already read above -- it queries `deal_searches` by email, then `deals` by search_ids).
-
-- [ ] **Step 2: This is already handled by Task 1**
-
-Task 1 copies matching deals from the shared pool into the user's own `deal_searches` record. `user-data.js` already queries by `user_email` and returns deals from those searches. Since the copied deals are linked to the user's search_id, they show up automatically.
-
-No changes needed to `user-data.js`. Task 1's copy approach means the existing query path works.
-
-- [ ] **Step 3: Verify by checking the query flow**
-
-After Task 1 is implemented, a new user's flow:
-1. Onboarding chat -> save_buy_box -> creates deal_searches with user's email
-2. save_buy_box also copies matching deals from daily pool into user's search
-3. deal_searches.status = 'complete'
-4. Dashboard calls user-data.js -> queries deal_searches by email -> finds the record -> queries deals by search_id -> finds the copied deals
-5. Deals appear in sidebar
-
-Skip this task -- mark as not needed.
-
----
-
-## Task 3: (Merged into Task 1)
-
-The `poolMatchCount` variable from Task 1 feeds into the tool result message that Claude receives. When Claude sees "Found 23 deals", it naturally tells the user. No separate task needed.
-
----
-
-## Task 4: Add User's Locations to Daily Cron Pool
-
-When a new user defines locations the daily cron doesn't cover, those locations should be added to the next day's scan. The daily cron currently uses the hardcoded buy-box.md. It should also check Supabase for all active user locations.
+The daily cron currently uses the default buy-box.md locations. It should also cover all user locations from Supabase.
 
 **Files:**
 - Modify: `/Users/gideonspencer/sophie/pipelines/daily-scrape.js`
 
-- [ ] **Step 1: Read all active user buy boxes before running the skill**
+- [ ] **Step 1: Add Supabase location query before skill invocation**
 
-Before invoking `/find-deals full`, query Supabase for all unique locations across active buy boxes:
+At the top of `run()`, before calling `runClaude`, query all user buy boxes:
 
 ```javascript
 async function run() {
   console.log('[Sophie] Daily scrape: collecting locations from all users...');
 
-  // Gather all unique locations from user buy boxes
   const { createClient } = require('@supabase/supabase-js');
   const sb = createClient(
     process.env.SUPABASE_DEALS_URL || process.env.SUPABASE_URL,
@@ -306,28 +316,118 @@ async function run() {
 
   const locationStr = [...allLocations].join(', ') || 'Texas';
   console.log(`[Sophie] Daily scrape locations: ${locationStr}`);
+  memory.appendToDailyNote(`Daily scrape pipeline: starting /find-deals full for ${locationStr}`);
 
-  // Pass locations to the skill via prompt override
   const prompt = allLocations.size > 0
     ? `/find-deals full -- in ${locationStr}`
     : '/find-deals full';
 
-  // ... rest of the run() function
-```
+  const startTime = Date.now();
 
-Note: this uses the natural-language override for the daily cron (acceptable since the daily cron is Gideon's scan, not a user-facing on-demand scan). The on-demand path uses the structured DEALHOUND_BUY_BOX_FILE env var.
+  try {
+    const { output } = await runClaude(prompt);
+    // ... rest unchanged
+```
 
 - [ ] **Step 2: Commit**
 
 ```bash
 cd /Users/gideonspencer/sophie
 git add pipelines/daily-scrape.js
-git commit -m "feat: daily cron covers all user locations, not just default buy box"
+git commit -m "feat: daily cron covers all user locations from Supabase"
 ```
 
 ---
 
-## Task 5: Deploy and Test End-to-End
+## Task 4: URL Dedup Unit Test
+
+Test that pool deals are correctly deduped against user's own deals by URL.
+
+**Files:**
+- Create: `/Users/gideonspencer/dealhound-pro/tests/unit/pool-dedup.test.js`
+
+- [ ] **Step 1: Write the test**
+
+```javascript
+import { describe, it, expect } from 'vitest';
+
+// Extract the dedup logic into a testable function
+function dedupPoolDeals(userDeals, poolDeals) {
+  const userUrls = new Set(userDeals.map(d => d.url).filter(Boolean));
+  return poolDeals.filter(d => !d.url || !userUrls.has(d.url));
+}
+
+describe('pool deal dedup', () => {
+  it('removes pool deals with URLs matching user deals', () => {
+    const userDeals = [
+      { id: '1', url: 'https://rvparkstore.com/listing/123', title: 'RV Park A' },
+      { id: '2', url: 'https://campground-marketplace.com/456', title: 'Camp B' },
+    ];
+    const poolDeals = [
+      { id: '3', url: 'https://rvparkstore.com/listing/123', title: 'RV Park A' }, // dupe
+      { id: '4', url: 'https://rvparkstore.com/listing/789', title: 'RV Park C' }, // unique
+      { id: '5', url: 'https://campground-marketplace.com/456', title: 'Camp B' }, // dupe
+    ];
+
+    const result = dedupPoolDeals(userDeals, poolDeals);
+    expect(result).toHaveLength(1);
+    expect(result[0].id).toBe('4');
+  });
+
+  it('keeps pool deals with null URLs', () => {
+    const userDeals = [{ id: '1', url: 'https://example.com/1' }];
+    const poolDeals = [{ id: '2', url: null, title: 'No URL Deal' }];
+
+    const result = dedupPoolDeals(userDeals, poolDeals);
+    expect(result).toHaveLength(1);
+  });
+
+  it('returns all pool deals when user has no deals', () => {
+    const poolDeals = [
+      { id: '1', url: 'https://example.com/1' },
+      { id: '2', url: 'https://example.com/2' },
+    ];
+
+    const result = dedupPoolDeals([], poolDeals);
+    expect(result).toHaveLength(2);
+  });
+
+  it('handles day-over-day duplicates (same URL different days)', () => {
+    // Monday pool deal already in user's deals from a previous scan
+    const userDeals = [
+      { id: '1', url: 'https://rvparkstore.com/listing/123', title: 'Park A (Monday)' },
+    ];
+    // Tuesday pool has same listing
+    const poolDeals = [
+      { id: '2', url: 'https://rvparkstore.com/listing/123', title: 'Park A (Tuesday)' },
+      { id: '3', url: 'https://rvparkstore.com/listing/456', title: 'Park B (new)' },
+    ];
+
+    const result = dedupPoolDeals(userDeals, poolDeals);
+    expect(result).toHaveLength(1);
+    expect(result[0].title).toBe('Park B (new)');
+  });
+});
+```
+
+- [ ] **Step 2: Run test**
+
+```bash
+cd /Users/gideonspencer/dealhound-pro && npx vitest run tests/unit/pool-dedup.test.js
+```
+
+Expected: All 4 tests pass.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add tests/unit/pool-dedup.test.js
+git commit -m "test: URL dedup for shared pool deals across daily scans"
+```
+
+---
+
+## Task 5: Deploy and E2E Test
 
 - [ ] **Step 1: Build dashboard**
 
@@ -341,33 +441,28 @@ cd /Users/gideonspencer/dealhound-pro/dashboard && npm run build
 cd /Users/gideonspencer/dealhound-pro && vercel --prod --yes
 ```
 
-- [ ] **Step 3: Test the new user flow**
+- [ ] **Step 3: Test new user flow (pool has deals)**
 
-1. Open the dashboard in a browser
+1. Open dashboard in browser
 2. Enter a NEW email (not gideon@stonemontcap.com)
 3. Go through onboarding: define buy box for Texas, micro resorts, $300k-$3M
-4. After confirming, deals should appear IMMEDIATELY (from this morning's pool)
-5. Verify the chat says "Found X deals" not "Starting your scan"
-6. Click on deals in the sidebar, verify deal cards show tier/price/location
-7. Click into a deal, verify deal chat works
+4. After confirming, Claude should say "Found X deals" (instant, from pool)
+5. Deals should appear in sidebar grouped by tier
+6. Click a deal -- deal chat should work
 
-- [ ] **Step 4: Verify data in Supabase**
+- [ ] **Step 4: Test empty pool fallback**
 
-```sql
--- New user should have a deal_searches record with status='complete'
-SELECT id, user_email, status FROM deal_searches
-WHERE user_email = 'NEW_TEST_EMAIL' ORDER BY run_at DESC LIMIT 1;
-
--- And deals linked to it
-SELECT count(*) FROM deals
-WHERE search_id = 'SEARCH_ID_FROM_ABOVE' AND passed_hard_filters = true;
-```
+1. Enter another new email
+2. Define buy box for a location NOT in the pool (e.g., "Alaska")
+3. Claude should say "I'm scanning the market for you now"
+4. Check `scrape_jobs` table -- a pending row should appear
+5. Sophie should pick it up within 60s
 
 - [ ] **Step 5: Commit any fixes**
 
 ```bash
 git add -A
-git commit -m "fix: MVP testing fixes"
+git commit -m "fix: MVP E2E testing fixes"
 ```
 
 ---
@@ -376,9 +471,24 @@ git commit -m "fix: MVP testing fixes"
 
 | Item | Why deferred |
 |------|-------------|
-| On-demand scan button | Daily pool covers MVP; scan button is a future feature for new locations |
-| DEALHOUND_BUY_BOX_FILE structured override | Daily cron handles deal sourcing; on-demand per-user scraping is post-MVP |
-| Multi-user buy box in daily cron via env var | Task 4 handles location expansion via prompt; structured env var is post-MVP |
-| Push notifications / email digest | Users check the dashboard; notifications are post-MVP |
-| User auth (passwords, OAuth) | Email gate is sufficient for MVP |
+| Buy box edit/update flow | V1 users define once, iterate in future |
+| Location normalization | Free-text matching is good enough for MVP markets |
+| Daily cron location cap | <10 users, <10 locations, not a problem yet |
+| Cross-pool-vs-user dedup beyond URL | Cross-source dedup within a day handled by skill |
+| Push notifications / email digest | Users check the dashboard |
+| User auth (passwords, OAuth) | Email gate is sufficient |
 | Payment / billing | Free for initial users |
+
+## GSTACK REVIEW REPORT
+
+| Review | Trigger | Why | Runs | Status | Findings |
+|--------|---------|-----|------|--------|----------|
+| CEO Review | `/plan-ceo-review` | Scope & strategy | 0 | -- | -- |
+| Codex Review | `/codex review` | Independent 2nd opinion | 0 | -- | -- |
+| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 1 | CLEAR (PLAN) | 7 issues, 0 critical gaps |
+| Design Review | `/plan-design-review` | UI/UX gaps | 0 | -- | -- |
+| DX Review | `/plan-devex-review` | Developer experience gaps | 0 | -- | -- |
+
+- **OUTSIDE VOICE:** Claude subagent found 8 issues. 2 addressed (#3 count mismatch, #6 empty pool fallback). Rest deferred as post-MVP.
+- **UNRESOLVED:** 0
+- **VERDICT:** ENG CLEARED -- ready to implement
