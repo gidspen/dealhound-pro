@@ -1,11 +1,12 @@
 import { batch } from '@preact/signals';
 import {
-  email, view, activeThreadId, scans, activeThreads,
+  email, view, activeThreadId, scans, activeThreads, deals,
   settingsOpen, sidebarOpen, sidebarWidth, sidebarTab, unreadFilter,
   starredDealIds, viewedDealIds, archivedDealIds,
-  inboxDeals, trackingDeals, newDealCount, previewOpen
+  inboxDeals, trackingDeals, newDealCount, previewOpen,
+  chatMessages
 } from '../lib/state.js';
-import { switchThread, toggleStar, archiveDeal } from '../lib/api.js';
+import { switchThread, toggleStar, archiveDeal, loadUserData } from '../lib/api.js';
 import { tierFromStrategy, tierLabel, fmtPrice, parseBreakdown } from '../lib/utils.js';
 
 // ── DealRow ──────────────────────────────────────────────────────────────────
@@ -124,8 +125,10 @@ export function Sidebar() {
   const totalAnalyzed = scans.value.reduce((sum, s) => sum + (s.deal_count || 0), 0);
 
   const startNewScan = () => {
-    view.value = 'onboarding';
+    // Clear chat so Quinn starts fresh (not mid-way through a previous conversation)
+    chatMessages.value = [];
     activeThreadId.value = null;
+    view.value = 'onboarding';
   };
 
   // ── Collapsed state ────────────────────────────────────────────────────────

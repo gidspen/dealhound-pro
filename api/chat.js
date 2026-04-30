@@ -276,8 +276,11 @@ module.exports = async function handler(req, res) {
 
             if (rawPoolDeals && rawPoolDeals.length > 0) {
 
-              const priceMax = buyBox.price_max;
-              const priceMin = buyBox.price_min;
+              // Pool check uses LOCATION ONLY — no price filter.
+              // Price is a refinement for ranking, not a reason to trigger a full scan.
+              // A user searching $1M-$3M Texas should see Texas deals even if most
+              // pool deals are under $1M. Better to show something than trigger an
+              // expensive on-demand scan that may never run.
               const locations = (buyBox.locations || []).map(l => l.toLowerCase());
 
               // State name to abbreviation map for location matching
@@ -295,8 +298,6 @@ module.exports = async function handler(req, res) {
               };
 
               const matching = (rawPoolDeals || []).filter(d => {
-                if (d.price && priceMax && Number(d.price) > priceMax) return false;
-                if (d.price && priceMin && Number(d.price) < priceMin) return false;
                 if (locations.length > 0 && d.location) {
                   const dealLoc = d.location.toLowerCase();
                   const locMatch = locations.some(loc => {
@@ -306,7 +307,6 @@ module.exports = async function handler(req, res) {
                     const abbrev = stateAbbrevs[loc];
                     if (abbrev && dealLoc.includes(`, ${abbrev}`)) return true;
                     // Free-text buy box: check if any city/state word from buy box appears in deal
-                    // "Within 2 hours of Houston, TX" -> check "houston", "tx"
                     const locWords = loc.replace(/[,]/g, ' ').split(/\s+/).filter(w => w.length >= 2);
                     const cityMatch = locWords.some(w => {
                       if (['in', 'of', 'the', 'and', 'within', 'near', 'from', 'hours', 'minutes', 'hour', 'minute'].includes(w)) return false;
