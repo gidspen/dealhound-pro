@@ -34,16 +34,19 @@ export function Settings() {
 
         <div class="settings-section">
           <div class="settings-section-title">Help</div>
-          <a href="mailto:support@dealhound.pro" class="settings-link">Contact Support →</a>
-          <a href="https://dealhound.pro" target="_blank" class="settings-link">Documentation →</a>
+          <a
+            href={`mailto:gideon@stonemontcap.com?subject=${encodeURIComponent('Deal Hound feedback')}&body=${encodeURIComponent('What worked? What didn\'t? What surprised you?\n\n')}`}
+            class="settings-link"
+          >
+            Send feedback →
+          </a>
+          <a href="mailto:support@dealhound.pro" class="settings-link">Contact support →</a>
         </div>
 
         <div class="settings-section">
-          <div class="settings-section-title">Billing</div>
-          <div class="settings-plan">Current plan: <strong>Free</strong></div>
-          <button class="settings-upgrade-btn" onClick={() => alert('Upgrade coming soon! Email support@dealhound.pro for early access.')}>
-            Upgrade to Pro — $29/mo
-          </button>
+          <div class="settings-section-title">Account</div>
+          <div class="settings-plan">Status: <strong>Beta access</strong></div>
+          <div class="settings-plan-meta">Unlimited free use during preview. Payments coming soon.</div>
         </div>
 
         <div class="settings-section">

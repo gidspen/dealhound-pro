@@ -130,7 +130,7 @@ body::before {
   justify-content: center;
 }
 .sidebar-logo-text { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; }
-.beta-badge { font-size: 0.55rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; background: var(--accent); color: #fff; padding: 1px 6px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
+.beta-badge { font-size: 0.55rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; background: var(--gold-dim); color: var(--gold); padding: 1px 6px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
 /* Sidebar tally — subtle caption */
 .sidebar-tally {
   font-size: 0.68rem; color: var(--cream-sub);
@@ -651,8 +651,9 @@ body::before {
   transition: color 0.12s;
 }
 .settings-link:hover { color: var(--gold); }
-.settings-plan { font-size: 0.82rem; color: var(--cream-dim); margin-bottom: 10px; }
+.settings-plan { font-size: 0.82rem; color: var(--cream-dim); margin-bottom: 4px; }
 .settings-plan strong { color: var(--cream); font-weight: 500; }
+.settings-plan-meta { font-size: 12px; color: var(--cream-dim); margin: 4px 0 0; }
 .settings-upgrade-btn {
   display: block; width: 100%; text-align: center;
   background: var(--gold); color: #FFF; border: none;
