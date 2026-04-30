@@ -1,0 +1,14 @@
+{
+  "name": "dealhound-worker",
+  "version": "1.0.0",
+  "description": "Background job worker — polls scrape_jobs queue and invokes find-deals agent",
+  "main": "worker.js",
+  "scripts": {
+    "start": "node worker.js",
+    "union-buy-box": "node union-buy-box.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.0",
+    "dotenv": "^16.4.5"
+  }
+}
