@@ -87,11 +87,23 @@ module.exports = async function handler(req, res) {
       deals = data || [];
     }
 
-    // Shared pool: also show deals from the latest daily scan matching user's buy box
+    // Shared pool: show scored deals from the last 7 days, filtered to user's buy box.
+    // This runs for ALL users — including new users with no scans yet.
+    // The pool is how users see deals immediately on first login.
     let poolDeals = [];
-    const latestBuyBox = (scans || []).find(s => s.buy_box)?.buy_box;
 
-    if (latestBuyBox && scanIds.length >= 0) {
+    // Parse buy box — handle both JSONB object and accidentally-stringified values
+    let rawBuyBox = (scans || []).find(s => s.buy_box)?.buy_box || null;
+    let latestBuyBox = null;
+    if (rawBuyBox) {
+      if (typeof rawBuyBox === 'string') {
+        try { latestBuyBox = JSON.parse(rawBuyBox); } catch (_) { latestBuyBox = null; }
+      } else {
+        latestBuyBox = rawBuyBox;
+      }
+    }
+
+    {
       // Query ALL recent scored deals across all scans from the last 7 days.
       // Multiple scans may cover different regions. Filter by buy box after.
       // URL dedup prevents duplicates.
@@ -105,10 +117,10 @@ module.exports = async function handler(req, res) {
 
       if (rawPoolDeals && rawPoolDeals.length > 0) {
 
-        // Filter by user's buy box
-        const priceMax = latestBuyBox.price_max;
-        const priceMin = latestBuyBox.price_min;
-        const locations = (latestBuyBox.locations || []).map(l => l.toLowerCase());
+        // Filter by user's buy box if available; otherwise show all pool deals
+        const priceMax = latestBuyBox?.price_max ?? null;
+        const priceMin = latestBuyBox?.price_min ?? null;
+        const locations = (latestBuyBox?.locations || []).map(l => l.toLowerCase());
 
         // State name to abbreviation map for location matching
         const stateAbbrevs = {
