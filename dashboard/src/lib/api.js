@@ -65,7 +65,10 @@ export async function sendMessage(text, endpoint, extraBody = {}) {
   chatMessages.value = [...chatMessages.value, userMsg];
   chatStreaming.value = true;
 
-  const allMessages = chatMessages.value.map(m => ({ role: m.role, content: m.content }));
+  // Strip role:'system' UI-only messages — Claude API only accepts 'user' and 'assistant'
+  const allMessages = chatMessages.value
+    .filter(m => m.role === 'user' || m.role === 'assistant')
+    .map(m => ({ role: m.role, content: m.content }));
 
   try {
     const res = await fetch(`${API_BASE}${endpoint}`, {
@@ -79,6 +82,11 @@ export async function sendMessage(text, endpoint, extraBody = {}) {
         ...extraBody
       })
     });
+
+    if (!res.ok) {
+      const errText = await res.text().catch(() => '');
+      throw new Error(`API error ${res.status}: ${errText.slice(0, 200)}`);
+    }
 
     const reader = res.body.getReader();
     const decoder = new TextDecoder();

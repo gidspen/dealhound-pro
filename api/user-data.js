@@ -1,4 +1,5 @@
 const { createClient } = require('@supabase/supabase-js');
+const { filterDealsByBuyBox } = require('./_lib/location');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -87,117 +88,63 @@ module.exports = async function handler(req, res) {
       deals = data || [];
     }
 
-    // Shared pool: also show deals from the latest daily scan matching user's buy box
+    // Shared pool: show scored deals from the last 7 days, filtered to user's buy box.
+    // This runs for ALL users — including new users with no scans yet.
+    // The pool is how users see deals immediately on first login.
     let poolDeals = [];
-    const latestBuyBox = (scans || []).find(s => s.buy_box)?.buy_box;
 
-    if (latestBuyBox && scanIds.length >= 0) {
-      // Query ALL recent scored deals across all scans from the last 7 days.
-      // Multiple scans may cover different regions. Filter by buy box after.
-      // URL dedup prevents duplicates.
-      const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
-      const { data: rawPoolDeals } = await supabase
-        .from('deals')
-        .select('id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description')
-        .eq('passed_hard_filters', true)
-        .gte('scraped_at', sevenDaysAgo)
-        .limit(500);
-
-      if (rawPoolDeals && rawPoolDeals.length > 0) {
-
-        // Filter by user's buy box
-        const priceMax = latestBuyBox.price_max;
-        const priceMin = latestBuyBox.price_min;
-        const locations = (latestBuyBox.locations || []).map(l => l.toLowerCase());
-
-        // State name to abbreviation map for location matching
-        const stateAbbrevs = {
-          'alabama':'al','alaska':'ak','arizona':'az','arkansas':'ar','california':'ca',
-          'colorado':'co','connecticut':'ct','delaware':'de','florida':'fl','georgia':'ga',
-          'hawaii':'hi','idaho':'id','illinois':'il','indiana':'in','iowa':'ia','kansas':'ks',
-          'kentucky':'ky','louisiana':'la','maine':'me','maryland':'md','massachusetts':'ma',
-          'michigan':'mi','minnesota':'mn','mississippi':'ms','missouri':'mo','montana':'mt',
-          'nebraska':'ne','nevada':'nv','new hampshire':'nh','new jersey':'nj','new mexico':'nm',
-          'new york':'ny','north carolina':'nc','north dakota':'nd','ohio':'oh','oklahoma':'ok',
-          'oregon':'or','pennsylvania':'pa','rhode island':'ri','south carolina':'sc',
-          'south dakota':'sd','tennessee':'tn','texas':'tx','utah':'ut','vermont':'vt',
-          'virginia':'va','washington':'wa','west virginia':'wv','wisconsin':'wi','wyoming':'wy',
-        };
-
-        poolDeals = (rawPoolDeals || []).filter(d => {
-          if (d.price && priceMax && Number(d.price) > priceMax) return false;
-          if (d.price && priceMin && Number(d.price) < priceMin) return false;
-          if (locations.length > 0 && d.location) {
-            const dealLoc = d.location.toLowerCase();
-            const locMatch = locations.some(loc => {
-              if (loc === 'us' || loc === 'usa' || loc === 'nationwide') return true;
-              if (dealLoc.includes(loc)) return true;
-              const abbrev = stateAbbrevs[loc];
-              if (abbrev && dealLoc.includes(`, ${abbrev}`)) return true;
-              // Free-text buy box: check if any city/state word appears in deal
-              const locWords = loc.replace(/[,]/g, ' ').split(/\s+/).filter(w => w.length >= 2);
-              const cityMatch = locWords.some(w => {
-                if (['in', 'of', 'the', 'and', 'within', 'near', 'from', 'hours', 'minutes', 'hour', 'minute'].includes(w)) return false;
-                return dealLoc.includes(w);
-              });
-              if (cityMatch) return true;
-              return false;
-            });
-            if (!locMatch) return false;
-          }
-          return true;
-        });
-
-        // URL dedup: remove pool deals already in user's own deals
-        const userUrls = new Set(deals.map(d => d.url).filter(Boolean));
-        poolDeals = poolDeals.filter(d => !d.url || !userUrls.has(d.url));
+    // Parse buy box — handle both JSONB object and accidentally-stringified values
+    let rawBuyBox = (scans || []).find(s => s.buy_box)?.buy_box || null;
+    let latestBuyBox = null;
+    if (rawBuyBox) {
+      if (typeof rawBuyBox === 'string') {
+        try { latestBuyBox = JSON.parse(rawBuyBox); } catch (_) { latestBuyBox = null; }
+      } else {
+        latestBuyBox = rawBuyBox;
       }
+    }
+
+    // Query all recent scored deals from the last 7 days, filter to buy box.
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+    const { data: rawPoolDeals } = await supabase
+      .from('deals')
+      .select('id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description')
+      .eq('passed_hard_filters', true)
+      .gte('scraped_at', sevenDaysAgo)
+      .limit(500);
+
+    if (rawPoolDeals && rawPoolDeals.length > 0) {
+      // Filter by buy box (price + location), then dedup against user's own deals
+      poolDeals = filterDealsByBuyBox(rawPoolDeals, latestBuyBox);
+      const userUrls = new Set(deals.map(d => d.url).filter(Boolean));
+      poolDeals = poolDeals.filter(d => !d.url || !userUrls.has(d.url));
     }
 
     // Merge pool deals after user's own deals
     deals = [...deals, ...poolDeals];
 
-    // Star status
+    // Fetch star/view/archive/thread status in parallel
     const dealIds = deals.map(d => d.id);
-    let starredIds = new Set();
-    if (dealIds.length > 0) {
-      const { data: stars } = await supabase
-        .from('user_deal_stars')
-        .select('deal_id')
+    const [starsRes, viewsRes, archivesRes, threadConvosRes] = await Promise.all([
+      dealIds.length > 0
+        ? supabase.from('user_deal_stars').select('deal_id').eq('user_email', email).in('deal_id', dealIds)
+        : Promise.resolve({ data: [] }),
+      dealIds.length > 0
+        ? supabase.from('user_deal_views').select('deal_id').eq('user_email', email).in('deal_id', dealIds)
+        : Promise.resolve({ data: [] }),
+      dealIds.length > 0
+        ? supabase.from('user_deal_archives').select('deal_id').eq('user_email', email).in('deal_id', dealIds)
+        : Promise.resolve({ data: [] }),
+      supabase.from('conversations').select('id, deal_id')
+        .eq('conversation_type', 'deal_qa')
         .eq('user_email', email)
-        .in('deal_id', dealIds);
-      starredIds = new Set((stars || []).map(s => s.deal_id));
-    }
+        .not('deal_id', 'is', null),
+    ]);
 
-    // Viewed status
-    let viewedIds = new Set();
-    if (dealIds.length > 0) {
-      const { data: views } = await supabase
-        .from('user_deal_views')
-        .select('deal_id')
-        .eq('user_email', email)
-        .in('deal_id', dealIds);
-      viewedIds = new Set((views || []).map(v => v.deal_id));
-    }
-
-    // Archived status
-    let archivedIds = new Set();
-    if (dealIds.length > 0) {
-      const { data: archives } = await supabase
-        .from('user_deal_archives')
-        .select('deal_id')
-        .eq('user_email', email)
-        .in('deal_id', dealIds);
-      archivedIds = new Set((archives || []).map(a => a.deal_id));
-    }
-
-    // Active deal threads
-    const { data: threadConvos } = await supabase
-      .from('conversations')
-      .select('id, deal_id')
-      .eq('conversation_type', 'deal_qa')
-      .eq('user_email', email)
-      .not('deal_id', 'is', null);
+    const starredIds  = new Set((starsRes.data    || []).map(s => s.deal_id));
+    const viewedIds   = new Set((viewsRes.data     || []).map(v => v.deal_id));
+    const archivedIds = new Set((archivesRes.data  || []).map(a => a.deal_id));
+    const threadConvos = threadConvosRes.data || [];
 
     // Deal counts per scan
     const dealCountMap = {};

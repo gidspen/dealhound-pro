@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build && rm dashboard/index.html",
   "outputDirectory": ".",
   "functions": {
     "api/chat.js": { "maxDuration": 60 },

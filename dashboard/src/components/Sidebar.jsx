@@ -1,11 +1,12 @@
 import { batch } from '@preact/signals';
 import {
-  email, view, activeThreadId, scans, activeThreads,
+  email, view, activeThreadId, scans, activeThreads, deals,
   settingsOpen, sidebarOpen, sidebarWidth, sidebarTab, unreadFilter,
   starredDealIds, viewedDealIds, archivedDealIds,
-  inboxDeals, trackingDeals, newDealCount, previewOpen
+  inboxDeals, trackingDeals, newDealCount, previewOpen,
+  chatMessages
 } from '../lib/state.js';
-import { switchThread, toggleStar, archiveDeal } from '../lib/api.js';
+import { switchThread, toggleStar, archiveDeal, loadUserData } from '../lib/api.js';
 import { tierFromStrategy, tierLabel, fmtPrice, parseBreakdown } from '../lib/utils.js';
 
 // ── DealRow ──────────────────────────────────────────────────────────────────
@@ -124,8 +125,10 @@ export function Sidebar() {
   const totalAnalyzed = scans.value.reduce((sum, s) => sum + (s.deal_count || 0), 0);
 
   const startNewScan = () => {
-    view.value = 'onboarding';
+    // Clear chat so Quinn starts fresh (not mid-way through a previous conversation)
+    chatMessages.value = [];
     activeThreadId.value = null;
+    view.value = 'onboarding';
   };
 
   // ── Collapsed state ────────────────────────────────────────────────────────
@@ -207,14 +210,8 @@ export function Sidebar() {
         </button>
       </div>
 
-      {/* Controls: New Scan + Unread filter (inbox only) */}
+      {/* Controls: Unread filter (inbox only) — New Scan hidden for now */}
       <div class="sidebar-controls">
-        <button class="sidebar-new-scan" style="flex: 1;" onClick={startNewScan}>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-            <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
-          </svg>
-          New Scan
-        </button>
         {sidebarTab.value === 'inbox' && (
           <button
             class={`sidebar-filter-btn ${unreadFilter.value ? 'active' : ''}`}

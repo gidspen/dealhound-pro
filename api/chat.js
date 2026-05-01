@@ -1,5 +1,6 @@
 const Anthropic = require('@anthropic-ai/sdk');
 const { createClient } = require('@supabase/supabase-js');
+const { dealMatchesLocations } = require('./_lib/location');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -7,6 +8,14 @@ const supabase = createClient(
 );
 
 const SYSTEM_PROMPT = `You are {{AGENT_NAME}}, an AI deal hunting agent. You scan 30+ marketplaces and private broker listings daily, assess and score every property, and surface only the deals that match an investor's exact strategy and buy box.
+
+## HOW SCANNING ACTUALLY WORKS (CRITICAL)
+
+You do NOT scan live during this conversation. You collect the user's buy box, confirm it, and save it via the save_buy_box tool. After that, a background scanner runs the full search (30-60 minutes) and the user sees results in the dashboard when complete.
+
+NEVER pretend to be scanning during chat. NEVER say things like "Give me 30 seconds to pull results" or "[Scanning...]" or "Let me compile the survivors." These are dishonest — you are not scanning during chat. The scan is a background job that runs after you save the buy box.
+
+If the user asks for live scanning or pushes for immediate results, be direct: "I don't scan live during our chat. Once we finalize your buy box and you confirm, the scanner runs in the background and you'll see scored deals in the dashboard within 30-60 minutes."
 
 Your personality: Candid, clear, direct, friendly, and positive. You're a sharp deal analyst — not a chatbot, not an overly excited teenager. Keep responses concise. One exclamation mark is fine in the very first message. After that, use periods. No slang like "pumped", "stoked", "awesome", "let's go". Just be real.
 
@@ -267,51 +276,13 @@ module.exports = async function handler(req, res) {
               .limit(500);
 
             if (rawPoolDeals && rawPoolDeals.length > 0) {
-
-              const priceMax = buyBox.price_max;
-              const priceMin = buyBox.price_min;
+              // Pool check uses LOCATION ONLY — no price filter.
+              // Price is a refinement for ranking, not a reason to trigger a full scan.
+              // A user searching $1M-$3M Texas should see Texas deals even if most
+              // pool deals are under $1M. Better to show something than trigger an
+              // expensive on-demand scan that may never run.
               const locations = (buyBox.locations || []).map(l => l.toLowerCase());
-
-              // State name to abbreviation map for location matching
-              const stateAbbrevs = {
-                'alabama':'al','alaska':'ak','arizona':'az','arkansas':'ar','california':'ca',
-                'colorado':'co','connecticut':'ct','delaware':'de','florida':'fl','georgia':'ga',
-                'hawaii':'hi','idaho':'id','illinois':'il','indiana':'in','iowa':'ia','kansas':'ks',
-                'kentucky':'ky','louisiana':'la','maine':'me','maryland':'md','massachusetts':'ma',
-                'michigan':'mi','minnesota':'mn','mississippi':'ms','missouri':'mo','montana':'mt',
-                'nebraska':'ne','nevada':'nv','new hampshire':'nh','new jersey':'nj','new mexico':'nm',
-                'new york':'ny','north carolina':'nc','north dakota':'nd','ohio':'oh','oklahoma':'ok',
-                'oregon':'or','pennsylvania':'pa','rhode island':'ri','south carolina':'sc',
-                'south dakota':'sd','tennessee':'tn','texas':'tx','utah':'ut','vermont':'vt',
-                'virginia':'va','washington':'wa','west virginia':'wv','wisconsin':'wi','wyoming':'wy',
-              };
-
-              const matching = (rawPoolDeals || []).filter(d => {
-                if (d.price && priceMax && Number(d.price) > priceMax) return false;
-                if (d.price && priceMin && Number(d.price) < priceMin) return false;
-                if (locations.length > 0 && d.location) {
-                  const dealLoc = d.location.toLowerCase();
-                  const locMatch = locations.some(loc => {
-                    if (loc === 'us' || loc === 'usa' || loc === 'nationwide') return true;
-                    if (dealLoc.includes(loc)) return true;
-                    // State name lookup: "Texas" -> matches ", tx" in deal
-                    const abbrev = stateAbbrevs[loc];
-                    if (abbrev && dealLoc.includes(`, ${abbrev}`)) return true;
-                    // Free-text buy box: check if any city/state word from buy box appears in deal
-                    // "Within 2 hours of Houston, TX" -> check "houston", "tx"
-                    const locWords = loc.replace(/[,]/g, ' ').split(/\s+/).filter(w => w.length >= 2);
-                    const cityMatch = locWords.some(w => {
-                      if (['in', 'of', 'the', 'and', 'within', 'near', 'from', 'hours', 'minutes', 'hour', 'minute'].includes(w)) return false;
-                      return dealLoc.includes(w);
-                    });
-                    if (cityMatch) return true;
-                    return false;
-                  });
-                  if (!locMatch) return false;
-                }
-                return true;
-              });
-
+              const matching = rawPoolDeals.filter(d => dealMatchesLocations(d.location, locations));
               poolMatchCount = matching.length;
             }
           } catch (poolErr) {

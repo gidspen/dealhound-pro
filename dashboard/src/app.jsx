@@ -1,4 +1,4 @@
-import { useEffect } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { batch } from '@preact/signals';
 import { email, view, scans, deals, activeThreadId, sidebarOpen, sidebarWidth, previewOpen, previewWidth } from './lib/state.js';
 import { loadUserData, switchThread } from './lib/api.js';
@@ -37,37 +37,60 @@ function ResizeHandle({ edge, widthSignal, minW, maxW }) {
   return <div class={`resize-handle resize-${edge}`} onPointerDown={onPointerDown} />;
 }
 
+// ── Shared routing logic after loadUserData resolves ──────────────────────────
+// Rules:
+//   1. Has deals (own or pool)  → deal view with top deal
+//   2. Has scans but no deals   → scan view (user has buy box, results pending)
+//   3. No scans at all          → onboarding (genuinely new user)
+async function routeAfterLoad() {
+  console.log('[DH] route: deals=%d scans=%d', deals.value.length, scans.value.length);
+
+  if (deals.value.length > 0) {
+    const topDeal = deals.value[0];
+    console.log('[DH] → deal view', topDeal.id);
+    batch(() => {
+      activeThreadId.value = topDeal.id;
+      view.value = 'deal';
+      previewOpen.value = true;
+    });
+    await switchThread(topDeal.id, 'deal', null);
+  } else if (scans.value.length > 0) {
+    // User already has a buy box — show scan view rather than restarting onboarding.
+    // Prefer a completed scan with deals; fall back to most recent scan.
+    const withDeals = scans.value.find(s => s.deal_count > 0);
+    const scan = withDeals || scans.value[0];
+    console.log('[DH] → scan view', scan.id, scan.status);
+    view.value = 'scan';
+    await switchThread(scan.id, 'scan', scan.conversation_id);
+  } else {
+    // Truly new user: no buy box yet
+    console.log('[DH] → onboarding (no scans)');
+    view.value = 'onboarding';
+  }
+}
+
 function EmailGate() {
+  const [loading, setLoading] = useState(false);
+  const [loadError, setLoadError] = useState(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const val = e.target.elements.email.value.trim();
     if (!val) return;
+
+    setLoading(true);
+    setLoadError(null);
     email.value = val;
     localStorage.setItem('dh_email', val);
 
     try {
       await loadUserData();
-      // If user has deals (from pool or own scans), go straight to deals
-      if (deals.value.length > 0) {
-        const topDeal = deals.value[0];
-        batch(() => {
-          activeThreadId.value = topDeal.id;
-          view.value = 'deal';
-          previewOpen.value = true;
-        });
-        await switchThread(topDeal.id, 'deal', null);
-      } else {
-        const completedScans = scans.value.filter(s => s.status === 'complete');
-        const bestScan = completedScans.find(s => s.deal_count > 0) || completedScans[0];
-        if (bestScan) {
-          view.value = 'scan';
-          await switchThread(bestScan.id, 'scan', bestScan.conversation_id);
-        } else {
-          view.value = 'onboarding';
-        }
-      }
-    } catch {
-      view.value = 'onboarding';
+      await routeAfterLoad();
+    } catch (err) {
+      console.error('[DH] loadUserData error:', err);
+      setLoadError('Could not load your dashboard. Check your connection and try again.');
+      setLoading(false);
+      // Don't route anywhere — stay on the gate so the user can retry
     }
   };
 
@@ -76,9 +99,12 @@ function EmailGate() {
       <h1>Your <em>deal hunting</em><br />command center.</h1>
       <p>Enter your email to access your buy boxes, scan results, and top deals.</p>
       <form class="gate-form" onSubmit={handleSubmit}>
-        <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" autofocus />
-        <button type="submit" class="btn-primary">Open Dashboard</button>
+        <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" autofocus disabled={loading} />
+        <button type="submit" class="btn-primary" disabled={loading}>
+          {loading ? 'Loading…' : 'Open Dashboard'}
+        </button>
       </form>
+      {loadError && <p class="gate-error">{loadError}</p>}
     </div>
   );
 }
@@ -88,28 +114,15 @@ export function App() {
     const stored = localStorage.getItem('dh_email');
     if (stored) {
       email.value = stored;
-      loadUserData().then(() => {
-        if (deals.value.length > 0) {
-          const topDeal = deals.value[0];
-          batch(() => {
-            activeThreadId.value = topDeal.id;
-            view.value = 'deal';
-            previewOpen.value = true;
-          });
-          switchThread(topDeal.id, 'deal', null);
-        } else {
-          const completedScans = scans.value.filter(s => s.status === 'complete');
-          const bestScan = completedScans.find(s => s.deal_count > 0) || completedScans[0];
-          if (bestScan) {
-            view.value = 'scan';
-            switchThread(bestScan.id, 'scan', bestScan.conversation_id);
-          } else {
-            view.value = 'onboarding';
-          }
-        }
-      }).catch(() => {
-        view.value = 'onboarding';
-      });
+      loadUserData()
+        .then(() => routeAfterLoad())
+        .catch((err) => {
+          // API failed on auto-load — clear stale email so user lands on the gate
+          // rather than a blank screen or, worse, Quinn's onboarding greeting.
+          console.error('[DH] auto-load failed:', err);
+          localStorage.removeItem('dh_email');
+          email.value = null;
+        });
     }
   }, []);
 
