@@ -65,6 +65,12 @@ body::before {
   transition: opacity 0.2s;
 }
 .btn-primary:hover { opacity: 0.88; }
+.btn-primary:disabled { opacity: 0.55; cursor: default; }
+
+.gate-error {
+  margin-top: 16px; font-size: 0.84rem;
+  color: var(--red); text-align: center; max-width: 420px;
+}
 
 /* APP SHELL */
 #app-shell {
