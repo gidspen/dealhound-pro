@@ -44,7 +44,7 @@ function dealMatchesLocations(dealLocation, locations) {
  * Returns only the deals that match.
  */
 function filterDealsByBuyBox(deals, buyBox) {
-  if (!buyBox) return deals;
+  if (!buyBox) return [];
 
   const priceMax = buyBox.price_max ?? null;
   const priceMin = buyBox.price_min ?? null;
