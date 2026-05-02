@@ -1,6 +1,6 @@
 const Anthropic = require('@anthropic-ai/sdk');
 const { createClient } = require('@supabase/supabase-js');
-const { dealMatchesLocations } = require('./_lib/location');
+const { triggerScan } = require('./_lib/scan-trigger');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -261,58 +261,12 @@ module.exports = async function handler(req, res) {
           console.error('Buy box save error:', JSON.stringify(searchError));
           res.write(`data: ${JSON.stringify({ type: 'error', error: 'Failed to save buy box: ' + searchError.message })}\n\n`);
         } else {
-          // Query ALL recent scored deals (not just one pool scan).
-          // Multiple scans may cover different regions. Grab everything
-          // from the last 7 days and filter by the user's buy box.
-          let poolMatchCount = 0;
-          try {
-            const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
-            const { data: rawPoolDeals } = await supabase
-              .from('deals')
-              .select('url, price, location')
-              .eq('passed_hard_filters', true)
-              .not('search_id', 'eq', search.id)
-              .gte('scraped_at', sevenDaysAgo)
-              .limit(500);
-
-            if (rawPoolDeals && rawPoolDeals.length > 0) {
-              // Pool check uses LOCATION ONLY — no price filter.
-              // Price is a refinement for ranking, not a reason to trigger a full scan.
-              // A user searching $1M-$3M Texas should see Texas deals even if most
-              // pool deals are under $1M. Better to show something than trigger an
-              // expensive on-demand scan that may never run.
-              const locations = (buyBox.locations || []).map(l => l.toLowerCase());
-              const matching = rawPoolDeals.filter(d => dealMatchesLocations(d.location, locations));
-              poolMatchCount = matching.length;
-            }
-          } catch (poolErr) {
-            console.error('Pool query error:', poolErr.message);
-          }
-
-          if (poolMatchCount > 0) {
-            // Deals available from pool -- mark search as complete
-            await supabase
-              .from('deal_searches')
-              .update({ status: 'complete' })
-              .eq('id', search.id);
-          } else {
-            // No pool matches -- trigger on-demand scan
-            await supabase.from('scrape_jobs').insert({
-              search_id: search.id,
-              buy_box: buyBox,
-              status: 'pending',
-            });
-            await supabase
-              .from('deal_searches')
-              .update({ status: 'scanning' })
-              .eq('id', search.id);
-          }
+          await triggerScan(search.id, buyBox, supabase);
 
           res.write(`data: ${JSON.stringify({
             type: 'buy_box_saved',
             search_id: search.id,
             buy_box: buyBox,
-            pool_match_count: poolMatchCount,
           })}\n\n`);
         }
 

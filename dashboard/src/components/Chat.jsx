@@ -52,32 +52,17 @@ export function Chat() {
 
   useEffect(() => {
     const handler = async (e) => {
-      const { search_id, pool_match_count } = e.detail;
+      const { search_id } = e.detail;
       const msgs = [...chatMessages.value];
 
-      if (pool_match_count > 0) {
-        msgs.push({ role: 'system', content: 'Buy box saved. Loading your deals...' });
-      } else {
-        msgs.push({ role: 'system', content: 'Buy box saved. Your agent is scanning the market...' });
-      }
+      msgs.push({ role: 'system', content: 'Buy box saved. Your agent is scanning the market...' });
       chatMessages.value = msgs;
 
       await loadUserData();
 
-      if (pool_match_count > 0 && deals.value.length > 0) {
-        // Pool has deals -- go straight to the first deal, skip scan debrief
-        const topDeal = deals.value[0];
-        batch(() => {
-          activeThreadId.value = topDeal.id;
-          view.value = 'deal';
-          previewOpen.value = true;
-        });
-        await switchThread(topDeal.id, 'deal', null);
-      } else {
-        // No pool deals -- show scan progress view
-        view.value = 'scan';
-        await switchThread(search_id, 'scan', null);
-      }
+      // Always go to scan view — every buy box save triggers a fresh scan
+      view.value = 'scan';
+      await switchThread(search_id, 'scan', null);
     };
     window.addEventListener('buybox-saved', handler);
     return () => window.removeEventListener('buybox-saved', handler);
