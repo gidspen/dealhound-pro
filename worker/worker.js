@@ -174,10 +174,21 @@ function runFindDeals(job) {
       DEALHOUND_BUY_BOX_JSON: JSON.stringify(job.buy_box || {}),
     };
 
-    log(`Spawning claude (${CLAUDE_BIN}) for job ${job.id}`, { searchId: job.search_id });
+    // Compose the prompt the skill receives. raw_prompt is the truth-of-record
+    // for the buy box; the skill's buy-box.md parses it. Fall back to the
+    // structured-only invocation if a legacy buy box has no raw_prompt.
+    const rawPrompt = (job.buy_box && job.buy_box.raw_prompt) || '';
+    const promptArg = rawPrompt
+      ? `/find-deals for ${rawPrompt}`
+      : '/find-deals full';
+
+    log(`Spawning claude (${CLAUDE_BIN}) for job ${job.id}`, {
+      searchId: job.search_id,
+      promptArg,
+    });
 
     let metrics = {};
-    const proc = spawn(CLAUDE_BIN, ['-p', '/find-deals full'], {
+    const proc = spawn(CLAUDE_BIN, ['-p', promptArg], {
       env,
       stdio: ['ignore', 'pipe', 'pipe'],
     });
