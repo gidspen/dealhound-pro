@@ -155,6 +155,58 @@ function writeBuyBoxFile(buyBox) {
   return file;
 }
 
+// ── Spawn config (pure function — testable) ──────────────────────────────────
+
+// Compose the args + env passed to `claude` for a given job. Pure: takes the
+// caller's processEnv and a job, returns spawn config. Behavior locked in by
+// tests/integration/worker-contract.test.js — read that file before changing
+// anything here. The promptArg, env stripping, and SUPABASE alias are each
+// load-bearing fixes for bugs we hit in production.
+function composeSpawnConfig(job, processEnv, buyBoxFilePath) {
+  // Strip ANTHROPIC_API_KEY so the spawned `claude` CLI falls back to the
+  // local subscription (Claude Pro/Max) instead of billing the API account.
+  const { ANTHROPIC_API_KEY: _omit, ...inheritedEnv } = processEnv;
+  const env = {
+    ...inheritedEnv,
+    DEALHOUND_SEARCH_ID: job.search_id || '',
+    DEALHOUND_SCRAPE_JOB_ID: job.id,
+    DEALHOUND_BUY_BOX_FILE: buyBoxFilePath || '',
+    DEALHOUND_BUY_BOX_JSON: JSON.stringify(job.buy_box || {}),
+    // The find-deals skill expects SUPABASE_DEALS_URL / SUPABASE_DEALS_ANON_KEY
+    // (its naming convention). Alias from our worker-side names so progress
+    // events and deal inserts can authenticate. Service key is fine here —
+    // the skill needs to bypass RLS to insert deals/progress rows.
+    SUPABASE_DEALS_URL: processEnv.SUPABASE_DEALS_URL || processEnv.SUPABASE_URL || '',
+    SUPABASE_DEALS_ANON_KEY: processEnv.SUPABASE_DEALS_ANON_KEY || processEnv.SUPABASE_SERVICE_KEY || '',
+  };
+
+  // Always invoke the documented `/find-deals full` subcommand. The buy box
+  // is loaded by the skill from DEALHOUND_BUY_BOX_FILE. Using a non-standard
+  // prompt like `/find-deals for [text]` causes Claude to improvise a flow
+  // that skips Step 1c (Supabase persistence) — proven empirically 2026-05-02
+  // when raw_prompt-style invocations produced 0 deals.
+  const args = ['-p', '/find-deals full'];
+
+  return { args, env };
+}
+
+// In-flight guard for the polling loop. Caps concurrency at 1 — prevents the
+// next setInterval tick from spawning a second `claude` while the first is
+// still running. Without this we'd burn 2x tokens and trigger LandSearch
+// rate limits. Behavior locked in by tests/integration/worker-contract.test.js.
+function createInFlightGuard() {
+  let count = 0;
+  return {
+    async tryRun(fn) {
+      if (count > 0) return false;
+      count++;
+      try { await fn(); return true; }
+      finally { count--; }
+    },
+    inFlight() { return count; },
+  };
+}
+
 // ── Job execution ─────────────────────────────────────────────────────────────
 
 function runFindDeals(job) {
@@ -166,40 +218,15 @@ function runFindDeals(job) {
       buyBoxFile = writeBuyBoxFile(job.buy_box);
     }
 
-    // Strip ANTHROPIC_API_KEY so the spawned `claude` CLI falls back to the
-    // local subscription (Claude Pro/Max) instead of billing the API account.
-    // The skill itself doesn't need the key — it only needs the Supabase
-    // creds, which we pass through explicitly.
-    const { ANTHROPIC_API_KEY: _omit, ...inheritedEnv } = process.env;
-    const env = {
-      ...inheritedEnv,
-      DEALHOUND_SEARCH_ID: job.search_id || '',
-      DEALHOUND_SCRAPE_JOB_ID: job.id,
-      DEALHOUND_BUY_BOX_FILE: buyBoxFile || '',
-      DEALHOUND_BUY_BOX_JSON: JSON.stringify(job.buy_box || {}),
-      // The find-deals skill expects SUPABASE_DEALS_URL / SUPABASE_DEALS_ANON_KEY
-      // (its naming convention). Alias from our worker-side names so progress
-      // events and deal inserts can authenticate. Service key is fine here —
-      // the skill needs to bypass RLS to insert deals/progress rows.
-      SUPABASE_DEALS_URL: process.env.SUPABASE_DEALS_URL || process.env.SUPABASE_URL || '',
-      SUPABASE_DEALS_ANON_KEY: process.env.SUPABASE_DEALS_ANON_KEY || process.env.SUPABASE_SERVICE_KEY || '',
-    };
-
-    // Always invoke the documented `/find-deals full` subcommand. The buy box
-    // is loaded by the skill from DEALHOUND_BUY_BOX_FILE (set above). Using a
-    // non-standard prompt like `/find-deals for [text]` causes Claude to
-    // improvise a flow that skips Step 1c (Supabase persistence) — we proved
-    // this empirically on 2026-05-02 when raw_prompt-style invocations
-    // produced 0 deals while `/find-deals full` runs produced 1000+.
-    const promptArg = '/find-deals full';
+    const { args, env } = composeSpawnConfig(job, process.env, buyBoxFile);
 
     log(`Spawning claude (${CLAUDE_BIN}) for job ${job.id}`, {
       searchId: job.search_id,
-      promptArg,
+      promptArg: args[1],
     });
 
     let metrics = {};
-    const proc = spawn(CLAUDE_BIN, ['-p', promptArg], {
+    const proc = spawn(CLAUDE_BIN, args, {
       env,
       stdio: ['ignore', 'pipe', 'pipe'],
     });
@@ -312,17 +339,22 @@ async function main() {
     envFile: envPath,
   });
 
-  let inFlight = 0;
+  const guard = createInFlightGuard();
 
   await processPendingJobs();
 
   setInterval(async () => {
-    if (inFlight > 0) return;
-    inFlight++;
-    try { await processPendingJobs(); }
-    catch (err) { log('ERROR in poll loop', err.message); }
-    finally { inFlight--; }
+    await guard.tryRun(async () => {
+      try { await processPendingJobs(); }
+      catch (err) { log('ERROR in poll loop', err.message); }
+    });
   }, POLL_INTERVAL_MS);
 }
 
-main().catch((err) => { console.error('FATAL:', err); process.exit(1); });
+// Only run main() when invoked as a script. Tests can require this module
+// without triggering the polling loop.
+if (require.main === module) {
+  main().catch((err) => { console.error('FATAL:', err); process.exit(1); });
+}
+
+module.exports = { composeSpawnConfig, createInFlightGuard };
