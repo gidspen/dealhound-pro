@@ -17,6 +17,7 @@ describe('triggerScan', () => {
 
   it('inserts a scrape_jobs row and sets deal_searches.status=scanning', async () => {
     const buyBox = {
+      raw_prompt: 'boutique hotel in austin, $2m max, cash flow from day 1',
       locations: ['Austin, TX'],
       price_max: 2_000_000,
       property_types: ['boutique_hotel'],
@@ -60,6 +61,7 @@ describe('triggerScan', () => {
 
   it('queues a scan even if the pool already has matching deals (no bypass)', async () => {
     const buyBox = {
+      raw_prompt: 'boutique hotel in austin, $2m max',
       locations: ['Austin, TX'],
       price_max: 2_000_000,
       property_types: ['boutique_hotel'],
