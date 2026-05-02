@@ -250,9 +250,30 @@ async function processPendingJobs() {
 
   try {
     const { durationMs, metrics } = await runFindDeals(job);
-    await finalizeScanRun(runId, { status: 'complete', durationMs, metrics });
-    await finalizeJob(job.id, 'complete');
-    await updateSearchStatus(job.search_id, 'complete');
+
+    // Silent-zero guard: a clean exit with zero inserted rows is a bug,
+    // not a "successful" scan. Mark it as error so we see it.
+    let zeroRowError = null;
+    if (job.search_id) {
+      const { count } = await supabase
+        .from('deals')
+        .select('*', { count: 'exact', head: true })
+        .eq('search_id', job.search_id);
+      if (count === 0) {
+        zeroRowError = 'Skill completed but wrote zero listings — check buy box format and scraper output';
+      }
+    }
+
+    if (zeroRowError) {
+      log(`WARN: ${zeroRowError}`, { searchId: job.search_id });
+      await finalizeScanRun(runId, { status: 'error', durationMs, metrics, error: zeroRowError });
+      await finalizeJob(job.id, 'complete');
+      await updateSearchStatus(job.search_id, 'error');
+    } else {
+      await finalizeScanRun(runId, { status: 'complete', durationMs, metrics });
+      await finalizeJob(job.id, 'complete');
+      await updateSearchStatus(job.search_id, 'complete');
+    }
     log(`Job ${job.id} complete in ${(durationMs / 1000).toFixed(1)}s`, metrics);
   } catch (err) {
     const durationMs = Date.now() - startMs;
