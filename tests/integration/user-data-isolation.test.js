@@ -68,7 +68,8 @@ describe('user-data isolation', () => {
     const { data: scans } = await supabase
       .from('deal_searches')
       .select('id')
-      .eq('user_email', TEST_EMAIL);
+      .eq('user_email', TEST_EMAIL)
+      .eq('test_data', true);
     const scanIds = scans.map(s => s.id);
 
     const { data: deals } = await supabase
@@ -108,7 +109,8 @@ describe('user-data isolation', () => {
     const { data: scans } = await supabase
       .from('deal_searches')
       .select('id')
-      .eq('user_email', TEST_EMAIL);
+      .eq('user_email', TEST_EMAIL)
+      .eq('test_data', true);
     const scanIds = scans.map(s => s.id);
 
     const { data: deals } = await supabase
