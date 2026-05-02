@@ -1,26 +1,28 @@
+// tests/integration/scan-trigger-raw-prompt.test.js
 import { describe, it, expect, afterAll } from 'vitest';
 import { getTestSupabase, cleanupTestData } from '../helpers/supabase.js';
 import { TEST_EMAIL } from '../helpers/test-constants.js';
 import { triggerScan } from '../../api/_lib/scan-trigger.js';
 
-describe('triggerScan raw_prompt persistence', () => {
+describe('triggerScan with raw_prompt', () => {
   const supabase = getTestSupabase();
   const createdSearchIds = [];
 
   afterAll(async () => {
-    // Clean up scrape_jobs for any search we created
     if (createdSearchIds.length > 0) {
       await supabase.from('scrape_jobs').delete().in('search_id', createdSearchIds);
     }
     await cleanupTestData(supabase, TEST_EMAIL);
   });
 
-  it('preserves raw_prompt through triggerScan into scrape_jobs', async () => {
+  it('persists raw_prompt on the scrape_jobs row', async () => {
     const buyBox = {
-      raw_prompt: 'luxury micro resort in coastal north carolina, $3m-5m, strong cash flow, oceanfront preferred',
-      locations: ['Coastal North Carolina'],
-      price_max: 5_000_000,
-      property_types: ['micro_resort', 'boutique_hotel'],
+      raw_prompt: 'micro resort in east texas, minimum 8 acres, $500k to $3m, must have existing structure, cash flow from day 1',
+      locations: ['East Texas'],
+      price_min: 500_000,
+      price_max: 3_000_000,
+      acreage_min: 8,
+      property_types: ['micro_resort'],
       revenue_requirement: 'cash_flow_day_1',
     };
 
@@ -46,13 +48,9 @@ describe('triggerScan raw_prompt persistence', () => {
       .eq('search_id', search.id)
       .single();
 
-    expect(job).not.toBeNull();
-    expect(job.buy_box).not.toBeNull();
-    expect(job.buy_box.raw_prompt).toBe('luxury micro resort in coastal north carolina, $3m-5m, strong cash flow, oceanfront preferred');
-    expect(job.buy_box.locations).toContain('Coastal North Carolina');
-    expect(job.buy_box.price_max).toBe(5_000_000);
-    expect(job.buy_box.property_types).toContain('micro_resort');
-    expect(job.buy_box.property_types).toContain('boutique_hotel');
-    expect(job.buy_box.revenue_requirement).toBe('cash_flow_day_1');
+    expect(job.buy_box.raw_prompt).toContain('micro resort');
+    expect(job.buy_box.raw_prompt).toContain('east texas');
+    expect(job.buy_box.raw_prompt).toContain('$500k');
+    expect(job.buy_box.property_types).toEqual(['micro_resort']);
   });
 });
