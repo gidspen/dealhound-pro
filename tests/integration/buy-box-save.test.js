@@ -10,6 +10,7 @@ describe('Buy box save', () => {
 
   it('inserts a deal_search with buy box and returns the ID', async () => {
     const buyBox = {
+      raw_prompt: 'boutique hotel in austin texas, $2m max, cash flow from day 1',
       locations: ['Coastal North Carolina'],
       price_max: 2000000,
       property_types: ['boutique_hotel', 'micro_resort'],

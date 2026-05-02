@@ -1,8 +1,9 @@
-import { useRef, useEffect } from 'preact/hooks';
+import { useRef, useEffect, useState } from 'preact/hooks';
 import { batch } from '@preact/signals';
 import { view, agentName, chatMessages, chatStreaming, activeThreadId, scans, deals, currentDeal, previewOpen, email } from '../lib/state.js';
 import { sendMessage, loadUserData, switchThread } from '../lib/api.js';
 import { parseBreakdown, tierFromStrategy } from '../lib/utils.js';
+import { ScanProgress } from './ScanProgress.jsx';
 
 function TypingIndicator() {
   return (
@@ -33,6 +34,13 @@ function WatchPlaceholder({ deal }) {
 export function Chat() {
   const msgsRef = useRef(null);
   const inputRef = useRef(null);
+  const [activeScanId, setActiveScanId] = useState(null);
+
+  useEffect(() => {
+    const onSaved = (e) => setActiveScanId(e.detail?.search_id || null);
+    window.addEventListener('buybox-saved', onSaved);
+    return () => window.removeEventListener('buybox-saved', onSaved);
+  }, []);
 
   useEffect(() => {
     if (msgsRef.current) {
@@ -154,6 +162,8 @@ export function Chat() {
           )}
         </div>
       </div>
+
+      {activeScanId && <ScanProgress searchId={activeScanId} />}
 
       {/* View My Results CTA — shown in scan view once Quinn has responded */}
       {view.value === 'scan' && !chatStreaming.value && chatMessages.value.some(m => m.role === 'assistant') && (

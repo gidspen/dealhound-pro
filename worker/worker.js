@@ -174,10 +174,21 @@ function runFindDeals(job) {
       DEALHOUND_BUY_BOX_JSON: JSON.stringify(job.buy_box || {}),
     };
 
-    log(`Spawning claude (${CLAUDE_BIN}) for job ${job.id}`, { searchId: job.search_id });
+    // Compose the prompt the skill receives. raw_prompt is the truth-of-record
+    // for the buy box; the skill's buy-box.md parses it. Fall back to the
+    // structured-only invocation if a legacy buy box has no raw_prompt.
+    const rawPrompt = (job.buy_box && job.buy_box.raw_prompt) || '';
+    const promptArg = rawPrompt
+      ? `/find-deals for ${rawPrompt}`
+      : '/find-deals full';
+
+    log(`Spawning claude (${CLAUDE_BIN}) for job ${job.id}`, {
+      searchId: job.search_id,
+      promptArg,
+    });
 
     let metrics = {};
-    const proc = spawn(CLAUDE_BIN, ['-p', '/find-deals full'], {
+    const proc = spawn(CLAUDE_BIN, ['-p', promptArg], {
       env,
       stdio: ['ignore', 'pipe', 'pipe'],
     });
@@ -239,9 +250,30 @@ async function processPendingJobs() {
 
   try {
     const { durationMs, metrics } = await runFindDeals(job);
-    await finalizeScanRun(runId, { status: 'complete', durationMs, metrics });
-    await finalizeJob(job.id, 'complete');
-    await updateSearchStatus(job.search_id, 'complete');
+
+    // Silent-zero guard: a clean exit with zero inserted rows is a bug,
+    // not a "successful" scan. Mark it as error so we see it.
+    let zeroRowError = null;
+    if (job.search_id) {
+      const { count } = await supabase
+        .from('deals')
+        .select('*', { count: 'exact', head: true })
+        .eq('search_id', job.search_id);
+      if (count === 0) {
+        zeroRowError = 'Skill completed but wrote zero listings — check buy box format and scraper output';
+      }
+    }
+
+    if (zeroRowError) {
+      log(`WARN: ${zeroRowError}`, { searchId: job.search_id });
+      await finalizeScanRun(runId, { status: 'error', durationMs, metrics, error: zeroRowError });
+      await finalizeJob(job.id, 'complete');
+      await updateSearchStatus(job.search_id, 'error');
+    } else {
+      await finalizeScanRun(runId, { status: 'complete', durationMs, metrics });
+      await finalizeJob(job.id, 'complete');
+      await updateSearchStatus(job.search_id, 'complete');
+    }
     log(`Job ${job.id} complete in ${(durationMs / 1000).toFixed(1)}s`, metrics);
   } catch (err) {
     const durationMs = Date.now() - startMs;
