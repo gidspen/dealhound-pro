@@ -301,11 +301,16 @@ async function main() {
     envFile: envPath,
   });
 
+  let inFlight = 0;
+
   await processPendingJobs();
 
   setInterval(async () => {
+    if (inFlight > 0) return;
+    inFlight++;
     try { await processPendingJobs(); }
     catch (err) { log('ERROR in poll loop', err.message); }
+    finally { inFlight--; }
   }, POLL_INTERVAL_MS);
 }
 
