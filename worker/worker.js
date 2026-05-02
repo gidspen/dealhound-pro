@@ -177,6 +177,12 @@ function runFindDeals(job) {
       DEALHOUND_SCRAPE_JOB_ID: job.id,
       DEALHOUND_BUY_BOX_FILE: buyBoxFile || '',
       DEALHOUND_BUY_BOX_JSON: JSON.stringify(job.buy_box || {}),
+      // The find-deals skill expects SUPABASE_DEALS_URL / SUPABASE_DEALS_ANON_KEY
+      // (its naming convention). Alias from our worker-side names so progress
+      // events and deal inserts can authenticate. Service key is fine here —
+      // the skill needs to bypass RLS to insert deals/progress rows.
+      SUPABASE_DEALS_URL: process.env.SUPABASE_DEALS_URL || process.env.SUPABASE_URL || '',
+      SUPABASE_DEALS_ANON_KEY: process.env.SUPABASE_DEALS_ANON_KEY || process.env.SUPABASE_SERVICE_KEY || '',
     };
 
     // Compose the prompt the skill receives. raw_prompt is the truth-of-record
