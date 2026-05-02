@@ -185,13 +185,13 @@ function runFindDeals(job) {
       SUPABASE_DEALS_ANON_KEY: process.env.SUPABASE_DEALS_ANON_KEY || process.env.SUPABASE_SERVICE_KEY || '',
     };
 
-    // Compose the prompt the skill receives. raw_prompt is the truth-of-record
-    // for the buy box; the skill's buy-box.md parses it. Fall back to the
-    // structured-only invocation if a legacy buy box has no raw_prompt.
-    const rawPrompt = (job.buy_box && job.buy_box.raw_prompt) || '';
-    const promptArg = rawPrompt
-      ? `/find-deals for ${rawPrompt}`
-      : '/find-deals full';
+    // Always invoke the documented `/find-deals full` subcommand. The buy box
+    // is loaded by the skill from DEALHOUND_BUY_BOX_FILE (set above). Using a
+    // non-standard prompt like `/find-deals for [text]` causes Claude to
+    // improvise a flow that skips Step 1c (Supabase persistence) — we proved
+    // this empirically on 2026-05-02 when raw_prompt-style invocations
+    // produced 0 deals while `/find-deals full` runs produced 1000+.
+    const promptArg = '/find-deals full';
 
     log(`Spawning claude (${CLAUDE_BIN}) for job ${job.id}`, {
       searchId: job.search_id,
