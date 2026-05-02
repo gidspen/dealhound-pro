@@ -166,8 +166,13 @@ function runFindDeals(job) {
       buyBoxFile = writeBuyBoxFile(job.buy_box);
     }
 
+    // Strip ANTHROPIC_API_KEY so the spawned `claude` CLI falls back to the
+    // local subscription (Claude Pro/Max) instead of billing the API account.
+    // The skill itself doesn't need the key — it only needs the Supabase
+    // creds, which we pass through explicitly.
+    const { ANTHROPIC_API_KEY: _omit, ...inheritedEnv } = process.env;
     const env = {
-      ...process.env,
+      ...inheritedEnv,
       DEALHOUND_SEARCH_ID: job.search_id || '',
       DEALHOUND_SCRAPE_JOB_ID: job.id,
       DEALHOUND_BUY_BOX_FILE: buyBoxFile || '',
