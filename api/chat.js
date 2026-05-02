@@ -67,6 +67,10 @@ const TOOLS = [
     input_schema: {
       type: 'object',
       properties: {
+        raw_prompt: {
+          type: 'string',
+          description: 'A clean, natural-language summary of the buy box composed from the validated structured fields. This is the truth-of-record passed to the deal-finding skill. Format: "[property type(s)] in [location(s)], [acreage], [price range], [revenue requirement], [exclusions]". Example: "micro resort in east texas, minimum 8 acres, $500k to $3m, must have existing structure, cash flow day 1." Use lowercase, plain English, no JSON-style enums (e.g., write "micro resort" not "micro_resort"). Compose this from the other fields you are about to save — never from raw user text.'
+        },
         locations: {
           type: 'array',
           items: { type: 'string' },
@@ -100,7 +104,7 @@ const TOOLS = [
           description: 'Hard exclusions (things to never show)'
         }
       },
-      required: ['locations', 'price_max', 'property_types', 'revenue_requirement']
+      required: ['raw_prompt', 'locations', 'price_max', 'property_types', 'revenue_requirement']
     }
   }
 ];
