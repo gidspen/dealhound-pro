@@ -1,5 +1,6 @@
 // api/scan-start.js
 const { createClient } = require('@supabase/supabase-js');
+const { triggerScan } = require('./_lib/scan-trigger');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -41,21 +42,12 @@ module.exports = async function handler(req, res) {
       return res.json({ status: search.status, search_id });
     }
 
-    await supabase
-      .from('deal_searches')
-      .update({ status: 'scanning' })
-      .eq('id', search_id);
+    await triggerScan(search_id, search.buy_box, supabase);
 
     await supabase.from('scan_progress').insert([
       { search_id, step: 'init', status: 'complete', message: 'Buy box loaded - queuing scan job' },
       { search_id, step: 'queued', status: 'running', message: 'Waiting for deal scanner to pick up your request...' },
     ]);
-
-    await supabase.from('scrape_jobs').insert({
-      search_id,
-      buy_box: search.buy_box,
-      status: 'pending',
-    });
 
     return res.json({ status: 'queued', search_id });
 

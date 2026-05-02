@@ -1,5 +1,4 @@
 const { createClient } = require('@supabase/supabase-js');
-const { filterDealsByBuyBox } = require('./_lib/location');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -88,43 +87,6 @@ module.exports = async function handler(req, res) {
       deals = data || [];
     }
 
-    // Shared pool: show scored deals from the last 7 days, filtered to user's buy box.
-    // Skipped entirely when no buy box is captured — pool can't be filtered without one.
-    let poolDeals = [];
-
-    // Parse buy box — handle both JSONB object and accidentally-stringified values
-    let rawBuyBox = (scans || []).find(s => s.buy_box)?.buy_box || null;
-    let latestBuyBox = null;
-    if (rawBuyBox) {
-      if (typeof rawBuyBox === 'string') {
-        try { latestBuyBox = JSON.parse(rawBuyBox); } catch (_) { latestBuyBox = null; }
-      } else {
-        latestBuyBox = rawBuyBox;
-      }
-    }
-
-    // Only query the shared pool when the user has a buy box — without one we
-    // have no way to filter the pool to relevant deals.
-    if (latestBuyBox) {
-      const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
-      const { data: rawPoolDeals } = await supabase
-        .from('deals')
-        .select('id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description')
-        .eq('passed_hard_filters', true)
-        .gte('scraped_at', sevenDaysAgo)
-        .limit(500);
-
-      if (rawPoolDeals && rawPoolDeals.length > 0) {
-        // Filter by buy box (price + location), then dedup against user's own deals
-        poolDeals = filterDealsByBuyBox(rawPoolDeals, latestBuyBox);
-        const userUrls = new Set(deals.map(d => d.url).filter(Boolean));
-        poolDeals = poolDeals.filter(d => !d.url || !userUrls.has(d.url));
-      }
-    }
-
-    // Merge pool deals after user's own deals
-    deals = [...deals, ...poolDeals];
-
     // Fetch star/view/archive/thread status in parallel
     const dealIds = deals.map(d => d.id);
     const [starsRes, viewsRes, archivesRes, threadConvosRes] = await Promise.all([
@@ -181,7 +143,7 @@ module.exports = async function handler(req, res) {
         brief: d.brief || null,
         days_on_market: d.days_on_market || null,
         property_type: d.property_type || null,
-        raw_description: d.raw_description ? d.raw_description.substring(0, 300) : null
+        raw_description: d.raw_description || null
       })),
       active_threads: (threadConvos || []).map(c => ({
         deal_id: c.deal_id,
