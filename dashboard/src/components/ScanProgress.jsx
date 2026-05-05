@@ -42,8 +42,12 @@ export function ScanProgress({ searchId }) {
         if (cancelled) return;
         setSteps(data.steps || []);
         setStatus(data.status);
-        if (data.status === 'complete' || data.status === 'error') {
-          stoppedAt = data.status;
+        if (data.status === 'complete' && stoppedAt !== 'complete') {
+          stoppedAt = 'complete';
+          // Tell Chat the scan is done so it can fire the debrief.
+          window.dispatchEvent(new CustomEvent('scan-complete', { detail: { searchId } }));
+        } else if (data.status === 'error' && stoppedAt !== 'error') {
+          stoppedAt = 'error';
         }
       } catch (_) { /* swallow — try again next tick */ }
     }

@@ -140,18 +140,37 @@ const TOOLS = [
 ];
 
 async function buildDebriefPrompt(searchId, agentName) {
+  const { data: search } = await supabase
+    .from('deal_searches')
+    .select('buy_box, status')
+    .eq('id', searchId)
+    .single();
+
+  // Defensive: only generate a real deal report when the scan has actually
+  // finished. The skill writes deals at the end of the run, so a mid-run
+  // query returns 0 even when matches exist. Without this guard the LLM
+  // cheerfully tells the user "0 DEALS FOUND" while the scan is still hunting.
+  const scanStatus = search?.status;
+  if (scanStatus === 'error') {
+    return `You are ${agentName}, an AI deal hunting agent. The scan failed before completing.
+
+Tell the investor in 1-2 sentences, in character: the scan didn't finish, you're not sure yet why, and they should retry from the dashboard. Stay confident and brief — own the failure, don't grovel. Do NOT report any deal count or speculate about what would have been found.`;
+  }
+  if (scanStatus !== 'complete') {
+    // 'scanning', 'ready', null, or any other in-flight state.
+    return `You are ${agentName}, an AI deal hunting agent. Your scan for this investor's buy box is still in progress — the skill is currently visiting marketplaces, scraping listings, and scoring matches against the buy box.
+
+CRITICAL: Do NOT report any deal count. Do NOT say "0 deals found" or any number. Do NOT speculate about results.
+
+Reply in 1-2 sentences, in character: confident, sharp, brief. Tell the investor you're still working on it, point them to the live progress shown below the chat, and say you'll deliver the full breakdown the moment the scan completes.`;
+  }
+
   const { data: deals } = await supabase
     .from('deals')
     .select('title, location, price, acreage, rooms_keys, score_breakdown, source, url, passed_hard_filters')
     .eq('search_id', searchId)
     .eq('passed_hard_filters', true)
     .order('id', { ascending: false });
-
-  const { data: search } = await supabase
-    .from('deal_searches')
-    .select('buy_box')
-    .eq('id', searchId)
-    .single();
 
   const dealSummaries = (deals || []).map((d, i) => {
     const bd = typeof d.score_breakdown === 'string' ? JSON.parse(d.score_breakdown) : (d.score_breakdown || {});
