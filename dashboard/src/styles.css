@@ -371,6 +371,11 @@ body::before {
   letter-spacing: 0.01em;
 }
 .btn-view-results:hover { opacity: 0.88; }
+.btn-view-results:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.btn-view-results:disabled:hover { opacity: 0.4; }
 
 /* PREVIEW PANEL */
 #preview-panel {
@@ -739,10 +744,21 @@ body::before {
   padding: 12px 16px;
   margin: 12px 0;
   font-size: 14px;
+  background: rgba(255,255,255,0.6);
 }
 .scan-progress__header {
   font-weight: 600;
   margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.scan-progress__heartbeat {
+  font-weight: 400;
+  font-size: 11px;
+  color: #888;
+  font-variant-numeric: tabular-nums;
 }
 .scan-progress__steps {
   list-style: none;
@@ -760,9 +776,22 @@ body::before {
 }
 .scan-progress__step--complete .scan-progress__label::before {
   content: '✓ ';
+  display: inline-block;
+  margin-right: 2px;
 }
 .scan-progress__step--running .scan-progress__label::before {
-  content: '⟳ ';
+  content: '⟳';
+  display: inline-block;
+  margin-right: 6px;
+  animation: scan-spin 1.4s linear infinite;
+}
+.scan-progress__step--placeholder .scan-progress__label {
+  font-style: italic;
+  color: #888;
+}
+@keyframes scan-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 .scan-progress__count {
   font-variant-numeric: tabular-nums;
@@ -774,4 +803,11 @@ body::before {
 .scan-progress__message {
   color: #666;
   font-size: 12px;
+}
+.scan-progress__time {
+  margin-left: auto;
+  color: #999;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }

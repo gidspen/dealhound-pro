@@ -35,6 +35,7 @@ export function Chat() {
   const msgsRef = useRef(null);
   const inputRef = useRef(null);
   const [activeScanId, setActiveScanId] = useState(null);
+  const [scanStatus, setScanStatus] = useState(null);
 
   useEffect(() => {
     const onSaved = (e) => setActiveScanId(e.detail?.search_id || null);
@@ -197,13 +198,20 @@ export function Chat() {
         </div>
       </div>
 
-      {activeScanId && <ScanProgress searchId={activeScanId} />}
+      {activeScanId && <ScanProgress searchId={activeScanId} onStatus={setScanStatus} />}
 
-      {/* View My Results CTA — shown in scan view once Quinn has responded */}
+      {/* View My Results CTA — shown in scan view once Quinn has responded.
+          Disabled while the scan is still running — clicking it before deals
+          are written just dumps the user back at "no deals yet". */}
       {view.value === 'scan' && !chatStreaming.value && chatMessages.value.some(m => m.role === 'assistant') && (
         <div class="scan-cta-bar">
-          <button class="btn-view-results" onClick={handleViewResults}>
-            View My Results →
+          <button
+            class="btn-view-results"
+            onClick={handleViewResults}
+            disabled={scanStatus !== 'complete'}
+            title={scanStatus !== 'complete' ? 'Scan still running — results unlock when complete' : 'See your scored deals'}
+          >
+            {scanStatus === 'complete' ? 'View My Results →' : 'Scanning...'}
           </button>
         </div>
       )}
