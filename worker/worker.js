@@ -29,7 +29,7 @@ if (fs.existsSync(envPath) && !process.env.SUPABASE_URL) {
 // ── Config ────────────────────────────────────────────────────────────────────
 
 const POLL_INTERVAL_MS = 60_000;
-const SCAN_TIMEOUT_MS = 30 * 60_000; // 30 min hard cap per scan
+const SCAN_TIMEOUT_MS = 90 * 60_000; // 90 min hard cap per scan
 
 // Find claude binary — check common locations across macOS setups
 function findClaude() {
