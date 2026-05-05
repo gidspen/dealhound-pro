@@ -69,6 +69,11 @@ export function ScanProgress({ searchId }) {
       <div class="scan-progress__header">
         {status === 'error' ? 'Scan failed' : 'Scanning marketplaces...'}
       </div>
+      {status !== 'error' && (
+        <div class="scan-progress__notice">
+          Scans can take up to 60 minutes. You can leave this tab open — the agent will keep working.
+        </div>
+      )}
       <ul class="scan-progress__steps">
         {steps.map((s) => (
           <li key={s.id} class={`scan-progress__step scan-progress__step--${s.status}`}>
