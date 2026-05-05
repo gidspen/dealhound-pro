@@ -1,6 +1,16 @@
 // dashboard/src/components/ScanProgress.jsx
 import { useEffect, useState } from 'preact/hooks';
 
+function relativeTime(isoString, now) {
+  if (!isoString) return '';
+  const diffMs = now - new Date(isoString).getTime();
+  const diffSec = Math.floor(diffMs / 1000);
+  if (diffSec < 60) return `${diffSec}s ago`;
+  const diffMin = Math.floor(diffSec / 60);
+  if (diffMin < 60) return `${diffMin}m ago`;
+  return `${Math.floor(diffMin / 60)}h ago`;
+}
+
 const API_BASE = '';
 const POLL_INTERVAL_MS = 3000;
 
@@ -28,6 +38,12 @@ function labelFor(step) {
 export function ScanProgress({ searchId }) {
   const [steps, setSteps] = useState([]);
   const [status, setStatus] = useState('scanning');
+  const [now, setNow] = useState(Date.now());
+
+  useEffect(() => {
+    const tick = setInterval(() => setNow(Date.now()), 10000);
+    return () => clearInterval(tick);
+  }, []);
 
   useEffect(() => {
     if (!searchId) return;
@@ -64,10 +80,20 @@ export function ScanProgress({ searchId }) {
   if (!searchId) return null;
   if (status === 'complete') return null;
 
+  const isEmpty = steps.length === 0;
+  const lastStep = steps.length > 0 ? steps[steps.length - 1] : null;
+  const headerText = status === 'error' ? 'Scan failed' : 'Scanning marketplaces...';
+
   return (
     <div class="scan-progress">
       <div class="scan-progress__header">
-        {status === 'error' ? 'Scan failed' : 'Scanning marketplaces...'}
+        {status !== 'error' && <span class="scan-progress__pulse" aria-hidden="true" />}
+        <span class="scan-progress__header-text">{headerText}</span>
+        {!isEmpty && lastStep && (
+          <span class="scan-progress__heartbeat">
+            updated {relativeTime(lastStep.created_at, now)}
+          </span>
+        )}
       </div>
       {status !== 'error' && (
         <div class="scan-progress__notice">

@@ -729,6 +729,8 @@ body::before {
 .scan-progress__header {
   font-weight: 600;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
 }
 .scan-progress__steps {
   list-style: none;
@@ -767,4 +769,30 @@ body::before {
   padding: 6px 0 10px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
   margin-bottom: 8px;
+}
+.scan-progress__heartbeat {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 400;
+  color: #888;
+}
+.scan-progress__pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1a7f37;
+  margin-right: 8px;
+  vertical-align: middle;
+  flex-shrink: 0;
+  animation: scan-progress-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes scan-progress-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50%       { opacity: 1;    transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-progress__pulse { animation: none; opacity: 0.7; }
 }
