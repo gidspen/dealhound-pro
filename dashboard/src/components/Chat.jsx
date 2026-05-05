@@ -136,26 +136,6 @@ export function Chat() {
     }
   };
 
-  // "View My Results" — used in scan debrief when 0 deals from the scan
-  // itself but the pool has deals. Reloads user data and goes to deal view.
-  const handleViewResults = async () => {
-    await loadUserData();
-    if (deals.value.length > 0) {
-      const topDeal = deals.value[0];
-      batch(() => {
-        activeThreadId.value = topDeal.id;
-        view.value = 'deal';
-        previewOpen.value = true;
-      });
-      await switchThread(topDeal.id, 'deal', null);
-    } else {
-      // Still nothing — tell the user honestly
-      const msgs = [...chatMessages.value];
-      msgs.push({ role: 'system', content: 'No deals in the pool yet for your buy box. The scanner will find new matches daily — check back tomorrow.' });
-      chatMessages.value = msgs;
-    }
-  };
-
   // Determine if we should show a pre-generated brief or watch placeholder
   const deal = currentDeal.value;
   const showBrief = view.value === 'deal' && deal && deal.brief && chatMessages.value.length === 0;
@@ -198,15 +178,6 @@ export function Chat() {
       </div>
 
       {activeScanId && <ScanProgress searchId={activeScanId} />}
-
-      {/* View My Results CTA — shown in scan view once Quinn has responded */}
-      {view.value === 'scan' && !chatStreaming.value && chatMessages.value.some(m => m.role === 'assistant') && (
-        <div class="scan-cta-bar">
-          <button class="btn-view-results" onClick={handleViewResults}>
-            View My Results →
-          </button>
-        </div>
-      )}
 
       <div class="chat-input-bar">
         <div class="chat-input-inner">

@@ -358,20 +358,6 @@ body::before {
 .btn-send:hover { opacity: 0.88; }
 .btn-send:disabled { opacity: 0.4; cursor: not-allowed; }
 
-/* Scan CTA bar — "View My Results" after scan debrief */
-.scan-cta-bar {
-  padding: 12px 32px; display: flex; justify-content: center;
-  border-top: 1px solid var(--border); flex-shrink: 0;
-  background: rgba(248,245,239,0.95);
-}
-.btn-view-results {
-  background: var(--forest, #2c4a3e); color: #fff; border: none;
-  padding: 12px 28px; border-radius: 8px; font-family: var(--sans);
-  font-size: 0.95rem; cursor: pointer; transition: opacity 0.2s;
-  letter-spacing: 0.01em;
-}
-.btn-view-results:hover { opacity: 0.88; }
-
 /* PREVIEW PANEL */
 #preview-panel {
   flex-shrink: 0; background: var(--surface);
