@@ -358,20 +358,6 @@ body::before {
 .btn-send:hover { opacity: 0.88; }
 .btn-send:disabled { opacity: 0.4; cursor: not-allowed; }
 
-/* Scan CTA bar — "View My Results" after scan debrief */
-.scan-cta-bar {
-  padding: 12px 32px; display: flex; justify-content: center;
-  border-top: 1px solid var(--border); flex-shrink: 0;
-  background: rgba(248,245,239,0.95);
-}
-.btn-view-results {
-  background: var(--forest, #2c4a3e); color: #fff; border: none;
-  padding: 12px 28px; border-radius: 8px; font-family: var(--sans);
-  font-size: 0.95rem; cursor: pointer; transition: opacity 0.2s;
-  letter-spacing: 0.01em;
-}
-.btn-view-results:hover { opacity: 0.88; }
-
 /* PREVIEW PANEL */
 #preview-panel {
   flex-shrink: 0; background: var(--surface);
@@ -743,6 +729,8 @@ body::before {
 .scan-progress__header {
   font-weight: 600;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
 }
 .scan-progress__steps {
   list-style: none;
@@ -774,4 +762,51 @@ body::before {
 .scan-progress__message {
   color: #666;
   font-size: 12px;
+}
+.scan-progress__notice {
+  font-size: 13px;
+  color: #6b6b6b;
+  padding: 6px 0 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  margin-bottom: 8px;
+}
+.scan-progress__heartbeat {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 400;
+  color: #888;
+}
+.scan-progress__pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1a7f37;
+  margin-right: 8px;
+  vertical-align: middle;
+  flex-shrink: 0;
+  animation: scan-progress-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes scan-progress-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50%       { opacity: 1;    transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-progress__pulse { animation: none; opacity: 0.7; }
+}
+.scan-progress__counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  padding: 8px 0;
+}
+.scan-progress__counter-item strong {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.scan-progress__counter-sep {
+  color: #9b9b9b;
 }
