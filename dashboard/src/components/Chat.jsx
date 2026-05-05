@@ -42,6 +42,17 @@ export function Chat() {
     return () => window.removeEventListener('buybox-saved', onSaved);
   }, []);
 
+  // Always mount ScanProgress while the user is on the scan view, even after
+  // a page reload. Without this the live log only renders right after a
+  // buybox-saved event and the user has no idea the scan is still running.
+  useEffect(() => {
+    if (view.value === 'scan' && activeThreadId.value) {
+      setActiveScanId(activeThreadId.value);
+    } else if (view.value !== 'scan') {
+      setActiveScanId(null);
+    }
+  }, [view.value, activeThreadId.value]);
+
   useEffect(() => {
     if (msgsRef.current) {
       msgsRef.current.scrollTop = msgsRef.current.scrollHeight;
@@ -53,10 +64,33 @@ export function Chat() {
     if (view.value === 'onboarding' && chatMessages.value.length === 0) {
       sendMessage('Hi, I want to set up my buy box.', '/api/chat', { mode: 'buy_box_intake' });
     } else if (view.value === 'scan' && chatMessages.value.length === 0 && activeThreadId.value) {
+      // The server-side prompt detects scan-in-progress and replies with a
+      // "still hunting" message instead of fabricating "0 deals found."
+      // When the scan completes, the scan-complete listener below re-fires
+      // this same call to deliver the real debrief.
       sendMessage('Show me my scan results.', '/api/chat', { mode: 'scan_debrief', search_id: activeThreadId.value });
     }
     // Deal view: do NOT auto-trigger — brief or watch placeholder handles it
   }, [view.value, activeThreadId.value]);
+
+  // When ScanProgress detects the scan flipped to complete, re-fire the
+  // debrief so the agent reports the actual deals it found.
+  useEffect(() => {
+    const onComplete = async (e) => {
+      const completedId = e.detail?.searchId;
+      if (!completedId || completedId !== activeThreadId.value) return;
+      if (view.value !== 'scan') return;
+      if (chatStreaming.value) return;
+      // Refresh deals/scans cache before the debrief reads them.
+      await loadUserData();
+      sendMessage('The scan is done — show me what you found.', '/api/chat', {
+        mode: 'scan_debrief',
+        search_id: completedId,
+      });
+    };
+    window.addEventListener('scan-complete', onComplete);
+    return () => window.removeEventListener('scan-complete', onComplete);
+  }, []);
 
   useEffect(() => {
     const handler = async (e) => {
