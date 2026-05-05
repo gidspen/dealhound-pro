@@ -35,13 +35,37 @@ function labelFor(step) {
   return STEP_LABELS[step] || step;
 }
 
+function deriveCounts(steps) {
+  // Sum per-source scrape counts for reviewed (running total as sources complete).
+  // If enrich:done is present, prefer it — it's the post-dedup union count.
+  let scrapeSum = 0;
+  let enrichCount = null;
+  let scored = 0;
+
+  for (const s of steps) {
+    if (s.listing_count == null) continue;
+    if (s.step.startsWith('scrape:') && s.step.endsWith(':done')) {
+      scrapeSum += s.listing_count;
+    }
+    if (s.step === 'enrich:done') {
+      enrichCount = s.listing_count;
+    }
+    if (s.step.startsWith('score:') || s.step.startsWith('apply_buybox:')) {
+      if (s.listing_count > scored) scored = s.listing_count;
+    }
+  }
+
+  const reviewed = enrichCount !== null ? enrichCount : scrapeSum;
+  return { reviewed, scored };
+}
+
 export function ScanProgress({ searchId }) {
   const [steps, setSteps] = useState([]);
   const [status, setStatus] = useState('scanning');
   const [now, setNow] = useState(Date.now());
 
   useEffect(() => {
-    const tick = setInterval(() => setNow(Date.now()), 10000);
+    const tick = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(tick);
   }, []);
 
@@ -82,6 +106,8 @@ export function ScanProgress({ searchId }) {
 
   const isEmpty = steps.length === 0;
   const lastStep = steps.length > 0 ? steps[steps.length - 1] : null;
+  const { reviewed, scored } = deriveCounts(steps);
+  const showCounter = reviewed > 0 || scored > 0;
   const headerText = status === 'error' ? 'Scan failed' : 'Scanning marketplaces...';
 
   return (
@@ -98,6 +124,17 @@ export function ScanProgress({ searchId }) {
       {status !== 'error' && (
         <div class="scan-progress__notice">
           Scans can take up to 60 minutes. You can leave this tab open — the agent will keep working.
+        </div>
+      )}
+      {showCounter && (
+        <div class="scan-progress__counter">
+          <span class="scan-progress__counter-item">
+            <strong>{reviewed.toLocaleString()}</strong> listings reviewed
+          </span>
+          <span class="scan-progress__counter-sep">·</span>
+          <span class="scan-progress__counter-item">
+            <strong>{scored.toLocaleString()}</strong> deals scored
+          </span>
         </div>
       )}
       <ul class="scan-progress__steps">
