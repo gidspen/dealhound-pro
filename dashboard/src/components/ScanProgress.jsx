@@ -151,3 +151,6 @@ export function ScanProgress({ searchId }) {
     </div>
   );
 }
+
+// Exported for unit testing only
+export { deriveCounts };
