@@ -253,7 +253,7 @@ module.exports = async function handler(req, res) {
     }
 
     const stream = await client.messages.stream({
-      model: isDebrief ? 'claude-sonnet-4-6' : 'claude-haiku-4-5-20251001',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: systemPrompt,
       ...(tools ? { tools } : {}),
