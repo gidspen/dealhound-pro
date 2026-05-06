@@ -161,10 +161,10 @@ export async function toggleStar(dealId) {
   starredDealIds.value = updated;
 
   try {
-    const res = await fetch(`${API_BASE}/api/star-deal`, {
+    const res = await fetch(`${API_BASE}/api/deal-actions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email.value, deal_id: dealId, starred: newStarred })
+      body: JSON.stringify({ action: 'star', email: email.value, deal_id: dealId, starred: newStarred })
     });
     if (!res.ok) throw new Error();
   } catch {
@@ -182,10 +182,10 @@ export async function viewDeal(dealId) {
   viewedDealIds.value = updated;
 
   try {
-    const res = await fetch(`${API_BASE}/api/view-deal`, {
+    const res = await fetch(`${API_BASE}/api/deal-actions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email.value, deal_id: dealId })
+      body: JSON.stringify({ action: 'view', email: email.value, deal_id: dealId })
     });
     if (!res.ok) throw new Error();
   } catch {
@@ -204,10 +204,10 @@ export async function archiveDeal(dealId) {
   archivedDealIds.value = updated;
 
   try {
-    const res = await fetch(`${API_BASE}/api/archive-deal`, {
+    const res = await fetch(`${API_BASE}/api/deal-actions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email.value, deal_id: dealId, archived: newArchived })
+      body: JSON.stringify({ action: 'archive', email: email.value, deal_id: dealId, archived: newArchived })
     });
     if (!res.ok) throw new Error();
   } catch {
