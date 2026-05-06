@@ -29,7 +29,7 @@ module.exports = async function handler(req, res) {
     // Get search status
     const { data: search, error: searchError } = await supabase
       .from('deal_searches')
-      .select('status, buy_box, user_email')
+      .select('status, buy_box')
       .eq('id', searchId)
       .single();
 
@@ -44,10 +44,23 @@ module.exports = async function handler(req, res) {
       .eq('search_id', searchId)
       .order('created_at', { ascending: true });
 
-    // Detect stale scans (no new progress in 5 minutes)
+    // Detect stale scans (no new progress in 2 hours)
     const isStale = search.status === 'scanning' &&
       steps && steps.length > 0 &&
       (new Date() - new Date(steps[steps.length - 1].created_at)) > 120 * 60 * 1000;
+
+    // Fetch latest scan_run error so the dashboard can show a specific reason
+    let errorReason = null;
+    if (search.status === 'error' || isStale) {
+      const { data: latestRun } = await supabase
+        .from('scan_runs')
+        .select('error')
+        .eq('search_id', searchId)
+        .order('started_at', { ascending: false })
+        .limit(1)
+        .single();
+      errorReason = isStale ? 'stale' : (latestRun?.error || null);
+    }
 
     // If complete, get deal count
     let dealCount = 0;
@@ -76,6 +89,7 @@ module.exports = async function handler(req, res) {
 
     return res.json({
       status: isStale ? 'error' : search.status,
+      error_reason: errorReason,
       buy_box: search.buy_box,
       steps: steps || [],
       stale: isStale,
