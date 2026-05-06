@@ -39,9 +39,9 @@ const FIXTURE_JOB = Object.freeze({
 });
 
 describe('composeSpawnConfig — promptArg contract', () => {
-  it('always uses the documented `/find-deals full` subcommand', () => {
+  it('always uses the documented `/find-deals full` subcommand with --dangerously-skip-permissions', () => {
     const { args } = composeSpawnConfig(FIXTURE_JOB, {}, '/tmp/buybox.json');
-    expect(args).toEqual(['-p', '/find-deals full']);
+    expect(args).toEqual(['-p', '/find-deals full', '--dangerously-skip-permissions']);
   });
 
   it('uses `/find-deals full` even when raw_prompt is present in buy_box', () => {

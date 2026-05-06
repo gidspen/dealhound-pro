@@ -253,7 +253,7 @@ module.exports = async function handler(req, res) {
     }
 
     const stream = await client.messages.stream({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: systemPrompt,
       ...(tools ? { tools } : {}),
@@ -326,6 +326,20 @@ module.exports = async function handler(req, res) {
         toolUse = null;
       }
     }
+
+    // Log token usage for cost tracking
+    const finalMsg = await stream.finalMessage();
+    const usage = finalMsg.usage;
+    const inputCost = (usage.input_tokens / 1_000_000) * 3.0;
+    const outputCost = (usage.output_tokens / 1_000_000) * 15.0;
+    console.log('[api-usage]', JSON.stringify({
+      op: isDebrief ? 'scan_debrief' : 'buy_box_intake',
+      user: email,
+      input_tokens: usage.input_tokens,
+      output_tokens: usage.output_tokens,
+      cost_usd: +(inputCost + outputCost).toFixed(6),
+      model: 'claude-sonnet-4-6'
+    }));
 
     // Save conversation
     if (conversation_id) {

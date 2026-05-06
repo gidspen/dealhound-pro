@@ -67,7 +67,7 @@ module.exports = async function handler(req, res) {
     res.setHeader('Connection', 'keep-alive');
 
     const stream = await client.messages.stream({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: buildDealPrompt(deal, buy_box, agent_name || 'Scout'),
       messages: messages.map(m => ({ role: m.role, content: m.content }))
@@ -81,6 +81,21 @@ module.exports = async function handler(req, res) {
         res.write(`data: ${JSON.stringify({ type: 'text', text: event.delta.text })}\n\n`);
       }
     }
+
+    // Log token usage for cost tracking
+    const finalMsg = await stream.finalMessage();
+    const usage = finalMsg.usage;
+    const inputCost = (usage.input_tokens / 1_000_000) * 3.0;
+    const outputCost = (usage.output_tokens / 1_000_000) * 15.0;
+    console.log('[api-usage]', JSON.stringify({
+      op: 'deal_qa',
+      user: email,
+      deal_id: deal.id || null,
+      input_tokens: usage.input_tokens,
+      output_tokens: usage.output_tokens,
+      cost_usd: +(inputCost + outputCost).toFixed(6),
+      model: 'claude-sonnet-4-6'
+    }));
 
     // Save conversation
     const allMsgs = [...messages, { role: 'assistant', content: fullText, timestamp: new Date().toISOString() }];
