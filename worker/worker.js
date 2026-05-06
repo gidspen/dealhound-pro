@@ -29,7 +29,7 @@ if (fs.existsSync(envPath) && !process.env.SUPABASE_URL) {
 // ── Config ────────────────────────────────────────────────────────────────────
 
 const POLL_INTERVAL_MS = 60_000;
-const SCAN_TIMEOUT_MS = 30 * 60_000; // 30 min hard cap per scan
+const SCAN_TIMEOUT_MS = 90 * 60_000; // 90 min hard cap per scan
 
 // Find claude binary — check common locations across macOS setups
 function findClaude() {
@@ -234,6 +234,9 @@ function runFindDeals(job) {
     });
 
     let metrics = {};
+    let lastPhase = null;
+    const phaseTimestamps = {};
+
     const proc = spawn(CLAUDE_BIN, args, {
       env,
       stdio: ['ignore', 'pipe', 'pipe'],
@@ -246,6 +249,17 @@ function runFindDeals(job) {
       // DEALHOUND_METRICS: {"sites_discovered":5,"listings_raw":42,"deals_scored":8}
       const m = text.match(/DEALHOUND_METRICS:\s*(\{[^\n]+\})/);
       if (m) { try { metrics = JSON.parse(m[1]); } catch (_) {} }
+      // Parse phase transitions if the skill emits: DEALHOUND_PHASE: phase1
+      const p = text.match(/DEALHOUND_PHASE:\s*(\S+)/);
+      if (p) {
+        const phase = p[1];
+        if (phase !== lastPhase) {
+          const elapsedMin = ((Date.now() - startMs) / 60000).toFixed(1);
+          log(`[PHASE] ${phase}`, { elapsed: `${elapsedMin}m`, job: job.id });
+          phaseTimestamps[phase] = Date.now();
+          lastPhase = phase;
+        }
+      }
     });
 
     proc.stderr.on('data', (chunk) => process.stderr.write(chunk));
@@ -255,17 +269,49 @@ function runFindDeals(job) {
       proc.kill('SIGTERM');
     }, SCAN_TIMEOUT_MS);
 
-    proc.on('close', (code) => {
+    // Log elapsed time every 5 min so we know where the scan is in long runs.
+    const heartbeat = setInterval(() => {
+      const elapsedMin = ((Date.now() - startMs) / 60000).toFixed(1);
+      log(`[HEARTBEAT] job ${job.id} still running`, {
+        elapsed: `${elapsedMin}m`,
+        phase: lastPhase || 'unknown',
+      });
+    }, 5 * 60_000);
+
+    function cleanup(code) {
       clearTimeout(timeout);
+      clearInterval(heartbeat);
       if (buyBoxFile && fs.existsSync(buyBoxFile)) fs.unlinkSync(buyBoxFile);
       const durationMs = Date.now() - startMs;
-      if (code === 0) resolve({ durationMs, metrics });
-      else reject(new Error(`claude exited with code ${code}`));
+      if (Object.keys(phaseTimestamps).length > 0) {
+        const phaseSummary = Object.entries(phaseTimestamps).map(([phase, ts]) => ({
+          phase,
+          startedAtMin: ((ts - startMs) / 60000).toFixed(1),
+        }));
+        log(`[TIMING] job ${job.id}`, {
+          totalMin: (durationMs / 60000).toFixed(1),
+          phases: phaseSummary,
+        });
+      }
+      return durationMs;
+    }
+
+    proc.on('close', (code, signal) => {
+      const durationMs = cleanup(code);
+      if (code === 0) {
+        resolve({ durationMs, metrics });
+      } else {
+        // On macOS, SIGTERM may deliver null code + 'SIGTERM' signal rather than code 143
+        const isTimeout = code === 143 || signal === 'SIGTERM';
+        const msg = isTimeout
+          ? `Scan timed out after ${(durationMs / 60000).toFixed(0)}m`
+          : `claude exited with code ${code}`;
+        reject(new Error(msg));
+      }
     });
 
     proc.on('error', (err) => {
-      clearTimeout(timeout);
-      if (buyBoxFile && fs.existsSync(buyBoxFile)) fs.unlinkSync(buyBoxFile);
+      cleanup(null);
       reject(err);
     });
   });
@@ -365,4 +411,4 @@ if (require.main === module) {
   main().catch((err) => { console.error('FATAL:', err); process.exit(1); });
 }
 
-module.exports = { composeSpawnConfig, createInFlightGuard };
+module.exports = { composeSpawnConfig, createInFlightGuard, SCAN_TIMEOUT_MS };

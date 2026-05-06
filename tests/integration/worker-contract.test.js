@@ -24,7 +24,7 @@
 // each one is locking out.
 
 import { describe, it, expect } from 'vitest';
-import { composeSpawnConfig, createInFlightGuard } from '../../worker/worker.js';
+import { composeSpawnConfig, createInFlightGuard, SCAN_TIMEOUT_MS } from '../../worker/worker.js';
 
 const FIXTURE_JOB = Object.freeze({
   id: 'job-uuid-abc',
@@ -60,6 +60,15 @@ describe('composeSpawnConfig — promptArg contract', () => {
     // worker/diagnose.js.
     const { args } = composeSpawnConfig(FIXTURE_JOB, {}, '/tmp/buybox.json');
     expect(args).toContain('--dangerously-skip-permissions');
+  });
+});
+
+describe('SCAN_TIMEOUT_MS — timeout cap', () => {
+  it('is set to 90 minutes to give broad buy boxes enough time to complete', () => {
+    // Regression guard: was 30 min; 2026-05-05 scans with 7 sources were hitting the cap.
+    // Bumped to 90 min after a successful 2,440-listing run proved the full pipeline takes
+    // longer than 30 min on broad buy boxes. Do not reduce without confirming scan times.
+    expect(SCAN_TIMEOUT_MS).toBe(90 * 60 * 1000);
   });
 });
 
