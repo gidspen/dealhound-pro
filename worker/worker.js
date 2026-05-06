@@ -185,7 +185,15 @@ function composeSpawnConfig(job, processEnv, buyBoxFilePath) {
   // prompt like `/find-deals for [text]` causes Claude to improvise a flow
   // that skips Step 1c (Supabase persistence) — proven empirically 2026-05-02
   // when raw_prompt-style invocations produced 0 deals.
-  const args = ['-p', '/find-deals full'];
+  //
+  // --dangerously-skip-permissions is load-bearing: without it, the spawned
+  // claude in -p mode never surfaces MCP browser tools, so the skill's
+  // Phase 2B (Playwright scrapes of NAI OHB, RV Park Store, etc.) silently
+  // degrades to landsearch-only. Proven empirically 2026-05-05 via
+  // worker/diagnose.js. Safe here because the worker runs as a daemon on
+  // Gideon's Mac with a fixture supabase-scoped writeset — no shell, no
+  // human in the loop, no untrusted prompts.
+  const args = ['-p', '/find-deals full', '--dangerously-skip-permissions'];
 
   return { args, env };
 }
