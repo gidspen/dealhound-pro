@@ -194,7 +194,7 @@ Reply in 1-2 sentences, in character: confident, sharp, brief. Tell the investor
 
   const dealSummaries = (deals || []).map((d, i) => {
     const bd = typeof d.score_breakdown === 'string' ? JSON.parse(d.score_breakdown) : (d.score_breakdown || {});
-    const tier = bd.strategy?.overall || 'UNKNOWN';
+    const tier = bd.tier || bd.strategy?.overall || 'UNKNOWN';
     const risk = bd.risk?.level || 'UNKNOWN';
     return `Deal ${i + 1}: ${d.title || 'Unnamed'}
   Location: ${d.location || '?'} | Price: ${d.price ? '$' + Number(d.price).toLocaleString() : '?'} | Acreage: ${d.acreage || '?'} | Keys: ${d.rooms_keys || '?'}
