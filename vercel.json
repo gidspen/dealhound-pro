@@ -5,6 +5,7 @@
     "api/chat.js": { "maxDuration": 60 },
     "api/scan-start.js": { "maxDuration": 10 },
     "api/scan-progress.js": { "maxDuration": 10 },
+    "api/scan-report.js": { "maxDuration": 10 },
     "api/user-data.js": { "maxDuration": 10 },
     "api/deal-chat.js": { "maxDuration": 60 },
     "api/conversation.js": { "maxDuration": 10 },
@@ -15,6 +16,7 @@
   },
   "rewrites": [
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },
-    { "source": "/dashboard/(.*)", "destination": "/dashboard-dist/index.html" }
+    { "source": "/dashboard/(.*)", "destination": "/dashboard-dist/index.html" },
+    { "source": "/scan/:id", "destination": "/scan/index.html" }
   ]
 }
