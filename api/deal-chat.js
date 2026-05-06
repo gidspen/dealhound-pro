@@ -67,7 +67,7 @@ module.exports = async function handler(req, res) {
     res.setHeader('Connection', 'keep-alive');
 
     const stream = await client.messages.stream({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: buildDealPrompt(deal, buy_box, agent_name || 'Scout'),
       messages: messages.map(m => ({ role: m.role, content: m.content }))
