@@ -559,9 +559,9 @@
     .pricing-section { padding: 96px 0; }
     .pricing-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 24px;
-      max-width: 820px;
+      max-width: 1100px;
       margin: 56px auto 0;
     }
     .pricing-card {
@@ -793,6 +793,7 @@
       .how-grid { grid-template-columns: 1fr; gap: 40px; }
       .sources-grid { grid-template-columns: 1fr 1fr; }
       .pricing-grid { grid-template-columns: 1fr; max-width: 440px; }
+      .founding-urgency { font-size: 0.75rem; }
       .who-grid { grid-template-columns: 1fr; }
       footer .container { flex-direction: column; gap: 20px; text-align: center; }
       .final-capture { flex-direction: column; }
@@ -836,7 +837,7 @@
       <div class="hero-inner">
         <div class="hero-eyebrow">
           <span class="dot"></span>
-          10,000+ Deals Analyzed
+          31,400+ Deals Analyzed
         </div>
 
         <h1>Your <em>AI deal team.</em></h1>
@@ -1014,7 +1015,7 @@
     <div class="container">
       <div style="text-align:center">
         <div class="section-tag">Pricing</div>
-        <h2 class="section-h2">One agent. One price.</h2>
+        <h2 class="section-h2">Pick your level.</h2>
         <p class="section-sub" style="margin: 0 auto;">Less than one hour of a broker's time. Your agent works every single day.</p>
       </div>
 
@@ -1022,32 +1023,48 @@
         <div class="pricing-card">
           <div class="pricing-name">Free Scan</div>
           <div class="pricing-price"><sup>$</sup>0</div>
-          <div class="pricing-period">Your first scan, on us</div>
+          <div class="pricing-period">No account required</div>
           <ul class="pricing-features">
-            <li>One full scan across all available markets</li>
+            <li>One full scan across all markets</li>
             <li>Personalized to your buy box</li>
-            <li>Ranked deal report delivered to you</li>
-            <li>Suggested next steps for each deal</li>
+            <li>Ranked deal report emailed to you</li>
+            <li>Shareable report link</li>
           </ul>
-          <a href="/dashboard" class="btn-full ghost">Claim My Free Scan</a>
+          <a href="/free-scan" class="btn-full ghost">Run a Free Scan &rarr;</a>
         </div>
 
         <div class="pricing-card featured">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-name">Deal Hound Agent</div>
-          <div class="pricing-price"><sup>$</sup>29</div>
+          <div class="pricing-badge">Founding Member — 50 spots</div>
+          <div class="pricing-name">Founding Member</div>
+          <div class="pricing-price"><sup>$</sup>49</div>
+          <div class="pricing-period">per month · locked for life</div>
+          <ul class="pricing-features">
+            <li>Daily scans across 30+ marketplaces</li>
+            <li>Saved buy box — update anytime</li>
+            <li>HOT / STRONG / WATCH scoring</li>
+            <li>Every future skill auto-unlocked (LOI, underwriting, comps)</li>
+            <li>Founding price locked forever</li>
+          </ul>
+          <button onclick="startCheckout('founding')" class="btn-full">Get Founding Access &rarr;</button>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-name">Hunter</div>
+          <div class="pricing-price"><sup>$</sup>79</div>
           <div class="pricing-period">per month · cancel anytime</div>
           <ul class="pricing-features">
             <li>Daily scans across 30+ marketplaces</li>
             <li>Saved buy box — update anytime</li>
-            <li>Ranked deal report delivered every morning</li>
-            <li>HOT / STRONG / WATCH tier scoring</li>
-            <li>Suggested next steps + risk flags per deal</li>
+            <li>HOT / STRONG / WATCH scoring</li>
             <li>New markets added as they go live</li>
           </ul>
-          <a href="/dashboard" class="btn-full">Start My Free Scan &rarr;</a>
+          <button onclick="startCheckout('hunter')" class="btn-full ghost">Get Started &rarr;</button>
         </div>
       </div>
+
+      <p style="text-align:center; margin-top:32px; font-size:0.8rem; color:var(--cream-sub);">
+        Need underwriting, LOI drafting, or team access? <a href="mailto:gideon@incredibleai.pro" style="color:var(--gold);">Talk to us about Investor ($249) or Operator ($599).</a>
+      </p>
     </div>
   </section>
 
@@ -1082,6 +1099,31 @@
       nav.classList.toggle('scrolled', window.scrollY > 20);
     }, { passive: true });
 
+    async function startCheckout(tier) {
+      const btn = event.currentTarget;
+      const orig = btn.textContent;
+      btn.textContent = 'Loading…';
+      btn.disabled = true;
+      try {
+        const res = await fetch('/api/create-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ tier })
+        });
+        const data = await res.json();
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          alert(data.error || 'Something went wrong. Please try again.');
+          btn.textContent = orig;
+          btn.disabled = false;
+        }
+      } catch {
+        alert('Could not connect. Please try again.');
+        btn.textContent = orig;
+        btn.disabled = false;
+      }
+    }
   </script>
 </body>
 </html>
