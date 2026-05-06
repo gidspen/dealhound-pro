@@ -152,9 +152,29 @@ async function buildDebriefPrompt(searchId, agentName) {
   // cheerfully tells the user "0 DEALS FOUND" while the scan is still hunting.
   const scanStatus = search?.status;
   if (scanStatus === 'error') {
-    return `You are ${agentName}, an AI deal hunting agent. The scan failed before completing.
+    const { data: latestRun } = await supabase
+      .from('scan_runs')
+      .select('error')
+      .eq('search_id', searchId)
+      .order('started_at', { ascending: false })
+      .limit(1)
+      .single();
 
-Tell the investor in 1-2 sentences, in character: the scan didn't finish, you're not sure yet why, and they should retry from the dashboard. Stay confident and brief — own the failure, don't grovel. Do NOT report any deal count or speculate about what would have been found.`;
+    const isZeroDeals = latestRun?.error?.includes('Skill completed but wrote zero listings');
+
+    if (isZeroDeals) {
+      const buyBoxStr = search?.buy_box ? JSON.stringify(search.buy_box, null, 2) : 'Not available';
+      return `You are ${agentName}, an AI deal hunting agent. You ran a full scan and came up empty — the market had zero listings matching the investor's criteria today.
+
+INVESTOR'S BUY BOX:
+${buyBoxStr}
+
+Tell the investor in 2-3 sentences, in character: the scan ran to completion, you hit every source, but nothing survived the filters today. Reference 1-2 of the tightest criteria from the buy box (acreage floor, property type, location, price floor). Suggest 1-2 concrete adjustments they could make. Don't apologize — the market was just thin for these specs. Do NOT say zero deals were found as a failure — frame it as a tight market.`;
+    }
+
+    return `You are ${agentName}, an AI deal hunting agent. The scan hit a technical error before completing.
+
+Tell the investor in 1-2 sentences, in character: the scan didn't finish due to a technical issue, and they should retry from the dashboard. Stay confident and brief — own the failure, don't grovel. Do NOT report any deal count or speculate about what would have been found.`;
   }
   if (scanStatus !== 'complete') {
     // 'scanning', 'ready', null, or any other in-flight state.
