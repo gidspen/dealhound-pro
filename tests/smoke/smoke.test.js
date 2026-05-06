@@ -18,6 +18,7 @@ describe('Post-deploy smoke tests', () => {
     await supabase.from('conversations').delete().eq('user_email', email);
 
     if (createdSearchIds.length > 0) {
+      await supabase.from('scrape_jobs').delete().in('search_id', createdSearchIds);
       await supabase.from('scan_progress').delete().in('search_id', createdSearchIds);
       await supabase.from('deal_searches').delete().in('id', createdSearchIds);
     }
