@@ -11,10 +11,12 @@
     "api/star-deal.js": { "maxDuration": 10 },
     "api/view-deal.js": { "maxDuration": 10 },
     "api/archive-deal.js": { "maxDuration": 10 },
-    "api/health.js": { "maxDuration": 5 }
+    "api/health.js": { "maxDuration": 5 },
+    "api/free-scan-start.js": { "maxDuration": 15 }
   },
   "rewrites": [
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },
-    { "source": "/dashboard/(.*)", "destination": "/dashboard-dist/index.html" }
+    { "source": "/dashboard/(.*)", "destination": "/dashboard-dist/index.html" },
+    { "source": "/free-scan", "destination": "/free-scan/index.html" }
   ]
 }

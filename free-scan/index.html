@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free AI Deal Scan — Deal Hound</title>
+  <meta name="description" content="Run a free AI deal scan. Tell us what you're hunting — boutique hotel, micro resort, glamping, B&B, STR, or campground — and your AI deal team will search 30+ marketplaces and email you the results within 60 minutes. No account required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F8F5EF;
+      --surface:   #FFFFFF;
+      --surface2:  #F0EDE4;
+      --border:    rgba(0,0,0,0.08);
+      --cream:     #1D1D1B;
+      --cream-dim: rgba(29,29,27,0.62);
+      --cream-sub: rgba(29,29,27,0.38);
+      --gold:      #243D35;
+      --gold-dim:  rgba(36,61,53,0.10);
+      --gold-glow: rgba(36,61,53,0.04);
+      --green:     #1a7f37;
+      --green-dim: rgba(26,127,55,0.08);
+      --amber:     #b45309;
+      --sans:      'Outfit', system-ui, sans-serif;
+      --serif:     'Cormorant Garamond', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.4;
+    }
+
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-1 { width: 700px; height: 700px; top: -250px; left: -200px; background: radial-gradient(circle, rgba(36,61,53,0.07) 0%, transparent 70%); }
+    .orb-2 { width: 500px; height: 500px; top: 40%; right: -150px; background: radial-gradient(circle, rgba(26,127,55,0.04) 0%, transparent 70%); }
+    .orb-3 { width: 400px; height: 400px; bottom: 0; left: 20%; background: radial-gradient(circle, rgba(36,61,53,0.03) 0%, transparent 70%); }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── NAV ───────────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 0;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.4s, background 0.4s, backdrop-filter 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(248,245,239,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-color: var(--border);
+    }
+    nav .container { display: flex; align-items: center; justify-content: space-between; }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--cream);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo-icon {
+      width: 28px; height: 28px;
+      background: var(--gold);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .nav-powered {
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cream-sub);
+    }
+    .nav-powered a { color: var(--gold); text-decoration: none; }
+    .nav-powered a:hover { text-decoration: underline; }
+    .nav-right { display: flex; align-items: center; gap: 28px; }
+    .nav-link {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--cream-dim);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--cream); }
+    .btn-nav {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      background: var(--gold);
+      padding: 9px 22px;
+      border-radius: 3px;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+    }
+    .btn-nav:hover { opacity: 0.85; }
+
+    /* ── PAGE LAYOUT ───────────────────────────────────────────── */
+    .page-wrapper {
+      min-height: 100vh;
+      padding: 120px 0 80px;
+    }
+
+    .page-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      padding-top: 20px;
+    }
+
+    /* ── HERO COPY ─────────────────────────────────────────────── */
+    .hero-copy {
+      position: sticky;
+      top: 120px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-dim);
+      border: 1px solid rgba(36,61,53,0.18);
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow .dot {
+      width: 6px; height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .hero-h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      line-height: 1.12;
+      color: var(--cream);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--cream-dim);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 440px;
+    }
+
+    .trust-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .trust-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--cream-dim);
+    }
+    .trust-list li::before {
+      content: '';
+      width: 18px; height: 18px;
+      background: var(--green-dim);
+      border: 1px solid rgba(26,127,55,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5L3.8 6.5L9 1' stroke='%231a7f37' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* ── FORM PANEL ────────────────────────────────────────────── */
+    .form-panel {
+      background: var(--surface);
+      border: 1px solid rgba(36,61,53,0.15);
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: 0 8px 48px rgba(36,61,53,0.07);
+    }
+
+    .form-panel-title {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: 6px;
+    }
+
+    .form-panel-sub {
+      font-size: 0.82rem;
+      color: var(--cream-sub);
+      margin-bottom: 28px;
+    }
+
+    .form-divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 28px;
+    }
+
+    /* ── FORM FIELDS ───────────────────────────────────────────── */
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+    }
+
+    .field-label .req {
+      color: var(--gold);
+      margin-left: 2px;
+    }
+
+    .field input,
+    .field select {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--cream);
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      width: 100%;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .field select {
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 7L11 1' stroke='%231D1D1B' stroke-opacity='0.38' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+
+    .field input::placeholder { color: var(--cream-sub); }
+    .field input:focus,
+    .field select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(36,61,53,0.06);
+    }
+
+    .price-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .price-input-wrap {
+      position: relative;
+    }
+    .price-input-wrap .currency {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.88rem;
+      color: var(--cream-sub);
+      pointer-events: none;
+      font-weight: 400;
+    }
+    .price-input-wrap input {
+      padding-left: 26px;
+    }
+
+    /* ── HONEYPOT ──────────────────────────────────────────────── */
+    .hp-field { display: none; }
+
+    /* ── SUBMIT BUTTON ─────────────────────────────────────────── */
+    .btn-submit {
+      display: block;
+      width: 100%;
+      background: var(--gold);
+      color: #FFFFFF;
+      border: none;
+      padding: 15px 24px;
+      border-radius: 6px;
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+      text-align: center;
+    }
+    .btn-submit:hover { opacity: 0.88; }
+    .btn-submit:active { transform: scale(0.99); }
+    .btn-submit:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    /* ── FORM TRUST SIGNALS ────────────────────────────────────── */
+    .form-trust {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .form-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: var(--cream-sub);
+    }
+    .form-trust-item svg { flex-shrink: 0; }
+
+    /* ── ERROR STATE ───────────────────────────────────────────── */
+    .form-error {
+      display: none;
+      background: rgba(180,83,9,0.06);
+      border: 1px solid rgba(180,83,9,0.2);
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 0.84rem;
+      color: var(--amber);
+      margin-bottom: 16px;
+    }
+    .form-error.visible { display: block; }
+
+    /* ── CONFIRMATION STATE ────────────────────────────────────── */
+    #confirmation-state {
+      display: none;
+    }
+
+    .confirmation-icon {
+      width: 56px; height: 56px;
+      background: var(--green-dim);
+      border: 1px solid rgba(26,127,55,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .confirmation-h2 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .confirmation-sub {
+      font-size: 0.9rem;
+      color: var(--cream-dim);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+    .confirmation-sub strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+
+    /* ── PROGRESS INDICATOR ────────────────────────────────────── */
+    .progress-block {
+      background: var(--gold-glow);
+      border: 1px solid rgba(36,61,53,0.12);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin-bottom: 28px;
+    }
+    .progress-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .progress-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .progress-step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: var(--cream-dim);
+    }
+    .progress-step .step-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: var(--border);
+    }
+    .progress-step.done .step-dot {
+      background: var(--green);
+    }
+    .progress-step.active .step-dot {
+      background: var(--gold);
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    .progress-step.done { color: var(--cream-dim); }
+    .progress-step.active { color: var(--cream); font-weight: 400; }
+
+    /* Animated dots for "searching..." */
+    .thinking-dots::after {
+      content: '';
+      animation: dots 1.4s steps(4, end) infinite;
+    }
+    @keyframes dots {
+      0%   { content: ''; }
+      25%  { content: '.'; }
+      50%  { content: '..'; }
+      75%  { content: '...'; }
+      100% { content: ''; }
+    }
+
+    /* ── FOUNDING MEMBER CTA ───────────────────────────────────── */
+    .founding-cta {
+      background: linear-gradient(145deg, var(--surface) 0%, rgba(36,61,53,0.03) 100%);
+      border: 1px solid rgba(36,61,53,0.2);
+      border-radius: 16px;
+      padding: 36px 32px;
+      margin-top: 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .founding-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: var(--gold);
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    .founding-countdown {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(36,61,53,0.08);
+      color: var(--gold);
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-left: 8px;
+    }
+
+    .founding-h3 {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .founding-h3 em { font-style: italic; color: var(--gold); }
+
+    .founding-sub {
+      font-size: 0.88rem;
+      color: var(--cream-dim);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      max-width: 460px;
+    }
+
+    .founding-price {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .founding-price-amount {
+      font-family: var(--serif);
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1;
+    }
+    .founding-price-amount sup {
+      font-size: 1.2rem;
+      vertical-align: top;
+      margin-top: 6px;
+      font-family: var(--sans);
+      font-weight: 300;
+    }
+    .founding-price-period {
+      font-size: 0.85rem;
+      color: var(--cream-sub);
+    }
+    .founding-price-note {
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    .founding-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 24px;
+    }
+    .founding-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: var(--cream-dim);
+    }
+    .founding-features li::before {
+      content: '—';
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .btn-founding {
+      display: inline-block;
+      background: var(--gold);
+      color: #FFFFFF;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-founding:hover { opacity: 0.88; }
+
+    .founding-footnote {
+      font-size: 0.74rem;
+      color: var(--cream-sub);
+      margin-top: 12px;
+    }
+
+    /* ── FOOTER ────────────────────────────────────────────────── */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      margin-top: 80px;
+    }
+    footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--cream);
+      text-decoration: none;
+    }
+    .footer-powered {
+      font-size: 0.75rem;
+      color: var(--cream-sub);
+    }
+    .footer-powered a { color: var(--gold); text-decoration: none; }
+    .footer-powered a:hover { text-decoration: underline; }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.78rem;
+      color: var(--cream-sub);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ── RESPONSIVE ────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .page-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .hero-copy {
+        position: static;
+      }
+    }
+    @media (max-width: 600px) {
+      .form-panel { padding: 28px 22px; }
+      .price-row { grid-template-columns: 1fr 1fr; gap: 8px; }
+      footer .container { flex-direction: column; gap: 20px; text-align: center; }
+      nav .nav-right .nav-link { display: none; }
+      .container { padding: 0 20px; }
+      .founding-cta { padding: 28px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="container">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 0 L9.6 6.4 L16 8 L9.6 9.6 L8 16 L6.4 9.6 L0 8 L6.4 6.4 Z"/>
+          </svg>
+        </div>
+        Deal Hound
+      </a>
+      <div class="nav-right">
+        <span class="nav-powered">Powered by <a href="https://incredibleai.pro" target="_blank">Incredible AI</a></span>
+        <a href="/#how-it-works" class="nav-link">How It Works</a>
+        <a href="/#pricing" class="nav-link">Pricing</a>
+        <a href="/dashboard" class="btn-nav">Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN PAGE -->
+  <div class="page-wrapper">
+    <div class="container">
+      <div class="page-inner">
+
+        <!-- LEFT: HERO COPY -->
+        <div class="hero-copy">
+          <div class="hero-eyebrow">
+            <span class="dot"></span>
+            Free Scan — No Account Required
+          </div>
+
+          <h1 class="hero-h1">
+            Run your free<br><em>AI deal scan.</em>
+          </h1>
+
+          <p class="hero-sub">
+            Tell us what you're hunting. Your AI deal team will search 30+ marketplaces and email you the results within 60 minutes.
+          </p>
+
+          <ul class="trust-list">
+            <li>No account required.</li>
+            <li>Results in your inbox in ~60 min.</li>
+            <li>Real AI analysis, not just a search.</li>
+          </ul>
+        </div>
+
+        <!-- RIGHT: FORM PANEL + FOUNDING CTA -->
+        <div>
+
+          <!-- FORM PANEL -->
+          <div class="form-panel">
+            <div class="form-panel-title">Your scan criteria</div>
+            <div class="form-panel-sub">Takes about 60 seconds to fill out.</div>
+            <div class="form-divider"></div>
+
+            <!-- FORM STATE -->
+            <div id="form-state">
+              <div id="form-error" class="form-error" role="alert"></div>
+
+              <form id="free-scan-form" novalidate>
+
+                <!-- Honeypot: hidden from real users, bots fill it in -->
+                <div class="hp-field" aria-hidden="true">
+                  <label for="website">Website</label>
+                  <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+                </div>
+
+                <div class="field-group">
+                  <div class="field">
+                    <label class="field-label" for="asset-type">Asset Type <span class="req">*</span></label>
+                    <select id="asset-type" name="assetType" required>
+                      <option value="" disabled selected>Select asset type</option>
+                      <option value="Boutique Hotel">Boutique Hotel</option>
+                      <option value="Micro Resort">Micro Resort</option>
+                      <option value="Glamping">Glamping</option>
+                      <option value="B&B">B&amp;B</option>
+                      <option value="STR">STR</option>
+                      <option value="Campground">Campground</option>
+                      <option value="Any">Any Hospitality</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label class="field-label" for="market">Target Market / Location <span class="req">*</span></label>
+                    <input
+                      type="text"
+                      id="market"
+                      name="market"
+                      placeholder="e.g. Blue Ridge Mountains, NC"
+                      required
+                      autocomplete="off"
+                    />
+                  </div>
+
+                  <div class="field">
+                    <label class="field-label">Price Range <span class="req">*</span></label>
+                    <div class="price-row">
+                      <div class="price-input-wrap">
+                        <span class="currency">$</span>
+                        <input
+                          type="number"
+                          id="price-min"
+                          name="priceMin"
+                          placeholder="Min"
+                          min="0"
+                          step="50000"
+                          required
+                        />
+                      </div>
+                      <div class="price-input-wrap">
+                        <span class="currency">$</span>
+                        <input
+                          type="number"
+                          id="price-max"
+                          name="priceMax"
+                          placeholder="Max"
+                          min="0"
+                          step="50000"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="field-label" for="email">Email Address <span class="req">*</span></label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Results delivered here"
+                      required
+                      autocomplete="email"
+                    />
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submit-btn">
+                  Start My Free Scan &rarr;
+                </button>
+              </form>
+
+              <div class="form-trust">
+                <div class="form-trust-item">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M7 1L8.3 5.3H13L9.4 7.9L10.7 12.2L7 9.6L3.3 12.2L4.6 7.9L1 5.3H5.7L7 1Z" fill="none" stroke="rgba(29,29,27,0.38)" stroke-width="1.2" stroke-linejoin="round"/>
+                  </svg>
+                  No account or credit card required
+                </div>
+                <div class="form-trust-item">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <rect x="2" y="6" width="10" height="7" rx="1.5" fill="none" stroke="rgba(29,29,27,0.38)" stroke-width="1.2"/>
+                    <path d="M4.5 6V4a2.5 2.5 0 0 1 5 0v2" stroke="rgba(29,29,27,0.38)" stroke-width="1.2" stroke-linecap="round"/>
+                  </svg>
+                  Your email is never sold or shared
+                </div>
+                <div class="form-trust-item">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <circle cx="7" cy="7" r="5.5" stroke="rgba(29,29,27,0.38)" stroke-width="1.2"/>
+                    <path d="M7 4v3.5l2 1.5" stroke="rgba(29,29,27,0.38)" stroke-width="1.2" stroke-linecap="round"/>
+                  </svg>
+                  One free scan per day — results in ~60 min
+                </div>
+              </div>
+            </div>
+
+            <!-- CONFIRMATION STATE (shown after submit) -->
+            <div id="confirmation-state">
+              <div class="confirmation-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12L9.5 16.5L19 7" stroke="#1a7f37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <div class="confirmation-h2">Your AI deal hunter is on it.</div>
+              <p class="confirmation-sub">
+                We'll email <strong id="confirm-email"></strong> with your results in about 60 minutes. Check your spam folder if you don't see it.
+              </p>
+
+              <div class="progress-block">
+                <div class="progress-label">Scan in progress</div>
+                <div class="progress-steps">
+                  <div class="progress-step done">
+                    <span class="step-dot"></span>
+                    Criteria received
+                  </div>
+                  <div class="progress-step done">
+                    <span class="step-dot"></span>
+                    Scan queued
+                  </div>
+                  <div class="progress-step active">
+                    <span class="step-dot"></span>
+                    <span>Searching 30+ marketplaces<span class="thinking-dots"></span></span>
+                  </div>
+                  <div class="progress-step">
+                    <span class="step-dot"></span>
+                    Scoring &amp; ranking deals
+                  </div>
+                  <div class="progress-step">
+                    <span class="step-dot"></span>
+                    Report delivered to your inbox
+                  </div>
+                </div>
+              </div>
+
+              <p style="font-size:0.82rem; color:var(--cream-sub);">While you wait — see what the Founding Member offer includes below.</p>
+            </div>
+          </div>
+
+          <!-- FOUNDING MEMBER CTA (always visible below form) -->
+          <div class="founding-cta">
+            <div>
+              <span class="founding-badge">Founding Member</span>
+              <span class="founding-countdown">First 50 spots</span>
+            </div>
+
+            <h3 class="founding-h3">
+              Want this on <em>autopilot</em> every week?
+            </h3>
+
+            <p class="founding-sub">
+              Founding Members get weekly auto-scans, every future skill we ship (LOI drafts, underwriting, comp analysis), and a locked-in price for life. First 50 only.
+            </p>
+
+            <div class="founding-price">
+              <div class="founding-price-amount"><sup>$</sup>49</div>
+              <div>
+                <div class="founding-price-period">/month</div>
+                <div class="founding-price-note">Locked for life &mdash; never increases</div>
+              </div>
+            </div>
+
+            <ul class="founding-features">
+              <li>10 agent runs/month (deal scan, LOI, underwriting, comps)</li>
+              <li>1 saved search with weekly auto-monitoring</li>
+              <li>Every future skill automatically unlocked</li>
+              <li>Founding Member badge + direct line to founder</li>
+              <li>Price locked forever as long as subscription stays active</li>
+            </ul>
+
+            <a href="/dashboard" class="btn-founding">Claim Founding Member Spot &rarr;</a>
+
+            <p class="founding-footnote">After 50 spots fill: standard entry is $79/mo, no lifetime price lock, no future-skills guarantee.</p>
+          </div>
+
+        </div><!-- end right column -->
+      </div><!-- end page-inner -->
+    </div><!-- end container -->
+  </div><!-- end page-wrapper -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <a href="/" class="footer-logo">Deal Hound</a>
+      <span class="footer-powered">Powered by <a href="https://incredibleai.pro" target="_blank">Incredible AI</a></span>
+      <ul class="footer-links">
+        <li><a href="https://incredibleai.pro" target="_blank">Incredible AI</a></li>
+        <li><a href="mailto:gideon@incredibleai.pro">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // Form submission
+    const form = document.getElementById('free-scan-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formState = document.getElementById('form-state');
+    const confirmationState = document.getElementById('confirmation-state');
+    const confirmEmail = document.getElementById('confirm-email');
+    const formError = document.getElementById('form-error');
+
+    function showError(msg) {
+      formError.textContent = msg;
+      formError.classList.add('visible');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Start My Free Scan →';
+    }
+
+    function clearError() {
+      formError.classList.remove('visible');
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      clearError();
+
+      const data = {
+        assetType: form.assetType.value,
+        market: form.market.value.trim(),
+        priceMin: form.priceMin.value,
+        priceMax: form.priceMax.value,
+        email: form.email.value.trim(),
+        _hp: document.getElementById('website').value, // honeypot
+      };
+
+      // Client-side validation
+      if (!data.assetType) { showError('Please select an asset type.'); return; }
+      if (!data.market) { showError('Please enter a target market or location.'); return; }
+      if (!data.priceMin || !data.priceMax) { showError('Please enter a price range.'); return; }
+      if (parseFloat(data.priceMax) <= parseFloat(data.priceMin)) {
+        showError('Max price must be greater than min price.'); return;
+      }
+      if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+        showError('Please enter a valid email address.'); return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Starting scan…';
+
+      try {
+        const res = await fetch('/api/free-scan-start', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            assetType: data.assetType,
+            market: data.market,
+            priceMin: parseFloat(data.priceMin),
+            priceMax: parseFloat(data.priceMax),
+            email: data.email,
+            _hp: data._hp,
+          }),
+        });
+
+        const json = await res.json();
+
+        if (res.status === 429) {
+          showError('You’ve already run a free scan today. Check your inbox, or come back tomorrow for another one.');
+          return;
+        }
+
+        if (!res.ok) {
+          showError(json.error || 'Something went wrong. Please try again.');
+          return;
+        }
+
+        // Success — show confirmation
+        confirmEmail.textContent = data.email;
+        formState.style.display = 'none';
+        confirmationState.style.display = 'block';
+
+      } catch (err) {
+        showError('Network error — please check your connection and try again.');
+      }
+    });
+  </script>
+</body>
+</html>
