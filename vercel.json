@@ -13,10 +13,12 @@
     "api/archive-deal.js": { "maxDuration": 10 },
     "api/health.js": { "maxDuration": 5 },
     "api/create-checkout.js": { "maxDuration": 10 },
-    "api/stripe-webhook.js": { "maxDuration": 10 }
+    "api/stripe-webhook.js": { "maxDuration": 10 },
+    "api/free-scan-start.js": { "maxDuration": 15 }
   },
   "rewrites": [
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },
-    { "source": "/dashboard/(.*)", "destination": "/dashboard-dist/index.html" }
+    { "source": "/dashboard/(.*)", "destination": "/dashboard-dist/index.html" },
+    { "source": "/free-scan", "destination": "/free-scan/index.html" }
   ]
 }
