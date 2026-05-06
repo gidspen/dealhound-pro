@@ -24,7 +24,7 @@
 // each one is locking out.
 
 import { describe, it, expect } from 'vitest';
-import { composeSpawnConfig, createInFlightGuard } from '../../worker/worker.js';
+import { composeSpawnConfig, createInFlightGuard, SCAN_TIMEOUT_MS } from '../../worker/worker.js';
 
 const FIXTURE_JOB = Object.freeze({
   id: 'job-uuid-abc',
@@ -41,7 +41,7 @@ const FIXTURE_JOB = Object.freeze({
 describe('composeSpawnConfig — promptArg contract', () => {
   it('always uses the documented `/find-deals full` subcommand', () => {
     const { args } = composeSpawnConfig(FIXTURE_JOB, {}, '/tmp/buybox.json');
-    expect(args).toEqual(['-p', '/find-deals full']);
+    expect(args).toEqual(['-p', '/find-deals full', '--dangerously-skip-permissions']);
   });
 
   it('uses `/find-deals full` even when raw_prompt is present in buy_box', () => {
@@ -51,6 +51,24 @@ describe('composeSpawnConfig — promptArg contract', () => {
     expect(args[1]).toBe('/find-deals full');
     expect(args[1]).not.toContain('for ');
     expect(args[1]).not.toContain(FIXTURE_JOB.buy_box.raw_prompt);
+  });
+
+  it('passes --dangerously-skip-permissions so MCP browser tools are reachable', () => {
+    // Regression guard: without this flag, spawned `claude -p` only surfaces
+    // auth-only built-in MCPs and Playwright's browser_* tools are invisible,
+    // silently degrading scrapes to landsearch-only. Proven 2026-05-05 via
+    // worker/diagnose.js.
+    const { args } = composeSpawnConfig(FIXTURE_JOB, {}, '/tmp/buybox.json');
+    expect(args).toContain('--dangerously-skip-permissions');
+  });
+});
+
+describe('SCAN_TIMEOUT_MS — timeout cap', () => {
+  it('is set to 90 minutes to give broad buy boxes enough time to complete', () => {
+    // Regression guard: was 30 min; 2026-05-05 scans with 7 sources were hitting the cap.
+    // Bumped to 90 min after a successful 2,440-listing run proved the full pipeline takes
+    // longer than 30 min on broad buy boxes. Do not reduce without confirming scan times.
+    expect(SCAN_TIMEOUT_MS).toBe(90 * 60 * 1000);
   });
 });
 

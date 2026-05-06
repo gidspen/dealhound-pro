@@ -59,9 +59,18 @@ function deriveCounts(steps) {
   return { reviewed, scored };
 }
 
+function errorDetailFor(reason) {
+  if (!reason || reason === 'unknown') return 'Something went wrong. Check worker logs for details.';
+  if (reason === 'stale') return 'No updates in 2+ hours — scan appears stuck.';
+  if (reason.toLowerCase().includes('timed out')) return reason + '. Try a narrower location or fewer sources.';
+  if (reason.toLowerCase().includes('zero listings')) return 'Scan completed but found no matching listings. Try broadening your buy box.';
+  return reason;
+}
+
 export function ScanProgress({ searchId }) {
   const [steps, setSteps] = useState([]);
   const [status, setStatus] = useState('scanning');
+  const [errorReason, setErrorReason] = useState(null);
   const [now, setNow] = useState(Date.now());
 
   useEffect(() => {
@@ -82,6 +91,7 @@ export function ScanProgress({ searchId }) {
         if (cancelled) return;
         setSteps(data.steps || []);
         setStatus(data.status);
+        setErrorReason(data.error_reason || null);
         if (data.status === 'complete' && stoppedAt !== 'complete') {
           stoppedAt = 'complete';
           // Tell Chat the scan is done so it can fire the debrief.
@@ -123,7 +133,12 @@ export function ScanProgress({ searchId }) {
       </div>
       {status !== 'error' && (
         <div class="scan-progress__notice">
-          Scans can take up to 60 minutes. You can leave this tab open — the agent will keep working.
+          Scans can take up to 90 minutes. You can leave this tab open — the agent will keep working.
+        </div>
+      )}
+      {status === 'error' && (
+        <div class="scan-progress__error-detail">
+          {errorDetailFor(errorReason)}
         </div>
       )}
       {showCounter && (
@@ -153,4 +168,4 @@ export function ScanProgress({ searchId }) {
 }
 
 // Exported for unit testing only
-export { deriveCounts };
+export { deriveCounts, errorDetailFor };

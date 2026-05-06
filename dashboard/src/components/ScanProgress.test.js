@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { deriveCounts } from './ScanProgress.jsx';
+import { deriveCounts, errorDetailFor } from './ScanProgress.jsx';
 
 function makeStep(step, listing_count) {
   return { step, listing_count, status: 'complete', id: Math.random() };
@@ -66,5 +66,34 @@ describe('deriveCounts', () => {
       makeStep('scrape:landsearch:done', 50),
     ];
     expect(deriveCounts(steps)).toEqual({ reviewed: 50, scored: 0 });
+  });
+});
+
+describe('errorDetailFor', () => {
+  it('returns generic message for null reason', () => {
+    expect(errorDetailFor(null)).toBe('Something went wrong. Check worker logs for details.');
+  });
+
+  it('returns generic message for unknown reason string', () => {
+    expect(errorDetailFor('unknown')).toBe('Something went wrong. Check worker logs for details.');
+  });
+
+  it('returns stale message for stale reason', () => {
+    expect(errorDetailFor('stale')).toBe('No updates in 2+ hours — scan appears stuck.');
+  });
+
+  it('returns timeout message with hint when reason includes "timed out"', () => {
+    const msg = errorDetailFor('Scan timed out after 90m');
+    expect(msg).toContain('Scan timed out after 90m');
+    expect(msg).toContain('Try a narrower location or fewer sources');
+  });
+
+  it('returns zero-listings message when reason includes "zero listings"', () => {
+    const msg = errorDetailFor('Skill completed but wrote zero listings — check buy box format');
+    expect(msg).toContain('broadening your buy box');
+  });
+
+  it('passes through unrecognised reason strings verbatim', () => {
+    expect(errorDetailFor('Some other error')).toBe('Some other error');
   });
 });
