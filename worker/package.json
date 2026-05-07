@@ -5,10 +5,12 @@
   "main": "worker.js",
   "scripts": {
     "start": "node worker.js",
-    "union-buy-box": "node union-buy-box.js"
+    "union-buy-box": "node union-buy-box.js",
+    "postinstall": "find node_modules/node-pty/prebuilds -name 'spawn-helper' -exec chmod +x {} + 2>/dev/null || true"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.0",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "node-pty": "^1.1.0"
   }
 }

@@ -1,8 +1,12 @@
 /**
  * dealhound-worker
  *
- * Polls scrape_jobs every 60s, invokes `claude /find-deals full` for each
- * pending job, and tracks execution in scan_runs.
+ * Polls scrape_jobs every 60s, invokes `/find-deals full` via interactive PTY
+ * for each pending job, and tracks execution in scan_runs.
+ *
+ * Default mode: headed (pty-runner.js) — interactive Claude, same scoring behavior
+ * as Claude Desktop. Eliminates the 31% classification / 93% risk score divergence
+ * seen with headless -p mode. Set DEALHOUND_WORKER_MODE=headless to revert.
  *
  * Worker = infrastructure. /find-deals = the agent. Don't conflate them.
  *
@@ -28,6 +32,7 @@ const {
   recordComputeUsed,
   RUN_CAPPED_MESSAGE,
 } = require('./cost-guardrails');
+const { runFindDealsHeaded } = require('./pty-runner');
 
 // Load env from ../.env.local (worker/ lives inside dealhound-pro/)
 const envPath = process.env.DOTENV_PATH || path.join(__dirname, '../.env.local');
@@ -39,6 +44,10 @@ if (fs.existsSync(envPath) && !process.env.SUPABASE_URL) {
 
 const POLL_INTERVAL_MS = 60_000;
 const SCAN_TIMEOUT_MS = 90 * 60_000; // 90 min hard cap per scan
+
+// Set DEALHOUND_WORKER_MODE=headless to fall back to -p mode (e.g. debugging).
+// Default: headed — uses interactive PTY to eliminate Step 4b scoring divergence.
+const WORKER_MODE = process.env.DEALHOUND_WORKER_MODE || 'headed';
 
 // Find claude binary — check common locations across macOS setups
 function findClaude() {
@@ -424,7 +433,24 @@ async function processPendingJobs() {
   }
 
   try {
-    const { durationMs, metrics, cogsUsed, cappedByCost } = await runFindDeals(job);
+    // Headed mode (default): interactive PTY — matches Claude Desktop scoring behavior.
+    // Headless mode: `claude -p` — fast but produces 31% classification divergence.
+    // Toggle: DEALHOUND_WORKER_MODE=headless in .env.local to revert.
+    let headedBuyBoxFile = null;
+    const runFn =
+      WORKER_MODE === 'headed'
+        ? async () => {
+            if (job.buy_box) headedBuyBoxFile = writeBuyBoxFile(job.buy_box);
+            const { env } = composeSpawnConfig(job, process.env, headedBuyBoxFile);
+            try {
+              return await runFindDealsHeaded({ claudeBin: CLAUDE_BIN, env, jobId: job.id, skill: 'deal scan' });
+            } finally {
+              if (headedBuyBoxFile && fs.existsSync(headedBuyBoxFile)) fs.unlinkSync(headedBuyBoxFile);
+            }
+          }
+        : () => runFindDeals(job);
+
+    const { durationMs, metrics, cogsUsed, cappedByCost } = await runFn();
 
     // ── Record compute used ──────────────────────────────────────────────────
     // Always record, whether run completed normally or was capped.
