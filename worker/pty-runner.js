@@ -30,7 +30,19 @@ const stripAnsi = (s) => s.replace(ANSI_RE, '');
 // at the start of a fresh line. We detect this twice:
 //   1. INIT → RUNNING: to inject the /find-deals full command
 //   2. RUNNING fallback: Claude returned to idle after skill finished
-const PROMPT_RE = /(?:^|\n)❯\s/;  // ❯ followed by space
+const PROMPT_RE = /(?:^|\n)❯\s/;  // ❯ followed by space (real input prompt)
+
+// --dangerously-skip-permissions now shows a confirmation dialog on startup:
+//   "By proceeding, you accept all responsibility..."
+//   "❯ 1. No, exit   2. Yes, I accept"
+// Detect it and auto-select option 2. The ❯ here has no space before the digit.
+const BYPASS_DIALOG_RE = /Yes,\s*I\s*accept|accept all responsibility/i;
+
+// settings.json parse error dialog (shown when settings.json has invalid JSON):
+//   "Settings Error — /path/to/settings.json — Invalid or malformed JSON"
+//   "❯ 1. Exit and fix manually   2. Continue without these settings"
+// Navigate down then Enter to select option 2.
+const SETTINGS_ERROR_RE = /Invalid or malformed JSON|Settings Error|Exit and fix manually/i;
 
 // The find-deals skill always ends with a summary line. Match any of these:
 //   "✅ SCAN COMPLETE — 8 HOT | 20 STRONG | 49 WATCH"
@@ -78,6 +90,8 @@ function runFindDealsHeaded({
     const phaseTimestamps = {};
     let cappedByCost = false;
     let exitHandled = false;
+    let bypassHandled = false;       // guard against re-triggering bypass acceptance
+    let settingsErrorHandled = false; // guard against re-triggering settings error acceptance
 
     const costTracker = new CostTracker(skill);
     if (process.env.FORCE_COGS_OVERRUN === 'true') {
@@ -135,7 +149,39 @@ function runFindDealsHeaded({
 
       // ── State machine ─────────────────────────────────────────────────────
       if (state === 'INIT') {
-        // Wait for the first interactive prompt
+        // Handle --dangerously-skip-permissions acceptance dialog (added in recent
+        // Claude Code versions). Shows a menu: "❯ 1. No, exit  2. Yes, I accept"
+        // Navigate with down-arrow then Enter. Guard with bypassHandled so the
+        // async timeouts don't re-trigger on subsequent onData events.
+        if (!bypassHandled && BYPASS_DIALOG_RE.test(cleanBuffer)) {
+          bypassHandled = true;
+          log('[PTY] Bypass permissions dialog detected — navigating to "Yes, I accept"');
+          setTimeout(() => {
+            ptyProc.write('\x1b[B'); // down arrow → move to option 2
+            setTimeout(() => {
+              log('[PTY] Confirming acceptance');
+              ptyProc.write('\r');   // Enter → confirm
+            }, 300);
+          }, 800);
+          return;
+        }
+        // Handle settings.json parse error dialog. Appears after the bypass dialog
+        // when settings.json contains invalid JSON. Selects "Continue without these
+        // settings" so the PTY reaches the real interactive prompt regardless.
+        if (!settingsErrorHandled && SETTINGS_ERROR_RE.test(cleanBuffer)) {
+          settingsErrorHandled = true;
+          log('[PTY] Settings error dialog detected — selecting "Continue without these settings"');
+          setTimeout(() => {
+            ptyProc.write('\x1b[B'); // down arrow → move to option 2
+            setTimeout(() => {
+              log('[PTY] Confirming continue without settings');
+              ptyProc.write('\r');   // Enter → confirm
+            }, 300);
+          }, 500);
+          return;
+        }
+
+        // Wait for the real interactive prompt (❯ followed by space)
         if (PROMPT_RE.test(cleanBuffer)) {
           state = 'RUNNING';
           log('[PTY] Prompt detected — injecting /find-deals full');
