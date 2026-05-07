@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "SessionStart": [{
+      "matcher": "",
+      "hooks": [{
+        "type": "command",
+        "command": "set -a && source .env 2>/dev/null; if [ \"$(git branch --show-current)\" = \"main\" ]; then echo '⚠️ On main branch — create a feature branch before edits'; fi"
+      }]
+    }]
+  },
+  "permissions": {
+    "allow": [
+      "mcp__ea70f4e7-7fc9-4a3d-b22e-07ef40dc2c8e__notion-fetch",
+      "mcp__ea70f4e7-7fc9-4a3d-b22e-07ef40dc2c8e__notion-search",
+      "mcp__355fbdbb-8a37-4004-9f25-0d7cb2071676__get_runtime_logs",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(pm2 logs *)",
+      "Bash(pm2 list)",
+      "mcp__f6c63e3e-c94d-4342-830c-a180c96f1fc1__stripe_api_search",
+      "mcp__fb5b629a-2ffd-443a-bf8f-2e88e58fd1b9__list_projects",
+      "mcp__8c018755-71b8-4dc3-9e15-031c8d4028a8__query_granola_meetings",
+      "mcp__6917ff9a-01fd-498f-ac02-d2eb06d96176__list_events",
+      "mcp__355fbdbb-8a37-4004-9f25-0d7cb2071676__get_deployment_build_logs",
+      "mcp__8c018755-71b8-4dc3-9e15-031c8d4028a8__list_meetings"
+    ]
+  }
+}
