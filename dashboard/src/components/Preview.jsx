@@ -1,5 +1,5 @@
 import { useEffect } from 'preact/hooks';
-import { view, previewOpen, previewWidth, currentDeal, dealsForCurrentScan, currentScan, scans, starredDealIds, activeThreads, deals, activeThreadId } from '../lib/state.js';
+import { view, previewOpen, previewWidth, currentDeal, dealsForCurrentScan, currentScan, scans, starredDealIds, activeThreads, deals, activeThreadId, scanInProgress } from '../lib/state.js';
 import { switchThread, loadUserData, toggleStar } from '../lib/api.js';
 import { fmtPrice, tierFromStrategy, tierLabel, riskClass, parseBreakdown, fmtDaysOnMarket, riskDimensions, strategyLabels } from '../lib/utils.js';
 
@@ -63,7 +63,7 @@ function ScanDealList() {
   return (
     <>
       <div class="preview-header">
-        <span>{scanDeals.length} Deals</span>
+        <span>{scanInProgress.value && scanDeals.length === 0 ? 'Scanning…' : `${scanDeals.length} Deals`}</span>
         <button class="preview-toggle" onClick={() => { previewOpen.value = false; }} title="Collapse panel">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 17l5-5-5-5" /><path d="M6 17l5-5-5-5" /></svg>
         </button>
@@ -102,7 +102,11 @@ function ScanDealList() {
         )}
 
         {scanDeals.length === 0 && (
-          <div class="preview-empty">No deals in this scan.</div>
+          <div class="preview-empty">
+            {scanInProgress.value
+              ? 'Deals will appear here as they\'re scored.'
+              : 'No deals in this scan.'}
+          </div>
         )}
       </div>
     </>
@@ -236,7 +240,7 @@ function DealDetail() {
 export function Preview() {
   // Subscribe to currentDeal so Preview re-renders when it changes
   const deal = currentDeal.value;
-  const hasContent = (view.value === 'scan' && dealsForCurrentScan.value.length > 0) || view.value === 'deal';
+  const hasContent = view.value === 'scan' || view.value === 'deal';
 
   // Auto-open when switching to a view that has preview content
   useEffect(() => {

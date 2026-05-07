@@ -11,6 +11,7 @@ export const sidebarOpen = signal(true);
 export const sidebarWidth = signal(220);
 export const sidebarTab = signal('inbox');
 export const unreadFilter = signal(false);
+export const scanInProgress = signal(false);
 
 export const scans = signal([]);
 export const deals = signal([]);
