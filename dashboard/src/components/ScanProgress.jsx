@@ -83,6 +83,7 @@ export function ScanProgress({ searchId }) {
     if (!searchId) return;
     let cancelled = false;
     let stoppedAt = null;
+    let observedActive = false;
 
     async function poll() {
       try {
@@ -93,11 +94,18 @@ export function ScanProgress({ searchId }) {
         setSteps(data.steps || []);
         setStatus(data.status);
         setErrorReason(data.error_reason || null);
-        scanInProgress.value = data.status !== 'complete' && data.status !== 'error';
+        const isActive = data.status !== 'complete' && data.status !== 'error';
+        scanInProgress.value = isActive;
+        if (isActive) observedActive = true;
         if (data.status === 'complete' && stoppedAt !== 'complete') {
           stoppedAt = 'complete';
-          // Tell Chat the scan is done so it can fire the debrief.
-          window.dispatchEvent(new CustomEvent('scan-complete', { detail: { searchId } }));
+          // Only fire the debrief event if we saw the scan in an active state
+          // earlier in this mount. If the very first poll returns 'complete',
+          // the user is revisiting a previously-finished scan and the debrief
+          // has already been delivered to the conversation.
+          if (observedActive) {
+            window.dispatchEvent(new CustomEvent('scan-complete', { detail: { searchId } }));
+          }
         } else if (data.status === 'error' && stoppedAt !== 'error') {
           stoppedAt = 'error';
         }
