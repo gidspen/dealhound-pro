@@ -17,7 +17,6 @@
  *   runFindDealsHeaded(job, options) → Promise<{ durationMs, metrics, cogsUsed, cappedByCost }>
  */
 
-const pty = require('node-pty');
 const { CostTracker } = require('./cost-guardrails');
 
 // ── ANSI escape stripper ──────────────────────────────────────────────────────
@@ -88,6 +87,9 @@ function runFindDealsHeaded({
     // ── Spawn interactive Claude ──────────────────────────────────────────────
     // No -p flag. PTY allocation makes stdin.isTTY = true, which puts Claude
     // in interactive mode (same system prompt as Claude Desktop).
+    // node-pty lazy-loaded here so importing this module (for tests) doesn't
+    // require the native binding to be present in root node_modules.
+    const pty = require('node-pty');
     const ptyProc = pty.spawn(claudeBin, ['--dangerously-skip-permissions'], {
       name: 'xterm-256color',
       cols: 220, // wide enough to avoid line-wrap confusion in output parsing
