@@ -1,5 +1,6 @@
 // dashboard/src/components/ScanProgress.jsx
 import { useEffect, useState } from 'preact/hooks';
+import { scanInProgress } from '../lib/state.js';
 
 function relativeTime(isoString, now) {
   if (!isoString) return '';
@@ -92,6 +93,7 @@ export function ScanProgress({ searchId }) {
         setSteps(data.steps || []);
         setStatus(data.status);
         setErrorReason(data.error_reason || null);
+        scanInProgress.value = data.status !== 'complete' && data.status !== 'error';
         if (data.status === 'complete' && stoppedAt !== 'complete') {
           stoppedAt = 'complete';
           // Tell Chat the scan is done so it can fire the debrief.
@@ -108,7 +110,11 @@ export function ScanProgress({ searchId }) {
       poll();
     }, POLL_INTERVAL_MS);
 
-    return () => { cancelled = true; clearInterval(interval); };
+    return () => {
+      cancelled = true;
+      clearInterval(interval);
+      scanInProgress.value = false;
+    };
   }, [searchId]);
 
   if (!searchId) return null;

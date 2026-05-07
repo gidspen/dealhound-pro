@@ -4,7 +4,7 @@ import {
   settingsOpen, sidebarOpen, sidebarWidth, sidebarTab, unreadFilter,
   starredDealIds, viewedDealIds, archivedDealIds,
   inboxDeals, trackingDeals, newDealCount, previewOpen,
-  chatMessages
+  chatMessages, scanInProgress
 } from '../lib/state.js';
 import { switchThread, toggleStar, archiveDeal, loadUserData } from '../lib/api.js';
 import { tierFromStrategy, tierLabel, fmtPrice, parseBreakdown } from '../lib/utils.js';
@@ -236,7 +236,9 @@ export function Sidebar() {
             <div class="sidebar-empty">
               {sidebarTab.value === 'tracking'
                 ? 'No starred deals — star a deal to track it'
-                : 'No deals yet — run a scan'}
+                : scanInProgress.value
+                  ? 'Scanning marketplaces — deals will appear shortly'
+                  : 'No deals yet — run a scan'}
             </div>
           )
         }
