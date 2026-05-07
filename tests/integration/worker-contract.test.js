@@ -38,7 +38,11 @@ const FIXTURE_JOB = Object.freeze({
   },
 });
 
-describe('composeSpawnConfig — promptArg contract', () => {
+// NOTE (2026-05-06): Worker now runs in HEADED mode by default (pty-runner.js).
+// composeSpawnConfig returns args with `-p` — used ONLY when DEALHOUND_WORKER_MODE=headless.
+// In headed mode, worker.js uses composeSpawnConfig for env composition only; args are ignored.
+// These tests lock in the env contract (active in ALL modes) and the headless fallback args.
+describe('composeSpawnConfig — promptArg contract (headless fallback path)', () => {
   it('always uses the documented `/find-deals full` subcommand', () => {
     const { args } = composeSpawnConfig(FIXTURE_JOB, {}, '/tmp/buybox.json');
     expect(args).toEqual(['-p', '/find-deals full', '--dangerously-skip-permissions']);
@@ -57,7 +61,7 @@ describe('composeSpawnConfig — promptArg contract', () => {
     // Regression guard: without this flag, spawned `claude -p` only surfaces
     // auth-only built-in MCPs and Playwright's browser_* tools are invisible,
     // silently degrading scrapes to landsearch-only. Proven 2026-05-05 via
-    // worker/diagnose.js.
+    // worker/diagnose.js. Same flag is used in headed mode (pty-runner.js).
     const { args } = composeSpawnConfig(FIXTURE_JOB, {}, '/tmp/buybox.json');
     expect(args).toContain('--dangerously-skip-permissions');
   });

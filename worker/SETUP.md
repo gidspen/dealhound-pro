@@ -64,8 +64,11 @@ tail -f ~/dealhound-pro/worker/logs/daily-scrape.log
   └── worker.js polls scrape_jobs
         ├── claims job (optimistic lock)
         ├── creates scan_runs row
-        └── spawns: claude -p "/find-deals full"
+        └── spawns: claude --dangerously-skip-permissions (interactive PTY)
+              sends "/find-deals full" over stdin once prompt appears
               with DEALHOUND_SEARCH_ID + DEALHOUND_BUY_BOX_FILE env vars
+              ↳ interactive mode = same scoring behavior as Claude Desktop
+              ↳ to fall back to headless: set DEALHOUND_WORKER_MODE=headless in .env.local
 
 User on second day
   └── pool query finds matching deals → no on-demand scan needed
