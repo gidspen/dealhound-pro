@@ -1,8 +1,10 @@
+// @ts-check
 const { createClient } = require('@supabase/supabase-js');
 
+/** @type {import('@supabase/supabase-js').SupabaseClient<import('../types/database').Database>} */
 const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
+  process.env.SUPABASE_URL ?? '',
+  process.env.SUPABASE_SERVICE_KEY ?? ''
 );
 
 const AGENT_NAMES = [
@@ -10,6 +12,9 @@ const AGENT_NAMES = [
   'Wren', 'Ellis', 'Reid', 'Sloane', 'Harper', 'Hunter'
 ];
 
+/**
+ * @param {string} email
+ */
 async function getOrCreateUser(email) {
   const { data: existing } = await supabase
     .from('users')
@@ -37,6 +42,10 @@ async function getOrCreateUser(email) {
   return data;
 }
 
+/**
+ * @param {import('http').IncomingMessage & { method?: string; query?: Record<string, string> }} req
+ * @param {import('http').ServerResponse & { status: (n: number) => any; json: (v: unknown) => any; setHeader: (k: string, v: string) => void }} res
+ */
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
@@ -50,7 +59,7 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email } = req.query;
+  const email = req.query ? req.query['email'] : undefined;
   if (!email) {
     return res.status(400).json({ error: 'Missing email' });
   }
@@ -68,6 +77,7 @@ module.exports = async function handler(req, res) {
 
     // Get conversation_ids for scan debriefs
     const scanIds = (scans || []).map(s => s.id);
+    /** @type {Array<{ id: string; search_id: string | null }>} */
     let scanConvos = [];
     if (scanIds.length > 0) {
       const { data } = await supabase
@@ -78,10 +88,12 @@ module.exports = async function handler(req, res) {
         .in('search_id', scanIds);
       scanConvos = data || [];
     }
+    /** @type {Record<string, string>} */
     const scanConvoMap = {};
-    scanConvos.forEach(c => { scanConvoMap[c.search_id] = c.id; });
+    scanConvos.forEach(c => { if (c.search_id) scanConvoMap[c.search_id] = c.id; });
 
     // Deals from all scans (passed hard filters only)
+    /** @type {Array<import('../types/database').Database['public']['Tables']['deals']['Row']>} */
     let deals = [];
     if (scanIds.length > 0) {
       const { data } = await supabase
@@ -118,9 +130,10 @@ module.exports = async function handler(req, res) {
     const threadConvos = threadConvosRes.data || [];
 
     // Deal counts per scan
+    /** @type {Record<string, number>} */
     const dealCountMap = {};
     deals.forEach(d => {
-      dealCountMap[d.search_id] = (dealCountMap[d.search_id] || 0) + 1;
+      if (d.search_id) dealCountMap[d.search_id] = (dealCountMap[d.search_id] || 0) + 1;
     });
 
     return res.status(200).json({
@@ -159,7 +172,8 @@ module.exports = async function handler(req, res) {
     });
 
   } catch (err) {
-    console.error('user-data error:', err.message);
+    const message = err instanceof Error ? err.message : String(err);
+    console.error('user-data error:', message);
     return res.status(500).json({ error: 'Failed to fetch user data' });
   }
 };

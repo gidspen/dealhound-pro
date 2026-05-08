@@ -26,14 +26,16 @@ describe('Post-deploy smoke tests', () => {
       } catch {
         // not ready yet
       }
-      await new Promise(r => setTimeout(r, 1000));
+      await new Promise((r) => setTimeout(r, 1000));
     }
 
     if (!CLEANUP_ENABLED) return;
     const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 
     // Touch user-data once to auto-create the user row if missing
-    await fetch(`${BASE_URL}/api/user-data?email=${encodeURIComponent(TEST_EMAIL)}`).catch(() => {});
+    await fetch(`${BASE_URL}/api/user-data?email=${encodeURIComponent(TEST_EMAIL)}`).catch(
+      () => {}
+    );
 
     // Mark as operator-tier so the paywall doesn't block save_buy_box. Reset
     // agent_runs_used so this never trips the per-tier-limit branch either.
@@ -79,10 +81,8 @@ describe('Post-deploy smoke tests', () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email: TEST_EMAIL,
-        messages: [
-          { role: 'user', content: 'Hi, I want to set up my buy box.' }
-        ]
-      })
+        messages: [{ role: 'user', content: 'Hi, I want to set up my buy box.' }],
+      }),
     });
 
     expect(res.status).toBe(200);
@@ -99,29 +99,42 @@ describe('Post-deploy smoke tests', () => {
         messages: [
           { role: 'user', content: 'Hi, I want to set up my buy box.' },
           { role: 'assistant', content: "Hey! I'm Scout. Tell me what you're looking for." },
-          { role: 'user', content: 'Glamping sites in Texas, under $1M, 5-15 units, cash flowing. No RV parks.' },
-          { role: 'assistant', content: "Here's what I'll hunt for: Glamping sites in Texas, under $1M, 5-15 units, cash flowing from day 1. No RV parks. Ready to run your first scan?" },
-          { role: 'user', content: 'yes' }
-        ]
-      })
+          {
+            role: 'user',
+            content: 'Glamping sites in Texas, under $1M, 5-15 units, cash flowing. No RV parks.',
+          },
+          {
+            role: 'assistant',
+            content:
+              "Here's what I'll hunt for: Glamping sites in Texas, under $1M, 5-15 units, cash flowing from day 1. No RV parks. Ready to run your first scan?",
+          },
+          { role: 'user', content: 'yes' },
+        ],
+      }),
     });
 
     expect(res.status).toBe(200);
     const text = await res.text();
 
-    const lines = text.split('\n').filter(l => l.startsWith('data: '));
-    const events = lines.map(l => {
-      try { return JSON.parse(l.slice(6)); } catch { return null; }
-    }).filter(Boolean);
+    const lines = text.split('\n').filter((l) => l.startsWith('data: '));
+    const events = lines
+      .map((l) => {
+        try {
+          return JSON.parse(l.slice(6));
+        } catch {
+          return null;
+        }
+      })
+      .filter(Boolean);
 
-    const saved = events.find(e => e.type === 'buy_box_saved');
+    const saved = events.find((e) => e.type === 'buy_box_saved');
     if (saved) {
       expect(saved.search_id).toBeDefined();
       expect(saved.buy_box).toBeDefined();
       createdSearchIds.push(saved.search_id);
     } else {
       // LLM nondeterminism — verify we got a response, not an error
-      const hasError = events.some(e => e.type === 'error');
+      const hasError = events.some((e) => e.type === 'error');
       expect(hasError).toBe(false);
       console.warn('Smoke: Claude returned tool-only response (no text deltas) — non-fatal.');
     }

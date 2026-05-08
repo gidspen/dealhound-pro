@@ -9,5 +9,5 @@ export default defineConfig({
     hookTimeout: 10000,
     fileParallelism: false,
     retry: 1,
-  }
+  },
 });
