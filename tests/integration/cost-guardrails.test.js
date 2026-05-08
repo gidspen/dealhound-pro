@@ -181,7 +181,7 @@ describe('checkAndReserveMonthlyBudget — within cap', () => {
   it('allows when monthly_compute_used is below tier cap', async () => {
     const user = {
       email: 'user@example.com',
-      tier: 'hunter',
+      subscription_tier: 'hunter',
       monthly_compute_used: 10.00,   // $10 of $30 cap used
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 0,
@@ -191,13 +191,39 @@ describe('checkAndReserveMonthlyBudget — within cap', () => {
     expect(result.allowed).toBe(true);
     expect(result.topupUsed).toBeFalsy();
   });
+
+  it('investor tier: allows when used < $150 cap', async () => {
+    const user = {
+      email: 'investor@example.com',
+      subscription_tier: 'investor',
+      monthly_compute_used: 100.00,  // $100 of $150 cap — should allow
+      agent_runs_reset_at: new Date().toISOString(),
+      topup_runs_remaining: 0,
+    };
+    const sb = makeSupabaseMock({ user });
+    const result = await checkAndReserveMonthlyBudget(user.email, sb);
+    expect(result.allowed).toBe(true);
+  });
+
+  it('operator tier: allows when used < $400 cap', async () => {
+    const user = {
+      email: 'operator@example.com',
+      subscription_tier: 'operator',
+      monthly_compute_used: 399.99,
+      agent_runs_reset_at: new Date().toISOString(),
+      topup_runs_remaining: 0,
+    };
+    const sb = makeSupabaseMock({ user });
+    const result = await checkAndReserveMonthlyBudget(user.email, sb);
+    expect(result.allowed).toBe(true);
+  });
 });
 
 describe('checkAndReserveMonthlyBudget — cap hit', () => {
   it('blocks when monthly_compute_used >= tier cap', async () => {
     const user = {
       email: 'user@example.com',
-      tier: 'hunter',
+      subscription_tier: 'hunter',
       monthly_compute_used: 30.00,   // exactly at $30 cap
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 0,
@@ -209,10 +235,36 @@ describe('checkAndReserveMonthlyBudget — cap hit', () => {
     expect(result.reason).toContain('Top up 5 runs for $25');
   });
 
-  it('uses hunter cap ($30) for unknown tiers', async () => {
+  it('investor tier: blocks when used >= $150 cap', async () => {
+    const user = {
+      email: 'investor@example.com',
+      subscription_tier: 'investor',
+      monthly_compute_used: 150.00,  // at cap — should block, not use $30 hunter fallback
+      agent_runs_reset_at: new Date().toISOString(),
+      topup_runs_remaining: 0,
+    };
+    const sb = makeSupabaseMock({ user });
+    const result = await checkAndReserveMonthlyBudget(user.email, sb);
+    expect(result.allowed).toBe(false);
+  });
+
+  it('operator tier: blocks when used >= $400 cap', async () => {
+    const user = {
+      email: 'operator@example.com',
+      subscription_tier: 'operator',
+      monthly_compute_used: 400.00,
+      agent_runs_reset_at: new Date().toISOString(),
+      topup_runs_remaining: 0,
+    };
+    const sb = makeSupabaseMock({ user });
+    const result = await checkAndReserveMonthlyBudget(user.email, sb);
+    expect(result.allowed).toBe(false);
+  });
+
+  it('uses hunter cap ($30) for unknown subscription_tier values', async () => {
     const user = {
       email: 'user@example.com',
-      tier: 'legacy_plan',         // unknown tier — should default to hunter
+      subscription_tier: 'legacy_plan', // unknown tier — should default to hunter
       monthly_compute_used: 31.00,
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 0,
@@ -231,7 +283,7 @@ describe('checkAndReserveMonthlyBudget — monthly reset', () => {
 
     const user = {
       email: 'user@example.com',
-      tier: 'hunter',
+      subscription_tier: 'hunter',
       monthly_compute_used: 29.99,  // near cap, but month rolled over
       agent_runs_reset_at: lastMonth.toISOString(),
       topup_runs_remaining: 0,
@@ -271,7 +323,7 @@ describe('checkAndReserveMonthlyBudget — top-up bypass', () => {
   it('allows and decrements topup_runs_remaining when > 0', async () => {
     const user = {
       email: 'user@example.com',
-      tier: 'hunter',
+      subscription_tier: 'hunter',
       monthly_compute_used: 30.00,  // over cap, but has top-up
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 3,

@@ -19,15 +19,6 @@
       "prettier --write"
     ]
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix --max-warnings 9999",
-      "prettier --write"
-    ],
-    "*.{json,md,yml,yaml}": [
-      "prettier --write"
-    ]
-  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
     "@preact/signals": "^2.9.0",
