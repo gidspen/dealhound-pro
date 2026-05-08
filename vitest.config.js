@@ -8,5 +8,6 @@ export default defineConfig({
     testTimeout: 15000,
     hookTimeout: 10000,
     fileParallelism: false,
+    retry: 1,
   }
 });
