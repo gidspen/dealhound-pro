@@ -29,7 +29,8 @@ async function checkPaywall(email, supabase) {
       allowed: false,
       status: 402,
       body: {
-        error: "Hey, you'll need a subscription to run a scan. Pick a plan and let's get you hunting.",
+        error:
+          "Hey, you'll need a subscription to run a scan. Pick a plan and let's get you hunting.",
         checkoutUrl: '/api/create-checkout',
         tier: null,
       },
@@ -52,7 +53,11 @@ async function checkPaywall(email, supabase) {
 
   return {
     allowed: true,
-    user: { email: user.email, subscription_tier: user.subscription_tier, agent_runs_used: user.agent_runs_used },
+    user: {
+      email: user.email,
+      subscription_tier: user.subscription_tier,
+      agent_runs_used: user.agent_runs_used,
+    },
     tier_limit: limit,
   };
 }
@@ -77,7 +82,10 @@ async function incrementAgentRuns(email, supabase) {
     }
 
     // RPC failed — fall back to manual increment
-    console.warn('increment_agent_runs rpc failed, falling back to manual update:', rpcError.message);
+    console.warn(
+      'increment_agent_runs rpc failed, falling back to manual update:',
+      rpcError.message
+    );
 
     const { data: user, error: readError } = await supabase
       .from('users')
