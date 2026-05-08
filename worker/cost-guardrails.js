@@ -252,16 +252,21 @@ async function recordComputeUsed(userEmail, cost, supabase) {
     // Non-fatal — log but don't throw. The run completed; failing to record
     // compute is a billing accuracy issue, not a product failure.
     console.warn(`[cost-guardrails] Failed to record compute for ${userEmail}: ${error.message}`);
-    // Fallback: try a direct update (not atomic but better than nothing)
-    await supabase
+    // Fallback: read current value and write incremented result. Not atomic but
+    // better than nothing — the primary path (rpc) is the atomic one.
+    const { data: row } = await supabase
       .from('users')
-      .update({
-        monthly_compute_used: supabase.rpc
-          ? undefined // rpc failed — skip to avoid double-update
-          : 0,
-      })
+      .select('monthly_compute_used')
       .eq('email', userEmail)
-      .then(() => {}); // swallow errors in the fallback
+      .single();
+    if (row) {
+      const current = parseFloat(row.monthly_compute_used) || 0;
+      await supabase
+        .from('users')
+        .update({ monthly_compute_used: current + parseFloat(cost.toFixed(6)) })
+        .eq('email', userEmail)
+        .then(() => {}); // swallow errors in the fallback
+    }
   }
 }
 

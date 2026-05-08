@@ -33,19 +33,19 @@ describe('CostTracker — constants', () => {
     expect(OUTPUT_COST_PER_TOKEN).toBeCloseTo(0.000015);
   });
   it('deal scan cap is $1.50', () => {
-    expect(SKILL_CAPS['deal scan']).toBe(1.50);
+    expect(SKILL_CAPS['deal scan']).toBe(1.5);
   });
   it('loi draft cap is $0.50', () => {
-    expect(SKILL_CAPS['loi draft']).toBe(0.50);
+    expect(SKILL_CAPS['loi draft']).toBe(0.5);
   });
   it('underwriting cap is $2.00', () => {
-    expect(SKILL_CAPS['underwriting']).toBe(2.00);
+    expect(SKILL_CAPS['underwriting']).toBe(2.0);
   });
   it('comp analysis cap is $1.00', () => {
-    expect(SKILL_CAPS['comp analysis']).toBe(1.00);
+    expect(SKILL_CAPS['comp analysis']).toBe(1.0);
   });
   it('market report cap is $1.50', () => {
-    expect(SKILL_CAPS['market report']).toBe(1.50);
+    expect(SKILL_CAPS['market report']).toBe(1.5);
   });
   it('RUN_CAPPED_MESSAGE is correct', () => {
     expect(RUN_CAPPED_MESSAGE).toBe('run capped — refine criteria for more depth');
@@ -88,7 +88,7 @@ describe('CostTracker — normal token accumulation', () => {
     t.trackTokenLine(line); // $1.35
     const { capped, totalCost } = t.trackTokenLine(line); // $1.80 >= $1.50 → capped
     expect(capped).toBe(true);
-    expect(totalCost).toBeGreaterThanOrEqual(1.50);
+    expect(totalCost).toBeGreaterThanOrEqual(1.5);
   });
 
   it('stays capped once capped — additional calls return capped=true without extra accumulation', () => {
@@ -121,8 +121,12 @@ describe('CostTracker — normal token accumulation', () => {
 });
 
 describe('CostTracker — FORCE_COGS_OVERRUN', () => {
-  beforeEach(() => { process.env.FORCE_COGS_OVERRUN = 'true'; });
-  afterEach(() => { delete process.env.FORCE_COGS_OVERRUN; });
+  beforeEach(() => {
+    process.env.FORCE_COGS_OVERRUN = 'true';
+  });
+  afterEach(() => {
+    delete process.env.FORCE_COGS_OVERRUN;
+  });
 
   it('fires cap on the first DEALHOUND_TOKENS line (overrun=$5)', () => {
     const t = new CostTracker('deal scan'); // cap = $1.50
@@ -130,7 +134,7 @@ describe('CostTracker — FORCE_COGS_OVERRUN', () => {
     const line = 'DEALHOUND_TOKENS: {"input_tokens":1,"output_tokens":1}';
     const { capped, totalCost } = t.trackTokenLine(line);
     expect(capped).toBe(true);
-    expect(totalCost).toBe(5.00);
+    expect(totalCost).toBe(5.0);
   });
 
   it('fires cap for every skill — LOI draft ($0.50 cap)', () => {
@@ -146,7 +150,7 @@ describe('CostTracker — FORCE_COGS_OVERRUN', () => {
 function makeSupabaseMock({ user = null, updateError = null, rpcError = null } = {}) {
   const updateChain = {
     eq: vi.fn().mockReturnThis(),
-    then: vi.fn((fn) => fn ? fn({ error: updateError }) : Promise.resolve()),
+    then: vi.fn((fn) => (fn ? fn({ error: updateError }) : Promise.resolve())),
   };
   updateChain.then = (fn) => (fn ? fn({ error: updateError }) : Promise.resolve());
 
@@ -155,7 +159,9 @@ function makeSupabaseMock({ user = null, updateError = null, rpcError = null } =
       select: vi.fn().mockReturnThis(),
       update: vi.fn(() => updateChain),
       eq: vi.fn().mockReturnThis(),
-      single: vi.fn().mockResolvedValue({ data: user, error: user ? null : { message: 'not found' } }),
+      single: vi
+        .fn()
+        .mockResolvedValue({ data: user, error: user ? null : { message: 'not found' } }),
     })),
     rpc: vi.fn().mockResolvedValue({ error: rpcError }),
   };
@@ -182,7 +188,7 @@ describe('checkAndReserveMonthlyBudget — within cap', () => {
     const user = {
       email: 'user@example.com',
       subscription_tier: 'hunter',
-      monthly_compute_used: 10.00,   // $10 of $30 cap used
+      monthly_compute_used: 10.0, // $10 of $30 cap used
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 0,
     };
@@ -196,7 +202,7 @@ describe('checkAndReserveMonthlyBudget — within cap', () => {
     const user = {
       email: 'investor@example.com',
       subscription_tier: 'investor',
-      monthly_compute_used: 100.00,  // $100 of $150 cap — should allow
+      monthly_compute_used: 100.0, // $100 of $150 cap — should allow
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 0,
     };
@@ -224,7 +230,7 @@ describe('checkAndReserveMonthlyBudget — cap hit', () => {
     const user = {
       email: 'user@example.com',
       subscription_tier: 'hunter',
-      monthly_compute_used: 30.00,   // exactly at $30 cap
+      monthly_compute_used: 30.0, // exactly at $30 cap
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 0,
     };
@@ -239,7 +245,7 @@ describe('checkAndReserveMonthlyBudget — cap hit', () => {
     const user = {
       email: 'investor@example.com',
       subscription_tier: 'investor',
-      monthly_compute_used: 150.00,  // at cap — should block, not use $30 hunter fallback
+      monthly_compute_used: 150.0, // at cap — should block, not use $30 hunter fallback
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 0,
     };
@@ -252,7 +258,7 @@ describe('checkAndReserveMonthlyBudget — cap hit', () => {
     const user = {
       email: 'operator@example.com',
       subscription_tier: 'operator',
-      monthly_compute_used: 400.00,
+      monthly_compute_used: 400.0,
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 0,
     };
@@ -265,7 +271,7 @@ describe('checkAndReserveMonthlyBudget — cap hit', () => {
     const user = {
       email: 'user@example.com',
       subscription_tier: 'legacy_plan', // unknown tier — should default to hunter
-      monthly_compute_used: 31.00,
+      monthly_compute_used: 31.0,
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 0,
     };
@@ -284,7 +290,7 @@ describe('checkAndReserveMonthlyBudget — monthly reset', () => {
     const user = {
       email: 'user@example.com',
       subscription_tier: 'hunter',
-      monthly_compute_used: 29.99,  // near cap, but month rolled over
+      monthly_compute_used: 29.99, // near cap, but month rolled over
       agent_runs_reset_at: lastMonth.toISOString(),
       topup_runs_remaining: 0,
     };
@@ -298,7 +304,7 @@ describe('checkAndReserveMonthlyBudget — monthly reset', () => {
           updateCalls.push(data);
           return {
             eq: vi.fn().mockReturnThis(),
-            then: (fn) => fn ? fn({}) : Promise.resolve(),
+            then: (fn) => (fn ? fn({}) : Promise.resolve()),
           };
         }),
         eq: vi.fn().mockReturnThis(),
@@ -324,7 +330,7 @@ describe('checkAndReserveMonthlyBudget — top-up bypass', () => {
     const user = {
       email: 'user@example.com',
       subscription_tier: 'hunter',
-      monthly_compute_used: 30.00,  // over cap, but has top-up
+      monthly_compute_used: 30.0, // over cap, but has top-up
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 3,
     };
@@ -337,7 +343,7 @@ describe('checkAndReserveMonthlyBudget — top-up bypass', () => {
           updateCalls.push(data);
           return {
             eq: vi.fn().mockReturnThis(),
-            then: (fn) => fn ? fn({}) : Promise.resolve(),
+            then: (fn) => (fn ? fn({}) : Promise.resolve()),
           };
         }),
         eq: vi.fn().mockReturnThis(),
@@ -351,10 +357,38 @@ describe('checkAndReserveMonthlyBudget — top-up bypass', () => {
     expect(result.topupUsed).toBe(true);
 
     // Should have decremented topup_runs_remaining to 2
-    const topupUpdate = updateCalls.find(
-      (u) => u.topup_runs_remaining === 2
-    );
+    const topupUpdate = updateCalls.find((u) => u.topup_runs_remaining === 2);
     expect(topupUpdate).toBeTruthy();
+  });
+});
+
+describe('checkAndReserveMonthlyBudget — null subscription_tier (cancelled sub)', () => {
+  it('falls back to hunter cap when subscription_tier is null', async () => {
+    const user = {
+      email: 'cancelled@example.com',
+      subscription_tier: null, // subscription cancelled — stripe-webhook sets this to null
+      monthly_compute_used: 25.00, // under hunter $30 cap → still allowed
+      agent_runs_reset_at: new Date().toISOString(),
+      topup_runs_remaining: 0,
+    };
+    const sb = makeSupabaseMock({ user });
+    const result = await checkAndReserveMonthlyBudget(user.email, sb);
+    // paywall.js blocks this user first (subscription_tier == null), but if
+    // cost-guardrails is reached, it should fall back to hunter cap, not throw
+    expect(result.allowed).toBe(true);
+  });
+
+  it('blocks when subscription_tier is null and used >= hunter fallback cap', async () => {
+    const user = {
+      email: 'cancelled@example.com',
+      subscription_tier: null,
+      monthly_compute_used: 30.00,
+      agent_runs_reset_at: new Date().toISOString(),
+      topup_runs_remaining: 0,
+    };
+    const sb = makeSupabaseMock({ user });
+    const result = await checkAndReserveMonthlyBudget(user.email, sb);
+    expect(result.allowed).toBe(false);
   });
 });
 
