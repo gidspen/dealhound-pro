@@ -18,6 +18,14 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // ── Magic-link bridge ────────────────────────────────────────────────────
+  // Folded into this file to stay under Vercel Hobby's 12-function cap.
+  // See vercel.json rewrite: /api/magic-link → /api/scan-report?_action=magic-link.
+  if (req.query._action === 'magic-link') {
+    const { handleMagicLink } = require('./_lib/magic-link-route');
+    return handleMagicLink(req, res);
+  }
+
   const { id } = req.query;
 
   if (!id) {

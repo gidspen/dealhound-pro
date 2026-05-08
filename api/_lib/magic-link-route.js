@@ -1,16 +1,18 @@
-// api/magic-link.js
+// api/_lib/magic-link-route.js
 //
-// GET /api/magic-link?token=...
+// GET /api/magic-link?token=...  (routed via scan-report?_action=magic-link)
 //
 // Verifies an HMAC magic link token, then 302-redirects to the dashboard
 // with email, scan_id, and from=magic as query params so the dashboard
 // can sign the user in without a password.
+//
+// Not a Vercel function — folded under _lib to stay within the 12-function cap.
 
 'use strict';
 
-const { verifyMagicLink } = require('./_lib/magic-link');
+const { verifyMagicLink } = require('./magic-link');
 
-module.exports = async function handler(req, res) {
+module.exports = { handleMagicLink: async function (req, res) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -53,4 +55,4 @@ module.exports = async function handler(req, res) {
 
   res.writeHead(302, { Location: location });
   return res.end();
-};
+} };
