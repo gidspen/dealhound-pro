@@ -1,11 +1,5 @@
 /**
  * paywall.js — subscription enforcement helpers
- *
- * COLUMN NOTE (known inconsistency — do NOT fix here):
- *   checkPaywall reads `users.subscription_tier` — the column written by api/stripe-webhook.js
- *   when a Stripe checkout completes and a subscription tier is set.
- *   The cost-guardrails worker reads `users.tier` instead. These are different columns.
- *   This inconsistency is tracked but intentionally not resolved in this file.
  */
 
 const TIER_LIMITS = {

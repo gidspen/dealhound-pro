@@ -173,7 +173,7 @@ async function checkAndReserveMonthlyBudget(userEmail, supabase) {
 
   const { data: user, error } = await supabase
     .from('users')
-    .select('email, tier, monthly_compute_used, agent_runs_reset_at, topup_runs_remaining')
+    .select('email, subscription_tier, monthly_compute_used, agent_runs_reset_at, topup_runs_remaining')
     .eq('email', userEmail)
     .single();
 
@@ -212,7 +212,7 @@ async function checkAndReserveMonthlyBudget(userEmail, supabase) {
   }
 
   // ── Monthly cap check ─────────────────────────────────────────────────────
-  const tier    = (user.tier || 'hunter').toLowerCase();
+  const tier    = (user.subscription_tier || 'hunter').toLowerCase();
   const tierCap = TIER_MONTHLY_CAPS[tier] ?? TIER_MONTHLY_CAPS.hunter;
   const used    = parseFloat(user.monthly_compute_used ?? 0);
 
