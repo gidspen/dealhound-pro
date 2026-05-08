@@ -1,4 +1,4 @@
-import { describe, it, expect, afterAll } from 'vitest';
+import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { createClient } from '@supabase/supabase-js';
 
 const BASE_URL = process.env.SMOKE_TEST_URL;
@@ -8,14 +8,35 @@ const CLEANUP_ENABLED = !!process.env.SUPABASE_URL && !!process.env.SUPABASE_SER
 
 describe('Post-deploy smoke tests', () => {
   const createdSearchIds = [];
+  const TEST_EMAIL = 'test-ci@dealhound.dev';
+
+  // Ensure the test user is paywall-exempt (operator tier = unlimited). The
+  // integration test in tests/integration/user-data.test.js deletes this user
+  // in its afterAll, so by the time smoke runs the row is gone or freshly
+  // created with subscription_tier=null, which the paywall in api/_lib/paywall.js
+  // would block. Touching /api/user-data first auto-creates the row, then we
+  // upgrade it to 'operator' so save_buy_box can fire end-to-end.
+  beforeAll(async () => {
+    if (!CLEANUP_ENABLED) return;
+    const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
+
+    // Touch user-data once to auto-create the user row if missing
+    await fetch(`${BASE_URL}/api/user-data?email=${encodeURIComponent(TEST_EMAIL)}`).catch(() => {});
+
+    // Mark as operator-tier so the paywall doesn't block save_buy_box. Reset
+    // agent_runs_used so this never trips the per-tier-limit branch either.
+    await supabase
+      .from('users')
+      .update({ subscription_tier: 'operator', agent_runs_used: 0 })
+      .eq('email', TEST_EMAIL);
+  });
 
   afterAll(async () => {
     if (!CLEANUP_ENABLED) return;
 
     const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
-    const email = 'test-ci@dealhound.dev';
 
-    await supabase.from('conversations').delete().eq('user_email', email);
+    await supabase.from('conversations').delete().eq('user_email', TEST_EMAIL);
 
     if (createdSearchIds.length > 0) {
       await supabase.from('scrape_jobs').delete().in('search_id', createdSearchIds);
