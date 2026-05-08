@@ -12,15 +12,6 @@
     "resolveJsonModule": true,
     "lib": ["ES2022", "DOM"]
   },
-  "include": [
-    "api/**/*.js",
-    "types/**/*.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dashboard-dist",
-    "property-research-suite",
-    "results",
-    ".vercel"
-  ]
+  "include": ["api/**/*.js", "types/**/*.d.ts"],
+  "exclude": ["node_modules", "dashboard-dist", "property-research-suite", "results", ".vercel"]
 }

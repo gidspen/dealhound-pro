@@ -85,12 +85,7 @@ module.exports = [
 
   // --- ESM Node files: api/_lib/filters.js, tests/, vite/vitest configs ---
   {
-    files: [
-      'api/_lib/filters.js',
-      'tests/**/*.js',
-      'vite.config.js',
-      'vitest.config.js',
-    ],
+    files: ['api/_lib/filters.js', 'tests/**/*.js', 'vite.config.js', 'vitest.config.js'],
     languageOptions: {
       sourceType: 'module',
       globals: {
