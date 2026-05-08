@@ -1,15 +1,30 @@
+// @ts-check
 const { createClient } = require('@supabase/supabase-js');
 
+/** @type {import('@supabase/supabase-js').SupabaseClient<import('../types/database').Database>} */
 const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
+  process.env.SUPABASE_URL ?? '',
+  process.env.SUPABASE_SERVICE_KEY ?? ''
 );
 
 const AGENT_NAMES = [
-  'Scout', 'Nora', 'Kit', 'Stella', 'Sophie', 'Quinn',
-  'Wren', 'Ellis', 'Reid', 'Sloane', 'Harper', 'Hunter'
+  'Scout',
+  'Nora',
+  'Kit',
+  'Stella',
+  'Sophie',
+  'Quinn',
+  'Wren',
+  'Ellis',
+  'Reid',
+  'Sloane',
+  'Harper',
+  'Hunter',
 ];
 
+/**
+ * @param {string} email
+ */
 async function getOrCreateUser(email) {
   const { data: existing } = await supabase
     .from('users')
@@ -37,6 +52,10 @@ async function getOrCreateUser(email) {
   return data;
 }
 
+/**
+ * @param {import('http').IncomingMessage & { method?: string; query?: Record<string, string> }} req
+ * @param {import('http').ServerResponse & { status: (n: number) => any; json: (v: unknown) => any; setHeader: (k: string, v: string) => void }} res
+ */
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
@@ -50,7 +69,7 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email } = req.query;
+  const email = req.query ? req.query['email'] : undefined;
   if (!email) {
     return res.status(400).json({ error: 'Missing email' });
   }
@@ -67,7 +86,8 @@ module.exports = async function handler(req, res) {
       .limit(20);
 
     // Get conversation_ids for scan debriefs
-    const scanIds = (scans || []).map(s => s.id);
+    const scanIds = (scans || []).map((s) => s.id);
+    /** @type {Array<{ id: string; search_id: string | null }>} */
     let scanConvos = [];
     if (scanIds.length > 0) {
       const { data } = await supabase
@@ -78,15 +98,21 @@ module.exports = async function handler(req, res) {
         .in('search_id', scanIds);
       scanConvos = data || [];
     }
+    /** @type {Record<string, string>} */
     const scanConvoMap = {};
-    scanConvos.forEach(c => { scanConvoMap[c.search_id] = c.id; });
+    scanConvos.forEach((c) => {
+      if (c.search_id) scanConvoMap[c.search_id] = c.id;
+    });
 
     // Deals from all scans (passed hard filters only)
+    /** @type {Array<import('../types/database').Database['public']['Tables']['deals']['Row']>} */
     let deals = [];
     if (scanIds.length > 0) {
       const { data } = await supabase
         .from('deals')
-        .select('id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description')
+        .select(
+          'id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description'
+        )
         .in('search_id', scanIds)
         .eq('passed_hard_filters', true)
         .order('id', { ascending: false })
@@ -95,45 +121,60 @@ module.exports = async function handler(req, res) {
     }
 
     // Fetch star/view/archive/thread status in parallel
-    const dealIds = deals.map(d => d.id);
+    const dealIds = deals.map((d) => d.id);
     const [starsRes, viewsRes, archivesRes, threadConvosRes] = await Promise.all([
       dealIds.length > 0
-        ? supabase.from('user_deal_stars').select('deal_id').eq('user_email', email).in('deal_id', dealIds)
+        ? supabase
+            .from('user_deal_stars')
+            .select('deal_id')
+            .eq('user_email', email)
+            .in('deal_id', dealIds)
         : Promise.resolve({ data: [] }),
       dealIds.length > 0
-        ? supabase.from('user_deal_views').select('deal_id').eq('user_email', email).in('deal_id', dealIds)
+        ? supabase
+            .from('user_deal_views')
+            .select('deal_id')
+            .eq('user_email', email)
+            .in('deal_id', dealIds)
         : Promise.resolve({ data: [] }),
       dealIds.length > 0
-        ? supabase.from('user_deal_archives').select('deal_id').eq('user_email', email).in('deal_id', dealIds)
+        ? supabase
+            .from('user_deal_archives')
+            .select('deal_id')
+            .eq('user_email', email)
+            .in('deal_id', dealIds)
         : Promise.resolve({ data: [] }),
-      supabase.from('conversations').select('id, deal_id')
+      supabase
+        .from('conversations')
+        .select('id, deal_id')
         .eq('conversation_type', 'deal_qa')
         .eq('user_email', email)
         .not('deal_id', 'is', null),
     ]);
 
-    const starredIds  = new Set((starsRes.data    || []).map(s => s.deal_id));
-    const viewedIds   = new Set((viewsRes.data     || []).map(v => v.deal_id));
-    const archivedIds = new Set((archivesRes.data  || []).map(a => a.deal_id));
+    const starredIds = new Set((starsRes.data || []).map((s) => s.deal_id));
+    const viewedIds = new Set((viewsRes.data || []).map((v) => v.deal_id));
+    const archivedIds = new Set((archivesRes.data || []).map((a) => a.deal_id));
     const threadConvos = threadConvosRes.data || [];
 
     // Deal counts per scan
+    /** @type {Record<string, number>} */
     const dealCountMap = {};
-    deals.forEach(d => {
-      dealCountMap[d.search_id] = (dealCountMap[d.search_id] || 0) + 1;
+    deals.forEach((d) => {
+      if (d.search_id) dealCountMap[d.search_id] = (dealCountMap[d.search_id] || 0) + 1;
     });
 
     return res.status(200).json({
       agent_name: user.agent_name,
-      scans: (scans || []).map(s => ({
+      scans: (scans || []).map((s) => ({
         id: s.id,
         buy_box: s.buy_box,
         status: s.status,
         run_at: s.run_at,
         deal_count: dealCountMap[s.id] || 0,
-        conversation_id: scanConvoMap[s.id] || null
+        conversation_id: scanConvoMap[s.id] || null,
       })),
-      deals: deals.map(d => ({
+      deals: deals.map((d) => ({
         id: d.id,
         title: d.title,
         location: d.location,
@@ -150,16 +191,16 @@ module.exports = async function handler(req, res) {
         brief: d.brief || null,
         days_on_market: d.days_on_market || null,
         property_type: d.property_type || null,
-        raw_description: d.raw_description || null
+        raw_description: d.raw_description || null,
       })),
-      active_threads: (threadConvos || []).map(c => ({
+      active_threads: (threadConvos || []).map((c) => ({
         deal_id: c.deal_id,
-        conversation_id: c.id
-      }))
+        conversation_id: c.id,
+      })),
     });
-
   } catch (err) {
-    console.error('user-data error:', err.message);
+    const message = err instanceof Error ? err.message : String(err);
+    console.error('user-data error:', message);
     return res.status(500).json({ error: 'Failed to fetch user data' });
   }
 };
