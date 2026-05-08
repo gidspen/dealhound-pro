@@ -1,6 +1,7 @@
 // api/scan-start.js
 const { createClient } = require('@supabase/supabase-js');
 const { triggerScan } = require('./_lib/scan-trigger');
+const { checkPaywall, incrementAgentRuns } = require('./_lib/paywall');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -42,7 +43,16 @@ module.exports = async function handler(req, res) {
       return res.json({ status: search.status, search_id });
     }
 
+    // Gate: check subscription before triggering the scan
+    const paywall = await checkPaywall(search.user_email, supabase);
+    if (!paywall.allowed) {
+      return res.status(paywall.status).json(paywall.body);
+    }
+
     await triggerScan(search_id, search.buy_box, supabase);
+
+    // Increment run counter after successful scan trigger (not on error)
+    await incrementAgentRuns(search.user_email, supabase);
 
     await supabase.from('scan_progress').insert([
       { search_id, step: 'init', status: 'complete', message: 'Buy box loaded - queuing scan job' },

@@ -12,9 +12,11 @@
     "api/deal-files.js": { "maxDuration": 30 },
     "api/health.js": { "maxDuration": 5 },
     "api/create-checkout.js": { "maxDuration": 10 },
-    "api/stripe-webhook.js": { "maxDuration": 10 }
+    "api/stripe-webhook.js": { "maxDuration": 10 },
+    "api/free-scan-start.js": { "maxDuration": 10 }
   },
   "rewrites": [
+    { "source": "/api/magic-link", "destination": "/api/scan-report?_action=magic-link" },
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },
     { "source": "/dashboard/(.*)", "destination": "/dashboard-dist/index.html" },
     { "source": "/free-scan", "destination": "/free-scan/index.html" },

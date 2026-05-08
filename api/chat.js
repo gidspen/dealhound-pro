@@ -1,6 +1,7 @@
 const Anthropic = require('@anthropic-ai/sdk');
 const { createClient } = require('@supabase/supabase-js');
 const { triggerScan } = require('./_lib/scan-trigger');
+const { checkPaywall, incrementAgentRuns } = require('./_lib/paywall');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -334,7 +335,18 @@ module.exports = async function handler(req, res) {
           console.error('Buy box save error:', JSON.stringify(searchError));
           res.write(`data: ${JSON.stringify({ type: 'error', error: 'Failed to save buy box: ' + searchError.message })}\n\n`);
         } else {
+          // Gate: check subscription before triggering the scan
+          const paywall = await checkPaywall(email, supabase);
+          if (!paywall.allowed) {
+            res.write(`data: ${JSON.stringify({ type: 'paywall', ...paywall.body })}\n\n`);
+            toolUse = null;
+            continue;
+          }
+
           await triggerScan(search.id, buyBox, supabase);
+
+          // Increment run counter after successful scan trigger (not on error)
+          await incrementAgentRuns(email, supabase);
 
           res.write(`data: ${JSON.stringify({
             type: 'buy_box_saved',
