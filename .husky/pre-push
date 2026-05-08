@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+# Source .env if present so SUPABASE_URL etc. are available for integration tests
+if [ -f .env ]; then
+  set -a
+  . ./.env
+  set +a
+fi
+
+npm run typecheck && npm test
