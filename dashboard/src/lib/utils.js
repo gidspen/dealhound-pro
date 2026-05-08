@@ -5,16 +5,36 @@ export function fmtPrice(n) {
   return '$' + n;
 }
 
-export function tierFromStrategy(overall) {
-  switch ((overall || '').toUpperCase()) {
+// Accepts either a strategy.overall string ("STRONG MATCH" / "MATCH" / ...)
+// OR a full breakdown object (with optional .tier / .strategy.overall / .score).
+// This lets the dashboard render correctly regardless of which pipeline shape
+// the scorer wrote — old (strategy.overall only) or new (tier + nested).
+export function tierFromStrategy(input) {
+  if (input && typeof input === 'object') {
+    const direct = (input.tier || '').toUpperCase();
+    if (direct === 'HOT') return 'hot';
+    if (direct === 'STRONG') return 'strong';
+    if (direct === 'WATCH') return 'watch';
+    if (direct === 'PASS') return 'pass';
+    if (input.strategy?.overall) return tierFromStrategy(input.strategy.overall);
+    if (typeof input.score === 'number') {
+      if (input.score >= 70) return 'hot';
+      if (input.score >= 50) return 'strong';
+      if (input.score >= 30) return 'watch';
+      return 'pass';
+    }
+    return 'watch';
+  }
+  switch ((input || '').toUpperCase()) {
     case 'STRONG MATCH': return 'hot';
     case 'MATCH': return 'strong';
+    case 'NO MATCH': return 'pass';
     default: return 'watch';
   }
 }
 
 export function tierLabel(tier) {
-  return { hot: 'HOT', strong: 'STRONG', watch: 'WATCH' }[tier] || 'WATCH';
+  return { hot: 'HOT', strong: 'STRONG', watch: 'WATCH', pass: 'PASS' }[tier] || 'WATCH';
 }
 
 export function riskClass(level) {
