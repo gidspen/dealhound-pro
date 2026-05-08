@@ -1,5 +1,5 @@
-import { useEffect } from 'preact/hooks';
-import { view, previewOpen, previewWidth, currentDeal, dealsForCurrentScan, currentScan, scans, starredDealIds, activeThreads, deals, activeThreadId, scanInProgress } from '../lib/state.js';
+import { useEffect, useState, useRef } from 'preact/hooks';
+import { view, previewOpen, previewWidth, currentDeal, dealsForCurrentScan, currentScan, scans, starredDealIds, activeThreads, deals, activeThreadId, scanInProgress, email } from '../lib/state.js';
 import { switchThread, loadUserData, toggleStar } from '../lib/api.js';
 import { fmtPrice, tierFromStrategy, tierLabel, riskClass, parseBreakdown, fmtDaysOnMarket, riskDimensions, strategyLabels } from '../lib/utils.js';
 
@@ -110,6 +110,137 @@ function ScanDealList() {
         )}
       </div>
     </>
+  );
+}
+
+const ALLOWED_EXTENSIONS = '.pdf,.xlsx,.xls,.csv,.doc,.docx';
+
+function fmtFileSize(bytes) {
+  if (!bytes) return '';
+  if (bytes < 1024) return `${bytes}B`;
+  if (bytes < 1048576) return `${(bytes / 1024).toFixed(0)}KB`;
+  return `${(bytes / 1048576).toFixed(1)}MB`;
+}
+
+function fileIcon(mimeType) {
+  if (!mimeType) return '📄';
+  if (mimeType.includes('pdf')) return '📕';
+  if (mimeType.includes('excel') || mimeType.includes('spreadsheet') || mimeType.includes('csv')) return '📊';
+  if (mimeType.includes('word') || mimeType.includes('wordprocessing')) return '📝';
+  return '📄';
+}
+
+function DealDocuments({ dealId }) {
+  const [files, setFiles] = useState([]);
+  const [uploading, setUploading] = useState(false);
+  const [dragOver, setDragOver] = useState(false);
+  const [error, setError] = useState(null);
+  const inputRef = useRef(null);
+  const userEmail = email.value;
+
+  useEffect(() => {
+    if (!dealId || !userEmail) return;
+    fetch(`/api/deal-files?deal_id=${dealId}&email=${encodeURIComponent(userEmail)}`)
+      .then(r => r.json())
+      .then(data => setFiles(data.files || []))
+      .catch(() => {});
+  }, [dealId]);
+
+  const showError = (msg) => {
+    setError(msg);
+    setTimeout(() => setError(null), 6000);
+  };
+
+  const upload = async (file) => {
+    if (uploading) return;
+    setUploading(true);
+    setError(null);
+    try {
+      const base64 = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+
+      const res = await fetch('/api/deal-files', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          deal_id: dealId,
+          email: userEmail,
+          file_name: file.name,
+          file_type: file.type || null,
+          file_data_base64: base64,
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Upload failed');
+      setFiles(prev => [data.file, ...prev]);
+    } catch (err) {
+      showError(err.message);
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const removeFile = async (id) => {
+    try {
+      const res = await fetch(`/api/deal-files?id=${id}&email=${encodeURIComponent(userEmail)}`, {
+        method: 'DELETE',
+      });
+      if (!res.ok) throw new Error('Delete failed');
+      setFiles(prev => prev.filter(f => f.id !== id));
+    } catch {
+      showError('Delete failed. Try again.');
+    }
+  };
+
+  const onDrop = (e) => {
+    e.preventDefault();
+    setDragOver(false);
+    const file = e.dataTransfer.files[0];
+    if (file) upload(file);
+  };
+
+  return (
+    <div class="deal-docs">
+      <div class="deal-detail-section-label">Documents</div>
+      <div
+        class={`deal-docs-zone${dragOver ? ' deal-docs-zone-active' : ''}${uploading ? ' deal-docs-zone-uploading' : ''}`}
+        onDrop={onDrop}
+        onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+        onDragLeave={() => setDragOver(false)}
+        onClick={() => !uploading && inputRef.current?.click()}
+      >
+        <input
+          ref={inputRef}
+          type="file"
+          style="display:none"
+          accept={ALLOWED_EXTENSIONS}
+          onChange={(e) => { if (e.target.files[0]) upload(e.target.files[0]); e.target.value = ''; }}
+        />
+        <span class="deal-docs-zone-text">
+          {uploading ? 'Uploading…' : <><span class="deal-docs-upload-icon">↑</span> Drop or click to add</>}
+        </span>
+      </div>
+      {error && <div class="deal-docs-error">{error}</div>}
+      {files.length > 0 && (
+        <div class="deal-docs-list">
+          {files.map(f => (
+            <div key={f.id} class="deal-docs-file">
+              <span class="deal-docs-file-icon">{fileIcon(f.file_type)}</span>
+              <div class="deal-docs-file-meta">
+                <div class="deal-docs-file-name" title={f.file_name}>{f.file_name}</div>
+                <div class="deal-docs-file-size">{fmtFileSize(f.file_size_bytes)}</div>
+              </div>
+              <button class="deal-docs-delete" onClick={() => removeFile(f.id)} title="Remove file">×</button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -227,6 +358,8 @@ function DealDetail() {
               <p class="deal-detail-desc-text">{deal.raw_description}</p>
             </div>
           )}
+
+          <DealDocuments dealId={deal.id} />
 
           {deal.url && (
             <a href={deal.url} target="_blank" rel="noopener" class="deal-detail-listing-link">View Original Listing →</a>
