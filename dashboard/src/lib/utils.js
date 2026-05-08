@@ -26,10 +26,14 @@ export function tierFromStrategy(input) {
     return 'watch';
   }
   switch ((input || '').toUpperCase()) {
-    case 'STRONG MATCH': return 'hot';
-    case 'MATCH': return 'strong';
-    case 'NO MATCH': return 'pass';
-    default: return 'watch';
+    case 'STRONG MATCH':
+      return 'hot';
+    case 'MATCH':
+      return 'strong';
+    case 'NO MATCH':
+      return 'pass';
+    default:
+      return 'watch';
   }
 }
 
@@ -40,18 +44,26 @@ export function tierLabel(tier) {
 export function riskClass(level) {
   if (!level) return 'risk-moderate';
   switch (level.toUpperCase()) {
-    case 'LOW': return 'risk-low';
-    case 'MODERATE': return 'risk-moderate';
-    case 'HIGH': return 'risk-high';
-    case 'VERY HIGH': return 'risk-very-high';
-    default: return 'risk-moderate';
+    case 'LOW':
+      return 'risk-low';
+    case 'MODERATE':
+      return 'risk-moderate';
+    case 'HIGH':
+      return 'risk-high';
+    case 'VERY HIGH':
+      return 'risk-very-high';
+    default:
+      return 'risk-moderate';
   }
 }
 
 export function parseBreakdown(raw) {
   if (!raw) return {};
-  try { return typeof raw === 'string' ? JSON.parse(raw) : raw; }
-  catch { return {}; }
+  try {
+    return typeof raw === 'string' ? JSON.parse(raw) : raw;
+  } catch {
+    return {};
+  }
 }
 
 export function escHtml(str) {
@@ -77,7 +89,7 @@ export function riskDimensions(breakdown) {
     { key: 'Revenue', value: risk.revenue, max: 5 },
     { key: 'Execution', value: risk.execution, max: 5 },
     { key: 'Info', value: risk.information, max: 5 },
-  ].filter(d => d.value != null);
+  ].filter((d) => d.value != null);
 }
 
 export function strategyLabels(breakdown) {

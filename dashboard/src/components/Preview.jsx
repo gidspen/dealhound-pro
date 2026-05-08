@@ -1,7 +1,30 @@
 import { useEffect, useState, useRef } from 'preact/hooks';
-import { view, previewOpen, previewWidth, currentDeal, dealsForCurrentScan, currentScan, scans, starredDealIds, activeThreads, deals, activeThreadId, scanInProgress, email } from '../lib/state.js';
+import {
+  view,
+  previewOpen,
+  previewWidth,
+  currentDeal,
+  dealsForCurrentScan,
+  currentScan,
+  scans,
+  starredDealIds,
+  activeThreads,
+  deals,
+  activeThreadId,
+  scanInProgress,
+  email,
+} from '../lib/state.js';
 import { switchThread, loadUserData, toggleStar } from '../lib/api.js';
-import { fmtPrice, tierFromStrategy, tierLabel, riskClass, parseBreakdown, fmtDaysOnMarket, riskDimensions, strategyLabels } from '../lib/utils.js';
+import {
+  fmtPrice,
+  tierFromStrategy,
+  tierLabel,
+  riskClass,
+  parseBreakdown,
+  fmtDaysOnMarket,
+  riskDimensions,
+  strategyLabels,
+} from '../lib/utils.js';
 
 function CompactDealRow({ deal, onOpen }) {
   const bd = parseBreakdown(deal.score_breakdown);
@@ -13,7 +36,13 @@ function CompactDealRow({ deal, onOpen }) {
 
   return (
     <div class="preview-deal-row" onClick={() => onOpen(deal)}>
-      <button class="preview-star" onClick={(e) => { e.stopPropagation(); toggleStar(deal.id); }}>
+      <button
+        class="preview-star"
+        onClick={(e) => {
+          e.stopPropagation();
+          toggleStar(deal.id);
+        }}
+      >
         {isStarred ? '★' : '☆'}
       </button>
       <div class="preview-deal-info">
@@ -40,22 +69,26 @@ function ScanDealList() {
   };
 
   // Group by starred first, then by tier
-  const starred = scanDeals.filter(d => starredDealIds.value.has(d.id));
-  const unstarred = scanDeals.filter(d => !starredDealIds.value.has(d.id));
+  const starred = scanDeals.filter((d) => starredDealIds.value.has(d.id));
+  const unstarred = scanDeals.filter((d) => !starredDealIds.value.has(d.id));
 
   const grouped = { hot: [], strong: [], watch: [], pass: [] };
-  unstarred.forEach(deal => {
+  unstarred.forEach((deal) => {
     const bd = parseBreakdown(deal.score_breakdown);
     const tier = tierFromStrategy({ ...bd, score: bd.priority_score ?? deal.score });
     if (grouped[tier]) grouped[tier].push(deal);
   });
 
   const scanMap = new Map();
-  scans.value.forEach(s => scanMap.set(s.id, s));
+  scans.value.forEach((s) => scanMap.set(s.id, s));
 
   const sortByRecency = (a, b) => {
-    const timeA = scanMap.get(a.search_id)?.run_at ? new Date(scanMap.get(a.search_id).run_at).getTime() : 0;
-    const timeB = scanMap.get(b.search_id)?.run_at ? new Date(scanMap.get(b.search_id).run_at).getTime() : 0;
+    const timeA = scanMap.get(a.search_id)?.run_at
+      ? new Date(scanMap.get(a.search_id).run_at).getTime()
+      : 0;
+    const timeB = scanMap.get(b.search_id)?.run_at
+      ? new Date(scanMap.get(b.search_id).run_at).getTime()
+      : 0;
     return timeB - timeA;
   };
 
@@ -67,9 +100,30 @@ function ScanDealList() {
   return (
     <>
       <div class="preview-header">
-        <span>{scanInProgress.value && scanDeals.length === 0 ? 'Scanning…' : `${scanDeals.length} Deals`}</span>
-        <button class="preview-toggle" onClick={() => { previewOpen.value = false; }} title="Collapse panel">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 17l5-5-5-5" /><path d="M6 17l5-5-5-5" /></svg>
+        <span>
+          {scanInProgress.value && scanDeals.length === 0
+            ? 'Scanning…'
+            : `${scanDeals.length} Deals`}
+        </span>
+        <button
+          class="preview-toggle"
+          onClick={() => {
+            previewOpen.value = false;
+          }}
+          title="Collapse panel"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M13 17l5-5-5-5" />
+            <path d="M6 17l5-5-5-5" />
+          </svg>
         </button>
       </div>
       <div class="preview-body">
@@ -77,7 +131,9 @@ function ScanDealList() {
         {starred.length > 0 && (
           <>
             <div class="preview-group-hdr preview-group-starred">★ Saved · {starred.length}</div>
-            {starred.map(deal => <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />)}
+            {starred.map((deal) => (
+              <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />
+            ))}
           </>
         )}
 
@@ -85,15 +141,21 @@ function ScanDealList() {
         {grouped.hot.length > 0 && (
           <>
             <div class="preview-group-hdr preview-group-hot">Hot · {grouped.hot.length}</div>
-            {grouped.hot.map(deal => <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />)}
+            {grouped.hot.map((deal) => (
+              <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />
+            ))}
           </>
         )}
 
         {/* STRONG */}
         {grouped.strong.length > 0 && (
           <>
-            <div class="preview-group-hdr preview-group-strong">Strong · {grouped.strong.length}</div>
-            {grouped.strong.map(deal => <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />)}
+            <div class="preview-group-hdr preview-group-strong">
+              Strong · {grouped.strong.length}
+            </div>
+            {grouped.strong.map((deal) => (
+              <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />
+            ))}
           </>
         )}
 
@@ -101,7 +163,9 @@ function ScanDealList() {
         {grouped.watch.length > 0 && (
           <>
             <div class="preview-group-hdr preview-group-watch">Watch · {grouped.watch.length}</div>
-            {grouped.watch.map(deal => <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />)}
+            {grouped.watch.map((deal) => (
+              <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />
+            ))}
           </>
         )}
 
@@ -109,14 +173,16 @@ function ScanDealList() {
         {grouped.pass.length > 0 && (
           <>
             <div class="preview-group-hdr preview-group-watch">Pass · {grouped.pass.length}</div>
-            {grouped.pass.map(deal => <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />)}
+            {grouped.pass.map((deal) => (
+              <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />
+            ))}
           </>
         )}
 
         {scanDeals.length === 0 && (
           <div class="preview-empty">
             {scanInProgress.value
-              ? 'Deals will appear here as they\'re scored.'
+              ? "Deals will appear here as they're scored."
               : 'No deals in this scan.'}
           </div>
         )}
@@ -137,7 +203,8 @@ function fmtFileSize(bytes) {
 function fileIcon(mimeType) {
   if (!mimeType) return '📄';
   if (mimeType.includes('pdf')) return '📕';
-  if (mimeType.includes('excel') || mimeType.includes('spreadsheet') || mimeType.includes('csv')) return '📊';
+  if (mimeType.includes('excel') || mimeType.includes('spreadsheet') || mimeType.includes('csv'))
+    return '📊';
   if (mimeType.includes('word') || mimeType.includes('wordprocessing')) return '📝';
   return '📄';
 }
@@ -153,8 +220,8 @@ function DealDocuments({ dealId }) {
   useEffect(() => {
     if (!dealId || !userEmail) return;
     fetch(`/api/deal-files?deal_id=${dealId}&email=${encodeURIComponent(userEmail)}`)
-      .then(r => r.json())
-      .then(data => setFiles(data.files || []))
+      .then((r) => r.json())
+      .then((data) => setFiles(data.files || []))
       .catch(() => {});
   }, [dealId]);
 
@@ -189,7 +256,7 @@ function DealDocuments({ dealId }) {
 
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Upload failed');
-      setFiles(prev => [data.file, ...prev]);
+      setFiles((prev) => [data.file, ...prev]);
     } catch (err) {
       showError(err.message);
     } finally {
@@ -203,7 +270,7 @@ function DealDocuments({ dealId }) {
         method: 'DELETE',
       });
       if (!res.ok) throw new Error('Delete failed');
-      setFiles(prev => prev.filter(f => f.id !== id));
+      setFiles((prev) => prev.filter((f) => f.id !== id));
     } catch {
       showError('Delete failed. Try again.');
     }
@@ -222,7 +289,10 @@ function DealDocuments({ dealId }) {
       <div
         class={`deal-docs-zone${dragOver ? ' deal-docs-zone-active' : ''}${uploading ? ' deal-docs-zone-uploading' : ''}`}
         onDrop={onDrop}
-        onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+        onDragOver={(e) => {
+          e.preventDefault();
+          setDragOver(true);
+        }}
         onDragLeave={() => setDragOver(false)}
         onClick={() => !uploading && inputRef.current?.click()}
       >
@@ -231,23 +301,36 @@ function DealDocuments({ dealId }) {
           type="file"
           style="display:none"
           accept={ALLOWED_EXTENSIONS}
-          onChange={(e) => { if (e.target.files[0]) upload(e.target.files[0]); e.target.value = ''; }}
+          onChange={(e) => {
+            if (e.target.files[0]) upload(e.target.files[0]);
+            e.target.value = '';
+          }}
         />
         <span class="deal-docs-zone-text">
-          {uploading ? 'Uploading…' : <><span class="deal-docs-upload-icon">↑</span> Drop or click to add</>}
+          {uploading ? (
+            'Uploading…'
+          ) : (
+            <>
+              <span class="deal-docs-upload-icon">↑</span> Drop or click to add
+            </>
+          )}
         </span>
       </div>
       {error && <div class="deal-docs-error">{error}</div>}
       {files.length > 0 && (
         <div class="deal-docs-list">
-          {files.map(f => (
+          {files.map((f) => (
             <div key={f.id} class="deal-docs-file">
               <span class="deal-docs-file-icon">{fileIcon(f.file_type)}</span>
               <div class="deal-docs-file-meta">
-                <div class="deal-docs-file-name" title={f.file_name}>{f.file_name}</div>
+                <div class="deal-docs-file-name" title={f.file_name}>
+                  {f.file_name}
+                </div>
                 <div class="deal-docs-file-size">{fmtFileSize(f.file_size_bytes)}</div>
               </div>
-              <button class="deal-docs-delete" onClick={() => removeFile(f.id)} title="Remove file">×</button>
+              <button class="deal-docs-delete" onClick={() => removeFile(f.id)} title="Remove file">
+                ×
+              </button>
             </div>
           ))}
         </div>
@@ -273,8 +356,25 @@ function DealDetail() {
     <>
       <div class="preview-header">
         <span>Deal Detail</span>
-        <button class="preview-toggle" onClick={() => { previewOpen.value = false; }} title="Collapse panel">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 17l5-5-5-5" /><path d="M6 17l5-5-5-5" /></svg>
+        <button
+          class="preview-toggle"
+          onClick={() => {
+            previewOpen.value = false;
+          }}
+          title="Collapse panel"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M13 17l5-5-5-5" />
+            <path d="M6 17l5-5-5-5" />
+          </svg>
         </button>
       </div>
       <div class="preview-body">
@@ -288,7 +388,11 @@ function DealDetail() {
               <div class="deal-detail-location">{deal.location || ''}</div>
             </div>
             <div style="display:flex;align-items:center;gap:6px;">
-              <button class="preview-star" onClick={() => toggleStar(deal.id)} style="font-size:1.1rem;">
+              <button
+                class="preview-star"
+                onClick={() => toggleStar(deal.id)}
+                style="font-size:1.1rem;"
+              >
                 {isStarred ? '★' : '☆'}
               </button>
               <span class={`deal-tier-badge-lg tier-${tier}`}>{tierLabel(tier)}</span>
@@ -297,7 +401,9 @@ function DealDetail() {
 
           {/* Badges row */}
           <div class="deal-detail-badges">
-            {deal.property_type && <span class="detail-badge">{deal.property_type.replace(/_/g, ' ')}</span>}
+            {deal.property_type && (
+              <span class="detail-badge">{deal.property_type.replace(/_/g, ' ')}</span>
+            )}
             {deal.source && <span class="detail-badge">{deal.source}</span>}
             {dom && <span class="detail-badge">{dom} on market</span>}
           </div>
@@ -318,7 +424,9 @@ function DealDetail() {
             </div>
             <div class="deal-detail-cell">
               <div class="deal-detail-cell-label">Risk</div>
-              <div class={`deal-detail-cell-value ${riskClass(risk.level)}`}>{risk.level || '—'}</div>
+              <div class={`deal-detail-cell-value ${riskClass(risk.level)}`}>
+                {risk.level || '—'}
+              </div>
             </div>
           </div>
 
@@ -327,8 +435,11 @@ function DealDetail() {
             <div class="deal-detail-strategy">
               <div class="deal-detail-section-label">Strategy Match</div>
               <div class="deal-detail-pills">
-                {stratLabels.map(s => (
-                  <span key={s.key} class={`strategy-pill strategy-${String(s.value).toLowerCase().replace(/\s+/g, '-')}`}>
+                {stratLabels.map((s) => (
+                  <span
+                    key={s.key}
+                    class={`strategy-pill strategy-${String(s.value).toLowerCase().replace(/\s+/g, '-')}`}
+                  >
                     {s.key}: {s.value}
                   </span>
                 ))}
@@ -340,7 +451,7 @@ function DealDetail() {
           {risks.length > 0 && (
             <div class="deal-detail-risks">
               <div class="deal-detail-section-label">Risk Breakdown</div>
-              {risks.map(r => (
+              {risks.map((r) => (
                 <div key={r.key} class="risk-bar-row">
                   <span class="risk-bar-label">{r.key}</span>
                   <div class="risk-bar-track">
@@ -349,7 +460,9 @@ function DealDetail() {
                       style={`width: ${(r.value / r.max) * 100}%`}
                     />
                   </div>
-                  <span class="risk-bar-val">{r.value}/{r.max}</span>
+                  <span class="risk-bar-val">
+                    {r.value}/{r.max}
+                  </span>
                 </div>
               ))}
             </div>
@@ -374,7 +487,9 @@ function DealDetail() {
           <DealDocuments dealId={deal.id} />
 
           {deal.url && (
-            <a href={deal.url} target="_blank" rel="noopener" class="deal-detail-listing-link">View Original Listing →</a>
+            <a href={deal.url} target="_blank" rel="noopener" class="deal-detail-listing-link">
+              View Original Listing →
+            </a>
           )}
         </div>
       </div>
@@ -401,8 +516,25 @@ export function Preview() {
     if (!hasContent) return null;
     return (
       <div id="preview-panel" class="preview-collapsed-strip">
-        <button class="preview-toggle preview-toggle-collapsed" onClick={() => { previewOpen.value = true; }} title="Expand panel">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M11 17l-5-5 5-5" /><path d="M18 17l-5-5 5-5" /></svg>
+        <button
+          class="preview-toggle preview-toggle-collapsed"
+          onClick={() => {
+            previewOpen.value = true;
+          }}
+          title="Expand panel"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M11 17l-5-5 5-5" />
+            <path d="M18 17l-5-5 5-5" />
+          </svg>
         </button>
       </div>
     );
