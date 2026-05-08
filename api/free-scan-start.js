@@ -80,7 +80,31 @@ module.exports = async function handler(req, res) {
       price_max: parseFloat(priceMax),
     };
 
-    // Insert free_scan_request row
+    // Insert deal_searches row FIRST — scrape_jobs.search_id is FK'd to
+    // deal_searches.id, so we can't reuse the free_scan_requests.id directly.
+    // The worker reads deal_searches.user_email via resolveUserEmail() and writes
+    // deals.search_id pointing back here, so the dashboard's existing
+    // search_id-based queries work uniformly for paid + free scans.
+    const { data: searchRow, error: searchInsertError } = await supabase
+      .from('deal_searches')
+      .insert({
+        user_email: email,
+        buy_box: buyBox,
+        status: 'pending',
+      })
+      .select('id')
+      .single();
+
+    if (searchInsertError) {
+      console.error('free-scan-start: deal_searches insert error:', searchInsertError);
+      return res.status(500).json({ error: 'Failed to queue scan. Please try again.' });
+    }
+
+    const searchId = searchRow.id;
+
+    // Insert free_scan_request row — keeps IP rate-limit, source provenance,
+    // and free-scan-specific fields (asset_type/market/price_min/price_max as
+    // flat columns) separate from the canonical deal_searches table.
     const { data: scanRow, error: insertError } = await supabase
       .from('free_scan_requests')
       .insert({
@@ -97,16 +121,17 @@ module.exports = async function handler(req, res) {
       .single();
 
     if (insertError) {
-      console.error('free-scan-start: insert error:', insertError);
+      console.error('free-scan-start: free_scan_requests insert error:', insertError);
+      // Roll back the deal_searches row to avoid orphans.
+      await supabase.from('deal_searches').delete().eq('id', searchId);
       return res.status(500).json({ error: 'Failed to queue scan. Please try again.' });
     }
 
-    const scanId = scanRow.id;
+    const freeScanId = scanRow.id;
 
-    // Trigger async worker — same pattern as scan-start.js
-    // Insert a scrape_job so the worker picks it up
+    // Insert scrape_job pointing at the deal_searches row. Worker picks it up.
     const { error: jobError } = await supabase.from('scrape_jobs').insert({
-      search_id: scanId,
+      search_id: searchId,
       buy_box: buyBox,
       status: 'pending',
       source: 'free_scan',   // lets worker distinguish free vs paid
@@ -115,12 +140,12 @@ module.exports = async function handler(req, res) {
 
     if (jobError) {
       console.error('free-scan-start: scrape_jobs insert error:', jobError);
-      // Update request to failed state — don't hard-fail the response,
-      // but do return an error so the UI knows
+      // Mark free_scan_requests row as failed so the UI/admin sees it; the
+      // deal_searches row is left in 'pending' so a manual requeue can flip it.
       await supabase
         .from('free_scan_requests')
         .update({ status: 'failed' })
-        .eq('id', scanId);
+        .eq('id', freeScanId);
       return res.status(500).json({ error: 'Failed to start scan. Please try again.' });
     }
 
@@ -128,9 +153,12 @@ module.exports = async function handler(req, res) {
     await supabase
       .from('free_scan_requests')
       .update({ status: 'running' })
-      .eq('id', scanId);
+      .eq('id', freeScanId);
 
-    return res.json({ success: true, scanId });
+    // Return searchId (not freeScanId) so the front-end and downstream magic-link
+    // both reference the deal_searches row. The free_scan_requests row is an
+    // internal/admin artifact.
+    return res.json({ success: true, scanId: searchId });
 
   } catch (err) {
     console.error('free-scan-start: unexpected error:', err);
