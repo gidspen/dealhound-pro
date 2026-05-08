@@ -33,6 +33,9 @@ const {
   RUN_CAPPED_MESSAGE,
 } = require('./cost-guardrails');
 const { runFindDealsHeaded } = require('./pty-runner');
+const { signMagicLink } = require('../api/_lib/magic-link');
+const { sendFreeScanCompleteEmail } = require('./email-sender');
+const { addToKitNurture } = require('./kit-nurture');
 
 // Load env from ../.env.local (worker/ lives inside dealhound-pro/)
 const envPath = process.env.DOTENV_PATH || path.join(__dirname, '../.env.local');
@@ -507,12 +510,158 @@ async function processPendingJobs() {
       await updateSearchStatus(job.search_id, 'complete');
     }
     log(`Job ${job.id} complete in ${(durationMs / 1000).toFixed(1)}s`, metrics);
+
+    // ── Free-scan completion: email + Kit handoff ─────────────────────────────
+    // Only fires for jobs that came in via /free-scan (source === 'free_scan').
+    // Both helpers degrade gracefully if env vars are missing — failures here
+    // must NOT roll back the scan completion.
+    if (job.source === 'free_scan' && job.notify_email) {
+      try {
+        await handleFreeScanCompletion(job, supabase);
+      } catch (err) {
+        log(`WARN: free-scan completion hooks failed for job ${job.id}: ${err.message}`);
+      }
+    }
   } catch (err) {
     const durationMs = Date.now() - startMs;
     log(`ERROR: job ${job.id} failed — ${err.message}`);
     await finalizeScanRun(runId, { status: 'error', error: err.message, durationMs });
     await finalizeJob(job.id, 'error', err.message);
     await updateSearchStatus(job.search_id, 'error');
+  }
+}
+
+// ── Free-scan agent name pool (mirrors api/user-data.js:8-11) ────────────────
+
+const AGENT_NAMES = [
+  'Scout', 'Nora', 'Kit', 'Stella', 'Sophie', 'Quinn',
+  'Wren', 'Ellis', 'Reid', 'Sloane', 'Harper', 'Hunter',
+];
+
+/**
+ * Fetch or create a users row, returning { email, agent_name }.
+ * Uses the same upsert logic as api/user-data.js.
+ *
+ * @param {string} email
+ * @param {import('@supabase/supabase-js').SupabaseClient} supabaseClient
+ */
+async function getOrCreateUser(email, supabaseClient) {
+  const { data: existing } = await supabaseClient
+    .from('users')
+    .select('email, agent_name')
+    .eq('email', email)
+    .single();
+
+  if (existing) return existing;
+
+  const agentName = AGENT_NAMES[Math.floor(Math.random() * AGENT_NAMES.length)];
+  const { data: created, error } = await supabaseClient
+    .from('users')
+    .insert({ email, agent_name: agentName })
+    .select('email, agent_name')
+    .single();
+
+  if (error) throw error;
+  return created;
+}
+
+/**
+ * Post-completion handler for free-scan jobs.
+ * Sends a transactional email (via Resend) and adds the user to Kit nurture.
+ * Gracefully degrades if env vars are missing.
+ *
+ * job.search_id === free_scan_requests.id (confirmed: free-scan-start.js inserts
+ * scrape_jobs with search_id = scanRow.id from free_scan_requests).
+ *
+ * TODO migration: ALTER TABLE free_scan_requests
+ *   ADD COLUMN IF NOT EXISTS email_sent_at TIMESTAMPTZ,
+ *   ADD COLUMN IF NOT EXISTS email_message_id TEXT;
+ *
+ * @param {object} job — scrape_jobs row
+ * @param {import('@supabase/supabase-js').SupabaseClient} supabaseClient
+ */
+async function handleFreeScanCompletion(job, supabaseClient) {
+  const userEmail = job.notify_email;
+
+  // 1. Resolve agent name
+  let agentName = 'Scout'; // fallback
+  try {
+    const user = await getOrCreateUser(userEmail, supabaseClient);
+    agentName = user.agent_name || agentName;
+  } catch (err) {
+    log(`WARN: could not resolve agent name for ${userEmail} — using fallback: ${err.message}`);
+  }
+
+  // 2. Fetch deal count + top deal for this scan
+  let dealCount = 0;
+  let topDealBrief = null;
+  try {
+    const { data: topDeals, count } = await supabaseClient
+      .from('deals')
+      .select('id, brief, score_breakdown', { count: 'exact' })
+      .eq('search_id', job.search_id)
+      .eq('passed_hard_filters', true)
+      .order('id', { ascending: false })
+      .limit(1);
+
+    dealCount = count || 0;
+
+    if (topDeals && topDeals.length > 0) {
+      const top = topDeals[0];
+      topDealBrief = top.brief || null;
+    }
+  } catch (err) {
+    log(`WARN: could not fetch deals for search_id ${job.search_id}: ${err.message}`);
+  }
+
+  // 3. Determine listings scanned (best-effort from metrics; fall back to 100)
+  const listingsScanned = (job.metrics && job.metrics.listings_raw)
+    ? job.metrics.listings_raw
+    : 100;
+
+  // 4. Generate magic link
+  const token = signMagicLink({ email: userEmail, scanId: job.search_id });
+  const appUrl = process.env.APP_URL || 'https://dealhound.pro';
+  const magicLinkUrl = `${appUrl}/api/magic-link?token=${encodeURIComponent(token)}`;
+
+  // 5. Send transactional email
+  const emailResult = await sendFreeScanCompleteEmail({
+    to: userEmail,
+    agentName,
+    firstName: '',
+    listingsScanned,
+    dealCount,
+    topDealBrief,
+    magicLinkUrl,
+  });
+  log(`[free-scan] email result for ${userEmail}`, emailResult);
+
+  // 6. Kit nurture handoff
+  const kitResult = await addToKitNurture({
+    email: userEmail,
+    tag: process.env.KIT_NURTURE_TAG || 'free-scan-completed',
+    firstName: '',
+  });
+  log(`[free-scan] kit result for ${userEmail}`, kitResult);
+
+  // 7. Record email_sent_at + message_id on the free_scan_requests row
+  //    (columns may not exist yet — wrapped in try/catch)
+  if (emailResult.ok && emailResult.messageId) {
+    try {
+      const { error: updateError } = await supabaseClient
+        .from('free_scan_requests')
+        .update({
+          email_sent_at: new Date().toISOString(),
+          email_message_id: emailResult.messageId,
+        })
+        .eq('id', job.search_id);
+
+      if (updateError) {
+        log(`WARN: could not update free_scan_requests.email_sent_at — ${updateError.message}`);
+      }
+    } catch (err) {
+      log(`WARN: email_sent_at update threw — ${err.message}`);
+    }
   }
 }
 
