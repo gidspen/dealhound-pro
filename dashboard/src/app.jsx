@@ -111,6 +111,44 @@ function EmailGate() {
 
 export function App() {
   useEffect(() => {
+    // ── Magic-link handler (runs before localStorage check) ──────────────────
+    const params = new URLSearchParams(window.location.search);
+    const fromMagic = params.get('from') === 'magic';
+    const magicEmail = params.get('email');
+    const magicScanId = params.get('scan_id');
+
+    if (fromMagic && magicEmail) {
+      email.value = magicEmail;
+      localStorage.setItem('dh_email', magicEmail);
+
+      // Strip magic-link params so a refresh doesn't replay this flow.
+      window.history.replaceState({}, '', window.location.pathname);
+
+      console.log('[DH] magic-link sign-in:', magicEmail, 'scan_id:', magicScanId);
+
+      (async () => {
+        try {
+          await loadUserData();
+          if (magicScanId) {
+            const scan = scans.value.find(s => s.id === magicScanId);
+            if (scan) {
+              batch(() => { activeThreadId.value = magicScanId; view.value = 'scan'; });
+              await switchThread(magicScanId, 'scan', scan.conversation_id);
+              return; // skip routeAfterLoad — we have a specific target
+            }
+          }
+          await routeAfterLoad();
+        } catch (err) {
+          console.error('[DH] magic-link load error:', err);
+          // Fall through to email-gate by clearing email so the gate renders
+          localStorage.removeItem('dh_email');
+          email.value = null;
+        }
+      })();
+      return;
+    }
+
+    // ── Existing localStorage auto-sign-in (unchanged) ───────────────────────
     const stored = localStorage.getItem('dh_email');
     if (stored) {
       email.value = stored;

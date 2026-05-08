@@ -11,7 +11,9 @@
     "api/deal-actions.js": { "maxDuration": 10 },
     "api/health.js": { "maxDuration": 5 },
     "api/create-checkout.js": { "maxDuration": 10 },
-    "api/stripe-webhook.js": { "maxDuration": 10 }
+    "api/stripe-webhook.js": { "maxDuration": 10 },
+    "api/magic-link.js": { "maxDuration": 5 },
+    "api/free-scan-start.js": { "maxDuration": 10 }
   },
   "rewrites": [
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },
