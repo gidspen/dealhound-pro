@@ -6,7 +6,8 @@ export function DealCard({ deal, variant = 'preview', onOpenThread }) {
   const bd = parseBreakdown(deal.score_breakdown);
   const strategy = bd.strategy || {};
   const risk = bd.risk || {};
-  const tier = tierFromStrategy(strategy.overall);
+  // Use full breakdown shape so .tier and score-based fallback work (mirrors Preview.jsx).
+  const tier = tierFromStrategy({ ...bd, score: bd.priority_score ?? deal.score });
   const isStarred = starredDealIds.value.has(deal.id);
 
   const acreage = deal.acreage ? deal.acreage + ' ac' : null;

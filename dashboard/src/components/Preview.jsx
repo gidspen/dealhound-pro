@@ -5,7 +5,10 @@ import { fmtPrice, tierFromStrategy, tierLabel, riskClass, parseBreakdown, fmtDa
 
 function CompactDealRow({ deal, onOpen }) {
   const bd = parseBreakdown(deal.score_breakdown);
-  const tier = tierFromStrategy(bd.strategy?.overall);
+  // Pass the full breakdown + score so tierFromStrategy can use .tier or score-based fallback
+  // when older `strategy.overall` is missing (e.g. pipelines that wrote a flat tier field).
+  // score_breakdown stores the score as priority_score; deal.score is a fallback for any future column.
+  const tier = tierFromStrategy({ ...bd, score: bd.priority_score ?? deal.score });
   const isStarred = starredDealIds.value.has(deal.id);
 
   return (
@@ -40,10 +43,10 @@ function ScanDealList() {
   const starred = scanDeals.filter(d => starredDealIds.value.has(d.id));
   const unstarred = scanDeals.filter(d => !starredDealIds.value.has(d.id));
 
-  const grouped = { hot: [], strong: [], watch: [] };
+  const grouped = { hot: [], strong: [], watch: [], pass: [] };
   unstarred.forEach(deal => {
     const bd = parseBreakdown(deal.score_breakdown);
-    const tier = tierFromStrategy(bd.strategy?.overall);
+    const tier = tierFromStrategy({ ...bd, score: bd.priority_score ?? deal.score });
     if (grouped[tier]) grouped[tier].push(deal);
   });
 
@@ -59,6 +62,7 @@ function ScanDealList() {
   grouped.hot.sort(sortByRecency);
   grouped.strong.sort(sortByRecency);
   grouped.watch.sort(sortByRecency);
+  grouped.pass.sort(sortByRecency);
 
   return (
     <>
@@ -98,6 +102,14 @@ function ScanDealList() {
           <>
             <div class="preview-group-hdr preview-group-watch">Watch · {grouped.watch.length}</div>
             {grouped.watch.map(deal => <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />)}
+          </>
+        )}
+
+        {/* PASS */}
+        {grouped.pass.length > 0 && (
+          <>
+            <div class="preview-group-hdr preview-group-watch">Pass · {grouped.pass.length}</div>
+            {grouped.pass.map(deal => <CompactDealRow key={deal.id} deal={deal} onOpen={openThread} />)}
           </>
         )}
 
@@ -251,7 +263,7 @@ function DealDetail() {
   const bd = parseBreakdown(deal.score_breakdown);
   const strategy = bd.strategy || {};
   const risk = bd.risk || {};
-  const tier = tierFromStrategy(strategy.overall);
+  const tier = tierFromStrategy({ ...bd, score: bd.priority_score ?? deal.score });
   const isStarred = starredDealIds.value.has(deal.id);
   const risks = riskDimensions(bd);
   const stratLabels = strategyLabels(bd);
