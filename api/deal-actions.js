@@ -5,8 +5,15 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_KEY
 );
 
+const dealFilesHandler = require('./_lib/deal-files-handler');
+
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
+
+  // /api/deal-files routes here via vercel.json rewrite (?_route=files)
+  if (req.query._route === 'files') {
+    return dealFilesHandler(req, res);
+  }
 
   if (req.method === 'OPTIONS') {
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
