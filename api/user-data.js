@@ -20,14 +20,21 @@ async function getOrCreateUser(email) {
   if (existing) return existing;
 
   const agentName = AGENT_NAMES[Math.floor(Math.random() * AGENT_NAMES.length)];
-  const { data: created, error } = await supabase
+  // ignoreDuplicates handles concurrent first-time inserts (two smoke runs racing)
+  const { error: upsertError } = await supabase
     .from('users')
-    .insert({ email, agent_name: agentName })
+    .upsert({ email, agent_name: agentName }, { onConflict: 'email', ignoreDuplicates: true });
+
+  if (upsertError) throw upsertError;
+
+  const { data, error } = await supabase
+    .from('users')
     .select('email, agent_name')
+    .eq('email', email)
     .single();
 
   if (error) throw error;
-  return created;
+  return data;
 }
 
 module.exports = async function handler(req, res) {

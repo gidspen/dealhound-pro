@@ -8,7 +8,7 @@
     "api/user-data.js": { "maxDuration": 10 },
     "api/deal-chat.js": { "maxDuration": 60 },
     "api/conversation.js": { "maxDuration": 10 },
-    "api/deal-actions.js": { "maxDuration": 10 },
+    "api/deal-actions.js": { "maxDuration": 30 },
     "api/health.js": { "maxDuration": 5 },
     "api/create-checkout.js": { "maxDuration": 10 },
     "api/stripe-webhook.js": { "maxDuration": 10 },
@@ -16,6 +16,7 @@
   },
   "rewrites": [
     { "source": "/api/magic-link", "destination": "/api/scan-report?_action=magic-link" },
+    { "source": "/api/deal-files", "destination": "/api/deal-actions?_route=files" },
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },
     { "source": "/dashboard/(.*)", "destination": "/dashboard-dist/index.html" },
     { "source": "/free-scan", "destination": "/free-scan/index.html" },

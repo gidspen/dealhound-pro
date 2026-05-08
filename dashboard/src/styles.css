@@ -810,3 +810,54 @@ body::before {
 .scan-progress__counter-sep {
   color: #9b9b9b;
 }
+
+/* ── Deal Documents ──────────────────────────────────────────── */
+.deal-docs { margin: 16px 0 8px; }
+.deal-docs-zone {
+  border: 1.5px dashed var(--border);
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.deal-docs-zone:hover,
+.deal-docs-zone-active {
+  border-color: var(--gold);
+  background: var(--gold-glow);
+}
+.deal-docs-zone-uploading { opacity: 0.6; cursor: default; }
+.deal-docs-zone-text { font-size: 0.79rem; color: var(--cream-sub); user-select: none; }
+.deal-docs-upload-icon { margin-right: 5px; }
+.deal-docs-error { font-size: 0.75rem; color: #b94a48; margin-top: 5px; }
+.deal-docs-list { margin-top: 8px; display: flex; flex-direction: column; gap: 4px; max-height: 180px; overflow-y: auto; }
+.deal-docs-file {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  background: var(--gold-glow);
+  border: 1px solid var(--border);
+}
+.deal-docs-file-icon { font-size: 0.95rem; flex-shrink: 0; }
+.deal-docs-file-meta { flex: 1; min-width: 0; }
+.deal-docs-file-name {
+  font-size: 0.76rem;
+  color: var(--cream);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.deal-docs-file-size { font-size: 0.68rem; color: var(--cream-sub); margin-top: 1px; }
+.deal-docs-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--cream-sub);
+  padding: 0 2px;
+  flex-shrink: 0;
+}
+.deal-docs-delete:hover { color: #b94a48; }
