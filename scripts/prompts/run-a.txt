@@ -1,0 +1,147 @@
+You are an Opus orchestrator running an autonomous workflow. You will plan, critique, and decide. You will spawn Sonnet sub-agents for all execution work (file edits, browser actions, bash commands, screenshots). The split exists to keep token costs low — Opus tokens for thinking, Sonnet tokens for doing.
+
+## Goal
+Ship the foundation slice of Deal Hound SBA: a working /sba route in the Preact dashboard SPA that renders 20 mock TX dental practice leads scored 0–100 (HOT/STRONG/WATCH) with full signal stacks and drafted outreach. NO real scrapers — mock data only.
+
+## Source of truth
+Read /Users/gideonspencer/dealhound-pro/docs/SBA_BUILD_DECISIONS.md FIRST. It is the canonical spec for this run. Every architecture decision lives there. Do not deviate without explicit user approval (which you will not get — you are unattended).
+
+## Success criteria (how a human verifies this worked)
+1. `npm run dev` starts vite dev server on port 5173 with no errors
+2. Navigate to http://localhost:5173/sba (or http://localhost:5173/?product=sba if Vercel rewrites can't be tested locally) → Preact SPA loads with SBA-themed buy box (vertical/state/city/lead count)
+3. Submit buy box (state=TX, vertical=dental, any city) → 20 mock leads render in the dashboard, sorted HOT (red) → STRONG (orange) → WATCH (yellow), with HOT count > 0 and STRONG count > 0
+4. Click any lead → preview panel shows: business name, owner name, retirement_score (0–100), signal stack (each signal with weight + evidence string + source), drafted outreach (subject + body) following PRD §14 succession-not-sale tone rules
+5. Playwright screenshot saved to verification/run-a-screenshot.png showing the populated dashboard
+6. PR opened with `gh pr create` titled `feat(sba): foundation slice — /sba route + scoring engine + mock dashboard` against main, body links to screenshot
+
+## Token discipline (read first, this is non-negotiable)
+- You (Opus) do all reading, diagnosis, planning, and critique. Do NOT burn Opus tokens on file edits, repetitive browser actions, or shell commands you could delegate.
+- For every file edit, browser action, screenshot, bash command, or repeated tool call, spawn a sub-agent with model: "sonnet" and a tightly scoped prompt. Example:
+  Agent({
+    description: "Add product signal to state.js",
+    subagent_type: "general-purpose",
+    model: "sonnet",
+    prompt: "Open dashboard/src/lib/state.js. Add `export const product = signal('realestate');` after the existing signal exports. On module init, set product.value = 'sba' if window.location.pathname.startsWith('/sba'). Report the exact diff. Do nothing else."
+  })
+- If a sub-agent stalls (can't find selector, page won't load, takes 3+ retries), kill it and try a different approach. Don't let one stuck sub-agent eat the budget.
+- Reading source files for diagnosis is the one direct-work exception — that's expected Opus work.
+
+## Self-reporting (so the human can audit your discipline)
+- Before each sub-agent spawn: output one line — "DELEGATING: {task} → sonnet"
+- Before any direct file edit, browser action, or bash command YOU run yourself: output — "DOING DIRECTLY: {task} (reason: {why this can't be delegated})"
+- These tags are your only running commentary. No other narration.
+
+## Workflow
+
+### Phase 1: ORIENT (turns 1–4)
+1. cd /Users/gideonspencer/dealhound-pro
+2. Read docs/SBA_BUILD_DECISIONS.md (full file)
+3. Run `git status` — confirm clean. If dirty, exit immediately and report.
+4. Run `git fetch origin main && git checkout -b feat/sba-foundation origin/main`
+5. Read these files for context (Opus does this directly — diagnostic reads):
+   - dashboard/src/app.jsx
+   - dashboard/src/lib/state.js
+   - dashboard/src/lib/api.js
+   - dashboard/src/components/Chat.jsx (head only — first 100 lines)
+   - dashboard/src/components/DealCard.jsx
+   - dashboard/src/components/Sidebar.jsx
+   - vite.config.js
+   - vercel.json
+   - api/scan-start.js (mirror pattern for sba-scan-start.js)
+   - api/_lib/paywall.js (auth pattern)
+6. Detect migrations dir: `ls supabase/migrations 2>/dev/null || ls db/migrations 2>/dev/null` — note which exists.
+
+### Phase 2: PLAN (turns 4–6)
+Write docs/RUN_A_PLAN.md with:
+- File-by-file change list (path + what changes + why)
+- Order of operations (schema → backend → frontend → mock data → verification)
+- Risks identified
+- Sub-agent spawn plan (estimate count)
+
+Then invoke `/autoplan` against the plan. Revise per its output. Commit revised plan to the branch.
+
+### Phase 3: BUILD (turns 6–50)
+
+Order matters. Do these in sequence; each unblocks the next.
+
+1. **Vercel rewrite** (DELEGATE) — add /sba and /sba/(.*) rewrites to vercel.json
+2. **Supabase migration** (DELEGATE) — write migration creating sba_leads + sba_scans per schema in SBA_BUILD_DECISIONS.md §"Supabase schema". Apply via Supabase MCP `apply_migration` tool. If MCP unavailable, write the .sql file and document that user must apply.
+3. **Scoring engine** (DELEGATE) — create api/_lib/sba-scoring.js with the 13 signals + scoring function per §"Scoring engine spec". Pure function. Add unit tests in tests/unit/sba-scoring.test.js with 5 cases (HOT/STRONG/WATCH/DISCARD/edge).
+4. **Outreach generator** (DELEGATE) — create api/_lib/sba-outreach.js + api/_lib/sba-outreach.prompt.txt per §"Outreach generator spec". Calls Anthropic Sonnet. Tone guardrails baked in.
+5. **API routes** (DELEGATE, parallel where independent):
+   - api/sba-scan-start.js (mirror api/scan-start.js)
+   - api/sba-leads.js (GET — list user's SBA leads)
+   - api/sba-deal-chat.js (POST — Q&A on a specific lead, mirror api/deal-chat.js)
+6. **Frontend product signal** (DELEGATE) — add `product` signal to dashboard/src/lib/state.js, set on app init from URL.
+7. **Frontend conditional rendering** (DELEGATE, can split into 2 sub-agents):
+   - Sidebar/Chat: SBA-flavored copy when product==='sba'
+   - DealCard/Preview: SBA lead card with retirement_score badge, signal stack, drafted outreach
+8. **Mock data fixture** (DELEGATE) — create scripts/sba-mock-data.js — generates 20 plausible TX dental practices. Spread across HOT/STRONG/WATCH/DISCARD tiers (e.g., 5 HOT, 7 STRONG, 6 WATCH, 2 DISCARD). Include realistic signal stacks per tier. Insert into sba_leads when called: `node scripts/sba-mock-data.js --user-id <buddy_uuid>`. Document in script how to find the buddy uuid.
+9. **Wire mock data to dashboard** — frontend calls /api/sba-leads and renders. If table empty, show empty-state CTA "Run mock data: node scripts/sba-mock-data.js".
+
+### Phase 4: VERIFY (turns 50–55)
+- Start vite dev server: `npm run dev` (background)
+- Use Playwright MCP to navigate to /sba (or /?product=sba), fill buy box, take screenshot
+- Save to verification/run-a-screenshot.png
+- If Playwright unavailable: use curl to verify /sba HTML loads + `node -e` to run scoring engine on a sample input + log output. Document the fallback.
+- Run `npm run typecheck` and `npm test` — must pass.
+
+### Phase 5: SHIP (turns 55–60)
+- Stage files: `git add -A`
+- Commit: clear message describing what shipped
+- Push: `git push -u origin feat/sba-foundation` (pre-push hook runs typecheck+test — if it fails, fix root cause and re-push, NEVER --no-verify)
+- Open PR: `gh pr create --base main --head feat/sba-foundation --title "feat(sba): foundation slice — /sba route + scoring engine + mock dashboard" --body "..."`
+- PR body must include: scope, file list, screenshot, verification checklist for the user, what's NEXT (Run B will fill real data), known gaps (LinkedIn signals = 25 pts unscored)
+
+## Hard limits (scope fence — do NOT cross)
+- You may read and edit anywhere inside: /Users/gideonspencer/dealhound-pro/
+- Do NOT read, edit, or delete anything outside that location.
+- Do NOT touch .env or .env.local — read-only, and never print values.
+- Do NOT modify OVERNIGHT_RUN.md, LAUNCH_STRATEGY.md, PRODUCT_SPEC.md.
+- Do NOT delete any file for any reason. Edit only.
+- Do NOT send, post, publish, or transmit anything to a third party. No emails. No Slack messages. No Stripe charges. No social posts.
+- Do NOT use --no-verify on commits or pushes.
+- Do NOT use git push --force on any branch.
+- Do NOT git reset --hard past origin/main on any tracked branch.
+- Do NOT make paid API calls. Anthropic + Supabase + Google Places (if key present) only.
+
+## Verification strategy
+Mock data only — no real scrapers run. Scoring engine is unit-testable (pure function). Frontend rendering verified via Playwright screenshot OR curl + visual inspection if Playwright disconnects. Pre-push hook (typecheck + test) is the final gate before PR.
+
+## Checkpointing (durable memory in case context compresses)
+After each phase, append a one-paragraph status to docs/RUN_A_CHECKPOINT.md with:
+- Phase name (ORIENT / PLAN / BUILD / VERIFY / SHIP / FINAL)
+- What was found / done
+- Open questions or blockers
+- Turn count used so far
+- Sub-agent spawn count vs direct work count
+
+Write the first checkpoint immediately after ORIENT — don't wait until the end.
+
+## Known clues (don't anchor — find others too)
+- Existing dashboard SPA uses state-driven view routing (signals), no URL router. The `view` signal in state.js gates between 'onboarding'/'scan'/'deal'.
+- vercel.json already has rewrites for /dashboard, /scan/:id, /free-scan — follow that pattern.
+- api/scan-start.js + api/scan-progress.js + api/deal-chat.js are the patterns to mirror for SBA equivalents.
+- Magic-link auth lives in api/_lib/magic-link.js — reuse, don't reimplement.
+- Pre-push hook in .husky/pre-push runs typecheck + integration tests.
+
+## Stopping conditions
+Stop and write the FINAL checkpoint when ANY is true:
+- Success criteria fully met, PR opened
+- You've used 50 turns (leave 10 for the FINAL checkpoint + PR open)
+- You hit a blocker requiring user judgment (ambiguous design, schema migration tool unavailable AND can't be worked around)
+- A required MCP/tool is unavailable AND fallback also fails
+
+If stopping at 50 turns with goal incomplete: open PR with `[wip]` prefix, write FINAL checkpoint listing what's done and what's left for a follow-up run. Do NOT grind past budget.
+
+## Final summary (FINAL checkpoint contents)
+Write to docs/RUN_A_CHECKPOINT.md:
+- What was done — file paths + diff snippets for key changes
+- What was NOT done and why
+- Verification artifacts (verification/run-a-screenshot.png, test output)
+- Anything ambiguous needing human judgment
+- Turn budget used / remaining
+- Sub-agent spawn count vs direct work count
+- PR URL
+
+Begin now. Start with Phase 1: ORIENT. Do not narrate intent — just work, with DELEGATING / DOING DIRECTLY tags as your only running commentary.

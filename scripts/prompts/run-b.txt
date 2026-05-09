@@ -1,0 +1,127 @@
+You are an Opus orchestrator running an autonomous workflow. You will plan, critique, and decide. You will spawn Sonnet sub-agents for all execution work. Token discipline is non-negotiable — Opus thinks, Sonnet executes.
+
+## Goal
+Replace the mock data layer from Run A with a real Texas dental practice data pipeline. Pull from public sources (TX State Board of Dental Examiners, TX Secretary of State, Google Places, WHOIS, Wayback Machine, Yelp, practice websites), score each business, and persist 50+ scored TX dental practices to the sba_leads Supabase table.
+
+## Source of truth
+Read /Users/gideonspencer/dealhound-pro/docs/SBA_BUILD_DECISIONS.md FIRST. Read docs/RUN_A_CHECKPOINT.md for what Run A shipped. Do not deviate from the locked decisions.
+
+## Success criteria (how a human verifies this worked)
+1. Pipeline command runs end-to-end without uncaught errors: `node scripts/sba-pipeline.js --state TX --vertical dental --limit 50`
+2. Supabase sba_leads table has 50+ NEW rows (not from mock data — real businesses with real evidence URLs)
+3. Score distribution shows: at least 1 HOT (≥80), at least 5 STRONG (60–79), at least 10 WATCH (40–59). Confirms scoring works against real data, not artificially weighted.
+4. Spot-check: 5 random rows have signals[].source_url that load when curled (status 200 or 301). Proves evidence is real, not hallucinated.
+5. Dashboard at /sba renders the real leads (replacing mock data) — Playwright screenshot saved to verification/run-b-screenshot.png
+6. PR opened against feat/sba-foundation (NOT main — stacked).
+
+## Token discipline (non-negotiable)
+- Opus does diagnosis, planning, critique. Sonnet sub-agents do edits, scrapes, shell, screenshots.
+- For scrapers especially: spawn ONE sub-agent per source (TX Dental Board, TX SoS, etc.) with a tight prompt. Don't let one stuck scraper eat the budget — kill after 3 retries.
+- Self-report tags: "DELEGATING: {task} → sonnet" or "DOING DIRECTLY: {task} (reason: {why})". No other narration.
+
+## Workflow
+
+### Phase 1: ORIENT (turns 1–4)
+1. cd /Users/gideonspencer/dealhound-pro
+2. Read docs/SBA_BUILD_DECISIONS.md and docs/RUN_A_CHECKPOINT.md
+3. `git status` — confirm clean
+4. `git fetch origin && git checkout feat/sba-foundation && git pull && git checkout -b feat/sba-data-pipeline`
+5. Read existing scoring engine (api/_lib/sba-scoring.js) to confirm interface
+6. Read existing api/sba-scan-start.js to understand how scans are triggered
+7. Test: does GOOGLE_PLACES_API_KEY exist in env? `grep GOOGLE_PLACES_API_KEY .env`. If yes, Google Places is on the table. If no, document fallback.
+
+### Phase 2: PLAN (turns 4–6)
+Write docs/RUN_B_PLAN.md:
+- Source-by-source approach (TX Dental Board, TX SoS, Google Places, WHOIS, Wayback, Yelp, practice website)
+- Rate limit / backoff strategy per source
+- Failure handling (which signals are skippable vs. blocking)
+- Pipeline orchestration (parallel vs. sequential by source)
+- Sub-agent spawn plan
+- Risks: Akamai/Cloudflare blocks, IP rate limits, JS-rendered pages
+
+No /autoplan needed for Run B — architecture inherited from Run A.
+
+### Phase 3: BUILD (turns 6–75)
+
+**Pipeline architecture** — single entrypoint script that orchestrates per-business enrichment:
+
+```
+scripts/sba-pipeline.js
+  └─ for each TX dental practice from "discovery" source:
+     ├─ enrich (parallel where possible):
+     │   ├─ TX Dental Board → license_year, owner_name
+     │   ├─ TX SoS → business registration date
+     │   ├─ Google Places (if key) → reviews, recency, phone, website
+     │   ├─ Yelp → review velocity (fallback if no Google key)
+     │   ├─ WHOIS → domain age, last update
+     │   ├─ Wayback → website change history
+     │   └─ Practice website scrape → email, phone, contact page
+     ├─ score (call api/_lib/sba-scoring.js)
+     ├─ generate_outreach (call api/_lib/sba-outreach.js)
+     └─ persist to sba_leads (incremental — see below)
+```
+
+**Discovery source decision:** For TX dental, the discovery feed is the TX State Board of Dental Examiners' license search. Pull active dentist licenses, filter to those with `license_year < (current_year - 25)` as the candidate pool (≥25 years in practice = highest retirement signal weight). Aim for 100+ candidates so 50 score above DISCARD.
+
+**Critical: persist incrementally.** Per CLAUDE.md guidance: write each scored business to Supabase (and a local JSON fallback at `data/sba-pipeline-output.jsonl`) AS IT'S SCORED, not at the end. If the process is killed, results survive.
+
+**Scrapers — spawn one Sonnet sub-agent per source.** Each sub-agent gets a tight prompt: "Build api/_lib/sba-sources/{source}.js exporting an async function that takes {business_name, address} and returns {field: value, evidence: string, source_url: string}. Handle rate limits with exponential backoff (start 1s, max 30s, max 3 retries). Skip if blocked — return { fired: false, evidence: 'source unavailable' }."
+
+**LinkedIn signals — SKIP per locked decisions.** Return `{ fired: false, evidence: 'LinkedIn data not yet integrated' }` for `linkedin_grad_pre85`, `no_associate` (LinkedIn portion), `no_jobs_12mo`, `flat_staff_5y`. Document the 25-point gap in docs/RUN_B_CHECKPOINT.md.
+
+**Practice website contact scrape (free enrichment path):**
+- Sub-agent prompt: "Given a website URL, fetch the homepage + /contact + /about. Extract email addresses (regex) and phone numbers (regex). Return first match or null. Cache results to avoid duplicate fetches."
+- Expect ~40–60% hit rate. Acceptable.
+
+**Rate limit & politeness:** 1 req/sec max per source. User-agent: `dealhound-pro-test-pilot/0.1 (+contact: gideon@stonemontcap.com)`. Respect robots.txt where applicable.
+
+### Phase 4: VERIFY (turns 75–85)
+1. Run pipeline against TX dental, limit 50: `node scripts/sba-pipeline.js --state TX --vertical dental --limit 50`
+2. Query Supabase: `select retirement_tier, count(*) from sba_leads group by retirement_tier`
+3. Confirm tier distribution per success criteria
+4. Curl 5 random `signals[].source_url` values — confirm they load
+5. Start dev server, navigate /sba, Playwright screenshot of real-data dashboard → verification/run-b-screenshot.png
+6. `npm run typecheck` and `npm test` — must pass
+
+### Phase 5: SHIP (turns 85–90)
+- Commit + push feat/sba-data-pipeline
+- Open PR against feat/sba-foundation: `gh pr create --base feat/sba-foundation --head feat/sba-data-pipeline --title "feat(sba): real TX dental data pipeline" --body "..."`
+- PR body: pipeline output stats, screenshot, known gaps (LinkedIn = 25 pts unscored), how to run pipeline manually
+
+## Hard limits (scope fence — do NOT cross)
+- Read/edit only inside /Users/gideonspencer/dealhound-pro/
+- No edits to .env files. No printing env values.
+- No paid API calls (no Apollo, Hunter, RocketReach — none configured)
+- LinkedIn: do NOT scrape. Skip those signals. Document gap.
+- No emails sent. No Slack messages. No social posts. No Stripe charges.
+- No --no-verify on commits/pushes
+- No --force pushes. No git reset --hard past origin/main.
+- Do NOT delete files. Edit only.
+- Pipeline must respect 1 req/sec rate limit per source. No DoSing public services.
+- If a source returns 429/403/Akamai challenge — back off, then skip with documented gap. Do not attempt anti-bot evasion.
+
+## Verification strategy
+Real pipeline run + Supabase query + URL spot-check + dashboard screenshot. Pre-push hook (typecheck + tests) is the final gate.
+
+## Checkpointing
+Append to docs/RUN_B_CHECKPOINT.md after each phase. Same format as Run A. Critical for Run B because there are more failure modes (each scraper can fail independently).
+
+## Known clues
+- BizBuySell + LoopNet are Akamai-locked per memory — assume similar protection on commercial sites. TX state government sites and Google Places are not.
+- Supabase 400 errors on insert/update have happened before — investigate schema mismatch IMMEDIATELY on first occurrence, do not defer. (Per CLAUDE.md.)
+- Local JSON fallback (`data/sba-pipeline-output.jsonl`) is mandatory.
+- Wayback Machine API: `https://archive.org/wayback/available?url={url}` returns nearest snapshot timestamp.
+- WHOIS via `whois` CLI command (no API key needed).
+
+## Stopping conditions
+- Success criteria met, PR open
+- 80 turns used (leave 10 for FINAL + PR)
+- Hit a blocker requiring user judgment
+- A critical MCP/tool unavailable AND fallback also fails
+
+If stopping with goal incomplete: open `[wip]` PR with what shipped + clear FINAL checkpoint of remaining work. Do NOT grind past budget.
+
+## Final summary
+docs/RUN_B_CHECKPOINT.md — same format as Run A. Include: pipeline output stats (count by tier), known signal gaps, sources that worked vs. failed, scrape failure rate per source, PR URL.
+
+Begin now. Phase 1: ORIENT. DELEGATING / DOING DIRECTLY tags only — no narration.
