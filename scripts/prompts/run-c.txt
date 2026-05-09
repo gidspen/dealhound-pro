@@ -1,0 +1,101 @@
+You are an Opus orchestrator running an autonomous workflow. You will plan, critique, and decide. Spawn Sonnet sub-agents for execution. Token discipline is non-negotiable.
+
+## Goal
+Polish Deal Hound SBA for the buddy test pilot. Add: (1) lead-detail Q&A chat preloaded with lead context, (2) CSV export, (3) lead status updates ("Mark contacted" / "Snooze"). Cut: weekly digest, Stripe, paywall, lead exclusivity.
+
+## Source of truth
+Read /Users/gideonspencer/dealhound-pro/docs/SBA_BUILD_DECISIONS.md FIRST. Read docs/RUN_A_CHECKPOINT.md and docs/RUN_B_CHECKPOINT.md for prior context. Do not deviate from locked decisions.
+
+## Success criteria (how a human verifies this worked)
+1. On /sba dashboard with real Run B leads, click a HOT lead → preview panel chat is preloaded with that lead's context (signals, score, business facts, drafted outreach already in context).
+2. Ask "Why was this scored HOT?" → response cites at least 2 specific signals with weights.
+3. Ask "What's a fair offer range for this practice?" → response gives a reasoned answer (revenue proxy from public data + multiple).
+4. Click "Export CSV" → CSV file downloads containing all currently visible leads with all schema fields.
+5. Click "Mark contacted" on a lead → status changes in UI immediately + persists to Supabase (verify with `select status from sba_leads where id = '<id>'`).
+6. Click "Snooze" → lead disappears from default view, reappears in "Snoozed" filter; status persists.
+7. Playwright screenshots saved: verification/run-c-qa.png (Q&A response visible), verification/run-c-csv.png (download triggered), verification/run-c-status.png (status badge updated).
+8. PR opened against feat/sba-data-pipeline (NOT main — stacked).
+
+## Token discipline (non-negotiable)
+Opus thinks, Sonnet executes. Tags: "DELEGATING: {task} → sonnet" / "DOING DIRECTLY: {task} (reason)". No other narration.
+
+## Workflow
+
+### Phase 1: ORIENT (turns 1–3)
+1. cd /Users/gideonspencer/dealhound-pro
+2. Read SBA_BUILD_DECISIONS.md + Run A + Run B checkpoints
+3. `git status` — confirm clean
+4. `git fetch origin && git checkout feat/sba-data-pipeline && git pull && git checkout -b feat/sba-buddy-polish`
+5. Read existing patterns to mirror:
+   - api/deal-chat.js (chat-with-deal pattern — clone for lead-chat)
+   - dashboard/src/components/Chat.jsx (chat UI to extend with SBA context)
+   - dashboard/src/components/DealCard.jsx (status badge pattern)
+
+### Phase 2: PLAN (turns 3–5)
+Write docs/RUN_C_PLAN.md:
+- Three features (Q&A, CSV, status) — each with file changes
+- Reuse vs. extend decisions
+- Sub-agent spawn plan
+
+No /autoplan needed — architecture inherited.
+
+### Phase 3: BUILD (turns 5–30)
+
+**Feature 1: Lead-detail Q&A** (DELEGATE 2 sub-agents)
+- Backend: api/sba-deal-chat.js — extends existing api/deal-chat.js pattern. System prompt receives lead context (business, owner, signals with weights/evidence, drafted outreach, scoring rationale). Streams response via Anthropic Sonnet.
+- Frontend: extend dashboard/src/components/Chat.jsx — when active lead has product='sba', preload chat with system context summary (read-only first message: "I have full context on {business}, scored {tier} ({score}/100). Ask me anything about this lead.")
+
+**Feature 2: CSV export** (DELEGATE 1 sub-agent)
+- Frontend-only — no API needed. Add "Export CSV" button to SBA dashboard header.
+- Click handler builds CSV from current leads array. Columns: business_name, vertical, address, city, state, zip, phone, website, owner_name, owner_email, owner_phone, retirement_score, retirement_tier, signals_summary, outreach_subject, outreach_body, status, scored_at.
+- `signals_summary` flattens signals array to "signal1; signal2; signal3" string.
+- Trigger download via Blob + a[download] click pattern.
+
+**Feature 3: Status updates** (DELEGATE 2 sub-agents)
+- Backend: api/sba-lead-status.js (POST { lead_id, status }) — updates sba_leads.status. Validates user owns the lead.
+- Frontend: status pill on each lead card with click → menu → Mark contacted / Mark responded / Mark rejected / Snooze. Optimistic UI update + API call. Filter pill in Sidebar to show/hide snoozed.
+
+### Phase 4: VERIFY (turns 30–35)
+- Start dev server, hit /sba
+- Playwright sequence:
+  1. Click HOT lead, ask "Why HOT?", screenshot the response → verification/run-c-qa.png
+  2. Click "Export CSV", verify download triggered + file content valid → verification/run-c-csv.png
+  3. Click "Mark contacted" on a lead, verify badge updates → verification/run-c-status.png
+- `npm run typecheck` and `npm test` — must pass
+
+### Phase 5: SHIP (turns 35–40)
+- Commit + push feat/sba-buddy-polish
+- Open PR against feat/sba-data-pipeline: `gh pr create --base feat/sba-data-pipeline --head feat/sba-buddy-polish --title "feat(sba): buddy polish — Q&A + CSV + status" --body "..."`
+- PR body: 3 features with screenshots, what buddy can now test end-to-end
+
+## Hard limits (scope fence — do NOT cross)
+- Read/edit only inside /Users/gideonspencer/dealhound-pro/
+- No edits to .env files. No printing env values.
+- No emails sent. No Slack messages. No Stripe charges. No social posts.
+- No --no-verify. No --force pushes. No git reset --hard past origin/main.
+- Do NOT delete files. Edit only.
+- Do NOT add: weekly digest, Stripe, paywall, lead exclusivity logic. Those are explicitly cut per locked decisions.
+- Q&A backend uses Sonnet (not Opus) for cost.
+
+## Verification strategy
+Live UI tests via Playwright + Supabase queries to confirm persistence. Pre-push hook (typecheck + test) is the final gate.
+
+## Checkpointing
+docs/RUN_C_CHECKPOINT.md — append after each phase.
+
+## Known clues
+- Existing chat pattern (Chat.jsx + api/deal-chat.js) is the template — clone, don't reinvent.
+- DealCard.jsx already has a status section — extend with SBA-specific statuses.
+- CSV download via Blob URL is a frontend pattern — no backend needed.
+
+## Stopping conditions
+- Success criteria met, PR open
+- 35 turns used (leave 5 for FINAL + PR)
+- Blocker requiring user judgment
+
+If stopping with goal incomplete: `[wip]` PR + clear FINAL checkpoint. Do NOT grind past budget.
+
+## Final summary
+docs/RUN_C_CHECKPOINT.md — what was done, what wasn't, verification artifacts, turn budget used, sub-agent count, PR URL.
+
+Begin now. Phase 1: ORIENT. DELEGATING / DOING DIRECTLY tags only.
