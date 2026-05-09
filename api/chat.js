@@ -186,14 +186,22 @@ CRITICAL: Do NOT report any deal count. Do NOT say "0 deals found" or any number
 Reply in 1-2 sentences, in character: confident, sharp, brief. Tell the investor you're still working on it, point them to the live progress shown below the chat, and say you'll deliver the full breakdown the moment the scan completes.`;
   }
 
-  const { data: deals } = await supabase
+  const { data: dealsRaw } = await supabase
     .from('deals')
     .select('title, location, price, acreage, rooms_keys, score_breakdown, source, url, passed_hard_filters')
     .eq('search_id', searchId)
-    .eq('passed_hard_filters', true)
-    .order('id', { ascending: false });
+    .eq('passed_hard_filters', true);
 
-  const dealSummaries = (deals || []).map((d, i) => {
+  // Sort by priority_score descending so Deal 1 = highest scorer — matches the
+  // preview panel ranking. Supabase insertion order (order by id) diverges from
+  // score rank, which is what caused "Deal 11" in chat ≠ rank 11 in the UI.
+  const deals = (dealsRaw || []).slice().sort((a, b) => {
+    const bda = typeof a.score_breakdown === 'string' ? JSON.parse(a.score_breakdown) : (a.score_breakdown || {});
+    const bdb = typeof b.score_breakdown === 'string' ? JSON.parse(b.score_breakdown) : (b.score_breakdown || {});
+    return (bdb.priority_score ?? 0) - (bda.priority_score ?? 0);
+  });
+
+  const dealSummaries = deals.map((d, i) => {
     const bd = typeof d.score_breakdown === 'string' ? JSON.parse(d.score_breakdown) : (d.score_breakdown || {});
     const tier = bd.tier || bd.strategy?.overall || 'UNKNOWN';
     const risk = bd.risk?.level || 'UNKNOWN';
