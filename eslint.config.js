@@ -59,6 +59,8 @@ module.exports = [
       'api/_lib/paywall.js',
       'api/_lib/progress.js',
       'api/_lib/scan-trigger.js',
+      'api/_lib/sba-scoring.js',
+      'api/_lib/sba-outreach.js',
       'worker/**/*.js',
       'emails/**/*.js',
     ],

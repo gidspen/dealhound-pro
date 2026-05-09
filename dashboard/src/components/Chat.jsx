@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'preact/hooks';
 import { batch } from '@preact/signals';
-import { view, agentName, chatMessages, chatStreaming, activeThreadId, scans, deals, currentDeal, previewOpen, email } from '../lib/state.js';
+import { view, agentName, chatMessages, chatStreaming, activeThreadId, scans, deals, currentDeal, previewOpen, email, product, currentSbaLead } from '../lib/state.js';
 import { sendMessage, loadUserData, switchThread } from '../lib/api.js';
 import { parseBreakdown, tierFromStrategy } from '../lib/utils.js';
 import { ScanProgress } from './ScanProgress.jsx';
@@ -61,6 +61,9 @@ export function Chat() {
 
   // Auto-trigger for onboarding and scan debrief (NOT deal view)
   useEffect(() => {
+    // SBA views don't use auto-triggered chat messages
+    if (product.value === 'sba') return;
+
     if (view.value === 'onboarding' && chatMessages.value.length === 0) {
       sendMessage('Hi, I want to set up my buy box.', '/api/chat', { mode: 'buy_box_intake' });
     } else if (view.value === 'scan' && chatMessages.value.length === 0 && activeThreadId.value) {
@@ -116,7 +119,9 @@ export function Chat() {
     if (!text) return;
     inputRef.current.value = '';
 
-    if (view.value === 'deal' && currentDeal.value) {
+    if (product.value === 'sba') {
+      sendMessage(text, '/api/sba-deal-chat', { lead: currentSbaLead.value });
+    } else if (view.value === 'deal' && currentDeal.value) {
       const scan = scans.value.find(s => s.id === currentDeal.value.search_id);
       sendMessage(text, '/api/deal-chat', { deal: currentDeal.value, buy_box: scan?.buy_box || {} });
     } else {
@@ -143,6 +148,11 @@ export function Chat() {
 
   return (
     <div id="chat-panel">
+      {product.value === 'sba' && currentSbaLead.value && (
+        <div class="sba-chat-context">
+          Discussing: {currentSbaLead.value.business_name} ({currentSbaLead.value.retirement_tier})
+        </div>
+      )}
       <div class="chat-messages" ref={msgsRef}>
         <div class="chat-messages-inner">
           {/* Pre-generated brief for HOT/STRONG deals */}

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'preact/hooks';
 import { batch } from '@preact/signals';
-import { email, view, scans, deals, activeThreadId, sidebarOpen, sidebarWidth, previewOpen, previewWidth } from './lib/state.js';
-import { loadUserData, switchThread } from './lib/api.js';
+import { email, view, scans, deals, activeThreadId, sidebarOpen, sidebarWidth, previewOpen, previewWidth, product, sbaLeads, activeSbaLeadId } from './lib/state.js';
+import { loadUserData, switchThread, loadSbaData } from './lib/api.js';
 import { Sidebar } from './components/Sidebar.jsx';
 import { Chat } from './components/Chat.jsx';
 import { Preview } from './components/Preview.jsx';
 import { Settings } from './components/Settings.jsx';
+import { SbaBuyBox } from './components/SbaBuyBox.jsx';
 
 function ResizeHandle({ edge, widthSignal, minW, maxW }) {
   const onPointerDown = (e) => {
@@ -43,6 +44,20 @@ function ResizeHandle({ edge, widthSignal, minW, maxW }) {
 //   2. Has scans but no deals   → scan view (user has buy box, results pending)
 //   3. No scans at all          → onboarding (genuinely new user)
 async function routeAfterLoad() {
+  // SBA product routing
+  if (product.value === 'sba') {
+    if (sbaLeads.value.length > 0) {
+      batch(() => {
+        activeSbaLeadId.value = sbaLeads.value[0].id;
+        view.value = 'sba-lead';
+        previewOpen.value = true;
+      });
+    } else {
+      view.value = 'sba-onboarding';
+    }
+    return;
+  }
+
   console.log('[DH] route: deals=%d scans=%d', deals.value.length, scans.value.length);
 
   if (deals.value.length > 0) {
@@ -111,6 +126,11 @@ function EmailGate() {
 
 export function App() {
   useEffect(() => {
+    // ── SBA product detection ───────────────────────────────────────────────
+    if (window.location.pathname.startsWith('/sba') || new URLSearchParams(window.location.search).get('product') === 'sba') {
+      product.value = 'sba';
+    }
+
     // ── Magic-link handler (runs before localStorage check) ──────────────────
     const params = new URLSearchParams(window.location.search);
     const fromMagic = params.get('from') === 'magic';
@@ -129,6 +149,7 @@ export function App() {
       (async () => {
         try {
           await loadUserData();
+          if (product.value === 'sba') await loadSbaData();
           if (magicScanId) {
             const scan = scans.value.find(s => s.id === magicScanId);
             if (scan) {
@@ -153,6 +174,7 @@ export function App() {
     if (stored) {
       email.value = stored;
       loadUserData()
+        .then(() => product.value === 'sba' ? loadSbaData() : Promise.resolve())
         .then(() => routeAfterLoad())
         .catch((err) => {
           // API failed on auto-load — clear stale email so user lands on the gate
@@ -166,6 +188,18 @@ export function App() {
 
   if (!email.value) {
     return <EmailGate />;
+  }
+
+  // SBA onboarding — buy box (renders in the main chat area, not as a gate)
+  if (product.value === 'sba' && view.value === 'sba-onboarding') {
+    return (
+      <div id="app-shell">
+        <Settings />
+        <Sidebar />
+        {sidebarOpen.value && <ResizeHandle edge="right" widthSignal={sidebarWidth} minW={180} maxW={480} />}
+        <SbaBuyBox />
+      </div>
+    );
   }
 
   return (

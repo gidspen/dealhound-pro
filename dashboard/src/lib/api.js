@@ -2,7 +2,8 @@ import {
   email, agentName, scans, deals, activeThreads, starredDealIds,
   viewedDealIds, archivedDealIds,
   chatMessages, chatConversationId, chatStreaming,
-  cacheGet, cacheSet, activeThreadId
+  cacheGet, cacheSet, activeThreadId,
+  product, sbaLeads, sbaScans, activeSbaLeadId
 } from './state.js';
 
 const API_BASE = '';
@@ -215,4 +216,47 @@ export async function archiveDeal(dealId) {
     if (currentlyArchived) reverted.add(dealId); else reverted.delete(dealId);
     archivedDealIds.value = reverted;
   }
+}
+
+// ── SBA API ─────────────────────────────────────────────────────────────────
+
+export async function loadSbaData() {
+  try {
+    const res = await fetch(`${API_BASE}/api/sba-leads?email=${encodeURIComponent(email.value)}`);
+    if (!res.ok) throw new Error('Failed to load SBA data');
+    const data = await res.json();
+    sbaLeads.value = data.leads || [];
+  } catch (err) {
+    console.warn('[SBA] API unavailable, loading mock data:', err.message);
+    try {
+      const mockRes = await fetch(`${import.meta.env.BASE_URL}sba-mock-leads.json`);
+      if (mockRes.ok) {
+        sbaLeads.value = await mockRes.json();
+        return;
+      }
+    } catch (_e) { /* fallback failed too */ }
+    sbaLeads.value = [];
+  }
+}
+
+export async function submitSbaBuyBox({ vertical, state, city, leadCount }) {
+  const res = await fetch(`${API_BASE}/api/sba-scan-start`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: email.value,
+      vertical: vertical || 'dental',
+      state: state || 'TX',
+      city: city || null,
+      lead_count: leadCount || 20
+    })
+  });
+
+  if (!res.ok) throw new Error('Failed to start SBA scan');
+  const data = await res.json();
+
+  // After starting scan, load the leads (which may be mock data)
+  await loadSbaData();
+
+  return data;
 }

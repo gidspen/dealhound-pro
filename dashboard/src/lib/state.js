@@ -13,6 +13,12 @@ export const sidebarTab = signal('inbox');
 export const unreadFilter = signal(false);
 export const scanInProgress = signal(false);
 
+// ── SBA product signals ─────────────────────────────────────────────────────
+export const product = signal('realestate');
+export const sbaLeads = signal([]);
+export const sbaScans = signal([]);
+export const activeSbaLeadId = signal(null);
+
 export const scans = signal([]);
 export const deals = signal([]);
 export const activeThreads = signal([]);
@@ -78,4 +84,23 @@ export const dealsForCurrentScan = computed(() => {
   const scan = currentScan.value;
   if (!scan) return [];
   return deals.value.filter(d => d.search_id === scan.id);
+});
+
+// ── SBA computed ────────────────────────────────────────────────────────────
+export const currentSbaLead = computed(() => {
+  if (!activeSbaLeadId.value) return null;
+  return sbaLeads.value.find(l => l.id === activeSbaLeadId.value) || null;
+});
+
+export const sbaLeadsByTier = computed(() => {
+  const grouped = { HOT: [], STRONG: [], WATCH: [] };
+  sbaLeads.value.forEach(lead => {
+    if (lead.retirement_tier === 'DISCARD') return;
+    if (grouped[lead.retirement_tier]) {
+      grouped[lead.retirement_tier].push(lead);
+    }
+  });
+  // Sort each group by score descending
+  Object.values(grouped).forEach(arr => arr.sort((a, b) => b.retirement_score - a.retirement_score));
+  return grouped;
 });

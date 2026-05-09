@@ -4,9 +4,11 @@ import {
   settingsOpen, sidebarOpen, sidebarWidth, sidebarTab, unreadFilter,
   starredDealIds, viewedDealIds, archivedDealIds,
   inboxDeals, trackingDeals, newDealCount, previewOpen,
-  chatMessages, scanInProgress
+  chatMessages, scanInProgress,
+  product, sbaLeads, sbaLeadsByTier, activeSbaLeadId
 } from '../lib/state.js';
 import { switchThread, toggleStar, archiveDeal, loadUserData } from '../lib/api.js';
+import { SbaLeadCard } from './SbaLeadCard.jsx';
 import { tierFromStrategy, tierLabel, fmtPrice, parseBreakdown } from '../lib/utils.js';
 
 // ── DealRow ──────────────────────────────────────────────────────────────────
@@ -166,6 +168,78 @@ export function Sidebar() {
   }
 
   // ── Expanded state ─────────────────────────────────────────────────────────
+
+  // ── SBA Product Mode ────────────────────────────────────────────────────
+  if (product.value === 'sba') {
+    const tiers = sbaLeadsByTier.value;
+    const totalLeads = sbaLeads.value.length;
+
+    return (
+      <div id="sidebar" style={`width: ${sidebarWidth.value}px`}>
+        <div class="sidebar-logo">
+          <div class="sidebar-logo-icon sba-logo-icon">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="white">
+              <path d="M8 0 L9.6 6.4 L16 8 L9.6 9.6 L8 16 L6.4 9.6 L0 8 L6.4 6.4 Z"/>
+            </svg>
+          </div>
+          <span class="sidebar-logo-text">Deal Hound</span><span class="beta-badge">SBA</span>
+          <button
+            class="sidebar-toggle"
+            onClick={() => { sidebarOpen.value = false; }}
+            title="Collapse sidebar"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M11 17l-5-5 5-5" /><path d="M18 17l-5-5 5-5" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="sidebar-controls sba-sidebar-controls">
+          <div class="sba-sidebar-summary">{totalLeads} practices scored</div>
+        </div>
+
+        <div class="sidebar-scroll">
+          {tiers.HOT.length > 0 && (
+            <>
+              <div class="sidebar-section-hdr sba-hdr-hot">Hot · {tiers.HOT.length}</div>
+              {tiers.HOT.map(lead => <SbaLeadCard key={lead.id} lead={lead} />)}
+            </>
+          )}
+          {tiers.STRONG.length > 0 && (
+            <>
+              <div class="sidebar-section-hdr sba-hdr-strong">Strong · {tiers.STRONG.length}</div>
+              {tiers.STRONG.map(lead => <SbaLeadCard key={lead.id} lead={lead} />)}
+            </>
+          )}
+          {tiers.WATCH.length > 0 && (
+            <>
+              <div class="sidebar-section-hdr sba-hdr-watch">Watch · {tiers.WATCH.length}</div>
+              {tiers.WATCH.map(lead => <SbaLeadCard key={lead.id} lead={lead} />)}
+            </>
+          )}
+
+          {totalLeads === 0 && (
+            <div class="sidebar-empty">No leads yet — submit the buy box to scan.</div>
+          )}
+        </div>
+
+        <div class="sidebar-footer">
+          <button
+            class="sidebar-settings-btn"
+            onClick={() => { settingsOpen.value = true; }}
+            title="Settings"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
+            </svg>
+          </button>
+          <span class="sidebar-email">{email.value}</span>
+        </div>
+      </div>
+    );
+  }
+
   let activeDeals = sidebarTab.value === 'tracking' ? trackingDeals.value : inboxDeals.value;
   if (sidebarTab.value === 'inbox' && unreadFilter.value) {
     activeDeals = activeDeals.filter(d => !viewedDealIds.value.has(d.id));

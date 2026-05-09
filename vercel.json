@@ -12,9 +12,14 @@
     "api/health.js": { "maxDuration": 5 },
     "api/create-checkout.js": { "maxDuration": 10 },
     "api/stripe-webhook.js": { "maxDuration": 10 },
-    "api/free-scan-start.js": { "maxDuration": 10 }
+    "api/free-scan-start.js": { "maxDuration": 10 },
+    "api/sba-scan-start.js": { "maxDuration": 10 },
+    "api/sba-leads.js": { "maxDuration": 10 },
+    "api/sba-deal-chat.js": { "maxDuration": 60 }
   },
   "rewrites": [
+    { "source": "/sba", "destination": "/dashboard-dist/index.html" },
+    { "source": "/sba/(.*)", "destination": "/dashboard-dist/index.html" },
     { "source": "/api/magic-link", "destination": "/api/scan-report?_action=magic-link" },
     { "source": "/api/deal-files", "destination": "/api/deal-actions?_route=files" },
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },

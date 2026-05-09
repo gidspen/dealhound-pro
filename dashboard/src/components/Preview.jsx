@@ -13,8 +13,11 @@ import {
   activeThreadId,
   scanInProgress,
   email,
+  product,
+  currentSbaLead,
 } from '../lib/state.js';
 import { switchThread, loadUserData, toggleStar } from '../lib/api.js';
+import { SbaLeadDetail } from './SbaLeadDetail.jsx';
 import {
   fmtPrice,
   tierFromStrategy,
@@ -500,7 +503,7 @@ function DealDetail() {
 export function Preview() {
   // Subscribe to currentDeal so Preview re-renders when it changes
   const deal = currentDeal.value;
-  const hasContent = view.value === 'scan' || view.value === 'deal';
+  const hasContent = view.value === 'scan' || view.value === 'deal' || view.value === 'sba-lead' || view.value === 'sba-leads';
 
   // Auto-open when switching to a view that has preview content
   useEffect(() => {
@@ -544,6 +547,7 @@ export function Preview() {
     <div id="preview-panel" class="preview-open" style={`width: ${previewWidth.value}px`}>
       {view.value === 'scan' && <ScanDealList />}
       {view.value === 'deal' && <DealDetail />}
+      {(view.value === 'sba-lead' || view.value === 'sba-leads') && product.value === 'sba' && <SbaLeadDetail />}
     </div>
   );
 }

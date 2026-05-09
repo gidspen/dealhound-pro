@@ -1,0 +1,2882 @@
+[
+  {
+    "id": "sba-mock-001",
+    "business_name": "Lone Star Family Dentistry",
+    "vertical": "dental",
+    "address": "4821 Westheimer Rd",
+    "city": "Houston",
+    "state": "TX",
+    "zip": "77056",
+    "phone": "(713) 555-0142",
+    "website": "lonestarfamilydentistry.com",
+    "owner_name": "Dr. Robert Harmon",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 38,
+    "license_year": 1988,
+    "retirement_score": 93,
+    "retirement_tier": "HOT",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": true,
+        "evidence": "License issued in 1988 — 38 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": true,
+        "evidence": "Business registered 38 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Single provider name on website and state board listing",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate dentist listed on website or board",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No matching surname found in practice staff listings",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Website copyright footer reads 2019; no posts since 2021",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": true,
+        "evidence": "Site built on Dreamweaver-era HTML; no HTTPS redirect",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Facebook page last post July 2020",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Google reviews: 12 in 2021, 3 in 2023, 1 in 2025",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review was 14 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "38 years of Lone Star Family Dentistry — a conversation about what comes next",
+    "outreach_body": "Dr. Harmon, nearly four decades of serving Houston families is a remarkable legacy — and it raises a question worth asking before anyone else does: have you started thinking about what the next chapter looks like for you and your practice? I work with dentists at exactly this stage, helping them transition on their own terms rather than scrambling when the time comes. I'd love to share what that process can look like — no pressure, just a conversation.",
+    "outreach_angle": "legacy",
+    "status": "new",
+    "scored_at": "2026-05-09T08:00:00.000Z",
+    "created_at": "2026-05-09T08:00:00.000Z"
+  },
+  {
+    "id": "sba-mock-002",
+    "business_name": "Hill Country Dental Care",
+    "vertical": "dental",
+    "address": "312 Main St",
+    "city": "Kerrville",
+    "state": "TX",
+    "zip": "78028",
+    "phone": "(830) 555-0287",
+    "website": "hillcountrydentalcare.com",
+    "owner_name": "Dr. Patricia Webb",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 34,
+    "license_year": 1992,
+    "retirement_score": 88,
+    "retirement_tier": "HOT",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": true,
+        "evidence": "License issued in 1992 — 34 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": true,
+        "evidence": "Business registered 34 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Single provider listed on TX Dental Board and website",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate or partner dentist identified",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match found in staff or provider listings",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Website copyright 2020; blog not updated since 2022",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": true,
+        "evidence": "Flash-era navigation menu; no mobile-responsive layout",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Instagram active; last post 3 weeks ago",
+        "source": "instagram_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Google reviews: 9 in 2022, 2 in 2024, 0 in 2025",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Last Google review posted 94 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Hill Country Dental — 34 years is a career worth protecting",
+    "outreach_body": "Dr. Webb, what you've built in Kerrville over 34 years is exactly the kind of practice that deserves a thoughtful transition — not a rushed sale. I work with practitioners who want to protect what they've built and move into the next chapter on their own schedule, with the right buyer. If you've ever wondered what your options look like, I'd welcome a low-key conversation whenever the timing feels right.",
+    "outreach_angle": "succession",
+    "status": "new",
+    "scored_at": "2026-05-09T08:01:00.000Z",
+    "created_at": "2026-05-09T08:01:00.000Z"
+  },
+  {
+    "id": "sba-mock-003",
+    "business_name": "Pecos Valley Smiles",
+    "vertical": "dental",
+    "address": "1104 S Cedar St",
+    "city": "Pecos",
+    "state": "TX",
+    "zip": "79772",
+    "phone": "(432) 555-0319",
+    "website": "pecosvalleysmiles.com",
+    "owner_name": "Dr. Gerald Muñoz",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 36,
+    "license_year": 1990,
+    "retirement_score": 85,
+    "retirement_tier": "HOT",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": true,
+        "evidence": "License issued in 1990 — 36 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": true,
+        "evidence": "Business registered 36 years ago per TX SOS",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Solo provider on board listing; one operatory per address record",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate dentist on website or board records",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Possible family member (same last name) listed as hygienist",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "No website content changes detected since 2021",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": true,
+        "evidence": "jQuery 1.4 detected; no SSL certificate",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Facebook page last post October 2019",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Google reviews: 8 in 2021, 2 in 2023, 1 in 2025",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Last Google review posted 78 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "36 years serving Pecos — is a transition plan on your radar?",
+    "outreach_body": "Dr. Muñoz, a practice like Pecos Valley Smiles doesn't happen by accident — it takes decades of trust-building in the community. I help dentists at this stage of their career think through succession before it becomes urgent, so the transition reflects the legacy they've built rather than the constraints of a rushed timeline. Would you be open to a brief call to explore what your options might look like?",
+    "outreach_angle": "legacy",
+    "status": "new",
+    "scored_at": "2026-05-09T08:02:00.000Z",
+    "created_at": "2026-05-09T08:02:00.000Z"
+  },
+  {
+    "id": "sba-mock-004",
+    "business_name": "Panhandle Dental Group",
+    "vertical": "dental",
+    "address": "2209 W 10th Ave",
+    "city": "Amarillo",
+    "state": "TX",
+    "zip": "79106",
+    "phone": "(806) 555-0478",
+    "website": "panhandledentalgroup.com",
+    "owner_name": "Dr. Charles Norwood",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 41,
+    "license_year": 1985,
+    "retirement_score": 95,
+    "retirement_tier": "HOT",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": true,
+        "evidence": "License issued in 1985 — 41 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": true,
+        "evidence": "Business registered 41 years ago per TX SOS",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Single dentist listed on TX Dental Board at this address",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate dentist referenced on website or board",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match found in staff listings",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Website last modified 2018 per HTTP headers",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": true,
+        "evidence": "HTML tables layout; IE-compatible meta tags present",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No active social media presence found",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Google reviews: 7 in 2020, 1 in 2023, 0 in 2025",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Last Google review posted 112 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "41 years of Panhandle Dental — you've earned the right to choose how this ends",
+    "outreach_body": "Dr. Norwood, four-plus decades in Amarillo is the kind of career most dentists only dream about. I work with practitioners at this stage to map out a transition that honors what they've built — preserving patient relationships, protecting staff, and maximizing the value of the practice. If you're beginning to think about what the next chapter looks like, I'd genuinely enjoy a conversation.",
+    "outreach_angle": "legacy",
+    "status": "new",
+    "scored_at": "2026-05-09T08:03:00.000Z",
+    "created_at": "2026-05-09T08:03:00.000Z"
+  },
+  {
+    "id": "sba-mock-005",
+    "business_name": "Rio Grande Valley Dental",
+    "vertical": "dental",
+    "address": "817 N Conway Ave",
+    "city": "Mission",
+    "state": "TX",
+    "zip": "78572",
+    "phone": "(956) 555-0563",
+    "website": "rgvdental.com",
+    "owner_name": "Dr. Elaine Castillo",
+    "owner_email": "ecastillo@rgvdental.com",
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 30,
+    "license_year": 1996,
+    "retirement_score": 82,
+    "retirement_tier": "HOT",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": true,
+        "evidence": "License issued in 1996 — 30 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": true,
+        "evidence": "Business registered 30 years ago per TX SOS",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Single dentist on TX Board listing at this address",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate mentioned in any public record",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match found in staff listings",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Website copyright 2021; no new content since mid-2022",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Modern WordPress stack; SSL present",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Facebook last post August 2021",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Google reviews: 11 in 2022, 4 in 2024, 1 in early 2026",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 45 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "30 years in Mission — your practice has options you may not know about",
+    "outreach_body": "Dr. Castillo, three decades of caring for the Mission community is a meaningful legacy. I specialize in helping practice owners like you explore what a planned transition can look like — whether that's two years from now or five — so you stay in control of the outcome. I'd love to share what other dentists in the Valley have done and see if a conversation makes sense.",
+    "outreach_angle": "transition",
+    "status": "new",
+    "scored_at": "2026-05-09T08:04:00.000Z",
+    "created_at": "2026-05-09T08:04:00.000Z"
+  },
+  {
+    "id": "sba-mock-006",
+    "business_name": "North Dallas Dental Associates",
+    "vertical": "dental",
+    "address": "5530 Spring Valley Rd",
+    "city": "Dallas",
+    "state": "TX",
+    "zip": "75254",
+    "phone": "(972) 555-0614",
+    "website": "northdallasdentalassoc.com",
+    "owner_name": "Dr. James Thatcher",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 28,
+    "license_year": 1998,
+    "retirement_score": 77,
+    "retirement_tier": "STRONG",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": true,
+        "evidence": "License issued in 1998 — 28 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": true,
+        "evidence": "Business registered 28 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": false,
+        "evidence": "One associate dentist listed on website",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Associate Dr. Patel listed as part-time provider",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match in staff listings",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Website last updated 2022; blog inactive",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Modern responsive site; Google Analytics present",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Facebook page last post March 2022",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Google reviews: 15 in 2022, 6 in 2024, 2 in 2025",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 22 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "28 years at North Dallas Dental — thinking about what comes next?",
+    "outreach_body": "Dr. Thatcher, after nearly three decades of building a reputation in North Dallas, many practice owners start thinking about timing — not because they're ready to leave, but because they want to choose the outcome rather than have it chosen for them. I work with dentists on exactly this kind of planning. If the idea of a thoughtful, owner-led transition resonates, I'd welcome a brief conversation.",
+    "outreach_angle": "succession",
+    "status": "new",
+    "scored_at": "2026-05-09T08:05:00.000Z",
+    "created_at": "2026-05-09T08:05:00.000Z"
+  },
+  {
+    "id": "sba-mock-007",
+    "business_name": "Capitol City Dental",
+    "vertical": "dental",
+    "address": "3405 Guadalupe St",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78705",
+    "phone": "(512) 555-0732",
+    "website": "capitolcitydental.com",
+    "owner_name": "Dr. Sandra Hoffmann",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 26,
+    "license_year": 2000,
+    "retirement_score": 72,
+    "retirement_tier": "STRONG",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": true,
+        "evidence": "License issued in 2000 — 26 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": true,
+        "evidence": "Business registered 26 years ago per TX SOS",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Solo provider per TX Dental Board",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate dentist in public records",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": false,
+        "evidence": "One staff member shares owner surname — possible family",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Website updated within last 18 months",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Modern stack; responsive design",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Facebook last post April 2023",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Google reviews: 20 in 2023, 7 in 2024, 2 in 2025",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 31 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Capitol City Dental — 26 years of Austin roots and what comes next",
+    "outreach_body": "Dr. Hoffmann, you've built something real in Austin over 26 years — a practice with deep community roots and loyal patients. I help dentists in that position think about their next chapter proactively, not reactively. Even if you're years away from any change, knowing your options now changes everything. I'd be glad to share what a planned transition looks like for a practice like yours.",
+    "outreach_angle": "transition",
+    "status": "new",
+    "scored_at": "2026-05-09T08:06:00.000Z",
+    "created_at": "2026-05-09T08:06:00.000Z"
+  },
+  {
+    "id": "sba-mock-008",
+    "business_name": "Alamo Heights Family Dental",
+    "vertical": "dental",
+    "address": "6420 Broadway St",
+    "city": "San Antonio",
+    "state": "TX",
+    "zip": "78209",
+    "phone": "(210) 555-0841",
+    "website": "alamoheightsfamilydental.com",
+    "owner_name": "Dr. Frank Delgado",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 27,
+    "license_year": 1999,
+    "retirement_score": 68,
+    "retirement_tier": "STRONG",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": true,
+        "evidence": "License issued in 1999 — 27 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": true,
+        "evidence": "Business registered 27 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Solo provider on TX Dental Board records",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate listed publicly",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match in staff listings",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Website copyright 2024; recently updated",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Modern WordPress; mobile-friendly",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Instagram active; posts within last 60 days",
+        "source": "instagram_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Google reviews: 18 in 2023, 6 in 2024, 2 in early 2026",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 18 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Alamo Heights Family Dental — 27 years of San Antonio trust",
+    "outreach_body": "Dr. Delgado, what you've built in Alamo Heights reflects decades of patient relationships that can't be replicated. I work with solo practitioners at this stage of their career to think through what a well-timed transition could look like — preserving continuity for patients and fair value for the owner. If this is even a distant thought, I'd be glad to have a brief conversation.",
+    "outreach_angle": "succession",
+    "status": "new",
+    "scored_at": "2026-05-09T08:07:00.000Z",
+    "created_at": "2026-05-09T08:07:00.000Z"
+  },
+  {
+    "id": "sba-mock-009",
+    "business_name": "Cowtown Smiles Dentistry",
+    "vertical": "dental",
+    "address": "910 E Lancaster Ave",
+    "city": "Fort Worth",
+    "state": "TX",
+    "zip": "76102",
+    "phone": "(817) 555-0956",
+    "website": "cowtownsmiles.com",
+    "owner_name": "Dr. Beverly Kincaid",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 25,
+    "license_year": 2001,
+    "retirement_score": 64,
+    "retirement_tier": "STRONG",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": true,
+        "evidence": "License issued in 2001 — 25 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 25 years ago — borderline threshold",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Solo provider on TX Dental Board at this address",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate found in public records",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No surname match found in staff",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Website blog last post 2022",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Wix-based site; SSL present",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Facebook active; post within last 30 days",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Review velocity stable at roughly 6-8/month",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 7 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "25 years of Cowtown Smiles — a few thoughts on what comes next",
+    "outreach_body": "Dr. Kincaid, a quarter century in Fort Worth is a real milestone — and often the point where dentists start thinking about what the back half of their career looks like. I help practice owners explore succession options before the urgency is forced on them. A short conversation about your situation and timeline would cost you nothing and might open up options you hadn't considered.",
+    "outreach_angle": "transition",
+    "status": "new",
+    "scored_at": "2026-05-09T08:08:00.000Z",
+    "created_at": "2026-05-09T08:08:00.000Z"
+  },
+  {
+    "id": "sba-mock-010",
+    "business_name": "Lubbock Family Dentistry",
+    "vertical": "dental",
+    "address": "4815 82nd St",
+    "city": "Lubbock",
+    "state": "TX",
+    "zip": "79424",
+    "phone": "(806) 555-1047",
+    "website": "lubbockfamilydentistry.com",
+    "owner_name": "Dr. Thomas Garrett",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 24,
+    "license_year": 2002,
+    "retirement_score": 61,
+    "retirement_tier": "STRONG",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": false,
+        "evidence": "License issued in 2002 — 24 years ago, below 25-year threshold",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 24 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Single provider on TX Dental Board listing",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate found on website or board records",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match in any listing",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Website last changed 2021; copyright 2021",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": true,
+        "evidence": "Flash fallback present; no mobile layout",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Facebook page last post January 2022",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Google reviews steady at 3-4/month over 24 months",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 28 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Lubbock Family Dentistry — approaching 25 years, thinking about what's next?",
+    "outreach_body": "Dr. Garrett, as you near the 25-year mark, it's worth starting to think about succession — not because you're done, but because the dentists who get the best outcomes are the ones who plan early. I work with solo practitioners like you to explore what a future transition could look like on your own terms. I'd welcome a brief conversation if you're curious.",
+    "outreach_angle": "succession",
+    "status": "new",
+    "scored_at": "2026-05-09T08:09:00.000Z",
+    "created_at": "2026-05-09T08:09:00.000Z"
+  },
+  {
+    "id": "sba-mock-011",
+    "business_name": "Plano Parkway Dental",
+    "vertical": "dental",
+    "address": "3301 Legacy Dr",
+    "city": "Plano",
+    "state": "TX",
+    "zip": "75023",
+    "phone": "(972) 555-1163",
+    "website": "planoparkwaydental.com",
+    "owner_name": "Dr. Margaret Osei",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 22,
+    "license_year": 2004,
+    "retirement_score": 74,
+    "retirement_tier": "STRONG",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": false,
+        "evidence": "License issued in 2004 — 22 years ago, below 25-year threshold",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 22 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Single provider listed on TX Dental Board",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate dentist in any public listing",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname found in staff",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Last blog post 2021; copyright footer 2021",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": true,
+        "evidence": "jQuery 1.7; no HTTPS on sub-pages",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Facebook last post December 2022",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Google reviews: 14 in 2023, 5 in 2024, 1 in 2025",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Last Google review posted 67 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Plano Parkway Dental — 22 years of building something worth protecting",
+    "outreach_body": "Dr. Osei, you've built a strong practice in Plano over 22 years — the kind of reputation that takes a long time to earn and a short time to erode if a transition isn't handled well. I help dentists think through succession planning before it becomes urgent, so the outcome reflects the value they've built. I'd love to share what that process looks like if you're open to a brief conversation.",
+    "outreach_angle": "legacy",
+    "status": "new",
+    "scored_at": "2026-05-09T08:10:00.000Z",
+    "created_at": "2026-05-09T08:10:00.000Z"
+  },
+  {
+    "id": "sba-mock-012",
+    "business_name": "Sun City Smiles",
+    "vertical": "dental",
+    "address": "7720 Montana Ave",
+    "city": "El Paso",
+    "state": "TX",
+    "zip": "79925",
+    "phone": "(915) 555-1274",
+    "website": "suncitysmiles.com",
+    "owner_name": "Dr. Arthur Benitez",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 23,
+    "license_year": 2003,
+    "retirement_score": 60,
+    "retirement_tier": "STRONG",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": false,
+        "evidence": "License issued in 2003 — 23 years ago, below 25-year threshold",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 23 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Solo provider per TX Dental Board",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate in any listing",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match in staff",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Site last updated 2022; testimonials page not changed in 4 years",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Modern responsive site; SSL present",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Facebook last post February 2023",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Google reviews: 10 in 2022, 4 in 2024, 1 in early 2026",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 40 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Sun City Smiles — 23 years serving El Paso and a transition worth planning",
+    "outreach_body": "Dr. Benitez, El Paso patients build lasting loyalty to their dentist — and 23 years of that trust represents real practice value. I help solo practitioners begin thinking about transition planning well before they need to, so the outcome is on their terms. If you've ever wondered what your options look like, a short conversation would be a good starting point.",
+    "outreach_angle": "transition",
+    "status": "new",
+    "scored_at": "2026-05-09T08:11:00.000Z",
+    "created_at": "2026-05-09T08:11:00.000Z"
+  },
+  {
+    "id": "sba-mock-013",
+    "business_name": "Arlington Gentle Dental",
+    "vertical": "dental",
+    "address": "2101 S Cooper St",
+    "city": "Arlington",
+    "state": "TX",
+    "zip": "76013",
+    "phone": "(817) 555-1381",
+    "website": "arlingtongentledental.com",
+    "owner_name": "Dr. Colleen Yamamoto",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 21,
+    "license_year": 2005,
+    "retirement_score": 58,
+    "retirement_tier": "WATCH",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": false,
+        "evidence": "License issued in 2005 — 21 years ago, below threshold",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 21 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Solo provider per TX Dental Board",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate listed publicly",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match found",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Website copyright 2022; blog inactive since 2022",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Standard WordPress install; mobile responsive",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Facebook active with posts within last 45 days",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Google review velocity stable at 4-5/month",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 12 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Arlington Gentle Dental — 21 years and growing, but worth a future conversation",
+    "outreach_body": "Dr. Yamamoto, 21 years of building a patient base in Arlington is no small thing. I work with dentists on long-range succession thinking — not because a transition is imminent, but so that when it is, you already have a plan. I'd love to connect briefly and share what early-stage transition planning typically looks like for practices at your stage.",
+    "outreach_angle": "transition",
+    "status": "new",
+    "scored_at": "2026-05-09T08:12:00.000Z",
+    "created_at": "2026-05-09T08:12:00.000Z"
+  },
+  {
+    "id": "sba-mock-014",
+    "business_name": "Brazos Valley Dental Center",
+    "vertical": "dental",
+    "address": "1820 Harvey Mitchell Pkwy",
+    "city": "College Station",
+    "state": "TX",
+    "zip": "77840",
+    "phone": "(979) 555-1492",
+    "website": "brazosvalleydental.com",
+    "owner_name": "Dr. Michael Russo",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 19,
+    "license_year": 2007,
+    "retirement_score": 52,
+    "retirement_tier": "WATCH",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": false,
+        "evidence": "License issued in 2007 — 19 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 19 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Single provider on TX Dental Board at this location",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate mentioned in any public record",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match found",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Website updated in 2024; recent content present",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Modern stack; Google Tag Manager present",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Instagram active; regular posts",
+        "source": "instagram_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Google reviews: 16 in 2023, 5 in 2024, 2 in early 2026",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": true,
+        "evidence": "Last Google review posted 71 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Brazos Valley Dental — 19 years in, thinking about the long game?",
+    "outreach_body": "Dr. Russo, you're in what many dentists consider the most productive stretch of their career — and it's exactly the right time to start thinking about what success looks like when you're ready to step back. I work with solo practitioners like you on long-range transition planning so that when the time comes, you're not caught off-guard. I'd welcome a brief conversation if you're curious about the process.",
+    "outreach_angle": "succession",
+    "status": "new",
+    "scored_at": "2026-05-09T08:13:00.000Z",
+    "created_at": "2026-05-09T08:13:00.000Z"
+  },
+  {
+    "id": "sba-mock-015",
+    "business_name": "Corpus Christi Coastal Dental",
+    "vertical": "dental",
+    "address": "4701 Staples St",
+    "city": "Corpus Christi",
+    "state": "TX",
+    "zip": "78411",
+    "phone": "(361) 555-1534",
+    "website": "coastaldental-cc.com",
+    "owner_name": "Dr. Diana Tran",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 20,
+    "license_year": 2006,
+    "retirement_score": 47,
+    "retirement_tier": "WATCH",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": false,
+        "evidence": "License issued in 2006 — 20 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 20 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Solo provider on TX Dental Board",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Part-time associate listed on website",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match in staff listings",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Website not updated since 2022",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Wix-based; mobile responsive",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Facebook posts within last 60 days",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Google reviews stable at 4/month",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 9 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Corpus Christi Coastal Dental — 20 years in and worth protecting",
+    "outreach_body": "Dr. Tran, two decades of practice along the coast means you've built real patient loyalty and community trust. I help dentists think through what comes next well before urgency sets in. If you're at all curious about how other solo practitioners have navigated this conversation, I'd be glad to share a few examples and see if a deeper discussion makes sense.",
+    "outreach_angle": "legacy",
+    "status": "new",
+    "scored_at": "2026-05-09T08:14:00.000Z",
+    "created_at": "2026-05-09T08:14:00.000Z"
+  },
+  {
+    "id": "sba-mock-016",
+    "business_name": "Laredo Family Smiles",
+    "vertical": "dental",
+    "address": "2410 San Bernardo Ave",
+    "city": "Laredo",
+    "state": "TX",
+    "zip": "78040",
+    "phone": "(956) 555-1645",
+    "website": "laredofamilysmiles.com",
+    "owner_name": "Dr. Oscar Villarreal",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 17,
+    "license_year": 2009,
+    "retirement_score": 43,
+    "retirement_tier": "WATCH",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": false,
+        "evidence": "License issued in 2009 — 17 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 17 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Solo provider on TX Dental Board",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate listed",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match found",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Website updated within last year; new patient specials posted recently",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Modern Squarespace site; SSL and analytics present",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Facebook active; recent patient spotlights posted",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Google reviews growing modestly year over year",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 5 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Laredo Family Smiles — building something worth a long-term plan",
+    "outreach_body": "Dr. Villarreal, at 17 years you're in the thick of practice growth — and that's exactly when smart dentists start thinking about what the endgame looks like. I help solo practitioners in practices like yours understand their succession options early, so the transition is on their timeline, not forced by circumstance. Happy to share what this looks like if you're curious.",
+    "outreach_angle": "transition",
+    "status": "new",
+    "scored_at": "2026-05-09T08:15:00.000Z",
+    "created_at": "2026-05-09T08:15:00.000Z"
+  },
+  {
+    "id": "sba-mock-017",
+    "business_name": "Midland Basin Dental",
+    "vertical": "dental",
+    "address": "3118 Andrews Hwy",
+    "city": "Midland",
+    "state": "TX",
+    "zip": "79703",
+    "phone": "(432) 555-1752",
+    "website": "midlandbasindental.com",
+    "owner_name": "Dr. Heather Strickland",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 18,
+    "license_year": 2008,
+    "retirement_score": 40,
+    "retirement_tier": "WATCH",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": false,
+        "evidence": "License issued in 2008 — 18 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 18 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Solo provider on TX Dental Board records",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate listed in any public record",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Spouse listed as office manager on About page",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Website has 2025 content; active blog",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Modern WordPress; good mobile experience",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Instagram: posts weekly; 800 followers",
+        "source": "instagram_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Google reviews growing at 8+/month",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 3 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Midland Basin Dental — still growing, but the right time to think ahead",
+    "outreach_body": "Dr. Strickland, you're clearly building something strong in Midland — 18 years in with an active practice and engaged patients. I don't think of succession planning as something you do when you're winding down; the best outcomes happen when you start the conversation years early. If you'd ever like to explore what that looks like, I'd be happy to chat.",
+    "outreach_angle": "succession",
+    "status": "new",
+    "scored_at": "2026-05-09T08:16:00.000Z",
+    "created_at": "2026-05-09T08:16:00.000Z"
+  },
+  {
+    "id": "sba-mock-018",
+    "business_name": "Waco Family Dental Group",
+    "vertical": "dental",
+    "address": "1507 N Valley Mills Dr",
+    "city": "Waco",
+    "state": "TX",
+    "zip": "76710",
+    "phone": "(254) 555-1863",
+    "website": "wacofamilydentalgroup.com",
+    "owner_name": "Dr. Nathan Kowalski",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 16,
+    "license_year": 2010,
+    "retirement_score": 28,
+    "retirement_tier": "DISCARD",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": false,
+        "evidence": "License issued in 2010 — 16 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 16 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": false,
+        "evidence": "Two dentists listed on TX Dental Board at this address",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Associate dentist Dr. Nguyen listed full-time",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match in listings",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Website with 2025 copyright; active blog",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Modern Squarespace site; analytics and booking widget",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Facebook and Instagram both active",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Google reviews growing at 10+/month",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted today",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Waco Family Dental — thinking long-term?",
+    "outreach_body": "Dr. Kowalski, you're in a growth phase with a strong practice — and that actually makes this a great time to at least understand your future options. I work with dentists who want to know the full landscape before they need to act on it. If you're even mildly curious about what a future transition might look like, I'd be glad to share what we typically see at this stage.",
+    "outreach_angle": "transition",
+    "status": "new",
+    "scored_at": "2026-05-09T08:17:00.000Z",
+    "created_at": "2026-05-09T08:17:00.000Z"
+  },
+  {
+    "id": "sba-mock-019",
+    "business_name": "East Texas Bright Smiles",
+    "vertical": "dental",
+    "address": "2305 N University Dr",
+    "city": "Nacogdoches",
+    "state": "TX",
+    "zip": "75965",
+    "phone": "(936) 555-1974",
+    "website": "etxbrightsmiles.com",
+    "owner_name": "Dr. Lisa Fontenot",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 14,
+    "license_year": 2012,
+    "retirement_score": 22,
+    "retirement_tier": "DISCARD",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": false,
+        "evidence": "License issued in 2012 — 14 years ago",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 14 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": false,
+        "evidence": "Two dentists on TX Dental Board at this address",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Associate listed on website and board",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Associate shares owner surname — likely family practice",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Website has 2026 content; active blog with monthly posts",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Clean modern site; online booking widget present",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Facebook and Instagram active with high engagement",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Google reviews growing strongly at 12+/month",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted yesterday",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "East Texas Bright Smiles — early stage, but worth a conversation someday",
+    "outreach_body": "Dr. Fontenot, you're clearly in a growth phase in Nacogdoches with a strong team around you. I reach out to practices like yours early — not because succession is near, but because dentists who understand their options at this stage consistently get better outcomes later. If you're ever curious about the landscape, I'd be glad to share what we typically see.",
+    "outreach_angle": "legacy",
+    "status": "new",
+    "scored_at": "2026-05-09T08:18:00.000Z",
+    "created_at": "2026-05-09T08:18:00.000Z"
+  },
+  {
+    "id": "sba-mock-020",
+    "business_name": "Beaumont Bay Dental",
+    "vertical": "dental",
+    "address": "3820 Calder Ave",
+    "city": "Beaumont",
+    "state": "TX",
+    "zip": "77706",
+    "phone": "(409) 555-2083",
+    "website": "beaumontbaydental.com",
+    "owner_name": "Dr. Kevin Arceneaux",
+    "owner_email": null,
+    "owner_phone": null,
+    "owner_linkedin": null,
+    "years_in_business": 21,
+    "license_year": 2005,
+    "retirement_score": 55,
+    "retirement_tier": "WATCH",
+    "signals": [
+      {
+        "key": "license_25y",
+        "category": "owner_age",
+        "weight": 15,
+        "fired": false,
+        "evidence": "License issued in 2005 — 21 years ago, below 25-year threshold",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "business_reg_25y",
+        "category": "business_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "Business registered 21 years ago",
+        "source": "tx_sos",
+        "source_url": null
+      },
+      {
+        "key": "linkedin_grad_pre85",
+        "category": "owner_age",
+        "weight": 10,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "solo_practitioner",
+        "category": "practice_structure",
+        "weight": 15,
+        "fired": true,
+        "evidence": "Single provider listed on TX Dental Board",
+        "source": "tx_dental_board",
+        "source_url": null
+      },
+      {
+        "key": "no_associate",
+        "category": "practice_structure",
+        "weight": 10,
+        "fired": true,
+        "evidence": "No associate listed in any public source",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "no_family_in_biz",
+        "category": "succession_readiness",
+        "weight": 5,
+        "fired": true,
+        "evidence": "No family surname match in staff",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "website_stale_3y",
+        "category": "digital_signals",
+        "weight": 8,
+        "fired": true,
+        "evidence": "Website copyright 2022; no recent blog updates",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "outdated_tech",
+        "category": "digital_signals",
+        "weight": 4,
+        "fired": false,
+        "evidence": "Wix-based; SSL present; mobile friendly",
+        "source": "website_scrape",
+        "source_url": null
+      },
+      {
+        "key": "dead_social",
+        "category": "digital_signals",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Facebook posts within last 30 days",
+        "source": "facebook_scrape",
+        "source_url": null
+      },
+      {
+        "key": "review_velocity_drop",
+        "category": "business_health",
+        "weight": 8,
+        "fired": false,
+        "evidence": "Google reviews stable at 3-4/month",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "last_review_60d",
+        "category": "business_health",
+        "weight": 5,
+        "fired": false,
+        "evidence": "Last Google review posted 19 days ago",
+        "source": "google_maps",
+        "source_url": null
+      },
+      {
+        "key": "no_jobs_12mo",
+        "category": "hiring_signals",
+        "weight": 3,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      },
+      {
+        "key": "flat_staff_5y",
+        "category": "hiring_signals",
+        "weight": 2,
+        "fired": false,
+        "evidence": "LinkedIn data not yet integrated",
+        "source": "pending",
+        "source_url": null
+      }
+    ],
+    "outreach_subject": "Beaumont Bay Dental — 21 years of Southeast Texas dental care",
+    "outreach_body": "Dr. Arceneaux, two decades of serving Beaumont patients reflects a practice that runs on trust. I work with solo dentists at this stage to understand what a future transition could look like — whether that's 3 years out or 10. Getting clarity now means you'll have options when it counts. If you're open to a brief conversation, I'd be glad to share what we're seeing in the market.",
+    "outreach_angle": "transition",
+    "status": "new",
+    "scored_at": "2026-05-09T08:19:00.000Z",
+    "created_at": "2026-05-09T08:19:00.000Z"
+  }
+]
