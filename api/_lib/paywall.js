@@ -2,6 +2,8 @@
  * paywall.js — subscription enforcement helpers
  */
 
+const FREE_RUNS = 1;
+
 const TIER_LIMITS = {
   founding: 10,
   hunter: 10,
@@ -23,14 +25,38 @@ async function checkPaywall(email, supabase) {
     .eq('email', email)
     .single();
 
-  // No row or no tier — unsubscribed
-  if (!user || user.subscription_tier == null) {
+  // No row at all — real edge case (race on user creation)
+  if (!user) {
     return {
       allowed: false,
       status: 402,
       body: {
         error:
           "Hey, you'll need a subscription to run a scan. Pick a plan and let's get you hunting.",
+        checkoutUrl: '/api/create-checkout',
+        tier: null,
+      },
+    };
+  }
+
+  // No tier — allow free first run, then paywall
+  if (user.subscription_tier == null) {
+    if (user.agent_runs_used < FREE_RUNS) {
+      return {
+        allowed: true,
+        user: {
+          email: user.email,
+          subscription_tier: user.subscription_tier,
+          agent_runs_used: user.agent_runs_used,
+        },
+        tier_limit: FREE_RUNS,
+      };
+    }
+    return {
+      allowed: false,
+      status: 402,
+      body: {
+        error: "You've used your free scan. Pick a plan to keep hunting.",
         checkoutUrl: '/api/create-checkout',
         tier: null,
       },
