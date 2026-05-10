@@ -35,10 +35,11 @@ describe.skipIf(missingEnv)('paywall', () => {
   });
 
   afterAll(async () => {
-    await supabase
+    const { error } = await supabase
       .from('users')
       .delete()
       .in('email', Object.values(emails));
+    if (error) console.error('afterAll cleanup failed — test rows may linger:', error.message);
   });
 
   it('null tier, 0 runs → allowed (free first run)', async () => {

@@ -192,17 +192,20 @@ Reply in 1-2 sentences, in character: confident, sharp, brief. Tell the investor
     .eq('search_id', searchId)
     .eq('passed_hard_filters', true);
 
+  const parseBreakdown = x => {
+    try { return typeof x === 'string' ? JSON.parse(x) : (x || {}); } catch { return {}; }
+  };
+
   // Sort by priority_score descending so Deal 1 = highest scorer — matches the
   // preview panel ranking. Supabase insertion order (order by id) diverges from
   // score rank, which is what caused "Deal 11" in chat ≠ rank 11 in the UI.
-  const deals = (dealsRaw || []).slice().sort((a, b) => {
-    const bda = typeof a.score_breakdown === 'string' ? JSON.parse(a.score_breakdown) : (a.score_breakdown || {});
-    const bdb = typeof b.score_breakdown === 'string' ? JSON.parse(b.score_breakdown) : (b.score_breakdown || {});
-    return (bdb.priority_score ?? 0) - (bda.priority_score ?? 0);
-  });
+  // Pre-parse score_breakdown once per deal to avoid O(n log n) re-parses in the comparator.
+  const deals = (dealsRaw || [])
+    .map(d => ({ ...d, _bd: parseBreakdown(d.score_breakdown) }))
+    .sort((a, b) => (b._bd.priority_score ?? 0) - (a._bd.priority_score ?? 0));
 
   const dealSummaries = deals.map((d, i) => {
-    const bd = typeof d.score_breakdown === 'string' ? JSON.parse(d.score_breakdown) : (d.score_breakdown || {});
+    const bd = d._bd;
     const tier = bd.tier || bd.strategy?.overall || 'UNKNOWN';
     const risk = bd.risk?.level || 'UNKNOWN';
     return `Deal ${i + 1}: ${d.title || 'Unnamed'}
@@ -221,7 +224,7 @@ Your personality: Direct, knowledgeable, confident. You sound like a sharp deal 
 INVESTOR'S BUY BOX:
 ${buyBox}
 
-DEALS FOUND (${(deals || []).length} survived the buy box filter):
+DEALS FOUND (${deals.length} survived the buy box filter):
 ${dealSummaries || 'No deals survived the filter.'}
 
 Instructions:
@@ -231,7 +234,7 @@ Instructions:
 - If the investor asks to compare deals, be specific — reference numbers, not generalities.
 - If they ask to drill into a deal, give detailed analysis using the score breakdown.
 - Be brief. No filler. No cheerleading. Sharp opinions backed by data.
-${(deals || []).length === 0 ? '\nNo deals matched. Suggest adjusting the buy box — be specific about which criteria are too narrow.' : ''}`;
+${deals.length === 0 ? '\nNo deals matched. Suggest adjusting the buy box — be specific about which criteria are too narrow.' : ''}`;
 }
 
 module.exports = async function handler(req, res) {
