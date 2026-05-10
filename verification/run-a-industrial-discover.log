@@ -1,0 +1,69 @@
+The write was blocked as a sensitive file. Approve and I'll save it — or let me know if you want a different path.
+
+Here's the full discovery summary:
+
+---
+
+```
+=== SITE DISCOVERY RESULTS — INDUSTRIAL BUY BOX ===
+Buy box: warehouse | flex industrial | self-storage | distribution center | light mfg
+Price range: $300,000–$3,000,000 | States: TX, OH, TN, PA
+
+Discovered: 2026-05-09
+
+SITES — HIGH SIGNAL (13 verified):
+  ✓ LoopNet — 1,930 TX / 316 OH warehouses confirmed
+  ✓ Crexi — 130k+ national listings, all 6 property types covered
+  ✓ CommercialSearch — 1,221 TX industrial, 425 OH industrial
+  ✓ Marcus & Millichap — 250 TX self-storage; warehouse/industrial NNN
+  ✓ Argus Self Storage Advisors — 12 active listings (Playwright confirmed)
+  ✓ Texas Storage Investors — 47 active TX listings (Playwright confirmed)
+  ✓ JLL Properties — TX/PA/OH/TN industrial (skews large)
+  ✓ CBRE — Pittsburgh/Columbus confirmed; Self Storage Advisory group
+  ✓ Cushman & Wakefield — TX/OH/TN industrial + MELE Storage Group
+  ✓ Matthews Real Estate — TX/TN industrial closings confirmed; 600+ agents
+  ✓ Colliers — National industrial + self-storage division; Columbus affiliate
+  ✓ NAI Robert Lynn — Most deeply rooted DFW industrial brokerage
+  ✓ NAI Ohio Equities — #1 Columbus industrial team, 65+ yrs experience
+  ✓ NAI Nashville Stanton Group — Exclusive Middle TN NAI partner
+  ✓ Ten-X Commercial — #1 CRE auction platform (access via LoopNet)
+
+SITES — MEDIUM SIGNAL (28 verified):
+  ✓ CommercialCafe | PropertyShark | Showcase.com | CityFeet
+  ✓ BizBuySell | BizQuest | Realmo | CIMLS | CommercialFlip | LandWatch
+  ✓ LandSearch | Avison Young | Warehouse Finder DFW | Lee & Associates DFW
+  ✓ CBRE Self Storage Advisory | ListSelfStorage | Karr-Cunningham Storage
+  ✓ Performance Self Storage Group | Storage Acquisition Group
+  ✓ Tranzon Auctions | Industrial Auction Hub | FRE Auctions
+  ✓ NAI Mertz (Eastern PA) | NAI Saig (Memphis)
+  ✓ SVN Wilson (Columbus) | SVN Wood (Knoxville)
+  ✓ Coldwell Banker Commercial | KW Commercial
+  ✓ Reonomy | PropStream
+
+SITES — LOW SIGNAL (13 verified):
+  ✓ Warehouse FTW | VIP Realty Dallas | Lee & Associates DFW
+  ✓ DRK & Company | Columbus Industrial Team | Platz Realty Group
+  ✓ IPB Industrial | Gerspacher Real Estate Group
+  ✓ Memphis Commercial & Industrial | SellYourCommercial (Pittsburgh)
+  ✓ SVN Traditions | Ohio Real Estate Auctions | TNRealEstate.Auction
+  ✓ LANDFLIP | CIMLS | Off-Market.io
+
+NOT VERIFIED (login-gated):
+  ✗ Brevitas — requires professional account to view listings
+
+INDIVIDUAL LISTINGS FOUND (3 — ready to score):
+  → Flex Building, Madison TN — Crexi — $975,000 — pending_score
+  → Industrial Warehouse, Fort Worth TX — warehouseftw.com — 9,000 SF — pending_score
+  → Flex Building, Goodlettsville TN — CommercialSearch — 35,528 SF — pending_score
+
+=== TOTAL: 54 verified Bucket A sources (15 HIGH + 28 MEDIUM + 13 LOW) ===
+
+=== RANK-POSITION HISTOGRAM ===
+  rank 1–10:  HIGH=11  MEDIUM=18  LOW=8   (37 total)
+  rank 11–25: HIGH=2   MEDIUM=6   LOW=4   (12 total)
+  rank 26+:   HIGH=2   MEDIUM=4   LOW=1   (5 total, mostly regional)
+```
+
+---
+
+Once you approve the file write, it saves to `discovered-sites.json` and Phase 1 is complete. **Next step:** run `/find-deals scrape` against the HIGH signal verified sites (LoopNet, Crexi, CommercialSearch, Marcus & Millichap, Argus, Texas Storage Investors) to pull raw listings into the scoring pipeline.
