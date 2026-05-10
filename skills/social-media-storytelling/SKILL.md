@@ -374,3 +374,44 @@ or flag that there's nothing new to post since last time.
 | "Still not perfect. Here's what breaks next." | "Excited to share this milestone" |
 | Specific numbers everywhere | Vague claims |
 | The struggle before the win | The win only |
+
+---
+
+## The "don't market Claude, market Deal Hound" rule
+
+This is a hard constraint that overrides everything else in this skill.
+
+**The problem:** Posts that lead with "I built this with Claude" or "AI wrote
+3 PRs while I slept" read as inspiration for builders — not as reasons for
+investors to buy Deal Hound. A developer who hears that story thinks *I could
+do this myself*. An investor who hears that story doesn't know what to do
+with it. Either way, you've marketed Anthropic's product instead of yours.
+
+**The fix:** Claude and the AI tooling are never the protagonist. They're
+infrastructure — like AWS or Postgres. You wouldn't write a post about the
+database technology behind Deal Hound. Apply the same logic to the AI layer.
+
+**Two audiences, two framings:**
+
+For the **investor audience** (the buyer):
+- The outcome is the story, not the tool that produced it
+- "The agent found 12 off-market boutique hotel leads before I had my coffee"
+- "It scanned 400 listings overnight and ranked them against your buy box"
+- The AI is completely invisible — Deal Hound did it
+
+For the **founder/builder audience** (the audience-builder):
+- Gideon's velocity and judgment are the story, not the AI
+- "I shipped a full outreach pipeline in a weekend" — not "Claude coded it"
+- "Woke up to 3 queued PRs" is fine — it's about *his* process, his output
+- Never frame it as "anyone could do this with AI" — the skill is in knowing
+  what to build and how to direct it
+
+**The test:** Before finalizing any post, ask: does this make someone want to
+buy Deal Hound, or does it make them want to open a Claude account? If the
+answer is the latter, reframe. Remove the tool, keep the outcome.
+
+**Always-on redirect:** Any time a post mentions the AI, Claude, or automation
+in the build, redirect the sentence to what it produced for investors:
+- "Built with AI" → "finds deals before your competitors do"
+- "Claude wrote the scorer" → "scored 400 properties against your exact criteria"
+- "Autonomous overnight build" → "new capability shipped — here's what it does for your deal flow"
