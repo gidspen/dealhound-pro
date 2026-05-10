@@ -44,10 +44,10 @@
 
 ### Regression — Python scrapers (Phase 2A path, untouched) — **PASS**
 
-| Scraper | Result |
-| --- | --- |
-| `landsearch` | 247 unique TX listings (3 pages /resort + /lodge); 120 enriched with descriptions ✅ |
-| `campground-connection` | 14 TX listings (Southwest region filter applied to 71 unique URLs) ✅ |
+| Scraper                 | Result                                                                               |
+| ----------------------- | ------------------------------------------------------------------------------------ |
+| `landsearch`            | 247 unique TX listings (3 pages /resort + /lodge); 120 enriched with descriptions ✅ |
+| `campground-connection` | 14 TX listings (Southwest region filter applied to 71 unique URLs) ✅                |
 
 Phase 2A code path was deliberately untouched in this PR. Both scrapers run as before. Confirms no collateral regression from the Phase 2B refactor.
 
