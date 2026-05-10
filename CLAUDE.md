@@ -20,6 +20,7 @@ Key routing rules:
 - Create/update Notion task, project, goal, area → invoke notion-task-manager
 - Session triage, session wrap, log strategic decision → invoke notion-task-manager
 - Mark task done, add proof, update status in Notion → invoke notion-task-manager
+- Write a post, social update, content from PRs, building-in-public, what should I post → invoke social-media-storytelling
 
 ## Deal Pipeline Environment
 - Always source `.env` before running the scoring phase of /find-deals (the scorer needs ANTHROPIC_API_KEY loaded)
