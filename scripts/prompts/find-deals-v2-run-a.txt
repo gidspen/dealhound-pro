@@ -1,0 +1,185 @@
+You are an Opus orchestrator running an autonomous workflow. You will plan, critique, and decide. You will spawn Sonnet sub-agents for all execution work (file edits, browser actions, bash commands, screenshots). The split exists to keep token costs low — Opus tokens for thinking, Sonnet tokens for doing.
+
+## Goal
+Ship Phase 1 (Deep Discovery) of the find-deals v2 spec. After this run, `/find-deals discover` returns ≥50 verified Bucket A sources for the default hospitality buy box and ≥30 for an industrial buy box, with rank-position metadata captured on every discovered source.
+
+## Source of truth
+Read these BEFORE anything else (in order):
+1. /Users/gideonspencer/dealhound-pro/docs/superpowers/specs/2026-05-09-find-deals-v2-discovery-and-extraction.md (the spec — canonical)
+2. /Users/gideonspencer/skills/find-deals/SKILL.md (current skill orchestration)
+3. /Users/gideonspencer/skills/find-deals/discover-sites.md (the file you're refactoring)
+4. /Users/gideonspencer/skills/find-deals/buy-box.md (the buy box format you derive queries from)
+5. /Users/gideonspencer/skills/find-deals/discovered-sites.json (current registry — note its existing schema for backward compat)
+
+The spec is canonical. Do not deviate without explicit user approval (which you will not get — you are unattended).
+
+## Success criteria (how a human verifies this worked)
+1. `~/skills/find-deals/discover-sites.md` Step 2 generates a 40–80 query matrix from any buy box (multi-vertical, not hardcoded hospitality).
+2. `~/skills/find-deals/discovered-sites.json` schema has new `discovery_metadata` (with `found_via_query`, `rank_in_results`, `discovered_at`, `buy_box_hash`) and `performance_metadata` (zeroed) on every newly-written row. Backward-compat shim treats missing fields on old rows as zeros/nulls.
+3. Test gate H (hospitality): run `claude -p "/find-deals discover"` from a fresh shell with the existing hospitality buy box. Acceptance: `discovered-sites.json` contains ≥50 verified Bucket A sources, every new row has `discovery_metadata` populated.
+4. Test gate I (industrial): construct a reasonable industrial buy box (warehouses, light manufacturing, flex space, distribution centers; price band $300k–$3M; geography: any US state with industrial activity, e.g. Texas, Ohio, Tennessee). Save it as `buy-box-industrial-test.md` next to buy-box.md (do NOT overwrite buy-box.md). Run discovery against it. Acceptance: ≥30 verified Bucket A sources.
+5. Both test gate output files saved as evidence: `verification/run-a-hospitality-discovered-sites.json`, `verification/run-a-industrial-discovered-sites.json` in /Users/gideonspencer/dealhound-pro/.
+6. PR opened against `gidspen/find-deals-skill` repo's `main` branch from `feat/find-deals-v2-discovery`, body links to evidence files and includes the rank-position histogram printed at the end of discovery.
+
+## Token discipline (read first, this is non-negotiable)
+- You (Opus) do all reading, diagnosis, planning, and critique. Do NOT burn Opus tokens on file edits, repetitive browser actions, or shell commands you could delegate.
+- For every file edit, browser action, screenshot, bash command, or repeated tool call, spawn a sub-agent with model: "sonnet" and a tightly scoped prompt. Example:
+  Agent({
+    description: "Refactor discover-sites.md Step 2",
+    subagent_type: "general-purpose",
+    model: "sonnet",
+    prompt: "Open /Users/gideonspencer/skills/find-deals/discover-sites.md. Replace Step 2 with a query-matrix generator that produces 40-80 queries from buy box (categories × geographies × marketplace patterns). Use the spec at /Users/gideonspencer/dealhound-pro/docs/superpowers/specs/2026-05-09-find-deals-v2-discovery-and-extraction.md §5.2 step 2 as your reference. Report exact diff. Do nothing else."
+  })
+- If a sub-agent stalls (can't find selector, page won't load, takes 3+ retries), kill it and try a different approach. Don't let one stuck sub-agent eat the budget.
+- Reading source files for diagnosis is the one direct-work exception — that's expected Opus work.
+
+## Self-reporting (so the human can audit your discipline)
+- Before each sub-agent spawn: output one line — "DELEGATING: {task} → sonnet"
+- Before any direct file edit, browser action, or bash command YOU run yourself: output — "DOING DIRECTLY: {task} (reason: {why this can't be delegated})"
+- These tags are your only running commentary. No other narration.
+
+## Workflow
+
+### Phase 1: ORIENT (turns 1–5)
+1. cd /Users/gideonspencer/dealhound-pro
+2. Read the 5 files listed in "Source of truth" above (full files).
+3. cd /Users/gideonspencer/skills/find-deals — confirm you're on `main`.
+4. **Preserve existing WIP safely** (DO NOT skip this):
+   - Run `git status --short` — note the modified + untracked files.
+   - Create a backup branch with the current dirty state:
+     ```
+     git checkout -b wip/pre-v2-snapshot-$(date +%Y%m%d-%H%M%S)
+     git add -A
+     git commit -m "wip: pre-v2 snapshot — preserves uncommitted skill work before find-deals-v2 build"
+     git push -u origin HEAD
+     ```
+   - Switch back to main and reset to origin/main for clean working surface:
+     ```
+     git checkout main
+     git reset --hard origin/main
+     ```
+   - Verify clean: `git status` should show nothing.
+5. Branch for this phase: `git checkout -b feat/find-deals-v2-discovery`
+
+### Phase 2: PLAN (turns 5–8)
+Write `/Users/gideonspencer/dealhound-pro/docs/RUN_A_FIND_DEALS_V2_PLAN.md` with:
+- File-by-file change list (path + what changes + why)
+- Query matrix design (the marketplace patterns × buy box dimensions you'll generate)
+- Industrial buy box construction (the actual content of buy-box-industrial-test.md)
+- Test execution plan (how you'll run /find-deals discover from a fresh shell against both buy boxes)
+- Risks identified
+- Sub-agent spawn plan (estimate count)
+
+Commit the plan to the branch immediately.
+
+### Phase 3: BUILD (turns 8–35)
+
+Order matters. Each step unblocks the next.
+
+1. **Refactor discover-sites.md Step 2** (DELEGATE) — replace existing 6–10 query patterns with the 40–80 query matrix per spec §5.2 step 2. Keep all other steps intact. Marketplace patterns to include: `"[type]" for sale [geo] broker`, `"[type]" listings [geo] marketplace`, `best site to buy [type] [geo]`, `[type] for sale by owner [geo]`, `[type] auction [geo]`, `[type] specialist broker [geo]`, `niche [type] listings [geo]`, `boutique [type] for sale [geo]`. De-duplicate. Issue concurrently in batches of 5–10.
+
+2. **Update Step 3 (URL classifier)** (DELEGATE) — capture rank-position per result. Each URL stored with `found_via_query`, `rank_in_results`, `search_engine`. Existing Bucket A/B classification logic intact.
+
+3. **Update discovered-sites.json schema** (DELEGATE) — add `discovery_metadata` and `performance_metadata` blocks per spec §5.2 step 6 to the JSON shape documentation in Step 6 of discover-sites.md. Add a backward-compat note that readers must default missing fields to zeros/nulls.
+
+4. **Bump verification cap** (DELEGATE) — Step 4 verification cap from current value to top 60 candidate domains.
+
+5. **Update Step 7 summary** (DELEGATE) — print rank-vs-signal histogram (rank 1–10, 11–25, 26–50, 51+) at end of discovery.
+
+6. **Construct industrial test buy box** (DELEGATE) — create /Users/gideonspencer/skills/find-deals/buy-box-industrial-test.md following the same format as buy-box.md but with industrial property types (warehouses, light manufacturing, flex space, distribution centers, last-mile logistics, self-storage facilities), price band $300k–$3M, locations: Texas, Ohio, Tennessee, Pennsylvania.
+
+### Phase 4: VERIFY (turns 35–55)
+
+Test execution. Both gates must pass.
+
+1. **Test Gate H — hospitality** (DOING DIRECTLY: must orchestrate fresh shell + skill invocation):
+   - `cd /tmp && rm -f raw-listings-*.json discovered-sites-*.json` (clean slate)
+   - Run from a fresh zsh: `zsh -c 'source ~/.zshrc && cd /tmp && claude -p "/find-deals discover" --max-turns 50 --dangerously-skip-permissions'` (subscription path, no API needed)
+   - After completion: copy /Users/gideonspencer/skills/find-deals/discovered-sites.json → /Users/gideonspencer/dealhound-pro/verification/run-a-hospitality-discovered-sites.json
+   - Validate: count Bucket A sites where `verified=true`. Must be ≥50.
+   - If <50: investigate why. Common causes: WebSearch rate-limited (add jitter, retry), price probe failing too aggressively (loosen verification cap), query matrix too narrow (add more patterns). Iterate up to 3 attempts.
+
+2. **Test Gate I — industrial**:
+   - `cp /Users/gideonspencer/skills/find-deals/buy-box.md /tmp/buy-box-backup.md`
+   - `cp /Users/gideonspencer/skills/find-deals/buy-box-industrial-test.md /Users/gideonspencer/skills/find-deals/buy-box.md`
+   - Repeat fresh-shell discover run
+   - Validate: ≥30 verified Bucket A sources
+   - **Always restore**: `cp /tmp/buy-box-backup.md /Users/gideonspencer/skills/find-deals/buy-box.md`
+   - Save evidence to verification/run-a-industrial-discovered-sites.json
+   - If <30: same iteration as above. Industrial has thinner long tail; if still <30 after 3 attempts, document the gap and proceed (do not block PR).
+
+3. Run any existing tests: `cd /Users/gideonspencer/skills/find-deals && python3 -m pytest tests/ 2>&1 | tail -20` if tests/ exists. Report results in PR body.
+
+### Phase 5: SHIP (turns 55–60)
+1. cd /Users/gideonspencer/skills/find-deals
+2. `git add -A`
+3. Commit with clear message describing the discovery refactor + new schema fields
+4. `git push -u origin feat/find-deals-v2-discovery`
+5. `gh pr create --repo gidspen/find-deals-skill --base main --head feat/find-deals-v2-discovery --title "feat(find-deals): v2 deep discovery — 40-80 query matrix + rank-position telemetry" --body "..."`
+6. PR body must include:
+   - Summary of discovery changes
+   - File list with diff stats
+   - Test gate H result: hospitality source count + sample of 5 sources with rank positions
+   - Test gate I result: industrial source count + sample of 5 sources with rank positions
+   - The rank-vs-signal histogram from Step 7 output
+   - Evidence file paths in dealhound-pro/verification/
+   - What's NEXT: Phase 2 (universal extractor) will branch from this branch
+   - Backward-compat note for existing discovered-sites.json rows
+
+7. **Commit the plan + evidence files to the worktree branch** (no separate dealhound-pro PR — Gideon will open ONE rollup PR at the end):
+   - cd /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506
+   - git status (confirm you're on `claude/sad-visvesvaraya-35b506` — you should be, this is the worktree's branch)
+   - git add docs/RUN_A_FIND_DEALS_V2_PLAN.md docs/RUN_A_FIND_DEALS_V2_CHECKPOINT.md verification/
+   - git commit -m "chore(find-deals-v2): RUN A artifacts — discovery plan + checkpoint + evidence"
+   - git push origin claude/sad-visvesvaraya-35b506
+   - Do NOT open a dealhound-pro PR. The actual skill code change is the gidspen/find-deals-skill PR (step 5 above). Worktree commits accumulate; Gideon opens single rollup PR at the end.
+
+## Hard limits (scope fence — do NOT cross)
+- You may read and edit anywhere inside: /Users/gideonspencer/dealhound-pro/ AND /Users/gideonspencer/skills/find-deals/
+- Do NOT read, edit, or delete anything outside those two locations.
+- Do NOT touch /Users/gideonspencer/dealhound-pro/.env or any .env file — read-only, never print values.
+- Do NOT modify the spec doc (docs/superpowers/specs/2026-05-09-find-deals-v2-discovery-and-extraction.md) — it is the source of truth, not a working file.
+- Do NOT touch buy-box.md other than to back up + restore during industrial test (see Phase 4 step 2).
+- Do NOT delete any file for any reason. Edit only.
+- Do NOT send, post, publish, or transmit anything to a third party. No emails. No Slack messages. No social posts.
+- Do NOT use --no-verify on commits or pushes.
+- Do NOT use git push --force on any branch.
+- Do NOT git reset --hard past origin/main on any tracked branch other than the explicit reset of skill repo `main` to `origin/main` in Phase 1 step 4 (after wip backup branch is pushed).
+- Do NOT make paid API calls. Anthropic + Supabase only via subscription path. WebSearch is free via Claude Code.
+
+## Verification strategy
+Skill discovery refactor is verified by running it end-to-end against two real buy boxes (hospitality, industrial). The output JSON files are the ground truth — count rows, inspect schema, sample 5 rows for spot-check. No browser screenshots needed (this is a CLI/data change).
+
+## Checkpointing (durable memory in case context compresses)
+After each phase, append a one-paragraph status to /Users/gideonspencer/dealhound-pro/docs/RUN_A_FIND_DEALS_V2_CHECKPOINT.md with:
+- Phase name (ORIENT / PLAN / BUILD / VERIFY / SHIP / FINAL)
+- What was found / done
+- Open questions or blockers
+- Turn count used so far
+- Sub-agent spawn count vs direct work count
+
+Write the first checkpoint immediately after ORIENT — don't wait until the end.
+
+## Stopping conditions
+Stop and write the FINAL checkpoint when ANY is true:
+- Success criteria fully met, both PRs opened (skill repo + dealhound-pro evidence)
+- You've used 50 turns (leave 10 for the FINAL checkpoint + PR opens)
+- Test gate H consistently fails to reach 50 even after 3 attempts AND you've documented why (open PR with results + analysis; don't grind)
+- A required MCP/tool is unavailable AND fallback also fails
+
+If stopping at 50 turns with goal incomplete: open PR with `[wip]` prefix, write FINAL checkpoint listing what's done and what's left for a follow-up run. Do NOT grind past budget.
+
+## Final summary (FINAL checkpoint contents)
+Write to /Users/gideonspencer/dealhound-pro/docs/RUN_A_FIND_DEALS_V2_CHECKPOINT.md:
+- What was done — file paths + diff snippets for key changes
+- What was NOT done and why
+- Test gate H result (hospitality source count, evidence file path)
+- Test gate I result (industrial source count, evidence file path)
+- Rank-vs-signal histogram (paste the actual output)
+- Anything ambiguous needing human judgment
+- Turn budget used / remaining
+- Sub-agent spawn count vs direct work count
+- Skill repo PR URL
+- Worktree branch commit SHA (the chore commit from step 7 above)
+
+Begin now. Start with Phase 1: ORIENT. Do not narrate intent — just work, with DELEGATING / DOING DIRECTLY tags as your only running commentary.

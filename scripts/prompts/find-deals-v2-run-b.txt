@@ -1,0 +1,134 @@
+You are an Opus orchestrator running an autonomous workflow. You will plan, critique, and decide. You will spawn Sonnet sub-agents for all execution work. Token discipline is non-negotiable.
+
+## Goal
+Ship Phase 2 (Universal Extractor) of the find-deals v2 spec. Create `~/skills/find-deals/universal-extract.md` — a structured DOM-based extraction routine that takes (URL, page_type, buy_box, cap=200) and returns structured listings from any site without site-specific code. Update `scrape-site.md` Phase 2B to delegate to it.
+
+## Source of truth
+Read these BEFORE anything else (in order):
+1. /Users/gideonspencer/dealhound-pro/docs/superpowers/specs/2026-05-09-find-deals-v2-discovery-and-extraction.md §5.3 (universal extractor architecture) AND §6 Phase 2 (acceptance criteria)
+2. /Users/gideonspencer/dealhound-pro/docs/RUN_A_FIND_DEALS_V2_CHECKPOINT.md (Phase 1 results — read so you know discovery output state)
+3. /Users/gideonspencer/skills/find-deals/scrape-site.md (the file you're updating Phase 2B of)
+4. /Users/gideonspencer/skills/find-deals/discovered-sites.json (current state — sites you'll test against)
+5. /Users/gideonspencer/skills/find-deals/SKILL.md (overall orchestration — for context only)
+
+The spec §5.3 is canonical for the extractor algorithm. Do not deviate.
+
+## Success criteria
+1. `/Users/gideonspencer/skills/find-deals/universal-extract.md` exists with the full routine per spec §5.3 (navigate, detect listing structure, apply filters, extract per cluster, paginate, score confidence, save).
+2. `/Users/gideonspencer/skills/find-deals/scrape-site.md` Phase 2B is refactored: instead of freeform Playwright MCP instructions, it loops over HIGH/MEDIUM signal sites and calls the universal extractor routine per site.
+3. `raw-listings-[slug].json` outputs gain an `extraction` block: `{method: "universal_dom", confidence: 0.0-1.0, pages_visited: N, extractor_version: "v2"}`.
+4. Auto-demote logic: 3 consecutive empty scrapes downgrades `signal_quality` one tier; 5 consecutive marks `verified: false`. Lives in extractor or post-run hook.
+5. **Test gate K (known-good site)**: run universal extractor against NAI OHB. Returns same listings as the existing Phase 2B flow with `extraction.confidence ≥ 0.7`. Save evidence: `verification/run-b-naiohb-extraction.json`.
+6. **Test gate R (random new site)**: pick a random site from Run A's discovery output that no human has hand-tuned for. Run universal extractor. Acceptance: returns ≥1 listing OR `blocked: true` OR `extraction.confidence: 0.0` with clean `notes`. No crashes, no unhandled exceptions. Save evidence: `verification/run-b-random-extraction.json`.
+7. PR opened against `gidspen/find-deals-skill` `main` from `feat/find-deals-v2-extractor`, branched off `feat/find-deals-v2-discovery` (Phase 1's branch — stack PR pattern).
+
+## Token discipline
+Same as Run A. Opus thinks; Sonnet does. Tag every action with DELEGATING: or DOING DIRECTLY:.
+
+## Workflow
+
+### Phase 1: ORIENT (turns 1–5)
+1. Read the 5 source-of-truth files above (full files).
+2. cd /Users/gideonspencer/skills/find-deals
+3. Confirm Phase 1 branch exists and is pushed: `git branch -a | grep find-deals-v2-discovery`. If missing, STOP — Phase 1 didn't complete. Write FINAL checkpoint and exit.
+4. Branch off Phase 1's branch (stack PR pattern):
+   ```
+   git fetch origin
+   git checkout feat/find-deals-v2-discovery
+   git pull origin feat/find-deals-v2-discovery
+   git checkout -b feat/find-deals-v2-extractor
+   ```
+
+### Phase 2: PLAN (turns 5–8)
+Write /Users/gideonspencer/dealhound-pro/docs/RUN_B_FIND_DEALS_V2_PLAN.md with:
+- universal-extract.md outline (the algorithm sections you'll write)
+- DOM-pattern-detection heuristics in detail (which selectors, which fallbacks)
+- The two test sites you'll use (NAI OHB + a randomly-selected one from discovered-sites.json — name it now)
+- Sub-agent spawn plan
+- Risks (especially: extraction confidence calibration)
+
+Commit the plan.
+
+### Phase 3: BUILD (turns 8–50)
+
+1. **Create universal-extract.md** (DELEGATE — this is the biggest single sub-agent task. Give the sub-agent the spec §5.3 inline in the prompt and ask it to expand into a full skill markdown file). Algorithm sections to write:
+   - Function signature + IO contract
+   - Navigate + warm load
+   - Detect listing structure (repeated DOM patterns, anchor clusters, price-pattern density, listing-card class heuristics)
+   - Fallback to `browser_evaluate` with generic JS extractor (CSS heuristics + microdata/JSON-LD detection)
+   - Apply site filters when discoverable (price min/max, type, location)
+   - Extract per cluster (existing schema: title, price, location, url, address, acreage, rooms_keys, revenue_hint, dom_hint, condition_hint, description, source_url) — description required, not truncated
+   - Visit detail pages when index card lacks data (cap 30/site)
+   - Paginate via accessibility tree text
+   - Score extraction confidence (1.0/0.7/0.4/0.0 per spec)
+   - Save raw-listings-[slug].json with extraction block
+   - Update discovered-sites.json performance_metadata
+
+2. **Update scrape-site.md Phase 2B** (DELEGATE) — replace freeform agentic instructions with: "For each HIGH/MEDIUM signal site not in the Python scraper registry, invoke the universal-extract.md routine. Skip sites marked `verified: false` or `blocked: true`. Order by signal_quality descending."
+
+3. **Add auto-demote logic** (DELEGATE) — choose home: either inside universal-extract.md (after each scrape, increment consecutive_empty_scrapes if zero listings; downgrade signal_quality if hit threshold) or in a small Python script `scripts/find-deals-auto-demote.py` invoked at end of /find-deals scrape phase. Pick the simpler home; document in scrape-site.md.
+
+### Phase 4: VERIFY (turns 50–70)
+
+1. **Test Gate K — NAI OHB known-good** (DOING DIRECTLY: orchestrate the test):
+   - `zsh -c 'source ~/.zshrc && cd /tmp && claude -p "/find-deals scrape naiohb" --max-turns 30 --dangerously-skip-permissions'` (subscription path)
+   - Or, if /find-deals scrape doesn't take a single-site arg, prompt the agent inline: `zsh -c 'source ~/.zshrc && cd /tmp && claude -p "Run the universal-extract.md routine against https://naiohb.com/listings — apply price filter $300k-$3M — extract all listings — save to /tmp/test-naiohb.json" --max-turns 30 --dangerously-skip-permissions'`
+   - Validate: listings returned (compare count to existing raw-listings-naiohb.json from previous runs), confidence ≥ 0.7
+   - If confidence < 0.7: investigate (DOM changed? extractor too conservative?). Iterate up to 2 attempts. If still failing, document and proceed.
+   - Copy result to /Users/gideonspencer/dealhound-pro/verification/run-b-naiohb-extraction.json
+
+2. **Test Gate R — random new site** (DOING DIRECTLY):
+   - Pick a random site from /Users/gideonspencer/skills/find-deals/discovered-sites.json (specifically: a site added during Phase 1 discovery, signal_quality=high, that does NOT have a Python scraper). Print its URL.
+   - Run universal extractor against it (similar invocation to Test Gate K)
+   - Validate: zero crashes. Outcome must be one of: ≥1 listing extracted, OR `blocked: true`, OR confidence 0.0 with non-empty `notes` field.
+   - Copy result to /Users/gideonspencer/dealhound-pro/verification/run-b-random-extraction.json
+
+3. **Regression test** — verify the two known-working Python scrapers (landsearch, campground-connection) still work. Run:
+   - `cd /Users/gideonspencer/skills/find-deals/scrapers && python3 scraper.py --site landsearch --location texas` (count listings — must be > 0)
+   - `python3 scraper.py --site campground-connection --location texas` (count listings — must be > 0)
+   - If either fails: investigate. The Python scraper path should be untouched by this phase. If it's broken, it's a regression — fix or document.
+
+### Phase 5: SHIP (turns 70–80)
+1. cd /Users/gideonspencer/skills/find-deals
+2. `git add -A`
+3. Commit with message describing the universal extractor + scrape-site refactor
+4. `git push -u origin feat/find-deals-v2-extractor`
+5. `gh pr create --repo gidspen/find-deals-skill --base feat/find-deals-v2-discovery --head feat/find-deals-v2-extractor --title "feat(find-deals): v2 universal DOM extractor + scrape-site refactor" --body "..."` (note: base is Phase 1's branch, not main — stack PR)
+6. PR body must include:
+   - Summary of extractor + Phase 2B refactor
+   - File list (universal-extract.md NEW + scrape-site.md MODIFIED)
+   - Test gate K result: NAI OHB listing count + confidence score
+   - Test gate R result: which random site was tested + outcome (listings/blocked/confidence-0 with notes)
+   - Regression test results: Python scrapers landsearch + campground-connection both still work
+   - Evidence file paths in dealhound-pro/verification/
+   - What's NEXT: Phase 3 (telemetry) will branch from this branch
+   - PR base note: this PR stacks on Phase 1's PR — merge Phase 1 first
+
+7. **Commit plan + evidence to worktree branch** (no separate PR):
+   - cd /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506
+   - git status (confirm on `claude/sad-visvesvaraya-35b506`)
+   - git add docs/RUN_B_FIND_DEALS_V2_PLAN.md docs/RUN_B_FIND_DEALS_V2_CHECKPOINT.md verification/
+   - git commit -m "chore(find-deals-v2): RUN B artifacts — extractor plan + checkpoint + evidence"
+   - git push origin claude/sad-visvesvaraya-35b506
+
+## Hard limits
+Same as Run A. Plus:
+- Do NOT modify Phase 1's deliverables (discover-sites.md, discovered-sites.json schema). Read only.
+- Do NOT touch the existing Python scrapers (scrapers/scraper.py) other than running them as regression tests. Universal extractor is an alternate path, not a replacement.
+
+## Stopping conditions
+Stop and write FINAL checkpoint when ANY:
+- Success criteria fully met, both PRs opened
+- You've used 70 turns (leave 10 for FINAL + PR opens)
+- Test gate K consistently fails (extractor can't match existing Phase 2B output) — document mismatch, open WIP PR
+- Required MCP/tool unavailable AND fallback fails
+
+## Final summary
+Write to /Users/gideonspencer/dealhound-pro/docs/RUN_B_FIND_DEALS_V2_CHECKPOINT.md:
+- All same fields as Run A's final checkpoint
+- Test gate K + R results
+- Regression test results
+- Skill repo PR URL (stacked on Phase 1)
+- Worktree branch commit SHA
+
+Begin now. Start with Phase 1: ORIENT.
