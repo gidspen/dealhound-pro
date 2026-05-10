@@ -20,7 +20,7 @@ Explicitly out of scope for this spec:
 
 - **Email alerts ingestion.** Tracked separately. Don't bundle.
 - **Local model (Ollama) execution.** Optimization for later, only if measured token cost becomes a bottleneck.
-- **Site-specific Python scrapers.** When a site shows up repeatedly and the universal extractor is slow on it, *then* it earns a dedicated scraper. Not in this round.
+- **Site-specific Python scrapers.** When a site shows up repeatedly and the universal extractor is slow on it, _then_ it earns a dedicated scraper. Not in this round.
 - **Cracking BizBuySell / LoopNet / LandWatch (Akamai).** Already established as uncrackable via free options. Skip and move on.
 - **Apify wiring.** Sat through a day of evaluation; no good actors for the sites that matter. Not in this round.
 - **The scoring/ranking pipeline (Phase 3).** This spec only touches discovery + extraction. The existing `apply-buybox.md` and `scorer.py` stay as-is.
@@ -28,31 +28,34 @@ Explicitly out of scope for this spec:
 ## 3. Current State (Reality Check)
 
 **Working:**
+
 - `discover-sites.md` — runs 6–10 WebSearch queries, classifies into Bucket A (sites) and Bucket B (individual listings), price-range probes via Playwright MCP. Output: `discovered-sites.json`.
 - `scrape-site.md` Phase 2A — Python scrapers for `landsearch` (✅ 239 TX listings) and `campground-connection` (✅ ~72).
 - `scrape-site.md` Phase 2B — ad-hoc Playwright MCP agentic flow for everything else.
 - Sophie / worker pipeline that invokes `claude -p "/find-deals full"` with a `DEALHOUND_SEARCH_ID` env var.
 
 **Broken / Underpowered:**
+
 - **Discovery is shallow.** 6–10 queries → ~10–15 candidate sites → ~4–5 actually verified. Not enough fan-out for the long tail.
 - **Universal extraction is informal.** Phase 2B is freeform instructions to Claude on how to drive Playwright MCP. Each invocation re-derives extraction logic from scratch. No reusable pattern-detection. No confidence scoring. No structured fallback when extraction returns garbage.
-- **No rank-position telemetry.** When a source produces a HOT deal, we have no way to know *where in discovery* that source was found (rank #3? rank #47?). Without that data we can't tell where the value tail dies off.
+- **No rank-position telemetry.** When a source produces a HOT deal, we have no way to know _where in discovery_ that source was found (rank #3? rank #47?). Without that data we can't tell where the value tail dies off.
 - **Source registry doesn't track value.** `discovered-sites.json` records `signal_quality` but not "this site has produced 3 STRONG deals across 5 scrapes" — so we can't promote/demote sources based on actual yield.
 - **Discovery is hardcoded-hospitality-flavored.** `discover-sites.md` Step 2 query patterns are generic enough, but the existing site registry skews to hospitality. Buy boxes for multifamily, retail, industrial, mobile home parks, marinas, etc., produce thinner results.
 
 ## 4. Locked Decisions
 
-| # | Decision | Rationale |
-|---|----------|-----------|
-| **D1** | **DOM-based extraction**, not vision-based | Cheaper and faster. Acceptable failure mode is "skip site," not "extract wrong data." |
-| **D2** | **Universal extractor for all sites in v2.** Site-specific scrapers come later, only for sources that show up repeatedly *and* the universal extractor is slow/unreliable on. | Avoid the 50-scrapers maintenance treadmill. Source list = config, not codebase. |
-| **D3** | **50 sources target on first run** for any buy box, regardless of vertical | Forcing function. Below 50, we have not earned the "deals you couldn't find" promise. |
-| **D4** | **Rank-position telemetry on every discovered source.** Track which query found it and at what result position. Track yield (deals scored ≥ MATCH) per source over time. | Lets us measure where the value tail dies. Lets us prune dead sources after N empty scrapes. |
-| **D5** | **No must-have site list from Gideon.** All 50 generated dynamically from buy box. | Buy boxes are diverse (hospitality, multifamily, retail, industrial). A hardcoded list breaks the moment a non-hospitality user signs up. |
-| **D6** | **Email alerts stays separate.** This spec ships zero email infrastructure. | Bounded scope. Email alerts is its own sprint per memory note. |
-| **D7** | **Universal extractor lives inside the existing find-deals skill.** Do not reinvent the skill — extend `discover-sites.md` and `scrape-site.md` Phase 2B. | Per memory: "find-deals skill IS the product core. Don't reinvent it worse." |
+| #      | Decision                                                                                                                                                                      | Rationale                                                                                                                                 |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **D1** | **DOM-based extraction**, not vision-based                                                                                                                                    | Cheaper and faster. Acceptable failure mode is "skip site," not "extract wrong data."                                                     |
+| **D2** | **Universal extractor for all sites in v2.** Site-specific scrapers come later, only for sources that show up repeatedly _and_ the universal extractor is slow/unreliable on. | Avoid the 50-scrapers maintenance treadmill. Source list = config, not codebase.                                                          |
+| **D3** | **50 sources target on first run** for any buy box, regardless of vertical                                                                                                    | Forcing function. Below 50, we have not earned the "deals you couldn't find" promise.                                                     |
+| **D4** | **Rank-position telemetry on every discovered source.** Track which query found it and at what result position. Track yield (deals scored ≥ MATCH) per source over time.      | Lets us measure where the value tail dies. Lets us prune dead sources after N empty scrapes.                                              |
+| **D5** | **No must-have site list from Gideon.** All 50 generated dynamically from buy box.                                                                                            | Buy boxes are diverse (hospitality, multifamily, retail, industrial). A hardcoded list breaks the moment a non-hospitality user signs up. |
+| **D6** | **Email alerts stays separate.** This spec ships zero email infrastructure.                                                                                                   | Bounded scope. Email alerts is its own sprint per memory note.                                                                            |
+| **D7** | **Universal extractor lives inside the existing find-deals skill.** Do not reinvent the skill — extend `discover-sites.md` and `scrape-site.md` Phase 2B.                     | Per memory: "find-deals skill IS the product core. Don't reinvent it worse."                                                              |
 
 **Resolved questions (Gideon, 2026-05-09):**
+
 - **R1:** Chrome extension at `$HOME/.dealhound-chrome-profile` is **not actively bypassing anti-bot** — it's a warm cookie jar (persistent profile accumulates trust signals across runs). Codebase reference if needed: `/Users/gideonspencer/incredible-ai-extension`. The universal extractor uses the persistent profile as today; no special integration required.
 - **R2:** Per-source listing cap = **200**. Configurable per source if a high-yield site warrants more in a later round.
 - **R3:** Non-hospitality test buy box = **industrial** (Phase 1.7 acceptance). Agent should construct a reasonable industrial buy box (warehouses, light manufacturing, flex space, distribution centers) at typical Deal Hound price band ($300k–$3M) and use it for the multi-vertical test gate.
@@ -104,11 +107,12 @@ Phase 2A (Python scrapers for landsearch + campground-connection) stays. Phase 3
    - `[type] auction [geo]`
    - `[type] specialist broker [geo]`
    - `niche [type] listings [geo]`
-   - `boutique [type] for sale [geo]` *(when applicable)*
+   - `boutique [type] for sale [geo]` _(when applicable)_
 
    Query budget: **40–80 queries per discovery run** (vs. today's 6–10). De-duplicated. Issue concurrently in batches of 5–10 to keep latency reasonable.
 
 3. **Collect results with rank metadata.** For every URL returned, store:
+
    ```json
    {
      "url": "...",
@@ -123,6 +127,7 @@ Phase 2A (Python scrapers for landsearch + campground-connection) stays. Phase 3
 5. **Verify top N Bucket A sites.** Price-range probe via Playwright MCP. Cap verification at top **60 candidate domains** (slight overshoot to land 50 verified after some fail).
 
 6. **Persist to `discovered-sites.json`.** Each site row gains:
+
    ```json
    {
      "name": "Some Niche Broker",
@@ -153,6 +158,7 @@ Phase 2A (Python scrapers for landsearch + campground-connection) stays. Phase 3
 A structured routine the agent calls per site. Lives as a new file: `universal-extract.md` (alongside `scrape-site.md`).
 
 **Function signature (conceptual):**
+
 ```
 extract_listings(
   url: str,
@@ -171,6 +177,7 @@ extract_listings(
 **Algorithm (Claude + Playwright MCP):**
 
 1. **Navigate + warm load.**
+
    ```
    browser_navigate(url)
    browser_wait_for(time=2)
@@ -200,6 +207,7 @@ extract_listings(
    - 0.0 — no listings extracted
 
 7. **Save** to `raw-listings-[slug].json` in existing format. Add two new fields:
+
    ```json
    {
      ...existing...,
@@ -230,7 +238,7 @@ Histogram:
   rank 51+:     avg yield_rate, avg hot_rate
 ```
 
-Print to terminal. This is the data Gideon asked for: *"track what number down the list each was, then we can see how far down the tail is valuable."* Run it manually after the first 5–10 scans accumulate; cron'd reporting is out of scope.
+Print to terminal. This is the data Gideon asked for: _"track what number down the list each was, then we can see how far down the tail is valuable."_ Run it manually after the first 5–10 scans accumulate; cron'd reporting is out of scope.
 
 ## 6. Implementation Phases
 
@@ -275,13 +283,13 @@ Each phase is shippable independently. Phase 1 unblocks the 50-source target. Ph
 
 ## 8. Risks + Mitigations
 
-| Risk | Likelihood | Mitigation |
-|------|-----------|------------|
-| Search engines rate-limit at 40–80 queries/run | Medium | Throttle to 5–10 concurrent; add 1–2s jitter; if WebSearch caps hit, fall back to staggered runs. |
-| Universal extractor returns garbage on weird DOM | High | Confidence scoring + graceful fallback. Bad data flagged, not silently merged. The `extraction.confidence` field surfaces this in `raw-listings-*.json`. |
-| 50 sources × 200 listings = 10K listings to score → token blowout | Medium | Existing scoring pipeline already hard-filters before LLM scoring. Phase 1 hard filter (`pipeline.py`) will drop 70–90% before scoring. Re-measure after first full run; if still expensive, add per-source caps to the discovery output. |
-| Discovery for non-hospitality verticals returns mostly junk | Medium | The 30-source test gate in Phase 1.7 forces us to confront this before declaring done. If it fails, expand the marketplace-pattern list rather than hardcoding category-specific lists. |
-| Anti-bot defenses block too many sites | Low–Medium | Acceptable — 50 sources discovered, even if 10 get blocked, leaves 40. Mark blocked sites in registry; revisit them later via different methods (residential proxy, browser extension). Out of scope for this round. |
+| Risk                                                              | Likelihood | Mitigation                                                                                                                                                                                                                                |
+| ----------------------------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Search engines rate-limit at 40–80 queries/run                    | Medium     | Throttle to 5–10 concurrent; add 1–2s jitter; if WebSearch caps hit, fall back to staggered runs.                                                                                                                                         |
+| Universal extractor returns garbage on weird DOM                  | High       | Confidence scoring + graceful fallback. Bad data flagged, not silently merged. The `extraction.confidence` field surfaces this in `raw-listings-*.json`.                                                                                  |
+| 50 sources × 200 listings = 10K listings to score → token blowout | Medium     | Existing scoring pipeline already hard-filters before LLM scoring. Phase 1 hard filter (`pipeline.py`) will drop 70–90% before scoring. Re-measure after first full run; if still expensive, add per-source caps to the discovery output. |
+| Discovery for non-hospitality verticals returns mostly junk       | Medium     | The 30-source test gate in Phase 1.7 forces us to confront this before declaring done. If it fails, expand the marketplace-pattern list rather than hardcoding category-specific lists.                                                   |
+| Anti-bot defenses block too many sites                            | Low–Medium | Acceptable — 50 sources discovered, even if 10 get blocked, leaves 40. Mark blocked sites in registry; revisit them later via different methods (residential proxy, browser extension). Out of scope for this round.                      |
 
 ## 9. Agent Execution Notes
 
