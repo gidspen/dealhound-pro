@@ -67,7 +67,26 @@ existing tools are all wrong.
 **No startup-speak.** Kill on sight: "excited to share," "game-changer,"
 "thrilled to announce," "we're on a mission," "leverage," "ecosystem."
 
-### Narrative angles (rotate these)
+### The core positioning
+
+Gideon is not just building in public. He's showing what's possible when
+a real estate investor also moves at the speed of a technical founder.
+That intersection is rare. Most RE investors can't build. Most builders
+don't know deals.
+
+The implicit promise of every post: *watch what I'm doing, because you
+can apply this too.* Not "use my product" — "see how fast this world is
+moving, and I'll be your guide to the real estate + tech intersection."
+
+The product is proof of that speed. It shows up in posts as evidence, not
+as the point.
+
+**Ruben Hassid (@rubenhassid)** is the closest tonal reference: "I know I
+talk a lot about Claude. But Claude doesn't pay me. I'm sharing how my work
+is speeding up — fast — so you can too." Adapt that energy to Gideon's
+world: real estate, deals, velocity, and the tool he built to make it real.
+
+
 
 1. **The tool I needed and couldn't find** — RE investor building the AI
    deal team he wished existed. Authenticity that a VC-backed proptech
@@ -234,14 +253,24 @@ them whenever available.
 built. "Deal Hound now finds off-market dental practices ranked by retirement
 probability" not "shipped the SBA module."
 
-### Accounts to study
+### X accounts to model (20K–100K, growing — verify counts before studying)
 
-- **@levelsio** — raw, specific, transparent on revenue and failures.
-  The template for honest building-in-public.
-- **@marc_louvion** — ships constantly, posts income + retrospectives,
-  honest about what works and what doesn't.
-- **@arvidkahl** — high-quality audience, psychological depth on indie SaaS.
-- **@tdinh_me** — clean product update cadence, sustainable posting rhythm.
+**1. Danny Postma (@dannypostmaa)**
+~40–60K followers. Built Headshot Pro, Translate.video. Posts revenue
+numbers, honest launch retrospectives. His pattern: specific number upfront
+→ what he tried → what happened → what he'd do differently. No ego, all
+specifics. Study for: "here's what shipped and what it actually did" format.
+
+**2. Kieran Drew (@KieranDrew_)**
+~50–80K followers. Strong hooks — usually a provocative single line, then
+slow reveal. Posts feel like you stumbled into someone's journal. Study
+for: personal story structure, hook writing, the slow burn to a point.
+
+**3. Ruben Hassid (@rubenhassid)**
+~40–70K followers. "I'm showing how fast my work is moving so you can
+move that fast too." Closest to Gideon's positioning. Study for: how to
+separate "here's what I used" from "here's what I accomplished" — the
+accomplishment is always the story, never the tool.
 
 ### Single post format
 
@@ -315,11 +344,25 @@ perform on X land differently here. Frame transparently-shared numbers as
 especially credible here — the professional audience understands the value of
 that combination.
 
-### Accounts to study
+### LinkedIn accounts to model (20K–100K, growing — verify counts before studying)
 
-- **Sophie Miller (@prettylittlemarketer)** — best case study for building
-  a solo-founder audience specifically on LinkedIn.
-- **Arvid Kahl** — high-quality founder/operator audience, consistent depth.
+**1. Lara Acosta (@lara.acosta_)**
+~60–90K followers. Grew her LinkedIn audience entirely by documenting her
+personal brand / creator journey in public. Strong hook game — first line
+always a tension or confession. Study for: hook structure, how she makes
+professional content feel human and personal.
+
+**2. Matt Gray (@matt_gray_)**
+~50–80K followers. Builds and documents systems for solo creators and
+founders. Posts are very structured — clear before/after, numbered insights,
+strong "here's the thing nobody tells you" framing. Study for: how to
+package a founder lesson in a scannable LinkedIn format.
+
+**3. Jasmin Alic (@jasmin.alic)**
+~30–60K followers. Copywriter and LinkedIn growth strategist who documents
+his own growth in real time. Posts dissect exactly what works and why.
+Study for: hook formulas that actually convert on LinkedIn, and how to write
+for dwell time — his posts are designed to be read slowly.
 
 ### Format
 
