@@ -5,7 +5,7 @@ Ship Phase 1 (Deep Discovery) of the find-deals v2 spec. After this run, `/find-
 
 ## Source of truth
 Read these BEFORE anything else (in order):
-1. /Users/gideonspencer/dealhound-pro/docs/superpowers/specs/2026-05-09-find-deals-v2-discovery-and-extraction.md (the spec — canonical)
+1. /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/superpowers/specs/2026-05-09-find-deals-v2-discovery-and-extraction.md (the spec — canonical)
 2. /Users/gideonspencer/skills/find-deals/SKILL.md (current skill orchestration)
 3. /Users/gideonspencer/skills/find-deals/discover-sites.md (the file you're refactoring)
 4. /Users/gideonspencer/skills/find-deals/buy-box.md (the buy box format you derive queries from)
@@ -28,7 +28,7 @@ The spec is canonical. Do not deviate without explicit user approval (which you 
     description: "Refactor discover-sites.md Step 2",
     subagent_type: "general-purpose",
     model: "sonnet",
-    prompt: "Open /Users/gideonspencer/skills/find-deals/discover-sites.md. Replace Step 2 with a query-matrix generator that produces 40-80 queries from buy box (categories × geographies × marketplace patterns). Use the spec at /Users/gideonspencer/dealhound-pro/docs/superpowers/specs/2026-05-09-find-deals-v2-discovery-and-extraction.md §5.2 step 2 as your reference. Report exact diff. Do nothing else."
+    prompt: "Open /Users/gideonspencer/skills/find-deals/discover-sites.md. Replace Step 2 with a query-matrix generator that produces 40-80 queries from buy box (categories × geographies × marketplace patterns). Use the spec at /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/superpowers/specs/2026-05-09-find-deals-v2-discovery-and-extraction.md §5.2 step 2 as your reference. Report exact diff. Do nothing else."
   })
 - If a sub-agent stalls (can't find selector, page won't load, takes 3+ retries), kill it and try a different approach. Don't let one stuck sub-agent eat the budget.
 - Reading source files for diagnosis is the one direct-work exception — that's expected Opus work.
@@ -62,7 +62,7 @@ The spec is canonical. Do not deviate without explicit user approval (which you 
 5. Branch for this phase: `git checkout -b feat/find-deals-v2-discovery`
 
 ### Phase 2: PLAN (turns 5–8)
-Write `/Users/gideonspencer/dealhound-pro/docs/RUN_A_FIND_DEALS_V2_PLAN.md` with:
+Write `/Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/RUN_A_FIND_DEALS_V2_PLAN.md` with:
 - File-by-file change list (path + what changes + why)
 - Query matrix design (the marketplace patterns × buy box dimensions you'll generate)
 - Industrial buy box construction (the actual content of buy-box-industrial-test.md)
@@ -95,7 +95,7 @@ Test execution. Both gates must pass.
 1. **Test Gate H — hospitality** (DOING DIRECTLY: must orchestrate fresh shell + skill invocation):
    - `cd /tmp && rm -f raw-listings-*.json discovered-sites-*.json` (clean slate)
    - Run from a fresh zsh: `zsh -c 'source ~/.zshrc && cd /tmp && claude -p "/find-deals discover" --max-turns 50 --dangerously-skip-permissions'` (subscription path, no API needed)
-   - After completion: copy /Users/gideonspencer/skills/find-deals/discovered-sites.json → /Users/gideonspencer/dealhound-pro/verification/run-a-hospitality-discovered-sites.json
+   - After completion: copy /Users/gideonspencer/skills/find-deals/discovered-sites.json → /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/verification/run-a-hospitality-discovered-sites.json
    - Validate: count Bucket A sites where `verified=true`. Must be ≥50.
    - If <50: investigate why. Common causes: WebSearch rate-limited (add jitter, retry), price probe failing too aggressively (loosen verification cap), query matrix too narrow (add more patterns). Iterate up to 3 attempts.
 
@@ -151,7 +151,7 @@ Test execution. Both gates must pass.
 Skill discovery refactor is verified by running it end-to-end against two real buy boxes (hospitality, industrial). The output JSON files are the ground truth — count rows, inspect schema, sample 5 rows for spot-check. No browser screenshots needed (this is a CLI/data change).
 
 ## Checkpointing (durable memory in case context compresses)
-After each phase, append a one-paragraph status to /Users/gideonspencer/dealhound-pro/docs/RUN_A_FIND_DEALS_V2_CHECKPOINT.md with:
+After each phase, append a one-paragraph status to /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/RUN_A_FIND_DEALS_V2_CHECKPOINT.md with:
 - Phase name (ORIENT / PLAN / BUILD / VERIFY / SHIP / FINAL)
 - What was found / done
 - Open questions or blockers
@@ -170,7 +170,7 @@ Stop and write the FINAL checkpoint when ANY is true:
 If stopping at 50 turns with goal incomplete: open PR with `[wip]` prefix, write FINAL checkpoint listing what's done and what's left for a follow-up run. Do NOT grind past budget.
 
 ## Final summary (FINAL checkpoint contents)
-Write to /Users/gideonspencer/dealhound-pro/docs/RUN_A_FIND_DEALS_V2_CHECKPOINT.md:
+Write to /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/RUN_A_FIND_DEALS_V2_CHECKPOINT.md:
 - What was done — file paths + diff snippets for key changes
 - What was NOT done and why
 - Test gate H result (hospitality source count, evidence file path)

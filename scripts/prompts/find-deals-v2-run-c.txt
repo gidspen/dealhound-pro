@@ -5,8 +5,8 @@ Ship Phase 3 (Telemetry + Loop Closure) of the find-deals v2 spec. Wire `apply-b
 
 ## Source of truth
 Read in order:
-1. /Users/gideonspencer/dealhound-pro/docs/superpowers/specs/2026-05-09-find-deals-v2-discovery-and-extraction.md §5.4 (telemetry) + §6 Phase 3 (acceptance)
-2. /Users/gideonspencer/dealhound-pro/docs/RUN_A_FIND_DEALS_V2_CHECKPOINT.md AND /Users/gideonspencer/dealhound-pro/docs/RUN_B_FIND_DEALS_V2_CHECKPOINT.md (prior phase results — know what's been built)
+1. /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/superpowers/specs/2026-05-09-find-deals-v2-discovery-and-extraction.md §5.4 (telemetry) + §6 Phase 3 (acceptance)
+2. /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/RUN_A_FIND_DEALS_V2_CHECKPOINT.md AND /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/RUN_B_FIND_DEALS_V2_CHECKPOINT.md (prior phase results — know what's been built)
 3. /Users/gideonspencer/skills/find-deals/apply-buybox.md (the file you're wiring)
 4. /Users/gideonspencer/skills/find-deals/discovered-sites.json (current schema with performance_metadata blocks)
 5. /Users/gideonspencer/skills/find-deals/SKILL.md (overall orchestration)
@@ -44,7 +44,7 @@ Same as Runs A + B. Opus thinks, Sonnet does. Tag every action.
    ```
 
 ### Phase 2: PLAN (turns 4–6)
-Write /Users/gideonspencer/dealhound-pro/docs/RUN_C_FIND_DEALS_V2_PLAN.md with:
+Write /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/RUN_C_FIND_DEALS_V2_PLAN.md with:
 - Where in apply-buybox.md Step 3 the wiring goes (specific section)
 - The exact data flow from scored-inline.json → performance_metadata updates
 - Yield script algorithm (math + output format)
@@ -85,7 +85,7 @@ Write /Users/gideonspencer/dealhound-pro/docs/RUN_C_FIND_DEALS_V2_PLAN.md with:
    - After completion, validate:
      - discovered-sites.json performance_metadata changed: at least 5 sources have scrapes > before-run-c snapshot
      - Supabase deals table has new rows (use Supabase MCP `execute_sql`: `SELECT count(*) FROM deals WHERE created_at > now() - interval '2 hours'` — must be > 0)
-     - Run yield script: `python3 /Users/gideonspencer/skills/find-deals/scripts/find-deals-source-yield.py > /Users/gideonspencer/dealhound-pro/verification/run-c-yield-histogram.txt`
+     - Run yield script: `python3 /Users/gideonspencer/skills/find-deals/scripts/find-deals-source-yield.py > /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/verification/run-c-yield-histogram.txt`
      - Histogram must have non-empty rank buckets
    - Copy discovered-sites.json AFTER state to verification/run-c-end-to-end-discovered-sites.json
 
@@ -122,7 +122,7 @@ Stop and write FINAL checkpoint when ANY:
 - Test gate E fails to verify telemetry update (telemetry didn't wire properly — debug + open WIP PR)
 
 ## Final summary
-Write to /Users/gideonspencer/dealhound-pro/docs/RUN_C_FIND_DEALS_V2_CHECKPOINT.md:
+Write to /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/RUN_C_FIND_DEALS_V2_CHECKPOINT.md:
 - All same fields as Runs A + B's final checkpoints
 - Test gate E result with full histogram pasted in
 - Skill repo PR URL (stacked)
