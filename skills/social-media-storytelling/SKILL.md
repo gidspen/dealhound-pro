@@ -1,162 +1,215 @@
 ---
 name: social-media-storytelling
 description: >
-  Pulls recent merged GitHub PRs from gidspen/dealhound-pro and writes
-  social media posts in Gideon's founder voice — personal, building-in-public,
-  honest about the grind. Posts are informative without being technical, bring
-  the audience along on the journey, and have a natural call-to-action toward
-  dealhound.pro. Use when Gideon says "write a post", "what should I post today",
-  "do a social update", "write me some content", "generate posts from my PRs",
-  or any variation of turning recent dev work into marketing content.
-  Also runs on a /loop to generate posts automatically on a schedule.
+  Pulls recent merged GitHub PRs from gidspen/dealhound-pro and writes a
+  paired set of platform-native posts — one for X (Twitter) and one for
+  LinkedIn — in Gideon's founder voice. Posts are personal, building-in-public,
+  honest about the grind, and formatted to each platform's audience-growth best
+  practices. Output is structured for the daily briefing approval flow: drafts
+  are presented for approval and, once approved, posted automatically.
+  Use when Gideon says "write a post", "what should I post", "social update",
+  "content from my PRs", "building-in-public", or as a prerequisite step in
+  the daily briefing skill.
 ---
 
 # Social Media Storytelling
 
-You're turning Gideon's recent GitHub activity into founder-voice social media
-posts. The audience is real estate investors — boutique hotel buyers, micro resort
-operators, STR investors — on Instagram and podcast. They don't care about code.
-They care about: what got better, why it matters for finding deals, and whether
-Gideon is the kind of builder they can trust with their deal flow.
+You're turning Gideon's recent GitHub activity into platform-native social posts
+that grow a founder audience around Deal Hound. One set of posts per run:
+one for X and one for LinkedIn. Same underlying story, different execution.
 
-## Voice
+The audience is real estate investors — boutique hotel buyers, micro resort
+operators, STR investors — plus founders and builders interested in the
+"AI replacing real estate grunt work" angle. They don't read changelogs.
+They follow people.
 
-First-person. Present tense where possible. No jargon ("I fixed a bug" not
-"I refactored the scoring pipeline"). Specific details anchor credibility —
-name the feature, name the problem it solved. Honest about struggle: if
-something broke before it worked, say so. Brief sentences. Each post should
-feel like a text from a founder who just shipped something and can't help
-sharing it.
-
-Not corporate. Not humble-braggy. Not a changelog.
+---
 
 ## Step 1 — Pull recent merged PRs
 
 Use `mcp__github__list_pull_requests` to fetch the last 10 PRs from
 `gidspen/dealhound-pro` with `state: "closed"`, sorted by `updated` desc.
-Filter for `merged_at` not null (actually merged, not just closed).
+Filter for `merged_at` not null.
 
-Keep only PRs merged in the last 7 days. If none, widen to 14 days.
+Keep PRs merged in the last 7 days. If fewer than 2 exist, widen to 14 days.
 
-For each merged PR, note:
+For each merged PR, extract:
 - Title (raw)
-- Body summary (first 3-4 sentences of the PR description, before test plans)
+- First 3–4 sentences of the PR body (before ## Test plan)
 - Merge date
-- Branch name (signals whether it's a fix, feat, chore)
+- Branch prefix (`fix/`, `feat/`, `chore/`)
 
-## Step 2 — Extract the human story
+---
 
-For each PR, identify the **one-sentence human impact**:
+## Step 2 — Find the story
 
-| PR type | Human translation |
-|---|---|
-| `fix/` — bug | Something was broken for users. Now it's not. |
-| `feat/` — feature | Users can now do X they couldn't before. |
-| `chore/` — infra | The engine got more reliable / faster. |
-| `refactor/` — cleanup | Less likely to break. Foundation for next feature. |
+Identify the **one strongest story** from the batch. Prefer:
+1. A user-facing fix that was embarrassing/frustrating before
+2. A new capability investors couldn't do yesterday
+3. A "I shipped this overnight" moment with a good before/after
+4. An honest failure that led to a better outcome
 
-Then identify the **emotional beat**: was this a late-night hunt for a subtle
-bug? A feature Gideon has been wanting for months? A quick win? A boring but
-necessary foundation piece? The PR body usually signals this.
+Group related PRs if they form a single arc (e.g., the bug that exposed the
+need for the fix). Use that group as one story.
 
-Group related PRs if they tell a single coherent story (e.g., a bug fix + the
-feature that exposed the bug = one story about shipping and iterating).
+Distill to:
+- **The problem** (concrete, relatable to someone making financial decisions)
+- **What changed** (in plain language, no code terms)
+- **Why it matters** (how it affects deal flow, trust, velocity)
+- **The human moment** (what it felt like building this, what it reveals about
+  the bigger vision)
 
-## Step 3 — Draft posts
+If all PRs are infrastructure/chore work, still find the story:
+"I spent the week making the foundation more reliable" is honest and earns
+credibility. Don't skip infra runs — they signal commitment.
 
-Write 1–3 posts depending on how much material is available.
+---
 
-### Post format
+## Step 3 — Write the X post
 
-**Hook line** — the thing that happened, in plain language. Compelling enough
-to stop the scroll. 8-12 words max. No period at the end.
+### X (Twitter) best practices for founder product growth
 
-**Body** — 3-6 short paragraphs. Tell the story: what it was, why it broke
-or why you built it, what it does now, what that means for an investor using
-it. Be concrete: "deals were sorted wrong in the chat" not "there was a
-ranking inconsistency." Use line breaks between each paragraph for IG
-readability.
+**Goal:** grow a following of founders, indie hackers, RE investors, and AI
+watchers who share the build journey. Virality comes from honesty, specificity,
+and making people feel something.
 
-**Landing** — one or two sentences that bring it home. Why does this matter
-in the bigger picture? What's next?
+**Format rules:**
+- Hook: first line must stop the scroll. 8–12 words. No period. Often a
+  paradox, a confession, a specific number, or a counter-intuitive statement.
+- Use hard line breaks every 1–2 sentences. White space = readability on mobile.
+- 3–5 paragraphs of 1–3 lines each.
+- End with either a question (drives replies) or a punchy statement (drives RTs).
+- Hashtags: 2–3 max, tucked at the very end. Use `#buildinpublic` always.
+  Add one niche tag (`#realestateinvesting`, `#proptech`, or `#aistartup`).
+- Total length: 220–280 characters for a standalone post. If the story needs
+  more space, write a **thread** (2–4 tweets, numbered 1/, 2/, 3/).
+- No em dashes. Short sentences. Fragments are fine.
 
-**CTA** — keep it soft, one line. Usually points to dealhound.pro or the
-Founding Member offer.
-
-**Hashtags** — 5-8 relevant tags at the end, separated by spaces, on their
-own line. Mix of niche (boutique hotel investing, off-market deals) and broad
-(buildinpublic, solofounder, proptech). Don't over-hashtag.
-
-### Length target
-
-Instagram caption sweet spot: 150–300 words. Longer is fine if the story
-earns it. Shorter is fine for quick wins.
-
-### Example tone (do not copy verbatim — this is style reference only)
-
-> Fixed something that's been bugging me for a week
->
-> When you asked the AI agent about your top deals, it would call them
-> "Deal 1, Deal 2, Deal 3" — but those numbers didn't match the ranked list
-> on your screen. Deal 1 in the chat might be Deal 7 on your dashboard. Made
-> it feel unreliable, even when the analysis was right.
->
-> Turned out the chat was reading deals in the order they hit the database,
-> not in priority order. A one-line fix. But these are the details that make
-> or break trust in a tool you're supposed to use to make real financial
-> decisions.
->
-> Every time I find one of these I ask: what else are we calling "Deal 1"
-> that's actually a "Deal 7"? Good motivation to keep auditing.
->
-> If you haven't tried a free scan yet, link in bio.
->
-> #buildinpublic #dealhunting #boutiquehotel #realestateinvesting
-> #airealestate #solofounder #proptech #aitools
-
-## Step 4 — Present posts
-
-Show Gideon each draft post, clearly labeled:
-
+**Thread format:**
 ```
---- POST 1 of N ---
-[the post, ready to copy-paste]
+1/ [hook — the strongest line]
 
-Source PRs: #XX, #YY
+[2 lines of setup]
+
+2/ [the meat — what happened, what broke, what you did]
+
+[concrete detail]
+
+3/ [the lesson or the forward look]
+
+[1 punchy closing line]
+
+#buildinpublic #realestateinvesting
 ```
 
-Then ask: "Want me to tweak any of these, or are they good to go?"
+**Tone:** raw, direct, occasionally self-deprecating. Like a smart founder
+texting a friend who gets it.
 
-Do NOT post anywhere automatically. These are drafts for review.
+---
 
-## Step 5 — Offer refinements
+## Step 4 — Write the LinkedIn post
 
-Common asks to anticipate:
-- "Make it shorter" → cut the middle, keep hook and landing
-- "Less techy" → replace any remaining technical words with outcomes
-- "Add more struggle" → emphasize what broke before it worked
-- "Make it punchy" → shorten sentences, use fragments intentionally
-- "Different platform" → for Twitter/X, break into a thread (each paragraph
-  = one tweet, add tweet numbers 1/, 2/ etc.)
+### LinkedIn best practices for founder product growth
+
+**Goal:** reach real estate investors, commercial brokers, and professionals
+who are adjacent to Deal Hound's buyer profile. Secondary: founders and
+operators interested in the "building with AI" angle. LinkedIn rewards depth
+and earned vulnerability.
+
+**Format rules:**
+- Hook: first line is the only thing visible before "...see more". Make it
+  work alone. No "I'm excited to announce." No "Great news." Start with a
+  specific observation, a number, or a confession.
+- Every paragraph is 1–2 sentences. Hard return between each.
+- Structure: hook → problem/context (2–3 paras) → what changed (2–3 paras)
+  → what this means / lesson (1–2 paras) → soft CTA (1 line).
+- Length: 150–250 words. Long enough to earn the "see more" click; short
+  enough to read in one breath.
+- Hashtags: 3–5, at the bottom on their own line. Mix founder tags
+  (`#buildinpublic`, `#solofounder`) with audience tags (`#realestateinvesting`,
+  `#commercialrealestate`, `#boutiquehospitality`).
+- No bullet points for the body (save those for product demos). Prose only.
+- CTA is always low-friction: "link in bio" / "free scan at dealhound.pro" /
+  "Founding Member offer open now if you've been watching."
+
+**Tone:** thoughtful, grounded, a level more polished than X but still
+personal. The founder reflecting on the build, not announcing a press release.
+
+---
+
+## Step 5 — Output format
+
+Present both posts clearly labeled. The output of this skill is designed to
+slot directly into Sophie's daily briefing as the social media section.
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SOCIAL POSTS FOR APPROVAL
+Source PRs: #XX, #YY  |  Story: [one-line story summary]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[X LOGO] X / TWITTER
+────────────────────
+[post or thread, copy-paste ready]
+
+[in LOGO] LINKEDIN
+────────────────────
+[post, copy-paste ready]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Approve both, approve one, or say what to change.
+When approved, these will be posted automatically.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+---
+
+## Step 6 — Handle approval
+
+If Gideon says:
+- **"Approve" / "post both" / "looks good"** → mark both as approved in the
+  briefing output. The posting step will be handled by the daily briefing
+  skill's posting flow. Return `{ approved: ["x", "linkedin"], posts: { x, linkedin } }`.
+- **"Approve X only"** → mark X approved, hold LinkedIn.
+- **"Change [X]"** → apply the change and show the revised draft. Don't
+  re-draft the other platform unless asked.
+- **"Skip" / "not today"** → note in briefing output that social was skipped.
+  Return `{ approved: [], reason: "skipped" }`.
+
+---
 
 ## Edge cases
 
-**No PRs in the last 14 days:** Tell Gideon there's no recent shipping to draw
-from, then offer to write from the product roadmap or from a specific feature
-he describes manually.
+**No PRs in last 14 days:** Offer to write from the product roadmap, the
+launch strategy (Founding Member offer, free scan), or a specific moment
+Gideon describes manually. The story doesn't have to come from code.
 
-**Only chore/infra PRs:** These still have stories. "I spent the last few days
-making the foundation more reliable so I can ship features faster" is honest
-and relatable. Don't skip infra PRs — they signal commitment and rigor.
+**Only chore/infra PRs:** These still earn posts. "Infrastructure week" is
+a real founder story. Reliability and care for the product *is* the message.
 
-**Duplicate story from a previous loop run:** Check if the same PR numbers
-were used in the last post. If so, skip them and look for older unposted PRs,
-or flag to Gideon that there's nothing new since last time.
+**Big feature launch (new skill, major capability):** Go longer on LinkedIn
+(up to 300 words), write a 4-tweet thread on X. This is worth the extra
+weight.
 
-## Notes
+**Founding Member window open:** Every CTA should reference it specifically —
+"$49/mo lifetime, first 50 only, link in bio." Don't bury it.
 
-- The Founding Member window ($49/mo, first 50) is time-limited — when that
-  offer is active, CTAs should reference it specifically
-- When in doubt, err toward more personal / honest over more polished / safe
-- The audience follows Gideon, not the product — write about the person first,
-  the tool second
+**Story used in previous run:** Check if the same PR numbers appeared in the
+last output. If so, skip them and find the next unused PRs, or flag that
+there's nothing new to post.
+
+---
+
+## Voice guardrails
+
+- **Do:** Name concrete things ("the chat was labeling Deal 7 as Deal 1",
+  "I ran this overnight and woke up to three queued PRs")
+- **Do:** Show the before/after ("before: broken. after: fixed. five-minute
+  detective work, then one line of code.")
+- **Do:** Connect to the investor's world ("when you're making a $2M decision,
+  you want your AI agent's Deal 1 to actually be the best deal")
+- **Don't:** Use startup-speak ("excited to share", "game-changer",
+  "thrilled to announce", "we're on a mission")
+- **Don't:** Over-explain the tech ("refactored the scoring pipeline" →
+  "the ranking was wrong, now it's right")
+- **Don't:** Be falsely humble or falsely confident. Specificity beats both.
