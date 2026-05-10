@@ -137,7 +137,39 @@ Err toward omission — it's easy to add something later, hard to un-publish.
 
 ---
 
-## Step 1 — Identify the story type
+## The structure that makes it human
+
+This is the single most important instruction in this skill. Get this right
+and everything else follows.
+
+**Wrong order (marketing copy):**
+Feature → why it matters → Gideon was there too
+
+**Right order (personal story):**
+Moment Gideon lived → what he felt or noticed → what he built because of it
+
+The post opens on a specific human scene — not a thesis, not a feature
+announcement, not a problem statement. A moment. Something that actually
+happened. The product shows up near the end as the natural conclusion, almost
+incidentally. The reader finds out what Deal Hound does by following Gideon's
+story, not by being told about it.
+
+**The test:** Cover the last paragraph. Does the rest of the post read like
+something a real person experienced and felt compelled to share? If yes,
+the structure is right. If it reads like a product announcement with a
+personal anecdote bolted on, it's wrong.
+
+**What "specific" actually means:**
+Not "I've been in deals" — "I was on a call in Phoenix and the broker had
+sent the rent roll three weeks earlier somewhere in an email thread"
+Not "deals are complex" — "I had 45 minutes before someone else was making
+an offer and I couldn't find the file"
+Not "investors need better tools" — "I built the thing I kept wishing existed"
+
+The more specific the scene, the more real it feels. Specificity is what
+makes someone reading on their phone think "that's exactly what happens to me."
+
+
 
 Look at the merged PRs from the last 7 days (widen to 14 if fewer than 2).
 Classify the primary PR by story type:
