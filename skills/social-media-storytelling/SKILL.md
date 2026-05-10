@@ -88,30 +88,54 @@ world: real estate, deals, velocity, and the tool he built to make it real.
 
 
 
-1. **The tool I needed and couldn't find** — RE investor building the AI
-   deal team he wished existed. Authenticity that a VC-backed proptech
-   startup can't replicate.
+### Narrative angles — rotate these, lean into at least one per post
 
-2. **The before/after on a real decision** — before Deal Hound: 3 hours of
-   manual search to find what the agent finds in minutes. What does that
-   mean for deal velocity? For how many deals you can evaluate in a month?
+**1. Real estate investor building for real estate investors**
+Gideon isn't a dev who wandered into proptech. He's been in deals through
+Stone Mont Capital — acquisitions, due diligence, the whole workflow. That
+domain credibility is the thing most proptech founders can't claim. When he
+fixes a bug because "Deal 1 should actually be the best deal when you're
+making a $2M decision" — that framing only works because he's been in those
+decisions. It's the angle no competitor can copy.
 
-3. **Honest failure → specific fix** — the bug that embarrassed him, the plan
-   that didn't work, the feature that took 3x longer than expected. Then what
-   he did about it.
+**2. Velocity as the story**
+Multiple PRs a day. Features shipped overnight. A whole product surface
+built before breakfast. That speed is part of the brand — it shows what's
+possible when you move without a committee. Posts that show velocity don't
+have to explain it. They just move fast and readers feel it.
 
-4. **Feature drop as investor benefit** — every new capability framed as what
-   the investor gets, not what was built. "The agent can now find dental
-   practices for sale before they hit the market" not "shipped SBA feature."
+**3. Honest about what broke — by name**
+The PR descriptions don't say "improved reliability." They say "the chat
+was calling Deal 7 'Deal 1' for six days." That instinct belongs in posts.
+Name the embarrassing thing. Name how long it existed. That honesty is what
+makes people trust the wins — if he's this candid about failures, the
+results must be real.
 
-5. **The dual-background credibility angle** — tech fluency + RE experience
-   is rare. Use it when talking about why existing tools miss what investors
-   actually need, or when explaining a decision that requires both kinds of
-   knowledge.
+**4. The $2M decision lens**
+Every fix connects to an investor at a decision point. The ranking bug isn't
+a ranking bug — it's "if you'd acted on what the agent told you, you might
+have called the wrong deal first." Use this lens to make product updates
+feel consequential. Deal Hound isn't a productivity tool, it's due diligence
+infrastructure.
 
-6. **Transparent goals and milestones** — $15K MRR target, Founding Member
-   count, scans run, markets covered. Founders who share numbers build trust
-   with audiences who buy things.
+**5. Stone Mont Capital is the credential**
+He's not a hobbyist experimenter. He operates at a professional level in RE.
+That gives him the authority to say "here's what investors actually need"
+rather than "here's what I think they need." Reference it when the
+credibility gap matters — why Deal Hound is built differently, why he
+cares about a specific detail that other tools get wrong.
+
+**6. Stated goals, publicly**
+$15K MRR in 3 weeks from a warm audience. Founding Member slots — first 50,
+$49 for life. These numbers are out in the open. Founders who share goals
+create accountability that silent execution never does. When milestones hit,
+they mean something because people watched the target get set.
+
+**7. Sleeping while the AI builds**
+The overnight autonomous runs are cinematic. Set the prompt before bed, wake
+up to queued PRs. That's a story most people have never seen in real life —
+and it demonstrates the velocity angle without having to claim it. Show the
+timestamp. Show what shipped. Let the story tell itself.
 
 ### Content mix — Phase 1 (current: building audience from zero)
 
