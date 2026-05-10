@@ -94,15 +94,46 @@ existing tools are all wrong.
    count, scans run, markets covered. Founders who share numbers build trust
    with audiences who buy things.
 
-### Content mix (rotate across posts over time)
+### Content mix — Phase 1 (current: building audience from zero)
 
-- ~40% feature drops and product updates ("here's what Deal Hound can do now")
-- ~30% honest journey (failures, pivots, late-night debug sessions, what I
-  got wrong and how I fixed it)
-- ~20% investor perspective (why the old way of deal hunting is broken, what
-  good deal flow actually looks like, what signals matter in boutique hotel
-  or SBA acquisitions)
-- ~10% transparent metrics (MRR, Founding Member slots, scans delivered)
+The goal right now is context and trust. People can't appreciate honest
+vulnerability from someone they don't know yet. Build the foundation first:
+who Gideon is, what Deal Hound does, why it exists, why it works. The
+vulnerability layer comes once there's an audience that has enough context
+to care.
+
+- ~50% product storytelling ("here's what Deal Hound can do, here's why
+  it matters for investors evaluating acquisitions")
+- ~30% founder credibility and origin ("I've been in real estate, I've been
+  in tech, here's what I saw that no one had built yet")
+- ~15% transparent milestones (Founding Member slots, scans delivered,
+  markets covered — builds trust and urgency)
+- ~5% honest texture (one small vulnerability at a time, once the audience
+  has context — not failures, more like "here's what surprised me")
+
+**Later phases** (once a following exists with context):
+- Shift toward 40/20/25/15 — more journey, more honest failures, more
+  opinions and takes. Don't rush there. The audience needs the foundation
+  before the cracks in it mean anything.
+
+---
+
+## Do Not Post — Restricted Topics
+
+Check this list before drafting. If the story touches any of these topics,
+skip it and find a different PR or angle. These are either too early to share,
+still being proved out, or better held for a specific launch moment.
+
+| Topic | Reason | Status |
+|---|---|---|
+| SBA deal finder / dental practice lead gen | Lab concept, not proven, not ready for public | Hold indefinitely until Gideon says otherwise |
+| Specific MRR numbers (exact figures) | Share milestones, not raw numbers until Gideon is comfortable | Ask first |
+| Competitor names | Not worth the engagement it invites | Never |
+| Specific customer names or deals | Privacy | Never without explicit permission |
+| Internal tooling / AI infrastructure details | See "don't market Claude" rule | Never as protagonist |
+
+When in doubt, ask Gideon before including a topic rather than guessing.
+Err toward omission — it's easy to add something later, hard to un-publish.
 
 ---
 
