@@ -19,7 +19,6 @@
     { "source": "/api/deal-files", "destination": "/api/deal-actions?_route=files" },
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },
     { "source": "/dashboard/(.*)", "destination": "/dashboard-dist/index.html" },
-    { "source": "/free-scan", "destination": "/free-scan/index.html" },
-    { "source": "/scan/:id", "destination": "/scan/index.html" }
+    { "source": "/free-scan", "destination": "/free-scan/index.html" }
   ]
 }

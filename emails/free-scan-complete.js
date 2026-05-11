@@ -26,7 +26,7 @@ function renderFreeScanCompleteEmail({
   magicLinkUrl,
 }) {
   const subject = 'Hey! I found some deals 👀';
-  const from    = `${agentName} from Deal Hound <hello@dealhound.pro>`;
+  const from    = `${agentName} from Deal Hound <gideon@stonemontcap.com>`;
 
   // ── Greeting ─────────────────────────────────────────────────────────────────
   const greeting = (firstName && firstName.trim())
