@@ -2,10 +2,10 @@ import { useEffect } from 'preact/hooks';
 import { settingsOpen, email, plan, upgradeModal } from '../lib/state.js';
 
 const TIER_DISPLAY = {
-  founding: { label: 'Founding Member',    badge: 'tier-founding' },
-  hunter:   { label: 'Hunter',             badge: 'tier-hunter'   },
-  investor: { label: 'Investor',           badge: 'tier-investor' },
-  operator: { label: 'Operator',           badge: 'tier-operator' },
+  founding: { label: 'Founding Member', badge: 'tier-founding' },
+  hunter: { label: 'Hunter', badge: 'tier-hunter' },
+  investor: { label: 'Investor', badge: 'tier-investor' },
+  operator: { label: 'Operator', badge: 'tier-operator' },
 };
 
 function formatResetDate(iso) {
@@ -24,7 +24,8 @@ function PlanSection() {
       <>
         <div class="settings-plan-tier tier-free">Free</div>
         <div class="settings-plan-meta">
-          You've used your free scan. Subscribe to keep hunting — every agent skill, capped runs, lifetime price.
+          You've used your free scan. Subscribe to keep hunting — every agent skill, capped runs,
+          lifetime price.
         </div>
         <button
           class="settings-upgrade-btn"
@@ -42,7 +43,7 @@ function PlanSection() {
 
   const display = TIER_DISPLAY[p.tier] || { label: p.tier, badge: 'tier-free' };
   const used = p.runs_used ?? 0;
-  const limit = p.runs_limit;            // null = unlimited
+  const limit = p.runs_limit; // null = unlimited
   const bonus = p.bonus_runs || 0;
   const resetLabel = formatResetDate(p.runs_reset_at);
   const overCap = limit !== null && used >= limit;
@@ -63,7 +64,9 @@ function PlanSection() {
             <div class={`settings-runs-fill${overCap ? ' over' : ''}`} style={`width: ${pct}%`} />
           </div>
           <div class="settings-runs-text">
-            <span>{used} of {limit} runs used</span>
+            <span>
+              {used} of {limit} runs used
+            </span>
             {resetLabel && <span>Resets {resetLabel}</span>}
           </div>
           {bonus > 0 && (
@@ -99,7 +102,9 @@ function PlanSection() {
 export function Settings() {
   useEffect(() => {
     if (!settingsOpen.value) return;
-    const handler = (e) => { if (e.key === 'Escape') settingsOpen.value = false; };
+    const handler = (e) => {
+      if (e.key === 'Escape') settingsOpen.value = false;
+    };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, [settingsOpen.value]);
@@ -119,11 +124,23 @@ export function Settings() {
   };
 
   return (
-    <div id="settings-overlay" onClick={(e) => { if (e.target.id === 'settings-overlay') settingsOpen.value = false; }}>
+    <div
+      id="settings-overlay"
+      onClick={(e) => {
+        if (e.target.id === 'settings-overlay') settingsOpen.value = false;
+      }}
+    >
       <div class="settings-panel">
         <div class="settings-header">
           <span class="settings-title">Settings</span>
-          <button class="settings-close-btn" onClick={() => { settingsOpen.value = false; }}>×</button>
+          <button
+            class="settings-close-btn"
+            onClick={() => {
+              settingsOpen.value = false;
+            }}
+          >
+            ×
+          </button>
         </div>
 
         <div class="settings-section">
@@ -137,12 +154,14 @@ export function Settings() {
         <div class="settings-section">
           <div class="settings-section-title">Help</div>
           <a
-            href={`mailto:gideon@stonemontcap.com?subject=${encodeURIComponent('Deal Hound feedback')}&body=${encodeURIComponent('What worked? What didn\'t? What surprised you?\n\n')}`}
+            href={`mailto:gideon@stonemontcap.com?subject=${encodeURIComponent('Deal Hound feedback')}&body=${encodeURIComponent("What worked? What didn't? What surprised you?\n\n")}`}
             class="settings-link"
           >
             Send feedback →
           </a>
-          <a href="mailto:gideon@stonemontcap.com" class="settings-link">Contact support →</a>
+          <a href="mailto:gideon@stonemontcap.com" class="settings-link">
+            Contact support →
+          </a>
         </div>
 
         <div class="settings-section">
@@ -157,7 +176,9 @@ export function Settings() {
         </div>
 
         <div class="settings-bottom">
-          <button class="settings-signout" onClick={signOut}>Sign out</button>
+          <button class="settings-signout" onClick={signOut}>
+            Sign out
+          </button>
         </div>
       </div>
     </div>

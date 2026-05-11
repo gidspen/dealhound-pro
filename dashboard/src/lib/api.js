@@ -1,9 +1,20 @@
 import {
-  email, agentName, scans, deals, activeThreads, starredDealIds,
-  viewedDealIds, archivedDealIds,
-  chatMessages, chatConversationId, chatStreaming,
-  cacheGet, cacheSet, activeThreadId,
-  plan, upgradeModal
+  email,
+  agentName,
+  scans,
+  deals,
+  activeThreads,
+  starredDealIds,
+  viewedDealIds,
+  archivedDealIds,
+  chatMessages,
+  chatConversationId,
+  chatStreaming,
+  cacheGet,
+  cacheSet,
+  activeThreadId,
+  plan,
+  upgradeModal,
 } from './state.js';
 
 const API_BASE = '';
@@ -17,9 +28,9 @@ export async function loadUserData() {
   scans.value = data.scans || [];
   deals.value = data.deals || [];
   activeThreads.value = data.active_threads || [];
-  starredDealIds.value = new Set(data.deals.filter(d => d.starred).map(d => d.id));
-  viewedDealIds.value = new Set(data.deals.filter(d => d.viewed).map(d => d.id));
-  archivedDealIds.value = new Set(data.deals.filter(d => d.archived).map(d => d.id));
+  starredDealIds.value = new Set(data.deals.filter((d) => d.starred).map((d) => d.id));
+  viewedDealIds.value = new Set(data.deals.filter((d) => d.viewed).map((d) => d.id));
+  archivedDealIds.value = new Set(data.deals.filter((d) => d.archived).map((d) => d.id));
   if (data.plan) {
     plan.value = data.plan;
   }
@@ -71,8 +82,8 @@ export async function sendMessage(text, endpoint, extraBody = {}) {
 
   // Strip role:'system' UI-only messages — Claude API only accepts 'user' and 'assistant'
   const allMessages = chatMessages.value
-    .filter(m => m.role === 'user' || m.role === 'assistant')
-    .map(m => ({ role: m.role, content: m.content }));
+    .filter((m) => m.role === 'user' || m.role === 'assistant')
+    .map((m) => ({ role: m.role, content: m.content }));
 
   try {
     const res = await fetch(`${API_BASE}${endpoint}`, {
@@ -83,8 +94,8 @@ export async function sendMessage(text, endpoint, extraBody = {}) {
         messages: allMessages,
         conversation_id: chatConversationId.value,
         agent_name: agentName.value,
-        ...extraBody
-      })
+        ...extraBody,
+      }),
     });
 
     if (!res.ok) {
@@ -115,7 +126,11 @@ export async function sendMessage(text, endpoint, extraBody = {}) {
             const msgs = [...chatMessages.value];
             const lastMsg = msgs[msgs.length - 1];
             if (lastMsg && lastMsg.role === 'assistant' && lastMsg._streaming) {
-              msgs[msgs.length - 1] = { role: 'assistant', content: assistantText, _streaming: true };
+              msgs[msgs.length - 1] = {
+                role: 'assistant',
+                content: assistantText,
+                _streaming: true,
+              };
             } else {
               msgs.push({ role: 'assistant', content: assistantText, _streaming: true });
             }
@@ -140,7 +155,9 @@ export async function sendMessage(text, endpoint, extraBody = {}) {
             msgs.push({ role: 'assistant', content: 'Error: ' + event.error });
             chatMessages.value = msgs;
           }
-        } catch { /* skip malformed JSON */ }
+        } catch {
+          /* skip malformed JSON */
+        }
       }
     }
 
@@ -155,9 +172,8 @@ export async function sendMessage(text, endpoint, extraBody = {}) {
 
     cacheSet(activeThreadId.value, {
       messages: chatMessages.value,
-      conversationId: chatConversationId.value
+      conversationId: chatConversationId.value,
     });
-
   } catch (err) {
     const msgs = [...chatMessages.value];
     msgs.push({ role: 'system', content: 'Connection lost. Try again.' });
@@ -172,19 +188,26 @@ export async function toggleStar(dealId) {
   const newStarred = !currentlyStarred;
 
   const updated = new Set(starredDealIds.value);
-  if (newStarred) updated.add(dealId); else updated.delete(dealId);
+  if (newStarred) updated.add(dealId);
+  else updated.delete(dealId);
   starredDealIds.value = updated;
 
   try {
     const res = await fetch(`${API_BASE}/api/deal-actions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'star', email: email.value, deal_id: dealId, starred: newStarred })
+      body: JSON.stringify({
+        action: 'star',
+        email: email.value,
+        deal_id: dealId,
+        starred: newStarred,
+      }),
     });
     if (!res.ok) throw new Error();
   } catch {
     const reverted = new Set(starredDealIds.value);
-    if (currentlyStarred) reverted.add(dealId); else reverted.delete(dealId);
+    if (currentlyStarred) reverted.add(dealId);
+    else reverted.delete(dealId);
     starredDealIds.value = reverted;
   }
 }
@@ -200,7 +223,7 @@ export async function viewDeal(dealId) {
     const res = await fetch(`${API_BASE}/api/deal-actions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'view', email: email.value, deal_id: dealId })
+      body: JSON.stringify({ action: 'view', email: email.value, deal_id: dealId }),
     });
     if (!res.ok) throw new Error();
   } catch {
@@ -215,19 +238,26 @@ export async function archiveDeal(dealId) {
   const newArchived = !currentlyArchived;
 
   const updated = new Set(archivedDealIds.value);
-  if (newArchived) updated.add(dealId); else updated.delete(dealId);
+  if (newArchived) updated.add(dealId);
+  else updated.delete(dealId);
   archivedDealIds.value = updated;
 
   try {
     const res = await fetch(`${API_BASE}/api/deal-actions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'archive', email: email.value, deal_id: dealId, archived: newArchived })
+      body: JSON.stringify({
+        action: 'archive',
+        email: email.value,
+        deal_id: dealId,
+        archived: newArchived,
+      }),
     });
     if (!res.ok) throw new Error();
   } catch {
     const reverted = new Set(archivedDealIds.value);
-    if (currentlyArchived) reverted.add(dealId); else reverted.delete(dealId);
+    if (currentlyArchived) reverted.add(dealId);
+    else reverted.delete(dealId);
     archivedDealIds.value = reverted;
   }
 }

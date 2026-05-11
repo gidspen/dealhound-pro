@@ -32,7 +32,10 @@ export function UpgradeModal() {
       if (res.status === 409) {
         // Founding window closed or 50/50 cap reached — fall back to Hunter.
         const body = await res.json().catch(() => ({}));
-        setErr((body.error || 'Founding spots are gone — try Hunter at $79/mo.') + ' Falling back to Hunter…');
+        setErr(
+          (body.error || 'Founding spots are gone — try Hunter at $79/mo.') +
+            ' Falling back to Hunter…'
+        );
         // Auto-retry on Hunter after 1.5s so the user reads the message
         setTimeout(() => startCheckout('hunter'), 1500);
         return;
@@ -55,9 +58,16 @@ export function UpgradeModal() {
   // ── No subscription: pitch Founding Member ────────────────────────────────
   if (m.reason === 'no_subscription') {
     return (
-      <div class="upgrade-overlay" onClick={(e) => { if (e.target.classList.contains('upgrade-overlay')) close(); }}>
+      <div
+        class="upgrade-overlay"
+        onClick={(e) => {
+          if (e.target.classList.contains('upgrade-overlay')) close();
+        }}
+      >
         <div class="upgrade-modal">
-          <button class="upgrade-close" onClick={close} aria-label="Close" disabled={busy}>×</button>
+          <button class="upgrade-close" onClick={close} aria-label="Close" disabled={busy}>
+            ×
+          </button>
 
           <div class="upgrade-eyebrow">First 50 only · 14-day window</div>
           <h2 class="upgrade-title">Become a Founding Member</h2>
@@ -67,10 +77,19 @@ export function UpgradeModal() {
           </p>
 
           <ul class="upgrade-bullets">
-            <li><strong>10 agent runs / month</strong> — deal scans, LOIs, underwriting, comps</li>
-            <li><strong>Lifetime price guarantee</strong> — never increases as long as you stay subscribed</li>
-            <li><strong>Every future skill included</strong> — no per-skill upsells, ever</li>
-            <li><strong>Direct line to the founder</strong> for feedback during beta</li>
+            <li>
+              <strong>10 agent runs / month</strong> — deal scans, LOIs, underwriting, comps
+            </li>
+            <li>
+              <strong>Lifetime price guarantee</strong> — never increases as long as you stay
+              subscribed
+            </li>
+            <li>
+              <strong>Every future skill included</strong> — no per-skill upsells, ever
+            </li>
+            <li>
+              <strong>Direct line to the founder</strong> for feedback during beta
+            </li>
           </ul>
 
           <button
@@ -105,14 +124,24 @@ export function UpgradeModal() {
     const limit = m.runs_limit ?? '?';
 
     return (
-      <div class="upgrade-overlay" onClick={(e) => { if (e.target.classList.contains('upgrade-overlay')) close(); }}>
+      <div
+        class="upgrade-overlay"
+        onClick={(e) => {
+          if (e.target.classList.contains('upgrade-overlay')) close();
+        }}
+      >
         <div class="upgrade-modal">
-          <button class="upgrade-close" onClick={close} aria-label="Close" disabled={busy}>×</button>
+          <button class="upgrade-close" onClick={close} aria-label="Close" disabled={busy}>
+            ×
+          </button>
 
-          <div class="upgrade-eyebrow">{used} / {limit} runs used this month</div>
+          <div class="upgrade-eyebrow">
+            {used} / {limit} runs used this month
+          </div>
           <h2 class="upgrade-title">You're out of runs</h2>
           <p class="upgrade-lede">
-            You've used your monthly compute. Top up 5 more runs for $25, or wait until your runs reset next month.
+            You've used your monthly compute. Top up 5 more runs for $25, or wait until your runs
+            reset next month.
           </p>
 
           <button
@@ -123,19 +152,13 @@ export function UpgradeModal() {
             {busy ? 'Opening checkout…' : 'Top up 5 runs · $25'}
           </button>
 
-          <button
-            class="upgrade-cta-secondary"
-            onClick={close}
-            disabled={busy}
-          >
+          <button class="upgrade-cta-secondary" onClick={close} disabled={busy}>
             Wait until next month
           </button>
 
           {err && <p class="upgrade-error">{err}</p>}
 
-          <p class="upgrade-fineprint">
-            One-time charge. Bonus runs roll over until used.
-          </p>
+          <p class="upgrade-fineprint">One-time charge. Bonus runs roll over until used.</p>
         </div>
       </div>
     );
@@ -145,9 +168,17 @@ export function UpgradeModal() {
   return (
     <div class="upgrade-overlay" onClick={close}>
       <div class="upgrade-modal">
-        <button class="upgrade-close" onClick={close} aria-label="Close">×</button>
+        <button class="upgrade-close" onClick={close} aria-label="Close">
+          ×
+        </button>
         <h2 class="upgrade-title">Upgrade required</h2>
-        <p class="upgrade-lede">Pick a plan at <a href="/" target="_blank" rel="noreferrer">dealhound.pro</a> to keep hunting.</p>
+        <p class="upgrade-lede">
+          Pick a plan at{' '}
+          <a href="/" target="_blank" rel="noreferrer">
+            dealhound.pro
+          </a>{' '}
+          to keep hunting.
+        </p>
       </div>
     </div>
   );

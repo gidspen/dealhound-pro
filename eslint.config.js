@@ -95,6 +95,19 @@ module.exports = [
     },
   },
 
+  // --- Playwright e2e specs: Node + browser globals (page.evaluate runs in browser) ---
+  {
+    files: ['tests/e2e/**/*.{js,ts}', 'playwright.config.ts'],
+    languageOptions: {
+      sourceType: 'module',
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+        ...globals.es2022,
+      },
+    },
+  },
+
   // --- Browser JS files: chat, free-scan, scan, dashboard lib ---
   {
     files: ['chat/**/*.js', 'free-scan/**/*.js', 'scan/**/*.js', 'dashboard/src/lib/**/*.js'],
