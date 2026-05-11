@@ -1,0 +1,73 @@
+File saved. Now printing the full discovery summary.
+
+---
+
+```
+=== SITE DISCOVERY RESULTS ===
+Buy box: micro resort | glamping | boutique hotel | cabin resort | inn | lodge | B&B
+Price range: $300k–$3M | Queries run: 65 | Discovered: 2026-05-09
+
+SITES — HIGH SIGNAL (20 verified):
+  ✓ NAI Outdoor Hospitality Brokers — naiohb.com — 22 active listings, unpriced but confirmed in range
+  ✓ The Campground Marketplace — thecampgroundmarketplace.com — 50+ listings $275k–$8.5M, many in range
+  ✓ The Campground Connection — thecampgroundconnection.com — listings $275k–$4.5M confirmed
+  ✓ Parks and Places — parksandplaces.com — NC Mountain glamping resort confirmed
+  ✓ Bed and Breakfast for Sale — bedandbreakfastforsale.com — #1 for B&Bs, boutique hotels, lodges
+  ✓ United Country Hospitality Properties — hospitality-properties.unitedcountry.com — TX/CO/TN/NC confirmed
+  ✓ United Country Resort Properties — resort-properties.unitedcountry.com — largest private inventory
+  ✓ The B&B Team — bbteam.com — #1 inn/B&B/boutique hotel broker NA
+  ✓ White Stone Brokers — whitestonebrokers.com — boutique lodging specialist, TN/NC focused
+  ✓ SVN Northco — northco.com — CO boutique hotel/glamping specialist, 5 live buy-box listings
+  ✓ North Star Brokerage — nstarba.com — Ranch 3232 TX Hill Country confirmed
+  ✓ Glampitect — connect.glampitect.com — glamping-exclusive marketplace
+  ✓ Land Broker MLS — landbrokermls.com — resort/cabin/lodge MLS, TX/CO/TN
+  ✓ LandSearch — landsearch.com — 96 TX + 164 CO + 31 TN + 55 NC resort props
+  ✓ BizBuySell — bizbuysell.com — 200 hotels + campgrounds, all states confirmed
+  ✓ BizQuest — bizquest.com — resort/campground/lodge by state
+  ✓ InnShopper — innshopper.com — boutique hotels, lodges, cabin resorts
+  ✓ Park Brokerage Services — parkbrokerageservices.com — TX outdoor hospitality specialist
+  ✓ Kaplan Brokerage Group — kaplanbrokeragegroup.com — national outdoor hospitality, 200+ deals
+  ✓ International Glamping Business — glampingbusiness.com — glamping-specific listings
+
+SITES — MEDIUM SIGNAL (8):
+  ~ LoopNet — loopnet.com — 100k+ hospitality listings, high noise
+  ~ Crexi — crexi.com — 23-key boutique resort CO confirmed
+  ~ DealStream — dealstream.com — global resort/hotel marketplace
+  ~ RV Park Store — rvparkstore.com — 51 resorts + 50 TX RV parks
+  ~ InnsForSale.com — innsforsale.com — dedicated inn marketplace
+  ~ Fay Ranches — fayranches.com — MT/CO lodge specialist, Boulder Creek Lodge confirmed
+  ~ Big Frontier Group — bigfrontiergroup.com — CO glamping specialist
+  ~ Viviun — viviun.com — global resort/inn FSBO marketplace
+
+SITES — LOW SIGNAL (1):
+  - LandWatch — landwatch.com — 338 camping properties, mostly raw land
+
+INDIVIDUAL LISTINGS FOUND (12 — ready to score):
+  → Ranch 3232, Johnson City TX (Hill Country) — Cabins+glamping+RV, 28 sites — nstarba.com — unpriced
+  → Catskills Riverfront Glamping Development, Phoenicia NY — $1,900,000 — naiohb.com
+  → NC Mountain Glamping Resort — 27 acres, 47 units, 2 glamping tents — parksandplaces.com — unpriced
+  → Colorado Bear Creek Cabins, Evergreen CO — 9-unit boutique resort, 3 acres — northco.com
+  → Eagle Fire Lodge & Cabins, Woodland Park CO — 25 keys — northco.com
+  → CampV Glamping Retreat, Naturita CO — 120 acres, river access — northco.com
+  → Foot of Mountain Motel (entitled 38 glamping tents), Boulder CO — northco.com
+  → 4 Seasons Inn on Fall River, Estes Park CO — boutique hotel, RMNP entrance — northco.com
+  → Hill Country Get Away, TX — 19 acres campground — $2,800,000 — thecampgroundmarketplace.com
+  → Riverside Resort, Rocky Mountain Region — $2,900,000 — thecampgroundmarketplace.com
+  → Near National Parks Resort, Rocky Mountain — $1,700,000 — thecampgroundmarketplace.com
+  → Full-Service Campground with 7 Cabins, SE Region — $520,000 — thecampgroundmarketplace.com
+
+Saved to: ~/.claude/skills/find-deals/discovered-sites.json (40KB)
+
+=== RANK-POSITION HISTOGRAM ===
+  rank 1–10:   HIGH=15  MEDIUM=3  LOW=1  (19 total)
+  rank 11–25:  HIGH=4   MEDIUM=4  LOW=0  (8 total)
+  rank 26–50:  HIGH=1   MEDIUM=1  LOW=0  (2 total)
+
+Next: run /find-deals scrape on the 20 HIGH signal sites
+```
+
+---
+
+**What's new vs. prior runs:** 3 net-new HIGH signal sites not in previous registry — `glampingbusiness.com`, `connect.glampitect.com`, and `park brokerageservices.com`. SVN Northco has 5 confirmed buy-box-qualified CO listings sitting unscored right now. Ranch 3232 (TX Hill Country, cabins+glamping mix) is the standout individual lead — zero exposure in prior scrapes.
+
+Run `/find-deals scrape` to pull raw listings from all 20 HIGH signal sites.
