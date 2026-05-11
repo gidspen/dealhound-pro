@@ -1,0 +1,15 @@
+{
+  "source": "International Glamping Business",
+  "source_url": "https://www.glampingbusiness.com/businesses-for-sale/",
+  "scraped_at": "2026-05-09T03:32:00Z",
+  "filters_applied": {},
+  "listings": [],
+  "extraction": {
+    "method": "universal_dom",
+    "confidence": 0.0,
+    "pages_visited": 3,
+    "extractor_version": "v2",
+    "blocked": true,
+    "notes": "glampingbusiness.com/businesses-for-sale/ contains no listing data in its own DOM. All listings are served via a cross-origin iframe from uk.businessesforsale.com (URL: https://uk.businessesforsale.com/ukpartners/search/camping-and-caravan-parks-and-rv-parks-for-sale?drid=4u7orkvsxxvu). When navigated directly, that domain returns a Cloudflare 'Performing security verification' challenge (Ray ID: 9f95e0178f6fe912) and no listings are accessible. Zero price signals, zero listing-path anchors, and zero structured data found on the host page. The actual listing inventory belongs to uk.businessesforsale.com, not glampingbusiness.com."
+  }
+}
