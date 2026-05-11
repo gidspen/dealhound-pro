@@ -38,20 +38,14 @@ async function checkPaywall(email, supabase) {
     };
   }
 
-  // No tier — allow one free scan, then gate
+  // No tier — unsubscribed
   if (user.subscription_tier == null) {
-    if ((user.agent_runs_used || 0) === 0) {
-      return {
-        allowed: true,
-        user: { email: user.email, subscription_tier: null, agent_runs_used: 0, bonus_runs: 0 },
-        tier_limit: 1,
-      };
-    }
     return {
       allowed: false,
       status: 402,
       body: {
-        error: "Hey, you've used your free scan — grab a plan to keep hunting deals.",
+        error:
+          "Hey, you'll need a subscription to run a scan. Pick a plan and let's get you hunting.",
         reason: 'no_subscription',
         checkoutUrl: '/api/create-checkout',
         tier: null,
