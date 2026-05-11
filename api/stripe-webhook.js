@@ -46,10 +46,7 @@ const { createClient } = require('@supabase/supabase-js');
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
-);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 
 // ---------------------------------------------------------------------------
 // getRawBody — reads the raw request buffer so Stripe can verify the signature.
@@ -58,7 +55,7 @@ const supabase = createClient(
 function getRawBody(req) {
   return new Promise((resolve, reject) => {
     const chunks = [];
-    req.on('data', chunk => chunks.push(chunk));
+    req.on('data', (chunk) => chunks.push(chunk));
     req.on('end', () => resolve(Buffer.concat(chunks)));
     req.on('error', reject);
   });
@@ -129,9 +126,7 @@ async function handleCheckoutCompleted(session) {
     monthly_compute_used: 0,
   };
 
-  const { error } = await supabase
-    .from('users')
-    .upsert(upsertPayload, { onConflict: 'email' });
+  const { error } = await supabase.from('users').upsert(upsertPayload, { onConflict: 'email' });
 
   if (error) {
     console.error('Failed to upsert user after checkout:', error);
@@ -207,7 +202,6 @@ module.exports = async function handler(req, res) {
     }
 
     return res.status(200).json({ received: true });
-
   } catch (err) {
     console.error('stripe-webhook: handler error:', err.message);
     // Return 500 so Stripe retries the webhook

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'preact/hooks';
 import { batch } from '@preact/signals';
-import { email, view, scans, deals, activeThreadId, sidebarOpen, sidebarWidth, previewOpen, previewWidth } from './lib/state.js';
+import { email, view, scans, deals, activeThreadId, sidebarOpen, sidebarWidth, previewOpen, previewWidth, upgradeModal } from './lib/state.js';
 import { loadUserData, switchThread } from './lib/api.js';
 import { Sidebar } from './components/Sidebar.jsx';
 import { Chat } from './components/Chat.jsx';
 import { Preview } from './components/Preview.jsx';
 import { Settings } from './components/Settings.jsx';
+import { UpgradeModal } from './components/UpgradeModal.jsx';
 
 function ResizeHandle({ edge, widthSignal, minW, maxW }) {
   const onPointerDown = (e) => {
@@ -110,6 +111,17 @@ function EmailGate() {
 }
 
 export function App() {
+  // Test-only hook: lets Playwright/devs open the UpgradeModal directly.
+  // No-op risk in production (just sets a signal — gated by being dispatched
+  // intentionally). Wired here so it's available even before sign-in.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    window.__dh_setUpgradeModal = (payload) => { upgradeModal.value = payload; };
+    const handler = (e) => { upgradeModal.value = e.detail; };
+    window.addEventListener('dh-test-open-upgrade', handler);
+    return () => window.removeEventListener('dh-test-open-upgrade', handler);
+  }, []);
+
   useEffect(() => {
     // ── Magic-link handler (runs before localStorage check) ──────────────────
     const params = new URLSearchParams(window.location.search);
@@ -171,6 +183,7 @@ export function App() {
   return (
     <div id="app-shell">
       <Settings />
+      <UpgradeModal />
       <Sidebar />
       {sidebarOpen.value && <ResizeHandle edge="right" widthSignal={sidebarWidth} minW={180} maxW={480} />}
       <Chat />

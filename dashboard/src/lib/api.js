@@ -2,7 +2,8 @@ import {
   email, agentName, scans, deals, activeThreads, starredDealIds,
   viewedDealIds, archivedDealIds,
   chatMessages, chatConversationId, chatStreaming,
-  cacheGet, cacheSet, activeThreadId
+  cacheGet, cacheSet, activeThreadId,
+  plan, upgradeModal
 } from './state.js';
 
 const API_BASE = '';
@@ -19,6 +20,9 @@ export async function loadUserData() {
   starredDealIds.value = new Set(data.deals.filter(d => d.starred).map(d => d.id));
   viewedDealIds.value = new Set(data.deals.filter(d => d.viewed).map(d => d.id));
   archivedDealIds.value = new Set(data.deals.filter(d => d.archived).map(d => d.id));
+  if (data.plan) {
+    plan.value = data.plan;
+  }
 }
 
 export async function loadConversation(conversationId) {
@@ -120,6 +124,17 @@ export async function sendMessage(text, endpoint, extraBody = {}) {
             chatConversationId.value = event.id;
           } else if (event.type === 'buy_box_saved') {
             window.dispatchEvent(new CustomEvent('buybox-saved', { detail: event }));
+          } else if (event.type === 'paywall') {
+            // Server saved the buy box but won't trigger a scan because the user
+            // is unsubscribed or out of runs. Open the upgrade modal with the
+            // server's reason payload.
+            upgradeModal.value = {
+              reason: event.reason || 'no_subscription',
+              tier: event.tier || null,
+              runs_used: event.runs_used,
+              runs_limit: event.runs_limit,
+              bonus_runs: event.bonus_runs,
+            };
           } else if (event.type === 'error') {
             const msgs = [...chatMessages.value];
             msgs.push({ role: 'assistant', content: 'Error: ' + event.error });

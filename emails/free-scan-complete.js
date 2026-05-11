@@ -26,12 +26,10 @@ function renderFreeScanCompleteEmail({
   magicLinkUrl,
 }) {
   const subject = 'Hey! I found some deals 👀';
-  const from    = `${agentName} from Deal Hound <gideon@stonemontcap.com>`;
+  const from = `${agentName} from Deal Hound <gideon@stonemontcap.com>`;
 
   // ── Greeting ─────────────────────────────────────────────────────────────────
-  const greeting = (firstName && firstName.trim())
-    ? `Hey ${firstName.trim()},`
-    : 'Hey,';
+  const greeting = firstName && firstName.trim() ? `Hey ${firstName.trim()},` : 'Hey,';
 
   // ── Body copy ─────────────────────────────────────────────────────────────────
   let bodyLines;
@@ -52,15 +50,11 @@ function renderFreeScanCompleteEmail({
       topDealLine = `The top match looks promising — let me walk you through the details in the dashboard.`;
     }
 
-    bodyLines = [
-      dealsLine,
-      '',
-      topDealLine,
-    ];
+    bodyLines = [dealsLine, '', topDealLine];
   }
 
-  const ctaLine  = `Want to dig in together? I'll walk you through them in the dashboard:`;
-  const signOff  = `— ${agentName}`;
+  const ctaLine = `Want to dig in together? I'll walk you through them in the dashboard:`;
+  const signOff = `— ${agentName}`;
 
   // ── Plain text ────────────────────────────────────────────────────────────────
   const text = [
@@ -79,7 +73,7 @@ function renderFreeScanCompleteEmail({
 
   // ── HTML ──────────────────────────────────────────────────────────────────────
   const bodyHtml = bodyLines
-    .map(line => line === '' ? '' : `<p style="margin:0 0 16px 0;">${escapeHtml(line)}</p>`)
+    .map((line) => (line === '' ? '' : `<p style="margin:0 0 16px 0;">${escapeHtml(line)}</p>`))
     .join('\n');
 
   const html = `<!DOCTYPE html>
@@ -110,7 +104,9 @@ function renderFreeScanCompleteEmail({
 
               ${bodyHtml}
 
-              ${dealCount !== 0 ? `
+              ${
+                dealCount !== 0
+                  ? `
               <p style="margin:0 0 28px 0;font-size:16px;color:#222222;">${escapeHtml(ctaLine)}</p>
 
               <!-- CTA button -->
@@ -130,7 +126,8 @@ function renderFreeScanCompleteEmail({
                 If the button doesn't work, copy this URL into your browser:<br>
                 <a href="${magicLinkUrl}" style="color:#555555;word-break:break-all;">${magicLinkUrl}</a>
               </p>
-              ` : `
+              `
+                  : `
               <!-- CTA button (zero-deal variant) -->
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin-top:8px;">
                 <tr>
@@ -148,7 +145,8 @@ function renderFreeScanCompleteEmail({
                 If the button doesn't work, copy this URL into your browser:<br>
                 <a href="${magicLinkUrl}" style="color:#555555;word-break:break-all;">${magicLinkUrl}</a>
               </p>
-              `}
+              `
+              }
             </td>
           </tr>
 
@@ -184,11 +182,11 @@ function renderFreeScanCompleteEmail({
 function escapeHtml(str) {
   if (!str) return '';
   return String(str)
-    .replace(/&/g,  '&amp;')
-    .replace(/</g,  '&lt;')
-    .replace(/>/g,  '&gt;')
-    .replace(/"/g,  '&quot;')
-    .replace(/'/g,  '&#39;');
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 module.exports = { renderFreeScanCompleteEmail };

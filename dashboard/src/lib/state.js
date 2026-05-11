@@ -24,6 +24,21 @@ export const chatMessages = signal([]);
 export const chatConversationId = signal(null);
 export const chatStreaming = signal(false);
 
+// Plan / runs — populated by loadUserData() from /api/user-data { plan }
+export const plan = signal({
+  tier: null,             // 'founding' | 'hunter' | 'investor' | 'operator' | null
+  runs_used: 0,
+  runs_limit: null,       // null = unlimited (operator) OR no subscription
+  tier_runs_limit: null,
+  bonus_runs: 0,
+  runs_reset_at: null,
+});
+
+// Upgrade modal — opened on 402 paywall response from /api/scan-start
+// or 'paywall' SSE event from /api/chat. Payload mirrors the server body:
+// { reason: 'no_subscription' | 'out_of_runs', tier, runs_used?, runs_limit?, ... }
+export const upgradeModal = signal(null);
+
 const MAX_CACHE = 8;
 const cache = new Map();
 
