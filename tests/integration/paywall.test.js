@@ -10,24 +10,54 @@ describe.skipIf(missingEnv)('paywall', () => {
   let supabase;
   const ts = Date.now();
   const emails = {
-    nullTier0Runs:    `test-paywall-${ts}-1@dealhound.dev`,
-    nullTier1Run:     `test-paywall-${ts}-2@dealhound.dev`,
-    operatorTier:     `test-paywall-${ts}-3@dealhound.dev`,
-    foundingBlocked:  `test-paywall-${ts}-4@dealhound.dev`,
-    foundingAllowed:  `test-paywall-${ts}-5@dealhound.dev`,
-    incrementTest:    `test-paywall-${ts}-6@dealhound.dev`,
+    nullTier0Runs: `test-paywall-${ts}-1@dealhound.dev`,
+    nullTier1Run: `test-paywall-${ts}-2@dealhound.dev`,
+    operatorTier: `test-paywall-${ts}-3@dealhound.dev`,
+    foundingBlocked: `test-paywall-${ts}-4@dealhound.dev`,
+    foundingAllowed: `test-paywall-${ts}-5@dealhound.dev`,
+    incrementTest: `test-paywall-${ts}-6@dealhound.dev`,
   };
 
   beforeAll(async () => {
     supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 
     const rows = [
-      { email: emails.nullTier0Runs,   subscription_tier: null,       agent_runs_used: 0,   agent_name: 'Scout' },
-      { email: emails.nullTier1Run,    subscription_tier: null,       agent_runs_used: 1,   agent_name: 'Scout' },
-      { email: emails.operatorTier,    subscription_tier: 'operator', agent_runs_used: 999, agent_name: 'Scout' },
-      { email: emails.foundingBlocked, subscription_tier: 'founding', agent_runs_used: 10,  agent_name: 'Scout' },
-      { email: emails.foundingAllowed, subscription_tier: 'founding', agent_runs_used: 9,   agent_name: 'Scout' },
-      { email: emails.incrementTest,   subscription_tier: null,       agent_runs_used: 0,   agent_name: 'Scout' },
+      {
+        email: emails.nullTier0Runs,
+        subscription_tier: null,
+        agent_runs_used: 0,
+        agent_name: 'Scout',
+      },
+      {
+        email: emails.nullTier1Run,
+        subscription_tier: null,
+        agent_runs_used: 1,
+        agent_name: 'Scout',
+      },
+      {
+        email: emails.operatorTier,
+        subscription_tier: 'operator',
+        agent_runs_used: 999,
+        agent_name: 'Scout',
+      },
+      {
+        email: emails.foundingBlocked,
+        subscription_tier: 'founding',
+        agent_runs_used: 10,
+        agent_name: 'Scout',
+      },
+      {
+        email: emails.foundingAllowed,
+        subscription_tier: 'founding',
+        agent_runs_used: 9,
+        agent_name: 'Scout',
+      },
+      {
+        email: emails.incrementTest,
+        subscription_tier: null,
+        agent_runs_used: 0,
+        agent_name: 'Scout',
+      },
     ];
 
     const { error } = await supabase.from('users').insert(rows);
@@ -35,25 +65,24 @@ describe.skipIf(missingEnv)('paywall', () => {
   });
 
   afterAll(async () => {
-    const { error } = await supabase
-      .from('users')
-      .delete()
-      .in('email', Object.values(emails));
+    const { error } = await supabase.from('users').delete().in('email', Object.values(emails));
     if (error) console.error('afterAll cleanup failed — test rows may linger:', error.message);
   });
 
-  it('null tier, 0 runs → allowed (free first run)', async () => {
+  it('null tier, 0 runs → blocked (no subscription)', async () => {
     const result = await checkPaywall(emails.nullTier0Runs, supabase);
-    expect(result.allowed).toBe(true);
-    expect(result.tier_limit).toBe(1);
+    expect(result.allowed).toBe(false);
+    expect(result.status).toBe(402);
+    expect(result.body.tier).toBeNull();
+    expect(result.body.reason).toBe('no_subscription');
   });
 
-  it('null tier, 1 run → blocked (paywall after free run)', async () => {
+  it('null tier, 1 run → blocked (no subscription)', async () => {
     const result = await checkPaywall(emails.nullTier1Run, supabase);
     expect(result.allowed).toBe(false);
     expect(result.status).toBe(402);
     expect(result.body.tier).toBeNull();
-    expect(result.body.error).toMatch(/free scan/i);
+    expect(result.body.reason).toBe('no_subscription');
   });
 
   it('operator tier, 999 runs → allowed (unlimited)', async () => {

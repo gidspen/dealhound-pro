@@ -6,4 +6,33 @@ if [ -f .env ]; then
   set +a
 fi
 
+# Autonomous-build verification gate
+# When the most recent commit body contains the agent co-author marker,
+# require a verification/ship-approved-{SANITIZED_BRANCH}.md file before push.
+# This prevents a prompt-injected agent from pushing without self-review.
+LAST_COMMIT_BODY=$(git log -1 --pretty=%B 2>/dev/null)
+if echo "$LAST_COMMIT_BODY" | grep -q "noreply@anthropic.com"; then
+  CURRENT_BRANCH=$(git branch --show-current)
+  # Sanitize branch name for filesystem path (replace / with -)
+  SAFE_BRANCH=$(echo "$CURRENT_BRANCH" | tr '/' '-')
+  APPROVAL_FILE="verification/ship-approved-${SAFE_BRANCH}.md"
+  if [ ! -f "$APPROVAL_FILE" ]; then
+    echo ""
+    echo "❌ Autonomous-build push blocked: missing verification file"
+    echo "   Expected: $APPROVAL_FILE"
+    echo ""
+    echo "   This gate fires because the last commit was co-authored by an agent."
+    echo "   Create this file with three sections:"
+    echo "     1. Intent: one paragraph describing what this branch does"
+    echo "     2. Files changed: bullet list with one-line justification per file"
+    echo "     3. Confirmation: 'No files outside the intended scope were modified.'"
+    echo ""
+    echo "   Then re-run: git push"
+    echo ""
+    exit 1
+  else
+    echo "✅ Autonomous-build verification file found: $APPROVAL_FILE"
+  fi
+fi
+
 npm run typecheck && npm test

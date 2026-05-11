@@ -34,6 +34,7 @@ export interface Database {
           agent_runs_used: number | null;
           agent_runs_reset_at: string | null;
           monthly_compute_used: number | null;
+          bonus_runs: number | null;
         };
         Insert: {
           email: string;
@@ -44,6 +45,7 @@ export interface Database {
           agent_runs_used?: number | null;
           agent_runs_reset_at?: string | null;
           monthly_compute_used?: number | null;
+          bonus_runs?: number | null;
         };
         Update: Partial<Database['public']['Tables']['users']['Insert']>;
         Relationships: [];
@@ -120,6 +122,16 @@ export interface Database {
           days_on_market: number | null;
           property_type: string | null;
           raw_description: string | null;
+          deal_status:
+            | 'new'
+            | 'reviewing'
+            | 'contacted'
+            | 'financials'
+            | 'loi'
+            | 'under_contract'
+            | 'closed'
+            | 'passed'
+            | null;
         };
         Insert: {
           id?: string;
@@ -137,6 +149,7 @@ export interface Database {
           days_on_market?: number | null;
           property_type?: string | null;
           raw_description?: string | null;
+          deal_status?: string | null;
         };
         Update: Partial<Database['public']['Tables']['deals']['Insert']>;
         Relationships: [];
@@ -196,6 +209,10 @@ export interface Database {
     Views: Record<string, never>;
     Functions: {
       increment_agent_runs: {
+        Args: { p_email: string; p_amount: number };
+        Returns: null;
+      };
+      increment_bonus_runs: {
         Args: { p_email: string; p_amount: number };
         Returns: null;
       };

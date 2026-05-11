@@ -27,7 +27,11 @@
 //     ADD COLUMN IF NOT EXISTS stripe_subscription_id TEXT,
 //     ADD COLUMN IF NOT EXISTS agent_runs_used        INTEGER     NOT NULL DEFAULT 0,
 //     ADD COLUMN IF NOT EXISTS agent_runs_reset_at    TIMESTAMPTZ,
-//     ADD COLUMN IF NOT EXISTS monthly_compute_used   NUMERIC(10,4) NOT NULL DEFAULT 0;
+//     ADD COLUMN IF NOT EXISTS monthly_compute_used   NUMERIC(10,4) NOT NULL DEFAULT 0,
+//     ADD COLUMN IF NOT EXISTS bonus_runs             INTEGER     NOT NULL DEFAULT 0;
+//
+//   -- See scripts/migrations/2026-05-10-bonus-runs.sql for the bonus_runs RPC
+//   -- (increment_bonus_runs) that the top-up handler calls.
 //
 //   -- Index for founding member cap query (count where subscription_tier = 'founding')
 //   CREATE INDEX IF NOT EXISTS idx_users_subscription_tier ON users (subscription_tier);
@@ -42,10 +46,7 @@ const { createClient } = require('@supabase/supabase-js');
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
-);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 
 // ---------------------------------------------------------------------------
 // getRawBody — reads the raw request buffer so Stripe can verify the signature.
@@ -54,7 +55,7 @@ const supabase = createClient(
 function getRawBody(req) {
   return new Promise((resolve, reject) => {
     const chunks = [];
-    req.on('data', chunk => chunks.push(chunk));
+    req.on('data', (chunk) => chunks.push(chunk));
     req.on('end', () => resolve(Buffer.concat(chunks)));
     req.on('error', reject);
   });
@@ -81,28 +82,32 @@ async function handleCheckoutCompleted(session) {
     return;
   }
 
-  // For top-up: add 5 runs, don't touch subscription_tier
+  // Top-up: grant 5 BONUS runs (do not touch subscription_tier or agent_runs_used).
+  // Bonus runs are added to the effective limit (see api/_lib/paywall.js).
   if (tier === 'topup') {
-    const { error } = await supabase.rpc('increment_agent_runs', {
+    const { error } = await supabase.rpc('increment_bonus_runs', {
       p_email: customerEmail,
       p_amount: 5,
     });
     if (error) {
-      // rpc may not exist yet — fall back to manual increment
-      console.warn('increment_agent_runs rpc failed, falling back to manual update:', error.message);
+      // rpc may not exist yet — fall back to manual update
+      console.warn(
+        'increment_bonus_runs rpc failed, falling back to manual update:',
+        error.message
+      );
       const { data: user } = await supabase
         .from('users')
-        .select('agent_runs_used')
+        .select('bonus_runs')
         .eq('email', customerEmail)
         .single();
       if (user) {
         await supabase
           .from('users')
-          .update({ agent_runs_used: (user.agent_runs_used || 0) + 5 })
+          .update({ bonus_runs: (user.bonus_runs || 0) + 5 })
           .eq('email', customerEmail);
       }
     }
-    console.log(`Top-up: +5 runs for ${customerEmail}`);
+    console.log(`Top-up: +5 bonus runs for ${customerEmail}`);
     return;
   }
 
@@ -121,9 +126,7 @@ async function handleCheckoutCompleted(session) {
     monthly_compute_used: 0,
   };
 
-  const { error } = await supabase
-    .from('users')
-    .upsert(upsertPayload, { onConflict: 'email' });
+  const { error } = await supabase.from('users').upsert(upsertPayload, { onConflict: 'email' });
 
   if (error) {
     console.error('Failed to upsert user after checkout:', error);
@@ -199,7 +202,6 @@ module.exports = async function handler(req, res) {
     }
 
     return res.status(200).json({ received: true });
-
   } catch (err) {
     console.error('stripe-webhook: handler error:', err.message);
     // Return 500 so Stripe retries the webhook

@@ -1,11 +1,23 @@
 import { useEffect, useState } from 'preact/hooks';
 import { batch } from '@preact/signals';
-import { email, view, scans, deals, activeThreadId, sidebarOpen, sidebarWidth, previewOpen, previewWidth } from './lib/state.js';
+import {
+  email,
+  view,
+  scans,
+  deals,
+  activeThreadId,
+  sidebarOpen,
+  sidebarWidth,
+  previewOpen,
+  previewWidth,
+  upgradeModal,
+} from './lib/state.js';
 import { loadUserData, switchThread } from './lib/api.js';
 import { Sidebar } from './components/Sidebar.jsx';
 import { Chat } from './components/Chat.jsx';
 import { Preview } from './components/Preview.jsx';
 import { Settings } from './components/Settings.jsx';
+import { UpgradeModal } from './components/UpgradeModal.jsx';
 
 function ResizeHandle({ edge, widthSignal, minW, maxW }) {
   const onPointerDown = (e) => {
@@ -57,7 +69,7 @@ async function routeAfterLoad() {
   } else if (scans.value.length > 0) {
     // User already has a buy box — show scan view rather than restarting onboarding.
     // Prefer a completed scan with deals; fall back to most recent scan.
-    const withDeals = scans.value.find(s => s.deal_count > 0);
+    const withDeals = scans.value.find((s) => s.deal_count > 0);
     const scan = withDeals || scans.value[0];
     console.log('[DH] → scan view', scan.id, scan.status);
     view.value = 'scan';
@@ -96,10 +108,22 @@ function EmailGate() {
 
   return (
     <div class="email-gate">
-      <h1>Your <em>deal hunting</em><br />command center.</h1>
+      <h1>
+        Your <em>deal hunting</em>
+        <br />
+        command center.
+      </h1>
       <p>Enter your email to access your buy boxes, scan results, and top deals.</p>
       <form class="gate-form" onSubmit={handleSubmit}>
-        <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" autofocus disabled={loading} />
+        <input
+          type="email"
+          name="email"
+          placeholder="your@email.com"
+          required
+          autocomplete="email"
+          autofocus
+          disabled={loading}
+        />
         <button type="submit" class="btn-primary" disabled={loading}>
           {loading ? 'Loading…' : 'Open Dashboard'}
         </button>
@@ -110,6 +134,21 @@ function EmailGate() {
 }
 
 export function App() {
+  // Test-only hook: lets Playwright/devs open the UpgradeModal directly.
+  // No-op risk in production (just sets a signal — gated by being dispatched
+  // intentionally). Wired here so it's available even before sign-in.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    window.__dh_setUpgradeModal = (payload) => {
+      upgradeModal.value = payload;
+    };
+    const handler = (e) => {
+      upgradeModal.value = e.detail;
+    };
+    window.addEventListener('dh-test-open-upgrade', handler);
+    return () => window.removeEventListener('dh-test-open-upgrade', handler);
+  }, []);
+
   useEffect(() => {
     // ── Magic-link handler (runs before localStorage check) ──────────────────
     const params = new URLSearchParams(window.location.search);
@@ -130,9 +169,12 @@ export function App() {
         try {
           await loadUserData();
           if (magicScanId) {
-            const scan = scans.value.find(s => s.id === magicScanId);
+            const scan = scans.value.find((s) => s.id === magicScanId);
             if (scan) {
-              batch(() => { activeThreadId.value = magicScanId; view.value = 'scan'; });
+              batch(() => {
+                activeThreadId.value = magicScanId;
+                view.value = 'scan';
+              });
               await switchThread(magicScanId, 'scan', scan.conversation_id);
               return; // skip routeAfterLoad — we have a specific target
             }
@@ -171,10 +213,15 @@ export function App() {
   return (
     <div id="app-shell">
       <Settings />
+      <UpgradeModal />
       <Sidebar />
-      {sidebarOpen.value && <ResizeHandle edge="right" widthSignal={sidebarWidth} minW={180} maxW={480} />}
+      {sidebarOpen.value && (
+        <ResizeHandle edge="right" widthSignal={sidebarWidth} minW={180} maxW={480} />
+      )}
       <Chat />
-      {previewOpen.value && <ResizeHandle edge="left" widthSignal={previewWidth} minW={280} maxW={600} />}
+      {previewOpen.value && (
+        <ResizeHandle edge="left" widthSignal={previewWidth} minW={280} maxW={600} />
+      )}
       <Preview />
     </div>
   );

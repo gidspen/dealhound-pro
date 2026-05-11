@@ -63,7 +63,10 @@ function findClaude() {
   ].filter(Boolean);
 
   for (const p of candidates) {
-    try { fs.accessSync(p, fs.constants.X_OK); return p; } catch (_) {}
+    try {
+      fs.accessSync(p, fs.constants.X_OK);
+      return p;
+    } catch (_) {}
   }
   return 'claude'; // fall back to PATH
 }
@@ -72,10 +75,7 @@ const CLAUDE_BIN = findClaude();
 
 // ── Supabase client ───────────────────────────────────────────────────────────
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
-);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -162,10 +162,7 @@ async function finalizeJob(jobId, status, error) {
 
 async function updateSearchStatus(searchId, status) {
   if (!searchId) return;
-  await supabase
-    .from('deal_searches')
-    .update({ status })
-    .eq('id', searchId);
+  await supabase.from('deal_searches').update({ status }).eq('id', searchId);
 }
 
 // ── Buy box temp file ─────────────────────────────────────────────────────────
@@ -198,7 +195,8 @@ function composeSpawnConfig(job, processEnv, buyBoxFilePath) {
     // events and deal inserts can authenticate. Service key is fine here —
     // the skill needs to bypass RLS to insert deals/progress rows.
     SUPABASE_DEALS_URL: processEnv.SUPABASE_DEALS_URL || processEnv.SUPABASE_URL || '',
-    SUPABASE_DEALS_ANON_KEY: processEnv.SUPABASE_DEALS_ANON_KEY || processEnv.SUPABASE_SERVICE_KEY || '',
+    SUPABASE_DEALS_ANON_KEY:
+      processEnv.SUPABASE_DEALS_ANON_KEY || processEnv.SUPABASE_SERVICE_KEY || '',
   };
 
   // Always invoke the documented `/find-deals full` subcommand. The buy box
@@ -229,10 +227,16 @@ function createInFlightGuard() {
     async tryRun(fn) {
       if (count > 0) return false;
       count++;
-      try { await fn(); return true; }
-      finally { count--; }
+      try {
+        await fn();
+        return true;
+      } finally {
+        count--;
+      }
     },
-    inFlight() { return count; },
+    inFlight() {
+      return count;
+    },
   };
 }
 
@@ -296,7 +300,11 @@ function runFindDeals(job, skill = 'deal scan') {
       // Parse structured metrics if the skill emits:
       // DEALHOUND_METRICS: {"sites_discovered":5,"listings_raw":42,"deals_scored":8}
       const m = text.match(/DEALHOUND_METRICS:\s*(\{[^\n]+\})/);
-      if (m) { try { metrics = JSON.parse(m[1]); } catch (_) {} }
+      if (m) {
+        try {
+          metrics = JSON.parse(m[1]);
+        } catch (_) {}
+      }
 
       // Parse phase transitions if the skill emits: DEALHOUND_PHASE: phase1
       const p = text.match(/DEALHOUND_PHASE:\s*(\S+)/);
@@ -316,9 +324,12 @@ function runFindDeals(job, skill = 'deal scan') {
       const { capped, totalCost, capAmount } = costTracker.trackTokenLine(text);
       if (capped && !cappedByCost) {
         cappedByCost = true;
-        log(`[COGS] Run cap hit — $${totalCost.toFixed(4)} >= $${capAmount} for skill "${skill}" — terminating`, {
-          job: job.id,
-        });
+        log(
+          `[COGS] Run cap hit — $${totalCost.toFixed(4)} >= $${capAmount} for skill "${skill}" — terminating`,
+          {
+            job: job.id,
+          }
+        );
         proc.kill('SIGTERM');
       }
     });
@@ -388,6 +399,106 @@ function runFindDeals(job, skill = 'deal scan') {
   });
 }
 
+// ── Test-mode short-circuit ───────────────────────────────────────────────────
+
+/**
+ * runFindDealsTestMode — skips the Claude/Apify subprocess entirely.
+ *
+ * Inserts 3 fake scored deals (varied tiers) for the job's search_id, then
+ * marks the scan_run / job / search complete. Used by Flow B + C + G e2e
+ * tests so the full pipeline can be exercised without burning tokens.
+ *
+ * Gated by WORKER_TEST_MODE=true in processPendingJobs. Default OFF.
+ *
+ * @param {object} job — claimed scrape_jobs row
+ * @param {import('@supabase/supabase-js').SupabaseClient} supabaseClient
+ */
+async function runFindDealsTestMode(job, supabaseClient) {
+  log(`[TEST_MODE] short-circuit for job ${job.id}`, { searchId: job.search_id });
+  const startMs = Date.now();
+
+  const scanRun = await supabaseClient
+    .from('scan_runs')
+    .insert({
+      search_id: job.search_id,
+      scrape_job_id: job.id,
+      user_email: await resolveUserEmail(job.search_id),
+      trigger: job.trigger || 'on_demand',
+      phase: 'full',
+      buy_box: job.buy_box,
+      status: 'running',
+      started_at: new Date().toISOString(),
+    })
+    .select()
+    .single();
+  const runId = scanRun?.data?.id || null;
+
+  const fakeDeals = [
+    {
+      search_id: job.search_id,
+      title: 'TEST DEAL 1',
+      location: 'Austin, TX',
+      price: 850000,
+      acreage: 5,
+      rooms_keys: 8,
+      source: 'test_mode',
+      url: 'https://example.test/deal-1',
+      passed_hard_filters: true,
+      brief: 'Test-mode fixture — STRONG MATCH tier',
+      days_on_market: 14,
+      property_type: 'micro_resort',
+      raw_description: 'Fake deal inserted by WORKER_TEST_MODE for e2e pipeline tests.',
+      score_breakdown: { strategy: { overall: 'STRONG MATCH' } },
+    },
+    {
+      search_id: job.search_id,
+      title: 'TEST DEAL 2',
+      location: 'Boerne, TX',
+      price: 1200000,
+      acreage: 12,
+      rooms_keys: 10,
+      source: 'test_mode',
+      url: 'https://example.test/deal-2',
+      passed_hard_filters: true,
+      brief: 'Test-mode fixture — MATCH tier',
+      days_on_market: 45,
+      property_type: 'boutique_hotel',
+      raw_description: 'Fake deal inserted by WORKER_TEST_MODE for e2e pipeline tests.',
+      score_breakdown: { strategy: { overall: 'MATCH' } },
+    },
+    {
+      search_id: job.search_id,
+      title: 'TEST DEAL 3',
+      location: 'Fredericksburg, TX',
+      price: 1800000,
+      acreage: 25,
+      rooms_keys: 6,
+      source: 'test_mode',
+      url: 'https://example.test/deal-3',
+      passed_hard_filters: true,
+      brief: 'Test-mode fixture — PARTIAL tier',
+      days_on_market: 90,
+      property_type: 'glamping',
+      raw_description: 'Fake deal inserted by WORKER_TEST_MODE for e2e pipeline tests.',
+      score_breakdown: { strategy: { overall: 'PARTIAL' } },
+    },
+  ];
+
+  const { error: insertError } = await supabaseClient.from('deals').insert(fakeDeals);
+  if (insertError) {
+    log(`[TEST_MODE] WARN: deals insert failed — ${insertError.message}`);
+  }
+
+  const durationMs = Date.now() - startMs;
+  const metrics = { sites_discovered: 1, listings_raw: 3, deals_scored: 3 };
+
+  await finalizeScanRun(runId, { status: 'complete', durationMs, metrics });
+  await finalizeJob(job.id, 'complete');
+  await updateSearchStatus(job.search_id, 'complete');
+
+  log(`[TEST_MODE] job ${job.id} complete — inserted 3 fake deals`, metrics);
+}
+
 // ── Core poll loop ────────────────────────────────────────────────────────────
 
 async function processPendingJobs() {
@@ -398,14 +509,25 @@ async function processPendingJobs() {
     .order('created_at', { ascending: true })
     .limit(1); // one at a time — no parallel token burn
 
-  if (error) { log('ERROR fetching jobs', error.message); return; }
+  if (error) {
+    log('ERROR fetching jobs', error.message);
+    return;
+  }
   if (!jobs || jobs.length === 0) return;
 
   const job = jobs[0];
   log(`Found pending job ${job.id}`, { searchId: job.search_id });
 
   const claimed = await claimJob(job);
-  if (!claimed) { log(`Job ${job.id} already claimed — skipping`); return; }
+  if (!claimed) {
+    log(`Job ${job.id} already claimed — skipping`);
+    return;
+  }
+
+  if (process.env.WORKER_TEST_MODE === 'true') {
+    await runFindDealsTestMode(claimed, supabase);
+    return;
+  }
 
   const scanRun = await createScanRun(job);
   const runId = scanRun?.id || null;
@@ -446,9 +568,15 @@ async function processPendingJobs() {
             if (job.buy_box) headedBuyBoxFile = writeBuyBoxFile(job.buy_box);
             const { env } = composeSpawnConfig(job, process.env, headedBuyBoxFile);
             try {
-              return await runFindDealsHeaded({ claudeBin: CLAUDE_BIN, env, jobId: job.id, skill: 'deal scan' });
+              return await runFindDealsHeaded({
+                claudeBin: CLAUDE_BIN,
+                env,
+                jobId: job.id,
+                skill: 'deal scan',
+              });
             } finally {
-              if (headedBuyBoxFile && fs.existsSync(headedBuyBoxFile)) fs.unlinkSync(headedBuyBoxFile);
+              if (headedBuyBoxFile && fs.existsSync(headedBuyBoxFile))
+                fs.unlinkSync(headedBuyBoxFile);
             }
           }
         : () => runFindDeals(job);
@@ -495,7 +623,8 @@ async function processPendingJobs() {
         .select('*', { count: 'exact', head: true })
         .eq('search_id', job.search_id);
       if (count === 0) {
-        zeroRowError = 'Skill completed but wrote zero listings — check buy box format and scraper output';
+        zeroRowError =
+          'Skill completed but wrote zero listings — check buy box format and scraper output';
       }
     }
 
@@ -534,8 +663,18 @@ async function processPendingJobs() {
 // ── Free-scan agent name pool (mirrors api/user-data.js:8-11) ────────────────
 
 const AGENT_NAMES = [
-  'Scout', 'Nora', 'Kit', 'Stella', 'Sophie', 'Quinn',
-  'Wren', 'Ellis', 'Reid', 'Sloane', 'Harper', 'Hunter',
+  'Scout',
+  'Nora',
+  'Kit',
+  'Stella',
+  'Sophie',
+  'Quinn',
+  'Wren',
+  'Ellis',
+  'Reid',
+  'Sloane',
+  'Harper',
+  'Hunter',
 ];
 
 /**
@@ -615,9 +754,7 @@ async function handleFreeScanCompletion(job, supabaseClient) {
   }
 
   // 3. Determine listings scanned (best-effort from metrics; fall back to 100)
-  const listingsScanned = (job.metrics && job.metrics.listings_raw)
-    ? job.metrics.listings_raw
-    : 100;
+  const listingsScanned = job.metrics && job.metrics.listings_raw ? job.metrics.listings_raw : 100;
 
   // 4. Generate magic link
   const token = signMagicLink({ email: userEmail, scanId: job.search_id });
@@ -688,8 +825,11 @@ async function main() {
 
   setInterval(async () => {
     await guard.tryRun(async () => {
-      try { await processPendingJobs(); }
-      catch (err) { log('ERROR in poll loop', err.message); }
+      try {
+        await processPendingJobs();
+      } catch (err) {
+        log('ERROR in poll loop', err.message);
+      }
     });
   }, POLL_INTERVAL_MS);
 }
@@ -697,7 +837,16 @@ async function main() {
 // Only run main() when invoked as a script. Tests can require this module
 // without triggering the polling loop.
 if (require.main === module) {
-  main().catch((err) => { console.error('FATAL:', err); process.exit(1); });
+  main().catch((err) => {
+    console.error('FATAL:', err);
+    process.exit(1);
+  });
 }
 
-module.exports = { composeSpawnConfig, createInFlightGuard, SCAN_TIMEOUT_MS, runFindDeals };
+module.exports = {
+  composeSpawnConfig,
+  createInFlightGuard,
+  SCAN_TIMEOUT_MS,
+  runFindDeals,
+  runFindDealsTestMode,
+};
