@@ -170,7 +170,9 @@ module.exports = async function handler(req, res) {
     });
 
     // Plan / runs payload — feeds the Settings panel and UpgradeModal copy.
-    const tierLimit = user.subscription_tier ? TIER_LIMITS[user.subscription_tier] : null;
+    /** @type {Record<string, number>} */
+    const tierLimits = TIER_LIMITS;
+    const tierLimit = user.subscription_tier ? tierLimits[user.subscription_tier] : null;
     const bonus = user.bonus_runs || 0;
     const effectiveLimit =
       tierLimit === Infinity
