@@ -1,6 +1,6 @@
 # Deal Hound — End-to-End User Flow Specification
 
-**Version:** 1.1 (2026-05-10)
+**Version:** 1.2 (2026-05-11)
 **Purpose:** Single source of truth for pre-launch Playwright e2e tests, manual QA, and subagent-orchestrated test runs. Living doc — update when flows change.
 **Companion:** [LAUNCH_STRATEGY.md](../LAUNCH_STRATEGY.md), [PRODUCT_SPEC.md](../PRODUCT_SPEC.md).
 
@@ -8,6 +8,7 @@
 
 ## Changelog
 
+- **1.2 (2026-05-11):** Marked §13 item 2 (top-up webhook bug) resolved. Added §14 RLS Lockdown Status (Phase 1 shipped, Phase 2 blocker documented). Added §15 Worker Test Mode (`WORKER_TEST_MODE` env var for CI).
 - **1.1 (2026-05-10):** Removed Flow J (public scan report viral loop — product decision to retire). Locked Flow E with Option A: cap free users from day 1; no "beta unlimited" period; Founding $49/mo lifetime with token cap; top-up for overflow.
 - **1.0 (2026-05-10):** Initial mapping of A–L from current code.
 
@@ -604,14 +605,71 @@ All flows A–I, K, L pass on green. (Flow J retired.) Specifically:
 
 ## 13. Open Questions / Decide Before Test Build
 
-| #   | Question                                       | Status                                                                                                                                                        |
-| --- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ~~Paywall copy contradiction~~                 | ✅ **Resolved 2026-05-10** — Option A locked. Cap from day 1, no beta-unlimited. See Locked Launch Policy.                                                    |
-| 2   | Top-up webhook bug                             | 🔴 **Open** — handler increments `agent_runs_used` instead of granting headroom. Needs schema (`bonus_runs` column) + paywall check update + handler rewrite. |
-| 3   | ~~Pending scan visited via `/scan/:id`~~       | ✅ **Obviated** — public `/scan/:id` removed.                                                                                                                 |
-| 4   | Worker timeout / scan failure email            | 🟡 **Open** — do we email "scan failed" or stay silent? UX call.                                                                                              |
-| 5   | Different email at Stripe vs dashboard         | 🟡 **Open** — reject, merge, or warn?                                                                                                                         |
-| 6   | Daily digest email                             | 🟡 **Open** — Settings has toggle but is the cron wired?                                                                                                      |
-| 7   | Auth-by-email-only security disclosure         | 🟡 **Open** — one-line note on EmailGate, OR upgrade to magic-link-only.                                                                                      |
-| 8   | `hello@dealhound.pro` Resend verification      | 🟡 **Open** — confirm DKIM/SPF/DMARC set + at least one real successful delivery to Gmail/Outlook before testing.                                             |
-| 9   | "Draft scan" preservation on paywall (Flow E6) | 🟡 **Open** — persist user's unsaved buy box for resume after upgrade, or discard?                                                                            |
+| #   | Question                                       | Status                                                                                                                                                                                                                                                               |
+| --- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | ~~Paywall copy contradiction~~                 | ✅ **Resolved 2026-05-10** — Option A locked. Cap from day 1, no beta-unlimited. See Locked Launch Policy.                                                                                                                                                           |
+| 2   | ~~Top-up webhook bug~~                         | ✅ **Resolved 2026-05-10** — `bonus_runs` column added via [scripts/migrations/2026-05-10-bonus-runs.sql](../scripts/migrations/2026-05-10-bonus-runs.sql); paywall check and webhook handler rewritten to grant headroom instead of incrementing `agent_runs_used`. |
+| 3   | ~~Pending scan visited via `/scan/:id`~~       | ✅ **Obviated** — public `/scan/:id` removed.                                                                                                                                                                                                                        |
+| 4   | Worker timeout / scan failure email            | 🟡 **Open** — do we email "scan failed" or stay silent? UX call.                                                                                                                                                                                                     |
+| 5   | Different email at Stripe vs dashboard         | 🟡 **Open** — reject, merge, or warn?                                                                                                                                                                                                                                |
+| 6   | Daily digest email                             | 🟡 **Open** — Settings has toggle but is the cron wired?                                                                                                                                                                                                             |
+| 7   | Auth-by-email-only security disclosure         | 🟡 **Open** — one-line note on EmailGate, OR upgrade to magic-link-only.                                                                                                                                                                                             |
+| 8   | `hello@dealhound.pro` Resend verification      | 🟡 **Open** — confirm DKIM/SPF/DMARC set + at least one real successful delivery to Gmail/Outlook before testing.                                                                                                                                                    |
+| 9   | "Draft scan" preservation on paywall (Flow E6) | 🟡 **Open** — persist user's unsaved buy box for resume after upgrade, or discard?                                                                                                                                                                                   |
+
+---
+
+## 14. RLS Lockdown Status
+
+The Supabase anon JWT is publicly embedded in [results/index.html](../results/index.html) (and historically in other static surfaces). Before this work, any visitor could read or write every row in `users`, `deals`, etc. via the anon key. RLS lockdown closes that hole. The API + worker use the **service-role key**, which bypasses RLS, so no app code changed during Phase 1.
+
+### 14.1 Phase 1 (shipped 2026-05-11)
+
+Migration: [scripts/migrations/2026-05-11-rls-lockdown-phase1.sql](../scripts/migrations/2026-05-11-rls-lockdown-phase1.sql). RLS enabled with **no policies** on the following 12 tables — meaning anon-key reads on these tables now return zero rows, while the service-role key continues to have full access.
+
+| Table                   | RLS   | Anon access |
+| ----------------------- | ----- | ----------- |
+| `deal_financial_files`  | ✅ ON | None        |
+| `deal_financials`       | ✅ ON | None        |
+| `deal_outreach`         | ✅ ON | None        |
+| `deal_outreach_actions` | ✅ ON | None        |
+| `free_scan_requests`    | ✅ ON | None        |
+| `raw_listings`          | ✅ ON | None        |
+| `scan_runs`             | ✅ ON | None        |
+| `scrape_jobs`           | ✅ ON | None        |
+| `user_deal_archives`    | ✅ ON | None        |
+| `user_deal_stars`       | ✅ ON | None        |
+| `user_deal_views`       | ✅ ON | None        |
+| `users`                 | ✅ ON | None        |
+
+**Security model:** service-role key (used by API + worker) bypasses RLS; anon key (embedded client-side) hits empty result sets. Anon-key reads on these tables now return zero rows.
+
+### 14.2 Phase 2 (pending)
+
+Two tables remain RLS-disabled: `deal_searches` and `deals`. **Blocker:** [results/index.html](../results/index.html) does direct browser → Supabase REST reads of these tables using the anon JWT. Enabling RLS without policies would break the results page.
+
+Phase 2 requires, in order:
+
+1. ⬜ Build `api/results.js` — service-key fetch by `search_id`, returns sanitized scan + deals payload.
+2. ⬜ Rewrite [results/index.html](../results/index.html) to call `/api/results?search_id=...` instead of hitting Supabase REST directly.
+3. ⬜ Remove the hardcoded anon JWT from [results/index.html](../results/index.html).
+4. ⬜ Enable RLS on `deal_searches` and `deals` (migration TBD).
+
+### 14.3 Pre-existing RLS-enabled tables (unaffected by Phase 1)
+
+`conversations`, `deal_hound_waitlist`, and `scan_progress` already had RLS enabled with legitimate policies before this work. Phase 1 did not touch them.
+
+---
+
+## 15. Worker Test Mode
+
+`WORKER_TEST_MODE` is an env var on [worker/worker.js](../worker/worker.js) that lets CI exercise Flow B / Flow C / Flow G end-to-end without paying for real Claude/Apify runs.
+
+| State                     | Behavior                                                                                                                                                    |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `WORKER_TEST_MODE=true`   | Worker skips the `claude -p /find-deals` and Apify spawns. Inserts **3 fake scored deals** per job, marks scan `complete`, fires the magic-link email path. |
+| Unset / `false` (default) | Unchanged — full real pipeline (Claude orchestrator + Apify scrape + scoring + persistence).                                                                |
+
+**Why:** the real worker spawn takes ~10 min and costs real API dollars; CI cannot afford to run it on every PR. Test mode produces a deterministic, fast, free signal for the surfaces that depend on a completed scan.
+
+**How to use:** set `WORKER_TEST_MODE=true` on the worker process **only in the test environment**. Never set in prod — there is no guard rail beyond the env var.
