@@ -2,6 +2,7 @@ const Anthropic = require('@anthropic-ai/sdk');
 const { createClient } = require('@supabase/supabase-js');
 const { triggerScan } = require('./_lib/scan-trigger');
 const { checkPaywall, incrementAgentRuns } = require('./_lib/paywall');
+const { recordChatComputeFromUsage } = require('./_lib/chat-compute');
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 
@@ -387,6 +388,19 @@ module.exports = async function handler(req, res) {
 
         toolUse = null;
       }
+    }
+
+    // Record compute usage (non-fatal). Final message carries token counts.
+    try {
+      const finalMsg = await stream.finalMessage();
+      await recordChatComputeFromUsage({
+        email,
+        usage: finalMsg?.usage,
+        supabase,
+        endpoint: 'chat',
+      });
+    } catch (computeErr) {
+      console.warn('chat compute tracking failed:', computeErr.message);
     }
 
     // Save conversation
