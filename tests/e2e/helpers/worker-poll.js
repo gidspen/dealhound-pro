@@ -43,5 +43,7 @@ export async function waitForScanStatus(
     await new Promise((r) => setTimeout(r, pollMs));
   }
 
-  throw new Error(`waitForScanStatus(${searchId}, ${targets.join('|')}): timed out after ${timeoutMs}ms`);
+  throw new Error(
+    `waitForScanStatus(${searchId}, ${targets.join('|')}): timed out after ${timeoutMs}ms`
+  );
 }

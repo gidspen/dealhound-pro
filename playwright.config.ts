@@ -7,14 +7,11 @@ const BASE_URL = process.env.E2E_BASE_URL || 'http://localhost:3000';
 export default defineConfig({
   testDir: './tests/e2e',
   testMatch: '**/*.spec.{js,ts}',
-  fullyParallel: false,           // serial: shared DB state, agent ordering
+  fullyParallel: false, // serial: shared DB state, agent ordering
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
-  workers: 1,                      // single worker — DB cleanup races otherwise
-  reporter: [
-    ['list'],
-    ['html', { open: 'never', outputFolder: 'playwright-report' }],
-  ],
+  workers: 1, // single worker — DB cleanup races otherwise
+  reporter: [['list'], ['html', { open: 'never', outputFolder: 'playwright-report' }]],
   use: {
     baseURL: BASE_URL,
     trace: 'retain-on-failure',

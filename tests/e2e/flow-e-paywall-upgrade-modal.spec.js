@@ -45,9 +45,11 @@ test.describe('Flow E — Paywall + UpgradeModal', () => {
         window.__dh_setUpgradeModal({ reason: 'no_subscription', tier: null });
       } else {
         // Fallback: trigger via the buy-box-saved-style custom event hook
-        window.dispatchEvent(new CustomEvent('dh-test-open-upgrade', {
-          detail: { reason: 'no_subscription', tier: null },
-        }));
+        window.dispatchEvent(
+          new CustomEvent('dh-test-open-upgrade', {
+            detail: { reason: 'no_subscription', tier: null },
+          })
+        );
       }
     });
 
@@ -98,14 +100,16 @@ test.describe('Flow E — Paywall + UpgradeModal', () => {
           bonus_runs: 0,
         });
       } else {
-        window.dispatchEvent(new CustomEvent('dh-test-open-upgrade', {
-          detail: {
-            reason: 'out_of_runs',
-            tier: 'founding',
-            runs_used: 10,
-            runs_limit: 10,
-          },
-        }));
+        window.dispatchEvent(
+          new CustomEvent('dh-test-open-upgrade', {
+            detail: {
+              reason: 'out_of_runs',
+              tier: 'founding',
+              runs_used: 10,
+              runs_limit: 10,
+            },
+          })
+        );
       }
     });
 
@@ -159,9 +163,11 @@ test.describe('Flow E — Paywall + UpgradeModal', () => {
       if (window.__dh_setUpgradeModal) {
         window.__dh_setUpgradeModal({ reason: 'no_subscription', tier: null });
       } else {
-        window.dispatchEvent(new CustomEvent('dh-test-open-upgrade', {
-          detail: { reason: 'no_subscription', tier: null },
-        }));
+        window.dispatchEvent(
+          new CustomEvent('dh-test-open-upgrade', {
+            detail: { reason: 'no_subscription', tier: null },
+          })
+        );
       }
     });
 
@@ -169,7 +175,9 @@ test.describe('Flow E — Paywall + UpgradeModal', () => {
     await page.click('button:has-text("Become a Founding Member")');
 
     // 409 → modal shows "Falling back to Hunter…" then auto-retries on Hunter
-    await expect(page.locator('text=/Founding|spots are full|Falling back/i').first()).toBeVisible({ timeout: 4000 });
+    await expect(page.locator('text=/Founding|spots are full|Falling back/i').first()).toBeVisible({
+      timeout: 4000,
+    });
 
     // Wait for the auto-fallback Hunter call (1.5s setTimeout in component)
     await page.waitForRequest(

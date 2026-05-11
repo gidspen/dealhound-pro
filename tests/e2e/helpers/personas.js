@@ -18,7 +18,7 @@ function getSupabase() {
 
 const TIER_DEFAULTS = {
   founding: { runs_used: 0, bonus_runs: 0 },
-  hunter:   { runs_used: 0, bonus_runs: 0 },
+  hunter: { runs_used: 0, bonus_runs: 0 },
   investor: { runs_used: 0, bonus_runs: 0 },
   operator: { runs_used: 0, bonus_runs: 0 },
 };
@@ -76,10 +76,7 @@ export async function deleteUser(email) {
   const sb = getSupabase();
 
   // Get search_ids for this user so we can clean dependents
-  const { data: searches } = await sb
-    .from('deal_searches')
-    .select('id')
-    .eq('user_email', email);
+  const { data: searches } = await sb.from('deal_searches').select('id').eq('user_email', email);
   const searchIds = (searches || []).map((s) => s.id);
 
   if (searchIds.length > 0) {
@@ -101,11 +98,7 @@ export async function deleteUser(email) {
  */
 export async function getUser(email) {
   const sb = getSupabase();
-  const { data, error } = await sb
-    .from('users')
-    .select('*')
-    .eq('email', email)
-    .single();
+  const { data, error } = await sb.from('users').select('*').eq('email', email).single();
   if (error && error.code !== 'PGRST116') throw error; // PGRST116 = no rows
   return data;
 }

@@ -23,8 +23,7 @@ import { createClient } from '@supabase/supabase-js';
 import { freshTestEmail } from './helpers/test-email.js';
 import { deleteUser } from './helpers/personas.js';
 
-const sb = () =>
-  createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
+const sb = () => createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 
 test.describe('Flow A — Free scan submission', () => {
   let testEmail;
@@ -60,9 +59,7 @@ test.describe('Flow A — Free scan submission', () => {
     const reqPromise = page.waitForRequest(
       (r) => r.url().includes('/api/free-scan-start') && r.method() === 'POST'
     );
-    const respPromise = page.waitForResponse((r) =>
-      r.url().includes('/api/free-scan-start')
-    );
+    const respPromise = page.waitForResponse((r) => r.url().includes('/api/free-scan-start'));
 
     await page.click('button[type=submit]');
 
@@ -81,13 +78,18 @@ test.describe('Flow A — Free scan submission', () => {
       // Rate limit hit — this IP already ran a free scan in the last 24h.
       // It IS the right behavior in production; just means we can't repeat the
       // happy-path assertion now. Skip cleanly so the suite stays trustworthy.
-      test.skip(true, 'IP rate-limited (429). Re-run from a fresh IP, or wait 24h, or run against vercel dev.');
+      test.skip(
+        true,
+        'IP rate-limited (429). Re-run from a fresh IP, or wait 24h, or run against vercel dev.'
+      );
       return;
     }
     expect(resp.status(), 'expected 2xx from /api/free-scan-start').toBeLessThan(300);
 
     // Confirmation panel appears in-page (no redirect away)
-    await expect(page.locator('text=/searching now|in your inbox|hunter|on the case/i').first()).toBeVisible({
+    await expect(
+      page.locator('text=/searching now|in your inbox|hunter|on the case/i').first()
+    ).toBeVisible({
       timeout: 10_000,
     });
     expect(page.url()).toContain('/free-scan');
