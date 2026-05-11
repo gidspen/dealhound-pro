@@ -1,5 +1,6 @@
 // @ts-check
 const { createClient } = require('@supabase/supabase-js');
+const { TIER_LIMITS } = require('./_lib/paywall');
 
 /** @type {import('@supabase/supabase-js').SupabaseClient<import('../types/database').Database>} */
 const supabase = createClient(
@@ -28,7 +29,9 @@ const AGENT_NAMES = [
 async function getOrCreateUser(email) {
   const { data: existing } = await supabase
     .from('users')
-    .select('email, agent_name')
+    .select(
+      'email, agent_name, subscription_tier, agent_runs_used, bonus_runs, agent_runs_reset_at'
+    )
     .eq('email', email)
     .single();
 
@@ -44,7 +47,9 @@ async function getOrCreateUser(email) {
 
   const { data, error } = await supabase
     .from('users')
-    .select('email, agent_name')
+    .select(
+      'email, agent_name, subscription_tier, agent_runs_used, bonus_runs, agent_runs_reset_at'
+    )
     .eq('email', email)
     .single();
 
@@ -164,8 +169,28 @@ module.exports = async function handler(req, res) {
       if (d.search_id) dealCountMap[d.search_id] = (dealCountMap[d.search_id] || 0) + 1;
     });
 
+    // Plan / runs payload — feeds the Settings panel and UpgradeModal copy.
+    /** @type {Record<string, number>} */
+    const tierLimits = TIER_LIMITS;
+    const tierLimit = user.subscription_tier ? tierLimits[user.subscription_tier] : null;
+    const bonus = user.bonus_runs || 0;
+    const effectiveLimit =
+      tierLimit === Infinity
+        ? null
+        : tierLimit !== null && tierLimit !== undefined
+          ? tierLimit + bonus
+          : null;
+
     return res.status(200).json({
       agent_name: user.agent_name,
+      plan: {
+        tier: user.subscription_tier, // 'founding' | 'hunter' | 'investor' | 'operator' | null
+        runs_used: user.agent_runs_used || 0,
+        runs_limit: effectiveLimit, // null = unlimited (operator) OR no subscription
+        tier_runs_limit: tierLimit === Infinity ? null : tierLimit,
+        bonus_runs: bonus,
+        runs_reset_at: user.agent_runs_reset_at || null,
+      },
       scans: (scans || []).map((s) => ({
         id: s.id,
         buy_box: s.buy_box,
