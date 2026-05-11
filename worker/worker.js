@@ -388,6 +388,106 @@ function runFindDeals(job, skill = 'deal scan') {
   });
 }
 
+// ── Test-mode short-circuit ───────────────────────────────────────────────────
+
+/**
+ * runFindDealsTestMode — skips the Claude/Apify subprocess entirely.
+ *
+ * Inserts 3 fake scored deals (varied tiers) for the job's search_id, then
+ * marks the scan_run / job / search complete. Used by Flow B + C + G e2e
+ * tests so the full pipeline can be exercised without burning tokens.
+ *
+ * Gated by WORKER_TEST_MODE=true in processPendingJobs. Default OFF.
+ *
+ * @param {object} job — claimed scrape_jobs row
+ * @param {import('@supabase/supabase-js').SupabaseClient} supabaseClient
+ */
+async function runFindDealsTestMode(job, supabaseClient) {
+  log(`[TEST_MODE] short-circuit for job ${job.id}`, { searchId: job.search_id });
+  const startMs = Date.now();
+
+  const scanRun = await supabaseClient
+    .from('scan_runs')
+    .insert({
+      search_id: job.search_id,
+      scrape_job_id: job.id,
+      user_email: await resolveUserEmail(job.search_id),
+      trigger: job.trigger || 'on_demand',
+      phase: 'full',
+      buy_box: job.buy_box,
+      status: 'running',
+      started_at: new Date().toISOString(),
+    })
+    .select()
+    .single();
+  const runId = scanRun?.data?.id || null;
+
+  const fakeDeals = [
+    {
+      search_id: job.search_id,
+      title: 'TEST DEAL 1',
+      location: 'Austin, TX',
+      price: 850000,
+      acreage: 5,
+      rooms_keys: 8,
+      source: 'test_mode',
+      url: 'https://example.test/deal-1',
+      passed_hard_filters: true,
+      brief: 'Test-mode fixture — STRONG MATCH tier',
+      days_on_market: 14,
+      property_type: 'micro_resort',
+      raw_description: 'Fake deal inserted by WORKER_TEST_MODE for e2e pipeline tests.',
+      score_breakdown: { strategy: { overall: 'STRONG MATCH' } },
+    },
+    {
+      search_id: job.search_id,
+      title: 'TEST DEAL 2',
+      location: 'Boerne, TX',
+      price: 1200000,
+      acreage: 12,
+      rooms_keys: 10,
+      source: 'test_mode',
+      url: 'https://example.test/deal-2',
+      passed_hard_filters: true,
+      brief: 'Test-mode fixture — MATCH tier',
+      days_on_market: 45,
+      property_type: 'boutique_hotel',
+      raw_description: 'Fake deal inserted by WORKER_TEST_MODE for e2e pipeline tests.',
+      score_breakdown: { strategy: { overall: 'MATCH' } },
+    },
+    {
+      search_id: job.search_id,
+      title: 'TEST DEAL 3',
+      location: 'Fredericksburg, TX',
+      price: 1800000,
+      acreage: 25,
+      rooms_keys: 6,
+      source: 'test_mode',
+      url: 'https://example.test/deal-3',
+      passed_hard_filters: true,
+      brief: 'Test-mode fixture — PARTIAL tier',
+      days_on_market: 90,
+      property_type: 'glamping',
+      raw_description: 'Fake deal inserted by WORKER_TEST_MODE for e2e pipeline tests.',
+      score_breakdown: { strategy: { overall: 'PARTIAL' } },
+    },
+  ];
+
+  const { error: insertError } = await supabaseClient.from('deals').insert(fakeDeals);
+  if (insertError) {
+    log(`[TEST_MODE] WARN: deals insert failed — ${insertError.message}`);
+  }
+
+  const durationMs = Date.now() - startMs;
+  const metrics = { sites_discovered: 1, listings_raw: 3, deals_scored: 3 };
+
+  await finalizeScanRun(runId, { status: 'complete', durationMs, metrics });
+  await finalizeJob(job.id, 'complete');
+  await updateSearchStatus(job.search_id, 'complete');
+
+  log(`[TEST_MODE] job ${job.id} complete — inserted 3 fake deals`, metrics);
+}
+
 // ── Core poll loop ────────────────────────────────────────────────────────────
 
 async function processPendingJobs() {
@@ -406,6 +506,11 @@ async function processPendingJobs() {
 
   const claimed = await claimJob(job);
   if (!claimed) { log(`Job ${job.id} already claimed — skipping`); return; }
+
+  if (process.env.WORKER_TEST_MODE === 'true') {
+    await runFindDealsTestMode(claimed, supabase);
+    return;
+  }
 
   const scanRun = await createScanRun(job);
   const runId = scanRun?.id || null;
@@ -700,4 +805,4 @@ if (require.main === module) {
   main().catch((err) => { console.error('FATAL:', err); process.exit(1); });
 }
 
-module.exports = { composeSpawnConfig, createInFlightGuard, SCAN_TIMEOUT_MS, runFindDeals };
+module.exports = { composeSpawnConfig, createInFlightGuard, SCAN_TIMEOUT_MS, runFindDeals, runFindDealsTestMode };
