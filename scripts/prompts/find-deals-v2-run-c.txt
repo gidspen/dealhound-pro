@@ -1,0 +1,132 @@
+You are an Opus orchestrator running an autonomous workflow. Token discipline non-negotiable: Opus thinks, Sonnet does, every action tagged.
+
+## Goal
+Ship Phase 3 (Telemetry + Loop Closure) of the find-deals v2 spec. Wire `apply-buybox.md` to update `discovered-sites.json` performance_metadata after scoring. Build `scripts/find-deals-source-yield.py` — read-only analysis that prints rank-vs-yield histogram. Run a full /find-deals end-to-end and verify telemetry populates correctly.
+
+## Source of truth
+Read in order:
+1. /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/superpowers/specs/2026-05-09-find-deals-v2-discovery-and-extraction.md §5.4 (telemetry) + §6 Phase 3 (acceptance)
+2. /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/RUN_A_FIND_DEALS_V2_CHECKPOINT.md AND /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/RUN_B_FIND_DEALS_V2_CHECKPOINT.md (prior phase results — know what's been built)
+3. /Users/gideonspencer/skills/find-deals/apply-buybox.md (the file you're wiring)
+4. /Users/gideonspencer/skills/find-deals/discovered-sites.json (current schema with performance_metadata blocks)
+5. /Users/gideonspencer/skills/find-deals/SKILL.md (overall orchestration)
+
+## Success criteria
+1. `apply-buybox.md` Step 3 (Persist) is wired to update `discovered-sites.json` performance_metadata for each source: increment `scrapes`, set `last_scrape_at`, set `last_scrape_status`, increment `deals_scored_match_or_better` and `deals_scored_strong_or_hot` based on the run's scored deals.
+2. `/Users/gideonspencer/skills/find-deals/scripts/find-deals-source-yield.py` exists. Reads `discovered-sites.json`. Prints histogram per spec §5.4:
+   - rank 1–10: avg yield_rate, avg hot_rate, source count
+   - rank 11–25: same
+   - rank 26–50: same
+   - rank 51+: same
+   - Plus a top-10 sources by hot_rate list
+3. **Test gate E (end-to-end)**: run a full `/find-deals full` from a fresh shell (worker subscription path, --persist-only via the worker). Acceptance:
+   - Scored deals land in Supabase (verify via `python3 -c "from supabase import create_client; ..."` or via Supabase MCP query)
+   - `discovered-sites.json` performance_metadata reflects the run (scrapes incremented, last_scrape_at recent)
+   - `python3 scripts/find-deals-source-yield.py` prints non-empty histogram
+4. Save evidence: `verification/run-c-end-to-end-discovered-sites.json`, `verification/run-c-yield-histogram.txt`
+5. PR opened against `gidspen/find-deals-skill` `main` from `feat/find-deals-v2-telemetry`, branched off `feat/find-deals-v2-extractor` (stack pattern).
+
+## Token discipline
+Same as Runs A + B. Opus thinks, Sonnet does. Tag every action.
+
+## Workflow
+
+### Phase 1: ORIENT (turns 1–4)
+1. Read the 5 source-of-truth files (full files).
+2. cd /Users/gideonspencer/skills/find-deals
+3. Verify Run B's branch exists: `git branch -a | grep find-deals-v2-extractor`. If missing, STOP — Phase 2 didn't complete. Write FINAL checkpoint and exit.
+4. Branch off Run B's branch:
+   ```
+   git fetch origin
+   git checkout feat/find-deals-v2-extractor
+   git pull origin feat/find-deals-v2-extractor
+   git checkout -b feat/find-deals-v2-telemetry
+   ```
+
+### Phase 2: PLAN (turns 4–6)
+Write /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/RUN_C_FIND_DEALS_V2_PLAN.md with:
+- Where in apply-buybox.md Step 3 the wiring goes (specific section)
+- The exact data flow from scored-inline.json → performance_metadata updates
+- Yield script algorithm (math + output format)
+- Risk: telemetry update should NOT break if discovered-sites.json schema is from old (pre-v2) row. Backward-compat note.
+
+### Phase 3: BUILD (turns 6–25)
+
+1. **Wire apply-buybox.md Step 3** (DELEGATE) — after the scorer.py persist-only run, add a step that:
+   - Reads scored-inline.json (or the final scored-deals JSON output)
+   - Groups deals by source domain
+   - Per source: count match_or_better and strong_or_hot
+   - Reads discovered-sites.json
+   - For each source row, updates performance_metadata: `scrapes += 1`, `last_scrape_at = <now>`, `last_scrape_status = "complete"`, `deals_scored_match_or_better += <count>`, `deals_scored_strong_or_hot += <count>`, `consecutive_empty_scrapes = 0` (or `+= 1` if zero listings from this source)
+   - Writes discovered-sites.json back atomically (write to .tmp then mv)
+   - Backward-compat: if a row has no performance_metadata block, initialize one before incrementing
+
+2. **Build scripts/find-deals-source-yield.py** (DELEGATE) — pure Python read-only analysis. Reads discovered-sites.json. Computes per-rank-bucket avg yield_rate (= deals_scored_match_or_better / max(scrapes, 1)) and avg hot_rate (= deals_scored_strong_or_hot / max(scrapes, 1)). Prints to stdout. Format:
+   ```
+   === SOURCE YIELD BY DISCOVERY RANK ===
+
+   Rank 1-10   ([N] sources, [X] total scrapes): avg yield Y%, avg hot Z%
+   Rank 11-25  ([N] sources, [X] total scrapes): avg yield Y%, avg hot Z%
+   Rank 26-50  ([N] sources, [X] total scrapes): avg yield Y%, avg hot Z%
+   Rank 51+    ([N] sources, [X] total scrapes): avg yield Y%, avg hot Z%
+
+   === TOP 10 SOURCES BY HOT RATE ===
+   1. [name] (rank #X, Y scrapes, Z% hot rate)
+   ...
+   ```
+   No external deps beyond stdlib (json, statistics, sys).
+
+### Phase 4: VERIFY (turns 25–45)
+
+1. **Test Gate E — full end-to-end** (DOING DIRECTLY: orchestrate carefully):
+   - Snapshot current discovered-sites.json: `cp /Users/gideonspencer/skills/find-deals/discovered-sites.json /tmp/discovered-sites-before-run-c.json`
+   - Run from fresh shell: `zsh -c 'source ~/.zshrc && cd /tmp && claude -p "/find-deals full" --max-turns 100 --dangerously-skip-permissions'` (subscription path)
+   - This is the long-running test. Be patient — full discover + scrape + score across 50+ sites can take 60+ minutes.
+   - After completion, validate:
+     - discovered-sites.json performance_metadata changed: at least 5 sources have scrapes > before-run-c snapshot
+     - Supabase deals table has new rows (use Supabase MCP `execute_sql`: `SELECT count(*) FROM deals WHERE created_at > now() - interval '2 hours'` — must be > 0)
+     - Run yield script: `python3 /Users/gideonspencer/skills/find-deals/scripts/find-deals-source-yield.py > /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/verification/run-c-yield-histogram.txt`
+     - Histogram must have non-empty rank buckets
+   - Copy discovered-sites.json AFTER state to verification/run-c-end-to-end-discovered-sites.json
+
+2. If full /find-deals full takes >2 hours OR fails midway: scale down — run `/find-deals discover` followed by `/find-deals scrape` on just the top 10 sites, then `/find-deals score`. Document the scaled-down approach in PR body. The acceptance gate for telemetry wiring works on any size run as long as performance_metadata updates correctly.
+
+### Phase 5: SHIP (turns 45–55)
+1. cd /Users/gideonspencer/skills/find-deals
+2. `git add -A`
+3. Commit with message describing telemetry wiring + yield script
+4. `git push -u origin feat/find-deals-v2-telemetry`
+5. `gh pr create --repo gidspen/find-deals-skill --base feat/find-deals-v2-extractor --head feat/find-deals-v2-telemetry --title "feat(find-deals): v2 source-yield telemetry + rank histogram" --body "..."`
+6. PR body must include:
+   - Summary of telemetry wiring + yield script
+   - Test gate E result: number of sources with updated performance_metadata, Supabase deal count delta, paste full histogram output
+   - Evidence file paths
+   - PR base note: stacks on Phase 2's PR — merge Phase 1 then Phase 2 then Phase 3
+7. **Commit plan + evidence to worktree branch** (no separate PR):
+   - cd /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506
+   - git status (confirm on `claude/sad-visvesvaraya-35b506`)
+   - git add docs/RUN_C_FIND_DEALS_V2_PLAN.md docs/RUN_C_FIND_DEALS_V2_CHECKPOINT.md verification/
+   - git commit -m "chore(find-deals-v2): RUN C artifacts — telemetry plan + checkpoint + evidence + final summary"
+   - git push origin claude/sad-visvesvaraya-35b506
+
+## Hard limits
+Same as Runs A + B. Plus:
+- Do NOT modify Phase 1 or Phase 2 deliverables. Read only.
+- Do NOT call the Anthropic API directly. Worker path uses --persist-only.
+
+## Stopping conditions
+Stop and write FINAL checkpoint when ANY:
+- Success criteria fully met, both PRs opened
+- 50 turns used (leave 5 for final + PR)
+- Test gate E full run takes >3 hours (scale down per Phase 4 step 2)
+- Test gate E fails to verify telemetry update (telemetry didn't wire properly — debug + open WIP PR)
+
+## Final summary
+Write to /Users/gideonspencer/dealhound-pro/.claude/worktrees/sad-visvesvaraya-35b506/docs/RUN_C_FIND_DEALS_V2_CHECKPOINT.md:
+- All same fields as Runs A + B's final checkpoints
+- Test gate E result with full histogram pasted in
+- Skill repo PR URL (stacked)
+- Worktree branch commit SHAs (all 3 chore commits)
+- AGGREGATE summary: 3 skill PR URLs in merge order, recommended next steps for Gideon (e.g., "merge skill PRs in order, then open dealhound-pro rollup PR claude/sad-visvesvaraya-35b506 → main, then run a real /find-deals to populate telemetry against fresh data")
+
+Begin now. Start with Phase 1: ORIENT.
