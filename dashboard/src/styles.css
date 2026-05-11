@@ -811,7 +811,7 @@ body::before {
   color: #9b9b9b;
 }
 
-/* ── Deal Documents ──────────────────────────────────────────── */
+/* ── Deal Documents ──────────────────────────────────────────────── */
 .deal-docs { margin: 16px 0 8px; }
 .deal-docs-zone {
   border: 1.5px dashed var(--border);
@@ -862,6 +862,56 @@ body::before {
 }
 .deal-docs-delete:hover { color: #b94a48; }
 
+/* DEAL PROGRESS BAR */
+.deal-progress-bar {
+  display: flex; align-items: flex-start;
+  justify-content: flex-end;
+  margin: -8px 0 14px;
+}
+.deal-progress-step {
+  display: flex; flex-direction: column; align-items: center;
+  position: relative;
+}
+.deal-progress-dot {
+  width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+.deal-progress-step-done .deal-progress-dot {
+  background: var(--gold);
+}
+.deal-progress-step-active .deal-progress-dot {
+  background: var(--green);
+  box-shadow: 0 0 0 2px rgba(26,127,55,0.18);
+}
+.deal-progress-step-pending .deal-progress-dot {
+  background: transparent;
+  border: 1.5px solid var(--border);
+}
+.deal-progress-connector {
+  width: 14px; height: 1.5px;
+  background: var(--border);
+  margin-top: 2.75px; flex-shrink: 0;
+}
+.deal-progress-connector.done { background: var(--gold); }
+.deal-progress-label {
+  font-size: 0.52rem; font-weight: 500; letter-spacing: 0.04em;
+  text-transform: uppercase; margin-top: 3px;
+  color: var(--cream-sub);
+  white-space: nowrap;
+}
+.deal-progress-step-active .deal-progress-label { color: var(--green); font-weight: 600; }
+.deal-progress-step-done .deal-progress-label { color: var(--gold); }
+
+/* Passed state */
+.deal-progress-passed {
+  justify-content: flex-end;
+}
+.deal-progress-passed-label {
+  font-size: 0.6rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--cream-sub);
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 100px; padding: 1px 8px;
+}
 /* UPGRADE MODAL */
 .upgrade-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.55);
