@@ -19,7 +19,7 @@ const TIER_LIMITS = {
 async function checkPaywall(email, supabase) {
   const { data: user } = await supabase
     .from('users')
-    .select('email, subscription_tier, agent_runs_used')
+    .select('email, subscription_tier, agent_runs_used, bonus_runs')
     .eq('email', email)
     .single();
 
@@ -31,22 +31,30 @@ async function checkPaywall(email, supabase) {
       body: {
         error:
           "Hey, you'll need a subscription to run a scan. Pick a plan and let's get you hunting.",
+        reason: 'no_subscription',
         checkoutUrl: '/api/create-checkout',
         tier: null,
       },
     };
   }
 
-  // Subscribed but out of runs
-  const limit = TIER_LIMITS[user.subscription_tier];
-  if (limit !== undefined && user.agent_runs_used >= limit) {
+  // Subscribed but out of runs (tier limit + any purchased top-up bonus)
+  const tierLimit = TIER_LIMITS[user.subscription_tier];
+  const bonus = user.bonus_runs || 0;
+  const effectiveLimit = tierLimit === Infinity ? Infinity : tierLimit + bonus;
+
+  if (tierLimit !== undefined && user.agent_runs_used >= effectiveLimit) {
     return {
       allowed: false,
       status: 402,
       body: {
-        error: "Hey, looks like you're out of runs this month — top up here?",
+        error: "You're out of runs this month. Top up 5 runs for $25, or wait until next month.",
+        reason: 'out_of_runs',
         checkoutUrl: '/api/create-checkout',
         tier: user.subscription_tier,
+        runs_used: user.agent_runs_used,
+        runs_limit: effectiveLimit,
+        bonus_runs: bonus,
       },
     };
   }
@@ -57,8 +65,9 @@ async function checkPaywall(email, supabase) {
       email: user.email,
       subscription_tier: user.subscription_tier,
       agent_runs_used: user.agent_runs_used,
+      bonus_runs: bonus,
     },
-    tier_limit: limit,
+    tier_limit: effectiveLimit,
   };
 }
 
@@ -112,4 +121,4 @@ async function incrementAgentRuns(email, supabase) {
   }
 }
 
-module.exports = { checkPaywall, incrementAgentRuns };
+module.exports = { checkPaywall, incrementAgentRuns, TIER_LIMITS };

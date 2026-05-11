@@ -24,6 +24,21 @@ export const chatMessages = signal([]);
 export const chatConversationId = signal(null);
 export const chatStreaming = signal(false);
 
+// Plan / runs — populated by loadUserData() from /api/user-data { plan }
+export const plan = signal({
+  tier: null, // 'founding' | 'hunter' | 'investor' | 'operator' | null
+  runs_used: 0,
+  runs_limit: null, // null = unlimited (operator) OR no subscription
+  tier_runs_limit: null,
+  bonus_runs: 0,
+  runs_reset_at: null,
+});
+
+// Upgrade modal — opened on 402 paywall response from /api/scan-start
+// or 'paywall' SSE event from /api/chat. Payload mirrors the server body:
+// { reason: 'no_subscription' | 'out_of_runs', tier, runs_used?, runs_limit?, ... }
+export const upgradeModal = signal(null);
+
 const MAX_CACHE = 8;
 const cache = new Map();
 
@@ -39,7 +54,8 @@ export function cacheGet(threadId) {
 export function cacheSet(threadId, data) {
   cache.set(threadId, { ...data, lastAccessed: Date.now() });
   if (cache.size > MAX_CACHE) {
-    let oldestKey = null, oldestTime = Infinity;
+    let oldestKey = null,
+      oldestTime = Infinity;
     for (const [key, val] of cache) {
       if (key !== activeThreadId.value && val.lastAccessed < oldestTime) {
         oldestTime = val.lastAccessed;
@@ -51,31 +67,31 @@ export function cacheSet(threadId, data) {
 }
 
 export const inboxDeals = computed(() => {
-  return deals.value.filter(d =>
-    !archivedDealIds.value.has(d.id) && !starredDealIds.value.has(d.id)
+  return deals.value.filter(
+    (d) => !archivedDealIds.value.has(d.id) && !starredDealIds.value.has(d.id)
   );
 });
 
 export const trackingDeals = computed(() => {
-  return deals.value.filter(d => starredDealIds.value.has(d.id));
+  return deals.value.filter((d) => starredDealIds.value.has(d.id));
 });
 
 export const newDealCount = computed(() => {
-  return inboxDeals.value.filter(d => !viewedDealIds.value.has(d.id)).length;
+  return inboxDeals.value.filter((d) => !viewedDealIds.value.has(d.id)).length;
 });
 
 export const currentScan = computed(() => {
   if (view.value !== 'scan') return null;
-  return scans.value.find(s => s.id === activeThreadId.value) || null;
+  return scans.value.find((s) => s.id === activeThreadId.value) || null;
 });
 
 export const currentDeal = computed(() => {
   if (view.value !== 'deal') return null;
-  return deals.value.find(d => d.id === activeThreadId.value) || null;
+  return deals.value.find((d) => d.id === activeThreadId.value) || null;
 });
 
 export const dealsForCurrentScan = computed(() => {
   const scan = currentScan.value;
   if (!scan) return [];
-  return deals.value.filter(d => d.search_id === scan.id);
+  return deals.value.filter((d) => d.search_id === scan.id);
 });
