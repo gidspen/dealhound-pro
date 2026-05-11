@@ -116,7 +116,7 @@ module.exports = async function handler(req, res) {
       const { data } = await supabase
         .from('deals')
         .select(
-          'id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description'
+          'id, title, location, price, acreage, rooms_keys, score_breakdown, source, url, search_id, passed_hard_filters, brief, days_on_market, property_type, raw_description, deal_status'
         )
         .in('search_id', scanIds)
         .eq('passed_hard_filters', true)
@@ -217,6 +217,7 @@ module.exports = async function handler(req, res) {
         days_on_market: d.days_on_market || null,
         property_type: d.property_type || null,
         raw_description: d.raw_description || null,
+        deal_status: d.deal_status || null,
       })),
       active_threads: (threadConvos || []).map((c) => ({
         deal_id: c.deal_id,
