@@ -120,6 +120,16 @@ export interface Database {
           days_on_market: number | null;
           property_type: string | null;
           raw_description: string | null;
+          deal_status:
+            | 'new'
+            | 'reviewing'
+            | 'contacted'
+            | 'financials'
+            | 'loi'
+            | 'under_contract'
+            | 'closed'
+            | 'passed'
+            | null;
         };
         Insert: {
           id?: string;
@@ -137,6 +147,7 @@ export interface Database {
           days_on_market?: number | null;
           property_type?: string | null;
           raw_description?: string | null;
+          deal_status?: string | null;
         };
         Update: Partial<Database['public']['Tables']['deals']['Insert']>;
         Relationships: [];

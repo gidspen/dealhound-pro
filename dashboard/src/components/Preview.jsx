@@ -191,6 +191,43 @@ function ScanDealList() {
   );
 }
 
+const DEAL_STAGES = [
+  { key: 'new',            label: 'New' },
+  { key: 'reviewing',      label: 'Review' },
+  { key: 'contacted',      label: 'Contact' },
+  { key: 'financials',     label: 'Financials' },
+  { key: 'loi',            label: 'LOI' },
+  { key: 'under_contract', label: 'Contract' },
+  { key: 'closed',         label: 'Closed' },
+];
+
+function DealProgressBar({ status }) {
+  if (status === 'passed') {
+    return (
+      <div class="deal-progress-bar deal-progress-passed">
+        <span class="deal-progress-passed-label">Passed</span>
+      </div>
+    );
+  }
+  const currentIdx = DEAL_STAGES.findIndex((s) => s.key === (status || 'new'));
+  return (
+    <div class="deal-progress-bar">
+      {DEAL_STAGES.map((stage, i) => {
+        const state = i < currentIdx ? 'done' : i === currentIdx ? 'active' : 'pending';
+        return (
+          <div key={stage.key} class={`deal-progress-step deal-progress-step-${state}`}>
+            <div class="deal-progress-dot" />
+            {i < DEAL_STAGES.length - 1 && (
+              <div class={`deal-progress-connector${i < currentIdx ? ' done' : ''}`} />
+            )}
+            <span class="deal-progress-label">{stage.label}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 const ALLOWED_EXTENSIONS = '.pdf,.xlsx,.xls,.csv,.doc,.docx';
 
 function fmtFileSize(bytes) {
@@ -398,6 +435,8 @@ function DealDetail() {
               <span class={`deal-tier-badge-lg tier-${tier}`}>{tierLabel(tier)}</span>
             </div>
           </div>
+
+          <DealProgressBar status={deal.deal_status} />
 
           {/* Badges row */}
           <div class="deal-detail-badges">
