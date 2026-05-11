@@ -53,6 +53,7 @@ module.exports = [
   {
     files: [
       'api/*.js',
+      'api/_lib/chat-compute.js',
       'api/_lib/deal-files-handler.js',
       'api/_lib/magic-link.js',
       'api/_lib/magic-link-route.js',
