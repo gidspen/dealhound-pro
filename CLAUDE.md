@@ -22,6 +22,11 @@ Key routing rules:
 - Mark task done, add proof, update status in Notion → invoke notion-task-manager
 - Write a post, social update, content from PRs, building-in-public, what should I post → invoke social-media-storytelling
 
+## Source-of-truth docs
+- [LAUNCH_STRATEGY.md](LAUNCH_STRATEGY.md) — locked pricing, positioning, beta strategy
+- [PRODUCT_SPEC.md](PRODUCT_SPEC.md) — what we're building
+- [docs/USER_FLOWS.md](docs/USER_FLOWS.md) — testable end-to-end user flow spec; the contract Playwright tests assert against. Update whenever a flow changes.
+
 ## Deal Pipeline Environment
 - Always source `.env` before running the scoring phase of /find-deals (the scorer needs ANTHROPIC_API_KEY loaded)
 - Persist scored deals incrementally to disk during scoring, not just at the end, so process kills don't lose in-memory results
