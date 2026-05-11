@@ -605,17 +605,17 @@ All flows A–I, K, L pass on green. (Flow J retired.) Specifically:
 
 ## 13. Open Questions / Decide Before Test Build
 
-| #   | Question                                       | Status                                                                                                                                                        |
-| --- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | ~~Paywall copy contradiction~~                 | ✅ **Resolved 2026-05-10** — Option A locked. Cap from day 1, no beta-unlimited. See Locked Launch Policy.                                                    |
+| #   | Question                                       | Status                                                                                                                                                                                                                                                               |
+| --- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | ~~Paywall copy contradiction~~                 | ✅ **Resolved 2026-05-10** — Option A locked. Cap from day 1, no beta-unlimited. See Locked Launch Policy.                                                                                                                                                           |
 | 2   | ~~Top-up webhook bug~~                         | ✅ **Resolved 2026-05-10** — `bonus_runs` column added via [scripts/migrations/2026-05-10-bonus-runs.sql](../scripts/migrations/2026-05-10-bonus-runs.sql); paywall check and webhook handler rewritten to grant headroom instead of incrementing `agent_runs_used`. |
-| 3   | ~~Pending scan visited via `/scan/:id`~~       | ✅ **Obviated** — public `/scan/:id` removed.                                                                                                                 |
-| 4   | Worker timeout / scan failure email            | 🟡 **Open** — do we email "scan failed" or stay silent? UX call.                                                                                              |
-| 5   | Different email at Stripe vs dashboard         | 🟡 **Open** — reject, merge, or warn?                                                                                                                         |
-| 6   | Daily digest email                             | 🟡 **Open** — Settings has toggle but is the cron wired?                                                                                                      |
-| 7   | Auth-by-email-only security disclosure         | 🟡 **Open** — one-line note on EmailGate, OR upgrade to magic-link-only.                                                                                      |
-| 8   | `hello@dealhound.pro` Resend verification      | 🟡 **Open** — confirm DKIM/SPF/DMARC set + at least one real successful delivery to Gmail/Outlook before testing.                                             |
-| 9   | "Draft scan" preservation on paywall (Flow E6) | 🟡 **Open** — persist user's unsaved buy box for resume after upgrade, or discard?                                                                            |
+| 3   | ~~Pending scan visited via `/scan/:id`~~       | ✅ **Obviated** — public `/scan/:id` removed.                                                                                                                                                                                                                        |
+| 4   | Worker timeout / scan failure email            | 🟡 **Open** — do we email "scan failed" or stay silent? UX call.                                                                                                                                                                                                     |
+| 5   | Different email at Stripe vs dashboard         | 🟡 **Open** — reject, merge, or warn?                                                                                                                                                                                                                                |
+| 6   | Daily digest email                             | 🟡 **Open** — Settings has toggle but is the cron wired?                                                                                                                                                                                                             |
+| 7   | Auth-by-email-only security disclosure         | 🟡 **Open** — one-line note on EmailGate, OR upgrade to magic-link-only.                                                                                                                                                                                             |
+| 8   | `hello@dealhound.pro` Resend verification      | 🟡 **Open** — confirm DKIM/SPF/DMARC set + at least one real successful delivery to Gmail/Outlook before testing.                                                                                                                                                    |
+| 9   | "Draft scan" preservation on paywall (Flow E6) | 🟡 **Open** — persist user's unsaved buy box for resume after upgrade, or discard?                                                                                                                                                                                   |
 
 ---
 
@@ -627,20 +627,20 @@ The Supabase anon JWT is publicly embedded in [results/index.html](../results/in
 
 Migration: [scripts/migrations/2026-05-11-rls-lockdown-phase1.sql](../scripts/migrations/2026-05-11-rls-lockdown-phase1.sql). RLS enabled with **no policies** on the following 12 tables — meaning anon-key reads on these tables now return zero rows, while the service-role key continues to have full access.
 
-| Table                    | RLS    | Anon access |
-| ------------------------ | ------ | ----------- |
-| `deal_financial_files`   | ✅ ON  | None        |
-| `deal_financials`        | ✅ ON  | None        |
-| `deal_outreach`          | ✅ ON  | None        |
-| `deal_outreach_actions`  | ✅ ON  | None        |
-| `free_scan_requests`     | ✅ ON  | None        |
-| `raw_listings`           | ✅ ON  | None        |
-| `scan_runs`              | ✅ ON  | None        |
-| `scrape_jobs`            | ✅ ON  | None        |
-| `user_deal_archives`     | ✅ ON  | None        |
-| `user_deal_stars`        | ✅ ON  | None        |
-| `user_deal_views`        | ✅ ON  | None        |
-| `users`                  | ✅ ON  | None        |
+| Table                   | RLS   | Anon access |
+| ----------------------- | ----- | ----------- |
+| `deal_financial_files`  | ✅ ON | None        |
+| `deal_financials`       | ✅ ON | None        |
+| `deal_outreach`         | ✅ ON | None        |
+| `deal_outreach_actions` | ✅ ON | None        |
+| `free_scan_requests`    | ✅ ON | None        |
+| `raw_listings`          | ✅ ON | None        |
+| `scan_runs`             | ✅ ON | None        |
+| `scrape_jobs`           | ✅ ON | None        |
+| `user_deal_archives`    | ✅ ON | None        |
+| `user_deal_stars`       | ✅ ON | None        |
+| `user_deal_views`       | ✅ ON | None        |
+| `users`                 | ✅ ON | None        |
 
 **Security model:** service-role key (used by API + worker) bypasses RLS; anon key (embedded client-side) hits empty result sets. Anon-key reads on these tables now return zero rows.
 
@@ -665,10 +665,10 @@ Phase 2 requires, in order:
 
 `WORKER_TEST_MODE` is an env var on [worker/worker.js](../worker/worker.js) that lets CI exercise Flow B / Flow C / Flow G end-to-end without paying for real Claude/Apify runs.
 
-| State                     | Behavior                                                                                                                       |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| State                     | Behavior                                                                                                                                                    |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `WORKER_TEST_MODE=true`   | Worker skips the `claude -p /find-deals` and Apify spawns. Inserts **3 fake scored deals** per job, marks scan `complete`, fires the magic-link email path. |
-| Unset / `false` (default) | Unchanged — full real pipeline (Claude orchestrator + Apify scrape + scoring + persistence).                                   |
+| Unset / `false` (default) | Unchanged — full real pipeline (Claude orchestrator + Apify scrape + scoring + persistence).                                                                |
 
 **Why:** the real worker spawn takes ~10 min and costs real API dollars; CI cannot afford to run it on every PR. Test mode produces a deterministic, fast, free signal for the surfaces that depend on a completed scan.
 

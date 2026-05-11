@@ -20,6 +20,10 @@ Also adds `WORKER_TEST_MODE` env var on `worker/worker.js` — when `'true'`, sk
 
 - `verification/ship-approved-fix-rls-lockdown.md` — this file.
 
+## Follow-up chore commit
+
+A chore commit applies prettier reformats that lint-staged generated during the original commit but could not restage (worktree `.git/index.lock` quirk). Touches only whitespace in `worker/worker.js`, `tests/integration/worker-test-mode.test.js`, and `docs/USER_FLOWS.md`. Zero semantic change; `npm test` still 88/88.
+
 ## Verification before push
 
 - Migration applied via Supabase MCP `apply_migration`. Post-apply `pg_tables.rowsecurity` confirmed `true` on all 12 locked tables, `false` on the 2 deferred.

@@ -37,18 +37,26 @@ describe('WORKER_TEST_MODE short-circuit', () => {
       .from('deal_searches')
       .insert({
         user_email: TEST_EMAIL,
-        buy_box: { raw_prompt: 'test mode', locations: ['TX'], price_max: 2_000_000, property_types: ['micro_resort'], revenue_requirement: 'any' },
+        buy_box: {
+          raw_prompt: 'test mode',
+          locations: ['TX'],
+          price_max: 2_000_000,
+          property_types: ['micro_resort'],
+          revenue_requirement: 'any',
+        },
         status: 'scanning',
         test_data: true,
         run_at: new Date().toISOString(),
       })
-      .select('id').single();
+      .select('id')
+      .single();
     createdSearchIds.push(search.id);
 
     const { data: job } = await supabase
       .from('scrape_jobs')
       .insert({ search_id: search.id, buy_box: { raw_prompt: 'x' }, status: 'running' })
-      .select().single();
+      .select()
+      .single();
     createdJobIds.push(job.id);
 
     return { searchId: search.id, job };
