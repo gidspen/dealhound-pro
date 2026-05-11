@@ -9,12 +9,21 @@ const TIER_LIMITS = {
   operator: Infinity,
 };
 
+// Free trial: every email gets this many scans before being asked to subscribe.
+const FREE_RUNS = 1;
+
 /**
  * checkPaywall(email, supabase)
  *
  * Returns:
- *   { allowed: false, status: 402, body: { error, checkoutUrl, tier } }
- *   { allowed: true, user: { email, subscription_tier, agent_runs_used }, tier_limit }
+ *   { allowed: false, status: 402, body: { error, checkoutUrl, tier, reason } }
+ *   { allowed: true, user: { email, subscription_tier, agent_runs_used }, tier_limit, free_run }
+ *
+ * Policy:
+ *   - No row → allowed (FREE_RUNS available, row gets created on increment)
+ *   - Null tier + agent_runs_used < FREE_RUNS → allowed (free trial)
+ *   - Null tier + agent_runs_used >= FREE_RUNS → blocked (free_run_used)
+ *   - Subscribed tier → allowed up to tier limit + bonus_runs
  */
 async function checkPaywall(email, supabase) {
   const { data: user } = await supabase
@@ -23,32 +32,47 @@ async function checkPaywall(email, supabase) {
     .eq('email', email)
     .single();
 
-  // No row — completely unknown user
+  // No row — brand new user, free first run on us
   if (!user) {
     return {
-      allowed: false,
-      status: 402,
-      body: {
-        error:
-          "Hey, you'll need a subscription to run a scan. Pick a plan and let's get you hunting.",
-        reason: 'no_subscription',
-        checkoutUrl: '/api/create-checkout',
-        tier: null,
+      allowed: true,
+      user: {
+        email,
+        subscription_tier: null,
+        agent_runs_used: 0,
+        bonus_runs: 0,
       },
+      tier_limit: FREE_RUNS,
+      free_run: true,
     };
   }
 
-  // No tier — unsubscribed
+  // No tier — unsubscribed. Free trial until they hit FREE_RUNS.
   if (user.subscription_tier == null) {
+    if ((user.agent_runs_used || 0) < FREE_RUNS) {
+      return {
+        allowed: true,
+        user: {
+          email: user.email,
+          subscription_tier: null,
+          agent_runs_used: user.agent_runs_used || 0,
+          bonus_runs: 0,
+        },
+        tier_limit: FREE_RUNS,
+        free_run: true,
+      };
+    }
     return {
       allowed: false,
       status: 402,
       body: {
         error:
-          "Hey, you'll need a subscription to run a scan. Pick a plan and let's get you hunting.",
-        reason: 'no_subscription',
+          "That was your free scan — solid work. Pick a plan to keep hunting and we'll line up your next round.",
+        reason: 'free_run_used',
         checkoutUrl: '/api/create-checkout',
         tier: null,
+        runs_used: user.agent_runs_used || 0,
+        runs_limit: FREE_RUNS,
       },
     };
   }
@@ -90,7 +114,8 @@ async function checkPaywall(email, supabase) {
  * incrementAgentRuns(email, supabase)
  *
  * Increments agent_runs_used by 1. Tries the RPC first; falls back to a
- * manual read-then-write (same pattern as api/stripe-webhook.js:86-104).
+ * read-then-write, and finally to an upsert if the user row doesn't exist yet
+ * (the free-first-run case: no Stripe webhook has created the row).
  *
  * Returns { ok: boolean, error?: string }. Never throws.
  */
@@ -102,32 +127,55 @@ async function incrementAgentRuns(email, supabase) {
     });
 
     if (!rpcError) {
-      return { ok: true };
+      // RPC succeeded — but it may have been a no-op if no row exists.
+      // Verify the row exists; if not, fall through to upsert.
+      const { data: check } = await supabase
+        .from('users')
+        .select('email')
+        .eq('email', email)
+        .maybeSingle();
+
+      if (check) {
+        return { ok: true };
+      }
+    } else {
+      console.warn(
+        'increment_agent_runs rpc failed, falling back to manual update:',
+        rpcError.message
+      );
     }
 
-    // RPC failed — fall back to manual increment
-    console.warn(
-      'increment_agent_runs rpc failed, falling back to manual update:',
-      rpcError.message
-    );
-
-    const { data: user, error: readError } = await supabase
+    // Read existing row (if any) so we can preserve agent_runs_used.
+    const { data: user } = await supabase
       .from('users')
       .select('agent_runs_used')
       .eq('email', email)
-      .single();
+      .maybeSingle();
 
-    if (readError || !user) {
-      return { ok: false, error: readError?.message || 'User not found during fallback increment' };
+    if (user) {
+      const { error: writeError } = await supabase
+        .from('users')
+        .update({ agent_runs_used: (user.agent_runs_used || 0) + 1 })
+        .eq('email', email);
+
+      if (writeError) {
+        return { ok: false, error: writeError.message };
+      }
+      return { ok: true };
     }
 
-    const { error: writeError } = await supabase
-      .from('users')
-      .update({ agent_runs_used: (user.agent_runs_used || 0) + 1 })
-      .eq('email', email);
+    // No row yet — first-run user. Upsert so the row exists for next time.
+    const { error: upsertError } = await supabase.from('users').upsert(
+      {
+        email,
+        agent_runs_used: 1,
+        agent_name: 'Scout',
+      },
+      { onConflict: 'email' }
+    );
 
-    if (writeError) {
-      return { ok: false, error: writeError.message };
+    if (upsertError) {
+      return { ok: false, error: upsertError.message };
     }
 
     return { ok: true };
@@ -136,4 +184,4 @@ async function incrementAgentRuns(email, supabase) {
   }
 }
 
-module.exports = { checkPaywall, incrementAgentRuns, TIER_LIMITS };
+module.exports = { checkPaywall, incrementAgentRuns, TIER_LIMITS, FREE_RUNS };
