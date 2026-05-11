@@ -192,13 +192,13 @@ function ScanDealList() {
 }
 
 const DEAL_STAGES = [
-  { key: 'new',            label: 'New' },
-  { key: 'reviewing',      label: 'Review' },
-  { key: 'contacted',      label: 'Contact' },
-  { key: 'financials',     label: 'Financials' },
-  { key: 'loi',            label: 'LOI' },
+  { key: 'new', label: 'New' },
+  { key: 'reviewing', label: 'Review' },
+  { key: 'contacted', label: 'Contact' },
+  { key: 'financials', label: 'Financials' },
+  { key: 'loi', label: 'LOI' },
   { key: 'under_contract', label: 'Contract' },
-  { key: 'closed',         label: 'Closed' },
+  { key: 'closed', label: 'Closed' },
 ];
 
 function DealProgressBar({ status }) {
