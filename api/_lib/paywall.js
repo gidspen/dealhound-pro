@@ -23,8 +23,23 @@ async function checkPaywall(email, supabase) {
     .eq('email', email)
     .single();
 
-  // No row or no tier — unsubscribed
-  if (!user || user.subscription_tier == null) {
+  // No row — completely unknown user
+  if (!user) {
+    return {
+      allowed: false,
+      status: 402,
+      body: {
+        error:
+          "Hey, you'll need a subscription to run a scan. Pick a plan and let's get you hunting.",
+        reason: 'no_subscription',
+        checkoutUrl: '/api/create-checkout',
+        tier: null,
+      },
+    };
+  }
+
+  // No tier — unsubscribed
+  if (user.subscription_tier == null) {
     return {
       allowed: false,
       status: 402,

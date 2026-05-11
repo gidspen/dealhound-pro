@@ -3,10 +3,7 @@ const { createClient } = require('@supabase/supabase-js');
 const { triggerScan } = require('./_lib/scan-trigger');
 const { checkPaywall, incrementAgentRuns } = require('./_lib/paywall');
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
-);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 
 const SYSTEM_PROMPT = `You are {{AGENT_NAME}}, an AI deal hunting agent. You scan 30+ marketplaces and private broker listings daily, assess and score every property, and surface only the deals that match an investor's exact strategy and buy box.
 
@@ -94,50 +91,54 @@ structure, cash flow from day 1"
 const TOOLS = [
   {
     name: 'save_buy_box',
-    description: 'Save the user\'s buy box criteria after they confirm. Call this ONLY after the user explicitly confirms the buy box summary.',
+    description:
+      "Save the user's buy box criteria after they confirm. Call this ONLY after the user explicitly confirms the buy box summary.",
     input_schema: {
       type: 'object',
       properties: {
         raw_prompt: {
           type: 'string',
-          description: 'A clean, natural-language summary of the buy box composed from the validated structured fields. This is the truth-of-record passed to the deal-finding skill. Format: "[property type(s)] in [location(s)], [acreage], [price range], [revenue requirement], [exclusions]". Example: "micro resort in east texas, minimum 8 acres, $500k to $3m, must have existing structure, cash flow day 1." Use lowercase, plain English, no JSON-style enums (e.g., write "micro resort" not "micro_resort"). Compose this from the other fields you are about to save — never from raw user text.'
+          description:
+            'A clean, natural-language summary of the buy box composed from the validated structured fields. This is the truth-of-record passed to the deal-finding skill. Format: "[property type(s)] in [location(s)], [acreage], [price range], [revenue requirement], [exclusions]". Example: "micro resort in east texas, minimum 8 acres, $500k to $3m, must have existing structure, cash flow day 1." Use lowercase, plain English, no JSON-style enums (e.g., write "micro resort" not "micro_resort"). Compose this from the other fields you are about to save — never from raw user text.',
         },
         locations: {
           type: 'array',
           items: { type: 'string' },
-          description: 'Target markets/locations (e.g., ["Texas", "Hill Country, TX", "Southeast US"])'
+          description:
+            'Target markets/locations (e.g., ["Texas", "Hill Country, TX", "Southeast US"])',
         },
         price_min: {
           type: 'number',
-          description: 'Minimum price in dollars (null if no minimum)'
+          description: 'Minimum price in dollars (null if no minimum)',
         },
         price_max: {
           type: 'number',
-          description: 'Maximum price in dollars'
+          description: 'Maximum price in dollars',
         },
         property_types: {
           type: 'array',
           items: { type: 'string' },
-          description: 'Specific asset types the investor wants (e.g., ["micro_resort", "glamping", "boutique_hotel", "multifamily", "self_storage", "mobile_home_park", "laundromat", "car_wash", "retail_strip", "industrial", "land", "str_portfolio", "cash_flowing_business"])'
+          description:
+            'Specific asset types the investor wants (e.g., ["micro_resort", "glamping", "boutique_hotel", "multifamily", "self_storage", "mobile_home_park", "laundromat", "car_wash", "retail_strip", "industrial", "land", "str_portfolio", "cash_flowing_business"])',
         },
         revenue_requirement: {
           type: 'string',
           enum: ['cash_flow_day_1', 'value_add_ok', 'development_ok', 'any'],
-          description: 'Revenue requirement level'
+          description: 'Revenue requirement level',
         },
         acreage_min: {
           type: 'number',
-          description: 'Minimum acreage (null or 0 if no minimum)'
+          description: 'Minimum acreage (null or 0 if no minimum)',
         },
         exclusions: {
           type: 'array',
           items: { type: 'string' },
-          description: 'Hard exclusions (things to never show)'
-        }
+          description: 'Hard exclusions (things to never show)',
+        },
       },
-      required: ['raw_prompt', 'locations', 'price_max', 'property_types', 'revenue_requirement']
-    }
-  }
+      required: ['raw_prompt', 'locations', 'price_max', 'property_types', 'revenue_requirement'],
+    },
+  },
 ];
 
 async function buildDebriefPrompt(searchId, agentName) {
@@ -186,23 +187,42 @@ CRITICAL: Do NOT report any deal count. Do NOT say "0 deals found" or any number
 Reply in 1-2 sentences, in character: confident, sharp, brief. Tell the investor you're still working on it, point them to the live progress shown below the chat, and say you'll deliver the full breakdown the moment the scan completes.`;
   }
 
-  const { data: deals } = await supabase
+  const { data: dealsRaw } = await supabase
     .from('deals')
-    .select('title, location, price, acreage, rooms_keys, score_breakdown, source, url, passed_hard_filters')
+    .select(
+      'title, location, price, acreage, rooms_keys, score_breakdown, source, url, passed_hard_filters'
+    )
     .eq('search_id', searchId)
-    .eq('passed_hard_filters', true)
-    .order('id', { ascending: false });
+    .eq('passed_hard_filters', true);
 
-  const dealSummaries = (deals || []).map((d, i) => {
-    const bd = typeof d.score_breakdown === 'string' ? JSON.parse(d.score_breakdown) : (d.score_breakdown || {});
-    const tier = bd.tier || bd.strategy?.overall || 'UNKNOWN';
-    const risk = bd.risk?.level || 'UNKNOWN';
-    return `Deal ${i + 1}: ${d.title || 'Unnamed'}
+  const parseBreakdown = (x) => {
+    try {
+      return typeof x === 'string' ? JSON.parse(x) : x || {};
+    } catch {
+      return {};
+    }
+  };
+
+  // Sort by priority_score descending so Deal 1 = highest scorer — matches the
+  // preview panel ranking. Supabase insertion order (order by id) diverges from
+  // score rank, which is what caused "Deal 11" in chat ≠ rank 11 in the UI.
+  // Pre-parse score_breakdown once per deal to avoid O(n log n) re-parses in the comparator.
+  const deals = (dealsRaw || [])
+    .map((d) => ({ ...d, _bd: parseBreakdown(d.score_breakdown) }))
+    .sort((a, b) => (b._bd.priority_score ?? 0) - (a._bd.priority_score ?? 0));
+
+  const dealSummaries = deals
+    .map((d, i) => {
+      const bd = d._bd;
+      const tier = bd.tier || bd.strategy?.overall || 'UNKNOWN';
+      const risk = bd.risk?.level || 'UNKNOWN';
+      return `Deal ${i + 1}: ${d.title || 'Unnamed'}
   Location: ${d.location || '?'} | Price: ${d.price ? '$' + Number(d.price).toLocaleString() : '?'} | Acreage: ${d.acreage || '?'} | Keys: ${d.rooms_keys || '?'}
   Source: ${d.source || '?'} | Tier: ${tier} | Risk: ${risk}
   Listing: ${d.url || 'N/A'}
   Score: ${JSON.stringify(bd)}`;
-  }).join('\n\n');
+    })
+    .join('\n\n');
 
   const buyBox = search?.buy_box ? JSON.stringify(search.buy_box, null, 2) : 'Not available';
 
@@ -213,7 +233,7 @@ Your personality: Direct, knowledgeable, confident. You sound like a sharp deal 
 INVESTOR'S BUY BOX:
 ${buyBox}
 
-DEALS FOUND (${(deals || []).length} survived the buy box filter):
+DEALS FOUND (${deals.length} survived the buy box filter):
 ${dealSummaries || 'No deals survived the filter.'}
 
 Instructions:
@@ -223,7 +243,7 @@ Instructions:
 - If the investor asks to compare deals, be specific — reference numbers, not generalities.
 - If they ask to drill into a deal, give detailed analysis using the score breakdown.
 - Be brief. No filler. No cheerleading. Sharp opinions backed by data.
-${(deals || []).length === 0 ? '\nNo deals matched. Suggest adjusting the buy box — be specific about which criteria are too narrow.' : ''}`;
+${deals.length === 0 ? '\nNo deals matched. Suggest adjusting the buy box — be specific about which criteria are too narrow.' : ''}`;
 }
 
 module.exports = async function handler(req, res) {
@@ -278,10 +298,10 @@ module.exports = async function handler(req, res) {
       max_tokens: 1024,
       system: systemPrompt,
       ...(tools ? { tools } : {}),
-      messages: messages.map(m => ({
+      messages: messages.map((m) => ({
         role: m.role,
-        content: m.content
-      }))
+        content: m.content,
+      })),
     });
 
     let fullText = '';
@@ -302,17 +322,23 @@ module.exports = async function handler(req, res) {
           toolUse = {
             id: event.content_block.id,
             name: event.content_block.name,
-            partial: ''
+            partial: '',
           };
         }
-      } else if (event.type === 'content_block_stop' && toolUse && toolUse.name === 'save_buy_box') {
+      } else if (
+        event.type === 'content_block_stop' &&
+        toolUse &&
+        toolUse.name === 'save_buy_box'
+      ) {
         // Tool call complete — save the buy box
         let buyBox;
         try {
           buyBox = JSON.parse(toolUse.partial);
         } catch (parseErr) {
           console.error('Buy box JSON parse error:', parseErr.message, 'raw:', toolUse.partial);
-          res.write(`data: ${JSON.stringify({ type: 'error', error: 'Failed to save buy box: invalid tool response' })}\n\n`);
+          res.write(
+            `data: ${JSON.stringify({ type: 'error', error: 'Failed to save buy box: invalid tool response' })}\n\n`
+          );
           toolUse = null;
           continue;
         }
@@ -326,14 +352,16 @@ module.exports = async function handler(req, res) {
             user_email: email,
             buy_box: buyBox,
             status: 'ready',
-            run_at: new Date().toISOString()
+            run_at: new Date().toISOString(),
           })
           .select('id')
           .single();
 
         if (searchError) {
           console.error('Buy box save error:', JSON.stringify(searchError));
-          res.write(`data: ${JSON.stringify({ type: 'error', error: 'Failed to save buy box: ' + searchError.message })}\n\n`);
+          res.write(
+            `data: ${JSON.stringify({ type: 'error', error: 'Failed to save buy box: ' + searchError.message })}\n\n`
+          );
         } else {
           // Gate: check subscription before triggering the scan
           const paywall = await checkPaywall(email, supabase);
@@ -348,11 +376,13 @@ module.exports = async function handler(req, res) {
           // Increment run counter after successful scan trigger (not on error)
           await incrementAgentRuns(email, supabase);
 
-          res.write(`data: ${JSON.stringify({
-            type: 'buy_box_saved',
-            search_id: search.id,
-            buy_box: buyBox,
-          })}\n\n`);
+          res.write(
+            `data: ${JSON.stringify({
+              type: 'buy_box_saved',
+              search_id: search.id,
+              buy_box: buyBox,
+            })}\n\n`
+          );
         }
 
         toolUse = null;
@@ -364,8 +394,11 @@ module.exports = async function handler(req, res) {
       await supabase
         .from('conversations')
         .update({
-          messages: [...messages, { role: 'assistant', content: fullText, timestamp: new Date().toISOString() }],
-          updated_at: new Date().toISOString()
+          messages: [
+            ...messages,
+            { role: 'assistant', content: fullText, timestamp: new Date().toISOString() },
+          ],
+          updated_at: new Date().toISOString(),
         })
         .eq('id', conversation_id);
     } else {
@@ -374,8 +407,11 @@ module.exports = async function handler(req, res) {
         .insert({
           user_email: email,
           conversation_type: isDebrief ? 'scan_debrief' : 'buy_box_intake',
-          messages: [...messages, { role: 'assistant', content: fullText, timestamp: new Date().toISOString() }],
-          ...(isDebrief && search_id ? { search_id } : {})
+          messages: [
+            ...messages,
+            { role: 'assistant', content: fullText, timestamp: new Date().toISOString() },
+          ],
+          ...(isDebrief && search_id ? { search_id } : {}),
         })
         .select('id')
         .single();
@@ -387,9 +423,13 @@ module.exports = async function handler(req, res) {
 
     res.write(`data: ${JSON.stringify({ type: 'done' })}\n\n`);
     res.end();
-
   } catch (err) {
-    console.error('Chat error:', err.message, err.status, JSON.stringify({ name: err.name, cause: err.cause, stack: err.stack?.slice(0, 300) }));
+    console.error(
+      'Chat error:',
+      err.message,
+      err.status,
+      JSON.stringify({ name: err.name, cause: err.cause, stack: err.stack?.slice(0, 300) })
+    );
     if (!res.headersSent) {
       return res.status(500).json({ error: err.message || 'Internal server error' });
     }
