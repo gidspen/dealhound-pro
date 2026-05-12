@@ -57,6 +57,19 @@ module.exports = async function handler(req, res) {
     'unknown';
 
   try {
+    // Email rate limit: 1 free scan per email lifetime (no date filter)
+    const { count: emailCount, error: emailCountError } = await supabase
+      .from('free_scan_requests')
+      .select('id', { count: 'exact', head: true })
+      .eq('email', email);
+
+    if (emailCountError) {
+      console.error('free-scan-start: email rate limit check failed:', emailCountError);
+      // Fail open
+    } else if (emailCount >= 1) {
+      return res.status(429).json({ error: "You've already used your free scan. Become a Founding Member to run more." });
+    }
+
     // IP rate limit: 1 free scan per IP per 24 hours
     const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
     const { count, error: countError } = await supabase

@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "vitest run tests/integration",
+    "test": "node --env-file=.env node_modules/.bin/vitest run tests/integration",
     "test:smoke": "vitest run tests/smoke",
     "e2e": "playwright test",
     "e2e:headed": "playwright test --headed",
