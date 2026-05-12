@@ -3,6 +3,7 @@ const { createClient } = require('@supabase/supabase-js');
 const { triggerScan } = require('./_lib/scan-trigger');
 const { checkPaywall, incrementAgentRuns } = require('./_lib/paywall');
 const { recordChatComputeFromUsage } = require('./_lib/chat-compute');
+const { saveBuyBox } = require('./_lib/save-buy-box');
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 
@@ -346,7 +347,20 @@ module.exports = async function handler(req, res) {
 
         console.log('Saving buy box for:', email, 'data:', JSON.stringify(buyBox));
 
-        // Create the deal_search record
+        // Persist/update the buy_boxes row and get the canonical id+version
+        let buyBoxId = null;
+        let buyBoxVersion = null;
+        try {
+          const result = await saveBuyBox(email, buyBox, supabase);
+          buyBoxId = result.buyBoxId;
+          buyBoxVersion = result.buyBoxVersion;
+          console.log('Buy box persisted:', buyBoxId, 'v' + buyBoxVersion);
+        } catch (bbErr) {
+          console.error('saveBuyBox error:', bbErr.message);
+          // Non-fatal — continue without buy_box_id so the scan still runs
+        }
+
+        // Create the deal_search record, stamping buy_box_id/version when available
         const { data: search, error: searchError } = await supabase
           .from('deal_searches')
           .insert({
@@ -354,6 +368,7 @@ module.exports = async function handler(req, res) {
             buy_box: buyBox,
             status: 'ready',
             run_at: new Date().toISOString(),
+            ...(buyBoxId ? { buy_box_id: buyBoxId, buy_box_version: buyBoxVersion } : {}),
           })
           .select('id')
           .single();
@@ -382,6 +397,8 @@ module.exports = async function handler(req, res) {
               type: 'buy_box_saved',
               search_id: search.id,
               buy_box: buyBox,
+              buy_box_id: buyBoxId,
+              buy_box_version: buyBoxVersion,
             })}\n\n`
           );
         }

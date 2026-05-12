@@ -62,6 +62,8 @@ module.exports = [
       'api/_lib/progress.js',
       'api/_lib/scan-trigger.js',
       'api/_lib/buy-box-limits.js',
+      'api/_lib/buy-box-name.js',
+      'api/_lib/save-buy-box.js',
       'worker/**/*.js',
       'emails/**/*.js',
     ],

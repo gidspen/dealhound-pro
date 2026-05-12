@@ -6,14 +6,7 @@
 // Also creates a draft buy_box row for the submitting email.
 
 const { createClient } = require('@supabase/supabase-js');
-
-// Derive a human-readable buy box name from scan criteria.
-function deriveBuyBoxName(assetType, market) {
-  if (assetType && market) return `${assetType} in ${market}`;
-  if (assetType) return assetType;
-  if (market) return market;
-  return 'Buy Box';
-}
+const { deriveBuyBoxName } = require('./_lib/buy-box-name');
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 
@@ -73,11 +66,9 @@ module.exports = async function handler(req, res) {
       console.error('free-scan-start: email rate limit check failed:', emailCountError);
       // Fail open
     } else if (emailCount >= 1) {
-      return res
-        .status(429)
-        .json({
-          error: "You've already used your free scan. Become a Founding Member to run more.",
-        });
+      return res.status(429).json({
+        error: "You've already used your free scan. Become a Founding Member to run more.",
+      });
     }
 
     // IP rate limit: 1 free scan per IP per 24 hours
@@ -114,7 +105,7 @@ module.exports = async function handler(req, res) {
 
     // Insert a draft buy_box for this email so the criteria persists. We do this
     // BEFORE deal_searches so we can stamp buy_box_id onto the search row.
-    const buyBoxName = deriveBuyBoxName(assetType, market);
+    const buyBoxName = deriveBuyBoxName(buyBox);
     const { data: buyBoxRow, error: buyBoxInsertError } = await supabase
       .from('buy_boxes')
       .insert({
