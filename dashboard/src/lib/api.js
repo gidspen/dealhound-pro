@@ -139,7 +139,10 @@ export async function sendMessage(text, endpoint, extraBody = {}) {
             chatConversationId.value = event.id;
           } else if (event.type === 'buy_box_saved') {
             window.dispatchEvent(new CustomEvent('buybox-saved', { detail: event }));
-            if (window.posthog) window.posthog.capture('buy_box_saved', { search_id: event.search_id || event.searchId || null });
+            if (window.posthog)
+              window.posthog.capture('buy_box_saved', {
+                search_id: event.search_id || event.searchId || null,
+              });
           } else if (event.type === 'paywall') {
             // Server saved the buy box but won't trigger a scan because the user
             // is unsubscribed or out of runs. Open the upgrade modal with the
@@ -151,7 +154,11 @@ export async function sendMessage(text, endpoint, extraBody = {}) {
               runs_limit: event.runs_limit,
               bonus_runs: event.bonus_runs,
             };
-            if (window.posthog) window.posthog.capture('scan_start_paywalled', { reason: event.reason || 'no_subscription', tier: event.tier || null });
+            if (window.posthog)
+              window.posthog.capture('scan_start_paywalled', {
+                reason: event.reason || 'no_subscription',
+                tier: event.tier || null,
+              });
           } else if (event.type === 'error') {
             const msgs = [...chatMessages.value];
             msgs.push({ role: 'assistant', content: 'Error: ' + event.error });
