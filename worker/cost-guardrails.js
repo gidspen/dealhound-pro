@@ -86,7 +86,7 @@ class CapExceededError extends Error {
   constructor(message, { kind, totalCost, capAmount, statusCode } = {}) {
     super(message);
     this.name = 'CapExceededError';
-    this.kind = kind;             // 'per_skill' | 'monthly_cap'
+    this.kind = kind; // 'per_skill' | 'monthly_cap'
     this.totalCost = totalCost;
     this.capAmount = capAmount;
     this.statusCode = statusCode || (kind === 'monthly_cap' ? 402 : 500);

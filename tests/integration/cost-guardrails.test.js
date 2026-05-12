@@ -368,7 +368,7 @@ describe('checkAndReserveMonthlyBudget — null subscription_tier (cancelled sub
     const user = {
       email: 'cancelled@example.com',
       subscription_tier: null, // subscription cancelled — stripe-webhook sets this to null
-      monthly_compute_used: 25.00, // under hunter $30 cap → still allowed
+      monthly_compute_used: 25.0, // under hunter $30 cap → still allowed
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 0,
     };
@@ -383,7 +383,7 @@ describe('checkAndReserveMonthlyBudget — null subscription_tier (cancelled sub
     const user = {
       email: 'cancelled@example.com',
       subscription_tier: null,
-      monthly_compute_used: 30.00,
+      monthly_compute_used: 30.0,
       agent_runs_reset_at: new Date().toISOString(),
       topup_runs_remaining: 0,
     };
@@ -422,7 +422,11 @@ describe('CapExceededError — per-skill throw (PR-3 DoD)', () => {
     t2.trackTokenLineOrThrow(line);
     t2.trackTokenLineOrThrow(line);
     let caught;
-    try { t2.trackTokenLineOrThrow(line); } catch (e) { caught = e; }
+    try {
+      t2.trackTokenLineOrThrow(line);
+    } catch (e) {
+      caught = e;
+    }
     expect(caught).toBeInstanceOf(CapExceededError);
     expect(caught.message).toBe('run capped — refine criteria for more depth');
     expect(caught.kind).toBe('per_skill');
@@ -464,11 +468,14 @@ describe('monthly compute ceiling — 402 + top-up copy (PR-3 DoD)', () => {
   });
 
   it('CapExceededError surfaces statusCode 402 when kind is monthly_cap', () => {
-    const err = new CapExceededError("You've used your monthly compute. Top up 5 runs for $25, or wait until next month.", {
-      kind: 'monthly_cap',
-      totalCost: 30,
-      capAmount: 30,
-    });
+    const err = new CapExceededError(
+      "You've used your monthly compute. Top up 5 runs for $25, or wait until next month.",
+      {
+        kind: 'monthly_cap',
+        totalCost: 30,
+        capAmount: 30,
+      }
+    );
     expect(err.statusCode).toBe(402);
     expect(err.kind).toBe('monthly_cap');
     expect(err.message).toMatch(/Top up 5 runs for \$25/);
