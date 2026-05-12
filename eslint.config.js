@@ -61,6 +61,7 @@ module.exports = [
       'api/_lib/posthog.js',
       'api/_lib/progress.js',
       'api/_lib/scan-trigger.js',
+      'api/_lib/buy-box-limits.js',
       'worker/**/*.js',
       'emails/**/*.js',
     ],
