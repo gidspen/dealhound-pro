@@ -22,9 +22,17 @@ const SUPABASE_PKG = '@supabase/supabase-js';
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function mockRes() {
   const res = { statusCode: 200, body: null, headers: {} };
-  res.setHeader = (k, v) => { res.headers[k] = v; };
-  res.status = (code) => { res.statusCode = code; return res; };
-  res.json = (data) => { res.body = data; return res; };
+  res.setHeader = (k, v) => {
+    res.headers[k] = v;
+  };
+  res.status = (code) => {
+    res.statusCode = code;
+    return res;
+  };
+  res.json = (data) => {
+    res.body = data;
+    return res;
+  };
   res.end = () => res;
   res._isMock = true;
   return res;

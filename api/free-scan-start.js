@@ -6,10 +6,7 @@
 
 const { createClient } = require('@supabase/supabase-js');
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
-);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 
 module.exports = async function handler(req, res) {
   if (req.method === 'OPTIONS') {
@@ -67,7 +64,11 @@ module.exports = async function handler(req, res) {
       console.error('free-scan-start: email rate limit check failed:', emailCountError);
       // Fail open
     } else if (emailCount >= 1) {
-      return res.status(429).json({ error: "You've already used your free scan. Become a Founding Member to run more." });
+      return res
+        .status(429)
+        .json({
+          error: "You've already used your free scan. Become a Founding Member to run more.",
+        });
     }
 
     // IP rate limit: 1 free scan per IP per 24 hours
@@ -147,32 +148,25 @@ module.exports = async function handler(req, res) {
       search_id: searchId,
       buy_box: buyBox,
       status: 'pending',
-      source: 'free_scan',   // lets worker distinguish free vs paid
-      notify_email: email,   // worker uses this to send result email
+      source: 'free_scan', // lets worker distinguish free vs paid
+      notify_email: email, // worker uses this to send result email
     });
 
     if (jobError) {
       console.error('free-scan-start: scrape_jobs insert error:', jobError);
       // Mark free_scan_requests row as failed so the UI/admin sees it; the
       // deal_searches row is left in 'pending' so a manual requeue can flip it.
-      await supabase
-        .from('free_scan_requests')
-        .update({ status: 'failed' })
-        .eq('id', freeScanId);
+      await supabase.from('free_scan_requests').update({ status: 'failed' }).eq('id', freeScanId);
       return res.status(500).json({ error: 'Failed to start scan. Please try again.' });
     }
 
     // Mark as running
-    await supabase
-      .from('free_scan_requests')
-      .update({ status: 'running' })
-      .eq('id', freeScanId);
+    await supabase.from('free_scan_requests').update({ status: 'running' }).eq('id', freeScanId);
 
     // Return searchId (not freeScanId) so the front-end and downstream magic-link
     // both reference the deal_searches row. The free_scan_requests row is an
     // internal/admin artifact.
     return res.json({ success: true, scanId: searchId });
-
   } catch (err) {
     console.error('free-scan-start: unexpected error:', err);
     if (!res.headersSent) {
