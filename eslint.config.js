@@ -58,6 +58,7 @@ module.exports = [
       'api/_lib/magic-link.js',
       'api/_lib/magic-link-route.js',
       'api/_lib/paywall.js',
+      'api/_lib/posthog.js',
       'api/_lib/progress.js',
       'api/_lib/scan-trigger.js',
       'worker/**/*.js',

@@ -11,6 +11,7 @@
 'use strict';
 
 const { verifyMagicLink } = require('./magic-link');
+const { capture } = require('./posthog');
 
 module.exports = { handleMagicLink: async function (req, res) {
   if (req.method !== 'GET') {
@@ -52,6 +53,12 @@ module.exports = { handleMagicLink: async function (req, res) {
   const { email, scanId } = result;
   const location =
     `/dashboard?email=${encodeURIComponent(email)}&scan_id=${encodeURIComponent(scanId)}&from=magic`;
+
+  await capture({
+    event: 'magic_link_clicked',
+    distinctId: email || 'anonymous',
+    properties: { scan_id: scanId || null },
+  });
 
   res.writeHead(302, { Location: location });
   return res.end();
