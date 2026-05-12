@@ -43,6 +43,7 @@
 
 const Stripe = require('stripe');
 const { createClient } = require('@supabase/supabase-js');
+const { capture } = require('./_lib/posthog');
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -134,6 +135,16 @@ async function handleCheckoutCompleted(session) {
   }
 
   console.log(`Subscription activated: ${customerEmail} → ${tier}`);
+
+  await capture({
+    event: 'checkout_completed',
+    distinctId: session.customer_details?.email || session.customer_email || 'anonymous',
+    properties: {
+      tier,
+      amount: session.amount_total,
+      mode: session.mode,
+    },
+  });
 }
 
 // ---------------------------------------------------------------------------

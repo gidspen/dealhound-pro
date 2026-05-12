@@ -11,6 +11,7 @@ import {
   previewOpen,
   previewWidth,
   upgradeModal,
+  plan,
 } from './lib/state.js';
 import { loadUserData, switchThread } from './lib/api.js';
 import { Sidebar } from './components/Sidebar.jsx';
@@ -56,6 +57,15 @@ function ResizeHandle({ edge, widthSignal, minW, maxW }) {
 //   3. No scans at all          → onboarding (genuinely new user)
 async function routeAfterLoad() {
   console.log('[DH] route: deals=%d scans=%d', deals.value.length, scans.value.length);
+
+  // PostHog: identify + dashboard_loaded
+  if (window.posthog && email.value) {
+    window.posthog.identify(email.value);
+    window.posthog.capture('dashboard_loaded', {
+      tier: plan.value?.tier || 'free',
+      has_scans: (scans.value?.length || 0) > 0,
+    });
+  }
 
   if (deals.value.length > 0) {
     const topDeal = deals.value[0];

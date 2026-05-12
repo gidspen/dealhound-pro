@@ -36,6 +36,7 @@ const { runFindDealsHeaded } = require('./pty-runner');
 const { signMagicLink } = require('../api/_lib/magic-link');
 const { sendFreeScanCompleteEmail } = require('./email-sender');
 const { addToKitNurture } = require('./kit-nurture');
+const { capture: posthogCapture } = require('../api/_lib/posthog');
 
 // Load env from ../.env.local (worker/ lives inside dealhound-pro/)
 const envPath = process.env.DOTENV_PATH || path.join(__dirname, '../.env.local');
@@ -772,6 +773,15 @@ async function handleFreeScanCompletion(job, supabaseClient) {
     magicLinkUrl,
   });
   log(`[free-scan] email result for ${userEmail}`, emailResult);
+
+  // 5b. PostHog: free_scan_email_sent
+  if (emailResult.ok) {
+    await posthogCapture({
+      event: 'free_scan_email_sent',
+      distinctId: userEmail,
+      properties: { search_id: job.search_id, agent_name: agentName },
+    });
+  }
 
   // 6. Kit nurture handoff
   const kitResult = await addToKitNurture({
