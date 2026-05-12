@@ -75,10 +75,10 @@ draft ──activate──▶ active ──pause──▶ draft
 ```
 
 | State      | Scans run? | Editable? | Counts against tier limit? |
-|------------|------------|-----------|---------------------------|
-| `active`   | Yes        | Yes       | Yes                       |
-| `draft`    | No         | Yes       | No                        |
-| `archived` | No         | No        | No                        |
+| ---------- | ---------- | --------- | -------------------------- |
+| `active`   | Yes        | Yes       | Yes                        |
+| `draft`    | No         | Yes       | No                         |
+| `archived` | No         | No        | No                         |
 
 **Activating** a buy box beyond the tier limit returns a 409 with upgrade CTA — never silently fails.
 
@@ -103,6 +103,7 @@ When the user saves changes to a buy box's criteria:
 - The version bump is invisible to the user — they just see "current results" vs "previous results"
 
 **What counts as a criteria change** (version bump):
+
 - Any field in `criteria` that affects which listings are returned: markets, asset types, price range, acreage floor, revenue requirement, hard exclusions
 - Renaming the buy box does NOT bump the version (cosmetic change)
 
@@ -135,10 +136,10 @@ if (count >= limit) {
 
 ```js
 const TIER_ACTIVE_BOX_LIMITS = {
-  founding:  3,
-  hunter:    3,
-  investor:  8,
-  operator:  Infinity,
+  founding: 3,
+  hunter: 3,
+  investor: 8,
+  operator: Infinity,
 };
 ```
 
@@ -165,6 +166,7 @@ Every 60 seconds, the worker:
 ```
 
 The scan result writes a `deal_searches` row with:
+
 - `buy_box_id` = the buy box that triggered it
 - `buy_box_version` = current version of that buy box at scan time
 - `buy_box` = criteria snapshot (already present — keeps deal_searches self-contained)
@@ -189,14 +191,14 @@ User-facing framing stays simple: "Your agent scans daily." The incremental opti
 
 ## API endpoints needed
 
-| Method | Path | What it does |
-|--------|------|-------------|
-| `POST` | `/api/buy-box` | Create new buy box (draft by default) |
-| `PATCH` | `/api/buy-box/:id` | Update criteria or name (bumps version if criteria changed) |
-| `POST` | `/api/buy-box/:id/activate` | Set status → active (enforces tier limit) |
-| `POST` | `/api/buy-box/:id/pause` | Set status → draft |
-| `POST` | `/api/buy-box/:id/archive` | Set status → archived |
-| `GET` | `/api/buy-boxes` | List all buy boxes for authenticated user |
+| Method  | Path                        | What it does                                                |
+| ------- | --------------------------- | ----------------------------------------------------------- |
+| `POST`  | `/api/buy-box`              | Create new buy box (draft by default)                       |
+| `PATCH` | `/api/buy-box/:id`          | Update criteria or name (bumps version if criteria changed) |
+| `POST`  | `/api/buy-box/:id/activate` | Set status → active (enforces tier limit)                   |
+| `POST`  | `/api/buy-box/:id/pause`    | Set status → draft                                          |
+| `POST`  | `/api/buy-box/:id/archive`  | Set status → archived                                       |
+| `GET`   | `/api/buy-boxes`            | List all buy boxes for authenticated user                   |
 
 The existing chat → `save_buy_box` tool call becomes a `POST /api/buy-box` (creates draft) followed by `POST /api/buy-box/:id/activate` once the user confirms. If they're at their tier limit, the activate call returns the 409 and the chat surfaces the upgrade CTA.
 
@@ -205,10 +207,12 @@ The existing chat → `save_buy_box` tool call becomes a `POST /api/buy-box` (cr
 ## UI framing
 
 **Active monitor count pill** (dashboard header):
+
 > "2 of 3 active monitors"
 > [Manage] → opens buy box list
 
 **Buy box list view:**
+
 - Each row: name, market summary, status pill (Active / Draft / Archived), last scan time, deal count (current version)
 - Active rows: pause button
 - Draft rows: activate button (grayed out + upgrade prompt if at limit)
@@ -216,9 +220,11 @@ The existing chat → `save_buy_box` tool call becomes a `POST /api/buy-box` (cr
 
 **Results page — version change indicator:**
 When the current version > 1, show a subtle banner:
+
 > "Showing results from current criteria (updated May 12). [View previous results]"
 
 **Upgrade CTA copy** (at active limit):
+
 > "You're using 3 of 3 active monitors. Pause one or upgrade to Hunter for more."
 
 ---

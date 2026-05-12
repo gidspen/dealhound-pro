@@ -1,6 +1,7 @@
 # Ship Approval — feat/buy-box-persistence
 
 ## Intent
+
 Promote buy boxes from an ephemeral JSONB field on `deal_searches` to a first-class
 persistent object with identity, status (active/draft/archived), and version
 stamping. This makes the active-monitor tier limit enforceable, gives the worker
@@ -12,6 +13,7 @@ produced it. Per spec `docs/buy-box-persistence-spec.md`.
 ## Files changed
 
 ### Schema
+
 - `scripts/migrations/2026-05-12-buy-boxes.sql` — creates `buy_boxes` table
   (id, user_email FK→users.email, name, criteria jsonb, status check
   active/draft/archived, version, criteria_updated_at, last_scanned_at,
@@ -25,12 +27,14 @@ produced it. Per spec `docs/buy-box-persistence-spec.md`.
   automatically** — must be applied by a human after PR merge.
 
 ### Tier constants
+
 - `api/_lib/buy-box-limits.js` — `TIER_ACTIVE_BOX_LIMITS` (founding 3, hunter 3,
   investor 8, operator Infinity) and `TIER_SCAN_INTERVAL_MS` (24h/24h/1h/15min).
   Single source of truth used by the activate endpoint, the chat saver, the
   stripe webhook auto-activator, and the worker scheduler.
 
 ### CRUD API
+
 - `api/buy-box.js` — POST creates draft, PATCH updates (bumps version on
   criteria change via JSON.stringify equality; rename alone does not bump),
   POST `?_action=activate|pause|archive&id=...` performs state transitions.
@@ -42,6 +46,7 @@ produced it. Per spec `docs/buy-box-persistence-spec.md`.
   entries for both new files.
 
 ### Free scan auto-save
+
 - `api/free-scan-start.js` — upserts users row, inserts a draft buy_boxes row
   for every submitter, stamps buy_box_id + buy_box_version=1 on the
   deal_searches row. Uses shared `deriveBuyBoxName` helper.
@@ -50,6 +55,7 @@ produced it. Per spec `docs/buy-box-persistence-spec.md`.
   (Infinity special-cased for operator). Silent — no UI prompt.
 
 ### Chat wiring
+
 - `api/_lib/save-buy-box.js` — extracted upsert: finds the user's active
   buy_box, bumps version when criteria differ (via JSON.stringify), no-op
   when identical, inserts new active row if none exists.
@@ -59,6 +65,7 @@ produced it. Per spec `docs/buy-box-persistence-spec.md`.
   includes both fields.
 
 ### Worker scheduler
+
 - `worker/buy-box-scheduler.js` — `runBuyBoxScheduler(supabase, options)`.
   Selects active buy_boxes, batches user-tier lookups, computes overdue via
   `TIER_SCAN_INTERVAL_MS`, inserts a deal_searches row (criteria snapshot,
@@ -69,10 +76,12 @@ produced it. Per spec `docs/buy-box-persistence-spec.md`.
   so tests exercise only DB writes — no real scans.
 
 ### Lint config
+
 - `eslint.config.js` — added the three new `api/_lib/*.js` files to the CJS
   file-list so eslint accepts `require`/`module.exports`.
 
 ### Tests (all new, all passing — 130/130 across 21 files)
+
 - `tests/integration/buy-box-crud.test.js` — 8 tests (create, version bump
   on criteria change, no bump on rename, activate under/over limit, pause,
   archive, list isolation)
@@ -88,10 +97,12 @@ produced it. Per spec `docs/buy-box-persistence-spec.md`.
   free-scan-start broke the existing mock)
 
 ### Spec
+
 - `docs/buy-box-persistence-spec.md` — already on branch from the prior
   spec commit. No further changes.
 
 ## Confirmation
+
 No files outside the intended scope were modified. The hard limits from the
 orchestrator prompt were honored: nothing outside `/Users/gideonspencer/dealhound-pro`
 was touched; no files deleted; `api/_lib/paywall.js` untouched; the Dave

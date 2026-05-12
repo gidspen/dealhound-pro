@@ -177,9 +177,14 @@ async function handleCheckoutCompleted(session) {
         .update({ status: 'active' })
         .in('id', draftIds);
       if (activateError) {
-        console.error('stripe-webhook: failed to auto-activate buy_boxes (operator):', activateError);
+        console.error(
+          'stripe-webhook: failed to auto-activate buy_boxes (operator):',
+          activateError
+        );
       } else {
-        console.log(`Auto-activated ${draftIds.length} buy_box(es) for ${customerEmail} (operator)`);
+        console.log(
+          `Auto-activated ${draftIds.length} buy_box(es) for ${customerEmail} (operator)`
+        );
       }
     }
   }

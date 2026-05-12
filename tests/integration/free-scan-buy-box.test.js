@@ -25,9 +25,17 @@ function getSupabase() {
 // ---------------------------------------------------------------------------
 function mockRes() {
   const res = { statusCode: 200, body: null, headers: {} };
-  res.setHeader = (k, v) => { res.headers[k] = v; };
-  res.status = (code) => { res.statusCode = code; return res; };
-  res.json = (data) => { res.body = data; return res; };
+  res.setHeader = (k, v) => {
+    res.headers[k] = v;
+  };
+  res.status = (code) => {
+    res.statusCode = code;
+    return res;
+  };
+  res.json = (data) => {
+    res.body = data;
+    return res;
+  };
   res.end = () => res;
   return res;
 }
@@ -93,7 +101,9 @@ describe('free-scan-start creates a draft buy_box', () => {
 
     await handler(req, res);
 
-    expect(res.statusCode, `handler returned ${res.statusCode}: ${JSON.stringify(res.body)}`).toBe(200);
+    expect(res.statusCode, `handler returned ${res.statusCode}: ${JSON.stringify(res.body)}`).toBe(
+      200
+    );
     expect(res.body.success).toBe(true);
     expect(res.body.scanId).toBeTruthy();
 
@@ -211,7 +221,12 @@ describe('checkout.session.completed activates draft buy_boxes', () => {
       .insert({
         user_email: testEmail,
         name: 'Motel in Austin, TX',
-        criteria: { asset_type: 'motel', market: 'Austin, TX', price_min: 500000, price_max: 2000000 },
+        criteria: {
+          asset_type: 'motel',
+          market: 'Austin, TX',
+          price_min: 500000,
+          price_max: 2000000,
+        },
         status: 'draft',
         version: 1,
       })

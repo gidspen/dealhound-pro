@@ -92,7 +92,7 @@ async function runBuyBoxScheduler(supabase, options = {}) {
       .from('deal_searches')
       .insert({
         user_email: box.user_email,
-        buy_box: box.criteria,        // criteria snapshot — keeps deal_searches self-contained
+        buy_box: box.criteria, // criteria snapshot — keeps deal_searches self-contained
         buy_box_id: box.id,
         buy_box_version: box.version,
         status: 'queued',

@@ -54,7 +54,10 @@ beforeAll(async () => {
   // Ensure users row exists (buy_boxes.user_email is FK'd to users.email)
   await supabase
     .from('users')
-    .upsert({ email: EMAIL, subscription_tier: 'founding', agent_runs_used: 0, agent_name: 'Scout' }, { onConflict: 'email' });
+    .upsert(
+      { email: EMAIL, subscription_tier: 'founding', agent_runs_used: 0, agent_name: 'Scout' },
+      { onConflict: 'email' }
+    );
 });
 
 afterAll(async () => {
@@ -64,7 +67,7 @@ afterAll(async () => {
     .select('id')
     .eq('user_email', EMAIL)
     .eq('test_data', true);
-  const ids = (searches || []).map(s => s.id);
+  const ids = (searches || []).map((s) => s.id);
   if (ids.length) {
     await supabase.from('deals').delete().in('search_id', ids);
     await supabase.from('deal_searches').delete().in('id', ids);
