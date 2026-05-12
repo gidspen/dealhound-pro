@@ -14,6 +14,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import {
   CostTracker,
+  CapExceededError,
   checkAndReserveMonthlyBudget,
   recordComputeUsed,
   SKILL_CAPS,
@@ -400,5 +401,104 @@ describe('TIER_MONTHLY_CAPS', () => {
     expect(TIER_MONTHLY_CAPS.hunter).toBe(30);
     expect(TIER_MONTHLY_CAPS.investor).toBe(150);
     expect(TIER_MONTHLY_CAPS.operator).toBe(400);
+  });
+});
+
+// ── PR-3 DoD: explicit cap-exceeded throws ────────────────────────────────────
+
+describe('CapExceededError — per-skill throw (PR-3 DoD)', () => {
+  it('throws CapExceededError when token cost crosses the deal-scan $1.50 cap', () => {
+    const t = new CostTracker('deal scan');
+    // Each line = $0.45; need 4 lines to cross $1.50
+    const line = 'DEALHOUND_TOKENS: {"input_tokens":100000,"output_tokens":10000}';
+    t.trackTokenLineOrThrow(line); // $0.45
+    t.trackTokenLineOrThrow(line); // $0.90
+    t.trackTokenLineOrThrow(line); // $1.35
+    expect(() => t.trackTokenLineOrThrow(line)).toThrow(CapExceededError);
+
+    // Verify the error carries the right metadata
+    const t2 = new CostTracker('deal scan');
+    t2.trackTokenLineOrThrow(line);
+    t2.trackTokenLineOrThrow(line);
+    t2.trackTokenLineOrThrow(line);
+    let caught;
+    try { t2.trackTokenLineOrThrow(line); } catch (e) { caught = e; }
+    expect(caught).toBeInstanceOf(CapExceededError);
+    expect(caught.message).toBe('run capped — refine criteria for more depth');
+    expect(caught.kind).toBe('per_skill');
+    expect(caught.capAmount).toBe(1.5);
+    expect(caught.totalCost).toBeGreaterThanOrEqual(1.5);
+  });
+});
+
+describe('monthly compute ceiling — 402 + top-up copy (PR-3 DoD)', () => {
+  it('returns allowed:false with top-up copy when monthly_compute_used >= tier cap', async () => {
+    const userEmail = 'capped@example.com';
+    // Founding tier cap is $30; simulate user at the cap, with a fresh reset this month
+    const now = new Date();
+    const user = {
+      email: userEmail,
+      subscription_tier: 'founding',
+      monthly_compute_used: 30,
+      agent_runs_reset_at: now.toISOString(),
+      topup_runs_remaining: 0,
+    };
+    const supabase = {
+      from: vi.fn(() => ({
+        select: vi.fn(() => ({
+          eq: vi.fn(() => ({
+            single: vi.fn().mockResolvedValue({ data: user, error: null }),
+          })),
+        })),
+        update: vi.fn(() => ({
+          eq: vi.fn().mockResolvedValue({ error: null }),
+        })),
+      })),
+      rpc: vi.fn().mockResolvedValue({ error: null }),
+    };
+    const result = await checkAndReserveMonthlyBudget(userEmail, supabase);
+    expect(result.allowed).toBe(false);
+    expect(result.reason).toBe(
+      "You've used your monthly compute. Top up 5 runs for $25, or wait until next month."
+    );
+  });
+
+  it('CapExceededError surfaces statusCode 402 when kind is monthly_cap', () => {
+    const err = new CapExceededError("You've used your monthly compute. Top up 5 runs for $25, or wait until next month.", {
+      kind: 'monthly_cap',
+      totalCost: 30,
+      capAmount: 30,
+    });
+    expect(err.statusCode).toBe(402);
+    expect(err.kind).toBe('monthly_cap');
+    expect(err.message).toMatch(/Top up 5 runs for \$25/);
+  });
+});
+
+describe('recordComputeUsed — increments via mocked DB write (PR-3 DoD)', () => {
+  it('calls supabase.rpc(increment_compute_used) with the cost', async () => {
+    const userEmail = 'increment@example.com';
+    const rpcMock = vi.fn().mockResolvedValue({ error: null });
+    const supabase = {
+      rpc: rpcMock,
+      from: vi.fn(() => ({
+        select: vi.fn(() => ({
+          eq: vi.fn(() => ({
+            single: vi.fn().mockResolvedValue({ data: null, error: null }),
+          })),
+        })),
+        update: vi.fn(() => ({
+          eq: vi.fn(() => ({
+            then: (resolve) => resolve({ error: null }),
+          })),
+        })),
+      })),
+    };
+    await recordComputeUsed(userEmail, 0.42, supabase);
+    expect(rpcMock).toHaveBeenCalledTimes(1);
+    expect(rpcMock).toHaveBeenCalledWith('increment_compute_used', {
+      p_email: userEmail,
+      p_amount: 0.42,
+    });
   });
 });
