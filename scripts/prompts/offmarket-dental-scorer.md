@@ -60,7 +60,7 @@ The `.gov` domains below have returned HTTP 403 to automated fetchers in this sa
 
 **Behavioral / "coasting" tells:**
 - Wayback Machine (`web.archive.org`) — when was the practice website last meaningfully changed? Design age? Snapshot frequency falling off?
-- The practice website itself — SSL? mobile-responsive? online booking? modern PMS / patient portal? copyright year in footer? "Dr. X & Associates" but no associates actually listed? team page stale? a single dentist listed?
+- The practice website itself — SSL? mobile-responsive? online booking? modern PMS / patient portal? copyright year in footer? "Dr. X & Associates" but no associates actually listed? team page stale? a single dentist listed? **For any practice you intend to tier `A_acquire_self` or `B_forward`, the "no associate / no successor in place" claim MUST be confirmed by directly fetching the live practice website's team/about/our-doctors page — not from a Google index snippet, a directory profile, or a cached summary.** Snippet text lags the live site by months and routinely misses a second dentist; an associate who *is* listed flips the read (it becomes a structured internal-buy-in situation, not an abandoned-coasting one) and lowers both Layer 3 and confidence. If the live site is unreachable (403/Cloudflare), say so explicitly in the signal `evidence` and drop confidence — do not let a snippet stand in for a live-site check on an A/B candidate.
 - WHOIS — domain registration + last-update dates.
 - Facebook / Instagram — last post date.
 - Job boards (Indeed/Glassdoor) — any hiring in the last 12 months? (no hiring + aging owner = stronger).
@@ -93,6 +93,7 @@ Is this a real, healthy, financeable business — not a distressed scrap, not a 
 **This is the differentiating layer.** Healthy business, but the owner has visibly stopped pushing — the classic pre-sale profile.
 - Positive tells (stack them): website not meaningfully updated 3+ yrs / outdated tech / no SSL / not mobile; review velocity flat or declining (last 6 mo vs. prior 6 mo) or newest review >60 days old; no new associate/provider in years; zero job postings in 12 mo; owner is the sole listed provider / "& Associates" with no associates; no online booking / no modern PMS / patient portal; reduced or "by appointment only" hours creep; no recent capex / dated equipment photos; owner owns the building; lapsed assumed-name cert or never-updated entity housekeeping; OV65 filed.
 - **Distinguish coasting from distress.** Coasting = healthy P&L, disengaged owner. Distress = liens/judgments/suits/forfeiture/closing notices/complaint spikes → those businesses are *excluded* (§4), not scored here.
+- **No-successor verification gate (A/B only):** if "sole listed provider / no associate / no successor" is one of the tells carrying this layer, and the practice would land in Tier `A_acquire_self` or `B_forward`, you must have a direct live-website fetch of the team/doctors page on record confirming it (see §2). If you only have a snippet/directory claim, cap `confidence` at `low` and do not place it in Tier A. An associate found on the live site → drop L3 toward the "2–3 tells" or "exactly 1" band as appropriate and recompute.
 - Anchors: 4+ strong tells → 80–100; 2–3 → 55–80; exactly 1 → 30–55; none → 10–30.
 
 ### Layer 4 — Market Pull (acquirer demand for this vertical × metro)
@@ -181,6 +182,7 @@ Token discipline: Opus plans/scores/synthesizes; sonnet does fetches/scrapes/fil
 3. At least one practice in each of Tier A, B, and C (proves the model spreads). If everything clusters in one tier, re-examine the model inputs — don't fudge scores to hit the spread, but do sanity-check you're not flat-lining a layer.
 4. Spot-check 5 random practices: every `evidence` string is traceable to a real source you actually hit (and a `source_url` where one exists). If you can't trace it, fix or remove the row.
 5. No fabricated businesses. No distressed businesses scored above `D_pass`. No business <5 yrs scored above ~35.
+5a. For every Tier-A and Tier-B practice whose Layer 3 leans on "no associate / no successor in place", confirm there's a signal row backed by a *direct live-website* fetch of the team/doctors page (not a snippet). If any A/B practice fails this, either fix it (fetch the site, recompute L3/confidence/tier) or demote it.
 6. Supabase: `select count(*) from offmarket.businesses` ≈ JSON count; `select final_tier, count(*) from offmarket.scored_targets group by 1` looks sane. (Or, if MCP unavailable, `run_manifest.json` + `REPORT.md` both clearly say the DB write was skipped and why.)
 7. `run_manifest.json` lists every source as worked / partial / blocked-with-error.
 
