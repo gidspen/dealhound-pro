@@ -97,6 +97,8 @@ function makeSupabaseMock({ emailCount = 0, ipCount = 0 } = {}) {
     delete: () => ({
       eq: () => Promise.resolve({ error: null }),
     }),
+
+    upsert: () => Promise.resolve({ error: null }),
   });
 
   return { from: fromImpl };

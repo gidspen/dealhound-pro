@@ -12,9 +12,18 @@
     "api/health.js": { "maxDuration": 5 },
     "api/create-checkout.js": { "maxDuration": 10 },
     "api/stripe-webhook.js": { "maxDuration": 10 },
-    "api/free-scan-start.js": { "maxDuration": 10 }
+    "api/free-scan-start.js": { "maxDuration": 10 },
+    "api/buy-box.js": { "maxDuration": 10 },
+    "api/buy-boxes.js": { "maxDuration": 10 }
   },
   "rewrites": [
+    { "source": "/api/buy-box/:id", "destination": "/api/buy-box?id=:id" },
+    {
+      "source": "/api/buy-box/:id/activate",
+      "destination": "/api/buy-box?_action=activate&id=:id"
+    },
+    { "source": "/api/buy-box/:id/pause", "destination": "/api/buy-box?_action=pause&id=:id" },
+    { "source": "/api/buy-box/:id/archive", "destination": "/api/buy-box?_action=archive&id=:id" },
     { "source": "/api/magic-link", "destination": "/api/scan-report?_action=magic-link" },
     { "source": "/api/deal-files", "destination": "/api/deal-actions?_route=files" },
     { "source": "/dashboard", "destination": "/dashboard-dist/index.html" },

@@ -33,6 +33,7 @@ const {
   RUN_CAPPED_MESSAGE,
 } = require('./cost-guardrails');
 const { runFindDealsHeaded } = require('./pty-runner');
+const { runBuyBoxScheduler } = require('./buy-box-scheduler');
 const { signMagicLink } = require('../api/_lib/magic-link');
 const { sendFreeScanCompleteEmail } = require('./email-sender');
 const { addToKitNurture } = require('./kit-nurture');
@@ -833,12 +834,35 @@ async function main() {
 
   await processPendingJobs();
 
+  // Run the buy-box scheduler once on startup before entering the interval loop.
+  // Gate real scraping: when WORKER_TEST_MODE=true, the scheduler still writes
+  // deal_searches + scrape_jobs rows (that IS the test surface), but
+  // processPendingJobs() is already gated at its top so it won't spawn Claude.
+  try {
+    const summary = await runBuyBoxScheduler(supabase);
+    if (summary.scheduled > 0) {
+      log(`[scheduler] startup tick — scheduled ${summary.scheduled}, skipped ${summary.skipped}`);
+    }
+  } catch (err) {
+    log('ERROR in buy-box scheduler (startup)', err.message);
+  }
+
   setInterval(async () => {
     await guard.tryRun(async () => {
       try {
         await processPendingJobs();
       } catch (err) {
         log('ERROR in poll loop', err.message);
+      }
+
+      // Run buy-box scheduler on every tick alongside the job queue.
+      try {
+        const summary = await runBuyBoxScheduler(supabase);
+        if (summary.scheduled > 0) {
+          log(`[scheduler] tick — scheduled ${summary.scheduled}, skipped ${summary.skipped}`);
+        }
+      } catch (err) {
+        log('ERROR in buy-box scheduler (tick)', err.message);
       }
     });
   }, POLL_INTERVAL_MS);
@@ -859,4 +883,5 @@ module.exports = {
   SCAN_TIMEOUT_MS,
   runFindDeals,
   runFindDealsTestMode,
+  runBuyBoxScheduler,
 };
