@@ -3,8 +3,10 @@
 // Public free scan endpoint. No auth required.
 // Rate limited to 1 scan per IP per 24 hours via Supabase.
 // Inserts into free_scan_requests, then queues a scrape_job.
+// Also creates a draft buy_box row for the submitting email.
 
 const { createClient } = require('@supabase/supabase-js');
+const { deriveBuyBoxName } = require('./_lib/buy-box-name');
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
 
@@ -64,11 +66,9 @@ module.exports = async function handler(req, res) {
       console.error('free-scan-start: email rate limit check failed:', emailCountError);
       // Fail open
     } else if (emailCount >= 1) {
-      return res
-        .status(429)
-        .json({
-          error: "You've already used your free scan. Become a Founding Member to run more.",
-        });
+      return res.status(429).json({
+        error: "You've already used your free scan. Become a Founding Member to run more.",
+      });
     }
 
     // IP rate limit: 1 free scan per IP per 24 hours
@@ -94,6 +94,37 @@ module.exports = async function handler(req, res) {
       price_max: parseFloat(priceMax),
     };
 
+    // Ensure the users row exists (buy_boxes.user_email is FK'd to users.email).
+    // This is a silent upsert — if the row already exists nothing changes.
+    const { error: usersUpsertError } = await supabase
+      .from('users')
+      .upsert({ email, agent_name: 'Scout' }, { onConflict: 'email', ignoreDuplicates: true });
+    if (usersUpsertError) {
+      console.error('free-scan-start: users upsert error:', usersUpsertError);
+    }
+
+    // Insert a draft buy_box for this email so the criteria persists. We do this
+    // BEFORE deal_searches so we can stamp buy_box_id onto the search row.
+    const buyBoxName = deriveBuyBoxName(buyBox);
+    const { data: buyBoxRow, error: buyBoxInsertError } = await supabase
+      .from('buy_boxes')
+      .insert({
+        user_email: email,
+        name: buyBoxName,
+        criteria: buyBox,
+        status: 'draft',
+        version: 1,
+      })
+      .select('id')
+      .single();
+
+    if (buyBoxInsertError) {
+      console.error('free-scan-start: buy_boxes insert error:', buyBoxInsertError);
+      // Non-fatal — continue without linking buy_box_id so the scan still runs.
+    }
+
+    const buyBoxId = buyBoxRow?.id || null;
+
     // Insert deal_searches row FIRST — scrape_jobs.search_id is FK'd to
     // deal_searches.id, so we can't reuse the free_scan_requests.id directly.
     // The worker reads deal_searches.user_email via resolveUserEmail() and writes
@@ -105,6 +136,7 @@ module.exports = async function handler(req, res) {
         user_email: email,
         buy_box: buyBox,
         status: 'pending',
+        ...(buyBoxId ? { buy_box_id: buyBoxId, buy_box_version: 1 } : {}),
       })
       .select('id')
       .single();
