@@ -19,6 +19,14 @@ a code bug — that requires running the scoring pipeline separately.
 - `api/user-data.js` — add lightweight count query; raise display limit from 50 to 500;
   remove stale derived-count block
 
+### worker/worker.js — `maybeFallbackScore` helper + wiring in headed run path
+
+Adds a post-PTY scorer.py safety net. After every headed PTY run, checks if
+`scored-inline.json` was written (Step 4b ran) but no deals have `score_breakdown`
+(Step 4c — scorer.py — was interrupted). If so, runs `scorer.py --persist-only`
+directly from the worker process. No AI calls; pure Supabase persistence of
+already-computed scores. Best-effort: scorer failure doesn't fail the scan.
+
 ## Confirmation
 
 No files outside the intended scope were modified.
