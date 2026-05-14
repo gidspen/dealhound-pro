@@ -88,14 +88,20 @@ function mergeBuyBoxes(criteriaList) {
   for (const box of criteriaList) {
     if (!box || typeof box !== 'object') continue;
 
-    if (typeof box.price_min === 'number') union.price_min = Math.min(union.price_min, box.price_min);
-    if (typeof box.price_max === 'number') union.price_max = Math.max(union.price_max, box.price_max);
-    if (typeof box.acreage_min === 'number') union.acreage_min = Math.min(union.acreage_min, box.acreage_min);
+    if (typeof box.price_min === 'number')
+      union.price_min = Math.min(union.price_min, box.price_min);
+    if (typeof box.price_max === 'number')
+      union.price_max = Math.max(union.price_max, box.price_max);
+    if (typeof box.acreage_min === 'number')
+      union.acreage_min = Math.min(union.acreage_min, box.acreage_min);
 
     const states = box.states || box.state ? [].concat(box.states || box.state) : [];
     states.forEach((s) => s && union.states.add(String(s).trim().toUpperCase()));
 
-    const types = box.property_types || box.property_type ? [].concat(box.property_types || box.property_type) : [];
+    const types =
+      box.property_types || box.property_type
+        ? [].concat(box.property_types || box.property_type)
+        : [];
     types.forEach((t) => t && union.property_types.add(String(t).trim().toLowerCase()));
 
     const kws = box.keywords ? [].concat(box.keywords) : [];
@@ -157,7 +163,10 @@ async function buildUnionAndPerUser(supabaseClient) {
   }
 
   if (!boxes || boxes.length === 0) {
-    return { unionBuyBox: { ...FALLBACK_UNION, generated_at: new Date().toISOString() }, perUserBoxes: [] };
+    return {
+      unionBuyBox: { ...FALLBACK_UNION, generated_at: new Date().toISOString() },
+      perUserBoxes: [],
+    };
   }
 
   const perUserBoxes = boxes.map((b) => ({
@@ -192,14 +201,22 @@ if (require.main === module) {
     if (count === 0) {
       console.log('No active buy boxes — writing default broad buy box');
     } else {
-      console.log(`Found ${count} active buy box(es) across ${new Set(perUserBoxes.map((b) => b.user_email)).size} user(s)`);
+      console.log(
+        `Found ${count} active buy box(es) across ${new Set(perUserBoxes.map((b) => b.user_email)).size} user(s)`
+      );
     }
 
     fs.writeFileSync(OUTPUT_PATH, JSON.stringify(unionBuyBox, null, 2));
     console.log(`Wrote union buy box (${count} source(s)) → ${OUTPUT_PATH}`);
-    console.log(`  price: $${(unionBuyBox.price_min / 1000).toFixed(0)}k–$${(unionBuyBox.price_max / 1000).toFixed(0)}k`);
-    console.log(`  states: ${unionBuyBox.states.length > 0 ? unionBuyBox.states.join(', ') : '(any)'}`);
-    console.log(`  types: ${unionBuyBox.property_types.length > 0 ? unionBuyBox.property_types.join(', ') : '(any)'}`);
+    console.log(
+      `  price: $${(unionBuyBox.price_min / 1000).toFixed(0)}k–$${(unionBuyBox.price_max / 1000).toFixed(0)}k`
+    );
+    console.log(
+      `  states: ${unionBuyBox.states.length > 0 ? unionBuyBox.states.join(', ') : '(any)'}`
+    );
+    console.log(
+      `  types: ${unionBuyBox.property_types.length > 0 ? unionBuyBox.property_types.join(', ') : '(any)'}`
+    );
   })().catch((err) => {
     console.error('FATAL:', err);
     process.exit(1);

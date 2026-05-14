@@ -67,10 +67,10 @@ async function sendFreeScanCompleteEmail({
       skipped: true,
       reason: 'no-key',
       preview: {
-        from:    rendered.from,
+        from: rendered.from,
         to,
         subject: rendered.subject,
-        text:    rendered.text,
+        text: rendered.text,
       },
     };
   }
@@ -88,17 +88,16 @@ async function sendFreeScanCompleteEmail({
     const resend = new Resend(apiKey);
 
     const response = await resend.emails.send({
-      from:    rendered.from,
-      to:      recipient,
+      from: rendered.from,
+      to: recipient,
       subject: rendered.subject,
-      html:    rendered.html,
-      text:    rendered.text,
+      html: rendered.html,
+      text: rendered.text,
     });
 
     const messageId = response?.data?.id ?? null;
     console.log(`[email] sent to ${recipient}`, { messageId });
     return { ok: true, messageId };
-
   } catch (err) {
     console.warn(`[email] send failed for ${recipient} — ${err.message}`);
     return { ok: false, error: err };
@@ -200,7 +199,9 @@ async function sendScheduledScanCompleteEmail({ to, agentName, dealCount, dashbo
 
   let recipient = to;
   if (process.env.DEALHOUND_EMAIL_TEST_MODE === 'true') {
-    console.log(`[email] TEST MODE — redirecting scheduled-scan email from ${to} to ${TEST_RECIPIENT}`);
+    console.log(
+      `[email] TEST MODE — redirecting scheduled-scan email from ${to} to ${TEST_RECIPIENT}`
+    );
     recipient = TEST_RECIPIENT;
   }
 

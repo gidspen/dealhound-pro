@@ -109,7 +109,10 @@ function findClaude() {
     `${os.homedir()}/.local/bin/claude`,
   ].filter(Boolean);
   for (const p of candidates) {
-    try { fs.accessSync(p, fs.constants.X_OK); return p; } catch (_) {}
+    try {
+      fs.accessSync(p, fs.constants.X_OK);
+      return p;
+    } catch (_) {}
   }
   return 'claude';
 }
@@ -145,7 +148,9 @@ async function filterOverdueBoxes(supabase, perUserBoxes) {
     .in('id', ids);
 
   if (boxesError) {
-    throw new Error(`group-scan-runner: failed to fetch buy_boxes timestamps — ${boxesError.message}`);
+    throw new Error(
+      `group-scan-runner: failed to fetch buy_boxes timestamps — ${boxesError.message}`
+    );
   }
 
   const lastScannedById = {};
@@ -201,7 +206,9 @@ async function createSearchAndJob(supabase, box) {
     .single();
 
   if (searchError) {
-    throw new Error(`deal_searches insert failed for box ${box.buy_box_id}: ${searchError.message}`);
+    throw new Error(
+      `deal_searches insert failed for box ${box.buy_box_id}: ${searchError.message}`
+    );
   }
 
   const { data: job, error: jobError } = await supabase
@@ -217,7 +224,11 @@ async function createSearchAndJob(supabase, box) {
 
   if (jobError) {
     // Best-effort cleanup of orphaned deal_searches row
-    await supabase.from('deal_searches').delete().eq('id', search.id).then(() => {});
+    await supabase
+      .from('deal_searches')
+      .delete()
+      .eq('id', search.id)
+      .then(() => {});
     throw new Error(`scrape_jobs insert failed for box ${box.buy_box_id}: ${jobError.message}`);
   }
 
@@ -226,7 +237,10 @@ async function createSearchAndJob(supabase, box) {
 
 // ── Buy box temp file ─────────────────────────────────────────────────────────
 function writeBuyBoxTmpfile(buyBox) {
-  const file = path.join(os.tmpdir(), `dealhound-group-${Date.now()}-${Math.random().toString(36).slice(2)}.json`);
+  const file = path.join(
+    os.tmpdir(),
+    `dealhound-group-${Date.now()}-${Math.random().toString(36).slice(2)}.json`
+  );
   fs.writeFileSync(file, JSON.stringify(buyBox, null, 2));
   return file;
 }
@@ -249,7 +263,11 @@ function composeSpawnEnv(searchId, scrapeJobId, buyBoxFilePath) {
 
 // ── Post-scan status updates ──────────────────────────────────────────────────
 async function finalizeSearch(supabase, searchId, status) {
-  await supabase.from('deal_searches').update({ status }).eq('id', searchId).then(() => {});
+  await supabase
+    .from('deal_searches')
+    .update({ status })
+    .eq('id', searchId)
+    .then(() => {});
 }
 
 async function finalizeJob(supabase, jobId, status, errorMsg) {
@@ -269,11 +287,28 @@ async function markBuyBoxScanned(supabase, buyBoxId) {
 }
 
 // ── Per-user agent name resolution ───────────────────────────────────────────
-const AGENT_NAMES = ['Scout', 'Nora', 'Kit', 'Stella', 'Sophie', 'Quinn', 'Wren', 'Ellis', 'Reid', 'Sloane', 'Harper', 'Hunter'];
+const AGENT_NAMES = [
+  'Scout',
+  'Nora',
+  'Kit',
+  'Stella',
+  'Sophie',
+  'Quinn',
+  'Wren',
+  'Ellis',
+  'Reid',
+  'Sloane',
+  'Harper',
+  'Hunter',
+];
 
 async function resolveAgentName(supabase, userEmail) {
   try {
-    const { data } = await supabase.from('users').select('agent_name').eq('email', userEmail).single();
+    const { data } = await supabase
+      .from('users')
+      .select('agent_name')
+      .eq('email', userEmail)
+      .single();
     if (data?.agent_name) return data.agent_name;
   } catch (_) {}
   return AGENT_NAMES[Math.floor(Math.random() * AGENT_NAMES.length)];
@@ -300,7 +335,9 @@ async function main() {
 
   // ── Validate env ─────────────────────────────────────────────────────────
   const requiredEnv = ['SUPABASE_URL', 'SUPABASE_SERVICE_KEY'];
-  const missingEnv = requiredEnv.filter((k) => !process.env[k] && !process.env[k.replace('SUPABASE_URL', 'SUPABASE_DEALS_URL')]);
+  const missingEnv = requiredEnv.filter(
+    (k) => !process.env[k] && !process.env[k.replace('SUPABASE_URL', 'SUPABASE_DEALS_URL')]
+  );
   if (missingEnv.length > 0 && !DRY_RUN) {
     log(`FATAL: missing required env vars: ${missingEnv.join(', ')}`);
     process.exit(1);
@@ -312,10 +349,14 @@ async function main() {
   let perUserBoxes = [];
 
   if (DRY_RUN) {
-    log('[group-scan] DRY RUN: skipping Supabase query — would fetch buy_boxes WHERE status=active');
+    log(
+      '[group-scan] DRY RUN: skipping Supabase query — would fetch buy_boxes WHERE status=active'
+    );
     log('[group-scan] DRY RUN: would build union buy box and per-user criteria list');
     log('[group-scan] DRY RUN: would filter to overdue boxes by tier interval');
-    log('[group-scan] DRY RUN: would spawn one `claude --dangerously-skip-permissions` per overdue box');
+    log(
+      '[group-scan] DRY RUN: would spawn one `claude --dangerously-skip-permissions` per overdue box'
+    );
     log('[group-scan] DRY RUN: would insert deal_searches + scrape_jobs rows per box');
     log('[group-scan] DRY RUN: would send Resend notification email per user');
     log('[group-scan] DRY RUN: would update buy_boxes.last_scanned_at per box');
@@ -324,7 +365,9 @@ async function main() {
   }
 
   const { unionBuyBox, perUserBoxes: allBoxes } = await buildUnionAndPerUser(supabase);
-  log(`[group-scan] Found ${allBoxes.length} active buy box(es) across ${new Set(allBoxes.map((b) => b.user_email)).size} user(s)`);
+  log(
+    `[group-scan] Found ${allBoxes.length} active buy box(es) across ${new Set(allBoxes.map((b) => b.user_email)).size} user(s)`
+  );
 
   if (allBoxes.length === 0) {
     log('[group-scan] No active buy boxes — nothing to do');
@@ -413,9 +456,12 @@ async function main() {
       await finalizeSearch(supabase, searchId, 'complete');
       await markBuyBoxScanned(supabase, box.buy_box_id);
 
-      log(`[group-scan] Scan complete for ${box.user_email} in ${(durationMs / 1000).toFixed(1)}s`, {
-        cappedByCost,
-      });
+      log(
+        `[group-scan] Scan complete for ${box.user_email} in ${(durationMs / 1000).toFixed(1)}s`,
+        {
+          cappedByCost,
+        }
+      );
 
       // ── Send notification email ───────────────────────────────────────────
       const agentName = await resolveAgentName(supabase, box.user_email);
@@ -444,7 +490,9 @@ async function main() {
       errorCount++;
     } finally {
       if (buyBoxFile && fs.existsSync(buyBoxFile)) {
-        try { fs.unlinkSync(buyBoxFile); } catch (_) {}
+        try {
+          fs.unlinkSync(buyBoxFile);
+        } catch (_) {}
       }
     }
   }
