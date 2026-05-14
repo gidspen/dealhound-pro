@@ -112,7 +112,19 @@ module.exports = async function handler(req, res) {
     // Deals from all scans (passed hard filters only)
     /** @type {Array<import('../types/database').Database['public']['Tables']['deals']['Row']>} */
     let deals = [];
+    /** @type {Record<string, number>} */
+    let dealCountMap = {};
     if (scanIds.length > 0) {
+      // Lightweight count query — only fetches search_id so it's accurate regardless of display limit
+      const { data: countRows } = await supabase
+        .from('deals')
+        .select('search_id')
+        .in('search_id', scanIds)
+        .eq('passed_hard_filters', true);
+      (countRows || []).forEach((r) => {
+        if (r.search_id) dealCountMap[r.search_id] = (dealCountMap[r.search_id] || 0) + 1;
+      });
+
       const { data } = await supabase
         .from('deals')
         .select(
@@ -121,7 +133,7 @@ module.exports = async function handler(req, res) {
         .in('search_id', scanIds)
         .eq('passed_hard_filters', true)
         .order('id', { ascending: false })
-        .limit(50);
+        .limit(500);
       deals = data || [];
     }
 
@@ -162,12 +174,7 @@ module.exports = async function handler(req, res) {
     const archivedIds = new Set((archivesRes.data || []).map((a) => a.deal_id));
     const threadConvos = threadConvosRes.data || [];
 
-    // Deal counts per scan
-    /** @type {Record<string, number>} */
-    const dealCountMap = {};
-    deals.forEach((d) => {
-      if (d.search_id) dealCountMap[d.search_id] = (dealCountMap[d.search_id] || 0) + 1;
-    });
+    // dealCountMap already populated by the lightweight count query above
 
     // Plan / runs payload — feeds the Settings panel and UpgradeModal copy.
     /** @type {Record<string, number>} */
