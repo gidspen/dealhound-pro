@@ -201,10 +201,13 @@ function runFindDealsHeaded({
           return;
         }
 
-        // Fallback: prompt returned after >50 KB of output (skill exited, Claude idle)
-        // The 50KB floor prevents triggering on a prompt that appears before the
-        // command echo is cleared. 50KB ≈ 1 full landsearch page of output.
-        if (rawBuffer.length > 50_000 && PROMPT_RE.test(cleanBuffer)) {
+        // Fallback: prompt returned after >500 KB of output (skill exited, Claude idle)
+        // The 500KB floor prevents false-positives from Claude Code's ANSI spinner
+        // animation, which fills ~50KB in ~30s before any scraper or pipeline runs.
+        // A real full scan (scraper + pipeline + scoring) produces >>500KB of output.
+        // Old threshold (50KB) was incorrectly calibrated — spinner fills it before
+        // Phase 2A even starts, killing the session with zero listings every time.
+        if (rawBuffer.length > 500_000 && PROMPT_RE.test(cleanBuffer)) {
           state = 'DONE';
           log('[PTY] Prompt returned after large output — skill complete', {
             outputKB: (rawBuffer.length / 1024).toFixed(0),
