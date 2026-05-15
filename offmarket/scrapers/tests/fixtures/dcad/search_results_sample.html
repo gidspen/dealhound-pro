@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dallas Central Appraisal District - Property Search Results</title>
+</head>
+<body>
+<form name="aspnetForm" method="post" action="SearchOwner.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="FAKE_VIEWSTATE_FOR_FIXTURE" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="FAKE_VALIDATION" />
+
+<!-- Navigation table — should NOT be picked up by _parse_results -->
+<table id="tblNavigation" cellpadding="2" cellspacing="0">
+  <tr>
+    <td><a href="/">Home</a></td>
+    <td><a href="/SearchOwner.aspx">Owner Search</a></td>
+  </tr>
+</table>
+
+<!-- Sidebar table — also should NOT be picked up -->
+<table id="tblSidebar">
+  <tr><td>Quick Links</td></tr>
+  <tr><td><a href="/exemptions.aspx">Exemptions</a></td></tr>
+</table>
+
+<!-- Main result grid — this IS the target -->
+<table id="GridViewSearchResults" cellpadding="3" cellspacing="1" border="1"
+       style="width:100%; border-collapse:collapse;">
+  <tr style="background-color:#4472C4; color:white;">
+    <th>Account #</th>
+    <th>Owner Name</th>
+    <th>Property Address</th>
+    <th>Legal Description</th>
+  </tr>
+  <tr style="background-color:#FFFFFF;">
+    <td><a href="/AcctDetailRes.aspx?AcctNum=00000123456789">00000123456789</a></td>
+    <td>FINCANNON DAVID W</td>
+    <td>1234 OAK GROVE LN  DALLAS TX 75201</td>
+    <td>HIGHLAND PARK EST BLK 4 LT 7</td>
+  </tr>
+  <tr style="background-color:#F2F2F2;">
+    <td><a href="/AcctDetailRes.aspx?AcctNum=00000987654321">00000987654321</a></td>
+    <td>FINCANNON DAVID R</td>
+    <td>5678 ELM STREET  DALLAS TX 75202</td>
+    <td>LAKEWOOD HEIGHTS BLK 12 LT 3</td>
+  </tr>
+  <tr style="background-color:#FFFFFF;">
+    <td><a href="/AcctDetailBPP.aspx?AcctNum=00000555555555">00000555555555</a></td>
+    <td>FINCANNON PEST SERVICES INC</td>
+    <td>999 COMMERCE ST  DALLAS TX 75208</td>
+    <td>CENTRAL BUSINESS DIST BLK 1 LT 1</td>
+  </tr>
+</table>
+
+<p>3 records found.</p>
+</form>
+</body>
+</html>

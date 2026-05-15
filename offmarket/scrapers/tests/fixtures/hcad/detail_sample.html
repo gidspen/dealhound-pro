@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+  Synthesized HCAD property detail fixture.
+  Source: search.hcad.org/Details/0521340000019 (React SPA detail view)
+
+  NOTE: SYNTHESIZED — live verification required before first real run.
+
+  Key fields extracted by _parse_detail() via cad_common.extract_exemptions():
+    - Exemptions: "OV65" and "HS EXEMPT" (homestead) present
+    - Deed Date: 03/15/2010
+    - Appraised Value: 245,000
+    - Year Built: 1982
+
+  The HCAD React SPA detail page renders property info in labeled
+  sections. Body innerText is passed to extract_exemptions() directly —
+  no selector dependency for exemption extraction.
+
+  Selectors / text patterns relied on by _parse_detail():
+    - Full body innerText fed to cad_common.extract_exemptions()
+    - "OV65" token → ov65=True
+    - "HS EXEMPT" token → homestead=True
+    - "Deed Date: MM/DD/YYYY" → deed_date
+    - "Appraised Value: NNN,NNN" → appraised_value
+    - "Year Built YYYY" → year_built
+    - Owner name: .owner-name or table row with "Owner" label
+    - Account: .account-number or data-account attribute
+-->
+<html lang="en">
+<head><title>Harris County Appraisal District - Property Detail</title></head>
+<body>
+<div id="root">
+  <div class="property-detail">
+    <div class="detail-header">
+      <h1>Property Detail</h1>
+      <span class="account-number" data-account="0521340000019">Account: 0521340000019</span>
+    </div>
+
+    <section class="owner-info">
+      <h2>Owner Information</h2>
+      <table class="detail-table">
+        <tr><th>Owner Name</th><td class="owner-name">WILLIAMS, JAMES R</td></tr>
+        <tr><th>Mailing Address</th><td>4521 FONDREN RD, HOUSTON TX 77035</td></tr>
+      </table>
+    </section>
+
+    <section class="property-info">
+      <h2>Property Information</h2>
+      <table class="detail-table">
+        <tr><th>Situs Address</th><td>4521 FONDREN RD HOUSTON TX 77035</td></tr>
+        <tr><th>Legal Description</th><td>LT 4 BLK 12 BRAEBURN VALLEY SEC 3</td></tr>
+        <tr><th>State Code</th><td>A1 - Single Family Residential</td></tr>
+        <tr><th>Year Built</th><td>1982</td></tr>
+      </table>
+    </section>
+
+    <section class="appraisal-info">
+      <h2>Appraisal Information</h2>
+      <table class="detail-table">
+        <tr><th>Appraised Value</th><td>245,000</td></tr>
+        <tr><th>Land Value</th><td>52,000</td></tr>
+        <tr><th>Improvement Value</th><td>193,000</td></tr>
+        <tr><th>Market Value</th><td>261,500</td></tr>
+      </table>
+    </section>
+
+    <section class="deed-info">
+      <h2>Deed Information</h2>
+      <table class="detail-table">
+        <tr><th>Deed Date</th><td>03/15/2010</td></tr>
+        <tr><th>Deed Volume</th><td>2010</td></tr>
+        <tr><th>Deed Page</th><td>031501</td></tr>
+      </table>
+    </section>
+
+    <section class="exemptions-info">
+      <h2>Exemptions</h2>
+      <table class="detail-table">
+        <thead>
+          <tr><th>Exemption Type</th><th>Taxing Unit</th><th>Amount</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>OV65</td><td>Harris County</td><td>160,000</td></tr>
+          <tr><td>OV65</td><td>Houston ISD</td><td>160,000</td></tr>
+          <tr><td>HS EXEMPT</td><td>Harris County</td><td>0</td></tr>
+          <tr><td>HS EXEMPT</td><td>Houston ISD</td><td>25,000</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>
+</body>
+</html>

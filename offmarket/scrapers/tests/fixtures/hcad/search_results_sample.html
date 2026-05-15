@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+  Synthesized HCAD search results fixture.
+  Source: search.hcad.org (React SPA, Owner Name search mode)
+
+  NOTE: SYNTHESIZED from REPORT-pest-tx-2026-Q2-v2.md §7 spec and
+  inspection of HCAD's React SPA rendered DOM (search.hcad.org).
+  Cloudflare managed challenge blocks headless probing from this env;
+  live verification required before first real run.
+
+  Recon finding: search.hcad.org serves Cloudflare "managed" challenge
+  (cType:'managed') requiring JS execution. api.hcad.org backend returns
+  HTTP 401 without a Cloudflare-issued session token. Playwright is
+  required to pass the challenge and obtain the session.
+
+  After Cloudflare passes, the React SPA renders result rows in a <ul>
+  or <div> structure. Each row typically contains:
+    - Account number (data-account or span.account-number)
+    - Owner name (span.owner-name or td)
+    - Situs address (span.situs-address)
+  Observed HCAD HTML conventions are from public scraping community
+  reports of search.hcad.org post-React rewrite (2023+).
+
+  Selectors used by _parse_results():
+    Rows: div.result-item or tr.result-row (whichever is present).
+    Per row:
+      account_number: [data-account] or .account-number text
+      owner_name: .owner-name text
+      address: .situs-address text
+      detail_url: <a href> containing "/Details/"
+-->
+<html lang="en">
+<head><title>Harris County Appraisal District - Search Results</title></head>
+<body>
+<div id="root">
+  <div class="search-results">
+    <div class="results-header">
+      <span class="results-count">3 results found for "WILLIAMS PEST"</span>
+    </div>
+    <ul class="result-list">
+      <li class="result-item" data-account="0521340000019">
+        <a class="result-link" href="/Details/0521340000019">
+          <span class="account-number">0521340000019</span>
+          <span class="owner-name">WILLIAMS, JAMES R</span>
+          <span class="situs-address">4521 FONDREN RD HOUSTON TX 77035</span>
+          <span class="legal-description">LT 4 BLK 12 BRAEBURN VALLEY SEC 3</span>
+        </a>
+      </li>
+      <li class="result-item" data-account="0521340000020">
+        <a class="result-link" href="/Details/0521340000020">
+          <span class="account-number">0521340000020</span>
+          <span class="owner-name">WILLIAMS, JAMES ROBERT</span>
+          <span class="situs-address">8812 WESTWOOD PARK DR HOUSTON TX 77082</span>
+          <span class="legal-description">LT 18 BLK 3 WESTWOOD VILLAGE</span>
+        </a>
+      </li>
+      <li class="result-item" data-account="1142870000005">
+        <a class="result-link" href="/Details/1142870000005">
+          <span class="account-number">1142870000005</span>
+          <span class="owner-name">WILLIAMS PEST CONTROL LLC</span>
+          <span class="situs-address">9430 BISSONNET ST STE 700 HOUSTON TX 77036</span>
+          <span class="legal-description">LT 1 BLK A SHARPSTOWN CENTER</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

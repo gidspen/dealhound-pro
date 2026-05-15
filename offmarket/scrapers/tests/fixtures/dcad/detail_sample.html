@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dallas Central Appraisal District - Property Detail</title>
+</head>
+<body>
+<form name="aspnetForm" method="post" action="AcctDetailRes.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="FAKE_VIEWSTATE" />
+
+<!-- Navigation — not data -->
+<table id="tblNavigation">
+  <tr><td><a href="/">Home</a></td><td><a href="/SearchOwner.aspx">Owner Search</a></td></tr>
+</table>
+
+<!-- Property header -->
+<table id="tblPropertyHeader" cellpadding="4" cellspacing="0" border="0">
+  <tr>
+    <td><strong>Account Number:</strong></td>
+    <td>00000123456789</td>
+  </tr>
+  <tr>
+    <td><strong>Owner:</strong></td>
+    <td>FINCANNON DAVID W</td>
+  </tr>
+  <tr>
+    <td><strong>Situs Address:</strong></td>
+    <td>1234 OAK GROVE LN  DALLAS TX 75201</td>
+  </tr>
+  <tr>
+    <td><strong>Mailing Address:</strong></td>
+    <td>1234 OAK GROVE LN  DALLAS TX 75201</td>
+  </tr>
+</table>
+
+<!-- Property Characteristics -->
+<table id="tblCharacteristics" cellpadding="4" cellspacing="0" border="0">
+  <tr>
+    <td><strong>Property Classification:</strong></td>
+    <td>Residential</td>
+  </tr>
+  <tr>
+    <td><strong>Year Built:</strong></td>
+    <td>1978</td>
+  </tr>
+  <tr>
+    <td><strong>Living Area (sqft):</strong></td>
+    <td>1,842</td>
+  </tr>
+</table>
+
+<!-- Value Summary — label/value pairs so regex can co-locate label and number -->
+<table id="tblValues" cellpadding="4" cellspacing="0" border="1">
+  <tr>
+    <td><strong>Land Value:</strong></td>
+    <td>$85,000</td>
+  </tr>
+  <tr>
+    <td><strong>Improvement Value:</strong></td>
+    <td>$178,500</td>
+  </tr>
+  <tr>
+    <td><strong>Appraised Value:</strong></td>
+    <td>$263,500</td>
+  </tr>
+  <tr>
+    <td><strong>Assessed Value:</strong></td>
+    <td>$263,500</td>
+  </tr>
+</table>
+
+<!-- Deed / Ownership History -->
+<table id="tblDeedHistory" cellpadding="4" cellspacing="0" border="1">
+  <tr style="background-color:#4472C4; color:white;">
+    <th>Deed Date</th>
+    <th>Deed Type</th>
+    <th>Grantor</th>
+    <th>Grantee</th>
+    <th>Instrument</th>
+  </tr>
+  <tr>
+    <td>06/14/2003</td>
+    <td>WD</td>
+    <td>PREVIOUS OWNER</td>
+    <td>FINCANNON DAVID W</td>
+    <td>200300123456</td>
+  </tr>
+</table>
+
+<!-- Exemptions — the key table for OV65 / HS detection -->
+<table id="tblExemptions" cellpadding="4" cellspacing="0" border="1">
+  <tr style="background-color:#4472C4; color:white;">
+    <th>Exemption Type</th>
+    <th>Taxing Entity</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <td>GEN HS</td>
+    <td>Dallas County</td>
+    <td>$40,000</td>
+  </tr>
+  <tr>
+    <td>HS EXEMPT</td>
+    <td>City of Dallas</td>
+    <td>$40,000</td>
+  </tr>
+  <tr>
+    <td>OV65</td>
+    <td>Dallas County</td>
+    <td>$10,000</td>
+  </tr>
+</table>
+
+<p>Property last updated: 2026-01-15</p>
+</form>
+</body>
+</html>
