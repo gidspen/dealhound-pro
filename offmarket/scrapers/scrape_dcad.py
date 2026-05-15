@@ -1,246 +1,567 @@
 #!/usr/bin/env python3
-"""DCAD owner search → OV65 + homestead + deed date for Dallas County pest businesses.
+"""DCAD owner search → OV65 + homestead + deed date for Dallas County businesses.
 
 Strategy: ASP.NET form at https://www.dallascad.org/SearchOwner.aspx
-After visiting homepage for cookies, POST owner name → results table with account # + address.
-Click into top match → detail page has exemptions and deed history.
+After visiting homepage for viewstate cookies, POST owner name → results grid →
+click top match → detail page has exemptions and deed history.
+
+Viewstate cookies expire; re-warm homepage every 20 requests (PLAN §8 risk #2).
+
+On no match in Dallas, emits cross_county_followup list for Collin/Denton/Tarrant/
+Rockwall. Those counties each need their own scraper — this file does NOT query them.
 """
-import json
+import argparse
+import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date, timedelta
 from pathlib import Path
+from typing import Optional
+
+# ---------------------------------------------------------------------------
+# Resolve repo root so this script is importable both as a module and as a
+# top-level runnable (python scrape_dcad.py) without installing the package.
+# ---------------------------------------------------------------------------
+_HERE = Path(__file__).resolve().parent
+_REPO_ROOT = _HERE.parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
-TARGETS = Path('/Users/gideonspencer/dealhound-pro/offmarket/data/pest-control_targets.json')
-OUT = Path('/tmp/pestrun_results/dcad_results.json')
-LOG = Path('/tmp/pestrun_results/dcad.log')
+from offmarket.scrapers.cad_common import (
+    cache_path,
+    extract_exemptions,
+    load_cached,
+    log_factory,
+    load_targets,
+    name_variants,
+    summary,
+    write_cached,
+)
 
-def log(msg):
-    ts = datetime.now(timezone.utc).strftime('%H:%M:%S')
-    line = f"[{ts}] [DCAD] {msg}"
-    print(line, flush=True)
-    with open(LOG, 'a') as f:
-        f.write(line + '\n')
+# ---------------------------------------------------------------------------
+# Constants
+# ---------------------------------------------------------------------------
 
-def search_dcad(page, last_name, first_name=None):
-    """Search by owner name; returns list of result rows or empty."""
-    # Build search term: "LASTNAME, FIRSTNAME" or just lastname
-    search_term = f"{last_name}, {first_name}" if first_name else last_name
+PORTAL = "dcad"
+SEARCH_URL = "https://www.dallascad.org/SearchOwner.aspx"
+HOME_URL = "https://www.dallascad.org/"
+POLITENESS_SEC = 1.0
+VIEWSTATE_REFRESH_EVERY = 20
+CROSS_COUNTY_FALLBACK = ["Collin", "Denton", "Tarrant", "Rockwall"]
+
+# TTL for field-typed cache freshness (matches PLAN §4)
+_FRESH_UNTIL_MAP = {
+    "ov65": "any",
+    "deed_date": "any",
+}
+
+
+# ---------------------------------------------------------------------------
+# Pure parse functions (no network, fully unit-testable)
+# ---------------------------------------------------------------------------
+
+def _parse_results(html: str) -> list[dict]:
+    """Parse DCAD owner-search results page HTML → list of row dicts.
+
+    Each dict has: account_no, owner_name, situs_address, detail_link.
+
+    Scoping strategy: DCAD renders the results grid in a table whose ID
+    contains "GridView" or whose class/id contains "SearchResults".  We
+    look for that specifically.  If the targeted table is absent we fall
+    back to the largest data-bearing table (> 2 columns, > 1 data row) to
+    stay robust against minor HTML changes.  Navigation / sidebar tables
+    typically have ≤2 columns and/or contain no anchor tags pointing to
+    /AcctDetailRes.aspx or /AcctDetailBPP.aspx.
+
+    Returns [] when no results (no-match page OR parse failure).
+    """
+    from html.parser import HTMLParser
+
+    class _TableParser(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.in_target = False
+            self.depth = 0         # nesting depth *inside* the target table
+            self.tables = []       # list of {"rows": [[{"text": str, "href": str|None}]]}
+            self._cur_table = None
+            self._cur_row = None
+            self._cur_cell = None
+            self._cell_text = []
+            self._cell_href = None
+            self._table_stack = []  # track nesting
+            self._in_cell = False
+
+        def handle_starttag(self, tag, attrs):
+            attrs_d = dict(attrs)
+            if tag == "table":
+                t = {"rows": [], "id": attrs_d.get("id", ""), "class": attrs_d.get("class", "")}
+                self._table_stack.append(t)
+                self._cur_table = t
+                self._cur_row = None
+            elif tag == "tr" and self._cur_table is not None:
+                self._cur_row = []
+                self._cur_table["rows"].append(self._cur_row)
+            elif tag in ("td", "th") and self._cur_row is not None:
+                self._cur_cell = {"text": "", "href": None}
+                self._cur_row.append(self._cur_cell)
+                self._cell_text = []
+                self._cell_href = None
+                self._in_cell = True
+            elif tag == "a" and self._in_cell:
+                href = attrs_d.get("href", "")
+                if href:
+                    self._cell_href = href
+
+        def handle_endtag(self, tag):
+            if tag == "table":
+                if self._table_stack:
+                    finished = self._table_stack.pop()
+                    self.tables.append(finished)
+                    self._cur_table = self._table_stack[-1] if self._table_stack else None
+            elif tag in ("td", "th"):
+                if self._cur_cell is not None:
+                    self._cur_cell["text"] = " ".join(self._cell_text).strip()
+                    if self._cell_href:
+                        self._cur_cell["href"] = self._cell_href
+                    self._cur_cell = None
+                    self._cell_text = []
+                    self._cell_href = None
+                self._in_cell = False
+
+        def handle_data(self, data):
+            if self._in_cell:
+                stripped = data.strip()
+                if stripped:
+                    self._cell_text.append(stripped)
+
+    parser = _TableParser()
     try:
-        page.goto("https://www.dallascad.org/SearchOwner.aspx", wait_until='domcontentloaded', timeout=20000)
+        parser.feed(html)
+    except Exception:
+        return []
+
+    # Step 1: prefer tables explicitly named for results (GridView / SearchResults)
+    RESULT_ID_HINTS = ("gridview", "searchresult", "tblresult", "results", "grid")
+    candidate_table = None
+    for t in parser.tables:
+        tid = (t.get("id", "") + " " + t.get("class", "")).lower()
+        if any(hint in tid for hint in RESULT_ID_HINTS):
+            data_rows = [r for r in t["rows"] if len(r) >= 3]
+            if data_rows:
+                candidate_table = t
+                break
+
+    # Step 2: fallback — largest table with ≥3 data columns and anchor links
+    if candidate_table is None:
+        def _score(t):
+            # only count rows with ≥3 cells; prefer tables with anchor links
+            data_rows = [r for r in t["rows"] if len(r) >= 3]
+            anchors = sum(1 for r in data_rows for c in r if c.get("href"))
+            return (len(data_rows), anchors)
+
+        tables_scored = sorted(parser.tables, key=_score, reverse=True)
+        for t in tables_scored:
+            data_rows = [r for r in t["rows"] if len(r) >= 3]
+            anchors = sum(1 for r in data_rows for c in r if c.get("href"))
+            if data_rows and anchors:
+                candidate_table = t
+                break
+
+    if candidate_table is None:
+        return []
+
+    all_rows = candidate_table["rows"]
+    if len(all_rows) < 2:
+        return []
+
+    # Skip header row(s) — DCAD header cells contain "Account", "Owner", "Address"
+    # Find the first row that looks like data (has a digit or a link in it)
+    start_idx = 0
+    for i, row in enumerate(all_rows):
+        row_text = " ".join(c["text"] for c in row)
+        has_digit = any(ch.isdigit() for ch in row_text)
+        has_link = any(c.get("href") for c in row)
+        if has_digit or has_link:
+            start_idx = i
+            break
+    else:
+        return []
+
+    data_rows = all_rows[start_idx:]
+    results = []
+    for row in data_rows:
+        texts = [c["text"] for c in row]
+        hrefs = [c.get("href") for c in row if c.get("href")]
+        # Skip rows that are obviously navigation or empty
+        row_text = " ".join(texts).strip()
+        if not row_text or len(row_text) < 5:
+            continue
+        # Skip rows where first cell doesn't look like an account number
+        # DCAD account numbers are numeric strings (8–17 digits)
+        first_text = texts[0].strip() if texts else ""
+        if not any(ch.isdigit() for ch in first_text):
+            continue
+
+        detail_link = None
+        for href in hrefs:
+            if href and ("AcctDetail" in href or "AcctId" in href or "account" in href.lower()):
+                detail_link = href
+                break
+        if not detail_link and hrefs:
+            detail_link = hrefs[0]
+
+        results.append({
+            "account_no": first_text,
+            "owner_name": texts[1].strip() if len(texts) > 1 else "",
+            "situs_address": texts[2].strip() if len(texts) > 2 else "",
+            "detail_link": detail_link,
+            "raw_cells": texts,
+        })
+
+    return results
+
+
+def _parse_detail_text(text: str) -> dict:
+    """Parse DCAD property detail page innerText → exemption dict.
+
+    Delegates actual regex work to cad_common.extract_exemptions.
+    Returns the cad_common dict plus a 'page_text_sample' for debugging.
+    """
+    result = extract_exemptions(text)
+    result["page_text_sample"] = text[:800] if text else ""
+    return result
+
+
+def _make_no_match_result(tpcl: str, legal_name: str, owner_name: str, searches: list) -> dict:
+    """Build a standardised no-match result dict with cross-county fallback."""
+    return {
+        "tpcl": tpcl,
+        "legal_name": legal_name,
+        "owner_name": owner_name,
+        "portal": PORTAL,
+        "status": "no_match",
+        "searches": searches,
+        "cross_county_followup": CROSS_COUNTY_FALLBACK,
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+    }
+
+
+# ---------------------------------------------------------------------------
+# Network helpers (Playwright)
+# ---------------------------------------------------------------------------
+
+def _warm_viewstate(page) -> None:
+    """Visit DCAD homepage to obtain fresh ASP.NET viewstate cookies."""
+    try:
+        page.goto(HOME_URL, wait_until="domcontentloaded", timeout=20_000)
+        time.sleep(0.5)
+    except Exception:
+        pass  # best-effort; main search will error if cookies are truly missing
+
+
+def _search_owner(page, search_term: str) -> tuple[list[dict], Optional[str]]:
+    """Fill and submit the DCAD owner-search form; return (rows, error|None).
+
+    Navigates to SearchOwner.aspx, fills txtOwnerName, clicks cmdSubmit, and
+    hands the resulting HTML to the pure _parse_results() function.
+    """
+    try:
+        page.goto(SEARCH_URL, wait_until="domcontentloaded", timeout=25_000)
         page.fill('input[name="txtOwnerName"]', search_term)
         page.click('input[name="cmdSubmit"]')
-        page.wait_for_load_state('domcontentloaded', timeout=15000)
-        time.sleep(1)
+        page.wait_for_load_state("domcontentloaded", timeout=20_000)
+        time.sleep(POLITENESS_SEC)
     except PWTimeout:
         return [], "timeout_on_search"
     except Exception as e:
-        return [], f"err_{type(e).__name__}"
+        return [], f"err_{type(e).__name__}_{str(e)[:60]}"
 
-    # Extract result rows. DCAD results page has a table with results.
     try:
-        rows = page.evaluate("""
-        () => {
-            // Try grid-like tables; results have account numbers like 17 digits or similar
-            const tables = Array.from(document.querySelectorAll('table'));
-            for (const t of tables) {
-                const trs = Array.from(t.querySelectorAll('tr'));
-                if (trs.length < 2) continue;
-                // First row has headers
-                const dataRows = trs.slice(1).map(r => {
-                    const cells = Array.from(r.querySelectorAll('td'));
-                    if (cells.length < 2) return null;
-                    // Find anchor (link to detail)
-                    const a = r.querySelector('a');
-                    return {
-                        cells: cells.map(c => c.innerText.trim()),
-                        link: a ? a.href : null,
-                        account: a ? a.innerText.trim() : null
-                    };
-                }).filter(x => x && x.cells.length >= 2);
-                if (dataRows.length > 0) return dataRows;
-            }
-            return [];
-        }
-        """)
+        html = page.content()
+        rows = _parse_results(html)
         return rows, None
     except Exception as e:
         return [], f"parse_err_{type(e).__name__}"
 
-def get_detail(page, link_url):
-    """Visit detail page for an account; extract OV65, homestead, deed info."""
+
+def _fetch_detail(page, link_url: str) -> tuple[Optional[dict], Optional[str]]:
+    """Visit a DCAD property detail page; return (_parse_detail_text result, error|None)."""
     try:
-        page.goto(link_url, wait_until='domcontentloaded', timeout=20000)
-        time.sleep(1)
-        info = page.evaluate("""
-        () => {
-            const text = document.body.innerText;
-            // Heuristics: look for "OVER 65" / "OVER-65" / "HS" / "HOMESTEAD"
-            const has_ov65 = /\\b(?:OV65|OVER\\s*65|OVER-65|OV-65)\\b/i.test(text);
-            const has_hs = /\\b(?:HOMESTEAD|HS\\s+EXEMPT|HS EXEMPT|GEN HS)\\b/i.test(text);
-            const has_disabled = /\\bDISABLED\\b/i.test(text);
-            // Find exemptions area
-            const exemptionMatch = text.match(/EXEMPTIONS?[:\\s]+([^\\n]{0,200})/i);
-            // Find deed date
-            const deedMatch = text.match(/DEED\\s+DATE[:\\s]+(\\d{1,2}\\/\\d{1,2}\\/\\d{4})/i);
-            // Find address
-            const ownerMatch = text.match(/OWNER[:\\s]+([^\\n]{0,80})/i);
-            const addressMatch = text.match(/(SITUS|PROPERTY)\\s+ADDRESS[:\\s]+([^\\n]{0,80})/i);
-            const mailingMatch = text.match(/MAILING\\s+ADDRESS[:\\s]+([^\\n]{0,150})/i);
-            const buildYearMatch = text.match(/YEAR\\s+BUILT[:\\s]+(\\d{4})/i);
-            const apprValMatch = text.match(/APPRAISED\\s+VALUE[:\\s]+\\$?([\\d,]+)/i);
-            return {
-                has_ov65,
-                has_homestead: has_hs,
-                has_disabled,
-                exemption_text: exemptionMatch ? exemptionMatch[1].trim() : null,
-                deed_date: deedMatch ? deedMatch[1] : null,
-                owner: ownerMatch ? ownerMatch[1].trim() : null,
-                situs_address: addressMatch ? addressMatch[2].trim() : null,
-                mailing_address: mailingMatch ? mailingMatch[1].trim() : null,
-                year_built: buildYearMatch ? buildYearMatch[1] : null,
-                appraised_value: apprValMatch ? apprValMatch[1] : null,
-                page_text_sample: text.slice(0, 800),
-            };
-        }
-        """)
-        return info, None
+        page.goto(link_url, wait_until="domcontentloaded", timeout=25_000)
+        time.sleep(POLITENESS_SEC)
+        text = page.evaluate("() => document.body.innerText")
+        return _parse_detail_text(text), None
+    except PWTimeout:
+        return None, "timeout_on_detail"
     except Exception as e:
         return None, f"detail_err_{type(e).__name__}_{str(e)[:60]}"
 
-def name_to_last_first(legal_name):
-    """Convert 'DAVID FINCANNON' or 'A ALL PEST TERMITE EXTERM INC' to lastname guess."""
-    parts = legal_name.strip().split()
-    if not parts:
-        return None, None
-    # If has corp markers, return full name (search by org)
-    if any(m in legal_name.upper() for m in ['INC', 'LLC', 'CORP', 'CORPORATION', 'COMPANY', 'LTD']):
-        return None, None  # let caller use full name
-    # Person name: last word is lastname
-    return parts[-1], parts[0]
 
-def lookup_one(page, biz):
-    """Look up a Dallas County business owner; return enrichment dict."""
-    legal = biz['legal_name']
-    owner = biz.get('owner_name') or legal
-    result = {
-        'legal_name': legal,
-        'owner_name': owner,
-        'tpcl': biz['tpcl'],
-        'searches': [],
-        'fetched_at': datetime.now(timezone.utc).isoformat(),
-    }
+# ---------------------------------------------------------------------------
+# Per-business orchestration
+# ---------------------------------------------------------------------------
 
-    # Build search list: try [owner_name "last, first"], [owner_name as-is], [legal_name]
-    search_terms = []
-    last, first = name_to_last_first(owner)
-    if last:
-        search_terms.append((last, first))
-    search_terms.append((owner, None))  # full as-is
-    if legal != owner:
-        search_terms.append((legal, None))
+def _lookup_one(page, biz: dict, request_counter: list[int]) -> dict:
+    """Look up one business; return enrichment dict. Mutates request_counter[0].
 
-    rows = []
-    matched_term = None
-    for last_or_full, first in search_terms:
-        these_rows, err = search_dcad(page, last_or_full, first)
-        result['searches'].append({
-            'term': f"{last_or_full},{first}" if first else last_or_full,
-            'rows': len(these_rows),
-            'err': err
+    Tries every name variant from cad_common.name_variants in sequence.
+    Refreshes viewstate every VIEWSTATE_REFRESH_EVERY requests.
+    """
+    tpcl = biz["tpcl"]
+    legal = biz.get("legal_name", "")
+    owner = biz.get("owner_name") or legal
+
+    # --- Cache-first ---
+    cached = load_cached(PORTAL, tpcl, fresh_until_map=_FRESH_UNTIL_MAP)
+    if cached is not None:
+        return cached
+
+    searches = []
+    rows: list[dict] = []
+    matched_term: Optional[str] = None
+
+    variants = name_variants(legal, owner)
+    if not variants:
+        # Absolute fallback: try the raw legal name as-is
+        variants = [(legal, None)]
+
+    for last_or_full, first in variants:
+        # Viewstate refresh guard
+        if request_counter[0] > 0 and request_counter[0] % VIEWSTATE_REFRESH_EVERY == 0:
+            _warm_viewstate(page)
+
+        # Build the search term DCAD expects: "LASTNAME FIRSTNAME" or just name
+        term = f"{last_or_full} {first}".strip() if first else last_or_full
+        these_rows, err = _search_owner(page, term)
+        request_counter[0] += 1
+        searches.append({
+            "term": term,
+            "rows": len(these_rows),
+            "err": err,
         })
         if these_rows:
             rows = these_rows
-            matched_term = last_or_full
+            matched_term = term
             break
 
     if not rows:
-        result['dcad_status'] = 'No Match'
+        result = _make_no_match_result(tpcl, legal, owner, searches)
+        write_cached(PORTAL, tpcl, result)
         return result
 
-    # Filter rows: look for ones with owner's last name + a Dallas-area zip
-    # Find best match — pick the one with homestead exemption if available, else first
-    result['dcad_status'] = 'Search Matched'
-    result['rows_count'] = len(rows)
-    result['matched_term'] = matched_term
-
-    # Pick best: prefer rows where owner string contains the last name
-    target_last = (last or '').upper() if last else (owner.split()[-1] if owner else '').upper()
-    best = None
+    # --- Pick best row ---
+    # Prefer rows where the last word of owner name appears in the row text
+    target_last = (owner.split()[-1] if owner else "").upper()
+    best = rows[0]
     for r in rows[:30]:
-        row_text = ' '.join(r['cells']).upper()
+        row_text = " ".join(r.get("raw_cells", [])).upper()
         if target_last and target_last in row_text:
             best = r
             break
-    if not best:
-        best = rows[0]
 
-    result['top_row'] = best['cells']
-    result['detail_link'] = best.get('link')
-    result['account'] = best.get('account')
+    result: dict = {
+        "tpcl": tpcl,
+        "legal_name": legal,
+        "owner_name": owner,
+        "portal": PORTAL,
+        "status": "search_matched",
+        "matched_term": matched_term,
+        "rows_count": len(rows),
+        "account_no": best.get("account_no"),
+        "situs_address": best.get("situs_address"),
+        "detail_link": best.get("detail_link"),
+        "searches": searches,
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+    }
 
-    # Fetch detail if we have a link
-    if best.get('link'):
-        detail, err = get_detail(page, best['link'])
+    # --- Fetch detail page ---
+    detail_link = best.get("detail_link")
+    if detail_link:
+        if request_counter[0] > 0 and request_counter[0] % VIEWSTATE_REFRESH_EVERY == 0:
+            _warm_viewstate(page)
+        detail, err = _fetch_detail(page, detail_link)
+        request_counter[0] += 1
         if detail:
+            # Field-typed TTLs per PLAN §4
+            today = date.today()
             result.update({
-                'cad_ov65': detail.get('has_ov65'),
-                'cad_homestead': detail.get('has_homestead'),
-                'cad_disabled': detail.get('has_disabled'),
-                'cad_exemption_text': detail.get('exemption_text'),
-                'cad_deed_date': detail.get('deed_date'),
-                'cad_owner': detail.get('owner'),
-                'cad_situs_address': detail.get('situs_address'),
-                'cad_mailing_address': detail.get('mailing_address'),
-                'cad_year_built': detail.get('year_built'),
-                'cad_appraised_value': detail.get('appraised_value'),
-                'cad_page_sample': detail.get('page_text_sample'),
+                "status": "detail_fetched",
+                "exemptions": {
+                    "ov65": detail.get("ov65", False),
+                    "homestead": detail.get("homestead", False),
+                    "disabled": detail.get("disabled", False),
+                },
+                "deed_date": detail.get("deed_date"),
+                "appraised_value": detail.get("appraised_value"),
+                "year_built": detail.get("year_built"),
+                "page_text_sample": detail.get("page_text_sample"),
+                "fresh_until": {
+                    "ov65": (today + timedelta(days=90)).isoformat(),
+                    "homestead": (today + timedelta(days=90)).isoformat(),
+                    "disabled": (today + timedelta(days=90)).isoformat(),
+                    "deed_date": (today + timedelta(days=365)).isoformat(),
+                    "appraised_value": (today + timedelta(days=365)).isoformat(),
+                },
             })
-            result['dcad_status'] = 'Detail Fetched'
         else:
-            result['detail_error'] = err
+            result["detail_error"] = err
+
+    write_cached(PORTAL, tpcl, result)
     return result
 
-def main():
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    LOG.unlink(missing_ok=True)
 
-    with open(TARGETS) as f:
-        data = json.load(f)
-    dallas = [b for b in data['businesses'] if 'DALLAS' in b['county'].upper()]
-    log(f"Processing {len(dallas)} Dallas County businesses")
+# ---------------------------------------------------------------------------
+# Fixture capture helper
+# ---------------------------------------------------------------------------
 
-    results = {}
+def _save_fixture(tpcl: str, vertical: str = "pest-control") -> None:
+    """Capture live search + detail HTML to fixtures dir for a given TPCL."""
+    from offmarket.scrapers.cad_common import load_targets
+
+    targets = load_targets(vertical, county_filter=["Dallas"])
+    biz = next((b for b in targets if b["tpcl"] == tpcl), None)
+    if not biz:
+        print(f"TPCL {tpcl!r} not found in {vertical} targets")
+        return
+
+    legal = biz.get("legal_name", "")
+    owner = biz.get("owner_name") or legal
+    variants = name_variants(legal, owner)
+    if not variants:
+        variants = [(legal, None)]
+
+    fixtures_dir = Path(__file__).parent / "tests" / "fixtures" / "dcad"
+    fixtures_dir.mkdir(parents=True, exist_ok=True)
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         ctx = browser.new_context(
             user_agent="Mozilla/5.0 (Macintosh) Chrome/120.0.0.0",
-            viewport={'width': 1280, 'height': 800}
+            viewport={"width": 1280, "height": 800},
         )
         page = ctx.new_page()
-        # Warm up with homepage visit for cookies
-        page.goto("https://www.dallascad.org/", wait_until='domcontentloaded', timeout=20000)
+        _warm_viewstate(page)
 
-        for i, biz in enumerate(dallas, 1):
-            try:
-                r = lookup_one(page, biz)
-            except Exception as e:
-                r = {'legal_name': biz['legal_name'], 'tpcl': biz['tpcl'],
-                     'dcad_status': 'Error', 'error': f"{type(e).__name__}: {str(e)[:120]}"}
-            results[biz['tpcl']] = r
-            ov65 = r.get('cad_ov65', '?')
-            hs = r.get('cad_homestead', '?')
-            log(f"[{i}/{len(dallas)}] {biz['legal_name'][:30]:32s} → {r.get('dcad_status','?'):20s} OV65={ov65} HS={hs}")
-            # Save every 3
-            if i % 3 == 0:
-                with open(OUT, 'w') as f:
-                    json.dump(results, f, indent=2)
+        for last_or_full, first in variants:
+            term = f"{last_or_full} {first}".strip() if first else last_or_full
+            page.goto(SEARCH_URL, wait_until="domcontentloaded", timeout=25_000)
+            page.fill('input[name="txtOwnerName"]', term)
+            page.click('input[name="cmdSubmit"]')
+            page.wait_for_load_state("domcontentloaded", timeout=20_000)
+            time.sleep(POLITENESS_SEC)
+            html = page.content()
+            rows = _parse_results(html)
+            if rows:
+                out = fixtures_dir / "search_results_sample.html"
+                out.write_text(html, encoding="utf-8")
+                print(f"Saved search fixture → {out}")
+                detail_link = rows[0].get("detail_link")
+                if detail_link:
+                    page.goto(detail_link, wait_until="domcontentloaded", timeout=25_000)
+                    time.sleep(POLITENESS_SEC)
+                    detail_html = page.content()
+                    out2 = fixtures_dir / "detail_sample.html"
+                    out2.write_text(detail_html, encoding="utf-8")
+                    print(f"Saved detail fixture → {out2}")
+                break
+            else:
+                out = fixtures_dir / "one_no_match.html"
+                out.write_text(html, encoding="utf-8")
+                print(f"Saved no-match fixture → {out}")
 
         browser.close()
 
-    with open(OUT, 'w') as f:
-        json.dump(results, f, indent=2)
-    log(f"DONE. Wrote {len(results)} results")
 
-if __name__ == '__main__':
+# ---------------------------------------------------------------------------
+# main()
+# ---------------------------------------------------------------------------
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="DCAD owner-search scraper")
+    parser.add_argument(
+        "--vertical", default="pest-control",
+        help="Target vertical (matches offmarket/data/{vertical}_targets.json)"
+    )
+    parser.add_argument(
+        "--limit", type=int, default=None,
+        help="Cap number of businesses processed (for testing)"
+    )
+    parser.add_argument(
+        "--force-refresh", action="store_true",
+        help="Ignore cache and re-fetch all records"
+    )
+    parser.add_argument(
+        "--save-fixture", metavar="TPCL",
+        help="Capture live HTML fixtures for the given TPCL and exit"
+    )
+    args = parser.parse_args()
+
+    log = log_factory(PORTAL)
+
+    if args.save_fixture:
+        _save_fixture(args.save_fixture, vertical=args.vertical)
+        return
+
+    # Load Dallas-county targets
+    try:
+        targets = load_targets(args.vertical, county_filter=["Dallas"])
+    except FileNotFoundError as e:
+        log(f"ERROR: {e}")
+        sys.exit(1)
+
+    if args.limit:
+        targets = targets[: args.limit]
+
+    log(f"Processing {len(targets)} Dallas County {args.vertical} businesses")
+
+    results: dict[str, dict] = {}
+    request_counter = [0]  # mutable int in a list for pass-by-ref into _lookup_one
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        # PLAN §5: 2 browser contexts max for DCAD
+        ctx = browser.new_context(
+            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                       "AppleWebKit/537.36 (KHTML, like Gecko) "
+                       "Chrome/120.0.0.0 Safari/537.36",
+            viewport={"width": 1280, "height": 800},
+        )
+        page = ctx.new_page()
+
+        # Warm up homepage for viewstate cookies
+        log("Warming viewstate cookies…")
+        _warm_viewstate(page)
+
+        for i, biz in enumerate(targets, 1):
+            tpcl = biz.get("tpcl", f"unknown_{i}")
+            try:
+                r = _lookup_one(page, biz, request_counter)
+            except Exception as e:
+                r = {
+                    "tpcl": tpcl,
+                    "legal_name": biz.get("legal_name", ""),
+                    "portal": PORTAL,
+                    "status": "error",
+                    "error": f"{type(e).__name__}: {str(e)[:120]}",
+                    "fetched_at": datetime.now(timezone.utc).isoformat(),
+                }
+
+            results[tpcl] = r
+            status = r.get("status", "?")
+            exemptions = r.get("exemptions", {})
+            ov65 = exemptions.get("ov65", r.get("cad_ov65", "?"))
+            hs = exemptions.get("homestead", r.get("cad_homestead", "?"))
+            log(
+                f"[{i}/{len(targets)}] {biz.get('legal_name','')[:30]:32s} "
+                f"→ {status:20s} OV65={ov65} HS={hs}"
+            )
+
+        browser.close()
+
+    summary(results, log)
+    log(f"Done. {len(results)} results written to cache.")
+
+
+if __name__ == "__main__":
     main()

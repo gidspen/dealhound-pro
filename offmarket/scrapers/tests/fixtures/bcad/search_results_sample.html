@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+  Synthesized BCAD search results fixture.
+  Source: bexar.trueautomation.com/clientdb/PropertySearch.aspx?cid=110
+
+  NOTE: This fixture is SYNTHESIZED from spec (REPORT-pest-tx-2026-Q2-v2.md §7
+  and inspection of TrueAutomation Classic portal conventions). Live verification
+  against the real BCAD portal is required before the first real run.
+
+  Selectors used by _parse_results():
+    Results table: <table> with id or class matching "searchResults" or
+      the first <table> with ≥2 columns containing account + owner + address.
+    Each row: <tr> with <td> cells; first <td> contains <a href="...PropertyDetail...">
+      linking to the property detail page, with the account number as link text.
+    Columns (0-indexed):
+      0: Account # (with link to detail page)
+      1: Owner Name
+      2: Situs Address (street + city + zip)
+      3: Legal Description (parcel/lot info)
+    The account number in column 0 is the CAD parcel ID, e.g. "119370760510"
+-->
+<html>
+<head>
+<title>Property Search - Bexar County Appraisal District</title>
+</head>
+<body>
+<form id="form1" method="post" action="PropertySearch.aspx?cid=110">
+  <div id="searchResultsDiv">
+    <table id="searchResults" cellpadding="3" cellspacing="1" border="1">
+      <thead>
+        <tr>
+          <th>Account #</th>
+          <th>Owner Name</th>
+          <th>Situs Address</th>
+          <th>Legal Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="ClientDB/Property.aspx?prop_id=1193707&amp;cid=110">119370760510</a></td>
+          <td>LEE, LEONARD E</td>
+          <td>1234 MAGNOLIA LN, SAN ANTONIO TX 78201</td>
+          <td>NCB 12345 BLK 3 LOT 7</td>
+        </tr>
+        <tr>
+          <td><a href="ClientDB/Property.aspx?prop_id=1193708&amp;cid=110">119370760511</a></td>
+          <td>LEE, LEONARD JR</td>
+          <td>5678 OAK CREEK DR, SAN ANTONIO TX 78249</td>
+          <td>TIMBER CREEK UNIT 4 BLK 1 LOT 12</td>
+        </tr>
+        <tr>
+          <td><a href="ClientDB/Property.aspx?prop_id=1193709&amp;cid=110">119370760512</a></td>
+          <td>LEE, LEONARD WAYNE</td>
+          <td>9999 HILL COUNTRY DR, HELOTES TX 78023</td>
+          <td>HELOTES RIDGE LOT 3</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>
+</body>
+</html>
