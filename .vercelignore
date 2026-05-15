@@ -1,0 +1,20 @@
+# Vercel hosts the Express + Vite dashboard only.
+# Keep non-web code out of the deploy payload.
+
+# Off-market scoring pipeline — Python scrapers, fixtures, cache, data.
+# Not used by any web route; vercel's static analyzer was failing on the
+# HTML fixtures (Cloudflare challenge markup contains embedded JS).
+offmarket/
+
+# PM2 worker — runs locally / on a server, not on Vercel.
+worker/
+
+# Integration test suite — runs in pre-push hooks, not in the deploy.
+tests/
+
+# Migrations, fixtures, verification docs.
+migrations/
+verification/
+
+# Source dashboard tree (the built artifact is dashboard-dist/, not dashboard/).
+dashboard/
