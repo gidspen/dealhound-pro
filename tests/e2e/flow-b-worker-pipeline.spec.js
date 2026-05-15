@@ -28,14 +28,11 @@
 // returned OK; the orchestrator side-checks the inbox via the email MCP.
 
 import { test, expect } from '@playwright/test';
-import { createRequire } from 'node:module';
 import { createClient } from '@supabase/supabase-js';
 import { freshInboxEmail } from './helpers/test-email.js';
 import { deleteUser } from './helpers/personas.js';
 import { waitForScanStatus } from './helpers/worker-poll.js';
-
-const require = createRequire(import.meta.url);
-const { signMagicLink } = require('../../api/_lib/magic-link');
+import { signToken } from './helpers/magic-link.js';
 
 const REAL_INBOX_FLAG = 'DEALHOUND_E2E_ALLOW_REAL_INBOX';
 const SCAN_TIMEOUT_MS = Number(process.env.E2E_SCAN_TIMEOUT_MS || 25 * 60_000);
@@ -59,87 +56,85 @@ test.describe('Flow B — worker pipeline (real Crexi scan)', () => {
     }
   });
 
-  test(
-    'B1-B5: free-scan submit → worker completes → deals exist → magic-link 302s',
-    async ({ page, request }) => {
-      testEmail = freshInboxEmail('flow-b');
+  test('B1-B5: free-scan submit → worker completes → deals exist → magic-link 302s', async ({
+    page,
+    request,
+  }) => {
+    testEmail = freshInboxEmail('flow-b');
 
-      // ── B1: submit a real scan via the production endpoint ────────────────
-      const submitResp = await request.post('/api/free-scan-start', {
-        data: {
-          assetType: 'Micro Resort',
-          market: 'Texas',
-          priceMin: 500_000,
-          priceMax: 3_000_000,
-          email: testEmail,
-          _hp: '',
-        },
-      });
-      expect(submitResp.status(), 'submit must succeed').toBeLessThan(300);
-      const submitBody = await submitResp.json();
-      expect(submitBody.searchId, 'searchId returned from submit').toBeTruthy();
-      const { searchId } = submitBody;
+    // ── B1: submit a real scan via the production endpoint ────────────────
+    const submitResp = await request.post('/api/free-scan-start', {
+      data: {
+        assetType: 'Micro Resort',
+        market: 'Texas',
+        priceMin: 500_000,
+        priceMax: 3_000_000,
+        email: testEmail,
+        _hp: '',
+      },
+    });
+    expect(submitResp.status(), 'submit must succeed').toBeLessThan(300);
+    const submitBody = await submitResp.json();
+    expect(submitBody.searchId, 'searchId returned from submit').toBeTruthy();
+    const { searchId } = submitBody;
 
-      console.log(`[flow-b] submitted search ${searchId} for ${testEmail}`);
+    console.log(`[flow-b] submitted search ${searchId} for ${testEmail}`);
 
-      // ── B2-B3: poll for completion (worker spawns find-deals, takes minutes) ──
-      const completed = await waitForScanStatus(searchId, ['complete', 'error'], {
-        timeoutMs: SCAN_TIMEOUT_MS,
-        pollMs: 10_000,
-      });
+    // ── B2-B3: poll for completion (worker spawns find-deals, takes minutes) ──
+    const completed = await waitForScanStatus(searchId, ['complete', 'error'], {
+      timeoutMs: SCAN_TIMEOUT_MS,
+      pollMs: 10_000,
+    });
 
-      expect(completed.status, 'scan should reach complete').toBe('complete');
-      console.log(`[flow-b] scan ${searchId} completed`);
+    expect(completed.status, 'scan should reach complete').toBe('complete');
+    console.log(`[flow-b] scan ${searchId} completed`);
 
-      // ── B3: assert deals exist for this search ───────────────────────────
-      const supabase = sb();
-      const { data: deals, error: dealsErr } = await supabase
-        .from('deals')
-        .select('id, source, title, raw_description, passed_hard_filters')
-        .eq('search_id', searchId);
-      if (dealsErr) throw dealsErr;
-      expect(deals, 'deals query should not error').toBeTruthy();
+    // ── B3: assert deals exist for this search ───────────────────────────
+    const supabase = sb();
+    const { data: deals, error: dealsErr } = await supabase
+      .from('deals')
+      .select('id, source, title, raw_description, passed_hard_filters')
+      .eq('search_id', searchId);
+    if (dealsErr) throw dealsErr;
+    expect(deals, 'deals query should not error').toBeTruthy();
 
-      // The worker may produce 0 passed deals if the buy box is too narrow,
-      // but the run should still have *some* candidates in the deals table.
-      // The contract is: complete + the email path ran. Don't require a tier.
-      console.log(
-        `[flow-b] deals: total=${deals.length} | passed_hard_filters=${
-          deals.filter((d) => d.passed_hard_filters).length
-        }`
-      );
+    // The worker may produce 0 passed deals if the buy box is too narrow,
+    // but the run should still have *some* candidates in the deals table.
+    // The contract is: complete + the email path ran. Don't require a tier.
+    console.log(
+      `[flow-b] deals: total=${deals.length} | passed_hard_filters=${
+        deals.filter((d) => d.passed_hard_filters).length
+      }`
+    );
 
-      // ── B4: assert that at least one Crexi listing surfaced ──────────────
-      // (Gideon's hard requirement: Crexi must be a working source.)
-      const crexiCount = deals.filter((d) => /crexi/i.test(d.source || '')).length;
-      if (crexiCount === 0) {
-        console.warn(
-          `[flow-b] WARNING: no Crexi listings in deals for search ${searchId}. ` +
-            `If the market has Crexi inventory and Crexi enrichment is supposed to be working, ` +
-            `this is a regression.`
-        );
-      }
-
-      // ── B5: magic-link constructed from the real searchId must verify ────
-      const token = signMagicLink({ email: testEmail, scanId: searchId });
-      const magicResp = await request.get(`/api/magic-link?token=${encodeURIComponent(token)}`, {
-        maxRedirects: 0,
-      });
-      expect(magicResp.status(), 'magic-link must 302').toBe(302);
-      const location = magicResp.headers()['location'];
-      expect(location).toContain('/dashboard');
-      expect(location).toContain(encodeURIComponent(testEmail));
-      expect(location).toContain(`scan_id=${searchId}`);
-
-      // ── B5 visual: drive the dashboard like a real user would ────────────
-      await page.goto(`/api/magic-link?token=${encodeURIComponent(token)}`);
-      await page.waitForURL(/\/dashboard(\?|$)/, { timeout: 15_000 });
-      const lsEmail = await page.evaluate(() => localStorage.getItem('dh_email'));
-      expect(lsEmail).toBe(testEmail);
-
-      console.log(
-        `[flow-b] ✓ scan ${searchId} complete · ${deals.length} deals · magic link works`
+    // ── B4: assert that at least one Crexi listing surfaced ──────────────
+    // (Gideon's hard requirement: Crexi must be a working source.)
+    const crexiCount = deals.filter((d) => /crexi/i.test(d.source || '')).length;
+    if (crexiCount === 0) {
+      console.warn(
+        `[flow-b] WARNING: no Crexi listings in deals for search ${searchId}. ` +
+          `If the market has Crexi inventory and Crexi enrichment is supposed to be working, ` +
+          `this is a regression.`
       );
     }
-  );
+
+    // ── B5: magic-link constructed from the real searchId must verify ────
+    const token = await signToken({ email: testEmail, scanId: searchId });
+    const magicResp = await request.get(`/api/magic-link?token=${encodeURIComponent(token)}`, {
+      maxRedirects: 0,
+    });
+    expect(magicResp.status(), 'magic-link must 302').toBe(302);
+    const location = magicResp.headers()['location'];
+    expect(location).toContain('/dashboard');
+    expect(location).toContain(encodeURIComponent(testEmail));
+    expect(location).toContain(`scan_id=${searchId}`);
+
+    // ── B5 visual: drive the dashboard like a real user would ────────────
+    await page.goto(`/api/magic-link?token=${encodeURIComponent(token)}`);
+    await page.waitForURL(/\/dashboard(\?|$)/, { timeout: 15_000 });
+    const lsEmail = await page.evaluate(() => localStorage.getItem('dh_email'));
+    expect(lsEmail).toBe(testEmail);
+
+    console.log(`[flow-b] ✓ scan ${searchId} complete · ${deals.length} deals · magic link works`);
+  });
 });
