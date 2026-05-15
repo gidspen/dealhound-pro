@@ -34,7 +34,8 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from offmarket.scrapers.cad_common import (
-    cache_path,
+    cache_key,
+    entity_key,
     load_targets,
     log_factory,
 )
@@ -62,12 +63,14 @@ _SCRAPER_MODULE: dict[str, str] = {
 
 def _split_by_county(
     targets: list[dict],
+    vertical: str = "pest-control",
     county_overrides: Optional[dict[str, str]] = None,
 ) -> dict[str, list[dict]]:
     """Split targets into buckets by county.
 
     Returns a dict with keys: 'harris', 'dallas', 'bexar', 'other'.
-    county_overrides: {tpcl: county_name} — force a target into a specific county.
+    county_overrides: {entity_id: county_name} — force a target into a specific county.
+    For backwards compat, also accepts the legacy {tpcl: county} form.
     County matching is case-insensitive.
     """
     buckets: dict[str, list[dict]] = {
@@ -79,9 +82,16 @@ def _split_by_county(
     overrides = {k: v.lower() for k, v in (county_overrides or {}).items()}
 
     for t in targets:
-        tpcl = t.get("tpcl", "")
-        if tpcl in overrides:
-            county = overrides[tpcl]
+        # Look up override by entity_key OR by tpcl (legacy) — whichever matches
+        try:
+            eid = entity_key(t, vertical)
+        except KeyError:
+            eid = None
+        legacy_tpcl = t.get("tpcl", "")
+        if eid and eid in overrides:
+            county = overrides[eid]
+        elif legacy_tpcl in overrides:
+            county = overrides[legacy_tpcl]
         else:
             county = (t.get("county") or "").strip().lower()
 
@@ -96,42 +106,54 @@ def _split_by_county(
 def _merge_results(
     comptroller_cache_dir: Path,
     cad_cache_dirs: dict[str, Path],
-    tpcls: list[str],
+    cache_keys: list[str],
 ) -> dict[str, dict]:
     """Read per-business cache files and merge into a single enrichment dict.
 
-    Returns {tpcl: {"comptroller": {...} | None, "cad": {...} | None}}.
+    Returns {cache_key: {"comptroller": {...} | None, "cad": {...} | None,
+                         "entity_id": str, "cache_key": str}}.
 
-    comptroller_cache_dir: Path to offmarket/cache/comptroller/
-    cad_cache_dirs: {portal_name: Path}, e.g. {"hcad": ..., "dcad": ..., "bcad": ...}
-    tpcls: list of all TPCLs to merge (union of all scrapers).
+    cache_keys: list of vertical-namespaced cache keys (from cad_common.cache_key).
+    The returned dict's TOP-LEVEL key is the cache_key. Use payload["entity_id"]
+    for the human-facing identifier.
     """
     results: dict[str, dict] = {}
 
-    for tpcl in tpcls:
-        entry: dict = {"tpcl": tpcl, "comptroller": None, "cad": None}
+    for ckey in cache_keys:
+        # Extract entity_id from cache_key (format: "vertical__entity_id")
+        eid = ckey.split("__", 1)[1] if "__" in ckey else ckey
+        entry: dict = {
+            "cache_key": ckey,
+            "entity_id": eid,
+            "comptroller": None,
+            "cad": None,
+        }
 
         # Load Comptroller cache
-        cp = comptroller_cache_dir / f"{tpcl}.json"
+        cp = comptroller_cache_dir / f"{ckey}.json"
         if cp.exists():
             try:
                 with cp.open("r", encoding="utf-8") as fh:
                     entry["comptroller"] = json.load(fh)
             except Exception:
-                entry["comptroller"] = {"error": "cache_read_failed", "tpcl": tpcl}
+                entry["comptroller"] = {"error": "cache_read_failed", "cache_key": ckey}
 
-        # Load CAD cache (first portal that has a file for this TPCL)
+        # Load CAD cache (first portal that has a file for this entity)
         for portal_name, cache_dir in cad_cache_dirs.items():
-            cp2 = cache_dir / f"{tpcl}.json"
+            cp2 = cache_dir / f"{ckey}.json"
             if cp2.exists():
                 try:
                     with cp2.open("r", encoding="utf-8") as fh:
                         entry["cad"] = json.load(fh)
                 except Exception:
-                    entry["cad"] = {"error": "cache_read_failed", "tpcl": tpcl, "portal": portal_name}
-                break  # first hit wins; a TPCL lives in one county
+                    entry["cad"] = {"error": "cache_read_failed", "cache_key": ckey, "portal": portal_name}
+                break  # first hit wins; an entity lives in one county
 
-        results[tpcl] = entry
+        # Surface cross_county_followup from the CAD cache to the top level
+        if entry["cad"] and isinstance(entry["cad"], dict) and entry["cad"].get("cross_county_followup"):
+            entry["cross_county_followup"] = entry["cad"]["cross_county_followup"]
+
+        results[ckey] = entry
 
     return results
 
@@ -206,8 +228,13 @@ def enrich(
         log(f"ERROR: {e}")
         return {}
 
-    tpcls = [t["tpcl"] for t in targets]
-    log(f"Loaded {len(targets)} targets")
+    cache_keys = []
+    for t in targets:
+        try:
+            cache_keys.append(cache_key(t, vertical))
+        except KeyError as e:
+            log(f"SKIP: target with no entity key: {e}")
+    log(f"Loaded {len(targets)} targets ({len(cache_keys)} with valid entity keys)")
 
     # Build common scraper args
     common_args = ["--vertical", vertical]
@@ -235,22 +262,25 @@ def enrich(
     # -----------------------------------------------------------------------
     # CAD pass — split by county, dispatch per portal
     # -----------------------------------------------------------------------
-    cross_county: list[dict] = []
+    unknown_county_followups: dict[str, dict] = {}
 
     if run_cad:
-        buckets = _split_by_county(targets, county_overrides=county_overrides)
+        buckets = _split_by_county(targets, vertical=vertical, county_overrides=county_overrides)
 
-        # Warn on unknowns and record cross_county_followup entries
+        # Warn on unknowns; record cross_county_followup for merge step
         for t in buckets.get("other", []):
             county_val = (t.get("county") or "unknown").strip()
-            log(f"WARNING: unknown county {county_val!r} for tpcl={t.get('tpcl')} "
+            try:
+                ckey = cache_key(t, vertical)
+            except KeyError:
+                continue
+            log(f"WARNING: unknown county {county_val!r} for {ckey} "
                 f"({t.get('legal_name', '')[:40]}) — skipping CAD scrape")
-            cross_county.append({
-                "tpcl": t.get("tpcl"),
-                "legal_name": t.get("legal_name"),
-                "county": county_val,
-                "cross_county_followup": True,
-            })
+            unknown_county_followups[ckey] = {
+                "counties": [],
+                "reason": "unknown_county_no_cad_scraper",
+                "primary_county": county_val,
+            }
 
         # Dispatch Harris → HCAD, Dallas → DCAD, Bexar → BCAD
         for county_key, portal in _PORTALS_BY_COUNTY.items():
@@ -282,23 +312,25 @@ def enrich(
         for portal in _PORTALS_BY_COUNTY.values()
     }
 
-    merged = _merge_results(comptroller_cache_dir, cad_cache_dirs, tpcls)
+    merged = _merge_results(comptroller_cache_dir, cad_cache_dirs, cache_keys)
 
-    # Inject cross_county_followup entries into the merged dict
-    for entry in cross_county:
-        tpcl = entry.get("tpcl")
-        if tpcl and tpcl in merged:
-            merged[tpcl]["cross_county_followup"] = {
-                "county": entry["county"],
-                "reason": "unknown_county_no_cad_scraper",
-            }
+    # Inject unknown-county followups (these targets have no CAD scraper, so
+    # the merge would otherwise leave them with no cross_county_followup)
+    for ckey, followup in unknown_county_followups.items():
+        if ckey in merged:
+            merged[ckey]["cross_county_followup"] = followup
 
     # Attach portal_status to each entry (useful for debugging)
     for rec in merged.values():
         rec["_portal_status"] = portal_status
 
-    log(f"Merge complete. {len(merged)} records. Portal status: {portal_status}")
-    return merged
+    # Re-key by entity_id (caller's natural identifier) — cache_key namespacing
+    # is internal. enrich("dental") returns {license_number: {...}}; enrich("pest-control")
+    # returns {tpcl: {...}}.
+    by_entity = {rec["entity_id"]: rec for rec in merged.values()}
+
+    log(f"Merge complete. {len(by_entity)} records. Portal status: {portal_status}")
+    return by_entity
 
 
 # ---------------------------------------------------------------------------

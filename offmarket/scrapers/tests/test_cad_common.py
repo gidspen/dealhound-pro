@@ -4,8 +4,11 @@ import datetime
 import unittest
 
 from offmarket.scrapers.cad_common import (
+    cache_key,
     cache_path,
+    entity_key,
     extract_exemptions,
+    is_cloudflare_challenge,
     load_cached,
     name_variants,
     write_cached,
@@ -158,6 +161,91 @@ class TestExtractExemptions(unittest.TestCase):
             extract_exemptions(None)  # type: ignore
         except Exception:
             pass  # defensive None handling expected to return defaults
+
+
+class TestEntityAndCacheKeys(unittest.TestCase):
+    def test_entity_key_pest(self):
+        self.assertEqual(entity_key({"tpcl": "0566446"}, "pest-control"), "0566446")
+
+    def test_entity_key_dental(self):
+        self.assertEqual(entity_key({"license_number": "DDS123"}, "dental"), "DDS123")
+
+    def test_entity_key_fallback_when_vertical_unknown(self):
+        # Unknown vertical → falls back to any common id field
+        self.assertEqual(entity_key({"tpcl": "FALL"}, "unknown-vertical"), "FALL")
+
+    def test_entity_key_raises_when_no_id(self):
+        with self.assertRaises(KeyError):
+            entity_key({"legal_name": "Acme"}, "pest-control")
+
+    def test_cache_key_namespaces_by_vertical(self):
+        self.assertEqual(
+            cache_key({"tpcl": "0566446"}, "pest-control"),
+            "pest-control__0566446",
+        )
+        self.assertEqual(
+            cache_key({"license_number": "DDS123"}, "dental"),
+            "dental__DDS123",
+        )
+
+    def test_cache_key_prevents_cross_vertical_collision(self):
+        # Same numeric id across two verticals → distinct cache keys
+        pest = cache_key({"tpcl": "12345"}, "pest-control")
+        dental = cache_key({"license_number": "12345"}, "dental")
+        self.assertNotEqual(pest, dental)
+
+
+class TestLoadCachedRobustness(unittest.TestCase):
+    """load_cached must not crash on corrupt JSON or malformed fresh_until dates."""
+
+    def setUp(self):
+        self.portal = "comptroller"
+        self.key = "ROBUSTNESS_TEST"
+        self.path = cache_path(self.portal, self.key)
+
+    def tearDown(self):
+        if self.path.exists():
+            self.path.unlink()
+
+    def test_malformed_fresh_until_returns_none_not_raise(self):
+        # Write a payload with a non-ISO fresh_until value
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.write_text('{"fresh_until": {"status": "not-a-date"}}', encoding="utf-8")
+        # Should return None, not raise
+        result = load_cached(self.portal, self.key, fresh_until_map={"status": "any"})
+        self.assertIsNone(result)
+
+    def test_corrupt_json_returns_none_not_raise(self):
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.write_text("{this is not json", encoding="utf-8")
+        result = load_cached(self.portal, self.key)
+        self.assertIsNone(result)
+
+    def test_missing_fresh_until_field_returns_none(self):
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.write_text('{"foo": "bar"}', encoding="utf-8")
+        result = load_cached(self.portal, self.key, fresh_until_map={"status": "any"})
+        self.assertIsNone(result)
+
+
+class TestCloudflareChallenge(unittest.TestCase):
+    def test_returns_true_on_cf_challenge_form(self):
+        self.assertTrue(is_cloudflare_challenge('<form id="cf-challenge-form">'))
+
+    def test_returns_true_on_ray_id(self):
+        self.assertTrue(is_cloudflare_challenge('<footer>Ray ID: abc123</footer>'))
+
+    def test_returns_true_on_checking_your_browser(self):
+        self.assertTrue(is_cloudflare_challenge('<h1>Checking your browser</h1>'))
+
+    def test_returns_false_on_normal_html(self):
+        self.assertFalse(is_cloudflare_challenge('<html><body>Normal page</body></html>'))
+
+    def test_returns_false_on_empty_string(self):
+        self.assertFalse(is_cloudflare_challenge(""))
+
+    def test_returns_false_on_none(self):
+        self.assertFalse(is_cloudflare_challenge(None))  # type: ignore
 
 
 if __name__ == "__main__":

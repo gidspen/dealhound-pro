@@ -201,13 +201,14 @@ class TestMergeResults(unittest.TestCase):
         for t in tpcls:
             self.assertIn(t, result)
 
-    def test_tpcl_field_present_in_entry(self):
+    def test_entity_id_field_present_in_entry(self):
         result = _merge_results(
             self.comptroller_dir,
             {"hcad": self.hcad_dir},
             ["XPQR"],
         )
-        self.assertEqual(result["XPQR"]["tpcl"], "XPQR")
+        self.assertEqual(result["XPQR"]["entity_id"], "XPQR")
+        self.assertEqual(result["XPQR"]["cache_key"], "XPQR")
 
 
 # ---------------------------------------------------------------------------

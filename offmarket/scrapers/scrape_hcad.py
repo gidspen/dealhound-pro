@@ -33,7 +33,10 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
 from offmarket.scrapers.cad_common import (
+    cache_key,
+    entity_key,
     extract_exemptions,
+    is_cloudflare_challenge,
     load_cached,
     load_targets,
     log_factory,
@@ -44,7 +47,14 @@ from offmarket.scrapers.cad_common import (
 
 PORTAL = "hcad"
 BASE_URL = "https://search.hcad.org"
-CROSS_COUNTY_FALLBACK = ["Fort Bend", "Montgomery", "Brazoria"]
+CROSS_COUNTY_COUNTIES = ["Fort Bend", "Montgomery", "Brazoria"]
+
+# Re-export for tests + symmetry with BCAD
+_is_cloudflare_challenge = is_cloudflare_challenge
+
+
+def _cross_county_followup(reason: str = "no_match_in_primary") -> dict:
+    return {"counties": CROSS_COUNTY_COUNTIES, "reason": reason}
 
 FRESH_UNTIL_MAP = {"ov65": "any", "deed_date": "any"}
 
@@ -265,15 +275,21 @@ def _pick_best_row(rows: list[dict], last: str, first: str | None) -> dict | Non
     return rows[0] if rows else None
 
 
-def lookup_one(biz: dict, page, log, save_fixture_tpcl: str | None = None) -> dict:
+def lookup_one(biz: dict, page, log, save_fixture_tpcl: str | None = None,
+               vertical: str = "pest-control") -> dict:
     """Look up one business; return enrichment payload dict."""
-    tpcl = biz["tpcl"]
+    eid = entity_key(biz, vertical)
+    ckey = cache_key(biz, vertical)
     legal = biz.get("legal_name", "")
     owner = biz.get("owner_name") or legal
 
     result: dict = {
-        "tpcl": tpcl,
+        "entity_id": eid,
+        "cache_key": ckey,
+        "tpcl": biz.get("tpcl"),
+        "license_number": biz.get("license_number"),
         "portal": PORTAL,
+        "vertical": vertical,
         "fetched_at": datetime.now(timezone.utc).isoformat(),
         "raw_term": None,
         "owner_match": None,
@@ -299,6 +315,7 @@ def lookup_one(biz: dict, page, log, save_fixture_tpcl: str | None = None) -> di
     if not variants:
         result["status"] = "no_variants"
         result["errors"].append("no_name_variants_generated")
+        write_cached(PORTAL, ckey, result)
         return result
 
     matched_rows: list[dict] = []
@@ -311,10 +328,10 @@ def lookup_one(biz: dict, page, log, save_fixture_tpcl: str | None = None) -> di
         html, rows = _search_owner(page, term, log)
         time.sleep(0.5)  # 500ms politeness between requests
 
-        if save_fixture_tpcl and tpcl == save_fixture_tpcl and html:
+        if save_fixture_tpcl and eid == save_fixture_tpcl and html:
             FIXTURE_DIR.mkdir(parents=True, exist_ok=True)
             (FIXTURE_DIR / "search_results_sample.html").write_text(html, encoding="utf-8")
-            log(f"  saved search fixture for {tpcl}")
+            log(f"  saved search fixture for {eid}")
 
         if rows:
             matched_rows = rows
@@ -325,14 +342,16 @@ def lookup_one(biz: dict, page, log, save_fixture_tpcl: str | None = None) -> di
 
     if not matched_rows:
         result["status"] = "no_match"
-        result["cross_county_followup"] = CROSS_COUNTY_FALLBACK
+        result["cross_county_followup"] = _cross_county_followup()
         log(f"  no match in Harris → flagging cross_county_followup")
+        write_cached(PORTAL, ckey, result)
         return result
 
     best = _pick_best_row(matched_rows, matched_last, matched_first)
     if not best:
         result["status"] = "no_match"
-        result["cross_county_followup"] = CROSS_COUNTY_FALLBACK
+        result["cross_county_followup"] = _cross_county_followup()
+        write_cached(PORTAL, ckey, result)
         return result
 
     result["owner_match"] = {
@@ -344,18 +363,20 @@ def lookup_one(biz: dict, page, log, save_fixture_tpcl: str | None = None) -> di
     detail_url = best.get("detail_url")
     if not detail_url:
         result["status"] = "match_no_detail_link"
+        write_cached(PORTAL, ckey, result)
         return result
 
     detail_html, detail = _get_detail(page, detail_url, log)
 
-    if save_fixture_tpcl and tpcl == save_fixture_tpcl and detail_html:
+    if save_fixture_tpcl and eid == save_fixture_tpcl and detail_html:
         FIXTURE_DIR.mkdir(parents=True, exist_ok=True)
         (FIXTURE_DIR / "detail_sample.html").write_text(detail_html, encoding="utf-8")
-        log(f"  saved detail fixture for {tpcl}")
+        log(f"  saved detail fixture for {eid}")
 
     if not detail:
         result["status"] = "detail_parse_error"
         result["errors"].append("detail_parse_returned_empty")
+        write_cached(PORTAL, ckey, result)
         return result
 
     result["exemptions"] = {
@@ -367,6 +388,7 @@ def lookup_one(biz: dict, page, log, save_fixture_tpcl: str | None = None) -> di
     result["appraised_value"] = detail.get("appraised_value")
     result["year_built"] = detail.get("year_built")
     result["status"] = "detail_fetched"
+    write_cached(PORTAL, ckey, result)
     return result
 
 
@@ -376,15 +398,19 @@ def lookup_one(biz: dict, page, log, save_fixture_tpcl: str | None = None) -> di
 
 def main():
     parser = argparse.ArgumentParser(description="HCAD owner search scraper")
+    parser.add_argument("--vertical", default="pest-control",
+                        help="Target vertical (matches offmarket/data/{vertical}_targets.json)")
     parser.add_argument("--limit", type=int, default=None, help="Process only N businesses")
-    parser.add_argument("--save-fixture", metavar="TPCL", default=None,
-                        help="Save raw HTML fixtures for the given TPCL")
+    parser.add_argument("--force-refresh", action="store_true",
+                        help="Ignore cache and re-fetch all records")
+    parser.add_argument("--save-fixture", metavar="ENTITY_ID", default=None,
+                        help="Save raw HTML fixtures for the given entity_id (TPCL/license)")
     args = parser.parse_args()
 
     log = log_factory(PORTAL)
 
     try:
-        targets = load_targets("pest-control", county_filter=["Harris"])
+        targets = load_targets(args.vertical, county_filter=["Harris"])
     except FileNotFoundError as e:
         log(f"ERROR: {e}")
         sys.exit(1)
@@ -392,7 +418,7 @@ def main():
     if args.limit:
         targets = targets[: args.limit]
 
-    log(f"Loaded {len(targets)} Harris County targets")
+    log(f"Loaded {len(targets)} Harris County targets for vertical={args.vertical}")
 
     results: dict[str, dict] = {}
 
@@ -426,23 +452,30 @@ def main():
         def _run_queue(queue: list[dict], pg, page_idx: int) -> list[dict]:
             out = []
             for biz in queue:
-                tpcl = biz["tpcl"]
-                cached = load_cached(PORTAL, tpcl, fresh_until_map=FRESH_UNTIL_MAP)
-                if cached:
-                    log(f"[ctx{page_idx}] {biz.get('legal_name','')[:30]:32s} → cache hit")
-                    out.append(cached)
-                    continue
+                eid = entity_key(biz, args.vertical)
+                ckey = cache_key(biz, args.vertical)
+                if not args.force_refresh:
+                    cached = load_cached(PORTAL, ckey, fresh_until_map=FRESH_UNTIL_MAP)
+                    if cached:
+                        log(f"[ctx{page_idx}] {biz.get('legal_name','')[:30]:32s} → cache hit")
+                        out.append({**cached, "_cache_hit": True})
+                        continue
                 try:
-                    r = lookup_one(biz, pg, log, save_fixture_tpcl=args.save_fixture)
+                    r = lookup_one(biz, pg, log, save_fixture_tpcl=args.save_fixture,
+                                   vertical=args.vertical)
                 except Exception as e:
                     r = {
-                        "tpcl": tpcl,
+                        "entity_id": eid,
+                        "cache_key": ckey,
+                        "tpcl": biz.get("tpcl"),
+                        "license_number": biz.get("license_number"),
                         "portal": PORTAL,
+                        "vertical": args.vertical,
                         "status": "error",
                         "errors": [f"{type(e).__name__}: {str(e)[:120]}"],
                         "fetched_at": datetime.now(timezone.utc).isoformat(),
                     }
-                write_cached(PORTAL, tpcl, r)
+                    write_cached(PORTAL, ckey, r)
                 ov65 = r.get("exemptions", {}).get("ov65", "?")
                 hs = r.get("exemptions", {}).get("homestead", "?")
                 log(f"[ctx{page_idx}] {biz.get('legal_name','')[:30]:32s} → {r.get('status','?'):22s} OV65={ov65} HS={hs}")

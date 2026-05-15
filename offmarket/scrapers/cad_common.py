@@ -22,12 +22,15 @@ def cache_path(portal: str, key: str) -> pathlib.Path:
 
 
 def load_cached(portal: str, key: str, fresh_until_map: dict[str, str] | None = None) -> dict | None:
-    """Return cached payload or None if missing / stale."""
+    """Return cached payload or None if missing / stale / corrupt."""
     path = cache_path(portal, key)
     if not path.exists():
         return None
-    with path.open("r", encoding="utf-8") as fh:
-        payload = json.load(fh)
+    try:
+        with path.open("r", encoding="utf-8") as fh:
+            payload = json.load(fh)
+    except (json.JSONDecodeError, OSError):
+        return None
     if fresh_until_map is None:
         return payload
     today = datetime.date.today()
@@ -36,7 +39,10 @@ def load_cached(portal: str, key: str, fresh_until_map: dict[str, str] | None = 
         raw = stored.get(field)
         if raw is None:
             return None
-        if datetime.date.fromisoformat(raw) < today:
+        try:
+            if datetime.date.fromisoformat(raw) < today:
+                return None
+        except (ValueError, TypeError):
             return None
     return payload
 
@@ -90,6 +96,69 @@ def load_targets(vertical: str, county_filter: list[str] | None = None) -> list[
         return targets
     cf_lower = [c.lower() for c in county_filter]
     return [t for t in targets if (t.get("county") or "").lower() in cf_lower]
+
+
+# ---------------------------------------------------------------------------
+# Entity keys — vertical-aware identifier for cache + logging
+# ---------------------------------------------------------------------------
+
+# Canonical identifier field per vertical. New verticals add an entry here.
+_VERTICAL_KEY_FIELD = {
+    "pest-control": "tpcl",
+    "dental": "license_number",
+    "fire-life-safety": "license_number",
+}
+
+
+def entity_key(target: dict, vertical: str) -> str:
+    """Vertical-specific stable identifier for this target (e.g. TPCL, license number).
+
+    Falls back to any common id field if the vertical's canonical field is missing.
+    """
+    field = _VERTICAL_KEY_FIELD.get(vertical)
+    if field and target.get(field):
+        return str(target[field])
+    for k in ("tpcl", "license_number", "npi", "id"):
+        if target.get(k):
+            return str(target[k])
+    raise KeyError(
+        f"No entity_key for vertical={vertical!r} in target with keys {list(target.keys())[:6]}"
+    )
+
+
+def cache_key(target: dict, vertical: str) -> str:
+    """Vertical-namespaced cache key. Prevents collision when ids overlap across verticals."""
+    return f"{vertical}__{entity_key(target, vertical)}"
+
+
+# ---------------------------------------------------------------------------
+# Cloudflare challenge detection — shared across all CAD scrapers behind CF
+# ---------------------------------------------------------------------------
+
+# Ordered from most specific to most general. Any single hit = challenge page.
+_CF_MARKERS = [
+    "cf-challenge-form",
+    "jschl-answer",
+    "cf_clearance",
+    "cf-spinner",
+    "challenges.cloudflare.com",
+    "Checking your browser",
+    "Ray ID",
+]
+
+
+def is_cloudflare_challenge(html: str) -> bool:
+    """True if html looks like a Cloudflare challenge page.
+
+    Scans for known marker strings — one strong signal is sufficient.
+    Used by any scraper that hits a CF-protected portal (HCAD, BCAD, future).
+    """
+    if not html:
+        return False
+    for marker in _CF_MARKERS:
+        if marker in html:
+            return True
+    return False
 
 
 # ---------------------------------------------------------------------------

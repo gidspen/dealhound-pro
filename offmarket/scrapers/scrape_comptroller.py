@@ -12,6 +12,7 @@ Cache: offmarket/cache/comptroller/{tpcl}.json  (atomic write via cad_common)
 """
 import argparse
 import json
+import os
 import sys
 import urllib.parse
 import urllib.request
@@ -30,7 +31,8 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from offmarket.scrapers.cad_common import (
-    cache_path,
+    cache_key,
+    entity_key,
     load_cached,
     load_targets,
     log_factory,
@@ -156,27 +158,29 @@ def words_compatible(target_words: list, candidate_words: list) -> bool:
 # Callers are responsible for cache-check and cache-write.
 # ---------------------------------------------------------------------------
 
-def _lookup_one(business: dict) -> dict:
+def _lookup_one(business: dict, vertical: str = "pest-control") -> dict:
     """Look up one business via the TX Comptroller JSON API.
 
     Takes a target dict (from load_targets); returns a payload dict with the
     standard Comptroller result schema.  NO cache I/O — pure network function.
     Designed to be importable and mockable in tests.
-
-    Required keys in business: tpcl, legal_name.
-    Optional: business_name_used, zip.
     """
     legal = business['legal_name']
     business_name = business.get('business_name_used') or ''
-    tpcl = business['tpcl']
+    eid = entity_key(business, vertical)
+    ckey = cache_key(business, vertical)
     target_zip = business.get('zip')
 
     is_sole = is_sole_proprietor_name(legal)
 
     today = date.today()
     result = {
-        "tpcl": tpcl,
+        "entity_id": eid,
+        "cache_key": ckey,
+        "tpcl": business.get('tpcl'),
+        "license_number": business.get('license_number'),
         "portal": PORTAL,
+        "vertical": vertical,
         "legal_name": legal,
         "business_name": business_name,
         "is_sole_prop_estimated": is_sole,
@@ -337,17 +341,22 @@ def main() -> None:
     errors = 0
 
     def _process_one(biz: dict) -> dict:
-        tpcl = biz['tpcl']
+        eid = entity_key(biz, args.vertical)
+        ckey = cache_key(biz, args.vertical)
         if not args.force_refresh:
-            cached = load_cached(PORTAL, tpcl, fresh_until_map=_FRESH_UNTIL_MAP)
+            cached = load_cached(PORTAL, ckey, fresh_until_map=_FRESH_UNTIL_MAP)
             if cached is not None:
-                return cached
+                return {**cached, "_cache_hit": True}
         try:
-            r = _lookup_one(biz)
+            r = _lookup_one(biz, args.vertical)
         except Exception as e:
             r = {
-                "tpcl": tpcl,
+                "entity_id": eid,
+                "cache_key": ckey,
+                "tpcl": biz.get('tpcl'),
+                "license_number": biz.get('license_number'),
                 "portal": PORTAL,
+                "vertical": args.vertical,
                 "legal_name": biz.get('legal_name', ''),
                 "status": "error",
                 "errors": [f"{type(e).__name__}: {str(e)[:120]}"],
@@ -358,7 +367,7 @@ def main() -> None:
                     "status": (date.today() + timedelta(days=_STATUS_TTL_DAYS)).isoformat(),
                 },
             }
-        write_cached(PORTAL, tpcl, r)
+        write_cached(PORTAL, ckey, r)
         return r
 
     with ThreadPoolExecutor(max_workers=8) as ex:
@@ -369,7 +378,12 @@ def main() -> None:
                 r = fut.result()
             except Exception as e:
                 r = {
-                    "tpcl": b['tpcl'], "portal": PORTAL,
+                    "entity_id": entity_key(b, args.vertical),
+                    "cache_key": cache_key(b, args.vertical),
+                    "tpcl": b.get('tpcl'),
+                    "license_number": b.get('license_number'),
+                    "portal": PORTAL,
+                    "vertical": args.vertical,
                     "legal_name": b.get('legal_name', ''),
                     "status": "error",
                     "errors": [f"{type(e).__name__}: {str(e)[:120]}"],
@@ -377,9 +391,8 @@ def main() -> None:
                     "raw_term": None, "owner_match": None,
                     "fresh_until": {"status": (date.today() + timedelta(days=_STATUS_TTL_DAYS)).isoformat()},
                 }
-            results[r['tpcl']] = r
-            is_hit = r.get('_cache_hit', False)
-            if is_hit:
+            results[r['entity_id']] = r
+            if r.get('_cache_hit'):
                 cached_hits += 1
             status = r.get('status', '?')
             if status == 'error':
@@ -389,12 +402,9 @@ def main() -> None:
 
     summary(results, log)
 
-    # Write run manifest
-    _CACHE_ROOT = Path(__file__).resolve().parent.parent / "cache"
-    manifest_dir = _CACHE_ROOT / PORTAL
-    manifest_dir.mkdir(parents=True, exist_ok=True)
+    # Write run manifest via cad_common.write_cached (same atomic-write idiom)
     today_str = date.today().isoformat()
-    manifest_path = manifest_dir / f"_manifest_{args.vertical}_{today_str}.json"
+    manifest_key = f"_manifest_{args.vertical}_{today_str}"
     manifest = {
         "vertical": args.vertical,
         "run_date": datetime.now(timezone.utc).isoformat(),
@@ -404,12 +414,8 @@ def main() -> None:
         "pass": len([r for r in results.values() if r.get("status") not in ("error", "not_found")]),
         "not_found": len([r for r in results.values() if r.get("status") == "not_found"]),
     }
-    tmp = manifest_path.with_suffix(".json.tmp")
-    with tmp.open("w", encoding="utf-8") as fh:
-        json.dump(manifest, fh, indent=2)
-    import os
-    os.replace(tmp, manifest_path)
-    log(f"Manifest written → {manifest_path}")
+    write_cached(PORTAL, manifest_key, manifest)
+    log(f"Manifest written → cache/{PORTAL}/{manifest_key}.json")
 
 
 if __name__ == '__main__':

@@ -116,15 +116,18 @@ class TestNoMatchCrossCounty(unittest.TestCase):
         def _fake_search(page, term, log):
             return "", []
 
-        with patch("offmarket.scrapers.scrape_hcad._search_owner", side_effect=_fake_search):
-            # page=None is safe because _search_owner is fully mocked
+        # Also patch write_cached so we don't actually touch disk
+        with patch("offmarket.scrapers.scrape_hcad._search_owner", side_effect=_fake_search), \
+             patch("offmarket.scrapers.scrape_hcad.write_cached"):
             result = lookup_one(biz, page=None, log=self._noop_log)
 
         self.assertEqual(result["status"], "no_match")
         self.assertIn("cross_county_followup", result)
-        self.assertIn("Fort Bend", result["cross_county_followup"])
-        self.assertIn("Montgomery", result["cross_county_followup"])
-        self.assertIn("Brazoria", result["cross_county_followup"])
+        self.assertIsInstance(result["cross_county_followup"], dict)
+        counties = result["cross_county_followup"]["counties"]
+        self.assertIn("Fort Bend", counties)
+        self.assertIn("Montgomery", counties)
+        self.assertIn("Brazoria", counties)
 
 
 class TestCacheHitSkipsNetwork(unittest.TestCase):

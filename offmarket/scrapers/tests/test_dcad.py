@@ -14,12 +14,18 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from offmarket.scrapers.scrape_dcad import (
-    CROSS_COUNTY_FALLBACK,
+    CROSS_COUNTY_COUNTIES,
     _make_no_match_result,
     _parse_detail_text,
     _parse_results,
 )
 from offmarket.scrapers.cad_common import extract_exemptions
+
+_TEST_BIZ = {
+    "tpcl": "12345",
+    "legal_name": "ACME PEST CONTROL",
+    "owner_name": "John Smith",
+}
 
 _FIXTURES = Path(__file__).parent / "fixtures" / "dcad"
 
@@ -172,31 +178,31 @@ class TestCrossCountyFollowup(unittest.TestCase):
 
     def test_no_match_result_has_cross_county_followup(self):
         result = _make_no_match_result(
-            tpcl="12345",
-            legal_name="ACME PEST CONTROL",
-            owner_name="John Smith",
-            searches=[{"term": "Smith John", "rows": 0, "err": None}],
+            _TEST_BIZ,
+            "pest-control",
+            [{"term": "Smith John", "rows": 0, "err": None}],
         )
         self.assertEqual(result["status"], "no_match")
         self.assertIn("cross_county_followup", result)
-        self.assertIsInstance(result["cross_county_followup"], list)
+        self.assertIsInstance(result["cross_county_followup"], dict)
+        self.assertIn("counties", result["cross_county_followup"])
+        self.assertIn("reason", result["cross_county_followup"])
 
     def test_cross_county_fallback_counties(self):
-        result = _make_no_match_result("12345", "ACME", "John", [])
-        counties = result["cross_county_followup"]
+        result = _make_no_match_result(_TEST_BIZ, "pest-control", [])
+        counties = result["cross_county_followup"]["counties"]
         self.assertIn("Collin", counties)
         self.assertIn("Denton", counties)
         self.assertIn("Tarrant", counties)
         self.assertIn("Rockwall", counties)
 
     def test_cross_county_fallback_count(self):
-        result = _make_no_match_result("12345", "ACME", "John", [])
-        self.assertEqual(len(result["cross_county_followup"]), 4)
+        result = _make_no_match_result(_TEST_BIZ, "pest-control", [])
+        self.assertEqual(len(result["cross_county_followup"]["counties"]), 4)
 
     def test_cross_county_constant_matches_result(self):
-        """CROSS_COUNTY_FALLBACK constant is what gets embedded in no-match results."""
-        result = _make_no_match_result("12345", "ACME", "John", [])
-        self.assertEqual(result["cross_county_followup"], CROSS_COUNTY_FALLBACK)
+        result = _make_no_match_result(_TEST_BIZ, "pest-control", [])
+        self.assertEqual(result["cross_county_followup"]["counties"], CROSS_COUNTY_COUNTIES)
 
 
 class TestExtractExemptionsIntegration(unittest.TestCase):

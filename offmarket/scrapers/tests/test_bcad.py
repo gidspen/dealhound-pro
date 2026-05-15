@@ -209,11 +209,13 @@ class TestCrossCountyFollowup(unittest.TestCase):
 
     def _make_no_match_result(self) -> dict:
         """Build a minimal no-match result dict as _lookup_one would produce."""
+        from offmarket.scrapers.scrape_bcad import _cross_county_followup
         return {
+            "entity_id": "0566813",
             "tpcl": "0566813",
             "portal": "bcad",
             "status": "no_match",
-            "cross_county_followup": ["Comal", "Guadalupe"],
+            "cross_county_followup": _cross_county_followup(),
             "searches": [],
             "errors": [],
         }
@@ -222,16 +224,18 @@ class TestCrossCountyFollowup(unittest.TestCase):
         result = self._make_no_match_result()
         self.assertIn("cross_county_followup", result)
 
-    def test_cross_county_followup_value(self):
+    def test_cross_county_followup_is_dict(self):
         result = self._make_no_match_result()
-        self.assertEqual(result["cross_county_followup"], ["Comal", "Guadalupe"])
+        self.assertIsInstance(result["cross_county_followup"], dict)
+        self.assertIn("counties", result["cross_county_followup"])
+        self.assertIn("reason", result["cross_county_followup"])
 
     def test_cross_county_followup_on_no_match_status(self):
         result = self._make_no_match_result()
         self.assertEqual(result["status"], "no_match")
-        self.assertIsInstance(result["cross_county_followup"], list)
-        self.assertIn("Comal", result["cross_county_followup"])
-        self.assertIn("Guadalupe", result["cross_county_followup"])
+        counties = result["cross_county_followup"]["counties"]
+        self.assertIn("Comal", counties)
+        self.assertIn("Guadalupe", counties)
 
     def test_cross_county_followup_not_on_matched_status(self):
         """A matched result should NOT have cross_county_followup."""

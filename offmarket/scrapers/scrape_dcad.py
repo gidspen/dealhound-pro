@@ -29,7 +29,8 @@ if str(_REPO_ROOT) not in sys.path:
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
 from offmarket.scrapers.cad_common import (
-    cache_path,
+    cache_key,
+    entity_key,
     extract_exemptions,
     load_cached,
     log_factory,
@@ -48,7 +49,11 @@ SEARCH_URL = "https://www.dallascad.org/SearchOwner.aspx"
 HOME_URL = "https://www.dallascad.org/"
 POLITENESS_SEC = 1.0
 VIEWSTATE_REFRESH_EVERY = 20
-CROSS_COUNTY_FALLBACK = ["Collin", "Denton", "Tarrant", "Rockwall"]
+CROSS_COUNTY_COUNTIES = ["Collin", "Denton", "Tarrant", "Rockwall"]
+
+
+def _cross_county_followup(reason: str = "no_match_in_primary") -> dict:
+    return {"counties": CROSS_COUNTY_COUNTIES, "reason": reason}
 
 # TTL for field-typed cache freshness (matches PLAN §4)
 _FRESH_UNTIL_MAP = {
@@ -233,16 +238,20 @@ def _parse_detail_text(text: str) -> dict:
     return result
 
 
-def _make_no_match_result(tpcl: str, legal_name: str, owner_name: str, searches: list) -> dict:
+def _make_no_match_result(biz: dict, vertical: str, searches: list) -> dict:
     """Build a standardised no-match result dict with cross-county fallback."""
     return {
-        "tpcl": tpcl,
-        "legal_name": legal_name,
-        "owner_name": owner_name,
+        "entity_id": entity_key(biz, vertical),
+        "cache_key": cache_key(biz, vertical),
+        "tpcl": biz.get("tpcl"),
+        "license_number": biz.get("license_number"),
+        "legal_name": biz.get("legal_name", ""),
+        "owner_name": biz.get("owner_name") or biz.get("legal_name", ""),
         "portal": PORTAL,
+        "vertical": vertical,
         "status": "no_match",
         "searches": searches,
-        "cross_county_followup": CROSS_COUNTY_FALLBACK,
+        "cross_county_followup": _cross_county_followup(),
         "fetched_at": datetime.now(timezone.utc).isoformat(),
     }
 
@@ -302,20 +311,23 @@ def _fetch_detail(page, link_url: str) -> tuple[Optional[dict], Optional[str]]:
 # Per-business orchestration
 # ---------------------------------------------------------------------------
 
-def _lookup_one(page, biz: dict, request_counter: list[int]) -> dict:
+def _lookup_one(page, biz: dict, request_counter: list[int],
+                vertical: str = "pest-control", force_refresh: bool = False) -> dict:
     """Look up one business; return enrichment dict. Mutates request_counter[0].
 
     Tries every name variant from cad_common.name_variants in sequence.
     Refreshes viewstate every VIEWSTATE_REFRESH_EVERY requests.
     """
-    tpcl = biz["tpcl"]
+    eid = entity_key(biz, vertical)
+    ckey = cache_key(biz, vertical)
     legal = biz.get("legal_name", "")
     owner = biz.get("owner_name") or legal
 
     # --- Cache-first ---
-    cached = load_cached(PORTAL, tpcl, fresh_until_map=_FRESH_UNTIL_MAP)
-    if cached is not None:
-        return cached
+    if not force_refresh:
+        cached = load_cached(PORTAL, ckey, fresh_until_map=_FRESH_UNTIL_MAP)
+        if cached is not None:
+            return {**cached, "_cache_hit": True}
 
     searches = []
     rows: list[dict] = []
@@ -346,8 +358,8 @@ def _lookup_one(page, biz: dict, request_counter: list[int]) -> dict:
             break
 
     if not rows:
-        result = _make_no_match_result(tpcl, legal, owner, searches)
-        write_cached(PORTAL, tpcl, result)
+        result = _make_no_match_result(biz, vertical, searches)
+        write_cached(PORTAL, ckey, result)
         return result
 
     # --- Pick best row ---
@@ -361,10 +373,14 @@ def _lookup_one(page, biz: dict, request_counter: list[int]) -> dict:
             break
 
     result: dict = {
-        "tpcl": tpcl,
+        "entity_id": eid,
+        "cache_key": ckey,
+        "tpcl": biz.get("tpcl"),
+        "license_number": biz.get("license_number"),
         "legal_name": legal,
         "owner_name": owner,
         "portal": PORTAL,
+        "vertical": vertical,
         "status": "search_matched",
         "matched_term": matched_term,
         "rows_count": len(rows),
@@ -407,7 +423,7 @@ def _lookup_one(page, biz: dict, request_counter: list[int]) -> dict:
         else:
             result["detail_error"] = err
 
-    write_cached(PORTAL, tpcl, result)
+    write_cached(PORTAL, ckey, result)
     return result
 
 
@@ -415,14 +431,12 @@ def _lookup_one(page, biz: dict, request_counter: list[int]) -> dict:
 # Fixture capture helper
 # ---------------------------------------------------------------------------
 
-def _save_fixture(tpcl: str, vertical: str = "pest-control") -> None:
-    """Capture live search + detail HTML to fixtures dir for a given TPCL."""
-    from offmarket.scrapers.cad_common import load_targets
-
+def _save_fixture(eid: str, vertical: str = "pest-control") -> None:
+    """Capture live search + detail HTML to fixtures dir for a given entity_id."""
     targets = load_targets(vertical, county_filter=["Dallas"])
-    biz = next((b for b in targets if b["tpcl"] == tpcl), None)
+    biz = next((b for b in targets if entity_key(b, vertical) == eid), None)
     if not biz:
-        print(f"TPCL {tpcl!r} not found in {vertical} targets")
+        print(f"entity_id {eid!r} not found in {vertical} targets")
         return
 
     legal = biz.get("legal_name", "")
@@ -534,20 +548,31 @@ def main() -> None:
         _warm_viewstate(page)
 
         for i, biz in enumerate(targets, 1):
-            tpcl = biz.get("tpcl", f"unknown_{i}")
             try:
-                r = _lookup_one(page, biz, request_counter)
+                eid = entity_key(biz, args.vertical)
+                ckey = cache_key(biz, args.vertical)
+            except KeyError:
+                eid = f"unknown_{i}"
+                ckey = f"{args.vertical}__{eid}"
+            try:
+                r = _lookup_one(page, biz, request_counter,
+                                vertical=args.vertical,
+                                force_refresh=args.force_refresh)
             except Exception as e:
                 r = {
-                    "tpcl": tpcl,
+                    "entity_id": eid,
+                    "cache_key": ckey,
+                    "tpcl": biz.get("tpcl"),
+                    "license_number": biz.get("license_number"),
                     "legal_name": biz.get("legal_name", ""),
                     "portal": PORTAL,
+                    "vertical": args.vertical,
                     "status": "error",
                     "error": f"{type(e).__name__}: {str(e)[:120]}",
                     "fetched_at": datetime.now(timezone.utc).isoformat(),
                 }
 
-            results[tpcl] = r
+            results[eid] = r
             status = r.get("status", "?")
             exemptions = r.get("exemptions", {})
             ov65 = exemptions.get("ov65", r.get("cad_ov65", "?"))

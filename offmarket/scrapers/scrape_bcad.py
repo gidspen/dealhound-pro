@@ -16,18 +16,19 @@ Strategy:
   (PLAN §8 risk #3.)
 """
 import argparse
-import json
 import sys
 import time
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timezone, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
 from offmarket.scrapers.cad_common import (
-    cache_path,
+    cache_key,
+    entity_key,
     extract_exemptions,
+    is_cloudflare_challenge,
     load_cached,
     load_targets,
     log_factory,
@@ -55,44 +56,16 @@ _FRESH_UNTIL_MAP = {
     "year_built": 365,
 }
 
-CROSS_COUNTY_FALLBACK = ["Comal", "Guadalupe"]
+CROSS_COUNTY_COUNTIES = ["Comal", "Guadalupe"]
 POLITENESS_SLEEP = 2.0  # seconds between requests
 
 
-# ---------------------------------------------------------------------------
-# Cloudflare detection
-# ---------------------------------------------------------------------------
-
-# Ordered from most specific to most general. Any single hit = challenge page.
-_CF_MARKERS = [
-    "cf-challenge-form",          # challenge form id (interactive + JS challenges)
-    "jschl-answer",               # JS challenge hidden input (legacy)
-    "cf_clearance",               # clearance cookie referenced in body
-    "cf-spinner",                 # spinner div on JS-challenge pages
-    "challenges.cloudflare.com",  # Turnstile iframe src
-    "Checking your browser",      # human-readable challenge header
-    "Ray ID",                     # Cloudflare diagnostic footer
-]
+def _cross_county_followup(reason: str = "no_match_in_primary") -> dict:
+    return {"counties": CROSS_COUNTY_COUNTIES, "reason": reason}
 
 
-def _is_cloudflare_challenge(html: str) -> bool:
-    """Return True if html looks like a Cloudflare challenge page.
-
-    Heuristic: scan for known Cloudflare marker strings (case-sensitive where
-    casing is stable in CF HTML, otherwise lower-case comparison).  We require
-    at least ONE marker from the set — a single strong signal is sufficient.
-
-    Design rationale: using multiple independent markers prevents false
-    positives from pages that happen to mention "Ray ID" in their own content
-    while also providing coverage across the several challenge page variants
-    CF deploys (JS challenge, managed challenge, Turnstile CAPTCHA).
-    """
-    if not html:
-        return False
-    for marker in _CF_MARKERS:
-        if marker in html:
-            return True
-    return False
+# Re-export shared CF detector for test backwards-compat
+_is_cloudflare_challenge = is_cloudflare_challenge
 
 
 # ---------------------------------------------------------------------------
@@ -389,28 +362,34 @@ def _fetch_detail(page, href: str, log) -> tuple[dict | None, str | None]:
 # Per-business lookup
 # ---------------------------------------------------------------------------
 
-def _lookup_one(page, biz: dict, log, force_refresh: bool = False) -> dict:
+def _lookup_one(page, biz: dict, log, force_refresh: bool = False,
+                vertical: str = "pest-control") -> dict:
     """Look up one Bexar County business; return enrichment dict.
 
     Cache-first unless force_refresh=True.
-    On no Bexar match: emits cross_county_followup = ["Comal", "Guadalupe"].
+    On no Bexar match: emits cross_county_followup dict {counties, reason}.
     """
-    tpcl = biz["tpcl"]
+    eid = entity_key(biz, vertical)
+    ckey = cache_key(biz, vertical)
     legal = biz.get("legal_name", "")
     owner = biz.get("owner_name") or legal
 
     # --- cache check ---
     if not force_refresh:
-        cached = load_cached(PORTAL, tpcl, fresh_until_map={
+        cached = load_cached(PORTAL, ckey, fresh_until_map={
             k: "any" for k in _FRESH_UNTIL_MAP
         })
         if cached is not None:
-            log(f"  cache hit: {tpcl}")
-            return cached
+            log(f"  cache hit: {eid}")
+            return {**cached, "_cache_hit": True}
 
     result: dict = {
-        "tpcl": tpcl,
+        "entity_id": eid,
+        "cache_key": ckey,
+        "tpcl": biz.get("tpcl"),
+        "license_number": biz.get("license_number"),
         "portal": PORTAL,
+        "vertical": vertical,
         "legal_name": legal,
         "owner_name": owner,
         "fetched_at": datetime.now(timezone.utc).isoformat(),
@@ -418,14 +397,10 @@ def _lookup_one(page, biz: dict, log, force_refresh: bool = False) -> dict:
         "errors": [],
     }
 
-    # --- build fresh_until dates ---
+    # --- build fresh_until dates (use timedelta uniformly — leap-safe) ---
     today = date.today()
     result["fresh_until"] = {
-        field: (
-            today.replace(year=today.year + 1)
-            if days == 365
-            else date.fromordinal(today.toordinal() + days)
-        ).isoformat()
+        field: (today + timedelta(days=days)).isoformat()
         for field, days in _FRESH_UNTIL_MAP.items()
     }
 
@@ -464,13 +439,14 @@ def _lookup_one(page, biz: dict, log, force_refresh: bool = False) -> dict:
 
     if cloudflare_blocked:
         result["status"] = "cloudflare_blocked"
-        log(f"  [{tpcl}] Cloudflare CAPTCHA — stopping run")
+        log(f"  [{eid}] Cloudflare CAPTCHA — stopping run")
+        write_cached(PORTAL, ckey, result)
         return result
 
     if not rows:
         result["status"] = "no_match"
-        result["cross_county_followup"] = CROSS_COUNTY_FALLBACK
-        write_cached(PORTAL, tpcl, result)
+        result["cross_county_followup"] = _cross_county_followup()
+        write_cached(PORTAL, ckey, result)
         return result
 
     result["status"] = "search_matched"
@@ -497,7 +473,8 @@ def _lookup_one(page, biz: dict, log, force_refresh: bool = False) -> dict:
         detail, err = _fetch_detail(page, best["detail_href"], log)
         if err == "cloudflare_blocked":
             result["status"] = "cloudflare_blocked"
-            log(f"  [{tpcl}] Cloudflare CAPTCHA on detail page — stopping run")
+            log(f"  [{eid}] Cloudflare CAPTCHA on detail page — stopping run")
+            write_cached(PORTAL, ckey, result)
             return result
         if detail:
             result["status"] = "detail_fetched"
@@ -513,7 +490,7 @@ def _lookup_one(page, biz: dict, log, force_refresh: bool = False) -> dict:
     else:
         result["errors"].append("no_detail_href")
 
-    write_cached(PORTAL, tpcl, result)
+    write_cached(PORTAL, ckey, result)
     return result
 
 
@@ -521,16 +498,16 @@ def _lookup_one(page, biz: dict, log, force_refresh: bool = False) -> dict:
 # --save-fixture helper
 # ---------------------------------------------------------------------------
 
-def _save_fixture(page, tpcl: str, log) -> None:
-    """Navigate BCAD for a single known TPCL and write HTML fixtures to disk."""
+def _save_fixture(page, eid: str, log, vertical: str = "pest-control") -> None:
+    """Navigate BCAD for a single known entity_id and write HTML fixtures to disk."""
     fixture_dir = Path(__file__).parent / "tests" / "fixtures" / "bcad"
     fixture_dir.mkdir(parents=True, exist_ok=True)
 
-    log(f"save-fixture: loading targets for tpcl={tpcl}")
-    targets = load_targets("pest-control", county_filter=["bexar"])
-    biz = next((b for b in targets if b["tpcl"] == tpcl), None)
+    log(f"save-fixture: loading targets for entity_id={eid}")
+    targets = load_targets(vertical, county_filter=["bexar"])
+    biz = next((b for b in targets if entity_key(b, vertical) == eid), None)
     if biz is None:
-        log(f"save-fixture: tpcl {tpcl} not found in Bexar targets")
+        log(f"save-fixture: entity_id {eid} not found in Bexar targets")
         return
 
     variants = name_variants(biz.get("legal_name"), biz.get("owner_name"))
@@ -571,8 +548,10 @@ def _save_fixture(page, tpcl: str, log) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="BCAD owner search scraper")
-    parser.add_argument("--save-fixture", metavar="TPCL",
-                        help="Capture live HTML fixtures for the given TPCL and exit")
+    parser.add_argument("--vertical", default="pest-control",
+                        help="Target vertical (matches offmarket/data/{vertical}_targets.json)")
+    parser.add_argument("--save-fixture", metavar="ENTITY_ID",
+                        help="Capture live HTML fixtures for the given entity_id and exit")
     parser.add_argument("--limit", type=int, default=None,
                         help="Process at most N businesses (for debugging)")
     parser.add_argument("--force-refresh", action="store_true",
@@ -581,10 +560,10 @@ def main() -> None:
 
     log = log_factory(PORTAL)
 
-    targets = load_targets("pest-control", county_filter=["bexar"])
+    targets = load_targets(args.vertical, county_filter=["bexar"])
     if args.limit:
         targets = targets[: args.limit]
-    log(f"Loaded {len(targets)} Bexar County businesses")
+    log(f"Loaded {len(targets)} Bexar County businesses for vertical={args.vertical}")
 
     results: dict[str, dict] = {}
 
@@ -604,7 +583,7 @@ def main() -> None:
                 log("Cannot capture fixture — interactive Cloudflare challenge")
                 browser.close()
                 sys.exit(1)
-            _save_fixture(page, args.save_fixture, log)
+            _save_fixture(page, args.save_fixture, log, vertical=args.vertical)
             browser.close()
             return
 
@@ -615,36 +594,48 @@ def main() -> None:
             browser.close()
             # Write a blocked sentinel for all targets so orchestrator knows
             for biz in targets:
+                eid = entity_key(biz, args.vertical)
+                ckey = cache_key(biz, args.vertical)
                 r = {
-                    "tpcl": biz["tpcl"],
+                    "entity_id": eid,
+                    "cache_key": ckey,
+                    "tpcl": biz.get("tpcl"),
+                    "license_number": biz.get("license_number"),
                     "portal": PORTAL,
+                    "vertical": args.vertical,
                     "status": "cloudflare_blocked",
                     "fetched_at": datetime.now(timezone.utc).isoformat(),
                     "errors": ["interactive_cf_challenge_at_warmup"],
                 }
-                results[biz["tpcl"]] = r
-                write_cached(PORTAL, biz["tpcl"], r)
+                results[eid] = r
+                write_cached(PORTAL, ckey, r)
             summary(results, log)
             return
 
         # --- Per-business loop ---
         for i, biz in enumerate(targets, 1):
-            tpcl = biz["tpcl"]
+            eid = entity_key(biz, args.vertical)
+            ckey = cache_key(biz, args.vertical)
             try:
-                r = _lookup_one(page, biz, log, force_refresh=args.force_refresh)
+                r = _lookup_one(page, biz, log, force_refresh=args.force_refresh,
+                                vertical=args.vertical)
             except Exception as e:
                 r = {
-                    "tpcl": tpcl,
+                    "entity_id": eid,
+                    "cache_key": ckey,
+                    "tpcl": biz.get("tpcl"),
+                    "license_number": biz.get("license_number"),
                     "portal": PORTAL,
+                    "vertical": args.vertical,
                     "legal_name": biz.get("legal_name", ""),
                     "status": "error",
                     "error": f"{type(e).__name__}: {str(e)[:120]}",
                     "fetched_at": datetime.now(timezone.utc).isoformat(),
                     "errors": [f"{type(e).__name__}: {str(e)[:120]}"],
                 }
-                write_cached(PORTAL, tpcl, r)
+                write_cached(PORTAL, ckey, r)
 
-            results[tpcl] = r
+            results[eid] = r
             status = r.get("status", "?")
             ov65 = r.get("exemptions", {}).get("ov65", "?")
             hs = r.get("exemptions", {}).get("homestead", "?")

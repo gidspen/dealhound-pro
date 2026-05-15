@@ -219,3 +219,27 @@ Three weakest decisions in the first draft + the fixes that are now in the plan:
 - `offmarket/data/pest-control_targets.json` — target schema
 - `offmarket/REPORT-pest-tx-2026-Q2-v2.md` — §7 playbook source
 - `offmarket/scrapers/cad_common.py` — created in Phase A, imported by all
+
+---
+
+## Deviations from plan (post-implementation)
+
+The independent Phase D review (Opus) caught several mismatches between this plan and what shipped. These are now reconciled in code; the plan is updated for accuracy.
+
+1. **HCAD does have a Cloudflare challenge.** §7 of REPORT v2 claims "no anti-bot observed" on `search.hcad.org` — that was incorrect. The spike author tested via headed Chrome where CF auto-resolved silently. Headless Playwright (and any curl/urllib) trips the managed challenge; the `api.hcad.org` XHR endpoint requires a CF-issued session token. **Reality:** HCAD ships with Playwright (2 contexts) + CF detection, mirroring BCAD. The 4-worker HTTP path from §5 was infeasible.
+
+2. **Cross-county fallback scope narrowed.** §8 risk #4 said "cross-county fallback shipped in v1" with actual scraping against adjacent CADs (Collin/Denton/Tarrant/Rockwall/etc.). **Reality:** building those adjacent-CAD scrapers is a separate sprint per portal. v1 emits a `cross_county_followup: {counties: [...], reason: "..."}` field on no-match for manual followup, but does NOT query the adjacent counties. The Fincannon gap is *flagged*, not yet *closed*.
+
+3. **Cross-vertical keying via `entity_key` / `cache_key`.** §4 promised the abstraction would live in `load_targets`. **Reality:** explicit helpers `cad_common.entity_key(target, vertical)` and `cache_key(target, vertical)` are called at every site. The cache filename uses `{vertical}__{entity_id}` to prevent collision between e.g. a pest TPCL "12345" and a dental license "12345". `enrich(vertical)` re-keys its return dict by entity_id at the boundary so callers see natural identifiers.
+
+4. **`cross_county_followup` is a dict, not a list.** Scrapers used to emit `["Fort Bend", "Montgomery", "Brazoria"]`; `enrich_phase6._merge_results` emitted `{"county": "...", "reason": "..."}`. Two schemas under one key. **Reality:** unified to `{"counties": [...], "reason": "..."}` everywhere. The `_cross_county_followup()` helper in each scraper is the single source.
+
+5. **All scrapers now write_cached on every return path.** HCAD's `lookup_one` previously only wrote cache from the outer caller in `main()`; DCAD/BCAD wrote inside `_lookup_one`. Reconciled: every scraper writes inside the per-business function, every return path. The outer write in `_run_queue` is dropped.
+
+6. **Comptroller `cached_hits` counter actually works.** Previously always reported 0 because nothing set `_cache_hit`. Fixed: cache-hit branch returns `{**cached, "_cache_hit": True}`.
+
+7. **`load_cached` hardened against malformed cache files.** Returns `None` on corrupt JSON or non-ISO `fresh_until` dates rather than raising.
+
+8. **BCAD `fresh_until` leap-year bug fixed.** `today.replace(year=today.year+1)` crashed on Feb 29; replaced with `today + timedelta(days=365)` uniformly.
+
+Test coverage after the fix pass: **174 tests passing** (up from 159 at end of Phase C). Added: entity_key/cache_key roundtrip, cross-vertical collision prevention, load_cached robustness against corrupt JSON + malformed dates, shared `is_cloudflare_challenge` detector tests.
