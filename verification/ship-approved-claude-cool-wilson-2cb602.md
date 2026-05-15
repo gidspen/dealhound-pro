@@ -41,7 +41,7 @@ scrape` and `/find-deals score` subcommands, which is a separate refactor.
   documenting installation, manual testing, and uninstall steps.
 
 - `worker/union-buy-box.js` — refactored to query `buy_boxes WHERE
-  status = 'active'` instead of the legacy `deal_searches` table.
+status = 'active'` instead of the legacy `deal_searches` table.
   Returns both the merged union AND the per-user record array so
   callers can use the union for scraping and the per-user list for
   filtering+scoring.
