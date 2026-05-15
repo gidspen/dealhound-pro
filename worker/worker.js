@@ -167,6 +167,62 @@ async function updateSearchStatus(searchId, status) {
   await supabase.from('deal_searches').update({ status }).eq('id', searchId);
 }
 
+// ── Post-PTY scorer fallback ──────────────────────────────────────────────────
+// Step 4b (inline scoring) runs inside the PTY session. Step 4c (scorer.py)
+// persists to Supabase and emits SCAN COMPLETE. If the PTY exits between 4b
+// and 4c (crash, timeout, fallback exit), scored-inline.json exists but no
+// deals have score_breakdown. This function detects that state and runs
+// scorer.py --persist-only directly — no AI calls, pure Supabase persistence.
+//
+// This is best-effort: if scorer.py also fails, the scan is still marked
+// complete so the user sees their raw filtered results.
+async function maybeFallbackScore(job, spawnEnv, supabaseClient) {
+  const skillDir = path.join(os.homedir(), '.claude/skills/find-deals');
+  const scorerPy = path.join(skillDir, 'scorer.py');
+  const scoredInline = path.join(skillDir, 'scored-inline.json');
+
+  if (!fs.existsSync(scorerPy) || !fs.existsSync(scoredInline)) return;
+
+  // scored-inline.json must be fresh (written in last 2h = within this run)
+  const stat = fs.statSync(scoredInline);
+  if (Date.now() - stat.mtimeMs > 2 * 60 * 60 * 1000) return;
+
+  // Only needed if no deals are already scored for this search
+  const { count: scoredCount } = await supabaseClient
+    .from('deals')
+    .select('*', { count: 'exact', head: true })
+    .eq('search_id', job.search_id)
+    .not('score_breakdown', 'is', null);
+
+  if (scoredCount > 0) return;
+
+  log(`[SCORER] scored-inline.json fresh but 0 scored deals — running scorer.py fallback`, {
+    job: job.id,
+  });
+
+  await new Promise((resolve) => {
+    const proc = spawn('python3', [scorerPy, '--persist-only'], {
+      env: spawnEnv,
+      cwd: skillDir,
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    proc.stdout.on('data', (d) => process.stdout.write(d));
+    proc.stderr.on('data', (d) => process.stderr.write(d));
+    proc.on('close', (code) => {
+      if (code === 0) {
+        log(`[SCORER] scorer.py fallback complete`, { job: job.id });
+      } else {
+        log(`WARN: [SCORER] scorer.py exited ${code} — scores may be missing`, { job: job.id });
+      }
+      resolve(); // always resolve — scoring is best-effort, scan still succeeded
+    });
+    proc.on('error', (err) => {
+      log(`WARN: [SCORER] scorer.py spawn error — ${err.message}`, { job: job.id });
+      resolve();
+    });
+  });
+}
+
 // ── Buy box temp file ─────────────────────────────────────────────────────────
 
 function writeBuyBoxFile(buyBox) {
@@ -570,12 +626,16 @@ async function processPendingJobs() {
             if (job.buy_box) headedBuyBoxFile = writeBuyBoxFile(job.buy_box);
             const { env } = composeSpawnConfig(job, process.env, headedBuyBoxFile);
             try {
-              return await runFindDealsHeaded({
+              const result = await runFindDealsHeaded({
                 claudeBin: CLAUDE_BIN,
                 env,
                 jobId: job.id,
                 skill: 'deal scan',
               });
+              // Safety net: if scored-inline.json was written but scorer.py never
+              // ran (PTY died between Step 4b and 4c), persist scores now.
+              await maybeFallbackScore(job, env, supabase);
+              return result;
             } finally {
               if (headedBuyBoxFile && fs.existsSync(headedBuyBoxFile))
                 fs.unlinkSync(headedBuyBoxFile);

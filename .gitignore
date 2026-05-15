@@ -19,3 +19,6 @@ offmarket/cache/*/*
 
 # Python bytecode caches
 offmarket/**/__pycache__/
+
+# Group scan runner logs (local only)
+worker/logs/
