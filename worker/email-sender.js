@@ -95,6 +95,17 @@ async function sendFreeScanCompleteEmail({
       text: rendered.text,
     });
 
+    // Resend SDK does NOT throw on 4xx — errors come back in response.error.
+    // Without this branch we silently report success on domain-not-verified, rate
+    // limits, invalid recipients, etc. (real bug observed 2026-05-15).
+    if (response?.error) {
+      const err = response.error;
+      console.warn(
+        `[email] send rejected by Resend for ${recipient} — ${err.statusCode || ''} ${err.name || ''} ${err.message || ''}`.trim()
+      );
+      return { ok: false, error: err };
+    }
+
     const messageId = response?.data?.id ?? null;
     console.log(`[email] sent to ${recipient}`, { messageId });
     return { ok: true, messageId };
@@ -216,6 +227,15 @@ async function sendScheduledScanCompleteEmail({ to, agentName, dealCount, dashbo
       html: bodyHtml,
       text: bodyText,
     });
+
+    // Resend SDK returns 4xx errors in response.error rather than throwing.
+    if (response?.error) {
+      const err = response.error;
+      console.warn(
+        `[email] scheduled-scan rejected by Resend for ${recipient} — ${err.statusCode || ''} ${err.name || ''} ${err.message || ''}`.trim()
+      );
+      return { ok: false, error: err };
+    }
 
     const messageId = response?.data?.id ?? null;
     console.log(`[email] scheduled-scan email sent to ${recipient}`, { messageId });
