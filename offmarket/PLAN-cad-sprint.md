@@ -64,6 +64,7 @@ CLI: `python -m offmarket.scrapers.enrich_phase6 --vertical dental --no-cad` for
 ## 4. Persistent cache — file-per-business JSON
 
 **Schema:**
+
 ```json
 {
   "tpcl": "...",
@@ -83,6 +84,7 @@ CLI: `python -m offmarket.scrapers.enrich_phase6 --vertical dental --no-cad` for
 **Cache key:** `(portal, tpcl)`. For verticals without TPCL (dental → NPI), keying is hidden inside `load_targets`. Cache is portal+entity, not vertical-scoped, so dental and pest businesses sharing an address don't pay the lookup tax twice.
 
 **TTL — field-typed, not portal-wide:**
+
 - `ov65`, `homestead`, `disabled`: 90 days (catches the toggle within a quarter of when it happens).
 - `deed_date`, `appraised_value`, `year_built`: 365 days (annual appraisal cycle).
 - Comptroller `status`: 30 days (forfeiture cascades quickly).
@@ -97,12 +99,12 @@ CLI: `python -m offmarket.scrapers.enrich_phase6 --vertical dental --no-cad` for
 
 **Two distinct worker pools, never shared:**
 
-| Portal | Engine | Workers | Justification |
-|---|---|---|---|
-| Comptroller | `urllib` + `ThreadPoolExecutor` | **8** | Proven in `scrape_comptroller.py`. ~6s for 60 businesses. Pure JSON API. |
-| HCAD | XHR recon first → `urllib`+ThreadPool if open, else Playwright | **4** HTTP / **2** Playwright fallback | §7: no anti-bot. React SPA likely has reachable JSON XHR. |
-| DCAD | Playwright (sync) | **2** | ASP.NET viewstate is per-session. Two browser contexts max. |
-| BCAD | Playwright (sync) | **1** | Cloudflare challenge per session. Parallelism = more challenges. Serial with reused context is safer. |
+| Portal      | Engine                                                         | Workers                                | Justification                                                                                         |
+| ----------- | -------------------------------------------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Comptroller | `urllib` + `ThreadPoolExecutor`                                | **8**                                  | Proven in `scrape_comptroller.py`. ~6s for 60 businesses. Pure JSON API.                              |
+| HCAD        | XHR recon first → `urllib`+ThreadPool if open, else Playwright | **4** HTTP / **2** Playwright fallback | §7: no anti-bot. React SPA likely has reachable JSON XHR.                                             |
+| DCAD        | Playwright (sync)                                              | **2**                                  | ASP.NET viewstate is per-session. Two browser contexts max.                                           |
+| BCAD        | Playwright (sync)                                              | **1**                                  | Cloudflare challenge per session. Parallelism = more challenges. Serial with reused context is safer. |
 
 **Per-portal politeness:** 500ms between requests in HCAD, 1s in DCAD, 2s in BCAD.
 
@@ -122,11 +124,13 @@ Each scraper splits `search_owner(page, term)` → `(html, _parse_results(html))
 **HCAD first.** Reasoning: §7 says "no anti-bot observed" and it's a React SPA — likely fetches JSON over XHR. If we can sniff the XHR endpoint, HCAD becomes a Comptroller-style HTTP scraper.
 
 **Agent H's first 10 minutes are XHR reconnaissance only:**
+
 1. Open Chrome devtools, capture XHR on a manual owner search.
 2. If XHR is open (no Auth0, no CSRF) → HTTP path, 4 workers.
 3. If XHR is auth-walled → Playwright path, 2 workers. **Both paths pre-documented in the brief.**
 
 Sequence:
+
 1. `cad_common.py` — pure helpers, no portal deps. **(serial prep)**
 2. `scrape_hcad.py` — XHR recon, then implementation. **(parallel)**
 3. `scrape_dcad.py` — refine existing stub. **(parallel)**
@@ -136,15 +140,16 @@ Sequence:
 
 ## 8. Risk register
 
-| # | Risk | Likelihood | Fallback |
-|---|---|---|---|
-| 1 | HCAD XHR auth-walled → HTTP-first fails | M | Pre-documented Playwright fallback. Cost: ~10 min vs ~2 min runtime. |
-| 2 | DCAD viewstate cookie expires mid-batch | M | Re-warm homepage every 20 requests. |
-| 3 | BCAD Cloudflare upgrades to CAPTCHA | L–M | Detect challenge HTML; mark `bcad_status: "cloudflare_blocked"`; cache survives, resume later. |
-| 4 | Sole-prop owner lives outside business county (Fincannon case) | H | **Cross-county fallback shipped in v1.** Each scraper accepts `fallback_counties`. After primary returns no match, retry against adjacent CADs (4 attempts max). |
-| 5 | Portal HTML structure changes | M | Fixture tests fail loudly. Refresh via `--save-fixture`. |
+| #   | Risk                                                           | Likelihood | Fallback                                                                                                                                                         |
+| --- | -------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | HCAD XHR auth-walled → HTTP-first fails                        | M          | Pre-documented Playwright fallback. Cost: ~10 min vs ~2 min runtime.                                                                                             |
+| 2   | DCAD viewstate cookie expires mid-batch                        | M          | Re-warm homepage every 20 requests.                                                                                                                              |
+| 3   | BCAD Cloudflare upgrades to CAPTCHA                            | L–M        | Detect challenge HTML; mark `bcad_status: "cloudflare_blocked"`; cache survives, resume later.                                                                   |
+| 4   | Sole-prop owner lives outside business county (Fincannon case) | H          | **Cross-county fallback shipped in v1.** Each scraper accepts `fallback_counties`. After primary returns no match, retry against adjacent CADs (4 attempts max). |
+| 5   | Portal HTML structure changes                                  | M          | Fixture tests fail loudly. Refresh via `--save-fixture`.                                                                                                         |
 
 **Cross-county fallback lists:**
+
 - HCAD primary: Harris. Fallbacks: Fort Bend, Montgomery, Brazoria.
 - DCAD primary: Dallas. Fallbacks: Collin, Denton, Tarrant, Rockwall.
 - BCAD primary: Bexar. Fallbacks: Comal, Guadalupe.
@@ -152,9 +157,11 @@ Sequence:
 ## 9. Parallelization map
 
 **Phase A — serial prep (1 Sonnet agent, ~10 min):**
+
 - Create `cad_common.py`, `offmarket/cache/` directory tree, update `.gitignore`. Every downstream agent imports from `cad_common`.
 
 **Phase B — parallel implementation (3 Sonnet agents, fully concurrent):**
+
 - **Agent H:** `scrape_hcad.py` + `tests/test_hcad.py` + fixtures + cross-county fallback (Fort Bend, Montgomery, Brazoria).
 - **Agent D:** `scrape_dcad.py` refinement + `tests/test_dcad.py` + fixtures + cross-county fallback (Collin, Denton, Tarrant, Rockwall).
 - **Agent B:** `scrape_bcad.py` + `tests/test_bcad.py` + fixtures + cross-county fallback (Comal, Guadalupe).
@@ -162,11 +169,13 @@ Sequence:
 Each agent owns disjoint files. Each reads `cad_common` read-only. Each writes its own portal cache directory. **Zero conflict potential.**
 
 **Phase C — serial finalize (1 Sonnet agent, ~20 min):**
+
 - Modify `scrape_comptroller.py` (add `--vertical`, switch to `offmarket/cache/comptroller/`).
 - Create `enrich_phase6.py` dispatching all 4 scrapers.
 - Create `test_enrich_phase6.py` integration smoke test.
 
 **Phase D — independent review (1 Opus agent, ~10 min):**
+
 - Adversarial review of all changes vs this plan. Surface any gaps before merge.
 
 **Total: 5 Sonnet agent-calls + 1 Opus review.**
@@ -176,6 +185,7 @@ Each agent owns disjoint files. Each reads `cad_common` read-only. Each writes i
 ## 10. Sonnet briefs — self-contained
 
 Each parallel agent gets:
+
 1. Absolute path to the file it writes.
 2. Function signatures from §1.
 3. Selectors from §7 of REPORT v2 (quoted).
@@ -192,13 +202,13 @@ No agent needs to read another agent's output to make decisions.
 Three weakest decisions in the first draft + the fixes that are now in the plan:
 
 1. **"HCAD HTTP-first" was hope, not engineering.**
-   - *Fix:* Agent H's first 10 minutes are XHR reconnaissance. Decision tree documented in brief. Playwright fallback ready, not researched at runtime.
+   - _Fix:_ Agent H's first 10 minutes are XHR reconnaissance. Decision tree documented in brief. Playwright fallback ready, not researched at runtime.
 
 2. **Uniform 90-day TTL masks OV65 toggle events.**
-   - *Fix:* Field-typed TTLs. OV65/homestead/disabled = 90d. Deed/value/year_built = 365d. Comptroller status = 30d. `fresh_until` map in cache entry.
+   - _Fix:_ Field-typed TTLs. OV65/homestead/disabled = 90d. Deed/value/year_built = 365d. Comptroller status = 30d. `fresh_until` map in cache entry.
 
 3. **"Cross-county fallback in Phase 2" reships the exact gap §7 identified (Fincannon case).**
-   - *Fix:* Cross-county fallback shipped in v1. Each scraper accepts `fallback_counties` list. ~1 hour added to each parallel agent.
+   - _Fix:_ Cross-county fallback shipped in v1. Each scraper accepts `fallback_counties` list. ~1 hour added to each parallel agent.
 
 ---
 
