@@ -7,8 +7,10 @@ API endpoints (discovered via XHR trace):
   GET https://comptroller.texas.gov/data-search/franchise-tax/<taxpayerId>
       → {success, data: {rightToTransactTX, sosRegistrationStatus, ...full record}}
 
-Writes /tmp/pestrun_results/comptroller_results.json keyed by tpcl.
+Cache: offmarket/cache/comptroller/{tpcl}.json  (atomic write via cad_common)
+  status TTL: 30 days per PLAN §4.
 """
+import argparse
 import json
 import sys
 import urllib.parse
@@ -16,25 +18,42 @@ import urllib.request
 import ssl
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date, timedelta
 from pathlib import Path
 
-TARGETS = Path('/Users/gideonspencer/dealhound-pro/offmarket/data/pest-control_targets.json')
-OUT = Path('/tmp/pestrun_results/comptroller_results.json')
-LOG = Path('/tmp/pestrun_results/comptroller.log')
+# ---------------------------------------------------------------------------
+# Resolve repo root so this module is importable without pip install.
+# ---------------------------------------------------------------------------
+_HERE = Path(__file__).resolve().parent
+_REPO_ROOT = _HERE.parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
 
+from offmarket.scrapers.cad_common import (
+    cache_path,
+    load_cached,
+    load_targets,
+    log_factory,
+    summary,
+    write_cached,
+)
+
+PORTAL = "comptroller"
 API_SEARCH = "https://comptroller.texas.gov/data-search/franchise-tax"
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh) Chrome/120.0.0.0', 'Accept': 'application/json'}
 CTX = ssl.create_default_context()
 
-def log(msg):
-    ts = datetime.now(timezone.utc).strftime('%H:%M:%S')
-    line = f"[{ts}] {msg}"
-    print(line, flush=True)
-    with open(LOG, 'a') as f:
-        f.write(line + '\n')
+# Field-typed TTL: Comptroller status = 30 days per PLAN §4
+_STATUS_TTL_DAYS = 30
+# fresh_until_map key used for cache freshness checks
+_FRESH_UNTIL_MAP = {"status": "any"}
 
-def get_json(url, retries=2):
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def _get_json(url: str, retries: int = 2) -> dict:
     for attempt in range(retries + 1):
         try:
             req = urllib.request.Request(url, headers=HEADERS)
@@ -46,9 +65,11 @@ def get_json(url, retries=2):
                 continue
             return {"error": f"{type(e).__name__}: {str(e)[:120]}"}
 
+
 CORP_SUFFIXES = {'INC', 'INCORPORATED', 'LLC', 'CORP', 'CORPORATION', 'COMPANY', 'CO', 'LTD', 'LP', 'PC', 'PLLC'}
 
-def normalize(name):
+
+def normalize(name: str) -> str:
     """Uppercase, strip punctuation, split into words, drop trailing corp suffixes."""
     n = name.upper().replace('.', ' ').replace(',', ' ').replace('-', ' ').replace("'", '').replace('&', ' AND ')
     words = n.split()
@@ -57,7 +78,8 @@ def normalize(name):
         words.pop()
     return ' '.join(words)
 
-def best_match(target_name, candidates, target_city=None, target_zip=None):
+
+def best_match(target_name: str, candidates: list, target_city=None, target_zip=None):
     """Return the candidate that best matches target name; prefer zip match if available."""
     target = normalize(target_name)
     target_words = set(target.split())
@@ -66,11 +88,8 @@ def best_match(target_name, candidates, target_city=None, target_zip=None):
     for c in candidates:
         cname = normalize(c.get('name', ''))
         cwords = set(cname.split())
-        # word overlap
         overlap = len(target_words & cwords)
-        # exact match bonus
         exact_bonus = 10 if cname == target else 0
-        # zip bonus
         zip_bonus = 0
         if target_zip and c.get('mailingAddressZip') == target_zip:
             zip_bonus = 5
@@ -80,18 +99,17 @@ def best_match(target_name, candidates, target_city=None, target_zip=None):
             best = c
     return best, best_score
 
-def is_likely_match(target, candidate, allow_subset=True):
+
+def is_likely_match(target: str, candidate: str, allow_subset: bool = True) -> bool:
     """Check if a candidate name is plausibly the SAME entity as the target.
 
     Avoids false positives like 'CHARLES HOWARD' matching 'CHARLES HOWARD DESIGN INC'.
-    Rule: candidate must contain ALL target name-tokens AND either be ≤3 extra tokens
-    OR contain a corporate suffix (INC/LLC/CORP) showing it's incorporated under that name."""
+    """
     t = normalize(target)
     c = normalize(candidate)
     t_tokens = t.split()
     c_tokens = c.split()
 
-    # Must contain all target tokens
     for tok in t_tokens:
         if tok not in c_tokens:
             return False
@@ -100,28 +118,26 @@ def is_likely_match(target, candidate, allow_subset=True):
     if extras <= 1:
         return True
 
-    # If the extras add a corp suffix only, accept
-    extra_tokens = [t for t in c_tokens if t not in t_tokens]
+    extra_tokens = [tk for tk in c_tokens if tk not in t_tokens]
     corp_words = {'INC', 'LLC', 'CORP', 'CORPORATION', 'COMPANY', 'LTD', 'LP', 'PC', 'PLLC'}
     if all(e in corp_words for e in extra_tokens):
         return True
 
-    # Otherwise: if "DBA"-style extra words like "DESIGN", "REMODELING" — reject as different business
     return False
 
-def is_sole_proprietor_name(legal_name):
+
+def is_sole_proprietor_name(legal_name: str) -> bool:
     """Heuristic: is this a person's name vs a corporation?"""
     n = legal_name.upper()
-    corp_markers = ['INC', 'LLC', 'CORP', 'CORPORATION', 'COMPANY', 'LTD', 'LP', 'PC', 'PLLC', 'SERVICES', 'SERVICE', 'CONTROL', 'EXTERMINATING', 'PEST']
+    corp_markers = ['INC', 'LLC', 'CORP', 'CORPORATION', 'COMPANY', 'LTD', 'LP', 'PC', 'PLLC',
+                    'SERVICES', 'SERVICE', 'CONTROL', 'EXTERMINATING', 'PEST']
     return not any(m in n.split() for m in corp_markers)
 
-def words_compatible(target_words, candidate_words):
+
+def words_compatible(target_words: list, candidate_words: list) -> bool:
     """Each target word must match a candidate word by exact OR prefix (≥4 chars) OR shared prefix.
 
-    Examples that should match:
-      target 'EXTERM'  ↔  candidate 'EXTERMINATORS'  (target is prefix of candidate)
-      target 'MGMT'    ↔  candidate 'MANAGEMENT'      (4-char prefix shared)
-      target 'SYSTEM'  with no SYSTEM in candidate    → drop SYSTEM if other words match
+    Allow 1 unmatched word for noise tolerance.
     """
     candidate_set = set(candidate_words)
     matched = 0
@@ -129,38 +145,49 @@ def words_compatible(target_words, candidate_words):
         if tw in candidate_set:
             matched += 1
             continue
-        # Try prefix match in either direction (need at least 4 char prefix)
         if len(tw) >= 4 and any(cw.startswith(tw[:4]) and (cw.startswith(tw) or tw.startswith(cw[:4])) for cw in candidate_words):
             matched += 1
             continue
-    # Allow 1 unmatched word for noise tolerance (e.g., SYSTEM, INC)
     return matched >= len(target_words) - 1 and matched >= 2
 
-def lookup_one(biz):
-    """Lookup one business; returns dict.
 
-    Strategy (conservative — avoid false positives):
-    - If legal_name has corp markers (INC/LLC): search by legal_name only. Match must be near-exact.
-    - If legal_name is a person's name (sole prop): search by business_name (DBA). Match must be near-exact.
-    - "Not Found" is fine — sole proprietors usually have no franchise tax entity.
+# ---------------------------------------------------------------------------
+# Pure per-business lookup — importable by tests without I/O side effects.
+# Callers are responsible for cache-check and cache-write.
+# ---------------------------------------------------------------------------
+
+def _lookup_one(business: dict) -> dict:
+    """Look up one business via the TX Comptroller JSON API.
+
+    Takes a target dict (from load_targets); returns a payload dict with the
+    standard Comptroller result schema.  NO cache I/O — pure network function.
+    Designed to be importable and mockable in tests.
+
+    Required keys in business: tpcl, legal_name.
+    Optional: business_name_used, zip.
     """
-    legal = biz['legal_name']
-    business_name = biz.get('business_name_used') or ''
-    tpcl = biz['tpcl']
-    target_zip = biz.get('zip')
+    legal = business['legal_name']
+    business_name = business.get('business_name_used') or ''
+    tpcl = business['tpcl']
+    target_zip = business.get('zip')
 
     is_sole = is_sole_proprietor_name(legal)
 
+    today = date.today()
     result = {
+        "tpcl": tpcl,
+        "portal": PORTAL,
         "legal_name": legal,
         "business_name": business_name,
-        "tpcl": tpcl,
         "is_sole_prop_estimated": is_sole,
         "search_attempts": [],
         "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "fresh_until": {
+            "status": (today + timedelta(days=_STATUS_TTL_DAYS)).isoformat(),
+        },
+        "errors": [],
     }
 
-    # Try queries in order: business_name first if sole prop, else legal_name first.
     queries = []
     if is_sole and business_name:
         queries = [business_name, legal]
@@ -172,18 +199,20 @@ def lookup_one(biz):
     candidates = []
     near_matches = []
     matched_query = None
-    NOISE_WORDS = {'INC','LLC','CORP','CORPORATION','COMPANY','LTD','LP','PC','PLLC','THE','SERVICES','SERVICE'}
+    NOISE_WORDS = {'INC', 'LLC', 'CORP', 'CORPORATION', 'COMPANY', 'LTD', 'LP', 'PC', 'PLLC', 'THE', 'SERVICES', 'SERVICE'}
 
     for q in queries:
         url = f"{API_SEARCH}?name={urllib.parse.quote(q)}"
-        r = get_json(url)
+        r = _get_json(url)
         result["search_attempts"].append({"name": q, "count": r.get('count', 0)})
         if r.get('error'):
-            result["error"] = r['error']
-            result["comptroller_status"] = "Error"
+            result["errors"].append(r['error'])
+            result["status"] = "error"
+            result["raw_term"] = q
+            result["owner_match"] = None
             return result
         these_candidates = r.get('data', [])
-        candidates = these_candidates  # keep last set for diagnostics
+        candidates = these_candidates
 
         target_norm = normalize(q)
         target_words = [w for w in target_norm.split() if w not in NOISE_WORDS]
@@ -194,19 +223,14 @@ def lookup_one(biz):
             cnorm = normalize(c.get('name', ''))
             cwords = cnorm.split()
             cwords_no_noise = [w for w in cwords if w not in NOISE_WORDS]
-            # Use prefix-tolerant word matching, ignoring noise words on both sides
             if words_compatible(target_words, cwords_no_noise):
-                # And reject if candidate has extra non-noise content beyond reasonable variance
                 cwords_set = set(cwords_no_noise)
                 tw_set = set(target_words)
                 extras = cwords_set - tw_set
-                # Filter extras using same prefix-match logic — any extra that prefix-matches a target word doesn't count
                 real_extras = set()
                 for e in extras:
                     if not any(tw.startswith(e[:4]) or e.startswith(tw[:4]) for tw in tw_set if len(tw) >= 4):
                         real_extras.add(e)
-                # For sole-prop searches, require ZERO real extras (avoid 'CHARLES HOWARD' matching 'CHARLES HOWARD DESIGN INC')
-                # For corp searches, allow 1 real extra (e.g., a regional qualifier)
                 max_extras = 0 if is_sole else 1
                 if len(real_extras) <= max_extras:
                     near_matches.append(c)
@@ -216,10 +240,11 @@ def lookup_one(biz):
             break
 
     result["matched_query"] = matched_query
+    result["raw_term"] = matched_query or (queries[0] if queries else None)
 
     if not near_matches:
-        result["comptroller_status"] = "Not Found"
-        result["entity_name_matched"] = None
+        result["status"] = "not_found"
+        result["owner_match"] = None
         result["candidates_count"] = len(candidates)
         if candidates:
             result["loose_candidates"] = [c.get('name') for c in candidates[:5]]
@@ -229,27 +254,31 @@ def lookup_one(biz):
         )
         return result
 
-    # Pick best match — prefer zip match
     best = near_matches[0]
     for c in near_matches:
         if target_zip and c.get('mailingAddressZip') == target_zip:
             best = c
             break
 
+    result["owner_match"] = {
+        "entity_name": best['name'],
+        "taxpayer_id": best['taxpayerId'],
+    }
     result["entity_name_matched"] = best['name']
     result["taxpayer_id"] = best['taxpayerId']
     result["candidates_count"] = len(candidates)
     result["near_matches_count"] = len(near_matches)
 
-    # Step 3: get full detail
+    # Fetch full detail
     detail_url = f"{API_SEARCH}/{best['taxpayerId']}"
-    detail = get_json(detail_url)
+    detail = _get_json(detail_url)
     if detail.get('error'):
-        result["error"] = detail['error']
+        result["errors"].append(detail['error'])
+        result["status"] = "detail_error"
         return result
 
     d = detail.get('data', {})
-    result["comptroller_status"] = d.get('rightToTransactTX', 'Unknown')
+    result["status"] = d.get('rightToTransactTX', 'unknown')
     result["sos_status"] = d.get('sosRegistrationStatus')
     result["sos_file_number"] = d.get('sosFileNumber')
     result["sos_registration_date"] = d.get('effectiveSosRegistrationDate')
@@ -266,40 +295,121 @@ def lookup_one(biz):
     return result
 
 
-def main():
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    LOG.unlink(missing_ok=True)
+# ---------------------------------------------------------------------------
+# Main — with CLI matching the other CAD scraper conventions
+# ---------------------------------------------------------------------------
 
-    with open(TARGETS) as f:
-        data = json.load(f)
-    businesses = data['businesses']
-    log(f"Loaded {len(businesses)} businesses")
+def main() -> None:
+    parser = argparse.ArgumentParser(description="TX Comptroller franchise-tax scraper")
+    parser.add_argument(
+        "--vertical", default="pest-control",
+        help="Target vertical (matches offmarket/data/{vertical}_targets.json)"
+    )
+    parser.add_argument(
+        "--limit", type=int, default=None,
+        help="Cap number of businesses processed (for testing)"
+    )
+    parser.add_argument(
+        "--force-refresh", action="store_true",
+        help="Ignore cache and re-fetch all records"
+    )
+    parser.add_argument(
+        "--save-fixture", metavar="TPCL", default=None,
+        help="(Unused for Comptroller — HTTP-only, no HTML fixtures needed)"
+    )
+    args = parser.parse_args()
 
-    results = {}
+    log = log_factory(PORTAL)
+
+    try:
+        targets = load_targets(args.vertical)
+    except FileNotFoundError as e:
+        log(f"ERROR: {e}")
+        sys.exit(1)
+
+    if args.limit:
+        targets = targets[: args.limit]
+
+    log(f"Loaded {len(targets)} {args.vertical} targets")
+
+    results: dict[str, dict] = {}
+    cached_hits = 0
+    errors = 0
+
+    def _process_one(biz: dict) -> dict:
+        tpcl = biz['tpcl']
+        if not args.force_refresh:
+            cached = load_cached(PORTAL, tpcl, fresh_until_map=_FRESH_UNTIL_MAP)
+            if cached is not None:
+                return cached
+        try:
+            r = _lookup_one(biz)
+        except Exception as e:
+            r = {
+                "tpcl": tpcl,
+                "portal": PORTAL,
+                "legal_name": biz.get('legal_name', ''),
+                "status": "error",
+                "errors": [f"{type(e).__name__}: {str(e)[:120]}"],
+                "fetched_at": datetime.now(timezone.utc).isoformat(),
+                "raw_term": None,
+                "owner_match": None,
+                "fresh_until": {
+                    "status": (date.today() + timedelta(days=_STATUS_TTL_DAYS)).isoformat(),
+                },
+            }
+        write_cached(PORTAL, tpcl, r)
+        return r
+
     with ThreadPoolExecutor(max_workers=8) as ex:
-        futures = {ex.submit(lookup_one, b): b for b in businesses}
+        futures = {ex.submit(_process_one, b): b for b in targets}
         for i, fut in enumerate(as_completed(futures), 1):
             b = futures[fut]
             try:
                 r = fut.result()
             except Exception as e:
-                r = {"legal_name": b['legal_name'], "tpcl": b['tpcl'],
-                     "comptroller_status": "Error", "error": f"{type(e).__name__}: {str(e)[:120]}"}
+                r = {
+                    "tpcl": b['tpcl'], "portal": PORTAL,
+                    "legal_name": b.get('legal_name', ''),
+                    "status": "error",
+                    "errors": [f"{type(e).__name__}: {str(e)[:120]}"],
+                    "fetched_at": datetime.now(timezone.utc).isoformat(),
+                    "raw_term": None, "owner_match": None,
+                    "fresh_until": {"status": (date.today() + timedelta(days=_STATUS_TTL_DAYS)).isoformat()},
+                }
             results[r['tpcl']] = r
-            status = r.get('comptroller_status', '?')
+            is_hit = r.get('_cache_hit', False)
+            if is_hit:
+                cached_hits += 1
+            status = r.get('status', '?')
+            if status == 'error':
+                errors += 1
             matched = r.get('entity_name_matched', '') or ''
-            log(f"[{i}/{len(businesses)}] {b['legal_name'][:30]:32s} → {status:12s} | {matched[:50]}")
+            log(f"[{i}/{len(targets)}] {b.get('legal_name','')[:30]:32s} → {status:20s} | {matched[:40]}")
 
-    with open(OUT, 'w') as f:
-        json.dump(results, f, indent=2)
+    summary(results, log)
 
-    # Summary
-    summary = {}
-    for r in results.values():
-        s = r.get('comptroller_status', '?')
-        summary[s] = summary.get(s, 0) + 1
-    log(f"\nSUMMARY: {summary}")
-    log(f"Wrote {len(results)} results to {OUT}")
+    # Write run manifest
+    _CACHE_ROOT = Path(__file__).resolve().parent.parent / "cache"
+    manifest_dir = _CACHE_ROOT / PORTAL
+    manifest_dir.mkdir(parents=True, exist_ok=True)
+    today_str = date.today().isoformat()
+    manifest_path = manifest_dir / f"_manifest_{args.vertical}_{today_str}.json"
+    manifest = {
+        "vertical": args.vertical,
+        "run_date": datetime.now(timezone.utc).isoformat(),
+        "total": len(results),
+        "cached_hits": cached_hits,
+        "errors": errors,
+        "pass": len([r for r in results.values() if r.get("status") not in ("error", "not_found")]),
+        "not_found": len([r for r in results.values() if r.get("status") == "not_found"]),
+    }
+    tmp = manifest_path.with_suffix(".json.tmp")
+    with tmp.open("w", encoding="utf-8") as fh:
+        json.dump(manifest, fh, indent=2)
+    import os
+    os.replace(tmp, manifest_path)
+    log(f"Manifest written → {manifest_path}")
 
 
 if __name__ == '__main__':
