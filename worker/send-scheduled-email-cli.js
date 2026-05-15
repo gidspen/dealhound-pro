@@ -5,8 +5,8 @@
 // Usage:
 //   node send-scheduled-email-cli.js --to <email> --agent <name> --deals <count>
 //
-// The underlying sendFreeScanCompleteEmail function is used as the transport.
-// --deals is passed as dealCount; other fields get safe defaults for batch context.
+// Calls sendScheduledScanCompleteEmail (separate template + copy from
+// the free-scan email — "Your Deal Hound scan is ready" vs free-scan).
 //
 // Exit codes:
 //   0 — sent successfully, OR skipped (no RESEND_API_KEY) — batch should continue
@@ -15,7 +15,7 @@
 'use strict';
 
 require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
-const { sendFreeScanCompleteEmail } = require('./email-sender');
+const { sendScheduledScanCompleteEmail } = require('./email-sender');
 
 function parseArgs() {
   const args = {};
@@ -41,14 +41,11 @@ async function main() {
     process.exit(1);
   }
 
-  const result = await sendFreeScanCompleteEmail({
-    to:              args.to,
-    agentName:       args.agent,
-    firstName:       args.firstName || null,
-    listingsScanned: args.listings ? parseInt(args.listings, 10) : dealCount,
+  const result = await sendScheduledScanCompleteEmail({
+    to: args.to,
+    agentName: args.agent,
     dealCount,
-    topDealBrief:    args.topDeal   || null,
-    magicLinkUrl:    'https://dealhound.pro/dashboard',
+    dashboardUrl: 'https://dealhound.pro/dashboard',
   });
 
   if (result.ok) {
