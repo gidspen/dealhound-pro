@@ -144,7 +144,9 @@ async function sendScheduledScanCompleteEmail({ to, agentName, dealCount, dashbo
       ? `${agentName} found ${dealCount} deal${dealCount === 1 ? '' : 's'} in your scheduled scan`
       : `${agentName} ran your scheduled scan — nothing cleared the bar today`;
 
-  const from = `${agentName} from Deal Hound <gideon@stonemontcap.com>`;
+  // Use the verified Resend domain (dealhound.pro). stonemontcap.com is
+  // intentionally NOT verified at Resend.
+  const from = `${agentName} from Deal Hound <hello@dealhound.pro>`;
 
   const bodyText =
     dealCount > 0
