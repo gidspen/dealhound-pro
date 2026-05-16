@@ -30,7 +30,7 @@ const stripAnsi = (s) => s.replace(ANSI_RE, '');
 // at the start of a fresh line. We detect this twice:
 //   1. INIT → RUNNING: to inject the /find-deals full command
 //   2. RUNNING fallback: Claude returned to idle after skill finished
-const PROMPT_RE = /(?:^|\n)❯\s/;  // ❯ followed by space (real input prompt)
+const PROMPT_RE = /(?:^|\n)❯\s/; // ❯ followed by space (real input prompt)
 
 // --dangerously-skip-permissions now shows a confirmation dialog on startup:
 //   "By proceeding, you accept all responsibility..."
@@ -64,13 +64,7 @@ const COMPLETE_RE = /(?:SCAN COMPLETE|\d+\s+HOT\s*[|│]\s*\d+\s+STRONG\s*[|│]
  *
  * @returns {Promise<{ durationMs: number, metrics: object, cogsUsed: number, cappedByCost: boolean }>}
  */
-function runFindDealsHeaded({
-  claudeBin,
-  env,
-  jobId,
-  skill = 'deal scan',
-  timeout = 90 * 60_000,
-}) {
+function runFindDealsHeaded({ claudeBin, env, jobId, skill = 'deal scan', timeout = 90 * 60_000 }) {
   return new Promise((resolve, reject) => {
     const startMs = Date.now();
     const ts = () => new Date().toISOString();
@@ -82,15 +76,15 @@ function runFindDealsHeaded({
       }
     };
 
-    let rawBuffer = '';    // raw PTY bytes (for COGS / metric regexes)
-    let cleanBuffer = '';  // ANSI-stripped (for prompt / completion detection)
-    let state = 'INIT';   // INIT → RUNNING → DONE
+    let rawBuffer = ''; // raw PTY bytes (for COGS / metric regexes)
+    let cleanBuffer = ''; // ANSI-stripped (for prompt / completion detection)
+    let state = 'INIT'; // INIT → RUNNING → DONE
     let metrics = {};
     let lastPhase = null;
     const phaseTimestamps = {};
     let cappedByCost = false;
     let exitHandled = false;
-    let bypassHandled = false;       // guard against re-triggering bypass acceptance
+    let bypassHandled = false; // guard against re-triggering bypass acceptance
     let settingsErrorHandled = false; // guard against re-triggering settings error acceptance
 
     const costTracker = new CostTracker(skill);
@@ -124,16 +118,21 @@ function runFindDealsHeaded({
       const { capped, totalCost, capAmount } = costTracker.trackTokenLine(data);
       if (capped && !cappedByCost) {
         cappedByCost = true;
-        log(`[COGS] Run cap hit — $${totalCost.toFixed(4)} >= $${capAmount} for skill "${skill}" — terminating`, {
-          job: jobId,
-        });
+        log(
+          `[COGS] Run cap hit — $${totalCost.toFixed(4)} >= $${capAmount} for skill "${skill}" — terminating`,
+          {
+            job: jobId,
+          }
+        );
         ptyProc.write('exit\r');
       }
 
       // ── Metric / phase parsing ────────────────────────────────────────────
       const mm = data.match(/DEALHOUND_METRICS:\s*(\{[^\n]+\})/);
       if (mm) {
-        try { metrics = JSON.parse(mm[1]); } catch (_) {}
+        try {
+          metrics = JSON.parse(mm[1]);
+        } catch (_) {}
       }
 
       const pp = data.match(/DEALHOUND_PHASE:\s*(\S+)/);
@@ -160,7 +159,7 @@ function runFindDealsHeaded({
             ptyProc.write('\x1b[B'); // down arrow → move to option 2
             setTimeout(() => {
               log('[PTY] Confirming acceptance');
-              ptyProc.write('\r');   // Enter → confirm
+              ptyProc.write('\r'); // Enter → confirm
             }, 300);
           }, 800);
           return;
@@ -175,7 +174,7 @@ function runFindDealsHeaded({
             ptyProc.write('\x1b[B'); // down arrow → move to option 2
             setTimeout(() => {
               log('[PTY] Confirming continue without settings');
-              ptyProc.write('\r');   // Enter → confirm
+              ptyProc.write('\r'); // Enter → confirm
             }, 300);
           }, 500);
           return;
@@ -260,7 +259,10 @@ function runFindDealsHeaded({
       }
 
       if (cappedByCost) {
-        log(`[COGS] Run ended by cost cap`, { job: jobId, cogsUsed: `$${costTracker.total.toFixed(4)}` });
+        log(`[COGS] Run ended by cost cap`, {
+          job: jobId,
+          cogsUsed: `$${costTracker.total.toFixed(4)}`,
+        });
         resolve({ durationMs, metrics, cogsUsed: costTracker.total, cappedByCost: true });
         return;
       }

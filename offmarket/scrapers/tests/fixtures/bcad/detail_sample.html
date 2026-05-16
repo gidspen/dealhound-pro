@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+  Synthesized BCAD property detail fixture.
+  Source: bexar.trueautomation.com/clientdb/PropertyDetail.aspx?prop_id=1193707&cid=110
+        (TrueAutomation Classic property detail page)
+
+  NOTE: SYNTHESIZED — live verification required before first real run.
+
+  Key fields extracted by _parse_detail_text() via cad_common.extract_exemptions():
+    - Exemptions text: "OV65" and "HOMESTEAD" (GEN HS) present
+    - Deed Date: 03/15/2001
+    - Appraised Value: 178,450
+    - Year Built: 1978
+
+  Selectors / text patterns relied on:
+    - extract_exemptions() uses full body innerText — no selector dependency.
+    - "OV65" token triggers ov65=True
+    - "HOMESTEAD" / "GEN HS" token triggers homestead=True
+    - "Deed Date: MM/DD/YYYY" pattern captures deed_date
+    - "Appraised Value: $NNN,NNN" pattern captures appraised_value
+    - "Year Built: YYYY" pattern captures year_built
+-->
+<html>
+<head>
+<title>Property Detail - Bexar County Appraisal District</title>
+</head>
+<body>
+<form id="form1">
+  <div id="propertyDetail">
+    <h2>Property Detail</h2>
+
+    <table>
+      <tr><th>Account #</th><td>119370760510</td></tr>
+      <tr><th>Owner Name</th><td>LEE, LEONARD E</td></tr>
+      <tr><th>Situs Address</th><td>1234 MAGNOLIA LN, SAN ANTONIO TX 78201</td></tr>
+      <tr><th>Legal Description</th><td>NCB 12345 BLK 3 LOT 7</td></tr>
+    </table>
+
+    <h3>Appraisal Information</h3>
+    <table>
+      <tr><th>Year Built</th><td>1978</td></tr>
+      <tr><th>Appraised Value</th><td>$178,450</td></tr>
+      <tr><th>Land Value</th><td>$42,000</td></tr>
+      <tr><th>Improvement Value</th><td>$136,450</td></tr>
+    </table>
+
+    <h3>Deed Information</h3>
+    <table>
+      <tr><th>Deed Date</th><td>03/15/2001</td></tr>
+      <tr><th>Deed Volume</th><td>9876</td></tr>
+      <tr><th>Deed Page</th><td>543</td></tr>
+    </table>
+
+    <h3>Exemptions</h3>
+    <table>
+      <tr><th>Exemption Type</th><th>Taxing Unit</th></tr>
+      <tr><td>OV65</td><td>Bexar County</td></tr>
+      <tr><td>OV65</td><td>San Antonio ISD</td></tr>
+      <tr><td>HOMESTEAD (GEN HS)</td><td>Bexar County</td></tr>
+      <tr><td>HOMESTEAD (GEN HS)</td><td>San Antonio ISD</td></tr>
+    </table>
+  </div>
+</form>
+</body>
+</html>

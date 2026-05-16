@@ -13,5 +13,12 @@ worker/compare/
 playwright-report/
 test-results/
 
+# Off-market scraper cache (gitignored contents, tracked directory structure)
+offmarket/cache/*/*
+!offmarket/cache/*/.gitkeep
+
+# Python bytecode caches
+offmarket/**/__pycache__/
+
 # Group scan runner logs (local only)
 worker/logs/
