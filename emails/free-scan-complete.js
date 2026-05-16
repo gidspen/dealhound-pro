@@ -26,7 +26,10 @@ function renderFreeScanCompleteEmail({
   magicLinkUrl,
 }) {
   const subject = 'Hey! I found some deals 👀';
-  const from = `${agentName} from Deal Hound <gideon@stonemontcap.com>`;
+  // Use hello@dealhound.pro — the verified Resend domain. stonemontcap.com
+  // isn't verified at Resend (and we don't want it to be — it's Gideon's
+  // personal/business domain).
+  const from = `${agentName} from Deal Hound <hello@dealhound.pro>`;
 
   // ── Greeting ─────────────────────────────────────────────────────────────────
   const greeting = firstName && firstName.trim() ? `Hey ${firstName.trim()},` : 'Hey,';

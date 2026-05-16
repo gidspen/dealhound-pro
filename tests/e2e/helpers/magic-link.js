@@ -1,18 +1,36 @@
 // tests/e2e/helpers/magic-link.js
 //
-// Wraps api/_lib/magic-link.js so tests can mint signed tokens without
-// having to drive the full email pipeline. Used by Flow C (magic-link claim)
-// and any flow that needs a logged-in dashboard quickly.
+// Bridge to the CommonJS signer at api/_lib/magic-link.js. Playwright loads
+// .spec.js files as ESM, so top-level `require()` fails. We use dynamic
+// import() and return promises.
 
-const { signMagicLink } = require('../../../api/_lib/magic-link');
+async function loadSigner() {
+  const mod = await import('../../../api/_lib/magic-link.js');
+  // CommonJS `module.exports = { signMagicLink, verifyMagicLink }` — Node
+  // exposes those as both default-shaped and named exports.
+  const sign = mod.signMagicLink || mod.default?.signMagicLink;
+  if (typeof sign !== 'function') {
+    throw new Error('helpers/magic-link.js: signMagicLink not found in api/_lib/magic-link.js');
+  }
+  return sign;
+}
 
 /**
- * mintMagicLinkUrl({ baseUrl, email, scanId, ttlMs? })
- *
- * Returns the full URL the email CTA would point to:
- *   {baseUrl}/api/magic-link?token=...
+ * Mint a token via the production signer.
+ * @param {{ email: string, scanId: string, ttlMs?: number }} opts
+ * @returns {Promise<string>}
  */
-export function mintMagicLinkUrl({ baseUrl, email, scanId, ttlMs }) {
-  const token = signMagicLink({ email, scanId, ttlMs });
+export async function signToken({ email, scanId, ttlMs }) {
+  const sign = await loadSigner();
+  return sign({ email, scanId, ttlMs });
+}
+
+/**
+ * Return the full URL the email CTA would point to.
+ * @param {{ baseUrl: string, email: string, scanId: string, ttlMs?: number }} opts
+ * @returns {Promise<string>}
+ */
+export async function mintMagicLinkUrl({ baseUrl, email, scanId, ttlMs }) {
+  const token = await signToken({ email, scanId, ttlMs });
   return `${baseUrl}/api/magic-link?token=${encodeURIComponent(token)}`;
 }

@@ -32,9 +32,12 @@ export async function waitForScanStatus(
   const deadline = Date.now() + timeoutMs;
 
   while (Date.now() < deadline) {
+    // NOTE: deal_searches has no `error_reason` column — selecting it would
+    // error out the query and leave us polling forever (bug audited
+    // 2026-05-15). If the column is added later, add it back here.
     const { data, error } = await sb
       .from('deal_searches')
-      .select('id, status, error_reason, run_at')
+      .select('id, status, run_at')
       .eq('id', searchId)
       .single();
 
