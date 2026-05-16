@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+  Synthesized Cloudflare interactive challenge fixture.
+  Represents the CAPTCHA-upgrade case (PLAN §8 risk #3).
+
+  Detection heuristic (see _is_cloudflare_challenge() in scrape_bcad.py):
+    Any of the following strings present in the page HTML (case-insensitive):
+      1. "cf-challenge-form"  — Cloudflare challenge form id (interactive + JS challenges)
+      2. "jschl-answer"       — JS challenge hidden input name (legacy turnstile)
+      3. "cf_clearance"       — Cloudflare clearance cookie name referenced in page
+      4. "Ray ID"             — Cloudflare diagnostic footer present on block pages
+      5. "cf-spinner"         — Cloudflare spinner div on JS-challenge pages
+      6. "challenges.cloudflare.com" — Turnstile iframe src domain
+      7. "Checking your browser" — Human-readable Cloudflare challenge text
+
+  This fixture exercises heuristics #1, #4, #6, and #7.
+  The passive 9-second JS challenge (bcad.org initial load) typically resolves
+  automatically and does NOT show this form — this fixture represents the
+  escalated interactive CAPTCHA that requires human input.
+-->
+<html>
+<head>
+  <title>Just a moment...</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div id="cf-content">
+      <h1>Checking your browser before accessing bcad.org.</h1>
+      <p>This process is automatic. Your browser will redirect to your requested content shortly.</p>
+      <p>Please allow up to 5 seconds...</p>
+
+      <form id="cf-challenge-form" action="/cdn-cgi/challenge-platform/h/b/flow/ov1" method="POST">
+        <input type="hidden" name="md" value="fake_md_token" />
+        <input type="hidden" name="r" value="fake_r_token" />
+        <div id="cf-turnstile" data-sitekey="0x4AAAAAAADnPIDROrmt1Wwj">
+          <!-- Turnstile CAPTCHA widget renders here -->
+          <iframe
+            src="https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/if/ov2/n/cb"
+            style="width:300px;height:65px;"
+            title="Widget containing a Cloudflare security challenge"
+          ></iframe>
+        </div>
+        <input type="submit" value="Verify you are human" />
+      </form>
+    </div>
+
+    <div id="cf-footer">
+      <span>Performance &amp; security by <a href="https://www.cloudflare.com">Cloudflare</a></span>
+      <span>Ray ID: 8d3f4a2c1b0e9f87</span>
+    </div>
+  </div>
+</body>
+</html>
