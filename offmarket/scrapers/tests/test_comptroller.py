@@ -13,6 +13,7 @@ from offmarket.scrapers.scrape_comptroller import (
     _lookup_one,
     is_sole_proprietor_name,
     normalize,
+    parse_pir_html,
     words_compatible,
 )
 from offmarket.scrapers.cad_common import (
@@ -307,6 +308,92 @@ class TestCacheHitPath(unittest.TestCase):
         self.assertIn("status", loaded["fresh_until"])
         expected = (date.today() + timedelta(days=30)).isoformat()
         self.assertEqual(loaded["fresh_until"]["status"], expected)
+
+
+class TestParsePirHtml(unittest.TestCase):
+    """Finding 1 (2026-05-15 deep-dive): extract officer list from Comptroller HTML page."""
+
+    _WHITAKER_HTML = """
+    <html><body>
+    <h2>Account Status</h2>
+    <div>Public Information Report (2024)</div>
+    <table>
+      <tr><th>Title</th><th>Name</th><th>Address</th></tr>
+      <tr><td>PRESIDENT</td><td>CHESTER D WHITAKER</td><td>8626 TESORO DRIVE STE 310, SAN ANTONIO, TX 78217</td></tr>
+      <tr><td>VICE PRESIDENT</td><td>GARY D WHITAKER</td><td>8626 TESORO DRIVE STE 310, SAN ANTONIO, TX 78217</td></tr>
+      <tr><td>SECRETARY</td><td>LANA P WHITAKER</td><td>8626 TESORO DRIVE STE 310, SAN ANTONIO, TX 78217</td></tr>
+    </table>
+    </body></html>
+    """
+
+    def test_extracts_pir_year(self):
+        result = parse_pir_html(self._WHITAKER_HTML)
+        self.assertEqual(result["pir_year"], 2024)
+
+    def test_extracts_three_officers(self):
+        result = parse_pir_html(self._WHITAKER_HTML)
+        self.assertEqual(len(result["officers"]), 3)
+
+    def test_officer_fields(self):
+        result = parse_pir_html(self._WHITAKER_HTML)
+        first = result["officers"][0]
+        self.assertEqual(first["title"], "PRESIDENT")
+        self.assertEqual(first["name"], "CHESTER D WHITAKER")
+        self.assertIn("8626 TESORO", first["address"])
+
+    def test_alternate_pir_year_format(self):
+        html = "<div>PIR 2023</div><table></table>"
+        result = parse_pir_html(html)
+        self.assertEqual(result["pir_year"], 2023)
+
+    def test_no_pir_returns_empty(self):
+        result = parse_pir_html("<html><body><p>nothing here</p></body></html>")
+        self.assertIsNone(result["pir_year"])
+        self.assertEqual(result["officers"], [])
+
+    def test_empty_html_returns_empty(self):
+        result = parse_pir_html("")
+        self.assertIsNone(result["pir_year"])
+        self.assertEqual(result["officers"], [])
+
+    def test_none_html_returns_empty(self):
+        result = parse_pir_html(None)  # type: ignore
+        self.assertIsNone(result["pir_year"])
+        self.assertEqual(result["officers"], [])
+
+    def test_filters_out_non_officer_rows(self):
+        # Random 3-column rows that aren't officer rows should be skipped
+        html = """
+        <table>
+          <tr><th>Header A</th><th>Header B</th><th>Header C</th></tr>
+          <tr><td>Some Random Field</td><td>Some Value</td><td>Another Value</td></tr>
+          <tr><td>PRESIDENT</td><td>JANE DOE</td><td>1 Main St</td></tr>
+          <tr><td>Address Type</td><td>Mailing</td><td>123 Oak</td></tr>
+        </table>
+        """
+        result = parse_pir_html(html)
+        self.assertEqual(len(result["officers"]), 1)
+        self.assertEqual(result["officers"][0]["name"], "JANE DOE")
+
+    def test_managing_member_recognized_as_officer(self):
+        html = """
+        <table>
+          <tr><td>MANAGING MEMBER</td><td>BOB BUILDER</td><td>500 Oak Rd</td></tr>
+        </table>
+        """
+        result = parse_pir_html(html)
+        self.assertEqual(len(result["officers"]), 1)
+        self.assertEqual(result["officers"][0]["title"], "MANAGING MEMBER")
+
+    def test_html_entities_decoded(self):
+        html = """
+        <table>
+          <tr><td>PRESIDENT</td><td>JONES &amp; SMITH LLC</td><td>1 Main St&nbsp;Apt 5</td></tr>
+        </table>
+        """
+        result = parse_pir_html(html)
+        self.assertEqual(result["officers"][0]["name"], "JONES & SMITH LLC")
+        self.assertIn("Apt 5", result["officers"][0]["address"])
 
 
 if __name__ == "__main__":

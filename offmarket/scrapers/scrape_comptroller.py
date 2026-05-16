@@ -13,6 +13,7 @@ Cache: offmarket/cache/comptroller/{tpcl}.json  (atomic write via cad_common)
 import argparse
 import json
 import os
+import re
 import sys
 import urllib.parse
 import urllib.request
@@ -42,7 +43,11 @@ from offmarket.scrapers.cad_common import (
 
 PORTAL = "comptroller"
 API_SEARCH = "https://comptroller.texas.gov/data-search/franchise-tax"
+# PIR officer / director list is only exposed on the HTML account-status page,
+# not the JSON API (discovered 2026-05-15 deep-dive — Whitaker Insurance et al).
+HTML_ACCOUNT_STATUS = "https://comptroller.texas.gov/taxes/franchise/account-status/search/{taxpayerId}"
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh) Chrome/120.0.0.0', 'Accept': 'application/json'}
+HTML_HEADERS = {'User-Agent': 'Mozilla/5.0 (Macintosh) Chrome/120.0.0.0', 'Accept': 'text/html,*/*'}
 CTX = ssl.create_default_context()
 
 # Field-typed TTL: Comptroller status = 30 days per PLAN §4
@@ -66,6 +71,137 @@ def _get_json(url: str, retries: int = 2) -> dict:
                 time.sleep(1)
                 continue
             return {"error": f"{type(e).__name__}: {str(e)[:120]}"}
+
+
+def _get_html(url: str, retries: int = 2) -> str | None:
+    """Fetch raw HTML from a Comptroller page. Returns None on persistent failure."""
+    for attempt in range(retries + 1):
+        try:
+            req = urllib.request.Request(url, headers=HTML_HEADERS)
+            with urllib.request.urlopen(req, timeout=15, context=CTX) as r:
+                body = r.read()
+                if isinstance(body, bytes):
+                    return body.decode("utf-8", errors="replace")
+                return body
+        except Exception:
+            if attempt < retries:
+                time.sleep(1)
+                continue
+            return None
+    return None
+
+
+# ---------------------------------------------------------------------------
+# PIR officer parsing — Finding 1, 2026-05-15 deep-dive
+# ---------------------------------------------------------------------------
+# The JSON API only returns the registered-agent record. The Public Information
+# Report (PIR) officer list — names + titles + addresses of directors/principals —
+# lives only on the HTML account-status page. Parsing this gives us Finding 5
+# data: cross-check the JSON owner_name against the actual equity-holding officers,
+# and Finding 4 data: detect when ≥2 co-Directors live at DIFFERENT residences
+# (indicating an internal buyout structure vs single-founder exit).
+
+# Compile once; use re module functions throughout (no BeautifulSoup dep).
+_PIR_YEAR_PATTERNS = [
+    re.compile(r'Public\s+Information\s+Report\s*\(?\s*(\d{4})\s*\)?', re.I),
+    re.compile(r'PIR[^\d]{0,20}(\d{4})', re.I),
+]
+
+# Officer rows on the Comptroller account-status page render as:
+#   <tr><td>PRESIDENT</td><td>CHESTER D WHITAKER</td><td>8626 TESORO DRIVE STE 310...</td></tr>
+# Titles seen in the wild include: PRESIDENT, VICE PRESIDENT, VP, SECRETARY,
+# TREASURER, DIRECTOR, MANAGER, MEMBER, PARTNER, OFFICER, AGENT, CEO, COO, CFO.
+_OFFICER_TITLE_PATTERN = re.compile(
+    r'\b(?:PRESIDENT|VICE\s+PRESIDENT|VP|SECRETARY|TREASURER|DIRECTOR|'
+    r'MANAGER|MANAGING\s+MEMBER|MEMBER|PARTNER|MANAGING\s+PARTNER|'
+    r'OFFICER|AGENT|CEO|COO|CFO|CHIEF\s+EXECUTIVE\s+OFFICER|'
+    r'CHIEF\s+OPERATING\s+OFFICER|CHIEF\s+FINANCIAL\s+OFFICER|'
+    r'EXECUTIVE\s+DIRECTOR|GENERAL\s+PARTNER|LIMITED\s+PARTNER|'
+    r'TRUSTEE|OWNER|PRINCIPAL)\b',
+    re.I,
+)
+
+_OFFICER_ROW_PATTERN = re.compile(
+    r'<tr[^>]*>\s*'
+    r'<t[dh][^>]*>([^<]+)</t[dh]>\s*'
+    r'<t[dh][^>]*>([^<]+)</t[dh]>\s*'
+    r'<t[dh][^>]*>([^<]+)</t[dh]>\s*'
+    r'</tr>',
+    re.I | re.S,
+)
+
+
+def _clean_cell(s: str) -> str:
+    """Strip HTML entities and whitespace from a cell value."""
+    if not s:
+        return ""
+    s = re.sub(r'&nbsp;', ' ', s)
+    s = re.sub(r'&amp;', '&', s)
+    s = re.sub(r'&#39;|&apos;', "'", s)
+    s = re.sub(r'&quot;', '"', s)
+    s = re.sub(r'<[^>]+>', '', s)
+    return s.strip()
+
+
+def parse_pir_html(html: str) -> dict:
+    """Parse Comptroller account-status HTML → {pir_year, officers}.
+
+    Returns:
+      pir_year       — int | None
+      officers       — list of {title, name, address} dicts. Empty if no officers section.
+
+    Pure function — no I/O. Caller passes HTML body; this returns structured data.
+    Designed to be testable with HTML fixtures.
+    """
+    out = {"pir_year": None, "officers": []}
+    if not html:
+        return out
+
+    # PIR year detection
+    for pat in _PIR_YEAR_PATTERNS:
+        m = pat.search(html)
+        if m:
+            try:
+                out["pir_year"] = int(m.group(1))
+                break
+            except (ValueError, IndexError):
+                continue
+
+    # Officer rows — naive 3-column <tr> match.
+    # Filter to rows where col1 contains a known officer title.
+    for m in _OFFICER_ROW_PATTERN.finditer(html):
+        c1 = _clean_cell(m.group(1))
+        c2 = _clean_cell(m.group(2))
+        c3 = _clean_cell(m.group(3))
+        if not (c1 and c2):
+            continue
+        if not _OFFICER_TITLE_PATTERN.search(c1):
+            continue
+        # Strip extra commas/whitespace from address
+        address = re.sub(r'\s+', ' ', c3) if c3 else None
+        out["officers"].append({
+            "title": c1.upper(),
+            "name": c2.upper(),
+            "address": address or None,
+        })
+    return out
+
+
+def fetch_pir(taxpayer_id: str) -> dict:
+    """Fetch + parse PIR officers from the Comptroller HTML page.
+
+    Returns {pir_year, officers, fetch_error}. fetch_error is None on success.
+    """
+    if not taxpayer_id:
+        return {"pir_year": None, "officers": [], "fetch_error": "no_taxpayer_id"}
+    url = HTML_ACCOUNT_STATUS.format(taxpayerId=taxpayer_id)
+    html = _get_html(url)
+    if html is None:
+        return {"pir_year": None, "officers": [], "fetch_error": "html_fetch_failed"}
+    parsed = parse_pir_html(html)
+    parsed["fetch_error"] = None
+    parsed["pir_html_url"] = url
+    return parsed
 
 
 CORP_SUFFIXES = {'INC', 'INCORPORATED', 'LLC', 'CORP', 'CORPORATION', 'COMPANY', 'CO', 'LTD', 'LP', 'PC', 'PLLC'}
@@ -296,6 +432,17 @@ def _lookup_one(business: dict, vertical: str = "pest-control") -> dict:
     result["mailing_address_zip"] = d.get('mailingAddressZip')
     result["state_of_formation"] = d.get('stateOfFormation')
     result["dba_name"] = d.get('dbaName')
+
+    # PIR officer list — only available on the HTML account-status page.
+    # Finding 1 (2026-05-15 deep-dive): registered_agent ≈ owner only ~40% of
+    # the time. The PIR officer list is the ground truth on who actually controls
+    # the entity (Fire Safe / Burianek case, Perdue / Cloud family case).
+    pir = fetch_pir(best['taxpayerId'])
+    result["pir_year"] = pir.get("pir_year")
+    result["pir_officers"] = pir.get("officers", [])
+    result["pir_html_url"] = pir.get("pir_html_url")
+    if pir.get("fetch_error"):
+        result.setdefault("errors", []).append(f"pir_fetch: {pir['fetch_error']}")
     return result
 
 

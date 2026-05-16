@@ -322,5 +322,79 @@ class TestEnrichIntegration(unittest.TestCase):
         self.assertEqual(result, {})
 
 
+class TestVerificationGatesWired(unittest.TestCase):
+    """Findings 4+5: confirm enrich() attaches verification_gates + cad_status_advisory."""
+
+    @patch("offmarket.scrapers.enrich_phase6._run_scraper", return_value=(True, None))
+    @patch("offmarket.scrapers.enrich_phase6._CACHE_ROOT", new=Path(tempfile.mkdtemp()))
+    @patch("offmarket.scrapers.enrich_phase6.load_targets")
+    def test_owner_mismatch_attaches_low_confidence_cap(self, mock_load, mock_run):
+        # Fire Safe-shaped fixture: JSON owner_name doesn't match PIR officers
+        mock_load.return_value = [{
+            "tpcl": "T_FIRE_SAFE",
+            "county": "harris",
+            "legal_name": "Sherwood Forest Enterprises LLC",
+            "owner_name": "Stephen McKinney",
+        }]
+        # Seed comptroller cache with Burianek as the only manager
+        from offmarket.scrapers.enrich_phase6 import _CACHE_ROOT
+        comp_dir = _CACHE_ROOT / "comptroller"
+        comp_dir.mkdir(parents=True, exist_ok=True)
+        with (comp_dir / "pest-control__T_FIRE_SAFE.json").open("w") as fh:
+            json.dump({
+                "status": "Active",
+                "registered_agent_name": "BRUCE L BURIANEK",
+                "pir_officers": [
+                    {"title": "MANAGER", "name": "BRUCE L BURIANEK", "address": "1 Sherwood Way"},
+                ],
+                "pir_year": 2024,
+            }, fh)
+
+        result = enrich("pest-control", run_comptroller=False, run_cad=False)
+        rec = result["T_FIRE_SAFE"]
+        self.assertIn("verification_gates", rec)
+        gates = rec["verification_gates"]
+        self.assertFalse(gates["owner_verification"]["owner_verified"])
+        self.assertEqual(gates["recommended_confidence_cap"], "low")
+
+    @patch("offmarket.scrapers.enrich_phase6._run_scraper", return_value=(True, None))
+    @patch("offmarket.scrapers.enrich_phase6._CACHE_ROOT", new=Path(tempfile.mkdtemp()))
+    @patch("offmarket.scrapers.enrich_phase6.load_targets")
+    def test_blocked_cad_attaches_advisory(self, mock_load, mock_run):
+        # Tarrant is blocked_spa per cad_registry
+        mock_load.return_value = [{
+            "tpcl": "T_TARRANT",
+            "county": "tarrant",
+            "legal_name": "Mellina Animal Hospital",
+            "owner_name": "Dr. J. Scott Mellina",
+        }]
+        result = enrich("pest-control", run_comptroller=False, run_cad=False)
+        rec = result["T_TARRANT"]
+        self.assertIn("cad_status_advisory", rec)
+        adv = rec["cad_status_advisory"]
+        self.assertEqual(adv["cad_status"], "blocked_spa")
+        self.assertGreater(len(adv["alt_paths"]), 0)
+        self.assertIn("alt_paths", adv)
+
+    @patch("offmarket.scrapers.enrich_phase6._run_scraper", return_value=(True, None))
+    @patch("offmarket.scrapers.enrich_phase6._CACHE_ROOT", new=Path(tempfile.mkdtemp()))
+    @patch("offmarket.scrapers.enrich_phase6.load_targets")
+    def test_works_county_has_no_alt_paths_advisory(self, mock_load, mock_run):
+        # Dallas works — no advisory needed (or status='works' with empty paths)
+        mock_load.return_value = [{
+            "tpcl": "T_DAL",
+            "county": "dallas",
+            "legal_name": "Acme Co",
+            "owner_name": "Test Owner",
+        }]
+        result = enrich("pest-control", run_comptroller=False, run_cad=False)
+        rec = result["T_DAL"]
+        # advisory is attached but for 'works' counties it doesn't include alt_paths
+        if "cad_status_advisory" in rec:
+            adv = rec["cad_status_advisory"]
+            self.assertEqual(adv["cad_status"], "works")
+            self.assertNotIn("alt_paths", adv)
+
+
 if __name__ == "__main__":
     unittest.main()
