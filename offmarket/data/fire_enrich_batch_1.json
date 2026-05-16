@@ -15,7 +15,18 @@
     "license_holder_name": "Billy R. Corbin, Jr.",
     "year_established": 1990,
     "data_sources": [
-      {"source": "website", "url": "https://firetron.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "year_established", "license_number", "license_holder_name", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://firetron.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": [
+          "legal_name",
+          "year_established",
+          "license_number",
+          "license_holder_name",
+          "sub_trade"
+        ]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Self-describes as 'largest individually owned life safety company in TX'. Founded 1990 by Billy R. Corbin Jr. Carries ACR/SCR/ECR plus security license. Multi-location across TX (Houston, Dallas, Austin, Corpus Christi, College Station, Victoria) but single ownership.",
@@ -83,11 +94,36 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://firetron.com/", "fetched_at": "2026-05-15T23:35:00Z", "fields": ["copyright_year", "online_payment", "locations"]},
-      {"source": "phmsa", "url": "https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2025-12/NOPV%20-%2024-0186-CR-SW%20-%20Firetron%20Inc.pdf", "fetched_at": "2026-05-15T23:36:00Z", "fields": ["regulatory_violation"]},
-      {"source": "justia", "url": "https://dockets.justia.com/docket/texas/txsdce/4:2026cv01806/2066699", "fetched_at": "2026-05-15T23:37:00Z", "fields": ["lawsuit"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/company/firetron-inc", "fetched_at": "2026-05-15T23:38:00Z", "fields": ["employee_count_estimate"]},
-      {"source": "corporationwiki", "url": "https://www.corporationwiki.com/Texas/Stafford/billy-r-corbin/33485146.aspx", "fetched_at": "2026-05-15T23:39:00Z", "fields": ["owner_role", "owner_name"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://firetron.com/",
+        "fetched_at": "2026-05-15T23:35:00Z",
+        "fields": ["copyright_year", "online_payment", "locations"]
+      },
+      {
+        "source": "phmsa",
+        "url": "https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2025-12/NOPV%20-%2024-0186-CR-SW%20-%20Firetron%20Inc.pdf",
+        "fetched_at": "2026-05-15T23:36:00Z",
+        "fields": ["regulatory_violation"]
+      },
+      {
+        "source": "justia",
+        "url": "https://dockets.justia.com/docket/texas/txsdce/4:2026cv01806/2066699",
+        "fetched_at": "2026-05-15T23:37:00Z",
+        "fields": ["lawsuit"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/company/firetron-inc",
+        "fetched_at": "2026-05-15T23:38:00Z",
+        "fields": ["employee_count_estimate"]
+      },
+      {
+        "source": "corporationwiki",
+        "url": "https://www.corporationwiki.com/Texas/Stafford/billy-r-corbin/33485146.aspx",
+        "fetched_at": "2026-05-15T23:39:00Z",
+        "fields": ["owner_role", "owner_name"]
+      }
     ],
     "enrichment_notes": "TOO LARGE for typical small-biz ETA target — 200+ employees, ~$30M revenue, six TX offices. Owner Billy Corbin Jr. is now Chairman (succession underway with Debbie Story as VP). Active PHMSA regulatory violation and federal lawsuit are flags but not sticky-distress. Recommend DECLINE due to size, not distress."
   },
@@ -107,7 +143,12 @@
     "license_holder_name": null,
     "year_established": 1945,
     "data_sources": [
-      {"source": "website", "url": "https://industrialfiretx.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://industrialfiretx.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned 'Serving Houston since 1945(TM)'. Holds ACR, ECR, HCR (hood) licenses. Strong recurring-revenue mix (kitchen hood + extinguisher + alarm).",
@@ -175,8 +216,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://industrialfiretx.com/", "fetched_at": "2026-05-15T23:40:00Z", "fields": ["office_hours", "customer_portal", "year_established"]},
-      {"source": "trademarkia", "url": "https://www.trademarkia.com/serving-texas-since-1945-industrial-fire-equipment--service-llc-87941893", "fetched_at": "2026-05-15T23:41:00Z", "fields": ["legal_name", "trademark"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://industrialfiretx.com/",
+        "fetched_at": "2026-05-15T23:40:00Z",
+        "fields": ["office_hours", "customer_portal", "year_established"]
+      },
+      {
+        "source": "trademarkia",
+        "url": "https://www.trademarkia.com/serving-texas-since-1945-industrial-fire-equipment--service-llc-87941893",
+        "fetched_at": "2026-05-15T23:41:00Z",
+        "fields": ["legal_name", "trademark"]
+      }
     ],
     "enrichment_notes": "Strong A/B candidate profile — 81 years in business, recurring revenue mix, owner not publicly identified (typical of low-key family operator). Need owner identification in deeper enrichment phase. Reduced office hours signal worth investigating. NO distress signals."
   },
@@ -196,7 +247,12 @@
     "license_holder_name": null,
     "year_established": 1916,
     "data_sources": [
-      {"source": "website", "url": "https://www.wilsonfire.com/about/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://www.wilsonfire.com/about/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned since 1916; four generations of family leadership. ECR-094 is extremely old license number. Detection/suppression/security + healthcare focus.",
@@ -255,8 +311,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.wilsonfire.com/leadership-wilson-fire/", "fetched_at": "2026-05-15T23:42:00Z", "fields": ["successor_check", "leadership_team"]},
-      {"source": "live_website_fetch", "url": "https://www.wilsonfire.com/about/", "fetched_at": "2026-05-15T23:43:00Z", "fields": ["year_established", "generations"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.wilsonfire.com/leadership-wilson-fire/",
+        "fetched_at": "2026-05-15T23:42:00Z",
+        "fields": ["successor_check", "leadership_team"]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.wilsonfire.com/about/",
+        "fetched_at": "2026-05-15T23:43:00Z",
+        "fields": ["year_established", "generations"]
+      }
     ],
     "enrichment_notes": "DECLINE — Succession already completed (Bob Wilson, 4th gen, now President). Family clearly committed to retaining ownership. Too large for typical ETA target. Excellent operator but not a coasting/about-to-sell profile."
   },
@@ -276,7 +342,12 @@
     "license_holder_name": null,
     "year_established": 2006,
     "data_sources": [
-      {"source": "website", "url": "https://kauffmanco.net/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://kauffmanco.net/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned and operated. Multi-trade: alarms, sprinklers, suppression, extinguishers, pumps, hydrants. Serves greater Houston and surrounding TX metros via service-area landing pages.",
@@ -335,8 +406,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/company/kauffman-company", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_history", "succession"]},
-      {"source": "live_website_fetch", "url": "https://www.kauffmanco.net/about-us/", "fetched_at": "2026-05-15T23:46:00Z", "fields": ["owner_history"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/company/kauffman-company",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_history", "succession"]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.kauffmanco.net/about-us/",
+        "fetched_at": "2026-05-15T23:46:00Z",
+        "fields": ["owner_history"]
+      }
     ],
     "enrichment_notes": "DECLINE — Strong father-son succession (John III + Conor) already in place. Conor is next-gen owner (~45), unlikely to sell anytime soon. Healthy operating business but exit window is decades away."
   },
@@ -356,7 +437,12 @@
     "license_holder_name": null,
     "year_established": 1982,
     "data_sources": [
-      {"source": "website", "url": "https://fire-safe.net/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://fire-safe.net/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Founded 1982. Full multi-trade. ECR-961 indicates long license tenure.",
@@ -424,8 +510,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://fire-safe.net/leadership-team/", "fetched_at": "2026-05-15T23:48:00Z", "fields": ["leadership_team", "successor_check"]},
-      {"source": "live_website_fetch", "url": "https://fire-safe.net/", "fetched_at": "2026-05-15T23:49:00Z", "fields": ["copyright_year", "blog_recency"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://fire-safe.net/leadership-team/",
+        "fetched_at": "2026-05-15T23:48:00Z",
+        "fields": ["leadership_team", "successor_check"]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://fire-safe.net/",
+        "fetched_at": "2026-05-15T23:49:00Z",
+        "fields": ["copyright_year", "blog_recency"]
+      }
     ],
     "enrichment_notes": "STRONG A/B CANDIDATE — Stephen McKinney has been at the helm 33 years, age ~65, no family successor visible, single largest healthcare account. Stale 2021 copyright in footer contradicts active 2026 blog — mixed coasting signal. Worth deeper enrichment: McKinney's homestead OV65 status would confirm age."
   },
@@ -445,7 +541,12 @@
     "license_holder_name": null,
     "year_established": 2002,
     "data_sources": [
-      {"source": "website", "url": "https://www.americanfiresys.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://www.americanfiresys.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Founded Feb 2002. HQ in Houston with offices in Dallas (Farmers Branch), Austin, and San Antonio. Sprinklers, alarms, extinguishers, pumps + security.",
@@ -504,8 +605,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.americanfiresys.com/company.html", "fetched_at": "2026-05-15T23:51:00Z", "fields": ["founders", "year_established"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/company/american-fire-systems-inc.", "fetched_at": "2026-05-15T23:52:00Z", "fields": ["company_size"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.americanfiresys.com/company.html",
+        "fetched_at": "2026-05-15T23:51:00Z",
+        "fields": ["founders", "year_established"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/company/american-fire-systems-inc.",
+        "fetched_at": "2026-05-15T23:52:00Z",
+        "fields": ["company_size"]
+      }
     ],
     "enrichment_notes": "B/C CANDIDATE — Three-founder partnership at 24 yrs, all likely 55-65. Could be approaching shareholder retirement window. Four TX offices suggest healthy but larger size — possibly outside typical small-biz target. Not a solo-coaster profile."
   },
@@ -525,7 +636,12 @@
     "license_holder_name": "Chris Knehr (referenced contact)",
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://spartanfirepro.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://spartanfirepro.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Self-described family-owned. Alarms, extinguishers, 24/7 monitoring, backflow, pumps, emergency lighting. Shares 3522 Bolin Rd address with Reliable Fire Protection — sister entity confirmed: distinct owners (Chris Knehr vs Sean Ellis).",
@@ -575,8 +691,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://spartanfirepro.com/", "fetched_at": "2026-05-15T23:54:00Z", "fields": ["copyright", "service_area"]},
-      {"source": "openpr", "url": "https://www.openpr.com/news/4306419/spartan-fire-protection-enhances-commercial-safety-with", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://spartanfirepro.com/",
+        "fetched_at": "2026-05-15T23:54:00Z",
+        "fields": ["copyright", "service_area"]
+      },
+      {
+        "source": "openpr",
+        "url": "https://www.openpr.com/news/4306419/spartan-fire-protection-enhances-commercial-safety-with",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      }
     ],
     "enrichment_notes": "C/D CANDIDATE — Newer entity, no public founding year, owner Chris Knehr identified but tenure unknown. Likely younger business. Recommend deeper investigation only if Reliable Fire (sister business) profile firms up."
   },
@@ -596,7 +722,12 @@
     "license_holder_name": "Sean Ellis (Owner)",
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://reliable-fire-protection.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://reliable-fire-protection.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "uncertain",
     "verification_notes": "Self-described family-owned, Houston-based, NICET-certified specialists. Shares 3522 Bolin Rd address with Spartan Fire Protection — same physical operation under two brands; distinct owners confirmed.",
@@ -646,8 +777,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://reliable-fire-protection.com/", "fetched_at": "2026-05-15T23:56:00Z", "fields": ["copyright", "owner_first_name"]},
-      {"source": "yelp", "url": "https://www.yelp.com/biz/reliable-fire-protection-houston", "fetched_at": "2026-05-15T23:57:00Z", "fields": ["owner_name"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://reliable-fire-protection.com/",
+        "fetched_at": "2026-05-15T23:56:00Z",
+        "fields": ["copyright", "owner_first_name"]
+      },
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/reliable-fire-protection-houston",
+        "fetched_at": "2026-05-15T23:57:00Z",
+        "fields": ["owner_name"]
+      }
     ],
     "enrichment_notes": "C/D CANDIDATE — Newer-feeling entity (no founding year, modern marketing copy). Sean Ellis identified as owner. Bolin Rd shared address with Spartan suggests co-located startups, not a long-tenured target. Defer unless additional signals emerge."
   },
@@ -667,7 +808,12 @@
     "license_holder_name": null,
     "year_established": 2017,
     "data_sources": [
-      {"source": "website", "url": "https://texasfiresolutions.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "year_established", "license_number", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://texasfiresolutions.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "year_established", "license_number", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned. Serving Houston since 2017. Sprinklers, alarms, extinguishers, fire mains, pumps, backflow. Newer (under 10 yrs), may not meet 'long-tenured' threshold but still worth seeding for enrichment phase.",
@@ -708,7 +854,12 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://texasfiresolutions.com/", "fetched_at": "2026-05-15T23:58:00Z", "fields": ["copyright", "founding_year"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://texasfiresolutions.com/",
+        "fetched_at": "2026-05-15T23:58:00Z",
+        "fields": ["copyright", "founding_year"]
+      }
     ],
     "enrichment_notes": "DECLINE — Only 9 years operating. Too early-stage for ETA acquisition target (owner not in retirement window)."
   },
@@ -728,7 +879,12 @@
     "license_holder_name": null,
     "year_established": 1999,
     "data_sources": [
-      {"source": "website", "url": "https://houstonfiresecurity.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://houstonfiresecurity.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Serving Houston since 1999. Commercial fire alarms, sprinkler service, extinguishers, kitchen hood inspections, emergency lighting, security.",
@@ -787,8 +943,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://houstonfiresecurity.com/", "fetched_at": "2026-05-15T23:59:00Z", "fields": ["copyright", "founding_year"]},
-      {"source": "live_website_fetch", "url": "https://houstonfiresecurity.com/about-us/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["leadership_team"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://houstonfiresecurity.com/",
+        "fetched_at": "2026-05-15T23:59:00Z",
+        "fields": ["copyright", "founding_year"]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://houstonfiresecurity.com/about-us/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["leadership_team"]
+      }
     ],
     "enrichment_notes": "GOOD A/B CANDIDATE — 27 years tenure, full multi-trade recurring mix, owner not publicly named, slightly stale copyright. Needs follow-up on owner identification via TX Comptroller filings. Promising profile."
   },
@@ -808,7 +974,12 @@
     "license_holder_name": null,
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://battlegroundfire.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://battlegroundfire.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Greater Houston / Ship Channel focus. Alarms + monitoring, sprinklers, extinguishers, backflow, kitchen hood, pumps.",
@@ -867,8 +1038,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://battlegroundfire.com/about-fire-protection-company/", "fetched_at": "2026-05-16T00:01:00Z", "fields": ["leadership_team", "founding_year"]},
-      {"source": "bizapedia", "url": "https://www.bizapedia.com/tx/battleground-fire-protection-llc.html", "fetched_at": "2026-05-16T00:02:00Z", "fields": ["entity_status"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://battlegroundfire.com/about-fire-protection-company/",
+        "fetched_at": "2026-05-16T00:01:00Z",
+        "fields": ["leadership_team", "founding_year"]
+      },
+      {
+        "source": "bizapedia",
+        "url": "https://www.bizapedia.com/tx/battleground-fire-protection-llc.html",
+        "fetched_at": "2026-05-16T00:02:00Z",
+        "fields": ["entity_status"]
+      }
     ],
     "enrichment_notes": "C CANDIDATE — '65+ years combined' language suggests newer entity with experienced founders. No founding year, no owner public. Ship Channel/Deer Park focus is attractive industrial niche, but cannot confirm long-tenure profile."
   },
@@ -888,7 +1069,12 @@
     "license_holder_name": null,
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://fireprotechllc.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://fireprotechllc.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Claims 50+ years industry experience (combined). Full multi-trade: alarms, sprinklers, extinguishers, clean agent, kitchen hood. Uses itmtracking.com for inspection reports. Founding year not stated.",
@@ -938,8 +1124,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://fireprotechllc.com/about-us/", "fetched_at": "2026-05-16T00:03:00Z", "fields": ["leadership_team", "company_size"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/c/firepro-tech-llc/371556378", "fetched_at": "2026-05-16T00:04:00Z", "fields": ["owner_names"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://fireprotechllc.com/about-us/",
+        "fetched_at": "2026-05-16T00:03:00Z",
+        "fields": ["leadership_team", "company_size"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/c/firepro-tech-llc/371556378",
+        "fetched_at": "2026-05-16T00:04:00Z",
+        "fields": ["owner_names"]
+      }
     ],
     "enrichment_notes": "DECLINE — 100+ team, above ETA target size. Multi-partner ownership with name churn in customer references. Not a coasting solo-operator profile."
   },
@@ -959,7 +1155,12 @@
     "license_holder_name": null,
     "year_established": 2007,
     "data_sources": [
-      {"source": "website", "url": "https://1sttexasfire.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://1sttexasfire.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Sprinkler-focused. Filed as Domestic For-Profit Corporation October 26, 2007. Website says 'over 14 years' so consistent with 2007/2008 founding.",
@@ -1018,8 +1219,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://1sttexasfire.com/", "fetched_at": "2026-05-16T00:05:00Z", "fields": ["copyright", "tenure"]},
-      {"source": "corporationwiki", "url": "https://www.corporationwiki.com/Texas/Houston/1st-texas-fire-protection-inc/37977431.aspx", "fetched_at": "2026-05-16T00:06:00Z", "fields": ["entity_formation_date"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://1sttexasfire.com/",
+        "fetched_at": "2026-05-16T00:05:00Z",
+        "fields": ["copyright", "tenure"]
+      },
+      {
+        "source": "corporationwiki",
+        "url": "https://www.corporationwiki.com/Texas/Houston/1st-texas-fire-protection-inc/37977431.aspx",
+        "fetched_at": "2026-05-16T00:06:00Z",
+        "fields": ["entity_formation_date"]
+      }
     ],
     "enrichment_notes": "B/C CANDIDATE — 19 years tenure with stale copyright + shortened office hours. Owner not publicly named. Sprinkler-only sub-trade means lower recurring revenue mix than multi-trade A candidates. Worth deeper enrichment for owner identification."
   },
@@ -1039,7 +1250,12 @@
     "license_holder_name": null,
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://www.bmfsolutions.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://www.bmfsolutions.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned full-service sprinkler contractor. 15+ years experience. Sprinkler systems, fire pumps, standpipes, water storage tanks, special hazards. Likely founded ~2010.",
@@ -1098,8 +1314,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.bmfsolutions.com/", "fetched_at": "2026-05-16T00:07:00Z", "fields": ["company_size", "year_estimated"]},
-      {"source": "live_website_fetch", "url": "https://www.bmfsolutions.com/about/", "fetched_at": "2026-05-16T00:08:00Z", "fields": ["family_owned", "leadership"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.bmfsolutions.com/",
+        "fetched_at": "2026-05-16T00:07:00Z",
+        "fields": ["company_size", "year_estimated"]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.bmfsolutions.com/about/",
+        "fetched_at": "2026-05-16T00:08:00Z",
+        "fields": ["family_owned", "leadership"]
+      }
     ],
     "enrichment_notes": "B CANDIDATE — 15 years operating, 60+ field personnel, family-owned but no names public. Healthy mid-size sprinkler contractor. Owner age unknown — younger operator likely. Outside top-tier 'coasting solo' profile but viable mid-size ETA target."
   },
@@ -1119,7 +1345,12 @@
     "license_holder_name": null,
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://www.firesprinklertx.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "license_number", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://www.firesprinklertx.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "license_number", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "30+ years in Texas. Sprinkler installation, inspection, maintenance, design, backflow, radio monitoring. Sugar Land (Fort Bend Co); included as Houston-metro adjacent. NOTE: City was tagged 'Harris' in spine — actually Fort Bend.",
@@ -1187,7 +1418,12 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.firesprinklertx.com/", "fetched_at": "2026-05-16T00:09:00Z", "fields": ["copyright", "owner_first_name", "tenure"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.firesprinklertx.com/",
+        "fetched_at": "2026-05-16T00:09:00Z",
+        "fields": ["copyright", "owner_first_name", "tenure"]
+      }
     ],
     "enrichment_notes": "B+ CANDIDATE — 30+ year tenure, owner-led ('James and his crew'), Sugar Land (Fort Bend Co — note correction from spine's Harris tag). Single license-holder (SCR-G-2415064) suggests solo or near-solo operator profile. Needs owner identification + age verification in next phase."
   },
@@ -1207,7 +1443,12 @@
     "license_holder_name": null,
     "year_established": 1992,
     "data_sources": [
-      {"source": "website", "url": "https://www.advantagefireprotection.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://www.advantagefireprotection.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "25+ years in business. Industrial/commercial/offshore focus. Alarms, sprinklers, suppression, gas detection, design/consulting/engineering, maintenance/monitoring, backflow. Founded 1992 by Mike Hunsucker; merged with Texas Suppression Contractors (TSC) in 2002.",
@@ -1284,8 +1525,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/mike-hunsucker-88080a32/", "fetched_at": "2026-05-16T00:10:00Z", "fields": ["owner_name", "founder_year"]},
-      {"source": "live_website_fetch", "url": "https://www.advantagefireprotection.com/about-fire-protection-company/", "fetched_at": "2026-05-16T00:11:00Z", "fields": ["founder_history", "merger_history"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/mike-hunsucker-88080a32/",
+        "fetched_at": "2026-05-16T00:10:00Z",
+        "fields": ["owner_name", "founder_year"]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.advantagefireprotection.com/about-fire-protection-company/",
+        "fetched_at": "2026-05-16T00:11:00Z",
+        "fields": ["founder_history", "merger_history"]
+      }
     ],
     "enrichment_notes": "TOP A CANDIDATE — Mike Hunsucker (owner since 1992, ~65 today) + co-founder Mike Staley (post-2002 merger). Two-partner senior team, no visible successor, industrial/offshore recurring revenue base, Houston + New Braunfels footprint. Classic ETA exit profile. RECOMMEND DEEPER ENRICHMENT (Hunsucker's homestead, OV65 status, recent property deed search)."
   }

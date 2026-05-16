@@ -1,7 +1,8 @@
 {
   "cad_lookups": [
     {
-      "i": 1, "legal_name": "Whitaker Insurance",
+      "i": 1,
+      "legal_name": "Whitaker Insurance",
       "cad": "Bexar (bexar.trueautomation.com)",
       "search_strategy": "Owner Name: WHITAKER CHESTER (per Comptroller PIR)",
       "property_id": "661777",
@@ -19,7 +20,8 @@
       "fetched_at": "2026-05-15T21:42:00Z"
     },
     {
-      "i": 9, "legal_name": "Animal Hospital of Valley Ranch",
+      "i": 9,
+      "legal_name": "Animal Hospital of Valley Ranch",
       "cad": "Dallas (dallascad.org)",
       "search_strategy": "Address from Comptroller PIR: 1924 COTTONWOOD VALLEY DR, IRVING (actual CAD address is COTTONWOOD VALLEY CIR S)",
       "account_id": "32077930120100000",
@@ -37,7 +39,8 @@
       "fetched_at": "2026-05-15T21:34:00Z"
     },
     {
-      "i": 6, "legal_name": "Perdue Insurance Agency LLC",
+      "i": 6,
+      "legal_name": "Perdue Insurance Agency LLC",
       "cad": "Hays (esearch.hayscad.com)",
       "search_strategy": "Owner: PERDUE (residence 300 Creekside Dr, Buda — Hays County per Comptroller PIR)",
       "fetched_at": "2026-05-15T21:40:00Z",
@@ -45,7 +48,8 @@
       "block_reason": "Hays CAD eSearch is a SPA without traditional form submission; Playwright/MCP click+search did not trigger results endpoint. Direct URL parameters return 404."
     },
     {
-      "i": 12, "legal_name": "Longenbaugh Veterinary Hospital P.C.",
+      "i": 12,
+      "legal_name": "Longenbaugh Veterinary Hospital P.C.",
       "cad": "Harris (search.hcad.org)",
       "search_strategy": "Residence 8402 LAUREL TRAILS, HOUSTON (from Comptroller PIR)",
       "fetched_at": "2026-05-15T21:25:00Z",
@@ -53,7 +57,8 @@
       "block_reason": "Texas law restriction at HCAD: 'Texas law prohibits us from displaying residential photographs, sketches, floor plans, or information indicating the age of a property owner.' HCAD does NOT publicly display OV65 — alternate proxy (tax ceiling) likely also masked. Additionally HCAD search.hcad.org is a React SPA where submit was not triggered via MCP. OV65 verification via HCAD requires direct records pull / HCAD account."
     },
     {
-      "i": 13, "legal_name": "Bellaire Optometry Clinic",
+      "i": 13,
+      "legal_name": "Bellaire Optometry Clinic",
       "cad": "Fort Bend (esearch.fbcad.org)",
       "search_strategy": "Owner ANNE HUYEN LE residence 137 N HALL DRIVE, SUGAR LAND (from Comptroller PIR)",
       "fetched_at": "2026-05-15T21:38:00Z",
@@ -61,62 +66,72 @@
       "block_reason": "Fort Bend CAD eSearch is the same SPA engine as Hays CAD — no form submit. URL params return 404."
     },
     {
-      "i": 2, "legal_name": "White Rock Animal Hospital",
+      "i": 2,
+      "legal_name": "White Rock Animal Hospital",
       "cad": "Dallas (dallascad.org)",
       "search_strategy": "Owner Hawthorne or business address 11414 E NW Hwy (current operator)",
       "verification_status": "not_attempted_low_priority",
       "reason": "Comptroller showed only an old inactive entity. Owner unconfirmed via Comptroller. Without confirmed owner residential address, CAD lookup would be exploratory."
     },
     {
-      "i": 3, "legal_name": "Mellina Animal Hospital",
+      "i": 3,
+      "legal_name": "Mellina Animal Hospital",
       "cad": "Tarrant (tarrant.prodigycad.com)",
       "verification_status": "blocked",
       "block_reason": "Tarrant CAD search is a JS-driven SPA with no exposed search route. URL parameters do not work. No Comptroller entity found so no owner residential address to anchor the search."
     },
     {
-      "i": 4, "legal_name": "Colleyville Animal Clinic",
+      "i": 4,
+      "legal_name": "Colleyville Animal Clinic",
       "cad": "Tarrant (tarrant.prodigycad.com)",
       "verification_status": "blocked",
       "block_reason": "Same Tarrant CAD SPA block. No Comptroller entity found."
     },
     {
-      "i": 5, "legal_name": "Alamo Dog & Cat Hospital",
+      "i": 5,
+      "legal_name": "Alamo Dog & Cat Hospital",
       "cad": "Bexar (bexar.trueautomation.com)",
       "verification_status": "not_attempted",
       "reason": "Comptroller-found entity is inactive. Owner Dr. Mark E. LaBrie didn't show up in LABRIE name search. Without confirmed residence, low-priority CAD attempt deferred."
     },
     {
-      "i": 7, "legal_name": "Altig Optical",
+      "i": 7,
+      "legal_name": "Altig Optical",
       "cad": "Tarrant",
       "verification_status": "blocked",
       "block_reason": "Same Tarrant CAD SPA block. No Comptroller entity found."
     },
     {
-      "i": 8, "legal_name": "Bankhead Insurance Agency LLC",
+      "i": 8,
+      "legal_name": "Bankhead Insurance Agency LLC",
       "cad": "Dallas",
       "verification_status": "not_attempted",
       "reason": "Comptroller PIR shows Philip Bankhead at business address only — no residence disclosed. Owner-name search by 'BANKHEAD PHILIP' would help but skipped due to time budget after confirming flow works on Chaikin/Whitaker."
     },
     {
-      "i": 10, "legal_name": "Bridge Street Animal Clinic",
+      "i": 10,
+      "legal_name": "Bridge Street Animal Clinic",
       "cad": "Tarrant",
       "verification_status": "blocked",
       "block_reason": "Same Tarrant CAD SPA block. No Comptroller entity found."
     },
     {
-      "i": 11, "legal_name": "Vision Plus",
+      "i": 11,
+      "legal_name": "Vision Plus",
       "cad": "Bexar",
       "verification_status": "partial",
       "notes": "Owner Thomas J Goldstein at business address only in Comptroller. Owner-name search GOLDSTEIN on bexar.trueautomation form did not return results on first attempt. The form is finicky after a previous search — may need a fresh navigate cycle. Time-budgeted out."
     },
     {
-      "i": 14, "legal_name": "North Texas Eye Care",
+      "i": 14,
+      "legal_name": "North Texas Eye Care",
       "cad": "Tarrant (Southlake)",
       "verification_status": "blocked",
       "block_reason": "Same Tarrant CAD SPA block. No Comptroller entity found."
     },
     {
-      "i": 15, "legal_name": "Fire Safe Protection Services",
+      "i": 15,
+      "legal_name": "Fire Safe Protection Services",
       "cad": "Harris",
       "verification_status": "blocked_by_law",
       "block_reason": "HCAD does not publicly display age-related exemption info per Texas law. Additionally, Comptroller's legal owner is Bruce L. Burianek (not the JSON's Stephen McKinney) — would need to lookup Burianek's residence, but HCAD restriction applies regardless."

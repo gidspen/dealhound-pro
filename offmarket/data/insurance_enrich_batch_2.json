@@ -16,7 +16,12 @@
     "license_holder_name": "J. Caserotti (likely Jeff/Joel Caserotti per email jcaserotti@isamck.com)",
     "year_established": 1991,
     "data_sources": [
-      {"source": "website", "url": "https://www.isamcktx.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["year_established", "lines_of_business"]}
+      {
+        "source": "website",
+        "url": "https://www.isamcktx.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["year_established", "lines_of_business"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "McKinney independent since 1991 — 34 yrs. Serves McKinney/Allen/Frisco/Plano/Celina (Collin County). Personal + commercial mix. Collin County technically — included as DFW-metro coverage.",
@@ -85,8 +90,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.isamcktx.com/", "fetched_at": "2026-05-15T19:10:00Z", "fields": ["solo_operator", "footer_copyright_year", "lines_of_business"]},
-      {"source": "google_search", "url": "https://www.facebook.com/IsaMck1991/", "fetched_at": "2026-05-15T19:11:00Z", "fields": ["year_established", "contact_email"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.isamcktx.com/",
+        "fetched_at": "2026-05-15T19:10:00Z",
+        "fields": ["solo_operator", "footer_copyright_year", "lines_of_business"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.facebook.com/IsaMck1991/",
+        "fetched_at": "2026-05-15T19:11:00Z",
+        "fields": ["year_established", "contact_email"]
+      }
     ],
     "enrichment_notes": "Strong A-tier candidate on size and tenure: 34-yr solo independent with no team page, no successor visible, owner identity opaque. Owner age unknown (Caserotti first-name initial only — full name not on public site). Distress checks clean. Worth deeper LinkedIn/CAD lookup for full Caserotti name + age."
   },
@@ -101,13 +116,28 @@
     "phone": "(214) 618-5430",
     "website": "https://www.allianceinsure.com/about-us.html",
     "lines_of_business": "mixed",
-    "carriers_visible": ["Travelers", "Progressive", "Liberty Mutual (as carrier)", "MetLife", "Mercury", "Hartford", "Safeco", "Foremost", "Hagerty"],
+    "carriers_visible": [
+      "Travelers",
+      "Progressive",
+      "Liberty Mutual (as carrier)",
+      "MetLife",
+      "Mercury",
+      "Hartford",
+      "Safeco",
+      "Foremost",
+      "Hagerty"
+    ],
     "license_number": null,
     "license_type": null,
     "license_holder_name": null,
     "year_established": 2002,
     "data_sources": [
-      {"source": "website", "url": "https://www.allianceinsure.com/about-us.html", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["carriers_visible", "lines_of_business", "address"]}
+      {
+        "source": "website",
+        "url": "https://www.allianceinsure.com/about-us.html",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["carriers_visible", "lines_of_business", "address"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Frisco independent, 'over 20 yrs'. 30+ A-rated carrier appointments. Started serving Plano/Collin County, now TX + AZ. Personal + commercial mix.",
@@ -167,7 +197,12 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.allianceinsure.com/about-us.html", "fetched_at": "2026-05-15T19:15:00Z", "fields": ["lines_of_business", "carriers_visible", "address"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.allianceinsure.com/about-us.html",
+        "fetched_at": "2026-05-15T19:15:00Z",
+        "fields": ["lines_of_business", "carriers_visible", "address"]
+      }
     ],
     "enrichment_notes": "23-yr Frisco independent on edge of target tenure window. Owner identity not disclosed — major data gap blocks A-tier scoring. Expanded into AZ recently (growth signal, not coasting). Needs TDI agent-license lookup + LinkedIn to identify owner before further qualification. B-tier pending owner ID."
   },
@@ -188,7 +223,12 @@
     "license_holder_name": null,
     "year_established": 1998,
     "data_sources": [
-      {"source": "google_business", "url": "https://www.getrcinsurance.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["lines_of_business"]}
+      {
+        "source": "google_business",
+        "url": "https://www.getrcinsurance.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["lines_of_business"]
+      }
     ],
     "platform_affiliation_check": "uncertain (site fetch failed — verify before scoring)",
     "verification_notes": "Carrollton local independent with 17+ yrs experience claimed on Google search snippet. WebFetch failed (ECONNREFUSED). Verify URL/ownership/year via TDI before A-tier scoring.",
@@ -248,8 +288,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "opencorporates", "url": "https://opencorporates.com/companies/us_tx/0803193864", "fetched_at": "2026-05-15T19:20:00Z", "fields": ["entity_sos_file_number"]},
-      {"source": "alignable", "url": "https://www.alignable.com/carrollton-tx/arci-insurance", "fetched_at": "2026-05-15T19:21:00Z", "fields": ["former_name", "years_in_business"]}
+      {
+        "source": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_tx/0803193864",
+        "fetched_at": "2026-05-15T19:20:00Z",
+        "fields": ["entity_sos_file_number"]
+      },
+      {
+        "source": "alignable",
+        "url": "https://www.alignable.com/carrollton-tx/arci-insurance",
+        "fetched_at": "2026-05-15T19:21:00Z",
+        "fields": ["former_name", "years_in_business"]
+      }
     ],
     "enrichment_notes": "27-yr Carrollton independent (formerly ARCI). TX SOS file 0803193864. Website DOWN on repeat live fetch — potential operational-neglect signal or hosting issue. Cannot complete A/B scoring without site access and owner ID. Defer to TDI license check + phone outreach."
   },
@@ -270,7 +320,12 @@
     "license_holder_name": "Hondo Salgado",
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://salgadoinsuranceagency.com/richardson-texas-independent-insurance-agency/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["phone", "lines_of_business"]}
+      {
+        "source": "website",
+        "url": "https://salgadoinsuranceagency.com/richardson-texas-independent-insurance-agency/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["phone", "lines_of_business"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Richardson independent. Eponymous family-owned. Personal + commercial mix. Year established + carrier list not disclosed on landing page; verify before scoring.",
@@ -321,8 +376,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://salgadoinsuranceagency.com/about-us/", "fetched_at": "2026-05-15T19:25:00Z", "fields": ["owner_name", "owner_tenure_years"]},
-      {"source": "google_search", "url": "https://integratedinsurancegrouptx.com/richardson-texas-independent-insurance-agency/", "fetched_at": "2026-05-15T19:26:00Z", "fields": ["secondary_brand"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://salgadoinsuranceagency.com/about-us/",
+        "fetched_at": "2026-05-15T19:25:00Z",
+        "fields": ["owner_name", "owner_tenure_years"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://integratedinsurancegrouptx.com/richardson-texas-independent-insurance-agency/",
+        "fetched_at": "2026-05-15T19:26:00Z",
+        "fields": ["secondary_brand"]
+      }
     ],
     "enrichment_notes": "DEMOTE: Hondo Salgado in insurance only 13-15 yrs — fails 20+yr tenure threshold for long-tenured coasting profile. Owner likely 35-45 (mid-career, not pre-retirement). D-tier on tenure floor."
   },
@@ -343,7 +408,12 @@
     "license_holder_name": "Todd McShan",
     "year_established": 2003,
     "data_sources": [
-      {"source": "website", "url": "https://www.insurancefordfw.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["year_established", "carriers_visible", "license_holder_name"]}
+      {
+        "source": "website",
+        "url": "https://www.insurancefordfw.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["year_established", "carriers_visible", "license_holder_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Lewisville-based independent since 2003, founder Todd McShan (30+ yr industry vet). 40+ carrier appointments. Member of Reliance Group Texas LP (independent agency cooperative — NOT a PE platform; just a clustering / shared-service network for small independents). Denton county; included as DFW-metro.",
@@ -412,7 +482,12 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.insurancefordfw.com/", "fetched_at": "2026-05-15T19:30:00Z", "fields": ["owner_name", "year_established", "successor_check"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.insurancefordfw.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_name", "year_established", "successor_check"]
+      }
     ],
     "enrichment_notes": "Solid B-tier: Todd McShan 30+yr vet, solo, no team page, no successor visible. Stale footer copyright = mild coasting tell. Personal-lines only is a multiple-cap. Reliance Group Texas LP is an independent cluster (not PE platform). Worth phone outreach."
   },
@@ -433,7 +508,12 @@
     "license_holder_name": null,
     "year_established": 2005,
     "data_sources": [
-      {"source": "website", "url": "https://magnumchoice.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["phone", "lines_of_business"]}
+      {
+        "source": "website",
+        "url": "https://magnumchoice.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["phone", "lines_of_business"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Plano/Richardson independent. SIAA + Coverica logos visible (these are agency networks/clusters, NOT PE platforms — independent). Personal + commercial mix. Year established not on site; verify via TDI.",
@@ -493,7 +573,12 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://magnumchoice.com/", "fetched_at": "2026-05-15T19:35:00Z", "fields": ["lines_of_business", "footer_copyright_year"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://magnumchoice.com/",
+        "fetched_at": "2026-05-15T19:35:00Z",
+        "fields": ["lines_of_business", "footer_copyright_year"]
+      }
     ],
     "enrichment_notes": "20-yr Plano agency with multi-agent team structure. Owner identity opaque — cannot complete Layer 1 scoring. Multi-producer signal weakens solo-coasting profile. C-tier candidate at best; needs TDI license lookup + owner ID."
   },
@@ -508,13 +593,33 @@
     "phone": "(817) 281-0125",
     "website": "https://www.insureitfast.com/",
     "lines_of_business": "mixed",
-    "carriers_visible": ["Liberty Mutual (as carrier)", "Progressive", "GEICO (as carrier)", "Travelers", "Allstate (as carrier)", "Aetna", "Bristol", "Delta Dental", "Foremost", "Kemper", "Markel", "Mercury", "National", "Hartford"],
+    "carriers_visible": [
+      "Liberty Mutual (as carrier)",
+      "Progressive",
+      "GEICO (as carrier)",
+      "Travelers",
+      "Allstate (as carrier)",
+      "Aetna",
+      "Bristol",
+      "Delta Dental",
+      "Foremost",
+      "Kemper",
+      "Markel",
+      "Mercury",
+      "National",
+      "Hartford"
+    ],
     "license_number": null,
     "license_type": null,
     "license_holder_name": "Hall family (inferred from agency name)",
     "year_established": 2000,
     "data_sources": [
-      {"source": "website", "url": "https://www.insureitfast.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["address", "phone", "carriers_visible", "lines_of_business"]}
+      {
+        "source": "website",
+        "url": "https://www.insureitfast.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["address", "phone", "carriers_visible", "lines_of_business"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Fort Worth independent with 14+ named carrier appointments. Personal + commercial mix. Eponymous, likely family-owned. Year established not on site; verify via TDI.",
@@ -574,7 +679,12 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.insureitfast.com/who-we-are/", "fetched_at": "2026-05-15T19:40:00Z", "fields": ["years_in_business", "family_owned_status"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.insureitfast.com/who-we-are/",
+        "fetched_at": "2026-05-15T19:40:00Z",
+        "fields": ["years_in_business", "family_owned_status"]
+      }
     ],
     "enrichment_notes": "25-yr Fort Worth family-owned independent. 14+ carrier appointments. Owner identity opaque — blocks age verification. C/B-tier pending TDI license search to identify Hall principal."
   },
@@ -595,7 +705,12 @@
     "license_holder_name": "James Little",
     "year_established": 1997,
     "data_sources": [
-      {"source": "website", "url": "https://www.jameslittleagency.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["license_holder_name", "lines_of_business"]}
+      {
+        "source": "website",
+        "url": "https://www.jameslittleagency.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["license_holder_name", "lines_of_business"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Fort Worth independent, personal-lines only (auto, home, boat, motorcycle, flood, condo, high net worth). Eponymous sole proprietor. Member of Reliance Group Texas LP (independent network, NOT a PE platform). High net worth specialty noteworthy.",
@@ -655,8 +770,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.jameslittleagency.com/", "fetched_at": "2026-05-15T19:45:00Z", "fields": ["owner_name", "successor_check", "personal_lines"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/c/james-little-agency-llc/346893083", "fetched_at": "2026-05-15T19:46:00Z", "fields": ["annual_revenue"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.jameslittleagency.com/",
+        "fetched_at": "2026-05-15T19:45:00Z",
+        "fields": ["owner_name", "successor_check", "personal_lines"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/c/james-little-agency-llc/346893083",
+        "fetched_at": "2026-05-15T19:46:00Z",
+        "fields": ["annual_revenue"]
+      }
     ],
     "enrichment_notes": "Strong A/B candidate: 28-yr eponymous solo, HNW personal-lines niche, $3M revenue (manageable size), no successor visible. Reliance Group Texas LP cluster member (independent). Owner age unknown but tenure proxy suggests 55-65. Worth deep CAD/voter lookup for James Little Tarrant County."
   },
@@ -671,13 +796,37 @@
     "phone": "(817) 353-2017",
     "website": "https://schuderinsurance.com/",
     "lines_of_business": "mixed",
-    "carriers_visible": ["Humana", "Aetna", "State Auto", "Colonial Life", "American General", "Lincoln Financial", "MetLife", "Arrowhead", "Manhattan Life", "New Era Life", "Travelers", "Safeco", "Allstate (as carrier)", "Progressive", "Nationwide (as carrier)", "UnitedHealthcare", "BCBS", "Mutual Omaha"],
+    "carriers_visible": [
+      "Humana",
+      "Aetna",
+      "State Auto",
+      "Colonial Life",
+      "American General",
+      "Lincoln Financial",
+      "MetLife",
+      "Arrowhead",
+      "Manhattan Life",
+      "New Era Life",
+      "Travelers",
+      "Safeco",
+      "Allstate (as carrier)",
+      "Progressive",
+      "Nationwide (as carrier)",
+      "UnitedHealthcare",
+      "BCBS",
+      "Mutual Omaha"
+    ],
     "license_number": null,
     "license_type": null,
     "license_holder_name": "Crystal Schuder",
     "year_established": 2018,
     "data_sources": [
-      {"source": "website", "url": "https://schuderinsurance.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["address", "phone", "carriers_visible", "license_holder_name"]}
+      {
+        "source": "website",
+        "url": "https://schuderinsurance.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["address", "phone", "carriers_visible", "license_holder_name"]
+      }
     ],
     "platform_affiliation_check": "captive_or_dual_appointed (Crystal Schuder is also a Farmers Insurance agent per agents.farmers.com)",
     "verification_notes": "Fort Worth — appears to operate dual identity: 'Schuder Insurance Agency' (claims independent on website) AND 'Crystal Schuder - Farmers Insurance Agent' (per agents.farmers.com + Yelp). Mother-daughter team (Harley + Crystal Schuder). Heavier health/life mix.",
@@ -719,9 +868,24 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://schuderinsurance.com/about/", "fetched_at": "2026-05-15T19:50:00Z", "fields": ["owner_name", "team_members", "year_founded"]},
-      {"source": "farmers_agents", "url": "https://agents.farmers.com/tx/fort-worth/crystal-schuder/", "fetched_at": "2026-05-15T19:51:00Z", "fields": ["platform_affiliation_check"]},
-      {"source": "yelp", "url": "https://www.yelp.com/biz/farmers-insurance-crystal-schuder-mansfield", "fetched_at": "2026-05-15T19:52:00Z", "fields": ["captive_indicator"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://schuderinsurance.com/about/",
+        "fetched_at": "2026-05-15T19:50:00Z",
+        "fields": ["owner_name", "team_members", "year_founded"]
+      },
+      {
+        "source": "farmers_agents",
+        "url": "https://agents.farmers.com/tx/fort-worth/crystal-schuder/",
+        "fetched_at": "2026-05-15T19:51:00Z",
+        "fields": ["platform_affiliation_check"]
+      },
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/farmers-insurance-crystal-schuder-mansfield",
+        "fetched_at": "2026-05-15T19:52:00Z",
+        "fields": ["captive_indicator"]
+      }
     ],
     "enrichment_notes": "DEMOTE to D_pass: (1) only 7 yrs in business (fails tenure floor), (2) Crystal Schuder also listed as Farmers captive agent — independence ambiguous. Not a long-tenured independent A-tier candidate."
   },
@@ -742,7 +906,12 @@
     "license_holder_name": "Jeffrey R. Mewhirter",
     "year_established": 1986,
     "data_sources": [
-      {"source": "website", "url": "https://mewhirterinsurance.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["carriers_visible", "license_holder_name", "lines_of_business"]}
+      {
+        "source": "website",
+        "url": "https://mewhirterinsurance.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["carriers_visible", "license_holder_name", "lines_of_business"]
+      }
     ],
     "platform_affiliation_check": "independent (former Farmers career agent; agency now lists 80+ carriers and self-describes as independent)",
     "verification_notes": "Grapevine independent, 80+ carrier appointments claimed. Eponymous principal Jeffrey R. Mewhirter (Dan also listed as co-contact — could be successor). Personal + commercial mix. Verify Dan's role + family relationship.",
@@ -811,8 +980,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://mewhirterinsurance.com/about-us/", "fetched_at": "2026-05-15T19:55:00Z", "fields": ["team_members", "owner_tenure"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/jeffmewhirter/", "fetched_at": "2026-05-15T19:56:00Z", "fields": ["education", "career_history"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://mewhirterinsurance.com/about-us/",
+        "fetched_at": "2026-05-15T19:55:00Z",
+        "fields": ["team_members", "owner_tenure"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/jeffmewhirter/",
+        "fetched_at": "2026-05-15T19:56:00Z",
+        "fields": ["education", "career_history"]
+      }
     ],
     "enrichment_notes": "B-tier candidate: 39-yr tenured solo+1 with eponymous founder ~64. Strong age/tenure A-signal BUT Dan Mewhirter listed as team member = internal-successor risk. Stale footer = mild coasting. Worth phone outreach to confirm Dan's role + family relationship before scoring."
   },
@@ -833,8 +1012,18 @@
     "license_holder_name": "Wade Sales (Partner) and Blake Sales (Partner)",
     "year_established": 1883,
     "data_sources": [
-      {"source": "google_business", "url": "https://www.iicsa.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["year_established"]},
-      {"source": "website", "url": "https://www.iicboerne.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["license_holder_name", "year_established"]}
+      {
+        "source": "google_business",
+        "url": "https://www.iicsa.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["year_established"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.iicboerne.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["license_holder_name", "year_established"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "San Antonio's oldest full-service agency — 'Trusted by Texas since 1883'. Described as 'A Family Business'. Multi-generational principal Wade Sales. Affiliated Boerne branch (Kendall County) operates under same email domain.",
@@ -894,7 +1083,12 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.iicboerne.com/about-us", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["all_principals", "successor_check_live_fetch", "family_relationships"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.iicboerne.com/about-us",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["all_principals", "successor_check_live_fetch", "family_relationships"]
+      }
     ],
     "enrichment_notes": "DEMOTE to D_pass: Multi-generational Sales family ownership (Wade + Blake + sons Jake + Conner) — explicit internal-successor structure makes external sale to ETA buyer highly unlikely. Long tenure is real (142 yrs entity, 30 yrs Sales family) but successor risk is dispositive."
   },
@@ -915,7 +1109,12 @@
     "license_holder_name": "Don Whitaker (President, Founder)",
     "year_established": 1982,
     "data_sources": [
-      {"source": "website", "url": "https://whitakerins.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["year_established", "lines_of_business", "platform_affiliation_check"]}
+      {
+        "source": "website",
+        "url": "https://whitakerins.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["year_established", "lines_of_business", "platform_affiliation_check"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "San Antonio + South Texas independent since 1982 — 43+ yrs. Trusted Choice member. Strong commercial specialty in home builder + contractor + general liability. Don Whitaker founder still President; received 2023 Drex Foreman lifetime-achievement award from IIAT.",
@@ -975,8 +1174,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://whitakerins.com/about/", "fetched_at": "2026-05-15T20:05:00Z", "fields": ["founder_status", "tenure"]},
-      {"source": "iiat", "url": "https://www.iiat.org/texas-agent-news/don-whitaker-of-san-antonio-receives-2023-drex-foreman-award", "fetched_at": "2026-05-15T20:06:00Z", "fields": ["lifetime_achievement_award", "founder_active_status"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://whitakerins.com/about/",
+        "fetched_at": "2026-05-15T20:05:00Z",
+        "fields": ["founder_status", "tenure"]
+      },
+      {
+        "source": "iiat",
+        "url": "https://www.iiat.org/texas-agent-news/don-whitaker-of-san-antonio-receives-2023-drex-foreman-award",
+        "fetched_at": "2026-05-15T20:06:00Z",
+        "fields": ["lifetime_achievement_award", "founder_active_status"]
+      }
     ],
     "enrichment_notes": "Strong A-tier candidate: 43-yr founder-led independent, owner ~70, commercial specialty, ~2,600 client book. 2023 Drex Foreman lifetime-achievement award suggests likely succession discussions in next 3-5 yrs. Successor check incomplete (team page exists but not surfaced in WebFetch); HIGH PRIORITY for next-pass direct team-page fetch + Bexar CAD OV65 lookup."
   },
@@ -997,7 +1206,18 @@
     "license_holder_name": "David W. Ison (Director), Mark R. Ison (VP), Stephen W. Ison (CEO/Owner)",
     "year_established": 1978,
     "data_sources": [
-      {"source": "website", "url": "https://davidisoninsurance.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["address", "phone", "year_established", "license_holder_name", "lines_of_business"]}
+      {
+        "source": "website",
+        "url": "https://davidisoninsurance.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": [
+          "address",
+          "phone",
+          "year_established",
+          "license_holder_name",
+          "lines_of_business"
+        ]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "San Antonio independent since 1978 — 47 yrs tenure. Commercial specialty (contractors, restaurants, manufacturers). Founder David Ison; sons Mark and Stephen confirmed as Director/VP/CEO — formal internal succession executed. Stephen Ison is current Owner/CEO. DBA 'David Ison & Sons Insurance, Inc.' makes succession explicit.",
@@ -1048,8 +1268,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://davidisoninsurance.com/", "fetched_at": "2026-05-15T20:10:00Z", "fields": ["all_principals", "and_sons_branding"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/p/Stephen-Ison/776465166", "fetched_at": "2026-05-15T20:11:00Z", "fields": ["current_owner", "secondary_business"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://davidisoninsurance.com/",
+        "fetched_at": "2026-05-15T20:10:00Z",
+        "fields": ["all_principals", "and_sons_branding"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/p/Stephen-Ison/776465166",
+        "fetched_at": "2026-05-15T20:11:00Z",
+        "fields": ["current_owner", "secondary_business"]
+      }
     ],
     "enrichment_notes": "DEMOTE to D_pass: Multi-generational Ison family with explicit '& Sons' branding and Stephen Ison as current CEO/Owner. Internal succession already completed (founder → son). External ETA sale not plausible."
   },
@@ -1070,7 +1300,12 @@
     "license_holder_name": "Tom Hotaling (Principal Partner) + Greg Garcia (Co-Principal Partner)",
     "year_established": 1991,
     "data_sources": [
-      {"source": "website", "url": "https://www.tomhotaling.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["year_established", "license_holder_name", "lines_of_business"]}
+      {
+        "source": "website",
+        "url": "https://www.tomhotaling.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["year_established", "license_holder_name", "lines_of_business"]
+      }
     ],
     "platform_affiliation_check": "independent_partnership (GTX Insurance Partners, two-principal partnership)",
     "verification_notes": "San Antonio agency: 'Tom Hotaling Insurance Agency' brand operates under GTX Insurance Partners, LLC (formed 1994 by Tom Hotaling + Greg Garcia). Two-principal structure. Email domain @gtxins.com.",
@@ -1121,8 +1356,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.gtxins.com/about/", "fetched_at": "2026-05-15T20:15:00Z", "fields": ["co_principals", "gtx_partnership_structure"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/tom-hotaling-5a284617/", "fetched_at": "2026-05-15T20:16:00Z", "fields": ["owner_age_estimate"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.gtxins.com/about/",
+        "fetched_at": "2026-05-15T20:15:00Z",
+        "fields": ["co_principals", "gtx_partnership_structure"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/tom-hotaling-5a284617/",
+        "fetched_at": "2026-05-15T20:16:00Z",
+        "fields": ["owner_age_estimate"]
+      }
     ],
     "enrichment_notes": "B/C-tier: Tom Hotaling 34-yr tenure, ~63 yrs old, BUT operates within GTX Insurance Partners 2-principal partnership (with Greg Garcia). Internal-succession path exists (partner buyout). External ETA sale less likely but not impossible if partners diverge. C-tier without clear distress trigger."
   },
@@ -1137,13 +1382,27 @@
     "phone": "(210) 492-7000",
     "website": "https://texanschoice.com/",
     "lines_of_business": "mixed",
-    "carriers_visible": ["Travelers", "Progressive", "Kemper", "Safeco", "State Auto", "MetLife", "National General", "Homeowners of America"],
+    "carriers_visible": [
+      "Travelers",
+      "Progressive",
+      "Kemper",
+      "Safeco",
+      "State Auto",
+      "MetLife",
+      "National General",
+      "Homeowners of America"
+    ],
     "license_number": null,
     "license_type": null,
     "license_holder_name": "Roger J. Haines (Owner)",
     "year_established": 2011,
     "data_sources": [
-      {"source": "website", "url": "https://texanschoice.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["address", "phone", "carriers_visible", "lines_of_business"]}
+      {
+        "source": "website",
+        "url": "https://texanschoice.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["address", "phone", "carriers_visible", "lines_of_business"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "San Antonio independent, Trusted Choice member, 8+ named carrier appointments. Personal + commercial mix. Founder Roger Haines started business 11/23/2011 per BBB; previously owned Allstate Canada 1999-2008.",
@@ -1194,8 +1453,18 @@
       }
     ],
     "data_sources_added": [
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/san-antonio/profile/auto-insurance/texans-choice-insurance-agency-0825-1000200933", "fetched_at": "2026-05-15T20:20:00Z", "fields": ["entity_formation_date"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/texanschoiceins/", "fetched_at": "2026-05-15T20:21:00Z", "fields": ["owner_career_history"]}
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/san-antonio/profile/auto-insurance/texans-choice-insurance-agency-0825-1000200933",
+        "fetched_at": "2026-05-15T20:20:00Z",
+        "fields": ["entity_formation_date"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/texanschoiceins/",
+        "fetched_at": "2026-05-15T20:21:00Z",
+        "fields": ["owner_career_history"]
+      }
     ],
     "enrichment_notes": "C-tier: Agency tenure only 14 yrs (below 20yr floor) but owner Haines has 25+ yr broader insurance career (Allstate Canada → independent TX). Owner age likely 55-65 based on career timeline. Doesn't fit classic long-tenured coasting profile but worth tracking."
   },
@@ -1216,7 +1485,12 @@
     "license_holder_name": "Robert C. 'Riley' Britton (son of founder Bob Britton); Jack R. Iffinger (Client Service Manager)",
     "year_established": 1985,
     "data_sources": [
-      {"source": "website", "url": "https://www.brittonandbritton.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["year_established", "license_holder_name", "phone"]}
+      {
+        "source": "website",
+        "url": "https://www.brittonandbritton.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["year_established", "license_holder_name", "phone"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Austin + San Antonio locally-owned independent since 1985 — 40 yrs. Founder Robert 'Bob' Britton. Son Riley Britton joined 1992, expanded Austin office 1999. Jack Iffinger is Client Service Manager (not stated as successor — prior Progressive claims background).",
@@ -1267,7 +1541,12 @@
       }
     ],
     "data_sources_added": [
-      {"source": "live_website_fetch", "url": "https://www.brittonandbritton.com/about-us/", "fetched_at": "2026-05-15T20:25:00Z", "fields": ["principals", "founder_son_succession"]}
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.brittonandbritton.com/about-us/",
+        "fetched_at": "2026-05-15T20:25:00Z",
+        "fields": ["principals", "founder_son_succession"]
+      }
     ],
     "enrichment_notes": "DEMOTE to D_pass: Internal succession founder→son already executed. Riley Britton (2nd gen) is current principal. Eponymous family branding signals 3rd-gen path or continuation. Stale footer (2016) IS a coasting tell but doesn't override succession-completed disqualifier."
   },
@@ -1288,7 +1567,12 @@
     "license_holder_name": "Patrick Watkins (CEO + majority shareholder); Chris Scott (President since Jan 1 2024)",
     "year_established": 1949,
     "data_sources": [
-      {"source": "website", "url": "https://watkinsinsurancegroup.com/", "fetched_at": "2026-05-15T19:00:00Z", "fields": ["lines_of_business", "platform_affiliation_check"]}
+      {
+        "source": "website",
+        "url": "https://watkinsinsurancegroup.com/",
+        "fetched_at": "2026-05-15T19:00:00Z",
+        "fields": ["lines_of_business", "platform_affiliation_check"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Austin-based privately-owned independent founded 1949 — 76 yrs old. Patrick Watkins (3rd-gen family, joined 1994, CEO since 2002) is current CEO + majority shareholder. Chris Scott named President Jan 1 2024. Member of Assurex Global (independent broker network, NOT a PE platform). 5 TX locations, licensed 50 states.",
@@ -1339,9 +1623,24 @@
       }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/company/watkins-insurance-group", "fetched_at": "2026-05-15T20:30:00Z", "fields": ["employee_count_estimate"]},
-      {"source": "press_release", "url": "https://watkinsinsurancegroup.com/blog/watkins-insurance-group-announces-leadership-appointment-chris-scott-named-president-patrick-watkins-continues-in-ceo-role/", "fetched_at": "2026-05-15T20:31:00Z", "fields": ["internal_successor_plan"]},
-      {"source": "iiat", "url": "https://www.iiat.org/texas-agent-news/patrick-watkins-of-austin-receives-2024-drex-foreman-award", "fetched_at": "2026-05-15T20:32:00Z", "fields": ["award_recognition"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/company/watkins-insurance-group",
+        "fetched_at": "2026-05-15T20:30:00Z",
+        "fields": ["employee_count_estimate"]
+      },
+      {
+        "source": "press_release",
+        "url": "https://watkinsinsurancegroup.com/blog/watkins-insurance-group-announces-leadership-appointment-chris-scott-named-president-patrick-watkins-continues-in-ceo-role/",
+        "fetched_at": "2026-05-15T20:31:00Z",
+        "fields": ["internal_successor_plan"]
+      },
+      {
+        "source": "iiat",
+        "url": "https://www.iiat.org/texas-agent-news/patrick-watkins-of-austin-receives-2024-drex-foreman-award",
+        "fetched_at": "2026-05-15T20:32:00Z",
+        "fields": ["award_recognition"]
+      }
     ],
     "enrichment_notes": "DEMOTE to D_pass: TOO LARGE for ETA target (165 employees / $93M revenue / 5 locations / 50-state licensing). Also has active 3rd-gen Watkins family ownership + named non-family President (Chris Scott) — internal succession plan firmly in place. Not a target."
   }

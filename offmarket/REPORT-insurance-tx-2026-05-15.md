@@ -18,53 +18,57 @@
 
 ## 2. Top 8 — `B_forward` ranked
 
-| Rank | Agency | City | County | Owner | Yrs | Final | Conf |
-|---|---|---|---|---|---|---|---|
-| 1 | **Whitaker Insurance** | San Antonio | Bexar | Don Whitaker (~70, IIAT 2023 lifetime award) | 43 | **81** | medium |
-| 2 | **Perdue Insurance Agency LLC** | Austin | Travis | Donald Perdue (38yr industry) | 30 | **79** | medium |
-| 3 | **Bankhead Insurance Agency, LLC** | Dallas | Dallas | Philip Bankhead (~70, 1986-present LinkedIn) | 40 | **77** | medium |
-| 4 | **Jeffrey R Mewhirter Insurance Agency** | Grapevine | Tarrant | Jeffrey Mewhirter (39 yr, but Dan on team) | 39 | **73** | medium |
-| 5 | **James Little Agency, LLC** | Fort Worth | Tarrant | James Little (HNW personal, $3M rev) | 28 | **69** | medium |
-| 6 | **Independent Insurance Center (IIC)** | San Antonio | Bexar | Sales family multi-gen | 142 | **69** | medium |
-| 7 | **Insurance Services Agency** | McKinney | Collin | J. Caserotti (opaque, thin web) | 34 | **68** | medium |
-| 8 | **Comaltex Insurance Agency** | New Braunfels | Comal | Owner opaque | 78 | **68** | medium |
+| Rank | Agency                                   | City          | County  | Owner                                        | Yrs | Final  | Conf   |
+| ---- | ---------------------------------------- | ------------- | ------- | -------------------------------------------- | --- | ------ | ------ |
+| 1    | **Whitaker Insurance**                   | San Antonio   | Bexar   | Don Whitaker (~70, IIAT 2023 lifetime award) | 43  | **81** | medium |
+| 2    | **Perdue Insurance Agency LLC**          | Austin        | Travis  | Donald Perdue (38yr industry)                | 30  | **79** | medium |
+| 3    | **Bankhead Insurance Agency, LLC**       | Dallas        | Dallas  | Philip Bankhead (~70, 1986-present LinkedIn) | 40  | **77** | medium |
+| 4    | **Jeffrey R Mewhirter Insurance Agency** | Grapevine     | Tarrant | Jeffrey Mewhirter (39 yr, but Dan on team)   | 39  | **73** | medium |
+| 5    | **James Little Agency, LLC**             | Fort Worth    | Tarrant | James Little (HNW personal, $3M rev)         | 28  | **69** | medium |
+| 6    | **Independent Insurance Center (IIC)**   | San Antonio   | Bexar   | Sales family multi-gen                       | 142 | **69** | medium |
+| 7    | **Insurance Services Agency**            | McKinney      | Collin  | J. Caserotti (opaque, thin web)              | 34  | **68** | medium |
+| 8    | **Comaltex Insurance Agency**            | New Braunfels | Comal   | Owner opaque                                 | 78  | **68** | medium |
 
 ## 3. A-tier list
 
 **No promotions to A this run** — same confidence cap as Fire. The two highest-confidence near-A candidates are:
+
 - **Whitaker Insurance (81)** — Don Whitaker IIAT Drex Foreman 2023 lifetime achievement award is a strong succession-imminent signal. If Bexar CAD confirms OV65, promote to A immediately.
 - **Perdue Insurance (79)** — Donald Perdue specialty commercial-trucking book with FMCSA/Texas Mutual carrier appointments. Trucking-specialty books retain at 90%+ and command 10-12x EBITDA at platform-scale.
 
 ## 4. Value-add theses (top picks)
 
 ### Whitaker Insurance — San Antonio (Bexar)
-*Final 81 · conf medium · L1 94 / L2 88 / L3 60 / L4 87*
+
+_Final 81 · conf medium · L1 94 / L2 88 / L3 60 / L4 87_
 
 43-yr San Antonio commercial-specialty independent with ~2,600 client book — Don Whitaker's IIAT Drex Foreman 2023 lifetime achievement award is the strongest succession-imminent signal in this vertical (lifetime-award recipients often sell within 12-24 mo). Commercial-lines retention is high. Modernization opportunity: cloud AMS, client portal, producer succession-planning hire. Bexar Co PE platforms (Hub, Acrisure, Higginbotham) routinely bolt-on commercial-specialty shops at 8-10x EBITDA. 18-24 mo EBITDA path: 28% → 32% via producer adds + client portal retention bumps. **Top-of-list TX insurance pick.**
 
 ### Perdue Insurance Agency LLC — Austin (Travis)
-*Final 79 · conf medium*
+
+_Final 79 · conf medium_
 
 Donald Perdue, 38-yr industry tenure, 1996 agency founding, specialty commercial-trucking + FMCSA/Texas Mutual/Berkshire Hathaway GUARD carrier appointments. Trucking-specialty books retain at 90%+ and command premium multiples (10-12x EBITDA at platform-scale). Modernization opportunity: cloud AMS, online certificate-of-insurance portal for trucking customers, producer succession hire. Austin metro = strong PE platform demand. 18-24 mo EBITDA path: 25% → 32%. Strong bolt-on to a specialty-commercial-focused platform (Higginbotham, NFP, Acrisure Specialty).
 
 ### Bankhead Insurance Agency, LLC — Dallas
-*Final 77 · conf medium*
+
+_Final 77 · conf medium_
 
 Philip Bankhead, ~70, sole eponymous owner since 1986 (40 yrs); LinkedIn 1986-present tenure confirms. Dallas Co solo agency, no named successor on team page. Needs DCAD OV65 + live successor-check team-page fetch for A promotion. Modernization play: cloud AMS migration; online quoting widget; client portal; producer hiring. Owner glide-path to exit at year 1-2. EBITDA improvement 22% → 30% over 18-24 mo. Higginbotham/Hub/Acrisure DFW bolt-on candidate post-modernization.
 
 ## 5. What worked vs blocked
 
-| Source | Status |
-|---|---|
-| Agency websites direct fetch | WORKED (50/50) |
-| Google Business Profile review data | WORKED |
-| LinkedIn company / tenure | PARTIAL (login-gated for several) |
-| Trusted Choice IIA directory | WORKED |
+| Source                                            | Status                                                                                                                           |
+| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Agency websites direct fetch                      | WORKED (50/50)                                                                                                                   |
+| Google Business Profile review data               | WORKED                                                                                                                           |
+| LinkedIn company / tenure                         | PARTIAL (login-gated for several)                                                                                                |
+| Trusted Choice IIA directory                      | WORKED                                                                                                                           |
 | TDI agent license lookup (txapps.tdi.state.tx.us) | BLOCKED — search-only UI; routed via Socrata `3yqc-fcdt` (agency spine) + `avjc-7u2m` (carrier-appointment crosswalk) per config |
-| TX Comptroller Taxable Entity Search | BLOCKED — requires interactive form / CAPTCHA |
-| OpenCorporates / Bizapedia | BLOCKED — HAProxy CAPTCHA |
-| CAD / OV65 lookups | BLOCKED — interactive form-based JS apps |
-| Wayback Machine snapshot diffs | BLOCKED — timeouts on web.archive.org |
+| TX Comptroller Taxable Entity Search              | BLOCKED — requires interactive form / CAPTCHA                                                                                    |
+| OpenCorporates / Bizapedia                        | BLOCKED — HAProxy CAPTCHA                                                                                                        |
+| CAD / OV65 lookups                                | BLOCKED — interactive form-based JS apps                                                                                         |
+| Wayback Machine snapshot diffs                    | BLOCKED — timeouts on web.archive.org                                                                                            |
 
 ## 6. Key findings
 

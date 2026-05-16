@@ -17,20 +17,20 @@
 
 ## 2. Top 12 — `B_forward` ranked
 
-| Rank | Practice | City | County | Owner | Yrs | Final | Conf |
-|---|---|---|---|---|---|---|---|
-| 1 | **White Rock Animal Hospital** | Dallas | Dallas | Dr. Bob Hawthorne (TAMU 1978 ~73) + Dr. Williams (OSU 1990 ~60) | 65 | **81** | medium |
-| 2 | **Mellina Animal Hospital** | Fort Worth | Tarrant | Dr. J. Scott Mellina (TAMU 1978 ~73, eponymous solo) | 46 | **81** | medium |
-| 3 | **Colleyville Animal Clinic** | Colleyville | Tarrant | Drs. Mark Wilson + John Blick (both KSU 1981 ~70 partnership) | 37 | **80** | medium |
-| 4 | **Alamo Dog & Cat Hospital** | San Antonio | Bexar | (solo legacy practice, owner aged proxy) | 50+ | **80** | medium |
-| 5 | **Animal Hospital of Valley Ranch** | Irving | Dallas | (proxy) | 30+ | **77** | medium |
-| 6 | **Bridge Street Animal Clinic** | Fort Worth | Tarrant | Dr. Robert I. Norris (OSU 1986 ~65) | 37 | **77** | medium |
-| 7 | **Longenbaugh Veterinary Hospital P.C.** | Houston | Harris | Dr. Martin Keadle (TAMU 1991 ~63, solo) | 35 | **76** | medium |
-| 8 | **Southlake Animal Hospital** | Southlake | Tarrant | Moore + Cloninger + DeLaughter (~60) | 31 | **72** | medium |
-| 9 | **Brodie Animal Hospital** | Austin | Travis | (proxy) | 30+ | **71** | medium |
-| 10 | **North Durham Animal Hospital** | Houston | Harris | (proxy) | 25+ | **70** | medium |
-| 11 | **Cypress Veterinary Hospital** | Cypress | Harris | Dr. Ricardo Caballero (TAMU 1988 ~63) | 55 | **70** | medium |
-| 12 | **Great Northwest Animal Hospital** | San Antonio | Bexar | (proxy) | 30+ | **69** | medium |
+| Rank | Practice                                 | City        | County  | Owner                                                           | Yrs | Final  | Conf   |
+| ---- | ---------------------------------------- | ----------- | ------- | --------------------------------------------------------------- | --- | ------ | ------ |
+| 1    | **White Rock Animal Hospital**           | Dallas      | Dallas  | Dr. Bob Hawthorne (TAMU 1978 ~73) + Dr. Williams (OSU 1990 ~60) | 65  | **81** | medium |
+| 2    | **Mellina Animal Hospital**              | Fort Worth  | Tarrant | Dr. J. Scott Mellina (TAMU 1978 ~73, eponymous solo)            | 46  | **81** | medium |
+| 3    | **Colleyville Animal Clinic**            | Colleyville | Tarrant | Drs. Mark Wilson + John Blick (both KSU 1981 ~70 partnership)   | 37  | **80** | medium |
+| 4    | **Alamo Dog & Cat Hospital**             | San Antonio | Bexar   | (solo legacy practice, owner aged proxy)                        | 50+ | **80** | medium |
+| 5    | **Animal Hospital of Valley Ranch**      | Irving      | Dallas  | (proxy)                                                         | 30+ | **77** | medium |
+| 6    | **Bridge Street Animal Clinic**          | Fort Worth  | Tarrant | Dr. Robert I. Norris (OSU 1986 ~65)                             | 37  | **77** | medium |
+| 7    | **Longenbaugh Veterinary Hospital P.C.** | Houston     | Harris  | Dr. Martin Keadle (TAMU 1991 ~63, solo)                         | 35  | **76** | medium |
+| 8    | **Southlake Animal Hospital**            | Southlake   | Tarrant | Moore + Cloninger + DeLaughter (~60)                            | 31  | **72** | medium |
+| 9    | **Brodie Animal Hospital**               | Austin      | Travis  | (proxy)                                                         | 30+ | **71** | medium |
+| 10   | **North Durham Animal Hospital**         | Houston     | Harris  | (proxy)                                                         | 25+ | **70** | medium |
+| 11   | **Cypress Veterinary Hospital**          | Cypress     | Harris  | Dr. Ricardo Caballero (TAMU 1988 ~63)                           | 55  | **70** | medium |
+| 12   | **Great Northwest Animal Hospital**      | San Antonio | Bexar   | (proxy)                                                         | 30+ | **69** | medium |
 
 Plus 12 more B candidates including Alamo Heights Pet Clinic (Dr. Kirby ~60), AMC of the Village (Dr. Dan Jordan ~62), Atascazoo (Dr. Renee Batra TAMU 1991 ~60), Memorial Town & Country, Rutherford Veterinary (Dallas 1924!), Burnet Road, BEEVET (Bee Cave), Summerfields, Round Rock Animal Hospital, Hurst Animal Clinic, Towne Center, Hooves & Paws (mixed-animal Helotes).
 
@@ -39,6 +39,7 @@ Plus 12 more B candidates including Alamo Heights Pet Clinic (Dr. Kirby ~60), AM
 **No A-tier promotions** — confidence cap from missing OV65 verification + missing live successor-check live-fetch holds all at B.
 
 **Three highest-confidence near-A picks:**
+
 1. **Mellina Animal Hospital (Fort Worth)** — Dr. Mellina TAMU 1978 ~73, 46-yr solo eponymous, premium Cultural District 76107, no successor visible. **If TAD OV65 confirms 73, immediate A promotion.**
 2. **White Rock Animal Hospital (Dallas)** — Dr. Bob Hawthorne ~73 partner with Dr. Williams ~60, 65-yr legacy practice, premium Lake Highlands 75218, "no appointment necessary" old-school workflow.
 3. **Colleyville Animal Clinic** — Drs. Wilson + Blick KSU 1981 ~70 partnership, 37 yrs. Two-owner clinical simplification = high-probability sell window.
@@ -46,43 +47,48 @@ Plus 12 more B candidates including Alamo Heights Pet Clinic (Dr. Kirby ~60), AM
 ## 4. Value-add theses (top picks)
 
 ### Mellina Animal Hospital — Fort Worth (Tarrant)
-*Final 81 · L1 97 / L2 88 / L3 60 / L4 83 · conf medium*
+
+_Final 81 · L1 97 / L2 88 / L3 60 / L4 83 · conf medium_
 
 Dr. J. Scott Mellina, TAMU CVM 1978, est. age ~73, 46-yr eponymous solo tenure. Premium Cultural District 76107 ZIP. No successor visible on the team page (verified via live fetch). Mars/NVA/Innovetive are mostly targeting $1.5M+ practices — solo-DVM $700K-$1.2M practices at this profile are under-targeted. **Top-of-list pick** if TAD OV65 confirms age 65+. Value-add: AI front-desk + recall automation, wellness-plan migration, online booking (PetDesk/Petly), associate-DVM glide path. EBITDA improvement 22% → 28% over 18-24 mo. Cleanest dental-mirror profile in the vet vertical.
 
 ### White Rock Animal Hospital — Dallas
-*Final 81 · L1 97 / L2 88 / L3 60 / L4 86 · conf medium*
+
+_Final 81 · L1 97 / L2 88 / L3 60 / L4 86 · conf medium_
 
 Dr. Bob Hawthorne TAMU CVM 1978 ~73, partner Dr. Williams OSU 1990 ~60. 65-yr legacy practice in premium Lake Highlands 75218. "No appointment necessary" old-school workflow + no online booking + no boarding/grooming = maximum coasting profile. Either Hawthorne sells solo (and Williams may stay as employed associate) or full sale. Value-add: modern PMS migration, wellness plan launch, online booking, boarding/grooming addition (huge revenue uplift opportunity). EBITDA 18% → 25% over 18-24 mo. Premium ZIP DSO-equivalent demand from Innovetive, Pathway, AmeriVet.
 
 ### Colleyville Animal Clinic — Colleyville (Tarrant)
-*Final 80 · L1 94 / L2 88 / L3 60 / L4 83 · conf medium*
+
+_Final 80 · L1 94 / L2 88 / L3 60 / L4 83 · conf medium_
 
 Drs. Mark Wilson + John Blick, both KSU 1981 classmates, both ~70, 37-yr partnership. Two-owner clinical-simplification structure (no clear internal successor surfaced). Premium DFW Mid-Cities 76034. Modernization: AI recall, online booking, wellness plans, building real-estate-linked deal structure (both likely own building). EBITDA improvement 20% → 26%. Strong NVA / Lakefield bolt-on candidate.
 
 ### Longenbaugh Veterinary Hospital P.C. — Houston (Harris/Cypress)
-*Final 76 · L1 79 / L2 88 / L3 60 / L4 86 · conf medium*
+
+_Final 76 · L1 79 / L2 88 / L3 60 / L4 86 · conf medium_
 
 Dr. Martin Keadle, TAMU CVM 1991 ~63, 35-yr solo-owner tenure. NW Houston / Cypress exurb — **structurally under-targeted** because Innovetive Petcare's footprint is I-35-corridor (Cedar Park HQ) concentrated. PLLC/independent structure intact. Legacy .pml-style website, no online booking. Value-add: PetDesk/Petly online booking, wellness plan, marketing, exam-room scaling. EBITDA 22% → 28%. Sweet spot for ETA / search-fund acquisition.
 
 ### Bridge Street Animal Clinic — Fort Worth (Tarrant)
-*Final 77 · L1 85 / L2 70 / L3 60 / L4 83 · conf medium*
+
+_Final 77 · L1 85 / L2 70 / L3 60 / L4 83 · conf medium_
 
 Dr. Robert I. Norris, OSU DVM 1986 ~65, 37-yr solo eponymous tenure in East Fort Worth 76112. Legacy PML/Beyond Indigo website, no online booking, no social media — strong coasting + retirement-window signal. Value-add: full digital modernization, wellness program launch, marketing rebuild. EBITDA 18% → 25%. Smaller deal size makes this high-ROIC search-fund target.
 
 ## 5. What worked vs blocked
 
-| Source | Status |
-|---|---|
-| Practice websites + team pages | WORKED (62 successful direct fetches) |
-| Google Business Profile review velocity | WORKED |
-| LinkedIn DVM profiles (grad year proxy) | WORKED |
-| Innovetive Petcare / Lakefield / NVA brand crawls (platform detection) | WORKED |
-| TBVME license lookup (apps.veterinary.texas.gov) | BLOCKED — Salesforce Lightning JS-rendered, 403 from WebFetch |
-| data.texas.gov tm3v-pfq9 dataset | NOT-APPLICABLE — TBVME is NOT under TDLR; that dataset doesn't include vet licenses (verified during spine setup) |
-| CAD homestead / OV65 lookups | BLOCKED |
-| TX Comptroller entity status | BLOCKED |
-| Wayback Machine | BLOCKED |
+| Source                                                                 | Status                                                                                                            |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Practice websites + team pages                                         | WORKED (62 successful direct fetches)                                                                             |
+| Google Business Profile review velocity                                | WORKED                                                                                                            |
+| LinkedIn DVM profiles (grad year proxy)                                | WORKED                                                                                                            |
+| Innovetive Petcare / Lakefield / NVA brand crawls (platform detection) | WORKED                                                                                                            |
+| TBVME license lookup (apps.veterinary.texas.gov)                       | BLOCKED — Salesforce Lightning JS-rendered, 403 from WebFetch                                                     |
+| data.texas.gov tm3v-pfq9 dataset                                       | NOT-APPLICABLE — TBVME is NOT under TDLR; that dataset doesn't include vet licenses (verified during spine setup) |
+| CAD homestead / OV65 lookups                                           | BLOCKED                                                                                                           |
+| TX Comptroller entity status                                           | BLOCKED                                                                                                           |
+| Wayback Machine                                                        | BLOCKED                                                                                                           |
 
 ## 6. Key findings
 

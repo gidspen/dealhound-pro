@@ -15,10 +15,30 @@
     "license_holder_name": "Ron Skelton Jr. (current owner; took over from Ron Skelton Sr. + Jeanne in 2010)",
     "year_established": 1983,
     "data_sources": [
-      {"source": "website", "url": "https://skeltonfirealarm.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "license_holder_name", "sub_trade"]},
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/san-antonio/profile/smoke-alarm-systems/skelton-fire-alarm-0825-1000105367", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/ron-skelton-358aa167", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_role"]},
-      {"source": "rocketreach", "url": "https://rocketreach.co/skelton-fire-alarm-profile_b46d1f7dfc5c7b99", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["leadership_team"]}
+      {
+        "source": "website",
+        "url": "https://skeltonfirealarm.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_holder_name", "sub_trade"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/san-antonio/profile/smoke-alarm-systems/skelton-fire-alarm-0825-1000105367",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/ron-skelton-358aa167",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_role"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/skelton-fire-alarm-profile_b46d1f7dfc5c7b99",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["leadership_team"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned since 1983 (43 yrs). Ron Skelton Sr. + Jeanne started; Ron Jr. (+ Jennifer) bought it in 2010 — second-generation succession already complete. Alarms (Honeywell Farenhyt/Gamewell-FCI) + sprinklers + suppression + extinguishers + 24/7 monitoring. BBB accredited since 2014.",
@@ -39,14 +59,56 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "second_generation_owner", "direction": "negative", "evidence": "Ron Jr. bought from Ron Sr. + Jeanne in June 2010 with '18 years of experience' — second-generation succession already complete; owner now ~56 with wife Jennifer involved", "source": "website", "source_url": "https://skeltonfirealarm.com/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_tenure_long", "direction": "positive", "evidence": "Ron Jr. has owned 16 yrs; was in business 18 yrs prior — 34 yrs in this industry / 16 yrs as principal", "source": "website", "source_url": "https://skeltonfirealarm.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "wife_co_owner", "direction": "negative", "evidence": "Jennifer (wife) referenced as co-owner — suggests committed husband-wife operation, not coasting solo", "source": "website", "source_url": "https://skeltonfirealarm.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "negative", "evidence": "About page returns 404 on /about/; root page emphasizes 'four decades' + community relationships but lists no succession plan or next-gen kids in the business", "source": "live_fetch", "source_url": "https://skeltonfirealarm.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "second_generation_owner",
+        "direction": "negative",
+        "evidence": "Ron Jr. bought from Ron Sr. + Jeanne in June 2010 with '18 years of experience' — second-generation succession already complete; owner now ~56 with wife Jennifer involved",
+        "source": "website",
+        "source_url": "https://skeltonfirealarm.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "Ron Jr. has owned 16 yrs; was in business 18 yrs prior — 34 yrs in this industry / 16 yrs as principal",
+        "source": "website",
+        "source_url": "https://skeltonfirealarm.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "wife_co_owner",
+        "direction": "negative",
+        "evidence": "Jennifer (wife) referenced as co-owner — suggests committed husband-wife operation, not coasting solo",
+        "source": "website",
+        "source_url": "https://skeltonfirealarm.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "About page returns 404 on /about/; root page emphasizes 'four decades' + community relationships but lists no succession plan or next-gen kids in the business",
+        "source": "live_fetch",
+        "source_url": "https://skeltonfirealarm.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/ron-skelton-358aa167", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_role"]},
-      {"source": "rocketreach", "url": "https://rocketreach.co/skelton-fire-alarm-profile_b46d1f7dfc5c7b99", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["leadership_team"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/ron-skelton-358aa167",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_role"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/skelton-fire-alarm-profile_b46d1f7dfc5c7b99",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["leadership_team"]
+      }
     ],
     "enrichment_notes": "Second-generation succession completed 2010 — Ron Jr. is now in his 16th year as principal and co-owns with wife Jennifer. Not coasting solo, but A/B candidate if Ron Jr. is approaching mid-50s and there's no third-gen successor visible (the live About-page 404 limited verification)."
   },
@@ -66,10 +128,30 @@
     "license_holder_name": "Russell F. Young (President)",
     "year_established": 1983,
     "data_sources": [
-      {"source": "website", "url": "https://ybfp1.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]},
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/helotes/profile/fire-safety-equipment/young-brothers-fire-protection-inc-0825-10803", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "buildzoom", "url": "https://www.buildzoom.com/contractor/young-bros-fire-protection", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "family_team"]},
-      {"source": "opencorporates", "url": "https://opencorporates.com/companies/us_tx/0068430300", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["entity_sos_file_number"]}
+      {
+        "source": "website",
+        "url": "https://ybfp1.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/helotes/profile/fire-safety-equipment/young-brothers-fire-protection-inc-0825-10803",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "buildzoom",
+        "url": "https://www.buildzoom.com/contractor/young-bros-fire-protection",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "family_team"]
+      },
+      {
+        "source": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_tx/0068430300",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["entity_sos_file_number"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Founded Dec 1983 (43 yrs). SCR-G-0008 — one of the lowest/oldest TX sprinkler license numbers (extremely long tenure). 30,000 sqft HQ with in-house pipe fabrication (rare). Family team: Russell (President), Coby Young (Operations/Construction), Clayton Young (Designer/Accounting), Lori Young (Office Manager).",
@@ -90,16 +172,71 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_long", "direction": "positive", "evidence": "Russell F. Young founder/President for 43 yrs; SCR-G-0008 = 8th oldest TX sprinkler license", "source": "website+bbb", "source_url": "https://ybfp1.com/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_age_proxy", "direction": "positive", "evidence": "Estimated ~67 (founded company 1983 at ~24-28); plausibly retirement-window", "source": "license_tenure_proxy", "source_url": "https://ybfp1.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "next_generation_active", "direction": "negative", "evidence": "Coby Young + Clayton Young + Lori Young all active in operations/design/admin — next-gen succession plan visibly in motion (Russell may transfer rather than sell)", "source": "buildzoom", "source_url": "https://www.buildzoom.com/contractor/young-bros-fire-protection", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "negative", "evidence": "Live-fetched /about/ — page emphasizes operational capabilities (NICET IV, IV-rated foremen, in-house fabrication) but does not disclose founder/family names; family-team presence on Buildzoom suggests internal succession, not sale", "source": "live_fetch", "source_url": "https://ybfp1.com/about/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_above_target", "direction": "negative", "evidence": "30,000 sqft facility + in-house fabrication shop = sizable operation (likely 25-50 employees) — at or above target ceiling", "source": "website", "source_url": "https://ybfp1.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "Russell F. Young founder/President for 43 yrs; SCR-G-0008 = 8th oldest TX sprinkler license",
+        "source": "website+bbb",
+        "source_url": "https://ybfp1.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_age_proxy",
+        "direction": "positive",
+        "evidence": "Estimated ~67 (founded company 1983 at ~24-28); plausibly retirement-window",
+        "source": "license_tenure_proxy",
+        "source_url": "https://ybfp1.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "next_generation_active",
+        "direction": "negative",
+        "evidence": "Coby Young + Clayton Young + Lori Young all active in operations/design/admin — next-gen succession plan visibly in motion (Russell may transfer rather than sell)",
+        "source": "buildzoom",
+        "source_url": "https://www.buildzoom.com/contractor/young-bros-fire-protection",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched /about/ — page emphasizes operational capabilities (NICET IV, IV-rated foremen, in-house fabrication) but does not disclose founder/family names; family-team presence on Buildzoom suggests internal succession, not sale",
+        "source": "live_fetch",
+        "source_url": "https://ybfp1.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_above_target",
+        "direction": "negative",
+        "evidence": "30,000 sqft facility + in-house fabrication shop = sizable operation (likely 25-50 employees) — at or above target ceiling",
+        "source": "website",
+        "source_url": "https://ybfp1.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/helotes/profile/fire-safety-equipment/young-brothers-fire-protection-inc-0825-10803", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "buildzoom", "url": "https://www.buildzoom.com/contractor/young-bros-fire-protection", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["family_team"]},
-      {"source": "opencorporates", "url": "https://opencorporates.com/companies/us_tx/0068430300", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["entity_sos_file_number"]}
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/helotes/profile/fire-safety-equipment/young-brothers-fire-protection-inc-0825-10803",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "buildzoom",
+        "url": "https://www.buildzoom.com/contractor/young-bros-fire-protection",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["family_team"]
+      },
+      {
+        "source": "opencorporates",
+        "url": "https://opencorporates.com/companies/us_tx/0068430300",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["entity_sos_file_number"]
+      }
     ],
     "enrichment_notes": "Strong tenure signal (43 yrs, license SCR-G-0008) but at-target ceiling on size and clear next-gen family team in place (3 Young family members in operations + admin) — likely an internal succession candidate, not a sale candidate. Owner age estimate proxy only."
   },
@@ -119,10 +256,30 @@
     "license_holder_name": "Anthony C. Sherwood (Owner/President)",
     "year_established": 1986,
     "data_sources": [
-      {"source": "website", "url": "https://lonestarfirefa.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/anthony-sherwood-465b7868/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "rocketreach", "url": "https://rocketreach.co/lone-star-fire-first-aid-profile_b4428e16fa211c52", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["employee_count_estimate"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/c/lone-star-fire--first-aid/389573538", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["employee_count_estimate", "revenue_estimate"]}
+      {
+        "source": "website",
+        "url": "https://lonestarfirefa.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/anthony-sherwood-465b7868/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/lone-star-fire-first-aid-profile_b4428e16fa211c52",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["employee_count_estimate"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/c/lone-star-fire--first-aid/389573538",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["employee_count_estimate", "revenue_estimate"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned + managed since 1986 (39 yrs). Anthony C. Sherwood = Owner/President. Fire extinguisher annual inspections + sales/service + first aid + pre-engineered suppression systems + safety training. Classic route-based recurring revenue model.",
@@ -143,16 +300,71 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_long", "direction": "positive", "evidence": "Anthony C. Sherwood = Owner of family-run business 'since 1986' (39 yrs)", "source": "website+linkedin", "source_url": "https://lonestarfirefa.com/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_in_target", "direction": "positive", "evidence": "~11 employees / ~$500K revenue — small route business in target sweet spot for solo-owner micro-acquisition", "source": "zoominfo", "source_url": "https://www.zoominfo.com/c/lone-star-fire--first-aid/389573538", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "recurring_revenue_route", "direction": "positive", "evidence": "Annual extinguisher inspection + first aid route + suppression inspection — classic predictable RMR-style route", "source": "website", "source_url": "https://lonestarfirefa.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive", "evidence": "Live-fetched site — no family next-gen named; staff mentioned only 'James' + 'Debbie' in testimonials. No succession plan disclosed", "source": "live_fetch", "source_url": "https://lonestarfirefa.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "minimal_marketing_footprint", "direction": "positive", "evidence": "ZoomInfo + RocketReach show minimal LinkedIn activity / sparse digital footprint = coasting tell for route-based extinguisher shop", "source": "zoominfo+rocketreach", "source_url": "https://www.zoominfo.com/c/lone-star-fire--first-aid/389573538", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "Anthony C. Sherwood = Owner of family-run business 'since 1986' (39 yrs)",
+        "source": "website+linkedin",
+        "source_url": "https://lonestarfirefa.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_in_target",
+        "direction": "positive",
+        "evidence": "~11 employees / ~$500K revenue — small route business in target sweet spot for solo-owner micro-acquisition",
+        "source": "zoominfo",
+        "source_url": "https://www.zoominfo.com/c/lone-star-fire--first-aid/389573538",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "recurring_revenue_route",
+        "direction": "positive",
+        "evidence": "Annual extinguisher inspection + first aid route + suppression inspection — classic predictable RMR-style route",
+        "source": "website",
+        "source_url": "https://lonestarfirefa.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "positive",
+        "evidence": "Live-fetched site — no family next-gen named; staff mentioned only 'James' + 'Debbie' in testimonials. No succession plan disclosed",
+        "source": "live_fetch",
+        "source_url": "https://lonestarfirefa.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "minimal_marketing_footprint",
+        "direction": "positive",
+        "evidence": "ZoomInfo + RocketReach show minimal LinkedIn activity / sparse digital footprint = coasting tell for route-based extinguisher shop",
+        "source": "zoominfo+rocketreach",
+        "source_url": "https://www.zoominfo.com/c/lone-star-fire--first-aid/389573538",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/anthony-sherwood-465b7868/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "rocketreach", "url": "https://rocketreach.co/lone-star-fire-first-aid-profile_b4428e16fa211c52", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["employee_count_estimate"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/c/lone-star-fire--first-aid/389573538", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["employee_count_estimate", "revenue_estimate"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/anthony-sherwood-465b7868/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/lone-star-fire-first-aid-profile_b4428e16fa211c52",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["employee_count_estimate"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/c/lone-star-fire--first-aid/389573538",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["employee_count_estimate", "revenue_estimate"]
+      }
     ],
     "enrichment_notes": "Strong A/B candidate. 39 yrs, solo-owner Anthony Sherwood, classic route business (~11 employees, ~$500K), no visible successor. Owner age not confirmed but tenure suggests likely retirement window. Worth deeper homestead/OV65 check on Sherwood."
   },
@@ -172,10 +384,30 @@
     "license_holder_name": "Nathan Ledwig (founder, inferred)",
     "year_established": 2019,
     "data_sources": [
-      {"source": "website", "url": "https://www.n8fireandsafety.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "sub_trade"]},
-      {"source": "website", "url": "https://www.n8fireandsafety.com/about-us/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["year_established"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/nathan-ledwig-b2529b104/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/schertz/profile/electrician/n8-fire-safety-llc-0825-1000256510", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["entity_status"]}
+      {
+        "source": "website",
+        "url": "https://www.n8fireandsafety.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "sub_trade"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.n8fireandsafety.com/about-us/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["year_established"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/nathan-ledwig-b2529b104/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/schertz/profile/electrician/n8-fire-safety-llc-0825-1000256510",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["entity_status"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned, Bexar/Guadalupe county service since 2019. Nathan Ledwig is named principal. 'N8' = his nickname. Founded ~2019 — too new for long-tenured target threshold.",
@@ -196,13 +428,44 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_short", "direction": "disqualifying", "evidence": "Founded 2019 — only 7 yrs in business; far below long-tenured threshold (15+ yrs target)", "source": "website", "source_url": "https://www.n8fireandsafety.com/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "modern_marketing", "direction": "negative", "evidence": "Active marketing (SEO landing pages for Schertz + 25+ yrs combined experience claim) indicates owner-operator still in growth mode, not coasting", "source": "website", "source_url": "https://www.n8fireandsafety.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_short",
+        "direction": "disqualifying",
+        "evidence": "Founded 2019 — only 7 yrs in business; far below long-tenured threshold (15+ yrs target)",
+        "source": "website",
+        "source_url": "https://www.n8fireandsafety.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_marketing",
+        "direction": "negative",
+        "evidence": "Active marketing (SEO landing pages for Schertz + 25+ yrs combined experience claim) indicates owner-operator still in growth mode, not coasting",
+        "source": "website",
+        "source_url": "https://www.n8fireandsafety.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website", "url": "https://www.n8fireandsafety.com/about-us/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["year_established"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/nathan-ledwig-b2529b104/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/schertz/profile/electrician/n8-fire-safety-llc-0825-1000256510", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["entity_status"]}
+      {
+        "source": "website",
+        "url": "https://www.n8fireandsafety.com/about-us/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["year_established"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/nathan-ledwig-b2529b104/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/schertz/profile/electrician/n8-fire-safety-llc-0825-1000256510",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["entity_status"]
+      }
     ],
     "enrichment_notes": "Disqualified by tenure. 7 yrs in business with active owner-operator (Nathan Ledwig) in growth phase. Does not fit long-tenured/coasting profile."
   },
@@ -222,11 +485,36 @@
     "license_holder_name": "Virgil King (President); Tommy King (Owner); Reba King (Officer); Elaine King (Partner)",
     "year_established": 2014,
     "data_sources": [
-      {"source": "website", "url": "https://firekingllc.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/virgil-king-904b0943/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/tommy-king-980098112/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "opengovus", "url": "https://opengovus.com/sam-entity/GLC1UJSPJZ13", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["officers", "entity_formation_date"]},
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/austin/profile/fire-sprinklers/fire-king-llc-0825-1000166191", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["address"]}
+      {
+        "source": "website",
+        "url": "https://firekingllc.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/virgil-king-904b0943/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/tommy-king-980098112/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "opengovus",
+        "url": "https://opengovus.com/sam-entity/GLC1UJSPJZ13",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["officers", "entity_formation_date"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/austin/profile/fire-sprinklers/fire-king-llc-0825-1000166191",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["address"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned, founded 2/21/2014 (~11 yrs). Multi-trade: sprinkler design/install/maintenance, alarms + 24-hr central monitoring, extinguishers, clean agent suppression, cooking protection (UL-300), fire mains/hydrants, ITM. Women-owned WBE.",
@@ -247,14 +535,53 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_short", "direction": "negative", "evidence": "Founded Feb 2014 — only 11 yrs as entity; family decades of experience but business itself does not meet long-tenured threshold", "source": "opengovus", "source_url": "https://opengovus.com/sam-entity/GLC1UJSPJZ13", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "multi_family_ownership", "direction": "negative", "evidence": "4 King family members on the cap table (Virgil, Tommy, Reba, Elaine) — not a clean solo-owner exit; sale would require multi-party agreement", "source": "opengovus", "source_url": "https://opengovus.com/sam-entity/GLC1UJSPJZ13", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_unknown", "direction": "neutral", "evidence": "Multi-trade scope (full sprinkler design + UL-300 + central monitoring) implies likely 15-30 employees but no firm count available", "source": "website", "source_url": "https://firekingllc.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_short",
+        "direction": "negative",
+        "evidence": "Founded Feb 2014 — only 11 yrs as entity; family decades of experience but business itself does not meet long-tenured threshold",
+        "source": "opengovus",
+        "source_url": "https://opengovus.com/sam-entity/GLC1UJSPJZ13",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "multi_family_ownership",
+        "direction": "negative",
+        "evidence": "4 King family members on the cap table (Virgil, Tommy, Reba, Elaine) — not a clean solo-owner exit; sale would require multi-party agreement",
+        "source": "opengovus",
+        "source_url": "https://opengovus.com/sam-entity/GLC1UJSPJZ13",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_unknown",
+        "direction": "neutral",
+        "evidence": "Multi-trade scope (full sprinkler design + UL-300 + central monitoring) implies likely 15-30 employees but no firm count available",
+        "source": "website",
+        "source_url": "https://firekingllc.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/virgil-king-904b0943/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/tommy-king-980098112/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "opengovus", "url": "https://opengovus.com/sam-entity/GLC1UJSPJZ13", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["officers", "entity_formation_date"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/virgil-king-904b0943/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/tommy-king-980098112/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "opengovus",
+        "url": "https://opengovus.com/sam-entity/GLC1UJSPJZ13",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["officers", "entity_formation_date"]
+      }
     ],
     "enrichment_notes": "Disqualified-ish: 11 yrs is below long-tenured threshold AND ownership is split 4-ways across King family. Even if owners are aging, multi-family LP/LLC ownership makes clean sale unlikely. Pass."
   },
@@ -274,11 +601,36 @@
     "license_holder_name": "Cindy Richter (President + CEO)",
     "year_established": 1998,
     "data_sources": [
-      {"source": "website", "url": "https://vgfire.com/about-vanguard.php", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/cindylrichter/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_age_source"]},
-      {"source": "aggie100", "url": "https://aggie100.com/honoree/vanguard-fire-systems-l-p/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_education"]},
-      {"source": "press", "url": "https://edstillmanatx.com/2020/04/27/cindy-richter-vanguard-fire-security-2019-vistage-lifetime-award-winner/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_age_source", "spouse"]},
-      {"source": "rocketreach", "url": "https://rocketreach.co/vanguard-fire-security-management_b5da3d22f42e56ba", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["leadership"]}
+      {
+        "source": "website",
+        "url": "https://vgfire.com/about-vanguard.php",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/cindylrichter/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_age_source"]
+      },
+      {
+        "source": "aggie100",
+        "url": "https://aggie100.com/honoree/vanguard-fire-systems-l-p/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "press",
+        "url": "https://edstillmanatx.com/2020/04/27/cindy-richter-vanguard-fire-security-2019-vistage-lifetime-award-winner/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_age_source", "spouse"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/vanguard-fire-security-management_b5da3d22f42e56ba",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["leadership"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Privately owned since 1998 (27 yrs). Cindy Richter is President/CEO; her husband Rance Richter (also TAMU Mays) is co-owner. Active Vistage member, 2019 Lifetime Achievement Award. Aggies 100 + Inc 5000 (2008-09). HUB-certified WBE/SBE. SCR-0484 = old number.",
@@ -299,16 +651,68 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_long", "direction": "positive", "evidence": "Cindy + Rance Richter own/run business 27 yrs (founded 1998)", "source": "website+aggie100", "source_url": "https://vgfire.com/about-vanguard.php", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_age_proxy", "direction": "positive", "evidence": "Cindy Richter BBA Marketing TAMU 1984 — if she graduated at 22, she's ~64 in 2026. Husband Rance also TAMU Mays alum — similar generation", "source": "linkedin_grad", "source_url": "https://www.linkedin.com/in/cindylrichter/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "active_owner_high_profile", "direction": "negative", "evidence": "Cindy is actively engaged: Vistage Lifetime Award 2019, speaking engagements, networking interviews — actively running, not coasting", "source": "press", "source_url": "https://edstillmanatx.com/2020/04/27/cindy-richter-vanguard-fire-security-2019-vistage-lifetime-award-winner/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_above_target", "direction": "negative", "evidence": "Inc 5000 honoree 2008-09 + Aggie 100 + scope (alarm + sprinkler/suppression + voice evac + mass notification + security + CCTV + access + UL-listed monitoring) implies 40+ employees — above micro-acquisition target", "source": "aggie100+website", "source_url": "https://vgfire.com/about-vanguard.php", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "Cindy + Rance Richter own/run business 27 yrs (founded 1998)",
+        "source": "website+aggie100",
+        "source_url": "https://vgfire.com/about-vanguard.php",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_age_proxy",
+        "direction": "positive",
+        "evidence": "Cindy Richter BBA Marketing TAMU 1984 — if she graduated at 22, she's ~64 in 2026. Husband Rance also TAMU Mays alum — similar generation",
+        "source": "linkedin_grad",
+        "source_url": "https://www.linkedin.com/in/cindylrichter/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_owner_high_profile",
+        "direction": "negative",
+        "evidence": "Cindy is actively engaged: Vistage Lifetime Award 2019, speaking engagements, networking interviews — actively running, not coasting",
+        "source": "press",
+        "source_url": "https://edstillmanatx.com/2020/04/27/cindy-richter-vanguard-fire-security-2019-vistage-lifetime-award-winner/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_above_target",
+        "direction": "negative",
+        "evidence": "Inc 5000 honoree 2008-09 + Aggie 100 + scope (alarm + sprinkler/suppression + voice evac + mass notification + security + CCTV + access + UL-listed monitoring) implies 40+ employees — above micro-acquisition target",
+        "source": "aggie100+website",
+        "source_url": "https://vgfire.com/about-vanguard.php",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/cindylrichter/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_age_source"]},
-      {"source": "aggie100", "url": "https://aggie100.com/honoree/vanguard-fire-systems-l-p/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_education"]},
-      {"source": "press", "url": "https://edstillmanatx.com/2020/04/27/cindy-richter-vanguard-fire-security-2019-vistage-lifetime-award-winner/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["spouse"]},
-      {"source": "rocketreach", "url": "https://rocketreach.co/vanguard-fire-security-management_b5da3d22f42e56ba", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["leadership"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/cindylrichter/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_age_source"]
+      },
+      {
+        "source": "aggie100",
+        "url": "https://aggie100.com/honoree/vanguard-fire-systems-l-p/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "press",
+        "url": "https://edstillmanatx.com/2020/04/27/cindy-richter-vanguard-fire-security-2019-vistage-lifetime-award-winner/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["spouse"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/vanguard-fire-security-management_b5da3d22f42e56ba",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["leadership"]
+      }
     ],
     "enrichment_notes": "Age fit (~64) and tenure (27 yrs) align, but Cindy is high-profile active operator (Vistage, speaking), husband-wife co-owned, and size is above target. Not a coasting candidate — runs like a growth-mode operation. Pass."
   },
@@ -328,9 +732,24 @@
     "license_holder_name": "Tim Lowe (President)",
     "year_established": null,
     "data_sources": [
-      {"source": "google_business", "url": "https://www.thebluebook.com/iProView/1272747/firecon-inc/subcontractors/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "sub_trade"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/tim-lowe-7a615b3b", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/company/firecon-inc", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["company_size"]}
+      {
+        "source": "google_business",
+        "url": "https://www.thebluebook.com/iProView/1272747/firecon-inc/subcontractors/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "sub_trade"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/tim-lowe-7a615b3b",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/company/firecon-inc",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["company_size"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned with 'nearly 3 generations of experience' in TX. Tim Lowe = President. Fire alarm + suppression design/repair/monitoring/install. Founding year not disclosed publicly. Direct website fetch timed out — used Blue Book + LinkedIn as backup.",
@@ -351,13 +770,47 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "multi_generation_family", "direction": "positive", "evidence": "'Nearly 3 generations of experience' — suggests current owner is gen 2 or 3, parents may already be retired", "source": "google_business", "source_url": "https://www.thebluebook.com/iProView/1272747/firecon-inc/subcontractors/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "website_freshness_concern", "direction": "positive", "evidence": "firecontx.com direct fetch timed out repeatedly — site may be down or low-priority maintenance (coasting tell)", "source": "live_fetch_attempt", "source_url": "https://www.firecontx.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "neutral", "evidence": "Direct website fetch failed; Blue Book listing only shows minimal data. Unable to verify founder identity, year founded, or successor", "source": "live_fetch_attempt", "source_url": "https://www.firecontx.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "multi_generation_family",
+        "direction": "positive",
+        "evidence": "'Nearly 3 generations of experience' — suggests current owner is gen 2 or 3, parents may already be retired",
+        "source": "google_business",
+        "source_url": "https://www.thebluebook.com/iProView/1272747/firecon-inc/subcontractors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "website_freshness_concern",
+        "direction": "positive",
+        "evidence": "firecontx.com direct fetch timed out repeatedly — site may be down or low-priority maintenance (coasting tell)",
+        "source": "live_fetch_attempt",
+        "source_url": "https://www.firecontx.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "neutral",
+        "evidence": "Direct website fetch failed; Blue Book listing only shows minimal data. Unable to verify founder identity, year founded, or successor",
+        "source": "live_fetch_attempt",
+        "source_url": "https://www.firecontx.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/tim-lowe-7a615b3b", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/company/firecon-inc", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["company_size"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/tim-lowe-7a615b3b",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/company/firecon-inc",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["company_size"]
+      }
     ],
     "enrichment_notes": "Tim Lowe = President. Multi-gen family business, but founding year and size unknown. Website timeout could be either coasting or a transient failure. Insufficient data for confident scoring — needs human follow-up if prioritized."
   },
@@ -377,9 +830,24 @@
     "license_holder_name": "Seth Smith (founder); Ryan Brandon (co-owner)",
     "year_established": 2003,
     "data_sources": [
-      {"source": "website", "url": "https://www.alliancefire.net/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]},
-      {"source": "website", "url": "https://www.alliancefire.net/aboutus", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/round-rock/profile/smoke-alarm-systems/alliance-safety-fire-protection-lp-0825-53673", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["entity_status"]}
+      {
+        "source": "website",
+        "url": "https://www.alliancefire.net/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.alliancefire.net/aboutus",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/round-rock/profile/smoke-alarm-systems/alliance-safety-fire-protection-lp-0825-53673",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["entity_status"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Founded 2003 (22 yrs) by Seth Smith. Ryan Brandon listed as co-owner. Alarms, sprinklers, extinguishers, kitchen suppression, backflow, BDA. Round Rock = Williamson County (Austin metro N). Included as Travis-adjacent.",
@@ -400,12 +868,38 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "two_owner_partnership", "direction": "negative", "evidence": "Two owners (Smith founder + Brandon co-owner) — partnership LP not clean solo-owner candidate", "source": "website", "source_url": "https://www.alliancefire.net/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_tenure_moderate", "direction": "neutral", "evidence": "22 yrs in business — meets minimum tenure but neither founder visibly retirement-age", "source": "website", "source_url": "https://www.alliancefire.net/aboutus", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "two_owner_partnership",
+        "direction": "negative",
+        "evidence": "Two owners (Smith founder + Brandon co-owner) — partnership LP not clean solo-owner candidate",
+        "source": "website",
+        "source_url": "https://www.alliancefire.net/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_moderate",
+        "direction": "neutral",
+        "evidence": "22 yrs in business — meets minimum tenure but neither founder visibly retirement-age",
+        "source": "website",
+        "source_url": "https://www.alliancefire.net/aboutus",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website", "url": "https://www.alliancefire.net/aboutus", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/round-rock/profile/smoke-alarm-systems/alliance-safety-fire-protection-lp-0825-53673", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["entity_status"]}
+      {
+        "source": "website",
+        "url": "https://www.alliancefire.net/aboutus",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/round-rock/profile/smoke-alarm-systems/alliance-safety-fire-protection-lp-0825-53673",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["entity_status"]
+      }
     ],
     "enrichment_notes": "Two-owner partnership (Smith + Brandon), 22 yrs in business. Owners likely not retirement-age yet. Multi-owner structure dilutes acquisition fit. Pass for now."
   },
@@ -425,9 +919,24 @@
     "license_holder_name": "Chris Nystrom (Co-founder); Tony Palm (General Manager)",
     "year_established": 2008,
     "data_sources": [
-      {"source": "website", "url": "https://www.pinnaclefp.net/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/tony-palm-b0b793a/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["leadership"]},
-      {"source": "rocketreach", "url": "https://rocketreach.co/pinnacle-fire-protection-profile_b5d64130f42e321e", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["revenue_estimate", "employee_count_estimate"]}
+      {
+        "source": "website",
+        "url": "https://www.pinnaclefp.net/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/tony-palm-b0b793a/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["leadership"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/pinnacle-fire-protection-profile_b5d64130f42e321e",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["revenue_estimate", "employee_count_estimate"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Privately owned + operated since 2008 (17 yrs). Chris Nystrom is co-founder; Tony Palm = GM. 100+ yrs combined experience. Alarms, sprinklers, extinguishers, suppression, monitoring, special hazards, marine. $5.6M revenue 2025 / 11 employees.",
@@ -448,13 +957,47 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_moderate", "direction": "neutral", "evidence": "17 yrs since 2008 founding — meets minimum tenure", "source": "website", "source_url": "https://www.pinnaclefp.net/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "co_founder_structure", "direction": "negative", "evidence": "Chris Nystrom listed as co-founder (implies 2+ founders); GM Tony Palm separate from ownership — multi-party structure", "source": "rocketreach", "source_url": "https://rocketreach.co/pinnacle-fire-protection-profile_b5d64130f42e321e", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_in_target", "direction": "positive", "evidence": "$5.6M revenue / 11 employees — small-business sweet spot for micro-acquisition", "source": "rocketreach", "source_url": "https://rocketreach.co/pinnacle-fire-protection-profile_b5d64130f42e321e", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_moderate",
+        "direction": "neutral",
+        "evidence": "17 yrs since 2008 founding — meets minimum tenure",
+        "source": "website",
+        "source_url": "https://www.pinnaclefp.net/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "co_founder_structure",
+        "direction": "negative",
+        "evidence": "Chris Nystrom listed as co-founder (implies 2+ founders); GM Tony Palm separate from ownership — multi-party structure",
+        "source": "rocketreach",
+        "source_url": "https://rocketreach.co/pinnacle-fire-protection-profile_b5d64130f42e321e",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_in_target",
+        "direction": "positive",
+        "evidence": "$5.6M revenue / 11 employees — small-business sweet spot for micro-acquisition",
+        "source": "rocketreach",
+        "source_url": "https://rocketreach.co/pinnacle-fire-protection-profile_b5d64130f42e321e",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/tony-palm-b0b793a/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["leadership"]},
-      {"source": "rocketreach", "url": "https://rocketreach.co/pinnacle-fire-protection-profile_b5d64130f42e321e", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["revenue_estimate", "employee_count_estimate"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/tony-palm-b0b793a/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["leadership"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/pinnacle-fire-protection-profile_b5d64130f42e321e",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["revenue_estimate", "employee_count_estimate"]
+      }
     ],
     "enrichment_notes": "Size is right ($5.6M / 11 employees) but co-founder structure + 17-yr tenure suggests owners not yet in retirement window. Holding pattern — could revisit in 5-10 yrs."
   },
@@ -474,8 +1017,18 @@
     "license_holder_name": null,
     "year_established": 2005,
     "data_sources": [
-      {"source": "website", "url": "https://lonestarfirepro.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "license_number", "sub_trade"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/company/lonestarfirepro", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["company"]}
+      {
+        "source": "website",
+        "url": "https://lonestarfirepro.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "license_number", "sub_trade"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/company/lonestarfirepro",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["company"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Sprinkler-focused multi-trade. Owners describe origins 'as apprentices with local 669 in the mid 2000s' — founding ~2005. Sprinkler design/install/test/maintenance + backflow. License SCR-G-2820281 is a high (recent) number consistent with mid-2000s formation. Owner identities not disclosed on website.",
@@ -496,12 +1049,41 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_moderate", "direction": "neutral", "evidence": "~21 yrs since 'mid 2000s' apprentice founding — meets minimum tenure", "source": "website", "source_url": "https://lonestarfirepro.com/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_identity_unknown", "direction": "negative", "evidence": "Website does not disclose owner name(s); insufficient data for owner-age / OV65 lookup", "source": "website", "source_url": "https://lonestarfirepro.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "Local_669_apprenticeship", "direction": "neutral", "evidence": "Founders were Sprinkler Fitters Local 669 apprentices — likely started young (early 20s), so now early-to-mid 40s = mid-career, not retirement-window", "source": "website", "source_url": "https://lonestarfirepro.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_moderate",
+        "direction": "neutral",
+        "evidence": "~21 yrs since 'mid 2000s' apprentice founding — meets minimum tenure",
+        "source": "website",
+        "source_url": "https://lonestarfirepro.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_identity_unknown",
+        "direction": "negative",
+        "evidence": "Website does not disclose owner name(s); insufficient data for owner-age / OV65 lookup",
+        "source": "website",
+        "source_url": "https://lonestarfirepro.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "Local_669_apprenticeship",
+        "direction": "neutral",
+        "evidence": "Founders were Sprinkler Fitters Local 669 apprentices — likely started young (early 20s), so now early-to-mid 40s = mid-career, not retirement-window",
+        "source": "website",
+        "source_url": "https://lonestarfirepro.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/company/lonestarfirepro", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["company"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/company/lonestarfirepro",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["company"]
+      }
     ],
     "enrichment_notes": "Tenure fits but owners likely 40s based on Local 669 apprentice origin in mid-2000s. Owner identities not disclosed. Likely too young to be in sell window. Pass."
   },
@@ -521,9 +1103,24 @@
     "license_holder_name": "Robert Squires (Owner/Operator)",
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://protechtexas.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "sub_trade"]},
-      {"source": "website", "url": "https://protechtexas.com/about-us/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/robert-squires-5bb4081a/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_education"]}
+      {
+        "source": "website",
+        "url": "https://protechtexas.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "sub_trade"]
+      },
+      {
+        "source": "website",
+        "url": "https://protechtexas.com/about-us/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/robert-squires-5bb4081a/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_education"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned + operated by Robert Squires (Owner/Operator). Education: Texas State Technical College Waco. Extinguishers, kitchen hood suppression, alarms, sprinklers, backflow, hydrants. Serves Austin + Waco TX. Founding year not stated on site.",
@@ -544,13 +1141,47 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "solo_owner_confirmed", "direction": "positive", "evidence": "Robert Squires explicitly listed as sole Owner/Operator — clean solo-owner structure", "source": "website+linkedin", "source_url": "https://protechtexas.com/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive", "evidence": "Live-fetched /about-us/ — only Squires named, references 'hardworking team' generically, no co-owner / family next-gen disclosed", "source": "live_fetch", "source_url": "https://protechtexas.com/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "no_founding_year_disclosed", "direction": "negative", "evidence": "Website does not state founding year — without tenure verification, cannot confirm long-tenured criterion", "source": "live_fetch", "source_url": "https://protechtexas.com/about-us/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "solo_owner_confirmed",
+        "direction": "positive",
+        "evidence": "Robert Squires explicitly listed as sole Owner/Operator — clean solo-owner structure",
+        "source": "website+linkedin",
+        "source_url": "https://protechtexas.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "positive",
+        "evidence": "Live-fetched /about-us/ — only Squires named, references 'hardworking team' generically, no co-owner / family next-gen disclosed",
+        "source": "live_fetch",
+        "source_url": "https://protechtexas.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_founding_year_disclosed",
+        "direction": "negative",
+        "evidence": "Website does not state founding year — without tenure verification, cannot confirm long-tenured criterion",
+        "source": "live_fetch",
+        "source_url": "https://protechtexas.com/about-us/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website", "url": "https://protechtexas.com/about-us/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/robert-squires-5bb4081a/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_education"]}
+      {
+        "source": "website",
+        "url": "https://protechtexas.com/about-us/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/robert-squires-5bb4081a/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_education"]
+      }
     ],
     "enrichment_notes": "Clean solo-owner (Robert Squires). Strong A/B candidate IF tenure + age can be confirmed via SOS file + CAD homestead lookup. Worth deeper drill."
   },
@@ -570,10 +1201,30 @@
     "license_holder_name": "Matt Counts + Pam Counts (Owners)",
     "year_established": 2006,
     "data_sources": [
-      {"source": "website", "url": "https://www.longhornfireandsafety.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]},
-      {"source": "website", "url": "https://www.longhornfireandsafety.com/about-us/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/matthew-counts-358848117/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_education"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/pam-counts-8ba455a", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]}
+      {
+        "source": "website",
+        "url": "https://www.longhornfireandsafety.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.longhornfireandsafety.com/about-us/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/matthew-counts-358848117/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_education"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/pam-counts-8ba455a",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned since 2006 (19 yrs). Matt + Pam Counts = husband-wife co-owners. Fire extinguisher sales (ABC, CO2, Wet Chemical, Clean Agent, Purple K, Class D, wheeled) + annual inspection/maintenance + recharging + training. Self-describes as 'only mom+pop independent fire extinguisher company in town'. Matt Counts education: Austin Community College AAS in Radio/TV/Film (no fire industry credential).",
@@ -594,15 +1245,62 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "husband_wife_co_owners", "direction": "negative", "evidence": "Matt + Pam Counts = husband-wife co-owners — couples sale, not pure solo", "source": "website", "source_url": "https://www.longhornfireandsafety.com/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_tenure_moderate", "direction": "neutral", "evidence": "19 yrs in business since 2006 — meets minimum tenure", "source": "website", "source_url": "https://www.longhornfireandsafety.com/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_likely_small", "direction": "positive", "evidence": "Self-describes 'mom+pop independent' — implies under 10 employees, classic micro-target", "source": "website", "source_url": "https://www.longhornfireandsafety.com/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "owner_career_transition", "direction": "positive", "evidence": "Matt's pre-2006 background is Radio/TV/Film (non-industry) — switched into fire safety mid-career; if started business at ~30, he'd be ~50 now (mid-career, but possible early-exit candidate)", "source": "linkedin_grad", "source_url": "https://www.linkedin.com/in/matthew-counts-358848117/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "husband_wife_co_owners",
+        "direction": "negative",
+        "evidence": "Matt + Pam Counts = husband-wife co-owners — couples sale, not pure solo",
+        "source": "website",
+        "source_url": "https://www.longhornfireandsafety.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_moderate",
+        "direction": "neutral",
+        "evidence": "19 yrs in business since 2006 — meets minimum tenure",
+        "source": "website",
+        "source_url": "https://www.longhornfireandsafety.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_likely_small",
+        "direction": "positive",
+        "evidence": "Self-describes 'mom+pop independent' — implies under 10 employees, classic micro-target",
+        "source": "website",
+        "source_url": "https://www.longhornfireandsafety.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "owner_career_transition",
+        "direction": "positive",
+        "evidence": "Matt's pre-2006 background is Radio/TV/Film (non-industry) — switched into fire safety mid-career; if started business at ~30, he'd be ~50 now (mid-career, but possible early-exit candidate)",
+        "source": "linkedin_grad",
+        "source_url": "https://www.linkedin.com/in/matthew-counts-358848117/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website", "url": "https://www.longhornfireandsafety.com/about-us/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/matthew-counts-358848117/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_education"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/pam-counts-8ba455a", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]}
+      {
+        "source": "website",
+        "url": "https://www.longhornfireandsafety.com/about-us/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/matthew-counts-358848117/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_education"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/pam-counts-8ba455a",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      }
     ],
     "enrichment_notes": "Small mom+pop in size target but owners likely still mid-career (~50) given Matt's pre-2006 non-industry career. Tenure marginal at 19 yrs. Husband-wife sale possible but not at retirement-imminent stage."
   },
@@ -622,10 +1320,30 @@
     "license_holder_name": "Rodney Jackson (Owner/Operator, Managing Member)",
     "year_established": 2018,
     "data_sources": [
-      {"source": "website", "url": "https://texasfireservices.net/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "license_number", "sub_trade"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/rodney-jackson-4061a872/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_tenure_years"]},
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/new-braunfels/profile/burglar-alarm-systems/texas-fire-services-llc-0825-1000202002", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "entity_status"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/p/Rodney-Jackson/1725833279", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_role"]}
+      {
+        "source": "website",
+        "url": "https://texasfireservices.net/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "license_number", "sub_trade"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/rodney-jackson-4061a872/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_tenure_years"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/new-braunfels/profile/burglar-alarm-systems/texas-fire-services-llc-0825-1000202002",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "entity_status"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/p/Rodney-Jackson/1725833279",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_role"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Texas Fire Services LLC incorporated 10/30/2018 — only 7 yrs old. Rodney Jackson = Managing Member / Owner-Operator. Prior to founding, Jackson was Owner-Operator of 1st Fire Alarm Services. 30+ yrs in industry, NICET Level III. Largest distributor of AUTOCALL technology in TX. Multi-metro (SA, Austin, DFW, Houston, NM).",
@@ -646,14 +1364,53 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_short", "direction": "negative", "evidence": "Entity only 7 yrs old (incorporated 2018) — below long-tenured threshold despite owner's 30+ yrs of personal industry experience", "source": "linkedin+bbb", "source_url": "https://www.linkedin.com/in/rodney-jackson-4061a872/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_career_long", "direction": "positive", "evidence": "Rodney Jackson has 30+ yrs personal industry experience (NICET III) — proxy implies age ~55-60", "source": "linkedin", "source_url": "https://www.linkedin.com/in/rodney-jackson-4061a872/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "growth_mode_signal", "direction": "negative", "evidence": "Multi-metro expansion (SA, Austin, DFW, Houston, NM) + 'Largest Autocall distributor' positioning = growth-mode, not coasting", "source": "website", "source_url": "https://texasfireservices.net/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_short",
+        "direction": "negative",
+        "evidence": "Entity only 7 yrs old (incorporated 2018) — below long-tenured threshold despite owner's 30+ yrs of personal industry experience",
+        "source": "linkedin+bbb",
+        "source_url": "https://www.linkedin.com/in/rodney-jackson-4061a872/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_career_long",
+        "direction": "positive",
+        "evidence": "Rodney Jackson has 30+ yrs personal industry experience (NICET III) — proxy implies age ~55-60",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/rodney-jackson-4061a872/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "growth_mode_signal",
+        "direction": "negative",
+        "evidence": "Multi-metro expansion (SA, Austin, DFW, Houston, NM) + 'Largest Autocall distributor' positioning = growth-mode, not coasting",
+        "source": "website",
+        "source_url": "https://texasfireservices.net/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/rodney-jackson-4061a872/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_tenure_years"]},
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/new-braunfels/profile/burglar-alarm-systems/texas-fire-services-llc-0825-1000202002", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["entity_status"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/p/Rodney-Jackson/1725833279", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "owner_role"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/rodney-jackson-4061a872/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_tenure_years"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/new-braunfels/profile/burglar-alarm-systems/texas-fire-services-llc-0825-1000202002",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["entity_status"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/p/Rodney-Jackson/1725833279",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "owner_role"]
+      }
     ],
     "enrichment_notes": "Owner is industry-tenured (~30 yrs) but this specific LLC is only 7 yrs old, and Jackson is in growth mode (multi-metro expansion, Autocall positioning). Doesn't fit coasting-solo profile. Pass."
   },
@@ -673,9 +1430,24 @@
     "license_holder_name": "Brown family: Ruby Brown (matriarch, surviving founder); Daphne Hajovsky + Melissa Brown + Sandy Marek (daughters); Randy Hajovsky (son-in-law)",
     "year_established": 1993,
     "data_sources": [
-      {"source": "website", "url": "https://actionfirepros.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]},
-      {"source": "website", "url": "https://actionfirepros.com/about-us/who-we-are/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "succession_history"]},
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/waxahachie/profile/fire-extinguisher/action-automatic-sprinkler-inc-0875-90572341", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["entity_status", "year_established"]}
+      {
+        "source": "website",
+        "url": "https://actionfirepros.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      },
+      {
+        "source": "website",
+        "url": "https://actionfirepros.com/about-us/who-we-are/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "succession_history"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/waxahachie/profile/fire-extinguisher/action-automatic-sprinkler-inc-0875-90572341",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["entity_status", "year_established"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned, certified woman-owned. James + Ruby Brown founded 1993 in Waxahachie; James (40-yr fire industry veteran) died 2001. Succession: daughters Daphne Hajovsky + Melissa Brown + Sandy Marek (founded sister LLC Action Fire Alarm 2003) + son-in-law Randy Hajovsky took the reins. Consolidated under 'Action Fire Pros' DBA 2009. Now multi-location (Waxahachie + Waco).",
@@ -696,14 +1468,56 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "multi_owner_family", "direction": "negative", "evidence": "Three Brown daughters + son-in-law collectively run business since 2001 succession — clean exit requires multi-party consensus", "source": "website", "source_url": "https://actionfirepros.com/about-us/who-we-are/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_tenure_long", "direction": "positive", "evidence": "32 yrs total business tenure; current 2nd-gen family ownership 25 yrs (since 2001)", "source": "website", "source_url": "https://actionfirepros.com/about-us/who-we-are/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_above_target", "direction": "negative", "evidence": "Two locations (Waxahachie + Waco/Woodway), multi-trade (sprinkler + alarm + extinguisher + monitoring), 'multi-million dollar' company per own description — above micro-acquisition target", "source": "website", "source_url": "https://actionfirepros.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "neutral", "evidence": "Live-fetched /about-us/who-we-are/ — succession history fully disclosed but no mention of third-generation involvement yet; 2nd-gen sisters likely 50s-60s now and have been at the helm 25 yrs", "source": "live_fetch", "source_url": "https://actionfirepros.com/about-us/who-we-are/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "multi_owner_family",
+        "direction": "negative",
+        "evidence": "Three Brown daughters + son-in-law collectively run business since 2001 succession — clean exit requires multi-party consensus",
+        "source": "website",
+        "source_url": "https://actionfirepros.com/about-us/who-we-are/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "32 yrs total business tenure; current 2nd-gen family ownership 25 yrs (since 2001)",
+        "source": "website",
+        "source_url": "https://actionfirepros.com/about-us/who-we-are/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_above_target",
+        "direction": "negative",
+        "evidence": "Two locations (Waxahachie + Waco/Woodway), multi-trade (sprinkler + alarm + extinguisher + monitoring), 'multi-million dollar' company per own description — above micro-acquisition target",
+        "source": "website",
+        "source_url": "https://actionfirepros.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "neutral",
+        "evidence": "Live-fetched /about-us/who-we-are/ — succession history fully disclosed but no mention of third-generation involvement yet; 2nd-gen sisters likely 50s-60s now and have been at the helm 25 yrs",
+        "source": "live_fetch",
+        "source_url": "https://actionfirepros.com/about-us/who-we-are/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website", "url": "https://actionfirepros.com/about-us/who-we-are/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name", "succession_history"]},
-      {"source": "bbb", "url": "https://www.bbb.org/us/tx/waxahachie/profile/fire-extinguisher/action-automatic-sprinkler-inc-0875-90572341", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["entity_status"]}
+      {
+        "source": "website",
+        "url": "https://actionfirepros.com/about-us/who-we-are/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name", "succession_history"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/waxahachie/profile/fire-extinguisher/action-automatic-sprinkler-inc-0875-90572341",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["entity_status"]
+      }
     ],
     "enrichment_notes": "Compelling tenure (32 yrs / 2-gen family) but 4-way Brown family ownership and multi-million size puts it above micro-target. Possible PE/strategic acquisition candidate but not solo-owner micro-fit. Pass."
   },
@@ -723,9 +1537,24 @@
     "license_holder_name": "P. Patel (inferred from email ppatel@spfires.com)",
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://specialtyfireservices.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "sub_trade"]},
-      {"source": "website", "url": "https://specialtyfireservices.com/about-us/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "dnb", "url": "https://www.dnb.com/business-directory/company-profiles.specialty_fire_services_llc.1f11d2b53124678a8e6b39d38d133bef.html", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["entity_status"]}
+      {
+        "source": "website",
+        "url": "https://specialtyfireservices.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "sub_trade"]
+      },
+      {
+        "source": "website",
+        "url": "https://specialtyfireservices.com/about-us/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "dnb",
+        "url": "https://www.dnb.com/business-directory/company-profiles.specialty_fire_services_llc.1f11d2b53124678a8e6b39d38d133bef.html",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["entity_status"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Multi-trade Houston fire protection: sprinklers + alarms + kitchen hood suppression + backflow + paint booth + emergency lighting + extinguishers + suppression + detection + consulting/training. 'Over 20 yrs combined experience' (early-mid 2000s founding likely). P. Patel inferred via ppatel@spfires.com.",
@@ -746,13 +1575,47 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_identity_inferred", "direction": "neutral", "evidence": "Only contact ppatel@spfires.com (P. Patel) on site — name not formally stated on About page; no full-name founder disclosure", "source": "website", "source_url": "https://specialtyfireservices.com/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "neutral", "evidence": "Live-fetched /about-us/ — no founder name, no year founded, no family disclosure, no team page; minimal transparency", "source": "live_fetch", "source_url": "https://specialtyfireservices.com/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "minimal_disclosure", "direction": "positive", "evidence": "Sparse public profile (no LinkedIn presence visible, no founder bio) consistent with low-marketing, route-driven coasting solo-owner", "source": "website+dnb", "source_url": "https://specialtyfireservices.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_identity_inferred",
+        "direction": "neutral",
+        "evidence": "Only contact ppatel@spfires.com (P. Patel) on site — name not formally stated on About page; no full-name founder disclosure",
+        "source": "website",
+        "source_url": "https://specialtyfireservices.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "neutral",
+        "evidence": "Live-fetched /about-us/ — no founder name, no year founded, no family disclosure, no team page; minimal transparency",
+        "source": "live_fetch",
+        "source_url": "https://specialtyfireservices.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "minimal_disclosure",
+        "direction": "positive",
+        "evidence": "Sparse public profile (no LinkedIn presence visible, no founder bio) consistent with low-marketing, route-driven coasting solo-owner",
+        "source": "website+dnb",
+        "source_url": "https://specialtyfireservices.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website", "url": "https://specialtyfireservices.com/about-us/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["owner_name"]},
-      {"source": "dnb", "url": "https://www.dnb.com/business-directory/company-profiles.specialty_fire_services_llc.1f11d2b53124678a8e6b39d38d133bef.html", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["entity_status"]}
+      {
+        "source": "website",
+        "url": "https://specialtyfireservices.com/about-us/",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "dnb",
+        "url": "https://www.dnb.com/business-directory/company-profiles.specialty_fire_services_llc.1f11d2b53124678a8e6b39d38d133bef.html",
+        "fetched_at": "2026-05-15T23:55:00Z",
+        "fields": ["entity_status"]
+      }
     ],
     "enrichment_notes": "Insufficient data — owner identity inferred, no year founded, no firm size. Sparse digital footprint is interesting (coasting tell) but cannot confirm tenure or owner age. Needs human follow-up or LinkedIn drill before scoring."
   }

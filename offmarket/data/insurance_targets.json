@@ -20,11 +20,7 @@
         "source": "website",
         "url": "https://whitakerins.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "lines_of_business",
-          "platform_affiliation_check"
-        ]
+        "fields": ["year_established", "lines_of_business", "platform_affiliation_check"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -89,19 +85,13 @@
         "source": "live_website_fetch",
         "url": "https://whitakerins.com/about/",
         "fetched_at": "2026-05-15T20:05:00Z",
-        "fields": [
-          "founder_status",
-          "tenure"
-        ]
+        "fields": ["founder_status", "tenure"]
       },
       {
         "source": "iiat",
         "url": "https://www.iiat.org/texas-agent-news/don-whitaker-of-san-antonio-receives-2023-drex-foreman-award",
         "fetched_at": "2026-05-15T20:06:00Z",
-        "fields": [
-          "lifetime_achievement_award",
-          "founder_active_status"
-        ]
+        "fields": ["lifetime_achievement_award", "founder_active_status"]
       }
     ],
     "enrichment_notes": "Strong A-tier candidate: 43-yr founder-led independent, owner ~70, commercial specialty, ~2,600 client book. 2023 Drex Foreman lifetime-achievement award suggests likely succession discussions in next 3-5 yrs. Successor check incomplete (team page exists but not surfaced in WebFetch); HIGH PRIORITY for next-pass direct team-page fetch + Bexar CAD OV65 lookup.",
@@ -200,10 +190,7 @@
         "source": "website",
         "url": "https://www.perdueinsurancetx.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "carriers_visible",
-          "lines_of_business"
-        ]
+        "fields": ["carriers_visible", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -259,17 +246,13 @@
         "source": "website",
         "url": "https://www.perdueinsurancetx.com/about-us/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_tenure_years"
-        ]
+        "fields": ["owner_tenure_years"]
       },
       {
         "source": "google_search",
         "url": "https://www.google.com/search?q=%22Perdue+Insurance+Agency%22+Austin+TX+trucking",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "enrichment_notes": "Strong A-tier candidate: 30 yrs founded (1996), owner Donald Perdue with 38 yrs industry tenure \u2192 ~age 60-70. Specialty commercial-trucking book = high multiple. Family-owned/family-run but successor not surfaced publicly = good signal for no-internal-successor. Specific commercial niche + retirement-window owner + no recent M&A = top candidate from this batch.",
@@ -365,10 +348,7 @@
         "source": "google_business",
         "url": "https://bosworth-associates.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "license_holder_name"
-        ]
+        "fields": ["year_established", "license_holder_name"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -442,26 +422,19 @@
         "source": "website",
         "url": "https://bosworth-associates.com/team/michael-j-bosworth/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name",
-          "owner_tenure_years"
-        ]
+        "fields": ["owner_name", "owner_tenure_years"]
       },
       {
         "source": "search_snippet",
         "url": "https://rocketreach.co/bosworth-associates-profile_b5f11246f966e5c5",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "employee_count_source"
-        ]
+        "fields": ["employee_count_source"]
       },
       {
         "source": "facebook",
         "url": "https://m.facebook.com/TylerEconomicDevelopment/photos/tedc-investor-spotlight-michael-bosworthbosworth-associatessecond-generation-bus/1343066997611476/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "enrichment_notes": "Strong on tenure (86 yrs), owner age (~71), and revenue scale ($5.7M). HOWEVER: (a) Out of 5-metro scope; (b) Cambridge Bosworth on track as 3rd gen since 2018 = internal succession path. B-tier reference; not target unless Cambridge exits agency.",
@@ -492,12 +465,7 @@
     "phone": "817-410-4690",
     "website": "https://mewhirterinsurance.com/",
     "lines_of_business": "mixed",
-    "carriers_visible": [
-      "Progressive",
-      "Liberty Mutual (as carrier)",
-      "Hartford",
-      "State Auto"
-    ],
+    "carriers_visible": ["Progressive", "Liberty Mutual (as carrier)", "Hartford", "State Auto"],
     "license_number": null,
     "license_type": null,
     "license_holder_name": "Jeffrey R. Mewhirter",
@@ -507,11 +475,7 @@
         "source": "website",
         "url": "https://mewhirterinsurance.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "carriers_visible",
-          "license_holder_name",
-          "lines_of_business"
-        ]
+        "fields": ["carriers_visible", "license_holder_name", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent (former Farmers career agent; agency now lists 80+ carriers and self-describes as independent)",
@@ -585,19 +549,13 @@
         "source": "live_website_fetch",
         "url": "https://mewhirterinsurance.com/about-us/",
         "fetched_at": "2026-05-15T19:55:00Z",
-        "fields": [
-          "team_members",
-          "owner_tenure"
-        ]
+        "fields": ["team_members", "owner_tenure"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/jeffmewhirter/",
         "fetched_at": "2026-05-15T19:56:00Z",
-        "fields": [
-          "education",
-          "career_history"
-        ]
+        "fields": ["education", "career_history"]
       }
     ],
     "enrichment_notes": "B-tier candidate: 39-yr tenured solo+1 with eponymous founder ~64. Strong age/tenure A-signal BUT Dan Mewhirter listed as team member = internal-successor risk. Stale footer = mild coasting. Worth phone outreach to confirm Dan's role + family relationship before scoring.",
@@ -638,10 +596,7 @@
         "source": "website",
         "url": "https://www.jameslittleagency.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "license_holder_name",
-          "lines_of_business"
-        ]
+        "fields": ["license_holder_name", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -706,19 +661,13 @@
         "source": "live_website_fetch",
         "url": "https://www.jameslittleagency.com/",
         "fetched_at": "2026-05-15T19:45:00Z",
-        "fields": [
-          "owner_name",
-          "successor_check",
-          "personal_lines"
-        ]
+        "fields": ["owner_name", "successor_check", "personal_lines"]
       },
       {
         "source": "zoominfo",
         "url": "https://www.zoominfo.com/c/james-little-agency-llc/346893083",
         "fetched_at": "2026-05-15T19:46:00Z",
-        "fields": [
-          "annual_revenue"
-        ]
+        "fields": ["annual_revenue"]
       }
     ],
     "enrichment_notes": "Strong A/B candidate: 28-yr eponymous solo, HNW personal-lines niche, $3M revenue (manageable size), no successor visible. Reliance Group Texas LP cluster member (independent). Owner age unknown but tenure proxy suggests 55-65. Worth deep CAD/voter lookup for James Little Tarrant County.",
@@ -759,18 +708,13 @@
         "source": "google_business",
         "url": "https://www.iicsa.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established"
-        ]
+        "fields": ["year_established"]
       },
       {
         "source": "website",
         "url": "https://www.iicboerne.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "license_holder_name",
-          "year_established"
-        ]
+        "fields": ["license_holder_name", "year_established"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -835,11 +779,7 @@
         "source": "live_website_fetch",
         "url": "https://www.iicboerne.com/about-us",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "all_principals",
-          "successor_check_live_fetch",
-          "family_relationships"
-        ]
+        "fields": ["all_principals", "successor_check_live_fetch", "family_relationships"]
       }
     ],
     "enrichment_notes": "DEMOTE to D_pass: Multi-generational Sales family ownership (Wade + Blake + sons Jake + Conner) \u2014 explicit internal-successor structure makes external sale to ETA buyer highly unlikely. Long tenure is real (142 yrs entity, 30 yrs Sales family) but successor risk is dispositive.",
@@ -880,10 +820,7 @@
         "source": "website",
         "url": "https://www.isamcktx.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "lines_of_business"
-        ]
+        "fields": ["year_established", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -957,20 +894,13 @@
         "source": "live_website_fetch",
         "url": "https://www.isamcktx.com/",
         "fetched_at": "2026-05-15T19:10:00Z",
-        "fields": [
-          "solo_operator",
-          "footer_copyright_year",
-          "lines_of_business"
-        ]
+        "fields": ["solo_operator", "footer_copyright_year", "lines_of_business"]
       },
       {
         "source": "google_search",
         "url": "https://www.facebook.com/IsaMck1991/",
         "fetched_at": "2026-05-15T19:11:00Z",
-        "fields": [
-          "year_established",
-          "contact_email"
-        ]
+        "fields": ["year_established", "contact_email"]
       }
     ],
     "enrichment_notes": "Strong A-tier candidate on size and tenure: 34-yr solo independent with no team page, no successor visible, owner identity opaque. Owner age unknown (Caserotti first-name initial only \u2014 full name not on public site). Distress checks clean. Worth deeper LinkedIn/CAD lookup for full Caserotti name + age.",
@@ -1011,12 +941,7 @@
         "source": "website",
         "url": "https://www.comaltex.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "address",
-          "phone",
-          "year_established",
-          "lines_of_business"
-        ]
+        "fields": ["address", "phone", "year_established", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1072,9 +997,7 @@
         "source": "website",
         "url": "https://www.comaltex.com/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "years_in_business"
-        ]
+        "fields": ["years_in_business"]
       },
       {
         "source": "nb_chamber",
@@ -1121,9 +1044,7 @@
         "source": "google_business",
         "url": "https://www.getrcinsurance.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "lines_of_business"
-        ]
+        "fields": ["lines_of_business"]
       }
     ],
     "platform_affiliation_check": "uncertain (site fetch failed \u2014 verify before scoring)",
@@ -1188,18 +1109,13 @@
         "source": "opencorporates",
         "url": "https://opencorporates.com/companies/us_tx/0803193864",
         "fetched_at": "2026-05-15T19:20:00Z",
-        "fields": [
-          "entity_sos_file_number"
-        ]
+        "fields": ["entity_sos_file_number"]
       },
       {
         "source": "alignable",
         "url": "https://www.alignable.com/carrollton-tx/arci-insurance",
         "fetched_at": "2026-05-15T19:21:00Z",
-        "fields": [
-          "former_name",
-          "years_in_business"
-        ]
+        "fields": ["former_name", "years_in_business"]
       }
     ],
     "enrichment_notes": "27-yr Carrollton independent (formerly ARCI). TX SOS file 0803193864. Website DOWN on repeat live fetch \u2014 potential operational-neglect signal or hosting issue. Cannot complete A/B scoring without site access and owner ID. Defer to TDI license check + phone outreach.",
@@ -1255,12 +1171,7 @@
         "source": "website",
         "url": "https://www.insureitfast.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "address",
-          "phone",
-          "carriers_visible",
-          "lines_of_business"
-        ]
+        "fields": ["address", "phone", "carriers_visible", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1325,10 +1236,7 @@
         "source": "live_website_fetch",
         "url": "https://www.insureitfast.com/who-we-are/",
         "fetched_at": "2026-05-15T19:40:00Z",
-        "fields": [
-          "years_in_business",
-          "family_owned_status"
-        ]
+        "fields": ["years_in_business", "family_owned_status"]
       }
     ],
     "enrichment_notes": "25-yr Fort Worth family-owned independent. 14+ carrier appointments. Owner identity opaque \u2014 blocks age verification. C/B-tier pending TDI license search to identify Hall principal.",
@@ -1384,11 +1292,7 @@
         "source": "website",
         "url": "https://www.alpineinsurancetexas.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "carriers_visible",
-          "license_holder_name",
-          "lines_of_business"
-        ]
+        "fields": ["carriers_visible", "license_holder_name", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1453,17 +1357,13 @@
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/michelle-davis-9bbb0849/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       },
       {
         "source": "google_search",
         "url": "https://www.google.com/search?q=%22Alpine+Insurance+of+Texas%22+Austin",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_tenure_years"
-        ]
+        "fields": ["owner_tenure_years"]
       }
     ],
     "enrichment_notes": "Solo principal Michelle (likely Davis, unconfirmed) \u2014 25 yrs ownership. Small team (3 named staff). Year established not surfaced. Owner age unknown but tenure + solo structure are positive signals for owner-succession thesis. B-tier; needs age verification to upgrade to A-tier.",
@@ -1513,10 +1413,7 @@
         "source": "search_snippet",
         "url": "https://www.google.com/search?q=Heaton+Bennett+Insurance+Austin+TX",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "carriers_visible",
-          "lines_of_business"
-        ]
+        "fields": ["carriers_visible", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1572,18 +1469,13 @@
         "source": "website",
         "url": "https://insureaustin.com/meet-the-team/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name",
-          "employee_count_estimate"
-        ]
+        "fields": ["owner_name", "employee_count_estimate"]
       },
       {
         "source": "google_search",
         "url": "https://insureaustin.com/nancy-heaton/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "enrichment_notes": "Founded 2004 (22 yrs), mid-size (~30 employees), two-principal structure. Ross Bennett moved to Austin in 2010 (post-founding) \u2014 title 'Operations Manager' per team page suggests Ross is not co-founder despite name; Nancy Heaton owner with husband Ted Heaton also in insurance. Partner succession risk + relatively recent founding (2004) puts this in B-tier. Owner ages unknown.",
@@ -1634,11 +1526,7 @@
         "source": "website",
         "url": "https://www.allianceinsure.com/about-us.html",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "carriers_visible",
-          "lines_of_business",
-          "address"
-        ]
+        "fields": ["carriers_visible", "lines_of_business", "address"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1703,11 +1591,7 @@
         "source": "live_website_fetch",
         "url": "https://www.allianceinsure.com/about-us.html",
         "fetched_at": "2026-05-15T19:15:00Z",
-        "fields": [
-          "lines_of_business",
-          "carriers_visible",
-          "address"
-        ]
+        "fields": ["lines_of_business", "carriers_visible", "address"]
       }
     ],
     "enrichment_notes": "23-yr Frisco independent on edge of target tenure window. Owner identity not disclosed \u2014 major data gap blocks A-tier scoring. Expanded into AZ recently (growth signal, not coasting). Needs TDI agent-license lookup + LinkedIn to identify owner before further qualification. B-tier pending owner ID.",
@@ -1738,12 +1622,7 @@
     "phone": null,
     "website": "https://www.rockinsurancetexas.com/",
     "lines_of_business": "mixed",
-    "carriers_visible": [
-      "Kemper",
-      "Allstate (as carrier)",
-      "Progressive",
-      "Travelers"
-    ],
+    "carriers_visible": ["Kemper", "Allstate (as carrier)", "Progressive", "Travelers"],
     "license_number": null,
     "license_type": null,
     "license_holder_name": null,
@@ -1753,11 +1632,7 @@
         "source": "website",
         "url": "https://www.rockinsurancetexas.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "carriers_visible",
-          "lines_of_business"
-        ]
+        "fields": ["year_established", "carriers_visible", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1844,11 +1719,7 @@
         "source": "website",
         "url": "https://www.insurancedallas.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "carriers_visible",
-          "platform_affiliation_check"
-        ]
+        "fields": ["year_established", "carriers_visible", "platform_affiliation_check"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1886,10 +1757,7 @@
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/philip-bankhead-6527ab16/",
         "fetched_at": "2026-05-15T20:45:00Z",
-        "fields": [
-          "owner_name",
-          "owner_tenure"
-        ]
+        "fields": ["owner_name", "owner_tenure"]
       }
     ],
     "enrichment_notes": "A-tier candidate \u2014 Philip Bankhead, solo eponymous principal, 40-yr tenure (1986-present), now ~70 in deep retirement window. Strong successor-uncertainty signal. Verify live successor check (team page) + SOS entity status + CAD homestead for OV65 confirmation in Phase 4.",
@@ -1969,10 +1837,7 @@
         "source": "website",
         "url": "https://magnumchoice.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "phone",
-          "lines_of_business"
-        ]
+        "fields": ["phone", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2037,10 +1902,7 @@
         "source": "live_website_fetch",
         "url": "https://magnumchoice.com/",
         "fetched_at": "2026-05-15T19:35:00Z",
-        "fields": [
-          "lines_of_business",
-          "footer_copyright_year"
-        ]
+        "fields": ["lines_of_business", "footer_copyright_year"]
       }
     ],
     "enrichment_notes": "20-yr Plano agency with multi-agent team structure. Owner identity opaque \u2014 cannot complete Layer 1 scoring. Multi-producer signal weakens solo-coasting profile. C-tier candidate at best; needs TDI license lookup + owner ID.",
@@ -2081,18 +1943,13 @@
         "source": "website",
         "url": "https://kingspointinsurance.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "lines_of_business"
-        ]
+        "fields": ["year_established", "lines_of_business"]
       },
       {
         "source": "trustedchoice",
         "url": "https://www.trustedchoice.com/agent/tx/houston/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "platform_affiliation_check"
-        ]
+        "fields": ["platform_affiliation_check"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2139,18 +1996,13 @@
         "source": "bbb",
         "url": "https://www.bbb.org/us/tx/houston/profile/insurance-companies/kingspoint-insurance-0915-44000103",
         "fetched_at": "2026-05-15T20:40:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       },
       {
         "source": "live_website_fetch",
         "url": "https://kingspointinsurance.com/about-us/",
         "fetched_at": "2026-05-15T20:41:00Z",
-        "fields": [
-          "copyright_year",
-          "team_size"
-        ]
+        "fields": ["copyright_year", "team_size"]
       }
     ],
     "enrichment_notes": "B-tier candidate \u2014 Ha Le, solo principal, 36-yr tenure suggests retirement-window owner. Thin web disclosure (no team, no carrier list on homepage) is a coasting tell. Verify SOS entity status and successor-check via team-page fetch + LinkedIn before A-tier promotion.",
@@ -2181,9 +2033,7 @@
     "phone": "(972) 991-9100",
     "website": "https://thumanninsuranceagency.com/",
     "lines_of_business": "mixed",
-    "carriers_visible": [
-      "80+ top-rated insurance companies"
-    ],
+    "carriers_visible": ["80+ top-rated insurance companies"],
     "license_number": null,
     "license_type": null,
     "license_holder_name": "Steve Thumann (President/Director & Agency Principal)",
@@ -2193,11 +2043,7 @@
         "source": "website",
         "url": "https://thumanninsuranceagency.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "address",
-          "year_established",
-          "lines_of_business"
-        ]
+        "fields": ["address", "year_established", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2244,10 +2090,7 @@
         "source": "bbb",
         "url": "https://www.bbb.org/us/tx/dallas/profile/insurance-agency/thumann-agency-inc-0875-90295777",
         "fetched_at": "2026-05-15T20:46:00Z",
-        "fields": [
-          "owner_name",
-          "entity_formation_date"
-        ]
+        "fields": ["owner_name", "entity_formation_date"]
       }
     ],
     "enrichment_notes": "B-tier candidate \u2014 Steve Thumann, eponymous solo principal, 20+ yrs in industry. Edge of retirement window. 80+ carriers = durable book. Verify exact owner age and team/producer count via live fetch + LinkedIn before A-tier.",
@@ -2278,13 +2121,7 @@
     "phone": null,
     "website": "https://www.insurancefordfw.com/",
     "lines_of_business": "personal_only",
-    "carriers_visible": [
-      "ASI Lloyds",
-      "Chubb",
-      "Hartford",
-      "State Auto",
-      "Travelers"
-    ],
+    "carriers_visible": ["ASI Lloyds", "Chubb", "Hartford", "State Auto", "Travelers"],
     "license_number": null,
     "license_type": null,
     "license_holder_name": "Todd McShan",
@@ -2294,11 +2131,7 @@
         "source": "website",
         "url": "https://www.insurancefordfw.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "carriers_visible",
-          "license_holder_name"
-        ]
+        "fields": ["year_established", "carriers_visible", "license_holder_name"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2372,11 +2205,7 @@
         "source": "live_website_fetch",
         "url": "https://www.insurancefordfw.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_name",
-          "year_established",
-          "successor_check"
-        ]
+        "fields": ["owner_name", "year_established", "successor_check"]
       }
     ],
     "enrichment_notes": "Solid B-tier: Todd McShan 30+yr vet, solo, no team page, no successor visible. Stale footer copyright = mild coasting tell. Personal-lines only is a multiple-cap. Reliance Group Texas LP is an independent cluster (not PE platform). Worth phone outreach.",
@@ -2417,10 +2246,7 @@
         "source": "website",
         "url": "https://gaiai.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "license_holder_name",
-          "lines_of_business"
-        ]
+        "fields": ["license_holder_name", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2485,19 +2311,13 @@
         "source": "website",
         "url": "https://gaiai.com/about/staff/robert-husk",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name",
-          "owner_tenure_years",
-          "year_established"
-        ]
+        "fields": ["owner_name", "owner_tenure_years", "year_established"]
       },
       {
         "source": "google_search",
         "url": "https://gaiai.com/about/staff/jeff-husk",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "enrichment_notes": "Founder Bob Husk likely 70-75 yrs old, 46 yrs at the helm. Son Jeff Husk active since 2007 = designated internal successor. Strong tenure + age but family-resolved succession = B-tier at best (not a no-successor target). A-tier candidacy requires Jeff Husk being unwilling/unable to continue.",
@@ -2538,12 +2358,7 @@
         "source": "website",
         "url": "https://www.centralins.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "address",
-          "phone",
-          "year_established",
-          "lines_of_business"
-        ]
+        "fields": ["address", "phone", "year_established", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2608,26 +2423,19 @@
         "source": "website",
         "url": "https://www.centralins.com/about-central-insurance/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name",
-          "employee_count_estimate"
-        ]
+        "fields": ["owner_name", "employee_count_estimate"]
       },
       {
         "source": "public_records",
         "url": "https://www.instantcheckmate.com/people/scott-raper/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_age_estimate"
-        ]
+        "fields": ["owner_age_estimate"]
       },
       {
         "source": "opencorporates",
         "url": "https://opencorporates.com/companies/us_tx/0027392400",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "entity_sos_file_number"
-        ]
+        "fields": ["entity_sos_file_number"]
       }
     ],
     "enrichment_notes": "Strong tenure (67 yrs) + retirement-window principals (Scott 64). HOWEVER \u2014 two active brother-principals = high internal-successor resolution likelihood (brother-to-brother transition or next-gen Raper). Pre-batch warning of internal succession confirmed. B-tier candidate at best; A-tier requires verification that brothers are unwilling/unable to continue independently.",
@@ -2668,11 +2476,7 @@
         "source": "website",
         "url": "https://www.tomhotaling.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "license_holder_name",
-          "lines_of_business"
-        ]
+        "fields": ["year_established", "license_holder_name", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent_partnership (GTX Insurance Partners, two-principal partnership)",
@@ -2728,18 +2532,13 @@
         "source": "live_website_fetch",
         "url": "https://www.gtxins.com/about/",
         "fetched_at": "2026-05-15T20:15:00Z",
-        "fields": [
-          "co_principals",
-          "gtx_partnership_structure"
-        ]
+        "fields": ["co_principals", "gtx_partnership_structure"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/tom-hotaling-5a284617/",
         "fetched_at": "2026-05-15T20:16:00Z",
-        "fields": [
-          "owner_age_estimate"
-        ]
+        "fields": ["owner_age_estimate"]
       }
     ],
     "enrichment_notes": "B/C-tier: Tom Hotaling 34-yr tenure, ~63 yrs old, BUT operates within GTX Insurance Partners 2-principal partnership (with Greg Garcia). Internal-succession path exists (partner buyout). External ETA sale less likely but not impossible if partners diverge. C-tier without clear distress trigger.",
@@ -2780,12 +2579,7 @@
         "source": "website",
         "url": "https://www.threlkeld.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "address",
-          "year_established",
-          "license_holder_name",
-          "lines_of_business"
-        ]
+        "fields": ["address", "year_established", "license_holder_name", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2859,18 +2653,13 @@
         "source": "website",
         "url": "https://www.threlkeld.com/our-team/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name",
-          "employee_count_estimate"
-        ]
+        "fields": ["owner_name", "employee_count_estimate"]
       },
       {
         "source": "insurance_business_mag",
         "url": "https://www.insurancebusinessmag.com/us/special-reports/top-producers-2020/dustin-glover-threlkeld-and-company-insurance-215365.aspx",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "enrichment_notes": "Mid-size specialty commercial agency (40 employees). Owner Todd Threlkeld ~age 62 in retirement window. BUT \u2014 Dustin Glover (non-family President) on management track since 2008, strong heir apparent. Likely internal transition. B-tier; A-tier requires Glover unable/unwilling to buy out Threlkeld.",
@@ -2911,11 +2700,7 @@
         "source": "website",
         "url": "https://www.dreissinsurance.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "license_holder_name",
-          "lines_of_business"
-        ]
+        "fields": ["year_established", "license_holder_name", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2980,11 +2765,7 @@
         "source": "website",
         "url": "https://www.dreissinsurance.com/about-us/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name",
-          "owner_tenure_years",
-          "employee_count_estimate"
-        ]
+        "fields": ["owner_name", "owner_tenure_years", "employee_count_estimate"]
       }
     ],
     "enrichment_notes": "Owner age right (Lee ~62) but internal successor LOCKED IN (Denton already on payroll as Commercial Lines Manager + Amy as Office Manager). 3-generation family business with explicit succession training. C-tier \u2014 no external exit needed. Pre-batch warning confirmed.",
@@ -3033,11 +2814,7 @@
         "source": "website",
         "url": "https://www.deandraper.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "carriers_visible",
-          "lines_of_business"
-        ]
+        "fields": ["year_established", "carriers_visible", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent_with_internal_succession",
@@ -3102,27 +2879,19 @@
         "source": "live_website_fetch",
         "url": "https://www.deandraper.com/our-story",
         "fetched_at": "2026-05-15T20:34:00Z",
-        "fields": [
-          "owner_name",
-          "succession_status",
-          "copyright_year"
-        ]
+        "fields": ["owner_name", "succession_status", "copyright_year"]
       },
       {
         "source": "insurance_journal",
         "url": "https://www.insurancejournal.com/news/southcentral/2022/04/07/661756.htm",
         "fetched_at": "2026-05-15T20:35:00Z",
-        "fields": [
-          "acquisition_pattern"
-        ]
+        "fields": ["acquisition_pattern"]
       },
       {
         "source": "google_search",
         "url": "https://www.google.com/search?q=%22Dean+%26+Draper+Insurance+Agency%22+Houston+owner+principal+acquired+sold+2024+2025+2026",
         "fetched_at": "2026-05-15T20:36:00Z",
-        "fields": [
-          "recent_news"
-        ]
+        "fields": ["recent_news"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 Dean & Draper is too large for typical ETA target AND has completed internal family succession (founder Bob Dean \u2192 son Kyle Dean). Kyle is operating principal in mid-career, not retirement. Active acquirer of smaller agencies. D-pass with reason: size_too_large + internal_succession_already_done.",
@@ -3225,19 +2994,13 @@
         "source": "live_website_fetch",
         "url": "https://davidisoninsurance.com/",
         "fetched_at": "2026-05-15T20:10:00Z",
-        "fields": [
-          "all_principals",
-          "and_sons_branding"
-        ]
+        "fields": ["all_principals", "and_sons_branding"]
       },
       {
         "source": "zoominfo",
         "url": "https://www.zoominfo.com/p/Stephen-Ison/776465166",
         "fetched_at": "2026-05-15T20:11:00Z",
-        "fields": [
-          "current_owner",
-          "secondary_business"
-        ]
+        "fields": ["current_owner", "secondary_business"]
       }
     ],
     "enrichment_notes": "DEMOTE to D_pass: Multi-generational Ison family with explicit '& Sons' branding and Stephen Ison as current CEO/Owner. Internal succession already completed (founder \u2192 son). External ETA sale not plausible.",
@@ -3278,11 +3041,7 @@
         "source": "website",
         "url": "https://www.brittonandbritton.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "license_holder_name",
-          "phone"
-        ]
+        "fields": ["year_established", "license_holder_name", "phone"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3338,10 +3097,7 @@
         "source": "live_website_fetch",
         "url": "https://www.brittonandbritton.com/about-us/",
         "fetched_at": "2026-05-15T20:25:00Z",
-        "fields": [
-          "principals",
-          "founder_son_succession"
-        ]
+        "fields": ["principals", "founder_son_succession"]
       }
     ],
     "enrichment_notes": "DEMOTE to D_pass: Internal succession founder\u2192son already executed. Riley Britton (2nd gen) is current principal. Eponymous family branding signals 3rd-gen path or continuation. Stale footer (2016) IS a coasting tell but doesn't override succession-completed disqualifier.",
@@ -3396,11 +3152,7 @@
         "source": "website",
         "url": "https://www.insuranceovertexas.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "carriers_visible",
-          "lines_of_business",
-          "platform_affiliation_check"
-        ]
+        "fields": ["carriers_visible", "lines_of_business", "platform_affiliation_check"]
       }
     ],
     "platform_affiliation_check": "independent_recent_succession_completed",
@@ -3438,10 +3190,7 @@
         "source": "live_website_fetch",
         "url": "https://www.insuranceovertexas.com/about-us.html",
         "fetched_at": "2026-05-15T20:39:00Z",
-        "fields": [
-          "owner_name",
-          "ownership_transition"
-        ]
+        "fields": ["owner_name", "ownership_transition"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 succession event already completed (Dale Jackson retired, sold to long-time employee Martha Juarez). New owner is just beginning tenure; will not be a near-term seller. D-pass with reason: succession_already_executed.",
@@ -3482,19 +3231,13 @@
         "source": "website",
         "url": "https://www.pasins.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "lines_of_business",
-          "platform_affiliation_check"
-        ]
+        "fields": ["year_established", "lines_of_business", "platform_affiliation_check"]
       },
       {
         "source": "trustedchoice",
         "url": "https://www.trustedchoice.com/agent/tx/houston/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "platform_affiliation_check"
-        ]
+        "fields": ["platform_affiliation_check"]
       }
     ],
     "platform_affiliation_check": "independent_3rd_generation_family",
@@ -3541,11 +3284,7 @@
         "source": "live_website_fetch",
         "url": "https://www.pasins.com/our-legacy",
         "fetched_at": "2026-05-15T20:37:00Z",
-        "fields": [
-          "owner_name",
-          "succession_history",
-          "founder_history"
-        ]
+        "fields": ["owner_name", "succession_history", "founder_history"]
       }
     ],
     "enrichment_notes": "DEMOTE \u2014 Pasadena Insurance Agency has clear 3rd-generation family succession active (Frank + Ronnie Karkowsky). Sons of Jay Karkowsky, grandsons of founder Leo. Operating brothers in active mid-career, not retirement. Internal succession plan visible \u2014 likely will continue family operation rather than sell. D-pass with reason: active_internal_family_succession.",
@@ -3586,17 +3325,13 @@
         "source": "website",
         "url": "https://gibbinsuranceservices.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "lines_of_business"
-        ]
+        "fields": ["lines_of_business"]
       },
       {
         "source": "google_business",
         "url": "https://www.gibbagency.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established"
-        ]
+        "fields": ["year_established"]
       }
     ],
     "platform_affiliation_check": "independent_internal_succession",
@@ -3634,10 +3369,7 @@
         "source": "live_website_fetch",
         "url": "https://www.gibbagency.com/about/",
         "fetched_at": "2026-05-15T20:49:00Z",
-        "fields": [
-          "owner_name",
-          "succession_history"
-        ]
+        "fields": ["owner_name", "succession_history"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 father-to-daughter family succession already done (Gilbert \u2192 Susana Gibb). Susana operates Dallas branch since 1997, active mid-career. D-pass with reason: internal_family_succession_already_executed.",
@@ -3690,10 +3422,7 @@
         "source": "website",
         "url": "https://brookscannon.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "carriers_visible",
-          "lines_of_business"
-        ]
+        "fields": ["carriers_visible", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3731,10 +3460,7 @@
         "source": "live_website_fetch",
         "url": "https://brookscannon.com/brooks/",
         "fetched_at": "2026-05-15T20:47:00Z",
-        "fields": [
-          "owner_career_start",
-          "owner_age_estimate"
-        ]
+        "fields": ["owner_career_start", "owner_age_estimate"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 Brooks Cannon (female founder) started in 2000, ~25 yrs career, likely mid-40s now. Far below retirement window. C-pass with reason: owner_below_retirement_window.",
@@ -3784,10 +3510,7 @@
         "source": "website",
         "url": "https://championins.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "carriers_visible",
-          "lines_of_business"
-        ]
+        "fields": ["carriers_visible", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent_recent_merger",
@@ -3825,10 +3548,7 @@
         "source": "google_search",
         "url": "https://championins.com/about-us/",
         "fetched_at": "2026-05-15T20:48:00Z",
-        "fields": [
-          "owner_name",
-          "merger_history"
-        ]
+        "fields": ["owner_name", "merger_history"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 Champion Commercial merged with Wood-Wilson in April 2023 specifically to resist PE acquirer pressure. Multi-partner structure (Sams + Hunt + Rumsey). Bruce Sams represents 4th generation in TX insurance \u2014 strong successor pipeline already established. D-pass with reason: recent_strategic_merger + multi_partner_with_succession.",
@@ -3878,12 +3598,7 @@
         "source": "website",
         "url": "https://texanschoice.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "address",
-          "phone",
-          "carriers_visible",
-          "lines_of_business"
-        ]
+        "fields": ["address", "phone", "carriers_visible", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3939,17 +3654,13 @@
         "source": "bbb",
         "url": "https://www.bbb.org/us/tx/san-antonio/profile/auto-insurance/texans-choice-insurance-agency-0825-1000200933",
         "fetched_at": "2026-05-15T20:20:00Z",
-        "fields": [
-          "entity_formation_date"
-        ]
+        "fields": ["entity_formation_date"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/texanschoiceins/",
         "fetched_at": "2026-05-15T20:21:00Z",
-        "fields": [
-          "owner_career_history"
-        ]
+        "fields": ["owner_career_history"]
       }
     ],
     "enrichment_notes": "C-tier: Agency tenure only 14 yrs (below 20yr floor) but owner Haines has 25+ yr broader insurance career (Allstate Canada \u2192 independent TX). Owner age likely 55-65 based on career timeline. Doesn't fit classic long-tenured coasting profile but worth tracking.",
@@ -4006,11 +3717,7 @@
         "source": "website",
         "url": "https://www.avalonins.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "carriers_visible",
-          "lines_of_business"
-        ]
+        "fields": ["year_established", "carriers_visible", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4057,9 +3764,7 @@
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/debbiegehring/",
         "fetched_at": "2026-05-15T20:42:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "enrichment_notes": "C-tier \u2014 durable independent book but owners not yet in tight retirement window (20-yr tenure, two named owners). Hold for monitoring; not a near-term seller. C-pass with reason: below_retirement_window.",
@@ -4090,9 +3795,7 @@
     "phone": "512-270-0256",
     "website": "https://www.thetexasinsurancebroker.com/",
     "lines_of_business": "mixed",
-    "carriers_visible": [
-      "40+ carriers (specific list not on homepage)"
-    ],
+    "carriers_visible": ["40+ carriers (specific list not on homepage)"],
     "license_number": null,
     "license_type": null,
     "license_holder_name": "Tom Shallue",
@@ -4102,12 +3805,7 @@
         "source": "website",
         "url": "https://www.thetexasinsurancebroker.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "address",
-          "phone",
-          "license_holder_name",
-          "lines_of_business"
-        ]
+        "fields": ["address", "phone", "license_holder_name", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4163,18 +3861,13 @@
         "source": "bbb",
         "url": "https://www.bbb.org/us/tx/austin/profile/insurance-agency/the-texas-insurance-broker-0825-1000167446",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "year_established",
-          "entity_formation_date"
-        ]
+        "fields": ["year_established", "entity_formation_date"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/tomshallue/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "enrichment_notes": "Young agency (7 yrs), young owner (likely 35-50). Tom Shallue is post-captive (Liberty Mutual) entrepreneur in growth mode. NOT a succession target. C-tier \u2014 owner is building, not exiting.",
@@ -4221,11 +3914,7 @@
         "source": "website",
         "url": "https://www.deshazoinsurance.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "carriers_visible",
-          "lines_of_business",
-          "platform_affiliation_check"
-        ]
+        "fields": ["carriers_visible", "lines_of_business", "platform_affiliation_check"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4263,10 +3952,7 @@
         "source": "zoominfo",
         "url": "https://www.zoominfo.com/p/Abbie-Deshazo/4254416746",
         "fetched_at": "2026-05-15T20:43:00Z",
-        "fields": [
-          "owner_name",
-          "year_founded_correction"
-        ]
+        "fields": ["owner_name", "year_founded_correction"]
       }
     ],
     "enrichment_notes": "C-tier \u2014 Abbie DeShazo is owner-operator at 16-yr tenure. Below retirement window. Year-founded actually 2010, not 2005 (correction from spine). C-pass with reason: below_retirement_window.",
@@ -4318,10 +4004,7 @@
         "source": "website",
         "url": "https://mhautohome.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "carriers_visible",
-          "lines_of_business"
-        ]
+        "fields": ["carriers_visible", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4368,10 +4051,7 @@
         "source": "sec_iapd",
         "url": "https://reports.adviserinfo.sec.gov/reports/individual/individual_4888177.pdf",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name",
-          "entity_formation_date"
-        ]
+        "fields": ["owner_name", "entity_formation_date"]
       }
     ],
     "enrichment_notes": "Young owner-operated agency. Brent Hagen ~age 45-55, only 11 yrs running agency. NOT a succession target. C-tier \u2014 owner is building career, not exiting.",
@@ -4412,11 +4092,7 @@
         "source": "website",
         "url": "https://www.insurewithhart.com/independent-agent",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "address",
-          "phone",
-          "platform_affiliation_check"
-        ]
+        "fields": ["address", "phone", "platform_affiliation_check"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4488,10 +4164,7 @@
         "source": "website",
         "url": "https://haleyinsuranceonline.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "phone",
-          "lines_of_business"
-        ]
+        "fields": ["phone", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4553,9 +4226,7 @@
     "phone": "281-998-2500",
     "website": "https://www.texaninsurance.com/",
     "lines_of_business": "mixed",
-    "carriers_visible": [
-      "dozens of carriers (specific list on Companies We Represent page)"
-    ],
+    "carriers_visible": ["dozens of carriers (specific list on Companies We Represent page)"],
     "license_number": null,
     "license_type": null,
     "license_holder_name": null,
@@ -4565,11 +4236,7 @@
         "source": "website",
         "url": "https://www.texaninsurance.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "lines_of_business",
-          "platform_affiliation_check"
-        ]
+        "fields": ["year_established", "lines_of_business", "platform_affiliation_check"]
       }
     ],
     "platform_affiliation_check": "independent_aggressive_acquirer",
@@ -4625,35 +4292,25 @@
         "source": "live_website_fetch",
         "url": "https://www.texaninsurance.com/who-we-are/",
         "fetched_at": "2026-05-15T20:30:00Z",
-        "fields": [
-          "copyright_year",
-          "online_quote"
-        ]
+        "fields": ["copyright_year", "online_quote"]
       },
       {
         "source": "insurance_journal",
         "url": "https://www.insurancejournal.com/news/southcentral/2022/02/09/653408.htm",
         "fetched_at": "2026-05-15T20:31:00Z",
-        "fields": [
-          "acquisition_pattern"
-        ]
+        "fields": ["acquisition_pattern"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/rahim-virani24/",
         "fetched_at": "2026-05-15T20:32:00Z",
-        "fields": [
-          "owner_name",
-          "owner_career_path"
-        ]
+        "fields": ["owner_name", "owner_career_path"]
       },
       {
         "source": "tracxn",
         "url": "https://tracxn.com/d/acquisitions/acquisitions-by-texan-insurance/__suI2G2VBpTyRp5BPxrM8wXTaqi_Qppu1ji8nrrGedSk",
         "fetched_at": "2026-05-15T20:33:00Z",
-        "fields": [
-          "acquisition_count"
-        ]
+        "fields": ["acquisition_count"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 Texan Insurance is an aggressive roll-up acquirer, not an acquisition target. President Rahim Virani has non-traditional/short-tenure career arc. Founder not in retirement window. They publicly market 'Mergers & Acquisitions' as a service line (texaninsurance.com/mergers-acquisitions/). D-pass with reason: aggressive_acquirer_competitor.",
@@ -4694,10 +4351,7 @@
         "source": "website",
         "url": "https://gettia.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "lines_of_business"
-        ]
+        "fields": ["year_established", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent_large_multi_location",
@@ -4744,10 +4398,7 @@
         "source": "live_website_fetch",
         "url": "https://gettia.com/meet-the-team/",
         "fetched_at": "2026-05-15T20:38:00Z",
-        "fields": [
-          "team_size",
-          "size_signal"
-        ]
+        "fields": ["team_size", "size_signal"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 TIA (gettia.com) is too large (700 employees, 40+ locations) and runs a 'Sell Your Agency' acquirer page. They are a regional aggregator, not a target. D-pass with reason: aggressive_acquirer_competitor + size_too_large.",
@@ -4778,9 +4429,7 @@
     "phone": "(972) 243-0108",
     "website": "https://kevinleeco.com/",
     "lines_of_business": "mixed",
-    "carriers_visible": [
-      "Nationwide (as carrier)"
-    ],
+    "carriers_visible": ["Nationwide (as carrier)"],
     "license_number": null,
     "license_type": null,
     "license_holder_name": "Kevin Lee",
@@ -4790,11 +4439,7 @@
         "source": "website",
         "url": "https://kevinleeco.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "lines_of_business",
-          "platform_affiliation_check"
-        ]
+        "fields": ["year_established", "lines_of_business", "platform_affiliation_check"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4841,10 +4486,7 @@
         "source": "live_website_fetch",
         "url": "https://kevinleeco.com/about-us/",
         "fetched_at": "2026-05-15T20:44:00Z",
-        "fields": [
-          "year_established",
-          "geographic_reach"
-        ]
+        "fields": ["year_established", "geographic_reach"]
       }
     ],
     "enrichment_notes": "A/B-tier \u2014 Kevin Lee, eponymous principal, 39-yr tenure, in retirement window. Multi-state reach (14 states) suggests larger size than typical ETA target. Verify revenue + producer team page + LinkedIn for size before A-tier promotion. Strong candidate for further enrichment in Phase 4.",
@@ -4885,10 +4527,7 @@
         "source": "website",
         "url": "https://salgadoinsuranceagency.com/richardson-texas-independent-insurance-agency/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "phone",
-          "lines_of_business"
-        ]
+        "fields": ["phone", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4944,18 +4583,13 @@
         "source": "live_website_fetch",
         "url": "https://salgadoinsuranceagency.com/about-us/",
         "fetched_at": "2026-05-15T19:25:00Z",
-        "fields": [
-          "owner_name",
-          "owner_tenure_years"
-        ]
+        "fields": ["owner_name", "owner_tenure_years"]
       },
       {
         "source": "google_search",
         "url": "https://integratedinsurancegrouptx.com/richardson-texas-independent-insurance-agency/",
         "fetched_at": "2026-05-15T19:26:00Z",
-        "fields": [
-          "secondary_brand"
-        ]
+        "fields": ["secondary_brand"]
       }
     ],
     "enrichment_notes": "DEMOTE: Hondo Salgado in insurance only 13-15 yrs \u2014 fails 20+yr tenure threshold for long-tenured coasting profile. Owner likely 35-45 (mid-career, not pre-retirement). D-tier on tenure floor.",
@@ -5015,12 +4649,7 @@
         "source": "website",
         "url": "https://schuderinsurance.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "address",
-          "phone",
-          "carriers_visible",
-          "license_holder_name"
-        ]
+        "fields": ["address", "phone", "carriers_visible", "license_holder_name"]
       }
     ],
     "platform_affiliation_check": "captive_or_dual_appointed (Crystal Schuder is also a Farmers Insurance agent per agents.farmers.com)",
@@ -5067,27 +4696,19 @@
         "source": "live_website_fetch",
         "url": "https://schuderinsurance.com/about/",
         "fetched_at": "2026-05-15T19:50:00Z",
-        "fields": [
-          "owner_name",
-          "team_members",
-          "year_founded"
-        ]
+        "fields": ["owner_name", "team_members", "year_founded"]
       },
       {
         "source": "farmers_agents",
         "url": "https://agents.farmers.com/tx/fort-worth/crystal-schuder/",
         "fetched_at": "2026-05-15T19:51:00Z",
-        "fields": [
-          "platform_affiliation_check"
-        ]
+        "fields": ["platform_affiliation_check"]
       },
       {
         "source": "yelp",
         "url": "https://www.yelp.com/biz/farmers-insurance-crystal-schuder-mansfield",
         "fetched_at": "2026-05-15T19:52:00Z",
-        "fields": [
-          "captive_indicator"
-        ]
+        "fields": ["captive_indicator"]
       }
     ],
     "enrichment_notes": "DEMOTE to D_pass: (1) only 7 yrs in business (fails tenure floor), (2) Crystal Schuder also listed as Farmers captive agent \u2014 independence ambiguous. Not a long-tenured independent A-tier candidate.",
@@ -5128,10 +4749,7 @@
         "source": "website",
         "url": "https://watkinsinsurancegroup.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "lines_of_business",
-          "platform_affiliation_check"
-        ]
+        "fields": ["lines_of_business", "platform_affiliation_check"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -5187,25 +4805,19 @@
         "source": "linkedin",
         "url": "https://www.linkedin.com/company/watkins-insurance-group",
         "fetched_at": "2026-05-15T20:30:00Z",
-        "fields": [
-          "employee_count_estimate"
-        ]
+        "fields": ["employee_count_estimate"]
       },
       {
         "source": "press_release",
         "url": "https://watkinsinsurancegroup.com/blog/watkins-insurance-group-announces-leadership-appointment-chris-scott-named-president-patrick-watkins-continues-in-ceo-role/",
         "fetched_at": "2026-05-15T20:31:00Z",
-        "fields": [
-          "internal_successor_plan"
-        ]
+        "fields": ["internal_successor_plan"]
       },
       {
         "source": "iiat",
         "url": "https://www.iiat.org/texas-agent-news/patrick-watkins-of-austin-receives-2024-drex-foreman-award",
         "fetched_at": "2026-05-15T20:32:00Z",
-        "fields": [
-          "award_recognition"
-        ]
+        "fields": ["award_recognition"]
       }
     ],
     "enrichment_notes": "DEMOTE to D_pass: TOO LARGE for ETA target (165 employees / $93M revenue / 5 locations / 50-state licensing). Also has active 3rd-gen Watkins family ownership + named non-family President (Chris Scott) \u2014 internal succession plan firmly in place. Not a target.",
@@ -5251,11 +4863,7 @@
         "source": "website",
         "url": "https://lminsurancebrokers.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "carriers_visible",
-          "license_holder_name",
-          "year_established"
-        ]
+        "fields": ["carriers_visible", "license_holder_name", "year_established"]
       }
     ],
     "platform_affiliation_check": "platform_subsidiary (Goosehead Insurance franchise \u2014 EXCLUDE FROM TARGETS)",
@@ -5293,17 +4901,13 @@
         "source": "goosehead",
         "url": "https://www.goosehead.com/agents/tx/round-rock/john-moore-and-justin-lawhorn",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "platform_affiliation_check"
-        ]
+        "fields": ["platform_affiliation_check"]
       },
       {
         "source": "google_search",
         "url": "https://agents.gooseheadinsurance.com/tx/round-rock/1311-chisholm-trail",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "platform_affiliation_check"
-        ]
+        "fields": ["platform_affiliation_check"]
       }
     ],
     "enrichment_notes": "DISQUALIFIED \u2014 Goosehead franchise (publicly traded GSHD). Same exclusion model as TWFG row #48. Independent appearance is misleading; corporate Goosehead owns brand, appointments, and tech infrastructure. Keep on list as platform_subsidiary for counted-but-excluded reference.",
@@ -5353,11 +4957,7 @@
         "source": "website",
         "url": "https://allenthomasgroup.com/texas-insurance-agency/houston/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "carriers_visible",
-          "lines_of_business"
-        ]
+        "fields": ["year_established", "carriers_visible", "lines_of_business"]
       }
     ],
     "platform_affiliation_check": "multi_state_HQ_out_of_state (Akron OH HQ; Houston is regional branch)",
@@ -5413,18 +5013,13 @@
         "source": "website",
         "url": "https://allenthomasgroup.com/about-us/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name",
-          "year_established"
-        ]
+        "fields": ["owner_name", "year_established"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/joe-race/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "enrichment_notes": "C-tier \u2014 out-of-state HQ (Akron OH), multi-state operation, growing not exiting. Houston is regional branch. Joe Race in growth mode, not retirement. Exclude as target.",
@@ -5476,11 +5071,7 @@
         "source": "website",
         "url": "https://insurancewithjosh.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "carriers_visible",
-          "license_holder_name"
-        ]
+        "fields": ["year_established", "carriers_visible", "license_holder_name"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -5527,17 +5118,13 @@
         "source": "website",
         "url": "https://insurancewithjosh.com/our-team/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "employee_count_estimate"
-        ]
+        "fields": ["employee_count_estimate"]
       },
       {
         "source": "veteran_owned",
         "url": "https://www.veteranownedbusiness.com/business/36054/josh-smith-insurance-agency",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "enrichment_notes": "C-tier \u2014 young agency, young owner (likely 40-55), expansion phase across TX/NM/ID. NOT a succession target.",
@@ -5588,11 +5175,7 @@
         "source": "website",
         "url": "https://twfg.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "year_established",
-          "carriers_visible",
-          "platform_affiliation_check"
-        ]
+        "fields": ["year_established", "carriers_visible", "platform_affiliation_check"]
       }
     ],
     "platform_affiliation_check": "platform_subsidiary (TWFG franchise model, ~400 branches; public IPO 2024 \u2014 EXCLUDE FROM TARGETS)",
@@ -5664,11 +5247,7 @@
         "source": "website",
         "url": "https://www.chandeagency.com/",
         "fetched_at": "2026-05-15T19:00:00Z",
-        "fields": [
-          "address",
-          "phone",
-          "license_holder_name"
-        ]
+        "fields": ["address", "phone", "license_holder_name"]
       }
     ],
     "platform_affiliation_check": "platform_subsidiary (GEICO Local Agent program \u2014 EXCLUDE FROM TARGETS)",
@@ -5706,17 +5285,13 @@
         "source": "geico",
         "url": "https://www.geico.com/insurance-agents/texas/austin/sameer-chande/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "platform_affiliation_check"
-        ]
+        "fields": ["platform_affiliation_check"]
       },
       {
         "source": "community_impact",
         "url": "https://communityimpact.com/austin/round-rock-pflugerville-hutto/impacts/2020/06/19/geico-opens-office-in-round-rock/",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "year_established"
-        ]
+        "fields": ["year_established"]
       }
     ],
     "enrichment_notes": "DISQUALIFIED \u2014 GEICO Local Agent (quasi-captive). Pre-batch flagged uncertainty resolved: confirmed GEICO-branded office, opened 2020. Same exclusion model as TWFG / Lawhorn-Moore-Goosehead.",

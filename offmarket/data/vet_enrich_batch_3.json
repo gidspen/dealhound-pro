@@ -15,8 +15,18 @@
     "license_holder_name": "Dr. Christopher LaBrie; Dr. John Kothmann",
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://thveterinary.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone"]},
-      {"source": "google_business", "url": "https://www.google.com/search?q=kothmann+pet+hospital+san+antonio", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["license_holder_name", "dba_name"]}
+      {
+        "source": "website",
+        "url": "https://thveterinary.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      },
+      {
+        "source": "google_business",
+        "url": "https://www.google.com/search?q=kothmann+pet+hospital+san+antonio",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["license_holder_name", "dba_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Same address/phone as 'Kothmann Pet Hospital' — appears co-branded or merged operation. Alamo Heights / Terrell Hills border 78209 premium ZIP. Phone-only intake (no online booking) = potential coasting tell.",
@@ -38,15 +48,65 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "succession_in_progress", "direction": "negative", "evidence": "78209 Magazine profile (cached): 'Dr. Kothmann chose to work with someone who was going to keep it a family practice instead of going corporate' — Dr. LaBrie bought in 'a few years back, with the plan of taking things over down the road when Kothmann retires.'", "source": "78209_magazine", "source_url": "https://78209magazine.com/kothmann-pet-hospital/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "long_tenure_dvm", "direction": "positive", "evidence": "Dr. Kothmann has 'over 40 years' licensed veterinary experience per website team page.", "source": "website", "source_url": "https://thveterinary.com/our-team", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "dvm_count_2", "direction": "neutral", "evidence": "Team page lists Dr. LaBrie and Dr. Kothmann.", "source": "website", "source_url": "https://thveterinary.com/our-team", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "no_online_booking", "direction": "positive", "evidence": "Site offers phone-only intake — no Vetstoria/PetDesk/AllyDVM booking widget visible.", "source": "website", "source_url": "https://thveterinary.com/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "premium_zip_78209", "direction": "positive", "evidence": "Alamo Heights/Terrell Hills 78209 premium Bexar Tier-A ZIP.", "source": "spine", "source_url": null, "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "succession_in_progress",
+        "direction": "negative",
+        "evidence": "78209 Magazine profile (cached): 'Dr. Kothmann chose to work with someone who was going to keep it a family practice instead of going corporate' — Dr. LaBrie bought in 'a few years back, with the plan of taking things over down the road when Kothmann retires.'",
+        "source": "78209_magazine",
+        "source_url": "https://78209magazine.com/kothmann-pet-hospital/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_dvm",
+        "direction": "positive",
+        "evidence": "Dr. Kothmann has 'over 40 years' licensed veterinary experience per website team page.",
+        "source": "website",
+        "source_url": "https://thveterinary.com/our-team",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "dvm_count_2",
+        "direction": "neutral",
+        "evidence": "Team page lists Dr. LaBrie and Dr. Kothmann.",
+        "source": "website",
+        "source_url": "https://thveterinary.com/our-team",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_online_booking",
+        "direction": "positive",
+        "evidence": "Site offers phone-only intake — no Vetstoria/PetDesk/AllyDVM booking widget visible.",
+        "source": "website",
+        "source_url": "https://thveterinary.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "premium_zip_78209",
+        "direction": "positive",
+        "evidence": "Alamo Heights/Terrell Hills 78209 premium Bexar Tier-A ZIP.",
+        "source": "spine",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_team", "url": "https://thveterinary.com/our-team", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["license_holder_name", "provider_count_estimate"]},
-      {"source": "78209_magazine", "url": "https://78209magazine.com/kothmann-pet-hospital/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["owner_name", "succession_status"]}
+      {
+        "source": "website_team",
+        "url": "https://thveterinary.com/our-team",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["license_holder_name", "provider_count_estimate"]
+      },
+      {
+        "source": "78209_magazine",
+        "url": "https://78209magazine.com/kothmann-pet-hospital/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["owner_name", "succession_status"]
+      }
     ],
     "enrichment_notes": "Active succession-in-progress: Dr. LaBrie buying in from Dr. Kothmann to keep it family/non-corporate. LOWER FIT for outside off-market sourcing — internal succession path already locked, even if owner is 70+ and 40+yr tenured."
   },
@@ -66,7 +126,12 @@
     "license_holder_name": null,
     "year_established": 1998,
     "data_sources": [
-      {"source": "website", "url": "https://www.familypethospitalofstoneoak.net/about/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established"]}
+      {
+        "source": "website",
+        "url": "https://www.familypethospitalofstoneoak.net/about/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Since 1998 (28 yrs) in Stone Oak 78258 (premium Bexar Tier-A, +5 nudge). Beyond Indigo Pets = website builder, not consolidator.",
@@ -88,13 +153,50 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "long_tenure_practice", "direction": "positive", "evidence": "'The Family Pet Hospital of Stone Oak has been a part of the San Antonio pet community since 1998' (28 yrs).", "source": "website", "source_url": "https://www.familypethospitalofstoneoak.net/about/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "small_family_owned", "direction": "positive", "evidence": "Description as 'small family owned business' on About page (per search summary).", "source": "website", "source_url": "https://www.familypethospitalofstoneoak.net/about/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No NVA/Innovetive/Lakefield/Thrive/Pathway/VetCor footer or branding.", "source": "website", "source_url": "https://www.familypethospitalofstoneoak.net/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "premium_zip_78258", "direction": "positive", "evidence": "Stone Oak 78258 — premium NE Bexar Tier-A ZIP.", "source": "spine", "source_url": null, "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_practice",
+        "direction": "positive",
+        "evidence": "'The Family Pet Hospital of Stone Oak has been a part of the San Antonio pet community since 1998' (28 yrs).",
+        "source": "website",
+        "source_url": "https://www.familypethospitalofstoneoak.net/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "small_family_owned",
+        "direction": "positive",
+        "evidence": "Description as 'small family owned business' on About page (per search summary).",
+        "source": "website",
+        "source_url": "https://www.familypethospitalofstoneoak.net/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Lakefield/Thrive/Pathway/VetCor footer or branding.",
+        "source": "website",
+        "source_url": "https://www.familypethospitalofstoneoak.net/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "premium_zip_78258",
+        "direction": "positive",
+        "evidence": "Stone Oak 78258 — premium NE Bexar Tier-A ZIP.",
+        "source": "spine",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_about", "url": "https://www.familypethospitalofstoneoak.net/about/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["year_established", "ownership_claim"]}
+      {
+        "source": "website_about",
+        "url": "https://www.familypethospitalofstoneoak.net/about/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["year_established", "ownership_claim"]
+      }
     ],
     "enrichment_notes": "Cleanly independent, 28-yr-tenured, premium-ZIP family-owned practice. Owner name not surfaced on website — needs SOS/CAD followup. Solid B/B+ candidate pending owner-age confirmation."
   },
@@ -114,7 +216,12 @@
     "license_holder_name": "Dr. Lauri Jehl (owner, opened 2011) + husband Russ (practice manager); Dr. Amy Campbell + Dr. Claudia Sotelo (associates)",
     "year_established": 2011,
     "data_sources": [
-      {"source": "website", "url": "https://www.alamohillsanimalhospital.com/about-us/meet-the-doctor.html", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "phone", "year_established", "license_holder_name"]}
+      {
+        "source": "website",
+        "url": "https://www.alamohillsanimalhospital.com/about-us/meet-the-doctor.html",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "phone", "year_established", "license_holder_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Husband+wife operation since 2011 (15 yrs) — DVM owner + spouse practice manager = classic family-operation pattern. iMatrix/VetMatrix = website builder. Associates make successor-check important.",
@@ -136,13 +243,50 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "family_operation", "direction": "positive", "evidence": "Dr. Lauri Jehl opened in 2011; husband Russ is practice manager.", "source": "website", "source_url": "https://www.alamohillsanimalhospital.com/about-us/meet-the-doctor.html", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_too_young", "direction": "negative", "evidence": "Tenure only 15 yrs since 2011 opening; estimated owner age ~50 — well below the 55-70 sweet spot for off-market succession.", "source": "license_tenure_proxy", "source_url": null, "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "successor_dvm_present", "direction": "negative", "evidence": "Dr. Amy Campbell (associate) + Dr. Claudia Sotelo (since 2023, Ross Univ) = ready in-house successors reduce off-market opportunity.", "source": "website", "source_url": "https://www.alamohillsanimalhospital.com/about-us/meet-the-doctor.html", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No consolidator footer disclosure.", "source": "website", "source_url": "https://www.alamohillsanimalhospital.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "family_operation",
+        "direction": "positive",
+        "evidence": "Dr. Lauri Jehl opened in 2011; husband Russ is practice manager.",
+        "source": "website",
+        "source_url": "https://www.alamohillsanimalhospital.com/about-us/meet-the-doctor.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young",
+        "direction": "negative",
+        "evidence": "Tenure only 15 yrs since 2011 opening; estimated owner age ~50 — well below the 55-70 sweet spot for off-market succession.",
+        "source": "license_tenure_proxy",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "successor_dvm_present",
+        "direction": "negative",
+        "evidence": "Dr. Amy Campbell (associate) + Dr. Claudia Sotelo (since 2023, Ross Univ) = ready in-house successors reduce off-market opportunity.",
+        "source": "website",
+        "source_url": "https://www.alamohillsanimalhospital.com/about-us/meet-the-doctor.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No consolidator footer disclosure.",
+        "source": "website",
+        "source_url": "https://www.alamohillsanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_meet_doctor", "url": "https://www.alamohillsanimalhospital.com/about-us/meet-the-doctor.html", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["dvm_list", "owner_school", "year_established"]}
+      {
+        "source": "website_meet_doctor",
+        "url": "https://www.alamohillsanimalhospital.com/about-us/meet-the-doctor.html",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["dvm_list", "owner_school", "year_established"]
+      }
     ],
     "enrichment_notes": "Independent family-run since 2011, but owner Jehl is too young (TAMU grad, ~50 est) and has 2 associates as in-house successors. C-tier fit — not coasting, not retirement-window."
   },
@@ -162,7 +306,12 @@
     "license_holder_name": null,
     "year_established": 1984,
     "data_sources": [
-      {"source": "website", "url": "https://babcockhills.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established"]}
+      {
+        "source": "website",
+        "url": "https://babcockhills.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      }
     ],
     "platform_affiliation_check": "platform_subsidiary",
     "verification_notes": "EXCLUDE: Part of Lakefield Veterinary Group (per Lakefield's own state/texas page + the Babcock Hills footer disclosure). Listed only as documentation example of the Lakefield-footer detection pattern.",
@@ -184,11 +333,32 @@
     "distress_reasons": [],
     "recent_acquisition": true,
     "signals": [
-      {"layer": 4, "signal_key": "platform_subsidiary_disqualifying", "direction": "disqualifying", "evidence": "Listed as a Lakefield Veterinary Group Texas practice (Lakefield is a Peloton Capital Management-backed consolidator with 71+ hospitals).", "source": "lakefield_website", "source_url": "https://lakefieldvet.com/our-story/who-we-are/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "lakefield_pe_recap_2024", "direction": "negative", "evidence": "Lakefield finalized minority investment from Peloton Capital Management on July 15, 2024 — Lakefield is firmly in PE-consolidator territory.", "source": "stoel_rives", "source_url": "https://www.stoel.com/capabilities/spotlights/lakefield-veterinary-group-finalizes-investment-by-peloton-capital-management", "observed_at": "2026-05-15"}
+      {
+        "layer": 4,
+        "signal_key": "platform_subsidiary_disqualifying",
+        "direction": "disqualifying",
+        "evidence": "Listed as a Lakefield Veterinary Group Texas practice (Lakefield is a Peloton Capital Management-backed consolidator with 71+ hospitals).",
+        "source": "lakefield_website",
+        "source_url": "https://lakefieldvet.com/our-story/who-we-are/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "lakefield_pe_recap_2024",
+        "direction": "negative",
+        "evidence": "Lakefield finalized minority investment from Peloton Capital Management on July 15, 2024 — Lakefield is firmly in PE-consolidator territory.",
+        "source": "stoel_rives",
+        "source_url": "https://www.stoel.com/capabilities/spotlights/lakefield-veterinary-group-finalizes-investment-by-peloton-capital-management",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "lakefield_website", "url": "https://lakefieldvet.com/our-story/who-we-are/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["platform_affiliation"]}
+      {
+        "source": "lakefield_website",
+        "url": "https://lakefieldvet.com/our-story/who-we-are/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["platform_affiliation"]
+      }
     ],
     "enrichment_notes": "EXCLUDE — Lakefield Veterinary Group subsidiary (consolidator-owned). Kept in batch only for completeness/audit trail."
   },
@@ -208,7 +378,12 @@
     "license_holder_name": "Dr. Rodriguez (joined 2002); Dr. Mossburg (joined 2006)",
     "year_established": 1976,
     "data_sources": [
-      {"source": "website", "url": "https://schertzanimalhospital.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established"]}
+      {
+        "source": "website",
+        "url": "https://schertzanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Since 1976 (50 yrs) Schertz / NE San Antonio exurb. AllyDVM = tech stack only. No platform footer. NOTE: Schertz is technically Guadalupe County but is included as San Antonio metro adjacent.",
@@ -230,13 +405,50 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "very_long_tenure_practice", "direction": "positive", "evidence": "50 years since 1976; Dr. Rodriguez joined 2002 (24 yrs), Dr. Mossburg joined 2006 (20 yrs).", "source": "website", "source_url": "https://schertzanimalhospital.com/our-team/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_2_dvm_20_plus_staff", "direction": "positive", "evidence": "Team page shows 2 DVMs plus '20+ employees across all departments.'", "source": "website", "source_url": "https://schertzanimalhospital.com/our-team/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "allydvm_pims", "direction": "neutral", "evidence": "AllyDVM communication/PIMS only — vendor tech stack, not a consolidator.", "source": "website", "source_url": "https://schertzanimalhospital.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No NVA/Innovetive/Lakefield/Thrive/Pathway/VetCor/Mission/Southern Vet/AmeriVet footer disclosure.", "source": "website", "source_url": "https://schertzanimalhospital.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "very_long_tenure_practice",
+        "direction": "positive",
+        "evidence": "50 years since 1976; Dr. Rodriguez joined 2002 (24 yrs), Dr. Mossburg joined 2006 (20 yrs).",
+        "source": "website",
+        "source_url": "https://schertzanimalhospital.com/our-team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_2_dvm_20_plus_staff",
+        "direction": "positive",
+        "evidence": "Team page shows 2 DVMs plus '20+ employees across all departments.'",
+        "source": "website",
+        "source_url": "https://schertzanimalhospital.com/our-team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "allydvm_pims",
+        "direction": "neutral",
+        "evidence": "AllyDVM communication/PIMS only — vendor tech stack, not a consolidator.",
+        "source": "website",
+        "source_url": "https://schertzanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Lakefield/Thrive/Pathway/VetCor/Mission/Southern Vet/AmeriVet footer disclosure.",
+        "source": "website",
+        "source_url": "https://schertzanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_team", "url": "https://schertzanimalhospital.com/our-team/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["license_holder_name", "provider_count_estimate", "employee_count_estimate"]}
+      {
+        "source": "website_team",
+        "url": "https://schertzanimalhospital.com/our-team/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["license_holder_name", "provider_count_estimate", "employee_count_estimate"]
+      }
     ],
     "enrichment_notes": "50-yr practice, 2 long-tenured DVMs (20+ and 24+ yrs), 20+ staff = $2-3M+ revenue band likely. Owner not surfaced explicitly but Rodriguez/Mossburg cohort = 55+ estimate. STRONG B+/A- candidate pending SOS owner identification."
   },
@@ -256,8 +468,18 @@
     "license_holder_name": "Dr. James Peterson (founder, still on team); Dr. Ana Macias; Dr. Miriam Lovell; Dr. Amanda Doty; Dr. Carlos Marquez; Dr. Raven Martinez-Hernandez",
     "year_established": 1999,
     "data_sources": [
-      {"source": "google_business", "url": "https://www.google.com/search?q=hill+country+animal+hospital+helotes+tx", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "city", "year_established"]},
-      {"source": "website", "url": "https://www.hillcountryanimalhospital.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["license_holder_name", "address"]}
+      {
+        "source": "google_business",
+        "url": "https://www.google.com/search?q=hill+country+animal+hospital+helotes+tx",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "city", "year_established"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.hillcountryanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["license_holder_name", "address"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Since 1999 in Helotes 78023 (NW Bexar exurb). Cat Friendly Certified Silver. 6 DVMs on team page — solid mid-size. BBB/GBP suggest possible 'Jim Holcomb' as current owner (vs founder Peterson) — succession uncertain.",
@@ -279,15 +501,68 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "founder_still_practicing", "direction": "positive", "evidence": "Dr. James Peterson, founder 1999, still on team page 27 years later.", "source": "website", "source_url": "https://www.hillcountryanimalhospital.com/about-us/team/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_6_dvm", "direction": "positive", "evidence": "6 DVMs listed: Peterson, Macias, Lovell, Doty, Marquez, Martinez-Hernandez.", "source": "website", "source_url": "https://www.hillcountryanimalhospital.com/about-us/team/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_revenue_band_high", "direction": "positive", "evidence": "6 DVMs implies $4M-6M+ revenue band (well above typical solo $1-2M).", "source": "estimate", "source_url": null, "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "cat_friendly_silver", "direction": "positive", "evidence": "Cat Friendly Practice Silver certification — quality cohort, not coasting.", "source": "google_business", "source_url": "https://www.google.com/search?q=hill+country+animal+hospital+helotes+tx", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "weekend_closed", "direction": "positive", "evidence": "Closed weekends (M-F 7am-6pm) — slight coasting tell; many corporate-run vets offer Sat.", "source": "website", "source_url": "https://www.hillcountryanimalhospital.com/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No NVA/Innovetive/Lakefield/Thrive/Pathway/VetCor consolidator branding.", "source": "website", "source_url": "https://www.hillcountryanimalhospital.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "founder_still_practicing",
+        "direction": "positive",
+        "evidence": "Dr. James Peterson, founder 1999, still on team page 27 years later.",
+        "source": "website",
+        "source_url": "https://www.hillcountryanimalhospital.com/about-us/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_6_dvm",
+        "direction": "positive",
+        "evidence": "6 DVMs listed: Peterson, Macias, Lovell, Doty, Marquez, Martinez-Hernandez.",
+        "source": "website",
+        "source_url": "https://www.hillcountryanimalhospital.com/about-us/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_revenue_band_high",
+        "direction": "positive",
+        "evidence": "6 DVMs implies $4M-6M+ revenue band (well above typical solo $1-2M).",
+        "source": "estimate",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "cat_friendly_silver",
+        "direction": "positive",
+        "evidence": "Cat Friendly Practice Silver certification — quality cohort, not coasting.",
+        "source": "google_business",
+        "source_url": "https://www.google.com/search?q=hill+country+animal+hospital+helotes+tx",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "weekend_closed",
+        "direction": "positive",
+        "evidence": "Closed weekends (M-F 7am-6pm) — slight coasting tell; many corporate-run vets offer Sat.",
+        "source": "website",
+        "source_url": "https://www.hillcountryanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Lakefield/Thrive/Pathway/VetCor consolidator branding.",
+        "source": "website",
+        "source_url": "https://www.hillcountryanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_team", "url": "https://www.hillcountryanimalhospital.com/about-us/team/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["license_holder_name", "provider_count_estimate"]}
+      {
+        "source": "website_team",
+        "url": "https://www.hillcountryanimalhospital.com/about-us/team/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["license_holder_name", "provider_count_estimate"]
+      }
     ],
     "enrichment_notes": "Solid mid-size practice, founder Dr. Peterson still on team after 27 yrs. 6-DVM size = strong revenue band but successor-rich (in-house DVM pool). STRONG B+ candidate — bigger ticket. Need SOS + CAD confirmation."
   },
@@ -307,7 +582,12 @@
     "license_holder_name": "Kimberly D. Klein, DVM (TAMU 1993)",
     "year_established": 1998,
     "data_sources": [
-      {"source": "website", "url": "https://hoovesandpawsvet.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]}
+      {
+        "source": "website",
+        "url": "https://hoovesandpawsvet.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Solo-DVM (Klein) since Aug 1998 (28 yrs). MIXED-ANIMAL: dogs, cats, horses, goats, sheep, pigs, cattle, exotic. NW Bexar exurb (Helotes 78023). Mixed-animal narrows buyer pool (-3 nudge) but under-targeted. PetDesk = tech stack.",
@@ -329,14 +609,59 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "solo_dvm_long_tenure", "direction": "positive", "evidence": "Kimberly Klein DVM (TAMU 1993) — solo owner since Aug 1998. 28 yrs as owner, 33 yrs since DVM. Age ~58 (1993+25).", "source": "website", "source_url": "https://hoovesandpawsvet.com/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "solo_no_successor", "direction": "positive", "evidence": "Solo practice — no in-house DVM successor. Higher off-market opportunity.", "source": "website", "source_url": "https://hoovesandpawsvet.com/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "mixed_animal_niche", "direction": "negative", "evidence": "Mixed-animal scope (large + small) narrows the consolidator buyer pool — most platforms only buy companion-animal practices.", "source": "website", "source_url": "https://hoovesandpawsvet.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "petdesk_present", "direction": "neutral", "evidence": "PetDesk tech stack only — vendor, not consolidator.", "source": "website", "source_url": "https://hoovesandpawsvet.com/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No consolidator footer disclosure.", "source": "website", "source_url": "https://hoovesandpawsvet.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "solo_dvm_long_tenure",
+        "direction": "positive",
+        "evidence": "Kimberly Klein DVM (TAMU 1993) — solo owner since Aug 1998. 28 yrs as owner, 33 yrs since DVM. Age ~58 (1993+25).",
+        "source": "website",
+        "source_url": "https://hoovesandpawsvet.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "solo_no_successor",
+        "direction": "positive",
+        "evidence": "Solo practice — no in-house DVM successor. Higher off-market opportunity.",
+        "source": "website",
+        "source_url": "https://hoovesandpawsvet.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "mixed_animal_niche",
+        "direction": "negative",
+        "evidence": "Mixed-animal scope (large + small) narrows the consolidator buyer pool — most platforms only buy companion-animal practices.",
+        "source": "website",
+        "source_url": "https://hoovesandpawsvet.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "petdesk_present",
+        "direction": "neutral",
+        "evidence": "PetDesk tech stack only — vendor, not consolidator.",
+        "source": "website",
+        "source_url": "https://hoovesandpawsvet.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No consolidator footer disclosure.",
+        "source": "website",
+        "source_url": "https://hoovesandpawsvet.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "yelp_business", "url": "https://www.yelp.com/biz/kimberly-d-klein-dvm-hooves-and-paws-veterinary-clinic-helotes-3", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["owner_grad_year"]}
+      {
+        "source": "yelp_business",
+        "url": "https://www.yelp.com/biz/kimberly-d-klein-dvm-hooves-and-paws-veterinary-clinic-helotes-3",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["owner_grad_year"]
+      }
     ],
     "enrichment_notes": "Solo-DVM, 28-yr tenure, mixed-animal scope. Owner ~58 (TAMU 1993 grad). Perfect coasting/successorless profile but mixed-animal narrows acquirer pool. B+ candidate for ETA/search-fund (not large platforms)."
   },
@@ -356,7 +681,12 @@
     "license_holder_name": "Dr. Allison Lott (Managing DVM); Dr. Christine Cao; Dr. Ashley Somers; Dr. Sarah DeCiero; Dr. Deniece Wade; Dr. Kenzii Kittell",
     "year_established": 1971,
     "data_sources": [
-      {"source": "website", "url": "https://www.austinvethospital.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "year_established"]}
+      {
+        "source": "website",
+        "url": "https://www.austinvethospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "year_established"]
+      }
     ],
     "platform_affiliation_check": "uncertain",
     "verification_notes": "Since 1971 (55 yrs) central Austin near Mueller / I-35. 'Your Other Family Doctor Since 1971' tagline. Ally DVM = tech stack. No platform footer visible. BUT: Dr. T.J. Palvino (former owner/Medical Director) has departed to Emancipet — current team has 6 different DVMs led by Dr. Allison Lott (Managing DVM). Ownership transition has occurred but no consolidator footprint visible.",
@@ -378,15 +708,62 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "owner_transition_completed", "direction": "negative", "evidence": "Dr. T.J. Palvino (former owner per Parkbench profile) now Lead Doctor at Emancipet Austin Dental & Special Surgery Center — has departed. Current Managing DVM is Dr. Allison Lott (Baylor + TAMU). Transition recent enough that no formal acquisition by a platform was located in search results.", "source": "linkedin_zoominfo", "source_url": "https://www.zoominfo.com/p/Tj-Palvino/-1657210887", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_6_dvm", "direction": "positive", "evidence": "6 DVMs listed on staff page.", "source": "website", "source_url": "https://www.austinvethospital.com/staff", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "ally_dvm_booking", "direction": "neutral", "evidence": "AllyDVM booking widget (practices.allydvm.com/online-booking?practice=austinvh) — vendor tech, not consolidator.", "source": "website", "source_url": "https://www.austinvethospital.com/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "no_platform_footer_observed", "direction": "neutral", "evidence": "No Thrive/NVA/VCA/Pathway/Innovetive/Lakefield/VetCor/PetVet/Mission/SVP/AmeriVet/Veritas/BluePearl text in footer or homepage; privacy policy is local URL.", "source": "website", "source_url": "https://www.austinvethospital.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_transition_completed",
+        "direction": "negative",
+        "evidence": "Dr. T.J. Palvino (former owner per Parkbench profile) now Lead Doctor at Emancipet Austin Dental & Special Surgery Center — has departed. Current Managing DVM is Dr. Allison Lott (Baylor + TAMU). Transition recent enough that no formal acquisition by a platform was located in search results.",
+        "source": "linkedin_zoominfo",
+        "source_url": "https://www.zoominfo.com/p/Tj-Palvino/-1657210887",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_6_dvm",
+        "direction": "positive",
+        "evidence": "6 DVMs listed on staff page.",
+        "source": "website",
+        "source_url": "https://www.austinvethospital.com/staff",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "ally_dvm_booking",
+        "direction": "neutral",
+        "evidence": "AllyDVM booking widget (practices.allydvm.com/online-booking?practice=austinvh) — vendor tech, not consolidator.",
+        "source": "website",
+        "source_url": "https://www.austinvethospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_platform_footer_observed",
+        "direction": "neutral",
+        "evidence": "No Thrive/NVA/VCA/Pathway/Innovetive/Lakefield/VetCor/PetVet/Mission/SVP/AmeriVet/Veritas/BluePearl text in footer or homepage; privacy policy is local URL.",
+        "source": "website",
+        "source_url": "https://www.austinvethospital.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_staff", "url": "https://www.austinvethospital.com/staff", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["license_holder_name", "provider_count_estimate"]},
-      {"source": "website_lott_bio", "url": "https://www.austinvethospital.com/staff/dr-allison-lott", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["managing_dvm_education"]},
-      {"source": "zoominfo_palvino", "url": "https://www.zoominfo.com/p/Tj-Palvino/-1657210887", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["prior_owner_departure"]}
+      {
+        "source": "website_staff",
+        "url": "https://www.austinvethospital.com/staff",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["license_holder_name", "provider_count_estimate"]
+      },
+      {
+        "source": "website_lott_bio",
+        "url": "https://www.austinvethospital.com/staff/dr-allison-lott",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["managing_dvm_education"]
+      },
+      {
+        "source": "zoominfo_palvino",
+        "url": "https://www.zoominfo.com/p/Tj-Palvino/-1657210887",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["prior_owner_departure"]
+      }
     ],
     "enrichment_notes": "Prior owner Dr. Palvino has exited to Emancipet — ownership has changed hands recently. No platform-consolidator footer found, but transition status unclear (could be independent buy or pending sale). NEEDS direct CAD/SOS lookup to identify current owner. RE-VERIFY before targeting."
   },
@@ -406,7 +783,12 @@
     "license_holder_name": "Dr. Amy (referenced in testimonial)",
     "year_established": 1970,
     "data_sources": [
-      {"source": "website", "url": "https://burnetroadanimalhospital.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established"]}
+      {
+        "source": "website",
+        "url": "https://burnetroadanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Since 1970 (56 yrs) on Burnet Rd. 'Family focused' language. Ally DVM + Covetrus + LifeLearn WebDVM + Patterson = tech stack only. High-tenure Travis target. PLLC legal form confirmed in name.",
@@ -428,13 +810,50 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "very_long_tenure_practice", "direction": "positive", "evidence": "56-year practice on Burnet Road in heart of N central Austin.", "source": "website", "source_url": "https://burnetroadanimalhospital.com/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "pllc_legal_form", "direction": "positive", "evidence": "PLLC suffix in legal name — typical TX vet ownership structure, consistent with sole-or-few DVM ownership rather than consolidator.", "source": "website", "source_url": "https://burnetroadanimalhospital.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "ally_dvm_covetrus_stack", "direction": "neutral", "evidence": "Ally DVM + Covetrus + LifeLearn WebDVM + Patterson — standard vendor stack; no consolidator.", "source": "website", "source_url": "https://burnetroadanimalhospital.com/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No consolidator footer.", "source": "website", "source_url": "https://burnetroadanimalhospital.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "very_long_tenure_practice",
+        "direction": "positive",
+        "evidence": "56-year practice on Burnet Road in heart of N central Austin.",
+        "source": "website",
+        "source_url": "https://burnetroadanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "pllc_legal_form",
+        "direction": "positive",
+        "evidence": "PLLC suffix in legal name — typical TX vet ownership structure, consistent with sole-or-few DVM ownership rather than consolidator.",
+        "source": "website",
+        "source_url": "https://burnetroadanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "ally_dvm_covetrus_stack",
+        "direction": "neutral",
+        "evidence": "Ally DVM + Covetrus + LifeLearn WebDVM + Patterson — standard vendor stack; no consolidator.",
+        "source": "website",
+        "source_url": "https://burnetroadanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No consolidator footer.",
+        "source": "website",
+        "source_url": "https://burnetroadanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_about", "url": "https://burnetroadanimalhospital.com/about-our-clinic/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["family_focused_text"]}
+      {
+        "source": "website_about",
+        "url": "https://burnetroadanimalhospital.com/about-our-clinic/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["family_focused_text"]
+      }
     ],
     "enrichment_notes": "56-yr Travis Co practice with PLLC structure — clean independent. Owner identity not surfaced on site (Dr. Amy referenced in testimonial). Needs SOS file + CAD for ownership confirmation. STRONG B+ candidate pending owner data."
   },
@@ -454,7 +873,12 @@
     "license_holder_name": null,
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://austinanimed.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone"]}
+      {
+        "source": "website",
+        "url": "https://austinanimed.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      }
     ],
     "platform_affiliation_check": "platform_subsidiary",
     "verification_notes": "EXCLUDE: Innovetive Petcare's TX practices list includes 'Austin Animal Medical Center' (Cedar Park HQ'd Innovetive). 30-year badge on the site; Oliver Pet Portal = same booking pattern as Country Brook (Innovetive tell).",
@@ -476,11 +900,32 @@
     "distress_reasons": [],
     "recent_acquisition": true,
     "signals": [
-      {"layer": 4, "signal_key": "platform_subsidiary_disqualifying", "direction": "disqualifying", "evidence": "Listed on Innovetive Petcare's TX practices page; Innovetive operates 72 hospitals across multiple states and is Metalmark Capital-backed.", "source": "innovetive_website", "source_url": "https://innovetivepetcare.com/our-practices/texas/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "metalmark_pe_owned", "direction": "negative", "evidence": "Metalmark Capital acquired Innovetive Petcare from Prospect Partners (2024).", "source": "privsource", "source_url": "https://www.privsource.com/acquisitions/deal/metalmark-capital-acquires-innovetive-petcare-from-prospect-partners-krSjjM", "observed_at": "2026-05-15"}
+      {
+        "layer": 4,
+        "signal_key": "platform_subsidiary_disqualifying",
+        "direction": "disqualifying",
+        "evidence": "Listed on Innovetive Petcare's TX practices page; Innovetive operates 72 hospitals across multiple states and is Metalmark Capital-backed.",
+        "source": "innovetive_website",
+        "source_url": "https://innovetivepetcare.com/our-practices/texas/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "metalmark_pe_owned",
+        "direction": "negative",
+        "evidence": "Metalmark Capital acquired Innovetive Petcare from Prospect Partners (2024).",
+        "source": "privsource",
+        "source_url": "https://www.privsource.com/acquisitions/deal/metalmark-capital-acquires-innovetive-petcare-from-prospect-partners-krSjjM",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "innovetive_website", "url": "https://innovetivepetcare.com/our-practices/texas/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["platform_affiliation"]}
+      {
+        "source": "innovetive_website",
+        "url": "https://innovetivepetcare.com/our-practices/texas/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["platform_affiliation"]
+      }
     ],
     "enrichment_notes": "EXCLUDE — Innovetive Petcare subsidiary (Metalmark Capital-backed consolidator)."
   },
@@ -500,7 +945,12 @@
     "license_holder_name": "Dr. Michael Werner (owner); Dr. Sandy Burke (joined 2008); Drs. Arambula, Holmes, Martin, Brown, Reesor",
     "year_established": 1987,
     "data_sources": [
-      {"source": "website", "url": "https://www.brodieanimalhospital.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]}
+      {
+        "source": "website",
+        "url": "https://www.brodieanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Since 1987 (39 yrs) South Austin 78745. AAHA + Cat Friendly. 7 DVMs = larger practice, higher revenue band ($3M+ likely). Multi-DVM team = successor-DVM check critical. Owner Michael Werner identified.",
@@ -522,14 +972,59 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "founder_likely_still_owner", "direction": "positive", "evidence": "Search results confirm Michael Werner is owner; practice founded 1987 — 39yr tenure suggests Werner was founder.", "source": "search", "source_url": "https://www.google.com/search?q=brodie+animal+hospital+owner+michael+werner", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "successor_dvm_present", "direction": "negative", "evidence": "Dr. Sandy Burke joined 2008 (18 yr tenure) and 5 other associate DVMs — strong in-house successor pool.", "source": "website", "source_url": "https://www.brodieanimalhospital.com/about-us/team/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_7_dvm", "direction": "positive", "evidence": "7 DVMs — large, $3M+ revenue band, AAHA + Cat Friendly.", "source": "spine", "source_url": null, "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "aaha_cat_friendly", "direction": "neutral", "evidence": "AAHA + Cat Friendly Practice certifications — quality cohort, not coasting.", "source": "spine", "source_url": null, "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No platform-consolidator footer disclosure.", "source": "website", "source_url": "https://www.brodieanimalhospital.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "founder_likely_still_owner",
+        "direction": "positive",
+        "evidence": "Search results confirm Michael Werner is owner; practice founded 1987 — 39yr tenure suggests Werner was founder.",
+        "source": "search",
+        "source_url": "https://www.google.com/search?q=brodie+animal+hospital+owner+michael+werner",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "successor_dvm_present",
+        "direction": "negative",
+        "evidence": "Dr. Sandy Burke joined 2008 (18 yr tenure) and 5 other associate DVMs — strong in-house successor pool.",
+        "source": "website",
+        "source_url": "https://www.brodieanimalhospital.com/about-us/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_7_dvm",
+        "direction": "positive",
+        "evidence": "7 DVMs — large, $3M+ revenue band, AAHA + Cat Friendly.",
+        "source": "spine",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "aaha_cat_friendly",
+        "direction": "neutral",
+        "evidence": "AAHA + Cat Friendly Practice certifications — quality cohort, not coasting.",
+        "source": "spine",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No platform-consolidator footer disclosure.",
+        "source": "website",
+        "source_url": "https://www.brodieanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "search_owner", "url": "https://www.google.com/search?q=brodie+animal+hospital+owner+michael+werner", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["owner_name"]}
+      {
+        "source": "search_owner",
+        "url": "https://www.google.com/search?q=brodie+animal+hospital+owner+michael+werner",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["owner_name"]
+      }
     ],
     "enrichment_notes": "Bigger 7-DVM practice, owner Werner ~39 yrs in (~65 est). Larger ticket ($3M+) attracts platforms. In-house DVM successors (Burke 18 yrs) reduce off-market urgency. B/B+ candidate — bigger fish but successor-rich."
   },
@@ -549,7 +1044,12 @@
     "license_holder_name": "Dr. Kate Oliver (founder, TAMU 1998); Dr. Donnielle Reynolds (Iowa State); Dr. Kristen Ussery (LSU)",
     "year_established": 2006,
     "data_sources": [
-      {"source": "website", "url": "https://oliveranimalhospital.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]}
+      {
+        "source": "website",
+        "url": "https://oliveranimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Self-describes 'Privately Owned Practice Since 2006' (20 yrs). South Austin 78749. Owner Dr. Kate Oliver. No platform footer.",
@@ -571,13 +1071,50 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "owner_dvm_grad_1998", "direction": "positive", "evidence": "Dr. Kate Oliver TAMU 1998 + opened 2006 = age ~51 est (1998+25). 20-yr tenure as owner.", "source": "website", "source_url": "http://oliveranimalhospital.com/team", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_too_young", "direction": "negative", "evidence": "~51 years old is below the 55-70 sweet spot for off-market succession.", "source": "linkedin_grad", "source_url": null, "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_3_dvm", "direction": "positive", "evidence": "3 DVMs — mid-size practice.", "source": "website", "source_url": "http://oliveranimalhospital.com/team", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "self_described_privately_owned", "direction": "positive", "evidence": "Self-describes 'Privately Owned Practice Since 2006' — explicit independence claim.", "source": "spine", "source_url": null, "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_dvm_grad_1998",
+        "direction": "positive",
+        "evidence": "Dr. Kate Oliver TAMU 1998 + opened 2006 = age ~51 est (1998+25). 20-yr tenure as owner.",
+        "source": "website",
+        "source_url": "http://oliveranimalhospital.com/team",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young",
+        "direction": "negative",
+        "evidence": "~51 years old is below the 55-70 sweet spot for off-market succession.",
+        "source": "linkedin_grad",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_3_dvm",
+        "direction": "positive",
+        "evidence": "3 DVMs — mid-size practice.",
+        "source": "website",
+        "source_url": "http://oliveranimalhospital.com/team",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "self_described_privately_owned",
+        "direction": "positive",
+        "evidence": "Self-describes 'Privately Owned Practice Since 2006' — explicit independence claim.",
+        "source": "spine",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_team", "url": "http://oliveranimalhospital.com/team", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["owner_grad_year", "dvm_list"]}
+      {
+        "source": "website_team",
+        "url": "http://oliveranimalhospital.com/team",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["owner_grad_year", "dvm_list"]
+      }
     ],
     "enrichment_notes": "Independent, founder-owned but owner ~51 (TAMU 1998) — too young for retirement window. C-tier off-market fit; watch for ~5-10 yrs."
   },
@@ -597,7 +1134,12 @@
     "license_holder_name": "Dr. Chow (board-certified ABVP)",
     "year_established": 1997,
     "data_sources": [
-      {"source": "website", "url": "https://www.mybeevet.com/about-us/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established"]}
+      {
+        "source": "website",
+        "url": "https://www.mybeevet.com/about-us/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Since 1997 (29 yrs). Self-describes 'one of the very few privately-owned, non-corporate hospitals' and 'proud to be privately owned and operated.' Bee Cave 78738 (premium W Austin / Lake Travis). AAHA, 1 of only 10 in Austin. VitusVet = tech stack.",
@@ -619,14 +1161,59 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "explicit_independent_claim", "direction": "positive", "evidence": "'We are proud to be privately owned and operated! This allows us to provide the best, individualized care for your pets in a comfortable environment.' — strongest possible non-platform tell.", "source": "website", "source_url": "https://www.mybeevet.com/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "anti_corporate_positioning", "direction": "positive", "evidence": "Site describes practice as 'one of the very few privately-owned, non-corporate hospitals' in Austin.", "source": "spine", "source_url": null, "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "abvp_board_certified", "direction": "positive", "evidence": "Dr. Chow holds ABVP board certification (Canine and Feline Practice) — quality cohort.", "source": "website", "source_url": "https://www.mybeevet.com/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "aaha_premium_market", "direction": "positive", "evidence": "AAHA-accredited; described as '1 of only 10 in Austin' — premium tier.", "source": "spine", "source_url": null, "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "premium_zip_78738", "direction": "positive", "evidence": "Bee Cave 78738 — premium W Austin / Lake Travis Tier-A ZIP.", "source": "spine", "source_url": null, "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "explicit_independent_claim",
+        "direction": "positive",
+        "evidence": "'We are proud to be privately owned and operated! This allows us to provide the best, individualized care for your pets in a comfortable environment.' — strongest possible non-platform tell.",
+        "source": "website",
+        "source_url": "https://www.mybeevet.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "anti_corporate_positioning",
+        "direction": "positive",
+        "evidence": "Site describes practice as 'one of the very few privately-owned, non-corporate hospitals' in Austin.",
+        "source": "spine",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "abvp_board_certified",
+        "direction": "positive",
+        "evidence": "Dr. Chow holds ABVP board certification (Canine and Feline Practice) — quality cohort.",
+        "source": "website",
+        "source_url": "https://www.mybeevet.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "aaha_premium_market",
+        "direction": "positive",
+        "evidence": "AAHA-accredited; described as '1 of only 10 in Austin' — premium tier.",
+        "source": "spine",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "premium_zip_78738",
+        "direction": "positive",
+        "evidence": "Bee Cave 78738 — premium W Austin / Lake Travis Tier-A ZIP.",
+        "source": "spine",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_about", "url": "https://www.mybeevet.com/about-us/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["independence_claim", "dvm_list_partial"]}
+      {
+        "source": "website_about",
+        "url": "https://www.mybeevet.com/about-us/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["independence_claim", "dvm_list_partial"]
+      }
     ],
     "enrichment_notes": "Strongest explicit-independence claim in batch. Premium Bee Cave ZIP + AAHA + ABVP board-cert = high-quality, high-revenue practice. Owner identity needs SOS confirmation. STRONG B+/A- candidate."
   },
@@ -646,7 +1233,12 @@
     "license_holder_name": "Dr. Eric Winston (founder/owner, 2007); Dr. Gretchen Carpenter",
     "year_established": 2007,
     "data_sources": [
-      {"source": "website", "url": "https://villagevetaustin.com/about/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]}
+      {
+        "source": "website",
+        "url": "https://villagevetaustin.com/about/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Founded 2007 by Dr. Eric Winston (NOT 2008 as spine). 18-19 yrs in Bee Cave 78738 (premium W Austin). 2 named DVMs. SecureVetSource = pharmacy partner only.",
@@ -668,13 +1260,50 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "founder_owner_long_tenure", "direction": "positive", "evidence": "'Dr. Winston founded Village Veterinary Hospital in 2007.' Still owner 19 yrs later.", "source": "website", "source_url": "https://villagevetaustin.com/about/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_2_dvm", "direction": "neutral", "evidence": "2 DVMs — small-mid practice. Dr. Carpenter offers acupuncture + dermatology + cardiology + orthopedics niches.", "source": "website", "source_url": "https://villagevetaustin.com/about/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No consolidator footer.", "source": "website", "source_url": "https://villagevetaustin.com/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "premium_zip_78738", "direction": "positive", "evidence": "Bee Cave 78738 — premium W Austin Tier-A ZIP.", "source": "spine", "source_url": null, "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "founder_owner_long_tenure",
+        "direction": "positive",
+        "evidence": "'Dr. Winston founded Village Veterinary Hospital in 2007.' Still owner 19 yrs later.",
+        "source": "website",
+        "source_url": "https://villagevetaustin.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_2_dvm",
+        "direction": "neutral",
+        "evidence": "2 DVMs — small-mid practice. Dr. Carpenter offers acupuncture + dermatology + cardiology + orthopedics niches.",
+        "source": "website",
+        "source_url": "https://villagevetaustin.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No consolidator footer.",
+        "source": "website",
+        "source_url": "https://villagevetaustin.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "premium_zip_78738",
+        "direction": "positive",
+        "evidence": "Bee Cave 78738 — premium W Austin Tier-A ZIP.",
+        "source": "spine",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_about", "url": "https://villagevetaustin.com/about/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["founder_year"]}
+      {
+        "source": "website_about",
+        "url": "https://villagevetaustin.com/about/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["founder_year"]
+      }
     ],
     "enrichment_notes": "Founder-owned 19 yrs, premium Bee Cave ZIP. Owner age unknown — needs CAD. Smaller (2 DVMs) but premium-market premium-margin. B candidate."
   },
@@ -694,7 +1323,12 @@
     "license_holder_name": "Dr. David Hocher (Medical Director, TAMU 1992); Dr. Maynor (TAMU 2010)",
     "year_established": 1978,
     "data_sources": [
-      {"source": "website", "url": "https://roundrockvet.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established"]}
+      {
+        "source": "website",
+        "url": "https://roundrockvet.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Since 1978 (48 yrs) — 'over 100 years of combined experience.' InTouch Practice Communications = marketing only. NOTE: Williamson Co, Travis-adjacent — include as Austin-metro suburb.",
@@ -716,13 +1350,50 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "owner_dvm_grad_1992", "direction": "positive", "evidence": "Dr. David Hocher TAMU DVM 1992 = age ~58 est (1992+25). 34 yrs since DVM.", "source": "search", "source_url": "https://roundrockvet.com/about/meet-the-team", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_age_in_sweet_spot", "direction": "positive", "evidence": "~58 years old is at the bottom of the 55-70 succession window.", "source": "linkedin_grad", "source_url": null, "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "very_long_tenure_practice", "direction": "positive", "evidence": "48-yr practice with '100+ years combined experience' marketing claim.", "source": "website", "source_url": "https://roundrockvet.com/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No consolidator footer.", "source": "website", "source_url": "https://roundrockvet.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_dvm_grad_1992",
+        "direction": "positive",
+        "evidence": "Dr. David Hocher TAMU DVM 1992 = age ~58 est (1992+25). 34 yrs since DVM.",
+        "source": "search",
+        "source_url": "https://roundrockvet.com/about/meet-the-team",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_age_in_sweet_spot",
+        "direction": "positive",
+        "evidence": "~58 years old is at the bottom of the 55-70 succession window.",
+        "source": "linkedin_grad",
+        "source_url": null,
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "very_long_tenure_practice",
+        "direction": "positive",
+        "evidence": "48-yr practice with '100+ years combined experience' marketing claim.",
+        "source": "website",
+        "source_url": "https://roundrockvet.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No consolidator footer.",
+        "source": "website",
+        "source_url": "https://roundrockvet.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "search_team", "url": "https://roundrockvet.com/about/meet-the-team", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["medical_director_grad_year"]}
+      {
+        "source": "search_team",
+        "url": "https://roundrockvet.com/about/meet-the-team",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["medical_director_grad_year"]
+      }
     ],
     "enrichment_notes": "Strong B+/A- candidate: 48-yr practice, Medical Director Hocher TAMU 1992 (~58, sweet-spot age), independent, Williamson Co Austin-metro. Needs SOS owner verification."
   },
@@ -742,7 +1413,12 @@
     "license_holder_name": "Dr. Morgan Miller (Medical Director, 20+ yr tenure); Dr. David Noel (Associate)",
     "year_established": 1985,
     "data_sources": [
-      {"source": "website", "url": "http://www.hillcountryvh.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "license_holder_name"]}
+      {
+        "source": "website",
+        "url": "http://www.hillcountryvh.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "license_holder_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Cedar Park 78613 (Williamson, Austin-metro suburb). Established 1985 (41 yrs). AAHA-accredited. PetDesk = tech stack only. Tenure unknown — enrich. Innovetive HQ is Cedar Park — but no Innovetive affiliation detected.",
@@ -764,14 +1440,59 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "medical_director_long_tenure", "direction": "positive", "evidence": "Testimonial: 'I've known Dr. Miller for at least 20 years and he has never failed to give my pets the best possible care.' — 20+ yr local tenure.", "source": "website", "source_url": "http://www.hillcountryvh.com/our-team/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "long_practice_history", "direction": "positive", "evidence": "Established 1985 = 41 yrs.", "source": "website", "source_url": "http://www.hillcountryvh.com/about/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_2_dvm", "direction": "neutral", "evidence": "2 DVMs (Miller + Noel) — small practice.", "source": "website", "source_url": "http://www.hillcountryvh.com/our-team/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "aaha_accredited", "direction": "positive", "evidence": "AAHA-accredited.", "source": "website", "source_url": "http://www.hillcountryvh.com/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No consolidator footer. Privacy policy local.", "source": "website", "source_url": "http://www.hillcountryvh.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "medical_director_long_tenure",
+        "direction": "positive",
+        "evidence": "Testimonial: 'I've known Dr. Miller for at least 20 years and he has never failed to give my pets the best possible care.' — 20+ yr local tenure.",
+        "source": "website",
+        "source_url": "http://www.hillcountryvh.com/our-team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "long_practice_history",
+        "direction": "positive",
+        "evidence": "Established 1985 = 41 yrs.",
+        "source": "website",
+        "source_url": "http://www.hillcountryvh.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_2_dvm",
+        "direction": "neutral",
+        "evidence": "2 DVMs (Miller + Noel) — small practice.",
+        "source": "website",
+        "source_url": "http://www.hillcountryvh.com/our-team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "aaha_accredited",
+        "direction": "positive",
+        "evidence": "AAHA-accredited.",
+        "source": "website",
+        "source_url": "http://www.hillcountryvh.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No consolidator footer. Privacy policy local.",
+        "source": "website",
+        "source_url": "http://www.hillcountryvh.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_team", "url": "http://www.hillcountryvh.com/our-team/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["license_holder_name", "provider_count_estimate"]}
+      {
+        "source": "website_team",
+        "url": "http://www.hillcountryvh.com/our-team/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["license_holder_name", "provider_count_estimate"]
+      }
     ],
     "enrichment_notes": "Independent, 41-yr practice, Medical Director Miller with 20+ yr local tenure. Owner ~53 est (slightly below sweet spot). Cedar Park Williamson Co. B candidate. Needs SOS for direct owner ID."
   },
@@ -791,7 +1512,12 @@
     "license_holder_name": "Dr. Daryl Neans (founder 1980, TAMU 1980); Dr. Carlyn Smallwood (current owner, MSU); Dr. Alissa Nguyen (TAMU); Dr. Lacy Parson (TAMU); Dr. Rachel Blatchford (Ross 2018, joined Sep 2025)",
     "year_established": 1980,
     "data_sources": [
-      {"source": "website", "url": "https://centraltexasanimalhospital.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]}
+      {
+        "source": "website",
+        "url": "https://centraltexasanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Since 1980 (46 yrs). Founded by Dr. Neans (TAMU CVM 1980); current owner Dr. Smallwood. Pflugerville 78660 (Travis exurb). 5 DVMs total. VetSource = pharmacy partner only.",
@@ -813,13 +1539,50 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "recent_owner_succession", "direction": "negative", "evidence": "Dr. Smallwood is described as current owner; 'practicing in the greater Austin area for the last seven years' — succession Neans→Smallwood already executed, current owner is young (~7 yrs out of vet school).", "source": "website", "source_url": "https://centraltexasanimalhospital.com/our-veterinarians/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "founder_still_practicing", "direction": "neutral", "evidence": "Dr. Neans (TAMU 1980, ~70 est) still on team page 46 yrs after founding.", "source": "website", "source_url": "https://centraltexasanimalhospital.com/our-veterinarians/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_5_dvm", "direction": "positive", "evidence": "5 DVMs — solid mid-size practice.", "source": "website", "source_url": "https://centraltexasanimalhospital.com/our-veterinarians/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No consolidator footer.", "source": "website", "source_url": "https://centraltexasanimalhospital.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "recent_owner_succession",
+        "direction": "negative",
+        "evidence": "Dr. Smallwood is described as current owner; 'practicing in the greater Austin area for the last seven years' — succession Neans→Smallwood already executed, current owner is young (~7 yrs out of vet school).",
+        "source": "website",
+        "source_url": "https://centraltexasanimalhospital.com/our-veterinarians/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "founder_still_practicing",
+        "direction": "neutral",
+        "evidence": "Dr. Neans (TAMU 1980, ~70 est) still on team page 46 yrs after founding.",
+        "source": "website",
+        "source_url": "https://centraltexasanimalhospital.com/our-veterinarians/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_5_dvm",
+        "direction": "positive",
+        "evidence": "5 DVMs — solid mid-size practice.",
+        "source": "website",
+        "source_url": "https://centraltexasanimalhospital.com/our-veterinarians/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No consolidator footer.",
+        "source": "website",
+        "source_url": "https://centraltexasanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_vets", "url": "https://centraltexasanimalhospital.com/our-veterinarians/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["license_holder_name", "ownership_succession"]}
+      {
+        "source": "website_vets",
+        "url": "https://centraltexasanimalhospital.com/our-veterinarians/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["license_holder_name", "ownership_succession"]
+      }
     ],
     "enrichment_notes": "Already had founder→successor transition (Neans to Smallwood). Current owner Smallwood is young (~45 est, ~7 yrs out of vet school). LOWER FIT for off-market succession sourcing — already executed. C-tier."
   },
@@ -839,7 +1602,12 @@
     "license_holder_name": "Dr. Patrick Breen (founder 1989, 'Doc Breen'); Dr. Bonnie Ory (TAMU, joined April 1998); Dr. Joe Gardial (current owner since 2016, Univ of Florida); Dr. Lauren Adix (Lincoln Memorial, joined June 2019)",
     "year_established": 1989,
     "data_sources": [
-      {"source": "website", "url": "https://animalhospitalgeorgetown.com/lp/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]}
+      {
+        "source": "website",
+        "url": "https://animalhospitalgeorgetown.com/lp/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Since 1989 (37 yrs). 3 DVMs. iVET360 = marketing/website provider, not consolidator. NOTE: distinguish from Innovetive's 'Good Water Animal Hospital' which is also Georgetown — these are different entities. Dr. Gardial joined 2014, took over Jan 1 2016.",
@@ -861,13 +1629,50 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "recent_owner_succession", "direction": "negative", "evidence": "'In 2014, Dr. Joe Gardial joined the practice, and then took over on January 1, 2016.' Current owner only 10 yrs in.", "source": "website", "source_url": "https://animalhospitalgeorgetown.com/about/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "long_associate_tenure", "direction": "positive", "evidence": "Dr. Bonnie Ory has 30+ yrs in practice (joined April 1998 from TAMU).", "source": "website", "source_url": "https://animalhospitalgeorgetown.com/about/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_3_dvm", "direction": "positive", "evidence": "3 DVMs.", "source": "website", "source_url": "https://animalhospitalgeorgetown.com/about/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No consolidator footer (iVET360 is marketing vendor only).", "source": "website", "source_url": "https://animalhospitalgeorgetown.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "recent_owner_succession",
+        "direction": "negative",
+        "evidence": "'In 2014, Dr. Joe Gardial joined the practice, and then took over on January 1, 2016.' Current owner only 10 yrs in.",
+        "source": "website",
+        "source_url": "https://animalhospitalgeorgetown.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "long_associate_tenure",
+        "direction": "positive",
+        "evidence": "Dr. Bonnie Ory has 30+ yrs in practice (joined April 1998 from TAMU).",
+        "source": "website",
+        "source_url": "https://animalhospitalgeorgetown.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_3_dvm",
+        "direction": "positive",
+        "evidence": "3 DVMs.",
+        "source": "website",
+        "source_url": "https://animalhospitalgeorgetown.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No consolidator footer (iVET360 is marketing vendor only).",
+        "source": "website",
+        "source_url": "https://animalhospitalgeorgetown.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_about", "url": "https://animalhospitalgeorgetown.com/about/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["ownership_succession", "license_holder_name"]}
+      {
+        "source": "website_about",
+        "url": "https://animalhospitalgeorgetown.com/about/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["ownership_succession", "license_holder_name"]
+      }
     ],
     "enrichment_notes": "Recent succession already executed (Breen→Gardial, Jan 2016). Current owner Gardial only 10 yrs in — too early for next exit. C-tier off-market fit."
   },
@@ -887,8 +1692,18 @@
     "license_holder_name": "Dr. Angela Asbury; Dr. Ian Voelzel (both 25+ yr tenure)",
     "year_established": 1970,
     "data_sources": [
-      {"source": "google_business", "url": "https://www.google.com/search?q=westlake+animal+hospital+austin+tx", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]},
-      {"source": "yelp", "url": "https://www.yelp.com/biz/westlake-animal-hospital-austin", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["address", "phone"]}
+      {
+        "source": "google_business",
+        "url": "https://www.google.com/search?q=westlake+animal+hospital+austin+tx",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]
+      },
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/westlake-animal-hospital-austin",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["address", "phone"]
+      }
     ],
     "platform_affiliation_check": "platform_subsidiary",
     "verification_notes": "EXCLUDE: westlakeanimalhospital.com 301-redirects to thrivepetcare.com/locations/texas/west-lake-hills/westlake-animal-hospital — confirmed Thrive Pet Healthcare subsidiary. BBB and other listings also confirm 'A Thrive Pet Healthcare Partner.'",
@@ -910,12 +1725,38 @@
     "distress_reasons": [],
     "recent_acquisition": true,
     "signals": [
-      {"layer": 4, "signal_key": "platform_subsidiary_disqualifying", "direction": "disqualifying", "evidence": "westlakeanimalhospital.com 301 redirects to thrivepetcare.com/locations/texas/west-lake-hills/westlake-animal-hospital (direct fetch confirmed 2026-05-15).", "source": "direct_fetch", "source_url": "https://westlakeanimalhospital.com/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "thrive_pet_healthcare_owned", "direction": "negative", "evidence": "Listed as 'Westlake Animal Hospital, A Thrive Pet Healthcare Partner' on BBB, Yelp, Facebook, Birdeye.", "source": "bbb_yelp", "source_url": "https://westlake-animal-hospital-a-thrive-pet-healthcare-partner.wheree.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 4,
+        "signal_key": "platform_subsidiary_disqualifying",
+        "direction": "disqualifying",
+        "evidence": "westlakeanimalhospital.com 301 redirects to thrivepetcare.com/locations/texas/west-lake-hills/westlake-animal-hospital (direct fetch confirmed 2026-05-15).",
+        "source": "direct_fetch",
+        "source_url": "https://westlakeanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "thrive_pet_healthcare_owned",
+        "direction": "negative",
+        "evidence": "Listed as 'Westlake Animal Hospital, A Thrive Pet Healthcare Partner' on BBB, Yelp, Facebook, Birdeye.",
+        "source": "bbb_yelp",
+        "source_url": "https://westlake-animal-hospital-a-thrive-pet-healthcare-partner.wheree.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "direct_fetch_redirect", "url": "https://westlakeanimalhospital.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["platform_affiliation_confirmed"]},
-      {"source": "thrive_locations", "url": "https://www.thrivepetcare.com/locations/texas/west-lake-hills/westlake-animal-hospital", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["platform_subsidiary"]}
+      {
+        "source": "direct_fetch_redirect",
+        "url": "https://westlakeanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["platform_affiliation_confirmed"]
+      },
+      {
+        "source": "thrive_locations",
+        "url": "https://www.thrivepetcare.com/locations/texas/west-lake-hills/westlake-animal-hospital",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["platform_subsidiary"]
+      }
     ],
     "enrichment_notes": "EXCLUDE — Thrive Pet Healthcare subsidiary confirmed via 301 redirect. Spine 'uncertain' resolved to disqualifying. Kept for audit trail."
   },
@@ -935,8 +1776,18 @@
     "license_holder_name": "Dr. Heflin (took over)",
     "year_established": null,
     "data_sources": [
-      {"source": "google_business", "url": "https://www.google.com/search?q=mission+veterinary+hospital+austin+tx", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "website"]},
-      {"source": "website", "url": "https://vetclinicmission.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["address", "owner_name"]}
+      {
+        "source": "google_business",
+        "url": "https://www.google.com/search?q=mission+veterinary+hospital+austin+tx",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "website"]
+      },
+      {
+        "source": "website",
+        "url": "https://vetclinicmission.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["address", "owner_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "EXCLUDE FROM AUSTIN/TRAVIS SET: vetclinicmission.com address is 2012 E Business Highway 83, Mission, TX 78572 — that is MISSION, TX (Hidalgo County, Rio Grande Valley), not Austin/Travis. SPINE ERROR: this row was mis-geo-tagged. Independent (only 'Simply Done Tech Solutions' as web vendor in footer; Dr. Heflin took over but full name not on homepage). Out of San Antonio + Austin Tier-A target geography.",
@@ -958,10 +1809,23 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 4, "signal_key": "out_of_target_geo", "direction": "disqualifying", "evidence": "Practice is at 2012 E Business Highway 83, Mission, TX 78572 (Hidalgo Co, Rio Grande Valley) — NOT in Travis County / Austin metro. Spine row mis-geo-tagged.", "source": "website", "source_url": "https://vetclinicmission.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 4,
+        "signal_key": "out_of_target_geo",
+        "direction": "disqualifying",
+        "evidence": "Practice is at 2012 E Business Highway 83, Mission, TX 78572 (Hidalgo Co, Rio Grande Valley) — NOT in Travis County / Austin metro. Spine row mis-geo-tagged.",
+        "source": "website",
+        "source_url": "https://vetclinicmission.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website", "url": "https://vetclinicmission.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["actual_geo_mission_tx"]}
+      {
+        "source": "website",
+        "url": "https://vetclinicmission.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["actual_geo_mission_tx"]
+      }
     ],
     "enrichment_notes": "EXCLUDE — outside Travis/Austin and outside Bexar/San Antonio. Spine row needs correction or removal. Independent operation by Dr. Heflin in Mission, TX (RGV) but not in target market."
   },
@@ -981,8 +1845,18 @@
     "license_holder_name": "Dr. Deka (founder 2025, but practicing in Austin/DS since 2009)",
     "year_established": 2025,
     "data_sources": [
-      {"source": "yelp", "url": "https://www.yelp.com/biz/founders-animal-hospital-dripping-springs", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["legal_name", "address", "city", "license_holder_name"]},
-      {"source": "website", "url": "https://foundersanimalhospital.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["address", "current_status"]}
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/founders-animal-hospital-dripping-springs",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "city", "license_holder_name"]
+      },
+      {
+        "source": "website",
+        "url": "https://foundersanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["address", "current_status"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Brand-new clinic: 'Founders Animal Hospital is Officially Open!' (June 2025 opening per search). Dr. Deka has 'cared for pets in Austin and Dripping Springs since 2009' — career 17 yrs but THIS practice is <1 yr old. Vetter Software (Petcare.vettersoftware.com) = PIMS only.",
@@ -1004,12 +1878,41 @@
     "distress_reasons": [],
     "recent_acquisition": false,
     "signals": [
-      {"layer": 1, "signal_key": "new_practice_excluded_from_off_market", "direction": "disqualifying", "evidence": "Practice opened June 2025 — <1 year tenure. Owner is in growth/build phase, not retirement window. Off-market sourcing target.", "source": "website", "source_url": "https://foundersanimalhospital.com/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_career_dvm_since_2009", "direction": "neutral", "evidence": "Dr. Deka has practiced in Austin/DS since 2009 — 17 yrs DVM, but only 1 yr as owner of this clinic.", "source": "website", "source_url": "https://foundersanimalhospital.com/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "independent_no_platform_footer", "direction": "positive", "evidence": "No consolidator footer.", "source": "website", "source_url": "https://foundersanimalhospital.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "new_practice_excluded_from_off_market",
+        "direction": "disqualifying",
+        "evidence": "Practice opened June 2025 — <1 year tenure. Owner is in growth/build phase, not retirement window. Off-market sourcing target.",
+        "source": "website",
+        "source_url": "https://foundersanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_career_dvm_since_2009",
+        "direction": "neutral",
+        "evidence": "Dr. Deka has practiced in Austin/DS since 2009 — 17 yrs DVM, but only 1 yr as owner of this clinic.",
+        "source": "website",
+        "source_url": "https://foundersanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "independent_no_platform_footer",
+        "direction": "positive",
+        "evidence": "No consolidator footer.",
+        "source": "website",
+        "source_url": "https://foundersanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website", "url": "https://foundersanimalhospital.com/", "fetched_at": "2026-05-15T20:00:00Z", "fields": ["opening_date", "booking_platform"]}
+      {
+        "source": "website",
+        "url": "https://foundersanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["opening_date", "booking_platform"]
+      }
     ],
     "enrichment_notes": "EXCLUDE FOR NOW — new clinic (June 2025 opening), <1 yr tenure. Owner is in build phase, not coasting. Revisit in 10-15 yrs."
   }

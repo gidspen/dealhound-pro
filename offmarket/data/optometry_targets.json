@@ -21,12 +21,7 @@
         "source": "website",
         "url": "https://www.altigoptical.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -82,18 +77,13 @@
         "source": "live_website_fetch",
         "url": "https://www.altigoptical.com/our-eye-care-clinic/our-doctors/",
         "fetched_at": "2026-05-15T20:03:00Z",
-        "fields": [
-          "associate_count",
-          "successor_signal"
-        ]
+        "fields": ["associate_count", "successor_signal"]
       },
       {
         "source": "incirclexec",
         "url": "https://incirclexec.com/william-d-altig-od-optometrist-and-owner/",
         "fetched_at": "2026-05-15T20:03:30Z",
-        "fields": [
-          "career_length"
-        ]
+        "fields": ["career_length"]
       }
     ],
     "enrichment_notes": "B-tier \u2014 owner age + tenure profile fits, BUT 3 associate hires (notably Reynolds as 'childhood patient') signals internal succession likely already underway. Not a clean wedge; family-internal handoff plausible. Worth softer outreach as 'is the practice for sale or are associates buying you out?'",
@@ -116,10 +106,7 @@
       "comptroller": {
         "entity_status": "not_found",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "search_attempts": [
-          "ALTIG OPTICAL (0)",
-          "ALTIG (8 unrelated)"
-        ],
+        "search_attempts": ["ALTIG OPTICAL (0)", "ALTIG (8 unrelated)"],
         "note": "Dr. William D Altig \u2014 likely sole prop / unincorporated DBA."
       },
       "cad_homestead": {
@@ -168,12 +155,7 @@
         "source": "website",
         "url": "https://www.visionplustx.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -238,18 +220,13 @@
         "source": "google_search",
         "url": "https://eyedoctor.io/optometrist/thomas-j-goldstein-od-san-antonio/",
         "fetched_at": "2026-05-15T20:12:00Z",
-        "fields": [
-          "graduation_year",
-          "career_arc"
-        ]
+        "fields": ["graduation_year", "career_arc"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/jennifer-goldstein-a5b92529/",
         "fetched_at": "2026-05-15T20:12:30Z",
-        "fields": [
-          "co_owner_spouse"
-        ]
+        "fields": ["co_owner_spouse"]
       }
     ],
     "enrichment_notes": "A-TIER \u2014 owner age 64, 32-yr ownership, family-run (Tom + Jennifer). Associate Sanchez present but unclear if buying-in successor or career associate. Strong retirement-window candidate with classic husband-wife operator structure (high seller-receptivity pattern).",
@@ -331,12 +308,7 @@
         "source": "website",
         "url": "https://www.bellaireoptometry.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -428,20 +400,13 @@
         "source": "npiprofile",
         "url": "https://npiprofile.com/npi/1568580637",
         "fetched_at": "2026-05-15T19:20:00Z",
-        "fields": [
-          "owner_full_name",
-          "owner_grad_year"
-        ]
+        "fields": ["owner_full_name", "owner_grad_year"]
       },
       {
         "source": "live_website_fetch",
         "url": "https://www.bellaireoptometry.com/",
         "fetched_at": "2026-05-15T19:20:00Z",
-        "fields": [
-          "saturday_hours",
-          "founding_year",
-          "specialty_services"
-        ]
+        "fields": ["saturday_hours", "founding_year", "specialty_services"]
       }
     ],
     "enrichment_notes": "TOP A-TIER CANDIDATE: 37-yr founder-owner tenure, solo OD, owner age ~63 in prime sell window, no distress, no acquisition. Mild caveats: Saturday hours + active capex investment = engaged operator (not yet coasting). Best when paired with CAD building-ownership lookup; if Dr. Le owns the building, succession path is significant.",
@@ -528,12 +493,7 @@
         "source": "website",
         "url": "https://www.ntxeyecare.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -598,18 +558,13 @@
         "source": "live_website_fetch",
         "url": "https://www.ntxeyecare.com/",
         "fetched_at": "2026-05-15T20:11:00Z",
-        "fields": [
-          "solo_check",
-          "tenure_self_report"
-        ]
+        "fields": ["solo_check", "tenure_self_report"]
       },
       {
         "source": "google_search",
         "url": "https://www.ntxeyecare.com/about-us/dr-gregory-kloesel/",
         "fetched_at": "2026-05-15T20:11:30Z",
-        "fields": [
-          "graduation_year"
-        ]
+        "fields": ["graduation_year"]
       }
     ],
     "enrichment_notes": "A-TIER TOP \u2014 solo 34-yr tenure, age ~62, no successor, no modern capex flags, premium Southlake ZIP, multi-generational patient base (classic coasting tell). Strongest candidate in batch.",
@@ -632,10 +587,7 @@
       "comptroller": {
         "entity_status": "not_found",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "search_attempts": [
-          "NORTH TEXAS EYE CARE (0)",
-          "KLOESEL (8 unrelated)"
-        ],
+        "search_attempts": ["NORTH TEXAS EYE CARE (0)", "KLOESEL (8 unrelated)"],
         "note": "Dr. Gregory Kloesel \u2014 likely sole prop / unincorporated DBA."
       },
       "cad_homestead": {
@@ -685,11 +637,7 @@
         "source": "vision_source",
         "url": "https://visionsource.com/vision-source-houston/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "phone"
-        ]
+        "fields": ["legal_name", "address", "phone"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -745,11 +693,7 @@
         "source": "website_team_page",
         "url": "https://www.visionsource-aldine.com/our-team.html",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "owner_tenure_years",
-          "year_established"
-        ]
+        "fields": ["owner_name", "owner_tenure_years", "year_established"]
       }
     ],
     "enrichment_notes": "STRONG candidate. Dr. Ravi Kankaria, sole-owner since 1993 (33 yr tenure). UH Optometry + Vision Rehab residency. Age ~60 in retirement window. Vision Source member (independent). N Houston Aldine corridor. No distress; clean.",
@@ -791,12 +735,7 @@
         "source": "website",
         "url": "https://www.parkcitieseye.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -861,11 +800,7 @@
         "source": "website_about_page",
         "url": "https://www.parkcitieseye.com/team/dr-cathy-ann-norton-od/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "owner_tenure_years",
-          "year_established"
-        ]
+        "fields": ["owner_name", "owner_tenure_years", "year_established"]
       }
     ],
     "enrichment_notes": "TOP candidate. Dr. Norton, solo-owner 30 yrs at premium Park Cities Preston Rd. Age ~60 squarely in retirement window. Premium 75225 ZIP, dry eye specialty, no associate bench (clean exit). No distress.",
@@ -907,36 +842,25 @@
         "source": "website",
         "url": "https://www.parmereyecare.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       },
       {
         "source": "website",
         "url": "https://www.parmereyecare.com/team/dr-sundra-lemanski/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education",
-          "tenure"
-        ]
+        "fields": ["owner_education", "tenure"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/sundra-lemanski-2632126/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       },
       {
         "source": "rocketreach",
         "url": "https://rocketreach.co/parmer-eye-care-profile_b467bd05fc5d696a",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "company_profile"
-        ]
+        "fields": ["company_profile"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1009,25 +933,19 @@
         "source": "website",
         "url": "https://www.parmereyecare.com/team/dr-sundra-lemanski/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/sundra-lemanski-2632126/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       },
       {
         "source": "rocketreach",
         "url": "https://rocketreach.co/parmer-eye-care-profile_b467bd05fc5d696a",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "company_profile"
-        ]
+        "fields": ["company_profile"]
       }
     ],
     "enrichment_notes": "B-TIER candidate. Dr. Lemanski 30 yrs owner-operator (~56 yrs old), single location, 3-OD size in target band, recurring revenue model. Not in immediate retirement window but classic 5-10 yr horizon. Worth deeper homestead/OV65 check on Lemanski.",
@@ -1069,12 +987,7 @@
         "source": "website",
         "url": "https://www.southlakefamilyeyecare.com/our-practice.html",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1139,27 +1052,19 @@
         "source": "live_website_fetch",
         "url": "https://www.southlakefamilyeyecare.com/our-practice.html",
         "fetched_at": "2026-05-15T20:10:00Z",
-        "fields": [
-          "solo_check",
-          "staff_count"
-        ]
+        "fields": ["solo_check", "staff_count"]
       },
       {
         "source": "google_search",
         "url": "https://doctor.webmd.com/doctor/kirk-koogler-1cb70cc4-b582-4629-b4b1-1af9298a3543-overview",
         "fetched_at": "2026-05-15T20:10:30Z",
-        "fields": [
-          "graduation_year"
-        ]
+        "fields": ["graduation_year"]
       },
       {
         "source": "pecaa",
         "url": "https://portal.pecaa.com/practice/kjk-eye-care-llc-dba-southlake-family-eye-care/",
         "fetched_at": "2026-05-15T20:10:45Z",
-        "fields": [
-          "entity_name",
-          "buying_group"
-        ]
+        "fields": ["entity_name", "buying_group"]
       }
     ],
     "enrichment_notes": "A-MINUS \u2014 solo, 29-yr tenure, no successor, no modern capex callouts, premium Southlake ZIP, entity KJK Eye Care LLC. Owner age proxy (~56) is at the lower edge of the 55+ window \u2014 softer A. Borderline call: A-tier on tenure+solo+no-successor profile; A-minus only because owner younger than peer candidates. Top candidate for outreach.",
@@ -1201,11 +1106,7 @@
         "source": "website",
         "url": "https://www.lakesidevisionplano.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1270,11 +1171,7 @@
         "source": "lakesidevisionplano",
         "url": "https://www.lakesidevisionplano.com/team/dr-deborah/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "owner_tenure_years",
-          "year_purchased"
-        ]
+        "fields": ["owner_name", "owner_tenure_years", "year_purchased"]
       }
     ],
     "enrichment_notes": "STRONG candidate. Dr. Moon owns Lakeside since 2004 (22 yr tenure). Age ~56 \u2014 entering retirement window. 2-OD bench eases transition. Industry leadership suggests engaged but realistic 5-10 yr horizon. Premium Plano/Preston Rd ZIP. No distress.",
@@ -1316,12 +1213,7 @@
         "source": "website",
         "url": "https://www.eagleranchvision.com/our-practice/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1377,10 +1269,7 @@
         "source": "live_website_fetch",
         "url": "https://www.eagleranchvision.com/",
         "fetched_at": "2026-05-15T20:06:00Z",
-        "fields": [
-          "doctor_count",
-          "founding_year"
-        ]
+        "fields": ["doctor_count", "founding_year"]
       }
     ],
     "enrichment_notes": "DECLINE on size/structure \u2014 6 ODs in shared brand is too large for solo-OD-succession wedge. Partnership/group practice typically transitions internally, not via outside ETA.",
@@ -1422,35 +1311,25 @@
         "source": "website",
         "url": "https://www.tsosugarland.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       },
       {
         "source": "website",
         "url": "https://www.tsosugarland.com/about-us.html",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "year_established"
-        ]
+        "fields": ["year_established"]
       },
       {
         "source": "tso_corp",
         "url": "https://tso.com/eye-doctor/Robert-Le-344/Sugar-Land-TSO-96/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       },
       {
         "source": "healthgrades",
         "url": "https://www.healthgrades.com/providers/robert-le-ymsmk",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_credentials"
-        ]
+        "fields": ["owner_credentials"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1541,25 +1420,19 @@
         "source": "website",
         "url": "https://www.tsosugarland.com/about-us.html",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "year_established"
-        ]
+        "fields": ["year_established"]
       },
       {
         "source": "tso_corp",
         "url": "https://tso.com/eye-doctor/Robert-Le-344/Sugar-Land-TSO-96/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       },
       {
         "source": "healthgrades",
         "url": "https://www.healthgrades.com/providers/robert-le-ymsmk",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_credentials"
-        ]
+        "fields": ["owner_credentials"]
       }
     ],
     "enrichment_notes": "STRONG A-TIER candidate. Dr. Robert Le solo owner 29 yrs (~57), Closed Wednesdays = mild coasting, no family-OD successor visible, single location. Caveat: TSO cooperative may have ROFR/transfer policy. Worth deep CAD/homestead check + TSO transfer rules diligence.",
@@ -1601,12 +1474,7 @@
         "source": "website",
         "url": "https://visualeyeswest.com/our-practice/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1662,11 +1530,7 @@
         "source": "live_website_fetch",
         "url": "https://visualeyeswest.com/our-practice/",
         "fetched_at": "2026-05-15T20:05:00Z",
-        "fields": [
-          "doctors",
-          "year_founded",
-          "associates"
-        ]
+        "fields": ["doctors", "year_founded", "associates"]
       }
     ],
     "enrichment_notes": "DECLINE \u2014 owner is too young (~50) and practice is in active growth/expansion mode (3 ODs, modern OptiLight tech, multiple relocations). Profile is growth-stage independent, not retirement-window coaster.",
@@ -1708,12 +1572,7 @@
         "source": "website",
         "url": "https://mivisioneyecare.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1778,18 +1637,13 @@
         "source": "live_website_fetch",
         "url": "https://mivisioneyecare.com/about-us/meet-doctor-cuba/",
         "fetched_at": "2026-05-15T20:18:00Z",
-        "fields": [
-          "career_arc",
-          "tech_stack"
-        ]
+        "fields": ["career_arc", "tech_stack"]
       },
       {
         "source": "google_search",
         "url": "https://mivisioneyecare.com/about-us/meet-doctor-cuba/",
         "fetched_at": "2026-05-15T20:18:30Z",
-        "fields": [
-          "graduation_year"
-        ]
+        "fields": ["graduation_year"]
       }
     ],
     "enrichment_notes": "B-tier \u2014 owner age proxy ~55 fits, but only 15 yrs OD career and ACTIVE growth mode (2+ locations, OCT, Humphrey VF, on-site lab, Sunday hours). Builder-operator profile, not coasting. Decline on coasting-tells layer.",
@@ -1831,28 +1685,19 @@
         "source": "website",
         "url": "https://tanglewoodvision.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established"
-        ]
+        "fields": ["legal_name", "address", "year_established"]
       },
       {
         "source": "website",
         "url": "https://tanglewoodvision.com/about-us/doctors-staff/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "doctors",
-          "owner_education"
-        ]
+        "fields": ["doctors", "owner_education"]
       },
       {
         "source": "bbb",
         "url": "https://www.bbb.org/us/tx/austin/profile/optometrist/tanglewood-vision-center-0825-63032",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1916,17 +1761,13 @@
         "source": "website",
         "url": "https://tanglewoodvision.com/about-us/doctors-staff/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "doctors"
-        ]
+        "fields": ["doctors"]
       },
       {
         "source": "bbb",
         "url": "https://www.bbb.org/us/tx/austin/profile/optometrist/tanglewood-vision-center-0825-63032",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "enrichment_notes": "B-TIER candidate. Owner 27 yrs (~52), single location, 2-OD size in target band, possible internal-succession ambiguity. Worth homestead/age verification.",
@@ -1968,11 +1809,7 @@
         "source": "website",
         "url": "https://visionsource-kingwood.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2028,10 +1865,7 @@
         "source": "visionsource",
         "url": "https://visionsource.com/about/leadership/glenn-d-ellisor-od/",
         "fetched_at": "2026-05-15T19:12:00Z",
-        "fields": [
-          "owner_founder_status",
-          "owner_age_estimate"
-        ]
+        "fields": ["owner_founder_status", "owner_age_estimate"]
       }
     ],
     "enrichment_notes": "DISQUALIFY: Founder of the Vision Source cooperative itself; succession pipeline locked-in via Wade + Erin Ellisor. Will not sell to outside ETA buyer.",
@@ -2073,36 +1907,25 @@
         "source": "website",
         "url": "https://www.lakelinevision.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       },
       {
         "source": "website",
         "url": "https://www.lakelinevision.com/team/dr-laurie-sorrenson-faao/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education",
-          "family_info"
-        ]
+        "fields": ["owner_education", "family_info"]
       },
       {
         "source": "vision_source",
         "url": "https://visionsource.com/doctors/advisory-board/laurie-sorrenson/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "industry_role"
-        ]
+        "fields": ["industry_role"]
       },
       {
         "source": "women_in_optometry",
         "url": "https://www.womeninoptometry.com/promoting-yourself/article/family-matters-at-lakeline-vision-source/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "family_succession"
-        ]
+        "fields": ["family_succession"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2184,25 +2007,19 @@
         "source": "website",
         "url": "https://www.lakelinevision.com/team/dr-laurie-sorrenson-faao/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       },
       {
         "source": "vision_source",
         "url": "https://visionsource.com/doctors/advisory-board/laurie-sorrenson/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "industry_role"
-        ]
+        "fields": ["industry_role"]
       },
       {
         "source": "women_in_optometry",
         "url": "https://www.womeninoptometry.com/promoting-yourself/article/family-matters-at-lakeline-vision-source/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "family_succession"
-        ]
+        "fields": ["family_succession"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 strong age/tenure signals but son Eric Hammond OD already in practice = locked internal succession. Plus size (10 ODs) above target ceiling. Not an acquisition candidate.",
@@ -2244,11 +2061,7 @@
         "source": "website",
         "url": "https://www.colonyeyecare.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "addresses",
-          "doctors"
-        ]
+        "fields": ["legal_name", "addresses", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent_multi_location",
@@ -2304,11 +2117,7 @@
         "source": "healthcare6_npi",
         "url": "https://www.healthcare6.com/physician/sugar-land-tx/steven-c-davenport-664550.html",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_age_estimate",
-          "owner_tenure_years",
-          "year_established"
-        ]
+        "fields": ["owner_age_estimate", "owner_tenure_years", "year_established"]
       }
     ],
     "enrichment_notes": "Dr. Davenport in retirement window (age ~60, 34 yr career). BUT 7-OD multi-location LLP group practice \u2014 likely internal successor route. Spine-valid but lower fit for solo-owner exit thesis. No distress.",
@@ -2350,13 +2159,7 @@
         "source": "website",
         "url": "https://www.exquisiteeyecare.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "phone",
-          "doctors",
-          "services"
-        ]
+        "fields": ["legal_name", "address", "phone", "doctors", "services"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2439,27 +2242,19 @@
         "source": "live_website_fetch",
         "url": "https://www.exquisiteeyecare.com/meet-the-optometrist",
         "fetched_at": "2026-05-15T19:05:00Z",
-        "fields": [
-          "owner_tenure_years",
-          "owner_school",
-          "associate_ODs"
-        ]
+        "fields": ["owner_tenure_years", "owner_school", "associate_ODs"]
       },
       {
         "source": "live_website_fetch",
         "url": "https://www.exquisiteeyecare.com/staff",
         "fetched_at": "2026-05-15T19:05:00Z",
-        "fields": [
-          "provider_count_estimate"
-        ]
+        "fields": ["provider_count_estimate"]
       },
       {
         "source": "google",
         "url": "https://www.google.com/search?q=%22Exquisite+Eye+Care%22+Houston+acquired+MyEyeDr",
         "fetched_at": "2026-05-15T19:05:00Z",
-        "fields": [
-          "recent_acquisition"
-        ]
+        "fields": ["recent_acquisition"]
       }
     ],
     "enrichment_notes": "Solid B-tier candidate. Multi-OD signal reduces solo-coast appeal \u2014 successor risk is real with Dr. Tran (running Pearland sister practice) and Dr. Nguyen on staff. Owner ~56, tenure 30 yrs, no distress, no acquisition. Active Saturday hours and modern tech = NOT coasting.",
@@ -2501,11 +2296,7 @@
         "source": "website",
         "url": "https://visionsource-copperfield.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established"
-        ]
+        "fields": ["legal_name", "address", "year_established"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2570,11 +2361,7 @@
         "source": "live_website_fetch",
         "url": "https://visionsource-copperfield.com/about-us/doctors-staff/",
         "fetched_at": "2026-05-15T19:16:00Z",
-        "fields": [
-          "owner_name",
-          "provider_count_estimate",
-          "associate_OD_grad_years"
-        ]
+        "fields": ["owner_name", "provider_count_estimate", "associate_OD_grad_years"]
       }
     ],
     "enrichment_notes": "DECLINE: Original 1991 founder no longer at practice. Current owner Dr. Madeline Nguyen ~46 (UHCO 2006). 3 ODs with recent 2022 hire = active growth practice. Internal succession path already used. Skip.",
@@ -2616,12 +2403,7 @@
         "source": "website",
         "url": "https://www.kleineyecare.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2695,19 +2477,13 @@
         "source": "todaysvision",
         "url": "https://www.todaysvision.com/klein-eyecare",
         "fetched_at": "2026-05-15T19:23:00Z",
-        "fields": [
-          "franchise_network",
-          "ownership_structure"
-        ]
+        "fields": ["franchise_network", "ownership_structure"]
       },
       {
         "source": "live_website_fetch",
         "url": "https://www.kleineyecare.com/our-eye-doctors/",
         "fetched_at": "2026-05-15T19:23:00Z",
-        "fields": [
-          "associate_ODs",
-          "founder_status"
-        ]
+        "fields": ["associate_ODs", "founder_status"]
       }
     ],
     "enrichment_notes": "DECLINE: Today's Vision franchise (licensing complication) + original 1981 founder gone + multi-OD with active associate hiring (Moczygemba 'recently welcomed') + current senior OD age 49 too young. Skip.",
@@ -2749,12 +2525,7 @@
         "source": "website",
         "url": "https://visionsource-magnolia.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2810,9 +2581,7 @@
         "source": "google",
         "url": "https://www.google.com/search?q=%22Vision+Source+Magnolia%22+acquired",
         "fetched_at": "2026-05-15T19:11:00Z",
-        "fields": [
-          "recent_acquisition"
-        ]
+        "fields": ["recent_acquisition"]
       }
     ],
     "enrichment_notes": "County mismatch (Montgomery, not Harris). Tenure 16 yrs is short of preference. DECLINE unless wider TX/Houston-metro filter accepted.",
@@ -2854,12 +2623,7 @@
         "source": "website",
         "url": "https://www.edfec.net/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2924,11 +2688,7 @@
         "source": "website_about_page",
         "url": "https://www.edfec.net/team/dr-anand-ned-kumar-od/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "owner_tenure_years",
-          "education"
-        ]
+        "fields": ["owner_name", "owner_tenure_years", "education"]
       }
     ],
     "enrichment_notes": "Solo-OD Dr. Anand Kumar, 21 yr tenure in Pleasant Grove. Age ~50 \u2014 at lower edge of preferred window. Active multi-school adjunct role suggests engaged, not coasting. Spine-valid mid-fit candidate.",
@@ -2970,12 +2730,7 @@
         "source": "website",
         "url": "https://www.completefamilyeyecaretexas.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3031,11 +2786,7 @@
         "source": "website_doctors_page",
         "url": "https://www.completefamilyeyecaretexas.com/our-eye-care-clinic/our-eye-doctors/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "co_owner",
-          "year_established"
-        ]
+        "fields": ["owner_name", "co_owner", "year_established"]
       }
     ],
     "enrichment_notes": "Spouse-team boutique McKinney practice, 16 yr tenure. Modern equipment + dry eye specialty. Age unknown but career arc suggests 45-55 range. Spouse co-ownership reduces clean-exit probability. Mid-tier candidate.",
@@ -3077,12 +2828,7 @@
         "source": "website",
         "url": "https://www.wilkeneye.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3138,11 +2884,7 @@
         "source": "website_doctors_page",
         "url": "https://www.wilkeneye.com/meet-the-doctors/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "co_owner",
-          "year_established"
-        ]
+        "fields": ["owner_name", "co_owner", "year_established"]
       }
     ],
     "enrichment_notes": "Spouse co-owned Wilken Family Eye Care, 24 yr tenure. Mid-age (~52) \u2014 approaching but below 55+. Associate Vickers added \u2014 internal successor risk. Mid-tier candidate.",
@@ -3184,29 +2926,19 @@
         "source": "website",
         "url": "https://cedarparkvision.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       },
       {
         "source": "website",
         "url": "https://cedarparkvision.com/team/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "doctors",
-          "owner_education",
-          "family_info"
-        ]
+        "fields": ["doctors", "owner_education", "family_info"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/dr-kim-wampler-739b81a/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3288,18 +3020,13 @@
         "source": "website",
         "url": "https://cedarparkvision.com/team/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "doctors",
-          "family_info"
-        ]
+        "fields": ["doctors", "family_info"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/dr-kim-wampler-739b81a/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "enrichment_notes": "PASS \u2014 strong tenure but husband-wife co-owners + clear internal-succession candidate (Dr. Rains promoted from tech). Likely internal transition, not external sale. Wineinger could retire first (older) but Wampler continues.",
@@ -3341,10 +3068,7 @@
         "source": "website",
         "url": "https://visionsource-pearland.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address"
-        ]
+        "fields": ["legal_name", "address"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3400,9 +3124,7 @@
         "source": "yelp",
         "url": "https://www.yelp.com/biz/vision-source-pearland-pearland-2",
         "fetched_at": "2026-05-15T19:13:00Z",
-        "fields": [
-          "year_established"
-        ]
+        "fields": ["year_established"]
       }
     ],
     "enrichment_notes": "Owner identity NOT publicly surfaced (Vision Source pages list owner roster on staff sub-page only \u2014 deeper enrichment needed). County mismatch and tenure-below-target. DECLINE without owner ID.",
@@ -3444,11 +3166,7 @@
         "source": "website",
         "url": "https://visioncorner.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3540,20 +3258,13 @@
         "source": "healthgrades",
         "url": "https://www.healthgrades.com/providers/sophia-barnes-27vbp",
         "fetched_at": "2026-05-15T19:19:00Z",
-        "fields": [
-          "owner_grad_year",
-          "owner_age_estimate"
-        ]
+        "fields": ["owner_grad_year", "owner_age_estimate"]
       },
       {
         "source": "live_website_fetch",
         "url": "https://visioncorner.com/about/",
         "fetched_at": "2026-05-15T19:19:00Z",
-        "fields": [
-          "office_hours",
-          "OCT_Optomap",
-          "booking_vendor"
-        ]
+        "fields": ["office_hours", "OCT_Optomap", "booking_vendor"]
       }
     ],
     "enrichment_notes": "TOP A-TIER CANDIDATE: 42-yr tenure, owner age ~68, SOLO OD, premium Galleria/River Oaks ZIP, NO Saturday hours, mixed-vendor booking (mild coasting tells), no distress, no acquisition. Owner age in prime sell window. Building ownership check (CAD lookup) is the natural next step.",
@@ -3595,12 +3306,7 @@
         "source": "website",
         "url": "https://sugarlandvision.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors",
-          "tenure"
-        ]
+        "fields": ["legal_name", "address", "doctors", "tenure"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3656,11 +3362,7 @@
         "source": "website_about_page",
         "url": "https://sugarlandvision.com/about-us/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "year_established",
-          "owner_tenure_years"
-        ]
+        "fields": ["owner_name", "year_established", "owner_tenure_years"]
       }
     ],
     "enrichment_notes": "Solo OD Dr. Ali, glaucoma specialist. Practice itself 22 yrs old but Dr. Ali joined in 2014 \u2014 possible succession-bought-from-prior-owner pattern (unconfirmed). Age estimate ~46 \u2014 outside 55+ retirement window. Spine-valid but low age fit.",
@@ -3702,11 +3404,7 @@
         "source": "vision_source",
         "url": "https://visionsource.com/vision-source-houston/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "phone"
-        ]
+        "fields": ["legal_name", "address", "phone"]
       }
     ],
     "platform_affiliation_check": "independent_multi_location",
@@ -3771,20 +3469,13 @@
         "source": "website_doctors_page",
         "url": "https://www.lifetimeeyecareassociates.com/team/grisel-lagunas-o-d/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "year_established",
-          "provider_count"
-        ]
+        "fields": ["owner_name", "year_established", "provider_count"]
       },
       {
         "source": "google_search",
         "url": "https://www.lifetimeeyecareassociates.com/our-doctors/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "provider_count_estimate",
-          "associate_bench"
-        ]
+        "fields": ["provider_count_estimate", "associate_bench"]
       }
     ],
     "enrichment_notes": "Dr. Grisel Lagunas founded Lifetime Eyecare in 2005 and added The Woodlands location in 2007. Multi-location regional group with 6 ODs serving Houston north corridor. Likely too large for solo-owner thesis but family-owned and multi-generation potential. No acquisition or distress signals.",
@@ -3826,11 +3517,7 @@
         "source": "website",
         "url": "https://prooptixeyecare.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3895,19 +3582,13 @@
         "source": "live_website_fetch",
         "url": "https://prooptixeyecare.com/our-practice/",
         "fetched_at": "2026-05-15T19:18:00Z",
-        "fields": [
-          "year_founded",
-          "owner_name",
-          "dry_eye_capex"
-        ]
+        "fields": ["year_founded", "owner_name", "dry_eye_capex"]
       },
       {
         "source": "community_impact",
         "url": "https://communityimpact.com/houston/bellaire-meyerland-west-university/business/2025/09/26/pro-optix-optometry-dry-eye-center-relocates-to-upper-kirby-area/",
         "fetched_at": "2026-05-15T19:18:00Z",
-        "fields": [
-          "recent_expansion"
-        ]
+        "fields": ["recent_expansion"]
       }
     ],
     "enrichment_notes": "DECLINE: 11-yr tenure too short + 2025 relocation to Upper Kirby (expansion) + recent IPL capex. Sister-owners young and actively growing. Skip.",
@@ -3949,11 +3630,7 @@
         "source": "website",
         "url": "https://www.visionproeyecare.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4018,18 +3695,13 @@
         "source": "healthgrades",
         "url": "https://www.healthgrades.com/providers/paul-proske-x9qvq",
         "fetched_at": "2026-05-15T19:24:00Z",
-        "fields": [
-          "owner_grad_year"
-        ]
+        "fields": ["owner_grad_year"]
       },
       {
         "source": "live_website_fetch",
         "url": "https://www.visionproeyecare.com/our-eye-doctors/",
         "fetched_at": "2026-05-15T19:24:00Z",
-        "fields": [
-          "provider_count_estimate",
-          "associate_ODs"
-        ]
+        "fields": ["provider_count_estimate", "associate_ODs"]
       }
     ],
     "enrichment_notes": "DECLINE: spine ID'd as 'solo OD' but actual roster is 5 ODs (Proske + 4 associates). Owner age ~52, too young for sell window. Active hire-and-grow practice. Skip.",
@@ -4071,11 +3743,7 @@
         "source": "website",
         "url": "https://www.visionveritaseyecare.com/our-practice/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4131,20 +3799,13 @@
         "source": "culturemap_dallas",
         "url": "https://dallas.culturemap.com/news/city-life/12-15-15-vision-veritas-anita-olivia-carleo-interview/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "year_established",
-          "tenure_years"
-        ]
+        "fields": ["owner_name", "year_established", "tenure_years"]
       },
       {
         "source": "addison_magazine",
         "url": "https://addisonmagazine.com/2023/09/vision-veritas-welcomes-dr-emily-van-o-d/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "provider_count_estimate",
-          "associate_hiring"
-        ]
+        "fields": ["provider_count_estimate", "associate_hiring"]
       }
     ],
     "enrichment_notes": "Sister-team boutique practice in premium N Dallas. 12 yr tenure, actively expanding (added associate 2023). Both founders likely 45-55 range \u2014 outside 55+ retirement window. Sibling co-ownership pattern; family successor risk.",
@@ -4186,11 +3847,7 @@
         "source": "website",
         "url": "https://www.friscofamilyvision.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4246,11 +3903,7 @@
         "source": "website_doctors_page",
         "url": "https://www.friscofamilyvision.com/team/dana-biederman-od/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "year_established",
-          "owner_tenure_years"
-        ]
+        "fields": ["owner_name", "year_established", "owner_tenure_years"]
       }
     ],
     "enrichment_notes": "Solo founder Dr. Biederman, growing practice. 12 yr tenure, young children, ABO Diplomate. Mid-career \u2014 outside retirement window. Low fit for sale-in-12-36-mo thesis.",
@@ -4292,28 +3945,19 @@
         "source": "website",
         "url": "https://www.ranchroadvision.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       },
       {
         "source": "website",
         "url": "https://www.ranchroadvision.com/team/dr-shazeen-ali/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/shazeen-ali-o-d-73479730/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4368,17 +4012,13 @@
         "source": "website",
         "url": "https://www.ranchroadvision.com/team/dr-shazeen-ali/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/shazeen-ali-o-d-73479730/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 owner ~38, 11 yrs tenure, build mode. Not a target.",
@@ -4420,10 +4060,7 @@
         "source": "website",
         "url": "https://visionsource-telfair.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address"
-        ]
+        "fields": ["legal_name", "address"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4488,10 +4125,7 @@
         "source": "live_website_fetch",
         "url": "https://visionsource-telfair.com/about-us/doctors-staff/",
         "fetched_at": "2026-05-15T19:17:00Z",
-        "fields": [
-          "associate_ODs",
-          "year_established_2014"
-        ]
+        "fields": ["associate_ODs", "year_established_2014"]
       }
     ],
     "enrichment_notes": "DECLINE: County mismatch (Fort Bend, not Harris), 12-yr tenure too short, owner identification ambiguous, partnership-OD structure. Skip.",
@@ -4533,11 +4167,7 @@
         "source": "website",
         "url": "https://brazoseyecenter.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4593,11 +4223,7 @@
         "source": "website_doctors_page",
         "url": "https://brazoseyecenter.com/our-team.html",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_age_estimate",
-          "owner_tenure_years",
-          "year_established"
-        ]
+        "fields": ["owner_age_estimate", "owner_tenure_years", "year_established"]
       }
     ],
     "enrichment_notes": "Solo-owner glaucoma specialist Dr. Le, ~44 yrs old, 11 yr practice. Outside ideal age and tenure windows. County corrected to Fort Bend. Spine-valid but low-priority for sale-in-12-36-mo thesis.",
@@ -4639,11 +4265,7 @@
         "source": "website",
         "url": "https://www.familyeyehealthsolutions.com/about-us.html",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4699,10 +4321,7 @@
         "source": "website_about_page",
         "url": "https://www.familyeyehealthsolutions.com/about-us.html",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "year_established"
-        ]
+        "fields": ["owner_name", "year_established"]
       }
     ],
     "enrichment_notes": "Solo-OD Dr. Jimmy Joseph, owner-operator since 2014. Independent, Fort Bend Missouri City. Tenure ~12 yr (slightly below preference). Age unknown but career suggests mid-career. Worth re-checking in 3 yr.",
@@ -4744,11 +4363,7 @@
         "source": "website",
         "url": "https://www.focusedeyecare.net/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4804,11 +4419,7 @@
         "source": "website_doctors_page",
         "url": "https://www.focusedeyecare.net/team/soby-abraham-o-d/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "education_year",
-          "owner_age_estimate"
-        ]
+        "fields": ["owner_name", "education_year", "owner_age_estimate"]
       }
     ],
     "enrichment_notes": "Dr. Soby Abraham (UH 2003), 23 yr career. Practice est 2008 (18 yr). 2-OD bench with Naidoo. Age ~49 \u2014 below 55+ window but trending. Garland suburb spread. Mid-tier candidate.",
@@ -4850,36 +4461,25 @@
         "source": "website",
         "url": "https://greathillseyecare.com/our-practice/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "addresses",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "addresses", "year_established", "doctors"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/drdrewprovost/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       },
       {
         "source": "communityimpact",
         "url": "https://communityimpact.com/sponsored/sponsored/2023/07/23/great-hills-eye-care-setting-the-standard-in-comprehensive-eye-care-in-the-austin-metro/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "company_profile"
-        ]
+        "fields": ["company_profile"]
       },
       {
         "source": "crunchbase",
         "url": "https://www.crunchbase.com/person/drew-provost-d556",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -4943,17 +4543,13 @@
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/drdrewprovost/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       },
       {
         "source": "communityimpact",
         "url": "https://communityimpact.com/sponsored/sponsored/2023/07/23/great-hills-eye-care-setting-the-standard-in-comprehensive-eye-care-in-the-austin-metro/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "company_profile"
-        ]
+        "fields": ["company_profile"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 wrong size + wrong life stage. Provost is a platform operator in growth mode, not a coasting solo-owner. If a deal happens here it'd be PE-rollup, not micro-acquisition.",
@@ -4995,11 +4591,7 @@
         "source": "website",
         "url": "https://friscoinfocus.com/about-us/doctors-staff/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -5055,20 +4647,13 @@
         "source": "website_doctors_page",
         "url": "https://friscoinfocus.com/about-us/doctors-staff/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "year_established",
-          "owner_tenure_years"
-        ]
+        "fields": ["owner_name", "year_established", "owner_tenure_years"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/kari-clark-od/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_age_estimate",
-          "career_history"
-        ]
+        "fields": ["owner_age_estimate", "career_history"]
       }
     ],
     "enrichment_notes": "Dr. Clark, 25-yr career, founded Frisco In Focus 2017. Outside ideal age/tenure but trending. Growth-stage practice \u2014 not coasting. Low fit; re-check in 5 yr.",
@@ -5110,36 +4695,25 @@
         "source": "website",
         "url": "https://www.cedarparkeyecare.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       },
       {
         "source": "website",
         "url": "https://www.cedarparkeyecare.com/team/dr-dennis-mccarty-o-d/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_credentials",
-          "family_info"
-        ]
+        "fields": ["owner_credentials", "family_info"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/dennis-mccarty-od-0623895/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       },
       {
         "source": "npiprofile",
         "url": "https://npiprofile.com/npi/1083785950",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_npi"
-        ]
+        "fields": ["owner_npi"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -5221,18 +4795,13 @@
         "source": "website",
         "url": "https://www.cedarparkeyecare.com/team/dr-dennis-mccarty-o-d/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education",
-          "family_info"
-        ]
+        "fields": ["owner_education", "family_info"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/dennis-mccarty-od-0623895/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "enrichment_notes": "B-TIER candidate but soft. Owner ~50 (too young for immediate retirement), but 24-yr tenure, solo, reduced hours = classic coasting lifestyle practice. 8-15 yr horizon, not 12-36 mo. Worth ongoing monitoring.",
@@ -5274,12 +4843,7 @@
         "source": "website",
         "url": "https://visionsource-cypress.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -5344,11 +4908,7 @@
         "source": "live_website_fetch",
         "url": "https://visionsource-cypress.com/about-us/doctors-staff/",
         "fetched_at": "2026-05-15T19:15:00Z",
-        "fields": [
-          "owner_name",
-          "year_founded",
-          "associate_OD"
-        ]
+        "fields": ["owner_name", "year_founded", "associate_OD"]
       }
     ],
     "enrichment_notes": "DECLINE: 8-year practice in expansion mode. Owner too young/early in career. Skip.",
@@ -5390,11 +4950,7 @@
         "source": "website",
         "url": "https://www.walnutvision.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -5441,20 +4997,13 @@
         "source": "website_doctors_page",
         "url": "https://www.walnutvision.com/our-eye-doctor/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "co_owner",
-          "family_successor"
-        ]
+        "fields": ["owner_name", "co_owner", "family_successor"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/jdeshaw/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "graduation_year",
-          "career_history"
-        ]
+        "fields": ["graduation_year", "career_history"]
       }
     ],
     "enrichment_notes": "DISQUALIFIED for thesis: Father-son DeShaw family practice. Glenn presumably ~65+ (founder); Jonathan ~41 successor (UH Optometry 2010). Successor pipeline blocks external buyer.",
@@ -5496,12 +5045,7 @@
         "source": "website",
         "url": "https://www.vistavisionsa.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -5557,10 +5101,7 @@
         "source": "live_website_fetch",
         "url": "https://www.vistavisionsa.com/doctors",
         "fetched_at": "2026-05-15T20:13:00Z",
-        "fields": [
-          "education",
-          "year_founded"
-        ]
+        "fields": ["education", "year_founded"]
       }
     ],
     "enrichment_notes": "DECLINE \u2014 owner age ~45, only 9 yrs as owner, active modern capex. Founder-build-mode profile, not retirement target.",
@@ -5602,11 +5143,7 @@
         "source": "website",
         "url": "https://mansfieldvision.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -5653,10 +5190,7 @@
         "source": "live_website_fetch",
         "url": "https://mansfieldvision.com/about-us/",
         "fetched_at": "2026-05-15T20:08:00Z",
-        "fields": [
-          "year_founded",
-          "doctor_history"
-        ]
+        "fields": ["year_founded", "doctor_history"]
       }
     ],
     "enrichment_notes": "DECLINE on age \u2014 Cooke is ~48 yrs old. Below 55 threshold despite 23-yr ownership. Re-check in 7-10 yrs.",
@@ -5698,12 +5232,7 @@
         "source": "website",
         "url": "https://nwfamilyeyecaresa.com/our-practice/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -5750,10 +5279,7 @@
         "source": "live_website_fetch",
         "url": "https://nwfamilyeyecaresa.com/our-practice/",
         "fetched_at": "2026-05-15T20:16:00Z",
-        "fields": [
-          "graduation_year",
-          "founding_year"
-        ]
+        "fields": ["graduation_year", "founding_year"]
       }
     ],
     "enrichment_notes": "DECLINE \u2014 owner ~45, only 13 yrs ownership. Below 55+/15+ thresholds.",
@@ -5795,11 +5321,7 @@
         "source": "website",
         "url": "https://envision-eye-care.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -5873,19 +5395,13 @@
         "source": "live_website_fetch",
         "url": "https://envision-eye-care.com/about-us/",
         "fetched_at": "2026-05-15T19:07:00Z",
-        "fields": [
-          "owner_grad_year",
-          "provider_count_estimate"
-        ]
+        "fields": ["owner_grad_year", "provider_count_estimate"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/giao-nguyen-a7837322/",
         "fetched_at": "2026-05-15T19:07:00Z",
-        "fields": [
-          "owner_school",
-          "owner_grad_year"
-        ]
+        "fields": ["owner_school", "owner_grad_year"]
       }
     ],
     "enrichment_notes": "Solo-OD signal is strong (no associate successor) but owner age (~52) is below sell-window. Premium ZIP. PARK for re-scoring in 5-7 yrs when owner enters target age band \u2014 or recategorize as C-tier if scoring rubric weights tenure-without-age heavily.",
@@ -5927,11 +5443,7 @@
         "source": "website",
         "url": "https://houstonfamilyeyecare.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -5987,18 +5499,13 @@
         "source": "zocdoc",
         "url": "https://www.zocdoc.com/doctor/chi-kim-nguyen-od-291859",
         "fetched_at": "2026-05-15T19:10:00Z",
-        "fields": [
-          "owner_full_name",
-          "owner_school"
-        ]
+        "fields": ["owner_full_name", "owner_school"]
       },
       {
         "source": "businessyab",
         "url": "https://www.businessyab.com/explore/united_states/texas/harris_county/humble/townsen_boulevard_west/21802/houston_family_eyecare.html",
         "fetched_at": "2026-05-15T19:10:00Z",
-        "fields": [
-          "entity_partner_relationship"
-        ]
+        "fields": ["entity_partner_relationship"]
       }
     ],
     "enrichment_notes": "Two-OD PLLC (Nguyen + Whyte) \u2014 internal succession likely. Lacks tenure / age data. DECLINE for A-tier unless deeper enrichment surfaces age, building ownership, or coasting signals. B-tier max.",
@@ -6040,27 +5547,19 @@
         "source": "website",
         "url": "https://www.pakfamilyeyecare.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "addresses"
-        ]
+        "fields": ["legal_name", "addresses"]
       },
       {
         "source": "website",
         "url": "https://www.pakfamilyeyecare.com/doctors",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "doctors",
-          "family_info"
-        ]
+        "fields": ["doctors", "family_info"]
       },
       {
         "source": "yahoo_local",
         "url": "https://local.yahoo.com/info-64190029-Pak-Family-Eye-Care/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -6124,9 +5623,7 @@
         "source": "website",
         "url": "https://www.pakfamilyeyecare.com/doctors",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "doctors"
-        ]
+        "fields": ["doctors"]
       }
     ],
     "enrichment_notes": "PASS \u2014 Costco-leased model, husband-wife co-owners, 3 locations / 5 providers. Wrong acquisition profile (lease + Costco dependency) and not solo-coaster. Spine listed 'Dr. Pak' as owner; corrected to Peter + Linda.",
@@ -6168,11 +5665,7 @@
         "source": "website",
         "url": "https://pearlandeyecare.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -6237,17 +5730,13 @@
         "source": "live_website_fetch",
         "url": "https://pearlandeyecare.com/meet-the-optometrist",
         "fetched_at": "2026-05-15T19:09:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       },
       {
         "source": "myeyedr_locations",
         "url": "https://locations.myeyedr.com/tx/pearland/2006-north-main-street",
         "fetched_at": "2026-05-15T19:09:00Z",
-        "fields": [
-          "recent_acquisition_disambiguation"
-        ]
+        "fields": ["recent_acquisition_disambiguation"]
       }
     ],
     "enrichment_notes": "DECLINE: sister practice to Exquisite Eye Care (same operator Dr. Tran). Two-location operator profile, not solo-coast. Active Saturday hours + premium capex (scleral, ortho-K) = not coasting. Skip in favor of single-owner solo targets.",
@@ -6289,11 +5778,7 @@
         "source": "website",
         "url": "https://visionsource-meyerpark.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -6349,10 +5834,7 @@
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/steve-lai-761b27291/",
         "fetched_at": "2026-05-15T19:14:00Z",
-        "fields": [
-          "owner_two_location_status",
-          "owner_administrative_role"
-        ]
+        "fields": ["owner_two_location_status", "owner_administrative_role"]
       }
     ],
     "enrichment_notes": "DECLINE: two-location operator + active cooperative leader role + recent premium-capex investment = not coasting solo owner. Age/tenure unknown but operating posture is expansion, not retirement.",
@@ -6394,11 +5876,7 @@
         "source": "website",
         "url": "https://www.coppellvisioncenter.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -6454,20 +5932,13 @@
         "source": "website_doctors_page",
         "url": "https://www.coppellvisioncenter.com/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "education",
-          "career_length"
-        ]
+        "fields": ["owner_name", "education", "career_length"]
       },
       {
         "source": "healthline_provider",
         "url": "https://care.healthline.com/find-care/provider/alycia-green-1003914524",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "education_year",
-          "owner_age_estimate"
-        ]
+        "fields": ["education_year", "owner_age_estimate"]
       }
     ],
     "enrichment_notes": "Dr. Green, 27 yr OD career, owner of Coppell Vision Center. Age ~53 \u2014 approaching but slightly below retirement window. 3-OD bench creates successor risk. 4.8 stars 600+ reviews \u2014 strong brand. Year founded unconfirmed.",
@@ -6509,11 +5980,7 @@
         "source": "website",
         "url": "https://www.richardsoneyeassociates.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -6569,11 +6036,7 @@
         "source": "website_doctors_page",
         "url": "https://www.richardsoneyeassociates.com/meet-the-doctors",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "co_owners",
-          "year_established"
-        ]
+        "fields": ["owner_name", "co_owners", "year_established"]
       }
     ],
     "enrichment_notes": "Dr. Harris in private practice since 2012 (14 yr). Mid-career operator. Possible legacy 'Krauss Jr' co-name from older listings \u2014 practice may have been transitioned/purchased. 3-OD group \u2014 successor risk. Mid-tier candidate.",
@@ -6615,11 +6078,7 @@
         "source": "website",
         "url": "https://www.arlingtoneyedoctors.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "addresses",
-          "doctors"
-        ]
+        "fields": ["legal_name", "addresses", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -6675,18 +6134,13 @@
         "source": "live_website_fetch",
         "url": "https://www.arlingtoneyedoctors.com/our-eye-doctors/",
         "fetched_at": "2026-05-15T20:07:00Z",
-        "fields": [
-          "doctors",
-          "grad_years"
-        ]
+        "fields": ["doctors", "grad_years"]
       },
       {
         "source": "healthgrades",
         "url": "https://www.healthgrades.com/group-directory/tx-texas/arlington/vision-source-professional-eyecare-x6kjn4",
         "fetched_at": "2026-05-15T20:07:30Z",
-        "fields": [
-          "owner_multi_location"
-        ]
+        "fields": ["owner_multi_location"]
       }
     ],
     "enrichment_notes": "DECLINE \u2014 owner Schunk is ~42, growth-mode, runs 2+ practices. Senior associate Curtis is winding down but not the owner of record. Not a succession target.",
@@ -6728,11 +6182,7 @@
         "source": "website",
         "url": "https://www.sonieeyecare.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -6788,10 +6238,7 @@
         "source": "live_website_fetch",
         "url": "https://www.sonieeyecare.com/our-doctor.html",
         "fetched_at": "2026-05-15T20:09:00Z",
-        "fields": [
-          "career_arc",
-          "tech_stack"
-        ]
+        "fields": ["career_arc", "tech_stack"]
       }
     ],
     "enrichment_notes": "DECLINE \u2014 Ayidu-Omo recently launched private practice after 16 yrs corporate optometry. New owner-operator, not retirement-window. Active capex (Inmode dry eye).",
@@ -6833,11 +6280,7 @@
         "source": "website",
         "url": "https://www.theeyeclinic-online.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -6902,18 +6345,13 @@
         "source": "live_website_fetch",
         "url": "https://www.theeyeclinic-online.com/our-eye-doctors/",
         "fetched_at": "2026-05-15T20:20:00Z",
-        "fields": [
-          "doctor_count",
-          "self_description"
-        ]
+        "fields": ["doctor_count", "self_description"]
       },
       {
         "source": "google_search",
         "url": "https://www.theeyeclinic-online.com/team/dr-celeste-acosta/",
         "fetched_at": "2026-05-15T20:20:30Z",
-        "fields": [
-          "graduation_year"
-        ]
+        "fields": ["graduation_year"]
       }
     ],
     "enrichment_notes": "B-tier \u2014 Acosta age ~50 just below 55, 16 yrs ownership, multi-generational patient base (classic coasting tell), 'not high-volume' self-description. Associate Dr. McClure present (successor risk). Worth soft outreach but lower priority than top A-tier.",
@@ -6955,11 +6393,7 @@
         "source": "website",
         "url": "https://eyesoftxaustin.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -7049,28 +6483,19 @@
         "source": "website",
         "url": "https://lookandseevision.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       },
       {
         "source": "website",
         "url": "https://lookandseevision.com/about/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education",
-          "staff"
-        ]
+        "fields": ["owner_education", "staff"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/tammy-vo-778048bb/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -7125,18 +6550,13 @@
         "source": "website",
         "url": "https://lookandseevision.com/about/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "staff",
-          "owner_education"
-        ]
+        "fields": ["staff", "owner_education"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/tammy-vo-778048bb/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "enrichment_notes": "Likely DISQUALIFY \u2014 Founder still actively hiring/growing (added Lee 2022). Tenure and exact age not confirmable but recent expansion + 'build mode' signals = not a 12-36 mo seller.",
@@ -7178,11 +6598,7 @@
         "source": "website",
         "url": "https://fortwortheyecenter.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -7238,10 +6654,7 @@
         "source": "live_website_fetch",
         "url": "https://fortwortheyecenter.com/about/",
         "fetched_at": "2026-05-15T20:04:00Z",
-        "fields": [
-          "doctor_bio",
-          "tech_stack"
-        ]
+        "fields": ["doctor_bio", "tech_stack"]
       }
     ],
     "enrichment_notes": "DECLINE \u2014 Rosenberg School of Optometry (UIW) first class graduated 2012. Dr. Lam therefore age <40 and tenure <14 yrs. Below 55/15 threshold. Modern capex signals active operator, not coasting.",
@@ -7283,11 +6696,7 @@
         "source": "website",
         "url": "https://saeyecare.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -7343,10 +6752,7 @@
         "source": "live_website_fetch",
         "url": "https://saeyecare.com/",
         "fetched_at": "2026-05-15T20:14:00Z",
-        "fields": [
-          "doctors",
-          "tech_stack"
-        ]
+        "fields": ["doctors", "tech_stack"]
       }
     ],
     "enrichment_notes": "DECLINE \u2014 Morar is too young (39, ~14 yrs out of school). Modern booking/EHR stack. Not retirement-window.",
@@ -7388,18 +6794,13 @@
         "source": "website",
         "url": "https://crystalfallsvisioncenter.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address"
-        ]
+        "fields": ["legal_name", "address"]
       },
       {
         "source": "yelp",
         "url": "https://www.yelp.com/biz/crystal-falls-vision-center-leander",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_credentials"
-        ]
+        "fields": ["owner_credentials"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -7463,9 +6864,7 @@
         "source": "yelp",
         "url": "https://www.yelp.com/biz/crystal-falls-vision-center-leander",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 owner ~44, 12 yrs tenure, modern tech. Mid-career; not a 12-36 mo seller.",
@@ -7507,12 +6906,7 @@
         "source": "website",
         "url": "https://eyesofcrestabella.com/our-practice/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -7559,10 +6953,7 @@
         "source": "live_website_fetch",
         "url": "https://eyesofcrestabella.com/our-practice/",
         "fetched_at": "2026-05-15T20:17:00Z",
-        "fields": [
-          "graduation_year",
-          "founding_year"
-        ]
+        "fields": ["graduation_year", "founding_year"]
       }
     ],
     "enrichment_notes": "DECLINE \u2014 owner age ~38, 6-yr-old practice. Builder/founder profile, not retirement-window.",
@@ -7604,11 +6995,7 @@
         "source": "website",
         "url": "https://www.enhancedeyecaretx.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -7655,18 +7042,13 @@
         "source": "google_search",
         "url": "https://www.healthgrades.com/providers/hiep-duong-xylfhvn",
         "fetched_at": "2026-05-15T20:00:00Z",
-        "fields": [
-          "graduation_year"
-        ]
+        "fields": ["graduation_year"]
       },
       {
         "source": "live_website_fetch",
         "url": "https://www.enhancedeyecaretx.com/",
         "fetched_at": "2026-05-15T20:01:00Z",
-        "fields": [
-          "doctors",
-          "tech_status"
-        ]
+        "fields": ["doctors", "tech_status"]
       }
     ],
     "enrichment_notes": "DECLINE \u2014 owner is 2014 grad, age proxy ~36. No retirement window. Independent and active but does not meet 55+ age + 15+ yr tenure spine threshold. (Note: spine verification_notes flagged this practice as A-tier \u2014 that scoring did not account for owner age.)",
@@ -7708,11 +7090,7 @@
         "source": "website",
         "url": "https://www.swfamilyeye.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -7759,17 +7137,13 @@
         "source": "live_website_fetch",
         "url": "https://www.swfamilyeye.com/our-eye-doctors/",
         "fetched_at": "2026-05-15T20:02:00Z",
-        "fields": [
-          "doctor_bio"
-        ]
+        "fields": ["doctor_bio"]
       },
       {
         "source": "google_search",
         "url": "https://americanboardofoptometry.org/optometrist-location/loy-jeremy-e-od/",
         "fetched_at": "2026-05-15T20:02:30Z",
-        "fields": [
-          "graduation_year"
-        ]
+        "fields": ["graduation_year"]
       }
     ],
     "enrichment_notes": "DECLINE \u2014 owner age proxy ~46. Too young to meet 55+ threshold despite strong medical-eye-care niche. Solo + specialty positioning (neuro-optometric rehab, vision therapy) would be A-tier on operating profile but disqualifies on owner_age. Re-check in 8-10 yrs.",
@@ -7811,11 +7185,7 @@
         "source": "website",
         "url": "https://eyesontxvision.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -7862,9 +7232,7 @@
         "source": "live_website_fetch",
         "url": "https://eyesontxvision.com/about",
         "fetched_at": "2026-05-15T20:15:00Z",
-        "fields": [
-          "doctor_bio_partial"
-        ]
+        "fields": ["doctor_bio_partial"]
       }
     ],
     "enrichment_notes": "DECLINE on age proxy \u2014 Iraq War veteran timeline suggests age ~50. Below 55 threshold. Solo + medical positioning would be A-tier on operating profile but disqualifies on age.",
@@ -7906,11 +7274,7 @@
         "source": "website",
         "url": "https://www.eyeshophouston.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -7993,18 +7357,13 @@
         "source": "live_website_fetch",
         "url": "https://www.eyeshophouston.com/team/dr-linda-rhodes-o-d-f-a-a-o/",
         "fetched_at": "2026-05-15T19:06:00Z",
-        "fields": [
-          "owner_tenure_years",
-          "owner_age_estimate"
-        ]
+        "fields": ["owner_tenure_years", "owner_age_estimate"]
       },
       {
         "source": "webmd",
         "url": "https://doctor.webmd.com/doctor/linda-rhodes-0e3902c3-33a7-4355-9b46-94da7da6cc79-overview",
         "fetched_at": "2026-05-15T19:06:00Z",
-        "fields": [
-          "ambiguous_ownership_transfer"
-        ]
+        "fields": ["ambiguous_ownership_transfer"]
       }
     ],
     "enrichment_notes": "DISQUALIFY for A-tier: 4 ODs + young partners = internal succession path likely. Investment in 2023 relocation = active, not coasting. WebMD review hints at possible prior internal sale to associates, which would block external acquisition. Worth C-tier follow-up only if associate-OD successor pipeline is confirmed broken.",
@@ -8046,12 +7405,7 @@
         "source": "website",
         "url": "https://eyesitetexas.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "addresses",
-          "doctors",
-          "tenure"
-        ]
+        "fields": ["legal_name", "addresses", "doctors", "tenure"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -8116,18 +7470,13 @@
         "source": "live_website_fetch",
         "url": "https://eyesitetexas.com/about-us/doctors/john-o-neill--od",
         "fetched_at": "2026-05-15T19:08:00Z",
-        "fields": [
-          "owner_age_indicator",
-          "owner_school"
-        ]
+        "fields": ["owner_age_indicator", "owner_school"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/john-o-neill-5a7b624a/",
         "fetched_at": "2026-05-15T19:08:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "enrichment_notes": "DECLINE for A-tier: owner ~50 (too young), multi-location multi-OD, family with young children. Not in typical retirement window. PARK for 8-10 yrs.",
@@ -8169,10 +7518,7 @@
         "source": "website",
         "url": "https://www.riveroaksoptical.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address"
-        ]
+        "fields": ["legal_name", "address"]
       }
     ],
     "platform_affiliation_check": "uncertain",
@@ -8237,11 +7583,7 @@
         "source": "live_website_fetch",
         "url": "https://www.riveroaksoptical.com/",
         "fetched_at": "2026-05-15T19:21:00Z",
-        "fields": [
-          "business_type",
-          "copyright",
-          "brands"
-        ]
+        "fields": ["business_type", "copyright", "brands"]
       }
     ],
     "enrichment_notes": "DECLINE for OD-practice ETA: business is optical-retail boutique with a leased OD, not an OD-owned medical practice. Different acquisition profile (optical retail), may belong in a separate cohort. Skip from optometry pipeline.",
@@ -8283,12 +7625,7 @@
         "source": "website",
         "url": "https://bettervisiontx.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "addresses",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "addresses", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -8353,12 +7690,7 @@
         "source": "live_website_fetch",
         "url": "https://bettervisiontx.com/",
         "fetched_at": "2026-05-15T19:22:00Z",
-        "fields": [
-          "owner_grad_year",
-          "owner_age_estimate",
-          "provider_count",
-          "OCT_Optomap"
-        ]
+        "fields": ["owner_grad_year", "owner_age_estimate", "provider_count", "OCT_Optomap"]
       }
     ],
     "enrichment_notes": "DECLINE: owner ~43 too young, active growth (2 locations + recent capex). PARK 10+ yrs.",
@@ -8400,12 +7732,7 @@
         "source": "website",
         "url": "https://www.modspectacle.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -8425,9 +7752,7 @@
     "provider_count_estimate": 1,
     "employee_count_source": "website_about_page",
     "is_distressed": false,
-    "distress_reasons": [
-      "founded_too_recently_for_thesis"
-    ],
+    "distress_reasons": ["founded_too_recently_for_thesis"],
     "recent_acquisition": false,
     "signals": [
       {
@@ -8463,10 +7788,7 @@
         "source": "lakewood_advocate",
         "url": "https://lakewood.advocatemag.com/update-modern-spectacle-eyecare-now-open/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "year_established",
-          "owner_name"
-        ]
+        "fields": ["year_established", "owner_name"]
       }
     ],
     "enrichment_notes": "DISQUALIFIED for thesis: 2-yr-old practice, young solo founder (~40). Useful as comp only. No distress.",
@@ -8508,11 +7830,7 @@
         "source": "website",
         "url": "https://cleareyecaretx.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "independent_multi_location",
@@ -8532,9 +7850,7 @@
     "provider_count_estimate": 6,
     "employee_count_source": "website_staff_pages",
     "is_distressed": false,
-    "distress_reasons": [
-      "multi_location_growth_operator"
-    ],
+    "distress_reasons": ["multi_location_growth_operator"],
     "recent_acquisition": false,
     "signals": [
       {
@@ -8570,20 +7886,13 @@
         "source": "website_staff_page",
         "url": "https://cleareyecaretexas.com/staff/paul-heeg-od/",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "owner_name",
-          "education_year",
-          "owner_age_estimate"
-        ]
+        "fields": ["owner_name", "education_year", "owner_age_estimate"]
       },
       {
         "source": "opennpi",
         "url": "https://opennpi.com/provider/1164839221",
         "fetched_at": "2026-05-15T22:00:00Z",
-        "fields": [
-          "entity_legal_name",
-          "address"
-        ]
+        "fields": ["entity_legal_name", "address"]
       }
     ],
     "enrichment_notes": "DISQUALIFIED for thesis: Dr. Heeg ~41, only 16 yr career, running multi-PLLC 3-location regional group. Growth/consolidator phase, not retirement. Watch as potential acquirer comp.",
@@ -8625,11 +7934,7 @@
         "source": "website",
         "url": "https://www.alamoeyeinstitute.com/",
         "fetched_at": "2026-05-15T18:00:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       }
     ],
     "platform_affiliation_check": "spine_misclassification_MD_not_OD",
@@ -8676,17 +7981,13 @@
         "source": "google_search",
         "url": "https://doctor.webmd.com/doctor/lynnell-lowry-e579cf74-545f-de11-86ed-001f29e3bb62-overview",
         "fetched_at": "2026-05-15T20:19:00Z",
-        "fields": [
-          "physician_type_MD"
-        ]
+        "fields": ["physician_type_MD"]
       },
       {
         "source": "lowry_clinic",
         "url": "https://thelowryclinic.com/alamo-eye-institute",
         "fetched_at": "2026-05-15T20:19:30Z",
-        "fields": [
-          "practice_type"
-        ]
+        "fields": ["practice_type"]
       }
     ],
     "enrichment_notes": "REMOVE FROM SPINE \u2014 Dr. Lowry is an MD ophthalmologist, not an OD. Alamo Eye Institute is an ophthalmology practice (ophthalmology + LASIK), out of scope for optometry-acquisition pipeline.",
@@ -8728,37 +8029,25 @@
         "source": "website",
         "url": "https://boernevisioncenter.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "addresses",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "addresses", "year_established", "doctors"]
       },
       {
         "source": "website",
         "url": "https://boernevisioncenter.com/aboutus/drjohnson/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_credentials",
-          "family_info"
-        ]
+        "fields": ["owner_credentials", "family_info"]
       },
       {
         "source": "bbb",
         "url": "https://www.bbb.org/us/tx/boerne/profile/optometry/boerne-vision-center-0825-1000145954",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name"
-        ]
+        "fields": ["legal_name"]
       },
       {
         "source": "zocdoc",
         "url": "https://www.zocdoc.com/doctor/susan-johnson-od-292232",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_name"
-        ]
+        "fields": ["owner_name"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -8831,17 +8120,13 @@
         "source": "website",
         "url": "https://boernevisioncenter.com/aboutus/drjohnson/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "family_info"
-        ]
+        "fields": ["family_info"]
       },
       {
         "source": "bbb",
         "url": "https://www.bbb.org/us/tx/boerne/profile/optometry/boerne-vision-center-0825-1000145954",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "entity_status"
-        ]
+        "fields": ["entity_status"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 owner has 3 young children (mid-career, not retirement). Plus only 14 yrs tenure, growth mode, and oversized (5 providers + 2 locations). Not a target.",
@@ -8883,29 +8168,19 @@
         "source": "website",
         "url": "https://www.bristolfamilyeyecare.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "addresses",
-          "doctors"
-        ]
+        "fields": ["legal_name", "addresses", "doctors"]
       },
       {
         "source": "website",
         "url": "https://www.bristolfamilyeyecare.com/about-us/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "year_established",
-          "owner"
-        ]
+        "fields": ["year_established", "owner"]
       },
       {
         "source": "website",
         "url": "https://www.bristolfamilyeyecare.com/meet-your-team/dr-dan-bristol/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_credentials",
-          "education"
-        ]
+        "fields": ["owner_credentials", "education"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -8978,17 +8253,13 @@
         "source": "website",
         "url": "https://www.bristolfamilyeyecare.com/about-us/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "year_established"
-        ]
+        "fields": ["year_established"]
       },
       {
         "source": "website",
         "url": "https://www.bristolfamilyeyecare.com/meet-your-team/dr-dan-bristol/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 Owner mid-career (52, young kids, just got biz degree, expansion mode). 3 locations puts size above target. Not a 12-36 mo seller.",
@@ -9030,20 +8301,13 @@
         "source": "website",
         "url": "https://www.eyecapitol.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "year_established", "doctors"]
       },
       {
         "source": "healthgrades",
         "url": "https://www.healthgrades.com/providers/michael-chavez-275y8",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -9107,9 +8371,7 @@
         "source": "healthgrades",
         "url": "https://www.healthgrades.com/providers/michael-chavez-275y8",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 owner too young (~44, 20 yrs into career), explicit anti-corporate brand. Not a 12-36 mo seller.",
@@ -9151,34 +8413,25 @@
         "source": "website",
         "url": "https://www.austinoptometrygrp.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "year_established"
-        ]
+        "fields": ["legal_name", "year_established"]
       },
       {
         "source": "website",
         "url": "https://www.austinoptometrygrp.com/our-doctor.html",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       },
       {
         "source": "broadcastmed",
         "url": "https://pv.broadcastmed.io/b/sp/aaron-wolf-291",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_credentials"
-        ]
+        "fields": ["owner_credentials"]
       },
       {
         "source": "tangiblescience_podcast",
         "url": "https://tangiblescience.com/blogs/talking-with-tangible-podcasts/eye-care-practice-insights",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "practice_insights"
-        ]
+        "fields": ["practice_insights"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -9242,17 +8495,13 @@
         "source": "website",
         "url": "https://www.austinoptometrygrp.com/our-doctor.html",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       },
       {
         "source": "broadcastmed",
         "url": "https://pv.broadcastmed.io/b/sp/aaron-wolf-291",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_credentials"
-        ]
+        "fields": ["owner_credentials"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 50-yr practice tenure is the only positive signal but owner is mid-career (42, 17 yrs in), is a KOL/consultant, recently added associate. The 1976 founder already exited 2009. Not a 12-36 mo seller.",
@@ -9294,36 +8543,25 @@
         "source": "website",
         "url": "https://austinvisioncenter.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "year_established"
-        ]
+        "fields": ["legal_name", "address", "year_established"]
       },
       {
         "source": "website",
         "url": "https://austinvisioncenter.com/about-us/team/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "doctors",
-          "owner_name"
-        ]
+        "fields": ["doctors", "owner_name"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/clay-barnett-a097252a/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       },
       {
         "source": "drgalen",
         "url": "https://drgalen.org/physician/dr-cary-clayton-barnett-optometrist-tx-us",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_credentials"
-        ]
+        "fields": ["owner_credentials"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -9387,26 +8625,19 @@
         "source": "website",
         "url": "https://austinvisioncenter.com/about-us/team/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_name",
-          "family_info"
-        ]
+        "fields": ["owner_name", "family_info"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/clay-barnett-a097252a/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       },
       {
         "source": "drgalen",
         "url": "https://drgalen.org/physician/dr-cary-clayton-barnett-optometrist-tx-us",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_credentials"
-        ]
+        "fields": ["owner_credentials"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 spine listed Pham; correct owner is Barnett (mid-career, 3 young kids, multi-practice operator including Steiner Eye Care). Not a 12-36 mo seller.",
@@ -9448,27 +8679,19 @@
         "source": "website",
         "url": "https://roundrockeyes.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       },
       {
         "source": "website",
         "url": "https://roundrockeyes.com/about/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_credentials"
-        ]
+        "fields": ["owner_credentials"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/brett-hamilton-1776816/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -9523,17 +8746,13 @@
         "source": "website",
         "url": "https://roundrockeyes.com/about/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/brett-hamilton-1776816/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "enrichment_notes": "DISQUALIFY \u2014 owner ~46, 14 yrs tenure. Mid-career; not a 12-36 mo seller.",
@@ -9575,27 +8794,19 @@
         "source": "website",
         "url": "https://www.aspirevisioncare.com/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "legal_name",
-          "address",
-          "doctors"
-        ]
+        "fields": ["legal_name", "address", "doctors"]
       },
       {
         "source": "website",
         "url": "https://www.aspirevisioncare.com/team/nancy-guenthner-od-fcovd-developmental-optometrist/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/nancyguenthner/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -9668,17 +8879,13 @@
         "source": "website",
         "url": "https://www.aspirevisioncare.com/team/nancy-guenthner-od-fcovd-developmental-optometrist/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_education"
-        ]
+        "fields": ["owner_education"]
       },
       {
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/nancyguenthner/",
         "fetched_at": "2026-05-15T19:30:00Z",
-        "fields": [
-          "owner_role"
-        ]
+        "fields": ["owner_role"]
       }
     ],
     "enrichment_notes": "PASS \u2014 husband-wife co-owners, multi-OD with growth (Training Center), specialty niche. Not a solo-owner-coasting deal. Owner age could not be confirmed.",

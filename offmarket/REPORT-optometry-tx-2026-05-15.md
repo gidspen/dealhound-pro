@@ -18,16 +18,16 @@
 
 ## 2. Top 8 — `B_forward` ranked
 
-| Rank | Practice | City | County | Owner | Yrs | Final | Conf |
-|---|---|---|---|---|---|---|---|
-| 1 | **Altig Optical** | Fort Worth | Tarrant | Dr. Altig (private since 1985, ~66, 41 yrs) | 41 | **78** | medium |
-| 2 | **Vision Plus** | San Antonio | Bexar | Dr. Thomas Goldstein (NSU 1986 ~64, 32 yrs) | 32 | **77** | medium |
-| 3 | **Bellaire Optometry Clinic** | Houston | Harris | Dr. Anne Huyen Le (UHCO 1989 ~63, solo founder) | 37 | **76** | medium |
-| 4 | **North Texas Eye Care** | Southlake | Tarrant | Dr. Gregory Kloesel (UHCO 1989 ~62, solo) | 34 | **75** | medium |
-| 5 | **Vision Source Aldine** | Houston | Harris | Dr. Ravindra Kankaria (~60, 33 yrs solo) | 33 | **72** | medium |
-| 6 | **Park Cities Eye Associates** | Dallas | Dallas | Dr. Cathy Ann Norton (~60, 30 yrs solo, premium 75225) | 30 | **68** | medium |
-| 7 | **Parmer Eye Care** | Austin | Travis | Dr. Sundra Lemanski (UH 1995 ~56, 30 yrs) | 30 | **66** | medium |
-| 8 | **Southlake Family Eye Care** | Southlake | Tarrant | Dr. Kirk Koogler (UH 1995 ~56, solo 29 yrs) | 29 | **65** | medium |
+| Rank | Practice                       | City        | County  | Owner                                                  | Yrs | Final  | Conf   |
+| ---- | ------------------------------ | ----------- | ------- | ------------------------------------------------------ | --- | ------ | ------ |
+| 1    | **Altig Optical**              | Fort Worth  | Tarrant | Dr. Altig (private since 1985, ~66, 41 yrs)            | 41  | **78** | medium |
+| 2    | **Vision Plus**                | San Antonio | Bexar   | Dr. Thomas Goldstein (NSU 1986 ~64, 32 yrs)            | 32  | **77** | medium |
+| 3    | **Bellaire Optometry Clinic**  | Houston     | Harris  | Dr. Anne Huyen Le (UHCO 1989 ~63, solo founder)        | 37  | **76** | medium |
+| 4    | **North Texas Eye Care**       | Southlake   | Tarrant | Dr. Gregory Kloesel (UHCO 1989 ~62, solo)              | 34  | **75** | medium |
+| 5    | **Vision Source Aldine**       | Houston     | Harris  | Dr. Ravindra Kankaria (~60, 33 yrs solo)               | 33  | **72** | medium |
+| 6    | **Park Cities Eye Associates** | Dallas      | Dallas  | Dr. Cathy Ann Norton (~60, 30 yrs solo, premium 75225) | 30  | **68** | medium |
+| 7    | **Parmer Eye Care**            | Austin      | Travis  | Dr. Sundra Lemanski (UH 1995 ~56, 30 yrs)              | 30  | **66** | medium |
+| 8    | **Southlake Family Eye Care**  | Southlake   | Tarrant | Dr. Kirk Koogler (UH 1995 ~56, solo 29 yrs)            | 29  | **65** | medium |
 
 Plus 6 more B candidates including Lakeside Vision & Optical (Plano), Eagle Ranch Vision, TSO Sugar Land (Dr. Robert Le UH 1994 ~57 + TSO co-op caveat), VisualEyes, Mi Vision Eye Care, Tanglewood Vision Center.
 
@@ -42,44 +42,49 @@ Cleaner near-A candidates without succession ambiguity: **Bellaire Optometry Cli
 ## 4. Value-add theses (top picks)
 
 ### Bellaire Optometry Clinic — Houston (Harris)
-*Final 76 · L1 79 / L2 88 / L3 60 / L4 87 · conf medium*
+
+_Final 76 · L1 79 / L2 88 / L3 60 / L4 87 · conf medium_
 
 Dr. Anne Huyen Le, UHCO 1989 founder, ~63 (license-tenure proxy), 37-yr founder-owner tenure, SOLO OD, premium SW Harris (Asian-immigrant repeat-patient demographic). 7 signals captured including Saturday hours active. Slightly more engaged than Vision Corner (Galleria) but stronger long-term value. Value-add: Modernization opportunity is moderate (already mid-tech) — focus on cloud EHR migration if not done, associate OD hire for glide path, medical-eye-care service expansion (dry eye, glaucoma management, diabetic retinopathy screening). EBITDA improvement 22% → 28% over 18-24 mo.
 
 ### Vision Plus — San Antonio (Bexar)
-*Final 77 · L1 82 / L2 75 / L3 60 / L4 82 · conf medium*
+
+_Final 77 · L1 82 / L2 75 / L3 60 / L4 82 · conf medium_
 
 Dr. Thomas Goldstein NSU OK 1986 ~64, 32-yr ownership, husband-wife operator (Jennifer co-owner / business manager) — classic family-run retirement-window profile. One associate (Sanchez, role unclear — needs successor-check). Value-add: associate-to-owner glide path, cloud EHR, online booking, optical-retail rebuild. EBITDA 22% → 28%. Bexar Co MyEyeDr has been less aggressive than DFW — clean entry.
 
 ### North Texas Eye Care — Southlake (Tarrant)
-*Final 75 · L1 75 / L2 88 / L3 60 / L4 83 · conf medium*
+
+_Final 75 · L1 75 / L2 88 / L3 60 / L4 83 · conf medium_
 
 Dr. Gregory Kloesel UHCO 1989 ~62, solo 34-yr tenure, no associate, no modern capex callouts, multi-generational patient base (founding patients now bringing children + grandchildren). Premium Southlake 76092. Value-add: AI recall, online booking, OCT/Optomap capex (if not present), medical-eye-care service expansion. EBITDA 22% → 28% over 18-24 mo. Strong DFW MyEyeDr / Acuity bolt-on candidate.
 
 ### Vision Source Aldine — Houston (Harris)
-*Final 72 · L1 67 / L2 75 / L3 60 / L4 86 · conf medium*
+
+_Final 72 · L1 67 / L2 75 / L3 60 / L4 86 · conf medium_
 
 Dr. Ravindra Kankaria, sole owner since 1993 (33 yr tenure), ~60. Vision Source cooperative member (Vision Source ≠ roll-up, members keep ownership). Single anchor location. Value-add: cloud EHR, online booking, associate hire. EBITDA 22% → 28%. Note: Vision Source member-to-member transfers are allowed and PE platforms do acquire member practices.
 
 ### Park Cities Eye Associates — Dallas
-*Final 68 · L1 67 / L2 75 / L3 60 / L4 87 · conf medium*
+
+_Final 68 · L1 67 / L2 75 / L3 60 / L4 87 · conf medium_
 
 Dr. Cathy Ann Norton, solo-owner 30 yrs at premium 75225 (Park Cities/Highland Park), ~60, no associate bench. Dry eye specialty + LASIK co-management. **Cleanest external-buyer path** — premium ZIP, solo OD, specialty book. Value-add: associate hire, cloud EHR, dry-eye treatment center build-out. EBITDA 24% → 30%. Premium-suburb Dallas optometry is a top MyEyeDr / Acuity target.
 
 ## 5. What worked vs blocked
 
-| Source | Status |
-|---|---|
-| Practice websites + team pages | WORKED (79 direct fetches) |
-| Google Business Profile review velocity | WORKED |
-| LinkedIn OD profiles (grad year proxy) | WORKED |
-| AOA "Find a Doctor" directory | WORKED |
-| Vision Source Houston metro directory | WORKED |
-| Texas Optometry Board (TOB) license lookup | BLOCKED — search-only UI, intermittent issues per TOB homepage |
-| data.texas.gov tm3v-pfq9 dataset | NOT-APPLICABLE — that dataset is Texas Medical Board licenses (38 license types), optometry NOT included (verified during spine setup) |
-| CAD homestead / OV65 | BLOCKED |
-| TX Comptroller entity status | BLOCKED |
-| Wayback Machine | BLOCKED |
+| Source                                     | Status                                                                                                                                 |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Practice websites + team pages             | WORKED (79 direct fetches)                                                                                                             |
+| Google Business Profile review velocity    | WORKED                                                                                                                                 |
+| LinkedIn OD profiles (grad year proxy)     | WORKED                                                                                                                                 |
+| AOA "Find a Doctor" directory              | WORKED                                                                                                                                 |
+| Vision Source Houston metro directory      | WORKED                                                                                                                                 |
+| Texas Optometry Board (TOB) license lookup | BLOCKED — search-only UI, intermittent issues per TOB homepage                                                                         |
+| data.texas.gov tm3v-pfq9 dataset           | NOT-APPLICABLE — that dataset is Texas Medical Board licenses (38 license types), optometry NOT included (verified during spine setup) |
+| CAD homestead / OV65                       | BLOCKED                                                                                                                                |
+| TX Comptroller entity status               | BLOCKED                                                                                                                                |
+| Wayback Machine                            | BLOCKED                                                                                                                                |
 
 ## 6. Key findings
 

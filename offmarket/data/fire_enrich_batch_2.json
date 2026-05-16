@@ -15,9 +15,24 @@
     "license_holder_name": "Mike Hunsucker (Owner)",
     "year_established": 1992,
     "data_sources": [
-      {"source": "website", "url": "https://www.advantagefireprotection.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "sub_trade"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/mike-hunsucker-88080a32/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name"]},
-      {"source": "rocketreach", "url": "https://rocketreach.co/advantage-interests-inc-profile_b44ec747fd9099ab", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["employee_count_estimate", "revenue_estimate"]}
+      {
+        "source": "website",
+        "url": "https://www.advantagefireprotection.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/mike-hunsucker-88080a32/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/advantage-interests-inc-profile_b44ec747fd9099ab",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["employee_count_estimate", "revenue_estimate"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "25+ years in business. Industrial/commercial/offshore focus.",
@@ -38,13 +53,47 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_long", "direction": "positive", "evidence": "Mike Hunsucker founded 1992; 34 years as owner", "source": "linkedin+rocketreach", "source_url": "https://www.linkedin.com/in/mike-hunsucker-88080a32/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "size_above_target", "direction": "negative", "evidence": "34 employees / $23.4M revenue (2026) — larger than typical solo-owner target", "source": "rocketreach", "source_url": "https://rocketreach.co/advantage-interests-inc-profile_b44ec747fd9099ab", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "merger_history", "direction": "negative", "evidence": "Merged with Texas Suppression Contractors (TSC) in 2002 — co-founder Mike Staley involved", "source": "rocketreach", "source_url": "https://rocketreach.co/advantage-interests-inc-profile_b44ec747fd9099ab", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "Mike Hunsucker founded 1992; 34 years as owner",
+        "source": "linkedin+rocketreach",
+        "source_url": "https://www.linkedin.com/in/mike-hunsucker-88080a32/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_above_target",
+        "direction": "negative",
+        "evidence": "34 employees / $23.4M revenue (2026) — larger than typical solo-owner target",
+        "source": "rocketreach",
+        "source_url": "https://rocketreach.co/advantage-interests-inc-profile_b44ec747fd9099ab",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "merger_history",
+        "direction": "negative",
+        "evidence": "Merged with Texas Suppression Contractors (TSC) in 2002 — co-founder Mike Staley involved",
+        "source": "rocketreach",
+        "source_url": "https://rocketreach.co/advantage-interests-inc-profile_b44ec747fd9099ab",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/mike-hunsucker-88080a32/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name"]},
-      {"source": "rocketreach", "url": "https://rocketreach.co/advantage-interests-inc-profile_b44ec747fd9099ab", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["employee_count_estimate", "founder", "merger_history"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/mike-hunsucker-88080a32/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/advantage-interests-inc-profile_b44ec747fd9099ab",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["employee_count_estimate", "founder", "merger_history"]
+      }
     ],
     "enrichment_notes": "Larger than target (34 employees, $23.4M revenue). Has partner Mike Staley from 2002 TSC merger — not a clean solo-owner. Acquirer-grade size, not micro acquisition target."
   },
@@ -64,7 +113,12 @@
     "license_holder_name": null,
     "year_established": 2015,
     "data_sources": [
-      {"source": "website", "url": "https://usapfs.org/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "license_number", "sub_trade"]}
+      {
+        "source": "website",
+        "url": "https://usapfs.org/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "license_number", "sub_trade"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned, minority-owned HUB. Alarms, inspections, extinguishers, security, surveillance, monitoring, access control.",
@@ -85,8 +139,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 3, "signal_key": "website_freshness", "direction": "negative", "evidence": "Copyright '© 2015-2025' suggests website not updated in 2026; About page is password-protected (unusual)", "source": "website", "source_url": "https://usapfs.org/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_tenure_short", "direction": "negative", "evidence": "Founded 2015 — only ~11 years in business", "source": "website", "source_url": "https://usapfs.org/", "observed_at": "2026-05-15"}
+      {
+        "layer": 3,
+        "signal_key": "website_freshness",
+        "direction": "negative",
+        "evidence": "Copyright '© 2015-2025' suggests website not updated in 2026; About page is password-protected (unusual)",
+        "source": "website",
+        "source_url": "https://usapfs.org/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_short",
+        "direction": "negative",
+        "evidence": "Founded 2015 — only ~11 years in business",
+        "source": "website",
+        "source_url": "https://usapfs.org/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [],
     "enrichment_notes": "Newer (founded 2015, ~11 yrs) — does not meet long-tenured threshold. Owner identity not disclosed. Below dental/pest/FLS profile minimums."
@@ -107,9 +177,24 @@
     "license_holder_name": null,
     "year_established": 1990,
     "data_sources": [
-      {"source": "website", "url": "https://www.thealarmmasters.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]},
-      {"source": "press_release", "url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["platform_affiliation_check", "owner_name"]},
-      {"source": "acquiringminds", "url": "https://acquiringminds.co/articles/stephen-olmon-collin-trimble-alarm-masters", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name", "platform_affiliation_check"]}
+      {
+        "source": "website",
+        "url": "https://www.thealarmmasters.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]
+      },
+      {
+        "source": "press_release",
+        "url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["platform_affiliation_check", "owner_name"]
+      },
+      {
+        "source": "acquiringminds",
+        "url": "https://acquiringminds.co/articles/stephen-olmon-collin-trimble-alarm-masters",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name", "platform_affiliation_check"]
+      }
     ],
     "platform_affiliation_check": "platform_backed",
     "verification_notes": "EXCLUDE — Received growth investment from Argentum (growth equity) in Nov 2024 and now actively rolling up acquisitions (acquired Alif Security + Royal Protection Group). Owned by Stephen Olmon + Collin Trimble as ETA platform.",
@@ -130,12 +215,38 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 4, "signal_key": "platform_backed_disqualifying", "direction": "disqualifying", "evidence": "Argentum growth investment Nov 2024; now actively acquiring (Alif Security, Royal Protection Group)", "source": "argentum_press_release", "source_url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/", "observed_at": "2026-05-15"},
-      {"layer": 4, "signal_key": "active_acquirer", "direction": "disqualifying", "evidence": "Two acquisitions closed in Nov 2024 — Alarm Masters is now the buyer, not the seller", "source": "acquiringminds", "source_url": "https://acquiringminds.co/articles/stephen-olmon-collin-trimble-alarm-masters", "observed_at": "2026-05-15"}
+      {
+        "layer": 4,
+        "signal_key": "platform_backed_disqualifying",
+        "direction": "disqualifying",
+        "evidence": "Argentum growth investment Nov 2024; now actively acquiring (Alif Security, Royal Protection Group)",
+        "source": "argentum_press_release",
+        "source_url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "active_acquirer",
+        "direction": "disqualifying",
+        "evidence": "Two acquisitions closed in Nov 2024 — Alarm Masters is now the buyer, not the seller",
+        "source": "acquiringminds",
+        "source_url": "https://acquiringminds.co/articles/stephen-olmon-collin-trimble-alarm-masters",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "argentum_press_release", "url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["platform_affiliation_check"]},
-      {"source": "acquiringminds", "url": "https://acquiringminds.co/articles/stephen-olmon-collin-trimble-alarm-masters", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name"]}
+      {
+        "source": "argentum_press_release",
+        "url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["platform_affiliation_check"]
+      },
+      {
+        "source": "acquiringminds",
+        "url": "https://acquiringminds.co/articles/stephen-olmon-collin-trimble-alarm-masters",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      }
     ],
     "enrichment_notes": "DISQUALIFIED — Already an ETA platform backed by Argentum, actively acquiring. Original Alarm Masters founders sold ~2024. Now serves as comp/example for the thesis, not a target."
   },
@@ -155,9 +266,24 @@
     "license_holder_name": null,
     "year_established": 2001,
     "data_sources": [
-      {"source": "website", "url": "https://www.firealarmhouston.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]},
-      {"source": "argentum_press_release", "url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["platform_affiliation_check"]},
-      {"source": "alifsecurity_team_page", "url": "https://www.alifsecurity.com/about-us/meet-the-team/6757_allen-alam", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name"]}
+      {
+        "source": "website",
+        "url": "https://www.firealarmhouston.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]
+      },
+      {
+        "source": "argentum_press_release",
+        "url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["platform_affiliation_check"]
+      },
+      {
+        "source": "alifsecurity_team_page",
+        "url": "https://www.alifsecurity.com/about-us/meet-the-team/6757_allen-alam",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      }
     ],
     "platform_affiliation_check": "platform_subsidiary",
     "verification_notes": "EXCLUDE — Alif Security was acquired by Alarm Masters (Argentum-backed platform) in Nov 2024. Founder Allen Alam still operates 3 companies (Alif Security, Fire Alarm Houston, Low Voltage Houston) but the parent is now under platform ownership.",
@@ -178,11 +304,29 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 4, "signal_key": "platform_subsidiary_disqualifying", "direction": "disqualifying", "evidence": "Acquired by Alarm Masters (Argentum-backed) in Nov 2024", "source": "argentum_press_release", "source_url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/", "observed_at": "2026-05-15"}
+      {
+        "layer": 4,
+        "signal_key": "platform_subsidiary_disqualifying",
+        "direction": "disqualifying",
+        "evidence": "Acquired by Alarm Masters (Argentum-backed) in Nov 2024",
+        "source": "argentum_press_release",
+        "source_url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "argentum_press_release", "url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["platform_affiliation_check"]},
-      {"source": "alifsecurity_team", "url": "https://www.alifsecurity.com/about-us/meet-the-team/6757_allen-alam", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name"]}
+      {
+        "source": "argentum_press_release",
+        "url": "https://argentumgroup.com/alarm-masters-receives-growth-investment-from-argentum-and-closes-two-strategic-acquisitions/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["platform_affiliation_check"]
+      },
+      {
+        "source": "alifsecurity_team",
+        "url": "https://www.alifsecurity.com/about-us/meet-the-team/6757_allen-alam",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      }
     ],
     "enrichment_notes": "DISQUALIFIED — Already sold to Alarm Masters/Argentum platform in Nov 2024."
   },
@@ -202,8 +346,18 @@
     "license_holder_name": null,
     "year_established": 2012,
     "data_sources": [
-      {"source": "website", "url": "https://iwatchfs.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "license_number", "sub_trade"]},
-      {"source": "yelp", "url": "https://www.yelp.com/biz/iwatch-tomball-5", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["address", "year_established"]}
+      {
+        "source": "website",
+        "url": "https://iwatchfs.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "license_number", "sub_trade"]
+      },
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/iwatch-tomball-5",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["address", "year_established"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned. Fire alarm + sprinkler supervisory + security + access + cameras + 24/7 monitoring. Tomball (NW Harris County). LLC established 2012.",
@@ -224,11 +378,32 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "family_owned_claim", "direction": "positive", "evidence": "Self-described family-owned and operated", "source": "website", "source_url": "https://iwatchfs.com/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_tenure_short", "direction": "negative", "evidence": "LLC established 2012 — only 14 years", "source": "yelp", "source_url": "https://www.yelp.com/biz/iwatch-tomball-5", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "family_owned_claim",
+        "direction": "positive",
+        "evidence": "Self-described family-owned and operated",
+        "source": "website",
+        "source_url": "https://iwatchfs.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_short",
+        "direction": "negative",
+        "evidence": "LLC established 2012 — only 14 years",
+        "source": "yelp",
+        "source_url": "https://www.yelp.com/biz/iwatch-tomball-5",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "yelp", "url": "https://www.yelp.com/biz/iwatch-tomball-5", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["year_established"]}
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/iwatch-tomball-5",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["year_established"]
+      }
     ],
     "enrichment_notes": "Borderline tenure (~14 yrs). Owner not publicly disclosed. Below long-tenured threshold but in target sub-trade."
   },
@@ -248,9 +423,24 @@
     "license_holder_name": "Hector Gabriel Cantu",
     "year_established": 2006,
     "data_sources": [
-      {"source": "website", "url": "https://www.archangelalarms.net/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "license_holder_name", "sub_trade"]},
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/hector-gabriel-cantu-91300024/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name", "owner_tenure"]},
-      {"source": "company_blog", "url": "https://www.archangelalarms.net/blogs/blogs/198503-meet-the-face-behind-archangel-alarm-services", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name", "family_members"]}
+      {
+        "source": "website",
+        "url": "https://www.archangelalarms.net/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_holder_name", "sub_trade"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/hector-gabriel-cantu-91300024/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name", "owner_tenure"]
+      },
+      {
+        "source": "company_blog",
+        "url": "https://www.archangelalarms.net/blogs/blogs/198503-meet-the-face-behind-archangel-alarm-services",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name", "family_members"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned, started 2006 as fire alarm monitoring company. Owner Hector Cantu has ~24 years industry experience. Family members: Samuel Cantu (relative) also at company.",
@@ -271,14 +461,56 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_named_solo", "direction": "positive", "evidence": "Hector Gabriel Cantu identified as President/Owner; ~24 yrs industry experience", "source": "linkedin+zoominfo", "source_url": "https://www.linkedin.com/in/hector-gabriel-cantu-91300024/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_tenure_long", "direction": "positive", "evidence": "Owner-operated since 2006 (20 yrs)", "source": "website", "source_url": "https://www.archangelalarms.net/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "recurring_revenue_focus", "direction": "positive", "evidence": "RMR-focused: 'nearly 1,000 loyal clients' — monitoring base", "source": "alignable", "source_url": "https://www.alignable.com/humble-tx/archangel-alarm-services", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "neutral", "evidence": "Samuel Cantu identified as colleague (likely family member) — possible second-gen on-boarding underway. Need live team page check.", "source": "zoominfo_signals", "source_url": "https://rocketreach.co/hector-gabriel-cantu-email_99051834", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_named_solo",
+        "direction": "positive",
+        "evidence": "Hector Gabriel Cantu identified as President/Owner; ~24 yrs industry experience",
+        "source": "linkedin+zoominfo",
+        "source_url": "https://www.linkedin.com/in/hector-gabriel-cantu-91300024/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "Owner-operated since 2006 (20 yrs)",
+        "source": "website",
+        "source_url": "https://www.archangelalarms.net/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "recurring_revenue_focus",
+        "direction": "positive",
+        "evidence": "RMR-focused: 'nearly 1,000 loyal clients' — monitoring base",
+        "source": "alignable",
+        "source_url": "https://www.alignable.com/humble-tx/archangel-alarm-services",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "neutral",
+        "evidence": "Samuel Cantu identified as colleague (likely family member) — possible second-gen on-boarding underway. Need live team page check.",
+        "source": "zoominfo_signals",
+        "source_url": "https://rocketreach.co/hector-gabriel-cantu-email_99051834",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "linkedin", "url": "https://www.linkedin.com/in/hector-gabriel-cantu-91300024/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name"]},
-      {"source": "company_blog", "url": "https://www.archangelalarms.net/blogs/blogs/198503-meet-the-face-behind-archangel-alarm-services", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name", "family"]}
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/hector-gabriel-cantu-91300024/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "company_blog",
+        "url": "https://www.archangelalarms.net/blogs/blogs/198503-meet-the-face-behind-archangel-alarm-services",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name", "family"]
+      }
     ],
     "enrichment_notes": "Solid candidate: solo owner (Hector Cantu, 24 yrs industry, 20 yrs as owner), ~1,000 RMR clients, possible family successor (Samuel Cantu). Smaller scale alarm/monitoring fit."
   },
@@ -298,7 +530,12 @@
     "license_holder_name": null,
     "year_established": 1987,
     "data_sources": [
-      {"source": "website", "url": "https://omnialarm.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "year_established", "sub_trade", "platform_affiliation_check"]}
+      {
+        "source": "website",
+        "url": "https://omnialarm.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "year_established", "sub_trade", "platform_affiliation_check"]
+      }
     ],
     "platform_affiliation_check": "platform_subsidiary",
     "verification_notes": "EXCLUDE — Website explicitly states 'a proud part of Pye-Barker Fire & Safety'. Already disqualified at spine stage.",
@@ -319,7 +556,15 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 4, "signal_key": "platform_subsidiary_disqualifying", "direction": "disqualifying", "evidence": "Owned by Pye-Barker Fire & Safety (national platform)", "source": "website", "source_url": "https://omnialarm.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 4,
+        "signal_key": "platform_subsidiary_disqualifying",
+        "direction": "disqualifying",
+        "evidence": "Owned by Pye-Barker Fire & Safety (national platform)",
+        "source": "website",
+        "source_url": "https://omnialarm.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [],
     "enrichment_notes": "DISQUALIFIED at spine — confirmed Pye-Barker subsidiary. No deep enrichment performed."
@@ -340,9 +585,24 @@
     "license_holder_name": "Cullen Crisp (President)",
     "year_established": 1933,
     "data_sources": [
-      {"source": "website", "url": "https://crispladewfire.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "year_established", "sub_trade"]},
-      {"source": "website_history", "url": "https://crispladewfire.com/history/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["founder", "succession"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/c/crisp-ladew-co/1126654902", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name"]}
+      {
+        "source": "website",
+        "url": "https://crispladewfire.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "year_established", "sub_trade"]
+      },
+      {
+        "source": "website_history",
+        "url": "https://crispladewfire.com/history/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["founder", "succession"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/c/crisp-ladew-co/1126654902",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Founded 1933 by Wm.H.LaDew (4th oldest TX sprinkler license). Merged Crisp Fire Sprinkler + LaDew Fire Protection in 2005. Cullen Crisp listed as President.",
@@ -363,14 +623,56 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "extreme_tenure", "direction": "positive", "evidence": "Founded 1933 (93 yrs) — oldest fire sprinkler company in Texas", "source": "website_history", "source_url": "https://crispladewfire.com/history/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "family_legacy", "direction": "positive", "evidence": "Crisp family surname carried forward in current president (Cullen Crisp); LaDew family business merged in 2005", "source": "zoominfo+website", "source_url": "https://www.zoominfo.com/c/crisp-ladew-co/1126654902", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive", "evidence": "Live fetch of history page (2026-05-15) confirms family-owned status maintained through 2005 merger of Crisp + LaDew", "source": "website_live", "source_url": "https://crispladewfire.com/crisp-ladew-history/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "regional_scale", "direction": "negative", "evidence": "Multi-office (Dallas, Fort Worth, Granbury) — likely 30+ employees", "source": "website", "source_url": "https://crispladewfire.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "extreme_tenure",
+        "direction": "positive",
+        "evidence": "Founded 1933 (93 yrs) — oldest fire sprinkler company in Texas",
+        "source": "website_history",
+        "source_url": "https://crispladewfire.com/history/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "family_legacy",
+        "direction": "positive",
+        "evidence": "Crisp family surname carried forward in current president (Cullen Crisp); LaDew family business merged in 2005",
+        "source": "zoominfo+website",
+        "source_url": "https://www.zoominfo.com/c/crisp-ladew-co/1126654902",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "positive",
+        "evidence": "Live fetch of history page (2026-05-15) confirms family-owned status maintained through 2005 merger of Crisp + LaDew",
+        "source": "website_live",
+        "source_url": "https://crispladewfire.com/crisp-ladew-history/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "regional_scale",
+        "direction": "negative",
+        "evidence": "Multi-office (Dallas, Fort Worth, Granbury) — likely 30+ employees",
+        "source": "website",
+        "source_url": "https://crispladewfire.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_history", "url": "https://crispladewfire.com/history/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["founder", "succession", "family_legacy"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/c/crisp-ladew-co/1126654902", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_name"]}
+      {
+        "source": "website_history",
+        "url": "https://crispladewfire.com/history/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["founder", "succession", "family_legacy"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/c/crisp-ladew-co/1126654902",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      }
     ],
     "enrichment_notes": "93-year family legacy. Cullen Crisp is President. Likely too large for target (multi-office, 30+ employees) but exceptional tenure makes it a 'maybe' for partnership/successor approach."
   },
@@ -390,10 +692,30 @@
     "license_holder_name": "Bud Shipman (President), Ben Shipman (VP)",
     "year_established": 1982,
     "data_sources": [
-      {"source": "website", "url": "https://centralfireprotection.net/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "license_holder_name", "sub_trade"]},
-      {"source": "website_about", "url": "https://centralfireprotection.net/about-us/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["owner_name", "succession", "family_generation"]},
-      {"source": "linkedin_bud", "url": "https://www.linkedin.com/in/bud-shipman-3a877272/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["owner_name"]},
-      {"source": "linkedin_ben", "url": "https://www.linkedin.com/in/ben-shipman-9a32a779/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["successor_name"]}
+      {
+        "source": "website",
+        "url": "https://centralfireprotection.net/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_holder_name", "sub_trade"]
+      },
+      {
+        "source": "website_about",
+        "url": "https://centralfireprotection.net/about-us/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["owner_name", "succession", "family_generation"]
+      },
+      {
+        "source": "linkedin_bud",
+        "url": "https://www.linkedin.com/in/bud-shipman-3a877272/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "linkedin_ben",
+        "url": "https://www.linkedin.com/in/ben-shipman-9a32a779/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["successor_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Family-owned since 1982 (44 yrs). Bud Shipman = President (CEO since 1982). Ben Shipman = VP, '3rd-generation fire protection specialist' (Bud's son, joined 2003). Bud has 4 children, all in fire protection. Multi-metro service (DFW, Houston, Austin, San Antonio).",
@@ -414,14 +736,56 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_extreme", "direction": "positive", "evidence": "Bud Shipman has run Central Fire Protection since founding in 1982 (44 yrs)", "source": "website_about", "source_url": "https://centralfireprotection.net/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_age_proxy", "direction": "positive", "evidence": "Bud is described as actively involved after 'more than four decades' — likely 65-75 years old; 4 children all in fire protection", "source": "website_about", "source_url": "https://centralfireprotection.net/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive", "evidence": "Live fetch (2026-05-15) confirms son Ben Shipman in VP role since 2003 — 'third-generation fire protection specialist' — family succession underway", "source": "website_about_live", "source_url": "https://centralfireprotection.net/about-us/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "multi_metro_scale", "direction": "negative", "evidence": "Services DFW + Houston + Austin + San Antonio — implies larger employee base than typical target", "source": "website", "source_url": "https://centralfireprotection.net/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_extreme",
+        "direction": "positive",
+        "evidence": "Bud Shipman has run Central Fire Protection since founding in 1982 (44 yrs)",
+        "source": "website_about",
+        "source_url": "https://centralfireprotection.net/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_age_proxy",
+        "direction": "positive",
+        "evidence": "Bud is described as actively involved after 'more than four decades' — likely 65-75 years old; 4 children all in fire protection",
+        "source": "website_about",
+        "source_url": "https://centralfireprotection.net/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "positive",
+        "evidence": "Live fetch (2026-05-15) confirms son Ben Shipman in VP role since 2003 — 'third-generation fire protection specialist' — family succession underway",
+        "source": "website_about_live",
+        "source_url": "https://centralfireprotection.net/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_metro_scale",
+        "direction": "negative",
+        "evidence": "Services DFW + Houston + Austin + San Antonio — implies larger employee base than typical target",
+        "source": "website",
+        "source_url": "https://centralfireprotection.net/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_about", "url": "https://centralfireprotection.net/about-us/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["owner_name", "succession", "owner_age_estimate"]},
-      {"source": "linkedin_ben", "url": "https://www.linkedin.com/in/ben-shipman-9a32a779/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["successor_name"]}
+      {
+        "source": "website_about",
+        "url": "https://centralfireprotection.net/about-us/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["owner_name", "succession", "owner_age_estimate"]
+      },
+      {
+        "source": "linkedin_ben",
+        "url": "https://www.linkedin.com/in/ben-shipman-9a32a779/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["successor_name"]
+      }
     ],
     "enrichment_notes": "STRONG CANDIDATE: Bud Shipman (~70, 44 yrs as owner) with son Ben (VP, 3rd-gen) actively succession-ing. Family has 4 children all in industry. Solid generational handoff in process. Possible sale-or-handoff inflection in next 5 years."
   },
@@ -441,8 +805,18 @@
     "license_holder_name": null,
     "year_established": 1970,
     "data_sources": [
-      {"source": "website", "url": "https://automaticfireprotection.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "year_established", "license_number", "sub_trade"]},
-      {"source": "satori_capital_press", "url": "https://www.satoricapital.com/satori-capital-invests-in-automatic-fire-protection/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["platform_affiliation_check"]}
+      {
+        "source": "website",
+        "url": "https://automaticfireprotection.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "year_established", "license_number", "sub_trade"]
+      },
+      {
+        "source": "satori_capital_press",
+        "url": "https://www.satoricapital.com/satori-capital-invests-in-automatic-fire-protection/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["platform_affiliation_check"]
+      }
     ],
     "platform_affiliation_check": "platform_subsidiary",
     "verification_notes": "EXCLUDE — Acquired by Satori Capital in May 2024 as a platform investment. Satori plans 'complementary acquisitions' = now an acquirer/platform, not a target. Originally founded 1970 in San Angelo by Fire Protection Professionals; SCR-G-0005 = oldest active sprinkler license in TX.",
@@ -463,10 +837,23 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 4, "signal_key": "platform_subsidiary_disqualifying", "direction": "disqualifying", "evidence": "Satori Capital invested May 2024; AFP is now a platform company actively pursuing acquisitions", "source": "satori_capital_press", "source_url": "https://www.satoricapital.com/satori-capital-invests-in-automatic-fire-protection/", "observed_at": "2026-05-15"}
+      {
+        "layer": 4,
+        "signal_key": "platform_subsidiary_disqualifying",
+        "direction": "disqualifying",
+        "evidence": "Satori Capital invested May 2024; AFP is now a platform company actively pursuing acquisitions",
+        "source": "satori_capital_press",
+        "source_url": "https://www.satoricapital.com/satori-capital-invests-in-automatic-fire-protection/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "satori_capital_press", "url": "https://www.satoricapital.com/satori-capital-invests-in-automatic-fire-protection/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["platform_affiliation_check"]}
+      {
+        "source": "satori_capital_press",
+        "url": "https://www.satoricapital.com/satori-capital-invests-in-automatic-fire-protection/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["platform_affiliation_check"]
+      }
     ],
     "enrichment_notes": "DISQUALIFIED — Satori Capital portfolio company since May 2024. Now a Texas-based fire safety platform pursuing roll-up acquisitions. Was a strong solo-owner profile until May 2024 transaction."
   },
@@ -486,9 +873,24 @@
     "license_holder_name": "Nick Bartow (Owner), James Blizzard (President)",
     "year_established": 1996,
     "data_sources": [
-      {"source": "website", "url": "https://www.flfpi.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "sub_trade", "copyright_year_2026"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/c/frontline-fire-protection-inc/400420007", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["owner_name", "year_established"]},
-      {"source": "easyleadz", "url": "https://www.easyleadz.com/company/frontline-fire-protection", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["owner_name"]}
+      {
+        "source": "website",
+        "url": "https://www.flfpi.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade", "copyright_year_2026"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/c/frontline-fire-protection-inc/400420007",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["owner_name", "year_established"]
+      },
+      {
+        "source": "easyleadz",
+        "url": "https://www.easyleadz.com/company/frontline-fire-protection",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["owner_name"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Founded 1996. Owner Nick Bartow + President James Blizzard. Two-person leadership structure (not pure solo-owner).",
@@ -509,12 +911,41 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_long", "direction": "positive", "evidence": "30 yrs in business (founded 1996); Nick Bartow as owner", "source": "zoominfo", "source_url": "https://www.zoominfo.com/c/frontline-fire-protection-inc/400420007", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "two_person_leadership", "direction": "neutral", "evidence": "Owner+President structure — not strictly solo-owner profile", "source": "zoominfo", "source_url": "https://www.zoominfo.com/c/frontline-fire-protection-inc/400420007", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "website_fresh", "direction": "positive", "evidence": "Footer shows '© 2026' — recently maintained", "source": "website", "source_url": "https://www.flfpi.com/", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "30 yrs in business (founded 1996); Nick Bartow as owner",
+        "source": "zoominfo",
+        "source_url": "https://www.zoominfo.com/c/frontline-fire-protection-inc/400420007",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "two_person_leadership",
+        "direction": "neutral",
+        "evidence": "Owner+President structure — not strictly solo-owner profile",
+        "source": "zoominfo",
+        "source_url": "https://www.zoominfo.com/c/frontline-fire-protection-inc/400420007",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "website_fresh",
+        "direction": "positive",
+        "evidence": "Footer shows '© 2026' — recently maintained",
+        "source": "website",
+        "source_url": "https://www.flfpi.com/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/c/frontline-fire-protection-inc/400420007", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["owner_name", "year_established"]}
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/c/frontline-fire-protection-inc/400420007",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["owner_name", "year_established"]
+      }
     ],
     "enrichment_notes": "Two-person ownership (Bartow + Blizzard). 30 yrs in business. Owner ages unknown. Not pure solo-owner profile — partnership structure introduces deal complexity."
   },
@@ -534,9 +965,24 @@
     "license_holder_name": "Jeremy Davis (Founder, now under Better Protection)",
     "year_established": 2010,
     "data_sources": [
-      {"source": "website", "url": "https://dfs-fs.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]},
-      {"source": "industry_press", "url": "https://fireandsafetyjournalamericas.com/better-protection-acquires-dfs-fire-systems-to-broaden-fire-safety-reach-across-texas-and-southwest/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["platform_affiliation_check", "owner_name"]},
-      {"source": "abry_press", "url": "https://abry.com/news-article/better-protection-strengthens-southwest-presence-with-acquisition-of-dfs-fire-systems/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["platform_affiliation_check"]}
+      {
+        "source": "website",
+        "url": "https://dfs-fs.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      },
+      {
+        "source": "industry_press",
+        "url": "https://fireandsafetyjournalamericas.com/better-protection-acquires-dfs-fire-systems-to-broaden-fire-safety-reach-across-texas-and-southwest/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["platform_affiliation_check", "owner_name"]
+      },
+      {
+        "source": "abry_press",
+        "url": "https://abry.com/news-article/better-protection-strengthens-southwest-presence-with-acquisition-of-dfs-fire-systems/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["platform_affiliation_check"]
+      }
     ],
     "platform_affiliation_check": "platform_subsidiary",
     "verification_notes": "EXCLUDE — Acquired by Better Protection (Abry Partners-backed fire safety platform) in November 2024. Jeremy Davis joined Better Protection management. Added 75 employees to platform; total platform ~$53M revenue projected 2024.",
@@ -557,11 +1003,29 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 4, "signal_key": "platform_subsidiary_disqualifying", "direction": "disqualifying", "evidence": "Acquired by Better Protection (Abry Partners) Nov 2024", "source": "abry_press", "source_url": "https://abry.com/news-article/better-protection-strengthens-southwest-presence-with-acquisition-of-dfs-fire-systems/", "observed_at": "2026-05-15"}
+      {
+        "layer": 4,
+        "signal_key": "platform_subsidiary_disqualifying",
+        "direction": "disqualifying",
+        "evidence": "Acquired by Better Protection (Abry Partners) Nov 2024",
+        "source": "abry_press",
+        "source_url": "https://abry.com/news-article/better-protection-strengthens-southwest-presence-with-acquisition-of-dfs-fire-systems/",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "industry_press", "url": "https://fireandsafetyjournalamericas.com/better-protection-acquires-dfs-fire-systems-to-broaden-fire-safety-reach-across-texas-and-southwest/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["platform_affiliation_check"]},
-      {"source": "abry_press", "url": "https://abry.com/news-article/better-protection-strengthens-southwest-presence-with-acquisition-of-dfs-fire-systems/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["platform_affiliation_check"]}
+      {
+        "source": "industry_press",
+        "url": "https://fireandsafetyjournalamericas.com/better-protection-acquires-dfs-fire-systems-to-broaden-fire-safety-reach-across-texas-and-southwest/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["platform_affiliation_check"]
+      },
+      {
+        "source": "abry_press",
+        "url": "https://abry.com/news-article/better-protection-strengthens-southwest-presence-with-acquisition-of-dfs-fire-systems/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["platform_affiliation_check"]
+      }
     ],
     "enrichment_notes": "DISQUALIFIED — Better Protection / Abry Partners portfolio since Nov 2024. Was Better Protection's 6th and largest acquisition."
   },
@@ -581,8 +1045,18 @@
     "license_holder_name": null,
     "year_established": 1984,
     "data_sources": [
-      {"source": "website", "url": "https://dssfire.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "sub_trade"]},
-      {"source": "website_company", "url": "https://dssfire.com/company.html", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["year_established", "employee_count_estimate", "acquisitions"]}
+      {
+        "source": "website",
+        "url": "https://dssfire.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      },
+      {
+        "source": "website_company",
+        "url": "https://dssfire.com/company.html",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["year_established", "employee_count_estimate", "acquisitions"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Founded 1984 as division of Dallas Security Systems; independent corporate entity since 1986. Acquired Fireguard Systems in 2009 (the '1979' reference in spine was Fireguard's tenure, not DSS Fire). 'Typically over 110 employees' — one of the largest TX life safety suppliers.",
@@ -603,11 +1077,32 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "size_above_target", "direction": "disqualifying", "evidence": "110+ employees — far exceeds solo-owner / micro-acquisition target profile", "source": "website_company", "source_url": "https://dssfire.com/company.html", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "active_acquirer_history", "direction": "negative", "evidence": "Acquired Fireguard Systems in 2009 — DSS is buyer, not seller", "source": "website_company", "source_url": "https://dssfire.com/company.html", "observed_at": "2026-05-15"}
+      {
+        "layer": 2,
+        "signal_key": "size_above_target",
+        "direction": "disqualifying",
+        "evidence": "110+ employees — far exceeds solo-owner / micro-acquisition target profile",
+        "source": "website_company",
+        "source_url": "https://dssfire.com/company.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_acquirer_history",
+        "direction": "negative",
+        "evidence": "Acquired Fireguard Systems in 2009 — DSS is buyer, not seller",
+        "source": "website_company",
+        "source_url": "https://dssfire.com/company.html",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_company", "url": "https://dssfire.com/company.html", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["year_established", "employee_count_estimate"]}
+      {
+        "source": "website_company",
+        "url": "https://dssfire.com/company.html",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["year_established", "employee_count_estimate"]
+      }
     ],
     "enrichment_notes": "DISQUALIFIED on size — 110+ employees. Too large for solo-owner acquisition profile. Self-describes as 'one of the largest suppliers in TX'."
   },
@@ -627,9 +1122,24 @@
     "license_holder_name": null,
     "year_established": null,
     "data_sources": [
-      {"source": "website", "url": "https://servicefireequip.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "sub_trade"]},
-      {"source": "yelp_reviews", "url": "https://www.yelp.com/biz/service-fire-equipment-irving", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["family_owned"]},
-      {"source": "bluebook", "url": "https://www.thebluebook.com/iProView/1391191/service-fire-equipment/subcontractors/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["year_established_proxy"]}
+      {
+        "source": "website",
+        "url": "https://servicefireequip.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      },
+      {
+        "source": "yelp_reviews",
+        "url": "https://www.yelp.com/biz/service-fire-equipment-irving",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["family_owned"]
+      },
+      {
+        "source": "bluebook",
+        "url": "https://www.thebluebook.com/iProView/1391191/service-fire-equipment/subcontractors/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["year_established_proxy"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Locally family-owned and operated. Yelp reviews reference 'owner and his sons are hands on' — suggests father+sons structure with succession underway. Blue Book listed since 2016 (10 yrs).",
@@ -650,13 +1160,47 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "family_owned_confirmed", "direction": "positive", "evidence": "Yelp reviews reference 'owner and his sons' — multi-generational family business", "source": "yelp_reviews", "source_url": "https://www.yelp.com/biz/service-fire-equipment-irving", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "small_route_business", "direction": "positive", "evidence": "Extinguisher/hood/exit-light focus — classic small route business model", "source": "website", "source_url": "https://servicefireequip.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive", "evidence": "Reviewers reference owner working with his sons day-to-day (active 2nd-gen handoff)", "source": "yelp_reviews_live", "source_url": "https://www.yelp.com/biz/service-fire-equipment-irving", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "family_owned_confirmed",
+        "direction": "positive",
+        "evidence": "Yelp reviews reference 'owner and his sons' — multi-generational family business",
+        "source": "yelp_reviews",
+        "source_url": "https://www.yelp.com/biz/service-fire-equipment-irving",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "small_route_business",
+        "direction": "positive",
+        "evidence": "Extinguisher/hood/exit-light focus — classic small route business model",
+        "source": "website",
+        "source_url": "https://servicefireequip.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "positive",
+        "evidence": "Reviewers reference owner working with his sons day-to-day (active 2nd-gen handoff)",
+        "source": "yelp_reviews_live",
+        "source_url": "https://www.yelp.com/biz/service-fire-equipment-irving",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "yelp_reviews", "url": "https://www.yelp.com/biz/service-fire-equipment-irving", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["family_owned", "successor"]},
-      {"source": "bluebook", "url": "https://www.thebluebook.com/iProView/1391191/service-fire-equipment/subcontractors/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["year_established_proxy"]}
+      {
+        "source": "yelp_reviews",
+        "url": "https://www.yelp.com/biz/service-fire-equipment-irving",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["family_owned", "successor"]
+      },
+      {
+        "source": "bluebook",
+        "url": "https://www.thebluebook.com/iProView/1391191/service-fire-equipment/subcontractors/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["year_established_proxy"]
+      }
     ],
     "enrichment_notes": "Small route business; family-owned with hands-on father+sons. Owner identity not publicly named. Active succession but unknown founding date — needs primary research. Strong sub-trade fit (route extinguisher/hood)."
   },
@@ -676,10 +1220,30 @@
     "license_holder_name": "Thomas Massey (founder, retired); Brandon + Christina Wright (owners since spring 2024)",
     "year_established": 1978,
     "data_sources": [
-      {"source": "website", "url": "https://www.eaglefireextinguisher.net/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]},
-      {"source": "website_leadership", "url": "https://www.eaglefireextinguisher.net/leadership", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["successor", "current_ownership"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/p/Thos-Massey/6025893039", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["founder_name"]},
-      {"source": "clustrmaps", "url": "https://clustrmaps.com/a/3be3kf", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["address_history"]}
+      {
+        "source": "website",
+        "url": "https://www.eaglefireextinguisher.net/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      },
+      {
+        "source": "website_leadership",
+        "url": "https://www.eaglefireextinguisher.net/leadership",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["successor", "current_ownership"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/p/Thos-Massey/6025893039",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["founder_name"]
+      },
+      {
+        "source": "clustrmaps",
+        "url": "https://clustrmaps.com/a/3be3kf",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["address_history"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Founded 1978 by Thomas Massey (31-yr Dallas FD retiree) + Elaine Massey (RN Parkland). Sale-transition just completed: Brandon + Christina Wright began ownership transition in spring 2024. Brandon was already with the company since 2001 as General Manager.",
@@ -700,12 +1264,38 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 4, "signal_key": "succession_complete_2024", "direction": "disqualifying", "evidence": "Ownership transitioned to Brandon + Christina Wright in spring 2024 — deal opportunity already executed", "source": "website_leadership", "source_url": "https://www.eaglefireextinguisher.net/leadership", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "founder_aged_out", "direction": "neutral", "evidence": "Founder Thomas Massey would be ~95+ today (retired Dallas FD 1978 with 31 yrs service); likely deceased per obituary cross-reference of son Russell (d. 2023)", "source": "obituary_search", "source_url": "https://www.mountainvalleyfuneralhome.com/obituaries/russell-massey", "observed_at": "2026-05-15"}
+      {
+        "layer": 4,
+        "signal_key": "succession_complete_2024",
+        "direction": "disqualifying",
+        "evidence": "Ownership transitioned to Brandon + Christina Wright in spring 2024 — deal opportunity already executed",
+        "source": "website_leadership",
+        "source_url": "https://www.eaglefireextinguisher.net/leadership",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "founder_aged_out",
+        "direction": "neutral",
+        "evidence": "Founder Thomas Massey would be ~95+ today (retired Dallas FD 1978 with 31 yrs service); likely deceased per obituary cross-reference of son Russell (d. 2023)",
+        "source": "obituary_search",
+        "source_url": "https://www.mountainvalleyfuneralhome.com/obituaries/russell-massey",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "website_leadership", "url": "https://www.eaglefireextinguisher.net/leadership", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["current_ownership", "succession_complete"]},
-      {"source": "zoominfo", "url": "https://www.zoominfo.com/p/Thos-Massey/6025893039", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["founder_name"]}
+      {
+        "source": "website_leadership",
+        "url": "https://www.eaglefireextinguisher.net/leadership",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["current_ownership", "succession_complete"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/p/Thos-Massey/6025893039",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["founder_name"]
+      }
     ],
     "enrichment_notes": "DISQUALIFIED on timing — succession to Brandon + Christina Wright already complete (spring 2024). New owners (formerly GM since 2001) just started 2-year tenure; not ready to sell. Was a textbook off-market candidate 18 months ago."
   },
@@ -725,9 +1315,24 @@
     "license_holder_name": "Deborah Brantley (Owner/Operator), Robin Brantley (Office Manager)",
     "year_established": 1993,
     "data_sources": [
-      {"source": "website", "url": "https://lonestarfire.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["legal_name", "address", "year_established", "sub_trade"]},
-      {"source": "linkedin_deborah", "url": "https://www.linkedin.com/in/deborah-brantley-5447b4a/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["owner_name"]},
-      {"source": "zoominfo_robin", "url": "https://www.zoominfo.com/p/Robin-Brantley/8075441679", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["family_member"]}
+      {
+        "source": "website",
+        "url": "https://lonestarfire.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      },
+      {
+        "source": "linkedin_deborah",
+        "url": "https://www.linkedin.com/in/deborah-brantley-5447b4a/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "zoominfo_robin",
+        "url": "https://www.zoominfo.com/p/Robin-Brantley/8075441679",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["family_member"]
+      }
     ],
     "platform_affiliation_check": "independent",
     "verification_notes": "Brantley family-owned since 1993 (33 yrs). Deborah Brantley = Owner/Operator. Robin Brantley = Office Manager (likely spouse or relative). Classic route-based recurring revenue model (extinguisher + suppression + training).",
@@ -748,15 +1353,65 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_named_solo", "direction": "positive", "evidence": "Deborah Brantley identified as Owner/Operator — clear solo principal", "source": "linkedin_deborah", "source_url": "https://www.linkedin.com/in/deborah-brantley-5447b4a/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_tenure_long", "direction": "positive", "evidence": "33 years owner-operator since 1993", "source": "website", "source_url": "https://lonestarfire.com/", "observed_at": "2026-05-15"},
-      {"layer": 1, "signal_key": "owner_age_proxy", "direction": "positive", "evidence": "33 yrs as owner — if started business at 30, would be 63+ today (likely 60-70 range)", "source": "license_tenure_proxy", "source_url": "https://lonestarfire.com/", "observed_at": "2026-05-15"},
-      {"layer": 2, "signal_key": "small_route_business", "direction": "positive", "evidence": "Pure extinguisher/recharge/training route model — high RMR, low capex", "source": "website", "source_url": "https://lonestarfire.com/", "observed_at": "2026-05-15"},
-      {"layer": 3, "signal_key": "family_only_no_successor", "direction": "negative", "evidence": "Only family member identified beyond owner is Robin (Office Manager, likely spouse). No second-gen successor visible.", "source": "zoominfo_robin", "source_url": "https://www.zoominfo.com/p/Robin-Brantley/8075441679", "observed_at": "2026-05-15"}
+      {
+        "layer": 1,
+        "signal_key": "owner_named_solo",
+        "direction": "positive",
+        "evidence": "Deborah Brantley identified as Owner/Operator — clear solo principal",
+        "source": "linkedin_deborah",
+        "source_url": "https://www.linkedin.com/in/deborah-brantley-5447b4a/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "33 years owner-operator since 1993",
+        "source": "website",
+        "source_url": "https://lonestarfire.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_age_proxy",
+        "direction": "positive",
+        "evidence": "33 yrs as owner — if started business at 30, would be 63+ today (likely 60-70 range)",
+        "source": "license_tenure_proxy",
+        "source_url": "https://lonestarfire.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "small_route_business",
+        "direction": "positive",
+        "evidence": "Pure extinguisher/recharge/training route model — high RMR, low capex",
+        "source": "website",
+        "source_url": "https://lonestarfire.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "family_only_no_successor",
+        "direction": "negative",
+        "evidence": "Only family member identified beyond owner is Robin (Office Manager, likely spouse). No second-gen successor visible.",
+        "source": "zoominfo_robin",
+        "source_url": "https://www.zoominfo.com/p/Robin-Brantley/8075441679",
+        "observed_at": "2026-05-15"
+      }
     ],
     "data_sources_added": [
-      {"source": "linkedin_deborah", "url": "https://www.linkedin.com/in/deborah-brantley-5447b4a/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["owner_name"]},
-      {"source": "zoominfo_robin", "url": "https://www.zoominfo.com/p/Robin-Brantley/8075441679", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["family_member"]}
+      {
+        "source": "linkedin_deborah",
+        "url": "https://www.linkedin.com/in/deborah-brantley-5447b4a/",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "zoominfo_robin",
+        "url": "https://www.zoominfo.com/p/Robin-Brantley/8075441679",
+        "fetched_at": "2026-05-15T23:50:00Z",
+        "fields": ["family_member"]
+      }
     ],
     "enrichment_notes": "TOP CANDIDATE: Deborah Brantley, 33 yrs owner-operator, family business (spouse/relative Robin in office mgmt). No visible 2nd-gen successor. Pure route extinguisher/recharge model = clean small acquisition target. Likely 60s, classic 'sell to retire' profile."
   }

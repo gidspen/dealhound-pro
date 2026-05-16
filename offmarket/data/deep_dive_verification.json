@@ -4,7 +4,10 @@
   "comptroller_lookup_success_rate": "10/15 = 67%",
   "comptroller_active_status_rate": "8/10 (2 found-but-inactive: White Rock Animal Clinic Inc 1970, Alamo Dog & Cat Hospital Inc 1970)",
   "cad_ov65_lookup_success_rate": "2/15 = 13% (of attempted CAD lookups, 2/5 = 40%)",
-  "cad_ov65_confirmed_with_high_confidence": ["Whitaker Insurance (Bexar CAD via WHITAKER CHESTER owner-name search)", "Animal Hospital of Valley Ranch / Chaikin (Dallas CAD via address search)"],
+  "cad_ov65_confirmed_with_high_confidence": [
+    "Whitaker Insurance (Bexar CAD via WHITAKER CHESTER owner-name search)",
+    "Animal Hospital of Valley Ranch / Chaikin (Dallas CAD via address search)"
+  ],
   "team_page_successor_check_success_rate": "12/12 = 100%",
   "promoted_to_a_tier": [
     "Whitaker Insurance (Bexar — high confidence OV65 + family successors)",
@@ -28,11 +31,37 @@
     "Fire Safe Protection Services (MAJOR finding: legal owner is Bruce L. Burianek, NOT Stephen McKinney; original L1 anchor was wrong owner; OV65 blocked by HCAD Texas law)"
   ],
   "blocked_sources": [
-    {"source": "HCAD (Harris County, search.hcad.org)", "error": "Texas law prohibits HCAD from displaying age-related info ('information indicating the age of a property owner'). Also, React SPA submit does not respond to MCP. Affects Longenbaugh, Fire Safe.", "candidates_affected": ["Longenbaugh Veterinary", "Fire Safe Protection"]},
-    {"source": "Tarrant CAD (tarrant.prodigycad.com)", "error": "JS-driven SPA — no exposed search route. URL parameters return 404. Affects Mellina, Colleyville, Bridge Street, Altig, NTX Eye Care.", "candidates_affected": ["Mellina", "Colleyville", "Bridge Street", "Altig Optical", "North Texas Eye Care"]},
-    {"source": "Hays CAD (esearch.hayscad.com)", "error": "Same SPA engine as Fort Bend — no form submit response to Playwright. Affects Perdue.", "candidates_affected": ["Perdue"]},
-    {"source": "Fort Bend CAD (esearch.fbcad.org)", "error": "JS-driven SPA — no exposed search route. Affects Bellaire (Le's Sugar Land residence).", "candidates_affected": ["Bellaire Optometry"]},
-    {"source": "Bexar CAD (bexar.trueautomation.com)", "error": "Partial — first WHITAKER search worked (yielded 627 S Birdsong); subsequent GOLDSTEIN search did not return results despite same form. Likely state corruption between searches.", "candidates_affected": ["Vision Plus (partial)"]}
+    {
+      "source": "HCAD (Harris County, search.hcad.org)",
+      "error": "Texas law prohibits HCAD from displaying age-related info ('information indicating the age of a property owner'). Also, React SPA submit does not respond to MCP. Affects Longenbaugh, Fire Safe.",
+      "candidates_affected": ["Longenbaugh Veterinary", "Fire Safe Protection"]
+    },
+    {
+      "source": "Tarrant CAD (tarrant.prodigycad.com)",
+      "error": "JS-driven SPA — no exposed search route. URL parameters return 404. Affects Mellina, Colleyville, Bridge Street, Altig, NTX Eye Care.",
+      "candidates_affected": [
+        "Mellina",
+        "Colleyville",
+        "Bridge Street",
+        "Altig Optical",
+        "North Texas Eye Care"
+      ]
+    },
+    {
+      "source": "Hays CAD (esearch.hayscad.com)",
+      "error": "Same SPA engine as Fort Bend — no form submit response to Playwright. Affects Perdue.",
+      "candidates_affected": ["Perdue"]
+    },
+    {
+      "source": "Fort Bend CAD (esearch.fbcad.org)",
+      "error": "JS-driven SPA — no exposed search route. Affects Bellaire (Le's Sugar Land residence).",
+      "candidates_affected": ["Bellaire Optometry"]
+    },
+    {
+      "source": "Bexar CAD (bexar.trueautomation.com)",
+      "error": "Partial — first WHITAKER search worked (yielded 627 S Birdsong); subsequent GOLDSTEIN search did not return results despite same form. Likely state corruption between searches.",
+      "candidates_affected": ["Vision Plus (partial)"]
+    }
   ],
   "outcome_assessment": {
     "did_playwright_unlock_a_tier_promotions": "YES — 6 A-tier promotions vs the 0 from the original run. Hypothesis confirmed.",
