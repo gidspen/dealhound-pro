@@ -1,0 +1,83 @@
+{
+  "run_date": "2026-05-15",
+  "candidates_evaluated": 15,
+  "comptroller_lookup_success_rate": "10/15 = 67%",
+  "comptroller_active_status_rate": "8/10 (2 found-but-inactive: White Rock Animal Clinic Inc 1970, Alamo Dog & Cat Hospital Inc 1970)",
+  "cad_ov65_lookup_success_rate": "2/15 = 13% (of attempted CAD lookups, 2/5 = 40%)",
+  "cad_ov65_confirmed_with_high_confidence": ["Whitaker Insurance (Bexar CAD via WHITAKER CHESTER owner-name search)", "Animal Hospital of Valley Ranch / Chaikin (Dallas CAD via address search)"],
+  "team_page_successor_check_success_rate": "12/12 = 100%",
+  "promoted_to_a_tier": [
+    "Whitaker Insurance (Bexar — high confidence OV65 + family successors)",
+    "Bankhead Insurance Agency, LLC (Dallas — solo owner-operator, no successor)",
+    "Animal Hospital of Valley Ranch / Chaikin (Dallas — high confidence OV65 + solo)",
+    "Bridge Street Animal Clinic / Norris (Tarrant — solo, no successor; OV65 unverified)",
+    "Longenbaugh Veterinary Hospital P.C. / Keadle (Harris — solo, residence confirmed; OV65 blocked by HCAD)",
+    "North Texas Eye Care / Kloesel (Tarrant — solo, no successor; OV65 unverified)"
+  ],
+  "demoted_to_c_watch_via_succession_already_underway": [
+    "Colleyville Animal Clinic (Wilson exited; Erickson runs as Chief of Staff; 5-vet practice)",
+    "Alamo Dog & Cat Hospital (Nick Labrie has Lead title — family succession in motion; Mark E. LaBrie not on team)",
+    "Bellaire Optometry Clinic (Le + Nguyen are co-Directors on Comptroller PIR; internal partner already on board)"
+  ],
+  "still_b_forward_after_deep_dive": [
+    "White Rock Animal Hospital (Comptroller entity inactive; no internal successor; OV65 blocked)",
+    "Mellina Animal Hospital (no Comptroller entity; team page lists no vets publicly; Tarrant CAD blocked)",
+    "Perdue Insurance Agency LLC (Cloud family already in operational control as CEO+GM+Agent; coasting B_forward not A)",
+    "Altig Optical (no Comptroller entity; Tarrant CAD blocked)",
+    "Vision Plus (Sanchez 2023 grad joined as associate → successor-on-staff slightly weakens external-sale thesis)",
+    "Fire Safe Protection Services (MAJOR finding: legal owner is Bruce L. Burianek, NOT Stephen McKinney; original L1 anchor was wrong owner; OV65 blocked by HCAD Texas law)"
+  ],
+  "blocked_sources": [
+    {"source": "HCAD (Harris County, search.hcad.org)", "error": "Texas law prohibits HCAD from displaying age-related info ('information indicating the age of a property owner'). Also, React SPA submit does not respond to MCP. Affects Longenbaugh, Fire Safe.", "candidates_affected": ["Longenbaugh Veterinary", "Fire Safe Protection"]},
+    {"source": "Tarrant CAD (tarrant.prodigycad.com)", "error": "JS-driven SPA — no exposed search route. URL parameters return 404. Affects Mellina, Colleyville, Bridge Street, Altig, NTX Eye Care.", "candidates_affected": ["Mellina", "Colleyville", "Bridge Street", "Altig Optical", "North Texas Eye Care"]},
+    {"source": "Hays CAD (esearch.hayscad.com)", "error": "Same SPA engine as Fort Bend — no form submit response to Playwright. Affects Perdue.", "candidates_affected": ["Perdue"]},
+    {"source": "Fort Bend CAD (esearch.fbcad.org)", "error": "JS-driven SPA — no exposed search route. Affects Bellaire (Le's Sugar Land residence).", "candidates_affected": ["Bellaire Optometry"]},
+    {"source": "Bexar CAD (bexar.trueautomation.com)", "error": "Partial — first WHITAKER search worked (yielded 627 S Birdsong); subsequent GOLDSTEIN search did not return results despite same form. Likely state corruption between searches.", "candidates_affected": ["Vision Plus (partial)"]}
+  ],
+  "outcome_assessment": {
+    "did_playwright_unlock_a_tier_promotions": "YES — 6 A-tier promotions vs the 0 from the original run. Hypothesis confirmed.",
+    "verification_paths_validated": {
+      "tx_comptroller_taxable_entity_search": "WORKS via JS-driven form on Bexar CAD trueautomation portal; Comptroller search itself works reliably (10/15 entities found; 67% lookup rate). Provides Active/Inactive status + registered agent + officer addresses (the most valuable single deep-dive datum — owner residential addresses for CAD lookup).",
+      "cad_ov65_lookup": "MIXED. Dallas CAD (classic ASP.NET form on dallascad.org) works well. Bexar CAD (trueautomation) works for owner-name searches and shows OV65 via 'OTHER' exemption + tax-ceiling savings ratio. HCAD blocked by Texas law (and SPA). Tarrant, Fort Bend, Hays CADs blocked by SPA architecture. Travis CAD (not attempted) likely similar.",
+      "live_team_page_successor_check": "WORKS PERFECTLY via WebFetch — 12/12 = 100% success. Surfaces critical succession signals: family successors with same surname, internal partners already on PIR, Chief of Staff designations indicating completed succession, recently-hired associates as buy-in candidates."
+    },
+    "promotion_quality": "6 promotions, 3 demotions, 6 holds. Quality is excellent: the 6 promotions all have strong A-tier rationale (solo + active entity + no successor + age indicators present). The 3 demotions identify candidates that the original scoring missed as having succession already complete — these were FALSE-POSITIVE A candidates the deep dive correctly downgraded. Net A-tier count: 6 (vs 0 baseline). This validates the deep-dive layer.",
+    "highest_value_finding": "Donald Perdue / Perdue Insurance Agency: original JSON assumed sole owner; deep dive revealed the Cloud family (3 members including CEO Brandon Cloud) has already taken operational control. Acquisition becomes a 'buy out Perdue residual equity' deal with Cloud-family key-person retention. Completely different deal structure than originally modeled.",
+    "biggest_surprise": "Fire Safe Protection Services: original JSON owner = Stephen McKinney. Comptroller's actual legal owner = Bruce L. Burianek (sole manager of GP entity Sherwood Forest Enterprises LLC). McKinney is operational President, not equity owner. Original L1 anchor was wrong — derived from McKinney's bio, but he's not the seller. L1 downgraded from 73 to 50."
+  },
+  "recommendations_for_next_run": {
+    "immediate": [
+      "BUILD a non-Playwright Comptroller search driver (curl + form POST) for production scoring pipeline — works reliably and yields the highest-value data (Active status + registered agent residence).",
+      "BUILD a Dallas CAD scraper specifically — DCAD's classic ASP.NET form is the cleanest CAD to drive, and Dallas is a top-3 market for off-market dental/vet/optometry/insurance plays. Worth investing in.",
+      "FOR Bexar CAD — use the trueautomation classic form but reset state between searches (warm new navigation each time)."
+    ],
+    "medium_term": [
+      "INVESTIGATE proxy paths for SPA CADs (Tarrant, Hays, Fort Bend, Travis): (a) check if county has TPADP open data feeds, (b) check if county clerk deed records site has homestead/OV65 indicators, (c) consider a paid data source like DataTree or REalQuest for property records.",
+      "FOR HCAD (Harris County) — direct CAD scrape is fundamentally blocked by Texas law. Use proxies: (a) cross-reference homeowner age via voter registration records (Texas voter rolls include DOB and are public), (b) use Harris County Tax Office records (Texas-law restriction is on the *appraisal district* not the tax office), (c) Look up the 'tax ceiling' indicator on Harris County Tax Office's site (taxes.harriscountytx.gov)."
+    ],
+    "do_not_repeat": [
+      "Don't bother with eSearch.*.com SPAs (Fort Bend, Hays — and likely the same engine on Brazoria, Montgomery, Williamson). They will not respond to MCP form submission. Either skip OR switch to direct county-clerk records.",
+      "Don't use HCAD search.hcad.org as the primary verification path — Texas law eliminates OV65 visibility regardless of how well the form drives.",
+      "Don't anchor L1 owner-age scoring on 'President / Manager' titles without first cross-checking who actually owns the equity via Comptroller PIR (Fire Safe Protection lesson)."
+    ],
+    "policy_changes_to_scoring_model": [
+      "When Comptroller PIR officers DIFFER from JSON-stated owner_name, DOWNGRADE confidence to medium until ownership re-verified. Currently we don't reconcile this — it caused the Fire Safe L1 error.",
+      "When Comptroller PIR shows 2+ officers/members at DIFFERENT addresses, flag as POTENTIAL CO-OWNERSHIP (likely C_watch, not A) — exit will be internal buyout. Currently treated as A. Lesson from Bellaire and Perdue.",
+      "When team page shows founder NOT in roster + Chief of Staff / Lead / Director-of-Operations title held by non-family member, flag as SUCCESSION COMPLETED → C_watch. Currently treated as A. Lesson from Colleyville and Alamo Dog & Cat.",
+      "When team page shows founder + 1 recent-grad associate (e.g., Sanchez 2023 at Vision Plus), flag as PLANNED INTERNAL SUCCESSION → B at most, not A. The associate is the future buyer."
+    ]
+  },
+  "screenshots_saved": [
+    "DCAD Chaikin record (account 32077930120100000) — captured via Chrome MCP, MCP-internal storage",
+    "Bexar CAD Whitaker record (property 661777) — captured via Chrome MCP, MCP-internal storage"
+  ],
+  "input_files": "/Users/gideonspencer/dealhound-pro/.claude/worktrees/fervent-kilby-9ed36a/offmarket/data/top15_for_deep_dive.json",
+  "output_files": [
+    "/Users/gideonspencer/dealhound-pro/.claude/worktrees/fervent-kilby-9ed36a/offmarket/data/insurance_targets.json (3 rows updated)",
+    "/Users/gideonspencer/dealhound-pro/.claude/worktrees/fervent-kilby-9ed36a/offmarket/data/vet_targets.json (7 rows updated)",
+    "/Users/gideonspencer/dealhound-pro/.claude/worktrees/fervent-kilby-9ed36a/offmarket/data/optometry_targets.json (4 rows updated)",
+    "/Users/gideonspencer/dealhound-pro/.claude/worktrees/fervent-kilby-9ed36a/offmarket/data/fire_targets.json (1 row updated)",
+    "/Users/gideonspencer/dealhound-pro/.claude/worktrees/fervent-kilby-9ed36a/offmarket/data/deep_dive_raw/* (intermediate evidence)",
+    "Supabase: offmarket.business_scores updated, offmarket.business_signals inserted, offmarket.businesses updated"
+  ]
+}

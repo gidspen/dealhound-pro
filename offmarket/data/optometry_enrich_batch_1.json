@@ -1,0 +1,2156 @@
+[
+  {
+    "legal_name": "Exquisite Eye Care",
+    "dba_name": null,
+    "address": "11509 Veterans Memorial Dr #900",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77067",
+    "phone": "(281) 580-3937",
+    "website": "https://www.exquisiteeyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Diep Dinh",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.exquisiteeyecare.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "phone",
+          "doctors",
+          "services"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent multi-OD practice. Dr. Dinh ~30 yrs in Houston. Two TG glaucoma-specialist associates (Dr. Tran, Dr. Nguyen). Sister location in Pearland. Strong medical eye care positioning (glaucoma, diabetic, dry eye, AMD). Saturday hours.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Diep Dinh",
+    "owner_age_estimate": 56,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 30,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 30,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_30_years",
+        "direction": "positive",
+        "evidence": "Website 'About' states Dr. Dinh has been 'providing eye care for communities in and surrounding Houston for nearly 30 years' — owner age estimate ~56 (OD grad ~1996 + 26 = 52, plus tenure cushion).",
+        "source": "website",
+        "source_url": "https://www.exquisiteeyecare.com/meet-the-optometrist",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_OD_practice",
+        "direction": "negative",
+        "evidence": "Three TG glaucoma-specialist ODs on staff: Diep Dinh, Antony N. Nguyen, Cuong V. Tran. Multi-OD reduces solo-coast tells.",
+        "source": "website",
+        "source_url": "https://www.exquisiteeyecare.com/staff",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Online booking via 4patientcare.ws (modern widget). Copyright 2026. iMatrix CMS vendor (small-practice SaaS, not a parent). Active site.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.exquisiteeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "saturday_hours_present",
+        "direction": "negative",
+        "evidence": "Saturday 9am-1pm. Owner is actively engaged in weekend operations — not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.exquisiteeyecare.com/meet-the-optometrist",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_OCT_Optomap_mention",
+        "direction": "positive",
+        "evidence": "No OCT or Optomap mentioned in services pages. Equipment may be basic-refraction tier — possible coasting capex.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.exquisiteeyecare.com/eyecare-services",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_disciplinary_or_distress_found",
+        "direction": "negative",
+        "evidence": "No TX Optometry Board disciplinary, no Google news of closing/acquired, no MyEyeDr/Acuity/EyeCare Partners acquisition. Active independent practice.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Exquisite+Eye+Care%22+Houston+acquired+MyEyeDr",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.exquisiteeyecare.com/meet-the-optometrist",
+        "fetched_at": "2026-05-15T19:05:00Z",
+        "fields": [
+          "owner_tenure_years",
+          "owner_school",
+          "associate_ODs"
+        ]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.exquisiteeyecare.com/staff",
+        "fetched_at": "2026-05-15T19:05:00Z",
+        "fields": [
+          "provider_count_estimate"
+        ]
+      },
+      {
+        "source": "google",
+        "url": "https://www.google.com/search?q=%22Exquisite+Eye+Care%22+Houston+acquired+MyEyeDr",
+        "fetched_at": "2026-05-15T19:05:00Z",
+        "fields": [
+          "recent_acquisition"
+        ]
+      }
+    ],
+    "enrichment_notes": "Solid B-tier candidate. Multi-OD signal reduces solo-coast appeal — successor risk is real with Dr. Tran (running Pearland sister practice) and Dr. Nguyen on staff. Owner ~56, tenure 30 yrs, no distress, no acquisition. Active Saturday hours and modern tech = NOT coasting."
+  },
+  {
+    "legal_name": "Eye Shop on Memorial",
+    "dba_name": "Eye Shop (formerly West Houston Eye)",
+    "address": "13130 Memorial Drive",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77079",
+    "phone": "(713) 977-8464",
+    "website": "https://www.eyeshophouston.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "unknown",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Linda Rhodes",
+    "year_established": 1976,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.eyeshophouston.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Established 1976 as West Houston Eye. Second-generation family-private practice — mother-daughter duo. 4 ODs total (Rhodes, Warstler, Wong, Gandhi). Successor blocked: daughter active. Rebranded 2009; relocated 2023.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Linda Rhodes",
+    "owner_age_estimate": 65,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 35,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 50,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 4,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_35_plus_years",
+        "direction": "positive",
+        "evidence": "Dr. Rhodes self-reports 'practicing optometry for over 35 years' + taught 19 yrs at UH College of Optometry. Owner age estimate 65 — high band of likely-to-sell window.",
+        "source": "website",
+        "source_url": "https://www.eyeshophouston.com/team/dr-linda-rhodes-o-d-f-a-a-o/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "founder_legacy_50_yr_practice",
+        "direction": "positive",
+        "evidence": "Practice established 1976 (50 yrs). Dr. Rhodes founded West Houston Eye — 'Houston's first female-owned private optometry practice'. Founder still active.",
+        "source": "website",
+        "source_url": "https://www.eyeshophouston.com/team/dr-linda-rhodes-o-d-f-a-a-o/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "successor_risk_multi_OD",
+        "direction": "disqualifying",
+        "evidence": "4 ODs on staff: Rhodes, Warstler, Wong, Gandhi. Multi-OD practices with younger partners typically transition internally — external acquisition unlikely. Per WebMD review: 'I think she sold and closed her practice West Houston Eye and now her name is being used by new owners at the Eye Store on Memorial Dr' — may indicate prior internal transfer.",
+        "source": "website",
+        "source_url": "https://www.eyeshophouston.com/our-eye-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "ambiguous_ownership_transfer",
+        "direction": "negative",
+        "evidence": "Patient review on WebMD: 'I think she sold and closed her practice West Houston Eye and now her name is being used by new owners at the Eye Store on Memorial Dr.' — possible recent internal sale to associates, requires direct verification.",
+        "source": "webmd",
+        "source_url": "https://doctor.webmd.com/doctor/linda-rhodes-0e3902c3-33a7-4355-9b46-94da7da6cc79-overview",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "rebranded_relocated_recently",
+        "direction": "negative",
+        "evidence": "Rebranded 2009, relocated 2023 to new office. Capex investment in last 3 yrs signals not winding down.",
+        "source": "website",
+        "source_url": "https://www.eyeshophouston.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no MyEyeDr/Acuity/EyeCare Partners acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Eye+Shop+on+Memorial%22+OR+%22West+Houston+Eye%22+acquired+MyEyeDr",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.eyeshophouston.com/team/dr-linda-rhodes-o-d-f-a-a-o/",
+        "fetched_at": "2026-05-15T19:06:00Z",
+        "fields": [
+          "owner_tenure_years",
+          "owner_age_estimate"
+        ]
+      },
+      {
+        "source": "webmd",
+        "url": "https://doctor.webmd.com/doctor/linda-rhodes-0e3902c3-33a7-4355-9b46-94da7da6cc79-overview",
+        "fetched_at": "2026-05-15T19:06:00Z",
+        "fields": [
+          "ambiguous_ownership_transfer"
+        ]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY for A-tier: 4 ODs + young partners = internal succession path likely. Investment in 2023 relocation = active, not coasting. WebMD review hints at possible prior internal sale to associates, which would block external acquisition. Worth C-tier follow-up only if associate-OD successor pipeline is confirmed broken."
+  },
+  {
+    "legal_name": "Envision Eye Care",
+    "dba_name": null,
+    "address": "3137 W Holcombe Blvd",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77025",
+    "phone": "(713) 349-9292",
+    "website": "https://envision-eye-care.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Giao Nguyen",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://envision-eye-care.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Boutique solo-OD practice near Texas Medical Center. Dr. Giao Nguyen. Includes cataract/LASIK co-management, myopia, dry eye. Premium ZIP (Medical Center / Bellaire-adjacent).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Giao Nguyen",
+    "owner_age_estimate": 52,
+    "owner_age_source": "linkedin_grad",
+    "owner_tenure_years": 27,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_grad_year_confirmed",
+        "direction": "positive",
+        "evidence": "Dr. Giao Nguyen graduated Magna Cum Laude with Doctor of Optometry 1999 from University of Houston College of Optometry. OD grad 1999 + 26 = ~52 owner age. 27 yrs of practice.",
+        "source": "website",
+        "source_url": "https://envision-eye-care.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "solo_OD_practice",
+        "direction": "positive",
+        "evidence": "Only Dr. Giao Nguyen listed as OD. Two opticians (Norma Medrano, Kimberly Nico) but no associate optometrists — classic solo-owner profile.",
+        "source": "website",
+        "source_url": "https://envision-eye-care.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_age_below_target_window",
+        "direction": "negative",
+        "evidence": "Owner ~52 is below the typical 55-65 sell-window. Likely 5-10 yrs from typical retirement decision.",
+        "source": "linkedin_grad",
+        "source_url": "https://www.linkedin.com/in/giao-nguyen-a7837322/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "premium_zip",
+        "direction": "positive",
+        "evidence": "77025 — Texas Medical Center / Bellaire-adjacent. Premium-income patient base.",
+        "source": "internal",
+        "source_url": "https://envision-eye-care.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no recent acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Envision+Eye+Care%22+Houston+acquired+MyEyeDr",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://envision-eye-care.com/about-us/",
+        "fetched_at": "2026-05-15T19:07:00Z",
+        "fields": [
+          "owner_grad_year",
+          "provider_count_estimate"
+        ]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/giao-nguyen-a7837322/",
+        "fetched_at": "2026-05-15T19:07:00Z",
+        "fields": [
+          "owner_school",
+          "owner_grad_year"
+        ]
+      }
+    ],
+    "enrichment_notes": "Solo-OD signal is strong (no associate successor) but owner age (~52) is below sell-window. Premium ZIP. PARK for re-scoring in 5-7 yrs when owner enters target age band — or recategorize as C-tier if scoring rubric weights tenure-without-age heavily."
+  },
+  {
+    "legal_name": "Eye Site Texas",
+    "dba_name": null,
+    "address": "25242 Kingsland Blvd",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77494",
+    "phone": "(281) 644-2010",
+    "website": "https://eyesitetexas.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. John O'Neill",
+    "year_established": 2001,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://eyesitetexas.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "addresses",
+          "doctors",
+          "tenure"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Two locations: Katy + Memorial Houston. 'Comprehensive Family Eye Care for Over 25 Years' (~2001 est). 5 ODs total. Site uses iMatrix CMS — practice management vendor only, not parent. Multi-OD successor risk.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. John O'Neill",
+    "owner_age_estimate": 50,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 25,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 25,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 5,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_estimate_below_target",
+        "direction": "negative",
+        "evidence": "Dr. O'Neill has 'young children' (Jack and Kathryn) per About page — suggests ~40-50 range. Owner age estimate ~50, below typical sell window.",
+        "source": "website",
+        "source_url": "https://eyesitetexas.com/about-us/doctors/john-o-neill--od",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_multi_OD",
+        "direction": "disqualifying",
+        "evidence": "5 ODs, 2 locations (Katy + Memorial Houston). Multi-location small-group is a different ETA profile than solo-coasting target.",
+        "source": "website",
+        "source_url": "https://eyesitetexas.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_owner_LinkedIn",
+        "direction": "negative",
+        "evidence": "LinkedIn profile updated, listed as Owner/President — actively running practice.",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/john-o-neill-5a7b624a/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no MyEyeDr/Acuity/EyeCare Partners acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Eye+Site+Texas%22+acquired+MyEyeDr",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://eyesitetexas.com/about-us/doctors/john-o-neill--od",
+        "fetched_at": "2026-05-15T19:08:00Z",
+        "fields": [
+          "owner_age_indicator",
+          "owner_school"
+        ]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/john-o-neill-5a7b624a/",
+        "fetched_at": "2026-05-15T19:08:00Z",
+        "fields": [
+          "owner_role"
+        ]
+      }
+    ],
+    "enrichment_notes": "DECLINE for A-tier: owner ~50 (too young), multi-location multi-OD, family with young children. Not in typical retirement window. PARK for 8-10 yrs."
+  },
+  {
+    "legal_name": "Pearland Eye Associates, LLC",
+    "dba_name": "Pearland Eye Care",
+    "address": "8498 S Sam Houston Pkwy E Suite 1300",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77075",
+    "phone": "(713) 991-4100",
+    "website": "https://pearlandeyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Cuong V. Tran",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://pearlandeyecare.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo TG glaucoma-specialist Dr. Tran. Same owner as Exquisite Eye Care Houston (sister practice). Medical eye care, specialty CL, ortho-K, scleral. Saturday hours.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Cuong V. Tran",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "sister_practice_same_owner",
+        "direction": "disqualifying",
+        "evidence": "Dr. Cuong V. Tran is also listed at Exquisite Eye Care (associate OD per Exquisite team page). Pearland Eye Care = sister branch under same operator. Two-location practice — different ETA profile than solo standalone.",
+        "source": "website",
+        "source_url": "https://pearlandeyecare.com/meet-the-optometrist",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "saturday_hours_present",
+        "direction": "negative",
+        "evidence": "Saturday hours visible — active operations.",
+        "source": "website",
+        "source_url": "https://pearlandeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "premium_capex_specialty",
+        "direction": "negative",
+        "evidence": "Scleral lenses, ortho-K, medical eye care — premium capex investments not typical of coasting practice.",
+        "source": "website",
+        "source_url": "https://pearlandeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "myeyedr_pearland_separate",
+        "direction": "negative",
+        "evidence": "MyEyeDr acquired a different practice ('Pearland Vision Center, now part of MyEyeDr.') at 2006 N Main St — NOT Pearland Eye Associates LLC at 8498 S Sam Houston Pkwy. Confirmed separate entities.",
+        "source": "myeyedr_locations",
+        "source_url": "https://locations.myeyedr.com/tx/pearland/2006-north-main-street",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://pearlandeyecare.com/meet-the-optometrist",
+        "fetched_at": "2026-05-15T19:09:00Z",
+        "fields": [
+          "owner_name"
+        ]
+      },
+      {
+        "source": "myeyedr_locations",
+        "url": "https://locations.myeyedr.com/tx/pearland/2006-north-main-street",
+        "fetched_at": "2026-05-15T19:09:00Z",
+        "fields": [
+          "recent_acquisition_disambiguation"
+        ]
+      }
+    ],
+    "enrichment_notes": "DECLINE: sister practice to Exquisite Eye Care (same operator Dr. Tran). Two-location operator profile, not solo-coast. Active Saturday hours + premium capex (scleral, ortho-K) = not coasting. Skip in favor of single-owner solo targets."
+  },
+  {
+    "legal_name": "Houston Family Eyecare",
+    "dba_name": null,
+    "address": "21802 Townsen Blvd W A",
+    "city": "Humble",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77338",
+    "phone": "(832) 406-2781",
+    "website": "https://houstonfamilyeyecare.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "false",
+    "optical_attached": "unknown",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Kim Nguyen",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://houstonfamilyeyecare.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo OD Dr. Kim Nguyen in Humble. Patient-centered, medical eye care, dry eye + allergies. Suburb of Houston northeast. Site mentions 'team of optometrists' but only one named.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Chi Kim Nguyen",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_full_name_confirmed",
+        "direction": "positive",
+        "evidence": "Full name: Dr. Chi Kim Nguyen, OD per Zocdoc. NPI/business filing: 'Nguyen & Whyte Eyecare PLLC'. UH College of Optometry grad.",
+        "source": "zocdoc",
+        "source_url": "https://www.zocdoc.com/doctor/chi-kim-nguyen-od-291859",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "two_party_PLLC_entity",
+        "direction": "negative",
+        "evidence": "Entity is 'Nguyen & Whyte Eyecare PLLC' — two-OD entity (Nguyen + Whyte). Not pure solo owner. Successor likely already internal to partnership.",
+        "source": "npi",
+        "source_url": "https://www.businessyab.com/explore/united_states/texas/harris_county/humble/townsen_boulevard_west/21802/houston_family_eyecare.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no MyEyeDr/Acuity/EyeCare Partners acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Houston+Family+Eyecare%22+Humble+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "zocdoc",
+        "url": "https://www.zocdoc.com/doctor/chi-kim-nguyen-od-291859",
+        "fetched_at": "2026-05-15T19:10:00Z",
+        "fields": [
+          "owner_full_name",
+          "owner_school"
+        ]
+      },
+      {
+        "source": "businessyab",
+        "url": "https://www.businessyab.com/explore/united_states/texas/harris_county/humble/townsen_boulevard_west/21802/houston_family_eyecare.html",
+        "fetched_at": "2026-05-15T19:10:00Z",
+        "fields": [
+          "entity_partner_relationship"
+        ]
+      }
+    ],
+    "enrichment_notes": "Two-OD PLLC (Nguyen + Whyte) — internal succession likely. Lacks tenure / age data. DECLINE for A-tier unless deeper enrichment surfaces age, building ownership, or coasting signals. B-tier max."
+  },
+  {
+    "legal_name": "Vision Source Magnolia",
+    "dba_name": null,
+    "address": "18000 FM 1488 Ste 100",
+    "city": "Magnolia",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77354",
+    "phone": "(346) 586-2020",
+    "website": "https://visionsource-magnolia.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Ravi Kankaria",
+    "year_established": 2010,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://visionsource-magnolia.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member (cooperative — independent). 2 TG-glaucoma ODs (Kankaria, Delk). Independently owned 2010. Magnolia is in Montgomery County technically — flag for county verification (may need Harris swap for Houston-metro adjacency).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Ravi Kankaria",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 16,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 16,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "county_correction_needed",
+        "direction": "negative",
+        "evidence": "Magnolia 77354 is in Montgomery County, not Harris. Outside strict Harris-only filter — flag for triage.",
+        "source": "internal",
+        "source_url": "https://en.wikipedia.org/wiki/Magnolia,_Texas",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "tenure_below_target",
+        "direction": "negative",
+        "evidence": "Practice established 2010 (16 yrs). Below 20-yr 'long-tenured-coasting' threshold.",
+        "source": "website",
+        "source_url": "https://www.visionsource-magnolia.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no acquisition. Active practice.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Vision+Source+Magnolia%22+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "google",
+        "url": "https://www.google.com/search?q=%22Vision+Source+Magnolia%22+acquired",
+        "fetched_at": "2026-05-15T19:11:00Z",
+        "fields": [
+          "recent_acquisition"
+        ]
+      }
+    ],
+    "enrichment_notes": "County mismatch (Montgomery, not Harris). Tenure 16 yrs is short of preference. DECLINE unless wider TX/Houston-metro filter accepted."
+  },
+  {
+    "legal_name": "Vision Source Kingwood",
+    "dba_name": null,
+    "address": "1714 Kingwood Drive",
+    "city": "Kingwood",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77339",
+    "phone": "(281) 359-2020",
+    "website": "https://visionsource-kingwood.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Glenn Ellisor",
+    "year_established": 1991,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://visionsource-kingwood.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source cooperative member (independent). Since 1991. 6 ODs including Glenn Ellisor and Wade Ellisor + Erin Ellisor — multi-generation family. Successor BLOCKED (family pipeline).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Glenn D. Ellisor",
+    "owner_age_estimate": 67,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 41,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 35,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 6,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "industry_founder_status",
+        "direction": "disqualifying",
+        "evidence": "Dr. Glenn Ellisor is the FOUNDER of Vision Source the cooperative (May 1, 1991) — served as President/CEO until 2016 and still board member. He is the most prominent independent-OD networker in the country. Started practicing in Humble/Kingwood in 1985. Owner age ~67 (41 yrs in practice).",
+        "source": "visionsource",
+        "source_url": "https://visionsource.com/about/leadership/glenn-d-ellisor-od/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_generational_family_practice",
+        "direction": "disqualifying",
+        "evidence": "6 ODs include Glenn + Wade Ellisor + Erin Ellisor. Family succession pipeline already established — external acquisition extremely unlikely.",
+        "source": "website",
+        "source_url": "https://visionsource-kingwood.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no acquisition. Active flagship practice for Vision Source cooperative.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Vision+Source+Kingwood%22+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "visionsource",
+        "url": "https://visionsource.com/about/leadership/glenn-d-ellisor-od/",
+        "fetched_at": "2026-05-15T19:12:00Z",
+        "fields": [
+          "owner_founder_status",
+          "owner_age_estimate"
+        ]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY: Founder of the Vision Source cooperative itself; succession pipeline locked-in via Wade + Erin Ellisor. Will not sell to outside ETA buyer."
+  },
+  {
+    "legal_name": "Vision Source Pearland (Signature Eye Care)",
+    "dba_name": "Vision Source Pearland",
+    "address": "1816 Broadway St Suite 106",
+    "city": "Pearland",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77581",
+    "phone": "(281) 992-3937",
+    "website": "https://visionsource-pearland.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": null,
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://visionsource-pearland.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member. Pearland (Brazoria County technically — flag for verification, may sit just inside Harris depending on ZIP). Cataract, glaucoma, dry eye, implantable CL.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 16,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 16,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "county_correction_needed",
+        "direction": "negative",
+        "evidence": "Pearland 77581 is split Harris/Brazoria — this address is in Brazoria County. Flag for filter triage.",
+        "source": "internal",
+        "source_url": "https://en.wikipedia.org/wiki/Pearland,_Texas",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "tenure_below_target",
+        "direction": "negative",
+        "evidence": "Per Yelp/Vision Source: established 2010. 16 yrs in business.",
+        "source": "yelp",
+        "source_url": "https://www.yelp.com/biz/vision-source-pearland-pearland-2",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Vision+Source+Pearland%22+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/vision-source-pearland-pearland-2",
+        "fetched_at": "2026-05-15T19:13:00Z",
+        "fields": [
+          "year_established"
+        ]
+      }
+    ],
+    "enrichment_notes": "Owner identity NOT publicly surfaced (Vision Source pages list owner roster on staff sub-page only — deeper enrichment needed). County mismatch and tenure-below-target. DECLINE without owner ID."
+  },
+  {
+    "legal_name": "Vision Source Meyer Park (Signature Eye Care)",
+    "dba_name": "Vision Source Meyer Park",
+    "address": "9935 S Post Oak Rd",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77096",
+    "phone": "(713) 721-7717",
+    "website": "https://visionsource-meyerpark.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Steve Lai",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://visionsource-meyerpark.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member (cooperative — independent). Dr. Steve Lai. OptiLight + ortho-K + myopia management. Sister location in Baytown (Chambers Town Center). Solo OD.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Steve Lai",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "two_location_operator",
+        "direction": "negative",
+        "evidence": "Dr. Steve Lai owns BOTH Vision Source Meyer Park AND Vision Source Chambers Town Center (Baytown). Two-location operator, also serves as 'Vision Source Houston Administrator' per LinkedIn — engaged in cooperative governance.",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/steve-lai-761b27291/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "premium_capex_specialty",
+        "direction": "negative",
+        "evidence": "OptiLight IPL (dry eye), ortho-K, myopia management. Recent specialty-capex investment.",
+        "source": "website",
+        "source_url": "https://visionsource-meyerpark.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Vision+Source+Meyer+Park%22+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/steve-lai-761b27291/",
+        "fetched_at": "2026-05-15T19:14:00Z",
+        "fields": [
+          "owner_two_location_status",
+          "owner_administrative_role"
+        ]
+      }
+    ],
+    "enrichment_notes": "DECLINE: two-location operator + active cooperative leader role + recent premium-capex investment = not coasting solo owner. Age/tenure unknown but operating posture is expansion, not retirement."
+  },
+  {
+    "legal_name": "Vision Source Cypress",
+    "dba_name": null,
+    "address": "15103 Mason Rd Suite B9",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77433",
+    "phone": "(832) 653-2631",
+    "website": "https://visionsource-cypress.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. M. Stubinski",
+    "year_established": 2018,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://visionsource-cypress.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member. Est 2018 — younger practice; tenure below 15-yr preference but operating + independent. Vision therapy + ortho-K + myopia control. Solo OD.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Megan Stubinski",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 8,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 8,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "tenure_too_short",
+        "direction": "disqualifying",
+        "evidence": "Practice founded 2018 (8 yrs). Far below long-tenured-coasting target. Confirmed via 2018 'New Vision Source Cypress Website' blog post.",
+        "source": "live_website_fetch",
+        "source_url": "https://visionsource-cypress.com/about-us/doctors-staff/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "second_associate_added",
+        "direction": "negative",
+        "evidence": "Dr. Lora Mishler (UH grad) added as second OD — practice in expansion mode, not contraction.",
+        "source": "website",
+        "source_url": "https://visionsource-cypress.com/about-us/doctors-staff/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "stubinski_at_multiple_locations",
+        "direction": "negative",
+        "evidence": "Dr. Megan Stubinski is also listed at Vision Source Copperfield team page. May indicate she has expanded across two Vision Source locations OR teams share roster references.",
+        "source": "website",
+        "source_url": "https://visionsource-copperfield.com/about-us/doctors-staff/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Vision+Source+Cypress%22+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://visionsource-cypress.com/about-us/doctors-staff/",
+        "fetched_at": "2026-05-15T19:15:00Z",
+        "fields": [
+          "owner_name",
+          "year_founded",
+          "associate_OD"
+        ]
+      }
+    ],
+    "enrichment_notes": "DECLINE: 8-year practice in expansion mode. Owner too young/early in career. Skip."
+  },
+  {
+    "legal_name": "Vision Source Copperfield",
+    "dba_name": null,
+    "address": "8717 Highway 6 North",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77095",
+    "phone": "(281) 859-8000",
+    "website": "https://visionsource-copperfield.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": null,
+    "year_established": 1991,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://visionsource-copperfield.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "year_established"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member. Operating since 1991 (35 yrs tenure — top-tier). Glaucoma, AMD, cataract, diabetic, myopia, telemedicine. Doctor roster not on landing page — verify owner-of-record before scoring.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Madeline Nguyen",
+    "owner_age_estimate": 46,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 20,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 35,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "original_founder_gone",
+        "direction": "disqualifying",
+        "evidence": "Practice est 1991 but current senior OD Madeline Nguyen grad UHCO 2006 (couldn't be 1991 founder). Original founder retired/transitioned out. Internal succession already occurred — external acquisition unlikely.",
+        "source": "website",
+        "source_url": "https://visionsource-copperfield.com/about-us/doctors-staff/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "three_OD_practice",
+        "direction": "negative",
+        "evidence": "3 ODs: Madeline Nguyen (UHCO 2006), Nadine Shihabeddin (UHCO 2022), Megan Stubinski. Multi-OD with junior OD recently added = active practice in growth mode.",
+        "source": "website",
+        "source_url": "https://visionsource-copperfield.com/about-us/doctors-staff/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "recent_associate_hire",
+        "direction": "negative",
+        "evidence": "Dr. Shihabeddin (grad 2022) added recently — practice hiring + retaining new ODs.",
+        "source": "website",
+        "source_url": "https://visionsource-copperfield.com/about-us/doctors-staff/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Vision+Source+Copperfield%22+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://visionsource-copperfield.com/about-us/doctors-staff/",
+        "fetched_at": "2026-05-15T19:16:00Z",
+        "fields": [
+          "owner_name",
+          "provider_count_estimate",
+          "associate_OD_grad_years"
+        ]
+      }
+    ],
+    "enrichment_notes": "DECLINE: Original 1991 founder no longer at practice. Current owner Dr. Madeline Nguyen ~46 (UHCO 2006). 3 ODs with recent 2022 hire = active growth practice. Internal succession path already used. Skip."
+  },
+  {
+    "legal_name": "Vision Source Telfair (Signature Eye Care)",
+    "dba_name": "Vision Source Telfair",
+    "address": "520 Highway 6 Suite 300",
+    "city": "Sugar Land",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(281) 243-2020",
+    "website": "https://visionsource-telfair.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": null,
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://visionsource-telfair.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member. Sugar Land (Fort Bend County, not Harris — flag for verification). General optometry + frames + lenses. Owner roster requires deeper page fetch.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. John Dang or Dr. Jenny Mak",
+    "owner_age_estimate": 43,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 12,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 12,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "county_correction_needed",
+        "direction": "negative",
+        "evidence": "Sugar Land 77478 is Fort Bend County, not Harris. Outside strict Harris filter.",
+        "source": "internal",
+        "source_url": "https://en.wikipedia.org/wiki/Sugar_Land,_Texas",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "tenure_too_short",
+        "direction": "disqualifying",
+        "evidence": "Founded 2014 (12 yrs). Dr. Jenny Mak grad UHCO 2008 (age ~44). Below long-tenured-coasting threshold.",
+        "source": "live_website_fetch",
+        "source_url": "https://visionsource-telfair.com/about-us/doctors-staff/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "two_OD_practice",
+        "direction": "negative",
+        "evidence": "Dr. John Dang + Dr. Jenny Mak. Two-OD partnership — internal succession path likely.",
+        "source": "website",
+        "source_url": "https://visionsource-telfair.com/about-us/doctors-staff/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Vision+Source+Telfair%22+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://visionsource-telfair.com/about-us/doctors-staff/",
+        "fetched_at": "2026-05-15T19:17:00Z",
+        "fields": [
+          "associate_ODs",
+          "year_established_2014"
+        ]
+      }
+    ],
+    "enrichment_notes": "DECLINE: County mismatch (Fort Bend, not Harris), 12-yr tenure too short, owner identification ambiguous, partnership-OD structure. Skip."
+  },
+  {
+    "legal_name": "Pro-Optix Optometry & Dry Eye Center",
+    "dba_name": null,
+    "address": "3800 Southwest Freeway Suite 112",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77027",
+    "phone": "(713) 360-7095",
+    "website": "https://prooptixeyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Sairah Malik",
+    "year_established": 2015,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://prooptixeyecare.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member, family-owned. Service area: West U, Bellaire, River Oaks — premium ZIPs. Heavy dry-eye specialty (OptiLight IPL + OptiLIFT). Scleral lenses. Saturday hours.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Sairah Malik & Dr. Sana Malik",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 11,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 11,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "tenure_too_short",
+        "direction": "disqualifying",
+        "evidence": "Founded 2015 (11 yrs). Sister-pair operating model.",
+        "source": "live_website_fetch",
+        "source_url": "https://prooptixeyecare.com/our-practice/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "expansion_relocation_2025",
+        "direction": "negative",
+        "evidence": "Per Community Impact Sept 2025 article: Pro-Optix relocated to Upper Kirby area in Sept 2025 — practice is expanding/upgrading, NOT winding down.",
+        "source": "community_impact",
+        "source_url": "https://communityimpact.com/houston/bellaire-meyerland-west-university/business/2025/09/26/pro-optix-optometry-dry-eye-center-relocates-to-upper-kirby-area/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "premium_capex_specialty",
+        "direction": "negative",
+        "evidence": "OptiLight IPL + OptiLIFT by Lumenis (recent dry-eye capex). Saturday hours 9-3pm. Modern 4patientcare.app booking. Active growth posture.",
+        "source": "live_website_fetch",
+        "source_url": "https://prooptixeyecare.com/our-practice/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Pro-Optix%22+Houston+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://prooptixeyecare.com/our-practice/",
+        "fetched_at": "2026-05-15T19:18:00Z",
+        "fields": [
+          "year_founded",
+          "owner_name",
+          "dry_eye_capex"
+        ]
+      },
+      {
+        "source": "community_impact",
+        "url": "https://communityimpact.com/houston/bellaire-meyerland-west-university/business/2025/09/26/pro-optix-optometry-dry-eye-center-relocates-to-upper-kirby-area/",
+        "fetched_at": "2026-05-15T19:18:00Z",
+        "fields": [
+          "recent_expansion"
+        ]
+      }
+    ],
+    "enrichment_notes": "DECLINE: 11-yr tenure too short + 2025 relocation to Upper Kirby (expansion) + recent IPL capex. Sister-owners young and actively growing. Skip."
+  },
+  {
+    "legal_name": "Vision Corner",
+    "dba_name": null,
+    "address": "4725 Westheimer Rd",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77027",
+    "phone": "(713) 623-2000",
+    "website": "https://visioncorner.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Sophia W. Barnes",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://visioncorner.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Premium independent practice in Galleria/River Oaks district. Owner-OD Dr. Barnes (TG glaucoma specialist, U Houston). Neurolens, migraine vision therapy, specialty CL. 'Premier private eye care' positioning.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Sophia W. Barnes",
+    "owner_age_estimate": 68,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 42,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_high_target_band",
+        "direction": "positive",
+        "evidence": "Dr. Sophia W. Barnes graduated UH College of Optometry 1984 — 42 yrs in practice. Estimated age ~68. Strong A-tier age signal — well within typical sell window (55-70).",
+        "source": "healthgrades",
+        "source_url": "https://www.healthgrades.com/providers/sophia-barnes-27vbp",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "solo_OD_practice",
+        "direction": "positive",
+        "evidence": "Only Dr. Barnes listed as owner/lead OD. No associate OD with succession claim. Classic solo-owner profile.",
+        "source": "website",
+        "source_url": "https://visioncorner.com/our-team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_capex_OCT_Optomap",
+        "direction": "negative",
+        "evidence": "Optos and OCT imaging confirmed on site — modern capex.",
+        "source": "live_website_fetch",
+        "source_url": "https://visioncorner.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_saturday_hours",
+        "direction": "positive",
+        "evidence": "Sat & Sun: Closed. M-F 9:30am-6pm only. Reduced hours coasting tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://visioncorner.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "mixed_booking_vendors",
+        "direction": "positive",
+        "evidence": "SolutionReach + SmileReminder dual vendor stack — fragmented tech.",
+        "source": "live_website_fetch",
+        "source_url": "https://visioncorner.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "premium_zip",
+        "direction": "positive",
+        "evidence": "4725 Westheimer Rd, 77027 — Galleria / River Oaks district. High-income patient base.",
+        "source": "internal",
+        "source_url": "https://visioncorner.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no MyEyeDr/Acuity/EyeCare Partners acquisition. Independent practice.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Vision+Corner%22+Houston+acquired+MyEyeDr",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "healthgrades",
+        "url": "https://www.healthgrades.com/providers/sophia-barnes-27vbp",
+        "fetched_at": "2026-05-15T19:19:00Z",
+        "fields": [
+          "owner_grad_year",
+          "owner_age_estimate"
+        ]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://visioncorner.com/about/",
+        "fetched_at": "2026-05-15T19:19:00Z",
+        "fields": [
+          "office_hours",
+          "OCT_Optomap",
+          "booking_vendor"
+        ]
+      }
+    ],
+    "enrichment_notes": "TOP A-TIER CANDIDATE: 42-yr tenure, owner age ~68, SOLO OD, premium Galleria/River Oaks ZIP, NO Saturday hours, mixed-vendor booking (mild coasting tells), no distress, no acquisition. Owner age in prime sell window. Building ownership check (CAD lookup) is the natural next step."
+  },
+  {
+    "legal_name": "Bellaire Optometry Clinic",
+    "dba_name": "Bellaire Optometry",
+    "address": "10080 Bellaire Blvd Suite 105",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77072",
+    "phone": "(713) 774-3211",
+    "website": "https://www.bellaireoptometry.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Anne Le",
+    "year_established": 1989,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.bellaireoptometry.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Operating since 1989 (37 yrs tenure — top-tier). Dr. Anne Le. Vision therapy, ortho-K, hard-to-fit CL, sports vision. Solo OD signal — high A-tier candidate.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Anne Huyen Le",
+    "owner_age_estimate": 63,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 37,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 37,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_owner_37_years",
+        "direction": "positive",
+        "evidence": "Dr. Anne Huyen Le founded Bellaire Optometry in 1989, graduated UH College of Optometry that same year. 37-year founder-owner tenure. Estimated age ~63 — prime sell window.",
+        "source": "npiprofile",
+        "source_url": "https://npiprofile.com/npi/1568580637",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "solo_OD_practice",
+        "direction": "positive",
+        "evidence": "Only Dr. Anne Le mentioned. No associate OD with succession claim. Classic solo-owner profile.",
+        "source": "website",
+        "source_url": "https://www.bellaireoptometry.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "saturday_hours_present",
+        "direction": "negative",
+        "evidence": "Saturday 8am-2pm. Still working Saturdays — full operational engagement at age 63.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.bellaireoptometry.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_copyright_year",
+        "direction": "negative",
+        "evidence": "Copyright 2026 — site actively maintained.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.bellaireoptometry.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "specialty_capex_orthoK_visiontherapy",
+        "direction": "negative",
+        "evidence": "Vision therapy, ortho-K, sports vision, hard-to-fit CL — specialty capex still being used. Not coasting on basic refraction.",
+        "source": "website",
+        "source_url": "https://www.bellaireoptometry.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "premium_immigrant_zip",
+        "direction": "positive",
+        "evidence": "10080 Bellaire Blvd, 77072 — Asian-immigrant 'Bellaire' ZIP. Stable repeat-patient base typical of culturally-rooted solo practice.",
+        "source": "internal",
+        "source_url": "https://www.bellaireoptometry.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no MyEyeDr/Acuity/EyeCare Partners acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Bellaire+Optometry%22+Houston+acquired+MyEyeDr",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "npiprofile",
+        "url": "https://npiprofile.com/npi/1568580637",
+        "fetched_at": "2026-05-15T19:20:00Z",
+        "fields": [
+          "owner_full_name",
+          "owner_grad_year"
+        ]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.bellaireoptometry.com/",
+        "fetched_at": "2026-05-15T19:20:00Z",
+        "fields": [
+          "saturday_hours",
+          "founding_year",
+          "specialty_services"
+        ]
+      }
+    ],
+    "enrichment_notes": "TOP A-TIER CANDIDATE: 37-yr founder-owner tenure, solo OD, owner age ~63 in prime sell window, no distress, no acquisition. Mild caveats: Saturday hours + active capex investment = engaged operator (not yet coasting). Best when paired with CAD building-ownership lookup; if Dr. Le owns the building, succession path is significant."
+  },
+  {
+    "legal_name": "River Oaks Optical",
+    "dba_name": null,
+    "address": "2900 Westheimer Rd",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77098",
+    "phone": "(346) 315-4911",
+    "website": "https://www.riveroaksoptical.com/",
+    "practice_type": "refraction_only",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "facility",
+    "license_holder_name": null,
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.riveroaksoptical.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "uncertain",
+    "verification_notes": "Family-owned, Westheimer / River Oaks area. Premium frames (Ray-Ban, Gucci, Tom Ford, Oliver Peoples). Site is optical-heavy — verify OD on staff vs frames-only retail before scoring. Could be optical-retail only with leased OD.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "optical_retail_with_leased_OD",
+        "direction": "disqualifying",
+        "evidence": "Yelp testimonial confirms 'optometrist on the premises' but site is frames-boutique-heavy. Premium luxury frames (Gucci, Tom Ford, Oliver Peoples, etc.). Likely optical retail with non-owner leased OD — NOT a traditional OD-owned practice.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.riveroaksoptical.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "stale_copyright",
+        "direction": "positive",
+        "evidence": "Copyright 2025 in footer — one year stale. Mild coasting tell, but consistent with a recently-launched website also.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.riveroaksoptical.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "owner_not_publicly_identified",
+        "direction": "negative",
+        "evidence": "No owner name on site. 'Family-owned for the last several decades' — opaque.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.riveroaksoptical.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22River+Oaks+Optical%22+Westheimer+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.riveroaksoptical.com/",
+        "fetched_at": "2026-05-15T19:21:00Z",
+        "fields": [
+          "business_type",
+          "copyright",
+          "brands"
+        ]
+      }
+    ],
+    "enrichment_notes": "DECLINE for OD-practice ETA: business is optical-retail boutique with a leased OD, not an OD-owned medical practice. Different acquisition profile (optical retail), may belong in a separate cohort. Skip from optometry pipeline."
+  },
+  {
+    "legal_name": "Better Vision TX",
+    "dba_name": null,
+    "address": "17814 Spring Cypress Rd #105",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77429",
+    "phone": "(281) 970-3840",
+    "website": "https://bettervisiontx.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Naveera Farooque",
+    "year_established": 2009,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://bettervisiontx.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "addresses",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent doctor-owned. Founder-led Dr. Farooque. 4 ODs. Cypress + Tomball locations. Advanced diagnostics (OCT, UWF, electroretinography, visual field, Rabin color). Strong medical-eye-care positioning.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Naveera Farooque",
+    "owner_age_estimate": 43,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 17,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 17,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 4,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_below_target",
+        "direction": "disqualifying",
+        "evidence": "Dr. Farooque grad UH College of Optometry 2009 magna cum laude. ~17 yrs in practice, age ~43. Far below typical 55-65 sell window.",
+        "source": "live_website_fetch",
+        "source_url": "https://bettervisiontx.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_OD_multi_location",
+        "direction": "negative",
+        "evidence": "4 TG-glaucoma specialist ODs across Cypress + Tomball. Multi-location operator profile.",
+        "source": "live_website_fetch",
+        "source_url": "https://bettervisiontx.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "premium_capex_modern",
+        "direction": "negative",
+        "evidence": "OCT at Cypress + EIDON 200° ultra-widefield retinal imaging at BOTH locations. Modern OpticalPOS online booking. Copyright 2026. Saturday hours 10-4 at both locations. Active expansion, not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://bettervisiontx.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Better+Vision+TX%22+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://bettervisiontx.com/",
+        "fetched_at": "2026-05-15T19:22:00Z",
+        "fields": [
+          "owner_grad_year",
+          "owner_age_estimate",
+          "provider_count",
+          "OCT_Optomap"
+        ]
+      }
+    ],
+    "enrichment_notes": "DECLINE: owner ~43 too young, active growth (2 locations + recent capex). PARK 10+ yrs."
+  },
+  {
+    "legal_name": "Klein Eyecare",
+    "dba_name": null,
+    "address": "8220 Louetta Road Suite 112",
+    "city": "Spring",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77379",
+    "phone": "(281) 370-2020",
+    "website": "https://www.kleineyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Lance Abernathy",
+    "year_established": 1981,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.kleineyecare.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Operating since 1981 (45 yrs — top-tier tenure). 3 ODs (Abernathy, Scott, Moczygemba). 'Recently welcomed' Dr. Moczygemba = associate hiring (potential succession). Spring/NW Houston.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Grant Gibson (current senior OD)",
+    "owner_age_estimate": 49,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 23,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 45,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 4,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "todays_vision_franchise",
+        "direction": "disqualifying",
+        "evidence": "Klein Eyecare is part of the Today's Vision franchise network (founded 1984 by Drs. Donald Glenz + Stig Pederson, sold 2005 to 22 licensee cooperative). Each Today's Vision location is independently owned, but licensee structure affects ETA acquisition terms (licensing fees, brand, IT).",
+        "source": "todaysvision",
+        "source_url": "https://www.todaysvision.com/klein-eyecare",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "original_founder_gone",
+        "direction": "negative",
+        "evidence": "Original 1981 founder no longer at practice. Current senior OD is Dr. Grant Gibson (UHCO 2003) — age ~49. Internal succession already occurred.",
+        "source": "website",
+        "source_url": "https://www.kleineyecare.com/our-eye-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_OD_practice",
+        "direction": "negative",
+        "evidence": "4 ODs: Grant Gibson (UHCO 2003), Misti Gibson (couple?), Lance Abernathy (Inter-American Univ Puerto Rico 2012, prior 6-yr Tennessee practice), Richard Scott, Jordan Moczygemba (UHCO, recent grad). Multi-OD with younger associates being added.",
+        "source": "website",
+        "source_url": "https://www.kleineyecare.com/our-eye-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "associate_hiring_2024_2025",
+        "direction": "negative",
+        "evidence": "'Recently welcomed' Dr. Moczygemba — active associate hiring within last 12 mo. Active growth posture.",
+        "source": "website",
+        "source_url": "https://www.kleineyecare.com/our-eye-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no MyEyeDr/Acuity/EyeCare Partners acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Klein+Eyecare%22+Spring+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "todaysvision",
+        "url": "https://www.todaysvision.com/klein-eyecare",
+        "fetched_at": "2026-05-15T19:23:00Z",
+        "fields": [
+          "franchise_network",
+          "ownership_structure"
+        ]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.kleineyecare.com/our-eye-doctors/",
+        "fetched_at": "2026-05-15T19:23:00Z",
+        "fields": [
+          "associate_ODs",
+          "founder_status"
+        ]
+      }
+    ],
+    "enrichment_notes": "DECLINE: Today's Vision franchise (licensing complication) + original 1981 founder gone + multi-OD with active associate hiring (Moczygemba 'recently welcomed') + current senior OD age 49 too young. Skip."
+  },
+  {
+    "legal_name": "Vision Pro",
+    "dba_name": null,
+    "address": "20920 Kuykendahl Rd Ste C",
+    "city": "Spring",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77379",
+    "phone": "(281) 353-3937",
+    "website": "https://www.visionproeyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Paul Proske",
+    "year_established": 2007,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.visionproeyecare.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo OD Dr. Proske (TG glaucoma specialist), 20+ yrs experience. Site explicitly says 'one of the few independent locally-owned optometry clinics still around'. Diabetic + glaucoma + AMD + MGD. Premium A-tier candidate.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Paul A. Proske",
+    "owner_age_estimate": 52,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 26,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 19,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 5,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_below_target",
+        "direction": "disqualifying",
+        "evidence": "Dr. Paul Proske grad UH College of Optometry 2000. ~26 yrs in practice, est age ~52. Below 55-65 typical sell window.",
+        "source": "healthgrades",
+        "source_url": "https://www.healthgrades.com/providers/paul-proske-x9qvq",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_OD_practice",
+        "direction": "negative",
+        "evidence": "5 ODs: Paul Proske + Elaine Pham + Mimi Duong + Monica Gonzales-Deliga + Vinh Nguyen. NOT solo as spine indicated. Active growth.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.visionproeyecare.com/our-eye-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "EyeCarePro CMS, scheduleyourexam.com booking, copyright 2026. Two-sons-and-wife mentioned — likely 40s-50s.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.visionproeyecare.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition",
+        "direction": "negative",
+        "evidence": "No TOB disciplinary, no acquisition.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Vision+Pro%22+Spring+Proske+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "healthgrades",
+        "url": "https://www.healthgrades.com/providers/paul-proske-x9qvq",
+        "fetched_at": "2026-05-15T19:24:00Z",
+        "fields": [
+          "owner_grad_year"
+        ]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.visionproeyecare.com/our-eye-doctors/",
+        "fetched_at": "2026-05-15T19:24:00Z",
+        "fields": [
+          "provider_count_estimate",
+          "associate_ODs"
+        ]
+      }
+    ],
+    "enrichment_notes": "DECLINE: spine ID'd as 'solo OD' but actual roster is 5 ODs (Proske + 4 associates). Owner age ~52, too young for sell window. Active hire-and-grow practice. Skip."
+  }
+]

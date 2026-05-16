@@ -1,0 +1,1911 @@
+[
+  {
+    "legal_name": "Lifetime Eyecare Associates",
+    "dba_name": null,
+    "address": "27214 Kuykendahl Suite 100",
+    "city": "The Woodlands",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77375",
+    "phone": "(281) 465-8300",
+    "website": "https://www.lifetimeeyecareassociates.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Grisel Lagunas",
+    "year_established": 2005,
+    "data_sources": [
+      {
+        "source": "vision_source",
+        "url": "https://visionsource.com/vision-source-houston/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "phone"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent_multi_location",
+    "verification_notes": "Vision Source member (independent). The Woodlands area — Tomball/Spring corridor. Tomball is in Harris County north. Owner roster requires deeper page fetch.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Grisel Lagunas (President) + Dr. Claudio Lagunas",
+    "owner_age_estimate": 50,
+    "owner_age_source": "linkedin_grad",
+    "owner_tenure_years": 21,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 21,
+    "employee_count_estimate": 15,
+    "provider_count_estimate": 6,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_husband_wife_team",
+        "direction": "positive",
+        "evidence": "Dr. Grisel Lagunas (president, UH Optometry 2001) founded the practice in 2005. Dr. Claudio Lagunas also on staff (Inter American University PR, 1997 grad) — likely spouse. ~21 yr tenure for Grisel; Claudio has ~29 yr career tenure. Combined family ownership.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.lifetimeeyecareassociates.com/team/grisel-lagunas-o-d/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_practice",
+        "direction": "negative",
+        "evidence": "Practice serves The Woodlands, Magnolia, Spring, Tomball, Conroe, and Houston — indicates 2+ physical locations. Multi-location with 6 ODs on staff (Grisel, Claudio, Adams-Derouen, Gates, Vallery, Martinez). Size approaches mini-group threshold.",
+        "source": "website",
+        "source_url": "https://www.lifetimeeyecareassociates.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "associate_OD_bench",
+        "direction": "positive",
+        "evidence": "4 associate ODs on staff beyond the 2 owners — strong bench depth eases transition risk. Practice has grown beyond solo founder phase.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.lifetimeeyecareassociates.com/our-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No news of sale, acquisition, MyEyeDr/Acuity/Keplr/EyeCare Partners affiliation, lawsuits, or TOB disciplinary action surfaced in distress check.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Lifetime+Eyecare+Associates%22+sold+acquired+MyEyeDr+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_doctors_page",
+        "url": "https://www.lifetimeeyecareassociates.com/team/grisel-lagunas-o-d/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "year_established",
+          "provider_count"
+        ]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.lifetimeeyecareassociates.com/our-doctors/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "provider_count_estimate",
+          "associate_bench"
+        ]
+      }
+    ],
+    "enrichment_notes": "Dr. Grisel Lagunas founded Lifetime Eyecare in 2005 and added The Woodlands location in 2007. Multi-location regional group with 6 ODs serving Houston north corridor. Likely too large for solo-owner thesis but family-owned and multi-generation potential. No acquisition or distress signals."
+  },
+  {
+    "legal_name": "Brazos Eye Center",
+    "dba_name": null,
+    "address": "6907 Summertime Way #110",
+    "city": "Rosenberg",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77469",
+    "phone": "(832) 595-3260",
+    "website": "https://brazoseyecenter.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Quynh Hoa Le",
+    "year_established": 2015,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://brazoseyecenter.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member, locally-owned. 2 ODs (Le + Ku). 175+ 5-star reviews. Note: Rosenberg is in Fort Bend County, not Harris — corrected. Practice est 2015 — only ~11 yrs tenure (below 15+ yr preferred threshold).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Quynh Hoa Le",
+    "owner_age_estimate": 44,
+    "owner_age_source": "linkedin_grad",
+    "owner_tenure_years": 11,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 11,
+    "employee_count_estimate": 6,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "younger_owner",
+        "direction": "negative",
+        "evidence": "Dr. Le graduated UH College of Optometry in 2008 (first in class) — estimated age ~44. Outside the 55+ retirement window. Likely not motivated seller within 12–36 months absent life event.",
+        "source": "website_doctors_page",
+        "source_url": "https://brazoseyecenter.com/our-team.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "short_tenure",
+        "direction": "negative",
+        "evidence": "Practice founded 2015 — only 11 years operating. Below 15+ year tenure preference.",
+        "source": "website",
+        "source_url": "https://www.brazoseyecenter.com/about.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition, sale, closure, lawsuit, or TOB disciplinary surfaced.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Brazos+Eye+Center%22+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_doctors_page",
+        "url": "https://brazoseyecenter.com/our-team.html",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_age_estimate",
+          "owner_tenure_years",
+          "year_established"
+        ]
+      }
+    ],
+    "enrichment_notes": "Solo-owner glaucoma specialist Dr. Le, ~44 yrs old, 11 yr practice. Outside ideal age and tenure windows. County corrected to Fort Bend. Spine-valid but low-priority for sale-in-12-36-mo thesis."
+  },
+  {
+    "legal_name": "Vision Source Aldine",
+    "dba_name": null,
+    "address": "5164 Aldine Mail Road",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77039",
+    "phone": "(281) 449-7400",
+    "website": "https://visionsource-aldine.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Ravindra (Ravi) Kankaria",
+    "year_established": 1993,
+    "data_sources": [
+      {
+        "source": "vision_source",
+        "url": "https://visionsource.com/vision-source-houston/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "phone"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member (independent). N Houston / Aldine corridor. Owner identified as Dr. Ravindra Kankaria, UH Optometry grad + Vision Rehab/Low Vision residency.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Ravindra (Ravi) Kankaria",
+    "owner_age_estimate": 60,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 33,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 33,
+    "employee_count_estimate": 8,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_age_in_retirement_window",
+        "direction": "positive",
+        "evidence": "Dr. Kankaria is owner since 1993 (33 yr tenure). UH Optometry grad + Vision Rehab residency. Conservative age estimate using tenure proxy (~26 + 33 = 59-62). Squarely in retirement window.",
+        "source": "website_team_page",
+        "source_url": "https://www.visionsource-aldine.com/our-team.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "long_tenure_solo_anchored",
+        "direction": "positive",
+        "evidence": "33 years operating same location since 1993. Single anchor location.",
+        "source": "website",
+        "source_url": "https://www.visionsource-aldine.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress news surfaced.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Vision+Source+Aldine%22+Kankaria+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_team_page",
+        "url": "https://www.visionsource-aldine.com/our-team.html",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "owner_tenure_years",
+          "year_established"
+        ]
+      }
+    ],
+    "enrichment_notes": "STRONG candidate. Dr. Ravi Kankaria, sole-owner since 1993 (33 yr tenure). UH Optometry + Vision Rehab residency. Age ~60 in retirement window. Vision Source member (independent). N Houston Aldine corridor. No distress; clean."
+  },
+  {
+    "legal_name": "Family Eye Health Solutions",
+    "dba_name": null,
+    "address": "5201 Hwy 6 Suite 700",
+    "city": "Missouri City",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77459",
+    "phone": "(832) 662-3500",
+    "website": "https://www.familyeyehealthsolutions.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Jimmy Joseph",
+    "year_established": 2014,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.familyeyehealthsolutions.com/about-us.html",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo OD Dr. Jimmy Joseph, owner-operator. Note: Missouri City is in Fort Bend County, not Harris — corrected. Independent, dry eye + myopia + surgical co-management.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Jimmy Joseph",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 12,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 12,
+    "employee_count_estimate": 4,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_about_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_owner_operator",
+        "direction": "positive",
+        "evidence": "Dr. Jimmy Joseph is sole owner-operator. Pennsylvania College of Optometry grad + Ocular Disease residency at Wilkes-Barre VA. No successor at site — clean external-buyer path.",
+        "source": "website_about_page",
+        "source_url": "https://www.familyeyehealthsolutions.com/about-us.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "tenure_short_to_mid",
+        "direction": "negative",
+        "evidence": "Practice est 2014 (~12 yr). Below 15+ yr preference but trending toward acceptable.",
+        "source": "website",
+        "source_url": "https://www.familyeyehealthsolutions.com/about-us.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress news surfaced.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Family+Eye+Health+Solutions%22+Missouri+City+Joseph+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_about_page",
+        "url": "https://www.familyeyehealthsolutions.com/about-us.html",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "year_established"
+        ]
+      }
+    ],
+    "enrichment_notes": "Solo-OD Dr. Jimmy Joseph, owner-operator since 2014. Independent, Fort Bend Missouri City. Tenure ~12 yr (slightly below preference). Age unknown but career suggests mid-career. Worth re-checking in 3 yr."
+  },
+  {
+    "legal_name": "Colony Eye Care Center",
+    "dba_name": null,
+    "address": "4511 Sweetwater Blvd",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77479",
+    "phone": "(281) 265-2020",
+    "website": "https://www.colonyeyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "unknown",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Steven Davenport",
+    "year_established": 1991,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.colonyeyecare.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "addresses",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent_multi_location",
+    "verification_notes": "7 ODs across Sugar Land + Missouri City locations. Multi-OD group practice. Note: Both locations in Fort Bend County, not Harris — corrected. Multiple-OD successor risk; verify ownership structure before scoring.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Steven C. Davenport",
+    "owner_age_estimate": 60,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 35,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 35,
+    "employee_count_estimate": 20,
+    "provider_count_estimate": 7,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_age_in_retirement_window",
+        "direction": "positive",
+        "evidence": "Dr. Davenport graduated UH College of Optometry in 1991 — 34+ years in optometry. Age proxy ~26+34 = ~60. In retirement window.",
+        "source": "healthcare6_npi",
+        "source_url": "https://www.healthcare6.com/physician/sugar-land-tx/steven-c-davenport-664550.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_group_practice",
+        "direction": "negative",
+        "evidence": "7 ODs across 2 locations (Sugar Land + Missouri City). Larger than solo-owner thesis target. Likely operating as group LLP — entity name 'Colony Eye Care Center LLP'. Successor candidates likely embedded.",
+        "source": "website",
+        "source_url": "https://www.colonyeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition, sale, or distress news. Yelp listing for Davenport individually shows 'CLOSED' but appears to be listing artifact — main practice is active.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Colony+Eye+Care%22+sold+acquired+retiring+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "healthcare6_npi",
+        "url": "https://www.healthcare6.com/physician/sugar-land-tx/steven-c-davenport-664550.html",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_age_estimate",
+          "owner_tenure_years",
+          "year_established"
+        ]
+      }
+    ],
+    "enrichment_notes": "Dr. Davenport in retirement window (age ~60, 34 yr career). BUT 7-OD multi-location LLP group practice — likely internal successor route. Spine-valid but lower fit for solo-owner exit thesis. No distress."
+  },
+  {
+    "legal_name": "Visionary Eye Care",
+    "dba_name": null,
+    "address": "1480 TX-6",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": null,
+    "phone": "(281) 240-4448",
+    "website": "https://sugarlandvision.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Alinah Ali",
+    "year_established": 2004,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://sugarlandvision.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors",
+          "tenure"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo TG glaucoma-specialist Dr. Ali, ~10 yr tenure at this practice. Practice itself est 2004 (~22 yr). Note: Sugar Land is in Fort Bend County, not Harris — corrected. Independent, full-scope. Premium suburban ZIP.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Alinah Ali",
+    "owner_age_estimate": 46,
+    "owner_age_source": "linkedin_grad",
+    "owner_tenure_years": 12,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 22,
+    "employee_count_estimate": 5,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_about_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "younger_owner_long_practice",
+        "direction": "negative",
+        "evidence": "Dr. Ali joined practice in 2014 with 10+ yrs prior experience — UH College of Optometry grad. Practice founded 2004 — Dr. Ali may not be original owner. Age estimate ~46 (UH grad ~2003 + 26 = ~49 by 2026, but joined Visionary in 2014). Outside the 55+ retirement window.",
+        "source": "website_about_page",
+        "source_url": "https://sugarlandvision.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "long_practice_tenure",
+        "direction": "positive",
+        "evidence": "Practice operating since 2004 (22 yrs). Premium Sugar Land Hwy 6 location.",
+        "source": "website",
+        "source_url": "https://sugarlandvision.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress news. Most recent practice news dated Dec 2024 — clean.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Visionary+Eye+Care%22+Sugar+Land+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_about_page",
+        "url": "https://sugarlandvision.com/about-us/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "year_established",
+          "owner_tenure_years"
+        ]
+      }
+    ],
+    "enrichment_notes": "Solo OD Dr. Ali, glaucoma specialist. Practice itself 22 yrs old but Dr. Ali joined in 2014 — possible succession-bought-from-prior-owner pattern (unconfirmed). Age estimate ~46 — outside 55+ retirement window. Spine-valid but low age fit."
+  },
+  {
+    "legal_name": "Vision Veritas Eyecare",
+    "dba_name": "Vision Veritas",
+    "address": "15123 Prestonwood Blvd Ste 120",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75248",
+    "phone": "(214) 253-2000",
+    "website": "https://www.visionveritaseyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "unknown",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Anita Carleo",
+    "year_established": 2014,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.visionveritaseyecare.com/our-practice/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-owned. Sisters Dr. Anita Carleo + Dr. Olivia Carleo founded Dec 2014. Premium Prestonwood Dallas ZIP. Dry eye specialty + OptiLight + designer frames (Cartier, Tom Ford, Oliver Peoples). 2-OD family successor pattern.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Anita Carleo + Dr. Olivia Carleo (sisters)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 12,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 12,
+    "employee_count_estimate": 7,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "sibling_co_ownership",
+        "direction": "negative",
+        "evidence": "Sisters Anita + Olivia Carleo co-founded Dec 2014 after 'more than a decade of combined experience' as ODs in separate practices. Joint sister ownership; both still active. Likely not in retirement window.",
+        "source": "culturemap_dallas",
+        "source_url": "https://dallas.culturemap.com/news/city-life/12-15-15-vision-veritas-anita-olivia-carleo-interview/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "expanding_practice",
+        "direction": "negative",
+        "evidence": "Practice added Dr. Emily Van in Sept 2023 — actively growing rather than coasting. 3 ODs total. 4,000 sq ft Tuscan-inspired buildout.",
+        "source": "addison_magazine",
+        "source_url": "https://addisonmagazine.com/2023/09/vision-veritas-welcomes-dr-emily-van-o-d/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress signals.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Vision+Veritas%22+Dallas+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "culturemap_dallas",
+        "url": "https://dallas.culturemap.com/news/city-life/12-15-15-vision-veritas-anita-olivia-carleo-interview/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "year_established",
+          "tenure_years"
+        ]
+      },
+      {
+        "source": "addison_magazine",
+        "url": "https://addisonmagazine.com/2023/09/vision-veritas-welcomes-dr-emily-van-o-d/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "provider_count_estimate",
+          "associate_hiring"
+        ]
+      }
+    ],
+    "enrichment_notes": "Sister-team boutique practice in premium N Dallas. 12 yr tenure, actively expanding (added associate 2023). Both founders likely 45-55 range — outside 55+ retirement window. Sibling co-ownership pattern; family successor risk."
+  },
+  {
+    "legal_name": "East Dallas Family Eye Care",
+    "dba_name": null,
+    "address": "8202 Elam Rd Ste 100",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75217",
+    "phone": "(214) 506-2549",
+    "website": "https://www.edfec.net/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Anand (Ned) Kumar",
+    "year_established": 2005,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.edfec.net/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent solo-OD. Established 2005 (~21 yr tenure). Pleasant Grove Dallas (lower-income but stable). Bilingual EN/ES. Medicaid acceptance (TMHP, Molina). Walk-ins. Glaucoma + AMD + diabetic + cataract co-management.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Anand (Ned) Kumar",
+    "owner_age_estimate": 50,
+    "owner_age_source": "linkedin_grad",
+    "owner_tenure_years": 21,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 21,
+    "employee_count_estimate": 4,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_about_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_owner_long_tenure",
+        "direction": "positive",
+        "evidence": "Dr. Kumar opened practice in 2005 — 21 yr tenure. Southern College of Optometry OD 2002 + Univ of Illinois BS 1997. Solo owner-operator. Age proxy: ~50 (BS 1997 + 4 + 4 = 2005, age likely ~25 then = ~46-50 now).",
+        "source": "website_about_page",
+        "source_url": "https://www.edfec.net/team/dr-anand-ned-kumar-od/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "solo_single_location",
+        "direction": "positive",
+        "evidence": "Single location, solo OD. No associate bench. Walk-ins + bilingual + Medicaid — high-volume model.",
+        "source": "website",
+        "source_url": "https://www.edfec.net/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_academic_role",
+        "direction": "negative",
+        "evidence": "Dr. Kumar serves as adjunct/clinical instructor at 3 optometry schools (UIW San Antonio, Midwestern Downers Grove, Rocky Mountain). Active engagement — not coasting. Suggests not near retirement.",
+        "source": "website_about_page",
+        "source_url": "https://www.edfec.net/team/dr-anand-ned-kumar-od/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress news.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22East+Dallas+Family+Eye+Care%22+acquired+sold+lawsuit+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_about_page",
+        "url": "https://www.edfec.net/team/dr-anand-ned-kumar-od/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "owner_tenure_years",
+          "education"
+        ]
+      }
+    ],
+    "enrichment_notes": "Solo-OD Dr. Anand Kumar, 21 yr tenure in Pleasant Grove. Age ~50 — at lower edge of preferred window. Active multi-school adjunct role suggests engaged, not coasting. Spine-valid mid-fit candidate."
+  },
+  {
+    "legal_name": "Lakeside Vision & Optical",
+    "dba_name": null,
+    "address": "4012 Preston Road Suite 500",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75093",
+    "phone": "(972) 985-3638",
+    "website": "https://www.lakesidevisionplano.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Deborah Moon",
+    "year_established": 2004,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.lakesidevisionplano.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member (cooperative — independent). Dr. Moon purchased in Jan 2004. 22 yrs at this practice + 30 yrs total OD licensure (since 1996). 2 ODs (Moon + Phillips). Dr. Moon is American Board of Optometry Delegate (high signal). Note: Plano is in Collin County, not Dallas — corrected. Glaucoma + ocular disease + Optomap.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Deborah Moon",
+    "owner_age_estimate": 55,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 22,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 22,
+    "employee_count_estimate": 6,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_age_in_retirement_window",
+        "direction": "positive",
+        "evidence": "Dr. Moon licensed 1996 — 30 yr career. UH Optometry summa cum laude. Purchased Lakeside Jan 2004. Age proxy ~26 + 30 = ~56. In retirement window.",
+        "source": "lakesidevisionplano",
+        "source_url": "https://www.lakesidevisionplano.com/team/dr-deborah/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "owner_long_anchor",
+        "direction": "positive",
+        "evidence": "22 years at single Plano Preston Rd location since acquisition in 2004. Single anchor.",
+        "source": "website",
+        "source_url": "https://www.lakesidevisionplano.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "industry_leadership_role",
+        "direction": "negative",
+        "evidence": "Dr. Moon is American Board of Optometry Delegate (prestigious title, limited recipients) + former Texas Optometric Assn Board 1998-2001. Active industry leadership — engaged, not coasting. May suggest later retirement.",
+        "source": "lakesidevisionplano",
+        "source_url": "https://www.lakesidevisionplano.com/team/dr-deborah/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress news.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Lakeside+Vision%22+Plano+sold+acquired+retiring+2024+2025+2026",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "lakesidevisionplano",
+        "url": "https://www.lakesidevisionplano.com/team/dr-deborah/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "owner_tenure_years",
+          "year_purchased"
+        ]
+      }
+    ],
+    "enrichment_notes": "STRONG candidate. Dr. Moon owns Lakeside since 2004 (22 yr tenure). Age ~56 — entering retirement window. 2-OD bench eases transition. Industry leadership suggests engaged but realistic 5-10 yr horizon. Premium Plano/Preston Rd ZIP. No distress."
+  },
+  {
+    "legal_name": "Complete Family Eye Care",
+    "dba_name": null,
+    "address": "8994 Tour Drive Suite 110",
+    "city": "McKinney",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75070",
+    "phone": "(972) 527-2020",
+    "website": "https://www.completefamilyeyecaretexas.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Kenneth Garza",
+    "year_established": 2010,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.completefamilyeyecaretexas.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Husband-wife founded 2010. Dr. Kenneth Garza + Dr. Bita Garza. Note: McKinney is in Collin County, not Dallas — corrected. OptiLight + Keratograph + diabetic + glaucoma. 2-OD successor pattern (spouse-spouse — may or may not block external buyout).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Kenneth Garza + Dr. Bita Garza (spouses)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 16,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 16,
+    "employee_count_estimate": 6,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "spouse_co_ownership",
+        "direction": "negative",
+        "evidence": "Dr. Kenneth + Dr. Bita Garza co-own since 2010 (founded by Kenneth). Spouse joint ownership pattern — successor concentrated in 2 people who likely retire together. Age not surfaced but Kenneth still actively practicing LASIK/cataract co-mgmt.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.completefamilyeyecaretexas.com/our-eye-care-clinic/our-eye-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "mid_tenure",
+        "direction": "positive",
+        "evidence": "16 yr tenure since 2010 founding. McKinney Collin County growth market. $1M revenue per ZoomInfo. Modern dry-eye equipment (Oculus Keratograph).",
+        "source": "website",
+        "source_url": "https://www.completefamilyeyecaretexas.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress news.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Complete+Family+Eye+Care%22+McKinney+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_doctors_page",
+        "url": "https://www.completefamilyeyecaretexas.com/our-eye-care-clinic/our-eye-doctors/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "co_owner",
+          "year_established"
+        ]
+      }
+    ],
+    "enrichment_notes": "Spouse-team boutique McKinney practice, 16 yr tenure. Modern equipment + dry eye specialty. Age unknown but career arc suggests 45-55 range. Spouse co-ownership reduces clean-exit probability. Mid-tier candidate."
+  },
+  {
+    "legal_name": "Frisco Family Vision",
+    "dba_name": null,
+    "address": "10150 Legacy Drive",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75033",
+    "phone": "(469) 444-8888",
+    "website": "https://www.friscofamilyvision.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Dana Biederman",
+    "year_established": 2014,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.friscofamilyvision.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent. 3 ODs (Biederman, Trivedi, Ly). Frisco premium ZIP. Note: Frisco is split between Collin + Denton Counties — primary practice at 10150 Legacy Dr is in Collin. Tuesday/Thursday evening hours. Comprehensive eye care + dry eye + disease management.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Dana Biederman",
+    "owner_age_estimate": 45,
+    "owner_age_source": "linkedin_grad",
+    "owner_tenure_years": 12,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 12,
+    "employee_count_estimate": 8,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_mid_career",
+        "direction": "negative",
+        "evidence": "Dr. Biederman serving Frisco since 2005, founded Frisco Family Vision 2014. Diplomate American Board of Optometry. UF undergrad + Southern College of Optometry. Mid-career age estimate ~45. Outside 55+ retirement window.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.friscofamilyvision.com/team/dana-biederman-od/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "expanding_practice",
+        "direction": "negative",
+        "evidence": "3 ODs total — actively expanding bench. Children mentioned in bio (Finn + Sloane) — family-life stage suggests longer time horizon to exit.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.friscofamilyvision.com/doctors",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress signals.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Frisco+Family+Vision%22+Biederman+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_doctors_page",
+        "url": "https://www.friscofamilyvision.com/team/dana-biederman-od/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "year_established",
+          "owner_tenure_years"
+        ]
+      }
+    ],
+    "enrichment_notes": "Solo founder Dr. Biederman, growing practice. 12 yr tenure, young children, ABO Diplomate. Mid-career — outside retirement window. Low fit for sale-in-12-36-mo thesis."
+  },
+  {
+    "legal_name": "Frisco In Focus",
+    "dba_name": null,
+    "address": "11511 Independence Pkwy Suite 102",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75035",
+    "phone": "(972) 478-0550",
+    "website": "https://friscoinfocus.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Kari Clark",
+    "year_established": 2017,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://friscoinfocus.com/about-us/doctors-staff/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent. 2 ODs (Clark + Ricker). Dr. Clark previously ran First Eye Care Plano (16 yrs group private). Frisco premium ZIP (Collin/Denton). Dry eye + myopia + glaucoma + LASIK co-management.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Kari Clark",
+    "owner_age_estimate": 49,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 9,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 9,
+    "employee_count_estimate": 5,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_mid_career",
+        "direction": "negative",
+        "evidence": "Dr. Clark UH Optometry 2001 grad — 25 yr career. Solo-founded Frisco In Focus Dec 2017 after 16 yrs at First Eye Care Plano (group). Age proxy ~26 + 25 = ~49. Outside 55+ retirement window but trending toward edge.",
+        "source": "website_doctors_page",
+        "source_url": "https://friscoinfocus.com/about-us/doctors-staff/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "short_practice_tenure",
+        "direction": "negative",
+        "evidence": "Practice founded Dec 2017 — only 9 yrs. Below 15+ yr threshold. 'Field of Dreams' WIO feature — explicitly growth-stage.",
+        "source": "women_in_optometry",
+        "source_url": "https://www.womeninoptometry.com/practice-designs/article/a-field-of-dreams-practice/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No distress or acquisition.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Frisco+In+Focus%22+Kari+Clark+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_doctors_page",
+        "url": "https://friscoinfocus.com/about-us/doctors-staff/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "year_established",
+          "owner_tenure_years"
+        ]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/kari-clark-od/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_age_estimate",
+          "career_history"
+        ]
+      }
+    ],
+    "enrichment_notes": "Dr. Clark, 25-yr career, founded Frisco In Focus 2017. Outside ideal age/tenure but trending. Growth-stage practice — not coasting. Low fit; re-check in 5 yr."
+  },
+  {
+    "legal_name": "Modern Spectacle Eyecare",
+    "dba_name": null,
+    "address": "6336 Gaston Ave",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75214",
+    "phone": "(469) 225-9959",
+    "website": "https://www.modspectacle.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Stephanie Kim LeSage",
+    "year_established": 2024,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.modspectacle.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member. Solo OD Dr. LeSage. Lakewood East Dallas. Est April 2024 — fails 15+yr tenure preference (excluded from preferred set but spine-valid). In-house lab; MiSight myopia. May still be useful as comp.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Stephanie Kim LeSage",
+    "owner_age_estimate": 40,
+    "owner_age_source": "linkedin_grad",
+    "owner_tenure_years": 2,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 2,
+    "employee_count_estimate": 2,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_about_page",
+    "is_distressed": false,
+    "distress_reasons": [
+      "founded_too_recently_for_thesis"
+    ],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_too_young",
+        "direction": "disqualifying",
+        "evidence": "Dr. LeSage opened practice April 25, 2024. ~10 yrs experience prior at Whittier St Health Center Boston + Dallas VA. Magna cum laude UH Optometry + Ochsner residency. Mid-career age ~40. Outside retirement window by ~15 yrs.",
+        "source": "lakewood_advocate",
+        "source_url": "https://lakewood.advocatemag.com/update-modern-spectacle-eyecare-now-open/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "practice_too_new",
+        "direction": "disqualifying",
+        "evidence": "Practice est April 2024 — 2 yrs old. Fails 15+ yr tenure floor.",
+        "source": "lakewood_advocate",
+        "source_url": "https://lakewood.advocatemag.com/update-modern-spectacle-eyecare-now-open/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No distress signals — too new for any.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Modern+Spectacle+Eyecare%22+Dallas+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "lakewood_advocate",
+        "url": "https://lakewood.advocatemag.com/update-modern-spectacle-eyecare-now-open/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "year_established",
+          "owner_name"
+        ]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFIED for thesis: 2-yr-old practice, young solo founder (~40). Useful as comp only. No distress."
+  },
+  {
+    "legal_name": "Park Cities Eye Associates",
+    "dba_name": null,
+    "address": "8115 Preston Rd Suite 630",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75225",
+    "phone": "(214) 360-9951",
+    "website": "https://www.parkcitieseye.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Cathy Ann Norton",
+    "year_established": 1996,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.parkcitieseye.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Premium Park Cities / Highland Park area ZIP. Solo OD Dr. Norton, est 1996 (30 yrs — top tenure). Dry eye specialty + Optomap + LASIK co-mgmt. High-income patient base. STRONG A-tier candidate. Vision Source member (visionsource-dallas.com alt URL).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Cathy Ann Norton",
+    "owner_age_estimate": 60,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 30,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 30,
+    "employee_count_estimate": 6,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_about_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_age_in_retirement_window",
+        "direction": "positive",
+        "evidence": "Practice est 1996 — Dr. Norton has owned for 30 years. Served on Dallas County Optometric Society Board 8 yrs. Age proxy ~60. In retirement window.",
+        "source": "website_about_page",
+        "source_url": "https://www.parkcitieseye.com/team/dr-cathy-ann-norton-od/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "solo_owner_long_tenure_premium_zip",
+        "direction": "positive",
+        "evidence": "30-year tenure at premium Park Cities / Preston Rd 75225 ZIP. Solo OD. High-income patient demographic. Dry eye specialty.",
+        "source": "website",
+        "source_url": "https://www.parkcitieseye.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_associate_bench",
+        "direction": "positive",
+        "evidence": "Solo OD — no associate or family successor identified. Clean external buyer path.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.parkcitieseye.com/our-eye-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress news.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Park+Cities+Eye+Associates%22+sold+acquired+retiring+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_about_page",
+        "url": "https://www.parkcitieseye.com/team/dr-cathy-ann-norton-od/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "owner_tenure_years",
+          "year_established"
+        ]
+      }
+    ],
+    "enrichment_notes": "TOP candidate. Dr. Norton, solo-owner 30 yrs at premium Park Cities Preston Rd. Age ~60 squarely in retirement window. Premium 75225 ZIP, dry eye specialty, no associate bench (clean exit). No distress."
+  },
+  {
+    "legal_name": "Coppell Vision Center",
+    "dba_name": null,
+    "address": "541 E Sandy Lake Rd",
+    "city": "Coppell",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75019",
+    "phone": "(972) 393-3937",
+    "website": "https://www.coppellvisioncenter.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Alycia Green",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.coppellvisioncenter.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent. 3 ODs (Green, Trinh, Leung). 4.8-star 600+ reviews. Coppell is in Dallas County NW. Premium suburban. Dry eye + disease + designer frames.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Alycia Green (Finklea)",
+    "owner_age_estimate": 51,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 27,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": 10,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_long_career_mid_age",
+        "direction": "positive",
+        "evidence": "Dr. Green graduated UH Optometry 1999 — 27 yr career. Age proxy ~26+27 = ~53. Approaching retirement window. Therapeutic + Optometric Glaucoma Specialist + pediatric vision development subspecialty (COVD member).",
+        "source": "website_doctors_page",
+        "source_url": "https://www.coppellvisioncenter.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "associate_bench_3_ODs",
+        "direction": "negative",
+        "evidence": "3 ODs (Green, Trinh, Leung) — associates create internal successor risk.",
+        "source": "website",
+        "source_url": "https://www.coppellvisioncenter.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress signals.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Coppell+Vision+Center%22+Green+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_doctors_page",
+        "url": "https://www.coppellvisioncenter.com/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "education",
+          "career_length"
+        ]
+      },
+      {
+        "source": "healthline_provider",
+        "url": "https://care.healthline.com/find-care/provider/alycia-green-1003914524",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "education_year",
+          "owner_age_estimate"
+        ]
+      }
+    ],
+    "enrichment_notes": "Dr. Green, 27 yr OD career, owner of Coppell Vision Center. Age ~53 — approaching but slightly below retirement window. 3-OD bench creates successor risk. 4.8 stars 600+ reviews — strong brand. Year founded unconfirmed."
+  },
+  {
+    "legal_name": "Wilken Family Eye Care",
+    "dba_name": null,
+    "address": "755 N Denton Tap Rd #100",
+    "city": "Coppell",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75019",
+    "phone": "(972) 459-3300",
+    "website": "https://www.wilkeneye.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Bret Wilken",
+    "year_established": 2002,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.wilkeneye.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "year_established",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Husband-wife co-owners Dr. Bret Wilken + Dr. Stephanie Wilken since 2002 + associate Dr. Vickers. 24-yr tenure. Best of Coppell Optometrist multi-year. TG glaucoma specialist (Bret since 2006). Spouse-pair ownership pattern.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Bret Wilken + Dr. Stephanie Wilken (spouses)",
+    "owner_age_estimate": 52,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 24,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 24,
+    "employee_count_estimate": 7,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "spouse_co_ownership",
+        "direction": "negative",
+        "evidence": "Spouse co-ownership pattern. Both Bret + Stephanie founded together in 2002 — 24 yr tenure. Both UH Optometry grads. Bret Kansas State undergrad; Stephanie Texas A&M. Age proxy ~52 (both). Bret glaucoma specialist since 2006.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.wilkeneye.com/meet-the-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "associate_OD_added",
+        "direction": "negative",
+        "evidence": "Associate Dr. Vickers added — possible successor pipeline. Reduces clean external-buyer probability.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.wilkeneye.com/meet-the-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No distress.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Wilken+Family+Eye+Care%22+Coppell+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_doctors_page",
+        "url": "https://www.wilkeneye.com/meet-the-doctors/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "co_owner",
+          "year_established"
+        ]
+      }
+    ],
+    "enrichment_notes": "Spouse co-owned Wilken Family Eye Care, 24 yr tenure. Mid-age (~52) — approaching but below 55+. Associate Vickers added — internal successor risk. Mid-tier candidate."
+  },
+  {
+    "legal_name": "Clear Eye Care",
+    "dba_name": null,
+    "address": "220 South Denton Tap Road Suite 204",
+    "city": "Coppell",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75019",
+    "phone": "(972) 745-8760",
+    "website": "https://cleareyecaretx.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "unknown",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Paul Heeg",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://cleareyecaretx.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent_multi_location",
+    "verification_notes": "6 ODs across Coppell + Flower Mound + Lewisville + The Colony (3 primary locations confirmed). Note: this looks like a 4-location regional group — flag for whether it's a doctor-owned multi-site or operating like a mini-chain. Verify ownership before scoring.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Paul Heeg",
+    "owner_age_estimate": 41,
+    "owner_age_source": "linkedin_grad",
+    "owner_tenure_years": 16,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": 15,
+    "provider_count_estimate": 6,
+    "employee_count_source": "website_staff_pages",
+    "is_distressed": false,
+    "distress_reasons": [
+      "multi_location_growth_operator"
+    ],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_too_young_growth_mode",
+        "direction": "disqualifying",
+        "evidence": "Dr. Heeg SUNY College of Optometry June 2010 — only 16 yr career. Age proxy ~26+16 = ~41. Outside 55+ retirement window. Active TOA/AOA/FCO/VOSH leadership.",
+        "source": "website_staff_page",
+        "source_url": "https://cleareyecaretexas.com/staff/paul-heeg-od/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "expanding_regional_operator",
+        "direction": "disqualifying",
+        "evidence": "Clear Eye Care operates 3 primary locations (Coppell, The Colony, Flower Mound) — entity 'Clear Vision Associates PLLC' + 'Clear Eye & Optical Flower Mound PLLC' suggests multi-PLLC operator. Growth-stage regional group, not retirement target.",
+        "source": "cleareyecaretexas",
+        "source_url": "https://cleareyecaretexas.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress news — but pattern suggests this entity could be an acquirer / consolidator path, not a seller.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Clear+Eye+Care%22+Coppell+Paul+Heeg+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_staff_page",
+        "url": "https://cleareyecaretexas.com/staff/paul-heeg-od/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "education_year",
+          "owner_age_estimate"
+        ]
+      },
+      {
+        "source": "opennpi",
+        "url": "https://opennpi.com/provider/1164839221",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "entity_legal_name",
+          "address"
+        ]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFIED for thesis: Dr. Heeg ~41, only 16 yr career, running multi-PLLC 3-location regional group. Growth/consolidator phase, not retirement. Watch as potential acquirer comp."
+  },
+  {
+    "legal_name": "Walnut Vision (Jonathan G. DeShaw, O.D.)",
+    "dba_name": "Walnut Vision",
+    "address": "2636 W Walnut St #200",
+    "city": "Garland",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75042",
+    "phone": "(972) 485-0700",
+    "website": "https://www.walnutvision.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Glenn G. DeShaw",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.walnutvision.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Multi-generation DeShaw family practice (Glenn + Jonathan). 2-OD father-son or brothers. Successor BLOCKED (family pipeline). Garland Dallas NE. In-house lens lab + corneal mapping + specialty CL.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Glenn G. DeShaw + Dr. Jonathan G. DeShaw",
+    "owner_age_estimate": 65,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": 5,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "multigeneration_family_successor",
+        "direction": "disqualifying",
+        "evidence": "Glenn (father, senior) + Jonathan (son, UH Optometry 2010 — age ~41). Father-son DeShaw pattern. Family pipeline blocks external buyer — Jonathan is presumptive successor.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.walnutvision.com/our-eye-doctor/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No distress.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Walnut+Vision%22+Garland+DeShaw+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_doctors_page",
+        "url": "https://www.walnutvision.com/our-eye-doctor/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "co_owner",
+          "family_successor"
+        ]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/jdeshaw/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "graduation_year",
+          "career_history"
+        ]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFIED for thesis: Father-son DeShaw family practice. Glenn presumably ~65+ (founder); Jonathan ~41 successor (UH Optometry 2010). Successor pipeline blocks external buyer."
+  },
+  {
+    "legal_name": "Richardson Eye Associates",
+    "dba_name": null,
+    "address": "660 W Campbell Rd Suite 102",
+    "city": "Richardson",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75080",
+    "phone": "(972) 231-3439",
+    "website": "https://www.richardsoneyeassociates.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Scott Harris",
+    "year_established": 2012,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.richardsoneyeassociates.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "3 ODs (Harris, Ngo, Barcelo/Miller). Richardson is in Dallas County. Dry eye (RF + IPL), pediatric, geriatric. Multi-OD group practice — verify ownership / successor. Dr. Harris in private practice since 2012 — possible 2012 founding or purchase.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Scott Harris",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 14,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": 8,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_mid_career",
+        "direction": "negative",
+        "evidence": "Dr. Harris in private practice since 2012 (14 yrs). UH Optometry grad. America's Top Optometrists 2014-2016. Age unconfirmed but mid-career profile — likely 40-50 range. Outside retirement window.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.richardsoneyeassociates.com/meet-the-doctors",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_OD_group",
+        "direction": "negative",
+        "evidence": "3-OD group (Harris, Ngo, plus Krauss Jr per Nextdoor — possible predecessor or co-owner). Practice name suggests possible long-running association; founding date unclear.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.richardsoneyeassociates.com/meet-the-doctors",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress signals. Krauss Jr mentioned in older Nextdoor listing — possible legacy owner who may have sold or retired; unconfirmed.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Richardson+Eye+Associates%22+Scott+Harris+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_doctors_page",
+        "url": "https://www.richardsoneyeassociates.com/meet-the-doctors",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "co_owners",
+          "year_established"
+        ]
+      }
+    ],
+    "enrichment_notes": "Dr. Harris in private practice since 2012 (14 yr). Mid-career operator. Possible legacy 'Krauss Jr' co-name from older listings — practice may have been transitioned/purchased. 3-OD group — successor risk. Mid-tier candidate."
+  },
+  {
+    "legal_name": "Focused Eye Care",
+    "dba_name": null,
+    "address": "3121 N President George Bush Hwy Ste 101",
+    "city": "Garland",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75040",
+    "phone": "(972) 495-7772",
+    "website": "https://www.focusedeyecare.net/",
+    "practice_type": "mixed",
+    "vision_source_member": "unknown",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Soby Abraham",
+    "year_established": 2008,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.focusedeyecare.net/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": [
+          "legal_name",
+          "address",
+          "doctors"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "2 ODs (Abraham, Naidoo). Powered by EyeCarePro (vendor only). Serves Garland + Rowlett + Sachse + Richardson. Verify ownership and tenure. Spine note 'Dr. Abraham' clarified as Soby Abraham (UH Optometry 2003).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Soby Abraham",
+    "owner_age_estimate": 49,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 23,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 18,
+    "employee_count_estimate": 6,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_mid_career",
+        "direction": "negative",
+        "evidence": "Dr. Soby Abraham UH Optometry 2003 — 23 yr career. Baylor undergrad. Age proxy ~26+23 = ~49. Outside 55+ retirement window but approaching.",
+        "source": "website_doctors_page",
+        "source_url": "https://www.focusedeyecare.net/team/soby-abraham-o-d/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "two_OD_group_18yr_tenure",
+        "direction": "positive",
+        "evidence": "Practice est 2008 — 18 yr tenure. 2 ODs (Abraham + Naidoo). Serves multiple suburb radius. Solid local brand.",
+        "source": "website",
+        "source_url": "https://www.focusedeyecare.net/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_acquisition_news",
+        "direction": "positive",
+        "evidence": "No acquisition or distress signals.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Focused+Eye+Care%22+Garland+Abraham+sold+acquired+2024+2025",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website_doctors_page",
+        "url": "https://www.focusedeyecare.net/team/soby-abraham-o-d/",
+        "fetched_at": "2026-05-15T22:00:00Z",
+        "fields": [
+          "owner_name",
+          "education_year",
+          "owner_age_estimate"
+        ]
+      }
+    ],
+    "enrichment_notes": "Dr. Soby Abraham (UH 2003), 23 yr career. Practice est 2008 (18 yr). 2-OD bench with Naidoo. Age ~49 — below 55+ window but trending. Garland suburb spread. Mid-tier candidate."
+  }
+]

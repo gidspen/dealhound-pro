@@ -1,0 +1,23 @@
+{
+  "status": "written",
+  "businesses_written": 50,
+  "business_scores_written": 50,
+  "business_signals_written": 140,
+  "errors": [],
+  "verification_counts": {
+    "businesses": 50,
+    "scores_by_tier": {
+      "B_forward": 18,
+      "C_watch": 19,
+      "D_pass": 13
+    },
+    "signals": 140
+  },
+  "score_run_id": "760573ba-faa4-4a8e-9d5b-cc5fcb90cbf9",
+  "run_label": "insurance-tx-2026-05-15",
+  "vertical": "insurance_pc",
+  "schema_notes": [
+    "10 neutral signals mapped to negative (schema CHECK constraint allows only positive/negative/disqualifying)",
+    "Some long-form value_add_thesis and comment fields were shortened during the write to keep SQL roundtrips within size limits; key scoring values (layer1-4 scores, final_score, final_tier, confidence, data_completeness) are exact from JSON"
+  ]
+}
