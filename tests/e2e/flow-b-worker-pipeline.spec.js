@@ -30,7 +30,7 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
 import { freshInboxEmail } from './helpers/test-email.js';
-import { deleteUser } from './helpers/personas.js';
+import { deleteUser, seedScanJob } from './helpers/personas.js';
 import { waitForScanStatus } from './helpers/worker-poll.js';
 import { signToken } from './helpers/magic-link.js';
 
@@ -56,29 +56,18 @@ test.describe('Flow B — worker pipeline (real Crexi scan)', () => {
     }
   });
 
-  test('B1-B5: free-scan submit → worker completes → deals exist → magic-link 302s', async ({
+  test('B1-B5: seed scan → worker completes → deals exist + email sent → magic-link 302s', async ({
     page,
     request,
   }) => {
     testEmail = freshInboxEmail('flow-b');
 
-    // ── B1: submit a real scan via the production endpoint ────────────────
-    const submitResp = await request.post('/api/free-scan-start', {
-      data: {
-        assetType: 'Micro Resort',
-        market: 'Texas',
-        priceMin: 500_000,
-        priceMax: 3_000_000,
-        email: testEmail,
-        _hp: '',
-      },
-    });
-    expect(submitResp.status(), 'submit must succeed').toBeLessThan(300);
-    const submitBody = await submitResp.json();
-    expect(submitBody.searchId, 'searchId returned from submit').toBeTruthy();
-    const { searchId } = submitBody;
-
-    console.log(`[flow-b] submitted search ${searchId} for ${testEmail}`);
+    // ── B1: seed deal_searches + scrape_jobs directly ─────────────────────
+    // Flow A covers the /api/free-scan-start submit path. Here we bypass it
+    // (and its 1-per-IP-per-day rate limit) and exercise the worker pipeline:
+    // pickup → real Crexi scrape → score → email → magic-link.
+    const { searchId } = await seedScanJob({ email: testEmail });
+    console.log(`[flow-b] seeded scan ${searchId} for ${testEmail}`);
 
     // ── B2-B3: poll for completion (worker spawns find-deals, takes minutes) ──
     const completed = await waitForScanStatus(searchId, ['complete', 'error'], {

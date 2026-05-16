@@ -183,3 +183,60 @@ export async function seedCompletedScan({ email, dealCount = 3 }) {
 
   return { searchId, dealIds: (dealsRows || []).map((d) => d.id) };
 }
+
+/**
+ * seedScanJob({ email, buyBox? })
+ *
+ * Insert a deal_searches + scrape_jobs row pair so the worker picks it up and
+ * runs a real scan + sends the completion email. Bypasses /api/free-scan-start
+ * (and therefore its 1-per-IP-per-day rate limit), since Flow A already covers
+ * the submit path. Flow B is testing the worker pipeline + email + dashboard.
+ *
+ * Returns: { searchId }
+ *
+ * Safety: refuses non-test emails. Caller should deleteUser(email) after.
+ */
+export async function seedScanJob({ email, buyBox }) {
+  if (!isTestEmail(email)) {
+    throw new Error(`seedScanJob refused: ${email} is not an e2e- test email`);
+  }
+  const sb = getSupabase();
+
+  await seedUser({ email });
+
+  const defaultBox = {
+    asset_type: 'Micro Resort',
+    market: 'Texas',
+    price_min: 500_000,
+    price_max: 3_000_000,
+  };
+  const box = buyBox || defaultBox;
+
+  const { data: searchRow, error: searchErr } = await sb
+    .from('deal_searches')
+    .insert({
+      user_email: email,
+      buy_box: box,
+      status: 'pending',
+      test_data: true,
+    })
+    .select('id')
+    .single();
+  if (searchErr) throw new Error(`seedScanJob: deal_searches insert failed: ${searchErr.message}`);
+
+  const searchId = searchRow.id;
+
+  const { error: jobErr } = await sb.from('scrape_jobs').insert({
+    search_id: searchId,
+    buy_box: box,
+    status: 'pending',
+    source: 'free_scan',
+    notify_email: email,
+  });
+  if (jobErr) {
+    await sb.from('deal_searches').delete().eq('id', searchId);
+    throw new Error(`seedScanJob: scrape_jobs insert failed: ${jobErr.message}`);
+  }
+
+  return { searchId };
+}
