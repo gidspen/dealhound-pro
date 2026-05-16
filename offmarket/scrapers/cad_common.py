@@ -240,10 +240,30 @@ def name_variants(legal_name: str | None, owner_name: str | None) -> list[tuple[
 # Exemption extraction
 # ---------------------------------------------------------------------------
 
+_BEXAR_OV65_PROXY_THRESHOLD = 6000  # USD tax-savings ratio that strongly indicates OV65
+
+
 def extract_exemptions(text: str) -> dict:
-    """Extract OV65/homestead/disabled flags and property data from CAD page text."""
+    """Extract OV65/homestead/disabled flags and property data from CAD page text.
+
+    Returns:
+      ov65                       — bool, True if "OV65" / "OVER 65" appears explicitly.
+      ov65_inferred              — bool, True if a proxy fires even when "OV65" is absent.
+                                   See "Bexar OTHER + tax-savings proxy" and "DCAD Tax Ceiling line".
+      ov65_inference_source      — str | None, name of the proxy that fired.
+      ov65_any                   — bool, ov65 OR ov65_inferred (convenience for scoring).
+      tax_savings_amount         — int | None, dollar amount of with-exempt vs without-exempt savings
+                                   parsed from Bexar property pages.
+      tax_ceiling                — bool, True if "Tax Ceiling" line is present (DCAD's OV65 marker).
+      homestead, disabled, deed_date, year_built, appraised_value — as before.
+    """
     result: dict = {
         "ov65": False,
+        "ov65_inferred": False,
+        "ov65_inference_source": None,
+        "ov65_any": False,
+        "tax_savings_amount": None,
+        "tax_ceiling": False,
         "homestead": False,
         "disabled": False,
         "deed_date": None,
@@ -289,7 +309,78 @@ def extract_exemptions(text: str) -> dict:
     except Exception:
         pass
 
+    # ------------------------------------------------------------------
+    # OV65 proxies (Finding 3, 2026-05-15 deep-dive)
+    # ------------------------------------------------------------------
+    # Proxy 1 — Bexar "OTHER" exemption + tax-savings ratio.
+    # Bexar property pages list exemption codes like "HS, OTHER" and a tax
+    # comparison row ("with-exempt $1,977.80 vs without-exempt $8,185.58").
+    # OV65 freezes the school-district tax ceiling, producing $6K+ savings
+    # vs the unfrozen amount. $6K threshold is the empirically observed
+    # Bexar floor (Whitaker Insurance, May 2026 deep-dive: $6,207 = OV65).
+    try:
+        has_other = bool(re.search(r'(?<![A-Z])OTHER(?![A-Z])', text))
+        savings = _parse_bexar_tax_savings(text)
+        if savings is not None:
+            result["tax_savings_amount"] = savings
+        if has_other and savings is not None and savings >= _BEXAR_OV65_PROXY_THRESHOLD:
+            result["ov65_inferred"] = True
+            result["ov65_inference_source"] = "bexar_other_exemption_savings_proxy"
+    except Exception:
+        pass
+
+    # Proxy 2 — DCAD "Tax Ceiling" line.
+    # Dallas CAD displays "Tax Ceiling" (school + county) when an Over-65 or
+    # Disabled-Person freeze is in place. Pure presence of the phrase is the
+    # signal — DCAD does not separately label OV65 vs Disabled, but combined
+    # with deed-age > 15 yrs it's a strong OV65 proxy. The orchestrator can
+    # tighten with "OTHER EXEMPTION" amount matching ($60K/$100K Dallas County
+    # OV65 amounts) if needed.
+    try:
+        if re.search(r'\bTax\s+Ceiling\b', text, re.I):
+            result["tax_ceiling"] = True
+            if not result["ov65"] and not result["ov65_inferred"]:
+                result["ov65_inferred"] = True
+                result["ov65_inference_source"] = "dcad_tax_ceiling_line"
+    except Exception:
+        pass
+
+    result["ov65_any"] = bool(result["ov65"] or result["ov65_inferred"])
+
     return result
+
+
+def _parse_bexar_tax_savings(text: str) -> int | None:
+    """Parse the with-exempt-vs-without-exempt savings ratio from Bexar pages.
+
+    Bexar shows two tax-due rows on the property detail page:
+      "Tax Due (with exemption): $1,977.80"
+      "Tax Due (without exemption): $8,185.58"
+    Returns the integer dollar difference, or None if either side is missing.
+    """
+    if not text:
+        return None
+    try:
+        with_m = re.search(
+            r'(?:Tax\s+Due\s*\(?\s*with[\s\-]*exempt(?:ion)?\)?|with[\s\-]*exempt(?:ion)?\s*tax)\D{0,40}'
+            r'\$?\s*([\d,]+(?:\.\d{1,2})?)',
+            text, re.I
+        )
+        without_m = re.search(
+            r'(?:Tax\s+Due\s*\(?\s*without[\s\-]*exempt(?:ion)?\)?|without[\s\-]*exempt(?:ion)?\s*tax)\D{0,40}'
+            r'\$?\s*([\d,]+(?:\.\d{1,2})?)',
+            text, re.I
+        )
+        if not (with_m and without_m):
+            return None
+        with_amt = float(with_m.group(1).replace(",", ""))
+        without_amt = float(without_m.group(1).replace(",", ""))
+        diff = without_amt - with_amt
+        if diff < 0:
+            return None
+        return int(round(diff))
+    except Exception:
+        return None
 
 
 # ---------------------------------------------------------------------------

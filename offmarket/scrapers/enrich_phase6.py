@@ -39,6 +39,8 @@ from offmarket.scrapers.cad_common import (
     load_targets,
     log_factory,
 )
+from offmarket.scrapers.cad_registry import get_cad_status, get_alt_paths
+from offmarket.scoring_rules import apply_verification_gates
 
 _CACHE_ROOT = Path(__file__).resolve().parent.parent / "cache"
 _PORTALS_BY_COUNTY: dict[str, str] = {
@@ -107,15 +109,20 @@ def _merge_results(
     comptroller_cache_dir: Path,
     cad_cache_dirs: dict[str, Path],
     cache_keys: list[str],
+    targets_by_ckey: dict[str, dict] | None = None,
 ) -> dict[str, dict]:
     """Read per-business cache files and merge into a single enrichment dict.
 
     Returns {cache_key: {"comptroller": {...} | None, "cad": {...} | None,
-                         "entity_id": str, "cache_key": str}}.
+                         "entity_id": str, "cache_key": str,
+                         "verification_gates": {...} | None,
+                         "cad_status_advisory": {...} | None}}.
 
     cache_keys: list of vertical-namespaced cache keys (from cad_common.cache_key).
-    The returned dict's TOP-LEVEL key is the cache_key. Use payload["entity_id"]
-    for the human-facing identifier.
+    targets_by_ckey: optional {cache_key: business_dict} for owner-name verification
+        (Findings 4+5). When provided, apply_verification_gates() is invoked per row
+        and the result attached as `verification_gates`. When None, gates are skipped
+        (legacy callers).
     """
     results: dict[str, dict] = {}
 
@@ -152,6 +159,38 @@ def _merge_results(
         # Surface cross_county_followup from the CAD cache to the top level
         if entry["cad"] and isinstance(entry["cad"], dict) and entry["cad"].get("cross_county_followup"):
             entry["cross_county_followup"] = entry["cad"]["cross_county_followup"]
+
+        # --------------------------------------------------------------
+        # Findings 4 + 5: attach verification gates (succession-completed +
+        # owner-name verification). Requires the original business record
+        # for the JSON owner_name; if not provided, skip silently.
+        # --------------------------------------------------------------
+        business = (targets_by_ckey or {}).get(ckey)
+        if business is not None:
+            try:
+                entry["verification_gates"] = apply_verification_gates(
+                    business=business,
+                    comptroller=entry.get("comptroller"),
+                )
+            except Exception as e:
+                entry["verification_gates"] = {
+                    "error": f"verification_gate_error: {type(e).__name__}: {str(e)[:120]}",
+                }
+
+            # Finding 2: attach CAD status advisory based on the target's county.
+            # Tells downstream callers whether the CAD result is authoritative
+            # ("works") or whether to apply low-confidence cap ("blocked_*").
+            county = (business.get("county") or "").strip().lower()
+            if county:
+                status = get_cad_status(county)
+                advisory: dict = {"county": county, "cad_status": status}
+                if status in ("blocked_spa", "blocked_by_law", "untested"):
+                    advisory["alt_paths"] = get_alt_paths(county)
+                    advisory["note"] = (
+                        f"CAD for {county} is {status}. Layer-1 owner-age signal from this "
+                        f"portal is not authoritative; see alt_paths."
+                    )
+                entry["cad_status_advisory"] = advisory
 
         results[ckey] = entry
 
@@ -229,11 +268,15 @@ def enrich(
         return {}
 
     cache_keys = []
+    targets_by_ckey: dict[str, dict] = {}
     for t in targets:
         try:
-            cache_keys.append(cache_key(t, vertical))
+            ck = cache_key(t, vertical)
         except KeyError as e:
             log(f"SKIP: target with no entity key: {e}")
+            continue
+        cache_keys.append(ck)
+        targets_by_ckey[ck] = t
     log(f"Loaded {len(targets)} targets ({len(cache_keys)} with valid entity keys)")
 
     # Build common scraper args
@@ -312,7 +355,12 @@ def enrich(
         for portal in _PORTALS_BY_COUNTY.values()
     }
 
-    merged = _merge_results(comptroller_cache_dir, cad_cache_dirs, cache_keys)
+    merged = _merge_results(
+        comptroller_cache_dir,
+        cad_cache_dirs,
+        cache_keys,
+        targets_by_ckey=targets_by_ckey,
+    )
 
     # Inject unknown-county followups (these targets have no CAD scraper, so
     # the merge would otherwise leave them with no cross_county_followup)
