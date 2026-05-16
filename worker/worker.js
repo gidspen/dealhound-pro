@@ -167,6 +167,93 @@ async function updateSearchStatus(searchId, status) {
   await supabase.from('deal_searches').update({ status }).eq('id', searchId);
 }
 
+// ── Post-PTY pipeline fallback ────────────────────────────────────────────────
+// Step 4a (pipeline.py — load raw-listings-*.json, dedup, hard-filter, persist
+// to Supabase) runs inside the PTY session. If the orchestrating Claude
+// misinterprets scraper bail-out lines like
+//   "[crexi] 5 consecutive failures — bailing"
+//   "[crexi] wall-time cap hit (240s >= 240s) — bailing with API taglines..."
+// as scrape failures, it skips Step 4a entirely. Result: raw-listings-*.json
+// files exist on disk, but zero rows land in the deals table. The silent-zero
+// guard catches the symptom; this fallback fixes the cause.
+//
+// Bail-out lines were added in PR #67 to fix the 90-min Crexi enrichment hang
+// on cold worker profiles. They are NORMAL output, not errors — the scraper
+// still exits 0 and the listings are saved. This fallback is the deterministic
+// safety net so the worker doesn't depend on Claude correctly interpreting
+// "bailing" vs "failed".
+//
+// Best-effort: if pipeline.py also fails (e.g., Supabase 4xx), the scan still
+// completes and the silent-zero guard fires. Scoring (Step 4b inline) is
+// not re-attempted here — that requires Claude. Users get raw filtered
+// listings without scores, which the dashboard handles gracefully.
+//
+// Dependency-injection seams (fsImpl, spawnImpl, skillDir) exist so unit
+// tests can drive the function with fakes and no module-level mocking. In
+// production the defaults are the real Node modules and the on-disk skill.
+async function maybeFallbackPipeline(job, spawnEnv, supabaseClient, deps = {}) {
+  const fsImpl = deps.fs || fs;
+  const spawnImpl = deps.spawn || spawn;
+  const skillDir = deps.skillDir || path.join(os.homedir(), '.claude/skills/find-deals');
+  const pipelinePy = path.join(skillDir, 'pipeline.py');
+
+  if (!fsImpl.existsSync(pipelinePy)) return;
+  if (!job.search_id) return;
+
+  // raw-listings-*.json must be fresh (written within last 2h = within this
+  // run). Same 2h window as maybeFallbackScore for symmetry — see comment there.
+  const freshRawFiles = fsImpl
+    .readdirSync(skillDir)
+    .filter((f) => f.startsWith('raw-listings-') && f.endsWith('.json'))
+    .map((f) => path.join(skillDir, f))
+    .filter((p) => {
+      try {
+        return Date.now() - fsImpl.statSync(p).mtimeMs < 2 * 60 * 60 * 1000;
+      } catch (_) {
+        return false;
+      }
+    });
+
+  if (freshRawFiles.length === 0) return;
+
+  // Only run if pipeline.py hasn't already persisted for this search_id.
+  const { count } = await supabaseClient
+    .from('deals')
+    .select('*', { count: 'exact', head: true })
+    .eq('search_id', job.search_id);
+
+  if (count > 0) return;
+
+  log(
+    `[PIPELINE] raw-listings-*.json fresh but 0 deals for search_id — running pipeline.py fallback`,
+    { job: job.id, rawFiles: freshRawFiles.length }
+  );
+
+  await new Promise((resolve) => {
+    const proc = spawnImpl('python3', [pipelinePy], {
+      env: spawnEnv,
+      cwd: skillDir,
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    proc.stdout.on('data', (d) => process.stdout.write(d));
+    proc.stderr.on('data', (d) => process.stderr.write(d));
+    proc.on('close', (code) => {
+      if (code === 0) {
+        log(`[PIPELINE] pipeline.py fallback complete`, { job: job.id });
+      } else {
+        log(`WARN: [PIPELINE] pipeline.py exited ${code} — listings may be missing`, {
+          job: job.id,
+        });
+      }
+      resolve();
+    });
+    proc.on('error', (err) => {
+      log(`WARN: [PIPELINE] pipeline.py spawn error — ${err.message}`, { job: job.id });
+      resolve();
+    });
+  });
+}
+
 // ── Post-PTY scorer fallback ──────────────────────────────────────────────────
 // Step 4b (inline scoring) runs inside the PTY session. Step 4c (scorer.py)
 // persists to Supabase and emits SCAN COMPLETE. If the PTY exits between 4b
@@ -632,7 +719,13 @@ async function processPendingJobs() {
                 jobId: job.id,
                 skill: 'deal scan',
               });
-              // Safety net: if scored-inline.json was written but scorer.py never
+              // Safety net 1: if raw-listings-*.json files were written but
+              // pipeline.py never ran (orchestrator misread scraper bail-out
+              // lines as failures), persist raw listings + filter results now.
+              // Must run BEFORE the scorer fallback — pipeline produces the
+              // survivors-for-scoring.json input that downstream steps rely on.
+              await maybeFallbackPipeline(job, env, supabase);
+              // Safety net 2: if scored-inline.json was written but scorer.py never
               // ran (PTY died between Step 4b and 4c), persist scores now.
               await maybeFallbackScore(job, env, supabase);
               return result;
@@ -944,4 +1037,5 @@ module.exports = {
   runFindDeals,
   runFindDealsTestMode,
   runBuyBoxScheduler,
+  maybeFallbackPipeline,
 };
