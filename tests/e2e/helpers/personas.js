@@ -140,7 +140,8 @@ export async function seedCompletedScan({ email, dealCount = 3 }) {
     })
     .select('id')
     .single();
-  if (searchErr) throw new Error(`seedCompletedScan: deal_searches insert failed: ${searchErr.message}`);
+  if (searchErr)
+    throw new Error(`seedCompletedScan: deal_searches insert failed: ${searchErr.message}`);
 
   const searchId = search.id;
 
