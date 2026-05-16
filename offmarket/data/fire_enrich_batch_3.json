@@ -1,0 +1,1187 @@
+[
+  {
+    "legal_name": "Pitts Fire Equipment",
+    "dba_name": null,
+    "address": null,
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "phone": null,
+    "website": "https://pittsdfw.com/",
+    "sub_trade": "extinguisher_hood",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Chris Keeton (current owner)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "google_business",
+        "url": "https://www.yelp.com/biz/pitts-fire-equipment-frisco",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "license_holder_name", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "60+ years in business in DFW. Family-owned 42 yrs by Pitts family, then sold to current owner's father (kept name + family ownership tradition). Fire extinguisher sales/service/install/inspection. NOTE: HQ in Frisco = Collin County, NOT Dallas/Tarrant — included as Dallas metro adjacent.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Chris Keeton",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 60,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not located",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_succession_completed_once",
+        "direction": "positive",
+        "evidence": "Pitts family sold to current owner's father who kept name; current owner Chris Keeton represents second non-family transition. 60+ yrs business per Yelp Feb 2026.",
+        "source": "google_search",
+        "source_url": "https://local.yahoo.com/info-225263367-pitts-fire-equipment-frisco/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "long_tenure_business",
+        "direction": "positive",
+        "evidence": "60+ years in DFW",
+        "source": "google_search",
+        "source_url": "https://www.yelp.com/biz/pitts-fire-equipment-frisco",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/chris-keeton-77b25256",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/pitts-fire-equipment-frisco",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["years_in_business"]
+      }
+    ],
+    "enrichment_notes": "Confirmed Chris Keeton as current owner. No distress signals found. Tenure proxy ~60 yrs (per Yelp). Owner age unknown — Chris Keeton's LinkedIn doesn't show grad year publicly. Smaller route-based extinguisher business; founding year not on website. Worth A/B candidacy if route revenue + age verifiable."
+  },
+  {
+    "legal_name": "Automatic Sprinkler of Texas",
+    "dba_name": null,
+    "address": null,
+    "city": "Duncanville",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "phone": "(972) 298-2772",
+    "website": "https://www.autosprinkleroftx.com/",
+    "sub_trade": "multi_trade",
+    "license_number": "SCR-0383 / ACR-2460 / ECR-1366",
+    "license_type": "mixed",
+    "license_holder_name": null,
+    "year_established": 1995,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.autosprinkleroftx.com/license-links",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "license_number", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "employee_owned_esop",
+    "verification_notes": "25 yrs in business / 60+ yrs combined experience. Locally owned + operated. Sprinklers, alarms, extinguishers. Holds licenses in 15+ states. SCR-0383 + ECR-1366 are old/low numbers = long tenure.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "1995-01-01",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Employee-owned (ESOP) — no single individual owner",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 31,
+    "employee_count_estimate": 32,
+    "provider_count_estimate": null,
+    "employee_count_source": "zoominfo via search summary",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "esop_disqualifier",
+        "direction": "disqualifying",
+        "evidence": "Per autosprinkleroftx.com/about: 'Automatic Sprinkler of Texas was incorporated in 1995, and we became an Employee Owned Business in 2019.' ESOP transition already completed — no solo-owner exit available.",
+        "source": "website",
+        "source_url": "https://www.autosprinkleroftx.com/about",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.autosprinkleroftx.com/about",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["platform_affiliation_check", "year_established", "owner_name"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFIED for off-market solo-owner acquisition thesis: company became a 100% ESOP in 2019. No exit-seeking owner; employee-owners have illiquid equity but no sale incentive matching our model. Keep on list as 'platform_subsidiary'-equivalent (counted, excluded)."
+  },
+  {
+    "legal_name": "United Fire Protection LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Irving",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "phone": "(972) 887-3772",
+    "website": "https://unitedfiretx.com/",
+    "sub_trade": "multi_trade",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": 2016,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://unitedfiretx.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "year_established", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2016 (under 10 yrs — newer). Women-owned. Alarms, sprinklers, extinguisher maintenance, 24/7 monitoring, kitchen hood installs, backflow, fire pump service. 30+ yrs of combined leadership.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Maggie Lopez (owner) and Tony (per About page)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 10,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 10,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not located",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "low_tenure_disqualifier",
+        "direction": "negative",
+        "evidence": "Founded 2016 = 10 yrs old. Below 'long-tenured' threshold for the thesis.",
+        "source": "website",
+        "source_url": "https://unitedfiretx.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "live_site_owner_identification",
+        "direction": "positive",
+        "evidence": "Maggie Lopez confirmed via LinkedIn profile (linkedin.com/in/maggielopez-unitedfiretx); 'Tony' co-owner per About page; women-owned.",
+        "source": "linkedin+website",
+        "source_url": "https://www.linkedin.com/in/maggielopez-unitedfiretx/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/maggielopez-unitedfiretx/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "website",
+        "url": "https://unitedfiretx.com/about/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "enrichment_notes": "Below-threshold candidate: only 10 yrs old, women-owned, founders likely mid-career (not retirement-eligible). Suggest deprioritize / exclude from core thesis."
+  },
+  {
+    "legal_name": "Allied Fire Protection",
+    "dba_name": null,
+    "address": null,
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "phone": "(800) 604-2600",
+    "website": "https://alliedfireprotection.com/",
+    "sub_trade": "multi_trade",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Shannon Payne, John Hubbard (founders)",
+    "year_established": 1998,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://alliedfireprotection.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "year_established", "license_holder_name", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1998 by Shannon Payne and John Hubbard. Sprinklers, alarm/detection, suppression, extinguishers, ITM, 24/7 monitoring. Multi-state. Enrichment phase: confirm ownership status — 25 yrs old with multi-state presence raises platform risk.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "1998-01-01",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Shannon Payne (Founder/CEO); John Hubbard semi-retired; Troy Davenport partner; Dallas Hall President",
+    "owner_age_estimate": null,
+    "owner_age_source": "linkedin_grad_inferred",
+    "owner_tenure_years": 28,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 28,
+    "employee_count_estimate": 250,
+    "provider_count_estimate": null,
+    "employee_count_source": "search_result_summary",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "succession_in_progress",
+        "direction": "negative",
+        "evidence": "Leadership team page (alliedfireprotection.com/about/leadership-team) shows expanded C-suite: Shannon Payne (Founder/CEO), Troy Davenport (Partner), Dallas Hall (President), Michael Bilski (CFO), Tina Tiller (CAO), John Bowman (COO, promoted 2025), Kyle Connelly (VP). John Hubbard 'semi-retired' but team enlarged.",
+        "source": "website_live_fetch",
+        "source_url": "https://alliedfireprotection.com/about/leadership-team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live fetch 2026-05-15: 7-person C-suite documented; multi-state operations across 6 TX offices; 250+ employees. This is a small-cap regional firm, not a coasting solo-owner.",
+        "source": "website_live_fetch",
+        "source_url": "https://alliedfireprotection.com/about/leadership-team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "scale_exceeds_thesis",
+        "direction": "disqualifying",
+        "evidence": "250 employees across 6 TX offices is well above ETA/search-fund target size (typically <50 EE).",
+        "source": "search_summary",
+        "source_url": "https://alliedfireprotection.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://alliedfireprotection.com/about/leadership-team/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name", "employee_count_estimate", "signals"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://alliedfireprotection.com/about/history/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["year_established", "owner_name"]
+      }
+    ],
+    "enrichment_notes": "Independent but TOO LARGE: 250+ employees, 6 offices, C-suite professionalization. Shannon Payne (~55, started at 27) still active CEO; not retirement-imminent. Reads more like next-rung PE platform than off-market target. Deprioritize."
+  },
+  {
+    "legal_name": "Consolidated Fire Systems, Inc.",
+    "dba_name": null,
+    "address": "2261 Crown Road",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75229",
+    "phone": "(972) 898-3913",
+    "website": "https://consolidatedfiresystems.com/",
+    "sub_trade": "multi_trade",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dustin Vanderslice (inferred from email)",
+    "year_established": 2004,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://consolidatedfiresystems.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-run since 2004. Fire protection services from small service calls to complete installs. DFW metroplex.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "2004-01-01",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "David B. Vanderslice (President); Dustin Vanderslice (VP, likely son)",
+    "owner_age_estimate": null,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 22,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 22,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not located",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "intergenerational_present",
+        "direction": "negative",
+        "evidence": "David Vanderslice (President) + Dustin Vanderslice (VP, ZoomInfo) suggest father-son in business; succession likely internal. Inferred from same surname + role hierarchy.",
+        "source": "google_search",
+        "source_url": "https://www.zoominfo.com/p/Dustin-Vanderslice/9179874088",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "coasting_email_personal",
+        "direction": "positive",
+        "evidence": "Primary owner contact email on About page is Dustinvanderslice@yahoo.com (personal yahoo address used for business primary contact) — classic coasting signal.",
+        "source": "website_live_fetch",
+        "source_url": "https://consolidatedfiresystems.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "coasting_stale_copyright",
+        "direction": "positive",
+        "evidence": "Copyright '2020' on live homepage (5+ years stale).",
+        "source": "website_live_fetch",
+        "source_url": "https://consolidatedfiresystems.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "neutral",
+        "evidence": "Live fetch 2026-05-15: no team page, no employee bios, only one contact email (Dustin Vanderslice yahoo). Web presence minimal — site reads as a sub-25-employee shop run by father+son. No external successor visible.",
+        "source": "website_live_fetch",
+        "source_url": "https://consolidatedfiresystems.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "corporationwiki",
+        "url": "https://www.corporationwiki.com/Texas/Garland/david-b-vanderslice/38125808.aspx",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "website",
+        "url": "https://consolidatedfiresystems.com/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["signals", "owner_name"]
+      }
+    ],
+    "enrichment_notes": "Strong coasting signals (yahoo email, 2020 copyright, no website upkeep). Father-son operation — but Dustin (VP) likely 30s-40s and David could be late-50s+ if Dustin is his son. Worth A/B contact if more info on David's age can be obtained. Likely small (<25 EE) which fits thesis."
+  },
+  {
+    "legal_name": "Urban Fire Protection",
+    "dba_name": null,
+    "address": "3285 Springer Road",
+    "city": "Rockwall",
+    "county": "Rockwall",
+    "state": "TX",
+    "zip": "75032",
+    "phone": "(972) 636-2800",
+    "website": "https://www.urbanfire.com/",
+    "sub_trade": "multi_trade",
+    "license_number": "ACR-1751 / ECR-1751372 / SCR-0319",
+    "license_type": "mixed",
+    "license_holder_name": null,
+    "year_established": 1993,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.urbanfire.com/about",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-owned since 1993. Fire alarm, extinguisher, sprinkler install/maintenance. ACR-1751 / SCR-0319 / ECR-1751372 — old numbers, long tenure. Member NFPA + FSCATX. NOTE: HQ Rockwall County (DFW metro adjacent). Houston office at 8556 Katy Fwy. Included as Dallas-metro candidate.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "1993-01-01",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "David Reynolds (President per ZoomInfo). Proffitt family (Jay Proffitt JR + Jay Proffitt III in Houston office) appear to be ownership-line successors.",
+    "owner_age_estimate": null,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 33,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 33,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "team_page_count",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live fetch 2026-05-15 of urbanfire.com/team: Houston office shows Jay Proffitt JR. + Jay Proffitt III — explicit father-son generational succession in place. Dallas side: Brandi Bernal (VP Accounting), Robert Huff (VP Design). David Reynolds (President per ZoomInfo) not on team page.",
+        "source": "website_live_fetch",
+        "source_url": "https://www.urbanfire.com/team",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "intergenerational_present",
+        "direction": "negative",
+        "evidence": "Jay Proffitt JR. + Jay Proffitt III on same team — generational handoff already underway internally.",
+        "source": "website_live_fetch",
+        "source_url": "https://www.urbanfire.com/team",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.urbanfire.com/team",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name", "signals"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/p/David-Reynolds/-1867752265",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "enrichment_notes": "DEPRIORITIZE: Multi-VP structure + Proffitt JR/III generational succession in place. Whoever the actual founder was (likely a Proffitt Sr. or a Reynolds), they've already solved the succession question internally."
+  },
+  {
+    "legal_name": "Texas Fire Protection",
+    "dba_name": null,
+    "address": null,
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "phone": "(214) 577-5612",
+    "website": "https://texasfireprotection.net/",
+    "sub_trade": "sprinkler_itm",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://texasfireprotection.net/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "20+ years experience. Fire sprinkler design/install/inspection/service. Residential + commercial.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Unknown (testimonials reference 'Brad' and 'Chris' as long-standing staff; ownership not disclosed publicly)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 20,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not located",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "thin_web_presence",
+        "direction": "positive",
+        "evidence": "Live fetch 2026-05-15: no team page, no owner identification, no founding year, no copyright year readable. Reads as small, owner-operated shop with minimal marketing investment — coasting profile.",
+        "source": "website_live_fetch",
+        "source_url": "https://texasfireprotection.net/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://texasfireprotection.net/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["years_in_business", "signals"]
+      }
+    ],
+    "enrichment_notes": "Information vacuum: 20+ yrs claimed but ownership/founder/employee count not findable via standard sources. Sprinkler-focused, small. WORTH manual TX SOS deep-dive in next pass; without owner identity confirmed, cannot score Layer 1."
+  },
+  {
+    "legal_name": "AmeriPro Fire Protection, LLC",
+    "dba_name": null,
+    "address": "3810 Melcer Drive, Suite 104",
+    "city": "Rowlett",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "phone": "(972) 905-5556",
+    "website": "https://ameriprofire.net/",
+    "sub_trade": "sprinkler_itm",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://ameriprofire.net/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "35+ yrs combined experience. Sprinkler install/repair/maintenance/inspection/design + fire alarm monitoring + backflow + 24/7 emergency. NOTE: Rowlett borders Dallas/Rockwall.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "William Moore (Owner per ZoomInfo)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not located",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_owner_confirmed",
+        "direction": "positive",
+        "evidence": "William Moore listed as Owner on ZoomInfo profile. Prior career: Sales Estimator/PM at Long Creek Fire Protection then Fire Protection Specialist at Assurance Fire Systems — long industry tenure suggests Moore is mid-to-late career.",
+        "source": "zoominfo+search_summary",
+        "source_url": "https://www.zoominfo.com/p/William-Moore/3220490258",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/p/William-Moore/3220490258",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "enrichment_notes": "Solo owner identified (William Moore). Founding year not published — '35+ yrs combined experience' is leadership-experience claim, not company age. Worth investigating: SOS filing date would clarify true company tenure. Moderate A/B candidate pending age confirmation."
+  },
+  {
+    "legal_name": "Richardson Fire Equipment",
+    "dba_name": null,
+    "address": "724 S. Sherman Street",
+    "city": "Richardson",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75081",
+    "phone": "(972) 699-3473",
+    "website": "https://richardsonfireequipment.com/",
+    "sub_trade": "multi_trade",
+    "license_number": "ECR-2375435 / ACR-2375448 / B10838 / HCR-2537783",
+    "license_type": "mixed",
+    "license_holder_name": null,
+    "year_established": 1988,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://richardsonfireequipment.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_number", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "'Full Service Fire Protection Contractor Since 1988' (37 yrs). Fire suppression (kitchen + paint spray booth) + extinguishers + alarms + monitoring. Holds ACR + ECR + HCR (hood).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "1988-01-01",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Mark Thomas (Founder/Owner/GM) + Kathy Thomas (Co-founder/Owner/Accounting Manager)",
+    "owner_age_estimate": null,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 38,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 38,
+    "employee_count_estimate": 6,
+    "provider_count_estimate": null,
+    "employee_count_source": "team_page_count",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "positive",
+        "evidence": "Live fetch 2026-05-15 of richardsonfireequipment.com/our_team: 6 team members listed (Mark Thomas Owner/GM, Kathy Thomas Owner/Accounting, Rick Allen, Robert Jacubowski, Mannie Jefferson, Daron Day). NO next-generation Thomases on team. Founders mention 'two grown children and four grandchildren' but no family in business — succession not internally solved.",
+        "source": "website_live_fetch",
+        "source_url": "https://richardsonfireequipment.com/our_team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "founder_owner_operator_both",
+        "direction": "positive",
+        "evidence": "Both founders (Mark + Kathy Thomas) still listed as owners and active operators 38 years in. High likelihood owners are 60+ given founding in 1988.",
+        "source": "website_live_fetch",
+        "source_url": "https://richardsonfireequipment.com/our_team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "small_team_size",
+        "direction": "positive",
+        "evidence": "Only 6 named team members on public team page — fits sub-25 EE thesis size.",
+        "source": "website_live_fetch",
+        "source_url": "https://richardsonfireequipment.com/our_team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "long_license_tenure",
+        "direction": "positive",
+        "evidence": "Multi-trade ACR/ECR/HCR/B license stack; 38 yrs operating in Richardson.",
+        "source": "website",
+        "source_url": "https://richardsonfireequipment.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://richardsonfireequipment.com/our_team/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name", "employee_count_estimate", "signals"]
+      }
+    ],
+    "enrichment_notes": "STRONG A/B candidate. Mark + Kathy Thomas — both founders, still both active 38 yrs in, two grown kids NOT in the business, ~6-person team. Likely couple in their 60s with no succession plan. Recommended for owner age verification via Dallas CAD OV65 / homestead deed lookup."
+  },
+  {
+    "legal_name": "Cowboy Fire Equipment LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Waxahachie",
+    "county": "Ellis",
+    "state": "TX",
+    "zip": "75167",
+    "phone": "(972) 576-5719",
+    "website": "https://www.cowboyfireequipment.com/",
+    "sub_trade": "extinguisher_hood",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": 1969,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.cowboyfireequipment.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-owned. References '56 years of experience' and 'over 51 years' of service (late 1960s/early 1970s founding). Vent-A-Hood suppression + fire alarms + safety inspections. Serves DFW including Mansfield, Arlington, DeSoto, Plano. NOTE: HQ Waxahachie (Ellis County) — included as DFW-metro adjacent.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "1969-01-01",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Larry E. Kindricks (President; took over from father) + Diane Kindricks (wife)",
+    "owner_age_estimate": null,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 57,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not located",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "second_generation_owner_aging",
+        "direction": "positive",
+        "evidence": "Founded 1969 by Larry's father; Larry took over after his mother passed. If Larry was ~25 when he took over and that happened anywhere ~1995-2010, Larry is likely now 55-75. Diane (wife) co-runs. Family-owned 57 yrs total.",
+        "source": "google_search",
+        "source_url": "https://www.yelp.com/biz/cowboy-fire-equipment-waxahachie",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "coasting_email_personal",
+        "direction": "positive",
+        "evidence": "Primary contact email cowboyfireequipment@hotmail.com on live site (hotmail personal-grade domain for business contact = coasting tell).",
+        "source": "website_live_fetch",
+        "source_url": "https://www.cowboyfireequipment.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "positive",
+        "evidence": "Live fetch 2026-05-15: site lacks any About/Team page, no successor names, no kids-in-business mentioned. Larry + Diane only with no apparent next gen.",
+        "source": "website_live_fetch",
+        "source_url": "https://www.cowboyfireequipment.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "long_tenure_business",
+        "direction": "positive",
+        "evidence": "57 yrs in business (1969 founding) — second-gen owner. Strong route-based extinguisher revenue.",
+        "source": "google_search",
+        "source_url": "https://www.yelp.com/biz/cowboy-fire-equipment-waxahachie",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/cowboy-fire-equipment-waxahachie",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name", "year_established"]
+      },
+      {
+        "source": "buzzfile",
+        "url": "https://www.buzzfile.com/business/Cowboys-Fire-Equipment-972-576-5719",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.cowboyfireequipment.com/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["signals"]
+      }
+    ],
+    "enrichment_notes": "STRONG A/B candidate. Larry + Diane Kindricks, second-gen owners, 57-yr family business, hotmail email coasting tell, route-based extinguisher economics, no successor visible. Recommended: Ellis CAD OV65/homestead lookup on Larry E. Kindricks for direct age verification."
+  },
+  {
+    "legal_name": "Lone Star Fire Sprinkler Inc",
+    "dba_name": null,
+    "address": "3200 Rufe Snow Drive",
+    "city": "Richland Hills",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76118",
+    "phone": "(817) 672-2936",
+    "website": "https://www.lonestarfiresprinkler.com/",
+    "sub_trade": "sprinkler_itm",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": 1994,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.lonestarfiresprinkler.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1992 (33 yrs). Commercial sprinkler install/renovation + backflow + annual + 5-yr inspections + 24/7 emergency. NICET-certified technicians. Richland Hills = Tarrant County (NE Fort Worth). CORRECTION: Per BBB the founding date is 1994-01-03, not 1992 as initially recorded.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "1994-01-03",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Thomas 'Tom' Winingar (President); Carrie F. Winingar (Secretary/Treasurer); Larry Mathis (VP/Construction Superintendent)",
+    "owner_age_estimate": null,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 32,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 32,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not located",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "husband_wife_team",
+        "direction": "positive",
+        "evidence": "Tom + Carrie Winingar as officers (President + Sec/Treas) — likely husband-wife founder team since 1994. Larry Mathis (VP Construction) named partner.",
+        "source": "google_search",
+        "source_url": "https://www.yellowpages.com/richland-hills-tx/mip/lone-star-fire-sprinkler-inc-4625051",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "long_tenure_business",
+        "direction": "positive",
+        "evidence": "32 yrs in Tarrant County under same officers.",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/richland-hls/profile/fire-sprinklers/lone-star-fire-sprinkler-inc-0825-235960344",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/richland-hls/profile/fire-sprinklers/lone-star-fire-sprinkler-inc-0825-235960344",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["year_established", "owner_name"]
+      },
+      {
+        "source": "yellowpages",
+        "url": "https://www.yellowpages.com/richland-hills-tx/mip/lone-star-fire-sprinkler-inc-4625051",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "enrichment_notes": "Solid A/B candidate. Husband-wife founders (Tom + Carrie Winingar) 32 yrs in. Owners likely 55-70 age range. Sprinkler-only with NICET — institutional knowledge in person. Recommended: Tarrant CAD OV65/homestead for age proxy."
+  },
+  {
+    "legal_name": "FireWise Texas LLC",
+    "dba_name": null,
+    "address": "4000 W I-20",
+    "city": "Weatherford",
+    "county": "Parker",
+    "state": "TX",
+    "zip": "76088",
+    "phone": "(817) 458-0058",
+    "website": "https://firewisetx.com/",
+    "sub_trade": "multi_trade",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": 2020,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://firewisetx.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-owned. Sprinklers, alarms, extinguishers, pumps, backflow + design/consulting. Serves Fort Worth, Dallas, Arlington. NOTE: HQ in Parker County (Weatherford — west of FW); included as Tarrant-metro candidate. CORRECTION: Founded 11/17/2020 per BBB — only 5 yrs old.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "2020-11-17",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Blake Bassham (CEO) + Shane Bassham (COO) — brothers",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 5,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 5,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not located",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "low_tenure_disqualifier",
+        "direction": "disqualifying",
+        "evidence": "BBB shows business start 11/17/2020 = ~5 yrs old. Bassham brothers (Blake CEO, Shane COO) are mid-career, growth-mode. Doesn't fit long-tenured coasting thesis.",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/weatherford/profile/fire-protection-contractor/firewise-texas-llc-0825-1000233732",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/weatherford/profile/fire-protection-contractor/firewise-texas-llc-0825-1000233732",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["year_established", "owner_name"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/blake-bassham-4b929469/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFIED for thesis: only 5 yrs in business; founders are growth-stage entrepreneurs, not coasting owners. Exclude from A/B set."
+  },
+  {
+    "legal_name": "Titan Fire Protection",
+    "dba_name": null,
+    "address": null,
+    "city": "Weatherford",
+    "county": "Parker",
+    "state": "TX",
+    "zip": null,
+    "phone": "(817) 565-7799",
+    "website": "https://titanfirepro.com/",
+    "sub_trade": "extinguisher_hood",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://titanfirepro.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-owned. Self-describes as 'brand new' — recent founding. Fire extinguishers + fire alarms + restaurant suppression + monitoring. Serves Parker, Hood, Tarrant, Palo Pinto counties. NOTE: low tenure — flag for enrichment phase.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Brian Smith (Owner per ZoomInfo); located at 150 Hicks Ln, Weatherford",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": 15,
+    "provider_count_estimate": null,
+    "employee_count_source": "zoominfo_range_10_19",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "low_tenure_disqualifier",
+        "direction": "disqualifying",
+        "evidence": "Website self-describes as 'brand new' (per spine note). Brian Smith is mid-career growth-mode owner. Doesn't fit long-tenured coasting thesis.",
+        "source": "zoominfo+website",
+        "source_url": "https://www.zoominfo.com/c/titan-fire-protection-llc/1326933760",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/c/titan-fire-protection-llc/1326933760",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name", "employee_count_estimate"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFIED: brand-new company, owner Brian Smith mid-career. Exclude from A/B set."
+  },
+  {
+    "legal_name": "Control Systems Inc. (CSI)",
+    "dba_name": null,
+    "address": "2201 Brookhollow Plaza Dr Suite 302",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76006",
+    "phone": "(888) 780-6465",
+    "website": "https://www.controlsystems.net/",
+    "sub_trade": "multi_trade",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.controlsystems.net/aboutus/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "sub_trade"]
+      }
+    ],
+    "platform_affiliation_check": "uncertain",
+    "verification_notes": "20+ years. Licensed systems integration contractor. Fire sprinkler, fire alarm, security, nurse call, special hazard, monitoring, structured cabling. Multi-state (AZ, CO, TX, FL, WA, OH, IN, AL) — could be a regional roll-up but no parent disclosed. Enrichment phase: verify ownership structure.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Ross Larson (Founder/President per Crunchbase; not mentioned in current website team content)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 20,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 20,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not located",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "scale_exceeds_thesis",
+        "direction": "negative",
+        "evidence": "Live fetch 2026-05-15: 8-state footprint (AZ, CO, TX, FL, WA, OH, IN, AL) — multi-state systems integrator. This scale is well above ETA/search-fund target.",
+        "source": "website_live_fetch",
+        "source_url": "https://www.controlsystems.net/aboutus/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "ross_larson_csi_role_overlap_red_flag",
+        "direction": "negative",
+        "evidence": "Ross Larson named Founder/President of Control Systems (Crunchbase); separately appears as EVP of newly Pye-Barker-acquired CSI (Spartanburg SC, led by Scott Clausen since 1993). Strongly suggests overlap or in-progress consolidation. Per Pye-Barker March 2026 announcement, Ross Larson now oversees CSI nationwide systems integration role. Likely already part of, or about to be absorbed into, Pye-Barker family.",
+        "source": "google_search",
+        "source_url": "https://pyebarkerfs.com/news/pye-barker-fire-safety-adds-control-systems-inc-strengthening-customer-service-and-team-opportunities-in-south-carolina/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "private_ownership_declared",
+        "direction": "neutral",
+        "evidence": "controlsystems.net/aboutus/2-4 (posted 2025-03-14): 'Control Systems is a private ownership company.' No PE / parent disclosed on site, but adjacent Pye-Barker activity raises platform-affiliation suspicion.",
+        "source": "website_live_fetch",
+        "source_url": "https://www.controlsystems.net/aboutus/2-4/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.controlsystems.net/aboutus/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["signals"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.controlsystems.net/aboutus/2-4/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["platform_affiliation_check"]
+      },
+      {
+        "source": "crunchbase",
+        "url": "https://www.crunchbase.com/organization/control-systems-70a4",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["owner_name"]
+      },
+      {
+        "source": "pyebarker",
+        "url": "https://pyebarkerfs.com/news/pye-barker-fire-safety-adds-control-systems-inc-strengthening-customer-service-and-team-opportunities-in-south-carolina/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["signals"]
+      }
+    ],
+    "enrichment_notes": "FLAG FOR EXCLUSION: 8-state multi-office footprint exceeds thesis scale. Ross Larson's role overlap with Pye-Barker-acquired CSI (Spartanburg) — same name, same person — strongly suggests these are now sister entities under one umbrella, or active acquisition target. Not an off-market solo-owner opportunity. Recommend treating as platform_subsidiary-equivalent pending direct confirmation."
+  },
+  {
+    "legal_name": "Skelton Fire Alarm",
+    "dba_name": "Skelton Fire Solutions",
+    "address": "12000 Crownpoint Drive, Suite 125",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78233",
+    "phone": "(210) 590-1328",
+    "website": "https://skeltonfirealarm.com/",
+    "sub_trade": "multi_trade",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Ron Skelton Jr. (current owner; took over from Ron Skelton Sr. + Jeanne in 2010)",
+    "year_established": 1983,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://skeltonfirealarm.com/",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "license_holder_name", "sub_trade"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/san-antonio/profile/smoke-alarm-systems/skelton-fire-alarm-0825-1000105367",
+        "fetched_at": "2026-05-15T23:30:00Z",
+        "fields": ["legal_name", "address"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-owned since 1983 (43 yrs). Ron Skelton Sr. + Jeanne started; Ron Jr. (+ Jennifer) bought it in 2010 — second-generation succession already complete. Alarms (Honeywell Farenhyt/Gamewell-FCI) + sprinklers + suppression + extinguishers + 24/7 monitoring. BBB accredited since 2014.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "1983-01-01",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Ron Skelton Jr. (Owner/President/CEO since June 2010 buyout); Jennifer Skelton (wife, co-owner)",
+    "owner_age_estimate": null,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 16,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 43,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not located",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "second_gen_owner_mid_career",
+        "direction": "negative",
+        "evidence": "Ron Jr. bought from his father in 2010 after 18 yrs of his own industry tenure (per about page). He's likely 50-55 currently — younger generation succession just completed. Less likely to be exit-seeking near-term.",
+        "source": "google_search",
+        "source_url": "https://skeltonfirealarm.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "long_tenure_business",
+        "direction": "positive",
+        "evidence": "43 yrs in San Antonio; second-gen family ownership; $4M revenue (ZoomInfo).",
+        "source": "zoominfo",
+        "source_url": "https://www.zoominfo.com/c/skelton-fire-alarm/356153417",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "neutral",
+        "evidence": "Live fetch 2026-05-15 of skeltonfirealarm.com: copyright 2026 (current), but no team page accessible, no successor names visible, no children of Ron Jr. listed.",
+        "source": "website_live_fetch",
+        "source_url": "https://skeltonfirealarm.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://skeltonfirealarm.com/",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["signals"]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/c/skelton-fire-alarm/356153417",
+        "fetched_at": "2026-05-15T23:45:00Z",
+        "fields": ["revenue_estimate"]
+      }
+    ],
+    "enrichment_notes": "DEPRIORITIZE for current cycle: Ron Skelton Jr. only 16 yrs into ownership (since 2010); likely too young to be exit-seeking. Strong business profile but timing mismatch. Park for 5-yr revisit."
+  }
+]

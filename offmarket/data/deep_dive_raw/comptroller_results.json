@@ -1,0 +1,283 @@
+{
+  "candidates": [
+    {
+      "i": 1,
+      "legal_name": "Whitaker Insurance",
+      "found": true,
+      "entity_name_official": "WHITAKER INSURANCE ASSOCIATES, INC.",
+      "search_url": "https://comptroller.texas.gov/taxes/franchise/account-status/search/17423240757",
+      "entity_taxpayer_number": "17423240757",
+      "entity_sos_file_number": "0070924400",
+      "entity_formation_date": "1984-06-19",
+      "entity_status": "Active",
+      "registered_agent": "C DON WHITAKER",
+      "registered_agent_address": "8626 TESORO DR #310, SAN ANTONIO, TX 78217",
+      "mailing_address": "8626 TESORO DR STE 310, SAN ANTONIO, TX 78217",
+      "officers": [
+        { "title": "PRES", "name": "CHESTER D WHITAKER" },
+        { "title": "VP", "name": "GARY D WHITAKER" },
+        { "title": "SEC", "name": "LANA P WHITAKER" }
+      ],
+      "all_officers_at_business_address": true,
+      "successor_signal": "Family business: 3 Whitakers (Chester, Gary, Lana). Internal succession likely. C Don Whitaker named as RA suggests senior figure handing off."
+    },
+    {
+      "i": 2,
+      "legal_name": "White Rock Animal Hospital",
+      "found": true,
+      "entity_name_official": "WHITE ROCK ANIMAL CLINIC INC",
+      "search_url": "https://comptroller.texas.gov/taxes/franchise/account-status/search/30000725132",
+      "entity_taxpayer_number": "30000725132",
+      "entity_sos_file_number": "0090006102",
+      "entity_formation_date": "1970-01-12",
+      "entity_status": "Franchise Tax Ended (Inactive)",
+      "registered_agent": "JAMES W ARD",
+      "registered_agent_address": "11414 E NW HWY, DALLAS, TX 75218",
+      "search_attempts": [
+        "WHITE ROCK ANIMAL HOSPITAL (0)",
+        "WHITE ROCK (0)",
+        "WHITE ROCK ANIMAL (1 — clinic inc inactive)",
+        "HAWTHORNE (0)"
+      ],
+      "notes": "Old entity from 1970 — Inactive. Current operation likely sole prop. James W Ard was historical owner; current owner Dr. Bob Hawthorne (per JSON) operates under DBA."
+    },
+    {
+      "i": 3,
+      "legal_name": "Mellina Animal Hospital",
+      "found": false,
+      "search_attempts": [
+        "MELLINA ANIMAL HOSPITAL (0)",
+        "MELLINA (8 unrelated — insurance, partnership, etc.)",
+        "J SCOTT MELLINA (0)"
+      ],
+      "notes": "No veterinary entity found in Comptroller. Dr. J. Scott Mellina likely operates as sole prop / unincorporated DBA."
+    },
+    {
+      "i": 4,
+      "legal_name": "Colleyville Animal Clinic",
+      "found": false,
+      "search_attempts": [
+        "COLLEYVILLE ANIMAL CLINIC (0)",
+        "COLLEYVILLE ANIMAL (0)",
+        "COLLEYVILLE ANIMAL CLINIC PA (0)",
+        "WILSON BLICK (0)",
+        "WILSON ANIMAL CLINIC (0)"
+      ],
+      "notes": "JSON says dba is 'Colleyville Animal Clinic, P.A.' but P.A. not found in Comptroller. May be filed under personal name (e.g., 'Mark D Wilson PA') or unincorporated."
+    },
+    {
+      "i": 5,
+      "legal_name": "Alamo Dog & Cat Hospital",
+      "found": true,
+      "entity_name_official": "ALAMO DOG AND CAT HOSPITAL INC",
+      "search_url": "https://comptroller.texas.gov/taxes/franchise/account-status/search/30000922440",
+      "entity_taxpayer_number": "30000922440",
+      "entity_sos_file_number": "0090032102",
+      "entity_formation_date": "1970-09-28",
+      "entity_status": "Franchise Tax Ended (Inactive)",
+      "registered_agent": "ERIC A LANGE",
+      "registered_agent_address": "1619 PLEASANTON ROAD, SAN ANTONIO, TX 78221",
+      "mailing_address": "2421 THOUSAND OAKS DR, SAN ANTONIO, TX 78232",
+      "search_attempts": ["ALAMO DOG AND CAT HOSPITAL (1 — inactive)", "LABRIE (no vet match)"],
+      "notes": "Old 1970 entity inactive. Current owner Dr. Mark E. LaBrie per JSON — likely operates as sole prop or under different entity. Registered office at 1619 Pleasanton Rd = current business address."
+    },
+    {
+      "i": 6,
+      "legal_name": "Perdue Insurance Agency LLC",
+      "found": true,
+      "entity_name_official": "PERDUE INSURANCE AGENCY LLC",
+      "search_url": "https://comptroller.texas.gov/taxes/franchise/account-status/search/32074146633",
+      "entity_taxpayer_number": "32074146633",
+      "entity_sos_file_number": "0803609108",
+      "entity_formation_date": "2020-05-04",
+      "entity_status": "Active",
+      "registered_agent": "BRANDON D CLOUD",
+      "registered_agent_address": "6607 AIRPORT BLVD, AUSTIN, TX 78752",
+      "officers": [
+        {
+          "title": "MEMBER",
+          "name": "BRANDON DAVIDSON CLOUD",
+          "address": "461 BRITNI LOOP, KYLE, TX 78640"
+        },
+        {
+          "title": "MANAGING MEMBER",
+          "name": "DONALD PERDUE",
+          "address": "300 CREEKSIDE DR, BUDA, TX 78610"
+        },
+        {
+          "title": "MEMBER",
+          "name": "FLABIA ESPARZA PERDUE",
+          "address": "300 CREEKSIDE DRIVE, BUDA, TX 78610"
+        }
+      ],
+      "owner_residential_address_for_cad": "300 CREEKSIDE DR, BUDA, TX 78610",
+      "owner_residential_county": "Hays",
+      "successor_signal": "Brandon Cloud (separate residence Kyle, listed first on PIR) is a younger partner — internal succession candidate. Donald + Flabia Perdue (spouses) own majority. LLC reformed 2020 from earlier entity."
+    },
+    {
+      "i": 7,
+      "legal_name": "Altig Optical",
+      "found": false,
+      "search_attempts": ["ALTIG OPTICAL (0)", "ALTIG (8 unrelated)"],
+      "notes": "Dr. William D Altig likely operates as sole prop / unincorporated DBA — common for solo optometrists."
+    },
+    {
+      "i": 8,
+      "legal_name": "Bankhead Insurance Agency, LLC",
+      "found": true,
+      "entity_name_official": "BANKHEAD INSURANCE AGENCY, LLC",
+      "search_url": "https://comptroller.texas.gov/taxes/franchise/account-status/search/32052717587",
+      "entity_taxpayer_number": "32052717587",
+      "entity_sos_file_number": "0801901316",
+      "entity_formation_date": "2014-01-01",
+      "entity_status": "Active",
+      "registered_agent": "PHILIP T BANKHEAD",
+      "registered_agent_address": "17103 PRESTON RD STE 175, DALLAS, TX 75248",
+      "officers": [
+        {
+          "title": "DIRECTOR/PRESIDENT",
+          "name": "PHILIP T BANKHEAD",
+          "address": "17103 PRESTON ROAD STE 175, DALLAS, TX 75248"
+        }
+      ],
+      "all_officers_at_business_address": true,
+      "successor_signal": "Solo owner-operator with no other officers on PIR. No internal successor named. LLC formed 2014 — likely successor entity to older operation."
+    },
+    {
+      "i": 9,
+      "legal_name": "Animal Hospital of Valley Ranch",
+      "found": true,
+      "entity_name_official": "ANIMAL HOSPITAL OF VALLEY RANCH, INC.",
+      "search_url": "https://comptroller.texas.gov/taxes/franchise/account-status/search/30117968500",
+      "entity_taxpayer_number": "30117968500",
+      "entity_sos_file_number": "0092091702",
+      "entity_formation_date": "1995-08-28",
+      "entity_status": "Active",
+      "registered_agent": "CHAS R BILINGS",
+      "registered_agent_address": "8300 DOUGLAS STE 800, DALLAS, TX 75225",
+      "officers": [
+        {
+          "title": "PRESIDENT/DIRECTOR",
+          "name": "BARRY CHAIKIN",
+          "address": "1924 COTTONWOOD VALLEY DR, IRVING, TX 75038"
+        }
+      ],
+      "owner_residential_address_for_cad": "1924 COTTONWOOD VALLEY DR, IRVING, TX 75038",
+      "owner_residential_county": "Dallas",
+      "successor_signal": "Solo owner. No partners/successor named. Chas Bilings reg agent is attorney address."
+    },
+    {
+      "i": 10,
+      "legal_name": "Bridge Street Animal Clinic",
+      "found": false,
+      "search_attempts": ["BRIDGE STREET ANIMAL (0)", "NORRIS VETERINARY (0)"],
+      "notes": "Dr. Robert I. Norris — likely sole prop / DBA."
+    },
+    {
+      "i": 11,
+      "legal_name": "Vision Plus",
+      "found": true,
+      "entity_name_official": "VISION PLUS LLC",
+      "search_url": "https://comptroller.texas.gov/taxes/franchise/account-status/search/32058621569",
+      "entity_taxpayer_number": "32058621569",
+      "entity_sos_file_number": "0802316730",
+      "entity_formation_date": "2015-10-21",
+      "entity_status": "Active",
+      "registered_agent": "THOMAS J GOLDSTEIN",
+      "registered_agent_address": "3331 WURZBACH RD STE B, SAN ANTONIO, TX 78238",
+      "officers": [
+        {
+          "title": "PRESIDENT/DIRECTOR",
+          "name": "THOMAS J GOLDSTEIN",
+          "address": "3331 WURZBACH RD STE B, SAN ANTONIO, TX 78238"
+        }
+      ],
+      "all_officers_at_business_address": true,
+      "successor_signal": "Solo owner. Jennifer Goldstein (co-owner per JSON) not on PIR — possibly informal role. LLC from 2015 — newer entity, business older."
+    },
+    {
+      "i": 12,
+      "legal_name": "Longenbaugh Veterinary Hospital P.C.",
+      "found": true,
+      "entity_name_official": "LONGENBAUGH VETERINARY HOSPITAL, P.C.",
+      "search_url": "https://comptroller.texas.gov/taxes/franchise/account-status/search/17603364492",
+      "entity_taxpayer_number": "17603364492",
+      "entity_sos_file_number": "0091625302",
+      "entity_formation_date": "1991-03-25",
+      "entity_status": "Active",
+      "registered_agent": "MARTIN W KEADLE",
+      "registered_agent_address": "8402 LAUREL TRAILS, HOUSTON, TX 77095",
+      "owner_residential_address_for_cad": "8402 LAUREL TRAILS, HOUSTON, TX 77095",
+      "owner_residential_county": "Harris",
+      "successor_signal": "Solo P.C. — common for solo vet practices. Reg agent at owner residence."
+    },
+    {
+      "i": 13,
+      "legal_name": "Bellaire Optometry Clinic",
+      "found": true,
+      "entity_name_official": "BELLAIRE OPTOMETRY CLINIC, P.C.",
+      "search_url": "https://comptroller.texas.gov/taxes/franchise/account-status/search/17604873749",
+      "entity_taxpayer_number": "17604873749",
+      "entity_sos_file_number": "0092119802",
+      "entity_formation_date": "1995-12-14",
+      "entity_status": "Active",
+      "registered_agent": "QUAN M NGUYEN",
+      "registered_agent_address": "10080 BELLAIRE BLVD STE 105, HOUSTON, TX 77072",
+      "officers": [
+        {
+          "title": "DIRECTOR/OFFICER",
+          "name": "ANNE HUYEN LE",
+          "address": "137 N HALL DRIVE, SUGAR LAND, TX 77478"
+        },
+        {
+          "title": "DIRECTOR/OFFICER",
+          "name": "QUAN M NGUYEN",
+          "address": "17507 HANKAR WAY, RICHMOND, TX 77407"
+        }
+      ],
+      "owner_residential_address_for_cad": "137 N HALL DRIVE, SUGAR LAND, TX 77478",
+      "owner_residential_county": "Fort Bend",
+      "successor_signal": "Co-owners (2 directors): Anne Huyen Le AND Quan M Nguyen — INTERNAL SUCCESSOR FOUND. Nguyen may be junior partner / future buyer."
+    },
+    {
+      "i": 14,
+      "legal_name": "North Texas Eye Care",
+      "found": false,
+      "search_attempts": ["NORTH TEXAS EYE CARE (0)", "KLOESEL (8 unrelated)"],
+      "notes": "Dr. Gregory Kloesel — likely sole prop / DBA."
+    },
+    {
+      "i": 15,
+      "legal_name": "Fire Safe Protection Services",
+      "found": true,
+      "entity_name_official": "FIRE SAFE PROTECTION SERVICES, LP",
+      "search_url": "https://comptroller.texas.gov/taxes/franchise/account-status/search/17600176964",
+      "entity_taxpayer_number": "17600176964",
+      "entity_sos_file_number": "0800283476",
+      "entity_formation_date": "2004-01-02",
+      "entity_status": "Active",
+      "registered_agent": "BRUCE L. BURIANEK",
+      "registered_agent_address": "1815 SHERWOOD FOREST, HOUSTON, TX 77043",
+      "officers": [
+        {
+          "title": "GENERAL PARTNER",
+          "name": "SHERWOOD FOREST ENTERPRISES, LLC",
+          "address": "1815 SHERWOOD FOREST, HOUSTON, TX 77043"
+        }
+      ],
+      "general_partner_managing_member": {
+        "name": "BRUCE L BURIANEK",
+        "address": "1815 SHERWOOD FOREST ST, HOUSTON, TX 77043"
+      },
+      "successor_signal": "Stephen McKinney (per JSON) is operational President, but legal owner is Bruce L Burianek (sole manager of GP entity Sherwood Forest Enterprises LLC). McKinney may be a key employee, NOT an equity owner. This changes the acquisition dynamic — would buy from Burianek."
+    }
+  ],
+  "summary": {
+    "total_candidates": 15,
+    "comptroller_found": 10,
+    "comptroller_active": 8,
+    "comptroller_inactive_distress": 2,
+    "comptroller_not_found_likely_sole_prop": 5,
+    "lookup_success_rate": "10/15 = 67%"
+  }
+}

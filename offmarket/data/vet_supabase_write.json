@@ -1,0 +1,28 @@
+{
+  "status": "written",
+  "score_run_id": "c64b70ef-6485-4d8b-8439-3af447612223",
+  "run_label": "vet-tx-2026-05-15",
+  "vertical": "veterinary",
+  "businesses_written": 65,
+  "business_scores_written": 65,
+  "business_signals_written": 217,
+  "neutral_signals_dropped": 23,
+  "errors": [],
+  "verification_counts": {
+    "businesses": 65,
+    "signals": 217,
+    "scores": 65,
+    "scores_by_tier": {
+      "A_acquire_self": 0,
+      "B_forward": 24,
+      "C_watch": 19,
+      "D_pass": 22
+    }
+  },
+  "notes": [
+    "Persisted via SECURITY DEFINER RPC public.offmarket_persist_vet_row(jsonb) to keep the MCP execute_sql payloads small.",
+    "23 signals with direction='neutral' were dropped because the business_signals_direction_check CHECK constraint only allows ('positive','negative','disqualifying'). Dropping preserves semantic meaning better than reclassifying.",
+    "All 65 rows upserted on (vertical, legal_name, city, state). Existing business_signals rows were deleted before insert to avoid duplicates within a re-run.",
+    "score_runs.business_count updated to 65."
+  ]
+}

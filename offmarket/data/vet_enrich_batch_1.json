@@ -1,0 +1,2092 @@
+[
+  {
+    "legal_name": "Memorial Town & Country Animal Clinic",
+    "dba_name": null,
+    "address": "12661 Memorial Dr.",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77024",
+    "phone": "(713) 464-4686",
+    "website": "https://mtcac.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": 1985,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://mtcac.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "practice_type"]
+      },
+      {
+        "source": "website",
+        "url": "https://mtcac.com/clinic",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["founder_history"]
+      },
+      {
+        "source": "website",
+        "url": "https://mtcac.com/team/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_list"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Since 1985 on Memorial Dr in premium 77024 Memorial-area ZIP. Self-describes as 'still locally owned.' No NVA/Innovetive/Lakefield/Mission tells. 1985 merger of Town & Country Clinic (Drs. Benson + Saxe) with Memorial Animal Clinic (Dr. John M. Brasher). Long-tenured Houston-inner-loop. Dr. Megan Arnold (TAMU CVM 2018) listed — younger associate.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Unknown — Drs. Benson/Saxe/Brasher were founders 1985; current owner not disclosed on website",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 41,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not_disclosed_on_website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_locally_owned",
+        "direction": "positive",
+        "evidence": "Self-describes 'still locally owned' for nearly 40 years (since 1985)",
+        "source": "website",
+        "source_url": "https://mtcac.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "founders_likely_retired",
+        "direction": "positive",
+        "evidence": "Founders Benson, Saxe, Brasher (1985) would all be 70+ in 2026 — implying current ownership is post-founder generation; verify on enrichment with deeper team-page fetch",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=memorial+town+country+animal+clinic+founder",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "No NVA / Innovetive / Mission / Kindvet / SVP / PetVet tells on homepage or in privacy policy domain",
+        "source": "website",
+        "source_url": "https://mtcac.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "google_search",
+        "url": "https://www.google.com/search?q=%22Memorial+Town+%26+Country+Animal+Clinic%22+Houston+acquired",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["acquisition_check_negative"]
+      }
+    ],
+    "enrichment_notes": "AAHA + AVMA accredited. Locally owned 41-yr practice in Tier-A Memorial 77024 ZIP. No consolidator affiliation. Owner identity not disclosed online — best confirmed by phone or deeper team-page scrape. Strong B+/A- candidacy pending owner DVM age confirmation."
+  },
+  {
+    "legal_name": "North Durham Animal Hospital",
+    "dba_name": null,
+    "address": "2018 N Durham Dr",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77008",
+    "phone": "(713) 863-7387",
+    "website": "https://www.ndanimalhospital.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": 1985,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.ndanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.ndanimalhospital.com/about-us/team/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_list"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.ndanimalhospital.com/about-us/team/dr-mehmed-john-ozak",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_bio"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Since 1985 in the Heights (77008). Dr. Mehmed John Ozak (Istanbul Univ Vet School 2013, TX licensed 2017) listed as Lead Veterinarian — joined July 2017, NOT founder. Owner identity not disclosed. Mon-Fri only, NO Saturday/Sunday hours = strong coasting tell. No boarding/grooming on team page. Pet Portal present but no consolidator subdomain.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Unknown — Dr. Ozak is Lead Veterinarian (hired 2017), not necessarily owner",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 41,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_team_page_lists_one_dvm",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "no_saturday_hours_coasting",
+        "direction": "positive",
+        "evidence": "Mon-Fri 7am-4pm only; Sat & Sun CLOSED. Reduced 5-day schedule = coasting tell for older owner-DVM running a low-revenue solo practice",
+        "source": "website",
+        "source_url": "https://www.ndanimalhospital.com/about-us/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "solo_dvm_signal",
+        "direction": "positive",
+        "evidence": "Team page lists only Dr. Ozak as DVM (1 vet). Solo or near-solo practice — classic ETA target shape",
+        "source": "website",
+        "source_url": "https://www.ndanimalhospital.com/about-us/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "lead_vet_is_recent_hire",
+        "direction": "negative",
+        "evidence": "Dr. Ozak joined 2017 (only 9-yr tenure) and is foreign-grad (Istanbul 2013) — likely younger than typical 1985-founder cohort. Suggests founder already exited and Ozak may be the buyer (recent owner = lower exit probability)",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/john-ozak-a2429b67/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Mission/SVP/Kindvet footer or subdomain",
+        "source": "website",
+        "source_url": "https://www.ndanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/john-ozak-a2429b67/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_bio"]
+      }
+    ],
+    "enrichment_notes": "Likely succession already happened: 1985 founder probably sold or transitioned to Dr. Ozak ~2017. No-Saturday + solo DVM is coasting profile but Ozak's young age weakens exit-in-12-to-36-months thesis. B-tier — monitor for ownership clarification."
+  },
+  {
+    "legal_name": "Memorial-610 Hospital for Animals",
+    "dba_name": null,
+    "address": "910 Antoine Drive",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77024",
+    "phone": "(713) 688-0387",
+    "website": "https://www.mem610.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Stephen T. Pittenger (Chief of Staff since 2008)",
+    "year_established": 1968,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.mem610.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      },
+      {
+        "source": "website",
+        "url": "http://www.mem610.com/our-history.pml",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["ownership_history", "founding_year"]
+      },
+      {
+        "source": "website",
+        "url": "http://www.mem610.com/our-doctors.pml",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_list", "license_holder_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1968 by Dr. Austin W. Weedn (OSU CVM 1951) as Memorial-610 Animal Clinic. Owner transitions: Weedn (1968-1978), Dr. David N. Shell (1978-2008), Dr. Stephen T. Pittenger (2008-present, TAMU CVM 1995, ABVP 2006). 4 DVMs including 3 ABVP diplomates (Pittenger, Rose, Dewhirst) — exceptional quality. AAHA accredited. Self-describes 'the only family-owned vet hospital in TX with 3 Board Certified Canine and Feline Practice Specialists.'",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Stephen T. Pittenger, DVM, Dipl. ABVP",
+    "owner_age_estimate": 56,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 18,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 58,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 4,
+    "employee_count_source": "website_doctors_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "multi_dvm_4",
+        "direction": "negative",
+        "evidence": "4 DVMs including 3 ABVP diplomates — multi-vet, board-certified, not solo. Higher revenue + multi-doctor = larger acquisition target, harder to underwrite as small-business ETA deal",
+        "source": "website",
+        "source_url": "http://www.mem610.com/our-doctors.pml",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young",
+        "direction": "negative",
+        "evidence": "Pittenger TAMU CVM 1995 (~age 56 in 2026); only 18-yr tenure as owner. Below typical 60+ exit window. Younger ABVP-certified DVM likely committed to clinical practice for another decade.",
+        "source": "website",
+        "source_url": "http://www.mem610.com/our-doctors.pml",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Mission/SVP/Kindvet tells. Legacy .pml URL structure but independently owned per history page.",
+        "source": "website",
+        "source_url": "https://www.mem610.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "high_quality_practice_low_distress",
+        "direction": "negative",
+        "evidence": "Mon-Fri 7am-6pm. 3 ABVP diplomates including newly-minted Dewhirst (ABVP 2025) — investing in growth/credentialing, not coasting",
+        "source": "website",
+        "source_url": "http://www.mem610.com/our-doctors.pml",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "http://www.mem610.com/our-history.pml",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["ownership_history"]
+      }
+    ],
+    "enrichment_notes": "High-quality 58-yr practice but owner Pittenger (TAMU 1995, ~age 56) is too young for the 12-36 month exit thesis. Practice is also too large (4 DVMs, 3 ABVP) for typical small-business ETA. DOWNGRADE from A-tier to C-tier. Strong practice, wrong size + wrong age."
+  },
+  {
+    "legal_name": "Animal Medical Center of the Village",
+    "dba_name": null,
+    "address": "5406 Kirby Dr.",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77005",
+    "phone": "(713) 524-3800",
+    "website": "https://www.amcofthevillage.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Dan Jordan (TAMU CVM)",
+    "year_established": 1983,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.amcofthevillage.com/about-us/our-mission",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.amcofthevillage.com/about-us/team/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_list"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.google.com/search?q=%22Animal+Medical+Center+of+the+Village%22+Houston+Dr.+Jordan+owner",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["owner_bio"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Since 1983 in West University Place 77005 (premium Tier-A inner-loop). Dr. Dan Jordan (TAMU CVM) is owner, with 30+ yrs Houston practice. 4 staff DVMs listed (Leidy, Russell, Kaldis, Henkelman). Self-describes as premier privately-owned practice. AAHA accredited. Saturday hours 9-4. Online booking present.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Dan Jordan",
+    "owner_age_estimate": 62,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 43,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 43,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 4,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_long_tenure_exit_window",
+        "direction": "positive",
+        "evidence": "Dr. Dan Jordan TAMU CVM, 30+ yrs in Houston (per amcofthevillage); founded AMC of the Village 1983 / 1995 move per Yelp. Estimated ~age 62. In classic exit window 60-70.",
+        "source": "website",
+        "source_url": "https://www.amcofthevillage.com/about-us/our-mission",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_not_on_team_page",
+        "direction": "positive",
+        "evidence": "Owner Dr. Jordan NOT listed on current team page (which shows Leidy, Russell, Kaldis, Henkelman). Suggests owner is hands-off or semi-retired — strong exit-readiness tell",
+        "source": "website",
+        "source_url": "https://www.amcofthevillage.com/about-us/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_dvm_4",
+        "direction": "negative",
+        "evidence": "4 active DVMs on team — larger practice harder to underwrite as small ETA deal; on the boundary between SBA ($1-3M revenue) and middle-market",
+        "source": "website",
+        "source_url": "https://www.amcofthevillage.com/about-us/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "premium_zip_77005",
+        "direction": "positive",
+        "evidence": "West University Place 77005 = Tier-A premium inner-Houston ZIP (median HH income $200k+). High-value real estate adds optionality",
+        "source": "website",
+        "source_url": "https://www.amcofthevillage.com/about-us/our-mission",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "AAHA accredited 'privately-owned'. No NVA/Innovetive/Mission/Kindvet/SVP tells",
+        "source": "website",
+        "source_url": "https://www.amcofthevillage.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/animal-medical-center-of-the-village-houston",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["founding_year_confirm"]
+      }
+    ],
+    "enrichment_notes": "A-tier candidate: owner ~62, 43-yr ownership, off the team page (semi-retired tell), premium 77005 ZIP, 4 associate DVMs in place (successor pool exists). Independent. Multi-DVM size is the main hesitation — could be middle-market scale rather than classic ETA solo target."
+  },
+  {
+    "legal_name": "Richmond Avenue Animal Hospital",
+    "dba_name": null,
+    "address": "4014 Richmond Ave",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77027",
+    "phone": "(832) 203-7711",
+    "website": "https://richmondavenueanimalhospital.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Drs. Diane Wilkie, Pandora Pipiringos, Randall Gallagher",
+    "year_established": 2009,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://richmondavenueanimalhospital.com/team/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.google.com/search?q=%22Richmond+Avenue+Animal+Hospital%22+Houston+founded",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["year_established", "dvm_list"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Opened spring 2009 with current staff — 17-yr practice (not legacy as Galleria-area practices go). AAHA-accredited, 4 DVMs (Wilkie / Pipiringos / Gallagher per pet medicus + named in testimonials). PetDesk = tech stack only, not consolidator.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Drs. Diane Wilkie / Pandora Pipiringos (likely co-owners — verify)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 17,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 17,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 4,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "multi_dvm_4",
+        "direction": "negative",
+        "evidence": "4 DVMs — multi-vet, not solo. AAHA accredited, full-service.",
+        "source": "website",
+        "source_url": "https://richmondavenueanimalhospital.com/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "tenure_borderline",
+        "direction": "negative",
+        "evidence": "17-yr practice (founded 2009) — below preferred 20-yr+ legacy threshold for ETA targets. Less likely to have founder fatigue",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Richmond+Avenue+Animal+Hospital%22+founded",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "premium_zip_77027_galleria",
+        "direction": "positive",
+        "evidence": "Galleria/Uptown Houston 77027 = Tier-A premium ZIP",
+        "source": "website",
+        "source_url": "https://richmondavenueanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Mission/SVP tells; PetDesk = tech stack only",
+        "source": "website",
+        "source_url": "https://richmondavenueanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "Tenure too short (17 yrs) + multi-DVM size makes this a B/C-tier target. Owners' ages unknown. Wait-list candidate unless owner ages confirm 60+."
+  },
+  {
+    "legal_name": "Longenbaugh Veterinary Hospital P.C.",
+    "dba_name": null,
+    "address": "15703 Longenbaugh, Ste. F",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77095",
+    "phone": "(281) 856-7023",
+    "website": "https://longenbaughvet.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Martin Keadle (TAMU CVM grad)",
+    "year_established": 1991,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://longenbaughvet.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "license_holder_name"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.google.com/search?q=%22Longenbaugh+Veterinary%22+Houston+%22Dr.+Keadle%22+TAMU",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["tenure_proxy"]
+      },
+      {
+        "source": "news_article",
+        "url": "https://communityimpact.com/houston/cy-fair-jersey-village/business/2026/03/26/longenbaugh-veterinary-hospital-marks-35-years-treating-cy-fairs-pets/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["year_established"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "35-yr practice (Community Impact article confirms 35 yrs March 2026 — founding ~1991). Self-describes as 'privately owned by Dr. Martin Keadle.' Solo named DVM. NW Houston / Cypress / Copperfield. Mon-Tue 7am-8pm, Wed-Fri 7am-6pm. No online booking widget — only pet portal.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Martin Keadle",
+    "owner_age_estimate": 63,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 35,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 35,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_only_dvm_listed",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_owner_long_tenure",
+        "direction": "positive",
+        "evidence": "Dr. Keadle solo-owner 35 yrs (since ~1991) — classic ETA target profile: long-tenured solo-DVM with no associate successor visible",
+        "source": "website",
+        "source_url": "https://longenbaughvet.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_in_exit_window",
+        "direction": "positive",
+        "evidence": "TAMU CVM grad ~1990-1992 (founded 1991) → est. age ~63 in 2026. Squarely in 60-70 exit window",
+        "source": "license_tenure_proxy",
+        "source_url": "https://longenbaughvet.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_online_booking",
+        "direction": "positive",
+        "evidence": "No online booking widget on homepage — only Pet Portal. Modest coasting tell.",
+        "source": "website",
+        "source_url": "https://longenbaughvet.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_successor_dvm",
+        "direction": "positive",
+        "evidence": "Only Dr. Keadle named on staff page. No associate DVM = no internal-successor path = higher likelihood of external sale at exit",
+        "source": "website",
+        "source_url": "https://www.longenbaughvet.com/our-staff.pml",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "Self-describes 'privately owned'. No NVA/Innovetive/Mission tells. .pml file structure = legacy Beyond Indigo template (mild coasting tell)",
+        "source": "website",
+        "source_url": "https://longenbaughvet.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "news_article",
+        "url": "https://communityimpact.com/houston/cy-fair-jersey-village/business/2026/03/26/longenbaugh-veterinary-hospital-marks-35-years-treating-cy-fairs-pets/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["35_year_milestone"]
+      }
+    ],
+    "enrichment_notes": "TOP A-TIER CANDIDATE. Solo-owner Dr. Keadle, 35-yr tenure, ~age 63, no associate successor, legacy website template, NW Houston exurban (under-targeted by I-35 platforms). All four classic ETA signals present."
+  },
+  {
+    "legal_name": "Northwest Animal Hospital",
+    "dba_name": null,
+    "address": "3031 Cypress Creek Pkwy",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77068",
+    "phone": "(281) 444-1084",
+    "website": "https://www.northwestanimalhospital.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Molly O'Bannion (purchased 2018; TAMU CVM)",
+    "year_established": 1972,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.northwestanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.northwestanimalhospital.com/about/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["ownership_history"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "REVISED: Founded 1972 by Dr. Jimmy Lloyd (TAMU). Dr. Molly O'Bannion took over 2018 — only 8-yr tenure under current owner. Now a 4-DVM practice (multi-vet, growing). Mon-Fri 7-6, CLOSED Saturday/Sunday. Beyond Indigo template. No online booking, no boarding/grooming.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Molly O'Bannion",
+    "owner_age_estimate": 40,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 8,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": "2018-01-01",
+    "years_in_business": 54,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 4,
+    "employee_count_source": "website_about_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young",
+        "direction": "disqualifying",
+        "evidence": "Dr. O'Bannion attended Klein Oak HS and TAMU undergrad + DVM. Took over 2018. Estimated ~age 40 in 2026 — far below exit window. Only 8-yr ownership tenure.",
+        "source": "website",
+        "source_url": "https://www.northwestanimalhospital.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "growing_4_dvm_practice",
+        "direction": "negative",
+        "evidence": "Practice grew from 1-DVM (Lloyd era) to 4-DVM under O'Bannion — actively expanding, NOT coasting",
+        "source": "website",
+        "source_url": "https://www.northwestanimalhospital.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_saturday_hours",
+        "direction": "positive",
+        "evidence": "Mon-Fri 7-6 only. Closed Sat/Sun. Modest coasting tell despite growth — or could be intentional founder-era staffing",
+        "source": "website",
+        "source_url": "https://www.northwestanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_online_booking",
+        "direction": "positive",
+        "evidence": "No online booking widget. Beyond Indigo Pets website (legacy template).",
+        "source": "website",
+        "source_url": "https://www.northwestanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "Self-describes 'privately owned and operated.' No NVA/Innovetive/Mission tells.",
+        "source": "website",
+        "source_url": "https://www.northwestanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.northwestanimalhospital.com/about/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["ownership_history", "successor_history"]
+      }
+    ],
+    "enrichment_notes": "DOWNGRADE — Dr. O'Bannion is young, 8-yr owner, and growing the practice (4 DVMs now). Wrong age + wrong stage for off-market exit thesis. C/D-tier. Practice is healthy but committed long-term."
+  },
+  {
+    "legal_name": "Cypress Veterinary Hospital",
+    "dba_name": null,
+    "address": "11950 Cypress N. Houston Rd.",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77429",
+    "phone": "(281) 469-8056",
+    "website": "https://www.cypressvethospital.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Ricardo A. Caballero (TAMU 1988)",
+    "year_established": 1971,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.cypressvethospital.com/about-us/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.cypressvethospital.com/meet_our_veterinarian",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_bio"]
+      },
+      {
+        "source": "google_business",
+        "url": "https://www.google.com/search?q=cypress+veterinary+hospital+cypress+tx+caballero+TAMU",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["graduation_year"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1971 — 55-yr practice in Cypress (exurban Harris). Dr. Ricardo A. Caballero owns/operates: TAMU CVM 1988, additional Purdue training, est. age ~63 in 2026. Ally DVM = tech stack, not consolidator.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Ricardo A. Caballero",
+    "owner_age_estimate": 63,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 55,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_meet_our_veterinarian_page_singular_doctor",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_in_exit_window",
+        "direction": "positive",
+        "evidence": "Dr. Caballero TAMU CVM 1988 → est. age ~63 in 2026. Squarely in 60-70 ETA exit window. 38-yr veterinary career.",
+        "source": "google_search",
+        "source_url": "https://www.cypressvethospital.com/meet_our_veterinarian",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "solo_dvm_signal",
+        "direction": "positive",
+        "evidence": "Single veterinarian page (singular 'Meet Our Veterinarian'). Solo or near-solo practice.",
+        "source": "website",
+        "source_url": "https://www.cypressvethospital.com/meet_our_veterinarian",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "55_yr_legacy_practice",
+        "direction": "positive",
+        "evidence": "Practice founded 1971 (55 yrs); under-targeted Cypress exurban submarket — outside Innovetive's I-35-concentrated footprint",
+        "source": "website",
+        "source_url": "https://www.cypressvethospital.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "Ally DVM = tech stack only; no NVA/Innovetive/Mission/SVP tells",
+        "source": "website",
+        "source_url": "https://www.cypressvethospital.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "A-TIER CANDIDATE. Solo-DVM Dr. Caballero, ~age 63, 38-yr career, 55-yr practice in under-targeted Cypress exurban submarket. Strong ETA target profile."
+  },
+  {
+    "legal_name": "Spring Creek Animal Hospital",
+    "dba_name": null,
+    "address": "101 Epps St",
+    "city": "Tomball",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77375",
+    "phone": "(281) 351-7184",
+    "website": "https://kindvet.com/animal-hospital",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. David Campbell (Chief of Staff, post-acquisition)",
+    "year_established": 1981,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://kindvet.com/animal-hospital",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      },
+      {
+        "source": "website",
+        "url": "https://kindvet.com/veterinarians",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_list"]
+      },
+      {
+        "source": "pitchbook",
+        "url": "https://pitchbook.com/profiles/company/297976-69",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["acquisition"]
+      }
+    ],
+    "platform_affiliation_check": "platform_subsidiary",
+    "verification_notes": "EXCLUDE — RECENT ACQUISITION: Spring Creek Animal Hospital acquired Nov 3, 2021 by People, Pets & Vets (now operates under 'Kind Veterinary Care' brand). Website hosted on kindvet.com domain. 3 DVMs listed (Campbell, Brown, Vernham). Disqualified from off-market candidate pool.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "People, Pets & Vets / Kind Veterinary Care (consolidator)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 5,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": "2021-11-03",
+    "years_in_business": 45,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website_veterinarians_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": true,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "consolidator_acquired",
+        "direction": "disqualifying",
+        "evidence": "Acquired Nov 3, 2021 by People, Pets & Vets per PitchBook. Now operates under 'Kind Veterinary Care' brand. Website domain = kindvet.com (corporate footer email hello@kindvet.com).",
+        "source": "pitchbook",
+        "source_url": "https://pitchbook.com/profiles/company/297976-69",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "platform_brand_replaced_local_name",
+        "direction": "disqualifying",
+        "evidence": "Spring Creek Animal Hospital's website now lives at kindvet.com — consolidator co-branding strategy. Hard exclusion.",
+        "source": "website",
+        "source_url": "https://kindvet.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "pitchbook",
+        "url": "https://pitchbook.com/profiles/company/297976-69",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["acquisition_date", "acquirer"]
+      }
+    ],
+    "enrichment_notes": "HARD EXCLUDE. Recent acquisition (People, Pets & Vets, Nov 2021). Should be removed from candidate pool before scoring."
+  },
+  {
+    "legal_name": "Tomball Animal Hospital, P.C.",
+    "dba_name": null,
+    "address": "802 West Main",
+    "city": "Tomball",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77375",
+    "phone": "(281) 351-4300",
+    "website": "https://www.tomballpetdr.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Jana Foltin Bruhn (took over 2006 from father Dr. Tony Foltin)",
+    "year_established": 1971,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.tomballpetdr.com/about",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1971 by Dr. Tony Foltin. Daughter Dr. Jana Foltin Bruhn took over 2006 — 20-yr 2nd-gen tenure. Husband Andrew Bruhn co-runs (not DVM). Saturday kennel-only hours. Boarding + grooming offered. No consolidator tells.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Jana Foltin Bruhn",
+    "owner_age_estimate": 52,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 20,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": "2006-01-01",
+    "years_in_business": 55,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_about_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "2nd_gen_family_owned_no_3rd_gen",
+        "direction": "positive",
+        "evidence": "Founded 1971 by Dr. Tony Foltin; daughter Dr. Jana took over 2006. No 3rd-generation DVM successor visible — classic family-succession-exit profile in 10-15 yr window",
+        "source": "website",
+        "source_url": "https://www.tomballpetdr.com/about",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_age_borderline_low",
+        "direction": "negative",
+        "evidence": "Dr. Jana est. ~age 52 (if TAMU CVM ~1998-2000). Below typical 60+ exit threshold but 2nd-gen owners often exit earlier due to burnout/lifestyle",
+        "source": "license_tenure_proxy",
+        "source_url": "https://www.tomballpetdr.com/about",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "saturday_kennel_only",
+        "direction": "positive",
+        "evidence": "Saturday hours only for kennel (boarding) — no Saturday clinical hours. Reduced 5-day clinical week = coasting tell",
+        "source": "website",
+        "source_url": "https://www.tomballpetdr.com/about",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "boarding_grooming_revenue_streams",
+        "direction": "positive",
+        "evidence": "Boarding + grooming services = additional fee revenue + sticky customer relationships. Boosts revenue multiples",
+        "source": "website",
+        "source_url": "https://www.tomballpetdr.com/about",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Mission/Kindvet/SVP tells. Independent family-owned.",
+        "source": "website",
+        "source_url": "https://www.tomballpetdr.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "Strong B+/A- candidate: 55-yr legacy, 2nd-gen family-owned, no 3rd-gen successor, Saturday-clinical-closed. Younger owner (~52) is the main hesitation — may exit at 60 not 65."
+  },
+  {
+    "legal_name": "Cy-Fair Animal Hospital",
+    "dba_name": null,
+    "address": "12725 Louetta Road",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77429",
+    "phone": "(281) 547-6128",
+    "website": "https://cyfairanimalhospital.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Aubrey Ross (co-founder 2013)",
+    "year_established": 2013,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://cyfairanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.google.com/search?q=%22Cy-Fair+Animal+Hospital%22+Cypress+Texas+founder",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["founder", "year_established"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "REVISED: Founded 2013 by Dr. Aubrey Ross + business partners (Houston native returning to area). Only 13-yr tenure. TWO locations (Cypress + Aldine Houston). Active multi-location expansion → NOT coasting. EzyVet + Online Booking + VIPet Plans = modernized stack. 6+ DVMs across two clinics.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Aubrey Ross (co-owner)",
+    "owner_age_estimate": 42,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 13,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 13,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 6,
+    "employee_count_source": "website_two_locations_multi_dvm",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_actively_expanding",
+        "direction": "disqualifying",
+        "evidence": "Dr. Ross founded 2013 — only 13 yrs ago. Est. age ~42 in 2026. Practice actively expanded to 2nd location (Aldine). Wrong age + growth-stage owner.",
+        "source": "google_search",
+        "source_url": "https://cyfairanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_expanding",
+        "direction": "negative",
+        "evidence": "Two locations (Cypress 77429 + Aldine 77060). Expansion = NOT coasting.",
+        "source": "website",
+        "source_url": "https://cyfairanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_stack_full_hours",
+        "direction": "negative",
+        "evidence": "Mon-Fri 7-7, Sat 8-4, Sun 8-1 (Cypress) — full 7-day clinical operations. EzyVet modern PIMS. VIPet membership plans. Online booking. NOT coasting.",
+        "source": "website",
+        "source_url": "https://cyfairanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Mission/Kindvet/SVP tells",
+        "source": "website",
+        "source_url": "https://cyfairanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DOWNGRADE/DROP — young growth-stage practice. Wrong owner profile for ETA. Independent but not in exit window."
+  },
+  {
+    "legal_name": "Cypress Falls Animal Hospital",
+    "dba_name": null,
+    "address": "9405 Huffmeister Rd Ste 170",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77095",
+    "phone": "(281) 858-7700",
+    "website": "https://www.cypressfallsah.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Heather Roberts (TAMU CVM 2002) + Dr. Betty Halbrook",
+    "year_established": 2009,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.cypressfallsah.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      },
+      {
+        "source": "website",
+        "url": "https://cypressfallsah.com/staff/betty-halbrook-dvm/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_bio"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.google.com/search?q=%22Cypress+Falls+Animal+Hospital%22+Houston+Dr.+Roberts+Dr.+Halbrook+2009",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["acquisition_date", "owner_bios"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Purchased 2009 by Drs. Heather Roberts (TAMU CVM 2002) and Betty Halbrook — 17-yr tenure under current owners. Roberts est. age ~47 in 2026. Saturday 8am-12pm. Online booking. No boarding/grooming.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Drs. Heather Roberts + Betty Halbrook",
+    "owner_age_estimate": 47,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 17,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": "2009-01-01",
+    "years_in_business": 17,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young",
+        "direction": "negative",
+        "evidence": "Roberts TAMU 2002 → ~age 47 in 2026. Halbrook age unknown but likely similar cohort. Below 60+ exit window.",
+        "source": "website",
+        "source_url": "https://cypressfallsah.com/staff/betty-halbrook-dvm/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "tenure_borderline_17yr",
+        "direction": "neutral",
+        "evidence": "17-yr ownership tenure — borderline at 15-yr threshold. Below 25+ legacy threshold",
+        "source": "website",
+        "source_url": "https://www.cypressfallsah.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Mission/Kindvet/SVP tells",
+        "source": "website",
+        "source_url": "https://www.cypressfallsah.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "C-tier. Owners too young (47ish), tenure too short for legacy-exit thesis. Independent but not in exit window. Drop or hold."
+  },
+  {
+    "legal_name": "Atascazoo Animal Hospital",
+    "dba_name": null,
+    "address": "5910 FM 1960 Rd. E Suite 5",
+    "city": "Humble",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77346",
+    "phone": "(281) 852-8398",
+    "website": "https://atascazooanimalhospital.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Renee Batra (TAMU CVM 1991)",
+    "year_established": 1991,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://atascazooanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      },
+      {
+        "source": "website",
+        "url": "https://atascazooanimalhospital.com/team/rene-batra-dvm/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_bio", "founder_year"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Dr. Renee Batra has been at the practice since 1991 — TAMU undergrad 1989 + TAMU CVM DVM 1991 = est. age ~60 in 2026. 35-yr tenure. 6 DVMs total (Batra, Jensen, Madigan, Aguila, Bolleter, Hilliard). Boarding offered. ePet Websites template (legacy).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Renee Batra (presumed owner — 35-yr tenure)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 35,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 35,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 6,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_in_exit_window_long_tenure",
+        "direction": "positive",
+        "evidence": "Dr. Batra TAMU undergrad 1989 + CVM 1991 → est. age ~60 in 2026. 35-yr tenure at same practice. Squarely in 60-70 exit window with retirement clock ticking.",
+        "source": "website",
+        "source_url": "https://atascazooanimalhospital.com/team/rene-batra-dvm/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_dvm_6",
+        "direction": "negative",
+        "evidence": "6 DVMs — larger practice, may exceed typical SBA-financed ETA size. Could be middle-market scale.",
+        "source": "website",
+        "source_url": "https://atascazooanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_dvm_pool_present",
+        "direction": "positive",
+        "evidence": "5 associate DVMs in place (Jensen, Madigan, Aguila, Bolleter, Hilliard) — successor pool exists, attractive to a buyer",
+        "source": "website",
+        "source_url": "https://atascazooanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "legacy_website_template",
+        "direction": "positive",
+        "evidence": "ePet Websites template + WebDVM = legacy tooling. Mild coasting tell.",
+        "source": "website",
+        "source_url": "https://atascazooanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Mission/Kindvet/SVP tells",
+        "source": "website",
+        "source_url": "https://atascazooanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "A-/B+ tier. Dr. Batra at 35-yr tenure, ~age 60, exit-window timing. 6-DVM size is the main hesitation — likely middle-market not classic ETA. Pre-built successor pool makes this attractive to a strategic buyer or roll-up."
+  },
+  {
+    "legal_name": "Critter Care Animal Hospital",
+    "dba_name": null,
+    "address": "13040 Dairy Ashford",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(281) 494-7700",
+    "website": "https://crittercareonline.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Amna Plummer (current owner per CareCredit/Yelp); Dr. Keidra Carmen (bought 2004 from late Dr. Katherine Kellner)",
+    "year_established": 1997,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://crittercareonline.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.google.com/search?q=%22Critter+Care+Animal+Hospital%22+Sugar+Land+owner+DVM",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["ownership_history"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded Dec 5, 1997. Multi-owner history: Dr. Katherine Kellner (founder, deceased) → Dr. Keidra Carmen bought 2004 → Dr. Amna Plummer (current per multiple aggregator sources). Multiple DVMs: Carmen (Tuskegee 2000), Therese Wilson (MSU 1979 — est. age ~71). LifeLearn WebDVM = tech stack. Covetrus = pharmacy partner.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Amna Plummer (verify current ownership status)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 29,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "elderly_associate_dvm_wilson",
+        "direction": "positive",
+        "evidence": "Dr. Therese Wilson (MSU 1979) — est. age ~71 in 2026. Long-tenured associate likely near full retirement.",
+        "source": "google_search",
+        "source_url": "https://www.petmedicus.com/vet/TX/Sugar-Land/Critter_Care_Animal_Hospital-Dr._Therese-Wilson/1298281&action=related_click",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "multi_ownership_transitions_history",
+        "direction": "neutral",
+        "evidence": "Multiple ownership transitions (Kellner → Carmen 2004 → possibly Plummer). Ownership history is muddy — needs phone-confirm.",
+        "source": "google_search",
+        "source_url": "https://crittercareonline.com/about-our-clinic/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Mission/Kindvet/SVP tells. LifeLearn + Covetrus = tech stack only.",
+        "source": "website",
+        "source_url": "https://crittercareonline.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "fort_bend_county_correction",
+        "direction": "neutral",
+        "evidence": "Sugar Land is Fort Bend Co, not Harris (corrected from spine). Harris-metro adjacent.",
+        "source": "website",
+        "source_url": "https://crittercareonline.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "Ownership-history ambiguity is the bottleneck — phone-call or SOS file lookup needed. Tier-A 77478 ZIP. B-tier pending owner identity confirmation."
+  },
+  {
+    "legal_name": "Sugar Land Pet Hospital",
+    "dba_name": null,
+    "address": "1216 Eldridge Rd.",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(281) 491-5533",
+    "website": "https://www.sugarlandpethospital.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Doug R. Hendrix (TAMU 1997; purchased 1999 from Harrell family)",
+    "year_established": 1978,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.sugarlandpethospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.google.com/search?q=%22Sugar+Land+Pet+Hospital%22+Dr.+Hendrix+TAMU+graduation",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["graduation_year"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/doug-hendrix-0355a082",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_bio"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1978. Dr. Doug R. Hendrix (TAMU CVM 1997) purchased Aug 1999 from Harrell family — 27-yr tenure under current owner. Est. age ~54 in 2026. Sat 8am-12pm. Boarding offered. Hibu website builder (template, not consolidator).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Doug R. Hendrix",
+    "owner_age_estimate": 54,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 27,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": "1999-01-01",
+    "years_in_business": 48,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_only_dvm_mentioned",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_borderline_low",
+        "direction": "negative",
+        "evidence": "Hendrix TAMU 1997 → est. age ~54 in 2026. Below 60+ exit window. 27-yr tenure though.",
+        "source": "license_tenure_proxy",
+        "source_url": "https://www.sugarlandpethospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "solo_dvm_long_tenure",
+        "direction": "positive",
+        "evidence": "Solo Dr. Hendrix, 27-yr owner. No associate DVMs visible. Classic solo-owner shape.",
+        "source": "website",
+        "source_url": "https://www.sugarlandpethospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "2nd_gen_handoff_history",
+        "direction": "positive",
+        "evidence": "Practice already changed hands once (Harrell → Hendrix 1999). Lower psychological barrier to selling.",
+        "source": "google_search",
+        "source_url": "https://www.sugarlandpethospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "Hibu website builder = template only. No NVA/Innovetive/Mission/Kindvet/SVP tells.",
+        "source": "website",
+        "source_url": "https://www.sugarlandpethospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "fort_bend_county_correction",
+        "direction": "neutral",
+        "evidence": "Sugar Land is Fort Bend Co, not Harris. Harris-metro adjacent.",
+        "source": "website",
+        "source_url": "https://www.sugarlandpethospital.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier. Solo-owner Dr. Hendrix at ~age 54 — younger than ideal but 27-yr tenure suggests possible early-exit candidate. Tier-A 77478 ZIP. Keep on watch list, retest in 5-10 yrs."
+  },
+  {
+    "legal_name": "Rutherford Veterinary Hospital",
+    "dba_name": null,
+    "address": "924 S Haskell Ave",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75223",
+    "phone": "(214) 826-4166",
+    "website": "https://rutherfordvet.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Teri Rowan (purchased Aug 2013 from Dr. Ronald E. Vaughn)",
+    "year_established": 1924,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://rutherfordvet.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      },
+      {
+        "source": "website",
+        "url": "https://rutherfordvet.com/read-our-history/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["ownership_history"]
+      },
+      {
+        "source": "news_article",
+        "url": "https://lakewood.advocatemag.com/rutherford-vet-east-dallas-celebrates-90-years/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["historical_context"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Oldest locally-owned animal hospital in Dallas — since 1924 (102 yrs). Ownership chain: Dr. Frank E. Rutherford (1924-1932) → Dr. Charles Steeger (son-in-law, TAMU 1936) → Dr. Ronald E. Vaughn (TAMU 1967, purchased 1985 from Steeger) → Dr. Teri Rowan (purchased Aug 1, 2013 from Vaughn). State + county historical landmark 1999. AAHA accredited. Sat 7am-2pm (full weekend hours!). Boarding + daycare.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Teri Rowan",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 13,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": "2013-08-01",
+    "years_in_business": 102,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not_yet_extracted",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "tenure_borderline_13yr",
+        "direction": "negative",
+        "evidence": "Dr. Rowan only 13-yr owner (since 2013). Below preferred 20-yr+ legacy-owner threshold.",
+        "source": "website",
+        "source_url": "https://rutherfordvet.com/read-our-history/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "multi_generation_handoff_history",
+        "direction": "positive",
+        "evidence": "Three prior owner-DVM transitions documented (Rutherford → Steeger → Vaughn → Rowan). Practice has handoff DNA — clean exits typical.",
+        "source": "website",
+        "source_url": "https://rutherfordvet.com/read-our-history/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "weekend_hours_boarding_daycare",
+        "direction": "negative",
+        "evidence": "Sat 7-2pm + boarding + daycare = full-service, not coasting. Robust ops.",
+        "source": "website",
+        "source_url": "https://rutherfordvet.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "historical_landmark_status",
+        "direction": "positive",
+        "evidence": "TX state + Dallas county historical landmark (1999). Real estate has marketability + cultural cachet — adds optionality.",
+        "source": "thc",
+        "source_url": "https://atlas.thc.state.tx.us/Details/5113011838",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "Self-describes 'oldest locally-owned animal hospital in Dallas.' No NVA/Innovetive/Mission/Kindvet/SVP tells.",
+        "source": "website",
+        "source_url": "https://rutherfordvet.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://rutherfordvet.com/read-our-history/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["ownership_history"]
+      },
+      {
+        "source": "thc",
+        "url": "https://atlas.thc.state.tx.us/Details/5113011838",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["historical_landmark"]
+      }
+    ],
+    "enrichment_notes": "C-tier currently. Dr. Rowan too recent (13 yrs) for legacy-exit. Practice itself is irreplaceable (102 yrs, landmark). Hold on watch list — if Rowan announces retirement plans in next 5 yrs, A-tier instant."
+  },
+  {
+    "legal_name": "Dallas Veterinary Clinic",
+    "dba_name": null,
+    "address": "6125 Sherry Ln Suite 101",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75225",
+    "phone": "(214) 363-4561",
+    "website": "https://dallasvet.net/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Ashley Warren Priddy (owner); Dr. Jennifer Parker (associate)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://dallasvet.net/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "phone"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.google.com/search?q=%22Dallas+Veterinary+Clinic%22+Dr.+Priddy+address",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["address", "owner_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Self-described 'ONLY independent, private + locally owned, AAHA Accredited, Fear Free Certified and Cat Friendly Practice in Texas.' Dr. Ashley Warren Priddy = owner (DFW Metroplex native, Park Cities). Dr. Jennifer Parker = associate. 6125 Sherry Ln Ste 101 Dallas 75225 (Preston Center premium area). Grooming offered ('The Spa'). No boarding. Veteran-owned.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Ashley Warren Priddy",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "explicit_independent_branding",
+        "direction": "positive",
+        "evidence": "Self-describes as 'the ONLY independent, private + locally owned' AAHA-accredited cat-friendly practice in TX. Explicit anti-consolidator positioning.",
+        "source": "website",
+        "source_url": "https://dallasvet.net/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "premium_zip_75225_preston_center",
+        "direction": "positive",
+        "evidence": "Preston Center / Park Cities 75225 = Tier-A premium Dallas ZIP",
+        "source": "google_search",
+        "source_url": "https://www.loc8nearme.com/texas/dallas/dallas-veterinary-clinic/4819885/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "Veteran-owned per website copy. No NVA/Innovetive/Mission/Kindvet/SVP tells.",
+        "source": "website",
+        "source_url": "https://dallasvet.net/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "loc8nearme",
+        "url": "https://www.loc8nearme.com/texas/dallas/dallas-veterinary-clinic/4819885/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["address", "owner_associate_split"]
+      }
+    ],
+    "enrichment_notes": "Owner-DVM age + tenure unknown — needs phone-call. Strong independent positioning + Tier-A 75225 + 2-DVM solo-with-associate structure is the right shape. B-tier pending age/tenure confirmation."
+  },
+  {
+    "legal_name": "White Rock Animal Hospital",
+    "dba_name": null,
+    "address": "11414 E NW Hwy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75218",
+    "phone": "(214) 328-3255",
+    "website": "https://whiterockanimalhospital.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Bob Hawthorne (TAMU CVM 1978); Dr. Patricia Williams (OSU CVM 1990)",
+    "year_established": 1961,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://whiterockanimalhospital.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.google.com/search?q=%22White+Rock+Animal+Hospital%22+Dallas+Hawthorne+1961+owner",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["founder", "owner_bio"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1961 by Dr. Bill Ard. Currently operated by Dr. Bob Hawthorne (TAMU CVM 1978, native Lake Highlands, Lake Highlands HS) + Dr. Patricia Williams (OSU CVM 1990). 'No appointment necessary' for routine visits = old-school drop-off workflow. Saturday 8am-12pm. Doctors break midday 12-2pm. No online booking, no boarding/grooming.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Bob Hawthorne (presumed primary owner — TAMU 1978)",
+    "owner_age_estimate": 73,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 65,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_meet_our_team",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_classic_exit_window",
+        "direction": "positive",
+        "evidence": "Dr. Hawthorne TAMU CVM 1978 → est. age ~73 in 2026. Past typical exit window; retirement clock advanced.",
+        "source": "website",
+        "source_url": "https://whiterockanimalhospital.com/about-us/meet-our-team.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "no_successor_dvm_visible",
+        "direction": "positive",
+        "evidence": "Williams (OSU 1990, ~age 60 herself) is the only other DVM. No younger associate DVM. Both vets in/near exit window — no internal-successor path",
+        "source": "website",
+        "source_url": "https://whiterockanimalhospital.com/about-us/meet-our-team.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_appointment_necessary_old_school",
+        "direction": "positive",
+        "evidence": "'No appointment necessary' drop-off workflow + midday doctor break = legacy ops. Strong coasting tell — practice run on autopilot.",
+        "source": "website",
+        "source_url": "https://whiterockanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_online_booking",
+        "direction": "positive",
+        "evidence": "No online booking widget on homepage. Petly = client portal only.",
+        "source": "website",
+        "source_url": "https://whiterockanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_boarding_grooming",
+        "direction": "positive",
+        "evidence": "No boarding / grooming / daycare. Pure clinical practice — leaves revenue on table = coasting tell.",
+        "source": "website",
+        "source_url": "https://whiterockanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "premium_zip_75218_lake_highlands",
+        "direction": "positive",
+        "evidence": "Lake Highlands 75218 = Tier-A Dallas ZIP. Long-term real estate appreciation.",
+        "source": "website",
+        "source_url": "https://whiterockanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "No NVA/Innovetive/Mission/Kindvet/SVP tells",
+        "source": "website",
+        "source_url": "https://whiterockanimalhospital.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://whiterockanimalhospital.com/about-us/meet-our-team.html",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["dvm_bios"]
+      }
+    ],
+    "enrichment_notes": "TOP A-TIER CANDIDATE. Dr. Hawthorne ~73, no successor DVM, no online booking, no boarding/grooming, old-school 'no appointment' workflow, premium Lake Highlands 75218 ZIP, 65-yr legacy. Classic coasting solo-owner-near-retirement profile."
+  },
+  {
+    "legal_name": "Abrams Royal Animal Clinic",
+    "dba_name": null,
+    "address": "8244 Abrams Rd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75231",
+    "phone": "(214) 349-2260",
+    "website": "https://abramsroyalanimalclinic.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Kyle Smith (OSU CVM 2012, TAMU undergrad 2007); founded by Dr. James C. Murray 1978",
+    "year_established": 1978,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://abramsroyalanimalclinic.com/about-abrams-royal-animal-clinic/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established", "license_holder_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1978 by Dr. James C. Murray (40-yr career). Dr. Kyle Smith purchased Jan 2018 — only 8-yr tenure under current owner. Smith from Plano TX, TAMU undergrad 2007, OSU CVM 2012, est. age ~40 in 2026. Saturday 8:30am-12pm. Boarding + grooming offered.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Kyle Smith",
+    "owner_age_estimate": 40,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 8,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": "2018-01-01",
+    "years_in_business": 48,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_recent_purchase",
+        "direction": "disqualifying",
+        "evidence": "Dr. Smith only 8-yr owner (2018 purchase). OSU CVM 2012 → est. age ~40 in 2026. Far below exit window.",
+        "source": "website",
+        "source_url": "https://abramsroyalanimalclinic.com/about-abrams-royal-animal-clinic/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "founder_already_exited",
+        "direction": "neutral",
+        "evidence": "Dr. Murray sold 2018 after 40-yr tenure (founder exited cleanly to independent buyer Smith) — no consolidator involvement",
+        "source": "website",
+        "source_url": "https://abramsroyalanimalclinic.com/about-abrams-royal-animal-clinic/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_consolidator_footer",
+        "direction": "positive",
+        "evidence": "Independent buyer (Smith, not platform). No NVA/Innovetive/Mission/Kindvet/SVP tells.",
+        "source": "website",
+        "source_url": "https://abramsroyalanimalclinic.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DROP. Smith too young (~40), only 8-yr tenure. Wrong age + wrong stage for off-market exit thesis. Independent but committed long-term. C/D-tier."
+  },
+  {
+    "legal_name": "Buckner Animal Clinic",
+    "dba_name": null,
+    "address": "2730 S Buckner Blvd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75227",
+    "phone": "(214) 388-4889",
+    "website": "https://buckneranimalclinic.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Jennifer Aguilera (per spine)",
+    "year_established": 1977,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://buckneranimalclinic.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "year_established"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.google.com/search?q=%22Buckner+Animal+Clinic%22+Dallas+Dr.+Aguilera+address",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["address"]
+      }
+    ],
+    "platform_affiliation_check": "uncertain",
+    "verification_notes": "Since 1977 (49 yrs) in Dallas. Address: 2730 S Buckner Blvd, 75227 (East Dallas / Pleasant Grove). AAHA accredited. PetOne Veterinary App reference is the same family of tooling as PetOne (used by NVA) — BUT also used by some independents. Need explicit NVA verification before A-tier. Dr. Jennifer Aguilera is solo DVM per spine.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Jennifer Aguilera",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 49,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website_team_page_solo_dvm",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "petone_app_uncertain_affiliation",
+        "direction": "neutral",
+        "evidence": "PetOne Veterinary App is used by some NVA practices but also independents. Cannot rule out NVA / consolidator without privacy-policy-domain check. Aggregator footprint sources don't confirm consolidator.",
+        "source": "website",
+        "source_url": "https://buckneranimalclinic.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "solo_dvm_long_legacy",
+        "direction": "positive",
+        "evidence": "Solo Dr. Aguilera per team page (1 vet). 49-yr practice.",
+        "source": "website",
+        "source_url": "https://buckneranimalclinic.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "aaha_accredited",
+        "direction": "positive",
+        "evidence": "AAHA accredited",
+        "source": "website",
+        "source_url": "https://buckneranimalclinic.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "promo_code_marketing",
+        "direction": "negative",
+        "evidence": "$25 first-visit promo code 'FURBABY' (exp 12/31/26) = active marketing push, not coasting",
+        "source": "website",
+        "source_url": "https://buckneranimalclinic.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "Owner age + tenure unknown — needs phone or deeper team-page fetch. Solo + 49-yr + Tier-B 75227 East Dallas. B-tier pending PetOne affiliation rule-out and Aguilera tenure confirmation."
+  },
+  {
+    "legal_name": "North Dallas Veterinary Hospital",
+    "dba_name": null,
+    "address": "3452 Forest Ln Ste 100",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75234",
+    "phone": "(972) 620-9012",
+    "website": "https://www.northdallasvet.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": 1988,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.northdallasvet.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      }
+    ],
+    "platform_affiliation_check": "platform_subsidiary",
+    "verification_notes": "EXCLUDE — SVP (Southern Veterinary Partners) AFFILIATION CONFIRMED. Footer email domain = clientcare.ndalla@svp.vet; template = svptemplate.vet. SVP is a major veterinary consolidator (400+ locations). Disqualified from off-market candidate pool.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Southern Veterinary Partners (consolidator)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 38,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not_disclosed",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": true,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "svp_email_domain_confirmed",
+        "direction": "disqualifying",
+        "evidence": "Footer email = clientcare.ndalla@svp.vet — definitive SVP affiliation marker. Template assets also reference svptemplate.vet.",
+        "source": "website",
+        "source_url": "https://www.northdallasvet.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "consolidator_400_plus_locations",
+        "direction": "disqualifying",
+        "evidence": "SVP is one of the top 5 vet consolidators by location count (400+ practices nationally, 86 in TX per PLATFORM)",
+        "source": "platform_pets_care",
+        "source_url": "https://www.pets.care/platform/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "platform_pets_care",
+        "url": "https://www.pets.care/platform/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["consolidator_directory"]
+      }
+    ],
+    "enrichment_notes": "HARD EXCLUDE. SVP-affiliated. Remove from candidate pool before scoring."
+  },
+  {
+    "legal_name": "Country Brook Animal Hospital",
+    "dba_name": null,
+    "address": "3046 Lavon Drive, Suite #136",
+    "city": "Garland",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75040",
+    "phone": "(972) 530-3951",
+    "website": "https://countrybrookvet.com/",
+    "practice_type": "small_animal",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dr. Charles Pipes (founder 1987, sold to Innovetive 2020)",
+    "year_established": 1987,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://countrybrookvet.com/",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["legal_name", "address", "phone", "year_established"]
+      },
+      {
+        "source": "press_release",
+        "url": "https://innovetivepetcare.com/news/welcome-country-brook-animal-hospital/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["acquisition_date", "founder_name"]
+      }
+    ],
+    "platform_affiliation_check": "platform_subsidiary",
+    "verification_notes": "EXCLUDE — RECENT ACQUISITION CONFIRMED: Country Brook Animal Hospital acquired April 15, 2020 by Innovetive Petcare. Founded 1987 by Dr. Charles Pipes (TVMA 2014 Distinguished Career Achievement Award). Footer privacy policy redirects to innovetivepetcare.com. GetOliver online booking. Disqualified from off-market candidate pool.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Innovetive Petcare (consolidator)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 6,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": "2020-04-15",
+    "years_in_business": 39,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "not_disclosed",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": true,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "innovetive_acquired",
+        "direction": "disqualifying",
+        "evidence": "Acquired April 15, 2020 by Innovetive Petcare per their own press release. Country Brook was the 26th hospital in Innovetive's network at acquisition.",
+        "source": "press_release",
+        "source_url": "https://innovetivepetcare.com/news/welcome-country-brook-animal-hospital/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "innovetive_privacy_policy_domain",
+        "direction": "disqualifying",
+        "evidence": "Footer privacy policy redirects to innovetivepetcare.com. GetOliver booking via Innovetive.",
+        "source": "website",
+        "source_url": "https://countrybrookvet.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "press_release",
+        "url": "https://innovetivepetcare.com/news/welcome-country-brook-animal-hospital/",
+        "fetched_at": "2026-05-15T22:30:00Z",
+        "fields": ["acquisition_date"]
+      }
+    ],
+    "enrichment_notes": "HARD EXCLUDE. Innovetive-affiliated since April 2020. Remove from candidate pool before scoring."
+  }
+]

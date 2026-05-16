@@ -1,0 +1,211 @@
+{
+  "team_page_checks": [
+    {
+      "i": 2,
+      "legal_name": "White Rock Animal Hospital",
+      "team_page_url": "https://whiterockanimalhospital.com/about-us/meet-our-team.html",
+      "n_professionals_listed": 2,
+      "doctors": [
+        { "name": "Dr. Bob Hawthorne", "role": "Owner/Vet", "tenure": "TAMU 1978 — 47+ yrs" },
+        {
+          "name": "Dr. Patty Williams",
+          "role": "Vet (also at MedVet Dallas)",
+          "tenure": "OSU 1990 — 35 yrs"
+        }
+      ],
+      "successor_candidates_found": [],
+      "key_staff": [{ "name": "Connie Davies", "role": "Head Vet Tech, 25+ yrs" }],
+      "observation": "Solo veterinary practice with no internal successor — Williams is a peer-age second vet who works elsewhere. No Hawthorne family successor. Long institutional staff (Davies 25 yrs) but no DVM exit path.",
+      "successor_signal": "NO INTERNAL SUCCESSOR"
+    },
+    {
+      "i": 3,
+      "legal_name": "Mellina Animal Hospital",
+      "team_page_url": "https://www.mellinaanimalhospital.com/about-us/",
+      "n_professionals_listed": 0,
+      "doctors": [],
+      "observation": "Team / staff not listed publicly — practice site emphasizes '40+ Years Serving' and reviews without naming any vets. Indicates solo or low-transparency single-DVM practice. Cannot confirm successor presence.",
+      "successor_signal": "UNDETERMINED — likely solo (no team page indicates one-person op)"
+    },
+    {
+      "i": 4,
+      "legal_name": "Colleyville Animal Clinic",
+      "team_page_url": "https://colleyvilleanimalclinic.com/veterinarians",
+      "n_professionals_listed": 5,
+      "doctors": [
+        { "name": "Dr. Cassandra Erickson", "role": "Chief of Staff" },
+        { "name": "Dr. John B Blick", "role": "Veterinarian (named co-owner per JSON)" },
+        { "name": "Dr. Shayla Holland", "role": "Veterinarian" },
+        { "name": "Dr. LaLa Keim", "role": "Veterinarian" },
+        { "name": "Dr. Sara Nichols", "role": "Veterinarian" }
+      ],
+      "successor_candidates_found": [
+        "Dr. Cassandra Erickson (Chief of Staff title = de facto operational successor)",
+        "Dr. Shayla Holland",
+        "Dr. LaLa Keim",
+        "Dr. Sara Nichols (4 younger DVMs)"
+      ],
+      "observation": "Dr. Mark D. Wilson (per JSON, original Pres) is NOT on current team page — likely retired/exited. Cassandra Erickson as Chief of Staff strongly indicates operational succession already in progress. Five DVMs total = group practice no longer solo.",
+      "successor_signal": "STRONG INTERNAL SUCCESSOR — Wilson appears to have exited; Erickson runs day-to-day. This is more 'succession completed' than 'about to sell' — DEMOTES the acquisition thesis."
+    },
+    {
+      "i": 5,
+      "legal_name": "Alamo Dog & Cat Hospital",
+      "team_page_url": "https://www.alamodogandcat.com/our-team/",
+      "n_professionals_listed": 2,
+      "doctors": [
+        {
+          "name": "Dr. Nick Labrie, DVM",
+          "role": "Lead Veterinarian (likely son/grandson of Mark E. LaBrie per surname + lead role)"
+        },
+        { "name": "Dr. Emma Oates, DVM", "role": "Associate Veterinarian" }
+      ],
+      "successor_candidates_found": [
+        "Dr. Nick Labrie (family successor — same surname, Lead title)",
+        "Dr. Emma Oates (younger associate)"
+      ],
+      "observation": "Dr. Mark E. LaBrie (per JSON) not on current team page — Nick Labrie has the Lead role. This is a SUCCESSION-IN-PROGRESS or COMPLETED. Family business already passing to next-gen.",
+      "successor_signal": "INTERNAL SUCCESSOR FOUND — family succession likely in motion."
+    },
+    {
+      "i": 6,
+      "legal_name": "Perdue Insurance Agency LLC",
+      "team_page_url": "https://www.perdueinsurancetx.com/meet-our-team/",
+      "n_professionals_listed": 6,
+      "people": [
+        { "name": "Donald Perdue", "role": "Founder and President" },
+        { "name": "Brandon Cloud", "role": "CEO" },
+        { "name": "Flabia Perdue", "role": "Co-CEO (spouse of Donald)" },
+        { "name": "Kevin Cloud", "role": "General Manager" },
+        { "name": "Kristopher Cloud", "role": "General Lines Agent" },
+        { "name": "Andrea Ramirez", "role": "General Lines Agent" }
+      ],
+      "successor_candidates_found": [
+        "Brandon Cloud (CEO — succession already in progress)",
+        "Kevin Cloud (GM)",
+        "Kristopher Cloud (Agent)"
+      ],
+      "observation": "MAJOR FINDING: Donald Perdue retains 'Founder/President' but is no longer CEO. Brandon Cloud has taken over the operational CEO role. The Cloud family (3 members) + the Perdue family (2 members) suggests a partnership where succession is mid-stream. Perdue may be coasting toward final exit.",
+      "successor_signal": "STRONG SUCCESSION IN MOTION — Cloud family operationally running it. The acquisition opportunity may be to buy out Donald + Flabia Perdue's residual equity, with the Cloud family as the natural ongoing operator (or to acquire the entire entity with the Clouds as key-person retentions)."
+    },
+    {
+      "i": 8,
+      "legal_name": "Bankhead Insurance Agency LLC",
+      "team_page_url": "https://www.insurancedallas.com/",
+      "n_professionals_listed": 0,
+      "people": [],
+      "observation": "No team/about page detected. Comptroller PIR shows Philip Bankhead as sole officer. Indicates solo principal-operated agency. NO INTERNAL SUCCESSOR ON RECORD.",
+      "successor_signal": "NO INTERNAL SUCCESSOR — solo owner-operator"
+    },
+    {
+      "i": 9,
+      "legal_name": "Animal Hospital of Valley Ranch",
+      "team_page_url": "https://ahofvr.com/meet-our-team/",
+      "n_professionals_listed": 1,
+      "doctors": [{ "name": "Dr. Barry Chaikin", "role": "Owner/Vet (TAMU 1985, 40+ yrs)" }],
+      "successor_candidates_found": [],
+      "observation": "Solo veterinarian, no associates, no family. Pure exit candidate.",
+      "successor_signal": "NO INTERNAL SUCCESSOR — solo owner"
+    },
+    {
+      "i": 10,
+      "legal_name": "Bridge Street Animal Clinic",
+      "team_page_url": "http://www.bridgestreetanimalclinic.com/meet-the-staff.pml",
+      "n_professionals_listed": 1,
+      "doctors": [{ "name": "Dr. Robert I. Norris", "role": "Owner/Vet (OSU 1986)" }],
+      "key_staff": [
+        { "name": "Kellie", "role": "Office Manager, 21+ yrs" },
+        { "name": "Michelle", "role": "Tech (since high school)" },
+        { "name": "Suzanne", "role": "Receptionist, since 2011" }
+      ],
+      "successor_candidates_found": [],
+      "observation": "Solo vet, deep institutional staff (Kellie 21 yrs office manager), 2 students in vet-track but not yet DVMs. NO INTERNAL SUCCESSOR — strong staff to maintain operations during sale transition.",
+      "successor_signal": "NO INTERNAL DVM SUCCESSOR — solo owner with strong support staff"
+    },
+    {
+      "i": 11,
+      "legal_name": "Vision Plus",
+      "team_page_url": "https://www.visionplustx.com/meet-the-optometrist",
+      "n_professionals_listed": 2,
+      "people": [
+        { "name": "Dr. Thomas J. Goldstein, OD", "role": "Founder/Owner (1994, 30+ yrs)" },
+        { "name": "Dr. Alexis I. Sanchez, OD", "role": "Associate (2023 grad)" }
+      ],
+      "successor_candidates_found": [
+        "Dr. Alexis I. Sanchez (younger associate joined ~2023-2024 — classic succession bench)"
+      ],
+      "observation": "Solo owner-OD with a recently-added young associate OD (Sanchez, 2023 grad). Sanchez is exactly the profile of a 'buy-in associate' — a successor candidate.",
+      "successor_signal": "INTERNAL SUCCESSOR FOUND — young associate OD (Sanchez)"
+    },
+    {
+      "i": 12,
+      "legal_name": "Longenbaugh Veterinary Hospital P.C.",
+      "team_page_url": "https://longenbaughvet.com/who-we-are.pml",
+      "n_professionals_listed": 1,
+      "doctors": [{ "name": "Dr. Martin Keadle", "role": "Owner/Vet (TAMU, 35+ yrs)" }],
+      "successor_candidates_found": [],
+      "observation": "Solo veterinarian, no associates, no family. Pure exit candidate.",
+      "successor_signal": "NO INTERNAL SUCCESSOR — solo owner"
+    },
+    {
+      "i": 13,
+      "legal_name": "Bellaire Optometry Clinic",
+      "team_page_url": "https://www.bellaireoptometry.com/meet-the-staff",
+      "n_professionals_listed": 2,
+      "people": [
+        {
+          "name": "Dr. Anne Huyen Le, OD",
+          "role": "Founder (1989), Therapeutic Optometrist, Glaucoma Specialist"
+        },
+        {
+          "name": "Dr. Quan M. Nguyen, OD",
+          "role": "Therapeutic Optometrist, Glaucoma Specialist (co-OD, listed as Director/Officer on PIR)"
+        }
+      ],
+      "successor_candidates_found": [
+        "Dr. Quan M Nguyen (formal Director/Officer on PIR + co-OD on team page = internal partner, future buyer)"
+      ],
+      "observation": "Two-OD practice. Nguyen is a formal partner (Comptroller PIR director). Le is the founder; Nguyen is the operational continuity.",
+      "successor_signal": "INTERNAL SUCCESSOR FOUND — Nguyen confirmed as partner/successor"
+    },
+    {
+      "i": 14,
+      "legal_name": "North Texas Eye Care",
+      "team_page_url": "https://www.ntxeyecare.com/ (about-doctor page)",
+      "n_professionals_listed": 1,
+      "people": [
+        {
+          "name": "Dr. Gregory Kloesel",
+          "role": "Owner/OD (1992, 33+ yrs), Therapeutic Optometrist, Optometric Glaucoma Specialist"
+        }
+      ],
+      "successor_candidates_found": [],
+      "observation": "Solo OD, no associates, no family. Pure exit candidate.",
+      "successor_signal": "NO INTERNAL SUCCESSOR — solo owner"
+    }
+  ],
+  "summary": {
+    "total_checked": 12,
+    "team_pages_fetched_successfully": 12,
+    "team_page_fetch_success_rate": "12/12 = 100%",
+    "successor_found_internal": 5,
+    "no_internal_successor": 5,
+    "succession_already_in_progress_or_completed": 2,
+    "candidates_with_internal_successor": [
+      "Colleyville (5 vets, Erickson as Chief of Staff)",
+      "Alamo Dog & Cat (Nick Labrie family successor)",
+      "Perdue (Cloud family as CEO+GM+Agent)",
+      "Vision Plus (Sanchez 2023 associate)",
+      "Bellaire (Nguyen co-OD partner)"
+    ],
+    "candidates_no_internal_successor": [
+      "White Rock",
+      "Bankhead",
+      "Valley Ranch (Chaikin)",
+      "Bridge Street (Norris)",
+      "Longenbaugh (Keadle)",
+      "NTX Eye Care (Kloesel)"
+    ],
+    "candidates_unclear": ["Mellina (no team page)"]
+  }
+}
