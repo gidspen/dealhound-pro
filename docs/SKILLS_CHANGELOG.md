@@ -50,3 +50,52 @@ Pre-change baseline: avg ~46, rich = 0, snapshot count = 0.
 Target post-change: avg >> 500, rich > 0, snapshot count ≈ total.
 
 **Reversal:** Revert scraper.py + pipeline.py changes. The `html_snapshot` column is safe to leave in place (nullable, ignored by dashboard).
+
+---
+
+## 2026-05-16 — Crexi enrichment bail-out + worker browser-profile isolation
+
+**Why:** The worker (PM2 daemon spawning `claude --dangerously-skip-permissions`) was hanging at 90+ minutes per scan with `outputKB` plateauing around 294 KB. Investigation found two stacked failures:
+
+1. **Profile lock conflict.** The user-scope playwright MCP registration uses `--user-data-dir /Users/gideonspencer/.dealhound-chrome-profile`. When an interactive Claude session already had the profile open (likely whenever Gideon was using `/find-deals` himself), the worker-spawned Claude tried to launch the same profile and got `"Browser is already in use for /Users/gideonspencer/.dealhound-chrome-profile, use --isolated to run multiple instances of the same browser"`. The find-deals skill silently retried forever.
+
+2. **Cold-profile Crexi hang.** Even with the profile lock cleared, the worker's profile is cold (no Cloudflare trust signals). Crexi's anti-bot served a never-ending JS challenge to detail-page visits, and `page.goto(..., wait_until="domcontentloaded", timeout=12000)` did NOT raise `PlaywrightTimeout` as documented — it just blocked. `enrich_with_descriptions` ran out the worker's 90-min budget before writing any listings to Supabase.
+
+**Changes (skill-side, `~/skills/find-deals/scrapers/scraper.py`):**
+
+- `enrich_with_descriptions()` now enforces three concurrent bail-outs:
+  - `MAX_WALL_SECONDS = 240` — total per-source enrichment budget, hard cap.
+  - `MAX_CONSECUTIVE_FAILURES = 5` — after 5 consecutive nav timeouts / Cloudflare bounces, bail. A cold profile fails the first 5 fast and skips the rest with API-tagline descriptions.
+  - Per-page `page.goto(..., timeout=8000)` (down from 12000) and per-selector `wait_for_selector(..., timeout=2000)` (down from 4000) — fail-fast when the page isn't going to render.
+- Reset `consecutive_failures = 0` on each successful enrichment so a single stall doesn't terminate enrichment for a still-healthy profile.
+- Enrichment summary now logs wall-time alongside counts: `[crexi] description enrichment: visited=5, enriched=0, skipped=0, blocked=5, failed=0 (19.3s)`.
+
+**Product-side dependency (this repo):**
+
+- `worker/mcp-config.json` — NEW. Project-scope MCP definition pointing playwright at `/Users/gideonspencer/.dealhound-worker-chrome-profile` (separate from the user-scope profile). Loaded via `claude --mcp-config worker/mcp-config.json --strict-mcp-config` in `worker/pty-runner.js`.
+- `worker/pty-runner.js` — UPDATED. Adds the two flags above to the `pty.spawn(claudeBin, [...])` argv. Comment block explains the audit.
+
+**How to verify:**
+
+```sh
+# Before fix: scraper hung indefinitely on cold profile
+# After fix: bails out in ~20s, writes 60 listings with API-tagline descriptions
+cd ~/skills/find-deals/scrapers && python3 scraper.py --site crexi --location texas --headless --output-dir /tmp/dh-debug
+```
+
+Expected tail:
+
+```
+=== Scraping CREXI ===
+  Crexi: https://www.crexi.com/properties/TX [filter: Hospitality]
+  → API returned 60 items (totalCount=635)
+  → kept 60 (matched filter 'Hospitality'); running total: 60
+  [crexi] 5 consecutive failures — bailing (profile likely cold or anti-bot-blocked)
+  [crexi] description enrichment: visited=5, enriched=0, skipped=0, blocked=5, failed=0 (19.3s)
+  crexi: 60 unique listings
+EXIT=0
+```
+
+**Trade-off:** A cold worker profile gets API-tagline descriptions (25-99 char) instead of rich detail-page descriptions (500-5800 char). The interactive `/find-deals` path on the warm user profile still gets rich descriptions. Future work: warm the worker profile from the user profile's cookies, or accept warm-up as an explicit pre-launch step.
+
+**Reversal:** Revert the bail-out block in `enrich_with_descriptions` (search for `MAX_WALL_SECONDS`).
