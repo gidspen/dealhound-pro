@@ -46,7 +46,11 @@
       "verified_via": "live-fetch of rmcreliablemachinists.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.rmcreliablemachinists.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "owner,founding,equipment_generic,certs_none"}
+      {
+        "url": "https://www.rmcreliablemachinists.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "owner,founding,equipment_generic,certs_none"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "Classic A-tier target profile: founder-led 45yr tenure, owner ~70, narrow oilfield niche, no diversification, dated web presence, no certs beyond API spec compliance. 'Chung and his family continue their traditions' language suggests informal family involvement but no clear named successor. Houston Harris County."
@@ -78,7 +82,12 @@
     "service_specialty": "mixed_oilfield_aerospace_semicon",
     "customer_mix": "oil & gas, petrochemical, refinery, aerospace, semiconductor — broad mix from rural Washington county base",
     "modern_equipment": true,
-    "equipment_brands_observed": ["Okuma MU-500VA mill", "KIA SKT 300 lathe", "ENSHU 550 VMC", "Fanuc Wire EDM"],
+    "equipment_brands_observed": [
+      "Okuma MU-500VA mill",
+      "KIA SKT 300 lathe",
+      "ENSHU 550 VMC",
+      "Fanuc Wire EDM"
+    ],
     "cad_cam_modern": null,
     "cad_cam_software": [],
     "owner_owns_building": null,
@@ -97,7 +106,11 @@
       "verified_via": "live-fetch of micallmachining.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://micallmachining.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "owner,equipment_okuma_kia_enshu_fanuc,certs_iso_compliant"}
+      {
+        "url": "https://micallmachining.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "owner,equipment_okuma_kia_enshu_fanuc,certs_iso_compliant"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Rural Washington county shop with modern Okuma + ENSHU equipment but no formal ISO/AS9100 cert; ITAR-style work would need cert for higher-tier defense. Leslie Little named in testimonials suggesting owner-operator. Small-but-modern outfit."
@@ -149,7 +162,11 @@
       "verified_via": "live-fetch of msmmachine.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://msmmachine.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "specialty,no_certs,no_owner"}
+      {
+        "url": "https://msmmachine.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "specialty,no_certs,no_owner"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Very thin web presence — owner not named, no founding year, no certifications, no equipment list. Modern 2024 copyright on responsive site but otherwise minimal disclosure. Hard to qualify without phone/in-person follow-up. Eastside Houston."
@@ -181,7 +198,12 @@
     "service_specialty": "aerospace_subsea_biomedical",
     "customer_mix": "aerospace, biomedical, subsea, energy (oil & gas), marine, agriculture",
     "modern_equipment": true,
-    "equipment_brands_observed": ["Mori Seiki NLVX7000", "Mori Seiki CMX100", "Mori Seiki NLX3000", "DMG MORI NVX 7000"],
+    "equipment_brands_observed": [
+      "Mori Seiki NLVX7000",
+      "Mori Seiki CMX100",
+      "Mori Seiki NLX3000",
+      "DMG MORI NVX 7000"
+    ],
     "cad_cam_modern": null,
     "cad_cam_software": [],
     "owner_owns_building": null,
@@ -199,7 +221,11 @@
       "verified_via": "live-fetch of midway-machine.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://midway-machine.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1982,equipment_mori_dmg,certs,facility"}
+      {
+        "url": "https://midway-machine.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1982,equipment_mori_dmg,certs,facility"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "Strong aerospace/biomedical posture with modern Mori Seiki + DMG MORI fleet, AS9100D + ISO 9001. 25K sqft. Hiring page is a coasting-negative signal (actively growing). Lower coast probability than A-tier targets. South Houston, near port — established subsea/aerospace shop."
@@ -249,7 +275,11 @@
       "verified_via": "live-fetch of ucprecisioninc.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://ucprecisioninc.com/houston-machining", "fetched_at": "2026-05-16T20:00:00Z", "field": "equipment_doosan_mori_daewoo_hurco,certs_iso_2024"}
+      {
+        "url": "https://ucprecisioninc.com/houston-machining",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "equipment_doosan_mori_daewoo_hurco,certs_iso_2024"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Recently certified (Nov 2024) ISO 9001:2015 — actively maturing, not coasting. Small/nimble shop. Modern responsive site (©2025). Doosan + Mori Seiki + Daewoo + Hurco = mid-Korean/Japanese fleet. NW Houston FM 529 corridor. Lower coast signal."
@@ -299,7 +329,11 @@
       "verified_via": "live-fetch of rbrmachine.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.rbrmachine.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "certs_iso_as9100_iso13485_itar,equipment_capacity"}
+      {
+        "url": "https://www.rbrmachine.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "certs_iso_as9100_iso13485_itar,equipment_capacity"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "Highly certified (ISO 9001, AS9100D, ISO 13485 medical, ITAR) with large-capacity equipment serving 7+ verticals. Likely $5-15M revenue. Owner not named. Lower coast probability — modern posture. Houston + Tyler service area under single legal entity."
@@ -331,7 +365,14 @@
     "service_specialty": "oil_gas_subsea_aerospace",
     "customer_mix": "oil & gas, subsea, solar energy, aerospace, power generation — prototype + short-run production",
     "modern_equipment": true,
-    "equipment_brands_observed": ["Mazak M5", "Mazak SL-40", "Mazak Vertical Mill", "HURCO TM8/TM6/VM2", "Haas horizontal", "Tree VCM 1060"],
+    "equipment_brands_observed": [
+      "Mazak M5",
+      "Mazak SL-40",
+      "Mazak Vertical Mill",
+      "HURCO TM8/TM6/VM2",
+      "Haas horizontal",
+      "Tree VCM 1060"
+    ],
     "cad_cam_modern": null,
     "cad_cam_software": [],
     "owner_owns_building": null,
@@ -349,7 +390,11 @@
       "verified_via": "live-fetch of stbmachinework.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://stbmachinework.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1980,equipment_mazak_hurco_haas_tree,certs_iso,facility_11k_sqft_1.3acre"}
+      {
+        "url": "https://stbmachinework.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1980,equipment_mazak_hurco_haas_tree,certs_iso,facility_11k_sqft_1.3acre"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "STRONG coast signal: website not updated since 2016-2017, 46-yr founder tenure, single ISO cert, modest 11K sqft on 1.3 acres (likely owned). Mazak + HURCO + Haas fleet is solid mid-2000s investment but no recent equipment refresh visible. Acres Homes North Houston — older industrial area. A-TIER CANDIDATE."
@@ -397,7 +442,11 @@
       "verified_via": "live-fetch of cspmachine.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://cspmachine.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_2000,certs_iso_ts_asme,woman_owned"}
+      {
+        "url": "https://cspmachine.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_2000,certs_iso_ts_asme,woman_owned"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Woman-owned, 26-yr tenure, niche certifications (oilfield ISO/TS + ASME nuclear NQA-1). Site copyright 2021 (4yr stale) but actively hiring (offsets stale tell). NW Houston FM 529 corridor. Mid-coast signal — not classic A-tier but interesting given woman-owned + nuclear cert."
@@ -448,7 +497,11 @@
       "verified_via": "live-fetch of tcrhouston.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.tcrhouston.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "certs_iso_9001"}
+      {
+        "url": "https://www.tcrhouston.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "certs_iso_9001"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "Turbine-specialty Houston inner-loop shop, ISO 9001:2015 (ABS #54215). Owner not named, founding not stated. Logo dated 2015. Mid-tier data completeness — needs follow-up phone/LinkedIn lookup."
@@ -500,7 +553,11 @@
       "verified_via": "live-fetch of edsprecision.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://edsprecision.com/capabilities/cnc-turning-cnc-milling/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1987,certs_iso_itar_ejcp_cmmc"}
+      {
+        "url": "https://edsprecision.com/capabilities/cnc-turning-cnc-milling/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1987,certs_iso_itar_ejcp_cmmc"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Eponymous Houston shop with ITAR + CMMC L1 — 39yr tenure, founder presumably Ed (unverified). No social presence, no equipment list. Strong coast hint via eponymous + age + thin web. NW Houston FM 529. POTENTIAL A-TIER."
@@ -552,7 +609,11 @@
       "verified_via": "live-fetch of hwmfg.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.hwmfg.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1978,family_owned,facility_34k_sqft_2009_built"}
+      {
+        "url": "https://www.hwmfg.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1978,family_owned,facility_34k_sqft_2009_built"
+      }
     ],
     "data_completeness": 0.65,
     "notes": "CLASSIC A-TIER: family-owned 48yr Spring (N Harris) shop, owns 34K sqft building (built 2009), no ISO/AS9100/ITAR cert posture (modest sophistication), Swiss screw specialist. Owner pair likely late 60s/70s. Strong successor risk and likely to consider sale."
@@ -604,7 +665,11 @@
       "verified_via": "live-fetch of rockwellprecision.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://rockwellprecision.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1979,family_owned,certs_iso,contact_dan_cotrino"}
+      {
+        "url": "https://rockwellprecision.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1979,family_owned,certs_iso,contact_dan_cotrino"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Family-owned 47-yr Houston NW shop, ISO 9001 only. Dan Cotrino named as contact. Modest cert posture suggests independent old-school operator. FM 1960/249 corridor. POTENTIAL A-TIER pending owner age confirmation."
@@ -654,7 +719,11 @@
       "verified_via": "live-fetch of abcdprecision.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://abcdprecision.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founders_arnold_corallo,founding_2012,certs_iso"}
+      {
+        "url": "https://abcdprecision.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founders_arnold_corallo,founding_2012,certs_iso"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "YOUNGEST in cohort (2012 founding, 14yrs). Founders ~mid-50s likely. Site has not updated since 2018 + possible SEO injection. NOT classic A-tier — too young for coasting playbook, but founders may exit if energy market dips. Houston NW."
@@ -704,7 +773,11 @@
       "verified_via": "live-fetch of edmoftexas.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.edmoftexas.com/industries/oil-gas", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1995,edm_specialty"}
+      {
+        "url": "https://www.edmoftexas.com/industries/oil-gas",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1995,edm_specialty"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "EDM-specialist niche, 31yr tenure, modern site. Suite-only address (rented). Multi-state customer base. Not classic A-tier (suite + modern + 24/7 = competitive, not coasting). N Houston Rankin Rd."
@@ -754,7 +827,11 @@
       "verified_via": "live-fetch of centerlinemanufacturingltd.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://centerlinemanufacturingltd.com/capabilities/cnc-turning/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_2005,certs_as9100_iso_itar"}
+      {
+        "url": "https://centerlinemanufacturingltd.com/capabilities/cnc-turning/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_2005,certs_as9100_iso_itar"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "21yr aerospace/defense shop with strong cert posture (AS9100D + ITAR). LTD entity = partnership. Younger than A-tier sweet spot but cert-rich and serious defense/aero work. NW Houston FM 529 corridor."
@@ -804,7 +881,11 @@
       "verified_via": "live-fetch of aagroup.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://aagroup.com/cnc-machine-shop-houston-tx/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1957,intl_china_office,certs_asme_ce_kgs"}
+      {
+        "url": "https://aagroup.com/cnc-machine-shop-houston-tx/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1957,intl_china_office,certs_asme_ce_kgs"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "FLAG SIZE: 69-yr tenure + Beijing office + 'A&A Group' multi-entity structure suggests this is LARGER THAN $30M target ceiling. Pressure vessel ASME/CE/China certs = international fabrication. Likely exceeds independent-owner ETA scope. Recommend EXCLUDE for size."
@@ -855,7 +936,11 @@
       "verified_via": "live-fetch of emd-usa.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://emd-usa.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "30yr_tenure,certs_iso,mold_tooling_specialty"}
+      {
+        "url": "https://emd-usa.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "30yr_tenure,certs_iso,mold_tooling_specialty"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Mold-tooling-heritage 30yr Houston NW shop, ISO 9001 only. Owner not named. Tooling-first specialty (declining segment as plastic mold work moves overseas) — could indicate coast-style operator. Mid coast signal."
@@ -883,7 +968,11 @@
     "iso_9001": true,
     "as9100": true,
     "itar_registered": true,
-    "api_certifications": ["API Q1 (Q1-1922)", "API Spec 7-1 (7-1-0377)", "API Monogram (ISO-0250)"],
+    "api_certifications": [
+      "API Q1 (Q1-1922)",
+      "API Spec 7-1 (7-1-0377)",
+      "API Monogram (ISO-0250)"
+    ],
     "service_specialty": "downhole_oilfield_aerospace_diversified",
     "customer_mix": "oil & gas downhole, aerospace, valves, defense, medical, power gen, subsea, agriculture",
     "modern_equipment": true,
@@ -904,7 +993,11 @@
       "verified_via": "live-fetch of conroemachine.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.conroemachine.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_2000,facility_65k_sqft,full_cert_stack_api_q1_as9100_itar"}
+      {
+        "url": "https://www.conroemachine.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_2000,facility_65k_sqft,full_cert_stack_api_q1_as9100_itar"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "FLAG SIZE: 65K sqft + full API Q1 + AS9100 + ITAR + 7+ verticals = likely $30-60M revenue. Founded 2000 (26yr). LIKELY EXCEEDS $30M independent-owner ceiling. Recommend EXCLUDE for size — pending revenue confirmation."
@@ -955,7 +1048,11 @@
       "verified_via": "live-fetch of alloycnc.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://alloycnc.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "facility_80k_sqft,firearms_specialty"}
+      {
+        "url": "https://alloycnc.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "facility_80k_sqft,firearms_specialty"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "FLAG SIZE: 80K sqft Conroe facility — likely exceeds $30M ceiling. No certifications listed despite scale (oddly). Firearms specialty is distinctive niche. Mid-2010s site. Recommend further size verification before A-tier inclusion."
@@ -1005,7 +1102,11 @@
       "verified_via": "live-fetch of txswiss.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://txswiss.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "20yr_tenure,certs_iso_ags_aiao,swiss_specialty"}
+      {
+        "url": "https://txswiss.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "20yr_tenure,certs_iso_ags_aiao,swiss_specialty"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Swiss-screw niche specialist with 13-axis capability, ISO 9001 only (no AS9100/ITAR). Active hiring = competitive posture. Likely younger sub-15-yr-old shop (founded ~2005). LOW coast signal — modern, active, specialized."
@@ -1037,7 +1138,18 @@
     "service_specialty": "aerospace_defense_oilfield_mixed",
     "customer_mix": "aerospace, defense, energy, industrial — 20K+ parts/month capacity",
     "modern_equipment": null,
-    "equipment_brands_observed": ["Monarch", "Bridgeport", "UNISIG", "YCM", "Clausing", "Fadal", "Samsung", "Warner Swasey", "Kingston", "Hwacheon"],
+    "equipment_brands_observed": [
+      "Monarch",
+      "Bridgeport",
+      "UNISIG",
+      "YCM",
+      "Clausing",
+      "Fadal",
+      "Samsung",
+      "Warner Swasey",
+      "Kingston",
+      "Hwacheon"
+    ],
     "cad_cam_modern": null,
     "cad_cam_software": [],
     "owner_owns_building": null,
@@ -1057,7 +1169,11 @@
       "verified_via": "live-fetch of bandrproduction.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://bandrproduction.com/areas/san-antonio-cnc-machine-shop", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1994,equipment_old_gen_monarch_bridgeport_fadal,certs_iso_only"}
+      {
+        "url": "https://bandrproduction.com/areas/san-antonio-cnc-machine-shop",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1994,equipment_old_gen_monarch_bridgeport_fadal,certs_iso_only"
+      }
     ],
     "data_completeness": 0.65,
     "notes": "Mixed signal: 32yr tenure + OLD-GENERATION equipment fleet (Monarch/Bridgeport/Fadal/Warner Swasey from 1980s-1990s) but no formal AS9100 cert. ISO 9001 only. New Waverly rural, owner likely operating older fleet without modernization. POTENTIAL A-TIER for coast tells."
@@ -1107,7 +1223,11 @@
       "verified_via": "live-fetch of umwtexas.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://umwtexas.com/services/machine-shop/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1972,7_services_welding_cnc_coatings,certs_iso"}
+      {
+        "url": "https://umwtexas.com/services/machine-shop/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1972,7_services_welding_cnc_coatings,certs_iso"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "ANOMALY: site says 1972 (not 40yr as spine implied) = 54yr tenure. Multi-service plant (welding + CNC + coatings) — old-school petrochem-rural model. New Waverly rural Walker county. STRONG A-TIER profile: long tenure, single cert, wide service stack."
@@ -1159,7 +1279,11 @@
       "verified_via": "live-fetch of candmmachining.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.candmmachining.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "30yr_family_owned,facility_34k_sqft,certs_iso,equipment_weilers_manual"}
+      {
+        "url": "https://www.candmmachining.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "30yr_family_owned,facility_34k_sqft,certs_iso,equipment_weilers_manual"
+      }
     ],
     "data_completeness": 0.65,
     "notes": "Family-owned 30yr rural Navasota shop, ISO 9001 + 34K sqft, MANUAL MILLS in equipment list = old-school posture. Owner partnership C + M (likely husband/wife or sibling). POTENTIAL A-TIER. Same legal entity as Sugar Land branch (deduplicate at finalization)."
@@ -1210,7 +1334,11 @@
       "verified_via": "live-fetch of snoeinc.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.snoeinc.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1979,facility_63k_sqft_53_cnc,certs_as9100_iso_jcp_ddtc"}
+      {
+        "url": "https://www.snoeinc.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1979,facility_63k_sqft_53_cnc,certs_as9100_iso_jcp_ddtc"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "FLAG SIZE: 63K sqft + 53 CNC + AS9100 + JCP/DDTC defense + 30K-lb capability = LIKELY $25-45M revenue range. Founded 1979 = 47yr. Possibly exceeds $30M independent-owner ceiling. Recommend pending revenue verification before A-tier."
@@ -1261,7 +1389,11 @@
       "verified_via": "live-fetch of mitchellcrane.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.mitchellcrane.com/precision-machining.html", "fetched_at": "2026-05-16T20:00:00Z", "field": "2_locations,crane_oem_primary,machining_division"}
+      {
+        "url": "https://www.mitchellcrane.com/precision-machining.html",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "2_locations,crane_oem_primary,machining_division"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "EXCLUDE/FLAG: Mitchell Crane is a CRANE OEM where CNC machining is a SECONDARY DIVISION. 2 TX locations + AGMA/IDA/AED memberships = heavy industrial scope. Likely exceeds $30M with crane biz. RECOMMEND EXCLUDE (out-of-scope: primary biz is cranes, not CNC machining)."
@@ -1316,7 +1448,11 @@
       "verified_via": "live-fetch of precisionent.net 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.precisionent.net/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1967,family_owned,cad_deltacad,manual_in_mix,no_certs"}
+      {
+        "url": "https://www.precisionent.net/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1967,family_owned,cad_deltacad,manual_in_mix,no_certs"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "STRONG A-TIER: 59yr tenure, DeltaCAD (legacy software), MANUAL MACHINING still in mix, NO certifications, rural East TX, family-owned pump-repair niche. Classic coasting profile. Owner likely 70s. TOP CANDIDATE."
@@ -1366,7 +1502,11 @@
       "verified_via": "live-fetch of lewisengineeringco.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://lewisengineeringco.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1961,family_owned,certs_iso_itar_pri,defense_focus"}
+      {
+        "url": "https://lewisengineeringco.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1961,family_owned,certs_iso_itar_pri,defense_focus"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "STRONG A-TIER PROFILE: 65yr tenure, family-owned, ITAR + ISO + PRI for HEAVY DEFENSE (guided bombs / munitions). East TX Marshall location. Modern social presence (FB/LinkedIn/YouTube) is mild competitive signal but defense ITAR + munitions work makes this a niche-defensible long-tenure shop."
@@ -1412,7 +1552,11 @@
       "verified_via": "live-fetch confirmed duplicate of Navasota entity"
     },
     "data_sources": [
-      {"url": "https://www.candmmachining.com/sugar-land-tx/", "fetched_at": "2026-05-16T20:00:00Z", "field": "duplicate_marker"}
+      {
+        "url": "https://www.candmmachining.com/sugar-land-tx/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "duplicate_marker"
+      }
     ],
     "data_completeness": 1.0,
     "notes": "DEDUPLICATE: This is the same legal entity (C & M Machining LP) as spine_index 22 Navasota — Sugar Land is a service-area presence page only. EXCLUDE from final target list to avoid double-count."
@@ -1463,7 +1607,11 @@
       "verified_via": "live-fetch of batesmachineonline.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://batesmachineonline.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "founding_1975,family_owned,no_certs,11_verticals"}
+      {
+        "url": "https://batesmachineonline.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founding_1975,family_owned,no_certs,11_verticals"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "STRONG A-TIER CANDIDATE: Bates family-owned 51yr in Farmersville (rural Collin/NE Dallas), NO certs (unusual for length), generalist 11-vertical mix, 'direct access to owners and machinists' tagline = small-team operator-led. Likely successor risk at owner 70+. Active social = modern but operationally classic small-shop."

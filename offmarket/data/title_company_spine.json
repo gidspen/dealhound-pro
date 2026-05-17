@@ -10,11 +10,24 @@
       "geography": "Texas",
       "row_count": 63,
       "data_sources_used": [
-        {"source": "Company websites (direct live fetch)", "notes": "Every business below has at least one direct page-fetch confirming legal name, founding year, or ownership status."},
-        {"source": "Texas Land Title Association (TLTA)", "url": "https://www.tlta.com/"},
-        {"source": "TDI Title Companies by County roster (xlsx)", "url": "https://www.tdi.texas.gov/title/documents/taanddobycounty.xlsx", "notes": "Referenced — not bulk-downloaded; individual companies cross-checked against this index by name."},
-        {"source": "Local chamber of commerce / BBB / Yelp directory listings", "notes": "Used only for cross-reference, never as primary independence verification."},
-        {"source": "Trade press (HousingWire, ALTA news, D Magazine, Fort Worth Report, Inc. profile)", "notes": "Used for ownership transitions (e.g., Independence Title to Realogy 2015, Georgetown Title to First American 2021, Porter Title to Capital Title 2020)."}
+        {
+          "source": "Company websites (direct live fetch)",
+          "notes": "Every business below has at least one direct page-fetch confirming legal name, founding year, or ownership status."
+        },
+        { "source": "Texas Land Title Association (TLTA)", "url": "https://www.tlta.com/" },
+        {
+          "source": "TDI Title Companies by County roster (xlsx)",
+          "url": "https://www.tdi.texas.gov/title/documents/taanddobycounty.xlsx",
+          "notes": "Referenced — not bulk-downloaded; individual companies cross-checked against this index by name."
+        },
+        {
+          "source": "Local chamber of commerce / BBB / Yelp directory listings",
+          "notes": "Used only for cross-reference, never as primary independence verification."
+        },
+        {
+          "source": "Trade press (HousingWire, ALTA news, D Magazine, Fort Worth Report, Inc. profile)",
+          "notes": "Used for ownership transitions (e.g., Independence Title to Realogy 2015, Georgetown Title to First American 2021, Porter Title to Capital Title 2020)."
+        }
       ],
       "exclusion_filters_applied": [
         "EXCLUDE: National public underwriters and their wholly-owned agencies — First American (FAF), Fidelity National Financial (FNF: Chicago Title, Fidelity National Title, Commonwealth, Alamo Title, Lawyers Title, Charter Title, West Texas Abstract, Great American Title, Austin Title, Georgetown Title-since-2021), Stewart Title (publicly traded, HQ Houston), Old Republic National Title, Westcor Land Title, WFG National Title, Anywhere Real Estate / Title Resources Group affiliated agencies (Texas American Title, Independence Title-since-2015, Title Resources Guaranty), Berkshire Hathaway HomeServices / Ebby Halliday affiliates (Texas Premier Title, HSTX Title)",
@@ -68,12 +81,33 @@
     "tlta_member": null,
     "website": "https://www.rattikintitle.com/",
     "phone": null,
-    "owners_or_principals": ["Jack Rattikin Sr. (founder, deceased)", "Jack Rattikin Jr.", "Jack Rattikin III (CEO/President — DECEASED Feb 2026 per Fort Worth Report obituary)"],
+    "owners_or_principals": [
+      "Jack Rattikin Sr. (founder, deceased)",
+      "Jack Rattikin Jr.",
+      "Jack Rattikin III (CEO/President — DECEASED Feb 2026 per Fort Worth Report obituary)"
+    ],
     "family_owned": true,
     "family_generations": 3,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://www.rattikintitle.com/about/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "family_owned", "owners_or_principals", "underwriters_appointed", "location_count"]},
-      {"source": "fort_worth_report", "url": "https://fortworthreport.org/2026/02/16/services-set-for-jack-rattikin-iii-fort-worth-title-company-ceo-and-president/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["owner_succession_event_2026"]}
+      {
+        "source": "company_about_page",
+        "url": "https://www.rattikintitle.com/about/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": [
+          "legal_name",
+          "founded_year",
+          "family_owned",
+          "owners_or_principals",
+          "underwriters_appointed",
+          "location_count"
+        ]
+      },
+      {
+        "source": "fort_worth_report",
+        "url": "https://fortworthreport.org/2026/02/16/services-set-for-jack-rattikin-iii-fort-worth-title-company-ceo-and-president/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["owner_succession_event_2026"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Independent, 3rd-generation family-owned since 1944. Title plant records back to 1845. EXCLUSIVELY independent — appoints 5 underwriters but is not owned by any of them. SUCCESSION EVENT: Jack Rattikin III (CEO) passed away February 2026 — this is a live succession-trigger event. Flag for A-tier deep-dive."
@@ -87,18 +121,37 @@
     "state": "TX",
     "zip": "76104",
     "license_number": null,
-    "underwriters_appointed": ["Alliant National", "AmTrust Financial", "DOMA", "First National Title Insurance Company (FNTIC)", "Title Resources Guaranty Company", "First American Title Company"],
+    "underwriters_appointed": [
+      "Alliant National",
+      "AmTrust Financial",
+      "DOMA",
+      "First National Title Insurance Company (FNTIC)",
+      "Title Resources Guaranty Company",
+      "First American Title Company"
+    ],
     "location_count": 17,
     "founded_year": 2001,
     "tlta_member": null,
     "website": "https://senderatitle.com/",
     "phone": null,
-    "owners_or_principals": ["Charles 'Chuck' Brown (Owner/Attorney, CEO; also runs The Brown Law Firm, PLLC)"],
+    "owners_or_principals": [
+      "Charles 'Chuck' Brown (Owner/Attorney, CEO; also runs The Brown Law Firm, PLLC)"
+    ],
     "family_owned": true,
     "family_generations": 1,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://senderatitle.com/about/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "location_count"]},
-      {"source": "company_home", "url": "https://senderatitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["underwriters_appointed", "location_count"]}
+      {
+        "source": "company_about_page",
+        "url": "https://senderatitle.com/about/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "location_count"]
+      },
+      {
+        "source": "company_home",
+        "url": "https://senderatitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["underwriters_appointed", "location_count"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Independent, attorney-owned (Chuck Brown). Self-described as 'one of Texas's largest independent title agencies' and 'family-owned'. Attorney-led structure (in-house counsel via Brown Law Firm). Single-owner, founder still active — high coasting-risk profile despite 17 offices."
@@ -112,18 +165,36 @@
     "state": "TX",
     "zip": "75093",
     "license_number": null,
-    "underwriters_appointed": ["First National Title Insurance Company (owned by same principal)", "First American", "Stewart", "Fidelity National"],
+    "underwriters_appointed": [
+      "First National Title Insurance Company (owned by same principal)",
+      "First American",
+      "Stewart",
+      "Fidelity National"
+    ],
     "location_count": 100,
     "founded_year": 2006,
     "tlta_member": null,
     "website": "https://ctot.com/",
     "phone": null,
-    "owners_or_principals": ["Bill Shaddock (Owner/CEO; also Chairman of First National Title Insurance Co.)", "Mel John (President of National Commercial Services)"],
+    "owners_or_principals": [
+      "Bill Shaddock (Owner/CEO; also Chairman of First National Title Insurance Co.)",
+      "Mel John (President of National Commercial Services)"
+    ],
     "family_owned": false,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://ctot.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "location_count"]},
-      {"source": "shaddock_holdings", "url": "https://shaddocknational.com/about/the-shaddock-experience/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["ownership_history"]}
+      {
+        "source": "company_about_page",
+        "url": "https://ctot.com/about-us/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "location_count"]
+      },
+      {
+        "source": "shaddock_holdings",
+        "url": "https://shaddocknational.com/about/the-shaddock-experience/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["ownership_history"]
+      }
     ],
     "independence_verified": true,
     "affiliation_caveat": "Vertically integrated — owner Bill Shaddock also owns First National Title Insurance Co (FNTIC), the 9th-largest US title underwriter. Listed as 'largest independent' in marketing but is a holding-company combo. NOT a small target. Included for completeness but unlikely acquisition fit — Shaddock has been actively acquiring, not selling.",
@@ -144,12 +215,26 @@
     "tlta_member": null,
     "website": "https://monteithtitle.com/",
     "phone": null,
-    "owners_or_principals": ["A.M. Monteith (founder, 1876)", "Frank J. Turner, Sr. (purchaser 1951)", "Turner family (current owners, 75+ years of family ownership)"],
+    "owners_or_principals": [
+      "A.M. Monteith (founder, 1876)",
+      "Frank J. Turner, Sr. (purchaser 1951)",
+      "Turner family (current owners, 75+ years of family ownership)"
+    ],
     "family_owned": true,
     "family_generations": 3,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://monteithtitle.com/about-monteith/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "location_count"]},
-      {"source": "killeen_daily_herald", "url": "https://kdhnews.com/news/region/monteith-abstract-title-company-now-oldest-title-company-in-texas-after-150-years-of-service/article_029509d7-cf4f-5a48-a015-2b9e865b73e7.html", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["family_ownership_history", "founded_year"]}
+      {
+        "source": "company_about_page",
+        "url": "https://monteithtitle.com/about-monteith/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "location_count"]
+      },
+      {
+        "source": "killeen_daily_herald",
+        "url": "https://kdhnews.com/news/region/monteith-abstract-title-company-now-oldest-title-company-in-texas-after-150-years-of-service/article_029509d7-cf4f-5a48-a015-2b9e865b73e7.html",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["family_ownership_history", "founded_year"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "OLDEST independent title company in Texas (150th anniversary 2026). Turner family ownership 75 years. Locations: Belton, Temple, Killeen, Harker Heights, Salado, Copperas Cove. Premium A-tier candidate — multi-generational family, very long tenure, regional concentration in Bell County."
@@ -163,17 +248,37 @@
     "state": "TX",
     "zip": "75605",
     "license_number": null,
-    "underwriters_appointed": ["Commonwealth Land Title", "Fidelity National Title", "First American Title", "First National Title Insurance Company", "Old Republic National Title", "Stewart Title Guaranty", "Texan Title Insurance Company", "Title Resources Guaranty Company", "WFG National Title"],
+    "underwriters_appointed": [
+      "Commonwealth Land Title",
+      "Fidelity National Title",
+      "First American Title",
+      "First National Title Insurance Company",
+      "Old Republic National Title",
+      "Stewart Title Guaranty",
+      "Texan Title Insurance Company",
+      "Title Resources Guaranty Company",
+      "WFG National Title"
+    ],
     "location_count": 6,
     "founded_year": 1912,
     "tlta_member": null,
     "website": "https://centraltitleco.com/",
     "phone": null,
-    "owners_or_principals": ["Paul B. Scott (1931 co-founder)", "Jas A. Hankerson (1931)", "EP Harding (1931)", "Multiple ownership transitions since"],
+    "owners_or_principals": [
+      "Paul B. Scott (1931 co-founder)",
+      "Jas A. Hankerson (1931)",
+      "EP Harding (1931)",
+      "Multiple ownership transitions since"
+    ],
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://centraltitleco.com/about-central-title/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "underwriters_appointed", "location_count"]}
+      {
+        "source": "company_about_page",
+        "url": "https://centraltitleco.com/about-central-title/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "underwriters_appointed", "location_count"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "East Texas's premier title authority, roots to 1912. Owns sovereign title plants in Gregg, Smith, Harrison, Upshur, and Rusk counties with records to 1845. Offices: Longview, Tyler, Marshall, Gilmer, Hallsville, Kilgore. Appoints 9 underwriters (not owned by any). Ownership has passed through several hands; current owners not publicly disclosed — flag for SOS filing pull before A-tier promotion."
@@ -193,11 +298,20 @@
     "tlta_member": null,
     "website": "https://www.chapintitle.com/",
     "phone": "903-868-1415",
-    "owners_or_principals": ["M.J. Chapin (1872 founder)", "Phil and Ruth Adams (purchased 1998, current owners)", "Karen Castleman (President)"],
+    "owners_or_principals": [
+      "M.J. Chapin (1872 founder)",
+      "Phil and Ruth Adams (purchased 1998, current owners)",
+      "Karen Castleman (President)"
+    ],
     "family_owned": true,
     "family_generations": 1,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://www.chapintitle.com/about/about-chapin-title-company/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "company_about_page",
+        "url": "https://www.chapintitle.com/about/about-chapin-title-company/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Oldest continuously operated business in Sherman, TX. Privately owned by Phil and Ruth Adams since 1998 (28 years of single-couple ownership). Acquired Tone Abstract Company 1990. Offices: Sherman, Gainesville, Pilot Point, plus abstracting office. Strong A-tier profile — sole-owner couple with multi-decade tenure, no successor publicly named."
@@ -217,11 +331,26 @@
     "tlta_member": null,
     "website": "https://redrivertitle.com/",
     "phone": "(903) 868-4446",
-    "owners_or_principals": ["Doris Caston (founder)", "Shawn KinCannon (current owner, son of founder, took over 2023)"],
+    "owners_or_principals": [
+      "Doris Caston (founder)",
+      "Shawn KinCannon (current owner, son of founder, took over 2023)"
+    ],
     "family_owned": true,
     "family_generations": 2,
     "data_sources": [
-      {"source": "company_home", "url": "https://redrivertitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone", "location_count"]}
+      {
+        "source": "company_home",
+        "url": "https://redrivertitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": [
+          "legal_name",
+          "founded_year",
+          "owners_or_principals",
+          "address",
+          "phone",
+          "location_count"
+        ]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned, mother-to-son succession completed 2023 (recent transition). Offices in Sherman, Anna, Whitesboro. Younger company (2004 founding) but established intergenerational structure already. Lower base-rate priority — new owner just started."
@@ -241,11 +370,20 @@
     "tlta_member": null,
     "website": "https://graysontitle.com/",
     "phone": "(903) 465-2545",
-    "owners_or_principals": ["Jean Vest (founder, 1964)", "Ron Vest (inherited)", "Garrett and Jamie Riddels (acquired 2019, current owners)"],
+    "owners_or_principals": [
+      "Jean Vest (founder, 1964)",
+      "Ron Vest (inherited)",
+      "Garrett and Jamie Riddels (acquired 2019, current owners)"
+    ],
     "family_owned": true,
     "family_generations": 1,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://graysontitle.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "company_about_page",
+        "url": "https://graysontitle.com/about-us/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1964 by Jean Vest, inherited by Ron Vest, acquired by Garrett and Jamie Riddels 2019. Single office Denison. New ownership only 7 years in — lower coasting-trigger likelihood."
@@ -259,7 +397,16 @@
     "state": "TX",
     "zip": "75418",
     "license_number": null,
-    "underwriters_appointed": ["Alamo Title Company", "Fidelity National Title", "Chicago Title", "First American Title", "First American Title Guaranty", "Old Republic National Title", "Stewart Title Guaranty", "WFG National Title"],
+    "underwriters_appointed": [
+      "Alamo Title Company",
+      "Fidelity National Title",
+      "Chicago Title",
+      "First American Title",
+      "First American Title Guaranty",
+      "Old Republic National Title",
+      "Stewart Title Guaranty",
+      "WFG National Title"
+    ],
     "location_count": 1,
     "founded_year": 1895,
     "tlta_member": null,
@@ -269,7 +416,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.coletitle.org/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "underwriters_appointed", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://www.coletitle.org/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "underwriters_appointed", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Originally Fannin County Abstract Company (1895), 130 yrs continuous service. Two attorneys on staff. Locally owned per site; current owner identity not publicly disclosed — flag for SOS filing pull. Solo office in Bonham (Fannin County)."
@@ -293,7 +445,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.kaufmancountytitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "address"]}
+      {
+        "source": "company_home",
+        "url": "https://www.kaufmancountytitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "address"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1873 — one of the oldest title operations in Texas, 150+ yrs. Self-described as locally owned. Solo office Kaufman, TX. Current owner not publicly disclosed; flag for SOS pull and TDI license-holder cross-check."
@@ -307,17 +464,38 @@
     "state": "TX",
     "zip": "75503",
     "license_number": null,
-    "underwriters_appointed": ["Fidelity National", "Texan Title Insurance Company", "First American", "Williston Financial Group (WFG)", "Old Republic Title", "Commonwealth Land Title"],
+    "underwriters_appointed": [
+      "Fidelity National",
+      "Texan Title Insurance Company",
+      "First American",
+      "Williston Financial Group (WFG)",
+      "Old Republic Title",
+      "Commonwealth Land Title"
+    ],
     "location_count": 2,
     "founded_year": 1981,
     "tlta_member": null,
     "website": "https://twincitytitle.com/",
     "phone": "(903) 793-7671",
-    "owners_or_principals": ["Partners of Langdon Davis (Texarkana law firm) also own Twin City Title and Miller County Abstract"],
+    "owners_or_principals": [
+      "Partners of Langdon Davis (Texarkana law firm) also own Twin City Title and Miller County Abstract"
+    ],
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://twincitytitle.com/about-us", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "underwriters_appointed", "address", "phone", "location_count"]}
+      {
+        "source": "company_about_page",
+        "url": "https://twincitytitle.com/about-us",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": [
+          "legal_name",
+          "founded_year",
+          "underwriters_appointed",
+          "address",
+          "phone",
+          "location_count"
+        ]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Locally owned, 30+ yrs. Two offices (Texarkana TX + New Boston TX) + sister Miller County Abstract (AR side). Partners of Langdon Davis law firm own the title company — attorney-partnership structure."
@@ -341,7 +519,12 @@
     "family_owned": true,
     "family_generations": 7,
     "data_sources": [
-      {"source": "company_team_page", "url": "https://moneylaw.com/team/brent-money/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals"]}
+      {
+        "source": "company_team_page",
+        "url": "https://moneylaw.com/team/brent-money/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Money Law Firm founded 2013, added title fee office 2016. Offices: Greenville, Sulphur Springs, Emory, Prosper, Sherman. Money family has lived in/served Hunt County for 7 generations — deep regional roots. Younger entity but exceptionally long family-name continuity."
@@ -361,11 +544,21 @@
     "tlta_member": null,
     "website": "https://kincy-sabine.com/",
     "phone": "903-450-1118",
-    "owners_or_principals": ["Bobby W. Stovall (President)", "Janet Kalka (Secretary)", "Paige Spradling", "Chris Blakemore"],
+    "owners_or_principals": [
+      "Bobby W. Stovall (President)",
+      "Janet Kalka (Secretary)",
+      "Paige Spradling",
+      "Chris Blakemore"
+    ],
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://kincy-sabine.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://kincy-sabine.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1896, 130 yrs. DBA: Hunt County Titles, Inc. Records back to original Hunt County land grants. Solo office Greenville. Family-ownership not explicitly stated on live site; ownership requires verification."
@@ -389,7 +582,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "http://hcaco.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "underwriters_appointed", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "http://hcaco.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "underwriters_appointed", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Originally Morris & Bailey era circa 1911. Self-described as 'the only locally owned and operated title company in the area'. 3 local attorneys + 4 underwriters. Title plant records to mid-1800s. Ownership not publicly disclosed."
@@ -403,7 +601,11 @@
     "state": "TX",
     "zip": "75751",
     "license_number": null,
-    "underwriters_appointed": ["Stewart Title Guaranty", "Fidelity National Title", "Old Republic National Title"],
+    "underwriters_appointed": [
+      "Stewart Title Guaranty",
+      "Fidelity National Title",
+      "Old Republic National Title"
+    ],
     "location_count": 2,
     "founded_year": 1964,
     "tlta_member": null,
@@ -413,7 +615,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://atcathens.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "underwriters_appointed", "owners_or_principals", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://atcathens.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "underwriters_appointed", "owners_or_principals", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Locally owned, 1964 founding, 2 offices East TX. Single-name president (Shirley Ward) — solo-owner profile. Underwrites via Stewart/Fidelity/Old Republic but not owned by any (independent agent)."
@@ -437,7 +644,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.etextitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "address", "phone", "location_count"]}
+      {
+        "source": "company_home",
+        "url": "https://www.etextitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "address", "phone", "location_count"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Texas-owned group covering 10 East TX offices: Smith, Cherokee, Gregg, Harrison, Panola, Rusk, Upshur, Van Zandt, Wood counties. Licensed in 87+ TX counties. Founding year + owner not on public site — requires SOS pull."
@@ -461,7 +673,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://assuredtitleco.com/aboutAssuredTitle.html", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "company_about_page",
+        "url": "https://assuredtitleco.com/aboutAssuredTitle.html",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Locally owned and operated Tyler TX. Capable of closing in all 254 TX counties. Single named partner/president (Brenda Head Hampy). Founding year not publicly disclosed."
@@ -481,11 +698,25 @@
     "tlta_member": null,
     "website": "https://www.titlehoustonholdings.com/",
     "phone": null,
-    "owners_or_principals": ["John H. Duncan, Jr. (Chairman)", "Frank Vandiver (President/Co-Founder)"],
+    "owners_or_principals": [
+      "John H. Duncan, Jr. (Chairman)",
+      "Frank Vandiver (President/Co-Founder)"
+    ],
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://www.titlehoustonholdings.com/about-us", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "location_count"]}
+      {
+        "source": "company_about_page",
+        "url": "https://www.titlehoustonholdings.com/about-us",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": [
+          "legal_name",
+          "founded_year",
+          "owners_or_principals",
+          "address",
+          "location_count"
+        ]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Independent, locally owned and managed. 2 offices: Voss + Post Oak (Houston). John Duncan Jr. is from a prominent Houston business family — verify against Duncan dynasty connections. 20+ yrs in market."
@@ -499,7 +730,9 @@
     "state": "TX",
     "zip": "77304",
     "license_number": null,
-    "underwriters_appointed": ["Lawyers Title Insurance Corporation (Fidelity National Financial sub)"],
+    "underwriters_appointed": [
+      "Lawyers Title Insurance Corporation (Fidelity National Financial sub)"
+    ],
     "location_count": 2,
     "founded_year": null,
     "tlta_member": null,
@@ -509,8 +742,18 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.texhomeland.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "underwriters_appointed", "address", "phone"]},
-      {"source": "company_story_page_search", "url": "https://www.texhomeland.com/our-story", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["owners_or_principals"]}
+      {
+        "source": "company_home",
+        "url": "https://www.texhomeland.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "underwriters_appointed", "address", "phone"]
+      },
+      {
+        "source": "company_story_page_search",
+        "url": "https://www.texhomeland.com/our-story",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["owners_or_principals"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Independent title agency, owned by Donna Rodriguez (CPA/JD) since joining 2015 as co-owner. Conroe + Huntsville offices. Issues via Lawyers Title (FNF underwriter) — independent agent not owned by FNF."
@@ -524,7 +767,12 @@
     "state": "TX",
     "zip": "77302",
     "license_number": null,
-    "underwriters_appointed": ["Old Republic Title", "Westcor", "WFG National Title", "First American Title"],
+    "underwriters_appointed": [
+      "Old Republic Title",
+      "Westcor",
+      "WFG National Title",
+      "First American Title"
+    ],
     "location_count": 3,
     "founded_year": null,
     "tlta_member": null,
@@ -534,7 +782,18 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://fptitletx.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "underwriters_appointed", "address", "owners_or_principals", "location_count"]}
+      {
+        "source": "company_home",
+        "url": "https://fptitletx.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": [
+          "legal_name",
+          "underwriters_appointed",
+          "address",
+          "owners_or_principals",
+          "location_count"
+        ]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Veteran-owned title agency. Offices: Conroe, Spring, The Woodlands. Independent — appoints 4 underwriters, owned by none."
@@ -548,17 +807,34 @@
     "state": "TX",
     "zip": "77340",
     "license_number": null,
-    "underwriters_appointed": ["Old Republic", "Stewart Title", "Title Resources Guaranty", "Texan Title Insurance", "First American Title", "Legacy Star"],
+    "underwriters_appointed": [
+      "Old Republic",
+      "Stewart Title",
+      "Title Resources Guaranty",
+      "Texan Title Insurance",
+      "First American Title",
+      "Legacy Star"
+    ],
     "location_count": 3,
     "founded_year": 1898,
     "tlta_member": null,
     "website": "https://walkercountytitle.com/",
     "phone": "(936) 295-8173",
-    "owners_or_principals": ["A.T. Randolph (founder 1898)", "E.R. Berry (1930s)", "Robert Smither and Lloyd C. Martin (1970 partnership)", "Alvin L. Martin (grandson of Lloyd C. Martin, current owner/manager since 2016)"],
+    "owners_or_principals": [
+      "A.T. Randolph (founder 1898)",
+      "E.R. Berry (1930s)",
+      "Robert Smither and Lloyd C. Martin (1970 partnership)",
+      "Alvin L. Martin (grandson of Lloyd C. Martin, current owner/manager since 2016)"
+    ],
     "family_owned": true,
     "family_generations": 3,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://walkercountytitle.com/about/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "company_about_page",
+        "url": "https://walkercountytitle.com/about/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Walker County since 1898 (128 yrs), San Jacinto County since 1972, Madisonville (as Mustang Title) since 2020. 3rd-generation family attorney ownership (Lloyd Martin → Alvin Martin). Premium A-tier — multi-gen + long tenure + small-county dominance."
@@ -582,7 +858,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://huntsvilleabstract.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "underwriters_appointed", "address"]}
+      {
+        "source": "company_home",
+        "url": "https://huntsvilleabstract.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "underwriters_appointed", "address"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Serves Madison, Trinity, Walker counties (East TX). Two underwriters appointed — appointed agent, not owned. Walker County has both this company and Walker County Title (Alvin Martin) — competing local players in Huntsville."
@@ -596,17 +877,29 @@
     "state": "TX",
     "zip": null,
     "license_number": null,
-    "underwriters_appointed": ["Alliant National Title Insurance Company", "First National Title Insurance Company"],
+    "underwriters_appointed": [
+      "Alliant National Title Insurance Company",
+      "First National Title Insurance Company"
+    ],
     "location_count": 1,
     "founded_year": 1903,
     "tlta_member": null,
     "website": "https://leoncountytitle.com/",
     "phone": null,
-    "owners_or_principals": ["John Mallard (deceased Feb 2015)", "Marjean Mallard (owned until 2021)", "Tisha Wilson (current owner since Sept 2021, prior employee 20+ yrs)"],
+    "owners_or_principals": [
+      "John Mallard (deceased Feb 2015)",
+      "Marjean Mallard (owned until 2021)",
+      "Tisha Wilson (current owner since Sept 2021, prior employee 20+ yrs)"
+    ],
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://leoncountytitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "underwriters_appointed"]}
+      {
+        "source": "company_home",
+        "url": "https://leoncountytitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "underwriters_appointed"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded mid-1890s, merged into single entity ~1903. Owner Tisha Wilson took over Sept 2021 from Mallard family. Strong Leon County small-rural focus."
@@ -630,7 +923,12 @@
     "family_owned": true,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://www.trincotitle.com/about", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "company_about_page",
+        "url": "https://www.trincotitle.com/about",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned and operated, history to original sovereign records of Trinity County, formerly Hutson Abstract Co. — part of Polk County Abstract family historically. Sole-county focus."
@@ -654,7 +952,12 @@
     "family_owned": true,
     "family_generations": 3,
     "data_sources": [
-      {"source": "company_home", "url": "https://ewabstract.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "owners_or_principals"]}
+      {
+        "source": "company_home",
+        "url": "https://ewabstract.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "owners_or_principals"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 100+ yrs ago. Rutta family ownership since 1957 (~69 yrs of family ownership, 3rd gen). 'Only title company in Colorado County which is locally owned and operated'. In-house real estate attorney. A-tier multi-gen profile."
@@ -678,7 +981,19 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://texascountrytitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone", "location_count"]}
+      {
+        "source": "company_home",
+        "url": "https://texascountrytitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": [
+          "legal_name",
+          "founded_year",
+          "owners_or_principals",
+          "address",
+          "phone",
+          "location_count"
+        ]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Solo-attorney-owned (Mark Humble). 10 offices across rural Central TX: Cameron, Rockdale, Giddings, Caldwell, Marlin, La Grange, Columbus, Bastrop, Brenham, Lexington. Sovereignty title plant in 8 counties. Single-owner attorney structure = high coasting risk."
@@ -702,7 +1017,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_our_story", "url": "https://ftcwaco.com/our-story/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "company_our_story",
+        "url": "https://ftcwaco.com/our-story/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Locally owned and operated since 1983. Founded by John Sheehy. 3 Waco offices (Waco Dr, Woodway, Downtown). 300+ years combined staff experience."
@@ -726,7 +1046,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_brazos_valley_page", "url": "https://www.utitle.com/brazos-valley", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "owners_or_principals", "address", "phone", "location_count"]}
+      {
+        "source": "company_brazos_valley_page",
+        "url": "https://www.utitle.com/brazos-valley",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "owners_or_principals", "address", "phone", "location_count"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "4 offices Brazos Valley: College Station main, Caldwell, Fitch, Franklin (Love Title & Abstract). Single-name president (Jennifer Price). Founding year + ownership requires SOS pull."
@@ -750,7 +1075,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "search_engine_directory", "url": "https://www.cityof.com/tx/san-antonio/service-title-company-734544", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "address", "phone"]}
+      {
+        "source": "search_engine_directory",
+        "url": "https://www.cityof.com/tx/san-antonio/service-title-company-734544",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Locally owned and operated SA for over 30 yrs (~1990s founding). Independent residential + commercial. Direct site fetch failed (ECONNREFUSED) — confirmed via reputable directory listings. Owner names not surfaced; flag for SOS pull."
@@ -774,7 +1104,12 @@
     "family_owned": null,
     "family_generations": 1,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://presidiotitle.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals"]}
+      {
+        "source": "company_about_page",
+        "url": "https://presidiotitle.com/about-us/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded Jan 2005 by San Antonio friends to create locally owned title company embodying Texas values. 'Largest San Antonio-based title company'. Founders identified only by first name on site — full names require SOS pull."
@@ -798,7 +1133,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.acorn-title.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "address", "phone", "license_number", "underwriters_appointed"]}
+      {
+        "source": "company_home",
+        "url": "https://www.acorn-title.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "address", "phone", "license_number", "underwriters_appointed"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Boutique, locally owned, San Antonio. Only TDI license number captured in this spine (3339657). Single-underwriter relationship (First American) but is an independent agent, not owned by FAF."
@@ -812,17 +1152,35 @@
     "state": "TX",
     "zip": null,
     "license_number": null,
-    "underwriters_appointed": ["Alamo Title Company", "Chicago Title", "Commonwealth Land Title", "Fidelity National Title", "First American Title", "Stewart Title Guaranty", "WFG National Title"],
+    "underwriters_appointed": [
+      "Alamo Title Company",
+      "Chicago Title",
+      "Commonwealth Land Title",
+      "Fidelity National Title",
+      "First American Title",
+      "Stewart Title Guaranty",
+      "WFG National Title"
+    ],
     "location_count": 5,
     "founded_year": 1959,
     "tlta_member": null,
     "website": "http://nbtitle.com/",
     "phone": null,
-    "owners_or_principals": ["Edward Badouh, Sr. (founder)", "Calvin Riedel (founder)", "Joseph Faust (founder)", "Nile Riedel (current President)"],
+    "owners_or_principals": [
+      "Edward Badouh, Sr. (founder)",
+      "Calvin Riedel (founder)",
+      "Joseph Faust (founder)",
+      "Nile Riedel (current President)"
+    ],
     "family_owned": true,
     "family_generations": 2,
     "data_sources": [
-      {"source": "company_directory_search_snippets_multiple", "url": "http://nbtitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "underwriters_appointed"]}
+      {
+        "source": "company_directory_search_snippets_multiple",
+        "url": "http://nbtitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "underwriters_appointed"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Oldest locally owned title insurance company in Comal County. Founded 1959 by three local businessmen. Nile Riedel (son of co-founder) is current President — 2nd-gen family. Operates DBA: New Braunfels Title, Seguin Title, San Marcos Title. Offices: New Braunfels, Seguin, Canyon Lake, San Marcos, La Vernia. NOTE: live site fetch failed (TLS cert issue); company existence confirmed via search snippet + chamber listings; flag for live re-fetch before A-tier."
@@ -842,11 +1200,22 @@
     "tlta_member": null,
     "website": "https://hltitle.com/",
     "phone": "(325) 247-5771",
-    "owners_or_principals": ["Wade Hutto (founder/attorney)", "Mike Lucksinger (founding partner)", "Bill Lehmberg (President)", "Tracey Becker (Exec VP)", "Rayma Roberts (Exec VP)"],
+    "owners_or_principals": [
+      "Wade Hutto (founder/attorney)",
+      "Mike Lucksinger (founding partner)",
+      "Bill Lehmberg (President)",
+      "Tracey Becker (Exec VP)",
+      "Rayma Roberts (Exec VP)"
+    ],
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://hltitle.com/about/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "location_count"]}
+      {
+        "source": "company_about_page",
+        "url": "https://hltitle.com/about/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "location_count"]
+      }
     ],
     "independence_verified": true,
     "affiliation_caveat": "PART OF TEXAN TITLE HOLDINGS family of companies (parent holding co. with own underwriter Texan Title Insurance Company). Not a fully standalone independent — operates locally but is under holding-company structure.",
@@ -871,7 +1240,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.texasinvestorstitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://www.texasinvestorstitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Independent agent representing multiple underwriters. Boerne (Kendall County, Hill Country growth metro). Founding year and ownership not on live site — flag for SOS pull."
@@ -885,7 +1259,16 @@
     "state": "TX",
     "zip": "78624",
     "license_number": null,
-    "underwriters_appointed": ["Alamo Title Company", "Chicago Title", "Fidelity National Title", "First American Title", "First National Title Insurance Company", "National Investors Title Insurance Company", "Texan Title Insurance Company", "WFG National Title Company"],
+    "underwriters_appointed": [
+      "Alamo Title Company",
+      "Chicago Title",
+      "Fidelity National Title",
+      "First American Title",
+      "First National Title Insurance Company",
+      "National Investors Title Insurance Company",
+      "Texan Title Insurance Company",
+      "WFG National Title Company"
+    ],
     "location_count": 6,
     "founded_year": null,
     "tlta_member": null,
@@ -895,7 +1278,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://hillcountrytitles.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "underwriters_appointed", "address", "phone", "location_count"]}
+      {
+        "source": "company_home",
+        "url": "https://hillcountrytitles.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "underwriters_appointed", "address", "phone", "location_count"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Licensed Gillespie, Mason, Kimble, Edwards, Blanco counties. Offices: Fredericksburg (HQ), Mason, Junction, Rocksprings, Blanco, Johnson City. 8 underwriters appointed — independent agent. Owners not publicly disclosed; flag for SOS pull. Hill Country boomer-retiree migration corridor = very high RE volume."
@@ -919,7 +1307,12 @@
     "family_owned": true,
     "family_generations": 2,
     "data_sources": [
-      {"source": "company_home", "url": "https://kerrvilletitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://kerrvilletitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Privately owned by Ann Robertson and her son Clay Robertson, since 1983 (43 yrs). Single Kerrville office. Mother-son ownership = succession plan in place but high A-tier on owner-age basis."
@@ -933,7 +1326,14 @@
     "state": "TX",
     "zip": null,
     "license_number": null,
-    "underwriters_appointed": ["Stewart Title", "Alamo Title", "Alliant National", "Title Resources Guaranty Company (TTIC)", "Fidelity National Title", "Texan Title Insurance Company"],
+    "underwriters_appointed": [
+      "Stewart Title",
+      "Alamo Title",
+      "Alliant National",
+      "Title Resources Guaranty Company (TTIC)",
+      "Fidelity National Title",
+      "Texan Title Insurance Company"
+    ],
     "location_count": 1,
     "founded_year": null,
     "tlta_member": null,
@@ -943,7 +1343,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.kerrtitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "underwriters_appointed"]}
+      {
+        "source": "company_home",
+        "url": "https://www.kerrtitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "underwriters_appointed"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Independent agent representing 6 underwriters. Same county as Kerrville Title — direct competitors. Founding year, address, ownership not on public site — flag SOS pull."
@@ -963,11 +1368,20 @@
     "tlta_member": null,
     "website": "https://centennialtitleco.com/",
     "phone": "(325) 692-2292",
-    "owners_or_principals": ["Gary H. Shahan (President, founder, Abilene attorney)", "Charles E. Erwin (Vice President, founder, Abilene attorney)", "Nicholas E. Arrott II (Escrow Officer/Partner)"],
+    "owners_or_principals": [
+      "Gary H. Shahan (President, founder, Abilene attorney)",
+      "Charles E. Erwin (Vice President, founder, Abilene attorney)",
+      "Nicholas E. Arrott II (Escrow Officer/Partner)"
+    ],
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://centennialtitleco.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "company_about_page",
+        "url": "https://centennialtitleco.com/about-us/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1981 by local Abilene attorneys Shahan + Erwin. Two original founders still listed as President + VP after 45 yrs — high A-tier base rate (owners likely 65-75+). Operates Abilene Abstract Company title plant dating to 1800s."
@@ -987,11 +1401,20 @@
     "tlta_member": null,
     "website": "https://www.firsttexastitle.com/",
     "phone": "(325) 794-2700",
-    "owners_or_principals": ["Bill Bradshaw (1977 co-founder)", "Bill Perry (1977 co-founder)", "Bradshaw, McCall & Westbrook PLLC (affiliated law firm)"],
+    "owners_or_principals": [
+      "Bill Bradshaw (1977 co-founder)",
+      "Bill Perry (1977 co-founder)",
+      "Bradshaw, McCall & Westbrook PLLC (affiliated law firm)"
+    ],
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.firsttexastitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://www.firsttexastitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "'100% locally-owned and attorney-operated'. Founded 1977 by Bradshaw + Perry. Affiliated with Bradshaw, McCall & Westbrook law firm. Licensed Taylor + Callahan counties (16 towns). NOT affiliated with First Texas Title Insurance Co underwriter (separate entity)."
@@ -1011,11 +1434,18 @@
     "tlta_member": null,
     "website": "https://www.suretytitleco.com/",
     "phone": "(325) 658-7588",
-    "owners_or_principals": ["W. Drew Darby (founder, President/CEO; Attorney; Texas House Representative)"],
+    "owners_or_principals": [
+      "W. Drew Darby (founder, President/CEO; Attorney; Texas House Representative)"
+    ],
     "family_owned": null,
     "family_generations": 1,
     "data_sources": [
-      {"source": "search_engine_company_profile", "url": "https://www.suretytitleco.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "phone"]}
+      {
+        "source": "search_engine_company_profile",
+        "url": "https://www.suretytitleco.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1982 by W. Drew Darby (Texas House Rep, sitting legislator). Acquired San Angelo Abstract Company 1985 (originally established 1882 — 3rd-oldest business in San Angelo). 5 offices: San Angelo, Ballinger, Big Spring, Junction, Robert Lee. NOTE: Live fetches errored (SSL cert issue); company existence confirmed via search snippet + BBB listing; flag for live re-fetch."
@@ -1039,7 +1469,12 @@
     "family_owned": true,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://www.ecatitle.com/about-abstract-title-company-escrow-agent-midland-andrews-odessa-monahans-west-odessa-crane-tx/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "company_about_page",
+        "url": "https://www.ecatitle.com/about-abstract-title-company-escrow-agent-midland-andrews-odessa-monahans-west-odessa-crane-tx/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "'Oldest title company in Odessa', 116 yrs. Family-owned by Ogilvy brothers (Tim + Mike). Serves Permian Basin: Midland, Andrews, Odessa, Crane, Monahans, West Odessa. Brother co-owners — succession path needs verification."
@@ -1063,7 +1498,12 @@
     "family_owned": null,
     "family_generations": 1,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.westernabstract.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://www.westernabstract.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1999; current owner Frank Tirey purchased 2018. Pecos + Midland offices. Serves Permian Basin (oil + gas heavy) — Midland, Reeves, Loving, Culberson counties."
@@ -1087,7 +1527,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://reagantitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://reagantitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Private. Operates sister companies: Lone Star of El Paso (LST) + Hale County Abstract & Title (HCAT, Plainview). Title plants in Reagan, Borden, Schleicher, El Paso, Hudspeth, Culberson, Hale, Swisher, Castro, Lamb, Bailey, Briscoe counties (12 counties). Owners not on public site."
@@ -1107,11 +1552,19 @@
     "tlta_member": null,
     "website": "http://www.elpasotitleco.com/",
     "phone": null,
-    "owners_or_principals": ["Cotton Schwarzbach (founder 1930)", "Suzi Schwarzbach (President/CEO, Escrow Officer, owner — granddaughter of founder)"],
+    "owners_or_principals": [
+      "Cotton Schwarzbach (founder 1930)",
+      "Suzi Schwarzbach (President/CEO, Escrow Officer, owner — granddaughter of founder)"
+    ],
     "family_owned": true,
     "family_generations": 4,
     "data_sources": [
-      {"source": "search_engine_profile_multiple", "url": "http://www.elpasotitleco.com/about/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals"]}
+      {
+        "source": "search_engine_profile_multiple",
+        "url": "http://www.elpasotitleco.com/about/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Premium A-tier: nearly 100 yrs, 4th-generation family-owned. Founded by Cotton Schwarzbach 1930. Granddaughter Suzi now President/CEO. NOTE: Live fetch errored (self-signed cert); company existence confirmed via search snippet + chamber listings + multiple directory references; flag for live re-fetch before A-tier deep-dive."
@@ -1135,7 +1588,12 @@
     "family_owned": null,
     "family_generations": 1,
     "data_sources": [
-      {"source": "company_home", "url": "https://texastitlecompanyep.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "owners_or_principals", "address", "phone", "location_count"]}
+      {
+        "source": "company_home",
+        "url": "https://texastitlecompanyep.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "owners_or_principals", "address", "phone", "location_count"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Privately owned, sole owner Steve Raney (attorney). 4 El Paso offices: Lee Trevino, Zaragoza, N. Mesa, Montwood. 'Only title company in El Paso with a real estate attorney actively involved in all closings'. Sole-owner attorney = high succession risk."
@@ -1149,17 +1607,42 @@
     "state": "TX",
     "zip": null,
     "license_number": null,
-    "underwriters_appointed": ["First National Title Insurance Company", "First American Title", "Title Resources Guaranty Company", "WFG National Title", "National Investors Title Insurance Company", "Commonwealth Land Title", "Texan Title Insurance Company"],
+    "underwriters_appointed": [
+      "First National Title Insurance Company",
+      "First American Title",
+      "Title Resources Guaranty Company",
+      "WFG National Title",
+      "National Investors Title Insurance Company",
+      "Commonwealth Land Title",
+      "Texan Title Insurance Company"
+    ],
     "location_count": 6,
     "founded_year": 1980,
     "tlta_member": null,
     "website": "https://www.americanlandtexas.com/",
     "phone": "(806) 349-9784",
-    "owners_or_principals": ["Dee Miller (Attorney)", "Oth Miller (Attorney)", "Ed Dowdy (Attorney)", "Michael Boulos (Attorney)"],
+    "owners_or_principals": [
+      "Dee Miller (Attorney)",
+      "Oth Miller (Attorney)",
+      "Ed Dowdy (Attorney)",
+      "Michael Boulos (Attorney)"
+    ],
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.americanlandtexas.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "underwriters_appointed", "owners_or_principals", "phone", "location_count"]}
+      {
+        "source": "company_home",
+        "url": "https://www.americanlandtexas.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": [
+          "legal_name",
+          "founded_year",
+          "underwriters_appointed",
+          "owners_or_principals",
+          "phone",
+          "location_count"
+        ]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Independent, locally owned. Serving TX Panhandle since 1980. 6 offices, 15 Panhandle/South Plains counties. 4 attorneys on staff (Dee Miller, Oth Miller, Ed Dowdy, Michael Boulos) with 100+ yrs combined experience — attorney-partnership structure. 'Miller' surname x2 = potential family operation; verify."
@@ -1179,11 +1662,19 @@
     "tlta_member": null,
     "website": "https://sheltontitleco.com/",
     "phone": null,
-    "owners_or_principals": ["James Shelton (acquired predecessor Security Abstract Co. 1998 / current owner)", "Taylor Shelton (son, joined 2016)"],
+    "owners_or_principals": [
+      "James Shelton (acquired predecessor Security Abstract Co. 1998 / current owner)",
+      "Taylor Shelton (son, joined 2016)"
+    ],
     "family_owned": true,
     "family_generations": 2,
     "data_sources": [
-      {"source": "company_home", "url": "https://sheltontitleco.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "location_count"]}
+      {
+        "source": "company_home",
+        "url": "https://sheltontitleco.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "location_count"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Originally Donley County Abstract 1907. James Shelton acquired Security Abstract Co. (successor entity) 1998. Son Taylor joined 2016 — 2nd-gen succession in place. 5 offices: Clarendon, Pampa, Wheeler, Silverton, Childress. Serves 8 Panhandle counties: Donley, Armstrong, Childress, Hall, Gray, Roberts, Briscoe, Wheeler."
@@ -1207,7 +1698,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "search_engine_directory", "url": "https://www.digitalabstract.net/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name"]}
+      {
+        "source": "search_engine_directory",
+        "url": "https://www.digitalabstract.net/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Full service abstract + title company TX Panhandle, 70+ yrs combined experience. Licensed: Ochiltree, Gray, Lipscomb, Roberts, Hemphill, Hansford counties. Ownership requires SOS pull."
@@ -1231,7 +1727,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.texaspanhandletitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://www.texaspanhandletitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Dumas (Moore County). Sister: Dalhart Abstract Company, LP (Dallam + Hartley counties). Represents national and regional underwriters. Owner not publicly disclosed — flag SOS pull."
@@ -1255,7 +1756,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://westtexastitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "underwriters_appointed", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://westtexastitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "underwriters_appointed", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "'Smallest title company in town' — independently owned and managed since 1979 (47 yrs). Lubbock + South Plains. Owner names not publicly disclosed (staff includes Nancy@westtexastitle.com email)."
@@ -1269,7 +1775,12 @@
     "state": "TX",
     "zip": "79424",
     "license_number": null,
-    "underwriters_appointed": ["Agents National Title Insurance", "First American", "Stewart Title", "Old Republic Title"],
+    "underwriters_appointed": [
+      "Agents National Title Insurance",
+      "First American",
+      "Stewart Title",
+      "Old Republic Title"
+    ],
     "location_count": 1,
     "founded_year": null,
     "tlta_member": null,
@@ -1279,7 +1790,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://truelubbock.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "underwriters_appointed", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://truelubbock.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "underwriters_appointed", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Lubbock independent agent, 4 underwriters appointed. Founding year + ownership require SOS pull."
@@ -1299,12 +1815,25 @@
     "tlta_member": null,
     "website": "https://southlandtitle.net/",
     "phone": "+1 409 744 0727",
-    "owners_or_principals": ["Patrick F. Doyle (Founder & CEO)", "Shannon Doyle Osborn (President since Jan 2024, daughter of Patrick Doyle)"],
+    "owners_or_principals": [
+      "Patrick F. Doyle (Founder & CEO)",
+      "Shannon Doyle Osborn (President since Jan 2024, daughter of Patrick Doyle)"
+    ],
     "family_owned": true,
     "family_generations": 2,
     "data_sources": [
-      {"source": "company_home", "url": "https://southlandtitle.net/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "owners_or_principals", "address", "phone", "location_count"]},
-      {"source": "galveston_daily_news", "url": "https://www.galvnews.com/business/shannon-doyle-osborn-named-president-of-south-land-title/article_f741e22d-7bd3-55e6-a1c6-d03fad8ee26d.html", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["owner_succession_event_2024"]}
+      {
+        "source": "company_home",
+        "url": "https://southlandtitle.net/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "owners_or_principals", "address", "phone", "location_count"]
+      },
+      {
+        "source": "galveston_daily_news",
+        "url": "https://www.galvnews.com/business/shannon-doyle-osborn-named-president-of-south-land-title/article_f741e22d-7bd3-55e6-a1c6-d03fad8ee26d.html",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["owner_succession_event_2024"]
+      }
     ],
     "independence_verified": true,
     "affiliation_caveat": "PART OF TEXAN TITLE HOLDINGS family (subsidiary brand). Holding-co parent operates its own underwriter (Texan Title Insurance Company). Doyle family appears to be ownership of the holding co. — verify with SOS filings.",
@@ -1329,7 +1858,12 @@
     "family_owned": null,
     "family_generations": 1,
     "data_sources": [
-      {"source": "company_history", "url": "https://www.texaslonestartitle.com/Our-Company-History", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals"]}
+      {
+        "source": "company_history",
+        "url": "https://www.texaslonestartitle.com/Our-Company-History",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 2013 by Michael Neuman. Acquired Guaranty Title & Abstract Jim Wells/Duval (founded ~1902, 2016), McMullen County Title & Abstract (records back to 1830s, 2017), Nueces Title (2019), Colorado City Title + Mitchell County Title (2018). 50+ TX counties title evidence. Holding-style — but TX-independent and active acquirer."
@@ -1353,7 +1887,12 @@
     "family_owned": false,
     "family_generations": null,
     "data_sources": [
-      {"source": "search_engine_profile", "url": "https://texasranches.com/directory/nueces-title-company-division-of-texas-lone-star-title-llc-f9377270", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "owners_or_principals"]}
+      {
+        "source": "search_engine_profile",
+        "url": "https://texasranches.com/directory/nueces-title-company-division-of-texas-lone-star-title-llc-f9377270",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "owners_or_principals"]
+      }
     ],
     "independence_verified": true,
     "affiliation_caveat": "Subsidiary of Texas Lone Star Title (2019 acquisition). Not standalone — parent operates the entity.",
@@ -1374,11 +1913,19 @@
     "tlta_member": null,
     "website": "https://sanjacintotitle.com/",
     "phone": null,
-    "owners_or_principals": ["Jennifer Slusher (VP Escrow Officer)", "Channing Slusher (Attorney, Slusher & Associates)"],
+    "owners_or_principals": [
+      "Jennifer Slusher (VP Escrow Officer)",
+      "Channing Slusher (Attorney, Slusher & Associates)"
+    ],
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_locations_page", "url": "https://sanjacintotitle.com/our-locations/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "owners_or_principals", "address", "location_count"]}
+      {
+        "source": "company_locations_page",
+        "url": "https://sanjacintotitle.com/our-locations/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "owners_or_principals", "address", "location_count"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "South Texas title insurance + closings since 1955 (71 yrs). 14 offices: Corpus Christi (4), Port Lavaca, Rockport, Victoria, Brownsville, Harlingen, McAllen (2), Rio Grande City, Beeville, Plano (TexasFile data subsidiary). Slusher surname x2 suggests family operation; verify."
@@ -1402,7 +1949,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://gtstx.com/about/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year"]}
+      {
+        "source": "company_about_page",
+        "url": "https://gtstx.com/about/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Locally owned and independent. Goliad, Victoria, Calhoun counties. 100+ yrs combined team experience. Originally Bedgood Title 1986. Owners not on public site."
@@ -1416,7 +1968,11 @@
     "state": "TX",
     "zip": "77706",
     "license_number": null,
-    "underwriters_appointed": ["First American Title", "Old Republic National Title", "Title Resources Guaranty Company"],
+    "underwriters_appointed": [
+      "First American Title",
+      "Old Republic National Title",
+      "Title Resources Guaranty Company"
+    ],
     "location_count": 2,
     "founded_year": null,
     "tlta_member": null,
@@ -1426,7 +1982,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://www.texasregional.com/about.html", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "address", "phone", "underwriters_appointed"]}
+      {
+        "source": "company_about_page",
+        "url": "https://www.texasregional.com/about.html",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "address", "phone", "underwriters_appointed"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Self-described as 'only locally owned and operated title company in Jefferson County'. 2 offices Beaumont + Port Arthur. Senior management 125+ years combined experience, working together 30+ yrs. Owner names not on public site — flag SOS pull."
@@ -1446,11 +2007,18 @@
     "tlta_member": null,
     "website": "https://www.mcknighttitle.com/",
     "phone": "(817) 479-5881",
-    "owners_or_principals": ["Scott McKnight (Founder, CEO, Sole Owner; Fort Worth attorney since 1994)"],
+    "owners_or_principals": [
+      "Scott McKnight (Founder, CEO, Sole Owner; Fort Worth attorney since 1994)"
+    ],
     "family_owned": null,
     "family_generations": 1,
     "data_sources": [
-      {"source": "search_engine_profile", "url": "https://www.mcknighttitle.com/leadership", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "search_engine_profile",
+        "url": "https://www.mcknighttitle.com/leadership",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Fort Worth based, Granbury + Dallas-Fort Worth + San Antonio + Austin offices. Scott McKnight sole owner (FW attorney). Single-owner attorney structure = high coasting risk if older."
@@ -1470,11 +2038,20 @@
     "tlta_member": null,
     "website": "https://stonewalltc.com/",
     "phone": "+1-(682) 498-1700",
-    "owners_or_principals": ["Steve Reid (Owner, attorney since 1984)", "Pamla Reid (Managing Director, wife)", "Robbie Reid (co-founder)"],
+    "owners_or_principals": [
+      "Steve Reid (Owner, attorney since 1984)",
+      "Pamla Reid (Managing Director, wife)",
+      "Robbie Reid (co-founder)"
+    ],
     "family_owned": true,
     "family_generations": 1,
     "data_sources": [
-      {"source": "company_home", "url": "https://stonewalltc.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://stonewalltc.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals", "address", "phone"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned husband-wife operation. Steve Reid practiced real estate law in Granbury since 1984 (42 yrs in market). Founded title company 2007. Single Granbury office."
@@ -1498,7 +2075,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://www.amnat.com/title/title-services/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "address", "phone"]}
+      {
+        "source": "company_home",
+        "url": "https://www.amnat.com/title/title-services/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "address", "phone"]
+      }
     ],
     "independence_verified": false,
     "affiliation_caveat": "Subsidiary of American National Bank & Trust — bank-affiliated title agency, not strictly independent in the family/private sense. Listed with flag.",
@@ -1519,11 +2101,20 @@
     "tlta_member": null,
     "website": "https://www.protitletx.com/",
     "phone": null,
-    "owners_or_principals": ["Dan Foster (CEO, founder, attorney)", "Paige Foster (wife, joined full-time as escrow officer)", "Daniel Foster (son, accounting department)"],
+    "owners_or_principals": [
+      "Dan Foster (CEO, founder, attorney)",
+      "Paige Foster (wife, joined full-time as escrow officer)",
+      "Daniel Foster (son, accounting department)"
+    ],
     "family_owned": true,
     "family_generations": 2,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://www.protitletx.com/our-story/ownership", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "founded_year", "owners_or_principals"]}
+      {
+        "source": "company_about_page",
+        "url": "https://www.protitletx.com/our-story/ownership",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "founded_year", "owners_or_principals"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned. Dan Foster (CEO, attorney, 20+ yrs real estate law), Paige Foster (wife, fmr loan officer), son Daniel Foster (accounting). 30 offices DFW + Greater Houston + San Antonio + statewide. Younger company (2008) but established 2nd-gen with son involved."
@@ -1547,7 +2138,12 @@
     "family_owned": null,
     "family_generations": 1,
     "data_sources": [
-      {"source": "company_about_page", "url": "https://monarchtitleoftexas.com/about/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "owners_or_principals", "location_count"]}
+      {
+        "source": "company_about_page",
+        "url": "https://monarchtitleoftexas.com/about/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "owners_or_principals", "location_count"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Independent. Owned by Robert Ricketts. Katy + Fulshear + Houston + Cypress offices. Solo-founder structure."
@@ -1561,7 +2157,10 @@
     "state": "TX",
     "zip": "75043",
     "license_number": null,
-    "underwriters_appointed": ["WFG National Title Insurance Company", "First National Title Insurance"],
+    "underwriters_appointed": [
+      "WFG National Title Insurance Company",
+      "First National Title Insurance"
+    ],
     "location_count": 2,
     "founded_year": null,
     "tlta_member": null,
@@ -1571,7 +2170,12 @@
     "family_owned": null,
     "family_generations": null,
     "data_sources": [
-      {"source": "company_home", "url": "https://lonestarpremiertitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["legal_name", "underwriters_appointed", "address", "phone", "location_count"]}
+      {
+        "source": "company_home",
+        "url": "https://lonestarpremiertitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["legal_name", "underwriters_appointed", "address", "phone", "location_count"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Two DFW offices (Garland + Plano). Independent — appoints WFG + FNTIC. Owner not publicly disclosed. Smaller player — possibly newer entity."

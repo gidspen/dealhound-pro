@@ -43,8 +43,16 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/17408284127", "fetched_at": "2026-05-17T01:24:00Z", "field": "entity_status,sos_reg,registered_agent"},
-      {"url": "https://www.pec.coop", "fetched_at": "2026-05-16T00:00:00Z", "field": "service_area,founded_year_proxy"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/17408284127",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "entity_status,sos_reg,registered_agent"
+      },
+      {
+        "url": "https://www.pec.coop",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "service_area,founded_year_proxy"
+      }
     ],
     "data_completeness": 0.65,
     "notes": "Not an acquisition target — member-owned electric cooperative. Largest US distribution electric coop. Broadband subsidiary 'Pedernales Connect' is board-controlled. Listed for completeness but should score D_pass (cooperative governance hard gate). Cannot be acquired by ETA / search fund / individual sponsor.",
@@ -94,8 +102,16 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/17528714003", "fetched_at": "2026-05-17T01:24:00Z", "field": "entity_status,reg_agent_smallwood"},
-      {"url": "https://ucs.net", "fetched_at": "2026-05-16T00:00:00Z", "field": "subscriber_count,fiber_miles"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/17528714003",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "entity_status,reg_agent_smallwood"
+      },
+      {
+        "url": "https://ucs.net",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "subscriber_count,fiber_miles"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "Not an acquisition target — electric cooperative subsidiary. CEO Cameron Smallwood is professional executive, not founder/owner. Active and growing — but governed by member board. DROP for acquisition purposes.",
@@ -144,8 +160,16 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/14541464849", "fetched_at": "2026-05-17T01:24:00Z", "field": "amg_parent_entity_william_baker_como_wireless"},
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32018659758", "fetched_at": "2026-05-17T01:24:00Z", "field": "nextlink_wireless_old_entity_youngers_miller_jung"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/14541464849",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "amg_parent_entity_william_baker_como_wireless"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32018659758",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "nextlink_wireless_old_entity_youngers_miller_jung"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "Strategic acquirer, not a target. AMG Technology Investment Group is the parent; PE backing visible via Herndon VA executive presence (DC private capital corridor). William Baker (Hudson Oaks TX) is named founder. 100k+ subs across 8 states. DROP for ETA acquisition purposes — they buy you, you don't buy them.",
@@ -196,7 +220,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32056843041", "fetched_at": "2026-05-17T01:24:00Z", "field": "officers_giles_waldrip_brooks_trust"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32056843041",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "officers_giles_waldrip_brooks_trust"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Acquirer-style profile, not coaster. Founder Chadd Giles still active, multi-state expansion, PE-style member structure (Point Broad Band LLC, Brooks Exempt Family Trust). Too young as founder (~48) and too multi-state to be a near-term seller. C_watch at best.",
@@ -249,8 +277,16 @@
       "verified_via": "skynetwisp.com homepage + comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32066404495", "fetched_at": "2026-05-17T01:24:00Z", "field": "entity_owner_batavia_cedar_park"},
-      {"url": "https://www.skynetwisp.com/", "fetched_at": "2026-05-17T01:24:00Z", "field": "locally_owned_branding"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32066404495",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "entity_owner_batavia_cedar_park"
+      },
+      {
+        "url": "https://www.skynetwisp.com/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "locally_owned_branding"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Solo-owner WISP, ~20yr tenure, exurban Houston footprint. Owner Mehmood Batavia age proxy ~55. Strong B_forward / potential A_acquire profile pending owner-age verification via LinkedIn. Worth deep-dive — Indian-/Asian-surnamed solo immigrant founder is a common silent-coast pattern in TX rural WISP space."
@@ -302,8 +338,16 @@
       "verified_via": "cgcomm.biz + comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32018080930", "fetched_at": "2026-05-17T01:24:00Z", "field": "officers_grohman_west_smithville"},
-      {"url": "https://cgcomm.biz/", "fetched_at": "2026-05-17T01:24:00Z", "field": "since_2004_locally_owned"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32018080930",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "officers_grohman_west_smithville"
+      },
+      {
+        "url": "https://cgcomm.biz/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "since_2004_locally_owned"
+      }
     ],
     "data_completeness": 0.78,
     "notes": "Solo/partnership founder. Owner Alton Grohman ~62 proxy. Smithville TX exurban Austin (Bastrop County) — strong growth corridor. 2.5k subs is SBA-size. Strong B_forward candidate, possibly A pending owner age verification."
@@ -351,8 +395,16 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/17430052765", "fetched_at": "2026-05-17T01:24:00Z", "field": "sole_member_vtx_communications_llc"},
-      {"url": "https://beecreek.net/about/", "fetched_at": "2026-05-17T01:24:00Z", "field": "since_2001_locally_owned_legacy_branding"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/17430052765",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "sole_member_vtx_communications_llc"
+      },
+      {
+        "url": "https://beecreek.net/about/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "since_2001_locally_owned_legacy_branding"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "DROP — already acquired by VTX1 Companies in 2023. Comptroller filing confirms VTX Communications LLC is sole member. Not available for independent acquisition.",
@@ -402,8 +454,16 @@
       "verified_via": "comptroller + nexstream.net live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32104995603", "fetched_at": "2026-05-17T01:24:00Z", "field": "nexstream_aos_llc_2026_reform"},
-      {"url": "https://nexstream.net", "fetched_at": "2026-05-17T01:24:00Z", "field": "no_team_info"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32104995603",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "nexstream_aos_llc_2026_reform"
+      },
+      {
+        "url": "https://nexstream.net",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_team_info"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "Low confidence on entity continuity. March 2026 Nexstream AOS LLC reformation is suspicious — could be sale prep, restructure, or succession event. Hill Country premium market with Boot Ranch+Boerne service area is attractive. Worth manual research before scoring above C_watch."
@@ -455,7 +515,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/12027633978", "fetched_at": "2026-05-17T01:24:00Z", "field": "lp_structure_windblown_internet_gp"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/12027633978",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "lp_structure_windblown_internet_gp"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "LP structure with Windblown Internet LLC as GP suggests partner/estate planning. Solid 20yr operating record in Central TX. B_forward candidate pending owner identification via Windblown Internet LLC officer search."
@@ -505,7 +569,11 @@
       "verified_via": "westernbroadband.com live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://www.westernbroadband.com/about/", "fetched_at": "2026-05-17T01:24:00Z", "field": "since_1996_since_2001_tenure_proxy"}
+      {
+        "url": "https://www.westernbroadband.com/about/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "since_1996_since_2001_tenure_proxy"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Low confidence — Comptroller search returned no direct match for Western Broadband variants. Operator may be DBA, sole prop, or under unrelated legal name. Williamson County exurban Austin growth corridor. Needs manual entity research before scoring above C_watch."
@@ -557,7 +625,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32064893467", "fetched_at": "2026-05-17T01:24:00Z", "field": "sole_member_christopher_brooks_waco"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32064893467",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "sole_member_christopher_brooks_waco"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "Solo founder but too young (~42 proxy) for natural exit; 8-year LLC tenure too short. C_watch tier — interesting structure (single-owner clean LLC) but base-rate timing wrong."
@@ -607,7 +679,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32075133044", "fetched_at": "2026-05-17T01:24:00Z", "field": "managing_members_berghoff_stone"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32075133044",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "managing_members_berghoff_stone"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Active builder profile, partnership structure with CO-based investor. Spine says 2015 founding but LLC formed 2020 — likely capex/financing event. Too young as entity for natural-exit window. D_pass on years_in_business gate (<5yr) or C_watch on Coryell County rural play."
@@ -658,7 +734,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32061663228", "fetched_at": "2026-05-17T01:24:00Z", "field": "husband_wife_managers_wills_bridgeport"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32061663228",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "husband_wife_managers_wills_bridgeport"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Husband-wife LLC, Bridgeport TX (Wise County DFW exurb). Founders ~48 proxy too young for immediate exit but mid-career fatigue case. Strong B_forward candidate; deep-dive on Wills LinkedIn to refine age."
@@ -711,8 +791,16 @@
       "verified_via": "spine_preseem_road_trip_only"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Cirra%20Networks", "fetched_at": "2026-05-17T01:24:00Z", "field": "no_entity_match"},
-      {"url": "http://cirranet.net", "fetched_at": "2026-05-17T01:24:00Z", "field": "intermittent_site"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Cirra%20Networks",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_entity_match"
+      },
+      {
+        "url": "http://cirranet.net",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "intermittent_site"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "Possibly distressed — intermittent site, no franchise tax record, DFW metro competition pressure. Could be informal sole-prop or already-wound-down operation per Preseem road trip date (2020) being last known reference. Likely D_pass on confidence + distress."
@@ -766,7 +854,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32054617603", "fetched_at": "2026-05-17T01:24:00Z", "field": "franchise_tax_ended_benson_director"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32054617603",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "franchise_tax_ended_benson_director"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "Distressed entity — original LLC franchise tax ended 2015, no clear successor. Either operating as sole-prop with Spencer Benson or has been quietly wound down. D_pass on distress hard gate."
@@ -819,7 +911,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32056972360", "fetched_at": "2026-05-17T01:24:00Z", "field": "entity_franchise_ended_not_registered"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32056972360",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "entity_franchise_ended_not_registered"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Distressed — D_pass hard gate. Comptroller entity not in good standing. Site still up but corporate hygiene broken. Avoid for acquisition."
@@ -870,8 +966,16 @@
       "verified_via": "comptroller + plainsinternet.com live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32057096862", "fetched_at": "2026-05-17T01:24:00Z", "field": "sole_president_joseph_monroe"},
-      {"url": "https://www.plainsinternet.com/", "fetched_at": "2026-05-17T01:24:00Z", "field": "copyright_2026_b2b_focus"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32057096862",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "sole_president_joseph_monroe"
+      },
+      {
+        "url": "https://www.plainsinternet.com/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "copyright_2026_b2b_focus"
+      }
     ],
     "data_completeness": 0.78,
     "notes": "Solo founder, 10yr LLC + earlier sole-prop. Joseph Monroe estimated ~48. Panhandle market with limited fiber competition. B_forward candidate; deep-dive needed to refine owner age (likely too young for A-tier base-rate timing)."
@@ -923,7 +1027,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/14215751554", "fetched_at": "2026-05-17T01:24:00Z", "field": "husband_wife_isbell_amarillo_2003"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/14215751554",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "husband_wife_isbell_amarillo_2003"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "Husband-wife founder pair, 22yr tenure, ~65 age proxy — A-tier-eligible base rate. Operating entity ambiguity (old LLC franchise-ended) requires deep-dive to find current legal entity. CAUTION: Adtran fiber transition press 2022 may indicate growth-mode owner not exit-mode. Worth manual research before scoring A."
@@ -975,7 +1083,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32039200269", "fetched_at": "2026-05-17T01:24:00Z", "field": "todd_still_gm_marble_falls"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32039200269",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "todd_still_gm_marble_falls"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Solo GM/owner structure, 26yr brand tenure (Comptroller Inc 2009 + pre-incorporation operating), ~58 age proxy. Marble Falls Highland Lakes premium recreation market. Strong B_forward / A_acquire candidate pending LinkedIn-verified age. Deep-dive priority."
@@ -1026,7 +1138,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/17430642912", "fetched_at": "2026-05-17T01:24:00Z", "field": "sole_president_scott_gibbs_san_angelo"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/17430642912",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "sole_president_scott_gibbs_san_angelo"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Solo founder, ~60 age proxy, 23yr brand tenure. Multi-market footprint (good multiple-expansion potential) but also indicates diversification — could be growth-mode or stretched solo operator. B_forward / A_acquire candidate pending LinkedIn check."
@@ -1077,7 +1193,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32065330915", "fetched_at": "2026-05-17T01:24:00Z", "field": "joint_venture_mi_parent_local_management"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32065330915",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "joint_venture_mi_parent_local_management"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Joint-venture structure with MI investor — not a classic solo-coast target. 8 years too young for natural-exit base rate. C_watch tier. The MI parent might be the actual seller if seeking exit from TX market."
@@ -1129,7 +1249,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/10207125500", "fetched_at": "2026-05-17T01:24:00Z", "field": "perry_president_temple_treasurer"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/10207125500",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "perry_president_temple_treasurer"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Dual-partner Inc, 22yr tenure, both partners likely ~60. East TX rural Van Zandt+Smith County — Eastex Coop overlap territory but FTTH not deployed everywhere. Strong B_forward candidate with potential succession driver (partner age, partnership-dissolution dynamics)."
@@ -1184,8 +1308,16 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/12025315982", "fetched_at": "2026-05-17T01:24:00Z", "field": "family_directors_gleason_lively_franchise_ended"},
-      {"url": "https://etbroadband.net/", "fetched_at": "2026-05-17T01:24:00Z", "field": "locally_owned_branding"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/12025315982",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "family_directors_gleason_lively_franchise_ended"
+      },
+      {
+        "url": "https://etbroadband.net/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "locally_owned_branding"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "Distressed entity status (franchise tax involuntarily ended). Family-and-partner structure suggests succession-eligible profile, but legal-entity hygiene problems require resolution before acquisition. D_pass on distress gate; or B_forward if entity status is cleaned up and they confirm intent to sell."
@@ -1240,8 +1372,16 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32075348154", "fetched_at": "2026-05-17T01:24:00Z", "field": "elektrafi_llc_forfeited_moonshot_group"},
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32086341842", "fetched_at": "2026-05-17T01:24:00Z", "field": "elektrafi_se_tx_franchise_ended"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32075348154",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "elektrafi_llc_forfeited_moonshot_group"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32086341842",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "elektrafi_se_tx_franchise_ended"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "Distressed — both TX LLCs out of good standing. PE-managed (Moonshot Group Denver CO). May be in active wind-down or restructure. D_pass on distress gate."
@@ -1292,7 +1432,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32100904112", "fetched_at": "2026-05-17T01:24:00Z", "field": "freedomwisp_llc_2025_reform_mostrom_agent"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32100904112",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "freedomwisp_llc_2025_reform_mostrom_agent"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Recent entity reformation makes timing suspicious — could be capital raise prep, succession event, or pre-sale grooming. Brand tenure ~8yr but legal entity <1yr. Worth manual outreach to Eric Mostrom — could be active seller. C_watch tier pending clarification."
@@ -1344,7 +1488,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32061134311", "fetched_at": "2026-05-17T01:24:00Z", "field": "celelli_family_3gen_jewett_thornton_bryan"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32061134311",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "celelli_family_3gen_jewett_thornton_bryan"
+      }
     ],
     "data_completeness": 0.78,
     "notes": "Three-generation family WISP (Celelli family) — succession structure already partially built. Parents ~58 proxy; Ren Celelli in Bryan TX is likely the successor. Less attractive as ETA acquisition because family-succession likely. B_forward with successor-likely caveat."
@@ -1397,8 +1545,16 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32056376513", "fetched_at": "2026-05-17T01:24:00Z", "field": "synlar_owner_santiago_fernandez_de_larrea_franchise_ended"},
-      {"url": "https://www.sinlarbroadband.com/", "fetched_at": "2026-05-17T01:24:00Z", "field": "dns_error"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32056376513",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "synlar_owner_santiago_fernandez_de_larrea_franchise_ended"
+      },
+      {
+        "url": "https://www.sinlarbroadband.com/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "dns_error"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Possibly distressed — DNS failure on site + related entity franchise tax ended. Spine references BBB McAllen as a source; needs deeper Comptroller probe under operator's individual name and additional surname variants. D_pass on distress gate."
@@ -1449,8 +1605,16 @@
       "verified_via": "twin.net_403_comptroller_no_match_2026-05-17"
     },
     "data_sources": [
-      {"url": "https://www.twin.net/", "fetched_at": "2026-05-17T01:24:00Z", "field": "403_anti_bot"},
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Twin%20Communications", "fetched_at": "2026-05-17T01:24:00Z", "field": "no_entity_match"}
+      {
+        "url": "https://www.twin.net/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "403_anti_bot"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Twin%20Communications",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_entity_match"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Old (27yr) RGV WISP with thin corporate trail. Sole-prop, DBA, or alternate legal name. C_watch / B_forward IF entity identification can be completed. Worth manual research given long tenure profile."
@@ -1503,9 +1667,21 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/18105921128", "fetched_at": "2026-05-17T01:24:00Z", "field": "oneal_founders_2003"},
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32064616900", "fetched_at": "2026-05-17T01:24:00Z", "field": "hc_wireless_llc_mccullough_2017"},
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32068699712", "fetched_at": "2026-05-17T01:24:00Z", "field": "hill_country_towers_inc_mccullough_neelon"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/18105921128",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "oneal_founders_2003"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32064616900",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "hc_wireless_llc_mccullough_2017"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32068699712",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "hill_country_towers_inc_mccullough_neelon"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "Complex multi-entity structure with 3+ TX entities (Hill Country Wireless Corp 1994 ended, Hill Country Wireless & Satellites Inc 2003 active, HC Wireless LLC 2017 active, Hill Country Towers Inc 2018 active). Suggests either partial ownership transition O'Neals → McCulloughs already in progress, OR informal partition between original wireless service and current tower-asset business. Worth deep-dive interviews. B_forward / A_acquire candidate — premium Hill Country market, complex structure may indicate active negotiation/transition phase."
@@ -1557,7 +1733,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/12006032689", "fetched_at": "2026-05-17T01:24:00Z", "field": "mccurdy_husband_wife_bulverde_2003"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/12006032689",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "mccurdy_husband_wife_bulverde_2003"
+      }
     ],
     "data_completeness": 0.8,
     "notes": "Husband-wife founders, 22yr tenure, ~67 age proxy, tiny scale (800 subs) — classic 'silently coasting' A-tier profile but micro-size limits SBA financing. Site DNS issue is a tell of tiny operator. B_forward at SBA-deal scale; A_acquire only if owner age confirms 65+. Worth manual contact."
@@ -1611,7 +1791,11 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax/32026808421", "fetched_at": "2026-05-17T01:24:00Z", "field": "maverick_franchise_ended_kandimalla"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32026808421",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "maverick_franchise_ended_kandimalla"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Distressed — entity inactive, site DNS broken, tiny operation. D_pass on distress gate. Either truly wound down or operating under unidentified successor entity."
@@ -1660,8 +1844,16 @@
       "verified_via": "reachbroadband.net live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Reach%20Broadband", "fetched_at": "2026-05-17T01:24:00Z", "field": "no_direct_match"},
-      {"url": "https://www.reachbroadband.net/", "fetched_at": "2026-05-17T01:24:00Z", "field": "no_team_content"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Reach%20Broadband",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_direct_match"
+      },
+      {
+        "url": "https://www.reachbroadband.net/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_team_content"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Likely not a solo-coast target — cable plant ownership + 8k subs suggests institutional operator. Could be Vyve Broadband subsidiary (excluded major) or PE-backed regional cable operator. Needs deeper entity research via FCC URS/ULS records and DBA filings before scoring. Provisional C_watch."
@@ -1712,8 +1904,16 @@
       "verified_via": "comptroller live-fetch 2026-05-17"
     },
     "data_sources": [
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Texxa", "fetched_at": "2026-05-17T01:24:00Z", "field": "no_entity_match"},
-      {"url": "https://texxa.com/", "fetched_at": "2026-05-17T01:24:00Z", "field": "js_heavy_site_no_team_content"}
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Texxa",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_entity_match"
+      },
+      {
+        "url": "https://texxa.com/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "js_heavy_site_no_team_content"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "Tiny solo Hill Country WISP with thin paper trail. Cannot verify entity status. Provisional C_watch pending manual research."
@@ -1766,8 +1966,16 @@
       "verified_via": "txwinet_ssl_fail_2026-05-17"
     },
     "data_sources": [
-      {"url": "https://txwinet.com/", "fetched_at": "2026-05-17T01:24:00Z", "field": "ssl_handshake_failure"},
-      {"url": "https://comptroller.texas.gov/data-search/franchise-tax?name=TxWiNet", "fetched_at": "2026-05-17T01:24:00Z", "field": "no_entity_match"}
+      {
+        "url": "https://txwinet.com/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "ssl_handshake_failure"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax?name=TxWiNet",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_entity_match"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Distressed — SSL cert broken, no Comptroller record, heavily contested Austin metro. D_pass on distress + low confidence. Possibly already wound down."

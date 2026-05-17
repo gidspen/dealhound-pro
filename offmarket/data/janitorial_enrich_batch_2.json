@@ -628,9 +628,7 @@
       "family_successor_present": null,
       "verified_via": "live-fetch 2026-05-16 — family-owned & operated, no second-gen named"
     },
-    "distress_signals": [
-      "9-year-stale website (2017 copyright) signals operator disengagement"
-    ],
+    "distress_signals": ["9-year-stale website (2017 copyright) signals operator disengagement"],
     "is_distressed": false,
     "signals_summary": "TOP-TIER A SUCCESSION CANDIDATE. Barry Burlison founded 1984 = 42-yr operator, estimated age 67-72. 9-year-stale website = classic disengagement signal. Multi-state biohazard/medical/shredding contract base. Strong fit for ETA/independent sponsor pursuit. Verify Barry still active via Comptroller registered agent + LinkedIn.",
     "data_sources": [
@@ -973,9 +971,7 @@
       "family_successor_present": null,
       "verified_via": "live-fetch 2026-05-16"
     },
-    "distress_signals": [
-      "5-year-stale website (2021 copyright) signals operator disengagement"
-    ],
+    "distress_signals": ["5-year-stale website (2021 copyright) signals operator disengagement"],
     "is_distressed": false,
     "signals_summary": "STRONG coasting signal via 5-year-stale website. Need Comptroller lookup to confirm vintage. If 10+yr formation, A-tier.",
     "data_sources": [
@@ -1202,9 +1198,7 @@
       "family_successor_present": null,
       "verified_via": "live-fetch FAILED 2026-05-16"
     },
-    "distress_signals": [
-      "Site unreachable (ECONNREFUSED) — may indicate domain/hosting lapse"
-    ],
+    "distress_signals": ["Site unreachable (ECONNREFUSED) — may indicate domain/hosting lapse"],
     "is_distressed": true,
     "signals_summary": "CANNOT VERIFY — site unreachable. Drop from A-tier per Layer 2 §2 (must successfully fetch live site OR drop). Possible operator distress signal (hosting lapse).",
     "data_sources": [
@@ -1919,9 +1913,7 @@
       "family_successor_present": null,
       "verified_via": "live-fetch FAILED 2026-05-16"
     },
-    "distress_signals": [
-      "Site 503 + no phone in spine = real distress signal"
-    ],
+    "distress_signals": ["Site 503 + no phone in spine = real distress signal"],
     "is_distressed": true,
     "signals_summary": "CANNOT VERIFY — site 503 + no phone. Drop from A-tier per Layer 2 §2. If retry succeeds, can reclassify. Distress signal active.",
     "data_sources": [
@@ -2046,9 +2038,7 @@
       "family_successor_present": null,
       "verified_via": "live-fetch 2026-05-16"
     },
-    "distress_signals": [
-      "5-year-stale website signals operator disengagement"
-    ],
+    "distress_signals": ["5-year-stale website signals operator disengagement"],
     "is_distressed": false,
     "signals_summary": "LOW-TIER candidate. Residential-leaning, single-metro, stale website, no commercial specialization. Drop unless Comptroller surfaces 15+yr formation date and meaningful commercial backbone.",
     "data_sources": [
@@ -2580,9 +2570,7 @@
       "family_successor_present": null,
       "verified_via": "live-fetch FAILED 2026-05-16"
     },
-    "distress_signals": [
-      "Site 404 on multiple paths — operator distress / website abandonment"
-    ],
+    "distress_signals": ["Site 404 on multiple paths — operator distress / website abandonment"],
     "is_distressed": true,
     "signals_summary": "DROP per Layer 2 §2. Live fetch failed — Tammy Gracey is search-snippet evidence only. Cannot carry A-tier without successful live fetch.",
     "data_sources": [
@@ -2650,7 +2638,14 @@
       {
         "url": "https://www.redbirdcleaning.com/",
         "fetched_at": "2026-05-16T12:05:00Z",
-        "fields": ["year_established", "owner_name", "MBE", "government_contracts", "4_state", "employee_portal"]
+        "fields": [
+          "year_established",
+          "owner_name",
+          "MBE",
+          "government_contracts",
+          "4_state",
+          "employee_portal"
+        ]
       }
     ],
     "data_completeness": 0.8,
@@ -3068,7 +3063,12 @@
       {
         "url": "https://txcleaningserv.com/",
         "fetched_at": "2026-05-16T12:05:00Z",
-        "fields": ["year_established", "enterprise_clients", "online_booking", "virtual_office_signal"]
+        "fields": [
+          "year_established",
+          "enterprise_clients",
+          "online_booking",
+          "virtual_office_signal"
+        ]
       }
     ],
     "data_completeness": 0.6,

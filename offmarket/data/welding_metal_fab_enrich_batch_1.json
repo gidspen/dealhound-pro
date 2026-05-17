@@ -30,8 +30,16 @@
       "verified_via": "websearch 2026-05-16 — 4 generations of Walkups currently active in company"
     },
     "data_sources": [
-      {"url": "https://www.walkupco.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,generations,certifications,equipment"},
-      {"url": "https://www.walkupco.com/history/", "fetched_at": "2026-05-16T20:45:00Z", "field": "founder,family_history,facility_size"}
+      {
+        "url": "https://www.walkupco.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,generations,certifications,equipment"
+      },
+      {
+        "url": "https://www.walkupco.com/history/",
+        "fetched_at": "2026-05-16T20:45:00Z",
+        "field": "founder,family_history,facility_size"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "B-tier base-rate candidate. 82-year run, 4-gen family business with 4th gen now active (active succession). 88K sq ft + 40 employees + ISO 9001 puts revenue likely $15-30M. Multi-gen succession in progress suggests operator NOT yet at exit window — 3rd gen still leading, 4th gen learning. Not a classic 'coasting solo owner' but worth monitoring as 3rd gen ages out."
@@ -69,7 +77,11 @@
       "verified_via": "live-fetch of /about-us 2026-05-16 — confirms 3 generations (Les→Larry→L.V.)"
     },
     "data_sources": [
-      {"url": "https://www.cameofab.com/about-us", "fetched_at": "2026-05-16T20:30:00Z", "field": "owner_family,year_founded,generations,equipment,specialty"}
+      {
+        "url": "https://www.cameofab.com/about-us",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owner_family,year_founded,generations,equipment,specialty"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "Strong A-tier candidate. 3-gen family business, 2nd gen Larry Coleman running 35+ years (now likely 65-70), 3rd gen L.V. Coleman is VP since 2004 but ownership not yet transferred. Petrochem specialty is defensible but commoditized. Owner age suggests 12-36 month sale window. RECOMMEND PRIORITIZE — well-documented family succession path with founder generation ageing out."
@@ -107,8 +119,16 @@
       "verified_via": "live-fetch of homepage 2026-05-16 — Emmott family ownership noted but no named individual; needs entity-search"
     },
     "data_sources": [
-      {"url": "https://www.patinametals.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,family,specialty,customer_types"},
-      {"url": "https://www.patinametals.com/about-us/", "fetched_at": "2026-05-16T20:45:00Z", "field": "family_status"}
+      {
+        "url": "https://www.patinametals.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,family,specialty,customer_types"
+      },
+      {
+        "url": "https://www.patinametals.com/about-us/",
+        "fetched_at": "2026-05-16T20:45:00Z",
+        "field": "family_status"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "B-tier candidate. 69-year ornamental iron specialist in Houston with Emmott family identity but no named successor on site. Architectural metal is a defensible niche but the absence of a named 2nd/3rd gen suggests classic 'coasting solo owner' profile. PRIORITIZE for entity-search next pass to identify named Emmott principal."
@@ -145,7 +165,11 @@
       "verified_via": "websearch 2026-05-16 — founder Ron Ober + sons Mike, Ryan, Eric"
     },
     "data_sources": [
-      {"url": "https://oberandsons.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,family_status,certifications"}
+      {
+        "url": "https://oberandsons.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,family_status,certifications"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "A-TIER. 40 years, founder Ron Ober still active, 3 sons (Mike, Ryan, Eric) operating. AWS + City of Houston certifications are commodity-grade. Founder age 65-80 puts him in the classic 12-36 month succession window. 3-son bench is strong but creates 'diffuse ownership' dynamic that often pushes sales. PRIORITIZE."
@@ -181,7 +205,11 @@
       "verified_via": "live-fetch of homepage 2026-05-16 — John King is solo founder, no named family successor"
     },
     "data_sources": [
-      {"url": "https://jkwelding.net/", "fetched_at": "2026-05-16T20:30:00Z", "field": "owner,equipment,specialty,social_media"}
+      {
+        "url": "https://jkwelding.net/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owner,equipment,specialty,social_media"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "C-tier — younger, modern, actively-promoted shop. John King (founder, age ~55-60) is not yet at typical succession-age trigger. Modern equipment + active social = NOT a classic coaster. Watch for owner-age progression in 5-10 years. Skip for current sourcing pass."
@@ -220,7 +248,11 @@
       "verified_via": "live-fetch of /about 2026-05-16 — only Pablo + Martha named"
     },
     "data_sources": [
-      {"url": "https://www.pinnica.net/about", "fetched_at": "2026-05-16T20:30:00Z", "field": "founders,year,specialty"}
+      {
+        "url": "https://www.pinnica.net/about",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "founders,year,specialty"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "A-TIER. Husband-wife team (Pablo + Martha Pineiro) operating 36 years; both likely in 60s by now. No named successor = strong coaster profile. Crane boom + structural niche = defensible but specialized. Strong candidate for 12-36 month sale window. PRIORITIZE."
@@ -260,7 +292,11 @@
       "verified_via": "live-fetch of homepage 2026-05-16 — family-owned per spine, no named successor"
     },
     "data_sources": [
-      {"url": "https://www.bhswelding.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,specialty,services"}
+      {
+        "url": "https://www.bhswelding.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,specialty,services"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "B-tier. 30-year shop with all classic small-shop indicators (Gmail address, cash payments, no name disclosure, no software/cert stack). Family-owned per spine notes — needs entity-search to identify principal. Likely undermarketed, small revenue."
@@ -298,7 +334,11 @@
       "verified_via": "live-fetch of homepage 2026-05-16 — family-owned per spine, David Currie is named principal"
     },
     "data_sources": [
-      {"url": "https://allweldhouston.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "owner,specialty"}
+      {
+        "url": "https://allweldhouston.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owner,specialty"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "C/D-tier. Too small (8 employees), founding year unverified, owner age unverified, no certifications. Owner David Currie identified via LinkedIn but no age signal. Below target size band (5-50 with proven revenue base). Skip for current sourcing pass."
@@ -339,8 +379,16 @@
       "verified_via": "live-fetch of /about 2026-05-16 — minimal disclosure; needs entity-search"
     },
     "data_sources": [
-      {"url": "https://www.channelsheetmetal.net/about", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,specialty,materials"},
-      {"url": "https://www.facebook.com/hastelloy1966/", "fetched_at": "2026-05-16T20:45:00Z", "field": "facebook_handle"}
+      {
+        "url": "https://www.channelsheetmetal.net/about",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,specialty,materials"
+      },
+      {
+        "url": "https://www.facebook.com/hastelloy1966/",
+        "fetched_at": "2026-05-16T20:45:00Z",
+        "field": "facebook_handle"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "STRONG A-tier candidate. 79-year-old Hastelloy/Inconel specialist on 21 acres in La Porte (Houston Ship Channel) with NO online owner disclosure = classic coasting solo-owner pattern. Owns substantial real estate. Exotic-alloy niche is genuinely defensible. PRIORITIZE for entity-search to identify principal in next pass."
@@ -379,8 +427,16 @@
       "verified_via": "websearch 2026-05-16 — Kelly D. Bise is sole named principal"
     },
     "data_sources": [
-      {"url": "https://bisewelding.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,certifications,equipment,specialty"},
-      {"url": "https://www.linkedin.com/in/kelly-bise-4a2615158/", "fetched_at": "2026-05-16T20:45:00Z", "field": "owner_president"}
+      {
+        "url": "https://bisewelding.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,certifications,equipment,specialty"
+      },
+      {
+        "url": "https://www.linkedin.com/in/kelly-bise-4a2615158/",
+        "fetched_at": "2026-05-16T20:45:00Z",
+        "field": "owner_president"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "STRONG A-TIER. 41-year ASME pressure-cylinder specialist run by Kelly D. Bise (likely 55-65). Defensible ASME U/U2/R/S certifications with classic coasting patterns: solo named principal, aging plate rolling equipment, no software stack, no social. PRIORITIZE — high-value defensible niche + sole owner in succession-age window."
@@ -417,7 +473,11 @@
       "verified_via": "websearch 2026-05-16 — Daniel Morua is owner"
     },
     "data_sources": [
-      {"url": "https://falconsteelfab.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,certifications,specialty"}
+      {
+        "url": "https://falconsteelfab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,certifications,specialty"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "C-tier. Too young for typical owner-age-driven succession. Modern facility, active digital presence. Owner Daniel Morua identified. Skip for current sourcing pass — re-screen in 5-10 years."
@@ -456,8 +516,16 @@
       "verified_via": "websearch 2026-05-16 — 'family-owned' confirmed, no named principal"
     },
     "data_sources": [
-      {"url": "https://www.westfieldmachine.com/large-component-structural-fabrication-services/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,certifications,specialty,software"},
-      {"url": "https://www.westfieldmachine.com/about-westfield-machine/", "fetched_at": "2026-05-16T20:45:00Z", "field": "year_founded_corrected,family_owned"}
+      {
+        "url": "https://www.westfieldmachine.com/large-component-structural-fabrication-services/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,certifications,specialty,software"
+      },
+      {
+        "url": "https://www.westfieldmachine.com/about-westfield-machine/",
+        "fetched_at": "2026-05-16T20:45:00Z",
+        "field": "year_founded_corrected,family_owned"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "STRONG A-TIER. 44-year (corrected) gas-turbine + aerospace specialist with API Q1 + ISO 9001 + Mil-Spec certs and named SolidWorks/AutoCAD/GibbsCAM workflow. Not a classic coaster (digital workflow present) BUT family-owned without named successor + 44-year tenure suggests owner likely 65+. Strong defensible niche. PRIORITIZE for principal identification."
@@ -497,8 +565,16 @@
       "verified_via": "websearch 2026-05-16 — Bedell-led ownership team purchased 2004, not family-owned"
     },
     "data_sources": [
-      {"url": "https://www.mobilsteel.com/about-us/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,certifications,specialty,software"},
-      {"url": "https://www.mobilsteel.com/mobil-steel-day-declared-to-honor-companys-40th-anniversary/", "fetched_at": "2026-05-16T20:50:00Z", "field": "founding_history,ownership_change"}
+      {
+        "url": "https://www.mobilsteel.com/about-us/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,certifications,specialty,software"
+      },
+      {
+        "url": "https://www.mobilsteel.com/mobil-steel-day-declared-to-honor-companys-40th-anniversary/",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "founding_history,ownership_change"
+      }
     ],
     "data_completeness": 0.8,
     "notes": "RECONSIDER FOR INCLUSION. Mobil Steel was sold in 2004 to current Bedell-led ownership team. This is NOT a 'family-owned coasting solo owner' profile — it is a professionally-managed CEO-led mid-cap fabricator. Bedell is active in industry (ABC Houston, Texas A&M Kingsville board, lobbying activities) = sophisticated operator. Likely not a willing seller in standard distress/age window. DOWNGRADE to D-tier — does not fit acquisition thesis."
@@ -536,7 +612,11 @@
       "verified_via": "websearch 2026-05-16 — 1988 incorporation, family-owned, no named principal"
     },
     "data_sources": [
-      {"url": "https://www.summitsteelfab.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "specialty,family_status"}
+      {
+        "url": "https://www.summitsteelfab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,family_status"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "B-tier (upgraded). 38 years operating (corrected from spine's 26), family-owned with no named principal — classic coasting pattern. Mid-tenure, small shop. Needs entity-search for principal name."
@@ -575,7 +655,11 @@
       "verified_via": "websearch 2026-05-16 — Miguel Ortega owner"
     },
     "data_sources": [
-      {"url": "https://www.mmsweldfab.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,specialty"}
+      {
+        "url": "https://www.mmsweldfab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,specialty"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "B-tier. 29-year PEMB erector run by Miguel Ortega with inactive social channels (classic coasting tell), no named certifications, no software stack. Solo named principal — strong coaster profile. Needs age verification but moderate-confidence A-tier candidate if Ortega 60+."
@@ -614,7 +698,11 @@
       "verified_via": "live-fetch of homepage 2026-05-16 + websearch — no public principal disclosure"
     },
     "data_sources": [
-      {"url": "https://www.southtexasfabmw.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "specialty,services"}
+      {
+        "url": "https://www.southtexasfabmw.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,services"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "D-tier. Insufficient data. Founding year unknown, owners unknown, family status unknown. Below research-worthy threshold without entity-search depth. De-prioritize."
@@ -648,7 +736,11 @@
       "verified_via": "live-fetch 2026-05-16 — no public principal disclosure"
     },
     "data_sources": [
-      {"url": "https://www.jt-fabrication.com/oilfield-metal-fabrication", "fetched_at": "2026-05-16T20:30:00Z", "field": "specialty,services"}
+      {
+        "url": "https://www.jt-fabrication.com/oilfield-metal-fabrication",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,services"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "D-tier. Too small, too little disclosure. Likely owner-welder operation. Note that spine flagged JT-Fabrication as oilfield-only (NAICS 213112) — actually mixed industrial per JT site. Skip."
@@ -688,7 +780,11 @@
       "verified_via": "websearch 2026-05-16 — Todd Kieschnick owner/president"
     },
     "data_sources": [
-      {"url": "https://kieschnickind.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,family,specialty"}
+      {
+        "url": "https://kieschnickind.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,family,specialty"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "B-tier. 25-year Beaumont fabricator run by Todd Kieschnick with SBC Global legacy email = classic coasting solo-owner pattern. No certifications, no software, single named principal. Beaumont I-10 corridor is a STRONG petrochem geography. Watch for owner-age progression."
@@ -726,7 +822,11 @@
       "verified_via": "websearch 2026-05-16 — Ryan Merendino CEO, founded 2012"
     },
     "data_sources": [
-      {"url": "https://labellecofab.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "specialty,facility"}
+      {
+        "url": "https://labellecofab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,facility"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "EXCLUDE / D-TIER. Founded 2012 by Ryan Merendino — only 14 years old, professionally CEO-led, 190K sq ft total implies likely >$50M revenue. Does not match 'coasting solo owner' thesis. EXCLUDE."
@@ -763,7 +863,11 @@
       "verified_via": "websearch 2026-05-16 — Bo Jack Davis email associated, no formal title confirmed"
     },
     "data_sources": [
-      {"url": "https://accurateindustriesinc.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "specialty,facility,family_status"}
+      {
+        "url": "https://accurateindustriesinc.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,facility,family_status"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "C-tier. Founded 2012 (14 years) — younger than ideal. Bo Jack Davis likely principal. Minority + family-owned HUB-certified. Too young for typical succession-age trigger. Skip for current sourcing pass; re-screen in 10+ years."
@@ -802,8 +906,16 @@
       "verified_via": "websearch 2026-05-16 — Rodney Serpa sole owner"
     },
     "data_sources": [
-      {"url": "https://www.serpafab.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "specialty,certifications"},
-      {"url": "https://www.federalpay.org/paycheck-protection-program/serpa-fabrication-inc-corpus-christi-tx", "fetched_at": "2026-05-16T20:50:00Z", "field": "ppp_loan,owner_confirmation"}
+      {
+        "url": "https://www.serpafab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,certifications"
+      },
+      {
+        "url": "https://www.federalpay.org/paycheck-protection-program/serpa-fabrication-inc-corpus-christi-tx",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "ppp_loan,owner_confirmation"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "B-tier. 30-year Corpus Christi ASME shop run by Rodney Serpa (likely 60). Sole owner, 50+ yrs combined staff experience = long-tenure aging workforce. Classic coaster pattern. Defensible ASME niche in Corpus Christi petrochem corridor. PPP loan received under DBA R.L.M. Industries. Watch for owner-age progression — solid B-tier nearing A."
@@ -840,7 +952,11 @@
       "verified_via": "live-fetch of homepage 2026-05-16 — 3 generations of Alegria family"
     },
     "data_sources": [
-      {"url": "https://www.sspmetalworks.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "owner_family,year_founded,equipment,generations"}
+      {
+        "url": "https://www.sspmetalworks.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owner_family,year_founded,equipment,generations"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "C-tier — RECENT TRANSITION (2022). Danny Alegria just took over and likely investing in growth, not selling. Skip for current sourcing pass — re-screen in 10-15 years. Excellent equipment modernization in 2010s+."
@@ -878,8 +994,16 @@
       "verified_via": "websearch 2026-05-16 — Gus Cargile (President) + Gus Cargile III (CEO) = father-son active"
     },
     "data_sources": [
-      {"url": "https://www.indfabcc.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,ownership_tenure,certifications,facility"},
-      {"url": "https://www.linkedin.com/in/gus-cargile-126023123/", "fetched_at": "2026-05-16T20:50:00Z", "field": "owner_president"}
+      {
+        "url": "https://www.indfabcc.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,ownership_tenure,certifications,facility"
+      },
+      {
+        "url": "https://www.linkedin.com/in/gus-cargile-126023123/",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "owner_president"
+      }
     ],
     "data_completeness": 0.8,
     "notes": "BORDERLINE A-TIER. 100+ employees + 185K sq ft + 20 acres + 2 shifts = revenue likely $20-50M. Cargile family (Gus Sr. + Gus III) — same ownership 49 yrs. ASME U/R + API 650 = legitimately defensible niche. 2nd gen son in CEO role suggests succession in progress. Owner age 75-85. PRIORITIZE — strongest base-rate signal in batch + father-son ownership at peak transition age."
@@ -915,7 +1039,11 @@
       "verified_via": "live-fetch 2026-05-16 — Ray/Windy Golden first gen"
     },
     "data_sources": [
-      {"url": "https://www.texascustomwelding.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "owners,year_founded,specialty"}
+      {
+        "url": "https://www.texascustomwelding.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owners,year_founded,specialty"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "D-tier. Owners too young (mid-40s), kids still in school, no succession trigger. Skip — re-screen in 20+ years."
@@ -955,9 +1083,21 @@
       "verified_via": "websearch 2026-05-16 — Richard + Edna Thrailkill (founders), Rick Jr. VP. Vietnam-era service indicates founder age ~75-80."
     },
     "data_sources": [
-      {"url": "https://www.firstqualityfabricating.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "owner,year_founded,equipment,family"},
-      {"url": "https://www.firstqualityfabricating.com/about-us-2/", "fetched_at": "2026-05-16T20:50:00Z", "field": "founder_bio,army_service"},
-      {"url": "https://www.firstqualityfabricating.com/team/thrailkill-4/", "fetched_at": "2026-05-16T20:50:00Z", "field": "rick_thrailkill_jr_vp"}
+      {
+        "url": "https://www.firstqualityfabricating.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owner,year_founded,equipment,family"
+      },
+      {
+        "url": "https://www.firstqualityfabricating.com/about-us-2/",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "founder_bio,army_service"
+      },
+      {
+        "url": "https://www.firstqualityfabricating.com/team/thrailkill-4/",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "rick_thrailkill_jr_vp"
+      }
     ],
     "data_completeness": 0.9,
     "notes": "STRONGEST A-TIER IN BATCH. 47-year Dallas sheet-metal fab founded by Richard Thrailkill (Army 101st Airborne/Ranger vet, now ~78) + wife Edna. Son Rick Jr. is VP. Premium Amada + Safan press brakes + robotic welding = modernized capital base. Founder at peak succession-age window with named successor son in place. RECOMMEND TOP PRIORITY for outreach — 12-24 month sale window plausible."
@@ -998,8 +1138,16 @@
       "verified_via": "websearch 2026-05-16 — founder Raymond Lee 1968, family-run, named successor not public"
     },
     "data_sources": [
-      {"url": "https://www.leemetalfab.com/", "fetched_at": "2026-05-16T20:30:00Z", "field": "year_founded,family,equipment,specialty"},
-      {"url": "https://www.leemetalfab.com/about/", "fetched_at": "2026-05-16T20:50:00Z", "field": "founder_raymond_lee"}
+      {
+        "url": "https://www.leemetalfab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,family,equipment,specialty"
+      },
+      {
+        "url": "https://www.leemetalfab.com/about/",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "founder_raymond_lee"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "STRONG A-TIER. 58-year Cleburne job shop founded by Raymond Lee (now likely 80+). Strong modern equipment (laser + plasma + CNC press brake + robotic welding) but classic coasting markers: no named successor publicly, no certifications, 1-800 marketing, no social. Dual brand (Lee Metal Fab + Lee Products/Metal Ranch retail) = additional real estate / customer-base value. PRIORITIZE — high base-rate succession signal + diversified asset base."

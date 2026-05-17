@@ -27,10 +27,26 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "phone_only_intake", "evidence": "Phone (281) 507-6801 prominent, no online quote form depth", "weight": "low"},
-      {"tell": "no_online_quote", "evidence": "No e-commerce / instant quote tooling visible", "weight": "low"},
-      {"tell": "no_portal", "evidence": "No customer/B2B portal — typical brochure presence", "weight": "low"},
-      {"tell": "mid-tenure_solo_owner", "evidence": "24-year founder, broad mix suggests owner-installer model", "weight": "low"}
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (281) 507-6801 prominent, no online quote form depth",
+        "weight": "low"
+      },
+      {
+        "tell": "no_online_quote",
+        "evidence": "No e-commerce / instant quote tooling visible",
+        "weight": "low"
+      },
+      {
+        "tell": "no_portal",
+        "evidence": "No customer/B2B portal — typical brochure presence",
+        "weight": "low"
+      },
+      {
+        "tell": "mid-tenure_solo_owner",
+        "evidence": "24-year founder, broad mix suggests owner-installer model",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -38,7 +54,11 @@
       "verified_via": "spine notes only — no team page disclosed"
     },
     "data_sources": [
-      {"url": "https://www.aaglc.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "family-owned", "services"]}
+      {
+        "url": "https://www.aaglc.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      }
     ],
     "data_completeness": 0.62,
     "notes": "Mid-tenure (24 yr) family-owned. Younger than ideal coasting profile but worth scoring — broad mix indicates owner-installer model. Owner age unknown; assume founder mid-50s."
@@ -72,9 +92,21 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": true,
     "coasting_tells": [
-      {"tell": "brochure_website", "evidence": "Static commercial-glazier brochure site, no online project portal", "weight": "low"},
-      {"tell": "no_online_quote", "evidence": "Commercial bid-only model, no instant-quote feature", "weight": "low"},
-      {"tell": "long_tenured_founder", "evidence": "42 years operating, founder ~67", "weight": "moderate"}
+      {
+        "tell": "brochure_website",
+        "evidence": "Static commercial-glazier brochure site, no online project portal",
+        "weight": "low"
+      },
+      {
+        "tell": "no_online_quote",
+        "evidence": "Commercial bid-only model, no instant-quote feature",
+        "weight": "low"
+      },
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "42 years operating, founder ~67",
+        "weight": "moderate"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -82,7 +114,11 @@
       "verified_via": "no public team disclosure"
     },
     "data_sources": [
-      {"url": "https://www.austinglass.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "founded_year", "services"]}
+      {
+        "url": "https://www.austinglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "services"]
+      }
     ],
     "data_completeness": 0.68,
     "notes": "42-year Austin commercial glazier with full curtain-wall + ACM capability. Architectural-capable — NOT pure coaster but high-conviction succession candidate at owner age ~67. Strong wedge for buyer wanting commercial backlog."
@@ -117,9 +153,17 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": true,
     "coasting_tells": [
-      {"tell": "long_tenured_founder", "evidence": "35+ years, veteran-founder retirement window", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static brochure, no project gallery depth", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone (512) 833-5118 prominent", "weight": "low"}
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "35+ years, veteran-founder retirement window",
+        "weight": "moderate"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static brochure, no project gallery depth",
+        "weight": "low"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone (512) 833-5118 prominent", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -127,7 +171,11 @@
       "verified_via": "family + veteran owned per spine — second-gen not explicit"
     },
     "data_sources": [
-      {"url": "https://www.snyderglasscompanyaustintx.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["family-owned", "veteran-owned", "tenure"]}
+      {
+        "url": "https://www.snyderglasscompanyaustintx.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["family-owned", "veteran-owned", "tenure"]
+      }
     ],
     "data_completeness": 0.65,
     "notes": "Family + veteran-owned commercial glazier across Austin/Houston/SA. 35+ year tenure puts founder in classic retirement window. Strong commercial-glazing capability. High-conviction succession target."
@@ -161,10 +209,22 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_business", "evidence": "66-year tenure typically signals coasting in current generation", "weight": "moderate"},
-      {"tell": "no_online_quote", "evidence": "No instant-quote tooling on site", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone (512) 452-5731 prominent on homepage", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information-only site", "weight": "low"}
+      {
+        "tell": "long_tenured_business",
+        "evidence": "66-year tenure typically signals coasting in current generation",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_online_quote",
+        "evidence": "No instant-quote tooling on site",
+        "weight": "low"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (512) 452-5731 prominent on homepage",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information-only site", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -172,7 +232,11 @@
       "verified_via": "66 years implies multi-generational; explicit successor not named on site"
     },
     "data_sources": [
-      {"url": "https://www.alamoaustin.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "services"]}
+      {
+        "url": "https://www.alamoaustin.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "services"]
+      }
     ],
     "data_completeness": 0.62,
     "notes": "66-year Austin local — almost certainly multi-generation. NOT affiliated with Alamo Glass & Mirror (Dallas) or Alamo Glass of Port Arthur — independence verified. Classic legacy operator with strong brand equity in Central Austin."
@@ -206,9 +270,13 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_founder", "evidence": "40 years operating, founder near retirement", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static information-only site", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone (512) 837-7200 prominent", "weight": "low"}
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "40 years operating, founder near retirement",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information-only site", "weight": "low" },
+      { "tell": "phone_only_intake", "evidence": "Phone (512) 837-7200 prominent", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -216,7 +284,11 @@
       "verified_via": "spine notes family-operated but no named successor"
     },
     "data_sources": [
-      {"url": "https://www.windowerks.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "family-owned", "services"]}
+      {
+        "url": "https://www.windowerks.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      }
     ],
     "data_completeness": 0.66,
     "notes": "40-year Austin family operator with both residential and commercial windows. Founder likely in late 60s — strong succession window. Smaller architectural capability than Austin Glass & Mirror but solid SMB target."
@@ -247,7 +319,11 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": true,
     "coasting_tells": [
-      {"tell": "younger_operator", "evidence": "15-year LLC, owner likely 50ish — NOT coasting profile", "weight": "very_low"}
+      {
+        "tell": "younger_operator",
+        "evidence": "15-year LLC, owner likely 50ish — NOT coasting profile",
+        "weight": "very_low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": false,
@@ -255,7 +331,11 @@
       "verified_via": "younger LLC, no succession context"
     },
     "data_sources": [
-      {"url": "https://www.atxglazing.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "founded_year", "notable clients"]}
+      {
+        "url": "https://www.atxglazing.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "notable clients"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Younger founder profile (15-year LLC). NOT a classic coasting target — owner likely 45-55, still growing the book. Better described as a roll-up acquirer candidate, not a seller. DEPRIORITIZE for retiring-owner thesis."
@@ -289,9 +369,13 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_family", "evidence": "39 years, family Texas roots cited explicitly", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone (512) 835-7575 prominent", "weight": "low"}
+      {
+        "tell": "long_tenured_family",
+        "evidence": "39 years, family Texas roots cited explicitly",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "phone_only_intake", "evidence": "Phone (512) 835-7575 prominent", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -299,7 +383,11 @@
       "verified_via": "family operator — successor not explicitly named"
     },
     "data_sources": [
-      {"url": "https://morrisglasstx.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "family-owned", "services"]}
+      {
+        "url": "https://morrisglasstx.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      }
     ],
     "data_completeness": 0.65,
     "notes": "39-year family operator in fast-growing Williamson County (Round Rock/Cedar Park corridor). Founder approaching/in retirement window. Strong commercial + custom residential mix with handrail capability. High-conviction succession target."
@@ -332,10 +420,18 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "phone_only_intake", "evidence": "Phone (512) 960-9427 prominent, no online quote", "weight": "low"},
-      {"tell": "owner_installer_model", "evidence": "Solo-owner pattern (residential-only, small geography)", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static one-page-style site", "weight": "low"},
-      {"tell": "no_online_quote", "evidence": "No e-commerce, contact-form only", "weight": "low"}
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (512) 960-9427 prominent, no online quote",
+        "weight": "low"
+      },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Solo-owner pattern (residential-only, small geography)",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static one-page-style site", "weight": "low" },
+      { "tell": "no_online_quote", "evidence": "No e-commerce, contact-form only", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": false,
@@ -343,7 +439,11 @@
       "verified_via": "no team page or family operator language"
     },
     "data_sources": [
-      {"url": "https://rcglassandwindows.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "founded_year", "services"]}
+      {
+        "url": "https://rcglassandwindows.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "services"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Small-scale 29-year LLC. Likely owner-installer model in fast-growing Georgetown/Cedar Park corridor. Too small for institutional acquirer — fit for hands-on operator buyer."
@@ -377,9 +477,13 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": true,
     "coasting_tells": [
-      {"tell": "long_tenured_business", "evidence": "70 years operating", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static information site, no online project portal", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone (254) 754-4651 prominent", "weight": "low"}
+      { "tell": "long_tenured_business", "evidence": "70 years operating", "weight": "moderate" },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static information site, no online project portal",
+        "weight": "low"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone (254) 754-4651 prominent", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -387,7 +491,11 @@
       "verified_via": "70-year tenure implies multi-generation operator"
     },
     "data_sources": [
-      {"url": "https://wacoglassmirror.com/about-us/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "founded_year", "services"]}
+      {
+        "url": "https://wacoglassmirror.com/about-us/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "services"]
+      }
     ],
     "data_completeness": 0.66,
     "notes": "70-year Central Texas commercial glazier with full curtain-wall capability. Dominant local brand. Multi-generation operator with current generation likely in early-60s. Strong architectural backlog candidate."
@@ -420,9 +528,21 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_family", "evidence": "80 years, 3-location Bryan-CS dominance", "weight": "moderate"},
-      {"tell": "no_online_quote", "evidence": "Phone-led intake; no instant-quote tooling", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information site, voted-best banners only", "weight": "low"}
+      {
+        "tell": "long_tenured_family",
+        "evidence": "80 years, 3-location Bryan-CS dominance",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_online_quote",
+        "evidence": "Phone-led intake; no instant-quote tooling",
+        "weight": "low"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static information site, voted-best banners only",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -430,8 +550,16 @@
       "verified_via": "80-year Morehead family multi-generation tenure"
     },
     "data_sources": [
-      {"url": "https://acmeglass.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "family-owned", "services"]},
-      {"url": "https://business.bcschamber.org/list/member/acme-glass-company-inc-1012", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["chamber_membership"]}
+      {
+        "url": "https://acmeglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      },
+      {
+        "url": "https://business.bcschamber.org/list/member/acme-glass-company-inc-1012",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["chamber_membership"]
+      }
     ],
     "data_completeness": 0.72,
     "notes": "PRIME candidate. 80-year Morehead family business dominating Bryan-CS-A&M market with 3 locations. Texas A&M corridor + Brazos County growth = durable demand. Multi-generation succession — current generation in early-60s. Strong brand moat (voted best 23 years)."
@@ -466,10 +594,22 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "phone_only_intake", "evidence": "Phone (979) 779-3224 prominent", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "long_tenured_solo_owner", "evidence": "30-year tenure, owner-operator vibe", "weight": "low"},
-      {"tell": "no_online_quote", "evidence": "Form-only contact, no instant quote", "weight": "low"}
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (979) 779-3224 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      {
+        "tell": "long_tenured_solo_owner",
+        "evidence": "30-year tenure, owner-operator vibe",
+        "weight": "low"
+      },
+      {
+        "tell": "no_online_quote",
+        "evidence": "Form-only contact, no instant quote",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -477,7 +617,11 @@
       "verified_via": "no team page"
     },
     "data_sources": [
-      {"url": "https://aplusglassandmirror.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["DBA", "tenure", "services"]}
+      {
+        "url": "https://aplusglassandmirror.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "tenure", "services"]
+      }
     ],
     "data_completeness": 0.6,
     "notes": "Secondary Bryan-CS operator (ACME Glass is dominant). 32-year tenure, owner in early-60s. Smaller scale than ACME but viable hands-on operator buy. Heavy-equipment glass service adds niche value."
@@ -509,11 +653,27 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_founder", "evidence": "48 years, founder very likely 70+", "weight": "high"},
-      {"tell": "phone_only_intake", "evidence": "Phone (254) 634-4005 prominent", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information site, no portal", "weight": "low"},
-      {"tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low"},
-      {"tell": "founder_age_high", "evidence": "Owner-installer near or past traditional retirement", "weight": "high"}
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "48 years, founder very likely 70+",
+        "weight": "high"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (254) 634-4005 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static information site, no portal",
+        "weight": "low"
+      },
+      { "tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low" },
+      {
+        "tell": "founder_age_high",
+        "evidence": "Owner-installer near or past traditional retirement",
+        "weight": "high"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -521,7 +681,11 @@
       "verified_via": "family-operated per spine but no named successor"
     },
     "data_sources": [
-      {"url": "https://bobsglasstx.com/about/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "founded_year", "family-owned"]}
+      {
+        "url": "https://bobsglasstx.com/about/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-owned"]
+      }
     ],
     "data_completeness": 0.68,
     "notes": "PRIME succession target. 48-year founder very likely 70+ in Bell County (Fort Hood + Killeen/Temple growth). Coverage spans 5 towns. Classic coasting profile — no online tooling, founder-eponymous brand."
@@ -555,10 +719,26 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_family", "evidence": "Family in glass since mid-1800s, company since 1924", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static information site, no online quote tooling", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone (915) 566-9461 prominent", "weight": "low"},
-      {"tell": "broad_mix_no_specialization", "evidence": "Six service categories — generalist legacy operator", "weight": "low"}
+      {
+        "tell": "long_tenured_family",
+        "evidence": "Family in glass since mid-1800s, company since 1924",
+        "weight": "moderate"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static information site, no online quote tooling",
+        "weight": "low"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (915) 566-9461 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Six service categories — generalist legacy operator",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -566,7 +746,11 @@
       "verified_via": "century-old family business — multi-generation succession likely in place"
     },
     "data_sources": [
-      {"url": "https://www.bakerglass.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "founded_year", "family-owned", "two-location"]}
+      {
+        "url": "https://www.bakerglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-owned", "two-location"]
+      }
     ],
     "data_completeness": 0.72,
     "notes": "PRIME candidate. 102-year El Paso dominator. Two locations, full mix, century-old Baker family ownership. El Paso geography is isolated market — high local moat. Multi-generation succession with current generation possibly nearing 60s+."
@@ -600,7 +784,7 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": true,
     "coasting_tells": [
-      {"tell": "long_tenured_business", "evidence": "73 years operating", "weight": "low"}
+      { "tell": "long_tenured_business", "evidence": "73 years operating", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -608,7 +792,11 @@
       "verified_via": "long-tenured + active growth (Central TX location) — succession likely planned"
     },
     "data_sources": [
-      {"url": "https://www.glasshousetexas.com/about-us", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "family-owned", "SDVOSB", "services"]}
+      {
+        "url": "https://www.glasshousetexas.com/about-us",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "SDVOSB", "services"]
+      }
     ],
     "data_completeness": 0.7,
     "notes": "Large commercial glazier — $500M+ project history with fire-rated and impact-resistant capability + SDVOSB certification (federal contract eligible). Currently expanding to Central TX (Manor). NOT a classic coaster — growth-mode operator, but premium target for strategic acquirer wanting federal/commercial glazing book."
@@ -640,10 +828,26 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_family", "evidence": "60 years, family-owned per spine", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static information site, hardwarespecialties.net", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone-led B2B contractor sales model", "weight": "low"},
-      {"tell": "broad_mix_distributor", "evidence": "Hardware + glass + supply — distributor model, not specialty installer", "weight": "low"}
+      {
+        "tell": "long_tenured_family",
+        "evidence": "60 years, family-owned per spine",
+        "weight": "moderate"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static information site, hardwarespecialties.net",
+        "weight": "low"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone-led B2B contractor sales model",
+        "weight": "low"
+      },
+      {
+        "tell": "broad_mix_distributor",
+        "evidence": "Hardware + glass + supply — distributor model, not specialty installer",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -651,7 +855,11 @@
       "verified_via": "60-year family business — likely multi-generation"
     },
     "data_sources": [
-      {"url": "https://hardwarespecialties.net/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "founded_year", "family-owned", "services"]}
+      {
+        "url": "https://hardwarespecialties.net/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-owned", "services"]
+      }
     ],
     "data_completeness": 0.65,
     "notes": "Hybrid hardware-distribution + glass installer in El Paso. 60-year family business — distinct from Baker Glass and The Glass House. B2B contractor supply book has durable recurring revenue. Multi-generation succession likely with current owner mid-60s."
@@ -685,10 +893,18 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "second_gen_aging", "evidence": "Glenn & Carolyn Burch as 2nd-gen owners — likely late 60s", "weight": "high"},
-      {"tell": "long_tenured_family", "evidence": "59 years, succession already executed once", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone (806) 866-9090 prominent", "weight": "low"}
+      {
+        "tell": "second_gen_aging",
+        "evidence": "Glenn & Carolyn Burch as 2nd-gen owners — likely late 60s",
+        "weight": "high"
+      },
+      {
+        "tell": "long_tenured_family",
+        "evidence": "59 years, succession already executed once",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "phone_only_intake", "evidence": "Phone (806) 866-9090 prominent", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -696,7 +912,11 @@
       "verified_via": "About page documents 2nd-gen (Glenn & Carolyn Burch) — 3rd-gen status unclear"
     },
     "data_sources": [
-      {"url": "https://www.burchglass.com/about-us", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "succession", "services"]}
+      {
+        "url": "https://www.burchglass.com/about-us",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "succession", "services"]
+      }
     ],
     "data_completeness": 0.78,
     "notes": "PRIME candidate. Glenn & Carolyn Burch documented as 2nd-gen owners — likely late 60s in succession window with no published 3rd-gen plan. 59-year Lubbock brand. Strong custom + cabinet niche."
@@ -730,10 +950,18 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_founder", "evidence": "37 years operating, founder in mid-60s", "weight": "moderate"},
-      {"tell": "phone_only_intake", "evidence": "Phone (806) 794-5277 prominent", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low"}
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "37 years operating, founder in mid-60s",
+        "weight": "moderate"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (806) 794-5277 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -741,7 +969,11 @@
       "verified_via": "spine notes family-owned per third-party listings — successor not named"
     },
     "data_sources": [
-      {"url": "https://www.actionglasslubbock.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["DBA", "tenure", "services"]}
+      {
+        "url": "https://www.actionglasslubbock.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "tenure", "services"]
+      }
     ],
     "data_completeness": 0.6,
     "notes": "37-year Lubbock secondary operator (Burch is the dominant local). Founder mid-60s, succession window approaching. Smaller scale than Burch but viable shower + custom + tinting niche."
@@ -772,8 +1004,16 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": true,
     "coasting_tells": [
-      {"tell": "long_tenured_family", "evidence": "80 years, 3rd-gen family corporation", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static commercial-glazier brochure site", "weight": "low"}
+      {
+        "tell": "long_tenured_family",
+        "evidence": "80 years, 3rd-gen family corporation",
+        "weight": "low"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static commercial-glazier brochure site",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -781,7 +1021,11 @@
       "verified_via": "3rd-gen self-described per spine"
     },
     "data_sources": [
-      {"url": "https://www.mwglass.net/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "family-owned", "services"]}
+      {
+        "url": "https://www.mwglass.net/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      }
     ],
     "data_completeness": 0.65,
     "notes": "80-year Permian Basin dominator. 3rd-gen family corporation with full commercial glazing scope including blast-resistant capability (oil patch demand). NOT a coaster — actively growing, but premium acquisition target with durable energy-sector commercial book. Address/phone need enrichment."
@@ -814,9 +1058,17 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "phone_only_intake", "evidence": "Phone (432) 349-0309 prominent", "weight": "low"},
-      {"tell": "owner_installer_model", "evidence": "Mobile + small mix suggests owner-installer", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"}
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (432) 349-0309 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Mobile + small mix suggests owner-installer",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -824,7 +1076,11 @@
       "verified_via": "no team page"
     },
     "data_sources": [
-      {"url": "https://www.amigosglass.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "tenure", "services"]}
+      {
+        "url": "https://www.amigosglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "tenure", "services"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Mid-size Midland operator behind Mid-West Glass. 23-year LLC. Mobile service capability + Permian Basin small-business glass niche. Owner likely mid-50s — earlier in window."
@@ -859,10 +1115,18 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_founder", "evidence": "45 years, founder ~68", "weight": "high"},
-      {"tell": "phone_only_intake", "evidence": "Phone (806) 355-9913 prominent", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "broad_mix_no_specialization", "evidence": "Six service categories — generalist coaster", "weight": "low"}
+      { "tell": "long_tenured_founder", "evidence": "45 years, founder ~68", "weight": "high" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (806) 355-9913 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Six service categories — generalist coaster",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -870,7 +1134,11 @@
       "verified_via": "family-owned per spine, no successor named"
     },
     "data_sources": [
-      {"url": "https://www.cityglassamarillo.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "family-owned", "tenure", "services"]}
+      {
+        "url": "https://www.cityglassamarillo.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "family-owned", "tenure", "services"]
+      }
     ],
     "data_completeness": 0.65,
     "notes": "45-year Amarillo family-owned. TPBA member. Founder near or past 68. Refrigerator-glass niche is unusual + sticky. Classic succession candidate."
@@ -904,9 +1172,13 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_business", "evidence": "73 years operating", "weight": "moderate"},
-      {"tell": "phone_only_intake", "evidence": "Phone (806) 376-9273 prominent", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"}
+      { "tell": "long_tenured_business", "evidence": "73 years operating", "weight": "moderate" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (806) 376-9273 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -914,7 +1186,11 @@
       "verified_via": "Clayton eponymous, 73-year tenure implies multi-generation"
     },
     "data_sources": [
-      {"url": "https://claytonsglass.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "services"]}
+      {
+        "url": "https://claytonsglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "services"]
+      }
     ],
     "data_completeness": 0.62,
     "notes": "Amarillo dual primary (with City Glass). 73-year Clayton family operator with remodel service add-on. Multi-generation succession likely with current generation early-60s."
@@ -948,9 +1224,13 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_family", "evidence": "66 years, 'and Sons' branding implies generational handoff", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone (956) 781-3840 prominent", "weight": "low"}
+      {
+        "tell": "long_tenured_family",
+        "evidence": "66 years, 'and Sons' branding implies generational handoff",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "phone_only_intake", "evidence": "Phone (956) 781-3840 prominent", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -958,7 +1238,11 @@
       "verified_via": "'and Sons' in legal name + 66-year tenure documents multi-generation"
     },
     "data_sources": [
-      {"url": "https://www.risicaandsons.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "founded_year", "family-owned", "services"]}
+      {
+        "url": "https://www.risicaandsons.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-owned", "services"]
+      }
     ],
     "data_completeness": 0.72,
     "notes": "PRIME candidate. 66-year RGV dominator with hurricane-resistant + heavy-glass capability (Gulf Coast moat). Multi-generation Risica family. RGV is high-growth border market. Strong commercial + auto + residential mix."
@@ -992,9 +1276,13 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_family", "evidence": "48 years, Shull family", "weight": "moderate"},
-      {"tell": "phone_only_intake", "evidence": "Phone (956) 428-6066 prominent", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"}
+      { "tell": "long_tenured_family", "evidence": "48 years, Shull family", "weight": "moderate" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (956) 428-6066 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -1002,7 +1290,11 @@
       "verified_via": "Shull family named per spine"
     },
     "data_sources": [
-      {"url": "https://harlingenglass.com/company/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "Shull-family", "services"]}
+      {
+        "url": "https://harlingenglass.com/company/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "Shull-family", "services"]
+      }
     ],
     "data_completeness": 0.7,
     "notes": "48-year Shull family in Harlingen (RGV). Security-film capability is a sticky commercial niche. Pair with Risica for full RGV regional roll-up thesis."
@@ -1037,10 +1329,18 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_family", "evidence": "37 years, Evins family", "weight": "moderate"},
-      {"tell": "phone_only_intake", "evidence": "Phone (361) 884-3995 prominent", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "broad_mix_no_specialization", "evidence": "Six service categories — generalist", "weight": "low"}
+      { "tell": "long_tenured_family", "evidence": "37 years, Evins family", "weight": "moderate" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (361) 884-3995 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Six service categories — generalist",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1048,7 +1348,11 @@
       "verified_via": "family-owned per spine, no successor disclosure"
     },
     "data_sources": [
-      {"url": "https://evinsglass.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["DBA", "family-owned", "tenure", "services"]}
+      {
+        "url": "https://evinsglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "family-owned", "tenure", "services"]
+      }
     ],
     "data_completeness": 0.65,
     "notes": "37-year Evins family Coastal Bend operator. Hurricane-impact + tinting is high-value Gulf coast niche. Founder mid-60s, classic succession window."
@@ -1082,11 +1386,23 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_founder", "evidence": "44 years operating, founder ~69", "weight": "high"},
-      {"tell": "phone_only_intake", "evidence": "Phone (361) 855-1471 prominent", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low"},
-      {"tell": "broad_mix_no_specialization", "evidence": "Six service categories generalist", "weight": "low"}
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "44 years operating, founder ~69",
+        "weight": "high"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (361) 855-1471 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low" },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Six service categories generalist",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1094,7 +1410,11 @@
       "verified_via": "family-owned per spine, no successor named"
     },
     "data_sources": [
-      {"url": "https://www.moglass.net/about", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["DBA", "family-owned", "tenure", "services"]}
+      {
+        "url": "https://www.moglass.net/about",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "family-owned", "tenure", "services"]
+      }
     ],
     "data_completeness": 0.62,
     "notes": "PRIME candidate. 44-year Corpus Christi family operator — founder likely ~69 with no published successor. Smaller than Evins but solid generalist book."
@@ -1127,9 +1447,13 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "experienced_owner_late_career", "evidence": "Owner brings 30+ years pre-LLC experience — career-end profile", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone-led intake", "weight": "low"}
+      {
+        "tell": "experienced_owner_late_career",
+        "evidence": "Owner brings 30+ years pre-LLC experience — career-end profile",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "phone_only_intake", "evidence": "Phone-led intake", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1137,7 +1461,11 @@
       "verified_via": "no team page"
     },
     "data_sources": [
-      {"url": "https://www.craftmanglass.com/about-4", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "founded_year", "family-operated", "owner-experience"]}
+      {
+        "url": "https://www.craftmanglass.com/about-4",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-operated", "owner-experience"]
+      }
     ],
     "data_completeness": 0.6,
     "notes": "19-year LLC but owner has 30+ years pre-LLC industry experience — owner functionally mid-60s. Adding doors capability sets it apart from pure glass shops. Mid-tier Corpus Christi succession target."
@@ -1171,9 +1499,13 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "auto_only_segment", "evidence": "Auto-glass-only — per vertical brief deprioritize", "weight": "high_segment_filter"},
-      {"tell": "long_tenured_founder", "evidence": "47 years, founder near 70", "weight": "high"},
-      {"tell": "phone_only_intake", "evidence": "Phone (361) 854-8000 prominent", "weight": "low"}
+      {
+        "tell": "auto_only_segment",
+        "evidence": "Auto-glass-only — per vertical brief deprioritize",
+        "weight": "high_segment_filter"
+      },
+      { "tell": "long_tenured_founder", "evidence": "47 years, founder near 70", "weight": "high" },
+      { "tell": "phone_only_intake", "evidence": "Phone (361) 854-8000 prominent", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1181,7 +1513,11 @@
       "verified_via": "family-owned per spine"
     },
     "data_sources": [
-      {"url": "https://www.scottglass.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["DBA", "founded_year", "family-owned", "services"]}
+      {
+        "url": "https://www.scottglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "founded_year", "family-owned", "services"]
+      }
     ],
     "data_completeness": 0.65,
     "notes": "DEPRIORITIZED — auto-glass-only segment per vertical brief (insurance-rate-sensitive, ADAS calibration competes with Safelite). Note for buyer: founder ~69 with ADAS niche could fit a Safelite-adjacent buyer, but not the family-owned glazier thesis."
@@ -1215,8 +1551,12 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "ambiguous_independence", "evidence": "Shares Kilgore address + @arrow-companies.com email with Henderson Glass — likely roll-up partnership under Arrow Glass Industries", "weight": "high_flag"},
-      {"tell": "long_tenured_business", "evidence": "94 years operating", "weight": "low"}
+      {
+        "tell": "ambiguous_independence",
+        "evidence": "Shares Kilgore address + @arrow-companies.com email with Henderson Glass — likely roll-up partnership under Arrow Glass Industries",
+        "weight": "high_flag"
+      },
+      { "tell": "long_tenured_business", "evidence": "94 years operating", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -1224,7 +1564,11 @@
       "verified_via": "2-gen Kinkaid per spine but Arrow Companies entanglement complicates"
     },
     "data_sources": [
-      {"url": "https://www.easttexasglasscompany.com/about-us", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "Kinkaid-family", "Arrow-Companies-flag"]}
+      {
+        "url": "https://www.easttexasglasscompany.com/about-us",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "Kinkaid-family", "Arrow-Companies-flag"]
+      }
     ],
     "data_completeness": 0.62,
     "notes": "FLAG — likely already rolled up under Arrow Glass Industries (shared address + email with Henderson Glass). DO NOT contact as independent target until ownership status confirmed. 94-year Kilgore legacy brand."
@@ -1258,7 +1602,11 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "ambiguous_independence", "evidence": "Explicitly partners with Arrow Glass Industries 'to extend trusted service throughout Texas' + shared Kilgore address with East Texas Glass", "weight": "high_flag"}
+      {
+        "tell": "ambiguous_independence",
+        "evidence": "Explicitly partners with Arrow Glass Industries 'to extend trusted service throughout Texas' + shared Kilgore address with East Texas Glass",
+        "weight": "high_flag"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -1266,7 +1614,11 @@
       "verified_via": "2nd-gen per spine but Arrow Industries partnership pre-empts traditional succession"
     },
     "data_sources": [
-      {"url": "https://www.hendersonglassco.com/about", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "Arrow-partnership", "services"]}
+      {
+        "url": "https://www.hendersonglassco.com/about",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "Arrow-partnership", "services"]
+      }
     ],
     "data_completeness": 0.62,
     "notes": "FLAG — Arrow Glass Industries partnership explicit on About page. Treat as ALREADY-IN-PROGRESS roll-up, not virgin succession target. 95-year brand though — worth tracking for downstream divestiture if Arrow re-shapes portfolio."
@@ -1298,10 +1650,22 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_founder", "evidence": "48 years operating, founder ~70", "weight": "high"},
-      {"tell": "phone_only_intake", "evidence": "Phone (903) 597-8975 prominent", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "owner_installer_model", "evidence": "Owner-name eponymous brand", "weight": "moderate"}
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "48 years operating, founder ~70",
+        "weight": "high"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (903) 597-8975 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Owner-name eponymous brand",
+        "weight": "moderate"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1309,7 +1673,11 @@
       "verified_via": "no team page"
     },
     "data_sources": [
-      {"url": "https://igmtyler.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["DBA", "founded_year", "services"]}
+      {
+        "url": "https://igmtyler.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "founded_year", "services"]
+      }
     ],
     "data_completeness": 0.62,
     "notes": "PRIME independent Tyler operator (literally named 'Independent') — explicitly NOT part of Arrow Glass Industries rollup. 48-year founder near 70. Butt-glaze + decorative is upmarket niche."
@@ -1341,9 +1709,13 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "site_unreachable", "evidence": "Direct WebFetch ECONNREFUSED — possible site neglect", "weight": "moderate"},
-      {"tell": "phone_only_intake", "evidence": "Phone/address need enrichment", "weight": "low"},
-      {"tell": "owner_installer_model", "evidence": "Multi-town East Texas SMB", "weight": "low"}
+      {
+        "tell": "site_unreachable",
+        "evidence": "Direct WebFetch ECONNREFUSED — possible site neglect",
+        "weight": "moderate"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone/address need enrichment", "weight": "low" },
+      { "tell": "owner_installer_model", "evidence": "Multi-town East Texas SMB", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1351,7 +1723,11 @@
       "verified_via": "no team page; locally owned per third-party"
     },
     "data_sources": [
-      {"url": "https://www.graceglassandmirror.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["DBA", "services", "third-party-listings"]}
+      {
+        "url": "https://www.graceglassandmirror.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "services", "third-party-listings"]
+      }
     ],
     "data_completeness": 0.45,
     "notes": "Tertiary Tyler operator. Site unreachable at fetch — flagged for distress/neglect signal. Earlier-window owner if 25-year tenure. DEPRIORITIZE pending phone/site recovery — viable later-pipeline candidate."
@@ -1386,11 +1762,19 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_founder", "evidence": "41 years, founder ~68", "weight": "high"},
-      {"tell": "phone_only_intake", "evidence": "Phone (903) 509-0031 prominent", "weight": "low"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low"},
-      {"tell": "owner_installer_model", "evidence": "Residential-only single-location", "weight": "moderate"}
+      { "tell": "long_tenured_founder", "evidence": "41 years, founder ~68", "weight": "high" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (903) 509-0031 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low" },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Residential-only single-location",
+        "weight": "moderate"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1398,7 +1782,11 @@
       "verified_via": "family-owned per spine; no successor named"
     },
     "data_sources": [
-      {"url": "https://www.apacheglassmirror.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["DBA", "family-owned", "tenure", "services"]}
+      {
+        "url": "https://www.apacheglassmirror.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "family-owned", "tenure", "services"]
+      }
     ],
     "data_completeness": 0.62,
     "notes": "PRIME small-target. 41-year founder ~68, residential-only single-location near Tyler. Cabinet-glass niche. Classic coasting solo-owner profile."
@@ -1432,8 +1820,12 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "younger_founder", "evidence": "18-year LLC, founder ~55 — earlier coasting window", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone (903) 793-4277 prominent", "weight": "low"}
+      {
+        "tell": "younger_founder",
+        "evidence": "18-year LLC, founder ~55 — earlier coasting window",
+        "weight": "low"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone (903) 793-4277 prominent", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": false,
@@ -1441,7 +1833,11 @@
       "verified_via": "no team page"
     },
     "data_sources": [
-      {"url": "https://texarkanaglasscompany.com/about/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "founded_year", "services"]}
+      {
+        "url": "https://texarkanaglasscompany.com/about/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "services"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Younger commercial-glazing LLC at TX/AR border. Educational + railing specialty. Earlier-window owner — not classic coaster. DEPRIORITIZE for retiring-owner thesis but watch for 10-year hold."
@@ -1474,11 +1870,27 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "no_website", "evidence": "No company website — Facebook + Yellow Pages only", "weight": "high"},
-      {"tell": "phone_only_intake", "evidence": "Phone-only intake model", "weight": "moderate"},
-      {"tell": "owner_age_high", "evidence": "Founder pair with 40 years combined pre-experience + 22-year tenure, both likely mid-60s+", "weight": "high"},
-      {"tell": "owner_installer_model", "evidence": "Husband-wife operator pair in small market", "weight": "moderate"},
-      {"tell": "broad_mix_no_specialization", "evidence": "Generalist commercial + residential + storefront", "weight": "low"}
+      {
+        "tell": "no_website",
+        "evidence": "No company website — Facebook + Yellow Pages only",
+        "weight": "high"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone-only intake model", "weight": "moderate" },
+      {
+        "tell": "owner_age_high",
+        "evidence": "Founder pair with 40 years combined pre-experience + 22-year tenure, both likely mid-60s+",
+        "weight": "high"
+      },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Husband-wife operator pair in small market",
+        "weight": "moderate"
+      },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Generalist commercial + residential + storefront",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": false,
@@ -1486,7 +1898,11 @@
       "verified_via": "no team page; LaBrie pair only owners disclosed"
     },
     "data_sources": [
-      {"url": "https://www.facebook.com/allglasswf/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "Mike-Janice-LaBrie", "address"]}
+      {
+        "url": "https://www.facebook.com/allglasswf/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "Mike-Janice-LaBrie", "address"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "PRIME coasting target. No website + husband-wife LaBrie pair operating since 2004 with 40yr combined industry pre-experience — strong retirement profile. Wichita Falls is isolated North Texas market. Small but high-conviction succession candidate."
@@ -1520,9 +1936,21 @@
     "is_commercial_glazier": true,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_founder_pair", "evidence": "42 years, Mark & Cindy Stratton both likely mid-60s+", "weight": "high"},
-      {"tell": "phone_only_intake", "evidence": "Phone (409) 724-0223 prominent", "weight": "low"},
-      {"tell": "broad_mix_no_specialization", "evidence": "Six service categories generalist", "weight": "low"}
+      {
+        "tell": "long_tenured_founder_pair",
+        "evidence": "42 years, Mark & Cindy Stratton both likely mid-60s+",
+        "weight": "high"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (409) 724-0223 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Six service categories generalist",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1530,7 +1958,11 @@
       "verified_via": "family glass legacy across relatives (grandfather Jan Jacinto / uncle Alamo PA / uncle Dixie Orange) but no in-company successor"
     },
     "data_sources": [
-      {"url": "https://aceglassandmirror.com/about-us/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "Stratton-family", "windstorm-certified"]}
+      {
+        "url": "https://aceglassandmirror.com/about-us/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "Stratton-family", "windstorm-certified"]
+      }
     ],
     "data_completeness": 0.7,
     "notes": "PRIME candidate. 42-year Stratton husband-wife pair near 67. Industrial-marine + windstorm-certified is sticky Gulf-Coast niche (petrochemical Beaumont/Port Arthur corridor). Family has multi-generation glass roots — but no in-company successor."
@@ -1564,10 +1996,18 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_family", "evidence": "77 years operating", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone (409) 962-0289 prominent", "weight": "low"},
-      {"tell": "broad_mix_no_specialization", "evidence": "Auto + residential + commercial generalist", "weight": "low"}
+      { "tell": "long_tenured_family", "evidence": "77 years operating", "weight": "moderate" },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (409) 962-0289 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Auto + residential + commercial generalist",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -1575,7 +2015,11 @@
       "verified_via": "77-year tenure implies multi-generation"
     },
     "data_sources": [
-      {"url": "https://www.alamoglassportarthur.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "founded_year", "family-owned", "services"]}
+      {
+        "url": "https://www.alamoglassportarthur.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-owned", "services"]
+      }
     ],
     "data_completeness": 0.7,
     "notes": "77-year Port Arthur/Beaumont/Orange operator. Distinct from Alamo Glass Austin and Alamo Glass & Mirror Dallas. Multi-generation Golden Triangle brand — connected to Ace Glass & Mirror via Stratton family lineage. Solid mid-size succession candidate."
@@ -1606,9 +2050,13 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_founder", "evidence": "55 years, founder ~70", "weight": "high"},
-      {"tell": "yext_placeholder_address", "evidence": "Address/phone use Yext placeholders — site neglect", "weight": "moderate"},
-      {"tell": "brochure_website", "evidence": "Static information site", "weight": "low"}
+      { "tell": "long_tenured_founder", "evidence": "55 years, founder ~70", "weight": "high" },
+      {
+        "tell": "yext_placeholder_address",
+        "evidence": "Address/phone use Yext placeholders — site neglect",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1616,7 +2064,11 @@
       "verified_via": "Romero eponymous, no successor named"
     },
     "data_sources": [
-      {"url": "https://www.romerosglass.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "family-owned", "tenure"]}
+      {
+        "url": "https://www.romerosglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "tenure"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "55-year Romero family Port Arthur. Founder ~70. Yext placeholders on site suggest disengaged owner-marketing. Heavy-equipment glass niche adds petrochemical industrial cap. High-conviction coasting profile."
@@ -1649,9 +2101,13 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_family", "evidence": "64 years operating", "weight": "moderate"},
-      {"tell": "site_unreachable", "evidence": "http:// (not https://) site ECONNREFUSED at fetch — strong neglect signal", "weight": "high"},
-      {"tell": "phone_only_intake", "evidence": "BBB profile-led discovery", "weight": "low"}
+      { "tell": "long_tenured_family", "evidence": "64 years operating", "weight": "moderate" },
+      {
+        "tell": "site_unreachable",
+        "evidence": "http:// (not https://) site ECONNREFUSED at fetch — strong neglect signal",
+        "weight": "high"
+      },
+      { "tell": "phone_only_intake", "evidence": "BBB profile-led discovery", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": true,
@@ -1659,7 +2115,11 @@
       "verified_via": "64-year tenure + BBB family-owned confirmation"
     },
     "data_sources": [
-      {"url": "https://www.bbb.org/us/tx/bedford/profile/window-glass/bedford-glass-mirror-0825-97060042", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "family-owned-BBB-confirmed"]}
+      {
+        "url": "https://www.bbb.org/us/tx/bedford/profile/window-glass/bedford-glass-mirror-0825-97060042",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned-BBB-confirmed"]
+      }
     ],
     "data_completeness": 0.6,
     "notes": "PRIME coasting target. 64-year Bedford (HEB mid-cities Tarrant) family operator. Website ECONNREFUSED at fetch + http-only — strong neglect signal. Multi-generation succession with current generation likely mid-60s."
@@ -1691,10 +2151,26 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "no_website", "evidence": "No company website at fetch — Facebook only", "weight": "high"},
-      {"tell": "phone_only_intake", "evidence": "Phone (214) 460-4628 only", "weight": "moderate"},
-      {"tell": "owner_installer_model", "evidence": "Small family op, neighborhood-only", "weight": "moderate"},
-      {"tell": "no_specialization", "evidence": "Generalist residential + commercial + mirror", "weight": "low"}
+      {
+        "tell": "no_website",
+        "evidence": "No company website at fetch — Facebook only",
+        "weight": "high"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (214) 460-4628 only",
+        "weight": "moderate"
+      },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Small family op, neighborhood-only",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_specialization",
+        "evidence": "Generalist residential + commercial + mirror",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1702,7 +2178,11 @@
       "verified_via": "no team disclosure"
     },
     "data_sources": [
-      {"url": "https://www.facebook.com/people/Lake-Highlands-Glass-Mirror/100057298875894/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["city", "family-owned"]}
+      {
+        "url": "https://www.facebook.com/people/Lake-Highlands-Glass-Mirror/100057298875894/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["city", "family-owned"]
+      }
     ],
     "data_completeness": 0.42,
     "notes": "Tiny North Dallas (Lake Highlands neighborhood) operator. No website. Family-owned per Facebook. Too small for institutional buyer but classic coasting owner-operator. DEPRIORITIZE size-wise — fit for hands-on operator buy."
@@ -1734,10 +2214,18 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "long_tenured_founder", "evidence": "43 years, founder ~67", "weight": "high"},
-      {"tell": "website_account_suspended", "evidence": "Site returned 'account suspended' at WebFetch — high neglect signal", "weight": "high"},
-      {"tell": "phone_only_intake", "evidence": "Phone-only at Yellow Pages", "weight": "low"},
-      {"tell": "owner_installer_model", "evidence": "Single-location affluent NW Tarrant SMB", "weight": "moderate"}
+      { "tell": "long_tenured_founder", "evidence": "43 years, founder ~67", "weight": "high" },
+      {
+        "tell": "website_account_suspended",
+        "evidence": "Site returned 'account suspended' at WebFetch — high neglect signal",
+        "weight": "high"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone-only at Yellow Pages", "weight": "low" },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Single-location affluent NW Tarrant SMB",
+        "weight": "moderate"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1745,7 +2233,11 @@
       "verified_via": "family-owned per Yellow Pages, no team page accessible"
     },
     "data_sources": [
-      {"url": "https://www.yellowpages.com/keller-tx/mip/keller-glass-and-mirror-4357398", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founded_year", "family-owned", "services"]}
+      {
+        "url": "https://www.yellowpages.com/keller-tx/mip/keller-glass-and-mirror-4357398",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "PRIME coasting target. Website account suspended (hosting bill unpaid signal) + 43-year founder ~67 + affluent NW Tarrant geography (Keller/Southlake/Westlake/Grapevine/Trophy Club — premium residential glass market). Strong succession candidate but verify entity active before contact."
@@ -1777,8 +2269,12 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "site_redirect_anomaly", "evidence": "Site redirected at fetch — possible ambiguity with Arrow Mirror & Glass (DBA LD Lewisville Glass)", "weight": "moderate"},
-      {"tell": "phone_only_intake", "evidence": "Phone/contact lookup via BBB", "weight": "low"}
+      {
+        "tell": "site_redirect_anomaly",
+        "evidence": "Site redirected at fetch — possible ambiguity with Arrow Mirror & Glass (DBA LD Lewisville Glass)",
+        "weight": "moderate"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone/contact lookup via BBB", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": false,
@@ -1786,7 +2282,11 @@
       "verified_via": "BBB profile only"
     },
     "data_sources": [
-      {"url": "https://www.bbb.org/us/tx/lewisville/profile/window-glass/lewisville-glass-mirror-company-0875-19003778", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["DBA", "city", "tenure"]}
+      {
+        "url": "https://www.bbb.org/us/tx/lewisville/profile/window-glass/lewisville-glass-mirror-company-0875-19003778",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "city", "tenure"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "FLAG — site redirect anomaly + adjacent Arrow Mirror & Glass operator (DBA LD Lewisville Glass) creates identity confusion. Confirm independence/entity status in diligence. 22-year tenure with mid-50s owner not classic retirement window."
@@ -1820,10 +2320,26 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "founder_age_high", "evidence": "Founder Larry Jaynes still active after 53 years — well past traditional retirement", "weight": "high"},
-      {"tell": "multi-location_no_online_quote", "evidence": "Three locations but no e-commerce / online quote — old-school sales floor", "weight": "moderate"},
-      {"tell": "phone_only_intake", "evidence": "Phone (972) 223-8936 prominent", "weight": "low"},
-      {"tell": "specialty_niche", "evidence": "Shower/mirror specialty — high margin but founder-dependent", "weight": "moderate"}
+      {
+        "tell": "founder_age_high",
+        "evidence": "Founder Larry Jaynes still active after 53 years — well past traditional retirement",
+        "weight": "high"
+      },
+      {
+        "tell": "multi-location_no_online_quote",
+        "evidence": "Three locations but no e-commerce / online quote — old-school sales floor",
+        "weight": "moderate"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (972) 223-8936 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "specialty_niche",
+        "evidence": "Shower/mirror specialty — high margin but founder-dependent",
+        "weight": "moderate"
+      }
     ],
     "successor_indicators": {
       "second_gen_present": null,
@@ -1831,7 +2347,11 @@
       "verified_via": "founder Larry Jaynes named, no successor disclosed"
     },
     "data_sources": [
-      {"url": "https://www.fashionglass.com/", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["DBA", "founded_year", "founder-Larry-Jaynes", "multi-location"]}
+      {
+        "url": "https://www.fashionglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "founded_year", "founder-Larry-Jaynes", "multi-location"]
+      }
     ],
     "data_completeness": 0.78,
     "notes": "PRIME high-conviction target. 53-year founder Larry Jaynes still active at ~75 — strong succession urgency. Multi-location specialty (DFW + Houston-Katy + Lockhart) frameless shower / decorative mirror = high-margin niche. Largest of batch 2."
@@ -1864,9 +2384,17 @@
     "is_commercial_glazier": false,
     "is_architectural_capable": false,
     "coasting_tells": [
-      {"tell": "younger_operator", "evidence": "12-year LLC, owner likely early 50s — NOT classic coasting", "weight": "low"},
-      {"tell": "broad_mix_no_specialization", "evidence": "Five service categories generalist", "weight": "low"},
-      {"tell": "phone_only_intake", "evidence": "Phone/zip need enrichment", "weight": "low"}
+      {
+        "tell": "younger_operator",
+        "evidence": "12-year LLC, owner likely early 50s — NOT classic coasting",
+        "weight": "low"
+      },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Five service categories generalist",
+        "weight": "low"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone/zip need enrichment", "weight": "low" }
     ],
     "successor_indicators": {
       "second_gen_present": false,
@@ -1874,7 +2402,11 @@
       "verified_via": "younger LLC; family-named brand"
     },
     "data_sources": [
-      {"url": "https://www.bizapedia.com/tx/davis-family-glass-company-llc.html", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["legal_name", "city", "family-owned"]}
+      {
+        "url": "https://www.bizapedia.com/tx/davis-family-glass-company-llc.html",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "city", "family-owned"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Younger Amarillo (Randall — south of Potter) operator behind City Glass and Clayton's. 12-year LLC + ~52-year-old owner. Heavy-equipment niche but not classic coaster. DEPRIORITIZE for retiring-owner thesis."
