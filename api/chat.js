@@ -347,6 +347,19 @@ module.exports = async function handler(req, res) {
 
         console.log('Saving buy box for:', email, 'data:', JSON.stringify(buyBox));
 
+        // Ensure users row exists before saving buy box.
+        // buy_boxes.user_email is FK'd to users(email) — if the row is missing
+        // the insert fails with a FK violation. Chat has no signup wall, so new
+        // users may reach this point without a users row yet.
+        const { error: usersUpsertError } = await supabase
+          .from('users')
+          .upsert({ email, agent_name: 'Scout' }, { onConflict: 'email', ignoreDuplicates: true });
+        if (usersUpsertError) {
+          console.error('chat: users upsert error:', usersUpsertError.message);
+          // If we can't create the users row the buy_box insert will also fail.
+          // Log and fall through — saveBuyBox will catch its own error below.
+        }
+
         // Persist/update the buy_boxes row and get the canonical id+version
         let buyBoxId = null;
         let buyBoxVersion = null;
