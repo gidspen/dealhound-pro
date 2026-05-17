@@ -1,0 +1,1415 @@
+[
+  {
+    "spine_index": 0,
+    "legal_name": "Hollywood-Crawford Door Co.",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://hollywoodcrawford.com",
+    "year_established": 1947,
+    "years_in_business": 79,
+    "owner_name": "Randy Oliver",
+    "owner_age_estimate": 70,
+    "owner_age_source": "tenure_proxy_running_since_1981",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 15,
+    "employee_count_estimate": 25,
+    "service_mix": "mixed",
+    "has_maintenance_plan": true,
+    "ida_member": true,
+    "coasting_tells": [
+      "Brochure-style website with limited online booking depth",
+      "Phone-first intake (210-494-3434 prominent)",
+      "No SMS reminders / FieldEdge tech visible",
+      "Long-tenured owner approaching/past retirement age (Oliver ~70)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "community impact article 2022 references 3-generation family business, son-in-law Randy Oliver runs operations since ~1981"
+    },
+    "data_sources": [
+      {"url": "https://hollywoodcrawford.com/about-us/", "fetched_at": "2026-05-16", "field": "ownership_history"},
+      {"url": "https://communityimpact.com/sponsored/sponsored/2022/10/31/family-owned-hollywood-crawford-door-co-reflects-on-75-years-of-business/", "fetched_at": "2026-05-16", "field": "75_year_anniversary"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"},
+      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_residential_#7"}
+    ],
+    "data_completeness": 0.92,
+    "high_conviction_signals": [
+      "79-year tenure (founded 1947)",
+      "IDA Top 100 #7 residential dealer",
+      "3-generation family business with succession already in place",
+      "IDEA-accredited dealer (premium credential)",
+      "Owner Randy Oliver running operations since ~1981 (45 years) — succession runway needed"
+    ]
+  },
+  {
+    "spine_index": 1,
+    "legal_name": "Plano Overhead Garage Door",
+    "city": "Plano",
+    "county": "Collin",
+    "website": "https://planooverhead.com",
+    "year_established": 1977,
+    "years_in_business": 49,
+    "owner_name": "Family (unspecified — founders still operating)",
+    "owner_age_estimate": 70,
+    "owner_age_source": "founder_tenure_since_1977",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 12,
+    "employee_count_estimate": 20,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": true,
+    "coasting_tells": [
+      "Brochure-style website",
+      "Phone-only intake (972-422-1695)",
+      "No online booking visible",
+      "No SMS reminders / modern dispatch tech evident",
+      "'All employees full-time & in-house' messaging suggests no growth via subcontract leverage"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of homepage; no explicit successor named in About — founder generation only"
+    },
+    "data_sources": [
+      {"url": "https://planooverhead.com", "fetched_at": "2026-05-16", "field": "founded_1977,family_owned"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"},
+      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#36"}
+    ],
+    "data_completeness": 0.85,
+    "high_conviction_signals": [
+      "49-year tenure",
+      "IDA Top 100 #36 by revenue, #16 residential",
+      "Started in founder's home — classic solo-owner archetype",
+      "No visible successor — high transition risk (positive for acquirer)"
+    ]
+  },
+  {
+    "spine_index": 2,
+    "legal_name": "Action Garage Door Repair Specialists, Inc.",
+    "city": "Plano",
+    "county": "Collin",
+    "website": "https://www.actiongaragedoor.com",
+    "year_established": 1984,
+    "years_in_business": 42,
+    "owner_name": "Family (multi-generational since 1984)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "founder_tenure_since_1984",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 30,
+    "employee_count_estimate": 60,
+    "service_mix": "mixed",
+    "has_maintenance_plan": true,
+    "ida_member": true,
+    "coasting_tells": [
+      "Multi-market expansion (DFW, Houston, Austin, Sherman-Denison) suggests NOT coasting",
+      "Modern website with online scheduling",
+      "Active digital marketing presence",
+      "400K+ customer claim indicates volume operation"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "live-fetch about-us page — same family ownership 40+ years, multi-market expansion implies generational handoff"
+    },
+    "data_sources": [
+      {"url": "https://www.actiongaragedoor.com/about-us/", "fetched_at": "2026-05-16", "field": "founded_family_multimarket"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"},
+      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#86"}
+    ],
+    "data_completeness": 0.85,
+    "high_conviction_signals": [
+      "FLAG: Likely too large for solo-owner thesis — multi-market regional",
+      "IDA Top 100 #86",
+      "42-year family-owned tenure",
+      "Active growth posture (not coasting) — may decline conversation"
+    ]
+  },
+  {
+    "spine_index": 3,
+    "legal_name": "Killeen Overhead Doors, Inc.",
+    "city": "Killeen",
+    "county": "Bell",
+    "website": "https://www.killeenoverheaddoors.com",
+    "year_established": 1991,
+    "years_in_business": 35,
+    "owner_name": "Jim & Rochelle Luster (founders); sons Dennis & Brett Luster (2nd gen)",
+    "owner_age_estimate": 72,
+    "owner_age_source": "founder_24yr_army_veteran_prior_to_1991",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 10,
+    "employee_count_estimate": 18,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": true,
+    "coasting_tells": [
+      "Brochure-style website",
+      "Phone-first intake (254-526-3858)",
+      "Central TX off-main-metro market = less PE attention",
+      "Veteran founder approaching/past retirement age"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "website references sons Dennis and Brett as 2nd-generation operators"
+    },
+    "data_sources": [
+      {"url": "https://www.killeenoverheaddoors.com/", "fetched_at": "2026-05-16", "field": "founder_sons"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"},
+      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#95"}
+    ],
+    "data_completeness": 0.90,
+    "high_conviction_signals": [
+      "35-year tenure (founded 1991)",
+      "IDA Top 100 #95",
+      "Founder = 24-year Army veteran (Jim Luster) — likely 72+ now",
+      "2nd gen already in business — handoff dynamics in play",
+      "Off-main-metro (Killeen) = less PE consolidator attention"
+    ]
+  },
+  {
+    "spine_index": 4,
+    "legal_name": "LGA Garage Door Service",
+    "city": "Spring",
+    "county": "Harris",
+    "website": "https://www.lga-garagedoor.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Unknown (needs TX SOS lookup)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 15,
+    "employee_count_estimate": 25,
+    "service_mix": "residential",
+    "has_maintenance_plan": false,
+    "ida_member": true,
+    "coasting_tells": [
+      "Phone-first intake (832-479-3003)",
+      "Brochure-style site",
+      "Limited online booking depth",
+      "Clopay/LiftMaster Master Dealer (premium dealer-level but vendor-driven)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "website lacks About-page biographical detail"
+    },
+    "data_sources": [
+      {"url": "https://www.lga-garagedoor.com/", "fetched_at": "2026-05-16", "field": "ida_member,address"},
+      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#56"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.55,
+    "high_conviction_signals": [
+      "IDA Top 100 #56 by revenue, #35 residential",
+      "Two locations (Spring + Pflugerville) — regional scale",
+      "INSUFFICIENT DATA on founding year and owner — needs deep dive before outreach"
+    ]
+  },
+  {
+    "spine_index": 5,
+    "legal_name": "Alamo Door Systems of Texas, Inc.",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://alamodoorsystems.com",
+    "year_established": 1976,
+    "years_in_business": 50,
+    "owner_name": "Family (unspecified — founder generation)",
+    "owner_age_estimate": 73,
+    "owner_age_source": "founder_tenure_since_1976",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 12,
+    "employee_count_estimate": 22,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": true,
+    "coasting_tells": [
+      "Brochure-style website",
+      "Phone-first intake (210-657-1150)",
+      "No online booking visible",
+      "'Local Company, National Reputation' tagline = legacy positioning"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch homepage; no explicit successor named"
+    },
+    "data_sources": [
+      {"url": "https://alamodoorsystems.com", "fetched_at": "2026-05-16", "field": "founded_1976"},
+      {"url": "https://doors.org/ida-scholarship/donors/", "fetched_at": "2026-05-16", "field": "ida_scholarship_donor"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.80,
+    "high_conviction_signals": [
+      "50-year tenure (founded 1976)",
+      "IDA scholarship donor (philanthropic owner = legacy mindset)",
+      "Founder generation likely 73+",
+      "No visible successor — high transition probability"
+    ]
+  },
+  {
+    "spine_index": 6,
+    "legal_name": "ABC Doors of Houston",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.abcdoors.com",
+    "year_established": 1971,
+    "years_in_business": 55,
+    "owner_name": "Family (unspecified — founder generation)",
+    "owner_age_estimate": 75,
+    "owner_age_source": "founder_tenure_since_1971",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 18,
+    "employee_count_estimate": 30,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (713-723-1500)",
+      "Brochure-style site",
+      "'No subcontractors' policy = inflexible labor model",
+      "Limited online scheduling depth",
+      "Serves Houston + Austin (long-running dual-market)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch homepage; references family but no successor"
+    },
+    "data_sources": [
+      {"url": "https://www.abcdoors.com/", "fetched_at": "2026-05-16", "field": "founded_1971,family"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.80,
+    "high_conviction_signals": [
+      "55-year tenure — exceptional",
+      "Founder generation now ~75+",
+      "Dual-market operation (Houston + Austin) suggests scale",
+      "Family ownership 50+ yrs without explicit succession = high transition probability"
+    ]
+  },
+  {
+    "spine_index": 7,
+    "legal_name": "Spectrum Overhead Door LLC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://spectrumoverheaddoor.com",
+    "year_established": 2006,
+    "years_in_business": 20,
+    "owner_name": "Travis Sweitzer",
+    "owner_age_estimate": 55,
+    "owner_age_source": "founder_since_2006_likely_mid_30s_at_start",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 5,
+    "employee_count_estimate": 10,
+    "service_mix": "residential",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (281-748-9542)",
+      "Small team (~6 employees + 4 techs)",
+      "Brochure-style site",
+      "Second location in Channelview — modest expansion"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch about page references Travis Sweitzer as sole proprietor / family-run"
+    },
+    "data_sources": [
+      {"url": "https://spectrumoverheaddoor.com/about/", "fetched_at": "2026-05-16", "field": "founder_Travis_Sweitzer"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.78,
+    "high_conviction_signals": [
+      "20-year tenure approaching",
+      "Solo-owner archetype (Travis Sweitzer)",
+      "Owner age estimate ~55 = mid-career, less likely to sell soon",
+      "BORDERLINE: still energetic owner, may not be exit-ready"
+    ]
+  },
+  {
+    "spine_index": 8,
+    "legal_name": "Garage Door Doctor",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://garagedoordoctor.biz",
+    "year_established": 1987,
+    "years_in_business": 39,
+    "owner_name": "Family (unspecified)",
+    "owner_age_estimate": 68,
+    "owner_age_source": "founder_tenure_since_1987",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 12,
+    "employee_count_estimate": 22,
+    "service_mix": "residential",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (281-638-9332)",
+      ".biz domain = pre-2010 web era",
+      "Brochure-style website",
+      "'Staff are either employees or family' = closed labor model"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": true,
+      "verified_via": "website explicitly references family staffing — successor likely on payroll"
+    },
+    "data_sources": [
+      {"url": "https://garagedoordoctor.biz", "fetched_at": "2026-05-16", "field": "founded_family"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.78,
+    "high_conviction_signals": [
+      "39-year tenure",
+      "10K+ 5-star reviews = strong customer-facing brand",
+      ".biz domain + brochure site = pre-modern web posture",
+      "Family-staffed model = generational successor likely on payroll"
+    ]
+  },
+  {
+    "spine_index": 9,
+    "legal_name": "Henderson Garage Door Services, LLC",
+    "city": "Baytown",
+    "county": "Harris",
+    "website": "https://hendersongaragedoor.com",
+    "year_established": 1989,
+    "years_in_business": 37,
+    "owner_name": "John Henderson",
+    "owner_age_estimate": 67,
+    "owner_age_source": "founder_30plus_yrs_industry_pre_1989",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 6,
+    "employee_count_estimate": 12,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (281-422-1099)",
+      "Brochure-style site",
+      "Houston east-side (Baytown) = less metropolitan PE attention",
+      "6-acre property with warehouse = capital-intensive but illiquid"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "chamber news + website — founder still public face"
+    },
+    "data_sources": [
+      {"url": "https://hendersongaragedoor.com/", "fetched_at": "2026-05-16", "field": "founder_John_Henderson"},
+      {"url": "https://cca.baytownchamber.com/NewsArticle.aspx?dbid2=TXBTWN&newsid=193463", "fetched_at": "2026-05-16", "field": "chamber_news"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.85,
+    "high_conviction_signals": [
+      "37-year tenure",
+      "Founder John Henderson likely 67+",
+      "30+ yrs prior industry experience = founder approaching deep retirement age",
+      "Baytown location = less PE attention",
+      "6-acre owned property = real estate value to deal"
+    ]
+  },
+  {
+    "spine_index": 10,
+    "legal_name": "Texas Overhead Door",
+    "city": "Burleson",
+    "county": "Johnson",
+    "website": "https://www.txohd.com",
+    "year_established": 1986,
+    "years_in_business": 40,
+    "owner_name": "Family (unspecified)",
+    "owner_age_estimate": 68,
+    "owner_age_source": "founder_tenure_since_1986",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 20,
+    "employee_count_estimate": 35,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Modern website with locations page",
+      "Phone-first intake (817-295-4848)",
+      "Multi-market (Burleson, Cleburne, Houston/Woodlands) suggests growth posture",
+      "Commercial regional reach (TX/LA/OK)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch about page — references family ownership but no named successor"
+    },
+    "data_sources": [
+      {"url": "https://www.txohd.com/about/", "fetched_at": "2026-05-16", "field": "founded_1986"},
+      {"url": "https://www.txohd.com/locations/", "fetched_at": "2026-05-16", "field": "burleson_cleburne_woodlands"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.78,
+    "high_conviction_signals": [
+      "40-year tenure",
+      "FLAG: May be too large (multi-state commercial reach)",
+      "Family-owned 40 yrs = succession reckoning likely in next 5 yrs",
+      "Burleson HQ = secondary DFW market, less PE roll-up pressure"
+    ]
+  },
+  {
+    "spine_index": 11,
+    "legal_name": "Family Christian Doors, LLC",
+    "city": "Haltom City",
+    "county": "Tarrant",
+    "website": "https://familychristiandoors.com",
+    "year_established": 2003,
+    "years_in_business": 23,
+    "owner_name": "Brandon Bailey",
+    "owner_age_estimate": 50,
+    "owner_age_source": "founder_since_2003_likely_late_20s_at_start",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 8,
+    "employee_count_estimate": 15,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (817-282-5677)",
+      "Faith-based brand = niche positioning, low corporate sale attractiveness",
+      "Multiple DFW locations = moderate growth posture"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch about-us; founder still active"
+    },
+    "data_sources": [
+      {"url": "https://familychristiandoors.com/about-us/", "fetched_at": "2026-05-16", "field": "founder_Brandon_Bailey"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.75,
+    "high_conviction_signals": [
+      "23-year tenure",
+      "Solo-owner (Brandon Bailey) ~50 = mid-career, NOT near exit",
+      "Faith-based positioning = founder identity tied to brand (harder sale)",
+      "BORDERLINE: under 30 yrs tenure, owner not approaching retirement"
+    ]
+  },
+  {
+    "spine_index": 12,
+    "legal_name": "Aaron's Garage Door Service",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://aaronsgaragedoor.com",
+    "year_established": 1997,
+    "years_in_business": 29,
+    "owner_name": "Aaron (founder — surname unspecified)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "founder_tenure_since_1997",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 6,
+    "employee_count_estimate": 12,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (210-690-7555)",
+      "Brochure-style site",
+      "Single-location San Antonio shop"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch home page — owner-operator branding"
+    },
+    "data_sources": [
+      {"url": "https://aaronsgaragedoor.com/", "fetched_at": "2026-05-16", "field": "family_owned"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.72,
+    "high_conviction_signals": [
+      "29-year tenure",
+      "Owner approaching 60 — pre-retirement window",
+      "Solo-owner archetype, name-on-door personal identity",
+      "NOT to be confused with 'Aaron Overhead Doors' Houston (AmeriPro brand — excluded)"
+    ]
+  },
+  {
+    "spine_index": 13,
+    "legal_name": "Mojo Garage Door Service",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://mojogaragedoors.com",
+    "year_established": 2007,
+    "years_in_business": 19,
+    "owner_name": "Moses Mizrahi",
+    "owner_age_estimate": 50,
+    "owner_age_source": "founder_since_2007_~20yrs_experience",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 6,
+    "employee_count_estimate": 12,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (210-997-7777)",
+      "Brochure-style site",
+      "1000+ 5-star local reviews = strong customer-facing operation",
+      "BBB accredited 2016 = mid-tenure dealer"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — owner Moses Mizrahi public-facing"
+    },
+    "data_sources": [
+      {"url": "https://mojogaragedoors.com/", "fetched_at": "2026-05-16", "field": "owner_Moses_Mizrahi"},
+      {"url": "https://www.bbb.org/us/tx/san-antonio/profile/garage-doors/mojo-garage-door-service-0825-1000131566", "fetched_at": "2026-05-16", "field": "bbb_2016"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.75,
+    "high_conviction_signals": [
+      "19-year tenure (approaching 20)",
+      "Solo-owner archetype (Moses Mizrahi)",
+      "Owner age ~50 = mid-career, NOT near exit",
+      "BORDERLINE: under 20 yrs tenure, owner not exit-ready"
+    ]
+  },
+  {
+    "spine_index": 14,
+    "legal_name": "Helotes Overhead Garage Doors and Contracting, LLC",
+    "city": "Helotes",
+    "county": "Bexar",
+    "website": "https://helotesoverheaddoors.com",
+    "year_established": 1985,
+    "years_in_business": 41,
+    "owner_name": "Tracy Dever (founder); Nathan Dever (son, 2nd gen now operates)",
+    "owner_age_estimate": 72,
+    "owner_age_source": "founder_tenure_since_1985",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 7,
+    "employee_count_estimate": 14,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (210-695-9085)",
+      "Brochure-style site",
+      "Helotes (NW San Antonio suburb) = off-main-metro",
+      "Multi-gen handoff already in motion"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "about-us page references Tracy as founder, son Nathan now runs operations"
+    },
+    "data_sources": [
+      {"url": "https://helotesoverheaddoors.com/about-us/", "fetched_at": "2026-05-16", "field": "founder_son"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.88,
+    "high_conviction_signals": [
+      "41-year tenure",
+      "Multi-generational handoff IN MOTION — Tracy → Nathan Dever",
+      "Founder Tracy likely 72+ — exit timing imminent",
+      "FLAG: Nathan as 2nd gen may want to keep — but founder dad may want cash"
+    ]
+  },
+  {
+    "spine_index": 15,
+    "legal_name": "AMR Garage Doors & Gates",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://amrgaragedoors.com",
+    "year_established": 2015,
+    "years_in_business": 11,
+    "owner_name": "Unknown (family-owned per BBB)",
+    "owner_age_estimate": 45,
+    "owner_age_source": "tech_25yr_combined_experience_suggests_mid_career",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 6,
+    "employee_count_estimate": 10,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (281-928-1837)",
+      "Brochure-style site",
+      "Borderline tenure (under 15 yrs)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — generic family-owned messaging only"
+    },
+    "data_sources": [
+      {"url": "https://amrgaragedoors.com/", "fetched_at": "2026-05-16", "field": "family_owned"},
+      {"url": "https://www.bbb.org/us/tx/houston/profile/garage-doors/amr-garage-doors-gates-0915-90074140", "fetched_at": "2026-05-16", "field": "bbb"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.60,
+    "high_conviction_signals": [
+      "11-year tenure (below 15 yr threshold)",
+      "Owner mid-career, NOT near exit",
+      "DEPRIORITIZE: below tenure threshold for solo-owner thesis"
+    ]
+  },
+  {
+    "spine_index": 16,
+    "legal_name": "Cornerstone Overhead Garage Doors, LLC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.cornerstoneoverheaddoor.com",
+    "year_established": 2007,
+    "years_in_business": 19,
+    "owner_name": "Iris Espinoza",
+    "owner_age_estimate": 55,
+    "owner_age_source": "founder_since_2007",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 6,
+    "employee_count_estimate": 14,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (713-690-3667)",
+      "Custom-builder niche (high-end Houston neighborhoods)",
+      "Local manufacturing = capital-intensive but illiquid"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch homepage — owner Iris Espinoza public-facing"
+    },
+    "data_sources": [
+      {"url": "https://www.cornerstoneoverheaddoor.com/", "fetched_at": "2026-05-16", "field": "owner_family"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.78,
+    "high_conviction_signals": [
+      "19-year tenure",
+      "Solo-owner (Iris Espinoza) ~55",
+      "Custom-builder niche = high-margin, defensible",
+      "BORDERLINE: under 20 yrs tenure, owner mid-late career"
+    ]
+  },
+  {
+    "spine_index": 17,
+    "legal_name": "Hutchins Garage Doors",
+    "city": "Austin",
+    "county": "Travis",
+    "website": "https://hutchinsgaragedoors.com",
+    "year_established": 1997,
+    "years_in_business": 29,
+    "owner_name": "Don & Dan Grenier (acquired from 'Hutch' in 2011)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "second_owner_since_2011",
+    "entity_status": "FLAG — verify post-Cedar-Park-acquisition (2024)",
+    "is_distressed": false,
+    "estimated_truck_count": 12,
+    "employee_count_estimate": 22,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (512-388-4400)",
+      "Brochure-style site",
+      "Site references 'sister company Cedar Park Overhead Doors' (Cedar Park = Gridiron Capital portfolio since 2024)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch homepage — Grenier family owners; post-2024 status unclear"
+    },
+    "data_sources": [
+      {"url": "https://hutchinsgaragedoors.com", "fetched_at": "2026-05-16", "field": "founded_grenier_2011"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_verify"}
+    ],
+    "data_completeness": 0.65,
+    "high_conviction_signals": [
+      "CRITICAL FLAG: 'Sister company' to Cedar Park Overhead Doors (acquired by Gridiron Capital June 2024)",
+      "REQUIRES TX SOS registered-agent check before outreach — may already be in GarageCo platform",
+      "EXCLUDE pending verification — high risk PE-affiliated"
+    ]
+  },
+  {
+    "spine_index": 18,
+    "legal_name": "Hannah's Garage Doors",
+    "city": "Austin",
+    "county": "Travis",
+    "website": "https://hannahsgaragedoors.com",
+    "year_established": 2001,
+    "years_in_business": 25,
+    "owner_name": "Quinton Hannah",
+    "owner_age_estimate": 55,
+    "owner_age_source": "industry_since_1997_business_since_2001",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 4,
+    "employee_count_estimate": 8,
+    "service_mix": "residential",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (512-944-0124)",
+      "Veteran-owned messaging = personal identity tied to brand",
+      "Small veteran crew = lean operation",
+      "Brochure-style site"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — Quinton Hannah is the brand"
+    },
+    "data_sources": [
+      {"url": "https://hannahsgaragedoors.com", "fetched_at": "2026-05-16", "field": "owner_Quinton_Hannah"},
+      {"url": "https://www.bbb.org/us/tx/austin/profile/garage-door-repair/hannahs-garage-doors-0825-1000166711", "fetched_at": "2026-05-16", "field": "bbb"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.80,
+    "high_conviction_signals": [
+      "25-year tenure (industry-since-1997, business-since-2001)",
+      "Solo-owner archetype, veteran",
+      "Owner ~55 — entering pre-retirement window",
+      "Name-on-door = personal identity (harder transition)"
+    ]
+  },
+  {
+    "spine_index": 19,
+    "legal_name": "Armstrong Garage Doors, Inc.",
+    "city": "Austin",
+    "county": "Travis",
+    "website": "https://armstrongdoorsaustin.com",
+    "year_established": 2010,
+    "years_in_business": 16,
+    "owner_name": "Armstrong (founder family, unspecified)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "founder_since_2010",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 5,
+    "employee_count_estimate": 10,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (512-903-8544)",
+      "Started Oak Hill = sub-Austin local",
+      "Brochure-style site"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch homepage"
+    },
+    "data_sources": [
+      {"url": "https://armstrongdoorsaustin.com", "fetched_at": "2026-05-16", "field": "founded_2010"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.65,
+    "high_conviction_signals": [
+      "16-year tenure (just over threshold)",
+      "Solo-owner, mid-career (~50)",
+      "BORDERLINE: tenure marginal, owner not near exit",
+      "DEPRIORITIZE relative to 30+ yr operators"
+    ]
+  },
+  {
+    "spine_index": 20,
+    "legal_name": "Aaction Overhead Door, Inc.",
+    "city": "Round Rock",
+    "county": "Williamson",
+    "website": "https://aactionoverhead.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Unknown (needs TX SOS lookup)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 8,
+    "employee_count_estimate": 15,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (512-335-7441)",
+      "Brochure-style site",
+      "Long-running per directory but unverified founding date"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch about page — minimal biographical detail"
+    },
+    "data_sources": [
+      {"url": "https://aactionoverhead.com/about-us/", "fetched_at": "2026-05-16", "field": "austin_round_rock_independent"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.45,
+    "high_conviction_signals": [
+      "INSUFFICIENT DATA: founding year unknown, owner unknown",
+      "Austin/Round Rock independent (NOT Action Garage Door Plano)",
+      "Needs deep-dive TX SOS + BBB founding-date verification"
+    ]
+  },
+  {
+    "spine_index": 21,
+    "legal_name": "Fratex Garage Door Specialists",
+    "city": "Round Rock",
+    "county": "Williamson",
+    "website": "https://fratexgarage.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Unknown (family-owned per directory)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 4,
+    "employee_count_estimate": 8,
+    "service_mix": "residential",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (512-661-7370)",
+      "Brochure-style site",
+      "Small operation"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal biographical detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.40,
+    "high_conviction_signals": [
+      "INSUFFICIENT DATA: founding year unknown, owner unknown",
+      "Round Rock family-owned per directory",
+      "DEPRIORITIZE pending tenure verification"
+    ]
+  },
+  {
+    "spine_index": 22,
+    "legal_name": "RidgeLine Overhead Garage Door",
+    "city": "Pflugerville",
+    "county": "Travis",
+    "website": "https://ridgelinegaragedoor.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Unknown",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 4,
+    "employee_count_estimate": 8,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (512-333-0149)",
+      "Brochure-style site",
+      "Small Pflugerville independent"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.35,
+    "high_conviction_signals": [
+      "INSUFFICIENT DATA",
+      "DEPRIORITIZE pending deep-dive"
+    ]
+  },
+  {
+    "spine_index": 23,
+    "legal_name": "R&S Overhead Garage Door of Austin",
+    "city": "Pflugerville",
+    "county": "Travis",
+    "website": "https://rsoverheaddoor.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Unknown",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 4,
+    "employee_count_estimate": 8,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (512-246-3993)",
+      "Brochure-style site"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.35,
+    "high_conviction_signals": [
+      "INSUFFICIENT DATA",
+      "DEPRIORITIZE pending deep-dive"
+    ]
+  },
+  {
+    "spine_index": 24,
+    "legal_name": "Tovar Garage Doors & Openers LLC",
+    "city": "Alvarado",
+    "county": "Johnson",
+    "website": "https://www.tovargaragedoors.com",
+    "year_established": 2001,
+    "years_in_business": 25,
+    "owner_name": "Pedro Tovar & Alfonso Tovar (brothers)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "founders_since_2001_likely_late_20s_at_start",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 8,
+    "employee_count_estimate": 16,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (817-583-3299)",
+      "Brochure-style installation-company site",
+      "Alvarado (Johnson County) + Fort Worth = secondary DFW markets"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch installation-company page — Tovar brothers as founders"
+    },
+    "data_sources": [
+      {"url": "https://www.tovargaragedoors.com/garage-door-installation-company/", "fetched_at": "2026-05-16", "field": "founders_brothers"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.80,
+    "high_conviction_signals": [
+      "25-year tenure",
+      "Brother-partnership solo-owner archetype",
+      "Owners ~55 — entering pre-retirement window",
+      "Two-owner exit dynamics (both may want to retire together)"
+    ]
+  },
+  {
+    "spine_index": 25,
+    "legal_name": "Alpha & Omega Door Company",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://alphaomegadoors.com",
+    "year_established": 2001,
+    "years_in_business": 25,
+    "owner_name": "Mike Porter",
+    "owner_age_estimate": 55,
+    "owner_age_source": "founder_since_2001",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 6,
+    "employee_count_estimate": 12,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Phone-first intake (817-595-1551)",
+      "Faith-based brand = niche / founder-identity tied",
+      "Custom cedar doors specialty = small batch operation"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch about page — Mike Porter as founder/owner"
+    },
+    "data_sources": [
+      {"url": "http://alphaomegadoors.com/about/", "fetched_at": "2026-05-16", "field": "founder_Mike_Porter"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.78,
+    "high_conviction_signals": [
+      "25-year tenure",
+      "Solo-owner (Mike Porter) ~55",
+      "Custom-cedar-door specialty = defensible niche",
+      "Faith-based positioning = founder identity tied (harder transition)"
+    ]
+  },
+  {
+    "spine_index": 26,
+    "legal_name": "Mike's Overhead Doors Co.",
+    "city": "Azle",
+    "county": "Tarrant",
+    "website": "https://mikesoverhead.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Mike (founder; surname unspecified)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 5,
+    "employee_count_estimate": 10,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "No phone number in directory listing",
+      "Brochure-style site",
+      "Azle (NW Fort Worth exurb) = off-main-metro"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_independent"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.40,
+    "high_conviction_signals": [
+      "INSUFFICIENT DATA: founding year unknown",
+      "Name-on-door (Mike's) = solo-owner archetype",
+      "Azle off-metro location = less PE attention",
+      "Needs deep-dive verification"
+    ]
+  },
+  {
+    "spine_index": 27,
+    "legal_name": "Arnold's Garage Door Service",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://arnoldsgaragedoorservice.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Arnold (founder; surname unspecified)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 4,
+    "employee_count_estimate": 8,
+    "service_mix": "residential",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "No phone in directory",
+      "Brochure-style site",
+      "Family-owned per directory"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_family"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.40,
+    "high_conviction_signals": [
+      "INSUFFICIENT DATA",
+      "Name-on-door = solo-owner archetype",
+      "Needs deep-dive"
+    ]
+  },
+  {
+    "spine_index": 28,
+    "legal_name": "Johnny B's Garage Doors And Service",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://johnnybsgaragedoorsfortworth.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Johnny B (founder; surname unspecified)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 4,
+    "employee_count_estimate": 8,
+    "service_mix": "residential",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "No phone in directory",
+      "Brochure-style site",
+      "Family-owned per directory"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_family"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.40,
+    "high_conviction_signals": [
+      "INSUFFICIENT DATA",
+      "Name-on-door = solo-owner archetype",
+      "Needs deep-dive"
+    ]
+  },
+  {
+    "spine_index": 29,
+    "legal_name": "Keller Garage Doors",
+    "city": "Keller",
+    "county": "Tarrant",
+    "website": "https://kellertx-garagedoor.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Unknown",
+    "owner_age_estimate": 60,
+    "owner_age_source": "30yrs_experience_claim_implies_55_60",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 4,
+    "employee_count_estimate": 8,
+    "service_mix": "residential",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Brochure-style site",
+      "Geographic-name brand (Keller) = local-only",
+      "30 yrs experience claim = mature operator"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_30_years"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.50,
+    "high_conviction_signals": [
+      "30 yrs experience claim = owner likely 55-60+",
+      "Keller (NE DFW) suburb-only positioning",
+      "Needs deep-dive on founding year + owner"
+    ]
+  },
+  {
+    "spine_index": 30,
+    "legal_name": "Alamo Doors and Gates",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "website": "https://alamodoor.com",
+    "year_established": null,
+    "years_in_business": 25,
+    "owner_name": "Unknown (family-owned)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "25yr_business_implies_founder_50s",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 5,
+    "employee_count_estimate": 10,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Brochure-style site",
+      "25 yrs in service per directory",
+      "Family-owned"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_family_25_years"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.55,
+    "high_conviction_signals": [
+      "25 yrs in service per directory",
+      "FLAG: distinct from 'Alamo Door Systems' (San Antonio) — verify TX SOS",
+      "Arlington family-owned",
+      "Needs deep-dive on owner identity + founding year"
+    ]
+  },
+  {
+    "spine_index": 31,
+    "legal_name": "The Good Guys Door Company",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://thegoodguysdoor.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Unknown (family-operated)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 5,
+    "employee_count_estimate": 10,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Brochure-style site",
+      "Family-operated per directory"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas", "fetched_at": "2026-05-16", "field": "directory_family"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.40,
+    "high_conviction_signals": [
+      "INSUFFICIENT DATA",
+      "Dallas family-operated",
+      "Needs deep-dive"
+    ]
+  },
+  {
+    "spine_index": 32,
+    "legal_name": "Hollywood Overhead Door Co.",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://hollywoodohd.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Unknown",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 6,
+    "employee_count_estimate": 12,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Brochure-style site",
+      "Dallas independent per directory"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas", "fetched_at": "2026-05-16", "field": "directory_independent"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.45,
+    "high_conviction_signals": [
+      "INSUFFICIENT DATA",
+      "FLAG: distinct from Hollywood-Crawford (San Antonio) — verify TX SOS",
+      "Dallas independent",
+      "Needs deep-dive"
+    ]
+  },
+  {
+    "spine_index": 33,
+    "legal_name": "Metro Garage Door Repair",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://metrogaragedoor.net",
+    "year_established": null,
+    "years_in_business": 20,
+    "owner_name": "Unknown (family-run)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "20yr_tenure_implies_founder_late_40s_to_50s",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 6,
+    "employee_count_estimate": 12,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Brochure-style site",
+      ".net domain = mid-2000s era",
+      "Family-run per directory",
+      "Dual locations (Dallas + Plano)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_family_run_20_years"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.55,
+    "high_conviction_signals": [
+      "20 yrs family-run per directory",
+      "Dallas + Plano dual-location",
+      "Needs deep-dive on owner identity"
+    ]
+  },
+  {
+    "spine_index": 34,
+    "legal_name": "Nation Overhead Door & Gate",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://nationoverheaddoor.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Unknown (family-owned)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_truck_count": 6,
+    "employee_count_estimate": 12,
+    "service_mix": "mixed",
+    "has_maintenance_plan": false,
+    "ida_member": false,
+    "coasting_tells": [
+      "Brochure-style site",
+      "Family-owned per directory"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch — minimal detail"
+    },
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas", "fetched_at": "2026-05-16", "field": "directory_family"},
+      {"url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php", "fetched_at": "2026-05-16", "field": "entity_status_active"}
+    ],
+    "data_completeness": 0.45,
+    "high_conviction_signals": [
+      "INSUFFICIENT DATA",
+      "Dallas family-owned",
+      "Needs deep-dive on owner + founding year"
+    ]
+  }
+]

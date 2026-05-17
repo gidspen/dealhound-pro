@@ -1,0 +1,2413 @@
+[
+  {
+    "_meta": {
+      "vertical": "janitorial_commercial_cleaning",
+      "naics": "561720",
+      "geography": "TX",
+      "build_run": "janitorial-tx-2026-Q2 spine-fetch",
+      "build_started_at": "2026-05-16T00:00:00Z",
+      "build_completed_at": "2026-05-16T03:30:00Z",
+      "build_status": "complete",
+      "spine_sources_used": [
+        "Google search by metro + 'commercial cleaning company'",
+        "Google search by metro + 'janitorial services'",
+        "Direct website fetches (about/team pages)",
+        "Expertise.com top-N city lists (lead source, every entry verified via direct site fetch)",
+        "ThreeBestRated.com (lead source, verified)",
+        "Inven.ai / Cerco.ai top-N TX lists (lead source, verified)",
+        "BBB profiles (cross-reference for owner names / founding year)"
+      ],
+      "spine_sources_attempted_blocked": [
+        "BSCAI member directory at www.bscai.org/Public/Find-Members.aspx - 404 / requires member login (paywall)",
+        "ISSA member directory at issa.com - not publicly searchable for TX subset",
+        "Texas Comptroller HUB database - not directly queryable per business via public web (queryable only by HUB ID via state portal)"
+      ],
+      "exclusion_filters_applied": [
+        "Franchise brands: JaniKing, Coverall, Office Pride, Stratus Building Solutions, JAN-PRO, Vanguard Cleaning Systems, Anago Cleaning Systems, System4, Corvus Janitorial Systems, ServiceMaster Clean (and ServiceMaster master franchises like 'ServiceMaster Janitorial by TAG', 'ServiceMaster Commercial Cleaning by Legacy', 'ServiceMaster Building Services by Dogwood', 'ServiceMaster Commercial Cleaning by the Experts'), SERVPRO franchise locations, Merry Maids franchise locations",
+        "Large national B2B accounts (>200 employees or NYSE-listed): ABM Industries, GCA Services (now ABM), Pritchard Industries, Aramark, C&W Services, Diversified Maintenance, Marsden Holdings, Harvard Maintenance, OpenWorks",
+        "Out-of-state HQ with TX branch only (Clean Team Inc Albuquerque NM, CBM Corp Syosset NY, Maintenance Resources Inc Denver CO, RenKe Building Maintenance Shreveport LA, DBS Building Solutions multi-state, Clean Method multi-state)",
+        "Texas-based but headcount too large for SMB target (McLemore Building Maintenance ~1,000+ employees, DTK Facility Services ~1,800+ employees, Redlee/SCS Inc 2,800+ employees) - logged as separate notes, kept Redlee out of spine",
+        "Residential-primary maid services (English Maids, Mary's Cleaning Edinburg, Anthony's Super Cleaning, Genesis Carpet Cleaning - flagged as mixed-residential where small-commercial component exists; only commercial-primary or >50% commercial businesses retained)",
+        "Self-identified franchise sellers / multi-unit licensors flagged but retained with 'flag_for_enrichment' note (AMC Commercial Cleaning, Corporate Building Services CBS, Strategic Janitorial Solutions, Professional Polish, Like New Building Solutions)"
+      ],
+      "verification_protocol": "Each entry has a live website fetch with timestamp. No company included on snippet-only evidence. Founded year, address, and franchise-independence appear in a direct fetch of the company's own site. Where the live site is unreachable (403, expired cert, 502, 404), the candidate was either dropped OR included with explicit 'low confidence' notes and zero independence_verified=true claim.",
+      "data_verification_warnings": [
+        "Several entries have null founded_year because website states only '20+ years' / 'over 30 years' without an explicit year - flagged for enrichment phase to cross-check via Texas Secretary of State / Comptroller Active Taxpayer registry",
+        "Owner names are sparse on most company websites - enrichment phase should pull Comptroller franchise tax record holder, BBB business profile owner, and LinkedIn CEO",
+        "Some entries (e.g. AMC Commercial Cleaning, Corporate Building Services) mention 'franchise opportunities available' on their site - this likely means they sell their own franchises, not that they ARE a franchise. Flagged for enrichment-phase deeper check before any A-tier promotion."
+      ],
+      "total_verified": 103,
+      "independence_verified_true": 97,
+      "independence_verified_false_or_low_confidence": 6
+    }
+  },
+  {
+    "legal_name": "BCI Janitorial",
+    "dba_name": null,
+    "address": "2812 Trinity Square Drive, Suite 100",
+    "city": "Carrollton",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75006",
+    "service_mix": "office, medical, retail, school, restaurants, manufacturing",
+    "estimated_employee_count": null,
+    "founded_year": 1990,
+    "website": "https://bcijanitorial.com/",
+    "phone": "(214) 653-1043",
+    "data_sources": [
+      {
+        "url": "https://bcijanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned and locally operated since 1990. Never subcontracts. Not on any exclusion-list franchise/national roster. Female owned per separate BBB profile."
+  },
+  {
+    "legal_name": "AMC Commercial Cleaning",
+    "dba_name": null,
+    "address": "8609 Mid Cities Blvd",
+    "city": "North Richland Hills",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76182",
+    "service_mix": "office, senior care, schools, medical, retail, daycare, industrial",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://amcclean.us/",
+    "phone": "(972) 705-7926",
+    "data_sources": [
+      {
+        "url": "https://amcclean.us/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services"
+      }
+    ],
+    "independence_verified": false,
+    "independence_notes": "Family-owned per site, 30+ years experience. HOWEVER the site mentions 'Franchises available' suggesting it may sell its own franchises - flag for enrichment-phase deep check before any A-tier promotion. Not on exclusion roster as of fetch."
+  },
+  {
+    "legal_name": "DBM Inc.",
+    "dba_name": "DBM Janitorial Services",
+    "address": "2815 Valley View Ln Ste 103",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75234",
+    "service_mix": "office, medical/healthcare, retail, day porter, floor/carpet",
+    "estimated_employee_count": null,
+    "founded_year": 1975,
+    "website": "https://full-service-janitorial.com/",
+    "phone": "(972) 620-9200",
+    "data_sources": [
+      {
+        "url": "https://full-service-janitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, addresses, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned, operating since 1975 (50 yrs). Multi-location DFW (Dallas, Plano, Frisco) - single ownership. Not on any exclusion roster."
+  },
+  {
+    "legal_name": "Daltex Janitorial Services, LLC",
+    "dba_name": null,
+    "address": "2702 Industrial Ln #D",
+    "city": "Garland",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75041",
+    "service_mix": "office, medical, schools, gym, retail, industrial, restaurants, hotels",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://daltexjanitorialservices.com/",
+    "phone": "(214) 703-0400",
+    "data_sources": [
+      {
+        "url": "https://daltexjanitorialservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent, locally operated. Not on franchise/national roster. Broad DFW coverage."
+  },
+  {
+    "legal_name": "Professional Janitorial Service",
+    "dba_name": "PJS of Houston",
+    "address": "4801 Milwee St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77092",
+    "service_mix": "office, schools, college, airport, industrial, medical, churches",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.pjsofhouston.com/",
+    "phone": "(713) 850-0287",
+    "data_sources": [
+      {
+        "url": "https://www.pjsofhouston.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services, family-team description"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-treatment company. Independent Houston-based; not on exclusion roster."
+  },
+  {
+    "legal_name": "Caring Commercial Cleaning Inc.",
+    "dba_name": null,
+    "address": "14090 SW Fwy, Suite 300",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "service_mix": "office (Class A), corporate campus, multi-tenant towers, schools/govt",
+    "estimated_employee_count": null,
+    "founded_year": 2007,
+    "website": "https://caringtx.com/",
+    "phone": "(281) 738-3951",
+    "data_sources": [
+      {
+        "url": "https://caringtx.com/janitorial-services/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-describes 'independently owned and operated'. Owner-operated. Inc 5000 fastest-growing 2019. CHOICE Partners + PCA Cooperative awarded vendor. Not on exclusion roster."
+  },
+  {
+    "legal_name": "SanServe Janitorial",
+    "dba_name": null,
+    "address": "4605 Washington Blvd",
+    "city": "Beaumont",
+    "county": "Jefferson",
+    "state": "TX",
+    "zip": "77707",
+    "service_mix": "office, hard-floor, carpet, construction cleanup, day porter, disinfection",
+    "estimated_employee_count": null,
+    "founded_year": 1963,
+    "website": "https://sanservejanitorial.com/",
+    "phone": "(800) 274-8464",
+    "data_sources": [
+      {
+        "url": "https://sanservejanitorial.com/houston-tx/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, service_area"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "62 years in business (since 1963). Independent, Beaumont-HQ. Greater Houston/Beaumont/Corpus service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Juany Cleaning Service",
+    "dba_name": null,
+    "address": "2800 S I-35 Frontage Rd Suite 200",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78704",
+    "service_mix": "commercial janitorial, office, medical, carpet, recurring maid, post-construction",
+    "estimated_employee_count": 60,
+    "founded_year": 2005,
+    "website": "https://juanycleaningservice.com/",
+    "phone": "(512) 470-7079",
+    "data_sources": [
+      {
+        "url": "https://juanycleaningservice.com/services-commercial-janitorial-services-greater-austin/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, employee_count, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Woman-owned, minority-owned, family-owned. 20+ years operating. 60+ cleaners. 440+ clients. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Master Clean Services",
+    "dba_name": null,
+    "address": "919 Billy Mitchell Blvd Suite 106",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78226",
+    "service_mix": "office, building maintenance, carpet, floor stripping/waxing, electrostatic disinfection, post-construction",
+    "estimated_employee_count": null,
+    "founded_year": 1993,
+    "website": "https://www.masterclean-sa.com/",
+    "phone": "(210) 433-8201",
+    "data_sources": [
+      {
+        "url": "https://www.masterclean-sa.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-describes 'family owned & operated' and explicitly 'not a large franchise'. 31+ years."
+  },
+  {
+    "legal_name": "J&J Commercial Cleaning LLC",
+    "dba_name": null,
+    "address": "3515 Sausalito Fern",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78261",
+    "service_mix": "office, commercial, floor/carpet, tile/grout, construction, window, porter, retail, deep, disinfection",
+    "estimated_employee_count": null,
+    "founded_year": 2008,
+    "website": "https://jjcommercial-cleaning.com/",
+    "phone": "(830) 521-5042",
+    "data_sources": [
+      {
+        "url": "https://jjcommercial-cleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "ex-franchise-now-independent disclosure on site"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Started as Vanguard Cleaning Systems franchise in 2008 and later became fully independent. Confirmed by direct site copy. Now fully independent J&J - no current exclusion-list affiliation."
+  },
+  {
+    "legal_name": "Brite Janitorial",
+    "dba_name": null,
+    "address": "7248 Glenview Dr",
+    "city": "Richland Hills",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76180",
+    "service_mix": "office, contract commercial, medical-grade terminal, vet, restroom, floor strip/wax, carpet, tile/grout, window, industrial",
+    "estimated_employee_count": null,
+    "founded_year": 1974,
+    "website": "https://britejanitorial.com/",
+    "phone": "(817) 498-6836",
+    "data_sources": [
+      {
+        "url": "https://britejanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned since 1974 (50+ years). Independent, Fort Worth metro. Not on any exclusion roster."
+  },
+  {
+    "legal_name": "Miner & Sons Janitorial Services",
+    "dba_name": null,
+    "address": "825 Precinct Line Rd",
+    "city": "Hurst",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76053",
+    "service_mix": "office, carpet, window, restroom/kitchen sanitation",
+    "estimated_employee_count": null,
+    "founded_year": 1996,
+    "website": "https://minerandsons.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://minerandsons.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year (29+ yrs), address, services, COO Miner"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned, COO James Miner listed. 29+ years serving DFW. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Alpine Building Maintenance & Supply",
+    "dba_name": null,
+    "address": "2920 SE Loop 820",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76140",
+    "service_mix": "office, janitorial, COVID disinfection, hard-floor, painting, pest control add-on, supplies",
+    "estimated_employee_count": null,
+    "founded_year": 1978,
+    "website": "https://alpinemaintenance.com/",
+    "phone": "(817) 795-6470",
+    "data_sources": [
+      {
+        "url": "https://alpinemaintenance.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, owner Perry Hoover, address, services, BSCAI/ISSA membership, HUB cert"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1978 by Perry Hoover. BSCAI Member, ISSA Member, HUB Certified Vendor. Not a franchise. 47+ years in business."
+  },
+  {
+    "legal_name": "R&M Janitorial Service",
+    "dba_name": "Frisco Brothers",
+    "address": null,
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75033",
+    "service_mix": "office, floor strip/wax, carpet, window, day porter, tile/grout, eco-friendly",
+    "estimated_employee_count": 26,
+    "founded_year": 2001,
+    "website": "https://www.friscojanitorial.com/",
+    "phone": "(214) 618-0816",
+    "data_sources": [
+      {
+        "url": "https://www.friscojanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founders McGlothlin, founded_year, employees 26, services, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2001 by Mark and Rick McGlothlin; currently owned by Mark and Sandra McGlothlin. 26+ staff, 65+ active clients. Bonded by Hartford. Family-owned."
+  },
+  {
+    "legal_name": "Pondsco Facility Services",
+    "dba_name": null,
+    "address": null,
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "office, commercial janitorial, pressure washing, construction, carpet/floor, day porter, deep cleaning, disinfection",
+    "estimated_employee_count": null,
+    "founded_year": 2000,
+    "website": "https://www.pondsco.com/",
+    "phone": "(214) 753-4000",
+    "data_sources": [
+      {
+        "url": "https://www.pondsco.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, 25+ yrs of experience, services, family-owned-and-operated"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned and operated, 25+ years experience. DFW area, Plano HQ. Not on exclusion roster. Note: Inven.ai list says since 1985; site says 25+ yrs (so ~2000). Defer to direct site claim until enrichment confirms."
+  },
+  {
+    "legal_name": "Legacy Business Services, LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "office, medical, dental, fertility clinic, eye center, bank, car dealership, church, school, porter, green, floor, power washing",
+    "estimated_employee_count": null,
+    "founded_year": 2012,
+    "website": "https://www.legacybusinessservices.com/",
+    "phone": "(214) 287-0390",
+    "data_sources": [
+      {
+        "url": "https://www.legacybusinessservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, owner Dan Moates, services, locally-owned-not-franchise"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2012 by Dan Moates. Locally owned, not a franchise. Recurring-revenue mix (medical/dental/banks/dealerships)."
+  },
+  {
+    "legal_name": "Prestige Janitorial Services (DFW)",
+    "dba_name": null,
+    "address": null,
+    "city": "Dallas-Fort Worth metro",
+    "county": null,
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial, medical/dental, construction, industrial, retail, restaurant, school, church, bank, gym, floor, window, carpet",
+    "estimated_employee_count": null,
+    "founded_year": 2003,
+    "website": "https://prestigejanitorial.com/",
+    "phone": "(972) 372-9071",
+    "data_sources": [
+      {
+        "url": "https://prestigejanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, OSHA cert, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "20+ years experience since 2003, OSHA certified. Multi-metro reach. Note: separate from Houston-area 'Prestige Janitorial Services' owned by Kevin Wyrick - different LLC. Both confirmed independent."
+  },
+  {
+    "legal_name": "Prestige Janitorial Services (Houston)",
+    "dba_name": null,
+    "address": "2100 W Loop South Suite 800",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77027",
+    "service_mix": "commercial, office, medical, industrial warehouse, retail, hospitality, church, bank, gym, healthcare, window, carpet, floor",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.commercialcleaninginhouston.com/",
+    "phone": "(713) 231-5891",
+    "data_sources": [
+      {
+        "url": "https://www.commercialcleaninginhouston.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, owner Kevin Wyrick, address, services, family-owned, no-contract"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Owned by Kevin Wyrick. 20+ years in TX. OSHA certified, fully bonded and insured. Family-owned, privately held. Distinct legal entity from DFW Prestige - same brand, different owner. Both confirmed independent."
+  },
+  {
+    "legal_name": "Fort Worth Cleaning Professionals",
+    "dba_name": null,
+    "address": "9500 Ray White Rd Suite 200",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76244",
+    "service_mix": "commercial, office, medical, dental, fitness, banking, post-event, carpet, high-tech facility",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://fwcleaningpros.com/",
+    "phone": "1-800-748-6858",
+    "data_sources": [
+      {
+        "url": "https://fwcleaningpros.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, addresses (2), services, veteran-owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Veteran-owned. Locally based Fort Worth. 2025 BEST award winner. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Sonlight Cleaning Services, Inc.",
+    "dba_name": null,
+    "address": "1411 Lemay Dr Suite 407",
+    "city": "Carrollton",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75007",
+    "service_mix": "janitorial, carpet/flood restoration, hard-floor, window, pressure washing, jan-san supplies",
+    "estimated_employee_count": null,
+    "founded_year": 1986,
+    "website": "https://sonlightcleaning.com/",
+    "phone": "(682) 214-8991",
+    "data_sources": [
+      {
+        "url": "https://sonlightcleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned 39+ years (since 1986). Multi-city TX coverage. Certified-bonded-insured."
+  },
+  {
+    "legal_name": "Delta Janitorial Systems, Inc",
+    "dba_name": null,
+    "address": "2100 N State Hwy 360 Suite 2103",
+    "city": "Grand Prairie",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75050",
+    "service_mix": "office, COVID sanitation, dry carpet, green cleaning, medical, daycare/school",
+    "estimated_employee_count": null,
+    "founded_year": 1985,
+    "website": "https://deltajanitorial.com/",
+    "phone": "(972) 261-9800",
+    "data_sources": [
+      {
+        "url": "https://deltajanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '40+ years' (so ~1985), address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "40+ years (founded ~1985). Independent, brands itself 'Dallas Janitorial Service For Over 40 Years'."
+  },
+  {
+    "legal_name": "Dallas Janitorial Services",
+    "dba_name": "DJS",
+    "address": "550 S Watters Rd #201",
+    "city": "Allen",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75013",
+    "service_mix": "office, day porter, deep cleaning, window, post-construction, floor, carpet, restroom, disinfection",
+    "estimated_employee_count": null,
+    "founded_year": 2006,
+    "website": "https://dallasjanitorialservices.com/",
+    "phone": "(214) 778-3689",
+    "data_sources": [
+      {
+        "url": "https://dallasjanitorialservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, addresses (4), services, 500+ clients"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned, 500+ DFW businesses served. Four offices (Allen HQ, Dallas, Plano, Fort Worth)."
+  },
+  {
+    "legal_name": "LM Commercial Cleaning",
+    "dba_name": null,
+    "address": "3815 Timms St Suite 101",
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "zip": "75701",
+    "service_mix": "office, carpet, hard-floor, window, green cleaning, on-site janitorial",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.lmcommercialcleaning.com/",
+    "phone": "(903) 257-3399",
+    "data_sources": [
+      {
+        "url": "https://www.lmcommercialcleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, addresses (5 TX locations), services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Multi-TX-location independent (Tyler HQ + Longview + Houston + Katy). East TX + Houston area focus."
+  },
+  {
+    "legal_name": "Windsor Building Services",
+    "dba_name": null,
+    "address": "1300 S Frazier St Suite 210",
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77301",
+    "service_mix": "office, day porter, floor, carpet, construction cleanup, electrostatic disinfection, project-based, high-touch preventive",
+    "estimated_employee_count": null,
+    "founded_year": 1997,
+    "website": "https://windsorservices.com/",
+    "phone": "(936) 756-7885",
+    "data_sources": [
+      {
+        "url": "https://windsorservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '28 yrs', address, services, family-owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned 28 years. Conroe HQ serves North Houston metro (Woodlands/Spring/Kingwood/Humble/Tomball)."
+  },
+  {
+    "legal_name": "My Pro Cleaner",
+    "dba_name": null,
+    "address": "26119 Interstate 45 N #303",
+    "city": "Spring",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77380",
+    "service_mix": "commercial, office, lobby, conference, retail, hotel, school, church, plus carpet/upholstery/tile/leather",
+    "estimated_employee_count": null,
+    "founded_year": 2004,
+    "website": "https://www.myprocleaner.com/",
+    "phone": "(281) 790-0005",
+    "data_sources": [
+      {
+        "url": "https://www.myprocleaner.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, owner Josh Almanza, founded_year"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2004 by Josh Almanza. Family-owned. North Houston / Spring TX. Not on exclusion roster."
+  },
+  {
+    "legal_name": "ECS Janitorial",
+    "dba_name": null,
+    "address": null,
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "general janitorial, day porter, electrostatic disinfection, enhanced disinfection, floor, carpet, outdoor maintenance",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.ecs-janitorial.com/",
+    "phone": "(469) 352-5517",
+    "data_sources": [
+      {
+        "url": "https://www.ecs-janitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, services, locally-owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned and operated Dallas. Serves Las Colinas/Irving corporate HQs. Not on exclusion roster. Enrichment phase needs to confirm founded_year via Secretary of State."
+  },
+  {
+    "legal_name": "Valor Janitorial",
+    "dba_name": null,
+    "address": "10425 Olympic Dr Suite A",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75220",
+    "service_mix": "office (medium-large), carpet, floor, construction, restroom, window, disinfection, event, warehouse",
+    "estimated_employee_count": null,
+    "founded_year": 2001,
+    "website": "https://www.valorjanitorial.com/",
+    "phone": "(214) 238-9550",
+    "data_sources": [
+      {
+        "url": "https://www.valorjanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2001. 90M+ sqft cleaned. $1M insurance. DFW-HQ. Sister branch in Midland (Valor Janitorial Midland) - separate listing. Note address same as Redlee/SCS (10425 Olympic Dr) - may be coworking or separate suites; flag for enrichment to confirm not a Redlee subsidiary."
+  },
+  {
+    "legal_name": "Valor Janitorial Midland",
+    "dba_name": null,
+    "address": "3107 Antelope Tr",
+    "city": "Midland",
+    "county": "Midland",
+    "state": "TX",
+    "zip": "79706",
+    "service_mix": "office, carpet, floor, disinfection, trash, pressure washing, construction cleanup, restroom, water damage",
+    "estimated_employee_count": null,
+    "founded_year": 2001,
+    "website": "https://www.valorjanitorialmidland.com/",
+    "phone": "(432) 666-2522",
+    "data_sources": [
+      {
+        "url": "https://www.valorjanitorialmidland.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Midland/Odessa West TX branch of Valor brand. Same operational lineage as Dallas Valor (2001). Permian Basin focus."
+  },
+  {
+    "legal_name": "Advantage Facility Services",
+    "dba_name": null,
+    "address": "2080 N State Hwy 360 Suite 100",
+    "city": "Grand Prairie",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75050",
+    "service_mix": "full-service janitorial, day porter, concert/venue, emergency, construction, window, hard-floor, make-ready, disinfection, pressure washing, landscaping",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://afs-texas.com/",
+    "phone": "(817) 776-5136",
+    "data_sources": [
+      {
+        "url": "https://afs-texas.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services, locally-owned-family-operated"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally Owned & Family Operated. Grand Prairie HQ. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Bethel Cleaning Services",
+    "dba_name": null,
+    "address": "644 N Tyler St",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75208",
+    "service_mix": "carpet, office, janitorial, commercial, residential, deep, disinfection, post-construction, floor",
+    "estimated_employee_count": null,
+    "founded_year": 2014,
+    "website": "https://www.bethelcleaningservicestx.com/",
+    "phone": "(972) 730-0620",
+    "data_sources": [
+      {
+        "url": "https://www.bethelcleaningservicestx.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year (10 yrs), address, services, service_area"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "10 years in Dallas. Not on exclusion roster. Mixed commercial/residential - confirm at enrichment whether commercial >50%."
+  },
+  {
+    "legal_name": "The Austin Cleaning Group, LLC",
+    "dba_name": null,
+    "address": "2900 N Quintan Park Rd #240-5010",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78732",
+    "service_mix": "commercial, office, retail, healthcare, fitness, education, day porter, event, plus residential/STR",
+    "estimated_employee_count": null,
+    "founded_year": 2018,
+    "website": "https://www.theaustincg.com/",
+    "phone": "(512) 910-3911",
+    "data_sources": [
+      {
+        "url": "https://www.theaustincg.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, 3 addresses, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Austin LLC. 3 metro offices. Commercial + STR mixed. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Western Janitorial Service, Inc.",
+    "dba_name": null,
+    "address": "2124 Montana Ave",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79903",
+    "service_mix": "commercial, office, medical/healthcare, construction, floor, window, retail, industrial, event, carpet, pressure washing",
+    "estimated_employee_count": null,
+    "founded_year": 1986,
+    "website": "https://westernjanitorial.com/",
+    "phone": "(915) 533-7107",
+    "data_sources": [
+      {
+        "url": "https://westernjanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, 38+ yrs (so ~1986), address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "38+ years, El Paso/West TX/Southern NM. Independent. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Maintenance Unlimited, Inc.",
+    "dba_name": null,
+    "address": "8860 Gateway East",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79907",
+    "service_mix": "commercial, office, janitorial, window, pressure, floor, green, COVID, custom",
+    "estimated_employee_count": null,
+    "founded_year": 1977,
+    "website": "https://maintenanceunlimited.com/",
+    "phone": "(915) 751-3780",
+    "data_sources": [
+      {
+        "url": "https://maintenanceunlimited.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, addresses, services, locally-owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1977 (48 yrs). El Paso + Las Cruces NM. Independent. Family-owned per Inven.ai list confirmed."
+  },
+  {
+    "legal_name": "Executive Cleaning Services, LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "office, floor, janitorial, disinfection, post-construction, day porter, 30+ facility types incl medical/edu/auto/retail/restaurant",
+    "estimated_employee_count": null,
+    "founded_year": 1976,
+    "website": "https://executive-clean.com/",
+    "phone": "1-800-664-6393",
+    "data_sources": [
+      {
+        "url": "https://executive-clean.com/locations/texas/corpus-christi/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, founder Ayxsa Moss, services, NOT a franchise"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1976 by Ayxsa Moss. Family-owned business explicitly 'not a franchise'. Woman-led, family-run, 49 yrs. BBB A+, HIPAA-compliant. Corpus Christi base + Houston/Fort Worth/Cypress service areas."
+  },
+  {
+    "legal_name": "Southwest Cleaning",
+    "dba_name": null,
+    "address": "7905 Farm to Market Road 179",
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": "79407",
+    "service_mix": "general commercial, auto dealership, bank, construction, medical, office, school, showroom, floor/upholstery",
+    "estimated_employee_count": null,
+    "founded_year": 1991,
+    "website": "https://www.swcleaning.com/",
+    "phone": "(806) 785-5665",
+    "data_sources": [
+      {
+        "url": "https://www.swcleaning.com/about-us",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, locally-owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1991 (34 yrs). Lubbock + Amarillo. BBB A+. Voted 2020 Best Lubbock. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Hi Definition Cleaning, Inc.",
+    "dba_name": null,
+    "address": null,
+    "city": "Allen",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "general office, hospital terminal, tile/grout, strip/wax, construction, move-in/out, commercial",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.hidefinitioncleaning.com/",
+    "phone": "(972) 872-5920",
+    "data_sources": [
+      {
+        "url": "https://www.hidefinitioncleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, service_areas (Collin Cty), services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Allen TX base. Bonded and insured. Not on exclusion roster. Enrichment phase needs to confirm founded_year + owner."
+  },
+  {
+    "legal_name": "Omni Cleaning Service",
+    "dba_name": null,
+    "address": "6406 HWY 78 Suite 107",
+    "city": "Sachse",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75048",
+    "service_mix": "janitorial, floor buff/wax, carpet, construction make-ready, power washing, window, office",
+    "estimated_employee_count": null,
+    "founded_year": 1994,
+    "website": "https://omnicleanservice.net/",
+    "phone": "(972) 530-1881",
+    "data_sources": [
+      {
+        "url": "https://omnicleanservice.net/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1994. Greater North DFW + Collin County. Not on exclusion roster."
+  },
+  {
+    "legal_name": "GC Services Maintenance & Janitorial",
+    "dba_name": null,
+    "address": "3818 Wow Rd Suite D",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78414",
+    "service_mix": "commercial cleaning, janitorial, window, floor, power washing, minor remodel, landscape, industrial",
+    "estimated_employee_count": null,
+    "founded_year": 2010,
+    "website": "https://gcservicescctx.com/",
+    "phone": "(361) 995-5885",
+    "data_sources": [
+      {
+        "url": "https://gcservicescctx.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2010. Corpus Christi + Robstown/Flour Bluff/Portland/SA service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "CJ's Cleaning Service LLC",
+    "dba_name": null,
+    "address": "1822 Holly Rd",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78417",
+    "service_mix": "residential + commercial, national accounts, construction, COVID disinfection, janitorial, day porter, lawn",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.cjscleaningservicetx.com/",
+    "phone": "(361) 530-5038",
+    "data_sources": [
+      {
+        "url": "https://www.cjscleaningservicetx.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, addresses (Corpus + SA)"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Corpus Christi + San Antonio offices. Mixed commercial/residential. Not on exclusion roster. Enrichment confirm founded_year + owner."
+  },
+  {
+    "legal_name": "Lux Janitorial",
+    "dba_name": null,
+    "address": "3855 Business Park Dr Unit 170",
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": "79110",
+    "service_mix": "residential + healthcare, office, financial, places of worship, post-construction",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://luxjanitorial.com/",
+    "phone": "(806) 884-8589",
+    "data_sources": [
+      {
+        "url": "https://luxjanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, 10+ yrs, address, service_area"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "10+ years TX Panhandle. 40+ commercial contracts. 26 counties served. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Cleanliness Janitorial Services",
+    "dba_name": null,
+    "address": null,
+    "city": "McKinney",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "medical office, janitorial, disinfection, carpet, strip/wax, day porter, daycare, Airbnb",
+    "estimated_employee_count": null,
+    "founded_year": 1999,
+    "website": "https://www.cleanlinessjan.com/",
+    "phone": "(469) 790-0738",
+    "data_sources": [
+      {
+        "url": "https://www.cleanlinessjan.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '25 yrs experience' (~1999), owner Brandon, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "25+ yrs in McKinney (~1999). Owner first name 'Brandon' on testimonials. Not on exclusion roster."
+  },
+  {
+    "legal_name": "His Handiworks, LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Canton",
+    "county": "Van Zandt",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial cleaning, janitorial, daily/weekly/bi-weekly",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://hishandiworkseasttexas.com/",
+    "phone": "(903) 368-0851",
+    "data_sources": [
+      {
+        "url": "https://hishandiworkseasttexas.com (timed out at fetch attempt)",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "phone, service area Canton/Longview/Jacksonville/Tyler"
+      }
+    ],
+    "independence_verified": false,
+    "independence_notes": "WARNING: Live fetch timed out at 60s. Only search-snippet evidence. 50+ years collective team experience per snippet. Per \u00a72 of skill rules this entry CANNOT carry A-tier in any future scoring round on this evidence. Listed at C_watch-risk level. Enrichment phase must successfully fetch live site OR drop."
+  },
+  {
+    "legal_name": "Advantage Building Services",
+    "dba_name": null,
+    "address": "1502 E Whaley St",
+    "city": "Longview",
+    "county": "Gregg",
+    "state": "TX",
+    "zip": "75601",
+    "service_mix": "construction cleanup, floor, janitorial, commercial - churches, manufacturing, medical, offices",
+    "estimated_employee_count": null,
+    "founded_year": 1996,
+    "website": "https://abscleantx.com/",
+    "phone": "(903) 753-2931",
+    "data_sources": [
+      {
+        "url": "https://abscleantx.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, 4000+ projects, 65M+ sqft"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Longview/Tyler East TX. Founded 1996. 93% retention. 4000+ projects. Not on exclusion roster."
+  },
+  {
+    "legal_name": "All Around Maintenance and Janitorial Inc.",
+    "dba_name": null,
+    "address": "PO Box 20821",
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": "76702",
+    "service_mix": "office, floor, carpet, window, pressure, construction, dispenser install, COVID, industrial",
+    "estimated_employee_count": null,
+    "founded_year": 1996,
+    "website": "https://allaroundmaintenance.net/",
+    "phone": "(254) 722-5876",
+    "data_sources": [
+      {
+        "url": "https://allaroundmaintenance.net/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year ~30 yrs, owners Floyd & Brady, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "30 years Central TX. Owned by Floyd and Brady (first names only). Killeen/Temple/Waco/Belton service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Ultra-Clean Janitorial Services",
+    "dba_name": null,
+    "address": "6815 Broad Avenue",
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": "76712",
+    "service_mix": "janitorial, floor wax/disinfect, carpet, hard surface, new construction cleanup",
+    "estimated_employee_count": null,
+    "founded_year": 1989,
+    "website": "https://www.ultracleanjanitorialservices.com/",
+    "phone": "(254) 857-4626",
+    "data_sources": [
+      {
+        "url": "https://www.ultracleanjanitorialservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '34 yrs' (~1989), address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "34+ years Waco/Temple. Owner contact email 'carson@'. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Superior Janitorial Services",
+    "dba_name": null,
+    "address": "2261 Northpark Dr #145",
+    "city": "Kingwood",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77339",
+    "service_mix": "commercial janitorial, deep, carpet, floor, maintenance, office, hospital/medical, hotel",
+    "estimated_employee_count": null,
+    "founded_year": 2013,
+    "website": "https://www.superiorjanitorialtx.com/",
+    "phone": "(281) 389-0242",
+    "data_sources": [
+      {
+        "url": "https://www.superiorjanitorialtx.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, locally-owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2013. Kingwood/Humble/Atascocita/New Caney. Locally owned. Not on exclusion roster."
+  },
+  {
+    "legal_name": "A-1 Professional Cleaning",
+    "dba_name": null,
+    "address": "11400 Hwy 30 Suite 204",
+    "city": "College Station",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial, janitorial, office, construction, make-ready, emergency",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.a1professionalcleaning.net/",
+    "phone": "(979) 399-5988",
+    "data_sources": [
+      {
+        "url": "https://www.a1professionalcleaning.net/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, owners Helen Beard + Sheila Dillard, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Owned by Helen Beard and Sheila Dillard. 30+ years combined experience. Brazos Valley + Navasota service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Howell Service Corporation",
+    "dba_name": null,
+    "address": "1512 South Texas Avenue",
+    "city": "Bryan",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": "77802",
+    "service_mix": "facility cleaning, floor, blitz, construction, carpet/upholstery, apartment make-ready, window, pressure washing",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.howellservicecorp.com/",
+    "phone": "(979) 823-1775",
+    "data_sources": [
+      {
+        "url": "https://www.howellservicecorp.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, 40+ yrs experience, address, services, BSCAI + ISSA membership, BBB A+"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "40+ years Brazos Valley. BSCAI Member, ISSA Member, BBB A+. Not on exclusion roster. Enrichment phase confirm founded_year via SoS / Comptroller."
+  },
+  {
+    "legal_name": "First Choice Cleaning Services",
+    "dba_name": null,
+    "address": null,
+    "city": "College Station",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial + residential cleaning",
+    "estimated_employee_count": null,
+    "founded_year": 2021,
+    "website": "https://www.firstchoice-cleaningservices.com/",
+    "phone": "(979) 571-4748",
+    "data_sources": [
+      {
+        "url": "https://www.firstchoice-cleaningservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, GM Devin Cantu, Ops Mgr Jasmin Lopez"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Young company (2021). Less than 5 years - if scored will fail Layer 2 hard gate. Listed for completeness. Founders had 10+ yrs prior experience."
+  },
+  {
+    "legal_name": "Express Commercial Cleaning, Inc.",
+    "dba_name": null,
+    "address": "1501 Panther Loop Building 3 Suite D",
+    "city": "Pflugerville",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "janitorial, floor, pressure washing, post-construction, carpet",
+    "estimated_employee_count": null,
+    "founded_year": 2010,
+    "website": "https://www.expresscommercialcleaning.com/",
+    "phone": "(512) 919-4333",
+    "data_sources": [
+      {
+        "url": "https://www.expresscommercialcleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, family-owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2010. Pflugerville HQ - Round Rock/Austin metro. Family-owned. 2025 Best Place to Work (Round Rock Chamber)."
+  },
+  {
+    "legal_name": "Mid-Cities Janitorial",
+    "dba_name": null,
+    "address": null,
+    "city": "Midland",
+    "county": "Midland",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial cleaning, floor wax, move-in/out",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.mid-citiesjanitorial.com/",
+    "phone": "(432) 230-7180",
+    "data_sources": [
+      {
+        "url": "https://www.mid-citiesjanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '15+ yrs', service_areas (Permian Basin)"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned 15+ yrs (~2010). Midland/Odessa/Big Spring/Stanton service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "West Texas Commercial Cleaning LLC",
+    "dba_name": "WTCC",
+    "address": "808 Tower Drive Ste 9",
+    "city": "Odessa",
+    "county": "Ector",
+    "state": "TX",
+    "zip": "79761",
+    "service_mix": "janitorial, office, disinfecting, event, make-ready, moving",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.wtccleaning.com/",
+    "phone": "(432) 552-9520",
+    "data_sources": [
+      {
+        "url": "https://www.wtccleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Odessa/Midland Permian Basin. Bonded and insured. Not on exclusion roster."
+  },
+  {
+    "legal_name": "S & T Janitorial Service, LLC",
+    "dba_name": null,
+    "address": "22 Estates Drive",
+    "city": "Odessa",
+    "county": "Ector",
+    "state": "TX",
+    "zip": "79765",
+    "service_mix": "commercial, janitorial, floor, window, carpet, office, construction, disinfection, event",
+    "estimated_employee_count": null,
+    "founded_year": 2008,
+    "website": "https://www.stjanitorial.com/",
+    "phone": "(432) 777-2903",
+    "data_sources": [
+      {
+        "url": "https://www.stjanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, BBB A+"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2008. Odessa/Midland/Permian Basin. BBB A+. 15+ years. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Bradley Janitorial Services",
+    "dba_name": null,
+    "address": "6961 King Ranch Rd",
+    "city": "Odessa",
+    "county": "Ector",
+    "state": "TX",
+    "zip": "79765",
+    "service_mix": "commercial janitorial, stripping/waxing, carpet, building maintenance",
+    "estimated_employee_count": null,
+    "founded_year": 2013,
+    "website": "https://www.bradleyjanitorialservices.net/",
+    "phone": "(432) 385-8983",
+    "data_sources": [
+      {
+        "url": "https://www.bradleyjanitorialservices.net/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, contact Sean"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2013. Odessa/Midland/Andrews/Big Spring/Kermit/Monahans. Not on exclusion roster."
+  },
+  {
+    "legal_name": "A1 Plus Cleaning Services, LLC",
+    "dba_name": null,
+    "address": "204 E 16th St",
+    "city": "Odessa",
+    "county": "Ector",
+    "state": "TX",
+    "zip": "79761",
+    "service_mix": "commercial, disinfection, move-in/out, office, post-construction",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://a1pluscleaningservices.com/",
+    "phone": "(432) 550-4999",
+    "data_sources": [
+      {
+        "url": "https://a1pluscleaningservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, service_areas Odessa/Midland"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Permian Basin. Locally owned and operated. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Texoma Cleaning LLC",
+    "dba_name": null,
+    "address": "212 N Crockett Suite C",
+    "city": "Sherman",
+    "county": "Grayson",
+    "state": "TX",
+    "zip": "75090",
+    "service_mix": "commercial, janitorial, office, residential, maid, move-in/out, rental",
+    "estimated_employee_count": null,
+    "founded_year": 1988,
+    "website": "https://texomacleaning.com/",
+    "phone": "(903) 814-8806",
+    "data_sources": [
+      {
+        "url": "https://texomacleaning.com/about-us/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1988 (37 yrs). Sherman/Denison/Gainesville/Bonham/Anna/Greenville. Mixed commercial/residential."
+  },
+  {
+    "legal_name": "Wall to Wall Cleaning Services",
+    "dba_name": null,
+    "address": null,
+    "city": "Sherman",
+    "county": "Grayson",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial, janitorial, window, floor, carpet, construction, green",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://walltowallcleaningservices.com/",
+    "phone": "(903) 815-1431",
+    "data_sources": [
+      {
+        "url": "https://walltowallcleaningservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, owner Jason Wall, service_area"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Owned by Jason Wall (lifelong Sherman resident, 20+ yrs service). Grayson County + N Texas + OK. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Bradwell Cleaning Services",
+    "dba_name": null,
+    "address": "190 B-2 Gulf Freeway",
+    "city": "League City",
+    "county": "Galveston",
+    "state": "TX",
+    "zip": "77573",
+    "service_mix": "office, janitorial, make-ready",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.bradwellcleaningservices.com/",
+    "phone": "(281) 303-5630",
+    "data_sources": [
+      {
+        "url": "https://www.bradwellcleaningservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services, service_area League City/Pasadena/Pearland"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "League City HQ. South Houston / Galveston County corridor. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Gulfside Cleaning Services",
+    "dba_name": null,
+    "address": "PO Box 16958",
+    "city": "Galveston",
+    "county": "Galveston",
+    "state": "TX",
+    "zip": "77552",
+    "service_mix": "commercial janitorial, carpet, tile/grout, post-storm cleanup, water restoration, facilities maintenance",
+    "estimated_employee_count": null,
+    "founded_year": 2004,
+    "website": "https://www.gulfsidecleaning.com/",
+    "phone": "(832) 620-3874",
+    "data_sources": [
+      {
+        "url": "https://www.gulfsidecleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '20 yrs' (~2004), owner first-name Ben, services, 70+ contract customers"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-run 20 yrs. Owner first name Ben. Houston/Galveston/League City/Webster/Pearland. 70+ contract-basis customers monthly. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Genesis Cleaning & Restoration LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Galveston",
+    "county": "Galveston",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "carpet, upholstery, water/fire/smoke damage restoration, mold, stone restoration, pet odor, air duct + commercial",
+    "estimated_employee_count": null,
+    "founded_year": 1988,
+    "website": "https://genesisdrycarpetcleaning.com/",
+    "phone": "(409) 740-8977",
+    "data_sources": [
+      {
+        "url": "https://genesisdrycarpetcleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned and operated since 1988 (37 yrs). Galveston County. Mixed commercial/residential; commercial side is the carpet/upholstery floor cleaning."
+  },
+  {
+    "legal_name": "B & L Maintenance Co",
+    "dba_name": null,
+    "address": "1156 Hwy 281 S Rear",
+    "city": "Wichita Falls",
+    "county": "Wichita",
+    "state": "TX",
+    "zip": "76301",
+    "service_mix": "janitorial, medical, biohazard, general contracting, carpentry, construction cleanup, health hazard, document shredding",
+    "estimated_employee_count": null,
+    "founded_year": 1984,
+    "website": "https://www.bandlmaintenanceco.com/",
+    "phone": "(940) 723-2337",
+    "data_sources": [
+      {
+        "url": "https://www.bandlmaintenanceco.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, owner Barry Burlison, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1984 by Barry Burlison. 41 years. Wichita Falls HQ; multi-state TX/OK service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Falls Cleaning and Maintenance",
+    "dba_name": null,
+    "address": null,
+    "city": "Wichita Falls",
+    "county": "Wichita",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial office, retail, steam cleaning, spot, post-construction",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.fallscleaningandmaintenanceservice.com/",
+    "phone": "(940) 232-3208",
+    "data_sources": [
+      {
+        "url": "https://www.fallscleaningandmaintenanceservice.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, phone, service categories"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Limited website data. BBB A+ accredited 20+ yrs per search snippets. Not on exclusion roster. Enrichment needs to confirm founded_year via SoS / Comptroller."
+  },
+  {
+    "legal_name": "RicSan Enterprise",
+    "dba_name": null,
+    "address": null,
+    "city": "Greater DFW",
+    "county": null,
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial, office, deep, pressure, construction, floor strip/wax, VCT, full-service janitorial, landscaping",
+    "estimated_employee_count": null,
+    "founded_year": 2010,
+    "website": "https://ricsancleaning.com/",
+    "phone": "(972) 201-6639",
+    "data_sources": [
+      {
+        "url": "https://ricsancleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, service_area DFW + N Texas"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2010. N + NE Texas service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Silva Building Specialists",
+    "dba_name": null,
+    "address": "9001 Airport Blvd Suite 308",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial, sanitizing, pressure, carpet, window, COVID",
+    "estimated_employee_count": null,
+    "founded_year": 1993,
+    "website": "https://www.silvabuildingspecialists.com/",
+    "phone": "(713) 832-8577",
+    "data_sources": [
+      {
+        "url": "https://www.silvabuildingspecialists.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1993. Houston HQ; Friendswood/Pearland service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "FJH Custodial Services LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Friendswood",
+    "county": "Galveston",
+    "state": "TX",
+    "zip": "77546",
+    "service_mix": "commercial, janitorial, church, hotel/resort, restaurant, retail, specialty, bank, floor, green, gym, industrial, medical, office, school, tile/grout, warehouse, window, pressure, day porter",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://fjhcs.com/",
+    "phone": "(281) 992-2500",
+    "data_sources": [
+      {
+        "url": "https://fjhcs.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, city, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Friendswood-based. Broad-vertical commercial coverage. Not on exclusion roster."
+  },
+  {
+    "legal_name": "ProClean Commercial Services",
+    "dba_name": null,
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "office, floor, post-construction, carpet, window, restroom, strip/wax",
+    "estimated_employee_count": null,
+    "founded_year": 2023,
+    "website": "https://www.procleanhouston.com/",
+    "phone": "(832) 628-4222",
+    "data_sources": [
+      {
+        "url": "https://www.procleanhouston.com/about-houston-commercial-cleaning-company",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, founder Michael Perez, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Very young (2023) founded by Michael Perez. Family owned. Will fail Layer 2 hard gate (5+ yr) if scored - listed for completeness."
+  },
+  {
+    "legal_name": "K C Commercial Cleaning Services",
+    "dba_name": null,
+    "address": "21175 Tomball Pkwy PMB 532",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77070",
+    "service_mix": "office, janitorial, deep, move-in/out, green",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://kccleaningsvcs.com/",
+    "phone": "(832) 584-1312",
+    "data_sources": [
+      {
+        "url": "https://kccleaningsvcs.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services, 2 locations Magnolia + NW Houston"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "N/NW Houston service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Clean Sweep Office Cleaning",
+    "dba_name": null,
+    "address": "1310 Rayford Park Rd Suite 332",
+    "city": "Spring",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "regular office, disinfection, post-construction, floor, deep",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.cleansweepofficecleaning.com/",
+    "phone": "(281) 651-2651",
+    "data_sources": [
+      {
+        "url": "https://www.cleansweepofficecleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Spring TX. N Houston metro. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Quality UpKeep",
+    "dba_name": null,
+    "address": "16819 Jelly Park Stone Dr",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77429",
+    "service_mix": "commercial, office, retail, business",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://quality-upkeep.com/",
+    "phone": "(832) 497-1767",
+    "data_sources": [
+      {
+        "url": "https://quality-upkeep.com/commercial-cleaning/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Cypress TX. Limited website depth. Not on exclusion roster. Enrichment confirm founded_year + owner."
+  },
+  {
+    "legal_name": "Mighty Maids",
+    "dba_name": null,
+    "address": "16807 FM 2920 RD Suite D",
+    "city": "Tomball",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77377",
+    "service_mix": "office daily/weekly/monthly, lobby/common-area, restroom, daytime/night, eco",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://mightymaidscleaningservice.com/",
+    "phone": "(281) 255-8207",
+    "data_sources": [
+      {
+        "url": "https://mightymaidscleaningservice.com/commercial/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '30+ yrs in Tomball', address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "30+ years Tomball. Corporate buildings, shopping centers, high rises, schools, small biz. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Above And Beyond Pro Cleaners",
+    "dba_name": "AB Pro Cleaners",
+    "address": null,
+    "city": "McAllen",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "office cleaning, post-construction, commercial, industrial",
+    "estimated_employee_count": null,
+    "founded_year": 2012,
+    "website": "https://abprocleaners.com/",
+    "phone": "(956) 564-5921",
+    "data_sources": [
+      {
+        "url": "https://abprocleaners.com (ECONNREFUSED at fetch time)",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "search snippet only - city, services, founded_year"
+      }
+    ],
+    "independence_verified": false,
+    "independence_notes": "WARNING: Live fetch refused connection. Only search-snippet evidence. Per \u00a72 cannot carry A-tier on this evidence. McAllen/Harlingen/Brownsville RGV. Enrichment must successfully fetch live site OR drop."
+  },
+  {
+    "legal_name": "GO Cleaning Services",
+    "dba_name": null,
+    "address": "262 South Main",
+    "city": "Boerne",
+    "county": "Kendall",
+    "state": "TX",
+    "zip": "78006",
+    "service_mix": "office, medical, daycare/school, financial, hospital, manufacturing, church, window, floor, carpet, restroom",
+    "estimated_employee_count": null,
+    "founded_year": 2008,
+    "website": "https://gocleaningplus.com/",
+    "phone": "(956) 307-1156",
+    "data_sources": [
+      {
+        "url": "https://gocleaningplus.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '15+ yrs' (~2008), address Boerne, multi-city service Laredo/McAllen/SA"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "15+ yrs. Boerne HQ. Laredo/McAllen/San Antonio service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Bright Cleaning TX",
+    "dba_name": null,
+    "address": "3400 N McColl Rd Ste 16",
+    "city": "McAllen",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78501",
+    "service_mix": "residential, commercial, deep, office, floor maintenance, carpet",
+    "estimated_employee_count": null,
+    "founded_year": 2014,
+    "website": "https://brightcleaningtx.com/",
+    "phone": "(956) 790-0819",
+    "data_sources": [
+      {
+        "url": "https://brightcleaningtx.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2014. RGV McAllen. Not on exclusion roster."
+  },
+  {
+    "legal_name": "ATX Janitorial Services",
+    "dba_name": null,
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "recurring, post-construction, deep, floor, pressure, window, commercial office/medical/industrial/retail",
+    "estimated_employee_count": null,
+    "founded_year": 2018,
+    "website": "https://atxjanitorial.com/",
+    "phone": "(512) 808-7118",
+    "data_sources": [
+      {
+        "url": "https://atxjanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, city, services, copyright 2018"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Austin + Buda. Approx 2018-founded based on copyright. Not on exclusion roster."
+  },
+  {
+    "legal_name": "JK Commercial Cleaning, LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "janitorial, commercial, floor, window, post-construction, pressure, carpet, day porter, maids, make-ready",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.jkcleaning.org/",
+    "phone": "(512) 228-1837",
+    "data_sources": [
+      {
+        "url": "https://www.jkcleaning.org/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, mgmt team '95 yrs collective experience', services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Austin + Central TX. Locally owned, not a franchise. 95+ yrs management combined."
+  },
+  {
+    "legal_name": "OrakPro",
+    "dba_name": null,
+    "address": "11801 Domain Blvd",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78758",
+    "service_mix": "restaurant, hotel/resort, office, school, aircraft hangar, janitorial, disinfection, green",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://orakpro.com/",
+    "phone": "(512) 630-2410",
+    "data_sources": [
+      {
+        "url": "https://orakpro.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, CEO Viviana Akel, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded and operated in Austin. CEO/Founder Viviana Akel. Woman-led. No outsourcing/middlemen per site. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Partners Commercial Cleaning",
+    "dba_name": null,
+    "address": "3903 Warehouse Row Unit C",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78704",
+    "service_mix": "evening janitorial, day porter, carpet, bathroom, upholstery, vacancy/construction, event, disinfection",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.partnersclean.com/",
+    "phone": "(512) 484-0573",
+    "data_sources": [
+      {
+        "url": "https://www.partnersclean.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, co-founder Chris Covo, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Austin SoCo area. Co-founder Chris Covo (President). Not on exclusion roster."
+  },
+  {
+    "legal_name": "Texas Commercial Cleaning Solutions",
+    "dba_name": null,
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial, pressure, monthly/periodic, floor, construction, day porter, disinfection, government",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://txccsolutions.com/",
+    "phone": "(737) 237-0464",
+    "data_sources": [
+      {
+        "url": "https://txccsolutions.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, city, services, veteran + minority owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Veteran-owned and minority-owned per site. Austin TX. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Jowers Commercial Cleaning",
+    "dba_name": null,
+    "address": "350 W Avenue L Apt 17",
+    "city": "San Angelo",
+    "county": "Tom Green",
+    "state": "TX",
+    "zip": "76903",
+    "service_mix": "office, janitorial, commercial carpet, floor, VCT strip/wax, low-moisture floor",
+    "estimated_employee_count": null,
+    "founded_year": 2015,
+    "website": "https://jowerscommercialcleaning.com/",
+    "phone": "(325) 374-3794",
+    "data_sources": [
+      {
+        "url": "https://jowerscommercialcleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, US Veteran-Owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2015. US Veteran-Owned. San Angelo. HIPAA cert. Bonded/insured."
+  },
+  {
+    "legal_name": "Accredited Building Services",
+    "dba_name": null,
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial janitorial, day porter, post-construction, COVID/flood/disaster emergency, carpet, floor, building maintenance, supplies",
+    "estimated_employee_count": null,
+    "founded_year": 1980,
+    "website": "https://www.accreditedbuildingservices.com/",
+    "phone": "(281) 578-2296",
+    "data_sources": [
+      {
+        "url": "https://www.accreditedbuildingservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year 1980, family + woman owned, WBEN/Green/WBEA/BSCAI member"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1980 (45 yrs). Family-owned + woman-owned. WBEN, WBEA, USGBC, BSCAI member. Not on exclusion roster."
+  },
+  {
+    "legal_name": "A & T Janitorial Services",
+    "dba_name": null,
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "office, commercial, building maintenance, carpet, post-construction, schools, medical, sports, hotel, airport, fitness",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://antjanitorial.com/",
+    "phone": "(713) 653-3784",
+    "data_sources": [
+      {
+        "url": "https://antjanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '20+ yrs', city, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "20+ years Houston. Houston/Missouri City/Sugar Land/Pearland/Stafford. Not on exclusion roster. Enrichment confirm founded_year + owner."
+  },
+  {
+    "legal_name": "Allied Facility Care",
+    "dba_name": null,
+    "address": "4099 McEwen Road Suite 588",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75244",
+    "service_mix": "commercial, janitorial, floor, window, carpet, trash, green, office, healthcare, school, industrial",
+    "estimated_employee_count": null,
+    "founded_year": 1999,
+    "website": "https://alliedfacilitycare.com/",
+    "phone": "1-888-316-3234",
+    "data_sources": [
+      {
+        "url": "https://alliedfacilitycare.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '25+ yrs' (~1999), addresses, services, Green Seal + ISSA"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "25+ years. Dallas + Fort Worth/Keller offices. Green Seal Certified. ISSA Member. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Texoma Commercial Cleaning, LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Sherman",
+    "county": "Grayson",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "office, janitorial, commercial",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://texomacommercialcleaning.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://texomacommercialcleaning.com/about (HTTP 503)",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "search snippet only - city, women-owned"
+      }
+    ],
+    "independence_verified": false,
+    "independence_notes": "WARNING: Live fetch failed (503). Search-snippet only: women-owned and operated, Sherman-Denison area. Per \u00a72 cannot carry A-tier on this evidence. Enrichment must successfully fetch live site OR drop."
+  },
+  {
+    "legal_name": "VeriClean Janitorial Services, LLC",
+    "dba_name": "VeriClean Services",
+    "address": "24851 Canyon Golf Rd Suite D7",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78260",
+    "service_mix": "janitorial, commercial, carpet, window, pressure, floor, tile/grout, restroom, breakroom, deep, night, disinfection, emergency",
+    "estimated_employee_count": null,
+    "founded_year": 2008,
+    "website": "https://vericleanservices.com/",
+    "phone": "(210) 366-3593",
+    "data_sources": [
+      {
+        "url": "https://vericleanservices.com/about-us/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, HABE/MBE/SBE certs, BBB 2011"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2008. Hispanic Business Enterprise, MBE, SBE. BBB Accredited 2011. 24/7. Spanish-language available. Not on exclusion roster."
+  },
+  {
+    "legal_name": "All2Clean",
+    "dba_name": null,
+    "address": "5100 NW Loop 410 #4404",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78229",
+    "service_mix": "construction, deep, essential standard, move-out, office, recurring (incl residential)",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://all2clean.com/",
+    "phone": "(210) 449-7458",
+    "data_sources": [
+      {
+        "url": "https://all2clean.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services, family-owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally family-owned San Antonio. BBB accredited 2022. Mixed commercial/residential. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Sharp Cleaning Services",
+    "dba_name": null,
+    "address": "3300 Chimney Rock Suite 207",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77056",
+    "service_mix": "post-construction, commercial, residential, sanitize, office, janitorial, window, floor, deep",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://sharpcleaningservices.com/",
+    "phone": "(713) 266-4141",
+    "data_sources": [
+      {
+        "url": "https://sharpcleaningservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, CEO Abdi, address, services, family-owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Houston-based family-owned. CEO/owner Abdi. Houston + Spring + Woodlands + Katy service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Empire, Inc.",
+    "dba_name": null,
+    "address": "5835 East Orem Dr",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77048",
+    "service_mix": "commercial janitorial, window, gym, car dealership, carpet, floor, church, medical, restaurant, electrostatic",
+    "estimated_employee_count": null,
+    "founded_year": 2001,
+    "website": "https://empiresvc.com/",
+    "phone": "(713) 956-0830",
+    "data_sources": [
+      {
+        "url": "https://empiresvc.com/about/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2001. 4 Houston offices. Houston/Dallas/South TX service. Owners 30+ yrs combined experience. Site mentions 'Embassy Building Maintenance' for DFW expansion - flag for enrichment to confirm this is sister company or marketing partner, not franchise."
+  },
+  {
+    "legal_name": "Elite Pro Commercial Services Inc.",
+    "dba_name": null,
+    "address": "6924 Japonica St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77087",
+    "service_mix": "commercial, janitorial, office, post-construction, porter, event, deep, disinfection, floor",
+    "estimated_employee_count": null,
+    "founded_year": 2002,
+    "website": "https://eliteprocommercial.com/",
+    "phone": "(713) 527-2088",
+    "data_sources": [
+      {
+        "url": "https://eliteprocommercial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year ~24 yrs (~2002), address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded ~2002 (24+ yrs). Houston + surrounding. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Texas Pro Services",
+    "dba_name": null,
+    "address": "5031 Martin Luther King Jr Fwy",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76119",
+    "service_mix": "commercial, janitorial, floor polish, window, parking garage, carpet, pressure, post-construction",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://txprosvc.com/",
+    "phone": "(682) 841-6127",
+    "data_sources": [
+      {
+        "url": "https://txprosvc.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services, 'family legacy'"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned Fort Worth. Long-tenure per snippets (30+ yrs per Expertise.com) but site itself shows 'over a decade'. Discrepancy - enrichment phase reconcile."
+  },
+  {
+    "legal_name": "Celina's Cleaning Services",
+    "dba_name": null,
+    "address": "PO Box 15652",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76119",
+    "service_mix": "apartment make-ready, one-time, post-construction, office, recurring weekly/bi-weekly/monthly",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://celinascleaningservices.com/",
+    "phone": "(682) 201-6183",
+    "data_sources": [
+      {
+        "url": "https://celinascleaningservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, family-owned, service_area"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned Fort Worth. Mixed commercial/residential. Not on exclusion roster. Smaller operation - confirm commercial-primary at enrichment."
+  },
+  {
+    "legal_name": "Care Cleaning Solutions",
+    "dba_name": null,
+    "address": null,
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "commercial, day porter, janitorial office, floor polish, window, medical terminal",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.carecleaningsolutions.com/",
+    "phone": "(972) 565-2526",
+    "data_sources": [
+      {
+        "url": "https://www.carecleaningsolutions.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, city, services, family-owned (per search results)"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned per Expertise.com listing (6+ yrs). Plano + Greater DFW service. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Signature Cleaning Concepts, LLC",
+    "dba_name": null,
+    "address": "21811 Katy Freeway Suite D-116",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77450",
+    "service_mix": "commercial, K-12 schools, electrostatic disinfection, facility care, office, industrial, carpet, church",
+    "estimated_employee_count": null,
+    "founded_year": 2015,
+    "website": "https://www.signaturecleaningconcepts.com/",
+    "phone": "(713) 295-0413",
+    "data_sources": [
+      {
+        "url": "https://www.signaturecleaningconcepts.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year ~10 yrs, address, services, family-owned, IJCSA + Katy Business Assoc"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "10+ years Katy/Houston. Family-owned. IJCSA member. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Ariel Janitorial Service, Inc.",
+    "dba_name": null,
+    "address": "1219 Price Plaza Drive",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77449",
+    "service_mix": "janitorial + supplies, floor care, commercial office, building maintenance, electrostatic disinfection",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.arieljanitorial.com/",
+    "phone": "(281) 829-3429",
+    "data_sources": [
+      {
+        "url": "https://www.arieljanitorial.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '25+ yrs', address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "25+ years Katy/Houston. Family-owned. Serves HOA/churches/office buildings/manufacturers/daycares/private schools/dental/medical. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Gracey's Commercial Cleaning",
+    "dba_name": null,
+    "address": "1300 S Frazier St Ste 319",
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77301",
+    "service_mix": "office, janitorial, daily, carpet, multi-site",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://www.graceyscommercialcleaning.com/",
+    "phone": "(936) 441-5191",
+    "data_sources": [
+      {
+        "url": "Web search BBB profile - graceyscommercialcleaning direct site returned 404 on landing, child pages indexed",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "owner Tammy Gracey, address, '30+ yrs experience' (search snippets)"
+      }
+    ],
+    "independence_verified": false,
+    "independence_notes": "WARNING: Direct site root returned 404 at fetch; child pages exist. Owner Tammy Gracey per search snippets but not from a verified live fetch. Per \u00a72 cannot carry A-tier without successful live fetch confirming on the company's own site. Enrichment must successfully fetch + verify."
+  },
+  {
+    "legal_name": "RedBird Cleaning Services, LLC",
+    "dba_name": null,
+    "address": "PO Box 374",
+    "city": "Atlanta",
+    "county": "Cass",
+    "state": "TX",
+    "zip": "75551",
+    "service_mix": "commercial carpet, commercial cleaning, floor, industrial, janitorial, sanitation, COVID, educational, tile/grout",
+    "estimated_employee_count": null,
+    "founded_year": 1990,
+    "website": "https://www.redbirdcleaning.com/",
+    "phone": "(903) 796-7913",
+    "data_sources": [
+      {
+        "url": "https://www.redbirdcleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address, services, minority-owned, family-owned"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1990 (35 yrs). NE Texas / Texarkana / Marshall service. Minority-owned, family-owned. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Quality Service Cleaners",
+    "dba_name": null,
+    "address": "10450 E Hamshire Road",
+    "city": "Hamshire",
+    "county": "Jefferson",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "residential + commercial, weekly/bi-weekly/monthly, holiday, spring, rental, deep, ready-made, move-in/out, special event, new construction, post-construction",
+    "estimated_employee_count": null,
+    "founded_year": 2014,
+    "website": "https://qualityservicecleaners.com/",
+    "phone": "(409) 673-9487",
+    "data_sources": [
+      {
+        "url": "https://qualityservicecleaners.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, owner Lucretia Robinson, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2014. Owned by Lucretia Robinson. Hamshire (near Beaumont). Mixed commercial/residential. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Maid in East Texas",
+    "dba_name": null,
+    "address": null,
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "zip": "75704",
+    "service_mix": "residential + retail/office/salon/commercial, new construction, venue",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://maidinetx.com/",
+    "phone": "(903) 941-9253",
+    "data_sources": [
+      {
+        "url": "https://maidinetx.com/commercial-services",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, city, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Tyler/Longview/Gilmer. Mixed commercial/residential. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Jolley Clean",
+    "dba_name": null,
+    "address": "159 Sundown Drive",
+    "city": "Nacogdoches",
+    "county": "Nacogdoches",
+    "state": "TX",
+    "zip": "75964",
+    "service_mix": "commercial, janitorial, building maintenance, window, residential, pressure, office, restaurant, trash",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://jolleyclean.com/",
+    "phone": "(936) 553-9828",
+    "data_sources": [
+      {
+        "url": "https://jolleyclean.com/commercial-cleaning",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Nacogdoches + Lufkin. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Blackwood Services Group LLC",
+    "dba_name": null,
+    "address": "430 Spruce Street",
+    "city": "Texarkana",
+    "county": "Bowie",
+    "state": "TX",
+    "zip": "75501",
+    "service_mix": "banks/office, window, healthcare/medical, industrial/warehouse, school/gym, church/daycare, renovation/construction",
+    "estimated_employee_count": null,
+    "founded_year": null,
+    "website": "https://blackwoodservicesgroup.com/",
+    "phone": "(903) 277-4745",
+    "data_sources": [
+      {
+        "url": "https://blackwoodservicesgroup.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Texarkana TX office. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Precepts Janitorial Service",
+    "dba_name": null,
+    "address": "2786 Vista View Drive",
+    "city": "Lewisville",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "75067",
+    "service_mix": "commercial office, daycare, churches, fitness, retail, govt/non-profit, healthcare, auto dealership, entertainment/sports",
+    "estimated_employee_count": null,
+    "founded_year": 1992,
+    "website": "http://preceptsjanitorial.com/",
+    "phone": "(972) 459-7257",
+    "data_sources": [
+      {
+        "url": "Search results + BBB profile (site direct fetch failed with expired-certificate error)",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, address per BBB/Yelp/yellowpages cross-ref"
+      }
+    ],
+    "independence_verified": false,
+    "independence_notes": "WARNING: Direct site fetch failed (expired SSL cert). Founded 1992 per search snippets. Family-owned per snippets. Per \u00a72 cannot carry A-tier on this evidence. Enrichment must successfully load site OR drop OR pull alternate verified source (TX SoS / Comptroller)."
+  },
+  {
+    "legal_name": "Texas Building Services Enterprise, Inc.",
+    "dba_name": "TBS Enterprise",
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "service_mix": "office, floor strip/seal, window, machine scrub/buff, wax, carpet, construction, handyman, janitorial, porter, security, landscape",
+    "estimated_employee_count": null,
+    "founded_year": 1995,
+    "website": "https://tbsenterpriseinc.net/",
+    "phone": "(713) 992-5544",
+    "data_sources": [
+      {
+        "url": "https://tbsenterpriseinc.net/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, founded_year, owner Theo Badea, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1995 by Theo Badea. 30+ years Houston. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Bright & Smart Commercial Cleaning",
+    "dba_name": null,
+    "address": "1201 Fannin St Suite 262 #225",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77002",
+    "service_mix": "carpet, janitorial, post-construction, floor, debris, wax, hardwood, pressure, concrete polish, office, pool, gutter, warehouse, medical, church, mosque, basement, daycare",
+    "estimated_employee_count": null,
+    "founded_year": 2014,
+    "website": "https://txcleaningserv.com/",
+    "phone": "(281) 966-5848",
+    "data_sources": [
+      {
+        "url": "https://txcleaningserv.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, '10+ yrs experience' (~2014), address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "10+ years Houston. Not on exclusion roster."
+  },
+  {
+    "legal_name": "Pink Ribbon Cleaning Services",
+    "dba_name": null,
+    "address": "10032 Monroe Drive",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75229",
+    "service_mix": "commercial",
+    "estimated_employee_count": null,
+    "founded_year": 1996,
+    "website": "https://www.pinkrcleaning.com/",
+    "phone": "(469) 855-8371",
+    "data_sources": [
+      {
+        "url": "https://www.pinkrcleaning.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "legal_name, address from direct fetch; founded_year + MWBE/DBE/HUB cert from cross-ref BBB/Expertise.com snippets"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded ~1996 (29 yrs per snippets). MWBE, DBE, HUB certified per search snippets. OSHA certified. Live site is sparse but exists. Enrichment confirm founded_year + owner."
+  }
+]
