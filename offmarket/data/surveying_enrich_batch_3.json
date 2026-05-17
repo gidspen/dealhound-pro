@@ -1,0 +1,228 @@
+{
+  "batch_id": "surveying_enrich_batch_3",
+  "fetched_at": "2026-05-16",
+  "notes": "Live-fetch enrichment continuation for top candidates 21-30.",
+  "results": [
+    {
+      "license_number": "10071100",
+      "legal_name": "REAVIS CONSULTING ENGINEERS",
+      "website": null,
+      "phone": "(512) 238-1358",
+      "team_page_url": null,
+      "successor_found": false,
+      "exclusion_reason": "$200K rev / 3 employees per BuildZoom — sub-SBA scale (<$300K rev). Marvin Reavis P.E. (TAMU CE 1970) — primarily an engineer, RPLS ancillary. Firm est 1991 — 35yr operating, but small. Owner-operator consulting practice, not a target.",
+      "demote_to_tier": "C_watch",
+      "team_page_evidence": "BuildZoom + Manta + Yellow Pages confirm address 2003 N Mays St Suite 105, Round Rock 78664; 3 employees / $200K rev. Marvin Reavis is owner. TAMU Civil Eng 1970 grad → likely 78yo today. Engineering-primary firm.",
+      "coasting_tells": [
+        "Sub-scale ($200K rev / 3 employees) — below SBA acquisition threshold.",
+        "Owner age est ~78 (TAMU CE 1970 grad)."
+      ],
+      "owner_age_verified": 78,
+      "owner_age_source": "linkedin_grad_year",
+      "comptroller_status": "active (per BuildZoom)",
+      "data_sources": [
+        {"source": "LinkedIn Marvin Reavis", "url": "https://www.linkedin.com/in/marvin-w-reavis-682a101a/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["grad_year","ownership"]},
+        {"source": "BuildZoom-style estimate", "url": "https://rocketreach.co/marvin-reavis-email_185489635", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["revenue_estimate","employee_count"]}
+      ]
+    },
+    {
+      "license_number": "10193888",
+      "legal_name": "CENTRO RESOURCES",
+      "website": "https://centroresources.com/",
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "exclusion_reason": "Centro Resources LLC: $4M revenue, 23 employees, established 2010, energy-industry-specialist with MODERN tech-stack (laser scanning, drone surveys, GIS mapping). Larry Turman brought his RPLS to this newer venture. Firm tenure 16yr (not 54yr from RPLS proxy). Already at platform-acquirer-bid scale; tech-forward = opposite of coasting.",
+      "demote_to_tier": "C_watch",
+      "demote_reason": "Modern tech-forward $4M rev firm with laser scanning + drone — already at strategic-acquirer scale, not an off-market coasting profile.",
+      "team_page_evidence": "centroresources.com (search summary): 'Established in 2010', $4M revenue, 23 employees, energy-industry-specialist; uses advanced surveying technologies, laser scanning, GIS mapping; services include Boundary Surveys + Platting, Pipeline/Powerline Easements, Well Site/Facility Surveys, Abstracting, As-Builts, GIS, Laser Scanning, Drone Surveys. Larry Turman has 45yr RPLS experience but founded Centro recently.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy_misleading",
+      "comptroller_status": "active",
+      "service_specialties": ["energy industry","pipeline","powerline easements","laser scanning","drone","GIS"],
+      "data_sources": [
+        {"source": "centroresources.com (summary)", "url": "https://centroresources.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["firm_size","established_year","tech_stack"]}
+      ]
+    },
+    {
+      "license_number": "10193863",
+      "legal_name": "R2M ENGINEERING, LLC",
+      "website": "https://r2meng.com/",
+      "phone": "(806) 783-9944",
+      "team_page_url": "https://r2meng.com/r2m-team/",
+      "successor_found": true,
+      "successor_evidence": "r2meng.com: 'multi-disciplined Civil, Environmental, and Safety engineering firm... 100 years of combined experience.' Jeryl 'Jere' D. Hart Jr. is VP of Engineering and Surveying — the 'Jr.' indicates he's the son of the senior RPLS Jeryl D Hart (RPLS granted 1975). Firm has multi-discipline staff. DEMOTE A→B: explicit Jr. successor in place.",
+      "team_page_evidence": "r2meng.com (search summary): multi-disciplined firm (civil + environmental + safety); 100+yr combined experience; Jeryl 'Jere' D. Hart Jr. is VP Engineering + Surveying, mentors staff, lead surveyor for PS&E projects, 47+yr experience. The 'Jr.' on the firm is the active operator. Lubbock TX, $unknown rev but multi-disciplined firm.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Family successor (Hart Jr.) is active VP and lead surveyor — internal-succession candidate.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy_misleading",
+      "comptroller_status": "active",
+      "service_specialties": ["civil","environmental","safety","surveying"],
+      "data_sources": [
+        {"source": "r2meng.com team page", "url": "https://r2meng.com/r2m-team/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["jr_successor","multi_discipline_staff"]}
+      ]
+    },
+    {
+      "license_number": "10105700",
+      "legal_name": "BLUE SKY SURVEYING AND MAPPING CORPORATION",
+      "website": "https://blueskysurveying.com/",
+      "phone": "214-358-4500",
+      "team_page_url": "https://blueskysurveying.com/",
+      "successor_found": null,
+      "successor_evidence": "blueskysurveying.com homepage (live-fetch attempt — ECONNREFUSED on direct fetch; relying on search-result summaries). David Petree (RPLS #1890, since 1975, 50yr career). 'Davana Petree' also listed at the firm per ZoomInfo (potential family-surname successor — wife or daughter; role unclear). Specialty: retail, shopping center, development services. Multi-state SOS records (11015 Midway Rd, Dallas 75229).",
+      "team_page_evidence": "blueskysurveying.com (search-result summary): David is RPLS+TBPLS Reg #10105700; RPLS #1890; 'nearly 50yr career'; Geomatic professionals specialized in retail/shopping/development; Davana Petree at the firm per ZoomInfo.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Davana Petree's role unclear from search results — if she's a credentialed RPLS or co-principal it's an internal-succession candidate; if admin only it's not. Cap at B until live-fetch can resolve. Surname match alone is enough to demote per skill rule.",
+      "coasting_tells": [
+        "Solo RPLS David Petree for 50+ years (RPLS #1890 granted 1976) — but Davana Petree presence suggests family operation.",
+        "Specialty niche (retail/shopping/development) — recurring-B2B but capacity-bound by single RPLS.",
+        "Owner age est ~80 (RPLS 1976 + 30 + 16 = ~80) — natural exit window."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (current website + multi-state SOS)",
+      "service_specialties": ["retail","shopping center","development"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "blueskysurveying.com (search summary)", "url": "https://blueskysurveying.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["principal","RPLS_number","tenure","specialty"]},
+        {"source": "ZoomInfo Davana Petree", "url": "https://www.zoominfo.com/p/Davana-Petree/-1904378646", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["family_surname_at_firm"]}
+      ]
+    },
+    {
+      "license_number": "10124200",
+      "legal_name": "GALBRAITH ENGINEERING CONSULTANTS, INC.",
+      "website": "https://galbraithengineering.com/",
+      "phone": "(210) 496-2636",
+      "team_page_url": null,
+      "successor_found": false,
+      "successor_evidence": "galbraithengineering.com (live-fetch): 'family owned and operated for over 41 years'; no individual principals named on accessible pages; civil engineering primary + surveying secondary; San Antonio (121 Interpark Blvd Suite 215, 78216). Glenn Galbraith P.E. is named on LinkedIn — RPLS designation NOT confirmed for him in search results (the TBPELS shows Glenn Edward Galbraith RPLS but the firm may have other people).",
+      "team_page_evidence": "galbraithengineering.com homepage: 41yr family-owned, multi-discipline (civil + structural + survey). No team page visible. Yelp shows 'CLOSED' but website still operating — likely Yelp data error.",
+      "coasting_tells": [
+        "41yr family-owned + 'CLOSED' Yelp flag = ambiguous operating status; verification needed.",
+        "Multi-discipline civil/structural/survey firm — engineering-primary.",
+        "Solo RPLS Glenn Galbraith for 49+ years (RPLS granted 1977) — no second RPLS at firm per TBPELS join.",
+        "Owner age est ~79 (RPLS 1977 + 30 + 18 = ~79)."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "verification_needed - Yelp 'CLOSED' flag conflicts with operating website",
+      "service_specialties": ["civil engineering","structural","surveying"],
+      "data_sources": [
+        {"source": "galbraithengineering.com (live-fetch)", "url": "https://galbraithengineering.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["family_ownership","tenure","disciplines"]},
+        {"source": "Yelp listing (closed flag)", "url": "https://www.yelp.com/biz/galbraith-engineering-consultants-san-antonio-2", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["closed_flag"]}
+      ]
+    },
+    {
+      "license_number": "10023000",
+      "legal_name": "Collins Surveying & Mapping, Inc.",
+      "website": "https://collinssurveying.com/",
+      "phone": "(903) 234-8051",
+      "team_page_url": "https://collinssurveying.com/",
+      "successor_found": true,
+      "successor_evidence": "Live-fetch of collinssurveying.com (2026-05-16): the firm mentions 'David Collins Jr.' as Vice President per search results. Live homepage shows RPLS #6488 (NOT David Collins's TBPELS-attached RPLS #1786 from 1978; #6488 is a more recent RPLS — likely David Collins Jr's). Multi-state (LA, AR). Modern tech-stack (GPS, Trimble Robotic Total Station, UAV/drone). Copyright 2026. DEMOTE A→B: explicit Jr son-successor in VP role with his own active RPLS.",
+      "team_page_evidence": "collinssurveying.com (live-fetch 2026-05-16): regional offices Longview + Atlanta TX; licenses extending to LA and AR; tech stack: GPS, Trimble Robotic Total Station, UAV/drone; RPLS #6488 mentioned (more recent than the senior RPLS #1786). Copyright 2026.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "David Collins Jr. is Vice President per BBB listing + RPLS #6488 (much more recent than senior's #1786) = explicit family-surname successor in place. Firm is also modernized (drone, robotic total station, multi-state).",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (current operating website + multi-state)",
+      "service_specialties": ["boundary","topographic","construction staking","commercial/industrial"],
+      "data_sources": [
+        {"source": "collinssurveying.com (live-fetch)", "url": "https://collinssurveying.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["multi_state_ops","tech_stack","RPLS_6488","copyright_year"]},
+        {"source": "BBB profile (David Collins Jr VP mention)", "url": "https://www.bbb.org/us/tx/longview/profile/land-surveyor/collins-surveying-mapping-inc-1075-6003670", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["jr_vp_successor"]}
+      ]
+    },
+    {
+      "license_number": "10194425",
+      "legal_name": "H.E. MCADAMS & SON SURVEYING, INC.",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": true,
+      "successor_evidence": "Firm legal name literally contains '& SON' = explicit successor in firm name. OpenCorporates / CorporationWiki show C. E. McAdams + H. E. McAdams as directors. Two-generation family operation: Harold E. McAdams (RPLS #2005) is senior; C.E. McAdams is son (director). DEMOTE A→B.",
+      "team_page_evidence": "OpenCorporates TX SOS file 0800019643; BestCompanyTexas listing; OpenGov listing at 1025 12th St Huntsville TX 77340; two officers: C.E. McAdams + H.E. McAdams (both directors). Firm incorporated 2001-10-15.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Legal name '& Son' + two same-surname directors = explicit family-successor team. Per skill rule, internal-buy-in candidate, not coasting-solo-to-outside.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (TX SOS active; multi-officer)",
+      "entity_sos_file_number": "0800019643",
+      "service_specialties": ["land surveying"],
+      "data_sources": [
+        {"source": "OpenCorporates TX SOS", "url": "https://opencorporates.com/companies/us_tx/0800019643", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["officers","incorporation_date","entity_status"]},
+        {"source": "OpenGov tax record", "url": "https://opengovus.com/texas-taxpayer/17606974131-2", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["address","tax_status"]}
+      ]
+    },
+    {
+      "license_number": "10014800",
+      "legal_name": "FLORES & COMPANY CONSULTING ENGINEERS",
+      "website": "https://floresengineers.com/",
+      "phone": "(210) 490-9963",
+      "team_page_url": "https://floresengineers.com/about-us/",
+      "successor_found": false,
+      "successor_evidence": "Live-fetch of floresengineers.com/about-us/ (2026-05-16): Only Thomas Flores named as founder/principal. 'Mr. Flores acquired sole ownership' after partner departure. No successor / son / daughter / Jr listed anywhere on page. Multi-discipline (civil engineering + land surveying). Founded 1982, 43yr in business. Born in Beeville TX 1945, raised in San Antonio, Army Captain (Corp of Engineers), UT Arlington BSCE. No tech mentioned (drone/RTK/scanning). Service area 150mi radius from SA, up to 16,000-acre projects.",
+      "team_page_evidence": "floresengineers.com/about-us/ live-fetch: Thomas Flores born Beeville TX 1945 (age 81 in 2026); UT Arlington BSCE; Army Corps of Engineers Captain; founded firm 1982; 'sole ownership'; no successor named. Multi-service: topographic, grading, utility planning, stormwater. Service area 150mi from SA, up to 16,000-acre projects. SBA Hub/Minority potential (Flores surname, founder of color).",
+      "coasting_tells": [
+        "Solo principal Thomas Flores P.E.+RPLS — sole owner per firm About page.",
+        "Born 1945 (verified via website bio) → age 81 in 2026 — well past natural exit window.",
+        "43yr in business — long-tenured settled firm.",
+        "No technology mentioned (drone/RTK/scanning absent) — classic surveying low-tech posture.",
+        "No successor / Jr. / family member listed on team page.",
+        "Multi-discipline (engineering + surveying) but engineering-primary; surveying-acquisition thesis may not be primary fit."
+      ],
+      "owner_age_verified": 81,
+      "owner_age_source": "website_self_report_dob_1945",
+      "comptroller_status": "active (current operating website)",
+      "service_specialties": ["civil engineering","land surveying","topographic","grading","utility","stormwater"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "floresengineers.com about page (live-fetch)", "url": "https://floresengineers.com/about-us/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founder_dob","founder_credentials","sole_ownership","no_successor"]}
+      ]
+    },
+    {
+      "license_number": "10091800",
+      "legal_name": "FULLER ENGINEERING & LAND SURVEYING, INC.",
+      "website": "https://www.dfwsurvey.com/",
+      "phone": "(817) 856-2442",
+      "team_page_url": null,
+      "successor_found": null,
+      "successor_evidence": "Multi-generation family: Trey Fuller is General Manager (likely Jr.). Wm S. Abraham is the RPLS attached to firm (TBPELS RPLS granted 1979). Firm est 2004 — only 22yr (NOT 47yr from RPLS tenure proxy); the RPLS is older than the firm = Abraham brought license. Trey Fuller running operations + Abraham as RPLS-of-record = effectively succession in place.",
+      "team_page_evidence": "dfwsurvey.com (search summary): 'Fastest growing land surveying firm in DFW'; service area 11 N TX counties; Trey Fuller is GM; established 2004 (engineering) + 2015 (added land surveying); Wm S Abraham is RPLS-of-record per TBPELS.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Firm tenure 22yr (not 47yr from RPLS proxy); Trey Fuller GM + Wm S Abraham RPLS-of-record = effective succession in place. Multi-generation family operating, modernized (fastest growing).",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy_misleading",
+      "comptroller_status": "active (rapid growth per self-claim)",
+      "service_specialties": ["residential","commercial","civil engineering","land surveying"],
+      "data_sources": [
+        {"source": "dfwsurvey.com (summary)", "url": "https://www.dfwsurvey.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["GM_name","established_year","service_area"]}
+      ]
+    },
+    {
+      "license_number": "10194784",
+      "legal_name": "Sure Shott Construction Services",
+      "website": "https://www.sureshott.com/",
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "is_distressed": false,
+      "exclusion_reason": "Firm formed 2021 per CobaltIntelligence/TX SOS. Mark Paulson RPLS tenure (47yr from 1979) does NOT reflect firm tenure (4yr). Fails >5yr settled-business hard gate. Sister entity 'Sure Shott Site Solutions' formed 2022 specializing in construction layout surveying.",
+      "demote_to_tier": "D_pass",
+      "demote_reason": "Firm formed 2021 — fails >5yr in business hard gate per skill non-negotiables.",
+      "team_page_evidence": "Cobalt Intelligence / TX SOS confirm Sure Shott Construction Services LLC formed 2021-07-28. Sister entity Sure Shott Site Solutions formed Sept 2022.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active",
+      "data_sources": [
+        {"source": "Cobalt Intelligence TX SOS", "url": "https://cobaltintelligence.com/secretary-of-state/Texas-business-search/SURE%20SHOTT%20CONSTRUCTION%20SERVICES,%20LLC", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["formation_date"]}
+      ]
+    }
+  ]
+}

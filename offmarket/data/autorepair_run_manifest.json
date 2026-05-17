@@ -1,0 +1,85 @@
+{
+  "run_label": "autorepair-tx-2026-05-15",
+  "score_run_id": "72d217c5-7a7d-4a8e-9834-fe925dd4a1b2",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "auto_repair",
+  "geography": "TX — Harris/Dallas/Tarrant/Bexar/Travis priority (plus Collin/Denton/Fort Bend/Williamson/Galveston/Montgomery/Brazoria/Bell/Coryell exurbs)",
+  "naics": "811111",
+  "started_at": "2026-05-15T23:45:00Z",
+  "finished_at": "2026-05-16T00:30:00Z",
+  "counts": {
+    "spine_rows": 120,
+    "after_dedupe": 120,
+    "enriched": 120,
+    "live_fetched_team_pages": 22,
+    "scored": 120,
+    "tier_a": 0,
+    "tier_b": 42,
+    "tier_c": 54,
+    "tier_d": 24,
+    "distress_excluded": 0
+  },
+  "county_distribution": {
+    "Harris": 38, "Dallas": 15, "Tarrant": 14, "Fort Bend": 12, "Travis": 12,
+    "Bexar": 11, "Denton": 4, "Williamson": 4, "Galveston": 3,
+    "Montgomery": 2, "Collin": 2, "Bell": 1, "Coryell": 1, "Brazoria": 1
+  },
+  "sources_worked": [
+    {"source": "WebSearch curation (family owned + since 19XX)", "rows": 120, "note": "Primary spine method"},
+    {"source": "Live WebFetch on top candidates", "rows": 22, "note": "Owner names, founding years, team members, certifications, recurring revenue language"},
+    {"source": "AAA Approved Auto Repair directory cross-check", "rows": 8, "note": "AAA annual re-cert quality signal"},
+    {"source": "NAPA AutoCare cross-check", "rows": 3, "note": "Family Auto Center, Midtown Auto, others"},
+    {"source": "ASE Blue Seal directory", "rows": 2, "note": "Phil's Service Killeen, Sims Copperas Cove"}
+  ],
+  "sources_partial": [
+    {"source": "ASE Blue Seal full TX iteration", "issue": "Only 2 of ~50 expected TX shops captured; full directory iteration not completed"}
+  ],
+  "sources_blocked": [
+    {"source": "TxDPS Vehicle Safety Inspection Station list", "url": "https://www.dps.texas.gov/section/vehicle-inspection", "error": "Not attempted — HB 3297 (2023, effective 2025) eliminated state safety inspection in most counties; emissions stations only in non-attainment counties + over-index on quick-lube franchises", "fallback_used": "Independent business website discovery filtered by founding year + family-owned language"},
+    {"source": "TX Comptroller Taxable Entity Search", "url": "https://mycpa.cpa.state.tx.us/coa/", "error": "Interactive POST form; WebFetch cannot drive", "fallback_used": "Entity status / SOS file numbers UNVERIFIED for all rows"},
+    {"source": "HCAD/DCAD/TCAD/TAD/BCAD homestead lookups for OV65", "error": "Interactive form-based searches not feasible from WebFetch in batch", "fallback_used": "license_tenure_proxy for all owner ages (founded year + 32 yrs)"},
+    {"source": "TX voter file (DOB) / TX DMV", "error": "Not retrievable + restricted-use (authorized for Gideon's private research only)", "fallback_used": "license_tenure_proxy only; no voter/DMV PII in outputs"},
+    {"source": "Wayback Machine snapshot diff", "error": "Not systematically used due to turn budget", "fallback_used": "Live-site state used as coasting tell"},
+    {"source": "County clerk (Harris/Dallas/Tarrant/Bexar/Travis) civil filings + liens", "error": "Not attempted", "fallback_used": "No distress flag fired for any shop in this run"},
+    {"source": "LinkedIn company employees + hiring posts", "error": "Not attempted", "fallback_used": "Hiring tells inferred from website + Indeed mentions only"},
+    {"source": "Google Maps Street View aging-equipment check", "error": "Not attempted", "fallback_used": "Coasting tells based on website state only"}
+  ],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 12,
+    "passed": 0,
+    "demoted_to_b": 12,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 12,
+      "cad_building_ownership_unverified": 12,
+      "comptroller_franchise_tax_unverified": 12,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0
+    },
+    "note": "All 12 numeric-A candidates demoted to B_forward per skill non-negotiable #5 — A-tier requires verified or near-verified owner age (preferably OV65). No OV65 / voter / DMV / Comptroller verification accessible in this sandbox. The 12 candidates are: Reliant, Collinsworth, Poutous, Midtown Auto, Byrd, Hillin's, Bolen's, Carlisle Air, Lorentz, Ross & Greenville, Addison Auto Repair, Montrose. All have bespoke value-add theses; all are correctly hand-to-buyer-community candidates pending CAD/Comptroller pass."
+  },
+  "supabase_write": {
+    "status": "PARTIAL_WRITTEN",
+    "project_id": "gggmmjvwbbfvrtjjlqvr",
+    "schema": "offmarket",
+    "score_run_id": "72d217c5-7a7d-4a8e-9834-fe925dd4a1b2",
+    "businesses_written": 117,
+    "scores_written": 20,
+    "signals_written": 0,
+    "reason": "117 of 120 businesses persisted via Supabase MCP execute_sql (3 had cross-batch ID collisions, resolved). 20 top-ranked scores (B_forward final ≥72) persisted with rich comments + value-add theses. Remaining ~100 scores have brief comments in local JSON only — full scoring narrative available in offmarket/data/autorepair_targets.json. Future re-run can complete via offmarket/data/sql/score_compact/scores_c_*.sql or offmarket/data/sql/score_v3.sql. Signals not persisted to business_signals table this run.",
+    "next_actions": [
+      "Apply offmarket/data/sql/score_compact/scores_c_00.sql + scores_c_01.sql via Supabase MCP for full score persistence",
+      "Apply offmarket/data/sql/multi/biz_multi_03.sql for the 3 remaining businesses",
+      "Apply business_signals persistence using offmarket/data/sql/20_autorepair_signals.sql (66 signals)"
+    ]
+  },
+  "owner_age_methodology": "Owner ages are PROXY estimates from license-tenure proxy (founded year + 32 yrs assumed founder age at founding). No OV65 homestead exemptions, voter-file DOB, or DMV data were obtained — county appraisal district bulk files (HCAD/DCAD/TCAD) and the TX voter file were not retrievable in this sandbox. Voter-file/DMV are authorized for Gideon's private research only; NONE were used in this run; no PII from those sources appears in outputs.",
+  "limitations": [
+    "Owner ages are proxies (license-tenure / founding-year + 32), not OV65/voter/DMV — confidence is `medium` at best for live-fetched rows, `low` for spine-only rows.",
+    "Successor verification done for top 22 candidates only via live WebFetch.",
+    "Distress screening incomplete: no Comptroller forfeiture check, no county-clerk lien/judgment search, no PACER. No distress flags fired this run.",
+    "Sample size: 120 verified shops; TX universe is ~6,000-9,000 acquirable independents.",
+    "Building ownership unverified — every A-tier candidate likely owns building given multi-decade tenure; CAD lookup pending."
+  ]
+}

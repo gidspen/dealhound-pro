@@ -1,0 +1,163 @@
+{
+  "run_label": "electrical-tx-2026-05-15",
+  "score_run_id": "7378ee66-ef83-444c-822a-3c53a84831ea",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {
+    "layer1": 0.3,
+    "layer2": 0.25,
+    "layer3": 0.3,
+    "layer4": 0.15
+  },
+  "vertical": "electrical",
+  "naics_code": "238210",
+  "geography": "TX \u2014 Harris/Dallas/Bexar/Tarrant/Travis/Williamson/Collin/Denton/Fort Bend/Montgomery/Galveston/Brazoria/Hays",
+  "started_at": "2026-05-16T04:49:42Z",
+  "finished_at": "2026-05-16T05:06:51.358246Z",
+  "counts": {
+    "spine_rows": 92,
+    "enriched_deep": 6,
+    "enriched_mid": 28,
+    "spine_only": 58,
+    "scored": 92,
+    "tier_a": 0,
+    "tier_b": 9,
+    "tier_c": 68,
+    "tier_d": 15,
+    "distress_excluded": 4
+  },
+  "by_county": {
+    "Harris": 20,
+    "Dallas": 12,
+    "Bexar": 10,
+    "Tarrant": 10,
+    "Travis": 7,
+    "Montgomery": 5,
+    "Williamson": 5,
+    "Collin": 5,
+    "Denton": 5,
+    "Fort Bend": 4,
+    "Brazoria": 3,
+    "Galveston": 3,
+    "Hays": 3
+  },
+  "sources_worked": [
+    {
+      "source": "TDLR Electrical Contractor bulk CSV",
+      "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+      "rows": 13877,
+      "notes": "Full statewide active EC roster. Browser UA required (Mozilla/5.0). 3.7MB single-file download. Confirmed reliable bulk source."
+    },
+    {
+      "source": "WebSearch (Google index)",
+      "url": "n/a",
+      "rows": 35,
+      "notes": "Used to discover websites, founding years, owner names, and family-business signals for the top 35 candidates."
+    },
+    {
+      "source": "WebFetch (live website team/about pages)",
+      "url": "various",
+      "rows": 9,
+      "notes": "Deep-enrichment live fetches: Cappadonna, Giffen, Lyons, Zubras, Mid-West, Travis, Mather, Dausin, Bewley. Some 404s on /about routes; recovered via homepage fetch."
+    }
+  ],
+  "sources_partial": [
+    {
+      "source": "TDLR LicenseSearch (individual Master Electrician lookup)",
+      "url": "https://www.tdlr.texas.gov/LicenseSearch/",
+      "issue": "Per-business Master-of-record cross-check not done at scale (would require Playwright). Owner-of-record proxy = company license holder name from bulk CSV."
+    }
+  ],
+  "sources_blocked": [
+    {
+      "source": "HCAD / DCAD / TCAD / BCAD / TAD / CCAD Property Search",
+      "url": "https://hcad.org/property-search/property-search",
+      "error": "JS-rendered ASP.NET search; not amenable to WebFetch. Would require Playwright sub-agent.",
+      "fallback_used": "None \u2014 owner age remains license_tenure_proxy. This blocks A-tier promotion per skill protocol (Item 1 of a-tier-deep-dive)."
+    },
+    {
+      "source": "TX Comptroller Taxable Entity Search",
+      "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search",
+      "error": "Per-business franchise-tax status not verified at scale (would require manual lookup per company). Entity_status field is null in this run.",
+      "fallback_used": "None \u2014 Comptroller status remains unverified. Not a hard-gate blocker (we used the publicly-active TDLR EC roster as proxy for operating status)."
+    },
+    {
+      "source": "TX Voter File / DMV DOB lookups",
+      "url": "n/a (restricted-use, manual lookups only)",
+      "error": "Not performed in this run.",
+      "fallback_used": "Owner age remains license_tenure_proxy."
+    }
+  ],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 5,
+    "passed": 0,
+    "demoted_to_b": 5,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 5,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    },
+    "candidates": [
+      {
+        "name": "Cappadonna Electrical Contractors Inc",
+        "final": 77,
+        "demotion_reason": "owner_age_proxy_only",
+        "next_step": "BCAD OV65 lookup on Bo D Cappadonna primary residence"
+      },
+      {
+        "name": "Giffen Electric Co Lc",
+        "final": 75,
+        "demotion_reason": "owner_age_proxy_only",
+        "next_step": "HCAD OV65 lookup on Bill Giffen primary residence"
+      },
+      {
+        "name": "Dausin Electric Co",
+        "final": 73,
+        "demotion_reason": "owner_age_proxy_only_plus_likely_too_large_at_150_employees",
+        "next_step": "BCAD OV65 + size verification; if confirmed at 150 employees this is a PE-platform-scale forward, not acquire-self"
+      },
+      {
+        "name": "Zubras Electric, Inc",
+        "final": 71,
+        "demotion_reason": "owner_age_proxy_only",
+        "next_step": "DCAD OV65 lookup on Simon Zubras primary residence"
+      },
+      {
+        "name": "Lyons Electric Inc",
+        "final": 65,
+        "demotion_reason": "owner_age_proxy_only",
+        "next_step": "TCAD OV65 lookup on Steven Lyons primary residence"
+      }
+    ]
+  },
+  "supabase_write": {
+    "status": "pending",
+    "reason": "Supabase write attempted in Phase 6 below."
+  },
+  "verticals_md_update": {
+    "status": "appended",
+    "file": "/Users/gideonspencer/.claude/skills/offmarket-acquisition-scorer/verticals.md",
+    "section": "Section 8 \u2014 Electrical residential service contractors (NAICS 238210) \u2014 COMPLETE"
+  },
+  "non_negotiable_compliance": {
+    "no_invented_businesses": "PASS \u2014 all 92 rows sourced from TDLR Electrical Contractor active license roster",
+    "no_a_b_on_snippet_only_successor_evidence": "PASS \u2014 only deep-enriched rows with live team-page fetches reach B-tier; mid-enriched and spine-only rows cap at C_watch",
+    "distress_exclusion": "PASS \u2014 4 closed/unverifiable rows flagged D_pass",
+    "voter_dmv_restriction": "N/A \u2014 no voter file or DMV data used in this run",
+    "a_tier_second_pass_deep_dive": "PASS \u2014 5 candidates evaluated; all demoted to B with explicit reason recorded (owner_age_proxy_only)",
+    "no_outreach": "PASS \u2014 this run produces a scored list only"
+  },
+  "honest_limitations": [
+    "Owner ages are 100% license_tenure_proxy (no OV65, no voter DOB, no DMV in this run). This is the single biggest blocker to A-tier promotion.",
+    "57 of 92 spine rows are 'spine_only' (no website / Wayback / team-page enrichment). Default tier for these is C_watch with confidence=low \u2014 they are verifiable real businesses (active TDLR license) but not yet ready for action.",
+    "Comptroller franchise-tax status not verified at scale; entity_status field is null.",
+    "No civil-filings / lien / disciplinary cross-checks performed on individual owners.",
+    "Successor verification done via live website fetch for 9 deep-enriched rows; mid-enriched rows fall back to web-search synthesis (lower confidence \u2014 capped at C_watch per skill protocol).",
+    "Texas voter file / DMV DOB / restricted-use sources were not invoked in this run."
+  ]
+}

@@ -1,0 +1,610 @@
+{
+  "batch": 4,
+  "geography": "Remaining ~50 spine candidates — light-touch enrichment (search-only signals; no live website fetch unless flagged for deep-dive)",
+  "fetched_at": "2026-05-16",
+  "note": "These are second-tier candidates enriched via search signal only. Per skill rule: any A/B candidacy with successor leaning on snippet evidence is CAPPED at C_watch (live-fetch required). These rows are intentionally C_watch / B_forward.",
+  "businesses": [
+    {
+      "legal_name": "Tri-County Wastewater Systems",
+      "city": "Bandera", "county": "Bandera",
+      "years_in_business": 30,
+      "owner_age_estimate": 60, "owner_age_source": "tenure_proxy",
+      "successor_check": {"method": "snippet_only", "direction": "positive_capped", "result": "30+ yrs experience. Hill Country 4-county. Owner not surfaced. Cap C_watch per skill rule."},
+      "size_estimate": "4-county. Estimated 4-6 trucks, $1M-$1.8M rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Snippet-only successor; cap C_watch."
+    },
+    {
+      "legal_name": "Hill Country Septic Service",
+      "city": "Kerrville", "county": "Kerr",
+      "years_in_business": 69, "year_established": 1957,
+      "owner_age_estimate": 70, "owner_age_source": "tenure_proxy",
+      "successor_check": {"method": "snippet_only", "direction": "positive_capped", "result": "Since 1957 = 69 yrs. Kerr Hill Country. Portable toilets + septic mix; partial-exclude check needed."},
+      "size_estimate": "Kerr/Kendall/Bandera. Estimated 5-8 trucks, $1.5M-$2.5M rev.",
+      "sub_trade": "multi_service_full_with_porta_toilet", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Snippet-only + porta-toilet mix check; cap C_watch."
+    },
+    {
+      "legal_name": "Texas Super Septic",
+      "city": "Liberty Hill", "county": "Williamson",
+      "years_in_business": 38, "year_established": 1987,
+      "owner_age_estimate": 65, "owner_age_source": "tenure_proxy",
+      "successor_check": {"method": "snippet_only", "direction": "positive_capped", "result": "Custom septic design + install since 1987 (38 yrs). Williamson West fast-growth exurb."},
+      "size_estimate": "Custom-install focus. Estimated 3-5 trucks, $800K-$1.5M rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Snippet-only; cap C_watch."
+    },
+    {
+      "legal_name": "Synergy Onsite Septic Solutions",
+      "city": "Buda", "county": "Hays",
+      "years_in_business": null,
+      "owner_age_estimate": null, "owner_age_source": "unknown",
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Hays county-focus. Estimated 3-4 trucks, $700K-$1.2M rev.",
+      "sub_trade": "maintenance_repair", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Insufficient data; cap C_watch / D_pass."
+    },
+    {
+      "legal_name": "Gruene Aerobic Services",
+      "city": "New Braunfels", "county": "Comal",
+      "owner_age_estimate": null, "owner_age_source": "unknown",
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Hill Country aerobic. Estimated 3-5 trucks, $800K-$1.5M rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Snippet-only; cap C_watch."
+    },
+    {
+      "legal_name": "Epic Septic & Service",
+      "city": "Austin", "county": "Travis",
+      "owner_age_estimate": null, "owner_age_source": "unknown",
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Central TX commercial focus (property mgrs / HOAs). Estimated 5-8 trucks, $1.5M-$2.5M rev.",
+      "sub_trade": "multi_service_full_commercial", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Snippet-only; cap C_watch."
+    },
+    {
+      "legal_name": "Houston Septic Service",
+      "city": "Houston", "county": "Harris",
+      "owner_age_estimate": null, "owner_age_source": "unknown",
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Site managed by PRO Software Solutions — POSSIBLE MARKETING AGENT not the actual operator. Verify entity identity in deep-dive."},
+      "size_estimate": "Houston metro multi-service. Estimated 8-12 trucks, $2M-$3.5M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Verify — possible marketing-agent shell",
+      "tier_cap_reason": "Entity identity not clear (marketing platform). Cap C_watch."
+    },
+    {
+      "legal_name": "A-1 Cleaning & Septic Systems, LLC",
+      "dba_name": "GotSeptic",
+      "city": "Spring", "county": "Harris",
+      "year_established": 1977, "years_in_business": 49,
+      "owner_age_estimate": 65, "owner_age_source": "tenure_proxy",
+      "successor_check": {"method": "live_website_fetch", "direction": "positive", "result": "Since 1977 = 49 yrs. Owner specific name NOT disclosed. 21+ city service area. 7-day/wk + 24-48hr emergency."},
+      "size_estimate": "21-city Houston route. Estimated 10-15 trucks, $2.5M-$4M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Owner anonymized — B/A candidate but cap pending owner age verification.",
+      "candidate_tier_target": "A_or_B"
+    },
+    {
+      "legal_name": "Aero-Septic Maintenance Inc.",
+      "city": "Tomball", "county": "Harris",
+      "years_in_business": 15,
+      "owner_age_estimate": null, "owner_age_source": "unknown",
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "NW Houston route. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Snippet-only; cap C_watch."
+    },
+    {
+      "legal_name": "Abracadabra Septic",
+      "city": "Magnolia", "county": "Montgomery",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Houston-NW arc. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "All Septics",
+      "city": "Houston", "county": "Harris",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Houston install-focus. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch / D_pass — under-scale."
+    },
+    {
+      "legal_name": "Greywater Septic",
+      "city": "Houston", "county": "Harris",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Houston metro. Estimated 2-3 trucks, $500K-$800K rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap D_pass — under-scale and insufficient signal."
+    },
+    {
+      "legal_name": "South Texas Environmental",
+      "city": "TBD", "county": "Bexar",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "South TX aerobic. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "maintenance_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "San Aerobic",
+      "city": "San Antonio", "county": "Bexar",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "SA aerobic + Boerne + NB + Canyon Lake. Estimated 4-6 trucks, $900K-$1.5M rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Herr Aerobic Services",
+      "city": "Boerne", "county": "Kendall",
+      "owner_age_estimate": null, "owner_age_source": "unknown",
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Herr surname-named — family-likely; specifics unknown."},
+      "size_estimate": "Boerne Kendall. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "J Bar C Septic Services",
+      "city": "Fredericksburg", "county": "Gillespie",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Far Hill Country Gillespie. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Childress Septic & Design",
+      "city": "Marble Falls", "county": "Burnet",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Burnet Hill Country. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Nelson Integrity Septic",
+      "city": "Marble Falls", "county": "Burnet",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Burnet/Llano. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Leinneweber Services",
+      "city": "Wimberley", "county": "Hays",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Leinneweber surname-named. Wimberley Hill Country."},
+      "size_estimate": "Hill Country Wimberley. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Mac Septic",
+      "city": "TBD", "county": "Travis",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Central TX aerobic. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "All Cen Tex Septic Pumping",
+      "city": "Austin", "county": "Travis",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Austin/RR/CP/Geo/Pflug. Estimated 4-6 trucks, $1M-$1.5M rev.",
+      "sub_trade": "pumping_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "24/7 Septic Solutions",
+      "city": "Round Rock", "county": "Williamson",
+      "years_in_business": 20,
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Williamson route. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Liberty Hill Septic",
+      "city": "Liberty Hill", "county": "Williamson",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Williamson West. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Alpha Septic",
+      "city": "Austin", "county": "Travis",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Austin multi-service. Estimated 4-6 trucks, $900K-$1.5M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Bastrop Aerobic Services (DBA Aerobic Services of South Texas)",
+      "city": "Bastrop", "county": "Bastrop",
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Service-area extension — likely consolidated with Aerobic Services of South Texas (already scored in batch 2)."},
+      "tier_cap_reason": "Likely duplicate of Aerobic Services of South Texas. Drop as separate row."
+    },
+    {
+      "legal_name": "Anytime Septic",
+      "city": "Bastrop", "county": "Bastrop",
+      "years_in_business": 20,
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Bastrop aerobic. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Double JP Septic",
+      "city": "Bastrop", "county": "Bastrop",
+      "year_established": 2014, "years_in_business": 12,
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Bastrop only. Estimated 2-3 trucks, $500K-$800K rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch — 12 yrs is past 5-yr gate but young; under-scale."
+    },
+    {
+      "legal_name": "HomeField Onsite Environmental",
+      "city": "Weatherford", "county": "Parker",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Parker/Hood/Johnson DFW SW. Estimated 4-6 trucks, $900K-$1.5M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Circle M Services",
+      "city": "Cleburne", "county": "Johnson",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "7-county DFW SW. Estimated 5-8 trucks, $1.2M-$2M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "CAS Septic Service, LLC",
+      "city": "Ennis", "county": "Ellis",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Ellis/Navarro/Johnson. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Harris Aerobic Septic",
+      "city": "Granbury", "county": "Hood",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Harris surname-named."},
+      "size_estimate": "Hood Granbury. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Coleman Aerobic Septic, Inc.",
+      "city": "Granbury", "county": "Hood",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Hood Granbury. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Double R Services, Inc.",
+      "city": "Granbury", "county": "Hood",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Hood County. Estimated 2-3 trucks, $400K-$700K rev.",
+      "sub_trade": "maintenance_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch / D_pass — under-scale."
+    },
+    {
+      "legal_name": "Patriot Septic",
+      "city": "Decatur", "county": "Wise",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Wise/Denton-N. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Integrity Septic Services",
+      "city": "TBD", "county": "Denton",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "5-county N TX. Estimated 4-6 trucks, $900K-$1.5M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Starr Wastewater Systems",
+      "city": "TBD", "county": "Wise",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Wise/Denton. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Cleburne Septic",
+      "city": "Cleburne", "county": "Johnson",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Johnson route. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "TexWay Wastewater",
+      "city": "Cleburne", "county": "Johnson",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Johnson. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "A-Solution Systems",
+      "city": "Waxahachie", "county": "Ellis",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Waxahachie aerobic. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Red Oak Septic Systems",
+      "city": "Red Oak", "county": "Ellis",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Red Oak install. Estimated 2-3 trucks, $400K-$700K rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap D_pass — under-scale."
+    },
+    {
+      "legal_name": "Randy's Septic Service",
+      "city": "Lindale", "county": "Smith",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Randy first-name in legal — owner-anonymized solo pattern."},
+      "size_estimate": "East TX route. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "D3 Septic",
+      "city": "Tyler", "county": "Smith",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Tyler/Lindale/Longview. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Roo Septic Systems",
+      "city": "Temple", "county": "Bell",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Temple/Belton. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "All About Septic",
+      "city": "Belton", "county": "Bell",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Belton. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Central Texas Septic and Backhoe",
+      "city": "Killeen", "county": "Bell",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Killeen/Belton/Temple route. Estimated 4-6 trucks, $900K-$1.5M rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Whitt Septic Services",
+      "city": "TBD", "county": "Brazoria",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Whitt surname-named."},
+      "size_estimate": "Brazoria coastal. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "SWS Resources",
+      "city": "Sealy", "county": "Austin",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "7-county W Houston route. Estimated 6-10 trucks, $1.5M-$2.5M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch — wide route signal but no owner verification."
+    },
+    {
+      "legal_name": "G & L Wastewater Services",
+      "city": "Brenham", "county": "Washington",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "100-mi Brenham radius. Estimated 5-8 trucks, $1.2M-$2M rev.",
+      "sub_trade": "pumping_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "JB Septic Pumping",
+      "city": "Brenham", "county": "Washington",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Washington/Austin/Fayette/Colorado route. Estimated 4-6 trucks, $900K-$1.5M rev.",
+      "sub_trade": "pumping_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Clint Young Septic",
+      "city": "Bryan", "county": "Brazos",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Brazos/Grimes/Washington. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Swartz Septic",
+      "city": "Brenham", "county": "Washington",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Swartz surname-named."},
+      "size_estimate": "Brenham/Navasota/Bellville. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Septic Solutions",
+      "city": "Pleasanton", "county": "Atascosa",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "South TX 6-county. Estimated 4-6 trucks, $900K-$1.5M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "TX Septic Systems LLC",
+      "city": "TBD", "county": "Bexar",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "SA/Wilson/Atascosa. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Christian Bros Septic",
+      "city": "TBD", "county": "Brazoria",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "negative_capped", "result": "Brothers-named = succession structurally in place."},
+      "size_estimate": "Brazoria/Liberty/Montgomery. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch — brothers succession likely internal."
+    },
+    {
+      "legal_name": "Quality Septic",
+      "city": "Kaufman", "county": "Kaufman",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Kaufman/Henderson/Van Zandt. Estimated 3-5 trucks, $700K-$1.2M rev.",
+      "sub_trade": "pumping_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Affordable Septic Tank",
+      "city": "Bastrop", "county": "Bastrop",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Bastrop/Caldwell. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "multi_service_full", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Franks Septic and Pumping",
+      "city": "Bastrop", "county": "Bastrop",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Frank first-name owner pattern."},
+      "size_estimate": "Bastrop. Estimated 2-3 trucks, $400K-$700K rev.",
+      "sub_trade": "pumping_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Vernon Tuck Septic",
+      "city": "TBD", "county": "Travis",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Vernon Tuck owner-named. Construction primary + septic adjacent — check primary mix."},
+      "size_estimate": "Central TX. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "septic_adjacent_construction_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap D_pass — construction-primary may exclude as not pure-septic."
+    },
+    {
+      "legal_name": "C9 Septic & Irrigation",
+      "city": "Tyler", "county": "Smith",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Tyler cross-service. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Texas Inspection",
+      "city": "Lake Jackson", "county": "Brazoria",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Lake Jackson RE inspection focus. Estimated 1-2 trucks, $300K-$600K rev.",
+      "sub_trade": "inspection_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap D_pass — under-scale, narrow service."
+    },
+    {
+      "legal_name": "Burleson Plumbing Pros",
+      "city": "Belton", "county": "Bell",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Bell. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "septic_adjacent_plumbing_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap D_pass — plumbing-primary, not septic-pure."
+    },
+    {
+      "legal_name": "Texas Land Services Septic",
+      "city": "TBD", "county": "Travis",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Central TX. Estimated 2-4 trucks, $500K-$900K rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "Dale Cook Backhoe Service",
+      "city": "Bastrop", "county": "Bastrop",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Dale Cook owner-named."},
+      "size_estimate": "Bastrop backhoe + septic. Estimated 2-3 trucks, $400K-$700K rev.",
+      "sub_trade": "installation_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch."
+    },
+    {
+      "legal_name": "AAMS Wimberley",
+      "city": "Wimberley", "county": "Hays",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Likely DUPLICATE of AAMS Wastewater (already scored batch 1). Drop.",
+      "sub_trade": "maintenance_primary_aerobic_specialist", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Duplicate; drop."
+    },
+    {
+      "legal_name": "Carter Septic",
+      "city": "Granbury", "county": "Hood",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped", "result": "Carter surname per Hood Co MP list — no website surfaced."},
+      "size_estimate": "Hood County small. Estimated 2-3 trucks, $400K-$700K rev.",
+      "sub_trade": "maintenance_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap C_watch / D_pass — insufficient signal."
+    },
+    {
+      "legal_name": "Aerobic Service Co. of Texas",
+      "city": "TBD", "county": "Tarrant",
+      "owner_age_estimate": null,
+      "successor_check": {"method": "snippet_only", "direction": "neutral_capped"},
+      "size_estimate": "Tarrant/Parker/Johnson. Unknown.",
+      "sub_trade": "maintenance_primary", "platform_affiliation_check": "Independent",
+      "tier_cap_reason": "Cap D_pass — insufficient verification; consider drop in final report."
+    }
+  ]
+}

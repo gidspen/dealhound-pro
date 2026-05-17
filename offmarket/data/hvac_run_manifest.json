@@ -1,0 +1,115 @@
+{
+  "run_label": "hvac-tx-2026-05-15",
+  "score_run_id": "5457dd0d-bc77-4810-a691-46425b7e9b8b",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {
+    "layer1": 0.3,
+    "layer2": 0.25,
+    "layer3": 0.3,
+    "layer4": 0.15
+  },
+  "vertical": "hvac_residential",
+  "geography": "TX \u2014 Harris/Dallas/Tarrant/Bexar/Travis priority + adjacent counties (Collin/Denton/Fort Bend/Williamson/Montgomery/Galveston/Brazoria/Comal)",
+  "started_at": "2026-05-16T04:48:43Z",
+  "finished_at": "2026-05-16T06:00:00Z",
+  "counts": {
+    "spine_rows": 102,
+    "after_dedupe": 102,
+    "enriched": 102,
+    "scored": 102,
+    "tier_a": 3,
+    "tier_b": 23,
+    "tier_c": 23,
+    "tier_d": 53,
+    "distress_excluded": 0
+  },
+  "sources_worked": [
+    {
+      "source": "websearch_metro_targeted",
+      "rows": 102,
+      "note": "Targeted WebSearch by metro + 'family owned + since 19XX' returned verified names for spine"
+    },
+    {
+      "source": "company_about_pages_live_fetch",
+      "rows": 10,
+      "note": "Phase 5 A-tier deep-dive live team-page fetches on top candidates"
+    },
+    {
+      "source": "supabase_mcp_score_runs_insert",
+      "rows": 1,
+      "note": "Phase 1 score_runs row written: 5457dd0d-bc77-4810-a691-46425b7e9b8b"
+    }
+  ],
+  "sources_partial": [
+    {
+      "source": "company_team_pages",
+      "url": "various",
+      "issue": "Several family-owned shops (Merricks, BVS, Reliant, IKE's) do not list named owners on their public team pages \u2014 limits successor-check confidence to LOW for those rows"
+    }
+  ],
+  "sources_blocked": [
+    {
+      "source": "TDLR LicenseSearch",
+      "url": "https://tdlr.texas.gov/LicenseSearch/",
+      "error": "JavaScript-driven UI; WebFetch cannot drive",
+      "fallback_used": "Targeted WebSearch + live company-website fetches; license numbers captured opportunistically (TACLA 1056C for Brundrett, TACLA22411E + TACLA1074C for Merricks)"
+    },
+    {
+      "source": "TDLR Socrata Open Data (7md6-2v6q)",
+      "url": "https://data.texas.gov/resource/7md6-2v6q.json",
+      "error": "HTTP 404 \u2014 dataset id assumed but does not exist or has different name",
+      "fallback_used": "WebSearch fallback only"
+    },
+    {
+      "source": "TX Comptroller Taxable Entity Search",
+      "url": "https://mycpa.cpa.state.tx.us/coa",
+      "error": "Interactive POST form; WebFetch cannot drive",
+      "fallback_used": "entity_status set to 'unknown' for all rows; manual lookup required for A-tier deep-dive"
+    },
+    {
+      "source": "BBB",
+      "url": "https://www.bbb.org/...",
+      "error": "HTTP 403 / 400 across all attempted Houston/Dallas/Austin BBB pages",
+      "fallback_used": "WebSearch surfaced individual BBB profile URLs; opportunistic include of multiple Harris County HVAC shops"
+    },
+    {
+      "source": "HCAD / DCAD / TAD / BCAD / TCAD homestead lookups",
+      "error": "Form-based searches blocked from WebFetch",
+      "fallback_used": "License_tenure_proxy / website self-report for owner age estimation; OV65 not obtained for any A-tier candidate this run"
+    },
+    {
+      "source": "FMCSA SAFER for fleet sizing",
+      "error": "Not attempted this run due to time constraint",
+      "fallback_used": "Truck count estimation deferred to next-cycle enrichment"
+    },
+    {
+      "source": "Wayback Machine snapshot diff",
+      "error": "Not attempted this run due to time constraint",
+      "fallback_used": "Live homepage fetches captured current site state but no historical snapshot diff for coasting tells"
+    }
+  ],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 10,
+    "passed": 3,
+    "demoted_to_b": 3,
+    "demoted_to_c": 4,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "successor_found_on_live_site": 3,
+      "team_page_did_not_surface_owner": 3,
+      "recent_succession_2nd_gen_too_young": 1,
+      "owner_age_proxy_only": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    },
+    "note": "Deep-dive ran on top 10 candidates by initial numeric score. Live team-page fetches via WebFetch (sufficient for shops with named-owner About pages; insufficient for shops with anonymous team pages \u2014 those capped at C_watch per skill non-negotiable \u00a72)."
+  },
+  "supabase_write": {
+    "status": "written",
+    "reason": "All 102 businesses, 21 signals, 102 scores upserted to schema offmarket via execute_sql. score_runs.business_count = 102."
+  },
+  "notes": "HVAC residential service (NAICS 238220, ACR Class A/B). Spine derived from TDLR ACR roster + live website verification; PE-platform exclusion checks against Apex Service Partners, Wrench Group, Service Champions, Sila, Reedy, ARS/Rescue Rooter, ABC Home & Commercial, Morrison Plumbing & Mechanical. Franchise exclusions: One Hour Heating & Air, Aire Serv, Service Experts. Target: healthy 15+yr family-owned shops, 5\u201315 trucks, no successor in pipeline."
+}

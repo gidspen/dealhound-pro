@@ -1,0 +1,255 @@
+{
+  "batch": 1,
+  "geography": "Hill Country + Houston exurbs (anchor candidates)",
+  "fetched_at": "2026-05-16",
+  "businesses": [
+    {
+      "legal_name": "Meiners Septic & Aerobic",
+      "owner_name": "Meiners family (specific name not disclosed on About page)",
+      "owner_age_estimate": null,
+      "owner_age_source": "unknown",
+      "year_established": 1995,
+      "years_in_business": 31,
+      "license_holder_name": "Meiners family",
+      "license_number": "MC00001",
+      "license_type": "TCEQ Maintenance Company (FIRST ISSUED IN TEXAS)",
+      "address": "Conroe area",
+      "city": "Conroe",
+      "county": "Montgomery",
+      "service_counties": ["Harris", "Montgomery", "Fort Bend", "Walker", "Waller", "Liberty", "Grimes"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://meinersseptic.com/about/",
+        "fetched_at": "2026-05-16",
+        "result": "No individual owner or team members named on About page. 'Family-oriented business' but no specific successor identified. Verbatim: 'family-oriented business that has been serving Houston and the surrounding area for the last 30 years.'",
+        "direction": "positive"
+      },
+      "coasting_tells": [
+        "About page light on family/team detail (anonymized solo-owner profile typical of coasting)",
+        "Online appointment booking present (modernization signal — partial offset)",
+        "MC00001 license tenure = first-issued = STRONG L1 + L2 baseline"
+      ],
+      "size_estimate": "Mid-shop estimate based on 7-county service area + 31 yr tenure: 5-8 trucks, $1.5M-$2.5M rev. Plausible $300-500K EBITDA.",
+      "sub_trade": "multi_service_full",
+      "platform_affiliation_check": "Independent — no Wind River / Walters / Casella affiliation visible.",
+      "data_sources": [
+        {"source": "website_about", "url": "https://meinersseptic.com/about/", "fetched_at": "2026-05-16", "fields": ["license_number", "year_established", "service_counties", "services"]},
+        {"source": "website_homepage", "url": "https://meinersseptic.com/", "fetched_at": "2026-05-16", "fields": ["services", "phone", "online_booking"]}
+      ]
+    },
+    {
+      "legal_name": "Brown Aerobic Septic Specialists",
+      "dba_name": "Brown Aerobic Service Company, Inc.",
+      "owner_name": "Jerrial Brown (founder) + Rashaud Brown (son co-owner)",
+      "owner_age_estimate": 60,
+      "owner_age_source": "linkedin_grad_proxy",
+      "year_established": 1999,
+      "years_in_business": 27,
+      "license_holder_name": "Jerrial Brown + Rashaud Brown",
+      "address": "17618 South Drive",
+      "city": "Cypress",
+      "county": "Harris",
+      "service_counties": ["Harris", "Montgomery", "Waller", "Fort Bend", "Austin", "Grimes", "Brazoria"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://brownaerobic.com/about-7290",
+        "fetched_at": "2026-05-16",
+        "result": "CONFIRMED FATHER-SON CO-OWNERSHIP. Verbatim: 'Brown Aerobic Septic Specialists is co-owned and operated by Jerrial Brown and his son, Rashaud Brown, bringing two generations of experience.' Rashaud entered industry 2007 and expanded business into Greater Houston.",
+        "direction": "negative"
+      },
+      "coasting_tells": [
+        "Family succession ALREADY IN PLACE — Rashaud is heir-apparent (not coasting; structured handoff)",
+        "Standard M-F 8-4:30 hours (no 24/7 emergency)",
+        "Modern operational tone — likely B_forward (internal buy-in candidate)"
+      ],
+      "size_estimate": "7-county route + 2-gen family. Estimated 6-10 trucks, $2M-$3.5M rev, $400K-$700K EBITDA.",
+      "sub_trade": "multi_service_full",
+      "platform_affiliation_check": "Independent."
+    },
+    {
+      "legal_name": "Van Delden Wastewater Systems",
+      "dba_name": "Van Delden Service Company",
+      "owner_name": "Van Delden family — Chad Van Delden + Courtney Van Delden (4th generation)",
+      "owner_age_estimate": 45,
+      "owner_age_source": "linkedin_grad_proxy",
+      "year_established": 1937,
+      "years_in_business": 89,
+      "license_holder_name": "Van Delden family",
+      "address": "26665 I-10 W",
+      "city": "Boerne",
+      "county": "Kendall",
+      "service_counties": ["Kendall", "Bexar", "Comal", "Bandera", "Kerr", "Guadalupe", "Hays"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://www.vdwws.com/",
+        "fetched_at": "2026-05-16",
+        "result": "FOURTH-GENERATION FAMILY OPERATION CONFIRMED. Chad + Courtney Van Delden are siblings, 4th gen running the company since 1937. Multi-gen succession in place. 23+ technician licenses on staff.",
+        "direction": "negative"
+      },
+      "coasting_tells": [
+        "Family succession at peak — multi-gen heirs already operating (NOT coasting)",
+        "24,629+ customers served + 126,936+ services completed = institutional scale",
+        "4.9/5 with 636 reviews = active engagement (NOT coasting)",
+        "Likely D_pass or C_watch — NOT Gideon target (4th-gen family-locked enterprise)"
+      ],
+      "size_estimate": "23+ technician licenses + 7-county + 89 yr tenure. Estimated 15-25 trucks, $5M-$10M rev, $1M-$2M EBITDA. Already platform-scale.",
+      "sub_trade": "multi_service_full_premium",
+      "platform_affiliation_check": "Independent — but functioning as TX-native quasi-platform itself."
+    },
+    {
+      "legal_name": "Ferguson & Sons Septic Services",
+      "owner_name": "Jesse Ferguson (owner) + Jordan Ferguson (wife) + 3 sons + 1 daughter",
+      "owner_age_estimate": 55,
+      "owner_age_source": "linkedin_grad_proxy",
+      "year_established": null,
+      "years_in_business": null,
+      "license_holder_name": "Jesse Ferguson",
+      "address": "Hill Country South TX",
+      "city": "Boerne",
+      "county": "Kendall",
+      "service_counties": ["Bexar", "Comal", "Kendall", "Gillespie", "Kerr", "Bandera", "Blanco", "Hays", "Medina", "Wilson", "Guadalupe", "Atascosa"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://fergusonseptics.com/about-ferguson-and-son-septic-servics/",
+        "fetched_at": "2026-05-16",
+        "result": "'AND SONS' = STRUCTURED FAMILY SUCCESSION. 3 sons + 1 daughter named in About page. Wife Jordan in operations. Internal buy-in is the path.",
+        "direction": "negative"
+      },
+      "coasting_tells": [
+        "Family succession already in place — likely B_forward",
+        "12-county service area = mature route business",
+        "24/7 operations = active engagement"
+      ],
+      "size_estimate": "12-county family operation. Estimated 6-10 trucks, $1.5M-$3M rev, $300K-$600K EBITDA.",
+      "sub_trade": "pumping_primary",
+      "platform_affiliation_check": "Independent."
+    },
+    {
+      "legal_name": "AAMS Wastewater",
+      "dba_name": "American Aerobic Management Systems",
+      "owner_name": "Steven (Steve) White",
+      "owner_age_estimate": 60,
+      "owner_age_source": "license_tenure_proxy",
+      "year_established": 1999,
+      "years_in_business": 27,
+      "license_holder_name": "Steven White",
+      "address": "PO Box 1514",
+      "city": "Wimberley",
+      "county": "Hays",
+      "phone": "512-847-0757",
+      "email": "office@aamswastewater.com",
+      "service_counties": ["Hays", "Comal-N"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://aamswastewater.com/",
+        "fetched_at": "2026-05-16",
+        "result": "Steven White = founder/owner. Staff named: Vanessa Jones, Geoff, John Epperson — but none identified as family or as licensed successor. NAWT certified. No family-succession info disclosed. No second TCEQ licensee on team page.",
+        "direction": "positive"
+      },
+      "coasting_tells": [
+        "27 yrs since 1999",
+        "Wimberley = peak Hill Country aerobic-density submarket",
+        "Hays + Comal-N coverage only (could expand) — flat geo growth",
+        "No succession visible on team page = STRONG L1+L3 stacking"
+      ],
+      "size_estimate": "Hays + Comal-N aerobic-density focus. Estimated 3-5 trucks, $700K-$1.5M rev, $150K-$300K EBITDA. Search-fund target.",
+      "sub_trade": "maintenance_primary_aerobic_specialist",
+      "platform_affiliation_check": "Independent."
+    },
+    {
+      "legal_name": "CTHC Septic",
+      "dba_name": "Central Texas Hill Country Septic",
+      "owner_name": "Joseph Jamieson (owner) + Jennifer Jamieson (office/billing — wife)",
+      "owner_age_estimate": 55,
+      "owner_age_source": "license_tenure_proxy",
+      "year_established": null,
+      "years_in_business": null,
+      "license_holder_name": "Joseph Jamieson + JK Parker",
+      "license_number": "OS0031389 / MP0001958 (Joseph); OS0031388 / MP0001957 (JK Parker)",
+      "address": "650 Wayside Dr",
+      "city": "Wimberley",
+      "county": "Hays",
+      "phone": "512-395-5060",
+      "email": "admin@cthcseptic.com",
+      "service_counties": ["Hays", "Blanco", "Travis", "Comal"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://cthcseptic.com/",
+        "fetched_at": "2026-05-16",
+        "result": "JOSEPH + JENNIFER JAMIESON (husband-wife) + JK PARKER (construction mgmt, SEPARATE LICENSE MP0001957). JK Parker is a SECOND LICENSED MAINTENANCE PROVIDER at same address = SUCCESSOR CANDIDATE under skill rule. Wife also active in business.",
+        "direction": "negative"
+      },
+      "coasting_tells": [
+        "Husband-wife operation = succession structurally in place (wife or partner)",
+        "JK Parker as 2nd licensed MP = internal-buy-in candidate"
+      ],
+      "size_estimate": "Hays-core operation. Estimated 4-6 trucks, $800K-$1.5M rev, $200K-$400K EBITDA.",
+      "sub_trade": "multi_service_full",
+      "platform_affiliation_check": "Independent."
+    },
+    {
+      "legal_name": "Carnes Enterprise",
+      "owner_name": "James D. 'Jim' Carnes",
+      "owner_age_estimate": 65,
+      "owner_age_source": "license_tenure_proxy",
+      "year_established": null,
+      "years_in_business": 35,
+      "license_holder_name": "Jim Carnes",
+      "address": "6760 FM 1283",
+      "city": "Pipe Creek",
+      "county": "Bandera",
+      "zip": "78063",
+      "phone": "210-884-0814",
+      "email": "gay@tecarnes.com",
+      "service_counties": ["Atascosa", "Bandera", "Bexar", "Blanco", "Comal", "Gillespie", "Hays", "Kendall", "Kerr", "Medina", "Uvalde"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://www.carnesenterprise.com/",
+        "fetched_at": "2026-05-16",
+        "result": "**JIM CARNES, 35+ YRS in utilities construction. NO SUCCESSOR VISIBLE on About page. Spouse Gay Carnes listed in email contact (gay@tecarnes.com) = office role, NOT licensed successor.** Solo licensed Installer II + Maintenance Provider. 11-county Hill Country aerobic core route.",
+        "direction": "positive"
+      },
+      "coasting_tells": [
+        "**Owner ~65 yrs old, 35+ yr career** — peak Layer 1 natural-exit window",
+        "Solo licensed owner — NO licensed second MP / Installer II visible",
+        "11-county Hill Country aerobic core route = MASSIVE recurring contract book",
+        "Spouse-as-office-help is NOT a licensed successor (skill rule)",
+        "STRONG A-tier candidate"
+      ],
+      "size_estimate": "11-county Hill Country aerobic dominator. Estimated 5-8 trucks, $1.2M-$2.5M rev, $300K-$600K EBITDA. **A-tier sweet spot.**",
+      "sub_trade": "maintenance_primary_aerobic_specialist",
+      "platform_affiliation_check": "Independent."
+    },
+    {
+      "legal_name": "Wilton Krause Septic",
+      "owner_name": "Wilton Krause (founder) + Sherry Krause Grimm (daughter, current operator)",
+      "owner_age_estimate": 55,
+      "owner_age_source": "license_tenure_proxy",
+      "year_established": 1972,
+      "years_in_business": 54,
+      "license_holder_name": "Sherry Krause Grimm",
+      "license_number": "OS0032686 + MP002484",
+      "address": "New Braunfels area",
+      "city": "New Braunfels",
+      "county": "Comal",
+      "phone": "830-557-5625",
+      "service_counties": ["Guadalupe", "Comal", "Wilson", "Gonzales", "Hays", "Caldwell", "Bexar"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://www.wiltonkrauseseptic.com/",
+        "fetched_at": "2026-05-16",
+        "result": "**SECOND-GEN succession ALREADY EXECUTED.** Daughter Sherry Krause Grimm is current operator. Family operation since 1972.",
+        "direction": "negative"
+      },
+      "coasting_tells": [
+        "2nd-gen handoff complete — Sherry has been operating for years",
+        "**Likely D_pass / C_watch — already structurally locked into family control**",
+        "Concrete septic tank manufacturing = vertical integration",
+        "7-county service area + 54 yr tenure = established"
+      ],
+      "size_estimate": "7-county + own concrete tank mfg. Estimated 8-12 trucks, $2M-$4M rev, $400K-$800K EBITDA. Platform-scale but family-locked.",
+      "sub_trade": "multi_service_full",
+      "platform_affiliation_check": "Independent — family-controlled."
+    }
+  ]
+}

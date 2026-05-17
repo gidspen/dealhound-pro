@@ -1,0 +1,47 @@
+{
+  "batch": 3,
+  "enrichment_method": "Final A-tier candidate verification cross-check via BBB / OpenCorporates / TSBPE",
+  "enriched_at": "2026-05-16",
+  "businesses": [
+    {
+      "spine_id": "plm-085",
+      "legal_name": "Clarke Kent Plumbing, Inc.",
+      "update": "VP Cynthia Clarke + President Gary Hacker = CO-OWNER PARTNERSHIP (not solo). DnB lists 'C.G.' as Owner and 'A.C.' as Partner. Whether they would sell jointly or one buys the other out is the central question. 'Clarke Kent' = Cynthia Clarke + Kent? + Hacker partnership.",
+      "successor_check_v2": "needs_followup - co-owner Cynthia Clarke is likely the internal partner, not a younger successor. If both are at retirement age, they would sell together (Gideon-acquirable). If younger Cynthia is heir-apparent, demote.",
+      "verdict_updated": "A_acquire_self CANDIDATE if both Gary + Cynthia are >65 (both would sell to outside buyer); B_forward if Cynthia is younger heir-apparent. RETAIN as A_acquire_self candidate with confidence MEDIUM pending OV65 verification on both Hacker and Clarke.",
+      "value_add_thesis_specific": "Clarke Kent has $10.6M revenue and 15 employees but NO membership plan visible and NO true online booking on the live site (fetched 2026-05-16) — strong modernization gaps at this scale. AI dispatch (ServiceTitan migration), online booking, recurring service-agreement program launch (Plumb-Smart $19-29/mo target), automated review generation, technician hiring funnel = credible 25-40% EBITDA uplift over 18-24 months in premium 78704 South Austin. Sale value uplift via clean recurring revenue book."
+    },
+    {
+      "spine_id": "plm-008",
+      "legal_name": "David Hicks Plumbing",
+      "update": "David Hicks is 2nd-gen owner (father George Hicks founded 1952). Master Plumber License #M-8529 (very low number = pre-1990 = 35+ yrs MP tenure). Plus additional licenses 1488, 20904, REG12333, REG13208, 15453 = multi-trade scope. 74-yr operation. No 3rd-gen Hicks mentioned in BBB or website.",
+      "verdict_updated": "A_acquire_self CANDIDATE (HIGH confidence) — 2nd-gen owner aging out (David Hicks born ~1957-65 = age 60-69 in 2026), no 3rd-gen Hicks visible, premium River Oaks/Montrose ZIP 77019, coasting tells (no membership, no online booking at 74-yr-old shop, no team page). NEEDS Harris CAD OV65 check on David Hicks personal residence + TSBPE M-8529 detail check.",
+      "value_add_thesis_specific": "Houston River Oaks/Montrose plumbing for old homes (1920s-1960s housing stock) commands premium repair pricing. AI dispatch + online booking + recurring service-agreement program (Hicks Family Plan $25-30/mo target) + modern PMS (Housecall Pro / ServiceTitan) + technician hiring funnel + sale-leaseback on Fairview St building (CAD lookup needed) = credible 30-50% EBITDA uplift in 18-24 months. River Oaks premium pricing power."
+    },
+    {
+      "spine_id": "plm-017",
+      "legal_name": "JOHN'S PLUMBING INC",
+      "update": "John P. Anselmo = President (CorporationWiki confirms). RMP M-17559 since 1989 (37+ yrs MP tenure). Address 14506 Cross Junction St (NW Harris — Bear Creek/Copperfield area). Template website with placeholder text 'Say something interesting about your business here' = CLASSIC COASTING TELL. Self-described 'Houston family-owned' but no team page / no son named / no successor visible.",
+      "verdict_updated": "A_acquire_self CANDIDATE (MEDIUM confidence) — 44-yr operation, single named RMP, age proxy ~65-75 (MP'd 1989), classic coasting tells (template website with placeholder text), no successor visible. CONFIDENCE CAP at MEDIUM due to: (a) template-site limits team verification depth; (b) NW Harris is ordinary submarket. NEEDS Harris CAD OV65 check.",
+      "value_add_thesis_specific": "John's Plumbing has 44 years of customer relationships in NW Houston (Bear Creek/Copperfield/Cypress fringe) but website is literally a template with unfilled placeholder text — owner has zero modernization investment. AI dispatch + true online booking + service-agreement membership launch + modern field-service software (ServiceTitan / Housecall Pro) + technician hiring funnel + customer database migration to a real CRM = a real EBITDA-doubling thesis. The 44-yr customer relationship database is the asset; modernization unlocks 2-3× the revenue from existing customers."
+    },
+    {
+      "spine_id": "plm-014",
+      "legal_name": "All in The Family Plumbing",
+      "update": "RMPL 21138 = mid-2000s RMP issue. Family-named brand. Serves Tomball + Jersey Village + Woodlands + Magnolia + Pinehurst + Conroe + Montgomery + Katy = 8-city NW Houston metro service area. Need team page deep-fetch.",
+      "verdict_updated": "B_forward — 'In the Family' branding implies multi-gen succession; RMP-tenure 2007ish = owner age 50-60 = NOT retirement-window primary thesis."
+    },
+    {
+      "spine_id": "plm-049",
+      "legal_name": "Lasiter and Lasiter Plumbing",
+      "update": "David Lasiter MP M-8331 (very low # = pre-1990 = 35+ yrs MP tenure). 'And Lasiter' family-double-name. Multiple membership plans (Annual + Loyalty).",
+      "verdict_updated": "B_forward — double-Lasiter family name strongly implies internal succession; whether it's David + brother or David + son needs deep-dive but family-pattern fires."
+    },
+    {
+      "spine_id": "plm-053",
+      "legal_name": "Ace Plumbing / Ace Repair Plumbing",
+      "update": "Toni Cryer President since 1990. Woman-owned. 36 yrs. Fort Worth 76114 (Lake Worth — older Tarrant housing stock). No successor visible in search. Two related entities (Ace Plumbing + Ace Repair).",
+      "verdict_updated": "B_forward — Toni Cryer 30+ yr female President = age 60+, fits retirement window, no obvious successor visible; cap at B due to thin online presence + smaller-shop size."
+    }
+  ]
+}
