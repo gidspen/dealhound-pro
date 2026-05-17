@@ -2,7 +2,7 @@
   "run_label": "vet-emergency-specialty-tx-2026-05-16-w5d",
   "score_run_id": "1a7f29b7-cab9-47ad-a3c1-a7c4f6c6ab9b",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
   "vertical": "vet_emergency_specialty",
   "naics_code": "541940",
   "geography": "TX — Harris/Dallas/Tarrant/Collin/Denton/Bexar/Travis/Williamson/Hays/Fort Bend/Montgomery/Galveston/Comal counties (independent ER + specialty referral hospitals only)",
@@ -12,7 +12,10 @@
     "spine_rows": 0,
     "enriched": 0,
     "scored": 0,
-    "tier_a": 0, "tier_b": 0, "tier_c": 0, "tier_d": 0,
+    "tier_a": 0,
+    "tier_b": 0,
+    "tier_c": 0,
+    "tier_d": 0,
     "distress_excluded": 0
   },
   "exclusion_filter": {
@@ -50,5 +53,5 @@
     "demoted_to_d_distress_surfaced": 0,
     "demotion_reasons": {}
   },
-  "supabase_write": {"status": "pending", "reason": "run in progress"}
+  "supabase_write": { "status": "pending", "reason": "run in progress" }
 }

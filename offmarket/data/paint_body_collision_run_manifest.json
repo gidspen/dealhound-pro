@@ -2,7 +2,7 @@
   "run_label": "paint-body-collision-tx-2026-05-16-w3a",
   "score_run_id": "55e31636-bd81-4737-a5c0-6993b4155f8e",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
   "vertical": "paint_body_collision",
   "naics_code": "811121",
   "geography": "TX — DFW (Dallas/Tarrant/Collin/Denton), Houston (Harris/Fort Bend/Brazoria/Montgomery/Galveston), SA (Bexar/Comal), Austin (Travis/Williamson/Hays)",
@@ -12,7 +12,10 @@
     "spine_rows": 0,
     "enriched": 0,
     "scored": 0,
-    "tier_a": 0, "tier_b": 0, "tier_c": 0, "tier_d": 0,
+    "tier_a": 0,
+    "tier_b": 0,
+    "tier_c": 0,
+    "tier_d": 0,
     "distress_excluded": 0
   },
   "sources_worked": [],
@@ -42,5 +45,5 @@
     "demoted_to_d_distress_surfaced": 0,
     "demotion_reasons": {}
   },
-  "supabase_write": {"status": "pending", "reason": "run open, businesses not yet upserted"}
+  "supabase_write": { "status": "pending", "reason": "run open, businesses not yet upserted" }
 }

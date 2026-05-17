@@ -2,7 +2,7 @@
   "run_label": "dry-cleaner-tx-2026-05-16-w4a",
   "score_run_id": "7835c9c5-4a1a-401c-8297-70a2f1f28e88",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
   "vertical": "dry_cleaner",
   "naics_code": "812320",
   "geography": "TX — Harris/Dallas/Tarrant/Collin/Denton/Bexar/Travis/Williamson/Fort Bend/Montgomery",
@@ -12,7 +12,10 @@
     "spine_rows": 0,
     "enriched": 0,
     "scored": 0,
-    "tier_a": 0, "tier_b": 0, "tier_c": 0, "tier_d": 0,
+    "tier_a": 0,
+    "tier_b": 0,
+    "tier_c": 0,
+    "tier_d": 0,
     "distress_excluded": 0
   },
   "sources_worked": [],
@@ -34,10 +37,19 @@
       "value_add_thesis_too_generic": 0
     }
   },
-  "supabase_write": {"status": "pending", "reason": ""},
+  "supabase_write": { "status": "pending", "reason": "" },
   "excluded_chains_franchises": [
-    "Tide Cleaners", "ZIPS Dry Cleaners", "Comet Cleaners", "1-800-Dry Clean",
-    "Martinizing Dry Cleaning", "Crest Cleaners", "Drycleaning Specialists Inc",
-    "Cleanyas", "WashClub", "Dry Cleaning Station", "Camelot Cleaners", "Sudz Express"
+    "Tide Cleaners",
+    "ZIPS Dry Cleaners",
+    "Comet Cleaners",
+    "1-800-Dry Clean",
+    "Martinizing Dry Cleaning",
+    "Crest Cleaners",
+    "Drycleaning Specialists Inc",
+    "Cleanyas",
+    "WashClub",
+    "Dry Cleaning Station",
+    "Camelot Cleaners",
+    "Sudz Express"
   ]
 }

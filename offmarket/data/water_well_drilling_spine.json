@@ -7,7 +7,35 @@
     "fetched_at": "2026-05-17T04:40:00Z",
     "clustering_method": "grouped by (business_address_line1 + business_city_state_zip + business_telephone); merged where same physical address has multiple licensees; surnames noted",
     "license_subtype_legend": "W=Driller, P=Pump Installer, M=Monitor Well, K=Closed Loop Geothermal, L=Large Diameter, C=Coring, D=Dewatering, N=Injection, T=Test Hole. Multi-letter = multi-endorsement.",
-    "counties_in_scope": ["TRAVIS","HAYS","COMAL","WILLIAMSON","BEXAR","TARRANT","PARKER","WISE","HOOD","JOHNSON","ERATH","MONTGOMERY","LIBERTY","WALLER","WOOD","SMITH","CHEROKEE","HENDERSON","HOPKINS","LAMAR","HUNT","FANNIN","BANDERA","KERR","BLANCO","BURNET","LLANO"],
+    "counties_in_scope": [
+      "TRAVIS",
+      "HAYS",
+      "COMAL",
+      "WILLIAMSON",
+      "BEXAR",
+      "TARRANT",
+      "PARKER",
+      "WISE",
+      "HOOD",
+      "JOHNSON",
+      "ERATH",
+      "MONTGOMERY",
+      "LIBERTY",
+      "WALLER",
+      "WOOD",
+      "SMITH",
+      "CHEROKEE",
+      "HENDERSON",
+      "HOPKINS",
+      "LAMAR",
+      "HUNT",
+      "FANNIN",
+      "BANDERA",
+      "KERR",
+      "BLANCO",
+      "BURNET",
+      "LLANO"
+    ],
     "total_license_rows_pulled": 264,
     "businesses_after_clustering": 75
   },
@@ -34,7 +62,11 @@
       "county": "TRAVIS",
       "zip": "78737",
       "phone": "512-288-1963",
-      "licensees_at_address": ["HEWELL, GARRETT LEE (KP, 61016)", "STEVENS, MASON PAUL (KP, 61462)", "SMITH, FRED (KLP, 54437)"],
+      "licensees_at_address": [
+        "HEWELL, GARRETT LEE (KP, 61016)",
+        "STEVENS, MASON PAUL (KP, 61462)",
+        "SMITH, FRED (KLP, 54437)"
+      ],
       "license_count": 3,
       "principal_license_number": "61016",
       "earliest_license_year_proxy": 2012,
@@ -118,7 +150,11 @@
       "county": "KERR",
       "zip": "78025",
       "phone": "830-238-4918",
-      "licensees_at_address": ["VLASEK, DENNIS LEE (KLPW, 50141)", "WEYAND, CHARLES (CMW, 54259)", "PLUMLEE, SHANNON (W, 60728)"],
+      "licensees_at_address": [
+        "VLASEK, DENNIS LEE (KLPW, 50141)",
+        "WEYAND, CHARLES (CMW, 54259)",
+        "PLUMLEE, SHANNON (W, 60728)"
+      ],
       "license_count": 3,
       "principal_license_number": "50141",
       "earliest_license_year_proxy": 1990,
@@ -146,7 +182,14 @@
       "county": "HAYS",
       "zip": "78620",
       "phone": "512-894-4221",
-      "licensees_at_address": ["SVETLIK, GREGORY ALLEN (CKPW, 56008)", "SCOTT, MICHAEL WARREN (KMPW, 59719)", "DEL VICARIO, NATHAN MICHELE (W, 61665)", "HERNANDEZ, ZACHARY (KP, 61647)", "THOMPSON, JARED W T (KP, 59901, at related 221 CLEAR LAKE)", "PAGE, KYLE DOUGLAS (KP, 60690, at related 1740 FITZHUGH)"],
+      "licensees_at_address": [
+        "SVETLIK, GREGORY ALLEN (CKPW, 56008)",
+        "SCOTT, MICHAEL WARREN (KMPW, 59719)",
+        "DEL VICARIO, NATHAN MICHELE (W, 61665)",
+        "HERNANDEZ, ZACHARY (KP, 61647)",
+        "THOMPSON, JARED W T (KP, 59901, at related 221 CLEAR LAKE)",
+        "PAGE, KYLE DOUGLAS (KP, 60690, at related 1740 FITZHUGH)"
+      ],
       "license_count": 4,
       "principal_license_number": "56008",
       "earliest_license_year_proxy": 2010,
@@ -160,7 +203,18 @@
       "county": "HAYS",
       "zip": "78666",
       "phone": "512-353-0075",
-      "licensees_at_address": ["KUTSCHER, DANIEL E (CKLMPW, 54746)", "MARTIN, WILLIAM (KLP, 60170)", "RODRIGUEZ, DIONISIO (KP, 61210)", "BROWN, PATRICK S (W, 59507)", "RAMIREZ, CESAR DAVID (W, 61667)", "SCOTT, DEREK RYAN (W, 59574)", "EZELL, AVERY C (KLP, 59634)", "KUTSCHER, CANON KARL (CW, 58773, at related Oak St)", "HOLLAND, JOHN HUNTER (KP, 59636, New Braunfels)", "SMITH, TANNER EVANS (CDKLMNPTW, 59422, Hydro Resources brand at Ranch Rd 12)"],
+      "licensees_at_address": [
+        "KUTSCHER, DANIEL E (CKLMPW, 54746)",
+        "MARTIN, WILLIAM (KLP, 60170)",
+        "RODRIGUEZ, DIONISIO (KP, 61210)",
+        "BROWN, PATRICK S (W, 59507)",
+        "RAMIREZ, CESAR DAVID (W, 61667)",
+        "SCOTT, DEREK RYAN (W, 59574)",
+        "EZELL, AVERY C (KLP, 59634)",
+        "KUTSCHER, CANON KARL (CW, 58773, at related Oak St)",
+        "HOLLAND, JOHN HUNTER (KP, 59636, New Braunfels)",
+        "SMITH, TANNER EVANS (CDKLMNPTW, 59422, Hydro Resources brand at Ranch Rd 12)"
+      ],
       "license_count": 7,
       "principal_license_number": "54746",
       "earliest_license_year_proxy": 2008,
@@ -188,7 +242,11 @@
       "county": "BANDERA",
       "zip": "78003",
       "phone": "830-796-4145",
-      "licensees_at_address": ["JACKMAN, KAMERON SHAE (KP, 62044)", "THALER, DANIEL EUGENE JR (KLPW, 61614, at 908 LAST GAP LN)", "THALER, DANIEL SR (CDKLMNPW, 4404, at 908 LAST GAP LANE)"],
+      "licensees_at_address": [
+        "JACKMAN, KAMERON SHAE (KP, 62044)",
+        "THALER, DANIEL EUGENE JR (KLPW, 61614, at 908 LAST GAP LN)",
+        "THALER, DANIEL SR (CDKLMNPW, 4404, at 908 LAST GAP LANE)"
+      ],
       "license_count": 3,
       "principal_license_number": "4404",
       "earliest_license_year_proxy": 1985,
@@ -216,7 +274,10 @@
       "county": "LLANO",
       "zip": "78643",
       "phone": "325-247-4888",
-      "licensees_at_address": ["MILLER, KASEY D (KLP, 61862)", "GILLILAND, KYLE WALKER (KLP, 61958, at adjacent 701 West Young)"],
+      "licensees_at_address": [
+        "MILLER, KASEY D (KLP, 61862)",
+        "GILLILAND, KYLE WALKER (KLP, 61958, at adjacent 701 West Young)"
+      ],
       "license_count": 2,
       "principal_license_number": "61862",
       "earliest_license_year_proxy": 2018,
@@ -244,7 +305,11 @@
       "county": "BURNET",
       "zip": "78654",
       "phone": "830-798-2739",
-      "licensees_at_address": ["JOHNSON, ROBERT W (KP, 60413)", "BECKER, MICHAEL G (CKMPW, 54516)", "JOHNSON, ANDREW JACKSON (CKMPW, 54989)"],
+      "licensees_at_address": [
+        "JOHNSON, ROBERT W (KP, 60413)",
+        "BECKER, MICHAEL G (CKMPW, 54516)",
+        "JOHNSON, ANDREW JACKSON (CKMPW, 54989)"
+      ],
       "license_count": 3,
       "principal_license_number": "54516",
       "earliest_license_year_proxy": 2008,
@@ -258,7 +323,11 @@
       "county": "BANDERA",
       "zip": "78003",
       "phone": "830-796-3697",
-      "licensees_at_address": ["DSPAIN, WILEY RAY JR (KLP, 4449)", "DSPAIN, WILEY RAY III (KLP, 60554)", "GUILL, CHRISTOPHER BRYANT (KLP, 62012, 335 MASON CREEK LOOP adjacent)"],
+      "licensees_at_address": [
+        "DSPAIN, WILEY RAY JR (KLP, 4449)",
+        "DSPAIN, WILEY RAY III (KLP, 60554)",
+        "GUILL, CHRISTOPHER BRYANT (KLP, 62012, 335 MASON CREEK LOOP adjacent)"
+      ],
       "license_count": 3,
       "principal_license_number": "4449",
       "earliest_license_year_proxy": 1987,
@@ -272,7 +341,12 @@
       "county": "HAYS",
       "zip": "78620",
       "phone": "512-858-4375",
-      "licensees_at_address": ["LINGLE, MARTIN DALE JR (CKMPW, 54813)", "GLASS, AARON G (CKLMPW, 4227)", "BENOIT, JAMES E (CKLMPTW, 4064)", "GIVENS, WYATT WILLIAM IV (KP, 59812)"],
+      "licensees_at_address": [
+        "LINGLE, MARTIN DALE JR (CKMPW, 54813)",
+        "GLASS, AARON G (CKLMPW, 4227)",
+        "BENOIT, JAMES E (CKLMPTW, 4064)",
+        "GIVENS, WYATT WILLIAM IV (KP, 59812)"
+      ],
       "license_count": 4,
       "principal_license_number": "4064",
       "earliest_license_year_proxy": 1985,
@@ -300,7 +374,10 @@
       "county": "WILLIAMSON",
       "zip": "76537",
       "phone": "512-746-2171",
-      "licensees_at_address": ["SPENCER, JOHN ARTHUR (W, 62042)", "STORK, BOBBY WAYNE (CKLMPTW, 2912)"],
+      "licensees_at_address": [
+        "SPENCER, JOHN ARTHUR (W, 62042)",
+        "STORK, BOBBY WAYNE (CKLMPTW, 2912)"
+      ],
       "license_count": 2,
       "principal_license_number": "2912",
       "earliest_license_year_proxy": 1978,
@@ -356,7 +433,10 @@
       "county": "KERR",
       "zip": "78025",
       "phone": "830-238-4877",
-      "licensees_at_address": ["SEVEY, CHRISTOPHER CHARLES (KP, 60085)", "HILL, DOUGLAS JOHN JR (KLPT, 60082)"],
+      "licensees_at_address": [
+        "SEVEY, CHRISTOPHER CHARLES (KP, 60085)",
+        "HILL, DOUGLAS JOHN JR (KLPT, 60082)"
+      ],
       "license_count": 2,
       "principal_license_number": "60082",
       "earliest_license_year_proxy": 2017,
@@ -678,7 +758,10 @@
       "county": "BURNET",
       "zip": "78608",
       "phone": "512-259-0378",
-      "licensees_at_address": ["MCDEARMON, JOE E (CMW, 2334)", "COWAN, BRADLEY DALE (PW, 61014, related)"],
+      "licensees_at_address": [
+        "MCDEARMON, JOE E (CMW, 2334)",
+        "COWAN, BRADLEY DALE (PW, 61014, related)"
+      ],
       "license_count": 2,
       "principal_license_number": "2334",
       "earliest_license_year_proxy": 1975,
@@ -720,7 +803,11 @@
       "county": "TARRANT",
       "zip": "76126",
       "phone": "817-443-0244",
-      "licensees_at_address": ["WATTS, TIMOTHY KEITH (CKLMPTW, 2457)", "YANEZ, MATTHEW QUENTIN (KP, 61930)", "WATTS, GRIFFEN TYLER (P, 61913)"],
+      "licensees_at_address": [
+        "WATTS, TIMOTHY KEITH (CKLMPTW, 2457)",
+        "YANEZ, MATTHEW QUENTIN (KP, 61930)",
+        "WATTS, GRIFFEN TYLER (P, 61913)"
+      ],
       "license_count": 3,
       "principal_license_number": "2457",
       "earliest_license_year_proxy": 1975,
@@ -734,7 +821,20 @@
       "county": "ERATH",
       "zip": "76401",
       "phone": "254-965-5924",
-      "licensees_at_address": ["AARDAL, GARY C (CDKLMNPTW, 2404)", "AARDAL, DYLAN BART (KLPTW, 61113)", "SANDERS, CURTIS WAYNE (LPW, 60404)", "LANGFORD, RUSSELL G (CDKLMNPTW, 56062)", "MOORE, JUSTIN D (KLPW, 59346)", "GOVIA, ANDEN ANTHONY (KPW, 61976)", "SCHROEDER, JAMES ALLEN (W, 61891)", "KAINER, MICHAEL CHARLES (KP, 61810)", "MATA, YONI R (KP, 61791)", "PATRICK, CURTIS R (KP, 61950)", "WALKER, JACE L (KLPT, 61686)", "RICHARDS, JIMMY L (KLPT, 60408)"],
+      "licensees_at_address": [
+        "AARDAL, GARY C (CDKLMNPTW, 2404)",
+        "AARDAL, DYLAN BART (KLPTW, 61113)",
+        "SANDERS, CURTIS WAYNE (LPW, 60404)",
+        "LANGFORD, RUSSELL G (CDKLMNPTW, 56062)",
+        "MOORE, JUSTIN D (KLPW, 59346)",
+        "GOVIA, ANDEN ANTHONY (KPW, 61976)",
+        "SCHROEDER, JAMES ALLEN (W, 61891)",
+        "KAINER, MICHAEL CHARLES (KP, 61810)",
+        "MATA, YONI R (KP, 61791)",
+        "PATRICK, CURTIS R (KP, 61950)",
+        "WALKER, JACE L (KLPT, 61686)",
+        "RICHARDS, JIMMY L (KLPT, 60408)"
+      ],
       "license_count": 12,
       "principal_license_number": "2404",
       "earliest_license_year_proxy": 1975,
@@ -748,7 +848,12 @@
       "county": "ERATH",
       "zip": "76401",
       "phone": "254-965-5924/7466",
-      "licensees_at_address": ["MCMINN, BILLY C (KLPT, 4510)", "COGBURN, CHRISTOPHER D (KLPT, 59360)", "HURFORD, PRESTON W (KLPT, 4181)", "SHIPMAN, PATTON SHANE (KLPT, 59443)"],
+      "licensees_at_address": [
+        "MCMINN, BILLY C (KLPT, 4510)",
+        "COGBURN, CHRISTOPHER D (KLPT, 59360)",
+        "HURFORD, PRESTON W (KLPT, 4181)",
+        "SHIPMAN, PATTON SHANE (KLPT, 59443)"
+      ],
       "license_count": 4,
       "principal_license_number": "4181",
       "earliest_license_year_proxy": 1985,
@@ -762,7 +867,10 @@
       "county": "ERATH",
       "zip": "76401",
       "phone": "254-965-5108",
-      "licensees_at_address": ["RILEY, JOE (CKLMPW, 2196)", "BORCHARDT, JUSTIN G (KLPW, 59563, adjacent 323 PR 1105)"],
+      "licensees_at_address": [
+        "RILEY, JOE (CKLMPW, 2196)",
+        "BORCHARDT, JUSTIN G (KLPW, 59563, adjacent 323 PR 1105)"
+      ],
       "license_count": 2,
       "principal_license_number": "2196",
       "earliest_license_year_proxy": 1975,
@@ -776,7 +884,11 @@
       "county": "HOOD",
       "zip": "76476",
       "phone": "817-573-4544",
-      "licensees_at_address": ["BENNETT, JEFFREY D (CKMPW, 4805)", "MEDCALF, BRENDON LEE (W, 61884)", "DUDLEY, MATTHEW R (KPW, 59581)"],
+      "licensees_at_address": [
+        "BENNETT, JEFFREY D (CKMPW, 4805)",
+        "MEDCALF, BRENDON LEE (W, 61884)",
+        "DUDLEY, MATTHEW R (KPW, 59581)"
+      ],
       "license_count": 3,
       "principal_license_number": "4805",
       "earliest_license_year_proxy": 1987,
@@ -818,7 +930,10 @@
       "county": "WISE",
       "zip": "76234",
       "phone": "940-627-5450",
-      "licensees_at_address": ["LAYTON, CHADWICK ARTHUR (KP, 61692)", "MILLER, BLANE ALBERT (PW, 61425)"],
+      "licensees_at_address": [
+        "LAYTON, CHADWICK ARTHUR (KP, 61692)",
+        "MILLER, BLANE ALBERT (PW, 61425)"
+      ],
       "license_count": 2,
       "principal_license_number": "61692",
       "earliest_license_year_proxy": 2018,
@@ -832,7 +947,11 @@
       "county": "WISE",
       "zip": "76234",
       "phone": "940-627-8760",
-      "licensees_at_address": ["BARNARD, KENNETH W (P, 59566)", "KINSEY, PAUL W (PW, 59567)", "GORTNEY, LEVI JARED (KPW, 61499)"],
+      "licensees_at_address": [
+        "BARNARD, KENNETH W (P, 59566)",
+        "KINSEY, PAUL W (PW, 59567)",
+        "GORTNEY, LEVI JARED (KPW, 61499)"
+      ],
       "license_count": 3,
       "principal_license_number": "59566",
       "earliest_license_year_proxy": 2015,
@@ -902,7 +1021,30 @@
       "county": "MONTGOMERY",
       "zip": "77318",
       "phone": "936-756-7721",
-      "licensees_at_address": ["WEISINGER, MICHAEL SCOTT (CDKLMNPTW, 1992)", "WEISINGER, MICHAEL S JR (W, 58019)", "ALLDREDGE, BILLIE JACK (KPT, 54930)", "ALLBRITTON, RICHARD HOLT (CDKMNPW, 4633)", "BAGWELL, CLAYTON ALAN (P, 61811)", "MARTIN, STEVEN WAYNE (CDKMNPTW, 54201)", "CASTANEDA, RONNIE W (KPT, 59330)", "AHEE, KEITH GILBERT (CDMNW, 54547)", "FORDER, JAMES W (KPT, 4439)", "ALLBRITTON, CHARLES H (W, 58158)", "ALLBRITTON, RYLAN A (W, 59846)", "THRASHER, LARRY (KPT, 54932)", "PIZANO, ANTONIO (KPW, 54927)", "PEREZ, ALFREDO F (W, 59514)", "SALINAS, MARCELO (W, 61720)", "LEMUS, HANSEL (KPTW, 60310)", "JONES, DARREN M (W, 61641)", "DONAHUE, JOSHUA MICHAEL (KPW, 61180)", "MENDOZA, ALEJANDRO (KPT, 58475)", "MCGINNIS, STEVEN (KLPTW, 56045)", "WILBURN, DEAN C (W, 59758)", "MORGAN, FRANK (KPT, 55028)"],
+      "licensees_at_address": [
+        "WEISINGER, MICHAEL SCOTT (CDKLMNPTW, 1992)",
+        "WEISINGER, MICHAEL S JR (W, 58019)",
+        "ALLDREDGE, BILLIE JACK (KPT, 54930)",
+        "ALLBRITTON, RICHARD HOLT (CDKMNPW, 4633)",
+        "BAGWELL, CLAYTON ALAN (P, 61811)",
+        "MARTIN, STEVEN WAYNE (CDKMNPTW, 54201)",
+        "CASTANEDA, RONNIE W (KPT, 59330)",
+        "AHEE, KEITH GILBERT (CDMNW, 54547)",
+        "FORDER, JAMES W (KPT, 4439)",
+        "ALLBRITTON, CHARLES H (W, 58158)",
+        "ALLBRITTON, RYLAN A (W, 59846)",
+        "THRASHER, LARRY (KPT, 54932)",
+        "PIZANO, ANTONIO (KPW, 54927)",
+        "PEREZ, ALFREDO F (W, 59514)",
+        "SALINAS, MARCELO (W, 61720)",
+        "LEMUS, HANSEL (KPTW, 60310)",
+        "JONES, DARREN M (W, 61641)",
+        "DONAHUE, JOSHUA MICHAEL (KPW, 61180)",
+        "MENDOZA, ALEJANDRO (KPT, 58475)",
+        "MCGINNIS, STEVEN (KLPTW, 56045)",
+        "WILBURN, DEAN C (W, 59758)",
+        "MORGAN, FRANK (KPT, 55028)"
+      ],
       "license_count": 22,
       "principal_license_number": "1992",
       "earliest_license_year_proxy": 1972,
@@ -916,7 +1058,16 @@
       "county": "BEXAR",
       "zip": "78109",
       "phone": "210-628-1090",
-      "licensees_at_address": ["NOTTINGHAM, THOMAS LEE (KPT, 61788)", "ADAMS, DANIEL WAYNE (KT, 58448)", "BAZAN, ERNEST AYALA JR (KPT, 60428)", "SHIRAR, DEVIN JAMES (KPT, 61502)", "BLACK, CLINTON R (KPT, 58574)", "BLACK, ROBERT D (KLPT, 54210)", "WILKINS, JOHN D (KPTW, 54470)", "REHFELD, RYAN KENNETH (KPT, 61629)"],
+      "licensees_at_address": [
+        "NOTTINGHAM, THOMAS LEE (KPT, 61788)",
+        "ADAMS, DANIEL WAYNE (KT, 58448)",
+        "BAZAN, ERNEST AYALA JR (KPT, 60428)",
+        "SHIRAR, DEVIN JAMES (KPT, 61502)",
+        "BLACK, CLINTON R (KPT, 58574)",
+        "BLACK, ROBERT D (KLPT, 54210)",
+        "WILKINS, JOHN D (KPTW, 54470)",
+        "REHFELD, RYAN KENNETH (KPT, 61629)"
+      ],
       "license_count": 8,
       "principal_license_number": "54210",
       "earliest_license_year_proxy": 2008,
@@ -930,7 +1081,11 @@
       "county": "BEXAR",
       "zip": "78240",
       "phone": "210-696-7114",
-      "licensees_at_address": ["NEAL, JAMES E (CKMPTW, 4868)", "MARTINEZ, HERIBERTO (M, 59554)", "MICHALSKY, JAROD MARK (KMNPW, 59624)"],
+      "licensees_at_address": [
+        "NEAL, JAMES E (CKMPTW, 4868)",
+        "MARTINEZ, HERIBERTO (M, 59554)",
+        "MICHALSKY, JAROD MARK (KMNPW, 59624)"
+      ],
       "license_count": 3,
       "principal_license_number": "4868",
       "earliest_license_year_proxy": 1990,
@@ -1014,7 +1169,11 @@
       "county": "HUNT",
       "zip": "75402",
       "phone": "903-527-3547",
-      "licensees_at_address": ["LANDRITH, JOE LOUIS (KPW, 4059)", "WADE, MELVIN T (CMW, 2892)", "DALE, DONALD JACOB (PW, 61639)"],
+      "licensees_at_address": [
+        "LANDRITH, JOE LOUIS (KPW, 4059)",
+        "WADE, MELVIN T (CMW, 2892)",
+        "DALE, DONALD JACOB (PW, 61639)"
+      ],
       "license_count": 3,
       "principal_license_number": "2892",
       "earliest_license_year_proxy": 1975,
@@ -1028,7 +1187,10 @@
       "county": "LIBERTY",
       "zip": "77575",
       "phone": "936-336-6221",
-      "licensees_at_address": ["GREAK, JAMES WILLIAM JR (CKLMPTW, 2130)", "GREAK, JAMES WILLIAM III (KPW, 60850)"],
+      "licensees_at_address": [
+        "GREAK, JAMES WILLIAM JR (CKLMPTW, 2130)",
+        "GREAK, JAMES WILLIAM III (KPW, 60850)"
+      ],
       "license_count": 2,
       "principal_license_number": "2130",
       "earliest_license_year_proxy": 1972,
@@ -1056,7 +1218,10 @@
       "county": "WOOD",
       "zip": "75494",
       "phone": "903-342-1060",
-      "licensees_at_address": ["MITCHELL, ARDIS S (KPW, 59409)", "MITCHELL, JACE ARDIS (KPW, 61964)"],
+      "licensees_at_address": [
+        "MITCHELL, ARDIS S (KPW, 59409)",
+        "MITCHELL, JACE ARDIS (KPW, 61964)"
+      ],
       "license_count": 2,
       "principal_license_number": "59409",
       "earliest_license_year_proxy": 2015,
@@ -1238,7 +1403,12 @@
       "county": "MONTGOMERY",
       "zip": "77378",
       "phone": "936-856-6374",
-      "licensees_at_address": ["BALLARD, SAMUEL L (CKMPTW, 54411)", "BALLARD, CHARLES ALAN III (KP, 61224)", "GREENHAW, BLAYNE KENDRICK (P, 61481)", "SNUFFER, KENNETH DAVID (W, 59847)"],
+      "licensees_at_address": [
+        "BALLARD, SAMUEL L (CKMPTW, 54411)",
+        "BALLARD, CHARLES ALAN III (KP, 61224)",
+        "GREENHAW, BLAYNE KENDRICK (P, 61481)",
+        "SNUFFER, KENNETH DAVID (W, 59847)"
+      ],
       "license_count": 4,
       "principal_license_number": "54411",
       "earliest_license_year_proxy": 2008,
@@ -1364,7 +1534,10 @@
       "county": "ERATH",
       "zip": "76401",
       "phone": "254-965-5152",
-      "licensees_at_address": ["DOWELL, JARRELL DALE II (KLPT, 4353)", "DOWELL, JUSTIN (W, 56066, PO Box 402 Stephenville - sister yard)"],
+      "licensees_at_address": [
+        "DOWELL, JARRELL DALE II (KLPT, 4353)",
+        "DOWELL, JUSTIN (W, 56066, PO Box 402 Stephenville - sister yard)"
+      ],
       "license_count": 2,
       "principal_license_number": "4353",
       "earliest_license_year_proxy": 1985,

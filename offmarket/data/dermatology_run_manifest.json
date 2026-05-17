@@ -2,7 +2,7 @@
   "run_label": "dermatology-tx-2026-05-16-w5b",
   "score_run_id": "6086eff8-d7f3-4b59-9aa3-9973142d7d5b",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
   "vertical": "dermatology",
   "naics_code": "621111",
   "npi_taxonomy": "207N00000X",
@@ -72,5 +72,5 @@
       "value_add_thesis_too_generic": 0
     }
   },
-  "supabase_write": {"status": "pending", "reason": ""}
+  "supabase_write": { "status": "pending", "reason": "" }
 }

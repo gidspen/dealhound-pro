@@ -2,18 +2,58 @@
   "run_label": "mental-health-counseling-tx-2026-05-16-w1c",
   "score_run_id": "5e13de17-8cdb-4339-a885-06252293a808",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
   "vertical": "mental_health_counseling",
   "naics_code": "621330",
   "geography": "TX — Harris/Dallas/Tarrant/Bexar/Travis/Collin/Denton/Williamson/Fort Bend/Montgomery priority",
   "started_at": "2026-05-16T23:26:00-05:00",
   "finished_at": null,
-  "target_counties": ["Harris", "Dallas", "Tarrant", "Bexar", "Travis", "Collin", "Denton", "Williamson", "Fort Bend", "Montgomery"],
+  "target_counties": [
+    "Harris",
+    "Dallas",
+    "Tarrant",
+    "Bexar",
+    "Travis",
+    "Collin",
+    "Denton",
+    "Williamson",
+    "Fort Bend",
+    "Montgomery"
+  ],
   "exclusion_filters": {
-    "pe_rollups": ["LifeStance Health", "Mindpath Health", "Refresh Mental Health", "Pathlight Mood & Anxiety", "ERC Pathlight", "Foundations Recovery Network", "Acadia Healthcare"],
-    "digital_first": ["Talkspace", "BetterHelp", "Headway", "Alma", "Octave", "Cerebral", "Brightside"],
-    "hospital_affiliated": ["Houston Methodist Behavioral", "Baylor Scott & White", "Memorial Hermann Behavioral", "JPS Behavioral", "UT Health Behavioral"],
-    "lmha": ["MHMRA", "Tropical Texas", "Tarrant MHMR", "Center for Health Care Services", "Bluebonnet Trails", "LifePath"],
+    "pe_rollups": [
+      "LifeStance Health",
+      "Mindpath Health",
+      "Refresh Mental Health",
+      "Pathlight Mood & Anxiety",
+      "ERC Pathlight",
+      "Foundations Recovery Network",
+      "Acadia Healthcare"
+    ],
+    "digital_first": [
+      "Talkspace",
+      "BetterHelp",
+      "Headway",
+      "Alma",
+      "Octave",
+      "Cerebral",
+      "Brightside"
+    ],
+    "hospital_affiliated": [
+      "Houston Methodist Behavioral",
+      "Baylor Scott & White",
+      "Memorial Hermann Behavioral",
+      "JPS Behavioral",
+      "UT Health Behavioral"
+    ],
+    "lmha": [
+      "MHMRA",
+      "Tropical Texas",
+      "Tarrant MHMR",
+      "Center for Health Care Services",
+      "Bluebonnet Trails",
+      "LifePath"
+    ],
     "solo_practice_min_providers": 3
   },
   "counts": {
@@ -45,5 +85,5 @@
       "value_add_thesis_too_generic": 0
     }
   },
-  "supabase_write": {"status": "pending", "reason": null}
+  "supabase_write": { "status": "pending", "reason": null }
 }

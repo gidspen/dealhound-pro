@@ -2,7 +2,7 @@
   "run_label": "independent-daycare-tx-2026-05-16-w4c",
   "score_run_id": "1884662b-fdaf-4a9b-bfb1-522e102b6df8",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
   "vertical": "independent_daycare",
   "naics_code": "624410",
   "geography": "TX — Dallas/Collin/Denton/Tarrant (DFW) + Harris/Fort Bend/Brazoria/Montgomery (Houston) + Bexar/Comal (SA) + Travis/Williamson/Hays (Austin)",
@@ -38,5 +38,5 @@
       "value_add_thesis_too_generic": 0
     }
   },
-  "supabase_write": {"status": "pending", "reason": ""}
+  "supabase_write": { "status": "pending", "reason": "" }
 }

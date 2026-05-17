@@ -2,7 +2,7 @@
   "run_label": "podiatry-tx-2026-05-16-w1d",
   "score_run_id": "243dda0e-0b83-4495-a14e-027bc9b1ad64",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
   "vertical": "podiatry",
   "naics": "621391",
   "geography": "TX — Harris/Dallas/Tarrant/Bexar/Travis/Collin/Denton/Williamson/Fort Bend/Montgomery",
@@ -38,7 +38,7 @@
       "value_add_thesis_too_generic": 0
     }
   },
-  "supabase_write": {"status": "pending", "reason": "run in progress"},
+  "supabase_write": { "status": "pending", "reason": "run in progress" },
   "exclusions": [
     "USCO (US Centric Care)",
     "Foundation Podiatry Group",

@@ -3,7 +3,7 @@
     "run_label": "paint-body-collision-tx-2026-05-16-w3a",
     "score_run_id": "55e31636-bd81-4737-a5c0-6993b4155f8e",
     "model_version": "offmarket-4layer-v0.2",
-    "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+    "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
     "vertical": "paint_body_collision",
     "naics_code": "811121",
     "geography": "TX — DFW + Houston + San Antonio + Austin metros, target 60-90 verified independents",
@@ -33,13 +33,44 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://www.texasbodyworks.com/about-us/", "fetched_at": "2026-05-16", "fields": ["years_in_business", "ownership_type", "founding_year"]},
-        {"source": "bbb", "url": "https://www.bbb.org/us/tx/dallas", "fetched_at": "2026-05-16", "fields": ["bbb_a_plus_since_1987", "address"]},
-        {"source": "websearch_corroboration", "url": "https://www.texasbodyworks.com", "fetched_at": "2026-05-16", "fields": ["founded_1987", "family_owned"]}
+        {
+          "source": "company_website_about",
+          "url": "https://www.texasbodyworks.com/about-us/",
+          "fetched_at": "2026-05-16",
+          "fields": ["years_in_business", "ownership_type", "founding_year"]
+        },
+        {
+          "source": "bbb",
+          "url": "https://www.bbb.org/us/tx/dallas",
+          "fetched_at": "2026-05-16",
+          "fields": ["bbb_a_plus_since_1987", "address"]
+        },
+        {
+          "source": "websearch_corroboration",
+          "url": "https://www.texasbodyworks.com",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1987", "family_owned"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "Founded 1987 per company About page; BBB A+ rating since 1987 corroborates; 39 yrs in business as of 2026.", "source": "company_website_about", "source_url": "https://www.texasbodyworks.com/about-us/", "observed_at": "2026-05-16"},
-        {"layer": 4, "signal_key": "metro_dfw_consolidation_pull", "direction": "positive", "evidence": "Dallas metro is the #1 TX target market for collision MSOs (Caliber, Crash Champions, Classic Collision, QCG all actively acquiring in DFW). Hail corridor = premium pricing.", "source": "industry_intelligence", "source_url": "https://www.autobodynews.com", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "Founded 1987 per company About page; BBB A+ rating since 1987 corroborates; 39 yrs in business as of 2026.",
+          "source": "company_website_about",
+          "source_url": "https://www.texasbodyworks.com/about-us/",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 4,
+          "signal_key": "metro_dfw_consolidation_pull",
+          "direction": "positive",
+          "evidence": "Dallas metro is the #1 TX target market for collision MSOs (Caliber, Crash Champions, Classic Collision, QCG all actively acquiring in DFW). Hail corridor = premium pricing.",
+          "source": "industry_intelligence",
+          "source_url": "https://www.autobodynews.com",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 65,
       "layer1_comment": "Founder family of Texas Body Works has operated since 1987 (39 yrs personal tenure). Specific owner name not publicly verified — owner_age estimated at ~62 using a license_tenure_proxy (a founder who personally launched in 1987 at typical founding age 25-35 would now be ~62-72). Confidence is medium-low without OV65 verification; this is the natural-exit window if the original founder is still owner.",
@@ -78,12 +109,38 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://www.walkerautobody.com/about-us", "fetched_at": "2026-05-16", "fields": ["founded_1981", "family_run", "second_generation"]},
-        {"source": "websearch_corroboration", "url": "https://www.facebook.com/p/Walker-Auto-Body-Frame-Shop-100064828670531/", "fetched_at": "2026-05-16", "fields": ["family_owned"]}
+        {
+          "source": "company_website_about",
+          "url": "https://www.walkerautobody.com/about-us",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1981", "family_run", "second_generation"]
+        },
+        {
+          "source": "websearch_corroboration",
+          "url": "https://www.facebook.com/p/Walker-Auto-Body-Frame-Shop-100064828670531/",
+          "fetched_at": "2026-05-16",
+          "fields": ["family_owned"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "second_generation_ownership", "direction": "negative", "evidence": "Website explicitly states '2nd generation' — successor is already in place, the family-internal transition has occurred or is in progress. This reduces L1 'natural exit' base rate substantially.", "source": "company_website_about", "source_url": "https://www.walkerautobody.com/about-us", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "Founded 1981, 45 yrs in business; family-run continuously per website.", "source": "company_website_about", "source_url": "https://www.walkerautobody.com/about-us", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "second_generation_ownership",
+          "direction": "negative",
+          "evidence": "Website explicitly states '2nd generation' — successor is already in place, the family-internal transition has occurred or is in progress. This reduces L1 'natural exit' base rate substantially.",
+          "source": "company_website_about",
+          "source_url": "https://www.walkerautobody.com/about-us",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "Founded 1981, 45 yrs in business; family-run continuously per website.",
+          "source": "company_website_about",
+          "source_url": "https://www.walkerautobody.com/about-us",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 35,
       "layer1_comment": "2nd-generation family-run shop. Successor is already in the business — current operator is likely 45-60 yrs old (took over from founder generation in 1990s-2000s). Not a natural-exit-window owner; their internal exit path is to the next generation, not an outside buyer.",
@@ -98,7 +155,7 @@
       "final_comment": "2nd-generation Walker family shop, founded 1981. Already passed through one succession — current operator is mid-career, not in natural exit window. C_watch: re-evaluate in 90+ days if succession dynamics change. Solid business, but not currently a coasting-pre-sale profile.",
       "value_add_thesis": "Not currently pursuable — successor already internal. If/when 2nd-gen owner approaches retirement (likely 2030s), revisit. Not actionable now.",
       "confidence": "medium",
-      "data_completeness": 0.50
+      "data_completeness": 0.5
     },
     {
       "legal_name": "Frisco Paint & Body, Inc.",
@@ -122,13 +179,47 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://friscopaintandbodyinc.com/", "fetched_at": "2026-05-16", "fields": ["founded_1971", "molinar_family", "50_years_serving_texas"]},
-        {"source": "businesswire_news", "url": "https://www.businesswire.com/news/home/20240827153430/en/Quality-Collision-Group-Expands-in-Texas-with-Acquisition-of-Hances-Uptown-Collision-Center", "fetched_at": "2026-05-16", "fields": ["frisco_market_context"]}
+        {
+          "source": "company_website_about",
+          "url": "https://friscopaintandbodyinc.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1971", "molinar_family", "50_years_serving_texas"]
+        },
+        {
+          "source": "businesswire_news",
+          "url": "https://www.businesswire.com/news/home/20240827153430/en/Quality-Collision-Group-Expands-in-Texas-with-Acquisition-of-Hances-Uptown-Collision-Center",
+          "fetched_at": "2026-05-16",
+          "fields": ["frisco_market_context"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "Established 1971 per website 'Molinar family has been faithfully serving communities across Texas for over 50 years' — 55 yrs.", "source": "company_website_about", "source_url": "https://friscopaintandbodyinc.com/", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "certifications", "direction": "positive", "evidence": "ASE Certified & I-Car Certified — clean operational record.", "source": "company_website_about", "source_url": "https://friscopaintandbodyinc.com/", "observed_at": "2026-05-16"},
-        {"layer": 4, "signal_key": "frisco_market_pull", "direction": "positive", "evidence": "Frisco is the premium-resi exurban DFW catchment; high-density consolidation activity (Caliber, QCG, Crash Champions all in 5-mile radius). Hail corridor premium.", "source": "industry_intelligence", "source_url": null, "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "Established 1971 per website 'Molinar family has been faithfully serving communities across Texas for over 50 years' — 55 yrs.",
+          "source": "company_website_about",
+          "source_url": "https://friscopaintandbodyinc.com/",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "certifications",
+          "direction": "positive",
+          "evidence": "ASE Certified & I-Car Certified — clean operational record.",
+          "source": "company_website_about",
+          "source_url": "https://friscopaintandbodyinc.com/",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 4,
+          "signal_key": "frisco_market_pull",
+          "direction": "positive",
+          "evidence": "Frisco is the premium-resi exurban DFW catchment; high-density consolidation activity (Caliber, QCG, Crash Champions all in 5-mile radius). Hail corridor premium.",
+          "source": "industry_intelligence",
+          "source_url": null,
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 70,
       "layer1_comment": "Molinar family has operated for 55 years (founded 1971). If current operating principal is the founder (or founder's now-adult child), age likely 60-70. License_tenure_proxy used; OV65 lookup on Molinar primary residence not completed this run. Strong natural-exit window if founding-generation principal is still active.",
@@ -167,15 +258,62 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://mpbworks.com/", "fetched_at": "2026-05-16", "fields": ["founded_1993", "family_owned"]},
-        {"source": "yelp_reviews", "url": "https://www.yelp.com/biz/memorial-paint-and-body-shop-houston", "fetched_at": "2026-05-16", "fields": ["owner_james_brewer", "33_years"]},
-        {"source": "bbb", "url": "https://www.bbb.org/us/tx/houston/profile/auto-body-repair-and-painting/memorial-paint-and-body-shop-0915-16000148", "fetched_at": "2026-05-16", "fields": ["bbb_profile"]}
+        {
+          "source": "company_website",
+          "url": "https://mpbworks.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1993", "family_owned"]
+        },
+        {
+          "source": "yelp_reviews",
+          "url": "https://www.yelp.com/biz/memorial-paint-and-body-shop-houston",
+          "fetched_at": "2026-05-16",
+          "fields": ["owner_james_brewer", "33_years"]
+        },
+        {
+          "source": "bbb",
+          "url": "https://www.bbb.org/us/tx/houston/profile/auto-body-repair-and-painting/memorial-paint-and-body-shop-0915-16000148",
+          "fetched_at": "2026-05-16",
+          "fields": ["bbb_profile"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "Established 1993 per company website — 33 yrs in business as of 2026.", "source": "company_website", "source_url": "https://mpbworks.com/", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "drp_recurring_revenue", "direction": "positive", "evidence": "Site explicitly says 'works directly with insurance companies' and 'DRP shop' — recurring carrier referral revenue.", "source": "company_website", "source_url": "https://mpbworks.com/", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "certifications", "direction": "positive", "evidence": "I-CAR & ASE certified per website.", "source": "company_website", "source_url": "https://mpbworks.com/", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "ev_repair", "direction": "positive", "evidence": "Site advertises EV repair — modern service line, forward-looking owner.", "source": "company_website", "source_url": "https://mpbworks.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "Established 1993 per company website — 33 yrs in business as of 2026.",
+          "source": "company_website",
+          "source_url": "https://mpbworks.com/",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "drp_recurring_revenue",
+          "direction": "positive",
+          "evidence": "Site explicitly says 'works directly with insurance companies' and 'DRP shop' — recurring carrier referral revenue.",
+          "source": "company_website",
+          "source_url": "https://mpbworks.com/",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "certifications",
+          "direction": "positive",
+          "evidence": "I-CAR & ASE certified per website.",
+          "source": "company_website",
+          "source_url": "https://mpbworks.com/",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "ev_repair",
+          "direction": "positive",
+          "evidence": "Site advertises EV repair — modern service line, forward-looking owner.",
+          "source": "company_website",
+          "source_url": "https://mpbworks.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 60,
       "layer1_comment": "James Brewer founded MPB in 1993 — 33-yr personal tenure. License_tenure_proxy puts him at ~60 (assuming founding at age 27). Edge of natural-exit window. No OV65 verification this run; Harris CAD lookup on Brewer primary residence would tighten this materially.",
@@ -214,14 +352,53 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://www.mastermatchcollision.com/", "fetched_at": "2026-05-16", "fields": ["founded_1989", "michael_sandra_wundt", "family_owned", "30_plus_years"]},
-        {"source": "yelp", "url": "https://www.yelp.com/biz/master-match-collision-center-san-antonio", "fetched_at": "2026-05-16", "fields": ["reviews", "30_years"]},
-        {"source": "birdeye_reviews", "url": "https://reviews.birdeye.com/master-match-collision-156053240029506", "fetched_at": "2026-05-16", "fields": ["review_volume_244"]}
+        {
+          "source": "company_website_about",
+          "url": "https://www.mastermatchcollision.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1989", "michael_sandra_wundt", "family_owned", "30_plus_years"]
+        },
+        {
+          "source": "yelp",
+          "url": "https://www.yelp.com/biz/master-match-collision-center-san-antonio",
+          "fetched_at": "2026-05-16",
+          "fields": ["reviews", "30_years"]
+        },
+        {
+          "source": "birdeye_reviews",
+          "url": "https://reviews.birdeye.com/master-match-collision-156053240029506",
+          "fetched_at": "2026-05-16",
+          "fields": ["review_volume_244"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "founder_named_couple", "direction": "positive", "evidence": "Michael Wundt (auto body) + Sandra Wundt (accounting) founded 1989 — 37-yr tenure. Husband+wife operating team, no public successor mentioned.", "source": "company_website_about", "source_url": "https://www.mastermatchcollision.com/", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "Established 1989 per website; 'over 30 years' of experience stated; 244 reviews on Birdeye = high-volume operating shop.", "source": "company_website_about", "source_url": "https://www.mastermatchcollision.com/", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "service_lines", "direction": "positive", "evidence": "Services dealerships, rental companies, individual owners — fleet/B2B recurring revenue.", "source": "company_website_about", "source_url": "https://www.mastermatchcollision.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "founder_named_couple",
+          "direction": "positive",
+          "evidence": "Michael Wundt (auto body) + Sandra Wundt (accounting) founded 1989 — 37-yr tenure. Husband+wife operating team, no public successor mentioned.",
+          "source": "company_website_about",
+          "source_url": "https://www.mastermatchcollision.com/",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "Established 1989 per website; 'over 30 years' of experience stated; 244 reviews on Birdeye = high-volume operating shop.",
+          "source": "company_website_about",
+          "source_url": "https://www.mastermatchcollision.com/",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "service_lines",
+          "direction": "positive",
+          "evidence": "Services dealerships, rental companies, individual owners — fleet/B2B recurring revenue.",
+          "source": "company_website_about",
+          "source_url": "https://www.mastermatchcollision.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 78,
       "layer1_comment": "Michael & Sandra Wundt founded Master Match in 1989 — 37-yr personal tenure as the operating principals. Web copy explicitly says '25+ years of experience' (Michael) + 'accounting background' (Sandra). Estimated current ages ~62-67 each. Strong natural-exit window. License_tenure_proxy primary, OV65 on Wundt residence not yet checked (Bexar CAD lookup needed for deep-dive).",
@@ -236,7 +413,7 @@
       "final_comment": "Michael & Sandra Wundt founded Master Match in San Antonio in 1989 — 37-yr personal husband+wife operating tenure, both likely in the 62-67 age band. Site mentions no successor or next-generation operator. High-volume shop (244+ reviews), dealership + rental + individual customer mix = healthy recurring revenue. Coasting tells: dated website, no online estimate/portal, limited digital presence. CANDIDATE A pending deep-dive: needs (1) OV65 lookup on Wundt residence via Bexar CAD, (2) live team-page fetch to confirm no successor / co-owner outside Michael+Sandra, (3) Comptroller franchise-tax status check on Master Match entity.",
       "value_add_thesis": "Digital intake modernization (online estimate, SMS status portal), DRP roster formalization (likely already informal — make explicit with top 5 carriers), ADAS calibration in-house (Bexar high-vehicle-density market), automated review gen (already strong at 244 reviews — accelerate), real-estate-anchored sale-leaseback option if Wundts own the Industrial Center building (Bexar CAD verify). 1.5-2x EBITDA path over 18-24 months, with the deal mechanic being a clean Wundt-couple-to-outside-buyer transition (no internal successor to negotiate around).",
       "confidence": "medium",
-      "data_completeness": 0.70
+      "data_completeness": 0.7
     },
     {
       "legal_name": "Hill Country Customs, Inc.",
@@ -260,12 +437,38 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.hillcountrycustoms.com/", "fetched_at": "2026-05-16", "fields": ["founded_1988", "family_owned", "travis_batey_owner"]},
-        {"source": "chamber_directory", "url": "https://www.chamberofcommerce.com/business-directory/texas/new-braunfels/auto-body-shop/2003011530-hill-country-customs", "fetched_at": "2026-05-16", "fields": ["address", "phone"]}
+        {
+          "source": "company_website",
+          "url": "https://www.hillcountrycustoms.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1988", "family_owned", "travis_batey_owner"]
+        },
+        {
+          "source": "chamber_directory",
+          "url": "https://www.chamberofcommerce.com/business-directory/texas/new-braunfels/auto-body-shop/2003011530-hill-country-customs",
+          "fetched_at": "2026-05-16",
+          "fields": ["address", "phone"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "named_owner_long_tenure", "direction": "positive", "evidence": "Travis Batey is named owner, business founded 1988, serving Comal/Hays/Bexar area for 38 yrs.", "source": "company_website", "source_url": "https://www.hillcountrycustoms.com/", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "service_area_breadth", "direction": "positive", "evidence": "Serves New Braunfels, Canyon Lake, Spring Branch, Bulverde — multi-county service area.", "source": "company_website", "source_url": "https://www.hillcountrycustoms.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "named_owner_long_tenure",
+          "direction": "positive",
+          "evidence": "Travis Batey is named owner, business founded 1988, serving Comal/Hays/Bexar area for 38 yrs.",
+          "source": "company_website",
+          "source_url": "https://www.hillcountrycustoms.com/",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "service_area_breadth",
+          "direction": "positive",
+          "evidence": "Serves New Braunfels, Canyon Lake, Spring Branch, Bulverde — multi-county service area.",
+          "source": "company_website",
+          "source_url": "https://www.hillcountrycustoms.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 68,
       "layer1_comment": "Travis Batey, 38-yr personal tenure (founded 1988). Estimated age ~58 (founding age 20 → now 58). License_tenure_proxy used. Pre-exit window but entering it within 5-10 yrs. Comal CAD OV65 lookup on Batey residence would tighten.",
@@ -304,13 +507,44 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://damianpaintandbody.com/", "fetched_at": "2026-05-16", "fields": ["founded_1983", "john_damian_owner", "family_owned"]},
-        {"source": "bbb", "url": "https://www.bbb.org/us/tx/clute/profile/auto-body-repair-and-painting/damian-paint-and-body-0915-30000216", "fetched_at": "2026-05-16", "fields": ["bbb_profile"]},
-        {"source": "dnb", "url": "https://www.dnb.com/business-directory/company-profiles.damian_paint__body_llc.042847dfe68be7d47032ab1575019291.html", "fetched_at": "2026-05-16", "fields": ["entity_record"]}
+        {
+          "source": "company_website",
+          "url": "https://damianpaintandbody.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1983", "john_damian_owner", "family_owned"]
+        },
+        {
+          "source": "bbb",
+          "url": "https://www.bbb.org/us/tx/clute/profile/auto-body-repair-and-painting/damian-paint-and-body-0915-30000216",
+          "fetched_at": "2026-05-16",
+          "fields": ["bbb_profile"]
+        },
+        {
+          "source": "dnb",
+          "url": "https://www.dnb.com/business-directory/company-profiles.damian_paint__body_llc.042847dfe68be7d47032ab1575019291.html",
+          "fetched_at": "2026-05-16",
+          "fields": ["entity_record"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "named_owner_long_tenure", "direction": "positive", "evidence": "John Damian is the named owner; founded 1983, 43-yr personal tenure.", "source": "company_website", "source_url": "https://damianpaintandbody.com/", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "43 yrs in Brazoria County, family-owned per website.", "source": "company_website", "source_url": "https://damianpaintandbody.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "named_owner_long_tenure",
+          "direction": "positive",
+          "evidence": "John Damian is the named owner; founded 1983, 43-yr personal tenure.",
+          "source": "company_website",
+          "source_url": "https://damianpaintandbody.com/",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "43 yrs in Brazoria County, family-owned per website.",
+          "source": "company_website",
+          "source_url": "https://damianpaintandbody.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 75,
       "layer1_comment": "John Damian, 43-yr personal tenure (founded 1983). License_tenure_proxy → age ~60-68. Strong natural-exit window. Brazoria CAD OV65 lookup needed.",
@@ -349,13 +583,47 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://www.northsidecollisionsa.com/about-us", "fetched_at": "2026-05-16", "fields": ["founded_2001", "mark_gutierrez", "javier_gutierrez_son", "22000_sf_facility"]},
-        {"source": "alldata_press", "url": "https://www.alldata.com/us/en/northside-collision", "fetched_at": "2026-05-16", "fields": ["operational_intelligence"]}
+        {
+          "source": "company_website_about",
+          "url": "https://www.northsidecollisionsa.com/about-us",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_2001", "mark_gutierrez", "javier_gutierrez_son", "22000_sf_facility"]
+        },
+        {
+          "source": "alldata_press",
+          "url": "https://www.alldata.com/us/en/northside-collision",
+          "fetched_at": "2026-05-16",
+          "fields": ["operational_intelligence"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "internal_successor_in_place", "direction": "negative", "evidence": "Mark Gutierrez (founder, ~62, former Allstate agent) + son Javier Gutierrez listed as co-owner and production manager. Javier started at age 12, served 6 yrs Army, returned. This is a CLEAR father-son operating succession. Mark's exit is to Javier, not to an outside buyer. L1 reduced.", "source": "company_website_about", "source_url": "https://www.northsidecollisionsa.com/about-us", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "size", "direction": "positive", "evidence": "22,000 sq ft facility, ~30 vehicles/month — est. $2-3.5M revenue. Top-tier SBA financeable.", "source": "company_website_about", "source_url": "https://www.northsidecollisionsa.com/about-us", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "certifications", "direction": "positive", "evidence": "Javier is Jaguar North America aluminum cosmetic + structural repair certified — high-value cert.", "source": "company_website_about", "source_url": "https://www.northsidecollisionsa.com/about-us", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "internal_successor_in_place",
+          "direction": "negative",
+          "evidence": "Mark Gutierrez (founder, ~62, former Allstate agent) + son Javier Gutierrez listed as co-owner and production manager. Javier started at age 12, served 6 yrs Army, returned. This is a CLEAR father-son operating succession. Mark's exit is to Javier, not to an outside buyer. L1 reduced.",
+          "source": "company_website_about",
+          "source_url": "https://www.northsidecollisionsa.com/about-us",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "size",
+          "direction": "positive",
+          "evidence": "22,000 sq ft facility, ~30 vehicles/month — est. $2-3.5M revenue. Top-tier SBA financeable.",
+          "source": "company_website_about",
+          "source_url": "https://www.northsidecollisionsa.com/about-us",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "certifications",
+          "direction": "positive",
+          "evidence": "Javier is Jaguar North America aluminum cosmetic + structural repair certified — high-value cert.",
+          "source": "company_website_about",
+          "source_url": "https://www.northsidecollisionsa.com/about-us",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 38,
       "layer1_comment": "Mark Gutierrez founded Northside in 2001, 25-yr personal tenure. BUT his son Javier is named co-owner / production manager — internal succession is already structured. Mark's natural exit is to Javier, not to an external buyer. L1 reduced to reflect internal-buy-in profile.",
@@ -394,10 +662,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://jonesandhadley.com/about-us", "fetched_at": "2026-05-16", "fields": ["founded_1953", "five_generations", "donnie_welty_current_owner"]}
+        {
+          "source": "company_website_about",
+          "url": "https://jonesandhadley.com/about-us",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1953", "five_generations", "donnie_welty_current_owner"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "multi_generation_business", "direction": "negative", "evidence": "5 generations of family ownership since 1953. Donnie Welty is current operator — internal succession history is the model. Each generation has transitioned to the next.", "source": "company_website_about", "source_url": "https://jonesandhadley.com/about-us", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "multi_generation_business",
+          "direction": "negative",
+          "evidence": "5 generations of family ownership since 1953. Donnie Welty is current operator — internal succession history is the model. Each generation has transitioned to the next.",
+          "source": "company_website_about",
+          "source_url": "https://jonesandhadley.com/about-us",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 35,
       "layer1_comment": "5-generation family business. Donnie Welty is current operator — likely mid-career (40-55). The exit pattern here is generational, not external sale. Even if Donnie wants to exit, the 6th generation is the likely successor.",
@@ -412,7 +693,7 @@
       "final_comment": "Jones & Hadley is a 73-yr 5-generation Angleton institution. The exit path is generational, not external — not a current acquisition target. C_watch: re-evaluate only if family-internal succession breaks down.",
       "value_add_thesis": "Not currently pursuable. Strong brand legacy but no exit pathway open to external buyers.",
       "confidence": "high",
-      "data_completeness": 0.60
+      "data_completeness": 0.6
     },
     {
       "legal_name": "Atascocita Car Care & Collision, Inc.",
@@ -436,11 +717,29 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.atascocitacarcollision.com/", "fetched_at": "2026-05-16", "fields": ["20_plus_years", "family_owned", "humble_atascocita_market"]},
-        {"source": "bbb", "url": "https://www.bbb.org/us/tx/humble/profile/auto-repair/atascocita-car-care-and-collision-0915-90028500", "fetched_at": "2026-05-16", "fields": ["bbb_profile"]}
+        {
+          "source": "company_website",
+          "url": "https://www.atascocitacarcollision.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["20_plus_years", "family_owned", "humble_atascocita_market"]
+        },
+        {
+          "source": "bbb",
+          "url": "https://www.bbb.org/us/tx/humble/profile/auto-repair/atascocita-car-care-and-collision-0915-90028500",
+          "fetched_at": "2026-05-16",
+          "fields": ["bbb_profile"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "20+ yrs per company website, ~22 yrs as of 2026.", "source": "company_website", "source_url": "https://www.atascocitacarcollision.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "20+ yrs per company website, ~22 yrs as of 2026.",
+          "source": "company_website",
+          "source_url": "https://www.atascocitacarcollision.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 55,
       "layer1_comment": "Laura B. is the listed owner/operator with no last name publicly available. 22-yr tenure suggests owner is mid-to-late career (~55-60). Confidence is low without name-resolution and OV65 lookup.",
@@ -479,13 +778,44 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://woodlandscarcare.com/about-us/", "fetched_at": "2026-05-16", "fields": ["founded_1995", "30_plus_years"]},
-        {"source": "linkedin", "url": "https://www.linkedin.com/in/al-diller-aaa3ab2a/", "fetched_at": "2026-05-16", "fields": ["owner_al_diller"]},
-        {"source": "bbb", "url": "https://www.bbb.org/us/tx/the-woodlands/profile/auto-repair/woodlands-car-care-0915-31000339", "fetched_at": "2026-05-16", "fields": ["bbb_profile"]}
+        {
+          "source": "company_website",
+          "url": "https://woodlandscarcare.com/about-us/",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1995", "30_plus_years"]
+        },
+        {
+          "source": "linkedin",
+          "url": "https://www.linkedin.com/in/al-diller-aaa3ab2a/",
+          "fetched_at": "2026-05-16",
+          "fields": ["owner_al_diller"]
+        },
+        {
+          "source": "bbb",
+          "url": "https://www.bbb.org/us/tx/the-woodlands/profile/auto-repair/woodlands-car-care-0915-31000339",
+          "fetched_at": "2026-05-16",
+          "fields": ["bbb_profile"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "named_owner_long_tenure", "direction": "positive", "evidence": "Al Diller is owner per LinkedIn, founded 1995, 31-yr personal tenure.", "source": "linkedin", "source_url": "https://www.linkedin.com/in/al-diller-aaa3ab2a/", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "service_lines", "direction": "positive", "evidence": "Combined Auto + Collision + RV — diversified revenue mix, 24/7 service per website.", "source": "company_website", "source_url": "https://woodlandscarcare.com/about-us/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "named_owner_long_tenure",
+          "direction": "positive",
+          "evidence": "Al Diller is owner per LinkedIn, founded 1995, 31-yr personal tenure.",
+          "source": "linkedin",
+          "source_url": "https://www.linkedin.com/in/al-diller-aaa3ab2a/",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "service_lines",
+          "direction": "positive",
+          "evidence": "Combined Auto + Collision + RV — diversified revenue mix, 24/7 service per website.",
+          "source": "company_website",
+          "source_url": "https://woodlandscarcare.com/about-us/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 68,
       "layer1_comment": "Al Diller, founded 1995, 31-yr personal tenure. LinkedIn-verified owner. Estimated age ~60 (linkedin_grad proxy). Approaching natural exit window. Montgomery CAD OV65 lookup needed.",
@@ -524,11 +854,29 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.masonspaintandbody.com/", "fetched_at": "2026-05-16", "fields": ["founded_1984", "family_owned"]},
-        {"source": "carwise", "url": "https://www.carwise.com/auto-body-shops/masons-paint-body-keller-tx-76244/547774", "fetched_at": "2026-05-16", "fields": ["location_keller"]}
+        {
+          "source": "company_website",
+          "url": "https://www.masonspaintandbody.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1984", "family_owned"]
+        },
+        {
+          "source": "carwise",
+          "url": "https://www.carwise.com/auto-body-shops/masons-paint-body-keller-tx-76244/547774",
+          "fetched_at": "2026-05-16",
+          "fields": ["location_keller"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "Founded 1984 per website — 42 yrs in business, family-owned in NE Tarrant County (Keller).", "source": "company_website", "source_url": "https://www.masonspaintandbody.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "Founded 1984 per website — 42 yrs in business, family-owned in NE Tarrant County (Keller).",
+          "source": "company_website",
+          "source_url": "https://www.masonspaintandbody.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 65,
       "layer1_comment": "42-yr tenure, Mason family. License_tenure_proxy → age ~60-70. Natural exit window. Founder name unverified this run.",
@@ -543,7 +891,7 @@
       "final_comment": "Mason's Paint & Body has been family-owned in Keller since 1984 (42 yrs). NE Tarrant premium catchment. Cap at B pending owner-name resolution + successor live-fetch. Strong forward candidate.",
       "value_add_thesis": "Affluent NE Tarrant catchment = premium pricing potential. Digital modernization, DRP roster, ADAS. Brand value of 42-yr Keller name is high to a regional consolidator.",
       "confidence": "low",
-      "data_completeness": 0.50
+      "data_completeness": 0.5
     },
     {
       "legal_name": "Galson Auto",
@@ -567,10 +915,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "websearch_corroboration", "url": "https://www.carwise.com/auto-body-shops/77429", "fetched_at": "2026-05-16", "fields": ["founded_1993", "family_owned", "cypress"]}
+        {
+          "source": "websearch_corroboration",
+          "url": "https://www.carwise.com/auto-body-shops/77429",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1993", "family_owned", "cypress"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "Founded 1993 per public sources, 33 yrs in Cypress. Note: 'primarily general automobile maintenance and repair rather than primarily collision work' per source — verify collision share before pursuit.", "source": "websearch_corroboration", "source_url": "https://www.carwise.com/auto-body-shops/77429", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "Founded 1993 per public sources, 33 yrs in Cypress. Note: 'primarily general automobile maintenance and repair rather than primarily collision work' per source — verify collision share before pursuit.",
+          "source": "websearch_corroboration",
+          "source_url": "https://www.carwise.com/auto-body-shops/77429",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 60,
       "layer1_comment": "Galson family, 33-yr tenure. License_tenure_proxy → ~60. Natural exit window. Note: business is dual general-repair + collision; collision share may be smaller. Confidence is low.",
@@ -585,7 +946,7 @@
       "final_comment": "Galson Auto — 33 yrs in Cypress, family-owned. Profile is mixed general repair + collision; collision share needs verification. Cap at B pending live website/successor check.",
       "value_add_thesis": "If collision is meaningful share, normal modernization playbook applies. If collision is <30% of revenue, this is actually an auto repair acquisition with collision side. Verify before pursuit.",
       "confidence": "low",
-      "data_completeness": 0.40
+      "data_completeness": 0.4
     },
     {
       "legal_name": "Ray Newton Collision, LLC",
@@ -609,11 +970,29 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.raynewtoncollision.com/", "fetched_at": "2026-05-16", "fields": ["owner_ray_terri", "founded_2000", "25_years"]},
-        {"source": "bbb", "url": "https://www.bbb.org/us/tx/fort-worth/profile/auto-body-repair-and-painting/ray-newton-collision-llc-0825-1000183768", "fetched_at": "2026-05-16", "fields": ["bbb_profile"]}
+        {
+          "source": "company_website",
+          "url": "https://www.raynewtoncollision.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["owner_ray_terri", "founded_2000", "25_years"]
+        },
+        {
+          "source": "bbb",
+          "url": "https://www.bbb.org/us/tx/fort-worth/profile/auto-body-repair-and-painting/ray-newton-collision-llc-0825-1000183768",
+          "fetched_at": "2026-05-16",
+          "fields": ["bbb_profile"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "named_couple_owners", "direction": "positive", "evidence": "Ray and Terri are owner-operators since 2000 (25 yrs). Ray has 30+ yrs collision industry experience.", "source": "company_website", "source_url": "https://www.raynewtoncollision.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "named_couple_owners",
+          "direction": "positive",
+          "evidence": "Ray and Terri are owner-operators since 2000 (25 yrs). Ray has 30+ yrs collision industry experience.",
+          "source": "company_website",
+          "source_url": "https://www.raynewtoncollision.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 68,
       "layer1_comment": "Ray & Terri Newton, 25-yr tenure as owner-operators (Ray has 30+ yrs total industry experience). Estimated age ~58-65. Approaching natural exit window. Tarrant CAD OV65 lookup needed for verification.",
@@ -652,11 +1031,29 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_our_story", "url": "https://legacyautocollision.com/our-story/", "fetched_at": "2026-05-16", "fields": ["mario_alberto_carrillo_founders", "family_owned", "25_plus_years"]},
-        {"source": "carwise", "url": "https://www.carwise.com/auto-body-shops/legacy-auto-body-shop-llc-garland-tx-75041/568221", "fetched_at": "2026-05-16", "fields": ["location_garland"]}
+        {
+          "source": "company_website_our_story",
+          "url": "https://legacyautocollision.com/our-story/",
+          "fetched_at": "2026-05-16",
+          "fields": ["mario_alberto_carrillo_founders", "family_owned", "25_plus_years"]
+        },
+        {
+          "source": "carwise",
+          "url": "https://www.carwise.com/auto-body-shops/legacy-auto-body-shop-llc-garland-tx-75041/568221",
+          "fetched_at": "2026-05-16",
+          "fields": ["location_garland"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "two_co_owners", "direction": "negative", "evidence": "Mario Carrillo + Alberto Carrillo are brothers + co-owners. Internal succession path is brother-to-brother or to next-gen Carrillo. Limits external-buyer thesis.", "source": "company_website_our_story", "source_url": "https://legacyautocollision.com/our-story/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "two_co_owners",
+          "direction": "negative",
+          "evidence": "Mario Carrillo + Alberto Carrillo are brothers + co-owners. Internal succession path is brother-to-brother or to next-gen Carrillo. Limits external-buyer thesis.",
+          "source": "company_website_our_story",
+          "source_url": "https://legacyautocollision.com/our-story/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 45,
       "layer1_comment": "Two-brother ownership team (Mario + Alberto Carrillo). Each likely 50-60. Limits external-buy thesis because brothers can buy each other out. License_tenure_proxy used.",
@@ -695,11 +1092,37 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://thebodyshoptx.com/about-the-body-shop.html", "fetched_at": "2026-05-16", "fields": ["founded_1976", "john_rattan_founder", "garland_prosper_mckinney_paris", "originally_dallas_lbj_central"]}
+        {
+          "source": "company_website_about",
+          "url": "https://thebodyshoptx.com/about-the-body-shop.html",
+          "fetched_at": "2026-05-16",
+          "fields": [
+            "founded_1976",
+            "john_rattan_founder",
+            "garland_prosper_mckinney_paris",
+            "originally_dallas_lbj_central"
+          ]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "named_founder_long_tenure", "direction": "positive", "evidence": "John Rattan founded in 1976, 50-yr personal tenure. Originally on LBJ & Central; moved to Garland 1978; added McKinney 2000.", "source": "company_website_about", "source_url": "https://thebodyshoptx.com/about-the-body-shop.html", "observed_at": "2026-05-16"},
-        {"layer": 2, "signal_key": "multi_location_growth", "direction": "positive", "evidence": "Multi-location: Garland + Prosper + McKinney + Paris. ~40 employees est.", "source": "company_website_about", "source_url": "https://thebodyshoptx.com/about-the-body-shop.html", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "named_founder_long_tenure",
+          "direction": "positive",
+          "evidence": "John Rattan founded in 1976, 50-yr personal tenure. Originally on LBJ & Central; moved to Garland 1978; added McKinney 2000.",
+          "source": "company_website_about",
+          "source_url": "https://thebodyshoptx.com/about-the-body-shop.html",
+          "observed_at": "2026-05-16"
+        },
+        {
+          "layer": 2,
+          "signal_key": "multi_location_growth",
+          "direction": "positive",
+          "evidence": "Multi-location: Garland + Prosper + McKinney + Paris. ~40 employees est.",
+          "source": "company_website_about",
+          "source_url": "https://thebodyshoptx.com/about-the-body-shop.html",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 85,
       "layer1_comment": "John Rattan founded The Body Shop in 1976 — 50-yr personal tenure. Estimated age ~70+ (founding age 20-25 → ~70-75 now). Solidly in natural-exit window. License_tenure_proxy strong. Dallas/Collin/Lamar CAD OV65 lookup on Rattan residence would tighten.",
@@ -738,10 +1161,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_history", "url": "https://www.tylerautobody.com/history", "fetched_at": "2026-05-16", "fields": ["founded_1988", "tatham_family", "dan_tatham_founder"]}
+        {
+          "source": "company_website_history",
+          "url": "https://www.tylerautobody.com/history",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1988", "tatham_family", "dan_tatham_founder"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "Founded 1988 by Dan Tatham, 38 yrs in business in East TX (Tyler / Smith County).", "source": "company_website_history", "source_url": "https://www.tylerautobody.com/history", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "Founded 1988 by Dan Tatham, 38 yrs in business in East TX (Tyler / Smith County).",
+          "source": "company_website_history",
+          "source_url": "https://www.tylerautobody.com/history",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 70,
       "layer1_comment": "Dan Tatham founded 1988, 38-yr personal tenure. License_tenure_proxy → age ~65-72. Strong natural-exit window.",
@@ -780,10 +1216,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.jackwinslowbodyshop.com/", "fetched_at": "2026-05-16", "fields": ["founded_1958", "three_generations", "lane_kimberly_winslow"]}
+        {
+          "source": "company_website",
+          "url": "https://www.jackwinslowbodyshop.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1958", "three_generations", "lane_kimberly_winslow"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "multi_generation_business", "direction": "negative", "evidence": "3rd-generation owners (Lane + Kimberly Winslow), 4th generation already in training. Internal succession is the model.", "source": "company_website", "source_url": "https://www.jackwinslowbodyshop.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "multi_generation_business",
+          "direction": "negative",
+          "evidence": "3rd-generation owners (Lane + Kimberly Winslow), 4th generation already in training. Internal succession is the model.",
+          "source": "company_website",
+          "source_url": "https://www.jackwinslowbodyshop.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 30,
       "layer1_comment": "3rd-generation, with 4th in training. Lane Winslow is mid-career. Multi-gen succession = no external exit path for forseeable future.",
@@ -798,7 +1247,7 @@
       "final_comment": "Jack Winslow Body Shop — 68-yr Bryan/College Station institution, 3rd gen + 4th gen in training. Pure internal succession path. NOTE: outside primary target counties. C_watch — not currently pursuable.",
       "value_add_thesis": "Not pursuable. Multi-gen family will not sell externally.",
       "confidence": "medium",
-      "data_completeness": 0.50
+      "data_completeness": 0.5
     },
     {
       "legal_name": "Quality Auto Body / Quality Body Shop",
@@ -822,11 +1271,34 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://www.qualitybodyshopaustin.com/about-us/", "fetched_at": "2026-05-16", "fields": ["founded_1975", "buster_florence_owner_2020", "second_generation", "250000_vehicles_repaired"]},
-        {"source": "bbb", "url": "https://www.bbb.org/us/tx/austin/profile/auto-body-repair-and-painting/quality-body-shop-0825-44080", "fetched_at": "2026-05-16", "fields": ["bbb_profile"]}
+        {
+          "source": "company_website_about",
+          "url": "https://www.qualitybodyshopaustin.com/about-us/",
+          "fetched_at": "2026-05-16",
+          "fields": [
+            "founded_1975",
+            "buster_florence_owner_2020",
+            "second_generation",
+            "250000_vehicles_repaired"
+          ]
+        },
+        {
+          "source": "bbb",
+          "url": "https://www.bbb.org/us/tx/austin/profile/auto-body-repair-and-painting/quality-body-shop-0825-44080",
+          "fetched_at": "2026-05-16",
+          "fields": ["bbb_profile"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "recent_ownership_change", "direction": "negative", "evidence": "Buster Florence became owner 2020-04-30. Only 6-yr personal owner tenure. Recently-acquired owners rarely re-sell within 5-7 yrs.", "source": "company_website_about", "source_url": "https://www.qualitybodyshopaustin.com/about-us/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "recent_ownership_change",
+          "direction": "negative",
+          "evidence": "Buster Florence became owner 2020-04-30. Only 6-yr personal owner tenure. Recently-acquired owners rarely re-sell within 5-7 yrs.",
+          "source": "company_website_about",
+          "source_url": "https://www.qualitybodyshopaustin.com/about-us/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 25,
       "layer1_comment": "Buster Florence acquired ownership 2020 — only 6-yr personal tenure. Recent buyers do not sell. L1 capped low. Not a natural-exit candidate.",
@@ -841,7 +1313,7 @@
       "final_comment": "Quality Auto Body — 51-yr brand but new owner Buster Florence (since April 2020). Recent acquirer does not re-sell. C_watch — re-evaluate in 5+ yrs once Buster's hold period matures.",
       "value_add_thesis": "Not pursuable in 2026. Re-evaluate ~2028-2030.",
       "confidence": "high",
-      "data_completeness": 0.70
+      "data_completeness": 0.7
     },
     {
       "legal_name": "ProTech Body Shop",
@@ -865,11 +1337,29 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://www.protechbodyshop.com/about.html", "fetched_at": "2026-05-16", "fields": ["founded_1997", "marwan_alameddine", "family_run"]},
-        {"source": "linkedin", "url": "https://www.linkedin.com/in/huda-alameddine-b46b862a7", "fetched_at": "2026-05-16", "fields": ["huda_alameddine_business_owner"]}
+        {
+          "source": "company_website_about",
+          "url": "https://www.protechbodyshop.com/about.html",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1997", "marwan_alameddine", "family_run"]
+        },
+        {
+          "source": "linkedin",
+          "url": "https://www.linkedin.com/in/huda-alameddine-b46b862a7",
+          "fetched_at": "2026-05-16",
+          "fields": ["huda_alameddine_business_owner"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "family_in_operations", "direction": "negative", "evidence": "Multiple family members in operations: Marwan (founder), Huda, Nour, Nayeli Alameddine. Family-internal next-gen present. Limits external-buy thesis.", "source": "company_website_about", "source_url": "https://www.protechbodyshop.com/about.html", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "family_in_operations",
+          "direction": "negative",
+          "evidence": "Multiple family members in operations: Marwan (founder), Huda, Nour, Nayeli Alameddine. Family-internal next-gen present. Limits external-buy thesis.",
+          "source": "company_website_about",
+          "source_url": "https://www.protechbodyshop.com/about.html",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 45,
       "layer1_comment": "Marwan Alameddine, founded 1997, 29-yr tenure (~58). Family-internal next-gen members (Huda, Nour, Nayeli) already in operations. Internal succession is plausible — L1 reduced.",
@@ -884,7 +1374,7 @@
       "final_comment": "ProTech Body Shop — Marwan Alameddine + family, 29 yrs. Multiple family members in ops — successor likely internal. Hold at B as lower-priority forward candidate.",
       "value_add_thesis": "External-buy thesis is weak (family-internal succession). Better suited as a smaller searcher tuck-in if family is open to exit. North Austin location is valuable.",
       "confidence": "medium",
-      "data_completeness": 0.60
+      "data_completeness": 0.6
     },
     {
       "legal_name": "Autocraft Bodywerks",
@@ -908,11 +1398,34 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://www.autocraftbodywerks.com/about/", "fetched_at": "2026-05-16", "fields": ["founded_1984_by_john_borek", "chris_raeder_acquired_2014", "father_son_operation", "robbie_will_mulderrig"]},
-        {"source": "autobody_news", "url": "https://www.autobodynews.com/news/austin-area-collision-repair-a-family-affair-built-on-savvy-serendipity-and-serious-service", "fetched_at": "2026-05-16", "fields": ["chris_phd_amd_background", "tesla_porsche_certified"]}
+        {
+          "source": "company_website_about",
+          "url": "https://www.autocraftbodywerks.com/about/",
+          "fetched_at": "2026-05-16",
+          "fields": [
+            "founded_1984_by_john_borek",
+            "chris_raeder_acquired_2014",
+            "father_son_operation",
+            "robbie_will_mulderrig"
+          ]
+        },
+        {
+          "source": "autobody_news",
+          "url": "https://www.autobodynews.com/news/austin-area-collision-repair-a-family-affair-built-on-savvy-serendipity-and-serious-service",
+          "fetched_at": "2026-05-16",
+          "fields": ["chris_phd_amd_background", "tesla_porsche_certified"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "named_owner_with_internal_succession", "direction": "negative", "evidence": "Chris Raeder acquired 2014 (12-yr tenure). Both sons Robbie + Will actively involved (Robbie = GM, Will = certified tech). Clear internal succession in place.", "source": "company_website_about", "source_url": "https://www.autocraftbodywerks.com/about/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "named_owner_with_internal_succession",
+          "direction": "negative",
+          "evidence": "Chris Raeder acquired 2014 (12-yr tenure). Both sons Robbie + Will actively involved (Robbie = GM, Will = certified tech). Clear internal succession in place.",
+          "source": "company_website_about",
+          "source_url": "https://www.autocraftbodywerks.com/about/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 50,
       "layer1_comment": "Chris Raeder (former AMD PhD, ~65) acquired 2014. 12-yr personal owner tenure. Both sons (Robbie, Will) are actively in the business with leadership roles. Internal succession is clearly structured. Not an external-exit-window owner.",
@@ -927,7 +1440,7 @@
       "final_comment": "Autocraft Bodywerks — Chris Raeder acquired 2014, 4 Austin-area locations, Tesla/Porsche/Land Rover/Jaguar certs, both sons in operations. Strong internal-succession profile. Not a current A target. B-tier for searcher community awareness only.",
       "value_add_thesis": "Not pursuable as off-market acquisition — internal succession path. Could be relevant later if sons exit or family-internal dynamics change.",
       "confidence": "high",
-      "data_completeness": 0.70
+      "data_completeness": 0.7
     },
     {
       "legal_name": "Heritage Body and Frame",
@@ -951,11 +1464,29 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://www.heritagebodyandframe.com/about-heritage-auto-body-collision-repair-shop/", "fetched_at": "2026-05-16", "fields": ["founded_1986", "borkland_family", "glenn_betty_jason"]},
-        {"source": "four_points_news", "url": "https://www.fourpointsnews.com/2017/04/19/heritage-body-frame-one-stop-shop/", "fetched_at": "2026-05-16", "fields": ["32_employees", "4_locations", "tesla_certified"]}
+        {
+          "source": "company_website_about",
+          "url": "https://www.heritagebodyandframe.com/about-heritage-auto-body-collision-repair-shop/",
+          "fetched_at": "2026-05-16",
+          "fields": ["founded_1986", "borkland_family", "glenn_betty_jason"]
+        },
+        {
+          "source": "four_points_news",
+          "url": "https://www.fourpointsnews.com/2017/04/19/heritage-body-frame-one-stop-shop/",
+          "fetched_at": "2026-05-16",
+          "fields": ["32_employees", "4_locations", "tesla_certified"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "next_gen_active", "direction": "negative", "evidence": "Glenn (President) + Betty (Business Manager) + Jason Borkland all owners. Jason is the next-gen successor in place — internal succession path is clear.", "source": "company_website_about", "source_url": "https://www.heritagebodyandframe.com/about-heritage-auto-body-collision-repair-shop/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "next_gen_active",
+          "direction": "negative",
+          "evidence": "Glenn (President) + Betty (Business Manager) + Jason Borkland all owners. Jason is the next-gen successor in place — internal succession path is clear.",
+          "source": "company_website_about",
+          "source_url": "https://www.heritagebodyandframe.com/about-heritage-auto-body-collision-repair-shop/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 50,
       "layer1_comment": "Glenn Borkland (~72) is President but Jason (son, next-gen) is co-owner — succession is in progress. Even though Glenn is in classic A-tier exit window, the internal-buy-in to Jason removes external-exit logic.",
@@ -970,7 +1501,7 @@
       "final_comment": "Heritage Body and Frame — Borkland family, 40 yrs, 4 Austin-area locations, 32 employees, Tesla certified. Glenn (~72) in classic exit window, but son Jason already co-owner = internal succession structured. Hold at B as forward candidate; an external exit would require family dynamics to shift.",
       "value_add_thesis": "Excellent quality and scale, but not externally available. Forward to consolidators as 'on radar if family-internal dynamics shift' — Glenn's age could create urgency if Jason has different plans.",
       "confidence": "high",
-      "data_completeness": 0.70
+      "data_completeness": 0.7
     },
     {
       "legal_name": "Joey's Body Shop",
@@ -994,7 +1525,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "facebook", "url": "https://www.facebook.com/JoeysBodyShop", "fetched_at": "2026-05-16", "fields": ["family_owned", "cedar_park"]}
+        {
+          "source": "facebook",
+          "url": "https://www.facebook.com/JoeysBodyShop",
+          "fetched_at": "2026-05-16",
+          "fields": ["family_owned", "cedar_park"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 50,
@@ -1034,10 +1570,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://hnrautobody.com/", "fetched_at": "2026-05-16", "fields": ["30_plus_years", "independent_family"]}
+        {
+          "source": "company_website",
+          "url": "https://hnrautobody.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["30_plus_years", "independent_family"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "30+ yrs per website, ~32 yrs as of 2026 (founded ~1994).", "source": "company_website", "source_url": "https://hnrautobody.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "30+ yrs per website, ~32 yrs as of 2026 (founded ~1994).",
+          "source": "company_website",
+          "source_url": "https://hnrautobody.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 62,
       "layer1_comment": "32-yr tenure, no specific owner name on public sources. License_tenure_proxy → age ~60. Approaching natural-exit window. Williamson CAD lookup needed.",
@@ -1076,10 +1625,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.prestigecollisionrepairdallas.com/", "fetched_at": "2026-05-16", "fields": ["vadim_tuniyants_owner_chief_tech", "family_owned"]}
+        {
+          "source": "company_website",
+          "url": "https://www.prestigecollisionrepairdallas.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["vadim_tuniyants_owner_chief_tech", "family_owned"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "named_owner_mid_career", "direction": "negative", "evidence": "Vadim Tuniyants is owner and active chief technician. Mid-career profile, ~15 yrs tenure.", "source": "company_website", "source_url": "https://www.prestigecollisionrepairdallas.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "named_owner_mid_career",
+          "direction": "negative",
+          "evidence": "Vadim Tuniyants is owner and active chief technician. Mid-career profile, ~15 yrs tenure.",
+          "source": "company_website",
+          "source_url": "https://www.prestigecollisionrepairdallas.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 35,
       "layer1_comment": "Vadim Tuniyants is mid-career active owner-operator. Not in natural exit window. Likely 15+ yrs of active operation ahead.",
@@ -1094,7 +1656,7 @@
       "final_comment": "Prestige Collision — Vadim Tuniyants, 15 yrs. Mid-career active owner-tech. Not currently a target. C_watch.",
       "value_add_thesis": "Not pursuable now.",
       "confidence": "medium",
-      "data_completeness": 0.40
+      "data_completeness": 0.4
     },
     {
       "legal_name": "Newmann's Collision",
@@ -1118,10 +1680,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "carwise", "url": "https://www.carwise.com/auto-body-shops/newmanns-collision-beaumont-tx-77707/472119", "fetched_at": "2026-05-16", "fields": ["30_years_beaumont", "icar_platinum_certified", "locally_owned"]}
+        {
+          "source": "carwise",
+          "url": "https://www.carwise.com/auto-body-shops/newmanns-collision-beaumont-tx-77707/472119",
+          "fetched_at": "2026-05-16",
+          "fields": ["30_years_beaumont", "icar_platinum_certified", "locally_owned"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "icar_platinum", "direction": "positive", "evidence": "I-CAR Platinum certified facility — top-tier independent operational standard.", "source": "carwise", "source_url": "https://www.carwise.com/auto-body-shops/newmanns-collision-beaumont-tx-77707/472119", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "icar_platinum",
+          "direction": "positive",
+          "evidence": "I-CAR Platinum certified facility — top-tier independent operational standard.",
+          "source": "carwise",
+          "source_url": "https://www.carwise.com/auto-body-shops/newmanns-collision-beaumont-tx-77707/472119",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 65,
       "layer1_comment": "30-yr tenure, locally owned. Likely founder is ~60-68. Specific name not verified.",
@@ -1136,7 +1711,7 @@
       "final_comment": "Newmann's Collision Beaumont — 30 yrs, I-CAR Platinum, locally owned. NOTE: outside primary target counties (Jefferson Co). Hold at B for ETA community awareness.",
       "value_add_thesis": "I-CAR Platinum = exceptional operational standard. Strong tuck-in for Golden Triangle / SE TX consolidator if any emerges.",
       "confidence": "low",
-      "data_completeness": 0.40
+      "data_completeness": 0.4
     },
     {
       "legal_name": "Domec Collision",
@@ -1160,10 +1735,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "websearch_corroboration", "url": "https://www.carwise.com/auto-body-shops/tx/port%20arthur", "fetched_at": "2026-05-16", "fields": ["domec_brothers_1975_vidor"]}
+        {
+          "source": "websearch_corroboration",
+          "url": "https://www.carwise.com/auto-body-shops/tx/port%20arthur",
+          "fetched_at": "2026-05-16",
+          "fields": ["domec_brothers_1975_vidor"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "founder_brothers_long_tenure", "direction": "positive", "evidence": "Domec brothers founded 1975, 51-yr personal tenure in Vidor.", "source": "websearch_corroboration", "source_url": "https://www.carwise.com/auto-body-shops/tx/port%20arthur", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "founder_brothers_long_tenure",
+          "direction": "positive",
+          "evidence": "Domec brothers founded 1975, 51-yr personal tenure in Vidor.",
+          "source": "websearch_corroboration",
+          "source_url": "https://www.carwise.com/auto-body-shops/tx/port%20arthur",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 80,
       "layer1_comment": "Domec brothers founded 1975, 51-yr tenure. Brothers likely now ~70-75. Strong natural-exit window. But brother-pair structure means co-owner buyout is the simpler path.",
@@ -1202,7 +1790,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "websearch_corroboration", "url": "https://www.classicbodyshopsetx.com/", "fetched_at": "2026-05-16", "fields": ["40_years_orange_tx"]}
+        {
+          "source": "websearch_corroboration",
+          "url": "https://www.classicbodyshopsetx.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["40_years_orange_tx"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 68,
@@ -1218,7 +1811,7 @@
       "final_comment": "Like New Automotive — Orange TX, 40 yrs. NOTE: outside primary target counties. Hold at B with caveats.",
       "value_add_thesis": "Marginal externally — rural Orange Co.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Krause Paint and Body",
@@ -1242,7 +1835,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.krausepaintandbody.com/", "fetched_at": "2026-05-16", "fields": ["35_years"]}
+        {
+          "source": "company_website",
+          "url": "https://www.krausepaintandbody.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["35_years"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 65,
@@ -1282,7 +1880,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.citypaintandbody.com/", "fetched_at": "2026-05-16", "fields": ["nearly_40_years"]}
+        {
+          "source": "company_website",
+          "url": "https://www.citypaintandbody.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["nearly_40_years"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 65,
@@ -1322,7 +1925,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://courtautomotive.com/", "fetched_at": "2026-05-16", "fields": ["family_owned_bryan"]}
+        {
+          "source": "company_website",
+          "url": "https://courtautomotive.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["family_owned_bryan"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 55,
@@ -1338,7 +1946,7 @@
       "final_comment": "Court Automotive — 25 yrs Bryan, outside primary counties. C_watch.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Frank's Collision Repair",
@@ -1362,7 +1970,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "websearch_corroboration", "url": "https://www.carwise.com/auto-body-shops/tx/texas%20city", "fetched_at": "2026-05-16", "fields": ["frank_collision_2003"]}
+        {
+          "source": "websearch_corroboration",
+          "url": "https://www.carwise.com/auto-body-shops/tx/texas%20city",
+          "fetched_at": "2026-05-16",
+          "fields": ["frank_collision_2003"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 50,
@@ -1378,7 +1991,7 @@
       "final_comment": "Frank's Collision Texas City — 23 yrs, mid-career owner. C_watch.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Legacy Collision",
@@ -1402,7 +2015,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "websearch_corroboration", "url": "https://www.carwise.com/auto-body-shops/77554", "fetched_at": "2026-05-16", "fields": ["20_plus_years_hitchcock"]}
+        {
+          "source": "websearch_corroboration",
+          "url": "https://www.carwise.com/auto-body-shops/77554",
+          "fetched_at": "2026-05-16",
+          "fields": ["20_plus_years_hitchcock"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 48,
@@ -1442,10 +2060,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.johnnybangs.com/", "fetched_at": "2026-05-16", "fields": ["over_30_years_tomball", "free_estimates", "lifetime_guarantee"]}
+        {
+          "source": "company_website",
+          "url": "https://www.johnnybangs.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["over_30_years_tomball", "free_estimates", "lifetime_guarantee"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "Over 30 years in Tomball, Magnolia, Woodlands area service.", "source": "company_website", "source_url": "https://www.johnnybangs.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "Over 30 years in Tomball, Magnolia, Woodlands area service.",
+          "source": "company_website",
+          "source_url": "https://www.johnnybangs.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 65,
       "layer1_comment": "Johnny (last name unverified) founded ~1994, 32-yr tenure. Likely age ~62. Approaching natural-exit window.",
@@ -1484,7 +2115,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "yelp", "url": "https://www.yelp.com/biz/tx-prestige-auto-collision-center-dallas", "fetched_at": "2026-05-16", "fields": ["family_owned", "steven_tony"]}
+        {
+          "source": "yelp",
+          "url": "https://www.yelp.com/biz/tx-prestige-auto-collision-center-dallas",
+          "fetched_at": "2026-05-16",
+          "fields": ["family_owned", "steven_tony"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 42,
@@ -1500,7 +2136,7 @@
       "final_comment": "TX Prestige — mid-career two-partner shop. C_watch.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Excellence Auto Collision LLC",
@@ -1524,7 +2160,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.excellenceautodfw.com/", "fetched_at": "2026-05-16", "fields": ["family_operated", "keller_fort_worth"]}
+        {
+          "source": "company_website",
+          "url": "https://www.excellenceautodfw.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["family_operated", "keller_fort_worth"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 40,
@@ -1540,7 +2181,7 @@
       "final_comment": "Excellence Auto Collision — 15 yrs, mid-career owner. C_watch.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Brauntex Auto Body and Collision",
@@ -1564,7 +2205,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.brauntexautobody.com", "fetched_at": "2026-05-16", "fields": ["18_years", "family_owned"]}
+        {
+          "source": "company_website",
+          "url": "https://www.brauntexautobody.com",
+          "fetched_at": "2026-05-16",
+          "fields": ["18_years", "family_owned"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 40,
@@ -1580,7 +2226,7 @@
       "final_comment": "Brauntex Auto Body — 18 yrs, mid-career. C_watch.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Walker Collision Center",
@@ -1604,7 +2250,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "yelp", "url": "https://www.yelp.com/biz/walker-collision-center-new-braunfels", "fetched_at": "2026-05-16", "fields": ["established_2009", "locally_family_owned"]}
+        {
+          "source": "yelp",
+          "url": "https://www.yelp.com/biz/walker-collision-center-new-braunfels",
+          "fetched_at": "2026-05-16",
+          "fields": ["established_2009", "locally_family_owned"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 40,
@@ -1620,7 +2271,7 @@
       "final_comment": "Walker Collision NB — 17 yrs, mid-career. C_watch.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Body Works Collision Center — New Braunfels",
@@ -1644,7 +2295,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "carwise", "url": "https://www.carwise.com/auto-body-shops/body-works-collision-center-new-braunfels-new-braunfels-tx-78130/492420", "fetched_at": "2026-05-16", "fields": ["family_owned", "new_braunfels"]}
+        {
+          "source": "carwise",
+          "url": "https://www.carwise.com/auto-body-shops/body-works-collision-center-new-braunfels-new-braunfels-tx-78130/492420",
+          "fetched_at": "2026-05-16",
+          "fields": ["family_owned", "new_braunfels"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 55,
@@ -1660,7 +2316,7 @@
       "final_comment": "Body Works Collision NB — est. 25 yrs, family-owned. Cap at B pending owner research.",
       "value_add_thesis": "I-35 corridor opportunity.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Ernie's Paint & Body",
@@ -1684,7 +2340,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.ernies.us/new-braunfels", "fetched_at": "2026-05-16", "fields": ["new_braunfels_independent"]}
+        {
+          "source": "company_website",
+          "url": "https://www.ernies.us/new-braunfels",
+          "fetched_at": "2026-05-16",
+          "fields": ["new_braunfels_independent"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 65,
@@ -1700,7 +2361,7 @@
       "final_comment": "Ernie's Paint & Body NB — eponymous owner, ~30 yrs. Cap at B pending owner research.",
       "value_add_thesis": "I-35 corridor; modernization playbook.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Brazoria Collision Specialist",
@@ -1724,10 +2385,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://brazoriacollisionautorv.com/", "fetched_at": "2026-05-16", "fields": ["since_1991", "family_owned", "rv_specialty"]}
+        {
+          "source": "company_website",
+          "url": "https://brazoriacollisionautorv.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["since_1991", "family_owned", "rv_specialty"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "rv_specialty", "direction": "positive", "evidence": "RV / motor home repair specialty — differentiated service line.", "source": "company_website", "source_url": "https://brazoriacollisionautorv.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "rv_specialty",
+          "direction": "positive",
+          "evidence": "RV / motor home repair specialty — differentiated service line.",
+          "source": "company_website",
+          "source_url": "https://brazoriacollisionautorv.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 65,
       "layer1_comment": "Since 1991, 35-yr tenure. Likely age ~60.",
@@ -1766,10 +2440,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.carlowenspaint.com/", "fetched_at": "2026-05-16", "fields": ["since_1965", "family_owned"]}
+        {
+          "source": "company_website",
+          "url": "https://www.carlowenspaint.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["since_1965", "family_owned"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "years_in_business", "direction": "positive", "evidence": "Since 1965, 61-yr family-owned operation in Tyler.", "source": "company_website", "source_url": "https://www.carlowenspaint.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "years_in_business",
+          "direction": "positive",
+          "evidence": "Since 1965, 61-yr family-owned operation in Tyler.",
+          "source": "company_website",
+          "source_url": "https://www.carlowenspaint.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 78,
       "layer1_comment": "61 yrs tenure — founder Carl Owens if still active is ~80+; if 2nd gen, ~55-65. Need successor verification.",
@@ -1784,7 +2471,7 @@
       "final_comment": "Carl Owens Paint & Body — 61 yrs Tyler. NOTE: outside primary target counties but East TX has active Classic Collision consolidation. Cap at B pending owner/gen resolution + successor live-fetch.",
       "value_add_thesis": "East TX consolidation tuck-in target. Long-tenured brand = significant local equity.",
       "confidence": "low",
-      "data_completeness": 0.40
+      "data_completeness": 0.4
     },
     {
       "legal_name": "Hub City Body Shop",
@@ -1808,7 +2495,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://hubcitybodyshop.com/", "fetched_at": "2026-05-16", "fields": ["family_owned", "lubbock"]}
+        {
+          "source": "company_website",
+          "url": "https://hubcitybodyshop.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["family_owned", "lubbock"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 50,
@@ -1848,10 +2540,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.westerncollisiontx.com/", "fetched_at": "2026-05-16", "fields": ["since_1996", "family_owned", "semi_truck_specialty"]}
+        {
+          "source": "company_website",
+          "url": "https://www.westerncollisiontx.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["since_1996", "family_owned", "semi_truck_specialty"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "truck_specialty", "direction": "positive", "evidence": "Semi-truck collision specialty — high-value differentiated service line.", "source": "company_website", "source_url": "https://www.westerncollisiontx.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "truck_specialty",
+          "direction": "positive",
+          "evidence": "Semi-truck collision specialty — high-value differentiated service line.",
+          "source": "company_website",
+          "source_url": "https://www.westerncollisiontx.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 60,
       "layer1_comment": "Since 1996, 30-yr tenure. Likely age ~58. Outside primary counties.",
@@ -1890,7 +2595,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.thedentcompanytx.com/", "fetched_at": "2026-05-16", "fields": ["since_1994_sweetwater", "20_plus_years"]}
+        {
+          "source": "company_website",
+          "url": "https://www.thedentcompanytx.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["since_1994_sweetwater", "20_plus_years"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 62,
@@ -1906,7 +2616,7 @@
       "final_comment": "The Dent Company Sweetwater — 32 yrs, rural West TX. Outside primary counties. C_watch.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Lubbock Wreck-A-mended Collision LLC",
@@ -1930,7 +2640,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "bbb", "url": "https://www.bbb.org/us/tx/lubbock/profile/auto-body-repair-and-painting/lubbock-wreck-a-mended-collision-llc-0875-62690", "fetched_at": "2026-05-16", "fields": ["9_years_local_corp", "30_yrs_industry_experience"]}
+        {
+          "source": "bbb",
+          "url": "https://www.bbb.org/us/tx/lubbock/profile/auto-body-repair-and-painting/lubbock-wreck-a-mended-collision-llc-0875-62690",
+          "fetched_at": "2026-05-16",
+          "fields": ["9_years_local_corp", "30_yrs_industry_experience"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 45,
@@ -1946,7 +2661,7 @@
       "final_comment": "Lubbock Wreck-A-mended — 9 yrs, new operator. C_watch.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Paul's Collision Repair",
@@ -1970,7 +2685,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "yelp", "url": "https://www.yelp.com/biz/pauls-collision-repair-fort-worth", "fetched_at": "2026-05-16", "fields": ["family_owned_fort_worth"]}
+        {
+          "source": "yelp",
+          "url": "https://www.yelp.com/biz/pauls-collision-repair-fort-worth",
+          "fetched_at": "2026-05-16",
+          "fields": ["family_owned_fort_worth"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 48,
@@ -1986,7 +2706,7 @@
       "final_comment": "Paul's Collision Repair — ~20 yrs Fort Worth. C_watch pending owner research.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Windus Auto Collision",
@@ -2010,7 +2730,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "websearch_corroboration", "url": "https://www.carwise.com/auto-body-shops/76107", "fetched_at": "2026-05-16", "fields": ["25_years_downtown_fort_worth", "family_owned"]}
+        {
+          "source": "websearch_corroboration",
+          "url": "https://www.carwise.com/auto-body-shops/76107",
+          "fetched_at": "2026-05-16",
+          "fields": ["25_years_downtown_fort_worth", "family_owned"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 60,
@@ -2050,7 +2775,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://slcollision.com/", "fetched_at": "2026-05-16", "fields": ["dfw_collision"]}
+        {
+          "source": "company_website",
+          "url": "https://slcollision.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["dfw_collision"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 35,
@@ -2090,7 +2820,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://brightstardfw.com/", "fetched_at": "2026-05-16", "fields": ["plano_independent"]}
+        {
+          "source": "company_website",
+          "url": "https://brightstardfw.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["plano_independent"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 38,
@@ -2130,10 +2865,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://vividautobody.com/", "fetched_at": "2026-05-16", "fields": ["frisco_mckinney_locations", "icar_certified"]}
+        {
+          "source": "company_website",
+          "url": "https://vividautobody.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["frisco_mckinney_locations", "icar_certified"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "multi_location", "direction": "positive", "evidence": "2 locations — Frisco + McKinney. Active growth profile.", "source": "company_website", "source_url": "https://vividautobody.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "multi_location",
+          "direction": "positive",
+          "evidence": "2 locations — Frisco + McKinney. Active growth profile.",
+          "source": "company_website",
+          "source_url": "https://vividautobody.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 38,
       "layer1_comment": "Mid-career owner with active expansion = not in natural exit window.",
@@ -2172,7 +2920,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://eliteautobodyshop.com/about/", "fetched_at": "2026-05-16", "fields": ["family_owned_dfw"]}
+        {
+          "source": "company_website",
+          "url": "https://eliteautobodyshop.com/about/",
+          "fetched_at": "2026-05-16",
+          "fields": ["family_owned_dfw"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 38,
@@ -2212,7 +2965,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "facebook", "url": "https://www.facebook.com/josebodyshop/", "fetched_at": "2026-05-16", "fields": ["dallas_independent"]}
+        {
+          "source": "facebook",
+          "url": "https://www.facebook.com/josebodyshop/",
+          "fetched_at": "2026-05-16",
+          "fields": ["dallas_independent"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 60,
@@ -2228,7 +2986,7 @@
       "final_comment": "Jose's Body Shop Dallas — eponymous owner, ~28 yrs est. Cap at B pending owner research + successor live-fetch.",
       "value_add_thesis": "Eponymous brand = strong local equity. Standard modernization play.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Dallas Collision Center",
@@ -2252,10 +3010,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.dallascollision.com/dealership/about.htm", "fetched_at": "2026-05-16", "fields": ["since_1986", "family_owned", "audi_acura_certified"]}
+        {
+          "source": "company_website",
+          "url": "https://www.dallascollision.com/dealership/about.htm",
+          "fetched_at": "2026-05-16",
+          "fields": ["since_1986", "family_owned", "audi_acura_certified"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "certifications", "direction": "positive", "evidence": "Audi + Acura factory-certified.", "source": "company_website", "source_url": "https://www.dallascollision.com/dealership/about.htm", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "certifications",
+          "direction": "positive",
+          "evidence": "Audi + Acura factory-certified.",
+          "source": "company_website",
+          "source_url": "https://www.dallascollision.com/dealership/about.htm",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 70,
       "layer1_comment": "Family-owned since 1986, 40-yr tenure. Likely founder age ~65-72.",
@@ -2294,7 +3065,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://renewcollisiontx.com/", "fetched_at": "2026-05-16", "fields": ["lubbock_amarillo_locations", "locally_owned"]}
+        {
+          "source": "company_website",
+          "url": "https://renewcollisiontx.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["lubbock_amarillo_locations", "locally_owned"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 35,
@@ -2310,7 +3086,7 @@
       "final_comment": "Renew Collision Lubbock/Amarillo — growth-mode. C_watch.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "East Texas Collision Repair",
@@ -2334,7 +3110,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website_about", "url": "https://easttexascollisionrepair.com/about/", "fetched_at": "2026-05-16", "fields": ["since_2000", "family_owned"]}
+        {
+          "source": "company_website_about",
+          "url": "https://easttexascollisionrepair.com/about/",
+          "fetched_at": "2026-05-16",
+          "fields": ["since_2000", "family_owned"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 50,
@@ -2350,7 +3131,7 @@
       "final_comment": "East Texas Collision Repair Tyler — 26 yrs. Outside primary counties. C_watch.",
       "value_add_thesis": "East TX consolidation tuck-in possibility but mid-career owner.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Texan Auto Repair & Collision",
@@ -2374,8 +3155,18 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://www.texanautorepair.com/", "fetched_at": "2026-05-16", "fields": ["since_2004", "family_owned_operated"]},
-        {"source": "yelp", "url": "https://www.yelp.com/biz/texan-auto-repair-and-collision-sugar-land-2", "fetched_at": "2026-05-16", "fields": ["terry_salamat_team"]}
+        {
+          "source": "company_website",
+          "url": "https://www.texanautorepair.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["since_2004", "family_owned_operated"]
+        },
+        {
+          "source": "yelp",
+          "url": "https://www.yelp.com/biz/texan-auto-repair-and-collision-sugar-land-2",
+          "fetched_at": "2026-05-16",
+          "fields": ["terry_salamat_team"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 48,
@@ -2415,7 +3206,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://crownautorepaircollision.com/", "fetched_at": "2026-05-16", "fields": ["since_2018", "family_owned"]}
+        {
+          "source": "company_website",
+          "url": "https://crownautorepaircollision.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["since_2018", "family_owned"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 30,
@@ -2455,11 +3251,29 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://chooseravenautobody.com/", "fetched_at": "2026-05-16", "fields": ["established_2014", "walter_russell_raul_gonzales", "mazda_certified"]},
-        {"source": "autobody_news", "url": "https://www.autobodynews.com/news/austin-area-collision-repair-a-family-affair-built-on-savvy-serendipity-and-serious-service", "fetched_at": "2026-05-16", "fields": ["walter_russell_1982_industry"]}
+        {
+          "source": "company_website",
+          "url": "https://chooseravenautobody.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["established_2014", "walter_russell_raul_gonzales", "mazda_certified"]
+        },
+        {
+          "source": "autobody_news",
+          "url": "https://www.autobodynews.com/news/austin-area-collision-repair-a-family-affair-built-on-savvy-serendipity-and-serious-service",
+          "fetched_at": "2026-05-16",
+          "fields": ["walter_russell_1982_industry"]
+        }
       ],
       "signals": [
-        {"layer": 1, "signal_key": "two_co_owners_named", "direction": "negative", "evidence": "Walter Russell (industry since 1982, ~60) + Raul Gonzales = two named co-owners. Co-owner buyout is the simpler path than external exit.", "source": "company_website", "source_url": "https://chooseravenautobody.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 1,
+          "signal_key": "two_co_owners_named",
+          "direction": "negative",
+          "evidence": "Walter Russell (industry since 1982, ~60) + Raul Gonzales = two named co-owners. Co-owner buyout is the simpler path than external exit.",
+          "source": "company_website",
+          "source_url": "https://chooseravenautobody.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 45,
       "layer1_comment": "Two co-owners, business 12 yrs old (2014 founding). Walter has 44 yrs industry experience but only 12-yr ownership tenure. Co-owner structure limits external-exit logic.",
@@ -2474,7 +3288,7 @@
       "final_comment": "Raven Auto Body Round Rock — 12-yr 2-owner shop, Mazda OEM. Co-owner-internal exit path more likely. C_watch.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "medium",
-      "data_completeness": 0.50
+      "data_completeness": 0.5
     },
     {
       "legal_name": "CARS Paint & Body",
@@ -2498,10 +3312,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://carspaintandbody.com/", "fetched_at": "2026-05-16", "fields": ["san_antonio_boerne_helotes", "locally_owned"]}
+        {
+          "source": "company_website",
+          "url": "https://carspaintandbody.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["san_antonio_boerne_helotes", "locally_owned"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "multi_location", "direction": "positive", "evidence": "3 locations — San Antonio + Boerne + Helotes. Multi-loc consolidator profile.", "source": "company_website", "source_url": "https://carspaintandbody.com/", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "multi_location",
+          "direction": "positive",
+          "evidence": "3 locations — San Antonio + Boerne + Helotes. Multi-loc consolidator profile.",
+          "source": "company_website",
+          "source_url": "https://carspaintandbody.com/",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 42,
       "layer1_comment": "Mid-career multi-loc operator. Active growth mode.",
@@ -2516,7 +3343,7 @@
       "final_comment": "CARS Paint & Body — 3-loc growth-mode. C_watch.",
       "value_add_thesis": "Not currently a target — but could be a future regional consolidator. Re-evaluate when growth slows.",
       "confidence": "medium",
-      "data_completeness": 0.40
+      "data_completeness": 0.4
     },
     {
       "legal_name": "Elite Collision of Boerne",
@@ -2540,7 +3367,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "company_website", "url": "https://elitecollisionofboerne.com/", "fetched_at": "2026-05-16", "fields": ["family_owned_boerne"]}
+        {
+          "source": "company_website",
+          "url": "https://elitecollisionofboerne.com/",
+          "fetched_at": "2026-05-16",
+          "fields": ["family_owned_boerne"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 38,
@@ -2556,7 +3388,7 @@
       "final_comment": "Elite Collision Boerne — 14 yrs est. C_watch.",
       "value_add_thesis": "Not currently a target.",
       "confidence": "low",
-      "data_completeness": 0.30
+      "data_completeness": 0.3
     },
     {
       "legal_name": "Helotes Collision Center",
@@ -2580,10 +3412,23 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "carwise", "url": "https://www.carwise.com/auto-body-shops/helotes-collision-center-helotes-tx-78023/600880", "fetched_at": "2026-05-16", "fields": ["car_crafters_division_since_1982", "helotes_since_2001"]}
+        {
+          "source": "carwise",
+          "url": "https://www.carwise.com/auto-body-shops/helotes-collision-center-helotes-tx-78023/600880",
+          "fetched_at": "2026-05-16",
+          "fields": ["car_crafters_division_since_1982", "helotes_since_2001"]
+        }
       ],
       "signals": [
-        {"layer": 2, "signal_key": "parent_company_long_tenure", "direction": "positive", "evidence": "Car Crafters Collision LLC founded 1982 (44 yrs); Helotes location opened 2001. Multi-location independent.", "source": "carwise", "source_url": "https://www.carwise.com/auto-body-shops/helotes-collision-center-helotes-tx-78023/600880", "observed_at": "2026-05-16"}
+        {
+          "layer": 2,
+          "signal_key": "parent_company_long_tenure",
+          "direction": "positive",
+          "evidence": "Car Crafters Collision LLC founded 1982 (44 yrs); Helotes location opened 2001. Multi-location independent.",
+          "source": "carwise",
+          "source_url": "https://www.carwise.com/auto-body-shops/helotes-collision-center-helotes-tx-78023/600880",
+          "observed_at": "2026-05-16"
+        }
       ],
       "layer1_base_rate": 70,
       "layer1_comment": "Car Crafters Collision LLC founded 1982 (44 yrs). If founder still owns, likely ~65-72.",
@@ -2622,7 +3467,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {"source": "websearch_corroboration", "url": "https://www.carwise.com/auto-body-shops/78613", "fetched_at": "2026-05-16", "fields": ["since_1997", "cedar_park_collision"]}
+        {
+          "source": "websearch_corroboration",
+          "url": "https://www.carwise.com/auto-body-shops/78613",
+          "fetched_at": "2026-05-16",
+          "fields": ["since_1997", "cedar_park_collision"]
+        }
       ],
       "signals": [],
       "layer1_base_rate": 50,
@@ -2638,7 +3488,7 @@
       "final_comment": "Heritage Cedar Park — needs independence verification (possibly part of Heritage Body & Frame Borkland family). C_watch pending entity clarification.",
       "value_add_thesis": "Insufficient data — verify entity relationship first.",
       "confidence": "low",
-      "data_completeness": 0.20
+      "data_completeness": 0.2
     },
     {
       "legal_name": "Cherry Coatings (NOTE: edge case)",

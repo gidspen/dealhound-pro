@@ -3,18 +3,58 @@
     "id": "b271f067-65af-470e-b691-04c479d5f163",
     "run_label": "self-storage-tx-2026-05-16-w4b",
     "model_version": "offmarket-4layer-v0.2",
-    "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+    "weights": {
+      "layer1": 0.3,
+      "layer2": 0.25,
+      "layer3": 0.3,
+      "layer4": 0.15
+    },
     "vertical": "self_storage",
     "naics_code": "531130",
-    "geography": "TX — Collin/Denton/Williamson/Hays/Comal/Fort Bend/Montgomery/Brazoria/Galveston/Bexar/Travis/Tarrant/Dallas/Harris (Sun Belt growth corridors)",
+    "geography": "TX \u2014 Collin/Denton/Williamson/Hays/Comal/Fort Bend/Montgomery/Brazoria/Galveston/Bexar/Travis/Tarrant/Dallas/Harris (Sun Belt growth corridors)",
     "started_at": "2026-05-16T00:00:00Z",
-    "exclude_brands_for_REIT_PE": ["Public Storage", "Extra Space Storage", "CubeSmart", "Life Storage", "NSA", "StorageMart", "Storage King USA", "StorAmerica", "Compass Self Storage", "All Storage", "Move It Self Storage", "Storquest", "iStorage", "Trojan Storage", "Andover Properties", "Devon Self Storage", "Right Move Storage", "5 Star Storage", "SmartStop", "Amazing Spaces (acquired by SmartStop 2024)", "Morningstar Storage", "MyPlace Self Storage", "A3 Storage Centers (regional aggregator)", "Securlock Storage", "Affordable Family Storage", "Premium Spaces", "Avid Storage", "10 Federal Storage", "KO Storage", "Storage Star", "Storage Sense", "FreeUp Storage", "Mount Storage", "Lone Star Self Storage"]
+    "exclude_brands_for_REIT_PE": [
+      "Public Storage",
+      "Extra Space Storage",
+      "CubeSmart",
+      "Life Storage",
+      "NSA",
+      "StorageMart",
+      "Storage King USA",
+      "StorAmerica",
+      "Compass Self Storage",
+      "All Storage",
+      "Move It Self Storage",
+      "Storquest",
+      "iStorage",
+      "Trojan Storage",
+      "Andover Properties",
+      "Devon Self Storage",
+      "Right Move Storage",
+      "5 Star Storage",
+      "SmartStop",
+      "Amazing Spaces (acquired by SmartStop 2024)",
+      "Morningstar Storage",
+      "MyPlace Self Storage",
+      "A3 Storage Centers (regional aggregator)",
+      "Securlock Storage",
+      "Affordable Family Storage",
+      "Premium Spaces",
+      "Avid Storage",
+      "10 Federal Storage",
+      "KO Storage",
+      "Storage Star",
+      "Storage Sense",
+      "FreeUp Storage",
+      "Mount Storage",
+      "Lone Star Self Storage"
+    ]
   },
   "businesses": [
     {
-      "legal_name": "A-American Self Storage — Texas operations",
+      "legal_name": "A-American Self Storage \u2014 Texas operations",
       "dba_name": "A-American Self Storage",
-      "address": "11560 Tennessee Ave (HQ Los Angeles, CA) — 7 TX facilities incl. Houston, Dallas, Irving, Killeen, Sherman, Tyler, Webster",
+      "address": "11560 Tennessee Ave (HQ Los Angeles, CA) \u2014 7 TX facilities incl. Houston, Dallas, Irving, Killeen, Sherman, Tyler, Webster",
       "city": "Houston",
       "county": "Harris",
       "state": "TX",
@@ -36,23 +76,38 @@
       "vertical": "self_storage",
       "score_run_id": "b271f067-65af-470e-b691-04c479d5f163",
       "layer1_base_rate": 75,
-      "layer1_comment": "Founder Edmund C. Olson opened first facility 1973, 53-yr tenure. Charter member TSSA. If still actively involved, he is ~82 (proxy-only). However A-American Storage Mgmt. Co. Inc. corporate structure may include 2nd-gen successors — needs SOS officer verification before tier confirmation.",
+      "layer1_comment": "Founder Edmund C. Olson opened first facility 1973, 53-yr tenure. Charter member TSSA. If still actively involved, he is ~82 (proxy-only). However A-American Storage Mgmt. Co. Inc. corporate structure may include 2nd-gen successors \u2014 needs SOS officer verification before tier confirmation.",
       "layer2_sellability": 78,
       "layer2_comment": "Multi-facility (7 TX + CA/CO/NV) regional independent operator, U-Haul Top Dealer, recurring rent + retail packing supplies. 53-yr operating history; SBA-financeable as a portfolio; possibly oversized for SBA 7(a) cap ($5M), would require SBA 504 or conventional. Online booking present.",
       "layer3_behavioral_trigger": 50,
-      "layer3_comment": "Tells: HQ in California (not single-facility solo); regional multi-state presence (CA/CO/NV/TX) suggests professional operator, not coasting solo. Modern website with online booking. Lower L3 — this is a regional independent, not a sleepy single-facility legacy holding. Charter TSSA member 50+ yrs = institutional but professional.",
+      "layer3_comment": "Tells: HQ in California (not single-facility solo); regional multi-state presence (CA/CO/NV/TX) suggests professional operator, not coasting solo. Modern website with online booking. Lower L3 \u2014 this is a regional independent, not a sleepy single-facility legacy holding. Charter TSSA member 50+ yrs = institutional but professional.",
       "layer4_market_pull": 88,
       "layer4_comment": "Multi-state self-storage portfolio is the prototype roll-up target for PSA/EXR/CUBE/NSA (Big 4 REITs). 50+ yr operating histories trade at premium multiples. Headline TX-metro exposure (Houston/Dallas/Tyler) attractive to TX-focused PE.",
       "final_score": 71,
       "final_tier": "B_forward",
       "final_comment": "A-American Self Storage (founder Edmund C. Olson, 1973). 7 TX facilities + CA/CO/NV portfolio. Founder ~82 by license-tenure proxy, but HQ in CA + multi-state operations + corporate Mgmt Co structure suggests professional operator, not coasting solo. B-tier: meaningful target for the buyer community (PE rollup buyers especially) but not a personally-acted-on A-tier for Gideon. Needs SOS officer verification + ownership cap-table check before any tier promotion.",
-      "value_add_thesis": "Acquire as TX-portfolio carve-out from the multi-state parent. 7 stabilized facilities with 50+ yr operating histories in Houston/Dallas/Tyler/Killeen/Sherman/Webster/Irving — premium leverage on SBA 504 (real estate) for ~$15-25M raise. Add SiteLink-equivalent modern PMS, rate-management software, automated review generation. Hold-and-flip to PSA/EXR within 5-7 years at 7-8 cap.",
+      "value_add_thesis": "Acquire as TX-portfolio carve-out from the multi-state parent. 7 stabilized facilities with 50+ yr operating histories in Houston/Dallas/Tyler/Killeen/Sherman/Webster/Irving \u2014 premium leverage on SBA 504 (real estate) for ~$15-25M raise. Add SiteLink-equivalent modern PMS, rate-management software, automated review generation. Hold-and-flip to PSA/EXR within 5-7 years at 7-8 cap.",
       "confidence": "low",
       "data_completeness": 0.55,
       "data_sources": [
-        {"source": "company_website", "url": "https://storagetex.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "year_founded,locations,charter_TSSA"},
-        {"source": "company_website", "url": "https://www.aamericanselfstorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "corporate_entity"},
-        {"source": "linkedin_company_profile", "url": "https://www.linkedin.com/company/a-american-self-storage", "fetched_at": "2026-05-16T00:00:00Z", "fields": "founder_Edmund_C_Olson_1973,HQ_LA_CA,53_employees,multi-state_CA_CO_NV"}
+        {
+          "source": "company_website",
+          "url": "https://storagetex.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "year_founded,locations,charter_TSSA"
+        },
+        {
+          "source": "company_website",
+          "url": "https://www.aamericanselfstorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "corporate_entity"
+        },
+        {
+          "source": "linkedin_company_profile",
+          "url": "https://www.linkedin.com/company/a-american-self-storage",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "founder_Edmund_C_Olson_1973,HQ_LA_CA,53_employees,multi-state_CA_CO_NV"
+        }
       ]
     },
     {
@@ -66,9 +121,9 @@
       "phone": "unknown",
       "website": "https://www.aaustinstorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — family-owned (not named on site)",
+      "license_holder_name": "Unknown \u2014 family-owned (not named on site)",
       "entity_status": "unknown",
-      "owner_name": "Unknown — family-owned per site copy",
+      "owner_name": "Unknown \u2014 family-owned per site copy",
       "owner_age_estimate": 70,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 57,
@@ -82,19 +137,24 @@
       "layer1_base_rate": 80,
       "layer1_comment": "Founded 1969, 57-yr operating history. Family-owned per site copy. If original family still running, founder is likely 75+; even if 2nd-gen took over in late 1990s, current operator is ~70. Need TCAD deed history + SOS lookup to identify owner. Long-homestead-tenure tell strong.",
       "layer2_sellability": 70,
-      "layer2_comment": "Solo Austin facility, 57-yr operating history. Frontier Valley Dr (East Austin near airport) — established submarket. No online booking visible (just bill-pay) = lower recurring-revenue digital sophistication but very long operating history. SBA 7(a) financeable; likely $1.5-3M annual revenue at full occupancy.",
+      "layer2_comment": "Solo Austin facility, 57-yr operating history. Frontier Valley Dr (East Austin near airport) \u2014 established submarket. No online booking visible (just bill-pay) = lower recurring-revenue digital sophistication but very long operating history. SBA 7(a) financeable; likely $1.5-3M annual revenue at full occupancy.",
       "layer3_behavioral_trigger": 78,
-      "layer3_comment": "Tells: (1) Founded 1969 — 57-yr tenure suggests aging owner; (2) website lists 'family-owned' but no owner names anywhere — anonymous operator profile; (3) NO online booking (only bill-pay) — phone-only rental intake = classic coasting tell; (4) Single facility for 57 yrs — no multi-property expansion = passive holding. Live-fetch successor protocol NOT YET COMPLETED (needs TCAD parcel deed history + SOS officer list to confirm no successor structure).",
+      "layer3_comment": "Tells: (1) Founded 1969 \u2014 57-yr tenure suggests aging owner; (2) website lists 'family-owned' but no owner names anywhere \u2014 anonymous operator profile; (3) NO online booking (only bill-pay) \u2014 phone-only rental intake = classic coasting tell; (4) Single facility for 57 yrs \u2014 no multi-property expansion = passive holding. Live-fetch successor protocol NOT YET COMPLETED (needs TCAD parcel deed history + SOS officer list to confirm no successor structure).",
       "layer4_market_pull": 92,
       "layer4_comment": "Austin Travis (top-2 TX metro) +5; East-Austin near airport = development-corridor uplift. ETA + PE + REIT all aggressively acquiring Austin self-storage. Single legacy facility on a likely-rezonable parcel is also valuable as land-redevelopment play.",
-      "final_score": 79,
-      "final_tier": "A_acquire_self_candidate",
-      "final_comment": "A-Austin Storage, Austin (Travis), 1805 Frontier Valley Dr — founded 1969 (57-yr operating history). Family-owned per site copy but NO OWNER NAMES anywhere on the live site (verified). Single facility, no online booking (phone/bill-pay only) — strong coasting profile. Austin metro acquirer pull is intense. PROVISIONAL A-CANDIDATE — needs Phase 5 deep-dive: TCAD parcel deed history (owner-LLC identification), SOS officer cross-check, OV65 lookup on identified owner's homestead. Confidence low until owner identified. Strong A-thesis if owner verified 65+.",
-      "value_add_thesis": "57-yr legacy East-Austin facility on Frontier Valley Drive — likely owner-financed legacy holding with rents 20-30% below market. Add online unit reservation + automated payment portal + dynamic rate management; modernize CCTV + gate access; possible 1.5-2x EBITDA path in 18-24 months. Real-estate-heavy exit: parcel is in airport-adjacent industrial corridor, redevelopment optionality.",
+      "final_score": 77,
+      "final_tier": "B_forward",
+      "final_comment": "A-Austin Storage, Austin (Travis), 1805 Frontier Valley Dr \u2014 founded 1969 (57-yr operating history). Family-owned per site copy but NO OWNER NAMES anywhere on the live site (verified). Single facility, no online booking (phone/bill-pay only) \u2014 strong coasting profile. Austin metro acquirer pull is intense. PROVISIONAL A-CANDIDATE \u2014 needs Phase 5 deep-dive: TCAD parcel deed history (owner-LLC identification), SOS officer cross-check, OV65 lookup on identified owner's homestead. Confidence low until owner identified. Strong A-thesis if owner verified 65+.",
+      "value_add_thesis": "57-yr legacy East-Austin facility on Frontier Valley Drive \u2014 likely owner-financed legacy holding with rents 20-30% below market. Add online unit reservation + automated payment portal + dynamic rate management; modernize CCTV + gate access; possible 1.5-2x EBITDA path in 18-24 months. Real-estate-heavy exit: parcel is in airport-adjacent industrial corridor, redevelopment optionality.",
       "confidence": "low",
       "data_completeness": 0.55,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.aaustinstorage.com/self-storage-austin-tx-f1397", "fetched_at": "2026-05-16T00:00:00Z", "fields": "year_1969,family_owned_claim,address,no_online_booking"}
+        {
+          "source": "company_website",
+          "url": "https://www.aaustinstorage.com/self-storage-austin-tx-f1397",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "year_1969,family_owned_claim,address,no_online_booking"
+        }
       ]
     },
     {
@@ -108,9 +168,9 @@
       "phone": "unknown",
       "website": "https://www.houstonprivateministorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — 'Texas owned & operated since 1969'",
+      "license_holder_name": "Unknown \u2014 'Texas owned & operated since 1969'",
       "entity_status": "unknown",
-      "owner_name": "Unknown — Texas owned & operated since 1969",
+      "owner_name": "Unknown \u2014 Texas owned & operated since 1969",
       "owner_age_estimate": 75,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 57,
@@ -124,19 +184,24 @@
       "layer1_base_rate": 82,
       "layer1_comment": "Founded 1969, 57-yr operating history. 'Texas owned & operated since 1969' on site. Owner likely 70-80 if original or 2nd-gen 65-75. Strong Layer 1 by tenure-proxy.",
       "layer2_sellability": 72,
-      "layer2_comment": "2 facilities (Spring + Houston/Clay Rd) — north Harris County corridor. 57-yr operating tenure. No online booking visible — quote-request form only. SBA 7(a) financeable as a 2-facility portfolio (~$2-4M annual rev estimate); attractive small acquisition.",
+      "layer2_comment": "2 facilities (Spring + Houston/Clay Rd) \u2014 north Harris County corridor. 57-yr operating tenure. No online booking visible \u2014 quote-request form only. SBA 7(a) financeable as a 2-facility portfolio (~$2-4M annual rev estimate); attractive small acquisition.",
       "layer3_behavioral_trigger": 82,
-      "layer3_comment": "Tells: (1) Founded 1969, single legacy 57-yr operator; (2) NO online booking, just quote-request form = phone-only intake = strong coasting tell; (3) NO owner names on site; (4) NO team page; (5) Only 2 facilities in 57 yrs = passive holding pattern; (6) 'Texas owned & operated' phrasing without naming = anonymous operator profile. Live-fetch successor protocol NOT COMPLETED — needs HCAD parcel deed lookup on both parcels + SOS officer search.",
+      "layer3_comment": "Tells: (1) Founded 1969, single legacy 57-yr operator; (2) NO online booking, just quote-request form = phone-only intake = strong coasting tell; (3) NO owner names on site; (4) NO team page; (5) Only 2 facilities in 57 yrs = passive holding pattern; (6) 'Texas owned & operated' phrasing without naming = anonymous operator profile. Live-fetch successor protocol NOT COMPLETED \u2014 needs HCAD parcel deed lookup on both parcels + SOS officer search.",
       "layer4_market_pull": 90,
       "layer4_comment": "Spring/Cypress (NW Houston exurban) +5 for growth corridor; PSA/EXR/CUBE all aggressively rolling up NW Houston independents. 2-facility portfolio is highly desirable to ETA buyers + PE rollups. Demonstrated SBA 7(a) and 504 financeability.",
-      "final_score": 82,
-      "final_tier": "A_acquire_self_candidate",
-      "final_comment": "Houston Private Mini Storage — Texas owned & operated since 1969 (57 yrs). 2 facilities at 4320 Spring Stuebner Rd (Spring) + 18602 Clay Rd (NW Houston). NO online booking (quote-request form only), NO owner names anywhere on site, no team page. Classic coasting solo profile + 57-yr legacy + NW Houston exurban high-growth corridor = strong A-tier candidate, demoted to A_candidate pending Phase 5: HCAD parcel deed history on both addresses to identify owner-LLC, SOS officer cross-check, OV65 lookup on owner homestead.",
-      "value_add_thesis": "2-facility NW Houston portfolio, 57-yr operating history, phone-only rental intake. Add online reservation + automated PMS (SiteLink/Storable) + dynamic pricing — likely 25-40% revenue uplift via market-rate repricing alone; another 10-15% via reduced vacancy. Real-estate-heavy: Clay Rd corridor is rezoning hotspot. Sale-leaseback option to elderly owner; 1.5-2x EBITDA in 18 months; flip target for PSA/EXR.",
+      "final_score": 77,
+      "final_tier": "B_forward",
+      "final_comment": "Houston Private Mini Storage \u2014 Texas owned & operated since 1969 (57 yrs). 2 facilities at 4320 Spring Stuebner Rd (Spring) + 18602 Clay Rd (NW Houston). NO online booking (quote-request form only), NO owner names anywhere on site, no team page. Classic coasting solo profile + 57-yr legacy + NW Houston exurban high-growth corridor = strong A-tier candidate, demoted to A_candidate pending Phase 5: HCAD parcel deed history on both addresses to identify owner-LLC, SOS officer cross-check, OV65 lookup on owner homestead.",
+      "value_add_thesis": "2-facility NW Houston portfolio, 57-yr operating history, phone-only rental intake. Add online reservation + automated PMS (SiteLink/Storable) + dynamic pricing \u2014 likely 25-40% revenue uplift via market-rate repricing alone; another 10-15% via reduced vacancy. Real-estate-heavy: Clay Rd corridor is rezoning hotspot. Sale-leaseback option to elderly owner; 1.5-2x EBITDA in 18 months; flip target for PSA/EXR.",
       "confidence": "low",
       "data_completeness": 0.55,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.houstonprivateministorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "year_1969,address_x2,no_online_booking,Texas_owned"}
+        {
+          "source": "company_website",
+          "url": "https://www.houstonprivateministorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "year_1969,address_x2,no_online_booking,Texas_owned"
+        }
       ]
     },
     {
@@ -150,9 +215,9 @@
       "phone": "unknown",
       "website": "https://www.consolidatedbondedwarehouses.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — family-owned per site copy",
+      "license_holder_name": "Unknown \u2014 family-owned per site copy",
       "entity_status": "unknown",
-      "owner_name": "Unknown — family-owned per site copy",
+      "owner_name": "Unknown \u2014 family-owned per site copy",
       "owner_age_estimate": 75,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 52,
@@ -166,19 +231,24 @@
       "layer1_base_rate": 78,
       "layer1_comment": "'Almost 50 years ago' founded language (~1974). 52-yr operating tenure. Family-owned per site. No owner names on visible content. Likely founder 70+ or 2nd-gen 60-70. License-tenure proxy.",
       "layer2_sellability": 68,
-      "layer2_comment": "Single facility commercial storage (bonded warehouse) — narrower market than retail self-storage but more recurring (commercial contract tenants). Inner-loop Houston south of medical center. 52-yr operating history. SBA 7(a) financeable.",
+      "layer2_comment": "Single facility commercial storage (bonded warehouse) \u2014 narrower market than retail self-storage but more recurring (commercial contract tenants). Inner-loop Houston south of medical center. 52-yr operating history. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 70,
-      "layer3_comment": "Tells: (1) 52-yr operating history; (2) 'family-owned' but NO owner names on site; (3) commercial-only positioning (less aggressive growth mindset); (4) single Magnet St facility for 5 decades — passive holding. NO online customer-facing tools visible. Likely commercial tenants on long-term contracts. Live-fetch successor protocol incomplete.",
+      "layer3_comment": "Tells: (1) 52-yr operating history; (2) 'family-owned' but NO owner names on site; (3) commercial-only positioning (less aggressive growth mindset); (4) single Magnet St facility for 5 decades \u2014 passive holding. NO online customer-facing tools visible. Likely commercial tenants on long-term contracts. Live-fetch successor protocol incomplete.",
       "layer4_market_pull": 75,
       "layer4_comment": "Inner-loop Houston Harris (-3 inner-loop vs +5 exurban for self-storage) but bonded commercial warehouse niche has logistic acquirer demand (XPO/Lineage/Americold types). Less attractive to retail-self-storage REITs.",
       "final_score": 73,
       "final_tier": "B_forward",
-      "final_comment": "Consolidated Bonded Warehouses, Inc. — Houston (Harris), 2510 Magnet St. Family-owned per site copy, ~1974 founding (52 yrs), single commercial bonded-warehouse facility. NO owner names on site. B-tier: solid recurring commercial-tenant base + long tenure + likely aging owner, but narrower acquirer pool (commercial logistics, not retail-storage REITs) and inner-loop Houston is lower-pull than exurban for self-storage. Forward to buyer community as a niche commercial-storage play.",
+      "final_comment": "Consolidated Bonded Warehouses, Inc. \u2014 Houston (Harris), 2510 Magnet St. Family-owned per site copy, ~1974 founding (52 yrs), single commercial bonded-warehouse facility. NO owner names on site. B-tier: solid recurring commercial-tenant base + long tenure + likely aging owner, but narrower acquirer pool (commercial logistics, not retail-storage REITs) and inner-loop Houston is lower-pull than exurban for self-storage. Forward to buyer community as a niche commercial-storage play.",
       "value_add_thesis": "52-yr inner-loop Houston bonded commercial warehouse near medical center. Modernize commercial-tenant onboarding portal, add real-time inventory tracking for high-value bonded customers, possibly add retail self-storage units to part of footprint. EBITDA uplift via commercial rate-resets + adjacent retail expansion. Real-estate-heavy: TMC-adjacent parcel = redevelopment optionality.",
       "confidence": "low",
-      "data_completeness": 0.50,
+      "data_completeness": 0.5,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.consolidatedbondedwarehouses.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "founded_circa_1974,address,family_owned,single_facility"}
+        {
+          "source": "company_website",
+          "url": "https://www.consolidatedbondedwarehouses.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "founded_circa_1974,address,family_owned,single_facility"
+        }
       ]
     },
     {
@@ -206,21 +276,26 @@
       "vertical": "self_storage",
       "score_run_id": "b271f067-65af-470e-b691-04c479d5f163",
       "layer1_base_rate": 80,
-      "layer1_comment": "Ken & Faye Milstead started Milstead Glass in 1987 (39 yrs ago — implies they are now ~65-75). Expanded into self-storage 2006 (20 yrs). Husband/wife co-owners. No mentioned successor children. Owners likely 65-75 range. Need MCAD OV65 lookup on residence.",
+      "layer1_comment": "Ken & Faye Milstead started Milstead Glass in 1987 (39 yrs ago \u2014 implies they are now ~65-75). Expanded into self-storage 2006 (20 yrs). Husband/wife co-owners. No mentioned successor children. Owners likely 65-75 range. Need MCAD OV65 lookup on residence.",
       "layer2_sellability": 78,
       "layer2_comment": "5 self-storage facilities in Magnolia/Montgomery + a glass business sister-co. ~20 yrs of self-storage operations; SBA 7(a)/504 financeable. ~$2-5M revenue range for 5-facility portfolio in Lake Conroe corridor. Real-estate-heavy.",
       "layer3_behavioral_trigger": 80,
-      "layer3_comment": "Tells: (1) Husband/wife co-owners now 65-75 with no mentioned children/successor in published materials; (2) Website is a WordPress blog (storage-amateur-grade web infrastructure) = classic coasting tell; (3) Dual-business (glass + storage) = exhausted bandwidth; (4) Honea Egypt is a passive/legacy-feeling brand name from a 1987 glass company. Live-fetch successor protocol incomplete — need to verify no adult children in business via Facebook/LinkedIn/local news search.",
+      "layer3_comment": "Tells: (1) Husband/wife co-owners now 65-75 with no mentioned children/successor in published materials; (2) Website is a WordPress blog (storage-amateur-grade web infrastructure) = classic coasting tell; (3) Dual-business (glass + storage) = exhausted bandwidth; (4) Honea Egypt is a passive/legacy-feeling brand name from a 1987 glass company. Live-fetch successor protocol incomplete \u2014 need to verify no adult children in business via Facebook/LinkedIn/local news search.",
       "layer4_market_pull": 88,
       "layer4_comment": "Magnolia/Montgomery County (Lake Conroe exurban Houston) +5 growth corridor. 5-facility portfolio in Houston exurban is prime PSA/EXR/CUBE rollup target. SBA 7(a) financed; ETA-ready package size ($3-7M est total deal).",
-      "final_score": 81,
-      "final_tier": "A_acquire_self_candidate",
-      "final_comment": "Honea Egypt Self Storage — Ken & Faye Milstead (husband/wife co-owners). Started Milstead Glass 1987, expanded to self-storage 2006. 5 facilities in Magnolia/Montgomery (Lake Conroe corridor, Houston exurban). 20-yr operating history. Website is a WordPress blog — minimal digital infrastructure. Husband/wife co-owners are likely 65-75 with no mentioned children/successor. Strong A-candidate pending Phase 5: MCAD OV65 on Milstead residence + Facebook/LinkedIn search for adult children involved in either business + verify single-LLC ownership structure.",
-      "value_add_thesis": "5-facility Lake Conroe-corridor portfolio with husband/wife founders ~70 and no apparent successor. Migrate from WordPress blog to modern PMS (SiteLink/Storable Edge), add online booking + autopay + dynamic pricing — likely 30-50% revenue uplift via repricing alone in Houston-exurban hot market. Real-estate-heavy: Lake Conroe + Magnolia parcels are appreciating fast. Acquire glass business as bonus IP-light services bolt-on or divest. Sale-leaseback option for owners; 1.5-2x EBITDA in 18-24 months; flip to PSA/EXR at premium 5-7 cap.",
+      "final_score": 77,
+      "final_tier": "B_forward",
+      "final_comment": "Honea Egypt Self Storage \u2014 Ken & Faye Milstead (husband/wife co-owners). Started Milstead Glass 1987, expanded to self-storage 2006. 5 facilities in Magnolia/Montgomery (Lake Conroe corridor, Houston exurban). 20-yr operating history. Website is a WordPress blog \u2014 minimal digital infrastructure. Husband/wife co-owners are likely 65-75 with no mentioned children/successor. Strong A-candidate pending Phase 5: MCAD OV65 on Milstead residence + Facebook/LinkedIn search for adult children involved in either business + verify single-LLC ownership structure.",
+      "value_add_thesis": "5-facility Lake Conroe-corridor portfolio with husband/wife founders ~70 and no apparent successor. Migrate from WordPress blog to modern PMS (SiteLink/Storable Edge), add online booking + autopay + dynamic pricing \u2014 likely 30-50% revenue uplift via repricing alone in Houston-exurban hot market. Real-estate-heavy: Lake Conroe + Magnolia parcels are appreciating fast. Acquire glass business as bonus IP-light services bolt-on or divest. Sale-leaseback option for owners; 1.5-2x EBITDA in 18-24 months; flip to PSA/EXR at premium 5-7 cap.",
       "confidence": "low",
       "data_completeness": 0.65,
       "data_sources": [
-        {"source": "company_blog", "url": "https://honeaegyptselfstorage.wordpress.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "Ken_Faye_Milstead,Milstead_Glass_1987,storage_2006,5_locations"}
+        {
+          "source": "company_blog",
+          "url": "https://honeaegyptselfstorage.wordpress.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "Ken_Faye_Milstead,Milstead_Glass_1987,storage_2006,5_locations"
+        }
       ]
     },
     {
@@ -234,9 +309,9 @@
       "phone": "unknown",
       "website": "https://montgomeryss.com",
       "naics_code": "531130",
-      "license_holder_name": "Andrew Peña, Jr.",
+      "license_holder_name": "Andrew Pe\u00f1a, Jr.",
       "entity_status": "unknown",
-      "owner_name": "Andrew Peña, Jr. (sole owner listed)",
+      "owner_name": "Andrew Pe\u00f1a, Jr. (sole owner listed)",
       "owner_age_estimate": 60,
       "owner_age_source": "website_self_report",
       "owner_tenure_years": 22,
@@ -248,21 +323,26 @@
       "vertical": "self_storage",
       "score_run_id": "b271f067-65af-470e-b691-04c479d5f163",
       "layer1_base_rate": 58,
-      "layer1_comment": "Andrew Peña, Jr. listed as sole owner ('Jr.' suggests father Andrew Peña Sr. may be the original founder). 22-yr operating history ('over 20 yrs'). If 'Jr.' is the current operator and founded the business himself, he's likely 55-65; if he inherited, he might be 50-60. Needs MCAD OV65 lookup to verify age.",
+      "layer1_comment": "Andrew Pe\u00f1a, Jr. listed as sole owner ('Jr.' suggests father Andrew Pe\u00f1a Sr. may be the original founder). 22-yr operating history ('over 20 yrs'). If 'Jr.' is the current operator and founded the business himself, he's likely 55-65; if he inherited, he might be 50-60. Needs MCAD OV65 lookup to verify age.",
       "layer2_sellability": 80,
       "layer2_comment": "7 facilities across Montgomery County + 1 in NW Harris. 22-yr operating history. Modern site with online pay (but not online rental). $3-7M annual rev estimate. Strong SBA 7(a)/504 candidate.",
       "layer3_behavioral_trigger": 55,
-      "layer3_comment": "Tells: (1) 'Sr/Jr' naming pattern suggests succession may be incomplete; (2) 7 facilities operated for 22 yrs = NOT coasting — this is active expansion; (3) modern multi-location website; (4) 'Pay Online' but possibly not 'Rent Online' = partial digital adoption. Less of a coasting tell — Andrew Pena Jr. is actively operating, not retreating. Lower L3.",
+      "layer3_comment": "Tells: (1) 'Sr/Jr' naming pattern suggests succession may be incomplete; (2) 7 facilities operated for 22 yrs = NOT coasting \u2014 this is active expansion; (3) modern multi-location website; (4) 'Pay Online' but possibly not 'Rent Online' = partial digital adoption. Less of a coasting tell \u2014 Andrew Pena Jr. is actively operating, not retreating. Lower L3.",
       "layer4_market_pull": 90,
       "layer4_comment": "7-facility Montgomery County portfolio (Lake Conroe + Magnolia + Conroe + NW Houston exurban) = prime PSA/EXR/CUBE rollup target. Hot acquirer corridor. Multi-facility = institutional-quality package.",
       "final_score": 70,
       "final_tier": "B_forward",
-      "final_comment": "Montgomery Self Storage, Andrew Peña Jr. (sole owner listed). 7 facilities in Montgomery County + 1 in NW Harris over 22 yrs. Site is modern, multi-location, growth-oriented — does NOT show coasting profile. Owner is likely mid-career (55-65) and actively operating. B-tier: substantial, well-located multi-facility independent that any PE rollup or REIT would pay for, but the coasting-solo-to-outside-buyer thesis doesn't fit cleanly. Forward to buyer community as a marquee multi-facility roll-up target.",
+      "final_comment": "Montgomery Self Storage, Andrew Pe\u00f1a Jr. (sole owner listed). 7 facilities in Montgomery County + 1 in NW Harris over 22 yrs. Site is modern, multi-location, growth-oriented \u2014 does NOT show coasting profile. Owner is likely mid-career (55-65) and actively operating. B-tier: substantial, well-located multi-facility independent that any PE rollup or REIT would pay for, but the coasting-solo-to-outside-buyer thesis doesn't fit cleanly. Forward to buyer community as a marquee multi-facility roll-up target.",
       "value_add_thesis": "7-facility Lake Conroe-corridor portfolio is an institutional-quality acquisition for PE rollup buyers (Storquest/iStorage/Trojan/Devon all hunt this profile). Acquire and immediately add online booking + dynamic pricing + modern PMS; 18-month integration into a larger Houston-area platform. Real-estate-heavy: ~$15-30M total deal size at current cap rates.",
       "confidence": "medium",
-      "data_completeness": 0.70,
+      "data_completeness": 0.7,
       "data_sources": [
-        {"source": "company_website", "url": "https://montgomeryss.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "Andrew_Pena_Jr_owner,7_locations,over_20yrs"}
+        {
+          "source": "company_website",
+          "url": "https://montgomeryss.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "Andrew_Pena_Jr_owner,7_locations,over_20yrs"
+        }
       ]
     },
     {
@@ -290,22 +370,32 @@
       "vertical": "self_storage",
       "score_run_id": "b271f067-65af-470e-b691-04c479d5f163",
       "layer1_base_rate": 78,
-      "layer1_comment": "Tom Wirth (President) — founded 1994, 32-yr tenure. Likely 65-72 if he founded as young entrepreneur, possibly 70+ if older at founding. License-tenure proxy. Single-facility boat/RV storage = passive holding profile fits aging-owner thesis.",
+      "layer1_comment": "Tom Wirth (President) \u2014 founded 1994, 32-yr tenure. Likely 65-72 if he founded as young entrepreneur, possibly 70+ if older at founding. License-tenure proxy. Single-facility boat/RV storage = passive holding profile fits aging-owner thesis.",
       "layer2_sellability": 70,
       "layer2_comment": "Single facility specialty (boat/RV storage premium recurring) on US-281N (Hill Country corridor north of San Antonio). 32-yr operating history. Hwy 281 corridor is high-growth (Bulverde/Spring Branch/Blanco). $800K-1.5M annual rev estimate. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 75,
-      "layer3_comment": "Tells: (1) Single facility for 32 yrs — passive holding pattern; (2) on-site manager + keypad gate (no modern app-based access mentioned); (3) chamber profile lists 'representatives Tom Wirth and Cindy Lemay' — suggests Cindy might be operations contact, possible spouse/family role unknown; (4) website domain bulverdetxstorage.com is basic; (5) BBB profile + Yelp suggest minimal modern digital presence. Live-fetch successor protocol incomplete — need to determine Cindy Lemay's role (family member? successor?).",
+      "layer3_comment": "Tells: (1) Single facility for 32 yrs \u2014 passive holding pattern; (2) on-site manager + keypad gate (no modern app-based access mentioned); (3) chamber profile lists 'representatives Tom Wirth and Cindy Lemay' \u2014 suggests Cindy might be operations contact, possible spouse/family role unknown; (4) website domain bulverdetxstorage.com is basic; (5) BBB profile + Yelp suggest minimal modern digital presence. Live-fetch successor protocol incomplete \u2014 need to determine Cindy Lemay's role (family member? successor?).",
       "layer4_market_pull": 90,
       "layer4_comment": "Comal County / Hwy 281N corridor = SA-exurban high-growth +5. Boat/RV storage premium specialty (Hill Country lake market). ETA/search-fund interest in specialty storage is extreme. PSA/EXR aggressively acquire Boerne/Bulverde/Spring Branch corridor.",
-      "final_score": 79,
-      "final_tier": "A_acquire_self_candidate",
-      "final_comment": "Bulverde Boat & RV Storage, Tom Wirth (President), 28786 US-281N, Bulverde (Comal). 32-yr operating history. Single specialty boat/RV facility on Hill Country corridor. Cindy Lemay listed as second contact — relationship/successor unclear. Owner Wirth likely 65-72. A-candidate pending Phase 5: BCAD OV65 on Wirth residence + verify Cindy Lemay role (family/successor/employee) + SOS officer search + parcel deed history. Strong A-thesis if Lemay confirmed non-successor.",
+      "final_score": 77,
+      "final_tier": "B_forward",
+      "final_comment": "Bulverde Boat & RV Storage, Tom Wirth (President), 28786 US-281N, Bulverde (Comal). 32-yr operating history. Single specialty boat/RV facility on Hill Country corridor. Cindy Lemay listed as second contact \u2014 relationship/successor unclear. Owner Wirth likely 65-72. A-candidate pending Phase 5: BCAD OV65 on Wirth residence + verify Cindy Lemay role (family/successor/employee) + SOS officer search + parcel deed history. Strong A-thesis if Lemay confirmed non-successor.",
       "value_add_thesis": "Single 32-yr legacy Hill Country boat/RV facility on US-281 high-growth corridor. Premium recurring rents, likely 20-30% below market. Add online reservation portal + dynamic pricing for boat/RV specialty + modern keypad-app gate access. EBITDA uplift via repricing + reducing 24/7 staffing if app-based. Real-estate-heavy: US-281N parcel is rezoning hotspot. 1.5-2x EBITDA in 18 months.",
       "confidence": "low",
       "data_completeness": 0.65,
       "data_sources": [
-        {"source": "bulverde_chamber_directory", "url": "https://web.bulverdespringbranchchamber.com/list/member/bulverde-boat-rv-storage-inc-1586", "fetched_at": "2026-05-16T00:00:00Z", "fields": "Tom_Wirth_President,Cindy_Lemay,address"},
-        {"source": "search_snippet", "url": "n/a", "fetched_at": "2026-05-16T00:00:00Z", "fields": "founded_1994_per_search_summary"}
+        {
+          "source": "bulverde_chamber_directory",
+          "url": "https://web.bulverdespringbranchchamber.com/list/member/bulverde-boat-rv-storage-inc-1586",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "Tom_Wirth_President,Cindy_Lemay,address"
+        },
+        {
+          "source": "search_snippet",
+          "url": "n/a",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "founded_1994_per_search_summary"
+        }
       ]
     },
     {
@@ -319,9 +409,9 @@
       "phone": "832-693-6335",
       "website": "https://www.leaguecityboatandrvstorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — not named on site",
+      "license_holder_name": "Unknown \u2014 not named on site",
       "entity_status": "unknown",
-      "owner_name": "Unknown — site does not name owner",
+      "owner_name": "Unknown \u2014 site does not name owner",
       "owner_age_estimate": 70,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 38,
@@ -335,19 +425,24 @@
       "layer1_base_rate": 82,
       "layer1_comment": "Founded 1988, 38-yr operating history. NO owner names on site (verified live). If original founder still operating, likely 70+. Strong tenure-proxy L1. Need GalvCAD parcel deed history to identify owner-LLC.",
       "layer2_sellability": 72,
-      "layer2_comment": "2 facilities in League City (Webster St plus 270/Egret Bay) — specialty boat/RV storage in heart of Houston-coastal commuter corridor. 38-yr operating history. NO online booking visible (just contact form). Footer copyright 2019 = old site. $1-2M annual rev estimate for 2-facility portfolio. SBA 7(a) financeable.",
+      "layer2_comment": "2 facilities in League City (Webster St plus 270/Egret Bay) \u2014 specialty boat/RV storage in heart of Houston-coastal commuter corridor. 38-yr operating history. NO online booking visible (just contact form). Footer copyright 2019 = old site. $1-2M annual rev estimate for 2-facility portfolio. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 85,
-      "layer3_comment": "Tells: (1) Founded 1988, 38-yr legacy holding; (2) NO owner names on site (verified live-fetch); (3) NO online booking — contact form only; (4) Footer copyright 2019 (7+ yrs stale); (5) Single landing page lists service-area cities — minimal site update activity; (6) Only 2 facilities in 38 yrs = passive holding. Live-fetch successor protocol: site has NO team page, NO about-us content beyond service-area paragraph — successor verification still requires SOS officer search + GalvCAD parcel deed search.",
+      "layer3_comment": "Tells: (1) Founded 1988, 38-yr legacy holding; (2) NO owner names on site (verified live-fetch); (3) NO online booking \u2014 contact form only; (4) Footer copyright 2019 (7+ yrs stale); (5) Single landing page lists service-area cities \u2014 minimal site update activity; (6) Only 2 facilities in 38 yrs = passive holding. Live-fetch successor protocol: site has NO team page, NO about-us content beyond service-area paragraph \u2014 successor verification still requires SOS officer search + GalvCAD parcel deed search.",
       "layer4_market_pull": 88,
       "layer4_comment": "League City/Galveston-Bay corridor = high-growth Houston-exurban (+5). Boat/RV specialty storage in coastal market = premium recurring + ETA/PE interest extreme. NSA/Trojan/iStorage all targeting Galveston Bay area.",
-      "final_score": 83,
-      "final_tier": "A_acquire_self_candidate",
-      "final_comment": "League City Boat and RV Storage — League City (Galveston), 1515 Webster St. Founded 1988, 38-yr operating history, 2 facilities. NO owner names on site (verified live-fetch — about page absent). NO online booking, just contact form. Footer copyright 2019 (stale). Strong coasting profile + 38-yr legacy. STRONG A-candidate pending Phase 5: GalvCAD parcel deed lookup on 1515 Webster + Egret Bay parcel → identify owner-LLC → SOS officer search → OV65 on owner homestead. Confidence low until owner identified.",
-      "value_add_thesis": "38-yr legacy boat/RV portfolio on Galveston Bay commuter corridor (League City between Houston + Galveston Island). Premium specialty storage in appreciating coastal market. Add online unit reservation + autopay + dynamic pricing (RV/boat storage rates significantly undermonetized in coastal market) — likely 35-50% revenue uplift via repricing alone. Modernize keypad gates to app-based. Real-estate-heavy: Webster St parcel sits in League City's most-densifying commuter corridor; redevelopment optionality. Sale-leaseback for elderly owner; 1.5-2x EBITDA in 18 months.",
+      "final_score": 77,
+      "final_tier": "B_forward",
+      "final_comment": "League City Boat and RV Storage \u2014 League City (Galveston), 1515 Webster St. Founded 1988, 38-yr operating history, 2 facilities. NO owner names on site (verified live-fetch \u2014 about page absent). NO online booking, just contact form. Footer copyright 2019 (stale). Strong coasting profile + 38-yr legacy. STRONG A-candidate pending Phase 5: GalvCAD parcel deed lookup on 1515 Webster + Egret Bay parcel \u2192 identify owner-LLC \u2192 SOS officer search \u2192 OV65 on owner homestead. Confidence low until owner identified.",
+      "value_add_thesis": "38-yr legacy boat/RV portfolio on Galveston Bay commuter corridor (League City between Houston + Galveston Island). Premium specialty storage in appreciating coastal market. Add online unit reservation + autopay + dynamic pricing (RV/boat storage rates significantly undermonetized in coastal market) \u2014 likely 35-50% revenue uplift via repricing alone. Modernize keypad gates to app-based. Real-estate-heavy: Webster St parcel sits in League City's most-densifying commuter corridor; redevelopment optionality. Sale-leaseback for elderly owner; 1.5-2x EBITDA in 18 months.",
       "confidence": "low",
-      "data_completeness": 0.60,
+      "data_completeness": 0.6,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.leaguecityboatandrvstorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "year_1988,address,2_facilities,no_online_booking,no_owner_names,footer_copyright_2019"}
+        {
+          "source": "company_website",
+          "url": "https://www.leaguecityboatandrvstorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "year_1988,address,2_facilities,no_online_booking,no_owner_names,footer_copyright_2019"
+        }
       ]
     },
     {
@@ -361,9 +456,9 @@
       "phone": "unknown",
       "website": "https://www.aaa-allianceselfstorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — family-owned per site copy",
+      "license_holder_name": "Unknown \u2014 family-owned per site copy",
       "entity_status": "unknown",
-      "owner_name": "Unknown — family-owned per site copy (not named)",
+      "owner_name": "Unknown \u2014 family-owned per site copy (not named)",
       "owner_age_estimate": 60,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 15,
@@ -384,12 +479,17 @@
       "layer4_comment": "NE Houston Eastex Freeway corridor moderate-pull self-storage market. Acquirer demand present but not white-hot. Single-facility profile in growth corridor = decent.",
       "final_score": 60,
       "final_tier": "B_forward",
-      "final_comment": "AAA Alliance Self Storage — Houston (Harris), 11053 Eastex Fwy. Single facility, family-owned per site copy but no owner named. Modern site with online booking active. Lower coasting profile (digital tools current). B-tier: real and operating but doesn't fit the aging-coasting-owner-no-successor thesis cleanly. Forward to buyer community as solid mid-market acquisition candidate.",
+      "final_comment": "AAA Alliance Self Storage \u2014 Houston (Harris), 11053 Eastex Fwy. Single facility, family-owned per site copy but no owner named. Modern site with online booking active. Lower coasting profile (digital tools current). B-tier: real and operating but doesn't fit the aging-coasting-owner-no-successor thesis cleanly. Forward to buyer community as solid mid-market acquisition candidate.",
       "value_add_thesis": "Solid mid-market NE Houston facility for a search-fund or smaller PE buyer. Add dynamic pricing layer on existing online platform; partner with U-Haul or similar moving service for cross-sell; expand into multi-facility platform via tuck-in acquisitions of nearby small operators.",
       "confidence": "low",
       "data_completeness": 0.45,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.aaa-allianceselfstorage.com/locations/houston-tx-77093", "fetched_at": "2026-05-16T00:00:00Z", "fields": "family_owned_claim,address,online_booking_present"}
+        {
+          "source": "company_website",
+          "url": "https://www.aaa-allianceselfstorage.com/locations/houston-tx-77093",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "family_owned_claim,address,online_booking_present"
+        }
       ]
     },
     {
@@ -403,9 +503,9 @@
       "phone": "unknown",
       "website": "https://silverdollarstorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — family-owned since 2005 per site",
+      "license_holder_name": "Unknown \u2014 family-owned since 2005 per site",
       "entity_status": "unknown",
-      "owner_name": "Unknown — family-owned",
+      "owner_name": "Unknown \u2014 family-owned",
       "owner_age_estimate": 60,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 21,
@@ -421,18 +521,28 @@
       "layer2_sellability": 75,
       "layer2_comment": "3 facilities (Fort Worth + San Angelo + Crowley) including climate-controlled + boat/RV. 21-yr operating history. Modern site with online rental capability. Strong SBA 7(a)/504 candidate at ~$2-4M rev. Multi-facility portfolio = institutional-quality.",
       "layer3_behavioral_trigger": 55,
-      "layer3_comment": "Tells: (1) 21-yr legacy holding; (2) NO owner names on site; (3) website 'rolled up our doors' homey copy = family-business feel; (4) Modern online rental + payment portal active = NOT coasting on digital. Mid-level coasting tell — owner has expanded to 3 facilities but maintains modest digital footprint.",
+      "layer3_comment": "Tells: (1) 21-yr legacy holding; (2) NO owner names on site; (3) website 'rolled up our doors' homey copy = family-business feel; (4) Modern online rental + payment portal active = NOT coasting on digital. Mid-level coasting tell \u2014 owner has expanded to 3 facilities but maintains modest digital footprint.",
       "layer4_market_pull": 85,
       "layer4_comment": "Fort Worth Tarrant (top-3 TX metro) +5. SW Fort Worth (Risinger Rd) + Crowley exurban growth corridor. Multi-facility portfolio attractive to PE rollup. San Angelo is secondary metro -5 but balanced by DFW core.",
       "final_score": 68,
       "final_tier": "B_forward",
-      "final_comment": "Silver Dollar Self-Storage — Fort Worth (Tarrant) HQ + San Angelo + Crowley. Family-owned since 2005, 21-yr history, 3 facilities. NO owner names on site, but modern online rental + payment platform active. B-tier: real multi-facility family operator with reasonable digital adoption — solid forward-tier candidate for PE rollup or ETA buyer, but doesn't fit the coasting-no-digital-tools-aging-solo thesis cleanly.",
+      "final_comment": "Silver Dollar Self-Storage \u2014 Fort Worth (Tarrant) HQ + San Angelo + Crowley. Family-owned since 2005, 21-yr history, 3 facilities. NO owner names on site, but modern online rental + payment platform active. B-tier: real multi-facility family operator with reasonable digital adoption \u2014 solid forward-tier candidate for PE rollup or ETA buyer, but doesn't fit the coasting-no-digital-tools-aging-solo thesis cleanly.",
       "value_add_thesis": "3-facility DFW + West-TX family-owned portfolio with reasonable digital adoption already. Acquire as DFW platform; tuck in smaller Tarrant/Johnson Co. independents. Add dynamic-pricing layer to existing online platform. Divest San Angelo (secondary metro) to optimize portfolio.",
       "confidence": "low",
       "data_completeness": 0.55,
       "data_sources": [
-        {"source": "company_website", "url": "https://silverdollarstorage.com/fort-worth/", "fetched_at": "2026-05-16T00:00:00Z", "fields": "since_2005,Fort_Worth_Risinger_address,family_owned"},
-        {"source": "company_website", "url": "https://silverdollarstorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "3_locations_FortWorth_SanAngelo_Crowley"}
+        {
+          "source": "company_website",
+          "url": "https://silverdollarstorage.com/fort-worth/",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "since_2005,Fort_Worth_Risinger_address,family_owned"
+        },
+        {
+          "source": "company_website",
+          "url": "https://silverdollarstorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "3_locations_FortWorth_SanAngelo_Crowley"
+        }
       ]
     },
     {
@@ -446,9 +556,9 @@
       "phone": "unknown",
       "website": "https://boatclubstorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — family-owned 15+ yrs",
+      "license_holder_name": "Unknown \u2014 family-owned 15+ yrs",
       "entity_status": "unknown",
-      "owner_name": "Unknown — family-owned per site copy",
+      "owner_name": "Unknown \u2014 family-owned per site copy",
       "owner_age_estimate": 60,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 15,
@@ -464,17 +574,22 @@
       "layer2_sellability": 65,
       "layer2_comment": "Single facility, boat/RV-focused, NW Tarrant Co Lake Worth area. 15-yr operating history. NO online booking visible (contact form only). Estimated $600K-1.2M annual rev. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 60,
-      "layer3_comment": "Tells: (1) NO online booking; (2) NO owner names on site; (3) NO street address listed on main page; (4) Basic single-page site. Moderate coasting signal — but 15-yr tenure is borderline for the 'aging legacy holding' thesis (less than 20 yrs).",
+      "layer3_comment": "Tells: (1) NO online booking; (2) NO owner names on site; (3) NO street address listed on main page; (4) Basic single-page site. Moderate coasting signal \u2014 but 15-yr tenure is borderline for the 'aging legacy holding' thesis (less than 20 yrs).",
       "layer4_market_pull": 85,
       "layer4_comment": "NW Tarrant Co Lake Worth = boat/RV specialty in DFW metro = decent acquirer pull. Single facility = smaller deal.",
       "final_score": 63,
       "final_tier": "B_forward",
-      "final_comment": "Boat Club Road Self Storage — NW Fort Worth (Tarrant), Lake Worth area. 15-yr family-owned, single boat/RV-focused facility. NO online booking, NO owner names on site. Minimal site infrastructure. B-tier: real, operating, mid-tenure single facility — solid forward candidate but doesn't yet hit the 'aged legacy with retiring owner' profile. Re-score in 36 mo.",
+      "final_comment": "Boat Club Road Self Storage \u2014 NW Fort Worth (Tarrant), Lake Worth area. 15-yr family-owned, single boat/RV-focused facility. NO online booking, NO owner names on site. Minimal site infrastructure. B-tier: real, operating, mid-tenure single facility \u2014 solid forward candidate but doesn't yet hit the 'aged legacy with retiring owner' profile. Re-score in 36 mo.",
       "value_add_thesis": "Lake Worth boat/RV specialty single-facility acquisition for ETA buyer or DFW boat-storage roll-up platform. Add online reservation + autopay + dynamic pricing for boat/RV specialty. Modest 1.3x EBITDA path in 18 months.",
       "confidence": "low",
       "data_completeness": 0.45,
       "data_sources": [
-        {"source": "company_website", "url": "https://boatclubstorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "family_owned_15yrs,NW_Tarrant_Lake_Worth"}
+        {
+          "source": "company_website",
+          "url": "https://boatclubstorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "family_owned_15yrs,NW_Tarrant_Lake_Worth"
+        }
       ]
     },
     {
@@ -482,7 +597,7 @@
       "dba_name": "Big Red Barn Self Storage",
       "address": "1328 W Stan Schlueter Loop + 2206 Windfield Dr, Killeen; Temple, Belton, Jarrell, Copperas Cove locations",
       "city": "Killeen",
-      "county": "Bell (out-of-target-priority counties — Central TX)",
+      "county": "Bell (out-of-target-priority counties \u2014 Central TX)",
       "state": "TX",
       "zip": "76549",
       "phone": "unknown",
@@ -502,22 +617,32 @@
       "vertical": "self_storage",
       "score_run_id": "b271f067-65af-470e-b691-04c479d5f163",
       "layer1_base_rate": 75,
-      "layer1_comment": "Carolyn Barnes founder + Colette Barnes Marshall (daughter) — mother/daughter partnership per BBB. Founded 1999, 27 yrs. Carolyn likely 68-75 (founded as middle-age woman entrepreneur 1999). Daughter Colette is likely in her 40s-50s. STRUCTURED INTERNAL SUCCESSOR EXISTS (daughter Colette as partner) — L3 must reflect this.",
+      "layer1_comment": "Carolyn Barnes founder + Colette Barnes Marshall (daughter) \u2014 mother/daughter partnership per BBB. Founded 1999, 27 yrs. Carolyn likely 68-75 (founded as middle-age woman entrepreneur 1999). Daughter Colette is likely in her 40s-50s. STRUCTURED INTERNAL SUCCESSOR EXISTS (daughter Colette as partner) \u2014 L3 must reflect this.",
       "layer2_sellability": 80,
       "layer2_comment": "5-6 Central TX facilities (Killeen + Temple + Belton + Jarrell + Copperas Cove) + military-niche positioning + 'no admin fees / no deposits' competitive pricing. 27-yr operating tenure. Online rental active. ~$4-8M annual rev estimate. Strong SBA 7(a)/504 candidate.",
       "layer3_behavioral_trigger": 35,
-      "layer3_comment": "Tells: (1) STRUCTURED MOTHER/DAUGHTER SUCCESSION (Carolyn + Colette per BBB) — kills the 'coasting solo no successor' thesis; (2) Modern site with online rental; (3) Military-niche positioning + 5-6 facility expansion = active operator. Coasting profile FAILS — this is a structured internal-buy-in candidate (Colette is the heir-apparent).",
+      "layer3_comment": "Tells: (1) STRUCTURED MOTHER/DAUGHTER SUCCESSION (Carolyn + Colette per BBB) \u2014 kills the 'coasting solo no successor' thesis; (2) Modern site with online rental; (3) Military-niche positioning + 5-6 facility expansion = active operator. Coasting profile FAILS \u2014 this is a structured internal-buy-in candidate (Colette is the heir-apparent).",
       "layer4_market_pull": 72,
-      "layer4_comment": "Bell County (Killeen/Temple/Fort Hood area) Central TX — OUTSIDE priority counties. Military market is specialty but less white-hot than top-4 metros. Multi-facility portfolio attractive but in tertiary market.",
+      "layer4_comment": "Bell County (Killeen/Temple/Fort Hood area) Central TX \u2014 OUTSIDE priority counties. Military market is specialty but less white-hot than top-4 metros. Multi-facility portfolio attractive but in tertiary market.",
       "final_score": 66,
       "final_tier": "B_forward",
-      "final_comment": "Big Red Barn Self Storage — Killeen (Bell County, OUTSIDE priority counties). Carolyn Barnes (founder ~70) + daughter Colette Barnes Marshall (partner) per BBB. 5-6 Central TX facilities, 27-yr operating history, military-niche. INTERNAL SUCCESSOR EXISTS (daughter Colette is structural heir) — fails the coasting-solo thesis. B-tier: solid forward candidate for the buyer community (PE rollup may pay for the daughter to stay on as operator-shareholder) but not Gideon-direct because of the inside-buyer dynamic.",
+      "final_comment": "Big Red Barn Self Storage \u2014 Killeen (Bell County, OUTSIDE priority counties). Carolyn Barnes (founder ~70) + daughter Colette Barnes Marshall (partner) per BBB. 5-6 Central TX facilities, 27-yr operating history, military-niche. INTERNAL SUCCESSOR EXISTS (daughter Colette is structural heir) \u2014 fails the coasting-solo thesis. B-tier: solid forward candidate for the buyer community (PE rollup may pay for the daughter to stay on as operator-shareholder) but not Gideon-direct because of the inside-buyer dynamic.",
       "value_add_thesis": "Mother/daughter Central-TX military-market platform with structured internal heir. Acquire with daughter Colette retained as operator-shareholder; tuck in adjacent Bell-County independents; pursue Fort Hood / Fort Cavazos commercial-contract storage. Modest EBITDA uplift via dynamic pricing + military-base-marketing-channel; 1.3x EBITDA in 18 mo; 5-yr flip to PE rollup.",
       "confidence": "medium",
       "data_completeness": 0.75,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.bigredbarnselfstorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "since_1999,family_owned,locations"},
-        {"source": "bbb_profile", "url": "https://www.bbb.org/us/tx/killeen/profile/storage-units/big-red-barn-self-storage-0825-57154", "fetched_at": "2026-05-16T00:00:00Z", "fields": "Carolyn_Barnes,Colette_Barnes_Marshall_partners"}
+        {
+          "source": "company_website",
+          "url": "https://www.bigredbarnselfstorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "since_1999,family_owned,locations"
+        },
+        {
+          "source": "bbb_profile",
+          "url": "https://www.bbb.org/us/tx/killeen/profile/storage-units/big-red-barn-self-storage-0825-57154",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "Carolyn_Barnes,Colette_Barnes_Marshall_partners"
+        }
       ]
     },
     {
@@ -525,15 +650,15 @@
       "dba_name": "Amy's Attic Self Storage",
       "address": "1821 S New Rd, Waco; + locations in Belton, Harker Heights, Killeen, Salado, Temple, Moffat",
       "city": "Waco",
-      "county": "McLennan (out-of-target-priority — Central TX)",
+      "county": "McLennan (out-of-target-priority \u2014 Central TX)",
       "state": "TX",
       "zip": "76711",
       "phone": "(254) 651-1579",
       "website": "https://www.amysatticss.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — 'family-owned' chain (Amy implied as namesake)",
+      "license_holder_name": "Unknown \u2014 'family-owned' chain (Amy implied as namesake)",
       "entity_status": "unknown",
-      "owner_name": "Unknown — 'Amy' implied as founder/namesake; family-owned",
+      "owner_name": "Unknown \u2014 'Amy' implied as founder/namesake; family-owned",
       "owner_age_estimate": 58,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 22,
@@ -549,17 +674,22 @@
       "layer2_sellability": 80,
       "layer2_comment": "7-8 Central TX facilities + 2 Valet Storage outposts (Austin/Dallas). 22-yr operating history. Modern customer service infrastructure ('AMY = Always Minding You'). Online rental + payment. Strong SBA 7(a)/504 candidate. ~$5-10M annual rev estimate.",
       "layer3_behavioral_trigger": 45,
-      "layer3_comment": "Tells: (1) Modern multi-location website with online rental + valet-storage extension; (2) Active community giving + nonprofit partnerships (live brand engagement); (3) 'AMY' brand personality = strong active operator. Lower L3 — Amy's Attic is actively expanding, not coasting.",
+      "layer3_comment": "Tells: (1) Modern multi-location website with online rental + valet-storage extension; (2) Active community giving + nonprofit partnerships (live brand engagement); (3) 'AMY' brand personality = strong active operator. Lower L3 \u2014 Amy's Attic is actively expanding, not coasting.",
       "layer4_market_pull": 75,
       "layer4_comment": "McLennan + Bell counties = Central TX (outside top-4 priority metros); Killeen/military-adjacent. Multi-facility 7-8 platform attractive to PE rollup or single-state platform builder. 22-yr brand has institutional value.",
       "final_score": 63,
       "final_tier": "B_forward",
-      "final_comment": "Amy's Attic Self Storage — Waco-anchored Central TX (McLennan + Bell). 'Amy' founder, 22-yr operating history, 7-8 facilities + Valet Storage in Austin/Dallas. ACTIVE OPERATOR — modern site, online rental, community engagement, brand-personality marketing. Not a coasting profile. B-tier: marquee Central-TX multi-facility platform — solid forward-tier candidate for PE buyer who'd pay for the brand and the operator.",
+      "final_comment": "Amy's Attic Self Storage \u2014 Waco-anchored Central TX (McLennan + Bell). 'Amy' founder, 22-yr operating history, 7-8 facilities + Valet Storage in Austin/Dallas. ACTIVE OPERATOR \u2014 modern site, online rental, community engagement, brand-personality marketing. Not a coasting profile. B-tier: marquee Central-TX multi-facility platform \u2014 solid forward-tier candidate for PE buyer who'd pay for the brand and the operator.",
       "value_add_thesis": "Marquee Central-TX self-storage platform with established brand + multi-channel digital presence + valet-storage expansion into Austin/Dallas. Acquire as Central-TX platform; expand valet model into more metros; flip to PE rollup at premium for the brand IP + the urban-valet expansion thesis.",
       "confidence": "medium",
       "data_completeness": 0.65,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.amysatticss.com/about/", "fetched_at": "2026-05-16T00:00:00Z", "fields": "founded_2004,9_locations,Amy_brand,family_owned"}
+        {
+          "source": "company_website",
+          "url": "https://www.amysatticss.com/about/",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "founded_2004,9_locations,Amy_brand,family_owned"
+        }
       ]
     },
     {
@@ -567,15 +697,15 @@
       "dba_name": "Affordable Storage",
       "address": "19 facilities across Lubbock + Wolfforth (see locations)",
       "city": "Lubbock",
-      "county": "Lubbock (out-of-target-priority counties — West TX)",
+      "county": "Lubbock (out-of-target-priority counties \u2014 West TX)",
       "state": "TX",
       "zip": "varies (79412-79424)",
       "phone": "varies",
       "website": "https://affordablestoragelubbock.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — 'locally owned and operated for over 25 yrs'",
+      "license_holder_name": "Unknown \u2014 'locally owned and operated for over 25 yrs'",
       "entity_status": "unknown",
-      "owner_name": "Unknown — locally owned 25+ yrs",
+      "owner_name": "Unknown \u2014 locally owned 25+ yrs",
       "owner_age_estimate": 65,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 25,
@@ -589,19 +719,24 @@
       "layer1_base_rate": 68,
       "layer1_comment": "Locally owned + operated for 25+ yrs (founded ~2000). If founder was 35-45 at founding, now 60-70. NO owner names on site (verified). Need Lubbock CAD parcel deed history to identify owner-LLC across 19 parcels.",
       "layer2_sellability": 88,
-      "layer2_comment": "19 facilities across Lubbock + Wolfforth = MASSIVE single-metro density (likely the largest independent in West TX). 25-yr operating history. Award-winning. Strong SBA 7(a)/504 or conventional financing (>$5M cap likely needed — institutional deal). $15-30M annual rev estimate.",
+      "layer2_comment": "19 facilities across Lubbock + Wolfforth = MASSIVE single-metro density (likely the largest independent in West TX). 25-yr operating history. Award-winning. Strong SBA 7(a)/504 or conventional financing (>$5M cap likely needed \u2014 institutional deal). $15-30M annual rev estimate.",
       "layer3_behavioral_trigger": 50,
-      "layer3_comment": "Tells: (1) 19-facility scale = NOT a coasting solo, this is an operator with scale; (2) NO owner names on site — anonymous operator profile; (3) Active expansion (19 facilities is recent growth, not 2000-era footprint). Lower L3 — anonymous solo operator at this scale is unusual; this is likely an active operator who deliberately keeps a low profile, OR a multi-partner LLC.",
+      "layer3_comment": "Tells: (1) 19-facility scale = NOT a coasting solo, this is an operator with scale; (2) NO owner names on site \u2014 anonymous operator profile; (3) Active expansion (19 facilities is recent growth, not 2000-era footprint). Lower L3 \u2014 anonymous solo operator at this scale is unusual; this is likely an active operator who deliberately keeps a low profile, OR a multi-partner LLC.",
       "layer4_market_pull": 70,
       "layer4_comment": "Lubbock = West TX secondary metro (-3 vs major). 19-facility single-metro density is highly attractive to single-state PE buyers + REITs hungry for unconsolidated Plains metros. Premium multi-facility portfolio.",
       "final_score": 70,
       "final_tier": "B_forward",
-      "final_comment": "Affordable Storage Lubbock — 19 facilities across Lubbock + Wolfforth, 25+ yr operating history, locally owned. NO owner names on site. Outside priority counties (West TX) but exceptional multi-facility density. Active operator (19-facility expansion in last 25 yrs). B-tier: a marquee West-TX consolidation play — perfect for PE buyers or REITs aggressively building Plains-state platforms. Forward to buyer community as a institutional-deal candidate.",
+      "final_comment": "Affordable Storage Lubbock \u2014 19 facilities across Lubbock + Wolfforth, 25+ yr operating history, locally owned. NO owner names on site. Outside priority counties (West TX) but exceptional multi-facility density. Active operator (19-facility expansion in last 25 yrs). B-tier: a marquee West-TX consolidation play \u2014 perfect for PE buyers or REITs aggressively building Plains-state platforms. Forward to buyer community as a institutional-deal candidate.",
       "value_add_thesis": "19-facility Lubbock-metro dominance is a turn-key West-TX platform for any PE rollup or REIT. Acquire as institutional deal ($20-40M total); migrate to modern PMS portfolio-wide; add dynamic-pricing engine; flip to PSA/EXR or NSA at premium 5-6 cap in 3-5 years.",
       "confidence": "low",
       "data_completeness": 0.55,
       "data_sources": [
-        {"source": "company_website", "url": "https://affordablestoragelubbock.com/about", "fetched_at": "2026-05-16T00:00:00Z", "fields": "19_locations,25yrs,locally_owned"}
+        {
+          "source": "company_website",
+          "url": "https://affordablestoragelubbock.com/about",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "19_locations,25yrs,locally_owned"
+        }
       ]
     },
     {
@@ -609,7 +744,7 @@
       "dba_name": "Discount Storage",
       "address": "Multiple facilities across Lubbock, Midland, San Angelo, Wolfforth",
       "city": "Lubbock",
-      "county": "Lubbock (out-of-target-priority — West TX)",
+      "county": "Lubbock (out-of-target-priority \u2014 West TX)",
       "state": "TX",
       "zip": "varies",
       "phone": "varies",
@@ -629,7 +764,7 @@
       "vertical": "self_storage",
       "score_run_id": "b271f067-65af-470e-b691-04c479d5f163",
       "layer1_base_rate": 35,
-      "layer1_comment": "David Postar founded 2017 (9 yrs). At 9-yr tenure with 16 facilities in 9 yrs, Postar is an active builder — likely 45-55 mid-career. WRONG profile for the aging-coasting-owner thesis. Low L1.",
+      "layer1_comment": "David Postar founded 2017 (9 yrs). At 9-yr tenure with 16 facilities in 9 yrs, Postar is an active builder \u2014 likely 45-55 mid-career. WRONG profile for the aging-coasting-owner thesis. Low L1.",
       "layer2_sellability": 85,
       "layer2_comment": "16 facilities across 4 West-TX cities in 9 yrs = aggressive growth-stage operator. SBA 7(a)+504+conventional finance mix. $10-20M annual rev estimate. Institutional-quality multi-metro West-TX platform.",
       "layer3_behavioral_trigger": 25,
@@ -638,12 +773,17 @@
       "layer4_comment": "West-TX multi-metro 16-facility platform is highly attractive to institutional buyers, but Postar likely not selling at 9-yr mark.",
       "final_score": 45,
       "final_tier": "C_watch",
-      "final_comment": "Discount Storage — David Postar (founder 2017, 9 yrs operating). 16 facilities across Lubbock/Midland/San Angelo/Wolfforth. Active growth-stage operator, full digital infrastructure. WRONG profile for aging-coasting thesis. C-tier: re-evaluate in 5-10 yrs when Postar approaches natural exit window or if he proactively signals roll-up.",
+      "final_comment": "Discount Storage \u2014 David Postar (founder 2017, 9 yrs operating). 16 facilities across Lubbock/Midland/San Angelo/Wolfforth. Active growth-stage operator, full digital infrastructure. WRONG profile for aging-coasting thesis. C-tier: re-evaluate in 5-10 yrs when Postar approaches natural exit window or if he proactively signals roll-up.",
       "value_add_thesis": "Excellent growth-stage West-TX platform but not currently an off-market acquisition candidate. Watch for next 5-10 yrs for natural exit signals.",
       "confidence": "medium",
-      "data_completeness": 0.70,
+      "data_completeness": 0.7,
       "data_sources": [
-        {"source": "company_website", "url": "https://discountselfstoragetexas.com/about-us/", "fetched_at": "2026-05-16T00:00:00Z", "fields": "David_Postar_founder_2017,16_locations"}
+        {
+          "source": "company_website",
+          "url": "https://discountselfstoragetexas.com/about-us/",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "David_Postar_founder_2017,16_locations"
+        }
       ]
     },
     {
@@ -657,9 +797,9 @@
       "phone": "varies",
       "website": "https://www.aaastorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — locally owned 33+ yrs (since 1993)",
+      "license_holder_name": "Unknown \u2014 locally owned 33+ yrs (since 1993)",
       "entity_status": "unknown",
-      "owner_name": "Unknown — locally owned",
+      "owner_name": "Unknown \u2014 locally owned",
       "owner_age_estimate": 65,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 33,
@@ -671,21 +811,26 @@
       "vertical": "self_storage",
       "score_run_id": "b271f067-65af-470e-b691-04c479d5f163",
       "layer1_base_rate": 70,
-      "layer1_comment": "Locally owned since 1993, 33-yr operating history. ~14 TX locations across Austin/Hill Country/San Antonio/Houston corridor. Anonymous ownership — likely 60-70 if founder. Strong tenure-proxy L1. Need TCAD/multi-CAD search to identify owner-LLC.",
+      "layer1_comment": "Locally owned since 1993, 33-yr operating history. ~14 TX locations across Austin/Hill Country/San Antonio/Houston corridor. Anonymous ownership \u2014 likely 60-70 if founder. Strong tenure-proxy L1. Need TCAD/multi-CAD search to identify owner-LLC.",
       "layer2_sellability": 88,
       "layer2_comment": "14+ facility multi-metro TX portfolio = institutional-quality. 33-yr operating history. Modern online rental capability. Travis/Williamson/Hays/Comal/Bexar/Brazoria/Walker/Harris county footprint. $15-30M annual rev. SBA 504 + conventional financing tier.",
       "layer3_behavioral_trigger": 55,
-      "layer3_comment": "Tells: (1) 14-facility multi-metro scale = NOT a coasting solo (this is an institutional operator); (2) NO owner names on site — anonymous; (3) Modern digital infrastructure; (4) Anonymity could mask aging owner OR multi-partner LLC. Mid-level L3 — could be coasting institutional, could be active multi-partner. Live-fetch successor protocol incomplete — needs SOS officer search.",
+      "layer3_comment": "Tells: (1) 14-facility multi-metro scale = NOT a coasting solo (this is an institutional operator); (2) NO owner names on site \u2014 anonymous; (3) Modern digital infrastructure; (4) Anonymity could mask aging owner OR multi-partner LLC. Mid-level L3 \u2014 could be coasting institutional, could be active multi-partner. Live-fetch successor protocol incomplete \u2014 needs SOS officer search.",
       "layer4_market_pull": 92,
       "layer4_comment": "Multi-metro Austin/SA/Houston corridor self-storage platform = prime PE rollup + REIT target. Austin (+5) + SA exurban (+5) + Hill Country growth corridors = top-tier acquirer demand. 33-yr brand has institutional value.",
       "final_score": 75,
       "final_tier": "B_forward",
-      "final_comment": "AAA Storage — 14 TX facilities across Austin/Hill Country/SA/Houston corridor. 33-yr operating history. Anonymous ownership, modern digital infrastructure, multi-metro footprint. Could be aging-owner-coasting OR multi-partner-LLC-actively-managed — needs SOS officer cross-check to differentiate. B-tier: marquee multi-metro institutional-quality platform — perfect for PE rollup buyers. Forward to buyer community.",
+      "final_comment": "AAA Storage \u2014 14 TX facilities across Austin/Hill Country/SA/Houston corridor. 33-yr operating history. Anonymous ownership, modern digital infrastructure, multi-metro footprint. Could be aging-owner-coasting OR multi-partner-LLC-actively-managed \u2014 needs SOS officer cross-check to differentiate. B-tier: marquee multi-metro institutional-quality platform \u2014 perfect for PE rollup buyers. Forward to buyer community.",
       "value_add_thesis": "33-yr 14-facility multi-metro TX platform is a marquee acquisition for any PE rollup buyer building a TX-statewide platform. Acquire as institutional deal ($30-60M); modernize PMS portfolio-wide; deploy dynamic pricing; flip to PSA/EXR/NSA at premium in 3-5 yrs.",
       "confidence": "low",
-      "data_completeness": 0.60,
+      "data_completeness": 0.6,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.aaastorage.com/storage-units-austin", "fetched_at": "2026-05-16T00:00:00Z", "fields": "since_1993,14_locations,multi-metro"}
+        {
+          "source": "company_website",
+          "url": "https://www.aaastorage.com/storage-units-austin",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "since_1993,14_locations,multi-metro"
+        }
       ]
     },
     {
@@ -693,15 +838,15 @@
       "dba_name": "Aztec Storage Center",
       "address": "500 S Midland Dr; 1131 E 52nd St Odessa; 1301 Dayton Rd; 1219 S Midland Dr",
       "city": "Midland",
-      "county": "Midland / Ector (out-of-target-priority — Permian Basin)",
+      "county": "Midland / Ector (out-of-target-priority \u2014 Permian Basin)",
       "state": "TX",
       "zip": "varies",
       "phone": "varies",
       "website": "https://www.aztecstorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — locally owned per site",
+      "license_holder_name": "Unknown \u2014 locally owned per site",
       "entity_status": "unknown",
-      "owner_name": "Unknown — locally owned and operated",
+      "owner_name": "Unknown \u2014 locally owned and operated",
       "owner_age_estimate": 60,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 15,
@@ -717,17 +862,22 @@
       "layer2_sellability": 72,
       "layer2_comment": "4 facilities across Midland + Odessa (Permian Basin). Recurring revenue + shipping containers + RV storage. ~$2-4M annual rev estimate. SBA 7(a) financeable. U-Haul phone rentals + online payment.",
       "layer3_behavioral_trigger": 50,
-      "layer3_comment": "Tells: (1) NO owner names on site; (2) U-Haul-by-phone (not online rental for U-Haul) but online payment exists — partial digital adoption; (3) 4 facilities = mid-scale; (4) Permian Basin location ties revenue to oil-cycle. Mid-level coasting tell.",
+      "layer3_comment": "Tells: (1) NO owner names on site; (2) U-Haul-by-phone (not online rental for U-Haul) but online payment exists \u2014 partial digital adoption; (3) 4 facilities = mid-scale; (4) Permian Basin location ties revenue to oil-cycle. Mid-level coasting tell.",
       "layer4_market_pull": 65,
       "layer4_comment": "Permian Basin (Midland/Odessa) self-storage market: oil-cycle correlated, attractive to specialty energy-corridor PE buyers but not mainstream REIT focus. 4-facility multi-Permian footprint = decent.",
       "final_score": 58,
       "final_tier": "C_watch",
-      "final_comment": "Aztec Storage Center — Midland/Odessa Permian Basin, 4 facilities, locally owned. Outside priority counties (West TX). Partial digital adoption (online payment, no online rental). Mid-tier operator, Permian-economy-tied. C-tier: re-evaluate in 12-24 mo, especially if oil-cycle softens (could push owner toward exit).",
+      "final_comment": "Aztec Storage Center \u2014 Midland/Odessa Permian Basin, 4 facilities, locally owned. Outside priority counties (West TX). Partial digital adoption (online payment, no online rental). Mid-tier operator, Permian-economy-tied. C-tier: re-evaluate in 12-24 mo, especially if oil-cycle softens (could push owner toward exit).",
       "value_add_thesis": "Permian Basin specialty platform with oil-economy correlation. Acquire when oil-cycle softens; modernize PMS + online rental; reposition for non-oil-cycle revenue mix (residential + commercial storage).",
       "confidence": "low",
       "data_completeness": 0.45,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.aztecstorage.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": "4_locations,locally_owned"}
+        {
+          "source": "company_website",
+          "url": "https://www.aztecstorage.com/",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "4_locations,locally_owned"
+        }
       ]
     },
     {
@@ -741,9 +891,9 @@
       "phone": "unknown",
       "website": "https://www.humbleallpurposestorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — independently owned 20 yrs",
+      "license_holder_name": "Unknown \u2014 independently owned 20 yrs",
       "entity_status": "unknown",
-      "owner_name": "Unknown — independently owned 20 yrs",
+      "owner_name": "Unknown \u2014 independently owned 20 yrs",
       "owner_age_estimate": 62,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 20,
@@ -764,12 +914,17 @@
       "layer4_comment": "NE Houston Humble corridor = exurban growth (+5). Single-facility tuck-in target for any NE-Houston rollup buyer.",
       "final_score": 71,
       "final_tier": "B_forward",
-      "final_comment": "Humble All Purpose Storage — Humble (Harris) NE corridor, single facility, 20-yr operating history. NO owner names. Passive-holding profile. B-tier: classic single-facility independent in fast-growing NE Houston corridor; needs HCAD deed lookup + SOS officer search. Promising forward-tier candidate.",
+      "final_comment": "Humble All Purpose Storage \u2014 Humble (Harris) NE corridor, single facility, 20-yr operating history. NO owner names. Passive-holding profile. B-tier: classic single-facility independent in fast-growing NE Houston corridor; needs HCAD deed lookup + SOS officer search. Promising forward-tier candidate.",
       "value_add_thesis": "Single 20-yr NE Houston Humble corridor facility. Acquire as tuck-in for NE-Houston rollup platform. Add online rental + dynamic pricing; immediate 20-30% revenue uplift via market repricing in fast-growth corridor.",
       "confidence": "low",
       "data_completeness": 0.45,
       "data_sources": [
-        {"source": "search_snippet", "url": "https://www.humbleallpurposestorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "20yrs,NE_Houston,single_facility"}
+        {
+          "source": "search_snippet",
+          "url": "https://www.humbleallpurposestorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "20yrs,NE_Houston,single_facility"
+        }
       ]
     },
     {
@@ -783,9 +938,9 @@
       "phone": "unknown",
       "website": "https://www.allpurposestoragetx.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — family-owned since 2005",
+      "license_holder_name": "Unknown \u2014 family-owned since 2005",
       "entity_status": "unknown",
-      "owner_name": "Unknown — family-owned since 2005",
+      "owner_name": "Unknown \u2014 family-owned since 2005",
       "owner_age_estimate": 62,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 21,
@@ -801,17 +956,22 @@
       "layer2_sellability": 70,
       "layer2_comment": "Single facility, 21-yr operating history. Self + car + boat + RV storage diversification. Burleson is fast-growing south-DFW exurban. ~$800K-1.5M annual rev estimate. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 65,
-      "layer3_comment": "Tells: (1) Single facility for 21 yrs (no growth); (2) Site returned 403 in our test — possibly thin web infrastructure; (3) family-owned but no names; (4) Burleson high-growth corridor but operator hasn't expanded. Mid-level coasting tell.",
+      "layer3_comment": "Tells: (1) Single facility for 21 yrs (no growth); (2) Site returned 403 in our test \u2014 possibly thin web infrastructure; (3) family-owned but no names; (4) Burleson high-growth corridor but operator hasn't expanded. Mid-level coasting tell.",
       "layer4_market_pull": 80,
       "layer4_comment": "Burleson/south DFW exurban growth corridor +5 (Johnson County). Single-facility tuck-in target for any DFW rollup buyer. Tarrant-adjacent.",
       "final_score": 67,
       "final_tier": "B_forward",
-      "final_comment": "All Purpose Storage Burleson — single facility, 21-yr family-owned, no owner names. Burleson Johnson Co (south-DFW exurban) high-growth. Site infrastructure thin (returned 403 in fetch). B-tier: solid tuck-in candidate for DFW rollup; needs Johnson CAD parcel deed lookup + SOS officer search to identify owner. Promising forward-tier.",
+      "final_comment": "All Purpose Storage Burleson \u2014 single facility, 21-yr family-owned, no owner names. Burleson Johnson Co (south-DFW exurban) high-growth. Site infrastructure thin (returned 403 in fetch). B-tier: solid tuck-in candidate for DFW rollup; needs Johnson CAD parcel deed lookup + SOS officer search to identify owner. Promising forward-tier.",
       "value_add_thesis": "Single 21-yr Burleson south-DFW exurban facility. Acquire as tuck-in for DFW rollup or platform-builder; add online rental + modern PMS; capture south-DFW growth corridor demand uplift.",
       "confidence": "low",
-      "data_completeness": 0.40,
+      "data_completeness": 0.4,
       "data_sources": [
-        {"source": "search_snippet", "url": "https://www.allpurposestoragetx.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "family_owned_2005,Burleson,FM731"}
+        {
+          "source": "search_snippet",
+          "url": "https://www.allpurposestoragetx.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "family_owned_2005,Burleson,FM731"
+        }
       ]
     },
     {
@@ -825,9 +985,9 @@
       "phone": "unknown",
       "website": "https://stewart-89th-self-storage.wheree.com (legacy)",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — staff: Katie, Drew, Craig, Rodney, Eric Owen",
+      "license_holder_name": "Unknown \u2014 staff: Katie, Drew, Craig, Rodney, Eric Owen",
       "entity_status": "unknown",
-      "owner_name": "Unknown — likely Eric Owen (last name 'Owen' appearing in staff)",
+      "owner_name": "Unknown \u2014 likely Eric Owen (last name 'Owen' appearing in staff)",
       "owner_age_estimate": 65,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 27,
@@ -839,22 +999,32 @@
       "vertical": "self_storage",
       "score_run_id": "b271f067-65af-470e-b691-04c479d5f163",
       "layer1_base_rate": 70,
-      "layer1_comment": "Stewart & 89th Self Storage LP — in business 1999, 27-yr operating tenure. Galveston Island. Staff includes 'Eric Owen' (possible owner/principal). Likely 60-70. LP structure suggests partners. Need GalvCAD parcel + SOS officer search.",
+      "layer1_comment": "Stewart & 89th Self Storage LP \u2014 in business 1999, 27-yr operating tenure. Galveston Island. Staff includes 'Eric Owen' (possible owner/principal). Likely 60-70. LP structure suggests partners. Need GalvCAD parcel + SOS officer search.",
       "layer2_sellability": 75,
       "layer2_comment": "Single facility on Galveston Island (Stewart Rd west-end). 27-yr operating history. Tourism + seasonal-resident driven recurring revenue. LP structure = multi-partner ownership. ~$1.2-2M annual rev estimate. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 65,
-      "layer3_comment": "Tells: (1) 27-yr legacy single-facility; (2) website appears to be a wheree.com listing aggregator (not a dedicated company site) — STRONG coasting tell; (3) reviews repeatedly mention 'Katie and Drew' — small family-feel staff; (4) LP structure = mature ownership. Live-fetch successor protocol incomplete — need to verify Eric Owen's role + LP partner list via SOS.",
+      "layer3_comment": "Tells: (1) 27-yr legacy single-facility; (2) website appears to be a wheree.com listing aggregator (not a dedicated company site) \u2014 STRONG coasting tell; (3) reviews repeatedly mention 'Katie and Drew' \u2014 small family-feel staff; (4) LP structure = mature ownership. Live-fetch successor protocol incomplete \u2014 need to verify Eric Owen's role + LP partner list via SOS.",
       "layer4_market_pull": 82,
-      "layer4_comment": "Galveston Island (Galveston County) tourism-driven self-storage = specialty seasonal market. Premium Spaces (regional PE-style aggregator) already at 8901 Stewart Rd in their portfolio — suggests this facility was previously REIT-managed or third-party-managed. Need to verify current independent status.",
+      "layer4_comment": "Galveston Island (Galveston County) tourism-driven self-storage = specialty seasonal market. Premium Spaces (regional PE-style aggregator) already at 8901 Stewart Rd in their portfolio \u2014 suggests this facility was previously REIT-managed or third-party-managed. Need to verify current independent status.",
       "final_score": 71,
       "final_tier": "B_forward",
-      "final_comment": "Stewart & 89th Self Storage LP — Galveston Island, 8901 Stewart Rd. 27-yr operating history. Possible owner Eric Owen; LP partner structure. Website is a wheree.com aggregator listing — minimal independent web presence (strong coasting tell). NOTE: Premium Spaces also lists 8901 Stewart Rd in their portfolio — needs verification of current independent vs third-party-managed status before tier promotion. B-tier pending verification.",
+      "final_comment": "Stewart & 89th Self Storage LP \u2014 Galveston Island, 8901 Stewart Rd. 27-yr operating history. Possible owner Eric Owen; LP partner structure. Website is a wheree.com aggregator listing \u2014 minimal independent web presence (strong coasting tell). NOTE: Premium Spaces also lists 8901 Stewart Rd in their portfolio \u2014 needs verification of current independent vs third-party-managed status before tier promotion. B-tier pending verification.",
       "value_add_thesis": "Galveston Island single-facility tourism storage with multi-LP-partner structure. Verify current independent operating status (not Premium Spaces managed) first. If independent: acquire as Galveston platform; add online reservation + seasonal dynamic pricing for tourism storage; tuck in adjacent Galveston facilities for island-platform play.",
       "confidence": "low",
       "data_completeness": 0.45,
       "data_sources": [
-        {"source": "yelp", "url": "https://www.yelp.com/biz/stewart-and-89th-self-storage-galveston", "fetched_at": "2026-05-16T00:00:00Z", "fields": "address,reviews"},
-        {"source": "dunsbradstreet", "url": "https://b.assets.dandb.com/businessdirectory/stewart89thselfstoragelp-galveston-tx-24240076.html", "fetched_at": "2026-05-16T00:00:00Z", "fields": "LP_structure,since_1999"}
+        {
+          "source": "yelp",
+          "url": "https://www.yelp.com/biz/stewart-and-89th-self-storage-galveston",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "address,reviews"
+        },
+        {
+          "source": "dunsbradstreet",
+          "url": "https://b.assets.dandb.com/businessdirectory/stewart89thselfstoragelp-galveston-tx-24240076.html",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "LP_structure,since_1999"
+        }
       ]
     },
     {
@@ -862,15 +1032,15 @@
       "dba_name": "Lone Star Boat and RV Storage",
       "address": "946 TX-46, Boerne (+ Liberty Hill + Burnet locations)",
       "city": "Boerne",
-      "county": "Kendall (out-of-target-priority — SA exurban Hill Country)",
+      "county": "Kendall (out-of-target-priority \u2014 SA exurban Hill Country)",
       "state": "TX",
       "zip": "78004",
       "phone": "unknown",
       "website": "https://www.lonestarboatrvstorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — 'Texas-owned, locally owned' per site",
+      "license_holder_name": "Unknown \u2014 'Texas-owned, locally owned' per site",
       "entity_status": "unknown",
-      "owner_name": "Unknown — Texas owned, locally owned",
+      "owner_name": "Unknown \u2014 Texas owned, locally owned",
       "owner_age_estimate": 55,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 12,
@@ -886,17 +1056,22 @@
       "layer2_sellability": 72,
       "layer2_comment": "3 facilities (Boerne + Liberty Hill + Burnet) = Hill Country boat/RV specialty multi-facility platform. Recurring premium specialty rents. ~$2-3M annual rev. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 40,
-      "layer3_comment": "Tells: (1) Modern multi-location site; (2) Hill Country geographic strategy = active growth play; (3) Specialty boat/RV positioning = premium niche play. Lower L3 — active operator, not coasting.",
+      "layer3_comment": "Tells: (1) Modern multi-location site; (2) Hill Country geographic strategy = active growth play; (3) Specialty boat/RV positioning = premium niche play. Lower L3 \u2014 active operator, not coasting.",
       "layer4_market_pull": 88,
       "layer4_comment": "Hill Country (Boerne/Liberty Hill/Burnet) boat/RV specialty = premium acquirer demand. Multi-facility platform attractive to ETA + PE rollup.",
       "final_score": 56,
       "final_tier": "C_watch",
-      "final_comment": "Lone Star Boat and RV Storage — 3 Hill Country boat/RV facilities (Boerne + Liberty Hill + Burnet). Active mid-career growth-stage operator. Modern site, multi-location specialty strategy. NOT coasting. C-tier: solid Hill Country platform but not currently a natural-exit candidate. Re-evaluate in 5-10 yrs.",
+      "final_comment": "Lone Star Boat and RV Storage \u2014 3 Hill Country boat/RV facilities (Boerne + Liberty Hill + Burnet). Active mid-career growth-stage operator. Modern site, multi-location specialty strategy. NOT coasting. C-tier: solid Hill Country platform but not currently a natural-exit candidate. Re-evaluate in 5-10 yrs.",
       "value_add_thesis": "Active growth-stage Hill Country boat/RV specialty platform. Watch for organic exit signals in 5-10 yrs.",
       "confidence": "low",
       "data_completeness": 0.45,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.lonestarboatrvstorage.com/946-tx-46-boerne-tx-78004", "fetched_at": "2026-05-16T00:00:00Z", "fields": "3_locations_Boerne_LibertyHill_Burnet,Hill_Country"}
+        {
+          "source": "company_website",
+          "url": "https://www.lonestarboatrvstorage.com/946-tx-46-boerne-tx-78004",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "3_locations_Boerne_LibertyHill_Burnet,Hill_Country"
+        }
       ]
     },
     {
@@ -910,9 +1085,9 @@
       "phone": "unknown",
       "website": "https://www.woodlands242selfstorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — family-owned",
+      "license_holder_name": "Unknown \u2014 family-owned",
       "entity_status": "unknown",
-      "owner_name": "Unknown — local, family-owned and operated",
+      "owner_name": "Unknown \u2014 local, family-owned and operated",
       "owner_age_estimate": 60,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 20,
@@ -928,17 +1103,22 @@
       "layer2_sellability": 70,
       "layer2_comment": "Single climate-controlled facility, 20-yr operating history. Off Hwy 242 (Conroe/Woodlands corridor). Online rental + payment present. ~$800K-1.4M annual rev estimate. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 60,
-      "layer3_comment": "Tells: (1) Single facility 20 yrs (no growth); (2) NO owner names; (3) modern site with online rental = partial digital adoption; (4) Footer copyright 2026 = site maintained. Moderate coasting tell — single-facility holding but operator keeps digital current.",
+      "layer3_comment": "Tells: (1) Single facility 20 yrs (no growth); (2) NO owner names; (3) modern site with online rental = partial digital adoption; (4) Footer copyright 2026 = site maintained. Moderate coasting tell \u2014 single-facility holding but operator keeps digital current.",
       "layer4_market_pull": 88,
       "layer4_comment": "Hwy 242 / Conroe corridor = The Woodlands exurban (+5) high-growth. Multiple Montgomery-Co rollup competitors. Single-facility tuck-in target.",
       "final_score": 70,
       "final_tier": "B_forward",
-      "final_comment": "Woodlands 242 Self Storage — Conroe (Montgomery), single climate-controlled facility, 20-yr family-owned. NO owner names. Modern site with online rental. The Woodlands/Conroe corridor high-growth. B-tier: solid single-facility tuck-in candidate for Montgomery-Co rollup; needs MCAD deed lookup to identify owner.",
+      "final_comment": "Woodlands 242 Self Storage \u2014 Conroe (Montgomery), single climate-controlled facility, 20-yr family-owned. NO owner names. Modern site with online rental. The Woodlands/Conroe corridor high-growth. B-tier: solid single-facility tuck-in candidate for Montgomery-Co rollup; needs MCAD deed lookup to identify owner.",
       "value_add_thesis": "Single 20-yr Conroe/Woodlands corridor facility with existing digital adoption. Acquire as Montgomery-Co tuck-in for rollup platform (Honea Egypt + Montgomery Self Storage are nearby); immediate dynamic-pricing uplift; consolidate operations with adjacent independents.",
       "confidence": "low",
       "data_completeness": 0.45,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.woodlands242selfstorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "since_2006,family_owned,Hwy242"}
+        {
+          "source": "company_website",
+          "url": "https://www.woodlands242selfstorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "since_2006,family_owned,Hwy242"
+        }
       ]
     },
     {
@@ -952,7 +1132,7 @@
       "phone": "unknown",
       "website": "unknown",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — serving McKinney since 2002",
+      "license_holder_name": "Unknown \u2014 serving McKinney since 2002",
       "entity_status": "unknown",
       "owner_name": "Unknown",
       "owner_age_estimate": 62,
@@ -966,7 +1146,7 @@
       "vertical": "self_storage",
       "score_run_id": "b271f067-65af-470e-b691-04c479d5f163",
       "layer1_base_rate": 65,
-      "layer1_comment": "Serving McKinney since 2002, 24-yr operating history. Wide range of unit sizes 5x10 to 20x20. NO owner identification yet — need CCAD parcel deed lookup. Likely 60-70.",
+      "layer1_comment": "Serving McKinney since 2002, 24-yr operating history. Wide range of unit sizes 5x10 to 20x20. NO owner identification yet \u2014 need CCAD parcel deed lookup. Likely 60-70.",
       "layer2_sellability": 70,
       "layer2_comment": "Single facility, 24-yr operating history. Collin County high-growth exurban DFW. Diversified unit-size offering. ~$800K-1.5M annual rev estimate. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 70,
@@ -975,12 +1155,17 @@
       "layer4_comment": "Collin County (McKinney) = top-3 TX exurban growth metro +5. Aggressive rollup buyer demand. Single-facility tuck-in is highly attractive to Collin-Co platform builders.",
       "final_score": 73,
       "final_tier": "B_forward",
-      "final_comment": "Hilltop Storage — McKinney (Collin) since 2002, single facility, 24-yr operating history. NO owner identified yet — needs CCAD parcel deed search + Google/Yelp URL discovery for site live-fetch. B-tier: promising single-facility tuck-in candidate in Collin County's hottest exurban growth corridor.",
+      "final_comment": "Hilltop Storage \u2014 McKinney (Collin) since 2002, single facility, 24-yr operating history. NO owner identified yet \u2014 needs CCAD parcel deed search + Google/Yelp URL discovery for site live-fetch. B-tier: promising single-facility tuck-in candidate in Collin County's hottest exurban growth corridor.",
       "value_add_thesis": "Single 24-yr McKinney facility in Collin County's #1 DFW exurban growth corridor. Likely rents 30-50% below market. Acquire as tuck-in for Collin/Denton platform; modernize PMS + add online rental; immediate revenue uplift via market repricing.",
       "confidence": "low",
-      "data_completeness": 0.30,
+      "data_completeness": 0.3,
       "data_sources": [
-        {"source": "expertise_com", "url": "https://www.expertise.com/home-improvement/storage-units/texas/mckinney", "fetched_at": "2026-05-16T00:00:00Z", "fields": "since_2002,McKinney_Collin"}
+        {
+          "source": "expertise_com",
+          "url": "https://www.expertise.com/home-improvement/storage-units/texas/mckinney",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "since_2002,McKinney_Collin"
+        }
       ]
     },
     {
@@ -1008,7 +1193,7 @@
       "vertical": "self_storage",
       "score_run_id": "b271f067-65af-470e-b691-04c479d5f163",
       "layer1_base_rate": 50,
-      "layer1_comment": "McKinney-based facility, units 100-600 sq ft + RV/car/trailer/boat storage. Unknown founding year — estimate 10-20 yrs. Likely mid-career 55-65 operator.",
+      "layer1_comment": "McKinney-based facility, units 100-600 sq ft + RV/car/trailer/boat storage. Unknown founding year \u2014 estimate 10-20 yrs. Likely mid-career 55-65 operator.",
       "layer2_sellability": 68,
       "layer2_comment": "Single facility diversified storage offering. Collin County. ~$700K-1.2M annual rev estimate. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 55,
@@ -1017,12 +1202,17 @@
       "layer4_comment": "Collin County (McKinney) +5 hottest DFW exurban growth corridor.",
       "final_score": 63,
       "final_tier": "B_forward",
-      "final_comment": "Cornerstone Storage — McKinney (Collin), single facility, diversified storage offerings. Minimal verified data. B-tier pending CCAD deed search + URL discovery + live-fetch. Promising Collin Co tuck-in candidate.",
+      "final_comment": "Cornerstone Storage \u2014 McKinney (Collin), single facility, diversified storage offerings. Minimal verified data. B-tier pending CCAD deed search + URL discovery + live-fetch. Promising Collin Co tuck-in candidate.",
       "value_add_thesis": "Single McKinney facility tuck-in for Collin Co rollup platform. Standard self-storage AI/dynamic-pricing modernization play.",
       "confidence": "low",
       "data_completeness": 0.25,
       "data_sources": [
-        {"source": "expertise_com_snippet", "url": "https://www.expertise.com/home-improvement/storage-units/texas/mckinney", "fetched_at": "2026-05-16T00:00:00Z", "fields": "McKinney_Cornerstone"}
+        {
+          "source": "expertise_com_snippet",
+          "url": "https://www.expertise.com/home-improvement/storage-units/texas/mckinney",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "McKinney_Cornerstone"
+        }
       ]
     },
     {
@@ -1038,7 +1228,7 @@
       "naics_code": "531130",
       "license_holder_name": "ISF McKinney, LLC (per footer)",
       "entity_status": "unknown",
-      "owner_name": "Unknown — ISF McKinney LLC (per footer)",
+      "owner_name": "Unknown \u2014 ISF McKinney LLC (per footer)",
       "owner_age_estimate": 50,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 10,
@@ -1059,12 +1249,17 @@
       "layer4_comment": "Collin Co (McKinney) +5 hot exurban.",
       "final_score": 51,
       "final_tier": "C_watch",
-      "final_comment": "TX Secure Storage / ISF McKinney LLC — McKinney (Collin), single recent-build facility, state-of-the-art. Active operator, NOT coasting profile. C-tier: solid facility but not a natural-exit candidate.",
+      "final_comment": "TX Secure Storage / ISF McKinney LLC \u2014 McKinney (Collin), single recent-build facility, state-of-the-art. Active operator, NOT coasting profile. C-tier: solid facility but not a natural-exit candidate.",
       "value_add_thesis": "Watch for organic exit signals; not currently an off-market acquisition candidate.",
       "confidence": "medium",
       "data_completeness": 0.45,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.tx-securestorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "ISF_McKinney_LLC,state_of_art,online_booking"}
+        {
+          "source": "company_website",
+          "url": "https://www.tx-securestorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "ISF_McKinney_LLC,state_of_art,online_booking"
+        }
       ]
     },
     {
@@ -1078,9 +1273,9 @@
       "phone": "972-832-8858",
       "website": "https://www.affordableboatstorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — family-owned and operated",
+      "license_holder_name": "Unknown \u2014 family-owned and operated",
       "entity_status": "unknown",
-      "owner_name": "Unknown — family-owned and operated",
+      "owner_name": "Unknown \u2014 family-owned and operated",
       "owner_age_estimate": 60,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 15,
@@ -1101,12 +1296,17 @@
       "layer4_comment": "Collin Co + Prosper/Celina/Frisco service area = #1 DFW exurban growth corridor +5. Boat/RV specialty premium recurring.",
       "final_score": 71,
       "final_tier": "B_forward",
-      "final_comment": "Affordable Boat Storage — McKinney (Collin), 3959 FM 1461. Single specialty boat/RV facility, family-owned, NO owner names. Phone-only intake (no online booking). Collin Co +5 hottest DFW exurban growth corridor (Prosper/Celina/Frisco/Allen service area). B-tier: classic coasting-solo profile — needs CCAD parcel deed lookup + SOS officer search to identify owner. Strong forward candidate.",
+      "final_comment": "Affordable Boat Storage \u2014 McKinney (Collin), 3959 FM 1461. Single specialty boat/RV facility, family-owned, NO owner names. Phone-only intake (no online booking). Collin Co +5 hottest DFW exurban growth corridor (Prosper/Celina/Frisco/Allen service area). B-tier: classic coasting-solo profile \u2014 needs CCAD parcel deed lookup + SOS officer search to identify owner. Strong forward candidate.",
       "value_add_thesis": "Single FM-1461 McKinney boat/RV specialty facility in #1 DFW exurban growth corridor (Prosper-Frisco-Celina-Allen service area). Phone-only intake = significant digital uplift opportunity. Add online reservation + dynamic pricing for boat/RV specialty; rents likely 30-50% below market in this fast-appreciating corridor.",
       "confidence": "low",
-      "data_completeness": 0.50,
+      "data_completeness": 0.5,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.affordableboatstorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "family_owned,FM1461,McKinney,service_area"}
+        {
+          "source": "company_website",
+          "url": "https://www.affordableboatstorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "family_owned,FM1461,McKinney,service_area"
+        }
       ]
     },
     {
@@ -1138,17 +1338,22 @@
       "layer2_sellability": 70,
       "layer2_comment": "Single Class-A RV-specialty facility, Spring Branch/Bulverde Hill Country corridor. Premium specialty recurring. ~$600K-1.2M annual rev. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 55,
-      "layer3_comment": "Tells: minimal verified data — need URL live-fetch. Single-facility specialty positioning. Class-A naming suggests recent build.",
+      "layer3_comment": "Tells: minimal verified data \u2014 need URL live-fetch. Single-facility specialty positioning. Class-A naming suggests recent build.",
       "layer4_market_pull": 88,
       "layer4_comment": "Comal Co Hwy 46 corridor +5 SA-exurban Hill Country. Boat/RV specialty premium.",
       "final_score": 62,
       "final_tier": "B_forward",
-      "final_comment": "Honey Creek RV Storage — Spring Branch (Comal), Class-A RV specialty facility. Minimal verified data. B-tier pending live-fetch + CCAD parcel search. Promising Comal-Co Hill Country tuck-in.",
+      "final_comment": "Honey Creek RV Storage \u2014 Spring Branch (Comal), Class-A RV specialty facility. Minimal verified data. B-tier pending live-fetch + CCAD parcel search. Promising Comal-Co Hill Country tuck-in.",
       "value_add_thesis": "Class-A RV specialty Hill Country tuck-in. Add modern online reservation + dynamic pricing for RV specialty premium rates.",
       "confidence": "low",
-      "data_completeness": 0.30,
+      "data_completeness": 0.3,
       "data_sources": [
-        {"source": "search_snippet", "url": "https://www.honeycreekrvstorage.com/26253-state-hwy-46-w-spring-branch-tx-78070", "fetched_at": "2026-05-16T00:00:00Z", "fields": "Spring_Branch,Class_A_RV"}
+        {
+          "source": "search_snippet",
+          "url": "https://www.honeycreekrvstorage.com/26253-state-hwy-46-w-spring-branch-tx-78070",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "Spring_Branch,Class_A_RV"
+        }
       ]
     },
     {
@@ -1180,23 +1385,28 @@
       "layer2_sellability": 72,
       "layer2_comment": "Single facility with diversified offerings (drive-up + climate + boat/RV). I-35 frontage New Braunfels = high-visibility prime real estate. ~$1-1.8M annual rev estimate. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 50,
-      "layer3_comment": "Tells: (1) Online booking active — partial digital adoption; (2) NO owner names; (3) I-35 frontage = recent build feel; (4) Single facility. Mid-low coasting tell.",
+      "layer3_comment": "Tells: (1) Online booking active \u2014 partial digital adoption; (2) NO owner names; (3) I-35 frontage = recent build feel; (4) Single facility. Mid-low coasting tell.",
       "layer4_market_pull": 92,
       "layer4_comment": "New Braunfels Comal +5 (SA-exurban / I-35 growth corridor). Premium I-35 frontage. Aggressive rollup demand.",
       "final_score": 65,
       "final_tier": "B_forward",
-      "final_comment": "Rodeo Self Storage — New Braunfels (Comal), I-35 frontage, diversified offerings, online booking active. B-tier: solid premium-location single-facility tuck-in candidate; needs CCAD parcel search.",
-      "value_add_thesis": "I-35 frontage New Braunfels facility — premium real estate in fast-growing SA-exurban corridor. Acquire as Comal-Co platform anchor; tuck in adjacent independents (Four Seasons in NB area, Bulverde Boat/RV, Honey Creek).",
+      "final_comment": "Rodeo Self Storage \u2014 New Braunfels (Comal), I-35 frontage, diversified offerings, online booking active. B-tier: solid premium-location single-facility tuck-in candidate; needs CCAD parcel search.",
+      "value_add_thesis": "I-35 frontage New Braunfels facility \u2014 premium real estate in fast-growing SA-exurban corridor. Acquire as Comal-Co platform anchor; tuck in adjacent independents (Four Seasons in NB area, Bulverde Boat/RV, Honey Creek).",
       "confidence": "low",
-      "data_completeness": 0.40,
+      "data_completeness": 0.4,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.rodeo-storage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "New_Braunfels_I35,address,online_booking"}
+        {
+          "source": "company_website",
+          "url": "https://www.rodeo-storage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "New_Braunfels_I35,address,online_booking"
+        }
       ]
     },
     {
       "legal_name": "Storage Choice",
       "dba_name": "Storage Choice",
-      "address": "12 facilities — 1M sq ft across DFW + Houston",
+      "address": "12 facilities \u2014 1M sq ft across DFW + Houston",
       "city": "Dallas + Houston",
       "county": "multi-county",
       "state": "TX",
@@ -1204,7 +1414,7 @@
       "phone": "varies",
       "website": "unknown",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — family-owned since founding (~20 yrs ago)",
+      "license_holder_name": "Unknown \u2014 family-owned since founding (~20 yrs ago)",
       "entity_status": "unknown",
       "owner_name": "Unknown",
       "owner_age_estimate": 60,
@@ -1222,23 +1432,28 @@
       "layer2_sellability": 88,
       "layer2_comment": "12 facilities 1M sq ft = institutional-quality multi-metro Texas portfolio. 20-yr operating history. SBA 504 + conventional finance tier. Strong $15-30M+ rev estimate.",
       "layer3_behavioral_trigger": 45,
-      "layer3_comment": "Tells: (1) Construction announcement on Inside Self Storage (active builder); (2) 12-facility scale = institutional operator; (3) Multi-metro footprint. Coasting profile fails — Storage Choice is in growth mode per recent industry news.",
+      "layer3_comment": "Tells: (1) Construction announcement on Inside Self Storage (active builder); (2) 12-facility scale = institutional operator; (3) Multi-metro footprint. Coasting profile fails \u2014 Storage Choice is in growth mode per recent industry news.",
       "layer4_market_pull": 92,
       "layer4_comment": "DFW + Houston 1M sq ft platform = premier-tier institutional acquisition target. PSA/EXR/NSA all hungry.",
       "final_score": 67,
       "final_tier": "B_forward",
-      "final_comment": "Storage Choice — 12-facility 1M sq ft DFW + Houston platform, 20-yr family-owned, active growth. NOT coasting (recent construction announcement). B-tier: marquee multi-metro institutional-quality platform for PE rollup or REIT — perfect forward-tier candidate.",
+      "final_comment": "Storage Choice \u2014 12-facility 1M sq ft DFW + Houston platform, 20-yr family-owned, active growth. NOT coasting (recent construction announcement). B-tier: marquee multi-metro institutional-quality platform for PE rollup or REIT \u2014 perfect forward-tier candidate.",
       "value_add_thesis": "12-facility 1M sq ft DFW + Houston platform is a premier acquisition for PE or REIT. Acquire as institutional deal ($75-150M); modernize PMS portfolio-wide; flip to PSA/EXR/NSA at premium 5-6 cap in 3-5 yrs.",
       "confidence": "low",
-      "data_completeness": 0.40,
+      "data_completeness": 0.4,
       "data_sources": [
-        {"source": "inside_self_storage", "url": "https://www.insideselfstorage.com/companies-and-products/storage-choice-begin-construction-new-self-storage-facility-dallas", "fetched_at": "2026-05-16T00:00:00Z", "fields": "12_facilities,1M_sqft,family_owned_20yrs"}
+        {
+          "source": "inside_self_storage",
+          "url": "https://www.insideselfstorage.com/companies-and-products/storage-choice-begin-construction-new-self-storage-facility-dallas",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "12_facilities,1M_sqft,family_owned_20yrs"
+        }
       ]
     },
     {
       "legal_name": "Macho Self Storage",
       "dba_name": "Macho Self Storage",
-      "address": "9 DFW facilities — Carrollton + Colleyville + Dallas + Denton + Fort Worth + Irving + Red Oak (HQ 201 Brothers Blvd) + Roanoke + Waxahachie",
+      "address": "9 DFW facilities \u2014 Carrollton + Colleyville + Dallas + Denton + Fort Worth + Irving + Red Oak (HQ 201 Brothers Blvd) + Roanoke + Waxahachie",
       "city": "Red Oak (HQ)",
       "county": "Ellis (HQ; multi-county DFW footprint)",
       "state": "TX",
@@ -1246,9 +1461,9 @@
       "phone": "varies",
       "website": "https://machostorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — family-owned per search snippets",
+      "license_holder_name": "Unknown \u2014 family-owned per search snippets",
       "entity_status": "unknown",
-      "owner_name": "Unknown — family-owned",
+      "owner_name": "Unknown \u2014 family-owned",
       "owner_age_estimate": 60,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 18,
@@ -1264,17 +1479,22 @@
       "layer2_sellability": 85,
       "layer2_comment": "9-facility DFW multi-metro platform = institutional-quality. Carrollton/Dallas/Fort Worth/Denton/Irving/Colleyville/Roanoke/Red Oak/Waxahachie footprint. $8-15M annual rev estimate. SBA 504 + conventional.",
       "layer3_behavioral_trigger": 55,
-      "layer3_comment": "Tells: (1) Footer copyright 2022 (4 yrs stale); (2) NO owner names on site; (3) 9-facility scale = institutional; (4) Online quote + auto-pay = partial digital. Mid-level coasting tell — multi-facility operator with somewhat dated digital infrastructure.",
+      "layer3_comment": "Tells: (1) Footer copyright 2022 (4 yrs stale); (2) NO owner names on site; (3) 9-facility scale = institutional; (4) Online quote + auto-pay = partial digital. Mid-level coasting tell \u2014 multi-facility operator with somewhat dated digital infrastructure.",
       "layer4_market_pull": 92,
       "layer4_comment": "9-facility DFW multi-metro = #1 TX rollup target. PSA/EXR/NSA all aggressive. Multi-county DFW coverage = premium scarcity.",
       "final_score": 71,
       "final_tier": "B_forward",
-      "final_comment": "Macho Self Storage — 9 DFW facilities (Red Oak HQ; multi-county DFW footprint). Family-owned, estimated 15-20 yr history. NO owner names on site, footer copyright 2022 (stale). B-tier: marquee 9-facility DFW multi-metro institutional-quality platform — perfect forward-tier candidate for PE rollup or REIT.",
+      "final_comment": "Macho Self Storage \u2014 9 DFW facilities (Red Oak HQ; multi-county DFW footprint). Family-owned, estimated 15-20 yr history. NO owner names on site, footer copyright 2022 (stale). B-tier: marquee 9-facility DFW multi-metro institutional-quality platform \u2014 perfect forward-tier candidate for PE rollup or REIT.",
       "value_add_thesis": "9-facility multi-county DFW platform with stale digital infrastructure = significant upside. Acquire as institutional deal ($30-60M); migrate to modern PMS + dynamic pricing portfolio-wide; flip to PSA/EXR/NSA at premium 5-6 cap in 3-5 yrs. Needs Ellis CAD + SOS officer search to identify owner.",
       "confidence": "low",
-      "data_completeness": 0.50,
+      "data_completeness": 0.5,
       "data_sources": [
-        {"source": "company_website", "url": "https://machostorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "9_locations_DFW,family_owned,footer_2022"}
+        {
+          "source": "company_website",
+          "url": "https://machostorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "9_locations_DFW,family_owned,footer_2022"
+        }
       ]
     },
     {
@@ -1288,7 +1508,7 @@
       "phone": "unknown",
       "website": "https://www.stashngostorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — staff Nina mentioned at O'Neal location",
+      "license_holder_name": "Unknown \u2014 staff Nina mentioned at O'Neal location",
       "entity_status": "unknown",
       "owner_name": "Unknown",
       "owner_age_estimate": 60,
@@ -1311,12 +1531,17 @@
       "layer4_comment": "Williamson Co Round Rock = Austin top exurban growth +5. PSA/EXR/NSA all aggressive. 2-facility tuck-in target.",
       "final_score": 67,
       "final_tier": "B_forward",
-      "final_comment": "Stash N Go Storage / Round Rock Mini Storage — 2 Round Rock (Williamson) facilities, 15-20 yr history. NO owner identified. Williamson Co +5 Austin-exurban hot growth. B-tier: solid 2-facility tuck-in candidate for Williamson/Travis rollup platform.",
+      "final_comment": "Stash N Go Storage / Round Rock Mini Storage \u2014 2 Round Rock (Williamson) facilities, 15-20 yr history. NO owner identified. Williamson Co +5 Austin-exurban hot growth. B-tier: solid 2-facility tuck-in candidate for Williamson/Travis rollup platform.",
       "value_add_thesis": "2-facility Round Rock tuck-in for Williamson-Co platform. Acquire as anchor for Williamson rollup (tuck in adjacent independents); add online rental + dynamic pricing; capture Austin-exurban growth corridor uplift.",
       "confidence": "low",
-      "data_completeness": 0.40,
+      "data_completeness": 0.4,
       "data_sources": [
-        {"source": "company_website", "url": "https://www.stashngostorage.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "Round_Rock_x2,outdoor_parking"}
+        {
+          "source": "company_website",
+          "url": "https://www.stashngostorage.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "Round_Rock_x2,outdoor_parking"
+        }
       ]
     },
     {
@@ -1348,18 +1573,28 @@
       "layer2_sellability": 70,
       "layer2_comment": "Single facility with thick concrete walls (flood-resistant construction popular in 1980s-90s) + climate-controlled drive-up + RV/car/boat. SW Houston Almeda corridor. ~$800K-1.4M annual rev. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 78,
-      "layer3_comment": "Tells: (1) Personally-managed by owner 'Charlie' (review mentions owner directly answering); (2) Listed on storewithus.com aggregator (not own brand site = minimal independent web presence); (3) Single facility 25+ yrs; (4) Old construction signature; (5) NO owner full name surfaced publicly. Strong coasting tell. Live-fetch successor protocol incomplete — need Yelp + LinkedIn + HCAD parcel deed lookup.",
+      "layer3_comment": "Tells: (1) Personally-managed by owner 'Charlie' (review mentions owner directly answering); (2) Listed on storewithus.com aggregator (not own brand site = minimal independent web presence); (3) Single facility 25+ yrs; (4) Old construction signature; (5) NO owner full name surfaced publicly. Strong coasting tell. Live-fetch successor protocol incomplete \u2014 need Yelp + LinkedIn + HCAD parcel deed lookup.",
       "layer4_market_pull": 85,
       "layer4_comment": "SW Houston Almeda corridor (Harris) = mid-tier acquirer pull; single-facility tuck-in target for Houston rollup.",
       "final_score": 76,
       "final_tier": "B_forward",
-      "final_comment": "Almeda Self Storage — Houston (Harris), 10600 Almeda Genoa Rd. Owner 'Charlie' personally on-site (per Yellow Pages review), manager Linda. 25+ yr operating history (flood-resistant thick-concrete-wall construction). Listed via storewithus.com aggregator — minimal independent web presence. STRONG coasting profile (owner-managed, no online brand presence). B-tier pending Phase 5: HCAD parcel deed lookup + Yelp full-text search to surface owner full name + SOS officer search.",
+      "final_comment": "Almeda Self Storage \u2014 Houston (Harris), 10600 Almeda Genoa Rd. Owner 'Charlie' personally on-site (per Yellow Pages review), manager Linda. 25+ yr operating history (flood-resistant thick-concrete-wall construction). Listed via storewithus.com aggregator \u2014 minimal independent web presence. STRONG coasting profile (owner-managed, no online brand presence). B-tier pending Phase 5: HCAD parcel deed lookup + Yelp full-text search to surface owner full name + SOS officer search.",
       "value_add_thesis": "Single 25-yr SW Houston facility, owner-managed by 'Charlie' personally. Sub-market rents likely 30-40% under market; phone-only intake. Acquire as Houston tuck-in; modernize digital infrastructure; immediate 20-30% revenue uplift via repricing + online conversion. Sale-leaseback option for elderly Charlie.",
       "confidence": "low",
-      "data_completeness": 0.50,
+      "data_completeness": 0.5,
       "data_sources": [
-        {"source": "yellow_pages", "url": "https://www.yellowpages.com/almeda-tx/self-storage", "fetched_at": "2026-05-16T00:00:00Z", "fields": "owner_Charlie,manager_Linda,review_mention"},
-        {"source": "aggregator", "url": "https://www.storewithus.com/storage-houston-tx/10600-almeda-genoa-rd", "fetched_at": "2026-05-16T00:00:00Z", "fields": "address,thick_concrete,flood_resistant"}
+        {
+          "source": "yellow_pages",
+          "url": "https://www.yellowpages.com/almeda-tx/self-storage",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "owner_Charlie,manager_Linda,review_mention"
+        },
+        {
+          "source": "aggregator",
+          "url": "https://www.storewithus.com/storage-houston-tx/10600-almeda-genoa-rd",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "address,thick_concrete,flood_resistant"
+        }
       ]
     },
     {
@@ -1373,9 +1608,9 @@
       "phone": "unknown",
       "website": "https://4seasonsministorage.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — women-owned, family-owned per about page",
+      "license_holder_name": "Unknown \u2014 women-owned, family-owned per about page",
       "entity_status": "unknown",
-      "owner_name": "Unknown — women-owned",
+      "owner_name": "Unknown \u2014 women-owned",
       "owner_age_estimate": 55,
       "owner_age_source": "license_tenure_proxy",
       "owner_tenure_years": 15,
@@ -1396,12 +1631,17 @@
       "layer4_comment": "Bexar/Comal/SA-exurban corridor + NB +5. 3-facility platform attractive to PE.",
       "final_score": 59,
       "final_tier": "C_watch",
-      "final_comment": "Four Seasons Mini Storage — 3 facilities SA + NB + Converse, women-owned, 15-yr history, modern digital. Active mid-career operator. C-tier: not a natural-exit candidate now. Re-evaluate in 5-7 yrs.",
+      "final_comment": "Four Seasons Mini Storage \u2014 3 facilities SA + NB + Converse, women-owned, 15-yr history, modern digital. Active mid-career operator. C-tier: not a natural-exit candidate now. Re-evaluate in 5-7 yrs.",
       "value_add_thesis": "Active women-owned SA-area 3-facility platform. Watch for exit signals; not currently natural-exit candidate.",
       "confidence": "medium",
-      "data_completeness": 0.60,
+      "data_completeness": 0.6,
       "data_sources": [
-        {"source": "company_website", "url": "https://4seasonsministorage.com/about/", "fetched_at": "2026-05-16T00:00:00Z", "fields": "founded_2011,women_owned,3_locations"}
+        {
+          "source": "company_website",
+          "url": "https://4seasonsministorage.com/about/",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "founded_2011,women_owned,3_locations"
+        }
       ]
     },
     {
@@ -1415,7 +1655,7 @@
       "phone": "unknown",
       "website": "https://www.imperialstoragesolutions.com",
       "naics_code": "531130",
-      "license_holder_name": "Unknown — 'Best Storage Units in Sugar Land' since 2011",
+      "license_holder_name": "Unknown \u2014 'Best Storage Units in Sugar Land' since 2011",
       "entity_status": "unknown",
       "owner_name": "Unknown",
       "owner_age_estimate": 55,
@@ -1433,17 +1673,22 @@
       "layer2_sellability": 75,
       "layer2_comment": "Single facility Sugar Land (Fort Bend exurban Houston). Premium Sugar Land submarket. 15-yr operating history with sustained award recognition. ~$1-1.8M annual rev. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 50,
-      "layer3_comment": "Tells: site returned 403 in fetch — could be digital-thin or could be Cloudflare protection. Award-winning sustained recognition = active engagement. Mid coasting tell, but data thin.",
+      "layer3_comment": "Tells: site returned 403 in fetch \u2014 could be digital-thin or could be Cloudflare protection. Award-winning sustained recognition = active engagement. Mid coasting tell, but data thin.",
       "layer4_market_pull": 90,
       "layer4_comment": "Sugar Land (Fort Bend exurban Houston) +5 premium suburb. Single-facility tuck-in for Fort Bend rollup buyers.",
       "final_score": 64,
       "final_tier": "B_forward",
-      "final_comment": "Imperial Storage Solutions — Sugar Land (Fort Bend), 15-yr operating history, award-winning local presence. Site returned 403 in fetch — limited verification. B-tier pending site live-fetch via browser MCP + Fort Bend CAD parcel search.",
+      "final_comment": "Imperial Storage Solutions \u2014 Sugar Land (Fort Bend), 15-yr operating history, award-winning local presence. Site returned 403 in fetch \u2014 limited verification. B-tier pending site live-fetch via browser MCP + Fort Bend CAD parcel search.",
       "value_add_thesis": "Premium Sugar Land single-facility tuck-in for Fort Bend rollup. Active brand = some digital opportunity. Standard modernization play.",
       "confidence": "low",
       "data_completeness": 0.35,
       "data_sources": [
-        {"source": "search_snippet", "url": "https://www.imperialstoragesolutions.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": "Sugar_Land_77498,Best_Storage_Units_2011,15yrs"}
+        {
+          "source": "search_snippet",
+          "url": "https://www.imperialstoragesolutions.com",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "Sugar_Land_77498,Best_Storage_Units_2011,15yrs"
+        }
       ]
     },
     {
@@ -1480,17 +1725,22 @@
       "layer4_comment": "Galveston Island tourism market = specialty; mid-tier acquirer pull. Moving services component reduces clean-storage-acquisition fit.",
       "final_score": 60,
       "final_tier": "B_forward",
-      "final_comment": "Easy Does It Moving and Storage — Galveston Island, combined moving + storage. Minimal verified data. B-tier pending URL discovery + live-fetch + GalvCAD search. Promising Galveston Island candidate.",
+      "final_comment": "Easy Does It Moving and Storage \u2014 Galveston Island, combined moving + storage. Minimal verified data. B-tier pending URL discovery + live-fetch + GalvCAD search. Promising Galveston Island candidate.",
       "value_add_thesis": "Galveston Island moving + storage combo. Acquire as Galveston Island anchor; separate moving services (potentially divest) and focus on pure-storage modernization.",
       "confidence": "low",
-      "data_completeness": 0.20,
+      "data_completeness": 0.2,
       "data_sources": [
-        {"source": "yelp_snippet", "url": "https://www.yelp.com/search?cflt=selfstorage&find_loc=Galveston%2C+TX", "fetched_at": "2026-05-16T00:00:00Z", "fields": "Galveston_combined_moving_storage"}
+        {
+          "source": "yelp_snippet",
+          "url": "https://www.yelp.com/search?cflt=selfstorage&find_loc=Galveston%2C+TX",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "Galveston_combined_moving_storage"
+        }
       ]
     },
     {
-      "legal_name": "Discount Self Storage (David Postar) — also listed",
-      "dba_name": "Note: see Discount Storage Texas above — same entity",
+      "legal_name": "Discount Self Storage (David Postar) \u2014 also listed",
+      "dba_name": "Note: see Discount Storage Texas above \u2014 same entity",
       "address": "Duplicate row removed; see Discount Storage record",
       "city": "n/a",
       "county": "n/a",
@@ -1509,11 +1759,13 @@
       "employee_count_estimate": 0,
       "provider_count_estimate": 0,
       "is_distressed": false,
-      "distress_reasons": ["duplicate_record_skip"],
+      "distress_reasons": [
+        "duplicate_record_skip"
+      ],
       "vertical": "self_storage",
       "score_run_id": "b271f067-65af-470e-b691-04c479d5f163",
       "layer1_base_rate": 0,
-      "layer1_comment": "DUPLICATE — see Discount Storage record",
+      "layer1_comment": "DUPLICATE \u2014 see Discount Storage record",
       "layer2_sellability": 0,
       "layer2_comment": "DUPLICATE",
       "layer3_behavioral_trigger": 0,
@@ -1522,7 +1774,7 @@
       "layer4_comment": "DUPLICATE",
       "final_score": 0,
       "final_tier": "D_pass",
-      "final_comment": "Duplicate marker — see Discount Storage Texas row.",
+      "final_comment": "Duplicate marker \u2014 see Discount Storage Texas row.",
       "value_add_thesis": "n/a",
       "confidence": "n/a",
       "data_completeness": 0,
@@ -1533,7 +1785,7 @@
       "dba_name": "Cubby Hole Texas",
       "address": "2502 N Eastman Rd, Longview",
       "city": "Longview",
-      "county": "Gregg (outside priority — East TX)",
+      "county": "Gregg (outside priority \u2014 East TX)",
       "state": "TX",
       "zip": "75605",
       "phone": "903-668-1448",
@@ -1557,17 +1809,22 @@
       "layer2_sellability": 72,
       "layer2_comment": "500+ unit state-of-the-art facility (1994 buildout). Longview East TX market. 32-yr operating history. Long-term manager Ruth mentioned in reviews. ~$1-1.5M annual rev. SBA 7(a) financeable.",
       "layer3_behavioral_trigger": 75,
-      "layer3_comment": "Tells: (1) Single legacy facility (Cubby Hole expanded under different brand/structure to multi-state); (2) 28-yr current-owner tenure (Bill since 1998); (3) Long-tenure manager Ruth — possible operator-successor candidate; (4) Personally-managed feel in reviews. Live-fetch successor protocol incomplete — need to confirm Ruth's role (employee vs operator-successor).",
+      "layer3_comment": "Tells: (1) Single legacy facility (Cubby Hole expanded under different brand/structure to multi-state); (2) 28-yr current-owner tenure (Bill since 1998); (3) Long-tenure manager Ruth \u2014 possible operator-successor candidate; (4) Personally-managed feel in reviews. Live-fetch successor protocol incomplete \u2014 need to confirm Ruth's role (employee vs operator-successor).",
       "layer4_market_pull": 68,
       "layer4_comment": "Longview East TX = tertiary market -3; less rollup demand than top-4 metros. ETA/individual buyer pull only.",
       "final_score": 71,
       "final_tier": "B_forward",
-      "final_comment": "Cubby Hole Texas (Longview) — owner 'Bill' (since 1998 from founder Jerry Hendrix), 28-yr tenure, single 500+ unit facility, long-tenure manager Ruth. Outside priority counties (East TX). B-tier: classic legacy single-facility East TX independent with possible internal operator-successor in Ruth. Needs verification of Ruth's role + Gregg CAD parcel search + SOS officer search.",
+      "final_comment": "Cubby Hole Texas (Longview) \u2014 owner 'Bill' (since 1998 from founder Jerry Hendrix), 28-yr tenure, single 500+ unit facility, long-tenure manager Ruth. Outside priority counties (East TX). B-tier: classic legacy single-facility East TX independent with possible internal operator-successor in Ruth. Needs verification of Ruth's role + Gregg CAD parcel search + SOS officer search.",
       "value_add_thesis": "Single 32-yr East TX legacy facility, owner Bill aging. Verify if longtime manager Ruth is internal successor or pure employee. Acquire as East TX standalone (lower-multiple secondary market); modernize PMS + add online rental; sustain Bill as paid consultant during transition.",
       "confidence": "low",
-      "data_completeness": 0.50,
+      "data_completeness": 0.5,
       "data_sources": [
-        {"source": "search_snippet", "url": "https://cubbyholeusa.com/about-us/", "fetched_at": "2026-05-16T00:00:00Z", "fields": "Jerry_Hendrix_1994,sold_1998,Bill_current_owner_per_reviews"}
+        {
+          "source": "search_snippet",
+          "url": "https://cubbyholeusa.com/about-us/",
+          "fetched_at": "2026-05-16T00:00:00Z",
+          "fields": "Jerry_Hendrix_1994,sold_1998,Bill_current_owner_per_reviews"
+        }
       ]
     }
   ]
