@@ -1,0 +1,323 @@
+{
+  "batch_id": "surveying_enrich_batch_4",
+  "fetched_at": "2026-05-16",
+  "notes": "Live-fetch enrichment continuation for top candidates 31-40.",
+  "results": [
+    {
+      "license_number": "10093600",
+      "legal_name": "VOSS ENGINEERING, INC.",
+      "website": "https://www.vossengineeringinc.com/",
+      "phone": "(361) 854-6202",
+      "team_page_url": "https://www.vossengineeringinc.com/",
+      "successor_found": true,
+      "successor_evidence": "LinkedIn shows 'Ron Voss Jr - Voss Engineering' (linkedin.com/in/ron-voss-jr-7b3325331/) — explicit Jr. family-surname successor active at the firm. Live-fetch of vossengineeringinc.com (2026-05-16) confirms 'family-owned' and multi-discipline (engineering + surveying since 1976, 49yr); copyright 2026. The senior Ronald A. Voss is RPLS-of-record per TBPELS (granted 1979) + TAMU CE 1970; Ron Voss Jr is active per LinkedIn. DEMOTE A→B.",
+      "team_page_evidence": "vossengineeringinc.com live-fetch: 'family-owned business serving the Coastal Bend... since 1976' / multi-discipline (foundation, windstorm, surveying, light structural); copyright 2026. Ron Voss Jr active at firm per LinkedIn.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Ron Voss Jr is explicit Jr. family-surname successor on LinkedIn at the firm — internal-buy-in candidate.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "linkedin_grad_year",
+      "comptroller_status": "active (Coastal Bend Home Builders Association member + current website)",
+      "service_specialties": ["foundation engineering","windstorm","surveying","light structural"],
+      "data_sources": [
+        {"source": "LinkedIn Ron Voss Jr", "url": "https://www.linkedin.com/in/ron-voss-jr-7b3325331/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["jr_successor_at_firm"]},
+        {"source": "vossengineeringinc.com (live-fetch)", "url": "https://www.vossengineeringinc.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["family_ownership","tenure","copyright_year"]}
+      ]
+    },
+    {
+      "license_number": "10043300",
+      "legal_name": "PSA ENGINEERS, INC.",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "successor_evidence": "Pansak Sribhen is the named Principal P.E.+RPLS at PSA Engineering (LinkedIn). 17819 Davenport Rd, Dallas. Blue Book since 1996 (~30yr listed). No public successor identified.",
+      "team_page_evidence": "Blue Book + Manta + Yelp confirm address, principal. LinkedIn confirms title.",
+      "coasting_tells": [
+        "Solo Principal Pansak Sribhen for 46+ years (RPLS granted 1980) — no second principal identified.",
+        "Owner age est ~76 (RPLS 1980 + 30 + 16).",
+        "Limited web presence — referral-driven posture.",
+        "Multi-discipline engineering + surveying — engineering-primary fits the consulting-engineer profile."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (Blue Book current)",
+      "service_specialties": ["consulting engineering","surveying"],
+      "data_sources": [
+        {"source": "Blue Book / LinkedIn Pansak Sribhen", "url": "https://www.linkedin.com/in/pansak-sribhen-pe-rpls-b201a755/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["title","credentials"]}
+      ]
+    },
+    {
+      "license_number": "10054600",
+      "legal_name": "STD LAND SURVEYING",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "exclusion_reason": "No business presence found via web search. Personal-name solo practitioner without firm structure (David Michael Mullins, RPLS granted 1980, located in Forney TX 75126 Kaufman County). Sub-SBA scale likely.",
+      "demote_to_tier": "C_watch",
+      "team_page_evidence": "No active website found. Different 'RDS Surveyors' nearby in Forney but different operator.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "verification_needed",
+      "data_sources": []
+    },
+    {
+      "license_number": "10059800",
+      "legal_name": "SCARBOROUGH ENGINEERING, INC.",
+      "website": null,
+      "phone": "(817) 451-6687",
+      "team_page_url": null,
+      "successor_found": false,
+      "successor_evidence": "Scarborough Engineering operating at 2400 Scott Ave, Fort Worth TX 76103. 12+yr in business per Blue Book (from 2014 — but RPLS Jon D Scarborough granted 1980, so 46yr RPLS tenure preceded firm). Solo Jon Scarborough as owner. 6 documented projects $2.8M total = small but real operation.",
+      "team_page_evidence": "Blue Book + Zabalist + Manta confirm firm operating. Jon Scarborough is owner + RPLS-of-record.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Firm tenure 12yr (from 2014) — RPLS tenure proxy of 46yr is misleading. Firm is smaller / younger than RPLS proxy suggests. Sub-A profile but real operating firm in DFW metro.",
+      "coasting_tells": [
+        "Solo Jon Scarborough P.E.+RPLS — single principal.",
+        "Owner age est ~76 (RPLS 1980 + 30 + 16) — natural exit window.",
+        "Firm tenure 12yr (2014) — not 46yr.",
+        "$2.8M lifetime project value across 6 projects = sub-scale ($300K-700K rev range)."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy_misleading",
+      "comptroller_status": "active",
+      "service_specialties": ["engineering","land surveying"],
+      "data_sources": [
+        {"source": "Blue Book / Zabalist", "url": "https://www.thebluebook.com/iProView/328848/scarborough-engineering-inc/engineers/locations-contacts/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["principal","established_year","project_value"]}
+      ]
+    },
+    {
+      "license_number": "10002700",
+      "legal_name": "Bass & Welsh Engineering",
+      "website": "http://www.bass-welsh.com/",
+      "phone": "(361) 882-5521",
+      "team_page_url": null,
+      "successor_found": null,
+      "successor_evidence": "Murray Bass Jr P.E.+RPLS is named partner at Bass & Welsh per LinkedIn. The 'Jr' in Bass's name suggests there may be a Murray Bass Sr (deceased or retired); BUT he is the current PARTNER (with Welsh) = two-partner firm. 6-10 employees / $1M-$5M revenue per ProView. Multi-discipline civil + marine + survey.",
+      "team_page_evidence": "ProView + RocketReach + LinkedIn confirm two-partner firm (Bass + Welsh); 6-10 employees; $1M-$5M revenue; multi-discipline (civil engineering, marine engineering, marine surveys, municipal surveys). Specialty marine engineering = Corpus Christi coastal/marine niche.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Two-partner firm (Bass + Welsh) = succession depth implicit. Mid-size ($1M-$5M rev). Welsh is the other principal/partner = co-owner candidate, not pure coasting-solo profile. Marine engineering specialty = highly differentiated niche.",
+      "coasting_tells": [
+        "Mid-size ($1M-$5M rev) two-partner firm in Corpus Christi — coastal/marine specialty niche.",
+        "Murray Bass Jr 'Jr' suffix = generational; potential succession further up the tree."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (current website + multi-listing)",
+      "service_specialties": ["civil engineering","marine engineering","marine surveys","municipal surveys"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "ProView", "url": "https://www.thebluebook.com/iProView/1344529/bass-welsh-engineering/engineers/locations-contacts/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["partners","revenue_range","employee_count"]},
+        {"source": "LinkedIn Murray Bass Jr P.E. R.P.L.S.", "url": "https://www.linkedin.com/in/murray-bass-jr-p-e-r-p-l-s-7488ab18", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["credentials","partnership"]}
+      ]
+    },
+    {
+      "license_number": "10041000",
+      "legal_name": "CIVIL ENGINEERING CONSULTANTS",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "successor_evidence": "Civil Engineering Consultants is a San Antonio civil engineering / land planning / surveying firm founded 1983. Alan Donald Lindskog is the RPLS-of-record per TBPELS (granted 1980). No public website found in search. Multi-discipline (transportation, water/wastewater, construction management, urban planning, residential/commercial site dev, land surveying).",
+      "team_page_evidence": "Search-only data: founded 1983 (43yr operating), multi-discipline civil engineering firm in San Antonio. PitchBook + Eagle Pass City engineering firm list reference. Limited public web presence.",
+      "coasting_tells": [
+        "Solo RPLS Alan D. Lindskog for 46+ years (RPLS granted 1980).",
+        "Owner age est ~76.",
+        "Founded 1983 (43yr operating) — long-tenured.",
+        "Limited web presence — referral-driven low-marketing posture."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (PitchBook + city engineering firm list)",
+      "service_specialties": ["civil engineering","transportation","water/wastewater","land surveying","urban planning"],
+      "data_sources": [
+        {"source": "PitchBook + Eagle Pass City Engineering List", "url": "https://www.eaglepasstx.gov/DocumentCenter/View/1557/Engineering-Firms-List-PDF", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["multi_discipline","est_year"]}
+      ]
+    },
+    {
+      "license_number": "10020500",
+      "legal_name": "RANDY L. STROUD",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "exclusion_reason": "Personal-name firm (legal name = RPLS personal name 'RANDY L. STROUD'). No active business website found. Likely sole-prop consulting practice in Angleton TX (Brazoria County). Sub-SBA scale.",
+      "demote_to_tier": "C_watch",
+      "demote_reason": "Personal-name firm with no public business presence — likely sub-$300K consulting practice; not an SBA acquisition target.",
+      "team_page_evidence": "No public business website. Personal-name LLC format.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "verification_needed",
+      "data_sources": []
+    },
+    {
+      "license_number": "10104700",
+      "legal_name": "ANDREW LONNIE SIKES, INC.",
+      "website": "https://www.sikessurveying.com/",
+      "phone": null,
+      "team_page_url": "https://www.sikessurveying.com/about.php",
+      "successor_found": false,
+      "successor_evidence": "Andy Sikes P.E.+RPLS is President per LinkedIn. Started business as sole proprietor 1977, incorporated 1980. Multi-service (engineering + surveying + GIS + hydrographic + GPS + aerial). Clients include 'World's largest corporations, major industries, significant institutions and general contractors.' No public successor identified — Andy Sikes appears solo principal but firm has employees.",
+      "team_page_evidence": "sikessurveying.com/about.php: Founded 1977 (sole prop), incorporated 1980. 49yr in business. Andy Sikes Principal+RPLS. Multi-service: civil engineering + surveying + GIS + hydrographic + GPS + aerial. Industrial / institutional / large-corporation client base.",
+      "coasting_tells": [
+        "Solo Principal Andy Sikes for 46+ years (RPLS granted 1980) — no second principal identified.",
+        "Multi-service (engineering + surveying + GIS + aerial) but solo-principal.",
+        "Specialty in industrial / institutional / large-corporation work — premium B2B recurring base.",
+        "Owner age est ~76 (RPLS 1980 + 30 + 16).",
+        "Limited tech-stack signals on website despite multi-service offering."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (current operating website)",
+      "service_specialties": ["civil engineering","surveying","GIS","hydrographic","GPS","aerial","industrial"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "sikessurveying.com about page", "url": "https://www.sikessurveying.com/about.php", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founder_credentials","established_year","incorporated_year","services","clients"]}
+      ]
+    },
+    {
+      "license_number": "10194928",
+      "legal_name": "Larry Turman",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "exclusion_reason": "Personal-name firm. Larry Turman has TWO entities on TBPELS (10194928 sole-prop + 10193888 Centro Resources). Centro Resources is the active modern firm (23 employees, $4M rev); 'Larry Turman' (10194928) is the personal-name consulting practice. Drop personal-name entity as sub-SBA / duplicate.",
+      "demote_to_tier": "C_watch",
+      "demote_reason": "Duplicate of Centro Resources (Turman's main firm); personal-name LLC is likely vestigial sole-prop consulting entity.",
+      "team_page_evidence": "Turman is Principal at Centro Resources LLC (10193888); 'Larry Turman' is the personal-name TBPELS license (10194928).",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (presumed - Centro is active)",
+      "data_sources": [
+        {"source": "TBPELS firm-RPLS join", "url": "https://tbpedownloads.s3-us-west-2.amazonaws.com/sur-firm_roster.csv", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["duplicate_entity"]}
+      ]
+    },
+    {
+      "license_number": "10194216",
+      "legal_name": "CLINTON LAMONT RIPPY SURVEYING COMPANY, INC.",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "is_distressed": true,
+      "distress_signals": ["Rippy Surveying Company licensing 'inactive when last checked' per third-party listings — license-board status flagged inactive; potential lapsed license = distress hard gate."],
+      "exclusion_reason": "License flagged inactive per cross-reference. Although TBPELS roster (May 2026) shows 'Registered' status, the third-party reports indicate operating status questionable. Cap at D_pass pending Comptroller confirmation.",
+      "demote_to_tier": "D_pass",
+      "team_page_evidence": "Third-party search results: 'Rippy Surveying Company, Inc holds land surveying licenses including one as a Registered Professional Land Surveyor firm, though these were inactive when last checked.' Need direct Comptroller + TBPELS state confirmation.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "verification_needed - third-party indicates inactive",
+      "data_sources": [
+        {"source": "BuildZoom Rippy", "url": "https://www.buildzoom.com/contractor/rippy-surveying-company-inc", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["license_status_inactive"]}
+      ]
+    },
+    {
+      "license_number": "10040700",
+      "legal_name": "LAMPE SURVEYING, INC.",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": true,
+      "successor_evidence": "TBPELS RPLS join shows TWO active RPLS at Lampe Surveying: Donald W. Lampe (RPLS granted 1972) + Matt Derek Lampe (RPLS granted 2001). Same-surname father-son team. DEMOTE A→B per family-surname successor rule. Located Brenham TX (Washington County).",
+      "team_page_evidence": "TBPELS RPLS roster: Lampe Surveying Inc (firm 10040700) has Donald W. Lampe (1972) + Matt Derek Lampe (2001) — 29-year-younger same-surname RPLS = explicit family-successor.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Matt Derek Lampe (RPLS granted 2001) is the family-surname successor to Donald W. Lampe — internal-buy-in candidate.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (presumed)",
+      "service_specialties": ["land surveying"],
+      "data_sources": [
+        {"source": "TBPELS RPLS roster cross-reference", "url": "https://tbpedownloads.s3-us-west-2.amazonaws.com/rpls_roster.csv", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["family_successor"]}
+      ]
+    },
+    {
+      "license_number": "10095700",
+      "legal_name": "GORMLY SURVEYING",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": true,
+      "successor_evidence": "TBPELS RPLS join shows TWO active RPLS at Gormly Surveying: Freddy A. Gormly (RPLS granted 1977) + Chad Alan Gormly (RPLS granted 2004). Same-surname father-son team. DEMOTE A→B. Located Alvin TX (Brazoria County).",
+      "team_page_evidence": "TBPELS RPLS roster: Gormly Surveying (firm 10095700) has Freddy A. Gormly (1977) + Chad Alan Gormly (2004) — 27-year-younger same-surname RPLS = explicit family-successor.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Chad Alan Gormly (RPLS granted 2004) is the family-surname successor to Freddy A. Gormly — internal-buy-in candidate.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (presumed)",
+      "service_specialties": ["land surveying"],
+      "data_sources": [
+        {"source": "TBPELS RPLS roster cross-reference", "url": "https://tbpedownloads.s3-us-west-2.amazonaws.com/rpls_roster.csv", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["family_successor"]}
+      ]
+    },
+    {
+      "license_number": "10068300",
+      "legal_name": "GEARLD A. CARTER AND ASSOCIATES LAND SURVEYORS",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "successor_evidence": "Solo Gearld A. Carter (RPLS granted 1977, 49yr tenure). 'AND ASSOCIATES' in legal name with no public second RPLS in TBPELS = classic name-without-associates pattern. Located Athens TX (Henderson County, secondary East TX market).",
+      "team_page_evidence": "TBPELS records only Gearld A Carter as the active RPLS at firm 10068300. No public website found in search.",
+      "coasting_tells": [
+        "Solo RPLS Gearld A. Carter for 49+ years (RPLS granted 1977).",
+        "'AND ASSOCIATES' in legal name with no actual associates = classic coasting tell.",
+        "Owner age est ~79 (RPLS 1977 + 30 + 18 = ~79).",
+        "Athens TX = secondary East TX market — lower transactional volume, but long-tenured local boundary surveyor."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (presumed)",
+      "service_specialties": ["land surveying"],
+      "data_sources": [
+        {"source": "TBPELS firm-RPLS join", "url": "https://tbpedownloads.s3-us-west-2.amazonaws.com/sur-firm_roster.csv", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["solo_rpls","legal_name_pattern"]}
+      ]
+    },
+    {
+      "license_number": "10112200",
+      "legal_name": "JEFFREY MOON & ASSOCIATES, INC.",
+      "website": "https://moonsurveying.com/",
+      "phone": null,
+      "team_page_url": "https://moonsurveying.com/about/",
+      "successor_found": true,
+      "successor_evidence": "moonsurveying.com (search summary): JMA has 'three field crews with a full-time staff of ten that includes three Registered Professional Land Surveyors and three survey technicians.' THREE active RPLS at the firm. The 1987 founding by Jeff Moon (who took over from Wally Tuttle's Arrowhead Surveying) is established multi-generation. DEMOTE A→B: 3 RPLS = depth of credential succession.",
+      "team_page_evidence": "moonsurveying.com (search summary): 3 field crews, 10 staff including 3 RPLS + 3 survey techs. Founded 1987 (Jeff Moon) from acquired Arrowhead Surveying (1960s). Conroe TX. Full-service.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Three active RPLS at firm = succession depth. NOTE: TBPELS join showed Seth Malone Gibson as senior RPLS at this firm (firm 10112200) + Jeffrey Moon as junior — but actual firm reporting shows Jeff Moon owns it (he bought Arrowhead Surveying / Wally Tuttle 1987). The TBPELS join is misleading because Seth Gibson's RPLS happens to also be attached to firm 10112200 in addition to his own firm 10057100 — possibly Seth Gibson was a pre-acquisition RPLS at Arrowhead Surveying.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy_misleading",
+      "comptroller_status": "active (current website + multi-staff)",
+      "service_specialties": ["full-service land surveying","commercial","residential","public sector"],
+      "data_sources": [
+        {"source": "moonsurveying.com (search summary)", "url": "https://moonsurveying.com/about/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["staff_count","RPLS_count","founding_history"]}
+      ]
+    },
+    {
+      "license_number": "10194261",
+      "legal_name": "3B ENERGY SERVICES, LLC",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": null,
+      "exclusion_reason": "Firm name suggests energy-services operator rather than pure surveying. Two RPLS at firm: Michael D. McGuinness (1978 senior) + Ryan Garrett Weber (2021 junior). 43-year gap = explicit younger successor in place; PLUS firm name suggests not pure surveying. DEMOTE.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Ryan Weber (2021 RPLS) is the explicit younger successor — internal-buy-in. Plus firm name '3B Energy Services' is energy operator, not pure surveying-services provider.",
+      "team_page_evidence": "TBPELS RPLS join shows two RPLS at firm; firm legal name '3B Energy Services LLC' indicates energy operator.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy_misleading",
+      "comptroller_status": "active (presumed)",
+      "data_sources": [
+        {"source": "TBPELS firm-RPLS join", "url": "https://tbpedownloads.s3-us-west-2.amazonaws.com/rpls_roster.csv", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["two_rpls","43yr_age_gap","firm_name_suggests_operator"]}
+      ]
+    }
+  ]
+}

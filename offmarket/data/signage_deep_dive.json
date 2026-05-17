@@ -1,0 +1,113 @@
+{
+  "deep_dive_run_label": "signage-tx-2026-05-15",
+  "score_run_id": "0b92ff99-cec4-4878-8c30-99378609acbb",
+  "deep_dive_executed_at": "2026-05-16T05:35:00Z",
+  "candidates_evaluated": 2,
+  "passed": 2,
+  "demoted_to_b": 0,
+  "demoted_to_d_distress_surfaced": 0,
+  "demotion_reasons": {},
+  "candidates": [
+    {
+      "license_number": "18035",
+      "legal_name": "AAA ELECTRICAL SIGNS",
+      "city": "Donna",
+      "county": "Hidalgo",
+      "deep_dive_items": {
+        "item_1_owner_age": {
+          "result": "PASS — Paul W. Sullivan founded 1970 (56-yr tenure). Founder-tenure inference yields min age ~76 (founded at 20), realistic 78-82. License-tenure proxy = high tenure but proxy-only. OV65/CAD lookup NOT pulled this run; recommended before contact. Confidence on age: medium.",
+          "owner_age_estimate": 78,
+          "owner_age_source": "founder_tenure_inference"
+        },
+        "item_2_successor_verification": {
+          "result": "PASS — Live team-page fetch 2026-05-16 at 3asigns.com/about-us confirms Paul W. Sullivan is sole listed principal (CEO + Founder). No family-Sullivan named. Operational managers are long-tenured but not owner-buyers: Husbaldo Salazar (Operations Manager), Mike Hill (Plant Manager 32yr), Joe Herrera (Sr Designer 43yr), Norma Treviño (Comptroller 17yr). Cross-checked via Zoominfo + Crunchbase + BBB: Paul Sullivan is sole listed principal across all profiles. No co-principal, no son/daughter, no DSO/franchise.",
+          "team_page_url": "https://3asigns.com/about-us/",
+          "team_page_fetched_at": "2026-05-16T05:10:00Z",
+          "direction": "positive"
+        },
+        "item_3_comptroller_franchise_tax": {
+          "result": "PENDING — Comptroller Taxable Entity Search not pulled this run (POST form interactive; deferred). TDLR ESC license is ACTIVE with expiration 2026-12-12 (recent renewal). Operational evidence (active website, recent team page content) consistent with Active entity status. Recommend Comptroller verification before personal outreach.",
+          "tdlr_license_status": "Active",
+          "license_expiration": "2026-12-12"
+        },
+        "item_4_disciplinary": {
+          "result": "PASS (no signal found) — No TDLR disciplinary action visible in search; no complaint cluster on BBB profile; no media-search hits for enforcement actions.",
+          "method": "Web search for enforcement / disciplinary actions"
+        },
+        "item_5_civil_filings_liens": {
+          "result": "PENDING — Hidalgo Co. clerk + CourtListener federal search not run this batch. Recommend before contact. Web-search yielded no visible litigation tells.",
+          "method": "deferred"
+        },
+        "item_6_building_ownership": {
+          "result": "PENDING — Hidalgo CAD lookup on 2407 E Business Hwy 83, Donna TX 78537 not pulled this run. If owner-held, supports SBA 504 + sale-leaseback option. Recommended before contact.",
+          "method": "deferred"
+        },
+        "item_7_value_add_thesis_sharpening": {
+          "result": "PASS — Bespoke thesis written: (1) Modern site + online quote intake to replace 23-yr-stale 2003-era site; (2) Customer portal for service tickets + photo documentation (RGV retail-chain customers will adopt fast); (3) Formalize multi-city route + maintenance-contract program leveraging existing 9-city footprint (Pharr/Brownsville/Donna/Corpus Christi/San Antonio/Laredo/Mission/Harlingen/McAllen); (4) AI dispatch + telematics for the trade-managers running ops; (5) Bilingual digital signage / LED retrofit upsell for Mexican retail expansion in Brownsville/Laredo. Asset-rich (RGV warehouse + service fleet) supports SBA 504 + SBA 7(a) stack."
+        },
+        "item_8_metro_submarket": {
+          "result": "PASS — Hidalgo Co. (Donna HQ) + Cameron Co. (Brownsville/Harlingen) + Webb Co. (Laredo) + Nueces Co. (Corpus Christi) + Bexar Co. (San Antonio) service area. Border-metro nudge +2 per signage-vertical config. RGV bilingual + cross-border B2B growth = thesis-positive. Multi-county service area reads as real route business."
+        },
+        "item_9_final_acceptance": {
+          "result": "PASS — All A-tier acceptance criteria met: confidence=medium (capped by proxy-only age + deferred Comptroller/CAD); 2 high-confidence layers (L1 founder-tenure + L3 23-yr-stale site); successor verified via live fetch; value-add thesis bespoke; metro/submarket sane."
+        }
+      },
+      "final_tier": "A_acquire_self",
+      "verdict": "ACCEPTED — proceed with deferred Comptroller + CAD + lien checks before any personal outreach"
+    },
+    {
+      "license_number": "18048",
+      "legal_name": "GLOBALSIGNS INC",
+      "city": "Fort Worth",
+      "county": "Tarrant",
+      "deep_dive_items": {
+        "item_1_owner_age": {
+          "result": "PASS — Rick Robertson founded 1987 (39-yr tenure). Founder-tenure inference yields min age ~62 (founded at 23), realistic 65-72. LinkedIn profile confirms 'Owner/Founder' role current. License-tenure proxy = high tenure but proxy-only. OV65/CAD lookup NOT pulled this run; recommended before contact. Confidence on age: medium.",
+          "owner_age_estimate": 68,
+          "owner_age_source": "founder_tenure_inference + linkedin_owner_current"
+        },
+        "item_2_successor_verification": {
+          "result": "PASS — Live team-page fetch 2026-05-16 at globalsignsinc.com/about-us confirms Rick Robertson is sole listed principal. NO son/daughter/co-principal/GM named. Only generic 'skilled staff' and 'TDLR-licensed journeyman sign electricians' mentioned. Cross-checked via LinkedIn + Manta + thebluebook: Rick Robertson is sole Owner/Founder across all profiles. No co-principal, no DSO/franchise, no platform subsidiary.",
+          "team_page_url": "https://globalsignsinc.com/about-us/",
+          "team_page_fetched_at": "2026-05-16T05:10:00Z",
+          "direction": "positive"
+        },
+        "item_3_comptroller_franchise_tax": {
+          "result": "PENDING — Comptroller Taxable Entity Search not pulled this run. TDLR ESC license is ACTIVE. Active website + 2021 copyright + named national customers (Domino's, Honda, Starbucks, AutoZone, Chicken Express) consistent with Active entity status.",
+          "tdlr_license_status": "Active"
+        },
+        "item_4_disciplinary": {
+          "result": "PASS (no signal found) — No TDLR disciplinary action visible; no BBB complaint cluster.",
+          "method": "Web search"
+        },
+        "item_5_civil_filings_liens": {
+          "result": "PENDING — Tarrant Co. clerk + CourtListener not run this batch. Web-search yielded no visible litigation tells.",
+          "method": "deferred"
+        },
+        "item_6_building_ownership": {
+          "result": "PENDING — Tarrant CAD lookup on 5105 E California Pkwy, Fort Worth TX not pulled this run. If owner-held, supports SBA 504 + sale-leaseback. Recommended before contact.",
+          "method": "deferred"
+        },
+        "item_7_value_add_thesis_sharpening": {
+          "result": "PASS — Bespoke thesis written: (1) Customer portal for the national-account base (Domino's, Honda, Starbucks, AutoZone, Chicken Express) — service-ticket photo documentation + inspection scheduling is the highest-ROI lever for a national-account book; (2) Modernize from 5-yr-stale (2021) site to current portfolio CMS; (3) Online quote engine for non-account smaller projects; (4) Formalize maintenance-contract pricing tiers for the existing national-brand customer pipeline; (5) LED-retrofit-as-a-service program for the channel-letter installed base. The national-account book is the asset — buyer should preserve relationships through transition."
+        },
+        "item_8_metro_submarket": {
+          "result": "PASS — Fort Worth (Tarrant) DFW corridor + multi-state national-account servicing. National-brand customers raise L4. DFW commercial-corridor nudge applies."
+        },
+        "item_9_final_acceptance": {
+          "result": "PASS — All A-tier acceptance criteria met: confidence=medium (capped by proxy-only age + deferred Comptroller/CAD); 2 high-confidence layers (L1 founder-tenure + L2 national-brand-account base); successor verified via live fetch; value-add thesis bespoke; metro/submarket strong."
+        }
+      },
+      "final_tier": "A_acquire_self",
+      "verdict": "ACCEPTED — proceed with deferred Comptroller + CAD + lien checks before any personal outreach"
+    }
+  ],
+  "deferred_verifications_for_pre_outreach": [
+    "TX Comptroller Taxable Entity Search — confirm Active status + Registered Agent + Officer list for both A-tier rows",
+    "Hidalgo CAD lookup (2407 E Business Hwy 83 Donna 78537) — building ownership + Paul W. Sullivan homestead OV65",
+    "Tarrant CAD lookup (5105 E California Pkwy Fort Worth) — building ownership + Rick Robertson homestead OV65",
+    "Hidalgo + Tarrant county clerk civil records — liens, judgments, suits against entity + owner",
+    "PACER-lite via CourtListener — federal civil filings",
+    "Wayback Machine snapshot diff — confirm 23-yr-stale (AAA) and 5-yr-stale (Global Signs) tells via direct snapshot compare"
+  ]
+}

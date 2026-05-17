@@ -1,0 +1,1 @@
+update offmarket.score_runs set business_count = (select count(*) from offmarket.business_scores where score_run_id = '02713a3e-ded7-4f5d-8e3c-ff77f8e796b6') where id = '02713a3e-ded7-4f5d-8e3c-ff77f8e796b6';

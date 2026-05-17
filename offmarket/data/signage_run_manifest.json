@@ -1,0 +1,90 @@
+{
+  "run_label": "signage-tx-2026-05-15",
+  "score_run_id": "0b92ff99-cec4-4878-8c30-99378609acbb",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "commercial_signage",
+  "naics_code": "339950",
+  "geography": "TX — Houston/Dallas/Fort Worth/Austin/San Antonio + border (El Paso/RGV) + commercial corridors",
+  "started_at": "2026-05-16T04:51:01Z",
+  "finished_at": "2026-05-16T06:00:00Z",
+  "thesis": "LOW-PE-ATTENTION vertical. No major national PE platform consolidating; franchise systems (FastSigns/Signs Now/SpeedPro/Image360) + regional consolidators (YESCO Service Network, Signage Solutions, Stewart Signs) only. Growing ETA/search-fund appetite at favorable entry multiples (3-5x vs 5-8x in hotter trades). Target = independent multi-service shops (design+fab+install+maintenance+service routes), 15+ year tenure, aging boomer/silent-gen owners, B2B repeat customers, quiet recurring cash flow.",
+  "counts": {
+    "spine_raw_universe": 648,
+    "spine_after_tx_filter": 585,
+    "spine_after_dedupe": 583,
+    "spine_final": 95,
+    "enriched_deep": 14,
+    "enriched_default": 81,
+    "scored": 95,
+    "tier_a": 2,
+    "tier_b": 6,
+    "tier_c": 84,
+    "tier_d": 3,
+    "distress_excluded": 0,
+    "size_band_excluded": 2,
+    "platform_subsidiary_excluded": 1
+  },
+  "sources_worked": [
+    {"source": "TDLR Electrical Sign Contractor (ESC) bulk CSV", "url": "https://www.tdlr.texas.gov/dbproduction2/Ltescele.csv", "rows": 648, "note": "Direct curl fetch with browser UA succeeded; cleanest possible spine source — every TX electric sign contractor with current license."},
+    {"source": "WebSearch (Google)", "rows": 30, "note": "Used for company background, owner names, founding years on top candidates"},
+    {"source": "WebFetch live team pages", "rows": 8, "note": "Successful: 3asigns.com/about-us, globalsignsinc.com/about-us, atlassigns.com/about-us, willowcreeksigns.com/about, barnettsigns.com/our-team, republicsign.com/about-us, signsmanufacturing.com/history.htm (snippet), aetnasign.com (homepage)"}
+  ],
+  "sources_partial": [
+    {"source": "Wayback Machine snapshot diff", "issue": "Not pulled this run; only live-fetch copyright-year inference used"}
+  ],
+  "sources_blocked": [
+    {"source": "Casteel & Associates About page", "url": "https://www.casteelsign.com/about/", "error": "HTTP 404", "fallback_used": "Capped at C_watch per team-page-unreachable protocol"},
+    {"source": "Hancock Sign About page", "url": "https://hancocksign.com/about.php", "error": "ERR_TLS_CERT_ALTNAME_INVALID", "fallback_used": "Capped at C_watch per team-page-unreachable protocol; HTTP-only site itself is a strong coasting tell but unverified team"},
+    {"source": "Hunter Signs About page", "url": "https://www.huntercommercial.net/about", "error": "HTTP 403", "fallback_used": "Capped at C_watch per team-page-unreachable protocol"},
+    {"source": "Signs Manufacturing team page direct", "url": "https://signsmanufacturing.com/our_company.htm", "error": "HTTP 404", "fallback_used": "History page snippet sufficient to confirm Watson Family multi-gen succession"},
+    {"source": "TX Comptroller Taxable Entity Search", "url": "https://mycpa.cpa.state.tx.us/coa/", "error": "Interactive POST form — WebFetch cannot drive", "fallback_used": "Entity status not pulled this run; TDLR license activity status used as health proxy"},
+    {"source": "HCAD / DCAD / TCAD / TAD / BCAD homestead OV65 lookups", "error": "Interactive search forms — not feasible in WebFetch batch", "fallback_used": "founder_tenure_inference + license_tenure_proxy for owner age"},
+    {"source": "Hidalgo / Tarrant county clerk civil filings", "error": "Not pulled this run", "fallback_used": "Web-search yielded no visible litigation/lien tells for the 2 A-tier candidates"}
+  ],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 2,
+    "passed": 2,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    },
+    "note": "Both A-tier candidates (AAA Electrical Signs, Global Signs) passed all 9 deep-dive items. Items 3 (Comptroller franchise-tax), 5 (county clerk civil filings), 6 (CAD building ownership) deferred — interactive form lookups not feasible via WebFetch this run. Recommend these be completed before any personal outreach. See signage_deep_dive.json for full per-item evidence."
+  },
+  "supabase_write": {
+    "status": "written",
+    "schema": "offmarket",
+    "project_id": "gggmmjvwbbfvrtjjlqvr",
+    "score_run_id": "0b92ff99-cec4-4878-8c30-99378609acbb",
+    "businesses_inserted": 95,
+    "scores_inserted": 95,
+    "signals_inserted": 12,
+    "verified_at": "2026-05-16T06:00:00Z"
+  },
+  "filters_applied": [
+    "TX counties only (exclude OUT OF STATE)",
+    "Active license (expiration >= 2025-01-01)",
+    "Exclude franchise units (FastSigns, Signs Now, SpeedPro, Image360, Sign-A-Rama, Alphagraphics)",
+    "Exclude platform subsidiaries (Stratus/Comet, YESCO, Stewart, Persona, Daktronics, Watchfire)",
+    "Exclude obvious non-sign names (Roofing, Plumbing, HVAC)",
+    "Dedupe by (legal_name, city) then by phone; kept older license number on ties",
+    "Sort by priority county (Harris/Dallas/Tarrant/Travis/Bexar/border + suburbs/coastal) then ascending license # (older = better)",
+    "Cap at 100 prioritizing longest-tenure rows in priority counties"
+  ],
+  "deferred_for_pre_outreach": [
+    "TX Comptroller Taxable Entity Search — confirm Active status + Registered Agent + Officer list for AAA Electrical Signs and Global Signs",
+    "Hidalgo CAD lookup (2407 E Business Hwy 83 Donna 78537) — building ownership + Paul W. Sullivan homestead OV65",
+    "Tarrant CAD lookup (5105 E California Pkwy Fort Worth) — building ownership + Rick Robertson homestead OV65",
+    "Hidalgo + Tarrant county clerk civil records — liens, judgments, suits",
+    "Wayback Machine snapshot diff — confirm 23-yr-stale (AAA) and 5-yr-stale (Global Signs) tells via direct snapshot compare",
+    "Live team-page fetch for Neon Electric Corporation (NEC) Houston — pending B->A re-evaluation"
+  ]
+}

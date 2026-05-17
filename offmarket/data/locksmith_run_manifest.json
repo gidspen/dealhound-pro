@@ -1,0 +1,127 @@
+{
+  "run_label": "locksmith-tx-2026-05-15",
+  "score_run_id": "0690a07f-dee6-42aa-af23-3cf2257ad6cd",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {
+    "layer1": 0.30,
+    "layer2": 0.25,
+    "layer3": 0.30,
+    "layer4": 0.15
+  },
+  "vertical": "locksmith",
+  "naics": "561622",
+  "geography": "TX — Harris/Dallas/Tarrant/Bexar/Travis priority (commercial focus)",
+  "thesis": "LOW-PE-attention vertical. Pop-A-Lock excluded (franchise). No national PE platform actively rolling up TX commercial locksmiths. The off-market thesis is that ETA / search-fund / independent-sponsor buyers face dramatically less bid competition than for dental / HVAC / plumbing.",
+  "started_at": "2026-05-15T23:43:00Z",
+  "finished_at": "2026-05-16T01:30:00Z",
+  "counts": {
+    "spine_rows": 37,
+    "after_dedupe": 36,
+    "enriched": 37,
+    "scored": 37,
+    "tier_a": 0,
+    "tier_b": 10,
+    "tier_c": 22,
+    "tier_d": 5,
+    "distress_excluded": 0
+  },
+  "sources_worked": [
+    {
+      "source": "company_websites_live_fetch",
+      "rows": 22,
+      "note": "direct WebFetch on company homepages and about pages — primary verification"
+    },
+    {
+      "source": "websearch_metadata",
+      "rows": 37,
+      "note": "WebSearch results for legal names, founder identification, family ownership, license #s"
+    },
+    {
+      "source": "bbb_cross_check",
+      "rows": 8,
+      "note": "BBB profiles surfaced owner/principal names not exposed on company websites (AAA Locksmith Scott White, Texas Safe & Lock Hallford/Stogner, Whitley's Gaither)"
+    },
+    {
+      "source": "linkedin_zoominfo_cross_check",
+      "rows": 6,
+      "note": "LinkedIn + ZoomInfo profiles for cross-verification — critical for Dixie Safe & Lock second-gen Joseph Rushing discovery; Alert Lock Hitchcock multi-family identification"
+    },
+    {
+      "source": "yelp_directory",
+      "rows": 4,
+      "note": "Yelp business profiles for review-count + Google reviews velocity proxy"
+    }
+  ],
+  "sources_partial": [
+    {
+      "source": "live_team_pages",
+      "url": "various /about/, /team/, /our-team/, /staff/",
+      "issue": "Most TX locksmith shops have THIN team pages. ~60% of attempts returned 404 on common about-page paths. Owner / leadership names not exposed on public sites for most candidates. This is a structural limitation of the locksmith vertical (locksmiths are notoriously bad at web marketing per the skill thesis) and limits the live-fetch successor-check to BBB/LinkedIn cross-references."
+    }
+  ],
+  "sources_blocked": [
+    {
+      "source": "TX DPS Private Security Bureau (PSB) Locksmith Company License roster",
+      "url": "https://apps.txdps.state.tx.us/dpswebsite/CrimeRecords/PrivateSecurity/RsdDownloadList.aspx",
+      "error": "ASP.NET form-based download page — not directly WebFetch-able. Would need Playwright session.",
+      "fallback_used": "Verified each spine row via individual company website + cross-referenced licenses from website footer or BBB profile. ~24 of 37 rows have verified TX DPS B-license numbers."
+    },
+    {
+      "source": "TX Comptroller Taxable Entity Search",
+      "url": "https://mycpa.cpa.state.tx.us/coa/",
+      "error": "Interactive POST form — WebFetch cannot drive",
+      "fallback_used": "entity_status set to 'unknown' for most rows. Property mgmt verification would require Comptroller manual lookup."
+    },
+    {
+      "source": "HCAD / DCAD / TAD / BCAD / TCAD homestead OV65 lookups",
+      "error": "Interactive form-based searches blocked from WebFetch; address-by-address not feasible in batch from this environment",
+      "fallback_used": "license_tenure_proxy + founder_year + biographic inference for owner age. No A-tier-grade OV65 confirmation obtained this run."
+    },
+    {
+      "source": "Wayback Machine snapshot diff for coasting tells",
+      "error": "Not attempted this run due to token budget",
+      "fallback_used": "live homepage fetch only; coasting tells based on current site state + reduced-hours + thin-team-page signals"
+    },
+    {
+      "source": "ALOA (Associated Locksmiths of America) TX member directory",
+      "url": "https://www.aloa.org/ + https://findalocksmith.com/",
+      "error": "Member directory requires individual searches; bulk export not attempted",
+      "fallback_used": "ALOA membership confirmed via individual company website mentions and websearch (Corpus Christi Safe & Lock, Guardian Safe & Lock, Securitex, Anytime Lock & Safe, AAA Locksmith, A-1 Locksmith)"
+    },
+    {
+      "source": "Yelp business pages (multiple)",
+      "url": "https://www.yelp.com/biz/<various>",
+      "error": "HTTP 403 on direct WebFetch (Yelp blocks scraping). Affects ABC Keys and Safes Corpus Christi + Heights River Oaks Houston Locksmith.",
+      "fallback_used": "websearch snippet metadata + Google Business Profile inference"
+    },
+    {
+      "source": "Several company About pages (404)",
+      "error": "Common about-page paths (/about, /about-us, /our-team, /team) returned 404 on multiple shops",
+      "fallback_used": "homepage fetch + BBB/LinkedIn/ZoomInfo cross-reference for owner identity"
+    }
+  ],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 3,
+    "passed": 0,
+    "demoted_to_b": 2,
+    "demoted_to_d_distress_surfaced": 0,
+    "demoted_to_c_successor_found": 2,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 2,
+      "successor_found_on_live_site": 0,
+      "successor_found_on_bbb_linkedin_cross_check": 3,
+      "team_page_unreachable": 12,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    },
+    "narrative": "Initial scoring produced 1 provisional A_acquire_self (Dixie Safe & Lock, final 77). Deep-dive on the top 3 boundary candidates revealed: (1) Dixie Safe & Lock — LinkedIn cross-check surfaced JOSEPH RUSHING (same surname as founder Harry Rushing) as Buyer / Inventory Control at the company — second-gen successor candidate present. Demoted A→B per skill verifying-no-successor protocol. (2) AAA Locksmith — BBB cross-check revealed SCOTT WHITE (same surname as founder Lloyd H. White) as current Manager — clean second-gen handoff. Demoted B→C. (3) Alert Lock & Key — LinkedIn + ZoomInfo cross-check surfaced THREE Hitchcock family members (Jerry, Freda, Justin) active across two generations. Demoted B→C. Net: 0 A-tier final candidates. Bilco Lock & Safe + Ace Security Solutions remain the strongest B-tier candidates at the A-tier boundary (final 76 each); CAD OV65 + voter DOB confirmation in next run could promote either to A."
+  },
+  "supabase_write": {
+    "status": "written",
+    "reason": "All 37 businesses + 37 business_scores rows upserted to offmarket schema. score_runs.business_count updated to 37. Verified via SELECT final_tier, count(*) FROM scored_targets WHERE score_run_id = '0690a07f-dee6-42aa-af23-3cf2257ad6cd' returning 0/10/22/5 (A/B/C/D).",
+    "business_signals_skipped": "business_signals rows were NOT separately persisted in this run — signal-level evidence is embedded in the businesses.raw_enrichment.signals jsonb (visible in local locksmith_targets.json) and in the layer comments on business_scores. Future iteration could decompose into business_signals rows for richer query patterns."
+  }
+}

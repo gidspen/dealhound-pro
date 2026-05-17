@@ -1,0 +1,3387 @@
+{
+  "score_run_id": "02713a3e-ded7-4f5d-8e3c-ff77f8e796b6",
+  "run_label": "surveying-tx-2026-05-15",
+  "vertical": "land_surveying",
+  "geography": "TX \u2014 major metros + energy corridors + coastal-flood metros",
+  "spine_source": "TBPELS Surveying Firms Roster CSV + RPLS Roster CSV (https://pels.texas.gov/roster/ls_rosters.html)",
+  "fetched_at": "2026-05-16T04:56:39.263543Z",
+  "filters_applied": [
+    "TX state",
+    "Headquarters rank",
+    "Status=Registered",
+    "geo_bucket in major_metro/major_metro_coastal/permian/eagle_ford/coastal_flood/secondary",
+    "n_active_rpls in [1,2,3,4]",
+    "earliest_rpls_year <= 2005 (priority A/B) or <= 2000 (priority C)"
+  ],
+  "spine_priority_explanation": {
+    "A": "1-2 active RPLS, earliest RPLS granted 1995 or earlier (owner ~58-78+) - prime exit-window candidates",
+    "B": "1-2 active RPLS, earliest RPLS granted 1996-2005 (owner ~50-65) - secondary exit-window",
+    "C": "3-4 active RPLS, earliest RPLS granted before 2000 (older multi-RPLS firms - possible succession-in-place but still candidates)"
+  },
+  "n_spine": 105,
+  "n_by_priority": {
+    "A": 60,
+    "B": 30,
+    "C": 15
+  },
+  "geo_distribution": {
+    "secondary": 25,
+    "major_metro": 44,
+    "major_metro_coastal": 29,
+    "permian": 1,
+    "coastal_flood": 5,
+    "eagle_ford": 1
+  },
+  "county_distribution": {
+    "Brazos": 3,
+    "Dallas": 9,
+    "Tarrant": 8,
+    "Galveston": 2,
+    "Washington": 2,
+    "Hood": 1,
+    "Harris": 15,
+    "Williamson": 6,
+    "Lubbock": 3,
+    "Brazoria": 3,
+    "Bexar": 6,
+    "Travis": 7,
+    "Henderson": 1,
+    "Montgomery": 5,
+    "Gregg": 1,
+    "Walker": 1,
+    "Liberty": 2,
+    "Comal": 1,
+    "Reeves": 1,
+    "Nueces": 2,
+    "Aransas": 1,
+    "Wichita": 1,
+    "Smith": 3,
+    "Bell": 1,
+    "El Paso": 2,
+    "Fort Bend": 2,
+    "Kaufman": 2,
+    "Kendall": 1,
+    "Jefferson": 1,
+    "Wilson": 1,
+    "Kerr": 1,
+    "Bastrop": 1,
+    "Collin": 3,
+    "Cameron": 1,
+    "Hunt": 1,
+    "Hidalgo": 2,
+    "Taylor": 2
+  },
+  "spine": [
+    {
+      "license_number": "10034800",
+      "legal_name": "CARLOMAGNO SURVEYING, INC.",
+      "address1": "2651 Boonville Road",
+      "address2": "#140",
+      "city": "Bryan",
+      "state": "TX",
+      "zip": "77808",
+      "county": "Brazos",
+      "geo_bucket": "secondary",
+      "firm_granted": "2007-11-12",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1562",
+          "name": "Dante Carlomagno",
+          "granted": "1967-08-23",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 59
+        }
+      ],
+      "earliest_rpls_granted": "1967-08-23",
+      "earliest_rpls_year": 1967,
+      "latest_rpls_granted": "1967-08-23",
+      "latest_rpls_year": 1967,
+      "owner_rpls_tenure_years": 59,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10040200",
+      "legal_name": "SURVEYING ASSOCIATES",
+      "address1": "1018 SOUTH BECKLEY AVENUE",
+      "address2": "",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75203",
+      "county": "Dallas",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-11-19",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1630",
+          "name": "BEN D. RYCHLIK",
+          "granted": "1969-02-19",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 57
+        }
+      ],
+      "earliest_rpls_granted": "1969-02-19",
+      "earliest_rpls_year": 1969,
+      "latest_rpls_granted": "1969-02-19",
+      "latest_rpls_year": 1969,
+      "owner_rpls_tenure_years": 57,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10194225",
+      "legal_name": "G. CURTIS SURVEYORS, LLC",
+      "address1": "3108 West 6th Street, Suite 105",
+      "address2": "",
+      "city": "Fort Worth",
+      "state": "TX",
+      "zip": "76107",
+      "county": "Tarrant",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2016-04-26",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1640",
+          "name": "Gerald A. Curtis",
+          "granted": "1969-08-27",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 57
+        }
+      ],
+      "earliest_rpls_granted": "1969-08-27",
+      "earliest_rpls_year": 1969,
+      "latest_rpls_granted": "1969-08-27",
+      "latest_rpls_year": 1969,
+      "owner_rpls_tenure_years": 57,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10194975",
+      "legal_name": "Gulf Coast Pipeline Services Inc.",
+      "address1": "1301 Dickinson Ave",
+      "address2": "",
+      "city": "Dickinson",
+      "state": "TX",
+      "zip": "77539",
+      "county": "Galveston",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2025-08-20",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1748",
+          "name": "Gordon Wesley Hans",
+          "granted": "1972-08-22",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 54
+        }
+      ],
+      "earliest_rpls_granted": "1972-08-22",
+      "earliest_rpls_year": 1972,
+      "latest_rpls_granted": "1972-08-22",
+      "latest_rpls_year": 1972,
+      "owner_rpls_tenure_years": 54,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10193888",
+      "legal_name": "CENTRO RESOURCES",
+      "address1": "5201 THRESHING DR",
+      "address2": "",
+      "city": "Fort Worth",
+      "state": "TX",
+      "zip": "76179",
+      "county": "Tarrant",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2013-02-26",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1740",
+          "name": "Larry Turman",
+          "granted": "1972-02-16",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 54
+        }
+      ],
+      "earliest_rpls_granted": "1972-02-16",
+      "earliest_rpls_year": 1972,
+      "latest_rpls_granted": "1972-02-16",
+      "latest_rpls_year": 1972,
+      "owner_rpls_tenure_years": 54,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10040700",
+      "legal_name": "LAMPE SURVEYING, INC.",
+      "address1": "P. O. BOX 2037",
+      "address2": "1408 W. Main Street",
+      "city": "Brenham",
+      "state": "TX",
+      "zip": "77834-2037",
+      "county": "Washington",
+      "geo_bucket": "secondary",
+      "firm_granted": "2007-11-19",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1732",
+          "name": "DONALD W. LAMPE",
+          "granted": "1972-02-16",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 54
+        },
+        {
+          "rpls_number": "5429",
+          "name": "MATT DEREK LAMPE",
+          "granted": "2001-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 25
+        }
+      ],
+      "earliest_rpls_granted": "1972-02-16",
+      "earliest_rpls_year": 1972,
+      "latest_rpls_granted": "2001-01-01",
+      "latest_rpls_year": 2001,
+      "owner_rpls_tenure_years": 54,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10194928",
+      "legal_name": "Larry Turman",
+      "address1": "4903 West Wedgefield Road",
+      "address2": "",
+      "city": "Granbury",
+      "state": "TX",
+      "zip": "76049",
+      "county": "Hood",
+      "geo_bucket": "secondary",
+      "firm_granted": "2024-12-16",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1740",
+          "name": "Larry Turman",
+          "granted": "1972-02-16",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 54
+        }
+      ],
+      "earliest_rpls_granted": "1972-02-16",
+      "earliest_rpls_year": 1972,
+      "latest_rpls_granted": "1972-02-16",
+      "latest_rpls_year": 1972,
+      "owner_rpls_tenure_years": 54,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10193000",
+      "legal_name": "SHANKS ENGINEERING AND SURVEYING, INC.",
+      "address1": "1446 PIRATES COVE",
+      "address2": "",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77058",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2011-04-18",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1821",
+          "name": "BILLY L. SHANKS",
+          "granted": "1974-02-13",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 52
+        }
+      ],
+      "earliest_rpls_granted": "1974-02-13",
+      "earliest_rpls_year": 1974,
+      "latest_rpls_granted": "1974-02-13",
+      "latest_rpls_year": 1974,
+      "owner_rpls_tenure_years": 52,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10002000",
+      "legal_name": "FOREST SURVEYING AND MAPPING",
+      "address1": "1002 SOUTH ASH STREET",
+      "address2": "",
+      "city": "Georgetown",
+      "state": "TX",
+      "zip": "78626",
+      "county": "Williamson",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-10-22",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1847",
+          "name": "WILLIAM F. FOREST",
+          "granted": "1975-02-26",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 51
+        }
+      ],
+      "earliest_rpls_granted": "1975-02-26",
+      "earliest_rpls_year": 1975,
+      "latest_rpls_granted": "1975-02-26",
+      "latest_rpls_year": 1975,
+      "owner_rpls_tenure_years": 51,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10193863",
+      "legal_name": "R2M ENGINEERING, LLC",
+      "address1": "5012 50TH STREET, SUITE 204",
+      "address2": "",
+      "city": "Lubbock",
+      "state": "TX",
+      "zip": "79414",
+      "county": "Lubbock",
+      "geo_bucket": "secondary",
+      "firm_granted": "2013-01-03",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1871",
+          "name": "Jeryl Drannon Hart",
+          "granted": "1975-08-27",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 51
+        }
+      ],
+      "earliest_rpls_granted": "1975-08-27",
+      "earliest_rpls_year": 1975,
+      "latest_rpls_granted": "1975-08-27",
+      "latest_rpls_year": 1975,
+      "owner_rpls_tenure_years": 51,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10105700",
+      "legal_name": "BLUE SKY SURVEYING AND MAPPING CORPORATION",
+      "address1": "11015 MIDWAY ROAD",
+      "address2": "",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75229",
+      "county": "Dallas",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-01-14",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1890",
+          "name": "DAVID RANDOLPH PETREE",
+          "granted": "1976-02-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 50
+        }
+      ],
+      "earliest_rpls_granted": "1976-02-25",
+      "earliest_rpls_year": 1976,
+      "latest_rpls_granted": "1976-02-25",
+      "latest_rpls_year": 1976,
+      "owner_rpls_tenure_years": 50,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10169900",
+      "legal_name": "GRIFFITH CONSULTING",
+      "address1": "4000 SENDERO SPRINGS DRIVE",
+      "address2": "",
+      "city": "Round Rock",
+      "state": "TX",
+      "zip": "78681",
+      "county": "Williamson",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2009-09-02",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1885",
+          "name": "James Walton Griffith",
+          "granted": "1976-02-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 50
+        }
+      ],
+      "earliest_rpls_granted": "1976-02-25",
+      "earliest_rpls_year": 1976,
+      "latest_rpls_granted": "1976-02-25",
+      "latest_rpls_year": 1976,
+      "owner_rpls_tenure_years": 50,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10095700",
+      "legal_name": "GORMLY SURVEYING",
+      "address1": "200 North Gordon",
+      "address2": "",
+      "city": "Alvin",
+      "state": "TX",
+      "zip": "77511",
+      "county": "Brazoria",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2008-01-08",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1918",
+          "name": "Freddy A. Gormly",
+          "granted": "1977-02-16",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 49
+        },
+        {
+          "rpls_number": "5796",
+          "name": "Chad Alan Gormly",
+          "granted": "2004-05-17",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 22
+        }
+      ],
+      "earliest_rpls_granted": "1977-02-16",
+      "earliest_rpls_year": 1977,
+      "latest_rpls_granted": "2004-05-17",
+      "latest_rpls_year": 2004,
+      "owner_rpls_tenure_years": 49,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10124200",
+      "legal_name": "GALBRAITH ENGINEERING CONSULTANTS, INC.",
+      "address1": "1048 Central Parkway South",
+      "address2": "",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78232",
+      "county": "Bexar",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-01-22",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1917",
+          "name": "Glenn Edward Galbraith",
+          "granted": "1977-02-16",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 49
+        }
+      ],
+      "earliest_rpls_granted": "1977-02-16",
+      "earliest_rpls_year": 1977,
+      "latest_rpls_granted": "1977-02-16",
+      "latest_rpls_year": 1977,
+      "owner_rpls_tenure_years": 49,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10194216",
+      "legal_name": "CLINTON LAMONT RIPPY SURVEYING COMPANY, INC.",
+      "address1": "10600 KIT CARSON DRIVE",
+      "address2": "",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78737",
+      "county": "Travis",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2016-03-14",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1926",
+          "name": "Clinton Lamont Rippy",
+          "granted": "1977-02-16",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 49
+        }
+      ],
+      "earliest_rpls_granted": "1977-02-16",
+      "earliest_rpls_year": 1977,
+      "latest_rpls_granted": "1977-02-16",
+      "latest_rpls_year": 1977,
+      "owner_rpls_tenure_years": 49,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10068300",
+      "legal_name": "GEARLD A. CARTER AND ASSOCIATES LAND SURVEYORS",
+      "address1": "1100 BEL AIR DRIVE",
+      "address2": "",
+      "city": "Athens",
+      "state": "TX",
+      "zip": "75751",
+      "county": "Henderson",
+      "geo_bucket": "secondary",
+      "firm_granted": "2008-01-03",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1935",
+          "name": "GEARLD A CARTER",
+          "granted": "1977-08-03",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 49
+        }
+      ],
+      "earliest_rpls_granted": "1977-08-03",
+      "earliest_rpls_year": 1977,
+      "latest_rpls_granted": "1977-08-03",
+      "latest_rpls_year": 1977,
+      "owner_rpls_tenure_years": 49,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10057100",
+      "legal_name": "C & G LAND SURVEYORS",
+      "address1": "1210 NORTH THOMPSON STREET",
+      "address2": "",
+      "city": "Conroe",
+      "state": "TX",
+      "zip": "77301",
+      "county": "Montgomery",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2007-12-28",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2000",
+          "name": "SETH MALONE GIBSON",
+          "granted": "1978-08-24",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 48
+        }
+      ],
+      "earliest_rpls_granted": "1978-08-24",
+      "earliest_rpls_year": 1978,
+      "latest_rpls_granted": "1978-08-24",
+      "latest_rpls_year": 1978,
+      "owner_rpls_tenure_years": 48,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10112200",
+      "legal_name": "JEFFREY MOON & ASSOCIATES, INC.",
+      "address1": "96 nugent",
+      "address2": "",
+      "city": "Conroe",
+      "state": "TX",
+      "zip": "77301",
+      "county": "Montgomery",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2014-07-02",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2000",
+          "name": "SETH MALONE GIBSON",
+          "granted": "1978-08-24",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 48
+        },
+        {
+          "rpls_number": "4639",
+          "name": "Jeffrey Kyle Moon",
+          "granted": "1987-08-19",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 39
+        }
+      ],
+      "earliest_rpls_granted": "1978-08-24",
+      "earliest_rpls_year": 1978,
+      "latest_rpls_granted": "1987-08-19",
+      "latest_rpls_year": 1987,
+      "owner_rpls_tenure_years": 48,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10133000",
+      "legal_name": "PRIME TEXAS SURVEYS",
+      "address1": "2417 N. FRWY",
+      "address2": "",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77009",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2008-03-17",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2001",
+          "name": "Richard V. Hall",
+          "granted": "1978-08-24",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 48
+        }
+      ],
+      "earliest_rpls_granted": "1978-08-24",
+      "earliest_rpls_year": 1978,
+      "latest_rpls_granted": "1978-08-24",
+      "latest_rpls_year": 1978,
+      "owner_rpls_tenure_years": 48,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10194261",
+      "legal_name": "3B ENERGY SERVICES, LLC",
+      "address1": "2002 TIMBERLOCH PLACE, SUITE 110",
+      "address2": "",
+      "city": "The Woodlands",
+      "state": "TX",
+      "zip": "77380",
+      "county": "Montgomery",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2016-08-18",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1965",
+          "name": "Michael D. McGuinness",
+          "granted": "1978-02-22",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 48
+        },
+        {
+          "rpls_number": "6929",
+          "name": "Ryan Garrett Weber",
+          "granted": "2021-12-02",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 5
+        }
+      ],
+      "earliest_rpls_granted": "1978-02-22",
+      "earliest_rpls_year": 1978,
+      "latest_rpls_granted": "2021-12-02",
+      "latest_rpls_year": 2021,
+      "owner_rpls_tenure_years": 48,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10118600",
+      "legal_name": "VANNOY & ASSOCIATES, INC.",
+      "address1": "1216 Siena Sunset Rd",
+      "address2": "",
+      "city": "Leander",
+      "state": "TX",
+      "zip": "78641",
+      "county": "Williamson",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-01-11",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1988",
+          "name": "Ray Lynn Vannoy",
+          "granted": "1978-02-22",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 48
+        }
+      ],
+      "earliest_rpls_granted": "1978-02-22",
+      "earliest_rpls_year": 1978,
+      "latest_rpls_granted": "1978-02-22",
+      "latest_rpls_year": 1978,
+      "owner_rpls_tenure_years": 48,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10023000",
+      "legal_name": "Collins Surveying & Mapping, Inc.",
+      "address1": "910A Judson Road",
+      "address2": "",
+      "city": "Longview",
+      "state": "TX",
+      "zip": "75601",
+      "county": "Gregg",
+      "geo_bucket": "secondary",
+      "firm_granted": "2007-11-01",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1954",
+          "name": "David R. Collins",
+          "granted": "1978-02-22",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 48
+        }
+      ],
+      "earliest_rpls_granted": "1978-02-22",
+      "earliest_rpls_year": 1978,
+      "latest_rpls_granted": "1978-02-22",
+      "latest_rpls_year": 1978,
+      "owner_rpls_tenure_years": 48,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10194425",
+      "legal_name": "H.E. MCADAMS & SON SURVEYING, INC.",
+      "address1": "1025 12TH STREET",
+      "address2": "",
+      "city": "Huntsville",
+      "state": "TX",
+      "zip": "77340",
+      "county": "Walker",
+      "geo_bucket": "secondary",
+      "firm_granted": "2018-05-31",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2005",
+          "name": "HAROLD E MCADAMS",
+          "granted": "1978-08-24",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 48
+        }
+      ],
+      "earliest_rpls_granted": "1978-08-24",
+      "earliest_rpls_year": 1978,
+      "latest_rpls_granted": "1978-08-24",
+      "latest_rpls_year": 1978,
+      "owner_rpls_tenure_years": 48,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10195017",
+      "legal_name": "Stewart M Kling",
+      "address1": "705 Edgemore Dr.",
+      "address2": "",
+      "city": "Bryan",
+      "state": "TX",
+      "zip": "77802",
+      "county": "Brazos",
+      "geo_bucket": "secondary",
+      "firm_granted": "2026-03-11",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2003",
+          "name": "Stewart M Kling",
+          "granted": "1978-08-24",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 48
+        }
+      ],
+      "earliest_rpls_granted": "1978-08-24",
+      "earliest_rpls_year": 1978,
+      "latest_rpls_granted": "1978-08-24",
+      "latest_rpls_year": 1978,
+      "owner_rpls_tenure_years": 48,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10020500",
+      "legal_name": "RANDY L. STROUD",
+      "address1": "201 SOUTH VELASCO STREET",
+      "address2": "",
+      "city": "Angleton",
+      "state": "TX",
+      "zip": "77515",
+      "county": "Brazoria",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2007-10-30",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2112",
+          "name": "RANDY LANE STROUD",
+          "granted": "1979-08-21",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        }
+      ],
+      "earliest_rpls_granted": "1979-08-21",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "1979-08-21",
+      "latest_rpls_year": 1979,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10064100",
+      "legal_name": "CLEVELAND SURVEYING COMPANY, INC.",
+      "address1": "709 SOUTH WASHINGTON AVENUE",
+      "address2": "",
+      "city": "Cleveland",
+      "state": "TX",
+      "zip": "77327",
+      "county": "Liberty",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2008-01-02",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2056",
+          "name": "Louis Walter Bergman",
+          "granted": "1979-08-21",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        }
+      ],
+      "earliest_rpls_granted": "1979-08-21",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "1979-08-21",
+      "latest_rpls_year": 1979,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10133800",
+      "legal_name": "REKHA ENGINEERING, INC.",
+      "address1": "7676 HILLMONT ST",
+      "address2": "SUITE 350",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77040",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2008-03-26",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2106",
+          "name": "MARTIN T. ROE",
+          "granted": "1979-08-21",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "5082",
+          "name": "TODD JEROME SLATON",
+          "granted": "1994-01-28",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 32
+        }
+      ],
+      "earliest_rpls_granted": "1979-08-21",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "1994-01-28",
+      "latest_rpls_year": 1994,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10195036",
+      "legal_name": "Civil Mesh Pro LLC",
+      "address1": "10119 Hickory Trail Ln",
+      "address2": "",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77064",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2026-05-11",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2153",
+          "name": "Larry Gus Hada",
+          "granted": "1979-12-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        }
+      ],
+      "earliest_rpls_granted": "1979-12-07",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "1979-12-07",
+      "latest_rpls_year": 1979,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10014800",
+      "legal_name": "FLORES & COMPANY CONSULTING ENGINEERS",
+      "address1": "12915 JONES MALTSBERGER ROAD",
+      "address2": "SUITE 403",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78247",
+      "county": "Bexar",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-10-29",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2238",
+          "name": "THOMAS FLORES",
+          "granted": "1979-12-27",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        }
+      ],
+      "earliest_rpls_granted": "1979-12-27",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "1979-12-27",
+      "latest_rpls_year": 1979,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10022600",
+      "legal_name": "GIL ENGINEERING ASSOCIATES, INC.",
+      "address1": "504 EAST BRAKER LANE",
+      "address2": "",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78753",
+      "county": "Travis",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-11-01",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2244",
+          "name": "JOSE MANUEL GIL",
+          "granted": "1979-12-27",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "5417",
+          "name": "VICTOR MANUEL GIL",
+          "granted": "2001-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 25
+        }
+      ],
+      "earliest_rpls_granted": "1979-12-27",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "2001-01-01",
+      "latest_rpls_year": 2001,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10091800",
+      "legal_name": "FULLER ENGINEERING & LAND SURVEYING, INC.",
+      "address1": "2411 GARDEN PARK COURT, SUITE A",
+      "address2": "",
+      "city": "Arlington",
+      "state": "TX",
+      "zip": "76013",
+      "county": "Tarrant",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-01-04",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2052",
+          "name": "WILLIAM S. ABRAHAM",
+          "granted": "1979-08-21",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        }
+      ],
+      "earliest_rpls_granted": "1979-08-21",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "1979-08-21",
+      "latest_rpls_year": 1979,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10153800",
+      "legal_name": "GRAHAM ASSOCIATES, INC.",
+      "address1": "600 SIX FLAGS DRIVE, SUITE 500",
+      "address2": "",
+      "city": "Arlington",
+      "state": "TX",
+      "zip": "76011",
+      "county": "Tarrant",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2009-01-02",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2267",
+          "name": "Carroll Lee Lilly",
+          "granted": "1979-12-27",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "5999",
+          "name": "MICHAEL LEE PETERSON",
+          "granted": "2007-06-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 19
+        }
+      ],
+      "earliest_rpls_granted": "1979-12-27",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "2007-06-01",
+      "latest_rpls_year": 2007,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10194784",
+      "legal_name": "Sure Shott Construction Services",
+      "address1": "5404 FM 1044",
+      "address2": "",
+      "city": "New Braunfels",
+      "state": "TX",
+      "zip": "78130",
+      "county": "Comal",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2022-09-16",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2099",
+          "name": "Mark R. Paulson",
+          "granted": "1979-08-21",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        }
+      ],
+      "earliest_rpls_granted": "1979-08-21",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "1979-08-21",
+      "latest_rpls_year": 1979,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10194570",
+      "legal_name": "FRANK X. SPENCER & ASSOCIATES, INC.",
+      "address1": "611 1/2 S. OAK",
+      "address2": "",
+      "city": "Pecos",
+      "state": "TX",
+      "zip": "79772",
+      "county": "Reeves",
+      "geo_bucket": "permian",
+      "firm_granted": "2020-01-31",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2198",
+          "name": "FRANK XAVIER SPENCER",
+          "granted": "1979-12-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        }
+      ],
+      "earliest_rpls_granted": "1979-12-07",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "1979-12-07",
+      "latest_rpls_year": 1979,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10002700",
+      "legal_name": "Bass & Welsh Engineering",
+      "address1": "3054 A Alameda St",
+      "address2": "",
+      "city": "Corpus Christi",
+      "state": "TX",
+      "zip": "78404",
+      "county": "Nueces",
+      "geo_bucket": "coastal_flood",
+      "firm_granted": "2007-10-22",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2128",
+          "name": "MURRAY BASS",
+          "granted": "1979-12-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "2211",
+          "name": "NIXON M. WELSH",
+          "granted": "1979-12-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        }
+      ],
+      "earliest_rpls_granted": "1979-12-07",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "1979-12-07",
+      "latest_rpls_year": 1979,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10093600",
+      "legal_name": "VOSS ENGINEERING, INC.",
+      "address1": "6838 GREENWOOD DRIVE",
+      "address2": "",
+      "city": "Corpus Christi",
+      "state": "TX",
+      "zip": "78415",
+      "county": "Nueces",
+      "geo_bucket": "coastal_flood",
+      "firm_granted": "2008-01-08",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2293",
+          "name": "Ronald Allen Voss",
+          "granted": "1979-12-27",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        }
+      ],
+      "earliest_rpls_granted": "1979-12-27",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "1979-12-27",
+      "latest_rpls_year": 1979,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10194917",
+      "legal_name": "Griffith & Brundrett Surveying & Engineering, Inc.",
+      "address1": "411 S Pearl St",
+      "address2": "",
+      "city": "Rockport",
+      "state": "TX",
+      "zip": "78382",
+      "county": "Aransas",
+      "geo_bucket": "coastal_flood",
+      "firm_granted": "2024-09-17",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2133",
+          "name": "JERALD LEONCE BRUNDRETT",
+          "granted": "1979-12-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "6073",
+          "name": "BRIDGET ANN BRUNDRETT",
+          "granted": "2009-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 17
+        }
+      ],
+      "earliest_rpls_granted": "1979-12-07",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "2009-01-01",
+      "latest_rpls_year": 2009,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10015000",
+      "legal_name": "PROVEN SURVEYING",
+      "address1": "2406 KELL BOULEVARD",
+      "address2": "",
+      "city": "Wichita Falls",
+      "state": "TX",
+      "zip": "76309",
+      "county": "Wichita",
+      "geo_bucket": "secondary",
+      "firm_granted": "2007-10-29",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2102",
+          "name": "ROY F. WOODMAN",
+          "granted": "1979-08-21",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "6838",
+          "name": "Brad Martin Litteken",
+          "granted": "2020-11-19",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 6
+        }
+      ],
+      "earliest_rpls_granted": "1979-08-21",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "2020-11-19",
+      "latest_rpls_year": 2020,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10025300",
+      "legal_name": "WWJ Land Surveying LLC",
+      "address1": "10819 Highway 69 N",
+      "address2": "",
+      "city": "Tyler",
+      "state": "TX",
+      "zip": "75706",
+      "county": "Smith",
+      "geo_bucket": "secondary",
+      "firm_granted": "2007-11-05",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2117",
+          "name": "DENNIS H WALKER",
+          "granted": "1979-08-21",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "6789",
+          "name": "CASEY HAROLD JORDAN",
+          "granted": "2019-08-29",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 7
+        }
+      ],
+      "earliest_rpls_granted": "1979-08-21",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "2019-08-29",
+      "latest_rpls_year": 2019,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10028400",
+      "legal_name": "RONALD CARROLL SURVEYORS, INC.",
+      "address1": "5302 SOUTH 31ST STREET",
+      "address2": "",
+      "city": "Temple",
+      "state": "TX",
+      "zip": "76502",
+      "county": "Bell",
+      "geo_bucket": "secondary",
+      "firm_granted": "2007-11-06",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2025",
+          "name": "Ronald L. Carroll",
+          "granted": "1979-02-21",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "6741",
+          "name": "Jonathan Lee Bourgeois",
+          "granted": "2018-11-30",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 8
+        }
+      ],
+      "earliest_rpls_granted": "1979-02-21",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "2018-11-30",
+      "latest_rpls_year": 2018,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10049000",
+      "legal_name": "FRANK X. SPENCER & ASSOCIATES, INC.",
+      "address1": "1130 MONTANA AVENUE",
+      "address2": "",
+      "city": "El Paso",
+      "state": "TX",
+      "zip": "79902",
+      "county": "El Paso",
+      "geo_bucket": "secondary",
+      "firm_granted": "2008-01-07",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2198",
+          "name": "FRANK XAVIER SPENCER",
+          "granted": "1979-12-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "5337",
+          "name": "ISAAC CAMACHO",
+          "granted": "2000-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 26
+        }
+      ],
+      "earliest_rpls_granted": "1979-12-07",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "2000-01-01",
+      "latest_rpls_year": 2000,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10009000",
+      "legal_name": "BENCHMARK ENGINEERING CORPORATION",
+      "address1": "2401 FOUNTAINVIEW DRIVE, SUITE 500",
+      "address2": "",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77057",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2007-10-24",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "3540",
+          "name": "Saib Yacoob Saour",
+          "granted": "1980-07-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        },
+        {
+          "rpls_number": "5342",
+          "name": "Ronald Glen Harrison",
+          "granted": "2000-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 26
+        }
+      ],
+      "earliest_rpls_granted": "1980-07-25",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "2000-01-01",
+      "latest_rpls_year": 2000,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10020600",
+      "legal_name": "DEL-PHI ENGINEERING ASSOCIATES, INC.",
+      "address1": "10298 SERENITY LANE",
+      "address2": "",
+      "city": "Conroe",
+      "state": "TX",
+      "zip": "77304-4678",
+      "county": "Montgomery",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2007-10-30",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "3726",
+          "name": "Ernest William Deluca",
+          "granted": "1980-09-16",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-09-16",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-09-16",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10030300",
+      "legal_name": "SANDER ENGINEERING CORPORATION",
+      "address1": "2901 WILCREST DRIVE",
+      "address2": "SUITE 550",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77042",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2007-11-08",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "3535",
+          "name": "Dennis W. Sander",
+          "granted": "1980-07-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-07-25",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-07-25",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10045400",
+      "legal_name": "SOUTH TEXAS SURVEYING ASSOCIATES, INC.",
+      "address1": "11281 RICHMOND AVENUE, BUILDING J",
+      "address2": "SUITE 101",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77082",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2007-12-03",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2321",
+          "name": "Frederick Widney Lawton",
+          "granted": "1980-01-22",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-01-22",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-01-22",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10085400",
+      "legal_name": "Adams Surveying",
+      "address1": "2004 South Gordon Street, Suite B",
+      "address2": "",
+      "city": "Alvin",
+      "state": "TX",
+      "zip": "77511",
+      "county": "Brazoria",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2008-01-04",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "3666",
+          "name": "STEPHEN DALE ADAMS",
+          "granted": "1980-08-20",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        },
+        {
+          "rpls_number": "5611",
+          "name": "STEPHEN DALE ADAMS",
+          "granted": "2002-12-06",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 24
+        }
+      ],
+      "earliest_rpls_granted": "1980-08-20",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "2002-12-06",
+      "latest_rpls_year": 2002,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10099100",
+      "legal_name": "PEPE ENGINEERING",
+      "address1": "800 Town and Country Blvd. Ste. 500",
+      "address2": "",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77024",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2008-01-08",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "3334",
+          "name": "SALIM AFIF JOUBRAN",
+          "granted": "1980-07-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-07-25",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-07-25",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10104700",
+      "legal_name": "ANDREW LONNIE SIKES, INC.",
+      "address1": "840 Victoria Lakes Dr",
+      "address2": "",
+      "city": "Katy",
+      "state": "TX",
+      "zip": "77493",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2008-01-07",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2914",
+          "name": "Andrew Lonnie Sikes",
+          "granted": "1980-05-30",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-05-30",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-05-30",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10158900",
+      "legal_name": "ESOR CONSULTING ENGINEERS, INC.",
+      "address1": "6027 DOVER HOUSE WAY",
+      "address2": "",
+      "city": "Spring",
+      "state": "TX",
+      "zip": "77389",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2009-01-23",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2634",
+          "name": "John Jesus Rodriquez",
+          "granted": "1980-03-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-03-25",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-03-25",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10194756",
+      "legal_name": "Civil Systems Engineering, Inc.",
+      "address1": "1202 Lake Pointe Pkwy",
+      "address2": "",
+      "city": "Sugar Land",
+      "state": "TX",
+      "zip": "77478",
+      "county": "Fort Bend",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2022-04-20",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2791",
+          "name": "Homero Luis Gutierrez",
+          "granted": "1980-05-30",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-05-30",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-05-30",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10001000",
+      "legal_name": "HARRY JEWETT ASSOCIATES",
+      "address1": "8000 I.H. 10 WEST, SUITE 633",
+      "address2": "",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78230",
+      "county": "Bexar",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-10-22",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2994",
+          "name": "Harry B. Jewett",
+          "granted": "1980-07-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-07-25",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-07-25",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10041000",
+      "legal_name": "CIVIL ENGINEERING CONSULTANTS",
+      "address1": "2806 W. Bitters Road",
+      "address2": "Suite 218",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78248",
+      "county": "Bexar",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-11-20",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2845",
+          "name": "ALAN DONALD LINDSKOG",
+          "granted": "1980-05-30",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        },
+        {
+          "rpls_number": "3964",
+          "name": "GARY BARTON NEILL",
+          "granted": "1981-08-19",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 45
+        }
+      ],
+      "earliest_rpls_granted": "1980-05-30",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1981-08-19",
+      "latest_rpls_year": 1981,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10043300",
+      "legal_name": "PSA ENGINEERS, INC.",
+      "address1": "17819 DAVENPORT ROAD, SUITE 215",
+      "address2": "",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75252",
+      "county": "Dallas",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-11-27",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "3576",
+          "name": "Pansak Sribhen",
+          "granted": "1980-07-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-07-25",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-07-25",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10054600",
+      "legal_name": "STD LAND SURVEYING",
+      "address1": "305 W. Buffalo St.",
+      "address2": "",
+      "city": "Forney",
+      "state": "TX",
+      "zip": "75126",
+      "county": "Kaufman",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-12-19",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "3437",
+          "name": "DAVID MICHAEL MULLINS",
+          "granted": "1980-07-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-07-25",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-07-25",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10057300",
+      "legal_name": "I. T. GONZALEZ ENGINEERS",
+      "address1": "3501 MANOR ROAD",
+      "address2": "",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78723",
+      "county": "Travis",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-12-28",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2780",
+          "name": "ISRAEL TREVINO GONZALEZ",
+          "granted": "1980-05-30",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-05-30",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-05-30",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10057500",
+      "legal_name": "HODGKISS SURVEYING",
+      "address1": "4401 TWISTED TREE DRIVE",
+      "address2": "",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78735",
+      "county": "Travis",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-12-28",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2808",
+          "name": "MELVIN BONIFAZIUS HODGKISS",
+          "granted": "1980-05-30",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-05-30",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-05-30",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10059800",
+      "legal_name": "SCARBOROUGH ENGINEERING, INC.",
+      "address1": "2400 SCOTT AVENUE",
+      "address2": "",
+      "city": "Fort Worth",
+      "state": "TX",
+      "zip": "76103",
+      "county": "Tarrant",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-01-02",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2456",
+          "name": "Jon D. Scarborough",
+          "granted": "1980-02-20",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-02-20",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-02-20",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10070800",
+      "legal_name": "SALCEDO GROUP, INC.",
+      "address1": "401 COLLEGE ST.",
+      "address2": "",
+      "city": "Grand Prairie",
+      "state": "TX",
+      "zip": "75050",
+      "county": "Dallas",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-01-04",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "3664",
+          "name": "Louis Melchor Salcedo",
+          "granted": "1980-08-12",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        },
+        {
+          "rpls_number": "6715",
+          "name": "Michael Anthony Salcedo",
+          "granted": "2018-05-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 8
+        }
+      ],
+      "earliest_rpls_granted": "1980-08-12",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "2018-05-25",
+      "latest_rpls_year": 2018,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10071100",
+      "legal_name": "REAVIS CONSULTING ENGINEERS",
+      "address1": "2001 Cross Creek Trail",
+      "address2": "",
+      "city": "Round Rock",
+      "state": "TX",
+      "zip": "78681",
+      "county": "Williamson",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-01-04",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "3502",
+          "name": "MARVIN WILLIAM REAVIS",
+          "granted": "1980-07-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        }
+      ],
+      "earliest_rpls_granted": "1980-07-25",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "1980-07-25",
+      "latest_rpls_year": 1980,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10086600",
+      "legal_name": "WINKELMANN & ASSOCIATES, INC.",
+      "address1": "6750 HILLCREST PLAZA DRIVE",
+      "address2": "SUITE 215",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75230",
+      "county": "Dallas",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-01-04",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2488",
+          "name": "William James Winkelmann",
+          "granted": "1980-02-20",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        },
+        {
+          "rpls_number": "5714",
+          "name": "Leonard Jay Lueker",
+          "granted": "2003-05-16",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 23
+        }
+      ],
+      "earliest_rpls_granted": "1980-02-20",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "2003-05-16",
+      "latest_rpls_year": 2003,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "A"
+    },
+    {
+      "license_number": "10191800",
+      "legal_name": "ELEVATION EXPRESS",
+      "address1": "1450 WEST GRAND PARKWAY SOUTH",
+      "address2": "SUITE G-158",
+      "city": "Katy",
+      "state": "TX",
+      "zip": "77494",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2011-03-07",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5180",
+          "name": "GEORGE JOSEPH MALIAKKAL",
+          "granted": "1996-06-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 30
+        }
+      ],
+      "earliest_rpls_granted": "1996-06-07",
+      "earliest_rpls_year": 1996,
+      "latest_rpls_granted": "1996-06-07",
+      "latest_rpls_year": 1996,
+      "owner_rpls_tenure_years": 30,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10050700",
+      "legal_name": "HOLT CARSON, INC.",
+      "address1": "1904 FORTVIEW ROAD",
+      "address2": "",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78704",
+      "county": "Travis",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2014-08-18",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5166",
+          "name": "TEDDY HOLT CARSON",
+          "granted": "1996-06-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 30
+        }
+      ],
+      "earliest_rpls_granted": "1996-06-07",
+      "earliest_rpls_year": 1996,
+      "latest_rpls_granted": "1996-06-07",
+      "latest_rpls_year": 1996,
+      "owner_rpls_tenure_years": 30,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10144700",
+      "legal_name": "SCHULTZ GEOMATICS",
+      "address1": "188 AUTUMN RIDGE",
+      "address2": "",
+      "city": "Boerne",
+      "state": "TX",
+      "zip": "78006",
+      "county": "Kendall",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-07-25",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5161",
+          "name": "TERRY CHARLES SCHULTZ",
+          "granted": "1996-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 30
+        }
+      ],
+      "earliest_rpls_granted": "1996-01-01",
+      "earliest_rpls_year": 1996,
+      "latest_rpls_granted": "1996-01-01",
+      "latest_rpls_year": 1996,
+      "owner_rpls_tenure_years": 30,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10194538",
+      "legal_name": "TERRENO DEVELOPMENT GROUP, LLC",
+      "address1": "801 E Campbell Rd #650",
+      "address2": "",
+      "city": "Richardson",
+      "state": "TX",
+      "zip": "75081",
+      "county": "Dallas",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2019-08-28",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5184",
+          "name": "Jimmie Dean Nichols",
+          "granted": "1996-06-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 30
+        }
+      ],
+      "earliest_rpls_granted": "1996-06-07",
+      "earliest_rpls_year": 1996,
+      "latest_rpls_granted": "1996-06-07",
+      "latest_rpls_year": 1996,
+      "owner_rpls_tenure_years": 30,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10194863",
+      "legal_name": "Probeck Land Surveyors",
+      "address1": "8630 Hackney Ln.",
+      "address2": "",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75238",
+      "county": "Dallas",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2024-02-14",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5187",
+          "name": "Larry Alan Probeck",
+          "granted": "1996-06-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 30
+        }
+      ],
+      "earliest_rpls_granted": "1996-06-07",
+      "earliest_rpls_year": 1996,
+      "latest_rpls_granted": "1996-06-07",
+      "latest_rpls_year": 1996,
+      "owner_rpls_tenure_years": 30,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10018600",
+      "legal_name": "FITTZ & SHIPMAN, INC.",
+      "address1": "1405 CORNERSTONE COURT",
+      "address2": "",
+      "city": "Beaumont",
+      "state": "TX",
+      "zip": "77706",
+      "county": "Jefferson",
+      "geo_bucket": "coastal_flood",
+      "firm_granted": "2007-10-29",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5163",
+          "name": "MITCHELL LEE BRACKIN",
+          "granted": "1996-06-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 30
+        }
+      ],
+      "earliest_rpls_granted": "1996-06-07",
+      "earliest_rpls_year": 1996,
+      "latest_rpls_granted": "1996-06-07",
+      "latest_rpls_year": 1996,
+      "owner_rpls_tenure_years": 30,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10052700",
+      "legal_name": "POLLOK & SONS SURVEYING, INC.",
+      "address1": "1008 B STREET",
+      "address2": "",
+      "city": "Floresville",
+      "state": "TX",
+      "zip": "78114",
+      "county": "Wilson",
+      "geo_bucket": "eagle_ford",
+      "firm_granted": "2007-12-18",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5186",
+          "name": "Larry James Pollok",
+          "granted": "1996-06-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 30
+        }
+      ],
+      "earliest_rpls_granted": "1996-06-07",
+      "earliest_rpls_year": 1996,
+      "latest_rpls_granted": "1996-06-07",
+      "latest_rpls_year": 1996,
+      "owner_rpls_tenure_years": 30,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10078100",
+      "legal_name": "CONDE, INC.",
+      "address1": "6080 SURETY DRIVE, SUITE 100",
+      "address2": "",
+      "city": "El Paso",
+      "state": "TX",
+      "zip": "79905",
+      "county": "El Paso",
+      "geo_bucket": "secondary",
+      "firm_granted": "2008-01-04",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5152",
+          "name": "RONALD ROBERT CONDE",
+          "granted": "1996-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 30
+        }
+      ],
+      "earliest_rpls_granted": "1996-01-01",
+      "earliest_rpls_year": 1996,
+      "latest_rpls_granted": "1996-01-01",
+      "latest_rpls_year": 1996,
+      "owner_rpls_tenure_years": 30,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10194410",
+      "legal_name": "WELLBORN ENGINEERING, LLC",
+      "address1": "631 WATER ST",
+      "address2": "",
+      "city": "Kerrville",
+      "state": "TX",
+      "zip": "78028",
+      "county": "Kerr",
+      "geo_bucket": "secondary",
+      "firm_granted": "2018-04-10",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5164",
+          "name": "Gary Max Brandenburg",
+          "granted": "1996-06-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 30
+        },
+        {
+          "rpls_number": "7162",
+          "name": "Jared Scott Martin",
+          "granted": "2025-04-09",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 1
+        }
+      ],
+      "earliest_rpls_granted": "1996-06-07",
+      "earliest_rpls_year": 1996,
+      "latest_rpls_granted": "2025-04-09",
+      "latest_rpls_year": 2025,
+      "owner_rpls_tenure_years": 30,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10194599",
+      "legal_name": "Gessner Engineering LLC",
+      "address1": "401 W. 26th St. Ste 3",
+      "address2": "",
+      "city": "Bryan",
+      "state": "TX",
+      "zip": "77803",
+      "county": "Brazos",
+      "geo_bucket": "secondary",
+      "firm_granted": "2020-05-15",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5168",
+          "name": "GLENN THOMAS DIAL",
+          "granted": "1996-06-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 30
+        }
+      ],
+      "earliest_rpls_granted": "1996-06-07",
+      "earliest_rpls_year": 1996,
+      "latest_rpls_granted": "1996-06-07",
+      "latest_rpls_year": 1996,
+      "owner_rpls_tenure_years": 30,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10139600",
+      "legal_name": "SURVEY CONSULTANTS, INC.",
+      "address1": "903 NORTH BOWSER ROAD #240",
+      "address2": "",
+      "city": "Richardson",
+      "state": "TX",
+      "zip": "75081",
+      "county": "Dallas",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-05-16",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5199",
+          "name": "DOUGLAS SCOTT LOOMIS",
+          "granted": "1997-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 29
+        }
+      ],
+      "earliest_rpls_granted": "1997-01-01",
+      "earliest_rpls_year": 1997,
+      "latest_rpls_granted": "1997-01-01",
+      "latest_rpls_year": 1997,
+      "owner_rpls_tenure_years": 29,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10194448",
+      "legal_name": "JACK CROW, RPLS",
+      "address1": "12324 Morrow LN",
+      "address2": "",
+      "city": "Elgin",
+      "state": "TX",
+      "zip": "78621",
+      "county": "Bastrop",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2018-09-17",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5209",
+          "name": "JACKIE LEE CROW",
+          "granted": "1997-06-06",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 29
+        }
+      ],
+      "earliest_rpls_granted": "1997-06-06",
+      "earliest_rpls_year": 1997,
+      "latest_rpls_granted": "1997-06-06",
+      "latest_rpls_year": 1997,
+      "owner_rpls_tenure_years": 29,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10018800",
+      "legal_name": "HODDE & HODDE LAND SURVEYING, INC.",
+      "address1": "613 EAST BLUE BELL ROAD",
+      "address2": "",
+      "city": "Brenham",
+      "state": "TX",
+      "zip": "77833",
+      "county": "Washington",
+      "geo_bucket": "secondary",
+      "firm_granted": "2007-10-29",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5197",
+          "name": "Jon Edwin Hodde",
+          "granted": "1997-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 29
+        }
+      ],
+      "earliest_rpls_granted": "1997-01-01",
+      "earliest_rpls_year": 1997,
+      "latest_rpls_granted": "1997-01-01",
+      "latest_rpls_year": 1997,
+      "owner_rpls_tenure_years": 29,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10045700",
+      "legal_name": "LAND SURVEY COMPANY",
+      "address1": "2010 MORNING TIDE LANE",
+      "address2": "",
+      "city": "League City",
+      "state": "TX",
+      "zip": "77573",
+      "county": "Galveston",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2007-12-04",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5247",
+          "name": "CHRISTOPHER F. TRUSKY",
+          "granted": "1998-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-01-01",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-01-01",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10077400",
+      "legal_name": "LIPPS GEOMATICS",
+      "address1": "13000 Murphy Rd., Suite 124",
+      "address2": "",
+      "city": "Stafford",
+      "state": "TX",
+      "zip": "77477",
+      "county": "Fort Bend",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2008-01-04",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5271",
+          "name": "JAMES CHARLES LIPPS",
+          "granted": "1998-06-12",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-06-12",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-06-12",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10006900",
+      "legal_name": "DIAMOND SURVEYING, INC.",
+      "address1": "116 SKYLINE ROAD",
+      "address2": "",
+      "city": "Georgetown",
+      "state": "TX",
+      "zip": "78628",
+      "county": "Williamson",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-10-24",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5281",
+          "name": "Shane Stephen Shafer",
+          "granted": "1998-06-12",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-06-12",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-06-12",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10009100",
+      "legal_name": "Gregory Sjerven",
+      "address1": "208 NORTH WASHINGTON STREET",
+      "address2": "",
+      "city": "Kaufman",
+      "state": "TX",
+      "zip": "75142",
+      "county": "Kaufman",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-10-29",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5244",
+          "name": "GREGORY DEVIN SJERVEN",
+          "granted": "1998-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-01-01",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-01-01",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10043100",
+      "legal_name": "SPIARS ENGINEERING, INC.",
+      "address1": "765 CUSTER ROAD",
+      "address2": "",
+      "city": "Plano",
+      "state": "TX",
+      "zip": "75075",
+      "county": "Collin",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-11-27",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5252",
+          "name": "DARREN KIRK BROWN",
+          "granted": "1998-06-12",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-06-12",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-06-12",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10044800",
+      "legal_name": "BOUNDARY IMAGE LAND SURVEYING",
+      "address1": "3016 Urban Way",
+      "address2": "",
+      "city": "Anna",
+      "state": "TX",
+      "zip": "75409",
+      "county": "Collin",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-12-03",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5256",
+          "name": "JEFFREY BRUCE DURHAM",
+          "granted": "1998-06-12",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-06-12",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-06-12",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10058500",
+      "legal_name": "HEJL, LEE & ASSOCIATES",
+      "address1": "206 TAYLOR ST.",
+      "address2": "",
+      "city": "Hutto",
+      "state": "TX",
+      "zip": "78634",
+      "county": "Williamson",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-12-28",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5265",
+          "name": "Daniel Paul Hejl",
+          "granted": "1998-06-12",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-06-12",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-06-12",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10094400",
+      "legal_name": "ROEDER SURVEYING LLC",
+      "address1": "3705 VINELAND DRIVE",
+      "address2": "",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78722",
+      "county": "Travis",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-01-04",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5278",
+          "name": "MICHAEL ROEDER",
+          "granted": "1998-06-12",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-06-12",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-06-12",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10183700",
+      "legal_name": "BARROW LAND SURVEYING, INC.",
+      "address1": "3970 SANDSHELL DRIVE",
+      "address2": "",
+      "city": "Fort Worth",
+      "state": "TX",
+      "zip": "76137",
+      "county": "Tarrant",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2010-08-24",
+      "n_active_rpls": 2,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5237",
+          "name": "Jeffrey Joel McCormack",
+          "granted": "1998-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        },
+        {
+          "rpls_number": "5519",
+          "name": "RICKY LYNN GENTRY",
+          "granted": "2002-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 24
+        }
+      ],
+      "earliest_rpls_granted": "1998-01-01",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "2002-01-01",
+      "latest_rpls_year": 2002,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10194594",
+      "legal_name": "Colin J. Henry",
+      "address1": "7073 Arboreal Dr.",
+      "address2": "",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75231",
+      "county": "Dallas",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2020-04-20",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5230",
+          "name": "COLIN J. HENRY",
+          "granted": "1998-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-01-01",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-01-01",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10071500",
+      "legal_name": "HOMELAND SURVEYING COMPANY",
+      "address1": "9575 F.M. 803",
+      "address2": "",
+      "city": "San Benito",
+      "state": "TX",
+      "zip": "78586",
+      "county": "Cameron",
+      "geo_bucket": "coastal_flood",
+      "firm_granted": "2008-01-04",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5235",
+          "name": "Jose Luis Lozano",
+          "granted": "1998-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-01-01",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-01-01",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10022400",
+      "legal_name": "Eyncon, LLC",
+      "address1": "2616 Stonewall St",
+      "address2": "",
+      "city": "Greenville",
+      "state": "TX",
+      "zip": "75401",
+      "county": "Hunt",
+      "geo_bucket": "secondary",
+      "firm_granted": "2007-11-01",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5266",
+          "name": "DONALD HOLDER",
+          "granted": "1998-06-12",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-06-12",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-06-12",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10087200",
+      "legal_name": "PENA ENGINEERING, LLC",
+      "address1": "1001 WEST WHITEWING AVENUE",
+      "address2": "",
+      "city": "Mcallen",
+      "state": "TX",
+      "zip": "78501",
+      "county": "Hidalgo",
+      "geo_bucket": "secondary",
+      "firm_granted": "2008-01-04",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5242",
+          "name": "Pablo Pena",
+          "granted": "1998-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 28
+        }
+      ],
+      "earliest_rpls_granted": "1998-01-01",
+      "earliest_rpls_year": 1998,
+      "latest_rpls_granted": "1998-01-01",
+      "latest_rpls_year": 1998,
+      "owner_rpls_tenure_years": 28,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10012700",
+      "legal_name": "CHAMBERS SURVEYING & MAPPING",
+      "address1": "11414A Sunnyside Drive",
+      "address2": "",
+      "city": "Baytown",
+      "state": "TX",
+      "zip": "77523",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2007-10-25",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5292",
+          "name": "MICHAEL WAYNE CHANDLER",
+          "granted": "1999-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 27
+        }
+      ],
+      "earliest_rpls_granted": "1999-01-01",
+      "earliest_rpls_year": 1999,
+      "latest_rpls_granted": "1999-01-01",
+      "latest_rpls_year": 1999,
+      "owner_rpls_tenure_years": 27,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10104100",
+      "legal_name": "WASHBURN & COMPANY",
+      "address1": "1409 N. Washington Ave.",
+      "address2": "",
+      "city": "Cleveland",
+      "state": "TX",
+      "zip": "77327",
+      "county": "Liberty",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2008-01-08",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5334",
+          "name": "Gerald Lloyd Wright",
+          "granted": "1999-04-24",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 27
+        }
+      ],
+      "earliest_rpls_granted": "1999-04-24",
+      "earliest_rpls_year": 1999,
+      "latest_rpls_granted": "1999-04-24",
+      "latest_rpls_year": 1999,
+      "owner_rpls_tenure_years": 27,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10194048",
+      "legal_name": "FOUR POINTS",
+      "address1": "83 EAST GREYWING CIRCLE",
+      "address2": "",
+      "city": "The Woodlands",
+      "state": "TX",
+      "zip": "77382",
+      "county": "Montgomery",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2014-07-29",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5326",
+          "name": "MARK LEE SHERLEY",
+          "granted": "1999-04-24",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 27
+        }
+      ],
+      "earliest_rpls_granted": "1999-04-24",
+      "earliest_rpls_year": 1999,
+      "latest_rpls_granted": "1999-04-24",
+      "latest_rpls_year": 1999,
+      "owner_rpls_tenure_years": 27,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10005400",
+      "legal_name": "STEPHEN G. COOK ENGINEERING",
+      "address1": "13302 Thornridge Lane",
+      "address2": "",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78232",
+      "county": "Bexar",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2014-12-09",
+      "n_active_rpls": 1,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "5293",
+          "name": "Stephen Gerard Cook",
+          "granted": "1999-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 27
+        }
+      ],
+      "earliest_rpls_granted": "1999-01-01",
+      "earliest_rpls_year": 1999,
+      "latest_rpls_granted": "1999-01-01",
+      "latest_rpls_year": 1999,
+      "owner_rpls_tenure_years": 27,
+      "spine_priority": "B"
+    },
+    {
+      "license_number": "10030400",
+      "legal_name": "HOVIS SURVEYING COMPANY, INC.",
+      "address1": "5000 CABBAGE STREET",
+      "address2": "",
+      "city": "Spring",
+      "state": "TX",
+      "zip": "77379",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2007-11-08",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "1814",
+          "name": "HARRY H. HOVIS",
+          "granted": "1974-02-13",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 52
+        },
+        {
+          "rpls_number": "4827",
+          "name": "HARRY HENDERSON HOVIS",
+          "granted": "1989-07-06",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 37
+        },
+        {
+          "rpls_number": "6123",
+          "name": "MARY MICHELLE MCKENZIE",
+          "granted": "2009-07-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 17
+        }
+      ],
+      "earliest_rpls_granted": "1974-02-13",
+      "earliest_rpls_year": 1974,
+      "latest_rpls_granted": "2009-07-01",
+      "latest_rpls_year": 2009,
+      "owner_rpls_tenure_years": 52,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10033900",
+      "legal_name": "WIER & ASSOCIATES, INC.",
+      "address1": "2201 E Lamar Blvd Ste 200E",
+      "address2": "",
+      "city": "Arlington",
+      "state": "TX",
+      "zip": "76006-7440",
+      "county": "Tarrant",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-11-12",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2296",
+          "name": "JOHN PATTERSON WIER",
+          "granted": "1979-12-27",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "5798",
+          "name": "Gregory Alvin Edwin Madsen",
+          "granted": "2004-05-17",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 22
+        },
+        {
+          "rpls_number": "6373",
+          "name": "Aaron L. Stringfellow",
+          "granted": "2012-05-23",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 14
+        }
+      ],
+      "earliest_rpls_granted": "1979-12-27",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "2012-05-23",
+      "latest_rpls_year": 2012,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10025700",
+      "legal_name": "STANGER SURVEYING TYLER, LLC",
+      "address1": "1595 EAST GRANDE BOULEVARD",
+      "address2": "",
+      "city": "Tyler",
+      "state": "TX",
+      "zip": "75703",
+      "county": "Smith",
+      "geo_bucket": "secondary",
+      "firm_granted": "2007-11-05",
+      "n_active_rpls": 4,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2111",
+          "name": "LESTER JOSEPH STANGER",
+          "granted": "1979-08-21",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "5385",
+          "name": "ROBERT SHANE NEALLY",
+          "granted": "2000-05-05",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 26
+        },
+        {
+          "rpls_number": "5680",
+          "name": "KENNY G. WILLIAMS",
+          "granted": "2002-12-06",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 24
+        },
+        {
+          "rpls_number": "6292",
+          "name": "SEAN WILLIAM SPRAY",
+          "granted": "2011-06-29",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 15
+        }
+      ],
+      "earliest_rpls_granted": "1979-08-21",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "2011-06-29",
+      "latest_rpls_year": 2011,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10048200",
+      "legal_name": "BOB MATUSH SURVEYING, INC.",
+      "address1": "2624 KENSINGTON DRIVE, SUITE 107",
+      "address2": "",
+      "city": "Tyler",
+      "state": "TX",
+      "zip": "75703",
+      "county": "Smith",
+      "geo_bucket": "secondary",
+      "firm_granted": "2007-12-11",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2114",
+          "name": "WESLEY D. TURLEY",
+          "granted": "1979-08-21",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 47
+        },
+        {
+          "rpls_number": "6499",
+          "name": "JOSEPH KEITH POLLARD",
+          "granted": "2014-05-15",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 12
+        },
+        {
+          "rpls_number": "6613",
+          "name": "JORDAN TAYLOR VULGAMOTT",
+          "granted": "2016-05-06",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 10
+        }
+      ],
+      "earliest_rpls_granted": "1979-08-21",
+      "earliest_rpls_year": 1979,
+      "latest_rpls_granted": "2016-05-06",
+      "latest_rpls_year": 2016,
+      "owner_rpls_tenure_years": 47,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10011300",
+      "legal_name": "BAIRD, HAMPTON & BROWN, INC.",
+      "address1": "6300 RIDGLEA PLACE, SUITE 700",
+      "address2": "",
+      "city": "Fort Worth",
+      "state": "TX",
+      "zip": "76116",
+      "county": "Tarrant",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-10-25",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "3086",
+          "name": "JOHN WILLIAM BAIRD",
+          "granted": "1980-07-25",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        },
+        {
+          "rpls_number": "5956",
+          "name": "JOHN GABRIEL MARGOTTA",
+          "granted": "2007-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 19
+        },
+        {
+          "rpls_number": "6731",
+          "name": "Colby Dean Strevey",
+          "granted": "2018-11-30",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 8
+        }
+      ],
+      "earliest_rpls_granted": "1980-07-25",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "2018-11-30",
+      "latest_rpls_year": 2018,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10141600",
+      "legal_name": "SAMES, INC.",
+      "address1": "200 SOUTH 10TH STREET",
+      "address2": "SUITE 1500",
+      "city": "Mcallen",
+      "state": "TX",
+      "zip": "78501",
+      "county": "Hidalgo",
+      "geo_bucket": "secondary",
+      "firm_granted": "2008-06-13",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2448",
+          "name": "Leo Lozano Rodriguez",
+          "granted": "1980-02-20",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        },
+        {
+          "rpls_number": "5005",
+          "name": "Oscar Hernandez",
+          "granted": "1992-12-11",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 34
+        },
+        {
+          "rpls_number": "6027",
+          "name": "Samuel David Maldonado",
+          "granted": "2008-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 18
+        }
+      ],
+      "earliest_rpls_granted": "1980-02-20",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "2008-01-01",
+      "latest_rpls_year": 2008,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10194091",
+      "legal_name": "PARKHILL, SMITH & COOPER, INC.",
+      "address1": "4222 85TH STREET",
+      "address2": "",
+      "city": "Lubbock",
+      "state": "TX",
+      "zip": "79423",
+      "county": "Lubbock",
+      "geo_bucket": "secondary",
+      "firm_granted": "2015-01-27",
+      "n_active_rpls": 4,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "2925",
+          "name": "Larry Dale Stone",
+          "granted": "1980-05-30",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 46
+        },
+        {
+          "rpls_number": "6081",
+          "name": "John Glas",
+          "granted": "2009-01-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 17
+        },
+        {
+          "rpls_number": "6453",
+          "name": "Samuel Wilson Wyatt",
+          "granted": "2013-12-11",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 13
+        },
+        {
+          "rpls_number": "6889",
+          "name": "Franklin Andrew Leamons",
+          "granted": "2021-06-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 5
+        }
+      ],
+      "earliest_rpls_granted": "1980-05-30",
+      "earliest_rpls_year": 1980,
+      "latest_rpls_granted": "2021-06-07",
+      "latest_rpls_year": 2021,
+      "owner_rpls_tenure_years": 46,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10073800",
+      "legal_name": "WEST BELT SURVEYING, INC.",
+      "address1": "21020 PARK ROW DRIVE",
+      "address2": "",
+      "city": "Katy",
+      "state": "TX",
+      "zip": "77449",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2008-02-08",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "4113",
+          "name": "HUGH WILLIAM CLARKSON",
+          "granted": "1982-08-27",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 44
+        },
+        {
+          "rpls_number": "4778",
+          "name": "Jack Robert Chiles",
+          "granted": "1989-07-06",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 37
+        },
+        {
+          "rpls_number": "5189",
+          "name": "JOEL DEAN WALKER",
+          "granted": "1996-06-07",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 30
+        }
+      ],
+      "earliest_rpls_granted": "1982-08-27",
+      "earliest_rpls_year": 1982,
+      "latest_rpls_granted": "1996-06-07",
+      "latest_rpls_year": 1996,
+      "owner_rpls_tenure_years": 44,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10013100",
+      "legal_name": "Jack W Roome Surveying, Inc.",
+      "address1": "1255 W. 15th Street",
+      "address2": "Suite 100",
+      "city": "Plano",
+      "state": "TX",
+      "zip": "75075",
+      "county": "Collin",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2007-10-25",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "4051",
+          "name": "FREDERICK E BEMENDERFER",
+          "granted": "1982-02-23",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 44
+        },
+        {
+          "rpls_number": "5693",
+          "name": "MICHAEL ROBERT CUZZO",
+          "granted": "2003-05-16",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 23
+        },
+        {
+          "rpls_number": "5733",
+          "name": "CHAD CONNERY SLEDGE",
+          "granted": "2003-05-16",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 23
+        }
+      ],
+      "earliest_rpls_granted": "1982-02-23",
+      "earliest_rpls_year": 1982,
+      "latest_rpls_granted": "2003-05-16",
+      "latest_rpls_year": 2003,
+      "owner_rpls_tenure_years": 44,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10020700",
+      "legal_name": "PERCHERON PROFESSIONAL SERVICES LLC DBA PERCHERON LLC",
+      "address1": "1904 W Grand Pkwy N Ste 200",
+      "address2": "",
+      "city": "Katy",
+      "state": "TX",
+      "zip": "77449",
+      "county": "Harris",
+      "geo_bucket": "major_metro_coastal",
+      "firm_granted": "2007-10-30",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "4279",
+          "name": "LARRY WAYNE SMITH",
+          "granted": "1984-02-22",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 42
+        },
+        {
+          "rpls_number": "6424",
+          "name": "Ronald Patrick Kell",
+          "granted": "2013-06-13",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 13
+        },
+        {
+          "rpls_number": "6576",
+          "name": "MICHAEL EDWARD TRIPP",
+          "granted": "2015-05-18",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 11
+        }
+      ],
+      "earliest_rpls_granted": "1984-02-22",
+      "earliest_rpls_year": 1984,
+      "latest_rpls_granted": "2015-05-18",
+      "latest_rpls_year": 2015,
+      "owner_rpls_tenure_years": 42,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10194493",
+      "legal_name": "Jacob & Martin, LLC",
+      "address1": "3465 CURRY LANE",
+      "address2": "",
+      "city": "Abilene",
+      "state": "TX",
+      "zip": "79606",
+      "county": "Taylor",
+      "geo_bucket": "secondary",
+      "firm_granted": "2019-02-25",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "4247",
+          "name": "MARK TAYLOR BROWN",
+          "granted": "1984-02-22",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 42
+        },
+        {
+          "rpls_number": "6394",
+          "name": "LEE WAGNER ROSENBAUM",
+          "granted": "2012-12-12",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 14
+        },
+        {
+          "rpls_number": "7130",
+          "name": "Riaz Logan Afshar",
+          "granted": "2024-10-30",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 2
+        }
+      ],
+      "earliest_rpls_granted": "1984-02-22",
+      "earliest_rpls_year": 1984,
+      "latest_rpls_granted": "2024-10-30",
+      "latest_rpls_year": 2024,
+      "owner_rpls_tenure_years": 42,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10178500",
+      "legal_name": "AMD ENGINEERING, LLC",
+      "address1": "6515 68TH STREET",
+      "address2": "SUITE 300",
+      "city": "Lubbock",
+      "state": "TX",
+      "zip": "79424",
+      "county": "Lubbock",
+      "geo_bucket": "secondary",
+      "firm_granted": "2010-04-23",
+      "n_active_rpls": 4,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "4339",
+          "name": "NORRIS PINER STEVENS",
+          "granted": "1985-02-18",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 41
+        },
+        {
+          "rpls_number": "4666",
+          "name": "STERLING BRENT BURROW",
+          "granted": "1988-06-24",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 38
+        },
+        {
+          "rpls_number": "6466",
+          "name": "LANDON SHAYNE MERRITT",
+          "granted": "2013-12-11",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 13
+        },
+        {
+          "rpls_number": "7251",
+          "name": "Blake Alan DeVaney",
+          "granted": "2025-12-06",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 1
+        }
+      ],
+      "earliest_rpls_granted": "1985-02-18",
+      "earliest_rpls_year": 1985,
+      "latest_rpls_granted": "2025-12-06",
+      "latest_rpls_year": 2025,
+      "owner_rpls_tenure_years": 41,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10089000",
+      "legal_name": "SINCLAIR LAND SURVEYING, INC.",
+      "address1": "3411 Magic Drive",
+      "address2": "",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78229229",
+      "county": "Bexar",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-01-04",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "4393",
+          "name": "Timothy Albert Lenz",
+          "granted": "1986-02-12",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 40
+        },
+        {
+          "rpls_number": "5142",
+          "name": "Lemuel Theodore Sinclair",
+          "granted": "1995-06-16",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 31
+        },
+        {
+          "rpls_number": "7024",
+          "name": "Ryan Timothy Lenz",
+          "granted": "2023-05-18",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 3
+        }
+      ],
+      "earliest_rpls_granted": "1986-02-12",
+      "earliest_rpls_year": 1986,
+      "latest_rpls_granted": "2023-05-18",
+      "latest_rpls_year": 2023,
+      "owner_rpls_tenure_years": 40,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10095500",
+      "legal_name": "MCGRAY & MCGRAY LAND SURVEYORS, INC.",
+      "address1": "3301 HANCOCK DRIVE, SUITE 6",
+      "address2": "",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78731",
+      "county": "Travis",
+      "geo_bucket": "major_metro",
+      "firm_granted": "2008-01-08",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "4552",
+          "name": "Joe Darrell Webber",
+          "granted": "1986-08-13",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 40
+        },
+        {
+          "rpls_number": "5623",
+          "name": "Christopher Ian Conrad",
+          "granted": "2002-12-06",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 24
+        },
+        {
+          "rpls_number": "6130",
+          "name": "TROY RYAN THOMAS",
+          "granted": "2009-07-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 17
+        }
+      ],
+      "earliest_rpls_granted": "1986-08-13",
+      "earliest_rpls_year": 1986,
+      "latest_rpls_granted": "2009-07-01",
+      "latest_rpls_year": 2009,
+      "owner_rpls_tenure_years": 40,
+      "spine_priority": "C"
+    },
+    {
+      "license_number": "10194134",
+      "legal_name": "Geotex Property Solutions",
+      "address1": "4701 South 3rd Street",
+      "address2": "",
+      "city": "Abilene",
+      "state": "TX",
+      "zip": "79605",
+      "county": "Taylor",
+      "geo_bucket": "secondary",
+      "firm_granted": "2015-07-13",
+      "n_active_rpls": 3,
+      "principal_rpls_list": [
+        {
+          "rpls_number": "4378",
+          "name": "REX DANIEL HAAS",
+          "granted": "1986-02-12",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 40
+        },
+        {
+          "rpls_number": "4885",
+          "name": "James Louis Williams",
+          "granted": "1990-06-01",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 36
+        },
+        {
+          "rpls_number": "7168",
+          "name": "Kelsey Neal Williams",
+          "granted": "2025-04-09",
+          "expires": "2026-12-31",
+          "tenure_years_from_grant": 1
+        }
+      ],
+      "earliest_rpls_granted": "1986-02-12",
+      "earliest_rpls_year": 1986,
+      "latest_rpls_granted": "2025-04-09",
+      "latest_rpls_year": 2025,
+      "owner_rpls_tenure_years": 40,
+      "spine_priority": "C"
+    }
+  ]
+}

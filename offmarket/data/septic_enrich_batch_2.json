@@ -1,0 +1,319 @@
+{
+  "batch": 2,
+  "geography": "DFW exurbs + Central TX (high-tenure anchors)",
+  "fetched_at": "2026-05-16",
+  "businesses": [
+    {
+      "legal_name": "Harrington Environmental Services, LLC",
+      "owner_name": "Raeford Harrington + 'Lord Härringtón' (per About page, ceremonial titles)",
+      "owner_age_estimate": 60,
+      "owner_age_source": "license_tenure_proxy",
+      "year_established": 1984,
+      "years_in_business": 42,
+      "license_holder_name": "Harrington family",
+      "address_1": "1632 Royalwood Cir Joshua, TX 76058",
+      "address_2": "3778 Burleson Retta Rd Burleson, TX 76028",
+      "address_3": "4108 Coral Circle Fort Worth, TX 76126",
+      "phone": "(817) 558-8181",
+      "service_counties": ["Tarrant", "Johnson", "Parker", "Hood", "Dallas-W"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://www.harringtonservices.com/about/",
+        "fetched_at": "2026-05-16",
+        "result": "Co-owners Raeford Harrington + 'Lord Härringtón' (whimsical titling references 16th-century ancestor Sir John Harrington). Family-name LLC. No specific next-gen successor visible. BBB Accredited. 3-location operation. Aerobic + grease + grit + sand + lift station + RE inspection multi-service.",
+        "direction": "positive"
+      },
+      "coasting_tells": [
+        "**42-yr tenure** (since 1984)",
+        "3 physical locations + BBB Accredited = scaled operation",
+        "Multi-service mix incl recurring grease + grit + sand traps",
+        "Family LLC but no visible 2nd-gen handoff",
+        "STRONG A-tier candidate IF owner age verified"
+      ],
+      "size_estimate": "3 locations + 42 yrs + multi-service = scale. Estimated 12-20 trucks, $4M-$8M rev, $800K-$1.6M EBITDA. **Already platform-scale; possibly Wind River radar.**",
+      "sub_trade": "multi_service_full",
+      "platform_affiliation_check": "Independent."
+    },
+    {
+      "legal_name": "Jackey Lackey Septic Service",
+      "owner_name": "Dwain Lackey (current; father was founder)",
+      "owner_age_estimate": 60,
+      "owner_age_source": "self_report_tenure_2nd_gen",
+      "year_established": 1986,
+      "years_in_business": 40,
+      "license_holder_name": "Dwain Lackey",
+      "license_number": "MP001459 + O50027917 + M18077 (plumbing)",
+      "address": "Alvarado area",
+      "city": "Alvarado",
+      "county": "Johnson",
+      "service_counties": ["Johnson", "Tarrant-S", "Hood"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://www.jackeylackeyseptic.com/about/",
+        "fetched_at": "2026-05-16",
+        "result": "**SECOND-GEN succession ALREADY EXECUTED.** Dwain Lackey began at age 15 working with father (founder). Father → Dwain succession complete. No third-gen visible. Master plumbing license 30 yrs + septic 10 yrs.",
+        "direction": "positive"
+      },
+      "coasting_tells": [
+        "2nd-gen owner Dwain — 30+ yr operator",
+        "Owner ~60 yrs, **near classic exit window**",
+        "No third-gen successor visible on About page",
+        "Multi-trade plumbing + septic + porta-toilet — mature operation",
+        "STRONG A-tier candidate IF owner age verified"
+      ],
+      "size_estimate": "3-county family-operation 40 yrs. Estimated 5-8 trucks, $1.2M-$2.5M rev, $300K-$550K EBITDA.",
+      "sub_trade": "multi_service_full",
+      "platform_affiliation_check": "Independent."
+    },
+    {
+      "legal_name": "Burleson Septic Cleaning",
+      "owner_name": "Family-owned (3rd generation; specific names not disclosed)",
+      "owner_age_estimate": 50,
+      "owner_age_source": "license_tenure_proxy_3rd_gen",
+      "year_established": 1973,
+      "years_in_business": 53,
+      "license_holder_name": "Family",
+      "license_number": "TCEQ #20584",
+      "address": "2410 SW Hulen St",
+      "city": "Burleson",
+      "county": "Tarrant",
+      "zip": "76028",
+      "phone": "(817) 295-4270",
+      "email": "burlesonsepticcleaning@gmail.com",
+      "service_counties": ["Tarrant-S", "Johnson", "Hood"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://www.burlesonsepticcleaning.com/about-us",
+        "fetched_at": "2026-05-16",
+        "result": "**3RD GENERATION family-owned.** 50+ years operating. 50,000+ customers served, 1M+ gallons pumped annually. Family LLC. 3rd-gen succession ALREADY in place.",
+        "direction": "negative"
+      },
+      "coasting_tells": [
+        "**3rd-gen family handoff complete** — internal succession is the path",
+        "50,000+ customers = institutional scale",
+        "Likely B_forward or D_pass — not coasting-solo profile"
+      ],
+      "size_estimate": "1M+ gallons/yr pumped = institutional. 50K+ customer book. Estimated 12-20 trucks, $3M-$6M rev, $600K-$1.2M EBITDA.",
+      "sub_trade": "multi_service_full",
+      "platform_affiliation_check": "Independent — family-controlled."
+    },
+    {
+      "legal_name": "A & M Septic",
+      "dba_name": "Malone Excavating & Waste Water Systems, Inc.",
+      "owner_name": "Bob Malone (founder) + Zack (probable son/successor)",
+      "owner_age_estimate": 62,
+      "owner_age_source": "license_tenure_proxy",
+      "year_established": 1992,
+      "years_in_business": 34,
+      "license_holder_name": "Bob Malone",
+      "license_number": "OS4227",
+      "address": "PO Box 249, Valley View, TX 76272",
+      "city": "Valley View",
+      "county": "Cooke",
+      "phone": "(972) 539-5247",
+      "service_counties": ["Denton", "Cooke", "Grayson", "Wise"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://www.amseptic.com/about",
+        "fetched_at": "2026-05-16",
+        "result": "Bob Malone + Zack listed as contacts (two phone numbers — Bob 214-500-8421, Zack 214-808-4072). 44+ yrs combined experience suggests Zack is family/long-tenured successor. Parent entity Malone Excavating. Family-owned + operated.",
+        "direction": "negative"
+      },
+      "coasting_tells": [
+        "Bob ~62 with Zack named as 2nd contact",
+        "44+ yrs combined experience = Zack is likely son/long-tenured",
+        "Likely B_forward — internal succession candidate visible",
+        "4-county N TX route"
+      ],
+      "size_estimate": "4-county. 34 yrs. Estimated 4-7 trucks, $1M-$2M rev, $200K-$400K EBITDA.",
+      "sub_trade": "multi_service_full",
+      "platform_affiliation_check": "Independent."
+    },
+    {
+      "legal_name": "Total Septic",
+      "owner_name": "DaWayne Gourley (founder) / Mackie Gourley (title page name)",
+      "owner_age_estimate": 50,
+      "owner_age_source": "license_tenure_proxy",
+      "year_established": 2016,
+      "years_in_business": 10,
+      "license_holder_name": "Gourley",
+      "address": "Collin County",
+      "city": "TBD",
+      "county": "Collin",
+      "service_counties": ["Collin", "Grayson", "Dallas", "Denton", "Rockwall", "Fannin", "Hunt"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://totalseptic.net/about",
+        "fetched_at": "2026-05-16",
+        "result": "DaWayne Gourley (founder body text) vs Mackie Gourley (title) — name discrepancy. 'Family-Owned Business' stated, no specifics on succession. 500+ systems installed + 5,000+ tanks pumped + Home Advisor awards.",
+        "direction": "positive"
+      },
+      "coasting_tells": [
+        "10 yrs since 2016 — barely meets 5-yr gate",
+        "7-county route established",
+        "**Borderline tenure — likely C_watch unless owner age confirms older**"
+      ],
+      "size_estimate": "Newer (10 yrs) but 7-county route. Estimated 3-5 trucks, $700K-$1.2M rev, $150K-$250K EBITDA.",
+      "sub_trade": "multi_service_full",
+      "platform_affiliation_check": "Independent."
+    },
+    {
+      "legal_name": "Tex Tech Environmental, Inc.",
+      "owner_name": "Cleve Weyenberg (founder) + Cleve Weyenberg Jr. (2nd gen) + Tyler Weyenberg (3rd gen)",
+      "owner_age_estimate": 75,
+      "owner_age_source": "license_tenure_proxy_3rd_gen",
+      "year_established": 1978,
+      "years_in_business": 48,
+      "license_holder_name": "Weyenberg family",
+      "address": "Burleson area",
+      "city": "Burleson",
+      "county": "Tarrant",
+      "service_counties": ["Tarrant-S", "Johnson", "Parker"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://textechenvironmental.com/about/",
+        "fetched_at": "2026-05-16",
+        "result": "**3RD GEN: Cleve Sr → Cleve Jr → Tyler Weyenberg (grandson).** Tyler is wastewater treatment plant operator. Multi-gen succession ALREADY in place. Vertically integrated: aerobic wastewater design + package plant fabrication + treatment ops.",
+        "direction": "negative"
+      },
+      "coasting_tells": [
+        "**3rd-gen succession complete** — Tyler operating",
+        "Vertically integrated (manufactures own treatment plants 500-500,000 GPD)",
+        "Not Gideon target — locked into family"
+      ],
+      "size_estimate": "Vertically integrated, 48 yrs, 3rd-gen. Estimated 10-15 trucks + manufacturing. $3M-$6M rev, $600K-$1.2M EBITDA. Platform-scale.",
+      "sub_trade": "multi_service_full_premium",
+      "platform_affiliation_check": "Independent — vertically-integrated TX family operation."
+    },
+    {
+      "legal_name": "Superior Septic and Clean Can",
+      "owner_name": "Ray McEachern",
+      "owner_age_estimate": 68,
+      "owner_age_source": "license_tenure_proxy_40yr",
+      "year_established": 1983,
+      "years_in_business": 43,
+      "license_holder_name": "Ray McEachern",
+      "license_number": "TCEQ #20500 + City of Austin Permit #42",
+      "address": "8 Indian Meadows Drive",
+      "city": "Round Rock",
+      "county": "Williamson",
+      "zip": "78665",
+      "phone": "512-244-6300",
+      "service_counties": ["Williamson", "Travis-N", "Hays-N"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "http://www.superiorseptictx.net/",
+        "fetched_at": "2026-05-16",
+        "result": "**SOLE OWNER Ray McEachern, 43 YEARS.** 'Family-owned and operated' but **NO succession plan or next-gen involvement disclosed** on About page. HUB Certified, bilingual, insured/bonded. Solo licensed operator.",
+        "direction": "positive"
+      },
+      "coasting_tells": [
+        "**Ray ~68 (40+ yr career since 1983)** = peak Layer 1 natural-exit window",
+        "Solo owner, NO licensed successor visible",
+        "20+ municipalities served = mature route",
+        "Cross-trade incl portable toilets + car washing (could partial-exclude per skill rule — verify primary mix)",
+        "**STRONG A-tier candidate** IF septic primary"
+      ],
+      "size_estimate": "20+ municipality route, 43 yrs. Estimated 6-10 trucks, $1.5M-$3M rev, $300K-$600K EBITDA. **A-tier sweet spot.**",
+      "sub_trade": "multi_service_full_with_porta_toilet",
+      "platform_affiliation_check": "Independent.",
+      "potential_caveat": "Portable toilet rental mix + car-washing could partial-exclude per skill rule (pure-portable-toilet exclusion). Verify primary revenue split during deep-dive."
+    },
+    {
+      "legal_name": "Aerobic Services of South Texas",
+      "owner_name": "TBD (not disclosed on About page)",
+      "owner_age_estimate": 58,
+      "owner_age_source": "license_tenure_proxy",
+      "year_established": 2001,
+      "years_in_business": 25,
+      "license_holder_name": "TBD",
+      "license_number": "MP349 + OS24597",
+      "address": "New Braunfels area",
+      "city": "New Braunfels",
+      "county": "Comal",
+      "service_counties": ["Austin", "Bastrop", "Caldwell", "Fayette", "Hays", "Lee", "Pflugerville", "Williamson", "Comal", "Bexar"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://www.aerobicservices.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "result": "Owner name NOT disclosed on About page. Separate operations for Canyon Lake + Bastrop = multi-location. State-licensed. Veteran/military 10% discount. No succession info disclosed. 25 yrs since 2001.",
+        "direction": "positive"
+      },
+      "coasting_tells": [
+        "25 yrs",
+        "Multi-location (Canyon Lake + Bastrop) = scaled",
+        "MP349 = low license number = early issuance/long tenure",
+        "Owner-not-disclosed pattern is typical of coasting solo owners who don't want to be 'the brand'",
+        "**Worth deep enrich — likely A or B candidate**"
+      ],
+      "size_estimate": "8+ county route + 2 locations + MP349 = early operator. Estimated 6-10 trucks, $1.5M-$3M rev, $300K-$600K EBITDA.",
+      "sub_trade": "maintenance_primary_aerobic_specialist",
+      "platform_affiliation_check": "Independent."
+    },
+    {
+      "legal_name": "Environmental Septic Services LLC",
+      "owner_name": "Lori (last name not disclosed)",
+      "owner_age_estimate": 55,
+      "owner_age_source": "license_tenure_proxy",
+      "year_established": 1997,
+      "years_in_business": 29,
+      "license_holder_name": "Lori",
+      "address": "711 W Main #111",
+      "city": "Ovilla",
+      "county": "Ellis",
+      "zip": "75154",
+      "phone": "214-325-8028",
+      "email": "acestexas@gmail.com",
+      "service_counties": ["Dallas", "Johnson", "Ellis"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://www.septictx.com/",
+        "fetched_at": "2026-05-16",
+        "result": "Owner first name Lori only. Full name not disclosed. **Ellis County CONTRACTED septic maintenance provider** = STRONG B2B sticky relationship. Aerobic-focus + service contracts + repair + aerator + pump + sprinkler + chlorine sales.",
+        "direction": "positive"
+      },
+      "coasting_tells": [
+        "29 yrs since 1997",
+        "**Ellis County contractor relationship** = code-mandated B2B recurring",
+        "Owner-name-anonymized pattern (Lori first only) = coasting tell",
+        "Aerobic-positioned",
+        "**STRONG A-tier candidate** IF owner age verifies older"
+      ],
+      "size_estimate": "Ellis-contracted, 3-county. Estimated 4-6 trucks, $900K-$1.8M rev, $200K-$400K EBITDA.",
+      "sub_trade": "maintenance_primary_aerobic_specialist",
+      "platform_affiliation_check": "Independent."
+    },
+    {
+      "legal_name": "Coastal Aerobic Systems, LLC",
+      "owner_name": "Jerry (last name not disclosed)",
+      "owner_age_estimate": 62,
+      "owner_age_source": "license_tenure_proxy",
+      "year_established": 1992,
+      "years_in_business": 34,
+      "license_holder_name": "Jerry",
+      "address": "8979 CR 400",
+      "city": "Brazoria",
+      "county": "Brazoria",
+      "zip": "77422",
+      "phone": "(979) 798-7678",
+      "service_counties": ["Brazoria", "Galveston", "Matagorda"],
+      "successor_check": {
+        "method": "live_website_fetch",
+        "url": "https://coastalaerobicsystems.com/new/",
+        "fetched_at": "2026-05-16",
+        "result": "Owner first name Jerry only. Full name not disclosed. **34 yrs since 1992.** Clearstream Wastewater equipment partner. Full-service residential + commercial + industrial. No team page visible — solo-owner pattern.",
+        "direction": "positive"
+      },
+      "coasting_tells": [
+        "**34 yrs since 1992** + owner ~62 = mid Layer 1 window",
+        "Coastal TX (vacation-home aerobic = sticky)",
+        "Clearstream equipment partnership = institutional",
+        "Solo-owner anonymized pattern = coasting tell",
+        "**A or B tier candidate**"
+      ],
+      "size_estimate": "Coastal route + Clearstream partner. Estimated 4-7 trucks, $1M-$2M rev, $200K-$400K EBITDA.",
+      "sub_trade": "multi_service_full",
+      "platform_affiliation_check": "Independent."
+    }
+  ]
+}

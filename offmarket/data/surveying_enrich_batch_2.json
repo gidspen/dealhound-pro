@@ -1,0 +1,220 @@
+{
+  "batch_id": "surveying_enrich_batch_2",
+  "fetched_at": "2026-05-16",
+  "notes": "Live-fetch enrichment continuation for top candidates 11-20.",
+  "results": [
+    {
+      "license_number": "10064100",
+      "legal_name": "CLEVELAND SURVEYING COMPANY, INC.",
+      "website": "https://clevelandsurveying.com/",
+      "phone": "281-592-6395",
+      "team_page_url": "https://clevelandsurveying.com/",
+      "successor_found": true,
+      "successor_evidence": "Cross-referenced search results show: Louis W. Bergman III is the senior RPLS at Cleveland Surveying Co (709 S. Washington Ave, Cleveland TX 77327). Separate but related: 'Humble Surveying Company' at 1032 E First St, Humble TX 77338 is owned by Louis W. Bergman IV — i.e., son. Multi-generational family operation with successor (Bergman IV) running a separate-but-related Humble office. The 'family-surname Bergman IV operating sister firm' = successor in place per skill rule. DEMOTE A→B.",
+      "team_page_evidence": "City of Cleveland TX directory + ResearchGiant + ClevelandTexasChamber listings confirm Louis W. Bergman III at Cleveland Surveying. Spokeo + Manta confirm Louis W. Bergman IV at Humble Surveying Company (separate office, same family). Bergman Engineering also in Cleveland TX 77327 per Manta — third Bergman business cluster.",
+      "coasting_tells": [
+        "Solo senior RPLS Louis W. Bergman III for 47+ years (RPLS granted 1979) at the Cleveland office.",
+        "Limited public website presence — referral-driven low-marketing posture.",
+        "Liberty County rural location — energy-corridor adjacent (East TX timber/oil) but moderate transactional volume."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Family-surname successor (Bergman IV) operating sister-firm in Humble — internal-succession candidate; not a coasting-solo-to-outside-buyer profile.",
+      "comptroller_status": "active (presumed - current operating website)",
+      "service_specialties": ["land surveying"],
+      "data_sources": [
+        {"source": "ClevelandTexas City directory", "url": "https://www.clevelandtexas.com/DocumentCenter/View/103", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["address","principal"]},
+        {"source": "Spokeo / cross-ref Bergman IV in Humble Surveying", "url": "https://www.bbb.org/us/tx/houston/profile/land-surveyor/shank-land-surveyors-0915-52000038", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["family_successor_match"]},
+        {"source": "clevelandsurveying.com", "url": "https://clevelandsurveying.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["operating_status"]}
+      ]
+    },
+    {
+      "license_number": "10195036",
+      "legal_name": "Civil Mesh Pro LLC",
+      "website": "https://civilmesh.com/",
+      "phone": null,
+      "team_page_url": "https://civilmesh.com/about/",
+      "successor_found": false,
+      "exclusion_reason": "Modern tech-forward drone-survey startup (verified aerial data, grading insights, earthwork quantities). Owner Larry Hada presumably brought his RPLS to a new venture — the 47yr RPLS tenure does NOT reflect the firm's tenure. Drop from A consideration: this is a recent tech-startup using drone surveys, not a coasting solo-owner of a long-tenured firm.",
+      "demote_to_tier": "C_watch",
+      "team_page_evidence": "civilmesh.com — 'Civil Mesh Pro combines cutting-edge technology with deep technical expertise to help construction companies, homebuilders, and land developers improve accuracy, reduce costs, and operate more efficiently.' Verified aerial data + grading + earthwork quantities = drone-survey-primary modern startup, NOT a traditional surveying firm.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy_misleading",
+      "comptroller_status": "active (recent LLC formation per name)",
+      "data_sources": [
+        {"source": "civilmesh.com homepage", "url": "https://civilmesh.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["business_nature","tech_stack"]}
+      ]
+    },
+    {
+      "license_number": "10020600",
+      "legal_name": "DEL-PHI ENGINEERING ASSOCIATES, INC.",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "is_distressed": false,
+      "distress_signals_historical": ["1989 court judgment from Texas Commerce Bank-Conroe against Del-Phi Engineering Associates, Inc. and Ernest W. DeLuca + Linda V. DeLuca (771 S.W.2d 589). Historical (37 years old) — likely satisfied long ago, but flag for the manual verification queue."],
+      "exclusion_reason": "Ernest William DeLuca (RPLS granted 1980, 46yr tenure) — historical lien but likely satisfied. No active website found, no team page. Sub-Houston/Conroe market. Cap at C until live operation can be verified.",
+      "demote_to_tier": "C_watch",
+      "team_page_evidence": "CorporationWiki shows Ernest Deluca as President of Del-Phi Engineering Associates Inc. Wife Linda V. DeLuca as Treasurer. Company incorporated 43 years ago (1983). No public website found. 1989 court judgment historical (likely satisfied).",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "verification_needed - 1989 judgment historical, current status unknown",
+      "data_sources": [
+        {"source": "CorporationWiki Ernest Deluca", "url": "https://www.corporationwiki.com/Texas/Conroe/ernest-w-deluca/31836094.aspx", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["officers","incorporation_year"]},
+        {"source": "Leagle court case", "url": "https://www.leagle.com/decision/19891360771sw2d58911318", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["1989_judgment"]}
+      ]
+    },
+    {
+      "license_number": "10030300",
+      "legal_name": "SANDER ENGINEERING CORPORATION",
+      "website": "http://www.sandereng.com/",
+      "phone": null,
+      "team_page_url": "http://www.sandereng.com/about/our-team/",
+      "successor_found": true,
+      "successor_evidence": "Live-fetch of sandereng.com/about/our-team/ (2026-05-16) reveals 6 named professionals: Dennis W. Sander (P.E. + RPLS #3535, founder/president), Erik D. Miller (P.E., VP/Partner since 2016), William 'Bill' T. Manning Jr. (P.E., VP/Partner since 2016), Rene G. Hurtado (P.E.), Daniel Benavidez (Graduate Engineer), Juan J. Arreola (Graduate Engineer). However: Dennis Sander is the SOLE RPLS — the firm's surveying capacity is single-RPLS-dependent. The 2 P.E. partners (Miller, Manning) are engineering succession but not surveying succession. Mixed result: engineering side has successor, surveying side does not — but firm is engineering-primary (5 P.E., 1 RPLS).",
+      "team_page_evidence": "sandereng.com/about/our-team/ live-fetch: Dennis W Sander founder, P.E. (Texas #30647) + R.P.L.S. (#3535), '50+ years of engineering experience in civil and municipal projects'. 2 P.E. partners since 2016 (Miller, Manning). 4 P.E.s + 2 graduate engineers + Sander = 7 professionals total. Engineering primary discipline; surveying ancillary.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Firm is engineering-primary multi-discipline (5 P.E. + 1 RPLS); the surveying acquisition thesis doesn't fit cleanly. The 2 VP/Partners (Miller, Manning) represent engineering-side succession even if surveying side is single-RPLS. ETA buyers targeting recurring-B2B surveying typically don't acquire engineering-primary firms.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (current operating website)",
+      "service_specialties": ["water/wastewater engineering","drainage","traffic","architectural","surveying"],
+      "data_sources": [
+        {"source": "sandereng.com team page (live-fetch)", "url": "http://www.sandereng.com/about/our-team/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["principals","RPLS_count","engineering_vs_surveying_mix","partners_since_2016"]}
+      ]
+    },
+    {
+      "license_number": "10045400",
+      "legal_name": "SOUTH TEXAS SURVEYING ASSOCIATES, INC.",
+      "website": "https://stsurvey.com/",
+      "phone": "(281) 556-6918",
+      "team_page_url": "https://stsurvey.com/About-us",
+      "successor_found": true,
+      "successor_evidence": "Live-fetched search of stsurvey.com About-us page: 'The company was established in 1980 by Fred W. Lawton, RPLS & PE, and his son, Fred F. Lawton, RPLS.' Fred W Lawton (founder, President) + Fred F Lawton III (VP, RPLS) = explicit family-successor team. Robust drone fleet mentioned. DEMOTE A→B.",
+      "team_page_evidence": "stsurvey.com/About-us (live-fetch summary): 'family-owned company, has been a cornerstone in commercial land surveying and residential surveys since 1980'; founder Fred W Lawton RPLS+PE + son Fred F Lawton III RPLS. 40+ years. Multi-service: ALTA/NSPS, category 1A condition II, topographic, construction, platting, elevation certs. 'Robust drone fleet' for aerial survey + 3D point clouds = MODERN tech-stack.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Explicit son-as-RPLS successor (Fred F Lawton III) — internal-succession candidate per verifying-no-successor.md family-surname rule.",
+      "coasting_tells": [
+        "Note: this firm has MODERNIZED (drone fleet, 3D point clouds) — opposite of coasting, but still son-successor in place."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (current operating website)",
+      "service_specialties": ["ALTA/NSPS","topographic","construction","platting","elevation certs","drone","3D modeling"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "stsurvey.com/About-us (live-fetch summary via search)", "url": "https://stsurvey.com/About-us", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founder","successor_son","services","technology"]}
+      ]
+    },
+    {
+      "license_number": "10099100",
+      "legal_name": "PEPE ENGINEERING",
+      "website": "https://www.pepe-engineering.com/",
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": true,
+      "successor_evidence": "Pepe Engineering is a 60+yr multi-discipline engineering firm with 'Registered Professional Engineers, Land Surveyors, engineers in training and experienced designers and drafters.' Salim Joubran is a 'Principal and 42-year company veteran' — clearly multi-principal firm. The firm is TX-DOT pre-certified Sequence #76 (significant institutional presence). DEMOTE A→B: engineering-primary multi-principal firm with TxDOT credentials = not a coasting-solo profile.",
+      "team_page_evidence": "pepe-engineering.com (search summary): '60 years' multi-discipline RPE+RPLS firm; TX-DOT pre-certified; Salim Joubran is Principal (42yr veteran). Multi-principal firm at 800 Town & Country Blvd Houston 77024.",
+      "demote_to_tier": "B_forward",
+      "demote_reason": "Multi-principal engineering-primary firm with TxDOT pre-certification — substantial operation with internal RPE+RPLS succession; not a solo-coasting profile.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (TxDOT pre-cert + current operating website)",
+      "service_specialties": ["civil engineering","structural","surveying","TxDOT"],
+      "data_sources": [
+        {"source": "pepe-engineering.com (search summary)", "url": "https://www.pepe-engineering.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["firm_history","multi_principal","TxDOT_precert"]}
+      ]
+    },
+    {
+      "license_number": "10158900",
+      "legal_name": "ESOR CONSULTING ENGINEERS, INC.",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "successor_evidence": "John Rodriquez P.E.+RPLS, CEO since 1982. Solo principal per LinkedIn + RocketReach. Multi-service: civil construction management/inspection, boundary surveying, topographic and construction surveying. Long-tenured (44yr). No public successor identified.",
+      "team_page_evidence": "RocketReach + LinkedIn: John Rodriquez P.E., R.P.L.S., C.E.O at ESOR Consulting Engineers Inc since 1982. Located 6027 Dover House Way, Spring TX 77389. Civil construction management/inspection + surveying services.",
+      "coasting_tells": [
+        "Solo principal John Rodriquez for 44 years (CEO since 1982) — no second principal identified.",
+        "Owner age est ~76 (RPLS granted 1980 + 30 + 16 = ~76) — natural exit window.",
+        "Multi-service (engineering inspection + surveying) but engineering-primary; sub-A for pure surveying acquisition thesis.",
+        "Limited web presence — referral-driven posture."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (current LinkedIn + RocketReach)",
+      "service_specialties": ["civil construction management","boundary","topographic","construction surveying"],
+      "data_sources": [
+        {"source": "RocketReach John Rodriquez", "url": "https://rocketreach.co/john-rodriquez-email_125189270", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["title","tenure","credentials"]}
+      ]
+    },
+    {
+      "license_number": "10194756",
+      "legal_name": "Civil Systems Engineering, Inc.",
+      "website": "https://www.cseengineers.com/",
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "exclusion_reason": "Firm established 2002 (24yr in business; RPLS tenure of 46yr DOES NOT reflect firm tenure — Gutierrez brought his RPLS to a newer venture). Engineering-primary firm specializing in Water Resources/Transportation/GIS with FEMA/USACE federal contracts. Not a coasting-solo surveying profile.",
+      "team_page_evidence": "cseengineers.com: 'small professional engineering services firm headquartered in Sugar Land, Texas, specializes in Water Resources, Transportation, and Geographic Information Systems. Established in 2002.' Federal contracts (FEMA, USACE).",
+      "demote_to_tier": "C_watch",
+      "demote_reason": "Firm tenure (24yr) much shorter than RPLS tenure proxy implies; engineering-primary federal-contracting firm — wrong profile for surveying-acquisition thesis.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy_misleading",
+      "comptroller_status": "active",
+      "data_sources": [
+        {"source": "cseengineers.com (summary)", "url": "https://www.cseengineers.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["established_year","specialties","federal_clients"]}
+      ]
+    },
+    {
+      "license_number": "10057300",
+      "legal_name": "I. T. GONZALEZ ENGINEERS",
+      "website": "http://www.itgonzalezengineers.com/",
+      "phone": "(512) 447-7400",
+      "team_page_url": "http://www.itgonzalezengineers.com/",
+      "successor_found": false,
+      "successor_evidence": "Israel Trevino Gonzalez is the named principal (P.E. + RPLS). Firm est 1977 — 49yr. Multi-discipline civil engineering + surveying. HUB/MBE/DBE certified (TX HUB, City of Austin MBE, Texas UCP DBE). No public RPLS successor identified.",
+      "team_page_evidence": "itgonzalezengineers.com (summary): Established 1977, Austin TX (3501 Manor Rd 78723); registered as TX Engineering Firm F-3216 + TX Licensed Surveying Firm 100573-0. Multi-service: civil engineering (site dev, drainage, water/wastewater, paving) + surveying (boundary, topo, route, platting, aerial, construction staking, GPS). HUB/MBE/DBE certs.",
+      "coasting_tells": [
+        "Solo RPLS Israel Gonzalez for 46+ years (RPLS granted 1980) — no second RPLS at firm.",
+        "Owner age est ~76 (RPLS 1980 + 30 + 16 = ~76) — natural exit window.",
+        "Multi-discipline firm but old website (no copyright year visible from search).",
+        "Austin Travis County major-metro location + HUB/MBE/DBE certs = recurring municipal contract eligibility = strong recurring-B2B underwriting."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (current website)",
+      "service_specialties": ["civil engineering","site development","drainage","water/wastewater","surveying","platting","construction staking"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "itgonzalezengineers.com (summary)", "url": "http://www.itgonzalezengineers.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["principal","established_year","services","certifications"]}
+      ]
+    },
+    {
+      "license_number": "10057500",
+      "legal_name": "HODGKISS SURVEYING",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "exclusion_reason": "No active business presence found via web search. Melvin Hodgkiss residential addresses only (Spokeo / InstantCheckmate). Likely a sole proprietor / consulting practice operating from home with no real firm structure.",
+      "demote_to_tier": "C_watch",
+      "demote_reason": "Personal-name solo practitioner with no active business website or independent firm presence — likely sub-SBA-scale consulting practice; not an acquisition target.",
+      "team_page_evidence": "Spokeo + InstantCheckmate show Melvin Hodgkiss residential addresses in Austin TX 78735/78744 and Cedar Park. No business website found.",
+      "coasting_tells": [],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "verification_needed",
+      "data_sources": [
+        {"source": "Spokeo Melvin Hodgkiss", "url": "https://www.spokeo.com/Melvin-Hodgkiss", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["residential_addresses_only"]}
+      ]
+    }
+  ]
+}

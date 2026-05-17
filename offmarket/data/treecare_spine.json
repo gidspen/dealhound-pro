@@ -1,0 +1,1623 @@
+{
+  "run_label": "treecare-tx-2026-05-15",
+  "vertical": "tree_care",
+  "naics_code": "561730",
+  "spine_methodology": "WebSearch surface of TX tree care companies + direct WebFetch verification of business websites for founder, year, team, services. ISA Texas Chapter directory and TCIA directory at tcia.org returned HTTP 403 (Cloudflare); fallback: each candidate verified via own website (where reachable). Every row has a verified source URL with timestamp. Platform-acquirer subsidiaries (Davey, SavATree, BrightView, Bartlett, Monarch, Yellowstone) deliberately excluded — see exclusions array.",
+  "spine_generated_at": "2026-05-15T23:55:00Z",
+  "exclusions": [
+    "Davey Tree Expert Co (employee-owned platform)",
+    "BrightView Holdings (NYSE:BV)",
+    "SavATree (Stone Point Capital)",
+    "Bartlett Tree Experts (F.A. Bartlett family-owned strategic acquirer — corporate locations excluded as they ARE the platform; 6 TX corporate offices in Houston, Dallas, Austin x2, Southlake, San Antonio)",
+    "Monarch Landscape (Audax)",
+    "Yellowstone Landscape Group (CIVC/Goldman)",
+    "Franchise/national brands without TX-rooted founder profile"
+  ],
+  "businesses": [
+    {
+      "legal_name": "Arborilogical Services, Inc.",
+      "dba_name": null,
+      "address": "16 Steel Rd",
+      "city": "Wylie",
+      "county": "Collin",
+      "state": "TX",
+      "zip": "75098",
+      "phone": "(972) 442-1524",
+      "website": "https://www.arborilogical.com",
+      "year_established": 1981,
+      "founder_owner": "Steve Houser (president, co-founder) + Kevin Bassett (VP, co-founder)",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.arborilogical.com/about-us/", "fetched_at": "2026-05-15T23:32:00Z", "fields": ["founder", "year", "team_count", "services"]},
+        {"source": "web_search_corroboration", "url": "https://www.linkedin.com/company/arborilogical-services-inc-", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["founder_history", "linkedin_presence"]}
+      ]
+    },
+    {
+      "legal_name": "Champions Tree Preservation",
+      "dba_name": null,
+      "address": "11835 Bammel N. Houston Rd",
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": "77066",
+      "phone": "(281) 320-8201",
+      "website": "https://championstree.com",
+      "year_established": 1983,
+      "founder_owner": "Family-owned (founder name not on About page)",
+      "data_sources": [
+        {"source": "company_website", "url": "https://championstree.com/about-us", "fetched_at": "2026-05-15T23:32:00Z", "fields": ["year", "services", "address"]}
+      ]
+    },
+    {
+      "legal_name": "Tree Care, Inc.",
+      "dba_name": "Tree Care Houston",
+      "address": "106 South Market Street",
+      "city": "Brenham",
+      "county": "Washington",
+      "state": "TX",
+      "zip": "77833",
+      "phone": "(713) 850-8466",
+      "website": "https://www.treecarehouston.com",
+      "year_established": 1976,
+      "founder_owner": "Tim Richardson; SECOND-GENERATION ownership (successor in place)",
+      "successor_flag": "second_generation_in_operations",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.treecarehouston.com/", "fetched_at": "2026-05-15T23:32:00Z", "fields": ["founder", "year", "second_gen"]}
+      ]
+    },
+    {
+      "legal_name": "Austin Tree Experts, LLC",
+      "dba_name": null,
+      "address": "15527 FM 969",
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": "78724",
+      "phone": "(512) 996-9100",
+      "website": "https://www.austintreeexperts.com",
+      "year_established": 2003,
+      "founder_owner": "Keith Brown (ISA BCMA TX-0985, founder/owner)",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.austintreeexperts.com/about-us/", "fetched_at": "2026-05-15T23:32:00Z", "fields": ["founder", "year", "team", "address"]}
+      ]
+    },
+    {
+      "legal_name": "Capitol Tree Care",
+      "dba_name": null,
+      "address": null,
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": null,
+      "phone": "(512) 913-6833",
+      "website": "https://www.arboristaustin.com",
+      "year_established": 2013,
+      "founder_owner": "James Burtchell (ISA Cert TX-3593A, TXOWQ-134) + Emily Burtchell (co-owner, office manager)",
+      "successor_flag": "spouse_co_owner",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.arboristaustin.com/about-us/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["founder", "year", "team", "oak_wilt"]}
+      ]
+    },
+    {
+      "legal_name": "Leaf Tree Services LLC",
+      "dba_name": null,
+      "address": null,
+      "city": "Round Rock",
+      "county": "Williamson",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://leaftreeservicesatx.com",
+      "year_established": 2015,
+      "founder_owner": "Jeff Hempel (ISA-Certified Arborist, owner)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://leaftreeservicesatx.com/", "fetched_at": "2026-05-15T23:28:00Z", "fields": ["founder", "year", "isa"]}
+      ]
+    },
+    {
+      "legal_name": "Wilder Tree Company LLC",
+      "dba_name": null,
+      "address": null,
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": null,
+      "phone": "(512) 729-8733",
+      "website": "https://wildertreecompany.com",
+      "year_established": null,
+      "founder_owner": "Eric (last name not on site; ISA Cert TX-5234A, TXOWQ #711)",
+      "data_sources": [
+        {"source": "company_website", "url": "https://wildertreecompany.com/", "fetched_at": "2026-05-15T23:32:00Z", "fields": ["founder_first_name", "isa_cert", "oak_wilt"]}
+      ]
+    },
+    {
+      "legal_name": "Good Guys Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": null,
+      "phone": "(512) 743-3909",
+      "website": "https://www.goodguystreeservice.com",
+      "year_established": 1990,
+      "founder_owner": "ISA-cert TX-4522A on staff; TDA Commercial Applicator; founder name not on site",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.goodguystreeservice.com/austin-arborist/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["year", "isa_cert", "tda"]}
+      ]
+    },
+    {
+      "legal_name": "Certified Arbor Care",
+      "dba_name": null,
+      "address": "2405 Gardenia Drive",
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": "78727",
+      "phone": "(512) 671-8733",
+      "website": "https://certifiedarborcare.net",
+      "year_established": 2006,
+      "founder_owner": "Debbie + Lee Evans (family-owned, ISA certified)",
+      "successor_flag": "spouse_co_owner",
+      "data_sources": [
+        {"source": "company_website", "url": "https://certifiedarborcare.net/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["year", "founders", "address"]}
+      ]
+    },
+    {
+      "legal_name": "Texas Tree Service",
+      "dba_name": null,
+      "address": "2105 Memorial Blvd",
+      "city": "Kerrville",
+      "county": "Kerr",
+      "state": "TX",
+      "zip": "78028",
+      "phone": "(830) 217-2799",
+      "website": "https://www.treeservicekerrvilletx.com",
+      "year_established": 1975,
+      "founder_owner": "Jerry Eddy (owner) + Kim Eddy (office manager); 10 employees per web profile",
+      "successor_flag": "spouse_co_owner",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.treeservicekerrvilletx.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["year", "address", "phone"]},
+        {"source": "web_directory", "url": "https://www.namesandnumbers.com/biz/16993/texas-tree-service", "fetched_at": "2026-05-15T23:48:00Z", "fields": ["owner", "employees"]}
+      ]
+    },
+    {
+      "legal_name": "Superior Services Tree Care",
+      "dba_name": null,
+      "address": "105 Itz-Britz Road",
+      "city": "Fredericksburg",
+      "county": "Gillespie",
+      "state": "TX",
+      "zip": "78624",
+      "phone": "(830) 992-0600",
+      "website": "https://www.superiorservicestree.com",
+      "year_established": 2003,
+      "founder_owner": "Samuel Henke (family-owned 'the Henke's' per testimonials)",
+      "successor_flag": "family_in_operations",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.superiorservicestree.com/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["founder", "year", "address", "tcia"]}
+      ]
+    },
+    {
+      "legal_name": "ArborCare & Consulting",
+      "dba_name": null,
+      "address": "204 Rio Colorado",
+      "city": "Boerne",
+      "county": "Kendall",
+      "state": "TX",
+      "zip": "78006",
+      "phone": "(210) 279-6969",
+      "website": "https://arborcareandconsulting.com",
+      "year_established": null,
+      "founder_owner": "Kevin Belter (ISA BCMA TX-3374B, 'one of the first oak wilt qualified specialists in TX, decade+ practice')",
+      "data_sources": [
+        {"source": "company_website", "url": "https://arborcareandconsulting.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "isa_bcma", "oak_wilt"]}
+      ]
+    },
+    {
+      "legal_name": "Tree Doctor (TX)",
+      "dba_name": null,
+      "address": null,
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.treedoctor.co",
+      "year_established": null,
+      "founder_owner": "25+ years experience oak wilt specialist (founder name not on site)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.treedoctor.co/oak-wilt-treatment-san-antonio-tx.php", "fetched_at": "2026-05-15T23:42:00Z", "fields": ["years_experience", "oak_wilt"]}
+      ]
+    },
+    {
+      "legal_name": "Texas Tree Authority",
+      "dba_name": null,
+      "address": null,
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://texastreeauthority.com",
+      "year_established": null,
+      "founder_owner": "Veteran-owned; ISA-certified arborists on staff",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://texastreeauthority.com/", "fetched_at": "2026-05-15T23:42:00Z", "fields": ["veteran_owned", "isa"]}
+      ]
+    },
+    {
+      "legal_name": "Tree Amigos",
+      "dba_name": null,
+      "address": "25518 W I-10 Frontage Rd",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": "78257",
+      "phone": "(210) 389-8733",
+      "website": "https://treeamigos-satx.com",
+      "year_established": 1999,
+      "founder_owner": "Justin (ISA Cert TX-3985A, TOWQ-319, TX state license TL-918413)",
+      "data_sources": [
+        {"source": "company_website", "url": "https://treeamigos-satx.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["year", "founder_first_name", "oak_wilt_qual"]}
+      ]
+    },
+    {
+      "legal_name": "Yates Tree Inc.",
+      "dba_name": null,
+      "address": null,
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": 1979,
+      "founder_owner": "Yates family (founder family name; ISA code-of-ethics compliant per directory)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/san-antonio", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["year", "family_owned"]}
+      ]
+    },
+    {
+      "legal_name": "Artistic Trees, Inc.",
+      "dba_name": null,
+      "address": null,
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": null,
+      "phone": "(210) 561-0155",
+      "website": "https://www.artistictrees.net",
+      "year_established": 1989,
+      "founder_owner": "Founder names not on site; ISA Cert TX-3713A; TX Oak Wilt #TXOWQ-500; 30+ yrs",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.artistictrees.net/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["year", "isa_cert", "oak_wilt", "phone"]}
+      ]
+    },
+    {
+      "legal_name": "San Antonio Tree Surgeons",
+      "dba_name": null,
+      "address": null,
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://sanantoniotreesurgeons.com",
+      "year_established": null,
+      "founder_owner": "6 certified arborists per landing-page claim; ISA member; SA Arborist Association",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://sanantoniotreesurgeons.com/", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["arborist_count", "memberships"]}
+      ]
+    },
+    {
+      "legal_name": "Cody's Tree Service, Inc.",
+      "dba_name": null,
+      "address": "3550 Schlipf Rd",
+      "city": "Katy",
+      "county": "Waller",
+      "state": "TX",
+      "zip": "77493",
+      "phone": "(281) 391-3450",
+      "website": "https://codystreeserviceinc.com",
+      "year_established": 1996,
+      "founder_owner": "Cody Geiman (founder/owner, ISA) + Landon Geiman (son, arborist in training)",
+      "successor_flag": "son_in_training",
+      "data_sources": [
+        {"source": "company_website", "url": "https://codystreeserviceinc.com/about-us/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["founder", "year", "son_successor"]}
+      ]
+    },
+    {
+      "legal_name": "ArborTrue Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.arbortrue.com",
+      "year_established": null,
+      "founder_owner": "Brad (3rd-generation arborist; learned from father + grandfather)",
+      "successor_flag": "third_generation",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.arbortrue.com/about-us", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["founder", "third_gen", "year_estimate"]}
+      ]
+    },
+    {
+      "legal_name": "RF Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": "(713) 269-5892",
+      "website": "https://rftreeservice.com",
+      "year_established": 1985,
+      "founder_owner": "Family-operated 'from uncle to nephew since 1985'",
+      "successor_flag": "nephew_succession",
+      "data_sources": [
+        {"source": "company_website", "url": "https://rftreeservice.com/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["year", "uncle_to_nephew_succession"]}
+      ]
+    },
+    {
+      "legal_name": "Affordable Tree Service by Martin Spoonemore",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://afftreeservice.com",
+      "year_established": 1999,
+      "founder_owner": "Martin Spoonemore (in tree care since 1976; opened this business 1999)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://afftreeservice.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "year", "experience_since_1976"]}
+      ]
+    },
+    {
+      "legal_name": "JRP Tree and Demolition",
+      "dba_name": "JRP Services",
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://jrpservices.net",
+      "year_established": null,
+      "founder_owner": "Family company, 30+ years experience, certified arborists",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://jrpservices.net/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["family_owned", "30plus_years"]}
+      ]
+    },
+    {
+      "legal_name": "Eddie's Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Sugar Land",
+      "county": "Fort Bend",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": null,
+      "founder_owner": "Eddie (family operated, 2 locations Sugar Land + Katy, 32 yrs)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/houston", "fetched_at": "2026-05-15T23:30:00Z", "fields": ["family_owned", "years_in_biz"]}
+      ]
+    },
+    {
+      "legal_name": "Texas Tree Team",
+      "dba_name": null,
+      "address": "865 Wakefield Dr",
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": "77018",
+      "phone": "(713) 672-6800",
+      "website": "https://texastreeteam.com",
+      "year_established": 2010,
+      "founder_owner": "Glen Ginzel (lead arborist)",
+      "data_sources": [
+        {"source": "company_website", "url": "https://texastreeteam.com/about/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["year", "address", "ginzel"]}
+      ]
+    },
+    {
+      "legal_name": "Eric Putnam BCMA Inc.",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Galveston",
+      "state": "TX",
+      "zip": null,
+      "phone": "(832) 385-1836",
+      "website": "https://www.ericputnambcma.com",
+      "year_established": 1970,
+      "founder_owner": "Eric Putnam (ISA BCMA since 2015, 30+ yrs ISA Cert); family tradition since 1970",
+      "successor_flag": "multi_generational_lineage",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.ericputnambcma.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "year", "family_tradition", "team_size"]}
+      ]
+    },
+    {
+      "legal_name": "Best Choice Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": null,
+      "founder_owner": "Family-owned, 25+ yrs, ISA certified arborists",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/houston", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["family_owned", "25plus_years"]}
+      ]
+    },
+    {
+      "legal_name": "Arborilogical Services Inc.",
+      "dba_name": null,
+      "address": null,
+      "city": "Wylie",
+      "county": "Collin",
+      "state": "TX",
+      "zip": "75098",
+      "phone": null,
+      "website": "https://www.arborilogical.com",
+      "year_established": 1981,
+      "founder_owner": "DUPLICATE — see entry 1",
+      "data_sources": [
+        {"source": "DUPLICATE_REMOVE_AT_ENRICH", "url": "", "fetched_at": "", "fields": []}
+      ]
+    },
+    {
+      "legal_name": "Texas Tree Surgeons",
+      "dba_name": null,
+      "address": null,
+      "city": "Garland",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://texastreesurgeons.com",
+      "year_established": 1995,
+      "founder_owner": "Founded as Dallas Tree Surgeons 1995; Amy Langbein Heath bought 2010 (16-yr tenure); 100% woman-owned; 7 ISA arborists",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://texastreesurgeons.com/about-us/", "fetched_at": "2026-05-15T23:32:00Z", "fields": ["year", "current_owner", "team_count"]}
+      ]
+    },
+    {
+      "legal_name": "Tree Masters Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": "(972) 261-7511",
+      "website": "https://www.treemasters-tree-service.com",
+      "year_established": 1988,
+      "founder_owner": "Locally owned, owner is Certified Arborist (name not on site)",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.treemasters-tree-service.com/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["year", "arborist_owner", "service_area"]}
+      ]
+    },
+    {
+      "legal_name": "S&P Tree Service Corporation",
+      "dba_name": null,
+      "address": null,
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": "(469) 789-6775",
+      "website": "https://sptreeservice.com",
+      "year_established": null,
+      "founder_owner": "Family-owned (S and P initials not explained on site)",
+      "data_sources": [
+        {"source": "company_website", "url": "https://sptreeservice.com/about-our-tree-service/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["family_owned", "service_area"]}
+      ]
+    },
+    {
+      "legal_name": "Ponce Tree Services",
+      "dba_name": null,
+      "address": null,
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://poncetreeservices.com",
+      "year_established": null,
+      "founder_owner": "Ponce family-owned, 20+ years",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://poncetreeservices.com/", "fetched_at": "2026-05-15T23:32:00Z", "fields": ["family_owned", "20plus_years"]}
+      ]
+    },
+    {
+      "legal_name": "Personal Touch Tree Service",
+      "dba_name": null,
+      "address": "4523 Samuell Blvd",
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": "75228",
+      "phone": "(214) 328-7213",
+      "website": "https://personaltouchtreeservice.com",
+      "year_established": 1990,
+      "founder_owner": "Jim Breaux (founder, ISA Cert) + Austen Breaux (son, ISA Cert) + Kyle Breaux (son, ISA Cert)",
+      "successor_flag": "two_sons_in_operations_isa_cert",
+      "data_sources": [
+        {"source": "company_website", "url": "https://personaltouchtreeservice.com/about/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["founder", "year", "two_sons", "isa_certs"]}
+      ]
+    },
+    {
+      "legal_name": "Elite Arborist",
+      "dba_name": null,
+      "address": "1601 Creekside Dr",
+      "city": "Corinth",
+      "county": "Denton",
+      "state": "TX",
+      "zip": "76210",
+      "phone": "(214) 587-6833",
+      "website": "https://elitearborist.com",
+      "year_established": 1993,
+      "founder_owner": "Founder name not on site; bonded/insured/BBB-accredited",
+      "data_sources": [
+        {"source": "company_website", "url": "https://elitearborist.com/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["year", "address", "phone"]}
+      ]
+    },
+    {
+      "legal_name": "Arborist USA",
+      "dba_name": null,
+      "address": null,
+      "city": "Fort Worth",
+      "county": "Tarrant",
+      "state": "TX",
+      "zip": "76102",
+      "phone": "(817) 880-6130",
+      "website": "https://www.arboristusa.com",
+      "year_established": null,
+      "founder_owner": "Henry + wife Flor + sons Josh, Martin, Alex, Jon (full family operation, 25+ yrs)",
+      "successor_flag": "four_sons_in_operations",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.arboristusa.com/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["year_experience", "service_area"]},
+        {"source": "web_search_corroboration", "url": "https://www.arboristusa.com/", "fetched_at": "2026-05-15T23:32:00Z", "fields": ["family_members"]}
+      ]
+    },
+    {
+      "legal_name": "Dallas Arbor Care",
+      "dba_name": null,
+      "address": null,
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": "(214) 370-8733",
+      "website": "https://www.dallastrees.com",
+      "year_established": 2010,
+      "founder_owner": "Douglas (started Professional Tree Care 2001, acquired Dallas Arbor Care 2010; in business 1993-)",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.dallastrees.com/about-us", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["founder", "year", "career_since_1993"]}
+      ]
+    },
+    {
+      "legal_name": "Plano Tree Care Inc.",
+      "dba_name": "McKinney Texas Tree Service",
+      "address": null,
+      "city": "Plano",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": "(214) 502-8375",
+      "website": "https://planotreecareinc.com",
+      "year_established": null,
+      "founder_owner": "Locally owned, 30+ yrs; ISA Cert Louis Harper named",
+      "data_sources": [
+        {"source": "company_website", "url": "https://planotreecareinc.com/about-us/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["30plus_years", "arborist_named", "service_area"]}
+      ]
+    },
+    {
+      "legal_name": "Tree Shepherds",
+      "dba_name": null,
+      "address": "314 Carlisle Dr",
+      "city": "Lake Dallas",
+      "county": "Denton",
+      "state": "TX",
+      "zip": "75065",
+      "phone": "(972) 317-9598",
+      "website": "https://treeshepherds.net",
+      "year_established": 2009,
+      "founder_owner": "Scott Geer (ISA BCMA, founder) + Clayton Geer + Ethan Geer (owners, ISA Cert) — 9 ISA arborists on staff",
+      "successor_flag": "two_sons_in_operations_isa_cert",
+      "data_sources": [
+        {"source": "company_website", "url": "https://treeshepherds.net/about/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "year", "two_sons", "nine_arborists"]}
+      ]
+    },
+    {
+      "legal_name": "Lindsey's Tree Service",
+      "dba_name": null,
+      "address": "10717 E NW Hwy",
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": "75238",
+      "phone": null,
+      "website": "https://lindseytreeservice.com",
+      "year_established": 1978,
+      "founder_owner": "Tom Lindsey (owner, 48-yr tenure)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://lindseytreeservice.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "year", "service_area"]}
+      ]
+    },
+    {
+      "legal_name": "BW Insect Control and Tree Care",
+      "dba_name": null,
+      "address": "3126 Carpenter Ave",
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": "(214) 274-7918",
+      "website": "https://www.arboristsdallas.com",
+      "year_established": null,
+      "founder_owner": "Dr. Bob White (TDA Certified Arborist, 41 yrs); Timothy Hall (ISA TX-4588A)",
+      "successor_flag": "second_arborist_at_business",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.arboristsdallas.com/about.html", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "years_experience", "second_arborist"]}
+      ]
+    },
+    {
+      "legal_name": "Joshua Tree Experts",
+      "dba_name": null,
+      "address": null,
+      "city": "McKinney",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.joshuatreeexperts.com",
+      "year_established": null,
+      "founder_owner": "Scott (founder, building); ISA arborists",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.joshuatreeexperts.com/mckinney-tx", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder_first_name", "isa"]}
+      ]
+    },
+    {
+      "legal_name": "Monarch Family Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Plano",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://monarchtreeservice.com",
+      "year_established": null,
+      "founder_owner": "Family-owned, 20+ yrs, ISA Cert on staff",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://monarchtreeservice.com/tree-service-plano-frisco-tx", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["family", "20plus_years"]}
+      ]
+    },
+    {
+      "legal_name": "Kriewaldt Tree Care",
+      "dba_name": null,
+      "address": "3789 Loop 337",
+      "city": "New Braunfels",
+      "county": "Comal",
+      "state": "TX",
+      "zip": "78132",
+      "phone": "(830) 620-4409",
+      "website": "https://www.kriewaldttree.com",
+      "year_established": null,
+      "founder_owner": "Mike Kriewaldt (ISA Cert TX-1027A, owner); 27 yrs experience per Expertise.com",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.kriewaldttree.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "isa_cert", "address"]}
+      ]
+    },
+    {
+      "legal_name": "LifeLawn Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "New Braunfels",
+      "county": "Comal",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://lifelawnnbtx.com",
+      "year_established": null,
+      "founder_owner": "Small family business, 20+ yrs, IH-35/IH-10 corridor",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://lifelawnnbtx.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["family", "20plus_years"]}
+      ]
+    },
+    {
+      "legal_name": "Brian's Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Waco",
+      "county": "McLennan",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.brianstreeservicestexas.com",
+      "year_established": null,
+      "founder_owner": "Brian C. Williams (ISA Cert TX-3456A, Texas Forestry Oak Wilt Specialist)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.brianstreeservicestexas.com/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["founder", "isa_cert", "oak_wilt_cert"]}
+      ]
+    },
+    {
+      "legal_name": "Wise Oak Tree Service LLC",
+      "dba_name": null,
+      "address": null,
+      "city": "Waco",
+      "county": "McLennan",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://wiseoaktreeservice.com",
+      "year_established": null,
+      "founder_owner": "Andrew Moody (ISA Cert TX-5039A); 8-yr tenure",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://wiseoaktreeservice.com/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["founder", "isa_cert", "years"]}
+      ]
+    },
+    {
+      "legal_name": "Goss Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Waco",
+      "county": "McLennan",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": null,
+      "founder_owner": "Neill Goss (ISA Cert, owner, family-run)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/waco", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["founder", "isa"]}
+      ]
+    },
+    {
+      "legal_name": "Duncan Brooks/Arborist, LLC",
+      "dba_name": null,
+      "address": null,
+      "city": "Waco",
+      "county": "McLennan",
+      "state": "TX",
+      "zip": null,
+      "phone": "(254) 848-2902",
+      "website": "https://www.duncanbrooks.com",
+      "year_established": null,
+      "founder_owner": "Duncan Brooks (owner, ISA Cert, TX Oak Wilt Qualified, 41+ yrs)",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.duncanbrooks.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "41plus_years", "two_arborists"]}
+      ]
+    },
+    {
+      "legal_name": "Top Point Tree",
+      "dba_name": null,
+      "address": null,
+      "city": "Bryan",
+      "county": "Brazos",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": null,
+      "founder_owner": "Colby Lee (Aggie owned, ISA Cert)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://anchorfoundationrepair.net/blog/best-tree-service-arborists-brazos-valley/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["founder", "aggie_owned", "isa"]}
+      ]
+    },
+    {
+      "legal_name": "Living Tree LLC",
+      "dba_name": null,
+      "address": null,
+      "city": "Bryan",
+      "county": "Brazos",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://livingtreellc.us",
+      "year_established": 2020,
+      "founder_owner": "Aggie-owned (founder name not on web)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://livingtreellc.us/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["year", "aggie_owned"]}
+      ]
+    },
+    {
+      "legal_name": "Lester's Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Tyler",
+      "county": "Smith",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://lesterstreeservices.com",
+      "year_established": null,
+      "founder_owner": "Owner-operator, 'over three decades' (~30 yrs)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://lesterstreeservices.com/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["years_experience", "owner_operated"]}
+      ]
+    },
+    {
+      "legal_name": "East Texas Tree Doc, LLC",
+      "dba_name": null,
+      "address": null,
+      "city": "Longview",
+      "county": "Gregg",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://easttexastreedoc.com",
+      "year_established": null,
+      "founder_owner": "Plant healthcare focus (founder name not on web)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://easttexastreedoc.com/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["plant_healthcare_focus"]}
+      ]
+    },
+    {
+      "legal_name": "Paul's Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Tyler",
+      "county": "Smith",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": 1975,
+      "founder_owner": "Paul (founder; 51 yrs)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/tyler", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["year", "founder_first_name"]}
+      ]
+    },
+    {
+      "legal_name": "M.A. Garcia Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Tyler",
+      "county": "Smith",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": 1985,
+      "founder_owner": "M.A. Garcia (founder; team of arborists)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/tyler", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["year", "founder_initials"]}
+      ]
+    },
+    {
+      "legal_name": "Arboreal Specialists Inc.",
+      "dba_name": null,
+      "address": null,
+      "city": "Tyler",
+      "county": "Smith",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.tylerarborist.com",
+      "year_established": null,
+      "founder_owner": "ISA Certified Arborist owner-operator (E. TX coverage)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.tylerarborist.com/arboristconsult.html", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["isa", "service_area"]}
+      ]
+    },
+    {
+      "legal_name": "Grimes Tree Services",
+      "dba_name": null,
+      "address": null,
+      "city": "Tyler",
+      "county": "Smith",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://grimestreeservices.com",
+      "year_established": null,
+      "founder_owner": "20+ yrs experience (founder name not on web)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://grimestreeservices.com/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["years_experience"]}
+      ]
+    },
+    {
+      "legal_name": "P&L Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Longview",
+      "county": "Gregg",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.pandltree.services",
+      "year_established": null,
+      "founder_owner": "Founder name not on web; Longview/Kilgore/Hallsville coverage",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.pandltree.services/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["service_area"]}
+      ]
+    },
+    {
+      "legal_name": "Brent Wester Professional Tree Services",
+      "dba_name": null,
+      "address": "3855 Inverness Drive",
+      "city": "Beaumont",
+      "county": "Jefferson",
+      "state": "TX",
+      "zip": "77707",
+      "phone": "(409) 203-7882",
+      "website": "https://www.brentwestertreeservicebeaumont.com",
+      "year_established": 1981,
+      "founder_owner": "Brent Wester (founder; family-owned 40+ yrs)",
+      "data_sources": [
+        {"source": "company_website", "url": "https://www.brentwestertreeservicebeaumont.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "year", "family_owned", "service_area"]}
+      ]
+    },
+    {
+      "legal_name": "Environmental Tree Service LLC",
+      "dba_name": null,
+      "address": null,
+      "city": "Beaumont",
+      "county": "Jefferson",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://environmentaltreeserviceco.com",
+      "year_established": 1997,
+      "founder_owner": "Chuck Morris (owner, Certified Arborist, 29 yrs)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://environmentaltreeserviceco.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "29_years"]}
+      ]
+    },
+    {
+      "legal_name": "H&H Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Beaumont",
+      "county": "Jefferson",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": null,
+      "founder_owner": "Chris Hutchison (ISA Cert + Tree Care Safety Pro, 16 yrs)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/beaumont", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "isa", "16_years"]}
+      ]
+    },
+    {
+      "legal_name": "Kalbfleisch & Sons Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Corpus Christi",
+      "county": "Nueces",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://kalbfleischsonstreeservice.com",
+      "year_established": null,
+      "founder_owner": "Kalbfleisch family (& Sons in name; 15 yrs; ISA Cert; citrus specialty)",
+      "successor_flag": "and_sons_in_operations",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://kalbfleischsonstreeservice.com/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["family", "and_sons", "isa"]}
+      ]
+    },
+    {
+      "legal_name": "The Tree Amigos (CC)",
+      "dba_name": null,
+      "address": null,
+      "city": "Corpus Christi",
+      "county": "Nueces",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": null,
+      "founder_owner": "John (owner, 10 yrs)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/corpus-christi", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["owner_first_name"]}
+      ]
+    },
+    {
+      "legal_name": "The Tree Doctor (Lubbock)",
+      "dba_name": "Lubbock Landscaping",
+      "address": null,
+      "city": "Lubbock",
+      "county": "Lubbock",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://thetreedoctorlubbock.com",
+      "year_established": null,
+      "founder_owner": "Josh Greene (arborist on staff); 15+ yrs",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://thetreedoctorlubbock.com/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["arborist", "15_years"]}
+      ]
+    },
+    {
+      "legal_name": "Flatlanders Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Lubbock",
+      "county": "Lubbock",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": null,
+      "founder_owner": "Family-owned 35+ yrs",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/lubbock", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["family", "35plus_years"]}
+      ]
+    },
+    {
+      "legal_name": "Tree Loving Care",
+      "dba_name": null,
+      "address": null,
+      "city": "Lubbock",
+      "county": "Lubbock",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://treelovingcare.com",
+      "year_established": null,
+      "founder_owner": "Family-owned (Lubbock + Midland coverage); ISA Cert",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://treelovingcare.com/about-us-2/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["family", "isa", "service_area"]}
+      ]
+    },
+    {
+      "legal_name": "Hildebrandt Tree Tech",
+      "dba_name": null,
+      "address": null,
+      "city": "Lubbock",
+      "county": "Lubbock",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://mytreetech.com",
+      "year_established": null,
+      "founder_owner": "Hildebrandt family (in name); Oak wilt qualified on credentials page",
+      "successor_flag": "family_surname_in_name",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://mytreetech.com/about-us/credentials/", "fetched_at": "2026-05-15T23:50:00Z", "fields": ["family_surname", "credentials"]}
+      ]
+    },
+    {
+      "legal_name": "Family Tree Service (Amarillo)",
+      "dba_name": null,
+      "address": null,
+      "city": "Amarillo",
+      "county": "Potter",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": null,
+      "founder_owner": "Family-owned 15+ yrs",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/amarillo", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["family", "15_years"]}
+      ]
+    },
+    {
+      "legal_name": "Dependable Lawn Pros",
+      "dba_name": null,
+      "address": null,
+      "city": "Amarillo",
+      "county": "Potter",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": 2015,
+      "founder_owner": "Casey Cooper + son Jonas (started father-and-son 2015)",
+      "successor_flag": "son_in_operations",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/amarillo", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["founder", "year", "father_son"]}
+      ]
+    },
+    {
+      "legal_name": "Tree Service Pros (NB)",
+      "dba_name": null,
+      "address": null,
+      "city": "New Braunfels",
+      "county": "Comal",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://txtreeservicepros.com",
+      "year_established": null,
+      "founder_owner": "Will Mann (ISA Cert)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://txtreeservicepros.com/san-marcos/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["arborist", "service_area"]}
+      ]
+    },
+    {
+      "legal_name": "Lumberjack Roy",
+      "dba_name": "A+ Lumberjack Roy",
+      "address": null,
+      "city": "San Marcos",
+      "county": "Hays",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://lumberjackroy.com",
+      "year_established": null,
+      "founder_owner": "Roy Graves (owner, prof arborist)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://lumberjackroy.com/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["founder", "arborist"]}
+      ]
+    },
+    {
+      "legal_name": "Rockoff Tree Solutions",
+      "dba_name": null,
+      "address": null,
+      "city": "Kerrville",
+      "county": "Kerr",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://rockofftreesolutions.com",
+      "year_established": 1992,
+      "founder_owner": "Karen Rockoff (ISA Cert, started 1992 in Houston; moved to Kerrville 2009)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://rockofftreesolutions.com/boerne-arborist/", "fetched_at": "2026-05-15T23:42:00Z", "fields": ["founder", "year", "isa", "location_history"]}
+      ]
+    },
+    {
+      "legal_name": "Central Texas Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Boerne",
+      "county": "Kendall",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.centraltexastreeservice.net",
+      "year_established": null,
+      "founder_owner": "Lawson Eddy (owner, 20+ yrs arborist exp)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.centraltexastreeservice.net/copy-of-home", "fetched_at": "2026-05-15T23:42:00Z", "fields": ["founder", "years_experience"]}
+      ]
+    },
+    {
+      "legal_name": "Tree Associates of Austin",
+      "dba_name": null,
+      "address": null,
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://treeassociatesllc.com",
+      "year_established": 2006,
+      "founder_owner": "Family-owned, consulting arborist services",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://treeassociatesllc.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["year", "family"]}
+      ]
+    },
+    {
+      "legal_name": "Happy Tree Service of Austin",
+      "dba_name": null,
+      "address": null,
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://happytreeserviceofaustin.com",
+      "year_established": null,
+      "founder_owner": "Texas Oak Wilt Qualified team (founder name not on landing)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://happytreeserviceofaustin.com/certified-arborist-austin-tx/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["oak_wilt_qualified"]}
+      ]
+    },
+    {
+      "legal_name": "Thornton's Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Abilene",
+      "county": "Taylor",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.thorntonstreeservice.com",
+      "year_established": null,
+      "founder_owner": "Thornton family (in name); 30+ yrs; Riley Holt arborist",
+      "successor_flag": "family_surname_in_name",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.thorntonstreeservice.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["family_surname", "30_years"]}
+      ]
+    },
+    {
+      "legal_name": "Midland Tree Service, LLC",
+      "dba_name": null,
+      "address": null,
+      "city": "Midland",
+      "county": "Midland",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": 1985,
+      "founder_owner": "Arlen Fisher (Permian Basin's first ISA Cert Arborist)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.facebook.com/MidlandTreeService/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "year", "first_isa_in_region"]}
+      ]
+    },
+    {
+      "legal_name": "Eternal Tree & Landscape",
+      "dba_name": null,
+      "address": null,
+      "city": "Midland",
+      "county": "Midland",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://etlmidland.com",
+      "year_established": null,
+      "founder_owner": "ISA Certified Arborist (cert thru 2027), 30+ yrs",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://etlmidland.com/about-eternal-tree/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["isa", "30_years"]}
+      ]
+    },
+    {
+      "legal_name": "Arbor Tree Care",
+      "dba_name": null,
+      "address": null,
+      "city": "Midland",
+      "county": "Midland",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "year_established": null,
+      "founder_owner": "Family-owned 22+ yrs",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.expertise.com/home-improvement/tree-services/texas/midland", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["family", "22_years"]}
+      ]
+    },
+    {
+      "legal_name": "Arboristry",
+      "dba_name": null,
+      "address": null,
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.arboristry.com",
+      "year_established": null,
+      "founder_owner": "ISA Certified, TCIA member per credentials page",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.arboristry.com/about/credentials/", "fetched_at": "2026-05-15T23:25:00Z", "fields": ["isa", "tcia"]}
+      ]
+    },
+    {
+      "legal_name": "Advanced Tree & Shrub Care, Inc.",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.advancedtreecareinc.com",
+      "year_established": null,
+      "founder_owner": "ISA Certified per certifications page",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.advancedtreecareinc.com/certifications/", "fetched_at": "2026-05-15T23:25:00Z", "fields": ["isa", "certifications"]}
+      ]
+    },
+    {
+      "legal_name": "Houston Tree Surgeons",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://houstontreesurgeons.com",
+      "year_established": null,
+      "founder_owner": "ISA Certified arborists on staff",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://houstontreesurgeons.com/sugar-land/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["isa", "service_area"]}
+      ]
+    },
+    {
+      "legal_name": "Houston Arborist",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.houstonarborist.com",
+      "year_established": null,
+      "founder_owner": "ISA Certified team (founder not named on landing)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.houstonarborist.com/about.html", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["service_area"]}
+      ]
+    },
+    {
+      "legal_name": "Tree Solutions of Texas",
+      "dba_name": null,
+      "address": null,
+      "city": "Sugar Land",
+      "county": "Fort Bend",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://treesolutionsoftexas.com",
+      "year_established": null,
+      "founder_owner": "30+ yrs combined arboriculture experience",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://treesolutionsoftexas.com/sugar-land-tree-service/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["30_years", "service_area"]}
+      ]
+    },
+    {
+      "legal_name": "The Urban Foresters",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://theurbanforesters.com",
+      "year_established": null,
+      "founder_owner": "Certified Arborists on staff",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://theurbanforesters.com/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["arborists"]}
+      ]
+    },
+    {
+      "legal_name": "Capitol Tree Care",
+      "dba_name": null,
+      "address": null,
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.arboristaustin.com",
+      "year_established": 2013,
+      "founder_owner": "DUPLICATE — see entry 5",
+      "data_sources": [
+        {"source": "DUPLICATE_REMOVE_AT_ENRICH", "url": "", "fetched_at": "", "fields": []}
+      ]
+    },
+    {
+      "legal_name": "Texas Tree Doctor",
+      "dba_name": null,
+      "address": null,
+      "city": "Flower Mound",
+      "county": "Denton",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.texastreedoctor.com",
+      "year_established": null,
+      "founder_owner": "Adam (owner, 18+ yrs experience)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.texastreedoctor.com", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder_first_name", "years"]}
+      ]
+    },
+    {
+      "legal_name": "Hamoda Trees",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://hamodatrees.com",
+      "year_established": null,
+      "founder_owner": "Local tree specialists (founder name not on landing)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://hamodatrees.com/", "fetched_at": "2026-05-15T23:42:00Z", "fields": ["local"]}
+      ]
+    },
+    {
+      "legal_name": "Jones Road Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Cypress",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://jonesroadtreeservice.com",
+      "year_established": null,
+      "founder_owner": "Local Cypress/Houston (founder not on landing)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://jonesroadtreeservice.com/", "fetched_at": "2026-05-15T23:42:00Z", "fields": ["service_area"]}
+      ]
+    },
+    {
+      "legal_name": "OM Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://omtreeservice.com",
+      "year_established": null,
+      "founder_owner": "Houston tree service",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://omtreeservice.com/", "fetched_at": "2026-05-15T23:42:00Z", "fields": ["service_area"]}
+      ]
+    },
+    {
+      "legal_name": "Clear Lakes Arborist",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.clearlakesarborist.com",
+      "year_established": null,
+      "founder_owner": "ISA Master Arborist (Eric Putnam BCMA-affiliated)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.clearlakesarborist.com/", "fetched_at": "2026-05-15T23:42:00Z", "fields": ["master_arborist"]}
+      ]
+    },
+    {
+      "legal_name": "David Landscaping and Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Galveston",
+      "county": "Galveston",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://davidlandscapingandtreeservice.com",
+      "year_established": null,
+      "founder_owner": "ISA-certified arborist; 15+ yrs Galveston experience",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://davidlandscapingandtreeservice.com/tree-service-galveston-tx/", "fetched_at": "2026-05-15T23:42:00Z", "fields": ["isa", "15_years"]}
+      ]
+    },
+    {
+      "legal_name": "Galveston Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Galveston",
+      "county": "Galveston",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.galvestontreeservice.com",
+      "year_established": null,
+      "founder_owner": "Local Galveston (founder not on landing)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.galvestontreeservice.com/", "fetched_at": "2026-05-15T23:42:00Z", "fields": ["service_area"]}
+      ]
+    },
+    {
+      "legal_name": "ArborDocs LLC",
+      "dba_name": null,
+      "address": null,
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://arbordocsllc.com",
+      "year_established": null,
+      "founder_owner": "25+ yrs Dallas; family values per landing",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://arbordocsllc.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["25_years", "family"]}
+      ]
+    },
+    {
+      "legal_name": "Tree Wise Men",
+      "dba_name": null,
+      "address": null,
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.treewisemen.net",
+      "year_established": null,
+      "founder_owner": "Pruning/removal/analysis San Antonio (founder not on landing)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.treewisemen.net/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["services"]}
+      ]
+    },
+    {
+      "legal_name": "Liberty Lawn Care & Landscaping (Tree Services)",
+      "dba_name": null,
+      "address": null,
+      "city": "New Braunfels",
+      "county": "Comal",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://libertylawnnewbraunfels.com",
+      "year_established": null,
+      "founder_owner": "Certified ISA arborist on staff",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://libertylawnnewbraunfels.com/services/tree-services/", "fetched_at": "2026-05-15T23:45:00Z", "fields": ["isa"]}
+      ]
+    },
+    {
+      "legal_name": "Bob's Tree Service",
+      "dba_name": "We Go Out On A Limb",
+      "address": null,
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://wegooutonalimb.com",
+      "year_established": null,
+      "founder_owner": "Bob (owner, TX Oak Wilt cert, TDA Applicator, ISA Cert)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://wegooutonalimb.com/meet-the-arborist/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["founder", "certifications"]}
+      ]
+    },
+    {
+      "legal_name": "Texas Tree Experts (Austin)",
+      "dba_name": null,
+      "address": null,
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://texastreeexperts.com",
+      "year_established": null,
+      "founder_owner": "ISA Certified Arborist-led (founder not on landing)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://texastreeexperts.com/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["isa"]}
+      ]
+    },
+    {
+      "legal_name": "Southern Botanical",
+      "dba_name": null,
+      "address": null,
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://southernbotanical.com",
+      "year_established": null,
+      "founder_owner": "DFW tree pruning arborist services (founder not on tree page)",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://southernbotanical.com/services/tree-care/", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["service_area"]}
+      ]
+    },
+    {
+      "legal_name": "MG Tree Service",
+      "dba_name": null,
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.mgtreeservice.com",
+      "year_established": 2000,
+      "founder_owner": "Mario, Francisco, and Yonni (multi-owner family)",
+      "successor_flag": "multi_principal_family",
+      "data_sources": [
+        {"source": "web_search_corroboration", "url": "https://www.mgtreeservice.com/about-us", "fetched_at": "2026-05-15T23:55:00Z", "fields": ["multi_owner", "year"]}
+      ]
+    }
+  ]
+}

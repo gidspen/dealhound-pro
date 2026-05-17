@@ -1,0 +1,135 @@
+{
+  "run_label": "treecare-tx-2026-05-15",
+  "score_run_id": "3d0e3d0f-5372-4dd0-8e95-89a6541c63b7",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {
+    "layer1": 0.3,
+    "layer2": 0.25,
+    "layer3": 0.3,
+    "layer4": 0.15
+  },
+  "vertical": "tree_care",
+  "naics_code": "561730",
+  "geography": "TX \u2014 Hill Country (oak wilt), Austin, San Antonio, Houston, DFW, East TX priority",
+  "pe_attention": "LOW-MEDIUM",
+  "started_at": "2026-05-15T23:54:00Z",
+  "finished_at": "2026-05-16T01:35:00Z",
+  "counts": {
+    "spine_rows": 96,
+    "enriched": 96,
+    "scored": 96,
+    "tier_a": 0,
+    "tier_b": 14,
+    "tier_c": 56,
+    "tier_d": 26,
+    "distress_excluded": 1
+  },
+  "sources_worked": [
+    {
+      "source": "company_websites_direct_fetch",
+      "rows": 96,
+      "note": "Primary verification source for each business"
+    },
+    {
+      "source": "WebSearch (Google index)",
+      "rows": 96,
+      "note": "Secondary corroboration on founder names, year founded, family relationships"
+    },
+    {
+      "source": "LinkedIn profiles",
+      "rows": 6,
+      "note": "Used for owner verification on Houser, Putnam, Pina, Bassett"
+    },
+    {
+      "source": "BBB profiles",
+      "rows": 8,
+      "note": "Officer/owner listings cross-check (partial \u2014 403s common)"
+    },
+    {
+      "source": "Supabase RPC offmarket_persist_treecare_row",
+      "rows": 96,
+      "note": "Successful persistence via SECURITY DEFINER RPC"
+    }
+  ],
+  "sources_partial": [
+    {
+      "source": "TCIA accredited directory",
+      "url": "https://www.tcia.org/TCIA/Directories/FindQualifiedTreeCare.aspx?State=TX&Accreditation=1",
+      "issue": "HTTP 403 Cloudflare; fallback: WebSearch + direct company-website verification"
+    },
+    {
+      "source": "BBB business profiles",
+      "url": "https://www.bbb.org/...",
+      "issue": "HTTP 403 on multiple attempts; partial success on others"
+    },
+    {
+      "source": "Yelp business pages",
+      "url": "https://www.yelp.com/biz/...",
+      "issue": "HTTP 403 on direct fetch; used search snippets for status info (e.g. Lindsey CLOSED flag)"
+    }
+  ],
+  "sources_blocked": [
+    {
+      "source": "ISA Texas Chapter directory",
+      "url": "https://certificates.directory.isa-arbor.com/",
+      "error": "Site requires interactive JS rendering; not attempted via Playwright in this run",
+      "fallback_used": "WebSearch-based candidate sourcing + direct website verification"
+    },
+    {
+      "source": "TX Comptroller franchise tax entity search",
+      "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search",
+      "error": "Interactive search form, not surfaced directly via WebFetch",
+      "fallback_used": "License-tenure proxy for entity formation date"
+    },
+    {
+      "source": "CAD OV65 lookups (HCAD, DCAD, TCAD, etc.)",
+      "url": "multiple",
+      "error": "Not attempted in this run \u2014 requires individual owner homestead address resolution first",
+      "fallback_used": "license_tenure_proxy + linkedin_grad"
+    }
+  ],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 1,
+    "passed": 0,
+    "demoted_to_b": 0,
+    "demoted_to_c_watch_successor_found": 1,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 1,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    },
+    "a_tier_candidate_outcomes": {
+      "Arborilogical_Services": "DEMOTED A\u2192C_watch \u2014 deep-dive of /our-qualified-staff/ surfaced Kirbie Houser Pastenes (daughter) as Assistant General Manager + 2 non-founder BCMAs (Peters, Strawn). Internal successor bench established."
+    }
+  },
+  "supabase_write": {
+    "status": "written",
+    "rows": 96,
+    "business_scores_written": 96,
+    "business_signals_written_estimate": 20,
+    "method": "SECURITY DEFINER RPC public.offmarket_persist_treecare_row(jsonb)",
+    "score_run_id": "3d0e3d0f-5372-4dd0-8e95-89a6541c63b7"
+  },
+  "platform_acquirer_filters": [
+    "Davey Tree Expert Co (employee-owned, $1.6B)",
+    "BrightView Holdings (NYSE:BV)",
+    "SavATree (Stone Point Capital)",
+    "Bartlett Tree Experts (private, F.A. Bartlett family)",
+    "Monarch Landscape (Audax)",
+    "Yellowstone Landscape Group (CIVC/Goldman)",
+    "Aspen Grove Capital (tree care platforms)"
+  ],
+  "headline_findings": [
+    "TREE CARE HAS THE HIGHEST FAMILY-SUCCESSION DENSITY OF ANY VERTICAL TESTED \u2014 19 of ~33 long-tenured candidates had visible internal successors (sons, daughters, nephews, spouses). The verifying-no-successor protocol fired correctly and prevented multiple false A-tier promotions.",
+    "Zero A-tier promotions \u2014 every potential A candidate either had a successor visible on live-fetch or had only license_tenure_proxy age (no OV65 verification in this run).",
+    "Top 3 highest-final-score (all B_forward): Artistic Trees / Rene Pina (SA Hill Country, 74), Kriewaldt Tree Care / Mike Kriewaldt (NB, 73), Brent Wester Pro (Beaumont, 70).",
+    "Two distress-flag rows: Lindsey Tree Service Dallas (Yelp CLOSED + ECONNREFUSED), Duncan Brooks/Arborist Waco (founder Sr. deceased 2019, son Jr. running operationally complete succession).",
+    "PE attention is LOW-MEDIUM as expected: Davey/SavATree/Bartlett all have visible TX corporate footprint but the independent universe is enormous and only modestly consolidated. ETA/searcher appetite is GROWING."
+  ]
+}

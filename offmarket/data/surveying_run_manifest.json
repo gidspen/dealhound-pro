@@ -1,0 +1,78 @@
+{
+  "run_label": "surveying-tx-2026-05-15",
+  "score_run_id": "02713a3e-ded7-4f5d-8e3c-ff77f8e796b6",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "land_surveying",
+  "naics_code": "541370",
+  "geography": "TX — major metros + energy corridors (Houston, Dallas, Austin, San Antonio, Fort Worth, Permian, Eagle Ford, Coastal flood metros)",
+  "started_at": "2026-05-16T04:53:12Z",
+  "finished_at": "2026-05-16T07:30:00Z",
+  "counts": {
+    "tbpels_firms_statewide_registered": 1275,
+    "tbpels_firms_tx_hq_registered": 1053,
+    "rpls_active_individuals_statewide": 2615,
+    "spine_pool_priority_A_candidates": 60,
+    "spine_pool_priority_B_candidates": 30,
+    "spine_pool_priority_C_candidates": 15,
+    "spine_rows": 105,
+    "enriched": 105,
+    "scored": 105,
+    "tier_a": 5,
+    "tier_b": 82,
+    "tier_c": 13,
+    "tier_d": 5,
+    "distress_excluded": 5,
+    "personal_name_firms_capped_at_b": 6
+  },
+  "sources_worked": [
+    {"source": "TBPELS Surveying Firms Roster CSV", "url": "https://tbpedownloads.s3-us-west-2.amazonaws.com/sur-firm_roster.csv", "rows": 1275, "notes": "Direct S3 download, 280KB; no auth required. Updated daily."},
+    {"source": "TBPELS RPLS Roster CSV", "url": "https://tbpedownloads.s3-us-west-2.amazonaws.com/rpls_roster.csv", "rows": 5535, "notes": "Direct S3 download, 620KB; latin-1 encoding. Updated daily."},
+    {"source": "Live website fetches", "url": "(per-firm)", "rows": 10, "notes": "Carlomagno, Forest, C&G, Flores, Vannoy, Prime TX, Sander, Galbraith, Voss, Collins — verified team page or homepage live-fetch"},
+    {"source": "WebSearch (Google) enrichment summaries", "url": "(various)", "rows": 35, "notes": "TSPS member directory, BBB, BuildZoom, Manta, ProView, ZoomInfo, LinkedIn, Yelp, OpenCorporates, RocketReach"},
+    {"source": "TX Comptroller Taxable Entity Search", "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search", "rows": 1, "notes": "Verified Carlomagno SOS file 0044025100 active via OpenCorporates relay. Direct Comptroller UI is JS-only and could not be queried programmatically without API key."},
+    {"source": "CorporationWiki / OpenCorporates TX SOS records", "url": "https://opencorporates.com/companies/us_tx/", "rows": 3, "notes": "Cross-verified officer/director records for top A-tier"}
+  ],
+  "sources_partial": [
+    {"source": "TX Comptroller direct entity search", "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search", "issue": "JS-only dynamic search; not directly queryable via WebFetch. Operating-status confirmed via active websites + multi-listing presence + OpenCorporates SOS file numbers. Direct Comptroller entity-status programmatic check is a productionized-version need (Socrata API key or scrape via Playwright)."},
+    {"source": "CAD OV65 lookup (HCAD/DCAD/TCAD/BCAD)", "url": "(per-county-CAD)", "issue": "OV65 not attempted for any candidate this run due to time budget. License-tenure-proxy (computed from RPLS grant year + assumed earn-age 30) used as fallback. Two candidates have website-self-reported DOB (Flores 1945, Carlomagno 1936) which were promoted from license_tenure_proxy to website_self_report_dob."}
+  ],
+  "sources_blocked": [
+    {"source": "OpenCorporates Cloudflare CAPTCHA", "url": "https://opencorporates.com/companies/us_tx/0044025100", "error": "CAPTCHA on first direct WebFetch attempt", "fallback_used": "Search-result summaries used instead"},
+    {"source": "Sander Engineering / Pepe Engineering team pages (HTTP 400 / authentication)", "url": "various", "error": "HTTP 400 on direct fetch", "fallback_used": "Search-result summaries used instead"}
+  ],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 12,
+    "passed": 5,
+    "demoted_to_b": 7,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 1,
+      "team_page_unreachable": 6,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    }
+  },
+  "supabase_write": {
+    "status": "written",
+    "project_id": "gggmmjvwbbfvrtjjlqvr",
+    "schema": "offmarket",
+    "tables": {
+      "score_runs": 1,
+      "businesses": 105,
+      "business_scores": 105,
+      "business_signals": 11
+    },
+    "notes": "All 105 rows persisted to Supabase. Signals limited to 11 for top A-tier rows (live-fetch-backed evidence). Full 671-signal local catalog available in offmarket/data/surveying_targets.json for offline use."
+  },
+  "verticals_md_updated": {
+    "section": "## 14. Land surveying firms (NAICS 541370) — COMPLETE — LOW-PE-ATTENTION VERTICAL (first run 2026-05-15)",
+    "path": "/Users/gideonspencer/.claude/skills/offmarket-acquisition-scorer/verticals.md",
+    "notes": "Full vertical config added: spine source (TBPELS S3 CSVs), NAICS/filters, successor definition, recurring-revenue language, coasting tells, active acquirer platforms (LOW PE ATTENTION = OPPORTUNITY), SBA size estimation, sub-market nudges, rollout notes."
+  },
+  "thesis_summary": "TX land surveying is a STRUCTURALLY UNDERBID quiet recurring-B2B vertical. Only 2 PE-backed rollup platforms active (Bowman NASDAQ:BWMN + Westwood Endeavour Capital). Large-AEC strategics (Stantec/WSP/AECOM/Kimley-Horn/Cobb Fendley/LJA) only bolt-on $5M+ rev firms. The entire sub-$5M independent universe is structurally under-targeted. TX RPLS license (4yr college + 4yr apprentice + state exam) is a strong regulatory moat. ETA/search-fund appetite emerging fast 2024-2026 (top-15 vertical in Stanford Search Fund Study). +2 baseline L4 boost applied for solo-RPLS / 2-RPLS TX-metro firms as the opportunity zone."
+}

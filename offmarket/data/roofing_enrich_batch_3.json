@@ -1,0 +1,138 @@
+{
+  "batch": 3,
+  "fetched_at": "2026-05-16",
+  "method": "Deep-dive on top A/B candidates + remaining promising candidates",
+  "businesses": [
+    {
+      "legal_name": "Texas Roof Management Inc.",
+      "live_fetch_url": "https://texasroof.com/company/our-team/ + https://texasroof.com/catherine-awtrey-recognized-in-d-ceo-magazine/",
+      "successor_status": "STRONG A-TIER — verified no successor in family or on team",
+      "details": "Catherine Awtrey (President/Owner, took over 2003 = 23 yrs). Address: 728 Lingco Drive, Richardson TX 75081 (Dallas suburb, NOT Houston). Wayne Awtrey founded 1996; died 2003. Catherine is career-changer widow (Blair TV → real estate → image consulting → roofing). D CEO Magazine 'Women Who Built Dallas' June 2019. NTRCA Industry Leader of the Year 2020. NO Awtrey children on team page. Senior management team: Mike Cieri (CFO), Danielle Begley (VP Business Ops), John Wayne Whitten (Senior Advisor + QA/QC Manager), Brett Norvell (Director of Ops), Ian Sellers (Service Manager), Dustin Daniel (Chief Estimator), Ana Ledbetter (Service Coordinator). Commercial preventive maintenance contracts = strong recurring revenue. Annual maintenance program. Firm-bid pricing. Service hours + 24/7 service (972-272-7663 office, 972-231-8350 service).",
+      "successor_check_signal": "positive",
+      "recurring_revenue_signal": "STRONG",
+      "comptroller_status_unknown": true,
+      "promote_to_a_candidate": true
+    },
+    {
+      "legal_name": "StazOn Roofing",
+      "live_fetch_url": "https://stazonroof.com/about-us/",
+      "successor_status": "INTERNAL SUCCESSOR VISIBLE — DEMOTE FROM A",
+      "details": "Paul Graham (founder/President, started as teen 1980 = currently mid-60s, 46 yrs running). Justin Graham (residential sales, 'started in sheet metal shop') — likely son (same surname) = same-surname successor visible. Long-tenured leads: Rob Ramsdale (Head of Residential, since 1997), Raul Serna (Head of Residential Repair, since 1999). Dallas (2860 Lombardy Ln 75220). Residential + commercial + multi-family + sheet metal + solar. NRCA, NTRCA, RCAT, MRA, BBB A+.",
+      "successor_check_signal": "negative (same-surname Justin Graham visible)",
+      "demote_reason": "successor_found_on_live_site",
+      "cap_at": "B_forward"
+    },
+    {
+      "legal_name": "Mataska Roofing",
+      "live_fetch_url": "https://mataskaroofing.com/ + BBB",
+      "successor_status": "2ND-GEN SUCCESSOR IN PLACE — DEMOTE",
+      "details": "Bob Mataska Sr. founded 1979. Daughter Debbie Mataska Gardner (President/GM) + David Gardner (VP, husband). 2nd-gen daughter succession in place + son-in-law in operations.",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site"
+    },
+    {
+      "legal_name": "Joe Ochoa Roofing Inc.",
+      "live_fetch_url": "https://www.ochoaroofing.com/ + BBB",
+      "successor_status": "JR. SUCCESSOR LIKELY — DEMOTE",
+      "details": "Joe Ochoa Sr. founded 1971. Jaime Ochoa is VP (same surname = likely son/Jr.). 55-yr family business. Stafford TX 77477. Tile + slate + GAF Designer + metal.",
+      "successor_check_signal": "negative",
+      "demote_reason": "same_surname_successor_in_operations"
+    },
+    {
+      "legal_name": "Cloud Roofing Co.",
+      "live_fetch_url": "BBB records + WebSearch",
+      "successor_status": "MULTI-GEN CLOUD FAMILY VISIBLE — DEMOTE",
+      "details": "Cloud family: Joshua Cloud (Manager) + Kenneth Cloud (BBB filings) = Cloud family multi-generational. Founded 1975 = 50 yrs. Same-surname succession in place.",
+      "successor_check_signal": "negative",
+      "demote_reason": "same_surname_successor_in_operations"
+    },
+    {
+      "legal_name": "Mid-Cities Roofing Inc.",
+      "live_fetch_url": "BBB records + WebSearch",
+      "successor_status": "OWNERSHIP CHANGED — Beau Revard now President",
+      "details": "Founded 1977 = 48 yrs. Beau Revard listed as President per BBB. No 'Revard family' historical signal. Multi-region (Weatherford TX + SA). Possible recent ownership change or 2nd-gen son. Ambiguous.",
+      "successor_check_signal": "ambiguous",
+      "deferred_to_c": true
+    },
+    {
+      "legal_name": "Marlin Construction LLC",
+      "live_fetch_url": "BBB + WebSearch",
+      "successor_status": "RECENT OWNERSHIP — JOHN+TRISH JOSEPHS ~15 YRS",
+      "details": "John + Trish Josephs (husband-wife owners). Cypress TX. 15+ yrs operating (founded ~2010, not 20+ as earlier). Younger owners (likely 40-55) — wrong cohort for natural-exit window. Versico Gold Medal 8 yrs. Commercial flat TPO/PVC.",
+      "successor_check_signal": "positive (no successor) but L1 weak",
+      "owner_age_likely_below_window": true,
+      "demote_reason": "owner_age_proxy_below_threshold"
+    },
+    {
+      "legal_name": "Wortham Brothers Roofing",
+      "live_fetch_url": "https://www.wbroofing.com/",
+      "successor_status": "Likely successor — Ben Wortham in testimonials",
+      "details": "David + Steve Wortham founded 1986 = 40 yrs. Ben Wortham appears in testimonials (likely son). McKinney TX. TPO + EPDM + metal + residential. No formal team page.",
+      "successor_check_signal": "negative (likely)"
+    },
+    {
+      "legal_name": "Parsons Roofing (Lorena/Waco)",
+      "live_fetch_url": "https://www.parsonsroofing.com/",
+      "successor_status": "PROMISING but family-culture-heavy, ambiguous successor",
+      "details": "Stuart Parsons (Owner). Operating since 1948 (claim varies — some sources 1948 some 4-gen family). 'Sue Parsons Protect the Kids Program' honors Stuart's mother (d. 2005). Preventive maintenance program. 3000+ school roofs (Duro-Last). Lorena TX (Waco). McLennan County. Stuart's Sports Ranch development = capital allocation outside roofing = potential exit signal.",
+      "successor_check_signal": "ambiguous (Stuart's children not visible on site)",
+      "recurring_revenue_signal": "STRONG"
+    },
+    {
+      "legal_name": "Quality Tops Roofing Inc.",
+      "live_fetch_url": "https://qualitytopsroofing.com/our-team/",
+      "successor_status": "PADEN SABINE = SUCCESSOR — DEMOTE",
+      "details": "Bruce Sabine (Owner since 1981, in roofing since 1978 = ~65-70 yo). Paden Sabine (Sales/Estimating, same surname). Arlington TX. 45 yrs in profession.",
+      "successor_check_signal": "negative",
+      "demote_reason": "same_surname_successor_in_operations"
+    },
+    {
+      "legal_name": "Brazos Urethane",
+      "live_fetch_url": "WebSearch + LinkedIn",
+      "successor_status": "UNKNOWN — site blocked",
+      "details": "Founded 1987 Texas City. SPF (spray polyurethane foam) commercial. 38 yrs. Wally Scoggins associated (LinkedIn). Site returned 403 — limited verification.",
+      "successor_check_signal": "ambiguous (live fetch blocked)",
+      "cap_at": "C_watch_until_live_fetch"
+    },
+    {
+      "legal_name": "Texas State Roofing Company (Corpus Christi)",
+      "live_fetch_url": "https://texasstateroofing.com/about-us/",
+      "successor_status": "PROMISING — 25 yrs family-managed, commercial maintenance program",
+      "details": "Founded ~2001 = 25 yrs. Locally owned family-managed. Commercial Roof Maintenance Program (recurring revenue signal). Multi-family + commercial in Corpus Christi + Coastal Bend + South TX. GAF Master Elite + OC Preferred + BBB. Insurance loss specialist (coastal storms +2). No team detail on About page.",
+      "successor_check_signal": "ambiguous",
+      "recurring_revenue_signal": "MODERATE"
+    },
+    {
+      "legal_name": "Braun's Roofing Inc.",
+      "live_fetch_url": "https://www.braunsroofing.com/",
+      "successor_status": "PROMISING — Skeeter Braun founder, no same-surname successor on site",
+      "details": "Founded 1987 by Skeeter Braun (President). Rene Samson (VP, different surname). Kyle Holmes (Office Mgr), Rhett Brethauer (PM). Houston (3748 Dover St 77087). 39 yrs.",
+      "successor_check_signal": "positive (no family successor)",
+      "owner_age_proxy": "Skeeter likely 65-75 implied by 1987 founding + 35+ yrs in business"
+    },
+    {
+      "legal_name": "American Roofing (Lubbock)",
+      "live_fetch_url": "https://americanroofinglubbocktx.com/",
+      "successor_status": "AMBIGUOUS — 2 generations claimed but no names",
+      "details": "Established 1982-1984. 'Family affair, two generations working' but no names disclosed. Lubbock (8227 Valencia Ave 79424). Hail-corridor metro +3. Residential + commercial + multi-family + metal coating + insurance.",
+      "successor_check_signal": "negative (2 generations claimed but no specifics — assume successor exists)",
+      "demote_reason": "2_gens_claimed_likely_successor_in_place"
+    },
+    {
+      "legal_name": "Texas Family Roofing (San Antonio)",
+      "live_fetch_url": "https://texasfamilyroofing.com/our-team/",
+      "successor_status": "UNKNOWN — limited info",
+      "details": "Family-owned local. SA + Austin. Year founding unverified.",
+      "successor_check_signal": "ambiguous",
+      "cap_at": "C_watch"
+    },
+    {
+      "legal_name": "Yuras Roofing Company",
+      "live_fetch_url": "https://www.yurasroofing.com/",
+      "successor_status": "Confirmed 3rd-gen owners — DEMOTE",
+      "details": "Bryan + Kevin Yuras (3rd gen since 2019). 76 yrs. Final demote.",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site"
+    }
+  ]
+}
