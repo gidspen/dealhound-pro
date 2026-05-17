@@ -1,0 +1,49 @@
+{
+  "run_label": "mental-health-counseling-tx-2026-05-16-w1c",
+  "score_run_id": "5e13de17-8cdb-4339-a885-06252293a808",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "mental_health_counseling",
+  "naics_code": "621330",
+  "geography": "TX — Harris/Dallas/Tarrant/Bexar/Travis/Collin/Denton/Williamson/Fort Bend/Montgomery priority",
+  "started_at": "2026-05-16T23:26:00-05:00",
+  "finished_at": null,
+  "target_counties": ["Harris", "Dallas", "Tarrant", "Bexar", "Travis", "Collin", "Denton", "Williamson", "Fort Bend", "Montgomery"],
+  "exclusion_filters": {
+    "pe_rollups": ["LifeStance Health", "Mindpath Health", "Refresh Mental Health", "Pathlight Mood & Anxiety", "ERC Pathlight", "Foundations Recovery Network", "Acadia Healthcare"],
+    "digital_first": ["Talkspace", "BetterHelp", "Headway", "Alma", "Octave", "Cerebral", "Brightside"],
+    "hospital_affiliated": ["Houston Methodist Behavioral", "Baylor Scott & White", "Memorial Hermann Behavioral", "JPS Behavioral", "UT Health Behavioral"],
+    "lmha": ["MHMRA", "Tropical Texas", "Tarrant MHMR", "Center for Health Care Services", "Bluebonnet Trails", "LifePath"],
+    "solo_practice_min_providers": 3
+  },
+  "counts": {
+    "spine_rows": 0,
+    "enriched": 0,
+    "scored": 0,
+    "tier_a": 0,
+    "tier_b": 0,
+    "tier_c": 0,
+    "tier_d": 0,
+    "distress_excluded": 0
+  },
+  "sources_worked": [],
+  "sources_partial": [],
+  "sources_blocked": [],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 0,
+    "passed": 0,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    }
+  },
+  "supabase_write": {"status": "pending", "reason": null}
+}

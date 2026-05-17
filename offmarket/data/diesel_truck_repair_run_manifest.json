@@ -1,0 +1,42 @@
+{
+  "run_label": "diesel-truck-repair-tx-2026-05-16-w3b",
+  "score_run_id": "9dffd443-8a88-470d-852a-4842c858636c",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "diesel_truck_repair",
+  "naics_code": "811111/488490",
+  "geography": "TX — Harris/Fort Bend/Brazoria/Galveston/Montgomery/Liberty (Houston petrochem) + Dallas/Tarrant/Collin/Denton (DFW logistics) + Bexar/Comal (SA) + Travis/Williamson (Austin) + Midland/Ector/Howard/Reeves (Permian) + Lubbock/Hale (Panhandle) + Smith/Gregg/Harrison (East TX) + Nueces (Corpus port)",
+  "started_at": "2026-05-16T00:00:00Z",
+  "finished_at": null,
+  "counts": {
+    "spine_rows": 0,
+    "enriched": 0,
+    "scored": 0,
+    "tier_a": 0,
+    "tier_b": 0,
+    "tier_c": 0,
+    "tier_d": 0,
+    "distress_excluded": 0
+  },
+  "vertical_notes": "Class 6-8 diesel/heavy-truck repair (NOT auto). Independent shops serving fleet customers (oilfield, freight, construction, agriculture, refuse, ISD school buses, municipal refuse). NAICS 811111 (general auto repair when applied to trucks) or 488490 (other support activities for road transportation). Spine from FMCSA SAFER, TX Comptroller sales-tax NAICS 811111, BBB accredited diesel shops, Google Maps independents, ATA-NTDA, TMC member directories. AGGRESSIVE exclusion of dealer chains: Peterbilt of Texas, Kenworth of Texas, Freightliner of Houston/Austin/Dallas, International Truck/Navistar dealers, Mack Truck of Texas, Volvo Trucks dealers, Rush Truck Centers (NASDAQ:RUSHA — largest TX dealer chain). Also exclude truck-stop service chains: TravelCenters of America (TA/Petro), Pilot Flying J, Speedco, Love's Travel Stops, Bandag Tire Centers (Bridgestone). Also exclude PE/captive: TruckPro (NAPA — most active national consolidator), FleetServ (PE), Penske Truck Leasing, Ryder System, TIP Trailer Services, Aim Transportation Solutions. Recurring revenue tells: fleet maintenance contract, preventive maintenance program (PMP), DOT annual inspection, BIT inspection, ECM tuning, DPF cleaning/regen service, tractor-trailer alignment program, oilfield service truck program, ISD school bus contract, refuse fleet contract. Coasting tells: sole owner who is also senior mechanic, same crew 10+ yrs, website pre-2018 or non-existent (very common in this trade — many word-of-mouth only), no fleet portal for customers, phone-only intake, aging shop equipment, no DPF cleaning machine, single location, ASE Master Truck Tech is the highest cert. Successor candidates: adult child / family member in operations, long-tenured ASE Master Truck Tech promoted to Shop Foreman / Service Manager, spouse co-owner. Active acquirers: TruckPro (NAPA), Aim, FleetServ, Rush, Cummins Sales & Service captive, Detroit Diesel Allison. ETA/search-fund HIGH due to recurring fleet contracts + SBA-financeable + asset-light vs dealership. Special: cap A-tier confidence at medium where no live team page can be fetched (common when no website exists).",
+  "sources_worked": [],
+  "sources_partial": [],
+  "sources_blocked": [],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 0,
+    "passed": 0,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    }
+  },
+  "supabase_write": {"status": "pending", "reason": ""}
+}
