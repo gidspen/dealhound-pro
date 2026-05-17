@@ -1,0 +1,42 @@
+{
+  "run_label": "independent-daycare-tx-2026-05-16-w4c",
+  "score_run_id": "1884662b-fdaf-4a9b-bfb1-522e102b6df8",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "independent_daycare",
+  "naics_code": "624410",
+  "geography": "TX — Dallas/Collin/Denton/Tarrant (DFW) + Harris/Fort Bend/Brazoria/Montgomery (Houston) + Bexar/Comal (SA) + Travis/Williamson/Hays (Austin)",
+  "started_at": "2026-05-16T00:00:00Z",
+  "finished_at": null,
+  "counts": {
+    "spine_rows": 0,
+    "enriched": 0,
+    "scored": 0,
+    "tier_a": 0,
+    "tier_b": 0,
+    "tier_c": 0,
+    "tier_d": 0,
+    "distress_excluded": 0
+  },
+  "vertical_notes": "Independent (NON-franchise, NON-chain) licensed child care centers. NAICS 624410. Spine: TX HHSC Child Care Search filtered to Licensed Child Care Centers (Type I); cross-checked with NAEYC accredited list and Texas Rising Star quality ratings. EXCLUDE: KinderCare Learning Companies (PE Partners Group), La Petite Academy (KinderCare), Bright Horizons (NYSE: BFAM), Goddard School (franchise), Primrose Schools (franchise), Children's Lighthouse Learning Centers (franchise), Crème de la Crème (PE), Tutor Time (Learning Care Group), The Learning Experience (PE Golden Gate), The Children's Courtyard (Learning Care Group), The Discovery School (mid-size chain), Kid's R Kids (franchise), Little Sunshine's Playhouse (franchise), Hilltop Learning Tree, Adventure Kids Playcare (chain), A Stepping Stone Children's Center (verify multi-location), Childcare Network (PE Lindsay Goldberg), Cadence Education (PE Apollo), Spring Education Group (PE Primavera), Endeavor Schools (PE), Children's Learning Adventure. Recurring revenue tells: weekly/monthly tuition (intrinsic), before/after-school care contracts, summer camp, ISD partnerships (Pre-K3/Pre-K4), TWC CCAP subsidized care, employer-subsidized corporate partnerships, long waitlists, multi-child discounts. Coasting tells: sole founder still director in classrooms at 60+, staff tenure 15-20 yrs, pre-2018 website or no website, no Brightwheel/Procare/HiMama/KidReports parent portal, phone-and-email enrollment only, aging facility, owner-LLC holds deed, newest Google review > 90 days, single location, limited age-range (no infants), M-F 7am-6pm only, HHSC license issued 25+ years ago. Active acquirers: Childcare Network, Cadence, KinderCare, Spring Education, Endeavor. ETA/search-fund VERY HIGH (top-5 vertical 2024-2026). SBA 7(a) financeable to $5M + SBA 504 for real estate. Special: HHSC license dates = license_tenure_proxy for Layer 1 base rate; HHSC violations / citations are PUBLIC distress signal.",
+  "sources_worked": [],
+  "sources_partial": [],
+  "sources_blocked": [],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 0,
+    "passed": 0,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    }
+  },
+  "supabase_write": {"status": "pending", "reason": ""}
+}

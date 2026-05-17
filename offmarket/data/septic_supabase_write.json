@@ -1,0 +1,30 @@
+{
+  "status": "written",
+  "score_run_id": "9b655bff-0d6c-45ec-86ee-5caa4b420ae1",
+  "run_label": "septic-tx-2026-05-15",
+  "vertical": "septic_ossf",
+  "businesses_written": 14,
+  "business_scores_written": 14,
+  "business_signals_written": 52,
+  "neutral_signals_dropped": 0,
+  "errors": [],
+  "verification_counts": {
+    "businesses": 14,
+    "signals": 52,
+    "scores": 14,
+    "scores_by_tier": {
+      "A_acquire_self": 5,
+      "B_forward": 5,
+      "C_watch": 2,
+      "D_pass": 2
+    }
+  },
+  "spine_total_rows": 80,
+  "fully_persisted_share": 0.175,
+  "notes": [
+    "Persisted via direct INSERT via Supabase MCP execute_sql (no septic-specific RPC built yet — followed pattern of fire/optometry/vet but inline). All 14 fully-scored businesses upserted on (vertical, legal_name, city, state).",
+    "Remaining 66 spine rows are scored as C_watch / D_pass in local JSON only (per skill rule: snippet-only successor evidence caps at C_watch; insufficient signal caps at D_pass) — they were not persisted to Supabase because the fully-scored subset is the actionable cohort. They are documented in septic_targets.json under remaining_businesses_summary.",
+    "All 5 A_acquire_self rows have live-fetch successor verification per skill rule. 2 C_watch rows are capped because live About-page fetch returned 404 (Hill Country Wastewater Services + Ledford Services). 2 D_pass rows are family-locked enterprises that fail the off-market thesis (Van Delden 4th-gen, Brown Aerobic father-son).",
+    "score_runs.business_count updated to 14. Run finalized."
+  ]
+}

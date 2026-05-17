@@ -1,0 +1,78 @@
+{
+  "run_label": "flooring-contractor-tx-2026-05-16-w4d",
+  "score_run_id": "13221daa-3f02-489e-a14e-dcbd6bc3bd44",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "flooring_contractor",
+  "naics_code": "238330",
+  "geography": "TX — DFW (Dallas/Tarrant/Collin/Denton) + Houston (Harris/Fort Bend/Brazoria/Montgomery) + SA (Bexar/Comal) + Austin (Travis/Williamson/Hays)",
+  "target_volume_min": 50,
+  "target_volume_max": 80,
+  "started_at": "2026-05-17T04:35:00Z",
+  "finished_at": null,
+  "counts": {
+    "spine_rows": 0,
+    "enriched": 0,
+    "scored": 0,
+    "tier_a": 0,
+    "tier_b": 0,
+    "tier_c": 0,
+    "tier_d": 0,
+    "distress_excluded": 0
+  },
+  "sources_worked": [],
+  "sources_partial": [],
+  "sources_blocked": [],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 0,
+    "passed": 0,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    }
+  },
+  "supabase_write": {"status": "in_progress", "reason": "score_runs row inserted; businesses pending"},
+  "exclusion_list_chain_pe": [
+    "Empire Today",
+    "50 Floor",
+    "LL Flooring",
+    "Lumber Liquidators",
+    "Floor & Decor",
+    "Floors USA",
+    "Floorz",
+    "Bassett Flooring",
+    "Sherwin-Williams Flooring",
+    "Carpets of Texas",
+    "Texas Floor Co",
+    "Flooring & Granite Liquidators",
+    "Carpet Express",
+    "Home Depot install",
+    "Lowe's install",
+    "Carpet One Floor & Home (corporate)",
+    "ProSource (chain wholesaler)"
+  ],
+  "spine_method": "NWFA TX certified installer directory + CTEF Certified Tile Installer TX + WFCA TX members + Carpet One TX dealers (cooperative) + Floors To Go TX dealers + Abbey Carpet & Floor TX dealers + CarpetsPlus COLORTILE TX dealers + BBB TX A+ accredited flooring + independent Google + city DBA/contractor filings",
+  "submarket_nudges": {
+    "DFW_new_construction": "+5",
+    "Austin_tech_corridor": "+5",
+    "Houston_suburban": "+3",
+    "SA": "+3",
+    "premium_zips_park_cities_memorial_westlake": "+5",
+    "rural": "-5"
+  },
+  "notes": [
+    "TX has no general flooring-contractor license. NAICS 238330 is the federal classification. NWFA wood, CTEF tile, INSTALL Floor Covering apprenticeship, NAFCD are the cert/trade-association spines.",
+    "Cooperative buying groups (Carpet One, Floors To Go, Abbey, CarpetsPlus, ProSource) = independently-owned dealers under a co-op brand. Treat as independents unless ownership clearly rolled to corporate.",
+    "Active acquirers: Empire Today (route acquisitions), Floor & Decor (showroom rollups), Floorz (PE), Sherwin-Williams Flooring (captive), Bassett Flooring (PE). ETA/search-fund interest MODERATE-HIGH for SBA-financeable installers with recurring builder + commercial contracts.",
+    "Recurring revenue tells: production-builder install contracts, multifamily turn services, NFL/school district/HOA/HHA contracts, manufacturer warranty install programs, insurance restoration referral pipelines.",
+    "Coasting tells specific to flooring: no MeasureSquare/RFMS/QFloors, phone+email intake only, dated showroom photos (vintage carpet/tile samples), aging truck fleet, no online quote form, no design-visualization tool."
+  ]
+}

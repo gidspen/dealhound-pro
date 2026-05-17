@@ -1,0 +1,113 @@
+{
+  "batch": 1,
+  "fetched_at": "2026-05-16",
+  "method": "WebFetch on business's own domain + WebSearch cross-checks",
+  "businesses": [
+    {
+      "legal_name": "Yuras Roofing Company",
+      "live_fetch_url": "https://www.yurasroofing.com/",
+      "successor_status": "INTERNAL SUCCESSOR IN PLACE — DEMOTE",
+      "details": "3rd-generation Bryan + Kevin Yuras (Texas A&M alums, took over 2019). Joe Yuras Sr. founded 1949 (1st gen); 2nd gen ran middle; 3rd gen Bryan + Kevin co-own since 2019. Internal-buy-in already executed.",
+      "successor_check_signal": "negative",
+      "no_maintenance_contracts": true,
+      "demote_reason": "successor_found_on_live_site"
+    },
+    {
+      "legal_name": "Bert Roofing Inc.",
+      "live_fetch_url": "https://bertroofing.com/our-management-team/",
+      "successor_status": "INTERNAL SUCCESSOR IN PLACE — DEMOTE",
+      "details": "John Edward Bert II (President since 2013, original co-founder/CFO) + Nicole Bert McElwee (VP, longtime office manager, marketing). Both Bert family.",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site"
+    },
+    {
+      "legal_name": "Joe Hall Roofing & Contracting",
+      "live_fetch_url": "https://joehallroofing.com/about-joe-hall-roofing/meet-the-team/",
+      "successor_status": "INTERNAL SUCCESSOR IN PLACE — DEMOTE",
+      "details": "Tina Hall (CEO), Brett Hall (co-owner SME), Jackson Hall (Strategic Growth Architect, 3rd gen) + Heather Kipker (COO). Strong family-succession architecture. 23 team members.",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site"
+    },
+    {
+      "legal_name": "Rose Roofing Inc.",
+      "live_fetch_url": "https://www.roseroofing.com/about-us/",
+      "successor_status": "INTERNAL SUCCESSOR IN PLACE — DEMOTE",
+      "details": "Jonathan Rose (3rd-gen CEO since Jan 2017) + wife Jessica. Lee Rose (1st gen 1972-1990) → Ken Rose (2nd gen, deceased 2014) → Jonathan. Ken's widow Tonya + children Kenneth II + Crystal worked through 2016 then transitioned. Repair crew since 1988, replacement crew since 1997 = strong tenure but residential-only, no commercial contracts.",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site"
+    },
+    {
+      "legal_name": "Arrington Roofing",
+      "live_fetch_url": "https://arringtonroofing.com/about-us",
+      "successor_status": "INTERNAL SUCCESSOR LIKELY — DEMOTE",
+      "details": "Chris Arrington (Founder/President, Texas Tech alum) + Reese Arrington (Sales and Marketing Manager) — same surname, on team page. Internal successor visible. James Townsend (Head of Commercial), Randy Eubank (Residential), Robin Eggen (Office Manager).",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site"
+    },
+    {
+      "legal_name": "Ja-Mar Roofing & Sheet Metal",
+      "live_fetch_url": "https://jamarroofing.com/spirit-of-ja-mar/",
+      "successor_status": "RECENT BUYER + FAMILY SUCCESSOR — DEMOTE",
+      "details": "Acquired 2005 by D.L. Phillips (not original family) from James + Marlyn McKinney. Phillips' daughter Kenedee Hall won internal award 2016 = family-in-operations. Commercial maintenance programs offered.",
+      "successor_check_signal": "negative",
+      "owner_tenure_years": 21,
+      "demote_reason": "owner_recent_buyer_not_natural_exit"
+    },
+    {
+      "legal_name": "Quality Tops Roofing Inc.",
+      "live_fetch_url": "https://qualitytopsroofing.com/our-team/",
+      "successor_status": "INTERNAL SUCCESSOR IN PLACE — DEMOTE",
+      "details": "Bruce Sabine (Owner, in roofing since 1978) + Paden Sabine (Sales/Estimating, same surname). Internal-buy-in candidate visible.",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site"
+    },
+    {
+      "legal_name": "King of Texas Roofing",
+      "live_fetch_url": "https://kingoftexas.com/our-team/",
+      "successor_status": "INTERNAL SUCCESSOR IN PLACE + TOO LARGE — DEMOTE",
+      "details": "Kelly R. Braddy (3rd gen President/CEO since 2019, joined 2011). Nelson Braddy Jr. (2nd gen founder). 14-state operation, multi-million sq ft projects. Too large for SBA off-market thesis.",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site + size_exceeds_thesis"
+    },
+    {
+      "legal_name": "Andrus Brothers Roofing",
+      "live_fetch_url": "https://andrusbrothers.com/meet-our-team/",
+      "successor_status": "INTERNAL SUCCESSOR IN PLACE — DEMOTE",
+      "details": "Jerry Andrus (Founder/Owner, 43 yrs), Melissa Proffitt + Jeremy Andrus (2nd gen Owners/Stockholders), Trevor Andrus (3rd gen, 6 yrs, sales). 3-gen family-succession in place.",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site"
+    },
+    {
+      "legal_name": "Lon Smith Roofing & Construction",
+      "live_fetch_url": "https://www.lonsmith.com/",
+      "successor_status": "INTERNAL SUCCESSOR IN PLACE — DEMOTE",
+      "details": "Lon Smith (deceased) → Judy Smith (widow, Secretary/Treasurer). Shawn Michael (President, with company since 1992 via fiancée-family connection — 34 yrs). David Beadles VP. 14-state, $28.7M annual revenue 2026 — too large for off-market SBA thesis.",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site + size_exceeds_thesis"
+    },
+    {
+      "legal_name": "Brazos Commercial Roofing",
+      "live_fetch_url": "https://brazoscommercialroofing.com/about-us/",
+      "successor_status": "INTERNAL SUCCESSOR LIKELY — DEMOTE",
+      "details": "David Galloway (President/Founder, decorated veteran, 20 yrs). Anna Galloway (CIO, same surname) = family successor. Paul Garcia (VP). Maintenance contracts offered.",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site"
+    },
+    {
+      "legal_name": "Smith & Sons Roofing (Ernie Smith & Sons)",
+      "live_fetch_url": "https://smithandsonsroofing.com/preventive-maitenance/",
+      "successor_status": "INTERNAL SUCCESSOR IN PLACE — DEMOTE",
+      "details": "Carl Smith (Owner, former RCAT President) + Mark Smith (Operations Manager). Both Smith family. Houston/Austin/Killeen locations. Preventive maintenance programs = strong recurring revenue. Father-son structure visible.",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site"
+    },
+    {
+      "legal_name": "Burch Roofing Inc.",
+      "live_fetch_url": "https://burchroofinginc.com/",
+      "successor_status": "INTERNAL SUCCESSOR IN PLACE — DEMOTE",
+      "details": "3 generations + 4th coming. Family-owned succession in place. GAF Certified (top 7%).",
+      "successor_check_signal": "negative",
+      "demote_reason": "successor_found_on_live_site"
+    }
+  ]
+}

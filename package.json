@@ -4,10 +4,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "vitest run tests/integration",
+    "test": "node --env-file=.env node_modules/.bin/vitest run tests/integration",
     "test:smoke": "vitest run tests/smoke",
     "e2e": "playwright test",
+    "e2e:env": "node --env-file=.env node_modules/.bin/playwright test",
     "e2e:headed": "playwright test --headed",
+    "e2e:prod": "E2E_BASE_URL=https://www.dealhound.pro node --env-file=.env node_modules/.bin/playwright test",
+    "e2e:real": "DEALHOUND_E2E_ALLOW_REAL_INBOX=true E2E_BASE_URL=https://www.dealhound.pro node --env-file=.env node_modules/.bin/playwright test",
     "e2e:report": "playwright show-report",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -27,6 +30,7 @@
     "@anthropic-ai/sdk": "^0.39.0",
     "@preact/signals": "^2.9.0",
     "@supabase/supabase-js": "^2.49.0",
+    "posthog-node": "^5.33.7",
     "preact": "^10.29.1",
     "resend": "^4.8.0",
     "stripe": "^22.1.0"

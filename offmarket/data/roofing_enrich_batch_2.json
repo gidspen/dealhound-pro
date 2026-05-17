@@ -1,0 +1,128 @@
+{
+  "batch": 2,
+  "fetched_at": "2026-05-16",
+  "method": "WebFetch + WebSearch — promising A/B candidates",
+  "businesses": [
+    {
+      "legal_name": "Texas Roof Management Inc.",
+      "live_fetch_url": "https://texasroof.com/company/history-of-texas-roof-management-inc/",
+      "successor_status": "STRONG A CANDIDATE — widow-led, no children visible as successors",
+      "details": "Wayne Awtrey (founder, deceased 2003) → Catherine Awtrey (widow, President since 2003 = 23 yrs leading). No children mentioned as visible team members or successors. Commercial preventive maintenance = strong recurring revenue. No 'now part of' language. Houston-based commercial roofing.",
+      "successor_check_signal": "positive",
+      "recurring_revenue_signal": "STRONG — preventive maintenance + commercial focus",
+      "promote_to_a_candidate": true
+    },
+    {
+      "legal_name": "Mataska Roofing",
+      "live_fetch_url": "https://mataskaroofing.com/",
+      "successor_status": "PROMISING A CANDIDATE — founder still active, no successor visible on site",
+      "details": "Bob Mataska Sr. founded 1979 (47 yrs). Likely 65-75 yo today. Family-owned 45+ yrs. NO Bob Jr. or other family successors visible on website. Wichita Falls (hail-corridor +3). Residential + commercial.",
+      "successor_check_signal": "positive (limited info — needs deeper check)",
+      "owner_age_proxy": "founder age ~65-75 implied by 1979 founding + Sr. designation"
+    },
+    {
+      "legal_name": "Cloud Roofing Co.",
+      "live_fetch_url": "https://www.cloudroofing.com/",
+      "successor_status": "PROMISING — family-owned 50+ yrs, no specific successor info on site",
+      "details": "Founded 1975. 50+ yrs family-owned. San Antonio (12022 Warfield St, 78216). RCAT + NRCA award recipient. Owens Corning Preferred. Commercial maintenance offered. Family ownership emphasized but no specific successor names on website.",
+      "successor_check_signal": "positive (limited info)",
+      "promote_to_b_candidate": true
+    },
+    {
+      "legal_name": "Marlin Construction LLC",
+      "live_fetch_url": "https://www.marlinroofs.com/about-marlin-construction/",
+      "successor_status": "PROMISING — husband-wife operation, no successor visible",
+      "details": "John + Trish Josephs (owners, ~20+ yrs at company). Commercial flat (TPO/PVC) specialist. Versico Gold Medal Quality Award 8 straight years. Maintenance + consulting + roof repair core offerings. Husband-wife couple = often coast pattern, no third-gen visible. Houston (10403 Kansack Lane 77086).",
+      "successor_check_signal": "positive (limited info)",
+      "recurring_revenue_signal": "MODERATE — maintenance + consulting offered, contracts implied",
+      "promote_to_b_candidate": true
+    },
+    {
+      "legal_name": "StazOn Roofing",
+      "live_fetch_url": "https://stazonroof.com/",
+      "successor_status": "PROMISING — founded 1980, no specific successor info on site",
+      "details": "Founded 1980 = 46 yrs. Family-owned since 1980. Owner names NOT on public site. Multiple TX trade memberships (NRCA, NTRCA, RCAT, MRA). A+ BBB. Dallas/FW area. Residential + commercial + multi-family (TPO + coatings + plaza deck systems).",
+      "successor_check_signal": "positive (limited info — needs deeper team-page check)",
+      "promote_to_b_candidate": true
+    },
+    {
+      "legal_name": "Braun's Roofing Inc.",
+      "live_fetch_url": "https://www.braunsroofing.com/",
+      "successor_status": "PROMISING — Skeeter Braun still president, founded 1987",
+      "details": "Founded 1987 (39 yrs, not 1990 as earlier). Skeeter Braun (President), Rene Samson (VP) — not same surname. Kyle Holmes (Office Manager), Rhett Brethauer (Project Manager). No family succession documented. Houston (3748 Dover St 77087).",
+      "successor_check_signal": "positive (limited info)",
+      "owner_age_proxy": "Skeeter Braun ~65+ implied by 1987 founding"
+    },
+    {
+      "legal_name": "American Roofing",
+      "live_fetch_url": "https://americanroofinglubbocktx.com/",
+      "successor_status": "AMBIGUOUS — 2 generations claimed but no named successors",
+      "details": "Established 1982-1984 (42 yrs experience). 'Family affair, two generations working' but no names disclosed. Lubbock (8227 Valencia Ave 79424). Residential + commercial + multi-family + insurance + metal coating. Hail-corridor +3.",
+      "successor_check_signal": "ambiguous"
+    },
+    {
+      "legal_name": "Wortham Brothers Roofing",
+      "live_fetch_url": "https://www.wbroofing.com/",
+      "successor_status": "LIKELY SUCCESSOR — Ben Wortham appears in testimonials",
+      "details": "Founded 1986 by David + Steve Wortham. Ben Wortham mentioned in testimonials (likely son, same surname). Commercial TPO/EPDM/metal services. McKinney/North TX.",
+      "successor_check_signal": "negative (likely)",
+      "demote_reason": "same_surname_successor_likely_in_operations"
+    },
+    {
+      "legal_name": "Parsons Roofing (Lorena/Waco)",
+      "live_fetch_url": "https://www.parsonsroofing.com/",
+      "successor_status": "AMBIGUOUS — Stuart Parsons owner, 4 generations claimed, family commemorations on site",
+      "details": "Operating since 1948. Stuart Parsons (Owner). 4 generations claimed in earlier search. 'Sue Parsons Protect the Kids Program' honors Stuart's mother (d. 2005). Commercial focus — Duro-Last, 3000+ school roofs. Preventive maintenance program = strong recurring revenue. Sports Ranch development = capital allocation outside roofing.",
+      "successor_check_signal": "ambiguous (no clear children listed but family-business culture strong)",
+      "recurring_revenue_signal": "STRONG — school district contracts + preventive maintenance"
+    },
+    {
+      "legal_name": "JC Roofing Galveston",
+      "live_fetch_url": "https://www.jcroofinggalveston.com/",
+      "successor_status": "PARTIALLY DEMOTED — actual founding 1996 not 50+ yrs",
+      "details": "Established 1996 = 30 yrs (not 50+ as earlier search suggested). 'Family owned and operated.' No named owner. Coastal hurricane corridor +2. Less L1 strength than initially assumed.",
+      "successor_check_signal": "ambiguous (limited info)",
+      "year_corrected": 1996
+    },
+    {
+      "legal_name": "Gill Roofing Co Inc",
+      "live_fetch_url": "https://www.gillroofingcoinc.com/",
+      "successor_status": "AMBIGUOUS — 80 yrs since 1945, family-owned, darlene@ email suggests female 2nd/3rd gen",
+      "details": "Since 1945 = 81 yrs. License #03-0172. EPA Lead Safe. RCAT + GAF + Owens-Corning + BBB. Family-owned. Darlene email contact = possibly 2nd/3rd gen female leader. Address 5105 Up River Rd Corpus Christi 78407. Residential + commercial. No team listed publicly.",
+      "successor_check_signal": "ambiguous (deep family-business history likely has internal successors)"
+    },
+    {
+      "legal_name": "Texas State Roofing Company",
+      "live_fetch_url": "https://texasstateroofing.com/about-us/",
+      "successor_status": "PROMISING — 25 yrs, family-managed, no successor info on page",
+      "details": "25 yrs experience (founded ~2001). Locally owned family-managed. Commercial Roof Maintenance Program (recurring revenue signal). Multi-family + commercial in Corpus Christi + Coastal Bend + South TX. GAF Master Elite + OC Preferred + BBB. Insurance loss specialist (coastal storms).",
+      "successor_check_signal": "positive (limited info)",
+      "recurring_revenue_signal": "STRONG — commercial maintenance program",
+      "promote_to_b_candidate": true
+    },
+    {
+      "legal_name": "Chamberlin Roofing & Waterproofing",
+      "live_fetch_url": "https://www.chamberlinltd.com/about-us",
+      "successor_status": "TOO LARGE FOR SBA THESIS — DEMOTE",
+      "details": "Founded 1897 (or 1978 Houston). 600+ employees. Multi-state. 'Proactive Asset Management' recurring revenue strong. Likely too large for SBA off-market thesis (~$50M+ revenue).",
+      "successor_check_signal": "n/a",
+      "demote_reason": "size_exceeds_thesis"
+    },
+    {
+      "legal_name": "STX Roofing",
+      "live_fetch_url": "https://www.stxroofing.com/",
+      "successor_status": "TOO YOUNG — DEMOTE",
+      "details": "Russell Mullin (founder, Air Force veteran). ~10 yrs operating = founded ~2015. Veteran-owned, family-operated. Houston (Huffman TX 77336). Commercial + multi-family. Justin and Ashley appear in reviews. Owner likely 35-50 yo — wrong cohort.",
+      "successor_check_signal": "n/a",
+      "demote_reason": "too_young_in_business"
+    },
+    {
+      "legal_name": "KangaRoof",
+      "live_fetch_url": "https://callkangaroof.com/",
+      "successor_status": "AMBIGUOUS — Scott + Stacie Feller (husband-wife founders, started 1992)",
+      "details": "Founded 1992 = 34 yrs. Scott + Stacie Feller owners. Multi-named team (De'Andre, Andrew, Peter, Michael Treviño, Kyle, Wyatt, Brian Bessellieu, Omar, Hannah). 'Overhead Care Club' = recurring revenue subscription. Apartments + churches = commercial recurring revenue. Austin metro.",
+      "successor_check_signal": "ambiguous (large team without family successor visible)",
+      "recurring_revenue_signal": "MODERATE — Overhead Care Club + multi-family contracts"
+    }
+  ]
+}

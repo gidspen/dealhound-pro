@@ -43,6 +43,8 @@
 
 const Stripe = require('stripe');
 const { createClient } = require('@supabase/supabase-js');
+const { capture } = require('./_lib/posthog');
+const { TIER_ACTIVE_BOX_LIMITS } = require('./_lib/buy-box-limits');
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -134,6 +136,68 @@ async function handleCheckoutCompleted(session) {
   }
 
   console.log(`Subscription activated: ${customerEmail} → ${tier}`);
+
+  // Auto-activate draft buy_boxes up to the tier limit.
+  // This is silent — no UI prompt. The user can manage via the dashboard.
+  const limit = TIER_ACTIVE_BOX_LIMITS[tier] != null ? TIER_ACTIVE_BOX_LIMITS[tier] : 3;
+  if (isFinite(limit) && limit > 0) {
+    const { data: drafts } = await supabase
+      .from('buy_boxes')
+      .select('id')
+      .eq('user_email', customerEmail)
+      .eq('status', 'draft')
+      .order('created_at', { ascending: true })
+      .limit(limit);
+
+    if (drafts && drafts.length > 0) {
+      const draftIds = drafts.map((d) => d.id);
+      const { error: activateError } = await supabase
+        .from('buy_boxes')
+        .update({ status: 'active' })
+        .in('id', draftIds);
+      if (activateError) {
+        console.error('stripe-webhook: failed to auto-activate buy_boxes:', activateError);
+      } else {
+        console.log(`Auto-activated ${draftIds.length} buy_box(es) for ${customerEmail}`);
+      }
+    }
+  } else if (!isFinite(limit)) {
+    // operator tier — no cap, activate all drafts
+    const { data: drafts } = await supabase
+      .from('buy_boxes')
+      .select('id')
+      .eq('user_email', customerEmail)
+      .eq('status', 'draft')
+      .order('created_at', { ascending: true });
+
+    if (drafts && drafts.length > 0) {
+      const draftIds = drafts.map((d) => d.id);
+      const { error: activateError } = await supabase
+        .from('buy_boxes')
+        .update({ status: 'active' })
+        .in('id', draftIds);
+      if (activateError) {
+        console.error(
+          'stripe-webhook: failed to auto-activate buy_boxes (operator):',
+          activateError
+        );
+      } else {
+        console.log(
+          `Auto-activated ${draftIds.length} buy_box(es) for ${customerEmail} (operator)`
+        );
+      }
+    }
+  }
+
+  await capture({
+    event: 'checkout_completed',
+    distinctId: session.customer_details?.email || session.customer_email || 'anonymous',
+    properties: {
+      tier,
+      amount: session.amount_total,
+      mode: session.mode,
+    },
+  });
 }
 
 // ---------------------------------------------------------------------------

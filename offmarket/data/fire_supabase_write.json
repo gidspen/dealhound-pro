@@ -1,0 +1,24 @@
+{
+  "status": "written",
+  "businesses_written": 60,
+  "business_scores_written": 60,
+  "business_signals_written": 159,
+  "neutral_signals_dropped": 31,
+  "errors": [],
+  "verification_counts": {
+    "businesses": 60,
+    "scores_by_tier": {
+      "B_forward": 8,
+      "C_watch": 27,
+      "D_pass": 25
+    },
+    "signals": 159
+  },
+  "rpc_function": "public.offmarket_persist_fire_row(jsonb)",
+  "score_run_id": "1c8260cb-b1aa-4f65-9b3e-840736224c7c",
+  "run_label": "fire-tx-2026-05-15",
+  "score_run_business_count_updated": 60,
+  "source_file": "/Users/gideonspencer/dealhound-pro/.claude/worktrees/fervent-kilby-9ed36a/offmarket/data/fire_targets.json",
+  "runner_script": "/tmp/fire_supabase_sql/persist_runner.py",
+  "runner_results": "/tmp/fire_supabase_sql/runner_results.json"
+}

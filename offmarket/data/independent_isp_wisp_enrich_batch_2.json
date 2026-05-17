@@ -1,0 +1,1983 @@
+[
+  {
+    "spine_index": 34,
+    "legal_name": "Pedernales Electric Cooperative",
+    "dba_name": "Pedernales Connect",
+    "city": "Johnson City",
+    "county": "Blanco",
+    "state": "TX",
+    "zip": "78636",
+    "website": "https://www.pec.coop",
+    "phone": "888-554-4732",
+    "year_established": 1938,
+    "years_in_business": 87,
+    "owner_name": "Member-owned electric cooperative — Board-controlled, no individual owner",
+    "owner_age_estimate": null,
+    "owner_age_source": "n_a_cooperative",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 1938-05-18; tpid 17408284127)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 800,
+    "employee_count_source": "industry_proxy_largest_us_distribution_electric_coop_8100sqmi",
+    "service_type": "fixed_wireless + expanding FTTH",
+    "subscriber_count_estimate": 5000,
+    "subscriber_source": "spine_estimate_broadband_affiliate",
+    "service_area_summary": "Hill Country — 8,100 sq mi across Central Texas; 24 counties served by PEC electric; broadband subsidiary footprint",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_registration_date_1938-05-18",
+    "is_cooperative": true,
+    "cooperative_type": "electric_coop_broadband_subsidiary",
+    "wispa_member": false,
+    "tta_member": null,
+    "trba_member": null,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Cooperative governance structure — board-controlled, no individual seller; NOT a typical acquisition target",
+      "Broadband subsidiary launched after 2017 (post-rural-broadband-grant era) — fixed_wireless still primary, FTTH expanding slowly",
+      "C T Corporation registered agent (national CT, common for cooperatives with statewide footprint) — no signal either way"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "n_a_cooperative_governance",
+      "family_successor_present": "n_a",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/17408284127",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "entity_status,sos_reg,registered_agent"
+      },
+      {
+        "url": "https://www.pec.coop",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "service_area,founded_year_proxy"
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "Not an acquisition target — member-owned electric cooperative. Largest US distribution electric coop. Broadband subsidiary 'Pedernales Connect' is board-controlled. Listed for completeness but should score D_pass (cooperative governance hard gate). Cannot be acquired by ETA / search fund / individual sponsor.",
+    "acquisition_eligibility": "DROP_COOPERATIVE"
+  },
+  {
+    "spine_index": 35,
+    "legal_name": "United Cooperative Services",
+    "dba_name": "United Fiber",
+    "city": "Burleson",
+    "county": "Johnson",
+    "state": "TX",
+    "zip": "76028",
+    "website": "https://ucs.net",
+    "phone": "817-556-4000",
+    "year_established": 2000,
+    "years_in_business": 25,
+    "owner_name": "Member-owned electric cooperative — Board-controlled. CEO Cameron Smallwood (registered agent)",
+    "owner_age_estimate": null,
+    "owner_age_source": "n_a_cooperative",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2000-04-01 as United Electric Cooperative Services Inc; tpid 17528714003)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 350,
+    "employee_count_source": "industry_proxy_14_county_electric_coop",
+    "service_type": "FTTH (co-op subsidiary)",
+    "subscriber_count_estimate": 34000,
+    "subscriber_source": "ADTRAN press release ucs.net",
+    "service_area_summary": "North Texas — Johnson, Erath, Hood, Bosque, Somervell, Palo Pinto, Coryell, Eastland, Comanche, Stephens, Young, Hamilton, Tarrant, Ellis counties",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2000_04_01_united_electric_coop_services_inc_HQ_Cleburne_76033",
+    "is_cooperative": true,
+    "cooperative_type": "electric_coop_broadband_subsidiary",
+    "wispa_member": false,
+    "tta_member": null,
+    "trba_member": null,
+    "fiber_miles": 20000,
+    "owner_owns_building": true,
+    "coasting_tells": [
+      "Cooperative governance — board-controlled, NOT acquirable by individual sponsor",
+      "Aggressive fiber buildout 20,000+ miles — not coasting; this is a builder, not seller",
+      "Cleburne HQ (Comptroller filing) vs. Burleson public address — same parent co-op"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "n_a_cooperative",
+      "family_successor_present": "n_a",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/17528714003",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "entity_status,reg_agent_smallwood"
+      },
+      {
+        "url": "https://ucs.net",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "field": "subscriber_count,fiber_miles"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "Not an acquisition target — electric cooperative subsidiary. CEO Cameron Smallwood is professional executive, not founder/owner. Active and growing — but governed by member board. DROP for acquisition purposes.",
+    "acquisition_eligibility": "DROP_COOPERATIVE"
+  },
+  {
+    "spine_index": 36,
+    "legal_name": "Nextlink Internet",
+    "dba_name": "Nextlink Internet (AMG Technology Investment Group LLC)",
+    "city": "Round Rock",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78681",
+    "website": "https://nextlinkinternet.com",
+    "phone": "855-698-5465",
+    "year_established": 2012,
+    "years_in_business": 13,
+    "owner_name": "William Baker (Managing Member of parent AMG Technology Investment Group LLC, Hudson Oaks TX); Lisa Youngers (CEO, Nextlink Wireless LLC). Private equity backed.",
+    "owner_age_estimate": 55,
+    "owner_age_source": "proxy_founder_2012_wisp_buildout_career_arc",
+    "entity_status": "Active — AMG Technology Investment Group, LLC (tpid 14541464849) reg 2012-01-03 ACTIVE. Nextlink Wireless LLC (tpid 32018659758) reg 2005 FRANCHISE TAX ENDED — old entity unwound. Hudson Oaks TX management.",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 800,
+    "employee_count_source": "industry_proxy_100k_subs_PE_backed_multi_state",
+    "service_type": "fixed_wireless + FTTH",
+    "subscriber_count_estimate": 100000,
+    "subscriber_source": "spine_estimate_CAF_II_RDOF_lightreading_2024",
+    "service_area_summary": "Rural TX + 7 other states — 200+ TX cities/towns including Abilene, Arlington, Hutto, Round Rock, Waco, Temple, Killeen, Sulphur Springs, Paris",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_AMG_tech_invst_group_2012",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "PE-backed strategic acquirer — NOT seller. Buying up rural fiber networks across 8 states.",
+      "CEO Lisa Youngers in Herndon VA (D.C. metro) — professional PE-installed executive, not founder.",
+      "Officer list includes April Nevarez (Tax Dir), Eric Miller (CTO), Kristi Jung (Treasurer) — corporate finance team, classic PE platform structure"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "n_a_pe_platform",
+      "family_successor_present": "n_a",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/14541464849",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "amg_parent_entity_william_baker_como_wireless"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32018659758",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "nextlink_wireless_old_entity_youngers_miller_jung"
+      }
+    ],
+    "data_completeness": 0.85,
+    "notes": "Strategic acquirer, not a target. AMG Technology Investment Group is the parent; PE backing visible via Herndon VA executive presence (DC private capital corridor). William Baker (Hudson Oaks TX) is named founder. 100k+ subs across 8 states. DROP for ETA acquisition purposes — they buy you, you don't buy them.",
+    "acquisition_eligibility": "DROP_STRATEGIC_ACQUIRER"
+  },
+  {
+    "spine_index": 37,
+    "legal_name": "Resound Networks LLC",
+    "dba_name": "Resound Networks",
+    "city": "Pampa",
+    "county": "Gray",
+    "state": "TX",
+    "zip": "79065",
+    "website": "https://resoundnetworks.com",
+    "phone": "800-806-1719",
+    "year_established": 2015,
+    "years_in_business": 10,
+    "owner_name": "Chadd Giles (Managing Member, Pampa TX — founder), Bryan Waldrip (Managing Member), Royce Waldrip (Member); members incl. Brooks Exempt Family Trust, KELP Holding Inc, Point Broad Band LLC (West Point GA — strategic investor)",
+    "owner_age_estimate": 48,
+    "owner_age_source": "proxy_founder_2015_chadd_giles_career_arc_wisp_industry",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2015-04-01; tpid 32056843041)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 100,
+    "employee_count_source": "industry_proxy_10k_subs_8_state_buildout",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 10000,
+    "subscriber_source": "spine_estimate_etisoftware_preseem",
+    "service_area_summary": "Texas Panhandle + West Texas + parts of NM/OK/AZ/AR/KS/CO/CA — 500+ communities including Pampa, Lubbock, Hobbs",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2015_04_01",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Multi-state PE-style investor presence — Point Broad Band LLC (West Point GA, KS-style broadband holding), Brooks Exempt Family Trust as member — suggests partial outside capital",
+      "Founder Chadd Giles still operating per recent industry articles — not retiring yet",
+      "10-year tenure, age 48 proxy — too early for natural exit window",
+      "Multi-state geographic sprawl (8 states from TX HQ) signals roll-up strategy not single-owner coast",
+      "Waldrip family (Bryan, Royce) presence in member list suggests family/local investor partnership"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "no_founder_still_in_seat",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32056843041",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "officers_giles_waldrip_brooks_trust"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "Acquirer-style profile, not coaster. Founder Chadd Giles still active, multi-state expansion, PE-style member structure (Point Broad Band LLC, Brooks Exempt Family Trust). Too young as founder (~48) and too multi-state to be a near-term seller. C_watch at best.",
+    "acquisition_eligibility": "C_watch_too_active"
+  },
+  {
+    "spine_index": 38,
+    "legal_name": "Skynet Wireless Traders, LLC (DBA Skynet WISP)",
+    "dba_name": "Skynet WISP",
+    "city": "Houston / Cedar Park (Comptroller HQ)",
+    "county": "Williamson (Cedar Park registered)",
+    "state": "TX",
+    "zip": "78613",
+    "website": "https://www.skynetwisp.com",
+    "phone": "281-293-7900",
+    "year_established": 2005,
+    "years_in_business": 20,
+    "owner_name": "Mehmood M Batavia (President / Registered Agent — Skynet Wireless Traders LLC, Cedar Park TX)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "proxy_president_2005_skynet_wisp_20yr_tenure",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2018-03-01; tpid 32066404495). NOTE: current LLC registered 2018, but website claims founded 2005 — likely re-formation of prior unincorporated/LLC entity. Original incorporation may have been under different name.",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 8,
+    "employee_count_source": "inferred_small_wisp_3k_subs",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 3000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Rural Houston suburbs and exurban — Harris, Waller, Montgomery, Liberty counties",
+    "founded_year_verified": false,
+    "founded_year_source": "website_claim_2005_vs_comptroller_2018_LLC_likely_reform",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Site copyright/era unclear, simple template with 'Locally owned' branding",
+      "Single-LLC structure, sole owner-president (Mehmood Batavia) — classic solo founder profile",
+      "Houston rural-suburban — exurban Harris/Waller/Montgomery/Liberty footprint not contested by Spectrum/AT&T fiber yet",
+      "'As Independent as Texas Itself' branding — local-owner positioning",
+      "No team page, no leadership listings, no online signup flow visible",
+      "Phone-forward intake (281-293-7900)",
+      "20-year tenure puts founder near retirement age window if entered at ~35 in 2005"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "skynetwisp.com homepage + comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32066404495",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "entity_owner_batavia_cedar_park"
+      },
+      {
+        "url": "https://www.skynetwisp.com/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "locally_owned_branding"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "Solo-owner WISP, ~20yr tenure, exurban Houston footprint. Owner Mehmood Batavia age proxy ~55. Strong B_forward / potential A_acquire profile pending owner-age verification via LinkedIn. Worth deep-dive — Indian-/Asian-surnamed solo immigrant founder is a common silent-coast pattern in TX rural WISP space."
+  },
+  {
+    "spine_index": 39,
+    "legal_name": "CG Communications, Inc.",
+    "dba_name": "CG Communications",
+    "city": "Smithville",
+    "county": "Bastrop",
+    "state": "TX",
+    "zip": "78957",
+    "website": "https://cgcomm.biz",
+    "phone": "888-221-6704",
+    "year_established": 2005,
+    "years_in_business": 20,
+    "owner_name": "Alton G Grohman (Vice President) and Vicki Lynn West (registered agent, Pettus TX) — family/partnership structure",
+    "owner_age_estimate": 62,
+    "owner_age_source": "proxy_vp_grohman_2005_founding_20yr_tenure_career_arc",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2005-08-26; tpid 32018080930)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 6,
+    "employee_count_source": "inferred_2500_subs_3_county_wisp",
+    "service_type": "WISP (fixed_wireless + fiber)",
+    "subscriber_count_estimate": 2500,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Central Texas — Bastrop, Caldwell, Fayette counties",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2005_08_26",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Website 'Since 2004' messaging on homepage — slight mismatch with 2005 SoS date (likely operating period before incorporation)",
+      "'Locally owned' branding",
+      "Multi-tribal family structure (Grohman + West names) suggests partnership/family business",
+      "Smithville rural Bastrop County — classic exurban Austin sprawl footprint",
+      "20-year tenure of operating partners",
+      "Registered agent in Pettus TX (Bee County, 100+ mi south) — owner-spouse or family member elsewhere",
+      "No team/About page on site"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "possible_family_structure_grohman_west",
+      "family_successor_present": "unknown",
+      "verified_via": "cgcomm.biz + comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32018080930",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "officers_grohman_west_smithville"
+      },
+      {
+        "url": "https://cgcomm.biz/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "since_2004_locally_owned"
+      }
+    ],
+    "data_completeness": 0.78,
+    "notes": "Solo/partnership founder. Owner Alton Grohman ~62 proxy. Smithville TX exurban Austin (Bastrop County) — strong growth corridor. 2.5k subs is SBA-size. Strong B_forward candidate, possibly A pending owner age verification."
+  },
+  {
+    "spine_index": 40,
+    "legal_name": "Bee Creek Communications, LLC",
+    "dba_name": "Bee Creek Communications",
+    "city": "Fredericksburg",
+    "county": "Gillespie",
+    "state": "TX",
+    "zip": "78624",
+    "website": "https://beecreek.net",
+    "phone": "830-990-1258",
+    "year_established": 2001,
+    "years_in_business": 24,
+    "owner_name": "VTX Communications LLC (Sole Member as of 2023-10-02 reorganization) — subsidiary of VTX1 Companies / Valley Telephone Cooperative",
+    "owner_age_estimate": null,
+    "owner_age_source": "n_a_now_subsidiary",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2023-10-02; tpid 17430052765). 2023 reformation as wholly-owned VTX1 subsidiary — prior independent entity rolled up.",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 12,
+    "employee_count_source": "inferred_4k_subs_pre_acquisition",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 4000,
+    "subscriber_source": "spine_estimate_pre_2024_acquisition",
+    "service_area_summary": "Texas Hill Country — Gillespie, Kendall, Kerr, Kimble, Blanco counties",
+    "founded_year_verified": true,
+    "founded_year_source": "spine_2001_website_since_2001",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Already acquired by VTX1 Companies (2023-10 reorganization confirmed via Comptroller — VTX Communications LLC is sole member)",
+      "Website still shows 'Since 2001' and 'locally owned' branding (pre-acquisition messaging not yet updated as of mid-2025 spine snapshot)",
+      "Comptroller filing date 2023-10-02 matches VTX acquisition timeline reported in WGNielsen / spine notes"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "n_a_now_subsidiary",
+      "family_successor_present": "n_a",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/17430052765",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "sole_member_vtx_communications_llc"
+      },
+      {
+        "url": "https://beecreek.net/about/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "since_2001_locally_owned_legacy_branding"
+      }
+    ],
+    "data_completeness": 0.85,
+    "notes": "DROP — already acquired by VTX1 Companies in 2023. Comptroller filing confirms VTX Communications LLC is sole member. Not available for independent acquisition.",
+    "acquisition_eligibility": "DROP_ALREADY_ACQUIRED"
+  },
+  {
+    "spine_index": 41,
+    "legal_name": "4ip Technology and Media LLC (DBA Nexstream)",
+    "dba_name": "Nexstream",
+    "city": "Fredericksburg",
+    "county": "Gillespie",
+    "state": "TX",
+    "zip": "78624",
+    "website": "https://nexstream.net",
+    "phone": "830-990-1118",
+    "year_established": 2005,
+    "years_in_business": 20,
+    "owner_name": "Unknown — Nexstream AOS LLC (tpid 32104995603) registered 2026-03-19 with national registered agent (Registered Agents Inc); no officer info populated yet. 4ip Technology and Media original entity not found in Comptroller search (may be NM/OK or different DBA)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "Newly Active (Nexstream AOS LLC tpid 32104995603, reg 2026-03-19) — likely entity reorganization. Original 4ip Technology and Media LLC name not located in Comptroller (possible foreign LLC).",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 10,
+    "employee_count_source": "inferred_3k_subs_fiber_wisp_hybrid",
+    "service_type": "FTTH + WISP hybrid",
+    "subscriber_count_estimate": 3000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Texas Hill Country / Central Texas — Fredericksburg, Boot Ranch, Boerne suburbs",
+    "founded_year_verified": false,
+    "founded_year_source": "spine_2005_unverified_comptroller_only_finds_2026_reformation",
+    "is_cooperative": false,
+    "wispa_member": false,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Recent (March 2026) Nexstream AOS LLC reformation — could be Owner-managed restructure, succession planning, or sale prep",
+      "Fredericksburg Hill Country premium market (Boot Ranch high-end community served) — strong real-estate-driven demand",
+      "Original 4ip Technology and Media LLC not findable in TX Comptroller — possibly NM/OK domestic or DBA-only operation",
+      "Site has minimal team/leadership info — no clues from live-fetch"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller + nexstream.net live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32104995603",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "nexstream_aos_llc_2026_reform"
+      },
+      {
+        "url": "https://nexstream.net",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_team_info"
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "Low confidence on entity continuity. March 2026 Nexstream AOS LLC reformation is suspicious — could be sale prep, restructure, or succession event. Hill Country premium market with Boot Ranch+Boerne service area is attractive. Worth manual research before scoring above C_watch."
+  },
+  {
+    "spine_index": 42,
+    "legal_name": "Farm to Market Broadband, LP",
+    "dba_name": "Farm-to-Market Broadband",
+    "city": "Temple",
+    "county": "Bell",
+    "state": "TX",
+    "zip": "76501",
+    "website": "https://farm-market.net",
+    "phone": "254-697-6710",
+    "year_established": 2005,
+    "years_in_business": 20,
+    "owner_name": "Windblown Internet, LLC (General Partner of Farm to Market Broadband LP — Temple TX). Registered agent Reeder Dossett.",
+    "owner_age_estimate": 55,
+    "owner_age_source": "proxy_partnership_2005_founding_20yr_tenure",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2005-04-29 as LP; tpid 12027633978). Windblown Internet LLC is General Partner.",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 6,
+    "employee_count_source": "inferred_2500_subs_4_county_wisp",
+    "service_type": "WISP (LTE-based fixed_wireless)",
+    "subscriber_count_estimate": 2500,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Central Texas — Bell, Falls, Milam, Williamson counties",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2005_04_29",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "LP structure with GP holding company (Windblown Internet LLC) — partnership-style ownership, suggests 2+ owners or estate planning",
+      "Reeder Dossett as registered agent — surname suggests family farming/land lineage in TX",
+      "Bell/Falls/Milam/Williamson exurban Killeen-Temple footprint — rural electric coop overlap territory",
+      "20-year tenure",
+      "LTE-based last mile (CBRS / unlicensed LTE) suggests modern tech investment 2018+",
+      "No About/Team page; minimal site polish",
+      "Phone-forward intake (254-697-6710)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "possible_lp_structure_implies_planning",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/12027633978",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "lp_structure_windblown_internet_gp"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "LP structure with Windblown Internet LLC as GP suggests partner/estate planning. Solid 20yr operating record in Central TX. B_forward candidate pending owner identification via Windblown Internet LLC officer search."
+  },
+  {
+    "spine_index": 43,
+    "legal_name": "Western Broadband",
+    "dba_name": "Western Broadband",
+    "city": "Georgetown",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78628",
+    "website": "https://www.westernbroadband.com",
+    "phone": "512-257-1077",
+    "year_established": 2008,
+    "years_in_business": 17,
+    "owner_name": "Unknown (no TX Comptroller entity match found under 'Western Broadband' variants — possibly DBA/sole-prop or domesticated under different legal name)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "Unverified — no direct Comptroller match. About page mentions 'since 1996' and 'Since 2001' (likely team-tenure references, not founding date). Spine sets founding 2008.",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 8,
+    "employee_count_source": "inferred_3500_subs_4_county_wisp",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 3500,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Central Texas — Williamson, Burnet, Travis, Bell counties",
+    "founded_year_verified": false,
+    "founded_year_source": "spine_2008_about_page_mentions_1996_and_2001",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "No discoverable Comptroller entity — implies sole proprietorship, DBA, or alternate legal name",
+      "Georgetown TX (Williamson) — fast-growing Austin exurban; fiber competition from Hill Country / United Cooperative subs (BVCN may be applicable)",
+      "About-page mentions 'since 1996' — could be team-tenure or related-company genesis; needs verification",
+      "Phone-forward intake (512-257-1077)",
+      "17-year tenure of named brand"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "westernbroadband.com live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.westernbroadband.com/about/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "since_1996_since_2001_tenure_proxy"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Low confidence — Comptroller search returned no direct match for Western Broadband variants. Operator may be DBA, sole prop, or under unrelated legal name. Williamson County exurban Austin growth corridor. Needs manual entity research before scoring above C_watch."
+  },
+  {
+    "spine_index": 44,
+    "legal_name": "Waco WiFi, LLC",
+    "dba_name": "Waco WiFi",
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": "76702",
+    "website": "https://wacowifi.com",
+    "phone": "254-836-2800",
+    "year_established": 2017,
+    "years_in_business": 8,
+    "owner_name": "Christopher Brooks (Director / Sole Member, Waco TX — PO Box 20936 Waco 76702)",
+    "owner_age_estimate": 42,
+    "owner_age_source": "proxy_sole_director_2017_founding_8yr_tenure_career_arc",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2017-09-20; tpid 32064893467)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 4,
+    "employee_count_source": "inferred_1500_subs_rural_mclennan",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 1500,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Central Texas / Waco rural — China Spring, Valley Mills, Coyote, Crawford, Speegleville, Woodway and surrounding rural McLennan / Bosque",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2017_09_20",
+    "is_cooperative": false,
+    "wispa_member": false,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": false,
+    "coasting_tells": [
+      "Sole-owner LLC structure (Christopher Brooks as Director + Member) — single owner exposed",
+      "Spine note says founded 2011 but Comptroller LLC registered 2017 — likely sole-prop > LLC conversion",
+      "Spine notes 'website founded 2011' — operating period prior to LLC formation",
+      "PO Box mailing address (not building ownership)",
+      "No discoverable About page content via live-fetch",
+      "8-year tenure is short for natural-exit profile (~42 years old founder)",
+      "Phone-forward intake"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32064893467",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "sole_member_christopher_brooks_waco"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "Solo founder but too young (~42 proxy) for natural exit; 8-year LLC tenure too short. C_watch tier — interesting structure (single-owner clean LLC) but base-rate timing wrong."
+  },
+  {
+    "spine_index": 45,
+    "legal_name": "Altitude ISP, LLC",
+    "dba_name": "Altitude ISP",
+    "city": "Copperas Cove (TX ops) / Durango CO (managing member)",
+    "county": "Coryell",
+    "state": "TX",
+    "zip": "76522",
+    "website": "https://altitudeisp.com",
+    "phone": "254-651-0445",
+    "year_established": 2020,
+    "years_in_business": 5,
+    "owner_name": "Daniel J Berghoff (Managing Member, Durango CO 81301) and Nathan Stone (Managing Member, Gholson TX 76705 — McLennan County)",
+    "owner_age_estimate": 45,
+    "owner_age_source": "proxy_dual_managing_members_2020_LLC_career_arc",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2020-07-21 as TX LLC; tpid 32075133044)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 5,
+    "employee_count_source": "inferred_2000_subs_central_tx_wisp",
+    "service_type": "WISP (fixed_wireless on fiber backbone)",
+    "subscriber_count_estimate": 2000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Central Texas — Bell, Coryell, Lampasas counties; Copperas Cove, Kempner, Pidcoke, Belton, Salado, Temple, Little River Academy, Rogers, Morgans Point",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2020_07_21",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Out-of-state managing member (Daniel Berghoff in Durango CO) — absentee-ownership pattern; multi-state investor-operator",
+      "Modern equipment (Tarana/Cambium gear per spine) — capex-active, not coasting",
+      "Spine note says 'founded 2015' but Comptroller LLC registered 2020 — possible sole-prop > LLC conversion",
+      "Co-managing structure (Berghoff + Stone) suggests partnership not pure solo coast",
+      "5 years LLC tenure too short for natural-exit base rate"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "no_too_recent",
+      "family_successor_present": "n_a",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32075133044",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "managing_members_berghoff_stone"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "Active builder profile, partnership structure with CO-based investor. Spine says 2015 founding but LLC formed 2020 — likely capex/financing event. Too young as entity for natural-exit window. D_pass on years_in_business gate (<5yr) or C_watch on Coryell County rural play."
+  },
+  {
+    "spine_index": 46,
+    "legal_name": "Wise ISP, LLC (DBA WiSEisp)",
+    "dba_name": "WiSEisp",
+    "city": "Bridgeport",
+    "county": "Wise",
+    "state": "TX",
+    "zip": "76426",
+    "website": "https://wiseisp.com",
+    "phone": "940-277-9473",
+    "year_established": 2016,
+    "years_in_business": 9,
+    "owner_name": "Andrew Wills (Manager, Bridgeport TX) and Valerie Wills (Manager, Bridgeport TX) — husband-wife/family LLC",
+    "owner_age_estimate": 48,
+    "owner_age_source": "proxy_dual_managers_2016_LLC_9yr_tenure",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2016-09-26; tpid 32061663228)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 5,
+    "employee_count_source": "inferred_2000_subs_rural_wise_county",
+    "service_type": "WISP + FTTH (millimeter-wave + microwave + fiber)",
+    "subscriber_count_estimate": 2000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "DFW Metroplex rural — Wise County; Paradise, Bridgeport, Lake Bridgeport, Jacksboro, Boonsville, Decatur, Chico, Runaway Bay",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2016_09_26",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Husband-wife LLC (Andrew + Valerie Wills, both Bridgeport TX) — family business structure",
+      "Spine says founded 2010 but Comptroller LLC registered 2016 — sole-prop to LLC conversion",
+      "Wise County DFW exurban (north of Fort Worth) — growth corridor",
+      "9-year LLC tenure (~10+ counting prior sole-prop)",
+      "Site live-fetch found minimal team/about content",
+      "Two named managers, no employees indicated"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "possible_family_succession_via_children",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32061663228",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "husband_wife_managers_wills_bridgeport"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "Husband-wife LLC, Bridgeport TX (Wise County DFW exurb). Founders ~48 proxy too young for immediate exit but mid-career fatigue case. Strong B_forward candidate; deep-dive on Wills LinkedIn to refine age."
+  },
+  {
+    "spine_index": 47,
+    "legal_name": "Cirra Networks",
+    "dba_name": "Cirra Wireless / Cirra Networks",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76101",
+    "website": "http://cirranet.net",
+    "phone": "817-509-4000",
+    "year_established": 2003,
+    "years_in_business": 22,
+    "owner_name": "Unknown — no TX Comptroller match for 'Cirra Networks' / 'Cirra Wireless' / 'Cirranet' variants",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "Unverified — no Comptroller entity found. Site at cirranet.net intermittent per spine notes. Possible sole-prop or domesticated under unrelated legal name.",
+    "is_distressed": true,
+    "distress_reasons": [
+      "Site intermittent/sometimes-down per Preseem road trip + spine notes",
+      "No discoverable franchise tax registration"
+    ],
+    "employee_count_estimate": 8,
+    "employee_count_source": "inferred_4000_subs_north_tx_wisp",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 4000,
+    "subscriber_source": "spine_estimate_preseem_road_trip",
+    "service_area_summary": "North Texas — 4,000+ sq mi; Tarrant, Wise, Parker, Johnson, Hood, Palo Pinto, Erath counties",
+    "founded_year_verified": false,
+    "founded_year_source": "spine_2003_unverified",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Website intermittent — site at cirranet.net sometimes down per Preseem 2020 road trip and spine cross-ref",
+      "No discoverable TX Comptroller entity record",
+      "Phone-forward intake",
+      "Operating in heavily-contested DFW metro — competes with AT&T fiber, Charter, T-Mobile Home — pressure on subscriber base",
+      "22-year tenure with declining web presence is a classic coast/distressed combination"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "spine_preseem_road_trip_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Cirra%20Networks",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_entity_match"
+      },
+      {
+        "url": "http://cirranet.net",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "intermittent_site"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "Possibly distressed — intermittent site, no franchise tax record, DFW metro competition pressure. Could be informal sole-prop or already-wound-down operation per Preseem road trip date (2020) being last known reference. Likely D_pass on confidence + distress."
+  },
+  {
+    "spine_index": 48,
+    "legal_name": "TekWav (TekWav Solutions, LLC — possibly dissolved)",
+    "dba_name": "TekWav",
+    "city": "Sherman",
+    "county": "Grayson",
+    "state": "TX",
+    "zip": "75090",
+    "website": "https://tekwav.com",
+    "phone": "903-771-3400",
+    "year_established": 2014,
+    "years_in_business": 11,
+    "owner_name": "Spencer B Benson (Director / Registered Agent of TekWav Solutions LLC, Sherman TX 75090) — but franchise tax ENDED 2015. Operating entity ambiguous as of 2026.",
+    "owner_age_estimate": 45,
+    "owner_age_source": "proxy_solo_director_2014_LLC_career_arc",
+    "entity_status": "PROBLEM — TekWav Solutions LLC (tpid 32054617603) FRANCHISE TAX ENDED, SoS INACTIVE since 2015. Site still active per spine. Likely re-formed under different LLC name or operating as sole-prop. Possible distress.",
+    "is_distressed": true,
+    "distress_reasons": [
+      "Original TekWav Solutions LLC franchise tax ENDED — entity not in good standing as of 2015",
+      "No active successor entity discoverable in Comptroller for tekwav.com brand",
+      "10+ year gap in entity standing suggests neglect or shadow operation"
+    ],
+    "employee_count_estimate": 4,
+    "employee_count_source": "inferred_1500_subs_solo_grayson_wisp",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 1500,
+    "subscriber_source": "spine_estimate_preseem_road_trip",
+    "service_area_summary": "North Texas — Grayson County primarily; Sherman, Denison",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_old_entity_2014_07_15",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Original TX LLC franchise tax ended ~2015 — entity housekeeping never updated",
+      "Spencer B Benson registered as sole director at Sherman TX address (matches public phone area code)",
+      "11-year website tenure but entity in non-good standing",
+      "Sherman/Denison Grayson County — Texoma rural exurban Dallas, exposed to AT&T+Spectrum competition",
+      "Site live-fetch shows minimal team content"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32054617603",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "franchise_tax_ended_benson_director"
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "Distressed entity — original LLC franchise tax ended 2015, no clear successor. Either operating as sole-prop with Spencer Benson or has been quietly wound down. D_pass on distress hard gate."
+  },
+  {
+    "spine_index": 49,
+    "legal_name": "Rock Solid Internet Systems Inc (DBA Rock Solid Internet and Telephone)",
+    "dba_name": "Rock Solid Internet",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78201",
+    "website": "https://rocksolidinternet.com",
+    "phone": "210-892-5555",
+    "year_established": 2007,
+    "years_in_business": 18,
+    "owner_name": "Unknown — Rock Solid Internet Systems Inc (tpid 32056972360) franchise tax ENDED, SoS NOT REGISTERED. Operating entity unclear.",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "DISTRESSED — Comptroller: rightToTransactTX=FRANCHISE TAX ENDED; sosRegistrationStatus=NOT REGISTERED. Original entity wound down, no replacement entity located.",
+    "is_distressed": true,
+    "distress_reasons": [
+      "Rock Solid Internet Systems Inc franchise tax ENDED",
+      "SoS registration status is NOT REGISTERED — original incorporation appears never finalized or has lapsed",
+      "No officer info populated in Comptroller record",
+      "Spine notes 'CLEC' status — voice service implies regulatory exposure under PUC; lapsed CPCN risk"
+    ],
+    "employee_count_estimate": 10,
+    "employee_count_source": "inferred_5000_subs_san_antonio_metro",
+    "service_type": "WISP + fiber + voice",
+    "subscriber_count_estimate": 5000,
+    "subscriber_source": "spine_estimate_preseem_road_trip",
+    "service_area_summary": "South-Central Texas — San Antonio region + surrounding rural Bexar, Atascosa, Wilson, Medina, Kendall, Comal",
+    "founded_year_verified": false,
+    "founded_year_source": "spine_2007_unverified",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Distressed entity status",
+      "San Antonio metro — heavily-contested by AT&T, Spectrum, Google Fiber competitors",
+      "CLEC status implies legacy phone services, regulatory burden, declining customer base"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32056972360",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "entity_franchise_ended_not_registered"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "Distressed — D_pass hard gate. Comptroller entity not in good standing. Site still up but corporate hygiene broken. Avoid for acquisition."
+  },
+  {
+    "spine_index": 50,
+    "legal_name": "Plains Internet, LLC",
+    "dba_name": "Plains Internet",
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": "79110",
+    "website": "https://www.plainsinternet.com",
+    "phone": "806-340-7320",
+    "year_established": 2015,
+    "years_in_business": 10,
+    "owner_name": "Joseph Monroe (President / Registered Agent, Amarillo TX 79110)",
+    "owner_age_estimate": 48,
+    "owner_age_source": "proxy_president_2015_LLC_10yr_tenure",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2015-04-23; tpid 32057096862)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 12,
+    "employee_count_source": "inferred_6000_subs_panhandle_buildout",
+    "service_type": "WISP + FTTH",
+    "subscriber_count_estimate": 6000,
+    "subscriber_source": "spine_estimate_zoominfo",
+    "service_area_summary": "Texas Panhandle — Amarillo, Dumas, Etter, Cactus, Sunray, Hart, Nazareth, White Deer, rural Amarillo (Potter, Randall, Moore, Hartley counties)",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2015_04_23",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Sole-owner LLC structure — Joseph Monroe as sole president/registered agent",
+      "13 years per spine (says 2012) vs 10yr LLC (2015) — spine may reflect prior operating period",
+      "Texas Panhandle rural Amarillo — relatively uncontested broadband market",
+      "Reasonable team mention of '...owners and business owners located in both urban and rural areas' — language suggests B2B focus",
+      "Copyright © 2026 — site actively maintained",
+      "10-year LLC tenure"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller + plainsinternet.com live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32057096862",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "sole_president_joseph_monroe"
+      },
+      {
+        "url": "https://www.plainsinternet.com/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "copyright_2026_b2b_focus"
+      }
+    ],
+    "data_completeness": 0.78,
+    "notes": "Solo founder, 10yr LLC + earlier sole-prop. Joseph Monroe estimated ~48. Panhandle market with limited fiber competition. B_forward candidate; deep-dive needed to refine owner age (likely too young for A-tier base-rate timing)."
+  },
+  {
+    "spine_index": 51,
+    "legal_name": "AW Broadband (Amarillo Wireless Enterprises, Inc. — historical)",
+    "dba_name": "AW Broadband",
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": "79101",
+    "website": "https://awbroadband.net",
+    "phone": "806-412-0888",
+    "year_established": 2003,
+    "years_in_business": 22,
+    "owner_name": "Robert A Isbell (President) and Peggy Isbell (Vice President) — husband-wife family business, Amarillo TX 79116",
+    "owner_age_estimate": 65,
+    "owner_age_source": "proxy_husband_wife_founders_2003_amarillo_22yr_tenure",
+    "entity_status": "AMBIGUOUS — Amarillo Wireless Enterprises Inc (tpid 14215751554) shows FRANCHISE TAX INVOLUNTARILY ENDED, SoS INACTIVE; reg 2003-02-06. Site/operations active per spine + Adtran press release. Likely re-formed under new LLC not yet matched in search.",
+    "is_distressed": false,
+    "distress_reasons": [
+      "Note: old entity is inactive but business clearly still operating (Adtran press 2022, ongoing FTTH transition). Implies entity reorganization not actual distress."
+    ],
+    "employee_count_estimate": 25,
+    "employee_count_source": "inferred_10000_subs_fttp_transition",
+    "service_type": "WISP transitioning to FTTH",
+    "subscriber_count_estimate": 10000,
+    "subscriber_source": "spine_estimate_awbroadband_adtran_press",
+    "service_area_summary": "Texas Panhandle — Potter, Randall, Carson counties plus surrounding rural",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_amarillo_wireless_enterprises_2003_02_06",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Husband-wife founder team (Robert + Peggy Isbell) — classic small-business succession pressure point",
+      "22-year operating tenure of named owners",
+      "Adtran end-to-end fiber transition since 2022 — capex active but possibly grant-funded (CAF II / BEAD)",
+      "Original entity Amarillo Wireless Enterprises Inc not in good standing — reorganized? but new entity not surfaced in search; needs deeper Comptroller probe with variants",
+      "Site live-fetch: no team page content visible"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown_no_named_kids",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/14215751554",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "husband_wife_isbell_amarillo_2003"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "Husband-wife founder pair, 22yr tenure, ~65 age proxy — A-tier-eligible base rate. Operating entity ambiguity (old LLC franchise-ended) requires deep-dive to find current legal entity. CAUTION: Adtran fiber transition press 2022 may indicate growth-mode owner not exit-mode. Worth manual research before scoring A."
+  },
+  {
+    "spine_index": 52,
+    "legal_name": "Zeecon Wireless Internet, Inc.",
+    "dba_name": "Zeecon Wireless",
+    "city": "Marble Falls",
+    "county": "Burnet",
+    "state": "TX",
+    "zip": "78654",
+    "website": "https://www.zeecon.com",
+    "phone": "830-798-9388",
+    "year_established": 1999,
+    "years_in_business": 26,
+    "owner_name": "Todd H. Still (General Manager / Registered Agent, Marble Falls TX 78654 — 904 Main St matches public address)",
+    "owner_age_estimate": 58,
+    "owner_age_source": "proxy_general_manager_1999_founding_26yr_tenure_career_arc",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2009-03-27; tpid 32039200269). Spine notes founded 1999 (pre-incorporation operating period). Current Inc since 2009.",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 10,
+    "employee_count_source": "inferred_4000_subs_4_county_highland_lakes",
+    "service_type": "WISP (fixed_wireless / microwave)",
+    "subscriber_count_estimate": 4000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Highland Lakes region — Burnet, Llano, Blanco, southern Travis counties; Marble Falls, Horseshoe Bay, Granite Shoals, Kingsland, Burnet, Llano, Lago Vista, Dripping Springs",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_inc_2009_plus_spine_1999_brand",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Sole-owner / GM-only structure (Todd Still as GM, no other officers listed)",
+      "26-year tenure of named brand (1999-2025); 16-year Inc tenure",
+      "Highland Lakes / Marble Falls market — premium TX retirement+lake-home demand, high-margin",
+      "Microwave-based WISP tech may be aging (Cambium PMP / Tarana not advertised on site)",
+      "Site live-fetch yielded no leadership/team content",
+      "No obvious online signup, phone-forward intake",
+      "Single-county anchor (Burnet) with regional spillover — small-shop profile"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32039200269",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "todd_still_gm_marble_falls"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "Solo GM/owner structure, 26yr brand tenure (Comptroller Inc 2009 + pre-incorporation operating), ~58 age proxy. Marble Falls Highland Lakes premium recreation market. Strong B_forward / A_acquire candidate pending LinkedIn-verified age. Deep-dive priority."
+  },
+  {
+    "spine_index": 53,
+    "legal_name": "VGI Technology, Inc.",
+    "dba_name": "VGI Technology",
+    "city": "San Angelo",
+    "county": "Tom Green",
+    "state": "TX",
+    "zip": "76904",
+    "website": "https://vgitechnology.com",
+    "phone": "325-223-3000",
+    "year_established": 2002,
+    "years_in_business": 23,
+    "owner_name": "Scott Gibbs (President / Director, San Angelo TX 76904 — 5522 Bentwood Dr residential)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "proxy_solo_president_2002_founding_23yr_tenure",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2008-03-18; tpid 17430642912). Spine notes founded 2002 — pre-incorporation operating period.",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 15,
+    "employee_count_source": "inferred_5000_subs_multi_market_buildout",
+    "service_type": "FTTH + fixed_wireless + security integrator",
+    "subscriber_count_estimate": 5000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Concho Valley + Permian Basin + Highland Lakes — Tom Green, Concho, Sutton, Schleicher, Reagan, Irion, Midland, Ector, Brown, Burnet counties",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_inc_2008_plus_spine_2002_brand",
+    "is_cooperative": false,
+    "wispa_member": false,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Sole-owner Inc structure — Scott Gibbs as sole president+director",
+      "Residential address listed for principal — possible home-office or owner-residence-as-HQ",
+      "23-year brand tenure, 17yr Inc tenure",
+      "Multi-market sprawl (Concho Valley + Permian + Highland Lakes) suggests acquisitive/growth-mode founder; could go either way on exit-readiness",
+      "Diversified product mix (fiber + WISP + security integration) — possible diversification fatigue",
+      "No team page or About content visible on site"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/17430642912",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "sole_president_scott_gibbs_san_angelo"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "Solo founder, ~60 age proxy, 23yr brand tenure. Multi-market footprint (good multiple-expansion potential) but also indicates diversification — could be growth-mode or stretched solo operator. B_forward / A_acquire candidate pending LinkedIn check."
+  },
+  {
+    "spine_index": 54,
+    "legal_name": "Invisalink Wireless Texas, LLC",
+    "dba_name": "Invisalink Wireless / IW Texas",
+    "city": "Wimberley",
+    "county": "Hays",
+    "state": "TX",
+    "zip": "78676",
+    "website": "https://iwtex.com",
+    "phone": "512-648-3336",
+    "year_established": 2017,
+    "years_in_business": 8,
+    "owner_name": "Joseph J Malone (Member, Wimberley TX 78676); Hill Country Communications LLC (Managing Member, Austin TX 78717); Invisalink Wireless Enterprises LLC (Member, Gaines MI 48436 — out-of-state parent)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "proxy_dual_managing_2017_LLC_career_arc",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2017-11-03; tpid 32065330915). Joint-venture structure with MI parent.",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 5,
+    "employee_count_source": "inferred_1500_subs_hill_country_wisp",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 1500,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Texas Hill Country — Hays, Comal, Blanco counties; Wimberley and surrounding rural",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2017_11_03",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Out-of-state member (Invisalink Wireless Enterprises LLC in Gaines MI 48436) — multi-state parent investor",
+      "Hill Country Communications LLC (Austin TX) as Managing Member — local management entity",
+      "Spine says founded 2018 but Comptroller LLC reg 2017 — accurate",
+      "Wimberley Hays County premium Hill Country market — high real estate values, demanding customers",
+      "Joint venture structure — co-managed by MI parent and local TX entity",
+      "8-year tenure too short for natural-exit base rate; investor-led structure suggests financial-not-lifestyle exit driver"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "no_too_recent",
+      "family_successor_present": "n_a",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32065330915",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "joint_venture_mi_parent_local_management"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "Joint-venture structure with MI investor — not a classic solo-coast target. 8 years too young for natural-exit base rate. C_watch tier. The MI parent might be the actual seller if seeking exit from TX market."
+  },
+  {
+    "spine_index": 55,
+    "legal_name": "Texas Cellnet, Inc.",
+    "dba_name": "Texas Cellnet",
+    "city": "Van",
+    "county": "Van Zandt",
+    "state": "TX",
+    "zip": "75790",
+    "website": "https://texascell.net",
+    "phone": "903-963-5151",
+    "year_established": 2003,
+    "years_in_business": 22,
+    "owner_name": "Timmy R Perry (President / Director, Ben Wheeler TX); Charles B Temple (Treasurer / Registered Agent, Van TX 75790)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "proxy_dual_officers_2003_founding_22yr_tenure",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2003-11-11; tpid 10207125500)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 6,
+    "employee_count_source": "inferred_2000_subs_east_tx_rural_wisp",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 2000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "East Texas rural — Van Zandt, Smith, Wood, Rains, Henderson counties",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2003_11_11",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Two-officer Inc structure — President Timmy Perry (Ben Wheeler) + Treasurer Charles Temple (Van) — partnership style",
+      "22-year tenure",
+      "Van TX is rural Van Zandt County — minimal fiber competition, Eastex Coop overlap",
+      "Two officers from neighboring towns (Van, Ben Wheeler) — local partnership",
+      "Spine notes 'locally-owned' — confirmed via Comptroller",
+      "No discoverable About/Team page content via live-fetch",
+      "Phone-forward intake"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/10207125500",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "perry_president_temple_treasurer"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "Dual-partner Inc, 22yr tenure, both partners likely ~60. East TX rural Van Zandt+Smith County — Eastex Coop overlap territory but FTTH not deployed everywhere. Strong B_forward candidate with potential succession driver (partner age, partnership-dissolution dynamics)."
+  },
+  {
+    "spine_index": 56,
+    "legal_name": "East Texas Broadband, Inc.",
+    "dba_name": "East Texas Broadband / ETB",
+    "city": "Palestine",
+    "county": "Anderson",
+    "state": "TX",
+    "zip": "75801",
+    "website": "https://etbroadband.net",
+    "phone": "903-723-3373",
+    "year_established": 2005,
+    "years_in_business": 20,
+    "owner_name": "Daniel Gleason (Director, Palestine TX), Jessica Gleason (Director / Registered Agent, Palestine TX), Keith Lively (Director, Palestine TX) — family + partner structure",
+    "owner_age_estimate": 55,
+    "owner_age_source": "proxy_dual_director_2005_founding_20yr_tenure",
+    "entity_status": "AMBIGUOUS — East Texas Broadband, Inc. (tpid 12025315982) FRANCHISE TAX INVOLUNTARILY ENDED, SoS INACTIVE; reg 2005-03-21. Business website still active, 'Locally Owned' branding visible. Likely operating as unincorporated or re-formed under different entity not surfaced in search.",
+    "is_distressed": true,
+    "distress_reasons": [
+      "Original ETB Inc franchise tax INVOLUNTARILY ENDED — penalty status",
+      "SoS INACTIVE — corporation not in good standing",
+      "Brand still active but legal entity status compromised"
+    ],
+    "employee_count_estimate": 8,
+    "employee_count_source": "inferred_3000_subs_anderson_county",
+    "service_type": "FTTH + WISP",
+    "subscriber_count_estimate": 3000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "East Texas — Anderson, Henderson, Cherokee, Houston counties; Palestine and surrounding",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2005_03_21",
+    "is_cooperative": false,
+    "wispa_member": false,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Family-structured corp (Gleason husband/wife/family + partner Keith Lively) — 3 directors all in Palestine TX",
+      "20-year tenure of named brand",
+      "Comptroller status shows franchise tax involuntarily ended — corporate housekeeping broken",
+      "'Locally Owned' homepage messaging",
+      "Phone-forward, no online signup",
+      "Anderson County (Palestine) East TX — minimal fiber competition outside ETB"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "possible_family_succession",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/12025315982",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "family_directors_gleason_lively_franchise_ended"
+      },
+      {
+        "url": "https://etbroadband.net/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "locally_owned_branding"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "Distressed entity status (franchise tax involuntarily ended). Family-and-partner structure suggests succession-eligible profile, but legal-entity hygiene problems require resolution before acquisition. D_pass on distress gate; or B_forward if entity status is cleaned up and they confirm intent to sell."
+  },
+  {
+    "spine_index": 57,
+    "legal_name": "ElektraFi (ElektraFi LLC — Texas operations)",
+    "dba_name": "ElektraFi / SOL High-Speed Internet",
+    "city": "Mineral Wells",
+    "county": "Palo Pinto",
+    "state": "TX",
+    "zip": "76067",
+    "website": "https://elektrafi.com",
+    "phone": "940-784-4910",
+    "year_established": 2010,
+    "years_in_business": 15,
+    "owner_name": "Moonshot Group (Manager — Denver CO 80205); Ryan Jenkins (Registered Agent). Out-of-state PE/venture management.",
+    "owner_age_estimate": null,
+    "owner_age_source": "n_a_corporate_pe_managed",
+    "entity_status": "DISTRESSED — ElektraFi LLC (tpid 32075348154) shows FORFEITED rightToTransactTX, SoS NOT REGISTERED. ElektraFi SE-TX LLC (tpid 32086341842) FRANCHISE TAX ENDED. Multiple entities, none in good standing in TX.",
+    "is_distressed": true,
+    "distress_reasons": [
+      "Primary ElektraFi LLC forfeited TX right to transact business",
+      "SE-TX subsidiary franchise tax ended",
+      "Both TX entities not in good standing",
+      "Out-of-state CO-based corporate manager (Moonshot Group) suggests venture-backed but possibly winding down TX operations"
+    ],
+    "employee_count_estimate": 12,
+    "employee_count_source": "inferred_5000_subs_multi_state_TX_CO",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 5000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "North Texas + Colorado — Palo Pinto, Parker, Wise, Jack, Erath counties (TX side)",
+    "founded_year_verified": false,
+    "founded_year_source": "spine_2010_comptroller_only_reflects_later_LLC",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "PE/venture-backed (Moonshot Group Denver CO is manager) — investor-owned not founder-coast",
+      "TX entities not in good standing — possible TX market exit in progress",
+      "Multi-state operation (TX + CO) with CO-based management",
+      "403 Forbidden response from elektrafi.com homepage (anti-bot or geo-restriction) — site live but defensive",
+      "Spine note 'SOL is branded high-speed tier' suggests recent rebrand/repositioning — distressed sign or growth-pivot"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "n_a_pe_managed",
+      "family_successor_present": "n_a",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32075348154",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "elektrafi_llc_forfeited_moonshot_group"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32086341842",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "elektrafi_se_tx_franchise_ended"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "Distressed — both TX LLCs out of good standing. PE-managed (Moonshot Group Denver CO). May be in active wind-down or restructure. D_pass on distress gate."
+  },
+  {
+    "spine_index": 58,
+    "legal_name": "FreedomWisp LLC (DBA Freedom WISP)",
+    "dba_name": "Freedom WISP",
+    "city": "Paris",
+    "county": "Lamar",
+    "state": "TX",
+    "zip": "75460",
+    "website": "https://freedomwisp.com",
+    "phone": "903-401-8741",
+    "year_established": 2017,
+    "years_in_business": 8,
+    "owner_name": "Eric Ruben Mostrom (Registered Agent, Paris TX 75460) — sole-member LLC (no officer info populated in 2025 reformation)",
+    "owner_age_estimate": 42,
+    "owner_age_source": "proxy_sole_agent_2017_brand_8yr_tenure_2025_LLC_reform",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2025-06-27 as FreedomWisp LLC; tpid 32100904112). Recent (2025) LLC reformation — spine says brand founded 2017 (operating period prior to current LLC).",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 4,
+    "employee_count_source": "inferred_2000_subs_lamar_county",
+    "service_type": "WISP + FTTH",
+    "subscriber_count_estimate": 2000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Northeast Texas + DFW rural — Lamar, Red River, Delta, Hopkins, Fannin counties plus parts of Dallas / Fort Worth exurbs",
+    "founded_year_verified": false,
+    "founded_year_source": "comptroller_only_2025_reform_spine_2017_brand_unverified",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "June 2025 LLC reformation — entity just 11 months old as of 2026-05; suspicious timing (sale prep? succession? capital raise?)",
+      "Sole registered agent (Eric Ruben Mostrom in Paris TX)",
+      "No officer info populated yet — too early in entity lifecycle",
+      "8-year brand tenure (Comptroller doesn't capture prior sole-prop period)",
+      "Paris TX (Lamar) Northeast TX — Cumby Tel + Eastex Coop overlap territory",
+      "Site live-fetch: no team content visible"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32100904112",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "freedomwisp_llc_2025_reform_mostrom_agent"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "Recent entity reformation makes timing suspicious — could be capital raise prep, succession event, or pre-sale grooming. Brand tenure ~8yr but legal entity <1yr. Worth manual outreach to Eric Mostrom — could be active seller. C_watch tier pending clarification."
+  },
+  {
+    "spine_index": 59,
+    "legal_name": "Express WISP LLC",
+    "dba_name": "Express WISP / Express WiFi",
+    "city": "Jewett",
+    "county": "Leon",
+    "state": "TX",
+    "zip": "75846",
+    "website": "https://expresswisp.com",
+    "phone": "903-626-5343",
+    "year_established": 2013,
+    "years_in_business": 12,
+    "owner_name": "Deanne N Celelli (President / Director, Jewett TX 75846); Anthony Celelli (Vice President / Director, Thornton TX); Ren Celelli (Director, Bryan TX) — three-generation family business",
+    "owner_age_estimate": 58,
+    "owner_age_source": "proxy_three_celelli_directors_2013_LLC_12yr_tenure",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2016-07-23; tpid 32061134311). Spine says brand founded 2013 (pre-incorporation operating period).",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 5,
+    "employee_count_source": "inferred_1500_subs_4_county_east_central_tx",
+    "service_type": "WISP (fixed_wireless on fiber backbone)",
+    "subscriber_count_estimate": 1500,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "East-Central Texas — Leon, Limestone, Freestone, Robertson counties; Lake Limestone, Buffalo, Jewett, Fairfield, Centerville",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_llc_2016_plus_spine_2013_brand",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Three-generation Celelli family LLC (Deanne president, Anthony VP, Ren director — likely parents + adult child)",
+      "Geographic dispersal across three towns (Jewett, Thornton, Bryan) — family lives across region not concentrated",
+      "12-year brand tenure / 9yr LLC tenure",
+      "Lake Limestone + Buffalo + Fairfield rural East-Central TX — minimal fiber competition",
+      "Family succession structure already partially in place (Ren Celelli in Bryan suggests next-gen)",
+      "Phone-forward intake, no online signup",
+      "Site live-fetch: no team content visible"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "likely_ren_celelli_in_bryan",
+      "family_successor_present": "likely_unverified",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32061134311",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "celelli_family_3gen_jewett_thornton_bryan"
+      }
+    ],
+    "data_completeness": 0.78,
+    "notes": "Three-generation family WISP (Celelli family) — succession structure already partially built. Parents ~58 proxy; Ren Celelli in Bryan TX is likely the successor. Less attractive as ETA acquisition because family-succession likely. B_forward with successor-likely caveat."
+  },
+  {
+    "spine_index": 60,
+    "legal_name": "Sinlar Broadband / Sinlar Wireless",
+    "dba_name": "Sinlar Broadband",
+    "city": "McAllen",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78504",
+    "website": "https://www.sinlarbroadband.com",
+    "phone": "956-630-0046",
+    "year_established": 2003,
+    "years_in_business": 22,
+    "owner_name": "Possibly Santiago Fernandez de Larrea (Owner/Director of related entity Synlar LLC, Mission TX — franchise tax ended). Need verification — current operating entity not directly located.",
+    "owner_age_estimate": 58,
+    "owner_age_source": "proxy_synlar_owner_2015_LLC_2003_brand_tenure",
+    "entity_status": "AMBIGUOUS — site at sinlarbroadband.com not resolving via live-fetch (DNS error). Related entity Synlar LLC (Mission TX 78572 — RGV) tpid 32056376513 shows FRANCHISE TAX ENDED, owner Santiago Fernandez de Larrea. Site DNS failure plus dissolved related entity suggests possible wind-down or website transition.",
+    "is_distressed": true,
+    "distress_reasons": [
+      "Website DNS not resolving (live-fetch 2026-05-17)",
+      "Related entity Synlar LLC franchise tax ended",
+      "No verified active legal entity for current operations under Sinlar Broadband brand"
+    ],
+    "employee_count_estimate": 8,
+    "employee_count_source": "inferred_3000_subs_rgv_7_tower",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 3000,
+    "subscriber_source": "spine_estimate_bbb_rocketreach",
+    "service_area_summary": "Rio Grande Valley — Hidalgo, Cameron, Starr, Willacy counties; from Rio Grande City to South Padre Island and Faysville to border",
+    "founded_year_verified": false,
+    "founded_year_source": "spine_2003_unverified_comptroller_inconclusive",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Site DNS not resolving as of 2026-05-17",
+      "Related TX LLC (Synlar) franchise tax ended",
+      "RGV (McAllen/Mission Hidalgo Co.) — contested by VTX1, Charter, AT&T",
+      "Long brand history (22yr per spine) but corporate paper trail broken"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32056376513",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "synlar_owner_santiago_fernandez_de_larrea_franchise_ended"
+      },
+      {
+        "url": "https://www.sinlarbroadband.com/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "dns_error"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "Possibly distressed — DNS failure on site + related entity franchise tax ended. Spine references BBB McAllen as a source; needs deeper Comptroller probe under operator's individual name and additional surname variants. D_pass on distress gate."
+  },
+  {
+    "spine_index": 61,
+    "legal_name": "Twin Communications / TWIN Internet",
+    "dba_name": "TWIN Internet",
+    "city": "McAllen",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78504",
+    "website": "https://www.twin.net",
+    "phone": "956-618-3343",
+    "year_established": 1998,
+    "years_in_business": 27,
+    "owner_name": "Unknown — no Comptroller match under 'Twin Communications' or 'TWIN Internet' RGV variants. Site returns 403 Forbidden on live-fetch (defensive anti-bot or geo-restrict).",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "Unverified — no Comptroller entity directly identified. Site live but rejects scraping (403). Brand tenure 27yr per spine.",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 8,
+    "employee_count_source": "inferred_2000_subs_rgv_wisp",
+    "service_type": "WISP (fixed_wireless / microwave)",
+    "subscriber_count_estimate": 2000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Rio Grande Valley — Hidalgo, Cameron, Willacy, Starr counties; rural and underserved RGV",
+    "founded_year_verified": false,
+    "founded_year_source": "spine_1998_unverified",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "27-year brand tenure (1998 per spine) — among the oldest WISPs in TX if accurate",
+      "Site has anti-bot defenses (403 Forbidden) — could be operator concern about scraping or just CDN config",
+      "RGV market — contested by VTX1, Charter, AT&T, but rural pockets remain",
+      "No discoverable Comptroller entity record — possibly DBA or sole prop",
+      "Phone-forward intake",
+      "Long brand life without clear legal entity surface is a coasting/legacy signal"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "twin.net_403_comptroller_no_match_2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.twin.net/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "403_anti_bot"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Twin%20Communications",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_entity_match"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Old (27yr) RGV WISP with thin corporate trail. Sole-prop, DBA, or alternate legal name. C_watch / B_forward IF entity identification can be completed. Worth manual research given long tenure profile."
+  },
+  {
+    "spine_index": 62,
+    "legal_name": "Hill Country Wireless & Satellites, Inc. (PRIMARY) — alongside HC Wireless, LLC (Hill Country Towers, Inc.)",
+    "dba_name": "HC Wireless",
+    "city": "Johnson City",
+    "county": "Blanco",
+    "state": "TX",
+    "zip": "78636",
+    "website": "https://hcwireless.net",
+    "phone": "830-868-3300",
+    "year_established": 2003,
+    "years_in_business": 22,
+    "owner_name": "William D O'Neal (President / Director, Pipe Creek TX 78063); Kelly O'Neal (Secretary / Director, Pipe Creek TX) — husband-wife founder pair of Hill Country Wireless & Satellites Inc (2003). Separately HC Wireless LLC owned by David McCullough + Virginia McCullough (Johnson City TX) — different entity, possibly successor or sister-co.",
+    "owner_age_estimate": 65,
+    "owner_age_source": "proxy_oneal_2003_founding_22yr_tenure_husband_wife",
+    "entity_status": "Active — TWO separate entities exist: (1) Hill Country Wireless & Satellites, Inc. (tpid 18105921128, reg 2003-11-24, ACTIVE, O'Neals Pipe Creek); (2) HC Wireless, LLC (tpid 32064616900, reg 2017-08-17, ACTIVE, McCulloughs Johnson City + Hill Country Towers Inc). Hill Country Wireless Corporation (1994 — older entity, tpid 30117133600) franchise tax ENDED.",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 6,
+    "employee_count_source": "inferred_1500_subs_hill_country_microwave",
+    "service_type": "WISP (microwave fixed_wireless)",
+    "subscriber_count_estimate": 1500,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Texas Hill Country — Blanco, Hays, Burnet, Llano, Travis (west), Comal (north) counties; serves 13 cities/towns",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_inc_2003_11_24_plus_1994_predecessor_entity",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Multi-entity structure suggests business has been re-organized 2-3 times (1994, 2003, 2017) — possibly partial ownership transitions",
+      "Husband-wife founder pair (William + Kelly O'Neal in Pipe Creek TX) of 2003 Inc",
+      "Separate 2017 LLC owned by McCullough family in Johnson City — possible spinoff or co-business with overlapping operations",
+      "Hill Country Towers Inc (tower-asset sister entity) co-owned with David+Virginia McCullough + Daniel Neelon (The Woodlands TX) + Nancy Neelon — investor-style member structure",
+      "22+ year continuous brand operation in Hill Country",
+      "Multi-county premium recreation+lake-home market (Blanco/Burnet/Llano/Hays — Wimberley/Dripping Springs/Johnson City)",
+      "Microwave fixed-wireless tech may be aging vs. modern Tarana/Cambium upgrades",
+      "Phone-forward intake (830-868-3300)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "complex_multi_entity_McCullough_LLC_may_be_successor",
+      "family_successor_present": "possible_McCullough_family_2017_LLC",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/18105921128",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "oneal_founders_2003"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32064616900",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "hc_wireless_llc_mccullough_2017"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32068699712",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "hill_country_towers_inc_mccullough_neelon"
+      }
+    ],
+    "data_completeness": 0.85,
+    "notes": "Complex multi-entity structure with 3+ TX entities (Hill Country Wireless Corp 1994 ended, Hill Country Wireless & Satellites Inc 2003 active, HC Wireless LLC 2017 active, Hill Country Towers Inc 2018 active). Suggests either partial ownership transition O'Neals → McCulloughs already in progress, OR informal partition between original wireless service and current tower-asset business. Worth deep-dive interviews. B_forward / A_acquire candidate — premium Hill Country market, complex structure may indicate active negotiation/transition phase."
+  },
+  {
+    "spine_index": 63,
+    "legal_name": "Indian Creek Internet Services, Inc.",
+    "dba_name": "Indian Creek Internet",
+    "city": "Bandera",
+    "county": "Bandera",
+    "state": "TX",
+    "zip": "78003",
+    "website": "https://indiancreekinternet.com (DNS error on live-fetch 2026-05-17)",
+    "phone": "830-460-3221",
+    "year_established": 2003,
+    "years_in_business": 22,
+    "owner_name": "Everett M McCurdy (President / Director / Registered Agent, Bulverde TX); Marian E McCurdy (Secretary / Director, Bulverde TX) — husband-wife founder pair",
+    "owner_age_estimate": 67,
+    "owner_age_source": "proxy_husband_wife_president_secretary_2003_founding_22yr_tenure_bulverde_TX",
+    "entity_status": "Active (Comptroller — rightToTransactTX=ACTIVE; SoS=ACTIVE; reg 2003-11-24; tpid 12006032689)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 3,
+    "employee_count_source": "inferred_800_subs_2_county_micro_wisp",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 800,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Hill Country — Bandera, Pipe Creek, Lakehills, Hondo, Mico, Rio Medina, Castroville (Bandera, Medina counties)",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2003_11_24",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Husband-wife founder pair (Everett + Marian McCurdy in Bulverde TX) — classic two-person small-business",
+      "22-year continuous Inc tenure (2003-2025)",
+      "Tiny scale (800 subs) — survival-mode rather than growth",
+      "Bandera County premium Hill Country market — limited but high-margin",
+      "Site DNS not resolving as of 2026-05-17 — likely tiny operator with on-call hosting",
+      "Phone-forward intake (830-460-3221)",
+      "Owner-aged proxy (67 if entered at 45 in 2003) is in A-tier natural-exit window"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/12006032689",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "mccurdy_husband_wife_bulverde_2003"
+      }
+    ],
+    "data_completeness": 0.8,
+    "notes": "Husband-wife founders, 22yr tenure, ~67 age proxy, tiny scale (800 subs) — classic 'silently coasting' A-tier profile but micro-size limits SBA financing. Site DNS issue is a tell of tiny operator. B_forward at SBA-deal scale; A_acquire only if owner age confirms 65+. Worth manual contact."
+  },
+  {
+    "spine_index": 64,
+    "legal_name": "Maverick Internet Properties, Inc. (— possibly dissolved)",
+    "dba_name": "Maverick Internet",
+    "city": "Kerrville",
+    "county": "Kerr",
+    "state": "TX",
+    "zip": "78028",
+    "website": "https://maverickinternet.net (DNS error live-fetch)",
+    "phone": "830-895-9990",
+    "year_established": 2007,
+    "years_in_business": 18,
+    "owner_name": "Ram B Kandimalla (Registered Agent of Maverick Internet Properties Inc — entity inactive)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "DISTRESSED — Maverick Internet Properties, Inc. (tpid 32026808421) shows FRANCHISE TAX INVOLUNTARILY ENDED, SoS INACTIVE; reg 2007-02-20. No successor entity surfaced. Site DNS error.",
+    "is_distressed": true,
+    "distress_reasons": [
+      "Maverick Internet Properties Inc franchise tax involuntarily ended",
+      "SoS registration status INACTIVE",
+      "Website DNS not resolving",
+      "No officer info populated"
+    ],
+    "employee_count_estimate": 3,
+    "employee_count_source": "inferred_1000_subs_hill_country_micro",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 1000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Hill Country — Kerr, Bandera, Medina, Comal counties; Bandera, Pipe Creek, Medina, Comfort, Kerrville, Hunt, Center Point",
+    "founded_year_verified": true,
+    "founded_year_source": "comptroller_sos_2007_02_20",
+    "is_cooperative": false,
+    "wispa_member": true,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Entity not in good standing",
+      "Site DNS broken",
+      "Tiny scale (1k subs)",
+      "Hill Country overlap with HCTC and HC Wireless — competition pressure"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax/32026808421",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "maverick_franchise_ended_kandimalla"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "Distressed — entity inactive, site DNS broken, tiny operation. D_pass on distress gate. Either truly wound down or operating under unidentified successor entity."
+  },
+  {
+    "spine_index": 65,
+    "legal_name": "Reach Broadband",
+    "dba_name": "Reach Broadband",
+    "city": "Odessa",
+    "county": "Ector",
+    "state": "TX",
+    "zip": "79764",
+    "website": "https://www.reachbroadband.net",
+    "phone": "432-381-5400",
+    "year_established": 2010,
+    "years_in_business": 15,
+    "owner_name": "Unknown — no direct Comptroller match for 'Reach Broadband' name variants. Possible related entities Vyve Broadband ecosystem (multi-state cable consolidator, PE-backed) but spine notes Reach is distinct from Vyve. Reach Communications TX LLC (tpid 32072381646 — Austin 78717) franchise tax ended.",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "AMBIGUOUS — no clear active TX legal entity surfaced for Reach Broadband Odessa cable+fiber operation. Multiple unrelated 'Reach' entities exist; none match Odessa Ector County HQ in Comptroller search.",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 35,
+    "employee_count_source": "inferred_8000_subs_cable_fiber_hybrid_permian",
+    "service_type": "cable + FTTH + fixed_wireless",
+    "subscriber_count_estimate": 8000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Permian Basin — Ector, Midland counties; West Odessa, Pleasant Farms, Gardendale",
+    "founded_year_verified": false,
+    "founded_year_source": "spine_2010_unverified_comptroller_inconclusive",
+    "is_cooperative": false,
+    "wispa_member": false,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Cable+fiber hybrid 8k subs — larger than typical solo-WISP, suggests possible PE-backed regional cable operator",
+      "Site live-fetch returned no team content via /about route",
+      "Permian Basin Odessa/Midland — oil-industry-driven volatile market",
+      "Cable plant ownership implies capital-intensive operation — institutional rather than solo-coast"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "reachbroadband.net live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Reach%20Broadband",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_direct_match"
+      },
+      {
+        "url": "https://www.reachbroadband.net/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_team_content"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Likely not a solo-coast target — cable plant ownership + 8k subs suggests institutional operator. Could be Vyve Broadband subsidiary (excluded major) or PE-backed regional cable operator. Needs deeper entity research via FCC URS/ULS records and DBA filings before scoring. Provisional C_watch."
+  },
+  {
+    "spine_index": 66,
+    "legal_name": "Texxa Internet Services",
+    "dba_name": "Texxa",
+    "city": "Kerrville",
+    "county": "Kerr",
+    "state": "TX",
+    "zip": "78028",
+    "website": "https://texxa.com",
+    "phone": "830-792-5400",
+    "year_established": 2007,
+    "years_in_business": 18,
+    "owner_name": "Unknown — no Comptroller match found for 'Texxa' variants. Possible sole-prop or DBA filing.",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "Unverified — no Comptroller entity. Site live but uses JS-rendered content (live-fetch yielded minified JS not human content).",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "employee_count_estimate": 3,
+    "employee_count_source": "inferred_800_subs_hill_country_micro",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 800,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Texas Hill Country — Kerr, Gillespie, Bandera, Real, Edwards counties; Harper, Mountain Home, Hunt, Ingram, Kerrville, Comfort, Bandera, Medina",
+    "founded_year_verified": false,
+    "founded_year_source": "spine_2007_unverified",
+    "is_cooperative": false,
+    "wispa_member": false,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "No discoverable Comptroller entity — sole-prop, DBA, or unrelated legal name",
+      "Tiny scale (800 subs)",
+      "Hill Country market with HC Wireless / HCTC / Bee Creek competition (now VTX1)",
+      "JS-heavy site (modern but no human-readable About content extracted)",
+      "Phone-forward intake (830-792-5400)",
+      "18-year brand tenure"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "comptroller live-fetch 2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax?name=Texxa",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_entity_match"
+      },
+      {
+        "url": "https://texxa.com/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "js_heavy_site_no_team_content"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "Tiny solo Hill Country WISP with thin paper trail. Cannot verify entity status. Provisional C_watch pending manual research."
+  },
+  {
+    "spine_index": 67,
+    "legal_name": "Texas Wireless Internet / TxWiNet",
+    "dba_name": "Texas Wireless Internet / TxWiNet",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78704",
+    "website": "https://txwinet.com (SSL handshake failure on live-fetch)",
+    "phone": "512-524-6363",
+    "year_established": 2005,
+    "years_in_business": 20,
+    "owner_name": "Unknown — no Comptroller match found for 'TxWiNet' / 'Texas Wireless Internet' Austin variants",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "Unverified — no Comptroller entity. Website SSL handshake failing (TLS aged certificate or aborted server config).",
+    "is_distressed": true,
+    "distress_reasons": [
+      "Website SSL handshake failure — certificate expired or server misconfiguration",
+      "No verifiable active Comptroller entity",
+      "Austin Travis County is the most-contested fiber market in TX (Google Fiber, AT&T Fiber, Spectrum, Frontier)"
+    ],
+    "employee_count_estimate": 3,
+    "employee_count_source": "inferred_1000_subs_austin_metro_micro",
+    "service_type": "WISP (fixed_wireless)",
+    "subscriber_count_estimate": 1000,
+    "subscriber_source": "spine_estimate",
+    "service_area_summary": "Central Texas — Travis, Hays, Bastrop, Caldwell counties (rural areas)",
+    "founded_year_verified": false,
+    "founded_year_source": "spine_2005_unverified",
+    "is_cooperative": false,
+    "wispa_member": false,
+    "tta_member": false,
+    "trba_member": false,
+    "fiber_miles": null,
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "SSL certificate broken / expired — site neglected",
+      "No discoverable corporate entity",
+      "Austin metro is heavily contested by Google/AT&T fiber — WISP business model under pressure",
+      "1k subs in Austin metro is tiny relative to addressable market"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unknown",
+      "family_successor_present": "unknown",
+      "verified_via": "txwinet_ssl_fail_2026-05-17"
+    },
+    "data_sources": [
+      {
+        "url": "https://txwinet.com/",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "ssl_handshake_failure"
+      },
+      {
+        "url": "https://comptroller.texas.gov/data-search/franchise-tax?name=TxWiNet",
+        "fetched_at": "2026-05-17T01:24:00Z",
+        "field": "no_entity_match"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Distressed — SSL cert broken, no Comptroller record, heavily contested Austin metro. D_pass on distress + low confidence. Possibly already wound down."
+  }
+]

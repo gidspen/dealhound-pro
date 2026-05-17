@@ -30,7 +30,7 @@ const stripAnsi = (s) => s.replace(ANSI_RE, '');
 // at the start of a fresh line. We detect this twice:
 //   1. INIT → RUNNING: to inject the /find-deals full command
 //   2. RUNNING fallback: Claude returned to idle after skill finished
-const PROMPT_RE = /(?:^|\n)❯\s/;  // ❯ followed by space (real input prompt)
+const PROMPT_RE = /(?:^|\n)❯\s/; // ❯ followed by space (real input prompt)
 
 // --dangerously-skip-permissions now shows a confirmation dialog on startup:
 //   "By proceeding, you accept all responsibility..."
@@ -64,13 +64,7 @@ const COMPLETE_RE = /(?:SCAN COMPLETE|\d+\s+HOT\s*[|│]\s*\d+\s+STRONG\s*[|│]
  *
  * @returns {Promise<{ durationMs: number, metrics: object, cogsUsed: number, cappedByCost: boolean }>}
  */
-function runFindDealsHeaded({
-  claudeBin,
-  env,
-  jobId,
-  skill = 'deal scan',
-  timeout = 90 * 60_000,
-}) {
+function runFindDealsHeaded({ claudeBin, env, jobId, skill = 'deal scan', timeout = 90 * 60_000 }) {
   return new Promise((resolve, reject) => {
     const startMs = Date.now();
     const ts = () => new Date().toISOString();
@@ -82,15 +76,15 @@ function runFindDealsHeaded({
       }
     };
 
-    let rawBuffer = '';    // raw PTY bytes (for COGS / metric regexes)
-    let cleanBuffer = '';  // ANSI-stripped (for prompt / completion detection)
-    let state = 'INIT';   // INIT → RUNNING → DONE
+    let rawBuffer = ''; // raw PTY bytes (for COGS / metric regexes)
+    let cleanBuffer = ''; // ANSI-stripped (for prompt / completion detection)
+    let state = 'INIT'; // INIT → RUNNING → DONE
     let metrics = {};
     let lastPhase = null;
     const phaseTimestamps = {};
     let cappedByCost = false;
     let exitHandled = false;
-    let bypassHandled = false;       // guard against re-triggering bypass acceptance
+    let bypassHandled = false; // guard against re-triggering bypass acceptance
     let settingsErrorHandled = false; // guard against re-triggering settings error acceptance
 
     const costTracker = new CostTracker(skill);
@@ -101,16 +95,31 @@ function runFindDealsHeaded({
     // ── Spawn interactive Claude ──────────────────────────────────────────────
     // No -p flag. PTY allocation makes stdin.isTTY = true, which puts Claude
     // in interactive mode (same system prompt as Claude Desktop).
+    //
+    // --mcp-config + --strict-mcp-config point claude at a worker-specific
+    // playwright MCP using `~/.dealhound-worker-chrome-profile` instead of
+    // the user-scope `~/.dealhound-chrome-profile`. Without this, running the
+    // worker while an interactive Claude session has the user-scope profile
+    // open produces "Browser is already in use for ~/.dealhound-chrome-profile"
+    // and the find-deals skill silently hangs (audited 2026-05-15: 90-min
+    // timeout, 0 phases reached, outputKB plateau).
+    //
     // node-pty lazy-loaded here so importing this module (for tests) doesn't
     // require the native binding to be present in root node_modules.
     const pty = require('node-pty');
-    const ptyProc = pty.spawn(claudeBin, ['--dangerously-skip-permissions'], {
-      name: 'xterm-256color',
-      cols: 220, // wide enough to avoid line-wrap confusion in output parsing
-      rows: 50,
-      cwd: process.env.HOME,
-      env,
-    });
+    const path = require('path');
+    const mcpConfigPath = path.join(__dirname, 'mcp-config.json');
+    const ptyProc = pty.spawn(
+      claudeBin,
+      ['--dangerously-skip-permissions', '--mcp-config', mcpConfigPath, '--strict-mcp-config'],
+      {
+        name: 'xterm-256color',
+        cols: 220, // wide enough to avoid line-wrap confusion in output parsing
+        rows: 50,
+        cwd: process.env.HOME,
+        env,
+      }
+    );
 
     log(`[PTY] Spawned headed claude (${claudeBin}) for job ${jobId}`);
 
@@ -124,16 +133,21 @@ function runFindDealsHeaded({
       const { capped, totalCost, capAmount } = costTracker.trackTokenLine(data);
       if (capped && !cappedByCost) {
         cappedByCost = true;
-        log(`[COGS] Run cap hit — $${totalCost.toFixed(4)} >= $${capAmount} for skill "${skill}" — terminating`, {
-          job: jobId,
-        });
+        log(
+          `[COGS] Run cap hit — $${totalCost.toFixed(4)} >= $${capAmount} for skill "${skill}" — terminating`,
+          {
+            job: jobId,
+          }
+        );
         ptyProc.write('exit\r');
       }
 
       // ── Metric / phase parsing ────────────────────────────────────────────
       const mm = data.match(/DEALHOUND_METRICS:\s*(\{[^\n]+\})/);
       if (mm) {
-        try { metrics = JSON.parse(mm[1]); } catch (_) {}
+        try {
+          metrics = JSON.parse(mm[1]);
+        } catch (_) {}
       }
 
       const pp = data.match(/DEALHOUND_PHASE:\s*(\S+)/);
@@ -160,7 +174,7 @@ function runFindDealsHeaded({
             ptyProc.write('\x1b[B'); // down arrow → move to option 2
             setTimeout(() => {
               log('[PTY] Confirming acceptance');
-              ptyProc.write('\r');   // Enter → confirm
+              ptyProc.write('\r'); // Enter → confirm
             }, 300);
           }, 800);
           return;
@@ -175,7 +189,7 @@ function runFindDealsHeaded({
             ptyProc.write('\x1b[B'); // down arrow → move to option 2
             setTimeout(() => {
               log('[PTY] Confirming continue without settings');
-              ptyProc.write('\r');   // Enter → confirm
+              ptyProc.write('\r'); // Enter → confirm
             }, 300);
           }, 500);
           return;
@@ -201,10 +215,13 @@ function runFindDealsHeaded({
           return;
         }
 
-        // Fallback: prompt returned after >50 KB of output (skill exited, Claude idle)
-        // The 50KB floor prevents triggering on a prompt that appears before the
-        // command echo is cleared. 50KB ≈ 1 full landsearch page of output.
-        if (rawBuffer.length > 50_000 && PROMPT_RE.test(cleanBuffer)) {
+        // Fallback: prompt returned after >500 KB of output (skill exited, Claude idle)
+        // The 500KB floor prevents false-positives from Claude Code's ANSI spinner
+        // animation, which fills ~50KB in ~30s before any scraper or pipeline runs.
+        // A real full scan (scraper + pipeline + scoring) produces >>500KB of output.
+        // Old threshold (50KB) was incorrectly calibrated — spinner fills it before
+        // Phase 2A even starts, killing the session with zero listings every time.
+        if (rawBuffer.length > 500_000 && PROMPT_RE.test(cleanBuffer)) {
           state = 'DONE';
           log('[PTY] Prompt returned after large output — skill complete', {
             outputKB: (rawBuffer.length / 1024).toFixed(0),
@@ -257,7 +274,10 @@ function runFindDealsHeaded({
       }
 
       if (cappedByCost) {
-        log(`[COGS] Run ended by cost cap`, { job: jobId, cogsUsed: `$${costTracker.total.toFixed(4)}` });
+        log(`[COGS] Run ended by cost cap`, {
+          job: jobId,
+          cogsUsed: `$${costTracker.total.toFixed(4)}`,
+        });
         resolve({ durationMs, metrics, cogsUsed: costTracker.total, cappedByCost: true });
         return;
       }

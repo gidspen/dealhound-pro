@@ -1,0 +1,44 @@
+{
+  "wave": "7b",
+  "completed_at": "2026-05-16",
+  "project_id": "gggmmjvwbbfvrtjjlqvr",
+  "schema": "offmarket",
+  "total_records_persisted": 188,
+  "verticals": {
+    "painting_contractor": {
+      "source_file": "offmarket/data/painting_contractor_targets.json",
+      "score_run_id": "409f1cb3-7d73-4802-8e99-26c1a4467b98",
+      "records_in_file": 86,
+      "records_persisted": 86,
+      "records_skipped": 0,
+      "tier_distribution": {
+        "A_acquire_self": 15,
+        "B_forward": 32,
+        "C_watch": 21,
+        "D_pass": 18
+      }
+    },
+    "janitorial": {
+      "source_file": "offmarket/data/janitorial_targets.json",
+      "score_run_id": "76d82ef9-f0db-4c64-92ef-db2973d7f014",
+      "records_in_file": 103,
+      "records_persisted": 102,
+      "records_skipped": 1,
+      "skip_reason": "Duplicate (vertical, legal_name, city, state) within source file: 'Mid-Cities Janitorial' Midland TX appears at both index 50 and 51",
+      "tier_distribution": {
+        "A_acquire_self": 16,
+        "B_forward": 30,
+        "C_watch": 47,
+        "D_pass": 9
+      }
+    }
+  },
+  "notes": [
+    "All inserts were transactional (CTE-chained INSERT INTO businesses RETURNING id -> INSERT INTO business_scores).",
+    "Tier names were already in long form (A_acquire_self/B_forward/C_watch/D_pass) in both source files — no normalization needed.",
+    "Layer1 field was named layer1_base_rate in both source files — direct mapping, no fallback to layer1_score required.",
+    "String-typed integer fields (employee_count_estimate, owner_age_estimate) were coerced by parsing the leading integer from ranges like '5-15' or '60+'. owner_tenure_years and years_in_business followed the same coercion.",
+    "1 record skipped due to in-source duplicate violating offmarket.businesses unique key (vertical, legal_name, city, state).",
+    "Painting C_watch count from spec said 21 (matches DB). Janitorial source said C=48 but final DB shows 47 because the one C-tier duplicate (Mid-Cities Janitorial) was deduped."
+  ]
+}

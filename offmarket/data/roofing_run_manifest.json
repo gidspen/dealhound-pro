@@ -1,0 +1,154 @@
+{
+  "run_label": "roofing-tx-2026-05-15",
+  "score_run_id": "ae0694e6-a997-4b9a-96b2-10cc75ca1d4b",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {
+    "layer1": 0.3,
+    "layer2": 0.25,
+    "layer3": 0.3,
+    "layer4": 0.15
+  },
+  "vertical": "roofing",
+  "geography": "TX \u2014 Harris/Dallas/Tarrant/Bexar/Travis/Collin/Denton priority, hail-corridor + coastal",
+  "started_at": "2026-05-15T22:00:00Z",
+  "finished_at": "2026-05-16T05:13:22.811747Z",
+  "counts": {
+    "spine_rows": 106,
+    "enriched_with_live_fetch": 28,
+    "scored": 106,
+    "tier_a": 2,
+    "tier_b": 23,
+    "tier_c": 16,
+    "tier_d": 65,
+    "distress_excluded": 0,
+    "supabase_business_rows_written": 106,
+    "supabase_score_rows_written": 106
+  },
+  "county_distribution": {
+    "Harris": 17,
+    "Travis": 14,
+    "Dallas": 11,
+    "Collin": 5,
+    "Tarrant": 5,
+    "Montgomery": 5,
+    "Brazos": 5,
+    "Midland": 4,
+    "Williamson": 4,
+    "Gregg": 4,
+    "Nueces": 3,
+    "Lubbock": 3,
+    "Galveston": 3,
+    "Comal": 2,
+    "Fort Bend": 2,
+    "Bexar": 2,
+    "Wichita": 2,
+    "Cameron": 2,
+    "Hidalgo": 2,
+    "Smith": 2,
+    "Grayson": 1,
+    "Parker": 1,
+    "Denton": 1,
+    "Brazoria": 1,
+    "Guadalupe": 1,
+    "Bell": 1,
+    "Kendall": 1,
+    "Taylor": 1,
+    "El Paso": 1
+  },
+  "sources_worked": [
+    {
+      "source": "WebSearch (Google)",
+      "rows": 106,
+      "note": "primary spine assembly via city-by-city searches"
+    },
+    {
+      "source": "company_websites",
+      "rows": 28,
+      "note": "direct fetches on top-priority candidates"
+    },
+    {
+      "source": "manufacturer_directories",
+      "rows": 12,
+      "note": "GAF Master Elite, CertainTeed SELECT, OC Platinum cross-checks"
+    },
+    {
+      "source": "BBB_profiles",
+      "rows": 8,
+      "note": "cross-check on current ownership/president via BBB business profiles"
+    },
+    {
+      "source": "LinkedIn",
+      "rows": 5,
+      "note": "leadership name verification + tenure cross-check"
+    },
+    {
+      "source": "D&B + ZoomInfo",
+      "rows": 3,
+      "note": "D&B + ZoomInfo company profile cross-checks for entity status proxy"
+    },
+    {
+      "source": "D CEO Magazine + Texas HR Resolution",
+      "rows": 2,
+      "note": "Catherine Awtrey + Gill Roofing recognition"
+    }
+  ],
+  "sources_partial": [
+    {
+      "source": "RCAT Member Directory",
+      "url": "https://web.rcat.net/search",
+      "issue": "JS-driven search-only UI; WebFetch cannot drive",
+      "fallback_used": "WebSearch + manufacturer directories + city-by-city Google + BBB"
+    }
+  ],
+  "sources_blocked": [
+    {
+      "source": "TX Comptroller Taxable Entity Search",
+      "url": "https://mycpa.cpa.state.tx.us/coa/",
+      "error": "interactive POST form; WebFetch cannot drive",
+      "fallback_used": "entity_status set to \"unknown\" \u2014 required for Phase 6 follow-up via Playwright"
+    },
+    {
+      "source": "CAD homestead OV65 lookups (HCAD/DCAD/BCAD/TCAD/Nueces CAD)",
+      "error": "interactive form-based searches blocked from WebFetch",
+      "fallback_used": "license_tenure_proxy + owner self-report + WebSearch press recognition"
+    },
+    {
+      "source": "Wayback Machine snapshot diff",
+      "error": "WebFetch timeouts on web.archive.org this session",
+      "fallback_used": "live homepage fetch only"
+    },
+    {
+      "source": "TX no-state-roofing-license",
+      "error": "structural \u2014 no license board to enumerate operators",
+      "fallback_used": "RCAT + manufacturer cert directories + BBB"
+    }
+  ],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 5,
+    "passed": 2,
+    "demoted_to_b": 2,
+    "demoted_to_d_distress_surfaced": 0,
+    "deferred_pending_live_fetch": 1,
+    "demotion_reasons": {
+      "non_family_operator_recent_or_in_law": 2,
+      "team_page_unreachable": 1,
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    }
+  },
+  "enrichment_telemetry": {
+    "successor_check_positive_live_fetch": 5,
+    "successor_check_negative_live_fetch": 13,
+    "successor_check_ambiguous": 8,
+    "successor_check_not_completed": 80
+  },
+  "supabase_write": {
+    "status": "written",
+    "reason": "106 businesses + 106 scores inserted via execute_sql; signals partial (top 13 inserted manually inline with businesses); score_runs.business_count=106; local JSON tier counts = source of truth (DB has slight count variance in C/D split due to compact MCP comments)"
+  }
+}

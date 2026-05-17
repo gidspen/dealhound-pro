@@ -1,0 +1,2414 @@
+[
+  {
+    "spine_index": 43,
+    "legal_name": "All American Glass & Remodeling",
+    "dba_name": "All American Glass",
+    "city": "League City",
+    "county": "Galveston",
+    "state": "TX",
+    "zip": "77573",
+    "website": "https://www.aaglc.com/",
+    "phone": "(281) 507-6801",
+    "year_established": 2002,
+    "years_in_business": 24,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller default (TX) — spine confirmed family-owned operating LLC, not directly Comptroller-pulled",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 58,
+    "owner_age_source": "tenure_proxy_founder_since_2002_+_industry_pre-experience",
+    "owner_tenure_years": 24,
+    "family_owner_pair": null,
+    "estimated_employee_count": 8,
+    "employee_count_basis": "single-location Bay Area glass shop mid-mix; typical 5-12 FTE",
+    "service_mix": "shower + replacement-windows + commercial-storefront + tinting + mirror",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (281) 507-6801 prominent, no online quote form depth",
+        "weight": "low"
+      },
+      {
+        "tell": "no_online_quote",
+        "evidence": "No e-commerce / instant quote tooling visible",
+        "weight": "low"
+      },
+      {
+        "tell": "no_portal",
+        "evidence": "No customer/B2B portal — typical brochure presence",
+        "weight": "low"
+      },
+      {
+        "tell": "mid-tenure_solo_owner",
+        "evidence": "24-year founder, broad mix suggests owner-installer model",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine notes only — no team page disclosed"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.aaglc.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      }
+    ],
+    "data_completeness": 0.62,
+    "notes": "Mid-tenure (24 yr) family-owned. Younger than ideal coasting profile but worth scoring — broad mix indicates owner-installer model. Owner age unknown; assume founder mid-50s."
+  },
+  {
+    "spine_index": 44,
+    "legal_name": "Austin Glass & Mirror, Inc.",
+    "dba_name": "Austin Glass & Mirror",
+    "address": "6308 Decker Lane",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78724",
+    "website": "https://www.austinglass.com/",
+    "phone": "(512) 928-9999",
+    "year_established": 1984,
+    "years_in_business": 42,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller TX (Inc. entity, decades operating)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 67,
+    "owner_age_source": "tenure_proxy_founder_since_1984_age_25_at_founding",
+    "owner_tenure_years": 42,
+    "family_owner_pair": null,
+    "estimated_employee_count": 35,
+    "employee_count_basis": "commercial glazier + curtain-wall + ACM panel capability typically 25-50 FTE in TX low/mid-rise market",
+    "service_mix": "commercial-glazing + curtain-wall + storefront + ACM-panels",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": true,
+    "coasting_tells": [
+      {
+        "tell": "brochure_website",
+        "evidence": "Static commercial-glazier brochure site, no online project portal",
+        "weight": "low"
+      },
+      {
+        "tell": "no_online_quote",
+        "evidence": "Commercial bid-only model, no instant-quote feature",
+        "weight": "low"
+      },
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "42 years operating, founder ~67",
+        "weight": "moderate"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "no public team disclosure"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.austinglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "services"]
+      }
+    ],
+    "data_completeness": 0.68,
+    "notes": "42-year Austin commercial glazier with full curtain-wall + ACM capability. Architectural-capable — NOT pure coaster but high-conviction succession candidate at owner age ~67. Strong wedge for buyer wanting commercial backlog."
+  },
+  {
+    "spine_index": 45,
+    "legal_name": "Snyder Commercial Glass Service",
+    "dba_name": "Snyder Commercial Glass Service",
+    "address": "8222 Jamestown Dr",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78758",
+    "website": "https://www.snyderglasscompanyaustintx.com/",
+    "phone": "(512) 833-5118",
+    "year_established": 1990,
+    "year_established_source": "self-described 35+ years (spine) — inferred ~1990",
+    "years_in_business": 36,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (operating TX glazier, multi-metro coverage)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Snyder (veteran-owned founder)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "veteran_+_founder_35yr_tenure",
+    "owner_tenure_years": 36,
+    "family_owner_pair": true,
+    "estimated_employee_count": 30,
+    "employee_count_basis": "commercial glazing + storefront + automatic doors + waterproofing across Austin/Houston/SA implies multi-crew",
+    "service_mix": "commercial-glazing + storefront + automatic-doors + commercial-film + skylight + waterproofing",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": true,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "35+ years, veteran-founder retirement window",
+        "weight": "moderate"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static brochure, no project gallery depth",
+        "weight": "low"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone (512) 833-5118 prominent", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "family + veteran owned per spine — second-gen not explicit"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.snyderglasscompanyaustintx.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["family-owned", "veteran-owned", "tenure"]
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "Family + veteran-owned commercial glazier across Austin/Houston/SA. 35+ year tenure puts founder in classic retirement window. Strong commercial-glazing capability. High-conviction succession target."
+  },
+  {
+    "spine_index": 46,
+    "legal_name": "Alamo Glass Inc.",
+    "dba_name": "Alamo Glass",
+    "address": "7123 North Lamar Boulevard",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78752",
+    "website": "https://www.alamoaustin.com/",
+    "phone": "(512) 452-5731",
+    "year_established": 1960,
+    "years_in_business": 66,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX Inc. entity, 60+ year operating)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 65,
+    "owner_age_source": "tenure_proxy_likely_2nd_gen_owner_with_long_runway",
+    "owner_tenure_years": 30,
+    "family_owner_pair": null,
+    "estimated_employee_count": 14,
+    "employee_count_basis": "single-location mid-mix (residential + commercial-storefront + shower + mirror) — typical 10-18 FTE",
+    "service_mix": "residential + shower + commercial-storefront + mirror",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_business",
+        "evidence": "66-year tenure typically signals coasting in current generation",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_online_quote",
+        "evidence": "No instant-quote tooling on site",
+        "weight": "low"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (512) 452-5731 prominent on homepage",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information-only site", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "66 years implies multi-generational; explicit successor not named on site"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.alamoaustin.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "services"]
+      }
+    ],
+    "data_completeness": 0.62,
+    "notes": "66-year Austin local — almost certainly multi-generation. NOT affiliated with Alamo Glass & Mirror (Dallas) or Alamo Glass of Port Arthur — independence verified. Classic legacy operator with strong brand equity in Central Austin."
+  },
+  {
+    "spine_index": 47,
+    "legal_name": "Austin Windowerks",
+    "dba_name": "Austin Windowerks",
+    "address": "2339 Kramer Lane",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78758",
+    "website": "https://www.windowerks.com/",
+    "phone": "(512) 837-7200",
+    "year_established": 1986,
+    "years_in_business": 40,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Austin operating glass company)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 68,
+    "owner_age_source": "founder_age_25_at_1986_founding_+_40yr_tenure",
+    "owner_tenure_years": 40,
+    "family_owner_pair": null,
+    "estimated_employee_count": 18,
+    "employee_count_basis": "commercial + residential windows + shower + repair — mid-size shop ~15-22 FTE",
+    "service_mix": "commercial-windows + commercial-storefront + residential-windows + shower + glass-repair",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "40 years operating, founder near retirement",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information-only site", "weight": "low" },
+      { "tell": "phone_only_intake", "evidence": "Phone (512) 837-7200 prominent", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine notes family-operated but no named successor"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.windowerks.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      }
+    ],
+    "data_completeness": 0.66,
+    "notes": "40-year Austin family operator with both residential and commercial windows. Founder likely in late 60s — strong succession window. Smaller architectural capability than Austin Glass & Mirror but solid SMB target."
+  },
+  {
+    "spine_index": 48,
+    "legal_name": "ATX Glazing, LLC",
+    "dba_name": "ATX Glazing",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "website": "https://www.atxglazing.com/",
+    "year_established": 2011,
+    "years_in_business": 15,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX LLC, operating Austin glazier)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 50,
+    "owner_age_source": "LLC_founder_2011_typical_age_35_at_founding",
+    "owner_tenure_years": 15,
+    "family_owner_pair": null,
+    "estimated_employee_count": 22,
+    "employee_count_basis": "commercial glazier with UT/Google/Apple/SpaceX/Dell project history — established mid-size operator",
+    "service_mix": "commercial-glazing + exterior-glass + interior-glass",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": true,
+    "coasting_tells": [
+      {
+        "tell": "younger_operator",
+        "evidence": "15-year LLC, owner likely 50ish — NOT coasting profile",
+        "weight": "very_low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "younger LLC, no succession context"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.atxglazing.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "notable clients"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "Younger founder profile (15-year LLC). NOT a classic coasting target — owner likely 45-55, still growing the book. Better described as a roll-up acquirer candidate, not a seller. DEPRIORITIZE for retiring-owner thesis."
+  },
+  {
+    "spine_index": 49,
+    "legal_name": "Morris Glass Company",
+    "dba_name": "Morris Glass",
+    "address": "3575 Rocking J Rd",
+    "city": "Round Rock",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78665",
+    "website": "https://morrisglasstx.com/",
+    "phone": "(512) 835-7575",
+    "year_established": 1987,
+    "years_in_business": 39,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (operating TX entity)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Morris family",
+    "owner_age_estimate": 66,
+    "owner_age_source": "founder_age_27_at_1987_founding_+_39yr_tenure",
+    "owner_tenure_years": 39,
+    "family_owner_pair": true,
+    "estimated_employee_count": 16,
+    "employee_count_basis": "commercial-glazing + custom-residential + shower + handrail + bathroom remodel — mid-size ~12-22 FTE",
+    "service_mix": "commercial-glazing + custom-residential + shower + handrail + bathroom-remodel",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_family",
+        "evidence": "39 years, family Texas roots cited explicitly",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "phone_only_intake", "evidence": "Phone (512) 835-7575 prominent", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "family operator — successor not explicitly named"
+    },
+    "data_sources": [
+      {
+        "url": "https://morrisglasstx.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "39-year family operator in fast-growing Williamson County (Round Rock/Cedar Park corridor). Founder approaching/in retirement window. Strong commercial + custom residential mix with handrail capability. High-conviction succession target."
+  },
+  {
+    "spine_index": 50,
+    "legal_name": "R.C. Glass & Windows LLC",
+    "dba_name": "R.C. Glass & Windows",
+    "city": "Georgetown",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78633",
+    "website": "https://rcglassandwindows.com/",
+    "phone": "(512) 960-9427",
+    "year_established": 1997,
+    "years_in_business": 29,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX LLC)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 60,
+    "owner_age_source": "tenure_proxy_LLC_29yr_founder_age_30_at_start",
+    "owner_tenure_years": 29,
+    "family_owner_pair": null,
+    "estimated_employee_count": 6,
+    "employee_count_basis": "residential glass + window + solar-screen single-location North Austin — solo-installer-plus-helper model",
+    "service_mix": "residential-glass + window + solar-screen",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (512) 960-9427 prominent, no online quote",
+        "weight": "low"
+      },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Solo-owner pattern (residential-only, small geography)",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static one-page-style site", "weight": "low" },
+      { "tell": "no_online_quote", "evidence": "No e-commerce, contact-form only", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": null,
+      "verified_via": "no team page or family operator language"
+    },
+    "data_sources": [
+      {
+        "url": "https://rcglassandwindows.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "services"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "Small-scale 29-year LLC. Likely owner-installer model in fast-growing Georgetown/Cedar Park corridor. Too small for institutional acquirer — fit for hands-on operator buyer."
+  },
+  {
+    "spine_index": 51,
+    "legal_name": "Waco Glass & Mirror, Inc.",
+    "dba_name": "Waco Glass & Mirror",
+    "address": "5496 N State Hwy 6",
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": "76712",
+    "website": "https://wacoglassmirror.com/",
+    "phone": "(254) 754-4651",
+    "year_established": 1956,
+    "years_in_business": 70,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX Inc., 70-year operator)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 62,
+    "owner_age_source": "tenure_proxy_70yr_entity_implies_2nd_or_3rd_gen_owner_60ish",
+    "owner_tenure_years": 25,
+    "family_owner_pair": null,
+    "estimated_employee_count": 22,
+    "employee_count_basis": "commercial-glazing + curtain-wall + storefront + custom + mirror — full-service Waco-region commercial glazier 18-30 FTE",
+    "service_mix": "commercial-glazing + storefront + curtain-wall + custom-glass + mirror",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": true,
+    "coasting_tells": [
+      { "tell": "long_tenured_business", "evidence": "70 years operating", "weight": "moderate" },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static information site, no online project portal",
+        "weight": "low"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone (254) 754-4651 prominent", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "70-year tenure implies multi-generation operator"
+    },
+    "data_sources": [
+      {
+        "url": "https://wacoglassmirror.com/about-us/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "services"]
+      }
+    ],
+    "data_completeness": 0.66,
+    "notes": "70-year Central Texas commercial glazier with full curtain-wall capability. Dominant local brand. Multi-generation operator with current generation likely in early-60s. Strong architectural backlog candidate."
+  },
+  {
+    "spine_index": 52,
+    "legal_name": "ACME Glass",
+    "dba_name": "ACME Glass",
+    "address": "810 S Washington Ave",
+    "city": "Bryan",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": "77803",
+    "website": "https://acmeglass.com/",
+    "year_established": 1946,
+    "years_in_business": 80,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX entity, Bryan-CS Chamber Inner Circle member)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Morehead family (Leonard & Bruce Morehead founders)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "founded_1946_3rd-gen_Morehead_estimate",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 32,
+    "employee_count_basis": "three locations Bryan/CS/A&M, mixed auto + commercial + residential, voted best 23 years — established 25-40 FTE",
+    "service_mix": "mixed (auto + commercial + residential)",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_family",
+        "evidence": "80 years, 3-location Bryan-CS dominance",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_online_quote",
+        "evidence": "Phone-led intake; no instant-quote tooling",
+        "weight": "low"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static information site, voted-best banners only",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "80-year Morehead family multi-generation tenure"
+    },
+    "data_sources": [
+      {
+        "url": "https://acmeglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      },
+      {
+        "url": "https://business.bcschamber.org/list/member/acme-glass-company-inc-1012",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["chamber_membership"]
+      }
+    ],
+    "data_completeness": 0.72,
+    "notes": "PRIME candidate. 80-year Morehead family business dominating Bryan-CS-A&M market with 3 locations. Texas A&M corridor + Brazos County growth = durable demand. Multi-generation succession — current generation in early-60s. Strong brand moat (voted best 23 years)."
+  },
+  {
+    "spine_index": 53,
+    "legal_name": "A+ Glass & Mirror",
+    "dba_name": "A+ Glass & Mirror",
+    "address": "908 N. Harvey Mitchell Pkwy",
+    "city": "Bryan",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": "77803",
+    "website": "https://aplusglassandmirror.com/",
+    "phone": "(979) 779-3224",
+    "year_established": 1994,
+    "year_established_source": "self-described 30+ years (spine) — inferred ~1994",
+    "years_in_business": 32,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller default (operating Bryan glass shop)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 62,
+    "owner_age_source": "tenure_proxy_30yr_founder_age_30_at_start",
+    "owner_tenure_years": 32,
+    "family_owner_pair": null,
+    "estimated_employee_count": 10,
+    "employee_count_basis": "residential + shower + commercial-storefront + mirror + heavy-equipment Bryan SMB ~8-14 FTE",
+    "service_mix": "residential + shower + commercial-storefront + mirror + heavy-equipment",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (979) 779-3224 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      {
+        "tell": "long_tenured_solo_owner",
+        "evidence": "30-year tenure, owner-operator vibe",
+        "weight": "low"
+      },
+      {
+        "tell": "no_online_quote",
+        "evidence": "Form-only contact, no instant quote",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "no team page"
+    },
+    "data_sources": [
+      {
+        "url": "https://aplusglassandmirror.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "tenure", "services"]
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "Secondary Bryan-CS operator (ACME Glass is dominant). 32-year tenure, owner in early-60s. Smaller scale than ACME but viable hands-on operator buy. Heavy-equipment glass service adds niche value."
+  },
+  {
+    "spine_index": 54,
+    "legal_name": "Bob's Screen & Glass LLC",
+    "dba_name": "Bob's Screen & Glass",
+    "city": "Killeen",
+    "county": "Bell",
+    "state": "TX",
+    "website": "https://bobsglasstx.com/",
+    "phone": "(254) 634-4005",
+    "year_established": 1978,
+    "years_in_business": 48,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX LLC)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Bob (founder, family-operated)",
+    "owner_age_estimate": 72,
+    "owner_age_source": "founder_age_22_at_1978_founding_+_48yr_tenure",
+    "owner_tenure_years": 48,
+    "family_owner_pair": true,
+    "estimated_employee_count": 12,
+    "employee_count_basis": "regional coverage Killeen/Temple/Belton/Harker Heights/Copperas Cove — multi-truck SMB ~10-15 FTE",
+    "service_mix": "residential-windows + screen + sunroom + shower + commercial-glass-repair",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "48 years, founder very likely 70+",
+        "weight": "high"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (254) 634-4005 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static information site, no portal",
+        "weight": "low"
+      },
+      { "tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low" },
+      {
+        "tell": "founder_age_high",
+        "evidence": "Owner-installer near or past traditional retirement",
+        "weight": "high"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "family-operated per spine but no named successor"
+    },
+    "data_sources": [
+      {
+        "url": "https://bobsglasstx.com/about/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-owned"]
+      }
+    ],
+    "data_completeness": 0.68,
+    "notes": "PRIME succession target. 48-year founder very likely 70+ in Bell County (Fort Hood + Killeen/Temple growth). Coverage spans 5 towns. Classic coasting profile — no online tooling, founder-eponymous brand."
+  },
+  {
+    "spine_index": 55,
+    "legal_name": "Baker Glass, Inc.",
+    "dba_name": "Baker Glass",
+    "address": "4015 Montana",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79903",
+    "website": "https://www.bakerglass.com/",
+    "phone": "(915) 566-9461",
+    "year_established": 1924,
+    "years_in_business": 102,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX Inc., 102-year operator, two-location)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Baker family",
+    "owner_age_estimate": 60,
+    "owner_age_source": "102yr_entity_4th-gen_Baker_estimate",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 28,
+    "employee_count_basis": "two El Paso locations (Montana + Lee Trevino) full-mix glass — established 22-35 FTE",
+    "service_mix": "mixed (residential + commercial + auto + shower + storefront + mirror)",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_family",
+        "evidence": "Family in glass since mid-1800s, company since 1924",
+        "weight": "moderate"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static information site, no online quote tooling",
+        "weight": "low"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (915) 566-9461 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Six service categories — generalist legacy operator",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "century-old family business — multi-generation succession likely in place"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.bakerglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-owned", "two-location"]
+      }
+    ],
+    "data_completeness": 0.72,
+    "notes": "PRIME candidate. 102-year El Paso dominator. Two locations, full mix, century-old Baker family ownership. El Paso geography is isolated market — high local moat. Multi-generation succession with current generation possibly nearing 60s+."
+  },
+  {
+    "spine_index": 56,
+    "legal_name": "The Glass House",
+    "dba_name": "The Glass House",
+    "address": "11111 Rojas Drive",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79935",
+    "website": "https://www.glasshousetexas.com/",
+    "phone": "(915) 592-5583",
+    "year_established": 1953,
+    "years_in_business": 73,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX entity, SDVOSB)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 62,
+    "owner_age_source": "73yr_business_likely_2nd-3rd_gen_owner",
+    "owner_tenure_years": null,
+    "family_owner_pair": null,
+    "estimated_employee_count": 55,
+    "employee_count_basis": "$500M+ contracts across full commercial glazing scope + Central TX expansion location — large operator 40-75 FTE",
+    "service_mix": "commercial-glazing + storefront + curtain-wall + entrances + fire-rated + impact-resistant",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": true,
+    "coasting_tells": [
+      { "tell": "long_tenured_business", "evidence": "73 years operating", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "long-tenured + active growth (Central TX location) — succession likely planned"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.glasshousetexas.com/about-us",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "SDVOSB", "services"]
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "Large commercial glazier — $500M+ project history with fire-rated and impact-resistant capability + SDVOSB certification (federal contract eligible). Currently expanding to Central TX (Manor). NOT a classic coaster — growth-mode operator, but premium target for strategic acquirer wanting federal/commercial glazing book."
+  },
+  {
+    "spine_index": 57,
+    "legal_name": "Hardware Specialties & Glass Co., Inc.",
+    "dba_name": "Hardware Specialties & Glass",
+    "address": "214 N. Virginia",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "website": "https://hardwarespecialties.net/",
+    "year_established": 1966,
+    "years_in_business": 60,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX Inc., 60-year El Paso operator)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 64,
+    "owner_age_source": "60yr_family_business_2nd-gen_owner_estimate",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 18,
+    "employee_count_basis": "builder hardware + glass supply + commercial glass — small/mid distribution-plus-install ~14-22 FTE",
+    "service_mix": "commercial-glass + builder-hardware + glass-supply",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_family",
+        "evidence": "60 years, family-owned per spine",
+        "weight": "moderate"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static information site, hardwarespecialties.net",
+        "weight": "low"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone-led B2B contractor sales model",
+        "weight": "low"
+      },
+      {
+        "tell": "broad_mix_distributor",
+        "evidence": "Hardware + glass + supply — distributor model, not specialty installer",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "60-year family business — likely multi-generation"
+    },
+    "data_sources": [
+      {
+        "url": "https://hardwarespecialties.net/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-owned", "services"]
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "Hybrid hardware-distribution + glass installer in El Paso. 60-year family business — distinct from Baker Glass and The Glass House. B2B contractor supply book has durable recurring revenue. Multi-generation succession likely with current owner mid-60s."
+  },
+  {
+    "spine_index": 58,
+    "legal_name": "Burch Glass Co., Inc.",
+    "dba_name": "Burch Glass Co.",
+    "address": "8211 Venita Avenue",
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": "79424",
+    "website": "https://www.burchglass.com/",
+    "phone": "(806) 866-9090",
+    "year_established": 1967,
+    "years_in_business": 59,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX Inc., 59-year Lubbock operator)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Glenn & Carolyn Burch (2nd-gen; founded by Everett & Dora Burch)",
+    "owner_age_estimate": 68,
+    "owner_age_source": "2nd-gen_Burch_succession_documented_on_about_page",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 16,
+    "employee_count_basis": "Lubbock single-location residential + commercial + custom mix — mid-size 12-22 FTE",
+    "service_mix": "residential + commercial + shower + framed-mirror + cabinet-glass + custom",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "second_gen_aging",
+        "evidence": "Glenn & Carolyn Burch as 2nd-gen owners — likely late 60s",
+        "weight": "high"
+      },
+      {
+        "tell": "long_tenured_family",
+        "evidence": "59 years, succession already executed once",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "phone_only_intake", "evidence": "Phone (806) 866-9090 prominent", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "About page documents 2nd-gen (Glenn & Carolyn Burch) — 3rd-gen status unclear"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.burchglass.com/about-us",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "succession", "services"]
+      }
+    ],
+    "data_completeness": 0.78,
+    "notes": "PRIME candidate. Glenn & Carolyn Burch documented as 2nd-gen owners — likely late 60s in succession window with no published 3rd-gen plan. 59-year Lubbock brand. Strong custom + cabinet niche."
+  },
+  {
+    "spine_index": 59,
+    "legal_name": "Action Glass and Mirror",
+    "dba_name": "Action Glass and Mirror",
+    "address": "255 US Hwy 87",
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": "79423",
+    "website": "https://www.actionglasslubbock.com/",
+    "phone": "(806) 794-5277",
+    "year_established": 1989,
+    "years_in_business": 37,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Lubbock operating entity)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 66,
+    "owner_age_source": "founder_age_29_at_1989_founding_+_37yr_tenure",
+    "owner_tenure_years": 37,
+    "family_owner_pair": null,
+    "estimated_employee_count": 12,
+    "employee_count_basis": "single-location shower + residential + storefront + custom + tinting — typical 10-15 FTE",
+    "service_mix": "shower + residential + commercial-storefront + custom + tinting",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "37 years operating, founder in mid-60s",
+        "weight": "moderate"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (806) 794-5277 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine notes family-owned per third-party listings — successor not named"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.actionglasslubbock.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "tenure", "services"]
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "37-year Lubbock secondary operator (Burch is the dominant local). Founder mid-60s, succession window approaching. Smaller scale than Burch but viable shower + custom + tinting niche."
+  },
+  {
+    "spine_index": 60,
+    "legal_name": "Mid-West Glass Co.",
+    "dba_name": "Mid-West Glass",
+    "city": "Midland",
+    "county": "Midland",
+    "state": "TX",
+    "website": "https://www.mwglass.net/",
+    "year_established": 1946,
+    "years_in_business": 80,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX corporation, 3rd-gen)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 60,
+    "owner_age_source": "3rd-gen_family_corporation_typical_current_principal_age",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 38,
+    "employee_count_basis": "commercial glazing + curtain-wall + storefront + automatic entrance + blast-resistant + residential across Permian Basin — large 30-50 FTE",
+    "service_mix": "commercial-glazing + curtain-wall + storefront + automatic-entrance + blast-resistant + residential",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": true,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_family",
+        "evidence": "80 years, 3rd-gen family corporation",
+        "weight": "low"
+      },
+      {
+        "tell": "brochure_website",
+        "evidence": "Static commercial-glazier brochure site",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "3rd-gen self-described per spine"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.mwglass.net/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "80-year Permian Basin dominator. 3rd-gen family corporation with full commercial glazing scope including blast-resistant capability (oil patch demand). NOT a coaster — actively growing, but premium acquisition target with durable energy-sector commercial book. Address/phone need enrichment."
+  },
+  {
+    "spine_index": 61,
+    "legal_name": "Amigo's Glass & Mirror LLC",
+    "dba_name": "Amigos Glass and Mirror",
+    "city": "Midland",
+    "county": "Midland",
+    "state": "TX",
+    "website": "https://www.amigosglass.com/",
+    "phone": "(432) 349-0309",
+    "year_established": 2003,
+    "year_established_source": "self-described 20+ years (spine) — inferred ~2003",
+    "years_in_business": 23,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX LLC)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 56,
+    "owner_age_source": "LLC_founder_2003_typical_age_33_at_founding",
+    "owner_tenure_years": 23,
+    "family_owner_pair": null,
+    "estimated_employee_count": 9,
+    "employee_count_basis": "mobile glass + residential + shower + storefront + cabinet Midland SMB ~7-12 FTE",
+    "service_mix": "residential + shower + commercial-storefront + cabinet-glass + mobile",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (432) 349-0309 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Mobile + small mix suggests owner-installer",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "no team page"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.amigosglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "tenure", "services"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "Mid-size Midland operator behind Mid-West Glass. 23-year LLC. Mobile service capability + Permian Basin small-business glass niche. Owner likely mid-50s — earlier in window."
+  },
+  {
+    "spine_index": 62,
+    "legal_name": "City Glass Co Inc",
+    "dba_name": "City Glass Co",
+    "address": "4907 Plains Blvd",
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": "79106",
+    "website": "https://www.cityglassamarillo.com/",
+    "phone": "(806) 355-9913",
+    "year_established": 1981,
+    "year_established_source": "45+ years experience cited (spine) — inferred ~1981",
+    "years_in_business": 45,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX Inc., TPBA member)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 68,
+    "owner_age_source": "founder_age_23_at_1981_founding_+_45yr_tenure",
+    "owner_tenure_years": 45,
+    "family_owner_pair": true,
+    "estimated_employee_count": 14,
+    "employee_count_basis": "single-location Amarillo mid-mix (residential + shower + commercial + custom + refrigerator + storefront) ~12-18 FTE",
+    "service_mix": "residential + shower + commercial + custom-mirror + refrigerator-glass + storefront",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      { "tell": "long_tenured_founder", "evidence": "45 years, founder ~68", "weight": "high" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (806) 355-9913 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Six service categories — generalist coaster",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "family-owned per spine, no successor named"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.cityglassamarillo.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "family-owned", "tenure", "services"]
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "45-year Amarillo family-owned. TPBA member. Founder near or past 68. Refrigerator-glass niche is unusual + sticky. Classic succession candidate."
+  },
+  {
+    "spine_index": 63,
+    "legal_name": "Clayton's Glass",
+    "dba_name": "Clayton's Glass",
+    "address": "2500 SW 7th Ave",
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": "79106",
+    "website": "https://claytonsglass.com/",
+    "phone": "(806) 376-9273",
+    "year_established": 1953,
+    "years_in_business": 73,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Amarillo operating entity)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Clayton family (eponymous)",
+    "owner_age_estimate": 63,
+    "owner_age_source": "73yr_entity_2nd-3rd-gen_Clayton_estimate",
+    "owner_tenure_years": null,
+    "family_owner_pair": null,
+    "estimated_employee_count": 12,
+    "employee_count_basis": "single-location residential + shower + commercial-storefront + mirror + remodel ~10-15 FTE",
+    "service_mix": "residential + shower + commercial-storefront + mirror + remodel",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      { "tell": "long_tenured_business", "evidence": "73 years operating", "weight": "moderate" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (806) 376-9273 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "Clayton eponymous, 73-year tenure implies multi-generation"
+    },
+    "data_sources": [
+      {
+        "url": "https://claytonsglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "services"]
+      }
+    ],
+    "data_completeness": 0.62,
+    "notes": "Amarillo dual primary (with City Glass). 73-year Clayton family operator with remodel service add-on. Multi-generation succession likely with current generation early-60s."
+  },
+  {
+    "spine_index": 64,
+    "legal_name": "Risica and Sons, Inc.",
+    "dba_name": "Risica and Sons",
+    "address": "403 E. Interstate 2",
+    "city": "San Juan",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78589",
+    "website": "https://www.risicaandsons.com/",
+    "phone": "(956) 781-3840",
+    "year_established": 1960,
+    "years_in_business": 66,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX Inc., RGV 66-year)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Risica family (and sons)",
+    "owner_age_estimate": 63,
+    "owner_age_source": "and-sons_branding_2nd-gen_Risica_estimate",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 24,
+    "employee_count_basis": "commercial + residential + shower + auto + hurricane-resistant + heavy-glass RGV regional — large 20-32 FTE",
+    "service_mix": "commercial + residential + shower + auto + hurricane-resistant + heavy-glass",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_family",
+        "evidence": "66 years, 'and Sons' branding implies generational handoff",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "phone_only_intake", "evidence": "Phone (956) 781-3840 prominent", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "'and Sons' in legal name + 66-year tenure documents multi-generation"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.risicaandsons.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-owned", "services"]
+      }
+    ],
+    "data_completeness": 0.72,
+    "notes": "PRIME candidate. 66-year RGV dominator with hurricane-resistant + heavy-glass capability (Gulf Coast moat). Multi-generation Risica family. RGV is high-growth border market. Strong commercial + auto + residential mix."
+  },
+  {
+    "spine_index": 65,
+    "legal_name": "Harlingen Glass and Mirror",
+    "dba_name": "Harlingen Glass",
+    "address": "1905 E. Harrison Ave",
+    "city": "Harlingen",
+    "county": "Cameron",
+    "state": "TX",
+    "zip": "78550",
+    "website": "https://harlingenglass.com/",
+    "phone": "(956) 428-6066",
+    "year_established": 1978,
+    "years_in_business": 48,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX entity, 48-year Cameron County)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Shull family",
+    "owner_age_estimate": 67,
+    "owner_age_source": "founder_age_25_at_1978_+_48yr_tenure_or_2nd-gen_Shull",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 14,
+    "employee_count_basis": "residential + commercial-glazing + custom + bathroom + security-film Cameron County ~12-18 FTE",
+    "service_mix": "residential + commercial-glazing + custom + bathroom-enclosure + security-film",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      { "tell": "long_tenured_family", "evidence": "48 years, Shull family", "weight": "moderate" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (956) 428-6066 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "Shull family named per spine"
+    },
+    "data_sources": [
+      {
+        "url": "https://harlingenglass.com/company/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "Shull-family", "services"]
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "48-year Shull family in Harlingen (RGV). Security-film capability is a sticky commercial niche. Pair with Risica for full RGV regional roll-up thesis."
+  },
+  {
+    "spine_index": 66,
+    "legal_name": "Evins Glass",
+    "dba_name": "Evins Glass",
+    "address": "101 N. Padre Island Dr",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78406",
+    "website": "https://evinsglass.com/",
+    "phone": "(361) 884-3995",
+    "year_established": 1989,
+    "year_established_source": "37+ years tenure cited (spine) — inferred ~1989",
+    "years_in_business": 37,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Corpus Christi operating entity)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Evins family",
+    "owner_age_estimate": 65,
+    "owner_age_source": "founder_age_28_at_1989_+_37yr_tenure",
+    "owner_tenure_years": 37,
+    "family_owner_pair": true,
+    "estimated_employee_count": 16,
+    "employee_count_basis": "full-mix Coastal Bend operator (auto + residential + shower + storefront + hurricane-impact + tinting) ~14-22 FTE",
+    "service_mix": "mixed (auto + residential + shower + commercial-storefront + hurricane-impact + tinting)",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      { "tell": "long_tenured_family", "evidence": "37 years, Evins family", "weight": "moderate" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (361) 884-3995 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Six service categories — generalist",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "family-owned per spine, no successor disclosure"
+    },
+    "data_sources": [
+      {
+        "url": "https://evinsglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "family-owned", "tenure", "services"]
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "37-year Evins family Coastal Bend operator. Hurricane-impact + tinting is high-value Gulf coast niche. Founder mid-60s, classic succession window."
+  },
+  {
+    "spine_index": 67,
+    "legal_name": "Mo Glass",
+    "dba_name": "Mo Glass",
+    "address": "2617 Holly Rd",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "website": "https://www.moglass.net/",
+    "phone": "(361) 855-1471",
+    "year_established": 1982,
+    "year_established_source": "44 years cited (spine) — inferred ~1982",
+    "years_in_business": 44,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Corpus Christi operating entity)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 69,
+    "owner_age_source": "founder_age_25_at_1982_+_44yr_tenure",
+    "owner_tenure_years": 44,
+    "family_owner_pair": true,
+    "estimated_employee_count": 12,
+    "employee_count_basis": "single-location Corpus Christi residential + commercial + auto + shower + mirror + storefront ~10-15 FTE",
+    "service_mix": "residential + commercial + auto + shower + mirror + storefront",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "44 years operating, founder ~69",
+        "weight": "high"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (361) 855-1471 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low" },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Six service categories generalist",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "family-owned per spine, no successor named"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.moglass.net/about",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "family-owned", "tenure", "services"]
+      }
+    ],
+    "data_completeness": 0.62,
+    "notes": "PRIME candidate. 44-year Corpus Christi family operator — founder likely ~69 with no published successor. Smaller than Evins but solid generalist book."
+  },
+  {
+    "spine_index": 68,
+    "legal_name": "Craftman Glass & Door, LLC",
+    "dba_name": "Craftman Glass & Door",
+    "address": "2003 Saratoga Blvd I",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78417",
+    "website": "https://www.craftmanglass.com/",
+    "year_established": 2007,
+    "years_in_business": 19,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX LLC)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 65,
+    "owner_age_source": "owner_30yr_industry_pre-LLC_+_19yr_company_tenure",
+    "owner_tenure_years": 19,
+    "family_owner_pair": true,
+    "estimated_employee_count": 10,
+    "employee_count_basis": "residential + commercial + shower + mirror + windows + doors Corpus SMB ~8-13 FTE",
+    "service_mix": "residential + commercial + shower + mirror + windows + doors",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "experienced_owner_late_career",
+        "evidence": "Owner brings 30+ years pre-LLC experience — career-end profile",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "phone_only_intake", "evidence": "Phone-led intake", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "no team page"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.craftmanglass.com/about-4",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-operated", "owner-experience"]
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "19-year LLC but owner has 30+ years pre-LLC industry experience — owner functionally mid-60s. Adding doors capability sets it apart from pure glass shops. Mid-tier Corpus Christi succession target."
+  },
+  {
+    "spine_index": 69,
+    "legal_name": "Scott Glass",
+    "dba_name": "Scott Glass",
+    "address": "3911 Wow Rd",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78413",
+    "website": "https://www.scottglass.com/",
+    "phone": "(361) 854-8000",
+    "year_established": 1979,
+    "years_in_business": 47,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Corpus Christi operating entity)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Scott family",
+    "owner_age_estimate": 69,
+    "owner_age_source": "founder_age_22_at_1979_+_47yr_tenure",
+    "owner_tenure_years": 47,
+    "family_owner_pair": true,
+    "estimated_employee_count": 22,
+    "employee_count_basis": "auto-glass-only operator with ADAS capability + windshield/repair — established mobile fleet 18-30 FTE",
+    "service_mix": "auto-glass (windshield, ADAS, repair) [auto-only — DEPRIORITIZE]",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "auto_only_segment",
+        "evidence": "Auto-glass-only — per vertical brief deprioritize",
+        "weight": "high_segment_filter"
+      },
+      { "tell": "long_tenured_founder", "evidence": "47 years, founder near 70", "weight": "high" },
+      { "tell": "phone_only_intake", "evidence": "Phone (361) 854-8000 prominent", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "family-owned per spine"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.scottglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "founded_year", "family-owned", "services"]
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "DEPRIORITIZED — auto-glass-only segment per vertical brief (insurance-rate-sensitive, ADAS calibration competes with Safelite). Note for buyer: founder ~69 with ADAS niche could fit a Safelite-adjacent buyer, but not the family-owned glazier thesis."
+  },
+  {
+    "spine_index": 70,
+    "legal_name": "East Texas Glass Co.",
+    "dba_name": "East Texas Glass Co",
+    "address": "1710 State Highway 31 E",
+    "city": "Kilgore",
+    "county": "Gregg",
+    "state": "TX",
+    "zip": "75662",
+    "website": "https://www.easttexasglasscompany.com/",
+    "phone": "(903) 984-3202",
+    "year_established": 1932,
+    "years_in_business": 94,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Kilgore operating entity, but FLAG: Arrow Companies affiliation)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Kinkaid family (2-gen)",
+    "owner_age_estimate": 62,
+    "owner_age_source": "2nd-gen_Kinkaid_per_spine",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 18,
+    "employee_count_basis": "shower + residential + commercial + custom-mirror + back-painted + insulated Kilgore regional ~14-24 FTE — but shared address with Henderson Glass suggests possibly combined",
+    "service_mix": "shower + residential + commercial + custom-mirror + back-painted + insulated",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "ambiguous_independence",
+        "evidence": "Shares Kilgore address + @arrow-companies.com email with Henderson Glass — likely roll-up partnership under Arrow Glass Industries",
+        "weight": "high_flag"
+      },
+      { "tell": "long_tenured_business", "evidence": "94 years operating", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "2-gen Kinkaid per spine but Arrow Companies entanglement complicates"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.easttexasglasscompany.com/about-us",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "Kinkaid-family", "Arrow-Companies-flag"]
+      }
+    ],
+    "data_completeness": 0.62,
+    "notes": "FLAG — likely already rolled up under Arrow Glass Industries (shared address + email with Henderson Glass). DO NOT contact as independent target until ownership status confirmed. 94-year Kilgore legacy brand."
+  },
+  {
+    "spine_index": 71,
+    "legal_name": "Henderson Glass Company",
+    "dba_name": "Henderson Glass",
+    "address": "2100 E Front St",
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "zip": "75702",
+    "website": "https://www.hendersonglassco.com/",
+    "phone": "(903) 597-7235",
+    "year_established": 1931,
+    "years_in_business": 95,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Tyler operating entity, but FLAG: Arrow Glass Industries partnership)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 60,
+    "owner_age_source": "2nd-gen_per_spine_+_partnership_with_Arrow_Industries",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 20,
+    "employee_count_basis": "shower + mirror + commercial + back-painted + insulated + storefront Tyler regional ~16-28 FTE, partnered with Arrow Glass Industries",
+    "service_mix": "shower + mirror + commercial + back-painted + insulated + storefront",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "ambiguous_independence",
+        "evidence": "Explicitly partners with Arrow Glass Industries 'to extend trusted service throughout Texas' + shared Kilgore address with East Texas Glass",
+        "weight": "high_flag"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "2nd-gen per spine but Arrow Industries partnership pre-empts traditional succession"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.hendersonglassco.com/about",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "Arrow-partnership", "services"]
+      }
+    ],
+    "data_completeness": 0.62,
+    "notes": "FLAG — Arrow Glass Industries partnership explicit on About page. Treat as ALREADY-IN-PROGRESS roll-up, not virgin succession target. 95-year brand though — worth tracking for downstream divestiture if Arrow re-shapes portfolio."
+  },
+  {
+    "spine_index": 72,
+    "legal_name": "Independent Glass & Mirror Co.",
+    "dba_name": "Independent Glass & Mirror",
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "website": "https://igmtyler.com/",
+    "phone": "(903) 597-8975",
+    "year_established": 1978,
+    "years_in_business": 48,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Tyler operating entity)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 70,
+    "owner_age_source": "founder_age_22_at_1978_+_48yr_tenure",
+    "owner_tenure_years": 48,
+    "family_owner_pair": null,
+    "estimated_employee_count": 13,
+    "employee_count_basis": "residential + shower + commercial + butt-glaze + decorative Tyler single-location ~10-16 FTE",
+    "service_mix": "residential + shower + commercial + butt-glaze + decorative",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_founder",
+        "evidence": "48 years operating, founder ~70",
+        "weight": "high"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (903) 597-8975 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Owner-name eponymous brand",
+        "weight": "moderate"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "no team page"
+    },
+    "data_sources": [
+      {
+        "url": "https://igmtyler.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "founded_year", "services"]
+      }
+    ],
+    "data_completeness": 0.62,
+    "notes": "PRIME independent Tyler operator (literally named 'Independent') — explicitly NOT part of Arrow Glass Industries rollup. 48-year founder near 70. Butt-glaze + decorative is upmarket niche."
+  },
+  {
+    "spine_index": 73,
+    "legal_name": "Grace Glass & Mirror",
+    "dba_name": "Grace Glass & Mirror",
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "website": "https://www.graceglassandmirror.com/",
+    "year_established": 1999,
+    "year_established_source": "25+ years experience cited (spine) — inferred ~1999",
+    "years_in_business": 27,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller default — site WebFetch ECONNREFUSED",
+    "is_distressed": false,
+    "distress_reasons": ["site_unreachable_at_fetch"],
+    "owner_name": null,
+    "owner_age_estimate": 55,
+    "owner_age_source": "tenure_proxy_25yr_founder_age_30_at_start",
+    "owner_tenure_years": 27,
+    "family_owner_pair": null,
+    "estimated_employee_count": 10,
+    "employee_count_basis": "multi-town East Texas coverage (Tyler/Longview/Canton/Jacksonville/Henderson) but small site — mid SMB ~8-13 FTE",
+    "service_mix": "commercial + residential + storefront",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "site_unreachable",
+        "evidence": "Direct WebFetch ECONNREFUSED — possible site neglect",
+        "weight": "moderate"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone/address need enrichment", "weight": "low" },
+      { "tell": "owner_installer_model", "evidence": "Multi-town East Texas SMB", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "no team page; locally owned per third-party"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.graceglassandmirror.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "services", "third-party-listings"]
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "Tertiary Tyler operator. Site unreachable at fetch — flagged for distress/neglect signal. Earlier-window owner if 25-year tenure. DEPRIORITIZE pending phone/site recovery — viable later-pipeline candidate."
+  },
+  {
+    "spine_index": 74,
+    "legal_name": "Apache Glass & Mirror",
+    "dba_name": "Apache Glass & Mirror",
+    "address": "18015 FM 2493",
+    "city": "Flint",
+    "county": "Smith",
+    "state": "TX",
+    "zip": "75762",
+    "website": "https://www.apacheglassmirror.com/",
+    "phone": "(903) 509-0031",
+    "year_established": 1985,
+    "year_established_source": "40+ years cited (spine) — inferred ~1985",
+    "years_in_business": 41,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Flint operating entity)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 68,
+    "owner_age_source": "founder_age_27_at_1985_+_41yr_tenure",
+    "owner_tenure_years": 41,
+    "family_owner_pair": true,
+    "estimated_employee_count": 9,
+    "employee_count_basis": "residential + shower + mirror + cabinet single-location Flint ~7-12 FTE",
+    "service_mix": "residential + shower + mirror + cabinet-glass",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      { "tell": "long_tenured_founder", "evidence": "41 years, founder ~68", "weight": "high" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (903) 509-0031 prominent",
+        "weight": "low"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      { "tell": "no_online_quote", "evidence": "Contact-form only", "weight": "low" },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Residential-only single-location",
+        "weight": "moderate"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "family-owned per spine; no successor named"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.apacheglassmirror.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "family-owned", "tenure", "services"]
+      }
+    ],
+    "data_completeness": 0.62,
+    "notes": "PRIME small-target. 41-year founder ~68, residential-only single-location near Tyler. Cabinet-glass niche. Classic coasting solo-owner profile."
+  },
+  {
+    "spine_index": 75,
+    "legal_name": "Texarkana Glass Co. LLC",
+    "dba_name": "Texarkana Glass Company",
+    "address": "421 Industrial Boulevard",
+    "city": "Nash",
+    "county": "Bowie",
+    "state": "TX",
+    "zip": "75569",
+    "website": "https://texarkanaglasscompany.com/",
+    "phone": "(903) 793-4277",
+    "year_established": 2008,
+    "years_in_business": 18,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX LLC)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 55,
+    "owner_age_source": "LLC_founder_2008_typical_age_37_at_founding",
+    "owner_tenure_years": 18,
+    "family_owner_pair": null,
+    "estimated_employee_count": 14,
+    "employee_count_basis": "commercial-glazing + shower + railing + patio + storefront + educational specialty Nash/Texarkana ~12-18 FTE",
+    "service_mix": "commercial-glazing + shower + glass-railing + patio + storefront + educational",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "younger_founder",
+        "evidence": "18-year LLC, founder ~55 — earlier coasting window",
+        "weight": "low"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone (903) 793-4277 prominent", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "no team page"
+    },
+    "data_sources": [
+      {
+        "url": "https://texarkanaglasscompany.com/about/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "services"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "Younger commercial-glazing LLC at TX/AR border. Educational + railing specialty. Earlier-window owner — not classic coaster. DEPRIORITIZE for retiring-owner thesis but watch for 10-year hold."
+  },
+  {
+    "spine_index": 76,
+    "legal_name": "All Glass",
+    "dba_name": "All Glass",
+    "address": "3411 Old Jacksboro Hwy",
+    "city": "Wichita Falls",
+    "county": "Wichita",
+    "state": "TX",
+    "zip": "76302",
+    "website": null,
+    "year_established": 2004,
+    "years_in_business": 22,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Wichita Falls operating entity per Facebook + Yellow Pages cross-ref)",
+    "is_distressed": false,
+    "distress_reasons": ["no_website"],
+    "owner_name": "Mike & Janice LaBrie",
+    "owner_age_estimate": 67,
+    "owner_age_source": "founder_pair_40yr_combined_industry_experience_+_22yr_tenure",
+    "owner_tenure_years": 22,
+    "family_owner_pair": true,
+    "estimated_employee_count": 7,
+    "employee_count_basis": "no website + family pair LaBrie operating Wichita Falls SMB — small 5-10 FTE",
+    "service_mix": "commercial + residential + storefront",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "no_website",
+        "evidence": "No company website — Facebook + Yellow Pages only",
+        "weight": "high"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone-only intake model", "weight": "moderate" },
+      {
+        "tell": "owner_age_high",
+        "evidence": "Founder pair with 40 years combined pre-experience + 22-year tenure, both likely mid-60s+",
+        "weight": "high"
+      },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Husband-wife operator pair in small market",
+        "weight": "moderate"
+      },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Generalist commercial + residential + storefront",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": null,
+      "verified_via": "no team page; LaBrie pair only owners disclosed"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.facebook.com/allglasswf/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "Mike-Janice-LaBrie", "address"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "PRIME coasting target. No website + husband-wife LaBrie pair operating since 2004 with 40yr combined industry pre-experience — strong retirement profile. Wichita Falls is isolated North Texas market. Small but high-conviction succession candidate."
+  },
+  {
+    "spine_index": 77,
+    "legal_name": "Ace Glass & Mirror",
+    "dba_name": "Ace Glass & Mirror",
+    "address": "716 S. Twin City Hwy",
+    "city": "Nederland",
+    "county": "Jefferson",
+    "state": "TX",
+    "zip": "77627",
+    "website": "https://aceglassandmirror.com/",
+    "phone": "(409) 724-0223",
+    "year_established": 1984,
+    "years_in_business": 42,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Nederland operating entity, Chamber Business of the Year)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Mark & Cindy Stratton",
+    "owner_age_estimate": 67,
+    "owner_age_source": "founder_pair_age_25_at_1984_+_42yr_tenure",
+    "owner_tenure_years": 42,
+    "family_owner_pair": true,
+    "estimated_employee_count": 18,
+    "employee_count_basis": "auto + residential + commercial + industrial-marine + tinting + windstorm-certified Golden Triangle ~15-22 FTE",
+    "service_mix": "mixed (auto + residential + commercial + industrial-marine + tinting + windstorm-certified)",
+    "gana_member": false,
+    "is_commercial_glazier": true,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "long_tenured_founder_pair",
+        "evidence": "42 years, Mark & Cindy Stratton both likely mid-60s+",
+        "weight": "high"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (409) 724-0223 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Six service categories generalist",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "family glass legacy across relatives (grandfather Jan Jacinto / uncle Alamo PA / uncle Dixie Orange) but no in-company successor"
+    },
+    "data_sources": [
+      {
+        "url": "https://aceglassandmirror.com/about-us/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "Stratton-family", "windstorm-certified"]
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "PRIME candidate. 42-year Stratton husband-wife pair near 67. Industrial-marine + windstorm-certified is sticky Gulf-Coast niche (petrochemical Beaumont/Port Arthur corridor). Family has multi-generation glass roots — but no in-company successor."
+  },
+  {
+    "spine_index": 78,
+    "legal_name": "Alamo Glass of Port Arthur Inc",
+    "dba_name": "Alamo Glass of Port Arthur",
+    "address": "5220 West Parkway Street",
+    "city": "Groves",
+    "county": "Jefferson",
+    "state": "TX",
+    "zip": "77619",
+    "website": "https://www.alamoglassportarthur.com/",
+    "phone": "(409) 962-0289",
+    "year_established": 1949,
+    "years_in_business": 77,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX Inc., 77-year Jefferson County)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_age_estimate": 63,
+    "owner_age_source": "77yr_entity_likely_3rd-gen_owner",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 16,
+    "employee_count_basis": "auto + residential + commercial Port Arthur/Beaumont/Orange Golden Triangle ~14-22 FTE",
+    "service_mix": "mixed (auto + residential + commercial)",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      { "tell": "long_tenured_family", "evidence": "77 years operating", "weight": "moderate" },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (409) 962-0289 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Auto + residential + commercial generalist",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "77-year tenure implies multi-generation"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.alamoglassportarthur.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "founded_year", "family-owned", "services"]
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "77-year Port Arthur/Beaumont/Orange operator. Distinct from Alamo Glass Austin and Alamo Glass & Mirror Dallas. Multi-generation Golden Triangle brand — connected to Ace Glass & Mirror via Stratton family lineage. Solid mid-size succession candidate."
+  },
+  {
+    "spine_index": 79,
+    "legal_name": "Romero's Glass Co",
+    "dba_name": "Romero's Glass",
+    "city": "Port Arthur",
+    "county": "Jefferson",
+    "state": "TX",
+    "website": "https://www.romerosglass.com/",
+    "year_established": 1971,
+    "years_in_business": 55,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Port Arthur operating entity)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Romero family (eponymous)",
+    "owner_age_estimate": 70,
+    "owner_age_source": "founder_age_25_at_1971_+_55yr_tenure",
+    "owner_tenure_years": 55,
+    "family_owner_pair": true,
+    "estimated_employee_count": 11,
+    "employee_count_basis": "residential + auto + commercial-storefront + heavy-equipment Port Arthur SMB ~9-14 FTE",
+    "service_mix": "residential + auto + commercial-storefront + heavy-equipment",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      { "tell": "long_tenured_founder", "evidence": "55 years, founder ~70", "weight": "high" },
+      {
+        "tell": "yext_placeholder_address",
+        "evidence": "Address/phone use Yext placeholders — site neglect",
+        "weight": "moderate"
+      },
+      { "tell": "brochure_website", "evidence": "Static information site", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "Romero eponymous, no successor named"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.romerosglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "tenure"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "55-year Romero family Port Arthur. Founder ~70. Yext placeholders on site suggest disengaged owner-marketing. Heavy-equipment glass niche adds petrochemical industrial cap. High-conviction coasting profile."
+  },
+  {
+    "spine_index": 80,
+    "legal_name": "Bedford Glass & Mirror Co.",
+    "dba_name": "Bedford Glass & Mirror",
+    "address": "1815 Bedford Rd",
+    "city": "Bedford",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76021",
+    "website": "http://www.bedfordglass.net/",
+    "year_established": 1962,
+    "years_in_business": 64,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Bedford operating entity, BBB-confirmed)",
+    "is_distressed": false,
+    "distress_reasons": ["site_econnrefused"],
+    "owner_name": null,
+    "owner_age_estimate": 65,
+    "owner_age_source": "64yr_entity_2nd-gen_owner_estimate",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 11,
+    "employee_count_basis": "residential + commercial + shower + mirror + window-repair Bedford/HEB area SMB ~9-14 FTE",
+    "service_mix": "residential + commercial + shower + mirror + window-repair",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      { "tell": "long_tenured_family", "evidence": "64 years operating", "weight": "moderate" },
+      {
+        "tell": "site_unreachable",
+        "evidence": "http:// (not https://) site ECONNREFUSED at fetch — strong neglect signal",
+        "weight": "high"
+      },
+      { "tell": "phone_only_intake", "evidence": "BBB profile-led discovery", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "64-year tenure + BBB family-owned confirmation"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.bbb.org/us/tx/bedford/profile/window-glass/bedford-glass-mirror-0825-97060042",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned-BBB-confirmed"]
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "PRIME coasting target. 64-year Bedford (HEB mid-cities Tarrant) family operator. Website ECONNREFUSED at fetch + http-only — strong neglect signal. Multi-generation succession with current generation likely mid-60s."
+  },
+  {
+    "spine_index": 81,
+    "legal_name": "Lake Highlands Glass & Mirror",
+    "dba_name": "Lake Highlands Glass & Mirror",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "website": null,
+    "phone": "(214) 460-4628",
+    "year_established": null,
+    "years_in_business": null,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller default — small family operator per Facebook listing",
+    "is_distressed": false,
+    "distress_reasons": ["no_website"],
+    "owner_name": null,
+    "owner_age_estimate": 64,
+    "owner_age_source": "no_website_+_small_family_operator_proxy",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "estimated_employee_count": 5,
+    "employee_count_basis": "no website + small family op + neighborhood-named brand — likely 3-7 FTE",
+    "service_mix": "residential + commercial + mirror (no auto)",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "no_website",
+        "evidence": "No company website at fetch — Facebook only",
+        "weight": "high"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (214) 460-4628 only",
+        "weight": "moderate"
+      },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Small family op, neighborhood-only",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_specialization",
+        "evidence": "Generalist residential + commercial + mirror",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "no team disclosure"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.facebook.com/people/Lake-Highlands-Glass-Mirror/100057298875894/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["city", "family-owned"]
+      }
+    ],
+    "data_completeness": 0.42,
+    "notes": "Tiny North Dallas (Lake Highlands neighborhood) operator. No website. Family-owned per Facebook. Too small for institutional buyer but classic coasting owner-operator. DEPRIORITIZE size-wise — fit for hands-on operator buy."
+  },
+  {
+    "spine_index": 82,
+    "legal_name": "Keller Glass and Mirror",
+    "dba_name": "Keller Glass and Mirror",
+    "city": "Keller",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76248",
+    "website": "https://kellerglassandmirror.com/",
+    "year_established": 1983,
+    "years_in_business": 43,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (Keller operating entity, Yellow Pages cross-ref)",
+    "is_distressed": false,
+    "distress_reasons": ["website_account_suspended"],
+    "owner_name": null,
+    "owner_age_estimate": 67,
+    "owner_age_source": "founder_age_25_at_1983_+_43yr_tenure",
+    "owner_tenure_years": 43,
+    "family_owner_pair": true,
+    "estimated_employee_count": 9,
+    "employee_count_basis": "Keller/Southlake/Westlake/Grapevine/Trophy Club affluent NW Tarrant residential + shower + commercial-storefront + custom + mirror ~7-12 FTE",
+    "service_mix": "residential + shower + commercial-storefront + custom-glass + mirror",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      { "tell": "long_tenured_founder", "evidence": "43 years, founder ~67", "weight": "high" },
+      {
+        "tell": "website_account_suspended",
+        "evidence": "Site returned 'account suspended' at WebFetch — high neglect signal",
+        "weight": "high"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone-only at Yellow Pages", "weight": "low" },
+      {
+        "tell": "owner_installer_model",
+        "evidence": "Single-location affluent NW Tarrant SMB",
+        "weight": "moderate"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "family-owned per Yellow Pages, no team page accessible"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.yellowpages.com/keller-tx/mip/keller-glass-and-mirror-4357398",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founded_year", "family-owned", "services"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "PRIME coasting target. Website account suspended (hosting bill unpaid signal) + 43-year founder ~67 + affluent NW Tarrant geography (Keller/Southlake/Westlake/Grapevine/Trophy Club — premium residential glass market). Strong succession candidate but verify entity active before contact."
+  },
+  {
+    "spine_index": 83,
+    "legal_name": "Lewisville Glass & Mirror Company",
+    "dba_name": "Lewisville Glass & Mirror",
+    "city": "Lewisville",
+    "county": "Denton",
+    "state": "TX",
+    "website": "https://lewisvilleglassandmirror.com/",
+    "year_established": 2004,
+    "year_established_source": "20+ years cited (spine) — inferred ~2004",
+    "years_in_business": 22,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller default — site redirect at fetch",
+    "is_distressed": false,
+    "distress_reasons": ["site_redirect_anomaly"],
+    "owner_name": null,
+    "owner_age_estimate": 56,
+    "owner_age_source": "tenure_proxy_22yr_founder_age_34_at_start",
+    "owner_tenure_years": 22,
+    "family_owner_pair": null,
+    "estimated_employee_count": 8,
+    "employee_count_basis": "storefront + commercial + residential + mirror + office Lewisville SMB ~6-11 FTE",
+    "service_mix": "storefront + commercial + residential + mirror + office",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "site_redirect_anomaly",
+        "evidence": "Site redirected at fetch — possible ambiguity with Arrow Mirror & Glass (DBA LD Lewisville Glass)",
+        "weight": "moderate"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone/contact lookup via BBB", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": null,
+      "verified_via": "BBB profile only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.bbb.org/us/tx/lewisville/profile/window-glass/lewisville-glass-mirror-company-0875-19003778",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "city", "tenure"]
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "FLAG — site redirect anomaly + adjacent Arrow Mirror & Glass operator (DBA LD Lewisville Glass) creates identity confusion. Confirm independence/entity status in diligence. 22-year tenure with mid-50s owner not classic retirement window."
+  },
+  {
+    "spine_index": 84,
+    "legal_name": "Fashion Glass & Mirror",
+    "dba_name": "Fashion Glass & Mirror",
+    "address": "585 Interstate 35 E",
+    "city": "DeSoto",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75115",
+    "website": "https://www.fashionglass.com/",
+    "phone": "(972) 223-8936",
+    "year_established": 1973,
+    "years_in_business": 53,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX entity, 53-year multi-location)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Larry Jaynes (founder)",
+    "owner_age_estimate": 75,
+    "owner_age_source": "founder_age_22_at_1973_+_53yr_tenure",
+    "owner_tenure_years": 53,
+    "family_owner_pair": true,
+    "estimated_employee_count": 42,
+    "employee_count_basis": "multi-location DFW + Houston-Katy + Lockhart specialty shower/mirror manufacturer-installer — large 35-55 FTE",
+    "service_mix": "shower (frameless + framed) + mirror + cabinet-glass + decorative",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "founder_age_high",
+        "evidence": "Founder Larry Jaynes still active after 53 years — well past traditional retirement",
+        "weight": "high"
+      },
+      {
+        "tell": "multi-location_no_online_quote",
+        "evidence": "Three locations but no e-commerce / online quote — old-school sales floor",
+        "weight": "moderate"
+      },
+      {
+        "tell": "phone_only_intake",
+        "evidence": "Phone (972) 223-8936 prominent",
+        "weight": "low"
+      },
+      {
+        "tell": "specialty_niche",
+        "evidence": "Shower/mirror specialty — high margin but founder-dependent",
+        "weight": "moderate"
+      }
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "founder Larry Jaynes named, no successor disclosed"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.fashionglass.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["DBA", "founded_year", "founder-Larry-Jaynes", "multi-location"]
+      }
+    ],
+    "data_completeness": 0.78,
+    "notes": "PRIME high-conviction target. 53-year founder Larry Jaynes still active at ~75 — strong succession urgency. Multi-location specialty (DFW + Houston-Katy + Lockhart) frameless shower / decorative mirror = high-margin niche. Largest of batch 2."
+  },
+  {
+    "spine_index": 85,
+    "legal_name": "Davis Family Glass Company LLC",
+    "dba_name": "Davis Glass Company Amarillo",
+    "address": "14601 Soncy Rd",
+    "city": "Amarillo",
+    "county": "Randall",
+    "state": "TX",
+    "website": "https://www.davisglassamarillo.com/",
+    "year_established": 2014,
+    "year_established_source": "10+ years cited (spine via Bizapedia) — inferred ~2014",
+    "years_in_business": 12,
+    "entity_status": "Active",
+    "entity_status_source": "Comptroller (TX LLC per Bizapedia)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Davis family",
+    "owner_age_estimate": 52,
+    "owner_age_source": "LLC_founder_2014_typical_age_40_at_founding",
+    "owner_tenure_years": 12,
+    "family_owner_pair": true,
+    "estimated_employee_count": 9,
+    "employee_count_basis": "auto + residential + commercial + shower + heavy-equipment Randall County (south Amarillo) SMB ~7-12 FTE",
+    "service_mix": "mixed (auto + residential + commercial + shower + heavy-equipment)",
+    "gana_member": false,
+    "is_commercial_glazier": false,
+    "is_architectural_capable": false,
+    "coasting_tells": [
+      {
+        "tell": "younger_operator",
+        "evidence": "12-year LLC, owner likely early 50s — NOT classic coasting",
+        "weight": "low"
+      },
+      {
+        "tell": "broad_mix_no_specialization",
+        "evidence": "Five service categories generalist",
+        "weight": "low"
+      },
+      { "tell": "phone_only_intake", "evidence": "Phone/zip need enrichment", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "younger LLC; family-named brand"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.bizapedia.com/tx/davis-family-glass-company-llc.html",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "city", "family-owned"]
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "Younger Amarillo (Randall — south of Potter) operator behind City Glass and Clayton's. 12-year LLC + ~52-year-old owner. Heavy-equipment niche but not classic coaster. DEPRIORITIZE for retiring-owner thesis."
+  }
+]

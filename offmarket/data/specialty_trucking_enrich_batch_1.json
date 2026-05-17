@@ -1,0 +1,1833 @@
+[
+  {
+    "spine_index": 0,
+    "legal_name": "Texas Chrome Transport Inc",
+    "dba_name": "Texas Chrome Transport",
+    "city": "Atascosa",
+    "county": "Atascosa",
+    "state": "TX",
+    "zip": "78002",
+    "website": "https://teamtct.com/",
+    "phone": "(210) 622-5757",
+    "year_established": 2011,
+    "years_in_business": 15,
+    "owner_name": "Family-owned (unverified specific principal)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified_no_named_principal",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 41,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "frac_sand",
+    "customer_mix": "Eagle Ford + Permian frac sand to oilfield completion crews; B2B services contracts",
+    "fmcsa_dot_number": "USDOT 2203204",
+    "mc_number": "MC-764505",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2011,
+    "coasting_tells": [
+      "Self-describes as 'family-owned business...over 45 years of logistics excellence' — owner-generation language suggests aging founder",
+      "Fleet sized DOWN from 200+ tractors to 41 between 2024-2025 — major contraction (74% reduction)",
+      "Frac sand market downturn 2024-2025 stress signal — owner may be tired",
+      "South Texas Atascosa County HQ — small-town operator, low marketing visibility",
+      "No online quote portal visible",
+      "No public mention of Samsara/KeepTruckin/Geotab telematics",
+      "Phone-forward customer intake (210 area code)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "implied_family_owned_language",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2203204",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      { "source": "website", "url": "https://teamtct.com/", "fetched_at": "2026-05-16T00:00:00Z" }
+    ],
+    "data_completeness": 0.65,
+    "notes": "DISTRESS/MOTIVATION FLAG: 74% fleet contraction 2024-2025 (200→41 tractors) is the dominant signal. Either owner is downsizing toward exit OR business is in oilfield-cycle distress. Specialty (frac sand) is volatile — Eagle Ford-Permian crash exposure. Family-owned framing + 15yr tenure + post-peak posture = motivated seller profile. Verify founder identity via TX Comptroller."
+  },
+  {
+    "spine_index": 1,
+    "legal_name": "Palletized Trucking Inc",
+    "dba_name": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77009",
+    "website": "https://www.palletizedtrucking.com/",
+    "phone": "(713) 225-3303",
+    "year_established": 1969,
+    "years_in_business": 57,
+    "owner_name": "Family-owned (Palletized family, unverified specific principal)",
+    "owner_age_estimate": 70,
+    "owner_age_source": "career_tenure_proxy_57yr_founding_family",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "300_plus_trailers_per_website_trucks_unknown",
+    "specialty": "heavy_haul",
+    "customer_mix": "oilfield rig moves, project cargo, oversized industrial equipment, refinery/petrochemical",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified_no_dot",
+    "safety_rating": null,
+    "founded_year": 1969,
+    "coasting_tells": [
+      "57 years of operation — 2nd or 3rd generation likely",
+      "Inner-loop Houston Collingsworth Street address — pre-1970 industrial corridor",
+      "Oversized/overweight specialty (rig moves, project cargo) — niche pre-internet expertise",
+      "USDOT not on landing page — flag for verification (older carriers sometimes operate under multiple authorities)",
+      "Family-owned since 1969 — aging founder cohort",
+      "No online quote / phone-forward (713-225 area code)",
+      "Houston Heights / Near Northside neighborhood — pre-2000 industrial site"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "highly_likely_57yr_tenure",
+      "family_successor_present": "likely_but_unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.palletizedtrucking.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "STRONG A-TIER profile: 57-year tenure, family-owned, heavy-haul/project cargo niche (high barrier to entry, defensible customers). Need to verify USDOT and power-unit count vs trailer count (300+ trailers is unusually high — possible trailer pool for owner-operators). Houston Ship Channel/petrochem customer concentration is high-value. Generational succession question is the gate."
+  },
+  {
+    "spine_index": 2,
+    "legal_name": "Basse Truck Line Inc",
+    "dba_name": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78219",
+    "website": "https://www.bassetrucklinesanantoniotx.com/",
+    "phone": "(210) 226-3167",
+    "year_established": 1929,
+    "years_in_business": 97,
+    "owner_name": "Basse family (unverified specific principal)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified_likely_3rd_4th_generation",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "fmcsa_usdot_active_count_unverified",
+    "specialty": "heavy_haul",
+    "customer_mix": "South TX border (San Antonio, Del Rio, Laredo, Eagle Pass) FTL/LTL with hazmat — cross-border, oilfield, industrial",
+    "fmcsa_dot_number": "USDOT 136511",
+    "mc_number": "MC-011603",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1929,
+    "coasting_tells": [
+      "97-year tenure — one of the oldest TX trucking carriers (pre-Depression founding)",
+      "Low MC number (MC-011603) confirms pre-1950 ICC authority — original tier of regulated carriers",
+      "Family-owned since 1929 — potentially 3rd/4th generation now",
+      "Domain name format (companyname-city-state.com) is mid-2000s SEO pattern — likely dated site",
+      "East Side San Antonio (Belgium Ln, 78219) industrial corridor — pre-1980 site",
+      "Specialty mix (border crossings, hazmat, FTL/LTL multi-trade) — generalist legacy carrier",
+      "Phone-forward customer intake (210-226 — old SA exchange)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "highly_likely_97yr_tenure",
+      "family_successor_present": "likely_3rd_4th_gen_unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.bassetrucklinesanantoniotx.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "EXCEPTIONAL TENURE: 97 years, MC# under 12,000 (pre-1950 ICC authority). Highly defensible border-region niche with hazmat capacity. Cross-generation succession question is the key — at 97 years, family may be at inflection point. Need power-unit count from FMCSA SAFER for size-band fit."
+  },
+  {
+    "spine_index": 3,
+    "legal_name": "McLo HotShot Service LLC",
+    "dba_name": null,
+    "city": "Odessa",
+    "county": "Ector",
+    "state": "TX",
+    "zip": "79765",
+    "website": "https://www.mclohotshot.com/",
+    "phone": "(432) 888-7625",
+    "year_established": 2013,
+    "years_in_business": 13,
+    "owner_name": "McLo family (unverified specific principal)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified_no_dot_listed",
+    "specialty": "hot_shot",
+    "customer_mix": "Permian Basin oilfield, construction, manufacturing — short-haul expedited",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2013,
+    "coasting_tells": [
+      "Owner-operator structure suggests solo-owner-driver model",
+      "Permian-only service area — single-basin concentration",
+      "13yr tenure — relatively new vs A-tier 25+ tenure target"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.mclohotshot.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "SMALLER PROFILE: Hot shot owner-operator format with 13yr tenure. Below A-tier age band (25yr+) but plausible B-tier if Permian crude/completion cycle motivates exit. Need USDOT, owner age, fleet size to grade properly."
+  },
+  {
+    "spine_index": 4,
+    "legal_name": "Hotshot Texas (Joe Burns Trucking)",
+    "dba_name": "Humble Hotshot Trucking",
+    "city": "Humble",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "website": "https://hotshottexas.net/",
+    "phone": "(281) 227-2777",
+    "year_established": 1974,
+    "years_in_business": 52,
+    "owner_name": "Joe Burns",
+    "owner_age_estimate": 75,
+    "owner_age_source": "founder_named_1974_plus_minimum_23yr_at_founding",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified_no_dot_listed",
+    "specialty": "hot_shot",
+    "customer_mix": "LTL/hot shot + forklift delivery; Houston-area + nationwide",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1974,
+    "coasting_tells": [
+      "Founder Joe Burns still named/active 52 years later — owner ~75 (min age 23 in 1974)",
+      "52-year solo-owner tenure aligned with A-tier coasting profile",
+      ".net domain (not .com) — older internet vintage",
+      "Humble, TX (NE Houston) — pre-2000 trucking yard region",
+      "Named after founder — classic solo-owner legacy brand",
+      "Forklift delivery niche — pre-2000 era specialty",
+      "281-227 exchange (older Houston area code variant)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://hotshottexas.net/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "A-TIER OWNER-AGE PROFILE: Founder Joe Burns named, 52yr tenure → owner ~75. Aging-out signal strong. Need fleet size + USDOT to confirm size-band fit. Hot shot + forklift delivery niche is mature/defensible."
+  },
+  {
+    "spine_index": 5,
+    "legal_name": "Earth Haulers Inc",
+    "dba_name": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "website": "https://www.earthhaulers.com/",
+    "phone": "(817) 540-2777",
+    "year_established": 1977,
+    "years_in_business": 49,
+    "owner_name": "unverified",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified_no_named_principal",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified_no_dot_listed",
+    "specialty": "aggregate",
+    "customer_mix": "DFW metroplex topsoil/aggregate/sand hauling — construction + landscape supply",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1977,
+    "coasting_tells": [
+      "49yr tenure — A-tier founder cohort age",
+      "Fort Worth aggregate hauler — DFW construction boom dependency",
+      "Family-owned status not stated on website (unverified)",
+      "No platform affiliation found",
+      "817-540 exchange (mid-Cities)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.earthhaulers.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "B-TIER candidate. 49yr tenure suggests founder is aging out. Need owner name from comptroller + fleet size to grade. Aggregate hauling in DFW corridor = stable customer demand."
+  },
+  {
+    "spine_index": 6,
+    "legal_name": "Panhandle Express LLC",
+    "dba_name": null,
+    "city": "Hereford",
+    "county": "Deaf Smith",
+    "state": "TX",
+    "zip": "79045",
+    "website": "https://panhandleexpress.com/",
+    "phone": "(806) 364-2021",
+    "year_established": 2007,
+    "years_in_business": 19,
+    "owner_name": "unverified",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 102,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "agricultural",
+    "customer_mix": "Texas Panhandle grain/feed agricultural hauling — feed lots, grain elevators, processors",
+    "fmcsa_dot_number": "USDOT 1592966",
+    "mc_number": "MC-589383",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2007,
+    "coasting_tells": [
+      "19yr tenure — below 25yr A-tier band",
+      "102 power units — EXCEEDS 50-truck size band cap",
+      "Texas Panhandle grain hub focus"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1592966",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://panhandleexpress.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "SIZE EXCLUDE: 102 power units exceeds 50-truck target band. Flag for cross-vertical visibility only — buyer thesis prefers 10-50 trucks for sponsor-LBO economics. Drop from buyer-ready set."
+  },
+  {
+    "spine_index": 7,
+    "legal_name": "Plains Transportation (Plains Livestock Transportation)",
+    "dba_name": null,
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": "79118",
+    "website": "https://www.plainstransportation.com/about/",
+    "phone": "(806) 372-9290",
+    "year_established": 1973,
+    "years_in_business": 53,
+    "owner_name": "Gripp family (founder Dick Gripp 1968/incorporated 1973)",
+    "owner_age_estimate": 80,
+    "owner_age_source": "founder_named_dick_gripp_1968_min_25yr_at_founding",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified_no_dot_listed",
+    "specialty": "refrigerated",
+    "customer_mix": "originally cattle hauling (1968-2000s); now refrigerated — Texas Panhandle dairy/meat",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1973,
+    "coasting_tells": [
+      "Founder Dick Gripp named — likely 80+ if still living",
+      "53yr tenure under same family",
+      "TXTA member (Texas Trucking Association) — established carrier",
+      "Pivot from cattle to refrigerated suggests strategic adaptation but classic family progression",
+      "Amarillo HQ — Panhandle dairy/meat corridor (Plainview/Hereford/Friona milk belt)",
+      "Truckload Carriers Assoc + SmartWay member — mainstream affiliations, not platform aggregator",
+      "806-372 exchange (Amarillo central)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "implied_gripp_family_2nd_gen_likely",
+      "family_successor_present": "likely_unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.plainstransportation.com/about/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "A-TIER tenure (53yr) + named founder Dick Gripp + refrigerated specialty (food-grade, defensible) + TX Panhandle dairy belt = strong profile. Need fleet size confirmation + current operating principal (2nd gen Gripp?)."
+  },
+  {
+    "spine_index": 8,
+    "legal_name": "Reliant Field Services Inc",
+    "dba_name": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77057",
+    "website": "https://www.reliantfieldservice.com/",
+    "phone": "(713) 621-2502",
+    "year_established": 2011,
+    "years_in_business": 15,
+    "owner_name": "unverified",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 42,
+    "fleet_size_source": "website_42_trucks_47_trailers",
+    "specialty": "crude_oil",
+    "customer_mix": "Eagle Ford + Permian crude oil, condensate, fuel, LPG hauling — Three Rivers + Corpus Christi yards",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2011,
+    "coasting_tells": [
+      "15yr tenure — below 25yr A-tier band",
+      "Class A office address (Fountain View Drive Suite 420) — corporate HQ format, not classic family yard",
+      "42 trucks — within target band",
+      "Family-ownership not stated on website",
+      "Dual-basin Eagle Ford + Permian = diversified intra-Texas crude exposure"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unlikely_15yr_tenure",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.reliantfieldservice.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "B-TIER candidate. 15yr tenure too short for A-tier coasting profile. Corporate office suite format suggests professional management vs solo-founder. Verify ownership structure — if PE-owned/sponsor-backed, drop from set."
+  },
+  {
+    "spine_index": 9,
+    "legal_name": "Hondo Resources LLC",
+    "dba_name": null,
+    "city": "Midland",
+    "county": "Midland",
+    "state": "TX",
+    "zip": "79706",
+    "website": "https://hondotx.com/",
+    "phone": "(325) 812-1636",
+    "year_established": 2023,
+    "years_in_business": 3,
+    "owner_name": "Brayden Woods (CEO)",
+    "owner_age_estimate": 35,
+    "owner_age_source": "founder_named_2023_likely_young_founder",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 10,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "oil_gas_water_hauling",
+    "customer_mix": "Permian Basin water transfer / produced water hauling",
+    "fmcsa_dot_number": "USDOT 4111063",
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2023,
+    "coasting_tells": [
+      "3yr tenure — FAR below 25yr A-tier band",
+      "Active M&A roll-up posture (acquired Hyflow Water Solutions Dec 2025) — BUYER, not seller",
+      "Young founder Brayden Woods — generational language ('fathers can pass on to sons') is aspirational not retroactive"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "no_too_new",
+      "family_successor_present": "no",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=4111063",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      { "source": "website", "url": "https://hondotx.com/", "fetched_at": "2026-05-16T00:00:00Z" }
+    ],
+    "data_completeness": 0.5,
+    "notes": "EXCLUDE FROM BUYER SET: <3yr tenure, active acquirer (roll-up posture), young founder. Does NOT match coasting/aging-out thesis. Flag as competitive M&A actor in Permian water space — useful intel but not target."
+  },
+  {
+    "spine_index": 10,
+    "legal_name": "Big Star Transportation LLC",
+    "dba_name": null,
+    "city": "Oklahoma City",
+    "county": null,
+    "state": "OK",
+    "zip": "73142",
+    "website": "https://www.bigstartrucking.com/",
+    "phone": "(877) 782-7340",
+    "year_established": 1999,
+    "years_in_business": 27,
+    "owner_name": "Link Clifton (founder)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "founder_named_1999_min_38yr_at_founding",
+    "entity_status": "oklahoma_not_tx_comptroller_jurisdiction",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 200,
+    "fleet_size_source": "website_200_plus_trucks",
+    "specialty": "crude_oil",
+    "customer_mix": "Eagle Ford + Permian crude oil hauling (TX division since 2011); also OK ops",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1999,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.bigstartrucking.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "EXCLUDE FROM BUYER SET: 200+ trucks far exceeds 10-50 size band. HQ Oklahoma City (not TX-domiciled). Listed only for visibility. DROP."
+  },
+  {
+    "spine_index": 11,
+    "legal_name": "Tim Ables Trucking",
+    "dba_name": null,
+    "city": "Kilgore",
+    "county": "Rusk",
+    "state": "TX",
+    "zip": "75662",
+    "website": "https://timables.floridawebcompany.com/",
+    "phone": "(903) 986-2078",
+    "year_established": 1988,
+    "years_in_business": 38,
+    "owner_name": "Tim Ables (founder)",
+    "owner_age_estimate": 70,
+    "owner_age_source": "founder_named_1988_min_30yr_at_founding",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 100,
+    "fleet_size_source": "website_100_plus_trucks",
+    "specialty": "frac_sand",
+    "customer_mix": "East TX frac sand to oilfield (TX, LA, OK, AR)",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1988,
+    "coasting_tells": [
+      "Founder Tim Ables still named — owner ~70",
+      "38yr tenure",
+      "Website hosted on floridawebcompany.com — third-party hosted, signals low tech investment",
+      "Grew from 2 trucks to 100+ — bootstrap growth, classic founder operation",
+      "East TX Kilgore HQ — oil patch heritage",
+      "903-986 exchange (East TX rural)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://timables.floridawebcompany.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "SIZE FLAG: 100+ trucks exceeds 50-truck buyer cap. A-tier coasting profile otherwise (named founder, 38yr tenure, dated website, no platform affiliation). Flag for cross-vertical visibility only — likely too large for buyer thesis."
+  },
+  {
+    "spine_index": 12,
+    "legal_name": "The Glover Company",
+    "dba_name": null,
+    "city": "Ozona",
+    "county": "Crockett",
+    "state": "TX",
+    "zip": "76943",
+    "website": "https://www.theglovercompany.com/",
+    "phone": "(325) 392-2561",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Mike Glover",
+    "owner_age_estimate": null,
+    "owner_age_source": "founder_named_no_founding_year",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified",
+    "specialty": "heavy_haul",
+    "customer_mix": "Permian Basin + Concho Valley oilfield (Ozona, Midland, Odessa, Big Lake, San Angelo) — winch trucks, floats, dropdecks",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": null,
+    "coasting_tells": [
+      "Owner Mike Glover named — solo-owner profile",
+      "Ozona TX (Crockett County) — small West TX town, low marketing visibility",
+      "Owner-operated suggests family-style operation",
+      "325-392 exchange (West TX rural)",
+      "Founding year not stated on website — unverified tenure"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.theglovercompany.com/winch-trucks-general-trucking",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "Solo-owner small-town Permian heavy-haul operator. Need USDOT, fleet size, founding year, and Mike Glover age verification. If 25yr+ tenure with named founder near retirement, strong A-tier candidate."
+  },
+  {
+    "spine_index": 13,
+    "legal_name": "GM Oilfield & Trucking Services LLC",
+    "dba_name": null,
+    "city": "Midland",
+    "county": "Midland",
+    "state": "TX",
+    "zip": "79706",
+    "website": "https://gmtruckingmidland.com/",
+    "phone": "(432) 934-6525",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "unverified",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified",
+    "specialty": "oil_gas_water_hauling",
+    "customer_mix": "Permian Basin (Midland, Odessa, Andrews, Big Lake, Pecos) — vacuum trucks, pump/kill trucks, hot oilers",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": null,
+    "coasting_tells": [
+      "Family-ownership not stated",
+      "Founding year not stated",
+      "Pump/kill/hot oiler niche — specialty oilfield equipment fleet"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://gmtruckingmidland.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.25,
+    "notes": "INSUFFICIENT DATA — needs USDOT, owner name, founding year, fleet size before grading. Permian oilfield specialty (vacuum, pump/kill, hot oilers) is defensible niche if profile fits."
+  },
+  {
+    "spine_index": 14,
+    "legal_name": "Diamond Pump and Transport",
+    "dba_name": null,
+    "city": "Odessa",
+    "county": "Ector",
+    "state": "TX",
+    "zip": "79766",
+    "website": "https://www.diamondpumptransport.com/",
+    "phone": "(432) 203-0264",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "unverified",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified",
+    "specialty": "oil_gas_water_hauling",
+    "customer_mix": "Permian Basin Midland + Pecos oilfield — pump trucks, hot oil, acid pumping, water hauling, tank cleaning",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": null,
+    "coasting_tells": [
+      "'Locally owned and operated' language — solo-owner profile",
+      "Permian-only service area",
+      "Specialty Permian oilfield services (acid pumping, tank cleaning)",
+      "432-203 exchange (Odessa)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.diamondpumptransport.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Insufficient data — needs USDOT + owner + founding year. 'Locally owned' framing fits independent profile; Permian acid/tank cleaning niche is defensible. Worth deeper enrichment in batch 2."
+  },
+  {
+    "spine_index": 15,
+    "legal_name": "Tiki Trucking LP",
+    "dba_name": null,
+    "city": "Leander",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78641",
+    "website": "https://www.tikitrucking.com/",
+    "phone": "(512) 422-8851",
+    "year_established": 2006,
+    "years_in_business": 20,
+    "owner_name": "Tiki family (unverified specific principal)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified",
+    "specialty": "aggregate",
+    "customer_mix": "Austin metro area — aggregate (sand, gravel, rock, asphalt, scrap, non-haz waste) + dry bulk/pneumatic (cement, fly ash)",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2006,
+    "coasting_tells": [
+      "20yr tenure — borderline A-tier",
+      "'Passed on from generation to generation' language suggests 2nd-gen succession discussion",
+      "Family-owned 2006 — likely 1st gen founder still active",
+      "Austin metro aggregate hauler — fast-growing market"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "implied_generational_language",
+      "family_successor_present": "implied_unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.tikitrucking.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "B-TIER. Austin metro aggregate + pneumatic dry bulk is high-demand niche. 20yr tenure with generational succession language. Need fleet size + USDOT + owner age."
+  },
+  {
+    "spine_index": 16,
+    "legal_name": "Redbird Trucking LLC",
+    "dba_name": "Texas Pneumatic Trucking",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "website": "https://redbirdtrucking.com/",
+    "phone": "(512) 392-3550",
+    "year_established": 2012,
+    "years_in_business": 14,
+    "owner_name": "unverified",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified",
+    "specialty": "chemical",
+    "customer_mix": "pneumatic dry-bulk: cement, fly ash, lime, mineral fill — Central TX",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2012,
+    "coasting_tells": [
+      "14yr tenure — below A-tier band",
+      "DBE certified — sole proprietor or small-business federal cert",
+      "Late-model Kenworth/Freightliner fleet (modernization signal)",
+      "Family ownership not stated"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unlikely_14yr_tenure",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://redbirdtrucking.com/pneumatic-trucking/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "C-TIER. 14yr tenure + modernized fleet + in-house maintenance suggests active investment, not coasting. Doesn't match aging-out thesis. DROP unless succession-event signal emerges."
+  },
+  {
+    "spine_index": 17,
+    "legal_name": "Dee King Trucking",
+    "dba_name": null,
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": null,
+    "website": "https://deekingtrucking.com/",
+    "phone": "(806) 670-9537",
+    "year_established": 1992,
+    "years_in_business": 34,
+    "owner_name": "King family (Dee King and family)",
+    "owner_age_estimate": null,
+    "owner_age_source": "founder_named_1992_likely_late_50s_early_60s",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified",
+    "specialty": "agricultural",
+    "customer_mix": "Texas Panhandle cattle hauling — feedyards to Tyson Foods slaughter plants",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1992,
+    "coasting_tells": [
+      "Founder name 'Dee King' in business name — solo-founder legacy brand",
+      "34yr tenure",
+      "Family-owned and operated since 1992",
+      "Mixed fleet of company drivers + owner-operators (hybrid model)",
+      "Tyson Foods customer concentration — single major buyer",
+      "806-670 exchange (Amarillo)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "implied_king_family",
+      "family_successor_present": "likely_unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://deekingtrucking.com/cattle-division/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "A-TIER candidate. 34yr family tenure + named founder Dee King + cattle/livestock niche (defensible, USDA-cycle stable) + Panhandle dairy/cattle hub. Need fleet size + Dee King age verification."
+  },
+  {
+    "spine_index": 18,
+    "legal_name": "Texas Premier Resources LLC",
+    "dba_name": "Premier Tank Truck Service",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77098",
+    "website": "https://www.premiertanktrucks.com/",
+    "phone": "(713) 524-8550",
+    "year_established": 2003,
+    "years_in_business": 23,
+    "owner_name": "unverified family",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified",
+    "specialty": "oil_gas_water_hauling",
+    "customer_mix": "Eagle Ford (Karnes City yard) + Barnett (Hillsboro yard) — frac fluid, drilling mud, production water",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2003,
+    "coasting_tells": [
+      "23yr tenure — borderline A-tier",
+      "Family-owned since 2003",
+      "Inner-loop Houston HQ (Bartlett St 77098) — Upper Kirby area office",
+      "Dual-basin Eagle Ford + Barnett shale exposure",
+      "713-524 exchange (older Houston)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.premiertanktrucks.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "B-TIER. 23yr family tenure + Eagle Ford/Barnett fluid hauling. Need fleet size + owner identity. Frac fluid/drilling mud niche is defensible but cycle-exposed."
+  },
+  {
+    "spine_index": 19,
+    "legal_name": "Luckey Truck Company Inc",
+    "dba_name": null,
+    "city": "Devine",
+    "county": "Medina",
+    "state": "TX",
+    "zip": "78016",
+    "website": "https://www.luckeyfeedlot.com/",
+    "phone": "(830) 665-3624",
+    "year_established": 1982,
+    "years_in_business": 44,
+    "owner_name": "Luckey family (associated with Luckey Custom Feedlot Inc)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 6,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "agricultural",
+    "customer_mix": "Cattle, feed liquids, bulk grains, cotton seed hulls, DDG — South TX feedlot integration",
+    "fmcsa_dot_number": "USDOT 1613477",
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1982,
+    "coasting_tells": [
+      "44yr tenure under Luckey family",
+      "Vertically integrated with feedlot (Luckey Custom Feedlot Inc)",
+      "6 power units — BELOW 10-truck band, very small operator",
+      "8 trailers + 6 drivers — owner-operator scale",
+      "Domain is feedlot domain, not trucking — trucking is ancillary"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "implied_luckey_family_44yr",
+      "family_successor_present": "likely_unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1613477",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://www.luckeyfeedlot.com/cattle-commodity-hauling",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "SIZE FLAG: 6 trucks below 10-truck band. 44yr family tenure but trucking is ancillary to feedlot. Likely sold WITH feedlot, not standalone. DROP unless feedlot+trucking package fits buyer thesis."
+  },
+  {
+    "spine_index": 20,
+    "legal_name": "JPI Trucking LLC",
+    "dba_name": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77076",
+    "website": "https://www.jpitrucking.com/",
+    "phone": "(832) 740-4901",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "unverified family",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified",
+    "specialty": "aggregate",
+    "customer_mix": "Houston metro — select fill, sand, crushed concrete, topsoil, aggregates for construction/civil",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": null,
+    "coasting_tells": [
+      "'Over a decade of experience' — 10-15yr tenure (below A-tier 25yr)",
+      "Family-owned hauling/trucking",
+      "HUB-certified (state of TX historically underutilized business cert)",
+      "Frels Ln Houston (77076) — North Houston industrial corridor",
+      "832-740 exchange (newer Houston cellular)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.jpitrucking.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "INSUFFICIENT DATA. ~10-15yr tenure + family-owned + HUB-certified. C-TIER pending founding year and owner verification."
+  },
+  {
+    "spine_index": 21,
+    "legal_name": "Mission Petroleum Carriers Inc",
+    "dba_name": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "website": "https://www.mipe.com/",
+    "phone": "(713) 943-8250",
+    "year_established": 1965,
+    "years_in_business": 61,
+    "owner_name": "Privately owned (unverified specific principal)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified",
+    "specialty": "crude_oil",
+    "customer_mix": "Crude oil + petroleum transport across TX",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1965,
+    "coasting_tells": [
+      "61yr tenure — A-tier deep heritage carrier",
+      "Privately owned (independent)",
+      "San Antonio HQ + Houston phone (713-943) — bi-city ops",
+      "'Long employee tenure noted' — stable workforce signal",
+      "mipe.com — short legacy domain"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "highly_likely_61yr_tenure",
+      "family_successor_present": "likely_unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      { "source": "website", "url": "https://www.mipe.com/", "fetched_at": "2026-05-16T00:00:00Z" }
+    ],
+    "data_completeness": 0.45,
+    "notes": "A-TIER tenure (61yr) + privately owned + crude oil specialty. Need USDOT + fleet size + ownership identity. Could be PE-owned or family — must verify. Long employee tenure suggests classic family operation."
+  },
+  {
+    "spine_index": 22,
+    "legal_name": "Indeca Crude Xpress LLC",
+    "dba_name": null,
+    "city": "Odessa",
+    "county": "Ector",
+    "state": "TX",
+    "zip": "79765",
+    "website": "https://indecacrudexpress.com/",
+    "phone": "(432) 563-2749",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "unverified",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 98,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "crude_oil",
+    "customer_mix": "Permian Basin crude oil hauling — Shell midstream relationship (Goal Zero awards 2017/2019/2020)",
+    "fmcsa_dot_number": "USDOT 2978046",
+    "mc_number": "MC-12529",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": null,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2978046",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "SIZE FLAG: 98 power units exceeds 50-truck buyer cap. Strong customer relationship (Shell) but too large for sponsor-LBO economics. Flag for visibility only."
+  },
+  {
+    "spine_index": 23,
+    "legal_name": "PennCo Transport Inc",
+    "dba_name": null,
+    "city": "Saginaw",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76179",
+    "website": "https://www.penncotransport.com/",
+    "phone": "(817) 439-2094",
+    "year_established": 2004,
+    "years_in_business": 22,
+    "owner_name": "unverified family",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 15,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "crude_oil",
+    "customer_mix": "Crude oil + condensate hauling across TX",
+    "fmcsa_dot_number": "USDOT 1292521",
+    "mc_number": "MC-502424",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2004,
+    "coasting_tells": [
+      "22yr tenure — borderline A-tier",
+      "Family-owned since 2004",
+      "15 power units — RIGHT IN target band (10-50)",
+      "Long employee retention emphasis (mentioned in independence notes)",
+      "ISN + Veriforce safety members (good safety posture)",
+      "Saginaw TX (Fort Worth NW suburb) industrial area",
+      "817-439 exchange"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1292521",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://www.penncotransport.com/about-pennco-oil-transport",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "B+ TIER. 22yr family tenure + 15-truck fleet (sweet spot size band) + long employee retention. Need owner age + identity. Strong B-tier candidate; if 1st gen founder is near retirement, upgrades to A-tier."
+  },
+  {
+    "spine_index": 24,
+    "legal_name": "Texas Hot Oilers Inc",
+    "dba_name": null,
+    "city": "Giddings",
+    "county": "Lee",
+    "state": "TX",
+    "zip": "78942",
+    "website": "https://texashotoilers.com/",
+    "phone": "(979) 542-9341",
+    "year_established": 1982,
+    "years_in_business": 44,
+    "owner_name": "unverified family",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 28,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "oil_gas_water_hauling",
+    "customer_mix": "Intrastate hazmat — hot oil units + frac water heater across Giddings, Madisonville, Caldwell, Tilden",
+    "fmcsa_dot_number": "USDOT 1938349",
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1982,
+    "coasting_tells": [
+      "44yr family tenure",
+      "Family-owned and operated since 1982",
+      "28 power units — solid mid-band target",
+      "Hot oil units niche — defensible Eagle Ford/Austin Chalk specialty",
+      "Multi-yard rural TX footprint (Giddings, Madisonville, Caldwell, Tilden) — pre-2000 oilfield infrastructure",
+      "Intrastate hazmat certified (not interstate) — TX-only operator",
+      "979-542 exchange (Brazos/Lee County area)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "likely_44yr_tenure",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1938349",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://texashotoilers.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "A-TIER candidate. 44yr family tenure + 28-truck fleet (perfect size band) + Eagle Ford hot oil specialty + multi-yard footprint. Need owner identity + age. Strong target for buyer thesis."
+  },
+  {
+    "spine_index": 25,
+    "legal_name": "Western Dairy Transport LLC",
+    "dba_name": null,
+    "city": "Stephenville",
+    "county": "Erath",
+    "state": "TX",
+    "zip": "76401",
+    "website": "https://www.wdtmilk.com/",
+    "phone": "(254) 918-5100",
+    "year_established": 1967,
+    "years_in_business": 59,
+    "owner_name": "Honeycutt family (founder)",
+    "owner_age_estimate": null,
+    "owner_age_source": "founder_family_named",
+    "entity_status": "missouri_hq_not_tx_comptroller_jurisdiction",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified",
+    "specialty": "refrigerated",
+    "customer_mix": "Bulk food-grade/milk hauling nationwide — TX terminal Stephenville (Erath dairy belt)",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1967,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_gen_present": "likely",
+      "family_successor_present": "likely",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.wdtmilk.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "JURISDICTION FLAG: Corporate HQ Cabool, MO — NOT TX-domiciled. TX terminal Stephenville is operational outpost. DROP from TX-domiciled filter; out-of-state ownership profile."
+  },
+  {
+    "spine_index": 26,
+    "legal_name": "Winburn Milk Company Inc",
+    "dba_name": null,
+    "city": "Sulphur Springs",
+    "county": "Hopkins",
+    "state": "TX",
+    "zip": "75482",
+    "website": null,
+    "phone": "(903) 885-2340",
+    "year_established": 1967,
+    "years_in_business": 59,
+    "owner_name": "C.D. Ballard (President); daughters Tammy Ballard Acker + Terri Monday",
+    "owner_age_estimate": 75,
+    "owner_age_source": "ballard_acquired_1980s_likely_30s_plus_45yrs",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 29,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "refrigerated",
+    "customer_mix": "Refrigerated milk transport since 1967 — Sulphur Springs (Hopkins County dairy belt) + Erath County operations",
+    "fmcsa_dot_number": "USDOT 109646",
+    "mc_number": "MC-401614",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1967,
+    "coasting_tells": [
+      "Founder-era Ballard family acquired 1980s — 45yrs of family ownership",
+      "C.D. Ballard President — likely 75+",
+      "2nd-gen daughters Tammy Ballard Acker + Terri Monday active",
+      "USDOT 109646 — extremely low number (pre-1970 ICC authority)",
+      "29 power units in Sulphur Springs entity (broader Ballard Enterprises ~70-100 across Hopkins + Erath)",
+      "No public website — phone-only customer intake",
+      "59yr tenure (1967 founding under prior owners; Ballard since 1980s)",
+      "903-885 exchange (NE TX rural)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "verified_two_daughters_active",
+      "family_successor_present": "verified_named_succession_path",
+      "verified_via": "trade_press_bulk_transporter"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=109646",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "trade_press",
+        "url": "https://www.bulktransporter.com/archive/article/21649520/texas-milk-transporter-responds-to-shifting-market-production",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "A-TIER STRONG. Named founder C.D. Ballard (~75), 2nd-gen daughters identified (Tammy Ballard Acker, Terri Monday), 29-truck fleet (right in band), 59yr tenure, refrigerated milk niche (defensible, USDA-regulated). NO website = old-school. Active succession could mean: (1) handing off internally, OR (2) considering sale after 2nd gen takes over. Highest priority target so far."
+  },
+  {
+    "spine_index": 27,
+    "legal_name": "Houston Refrigerated Logistics Inc",
+    "dba_name": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77012",
+    "website": "https://hrlcorp.com/",
+    "phone": "(713) 928-9940",
+    "year_established": 2013,
+    "years_in_business": 13,
+    "owner_name": "Dennis & Julie Carroll",
+    "owner_age_estimate": null,
+    "owner_age_source": "founder_named_2013",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": null,
+    "fleet_size_source": "unverified",
+    "specialty": "refrigerated",
+    "customer_mix": "Primarily 3PL/warehousing + cross-dock — refrigerated trucking secondary",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2013,
+    "coasting_tells": [
+      "13yr tenure — below A-tier band",
+      "Founders Dennis & Julie Carroll named",
+      "Family-owned since 2013"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unlikely_13yr_tenure",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      { "source": "website", "url": "https://hrlcorp.com/", "fetched_at": "2026-05-16T00:00:00Z" }
+    ],
+    "data_completeness": 0.4,
+    "notes": "NAICS FLAG: 3PL/warehousing primary, trucking secondary (likely NAICS 484+493). Doesn't match pure specialty trucking thesis. Spine flagged for NAICS verification. DROP unless trucking-only carve-out possible."
+  },
+  {
+    "spine_index": 28,
+    "legal_name": "JA Harris Trucking Inc",
+    "dba_name": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77029",
+    "website": "https://www.jaharristrucking.com/",
+    "phone": "(713) 672-6900",
+    "year_established": 2004,
+    "years_in_business": 22,
+    "owner_name": "Jaime A. Harris + Rogelio Gonzalez (founders); Joe Harris (joined 2005)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "founder_named_2004_likely_late_30s_plus_22yr",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 15,
+    "fleet_size_source": "fmcsa_safer_15_power_units_website_30_units_discrepancy",
+    "specialty": "heavy_haul",
+    "customer_mix": "Houston Ship Channel oilfield/heavy equipment + petrochemical — flatbeds, double drops, stretch, RGN, vans, gooseneck, container",
+    "fmcsa_dot_number": "USDOT 1257879",
+    "mc_number": "MC-492527",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2004,
+    "coasting_tells": [
+      "Named founders Jaime A. Harris + Rogelio Gonzalez",
+      "Family-led — Joe Harris joined 2005 (likely 2nd-gen son or brother)",
+      "22yr tenure — borderline A-tier",
+      "Diverse trailer types (flatbeds, double drops, stretch, RGN, vans, gooseneck, container) — specialized capability",
+      "Ship Channel customer concentration (Lyons Ave Houston 77029)",
+      "Fleet count discrepancy SAFER 15 vs website 30 — needs verification",
+      "713-672 exchange (older Houston)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "verified_joe_harris_joined_2005",
+      "family_successor_present": "verified_family_led",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1257879",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://www.jaharristrucking.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "B+ TIER. 22yr tenure, named founders, family-led with verified 2nd-gen Joe Harris joined 2005, heavy-haul Houston Ship Channel niche. Fleet size 15-30 (sweet spot). Verify CSA + entity status."
+  },
+  {
+    "spine_index": 29,
+    "legal_name": "Dunagin Transport Company",
+    "dba_name": null,
+    "city": "Merkel",
+    "county": "Taylor",
+    "state": "TX",
+    "zip": "79536",
+    "website": "https://dunagintransport.com/",
+    "phone": "(325) 928-5253",
+    "year_established": 1981,
+    "years_in_business": 45,
+    "owner_name": "Dunagin family (unverified specific principal)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 120,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "oil_gas_water_hauling",
+    "customer_mix": "TX/NM/OK fluid + waste mgmt for O&G — Big Country + Permian",
+    "fmcsa_dot_number": "USDOT 2077527",
+    "mc_number": "MC-1090446",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1981,
+    "coasting_tells": ["Family-owned 40+ years", "Merkel TX (Taylor County) — small West TX town"],
+    "successor_indicators": {
+      "second_gen_present": "likely_45yr_tenure",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2077527",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://dunagintransport.com/about/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "SIZE FLAG: 120 power units EXCEEDS 50-truck buyer cap. Strong A-tier coasting profile otherwise (45yr family tenure, Big Country/Permian fluid hauling). Flag for cross-vertical visibility only."
+  },
+  {
+    "spine_index": 30,
+    "legal_name": "Ahrens Brothers Transport Inc",
+    "dba_name": null,
+    "city": "Brenham",
+    "county": "Washington",
+    "state": "TX",
+    "zip": null,
+    "website": "https://ahrensbrotherstransport.com/",
+    "phone": "(979) 836-1660",
+    "year_established": 1978,
+    "years_in_business": 48,
+    "owner_name": "Ahrens family (brothers — unverified specific principals)",
+    "owner_age_estimate": null,
+    "owner_age_source": "founder_brothers_1978_likely_70s",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 19,
+    "fleet_size_source": "website_19_power_units_22_LPG_trailers_6_asphalt",
+    "specialty": "chemical",
+    "customer_mix": "LPG + asphalt oil transport TX/OK/LA",
+    "fmcsa_dot_number": null,
+    "mc_number": null,
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1978,
+    "coasting_tells": [
+      "Founder generation 'Brothers' — likely 70s now after 48yr tenure",
+      "Brenham TX (Washington County) — small-town brewery town between Houston and Austin",
+      "48yr tenure",
+      "19 power units + 22 LPG tank trailers (specialty trailer-heavy fleet)",
+      "Niche LPG + asphalt — barrier to entry (hazmat, specialty trailers)",
+      "979-836 exchange (Brazos Valley area)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "likely_48yr_tenure",
+      "family_successor_present": "implied_unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://ahrensbrotherstransport.com/trucking-services/lpg-transport/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "A-TIER candidate. 48yr 'Ahrens Brothers' founding cohort = aging-out signal. 19 power units (perfect size band). LPG+asphalt specialty (hazmat barriers). Need owner identity + 2nd-gen succession status. Strong target."
+  },
+  {
+    "spine_index": 31,
+    "legal_name": "HD5 Transport LLC",
+    "dba_name": null,
+    "city": "Dripping Springs",
+    "county": "Hays",
+    "state": "TX",
+    "zip": "78620",
+    "website": "https://hd5transport.com/",
+    "phone": "(512) 848-5891",
+    "year_established": 2011,
+    "years_in_business": 15,
+    "owner_name": "unverified",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 15,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "chemical",
+    "customer_mix": "NGL/Y-grade/raw mix/propane hauling — Central TX (Dripping Springs HQ + San Angelo office)",
+    "fmcsa_dot_number": "USDOT 2175920",
+    "mc_number": "MC-861620",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 2011,
+    "coasting_tells": [
+      "15yr tenure — below A-tier band",
+      "'Family-orientated' culture but ownership not stated",
+      "15 power units — perfect target band size",
+      "NGL/Y-grade specialty (midstream chemicals)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unlikely_15yr_tenure",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2175920",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://hd5transport.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "B/C-TIER. 15yr tenure too young for A-tier coasting. NGL specialty is defensible. Need owner identity to assess succession motivation."
+  },
+  {
+    "spine_index": 32,
+    "legal_name": "Pulido Transport LP",
+    "dba_name": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77049",
+    "website": "https://pulidotransport.com/",
+    "phone": "(832) 243-4658",
+    "year_established": 1995,
+    "years_in_business": 31,
+    "owner_name": "Joe Pulido (founder, former truck driver)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "founder_named_1995_former_driver_likely_35_at_founding",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 29,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "chemical",
+    "customer_mix": "Lubricants, waxes, chemicals — lower 48 states; terminals Houston + Beaumont",
+    "fmcsa_dot_number": "USDOT 1345468",
+    "mc_number": "MC-553176",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": 1995,
+    "coasting_tells": [
+      "Founder Joe Pulido named — owner-operator driver-turned-owner profile",
+      "31yr solo-founder tenure",
+      "Owner likely ~65 (former truck driver who started carrier at ~35)",
+      "29 power units — perfect target band",
+      "Asset-based (owns equipment) — defensible model",
+      "Beaumont + Houston terminals — petrochemical corridor",
+      "832-243 exchange (newer Houston cellular)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1345468",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://pulidotransport.com/about-us/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "A-TIER STRONG. Named founder Joe Pulido (former truck driver, classic solo-founder narrative), 31yr tenure, 29-truck fleet (perfect band), Houston/Beaumont petrochem corridor. ~65 owner age = aging-out window. Asset-based + chemical specialty = defensible. Need succession verification (any Pulido children active?)."
+  },
+  {
+    "spine_index": 33,
+    "legal_name": "Forerunner Ag LLC",
+    "dba_name": null,
+    "city": "Hereford",
+    "county": "Deaf Smith",
+    "state": "TX",
+    "zip": "79045",
+    "website": "https://www.forerunnerag.com/",
+    "phone": "(806) 346-2092",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "James Barrett (associated)",
+    "owner_age_estimate": null,
+    "owner_age_source": "associated_principal_named",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 27,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "agricultural",
+    "customer_mix": "Livestock, grain, feed, hay, dry bulk — Texas Panhandle (~two decades)",
+    "fmcsa_dot_number": "USDOT 732476",
+    "mc_number": "MC-736283",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": null,
+    "coasting_tells": [
+      "Nearly two decades in Texas Panhandle (~20yr tenure)",
+      "27 power units — solid target band",
+      "James Barrett associated",
+      "No platform affiliation; independent",
+      "Diversified ag commodities (livestock + grain + feed + hay + dry bulk)",
+      "806-346 exchange (Hereford TX Panhandle)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=732476",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "directory",
+        "url": "https://www.livestocknetwork.com/Cattle_Trucking_Companies/companyDetails.cfm?user_company_id=15758",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "B-TIER. 20yr Panhandle ag tenure + 27-truck fleet (perfect band) + independent + diversified ag mix. Need founding year + James Barrett verification. If approaching A-tier age, upgrade."
+  },
+  {
+    "spine_index": 34,
+    "legal_name": "Texas Milk Transport Inc",
+    "dba_name": null,
+    "city": "Dimmitt",
+    "county": "Castro",
+    "state": "TX",
+    "zip": "79027",
+    "website": null,
+    "phone": "(559) 786-0920",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "unverified",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 19,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "refrigerated",
+    "customer_mix": "General freight + milk hauling — Texas Panhandle dairy belt (Castro County)",
+    "fmcsa_dot_number": "USDOT 1945776",
+    "mc_number": "MC-1635867",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": null,
+    "coasting_tells": [
+      "Phone area code 559 (California) — flag for ownership jurisdiction (CA-controlled?)",
+      "19 power units — perfect band",
+      "1.47M annual mileage",
+      "No public website — phone-only",
+      "Castro County (Dimmitt) — heart of Panhandle dairy belt"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1945776",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "JURISDICTION FLAG: 559 (CA) phone area code suggests CA-controlled ownership. TX domicile but possibly out-of-state principal. Verify before targeting — could be sister entity to CA dairy hauler. DROP if confirmed CA-controlled."
+  },
+  {
+    "spine_index": 35,
+    "legal_name": "Texas Oilfield Transportation Inc",
+    "dba_name": null,
+    "city": "Mt Enterprise",
+    "county": "Rusk",
+    "state": "TX",
+    "zip": "75681",
+    "website": null,
+    "phone": "(903) 822-3320",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "unverified",
+    "owner_age_estimate": null,
+    "owner_age_source": "unverified",
+    "entity_status": "unknown_not_verified_comptroller",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "fleet_size": 20,
+    "fleet_size_source": "fmcsa_safer_power_units",
+    "specialty": "heavy_haul",
+    "customer_mix": "General freight, logs/lumber, oilfield equipment, water well — East TX (Mt Enterprise, Rusk County)",
+    "fmcsa_dot_number": "USDOT 2166062",
+    "mc_number": "MC-753778",
+    "csa_score_concern": null,
+    "csa_score_source": "unverified",
+    "safety_rating": null,
+    "founded_year": null,
+    "coasting_tells": [
+      "20 power units + 4 employee drivers — heavily owner-operator dependent",
+      "Mt Enterprise TX (Rusk County) — small East TX oil patch town",
+      "No website — phone-only customer intake",
+      "Diverse cargo mix (lumber + oilfield + water well) — generalist East TX carrier",
+      "903-822 exchange (East TX rural)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": "unverified",
+      "family_successor_present": "unverified",
+      "verified_via": "spine_independence_notes_2026-05-16"
+    },
+    "data_sources": [
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2166062",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "Insufficient data — no website, no owner identity, no founding year. 20-truck fleet (perfect band) + East TX rural location + no online presence = classic coasting profile signals BUT cannot verify without TX Comptroller lookup and SOS records. Worth deeper enrichment in batch 2."
+  }
+]

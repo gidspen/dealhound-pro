@@ -1,0 +1,137 @@
+{
+  "run_label": "dental-tx-spike-2026-05-12",
+  "model_version": "offmarket-dental-4layer-v0.1",
+  "generated_at": "2026-05-12T19:11:21.075592Z",
+  "vertical": "dental",
+  "geography": "TX \u2014 Harris/Dallas/Travis priority (with adjacent Fort Bend/Brazoria suburbs kept as lower-priority rows)",
+  "weights": {
+    "layer1": 0.3,
+    "layer2": 0.25,
+    "layer3": 0.3,
+    "layer4": 0.15
+  },
+  "gates": [
+    "distressed -> final<=25, D_pass",
+    "<5 yrs in business -> final<=35"
+  ],
+  "tier_thresholds": {
+    "A_acquire_self": "final>=78 AND L1>=70 AND L3>=65 AND not distressed AND confidence in (medium,high)",
+    "B_forward": "final 60-77 (or >=78 but failing an A gate)",
+    "C_watch": "final 45-59",
+    "D_pass": "final<45 OR distressed OR <5 yrs in business pushing it below 45"
+  },
+  "business_count": 60,
+  "tier_counts": {
+    "B_forward": 23,
+    "C_watch": 30,
+    "D_pass": 3,
+    "A_acquire_self": 4
+  },
+  "county_counts": {
+    "Harris": 26,
+    "Brazoria": 1,
+    "Fort Bend": 3,
+    "Dallas": 19,
+    "Travis": 7,
+    "Williamson": 2,
+    "Montgomery": 2
+  },
+  "distressed_excluded_count": 0,
+  "supabase": {
+    "project_id": "gggmmjvwbbfvrtjjlqvr",
+    "schema": "offmarket",
+    "status": "WRITTEN",
+    "reason": "Loaded into the offmarket schema by the main session via the Supabase MCP (the autonomous sub-agent's execute_sql call was permission-denied; the main session's was not). score_runs id = 38f59bde-c3a1-5f3a-8434-e0f6ef717462; 60 businesses, 213 business_signals, 60 business_scores. Re-runnable via offmarket/gen_load_sql.py (deterministic uuid5 keys) + the ordered SQL chunks under offmarket/data/sql/.",
+    "intended_score_runs_row": {
+      "run_label": "dental-tx-spike-2026-05-12",
+      "model_version": "offmarket-dental-4layer-v0.1",
+      "weights": {
+        "layer1": 0.3,
+        "layer2": 0.25,
+        "layer3": 0.3,
+        "layer4": 0.15
+      },
+      "vertical": "dental",
+      "geography": "TX \u2014 Harris/Dallas/Travis priority",
+      "notes": "Spike run; 4-layer composite model; distressed excluded by filter; owner-age via OV65/license-tenure proxy."
+    },
+    "score_run_id": "38f59bde-c3a1-5f3a-8434-e0f6ef717462"
+  },
+  "owner_age_methodology": "Owner ages are PROXY estimates (mostly license-tenure / dental-school-grad-year + ~26, occasionally 'in practice since' statements). No OV65 homestead exemptions, voter-file DOB, or DMV data were obtained \u2014 county appraisal district bulk files (HCAD/DCAD/TCAD) and the TX voter file/DMV bulk data were not retrievable in this sandbox (see blocked sources). Voter-file/DMV are authorized for Gideon's private research only; none were used. Every owner_age_estimate carries an owner_age_source tag.",
+  "sources": [
+    {
+      "name": "TX State Board of Dental Examiners (TSBDE) licensee lists / public license search",
+      "url": "https://tsbde.texas.gov/resources/licensee-lists/ ; https://ls.tsbde.texas.gov/",
+      "status": "BLOCKED",
+      "error": "HTTP 403 Forbidden to the automated fetcher (known sandbox quirk for .gov domains). Could not download the bulk licensee CSVs or hit the license-verification search. License numbers and exact original-issue dates are therefore MISSING; license tenure is proxied from dental-school grad year / 'in practice since' statements found via web search."
+    },
+    {
+      "name": "Texas Open Data Portal (data.texas.gov / Socrata) \u2014 TSBDE 'DataSet-01 All Licenses' (tm3v-pfq9)",
+      "url": "https://data.texas.gov/resource/tm3v-pfq9.json",
+      "status": "BLOCKED",
+      "error": "HTTP 403 Forbidden to the automated fetcher and host not in the bash allowlist. Could not pull the Socrata JSON. Dataset existence confirmed via search (dev.socrata.com foundry page)."
+    },
+    {
+      "name": "Google web search (search index summaries)",
+      "url": "n/a",
+      "status": "WORKED",
+      "error": "Primary discovery + enrichment channel. Returned practice names, addresses, owner-dentist names, founding/grad years, hours, and review counts via indexed snippets of practice websites and directory profiles. Could not retrieve full page HTML for most practice sites (see below)."
+    },
+    {
+      "name": "Practice websites (direct fetch)",
+      "url": "various",
+      "status": "PARTIAL/BLOCKED",
+      "error": "Most small-practice sites returned HTTP 403 to the WebFetch tool (bot protection / Cloudflare). Facts were instead recovered from the Google index summaries of those same pages and from directory profiles (Yelp, Healthgrades, WebMD, US News, ADA Find-a-Dentist, NPI registry)."
+    },
+    {
+      "name": "Yelp / Healthgrades / WebMD / US News / ADA / NPI profiles",
+      "url": "various",
+      "status": "WORKED (via search summaries)",
+      "error": "Used for review counts, addresses, license-holder confirmation, and NPI numbers (e.g., Leffall NPI 1144399460, Riley NPI on ADA). Surfaced through search; direct page fetches not consistently available."
+    },
+    {
+      "name": "TX Comptroller Taxable Entity Search",
+      "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search.php",
+      "status": "NOT ATTEMPTED / EXPECTED-BLOCKED",
+      "error": "Not reached in this run \u2014 .gov fetches are 403'd in this sandbox. Franchise-tax status (a distress signal) and SOS file numbers / officers are therefore UNVERIFIED. No business was confirmed forfeited; equally, none was confirmed in good standing via the Comptroller."
+    },
+    {
+      "name": "TX SOSDirect (formation dates, assumed-name certs)",
+      "url": "https://www.sos.state.tx.us/",
+      "status": "NOT ATTEMPTED",
+      "error": "Paid ($1/search) and .gov; not reached. entity_formation_date and entity_sos_file_number are MISSING for all rows."
+    },
+    {
+      "name": "County Appraisal Districts \u2014 HCAD (Harris), DCAD (Dallas), TCAD (Travis) \u2014 OV65 homestead exemptions / bulk PDATA",
+      "url": "https://hcad.org ; https://www.dallascad.org ; https://traviscad.org",
+      "status": "NOT OBTAINED",
+      "error": "Bulk appraisal-roll downloads not retrievable in this sandbox; the single cleanest legal owner-age signal (OV65 self-declared 65+) is therefore unavailable. Owner ages fall back to license-tenure proxies. A productionized skill must ingest these bulk files."
+    },
+    {
+      "name": "Texas voter file (DOB) / Texas DMV",
+      "url": "n/a",
+      "status": "NOT OBTAINED (and restricted-use)",
+      "error": "Not retrievable here, and restricted: Election Code limits voter-roll use to non-commercial/election purposes; DPPA limits DMV use. Authorized for Gideon's private research only \u2014 none used in this run; no PII from these sources appears anywhere in the outputs."
+    },
+    {
+      "name": "Wayback Machine (web.archive.org) \u2014 website staleness",
+      "url": "https://web.archive.org/",
+      "status": "NOT SYSTEMATICALLY USED",
+      "error": "Not run per-practice in this pass due to turn budget; 'dated web brand' L3 signals are inferred from the practices' current presentation rather than from snapshot diffs. A productionized skill should run Wayback diffs per practice."
+    },
+    {
+      "name": "WHOIS / Indeed-Glassdoor hiring / Facebook-Instagram recency / county deed records",
+      "url": "n/a",
+      "status": "NOT USED",
+      "error": "Out of scope for this turn-budget-limited pass. These are listed in the 'what the productionized skill needs' section of REPORT.md."
+    }
+  ],
+  "limitations": [
+    "Owner ages are proxies (license tenure / grad year), not OV65/voter/DMV \u2014 confidence is correspondingly 'medium' at best for the strongest rows and 'low' for many.",
+    "License numbers, franchise-tax status, and SoS formation data are missing because the relevant .gov / data.texas.gov endpoints 403'd the sandbox fetcher.",
+    "Distress screening is therefore incomplete: no Comptroller forfeiture check, no county-clerk lien/judgment search, no PACER. Rows are flagged distressed only if a public signal surfaced; none did, so all rows are treated as non-distressed \u2014 a human should run the Comptroller + county-clerk checks before acting on any lead.",
+    "Sample size (~60 practices) is a proof-run, not a market census. Several rows outside the top 3 counties (Fort Bend, Brazoria) are kept but deprioritized.",
+    "Some 'practices' may turn out to be group/DSO-owned rather than single-owner \u2014 Fort Bend Dental and Dallas Dental Specialists in particular need an ownership check.",
+    "Supabase: written to schema `offmarket` (project gggmmjvwbbfvrtjjlqvr) \u2014 businesses/business_signals/business_scores/score_runs all populated; query via the offmarket.scored_targets view."
+  ]
+}

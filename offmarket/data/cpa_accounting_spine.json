@@ -1,0 +1,2907 @@
+[
+  {
+    "_meta": {
+      "vertical": "cpa_accounting",
+      "naics": "541211",
+      "state": "TX",
+      "run_label": "cpa-accounting-tx-spine-2026-Q2",
+      "fetched_at": "2026-05-16T16:35:00Z",
+      "spine_source_primary": "TX State Board of Public Accountancy (TSBPA) Firm Lookup at https://portal.tsbpa.texas.gov/php/fpl/frmlookup.php — confirmed reachable but POST-form gated; NOT directly fetchable via WebFetch. License-level data deferred to enrich phase.",
+      "spine_sources_used": [
+        "Live firm-website fetches (primary verification per skill non-negotiable §2)",
+        "Google search for `<city> CPA firm independent established`",
+        "TXCPA chapter directory references"
+      ],
+      "sources_blocked": [
+        {
+          "source": "TSBPA Firm Lookup POST form",
+          "url": "https://portal.tsbpa.texas.gov/php/fpl/frmlookup.php",
+          "reason": "Form requires POST with cFirmName/cCity/cState/cZip params; WebFetch is GET-only. Each firm in this spine has been verified via direct firm-website fetch instead. License-number capture deferred to enrich phase (which can use a browser-tool MCP)."
+        },
+        {
+          "source": "Clifford, Ross, Raudenbush & Cooper LLC website",
+          "url": "https://crrc-cpa.com/",
+          "reason": "HTTP 403 Forbidden; firm exists per multiple secondary refs but not directly verified. Excluded from spine."
+        },
+        {
+          "source": "Sugar Land CPA",
+          "url": "http://www.sugarlandcpa.com/",
+          "reason": "TLS cert altname invalid; site unreachable. Excluded."
+        },
+        {
+          "source": "PriceKubecka",
+          "url": "https://www.pricekubecka.com/",
+          "reason": "HTTP 403 Forbidden. Excluded."
+        },
+        {
+          "source": "Brown & Company PLLC",
+          "url": "http://cbrowncpa.com/",
+          "reason": "TLS cert altname invalid. Excluded."
+        }
+      ],
+      "exclusions_applied": [
+        "Big 4 (PwC, Deloitte, EY, KPMG)",
+        "Top 25 national firms (BDO USA, Grant Thornton, RSM US, Crowe, EisnerAmper, Marcum, Withum, CohnReznick, Aprio, Citrin Cooperman, Schellman, Wipfli, Plante Moran, Baker Tilly, Cherry Bekaert, CBIZ, Carr Riggs & Ingram, Haynie & Company multi-state)",
+        "Chain tax-prep (H&R Block, Jackson Hewitt, Liberty Tax)",
+        "Recent national-firm acquisitions (PKF Texas → joined Withum June 2025; APRIO formerly Ridout Barrett)"
+      ],
+      "inclusions_notable": [
+        "PrimeGlobal-affiliated firms (alliance, not owned) INCLUDED with note: Lane Gorman Trubitt LLC",
+        "Russell Bedford International (alliance) INCLUDED with note: PW Associates PLLC",
+        "Padgett-affiliated independents (franchise-style, owner-operated) INCLUDED with note: Albert Okagbue CPA LLC"
+      ],
+      "verified_count": 94,
+      "geography_coverage": {
+        "Houston_metro_Harris_FortBend_Brazoria_Montgomery_Galveston": 36,
+        "DFW_metro_Dallas_Tarrant_Collin_Denton": 28,
+        "Austin_metro_Travis_Williamson_Hays": 7,
+        "San_Antonio_Bexar_Comal": 5,
+        "Tier2_Tyler_Lubbock_Amarillo_Beaumont_CorpusChristi_Midland_ElPaso_WacoTemple_BCS": 18
+      },
+      "next_phase_notes": "Enrich phase MUST: (a) hit TSBPA portal via browser MCP to capture license_number + license_issue_date + license_holder_name per firm; (b) re-verify partner/team page live-fetch (per §2 failure-mode guard) before any A_acquire_self promotion; (c) cross-check Comptroller franchise-tax-active for each entity; (d) flag firms with `not_accepting_new_clients` language (e.g., Wendi M. Stratta CPA PLLC) as elevated succession-trigger."
+    }
+  },
+  {
+    "legal_name": "Melton & Melton, L.L.P.",
+    "dba_name": null,
+    "address": "6002 Rogerdale, Suite 200",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77072",
+    "phone": "(281) 759-1120",
+    "website": "https://melton-melton.com/",
+    "year_established": 1965,
+    "service_mix": "full_service",
+    "partner_count": 3,
+    "partners": [
+      "Todd Selby (Partner, Tax Department, promoted Jan 2026)",
+      "Christy Riley (Partner, Audit Department, promoted Jan 2026)",
+      "Mary Gauss (Partner, Tax Department, promoted Feb 2025)"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://melton-melton.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["year_established", "partners", "service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "60+ years in Houston, no national-firm affiliation visible. Multiple recent internal partner promotions (2025-2026) suggest succession path being built — possibly REDUCES coasting-trigger score."
+  },
+  {
+    "legal_name": "HRSS CPAs",
+    "dba_name": null,
+    "address": "6671 Southwest Fwy, Suite 500",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77074",
+    "phone": "(713) 328-4000",
+    "website": "https://hrss.cpa/",
+    "year_established": 1985,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://hrss.cpa/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["year_established_proxy_40yrs", "service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "70+ professionals, 40+ yrs tenure, named Top 25 Houston firm. Likely too large for solo-owner A-tier but credible B-tier. Enrich phase should pull leadership-team page for actual partner count + ages."
+  },
+  {
+    "legal_name": "Cooper CPA Group, PC",
+    "dba_name": null,
+    "address": "1703 West 12th Street",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77008",
+    "phone": "(713) 243-8590",
+    "website": "https://www.coopercpagroup.com/",
+    "year_established": 2004,
+    "service_mix": "tax_bookkeeping",
+    "partner_count": 1,
+    "partners": ["Gary Cooper (founder/principal)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Gary Cooper",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.coopercpagroup.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["year_established_proxy_20yrs", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA, 20+ yrs. Explicitly offers M&A / Succession Planning to clients — meta succession signal."
+  },
+  {
+    "legal_name": "JAG CPA & Co.",
+    "dba_name": null,
+    "address": "2100 Travis St. Suite 230",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77002",
+    "phone": "(713) 234-5112",
+    "website": "https://jagcpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Joe Gallegos, CPA/CVA (Partner-in-Charge, TX CPA since 2013, CVA 2018)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Joe Gallegos",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://jagcpa.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA founded by ex-Big 4 partner Joe Gallegos. TX license 2013 — only ~12 yrs tenure → likely LOW base-rate score. Younger owner = poor A-tier fit."
+  },
+  {
+    "legal_name": "Kirk CPA Firm PLLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "phone": "(281) 371-6675",
+    "website": "https://kirkcpafirm.com/",
+    "year_established": 1999,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://kirkcpafirm.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["year_established_proxy_25yrs", "service_mix"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "25+ yrs experience per site. Explicitly offers Succession Planning. Address/partner detail not on landing; enrich phase to capture from About page."
+  },
+  {
+    "legal_name": "Bankole, Okoye & Associates, P.C.",
+    "dba_name": "BOA CPAs",
+    "address": "11511 Katy Freeway, Suite 501",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77079",
+    "phone": "(281) 741-7900",
+    "website": "https://www.boacpas.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": ["Abiodun 'Abi' Bankole (founder, per LinkedIn ref)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.boacpas.com/about.htm",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Full-service CPA firm. Two-name partnership (Bankole + Okoye) suggests 2-partner structure. Faith-based + nonprofit niche."
+  },
+  {
+    "legal_name": "Ann Thomas CPA, PC",
+    "dba_name": null,
+    "address": "1120 East NASA Parkway Ste. 108",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77058",
+    "phone": "(281) 333-3848",
+    "website": "https://www.annthomascpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Ann Thomas (owner)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Ann Thomas",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.annthomascpa.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo-named CPA practice. NASA Parkway / League City area. Explicitly mentions estate + succession planning."
+  },
+  {
+    "legal_name": "Howard CPA, LLC",
+    "dba_name": null,
+    "address": "2 Riverway Dr. Suite 1260",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77056",
+    "phone": "(713) 258-5512",
+    "website": "https://www.howardcpallc.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Rebekah Howard (principal)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Rebekah Howard",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.howardcpallc.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo-name CPA. Small-mid biz + nonprofit niche. Founded year not on landing page — enrich."
+  },
+  {
+    "legal_name": "Hooker CPA Firm, PLLC",
+    "dba_name": null,
+    "address": "2656 S Loop W Suite 340",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77054",
+    "phone": "(281) 942-7967",
+    "website": "https://www.hookercpa.com/",
+    "year_established": null,
+    "service_mix": "tax_bookkeeping",
+    "partner_count": 1,
+    "partners": ["Kentrell Hooker (founder, per LinkedIn ref)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.hookercpa.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA. Virtual-first practice — owner likely younger; check tenure in enrich."
+  },
+  {
+    "legal_name": "Lee, Huang & Associates, P.C.",
+    "dba_name": null,
+    "address": "5855 Sovereign Dr, Ste A",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77036",
+    "phone": "(713) 271-9600",
+    "website": "https://www.leehuangcpa.com/",
+    "year_established": 1983,
+    "service_mix": "full_service",
+    "partner_count": 3,
+    "partners": [
+      "Winnie Huang, CPA (Senior Partner)",
+      "Connie Zhang, CPA (Managing Partner)",
+      "Lucy Liu, CPA (Partner)"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.leehuangcpa.com/meet-the-team.php",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["year_established", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "43-yr-old firm. Senior Partner (Huang) likely senior — strong base-rate proxy. Note 'Lee' name is in firm but not in current partner list = partial succession already happened."
+  },
+  {
+    "legal_name": "Polk CPA Firm, PLLC",
+    "dba_name": null,
+    "address": "1502 Augusta Drive, Suite 390",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77057",
+    "phone": "(713) 265-8777",
+    "website": "https://www.polkcpatx.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.polkcpatx.com/family-owned-business-accounting.htm",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Named-principal firm specializing in family-owned business accounting. Multi-generational client orientation suggests senior owner. Founded date not on landing — enrich."
+  },
+  {
+    "legal_name": "Cynthia Bannon CPA PC",
+    "dba_name": null,
+    "address": "1322 Space Park Drive, Suite B133",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77058",
+    "phone": "(832) 492-0208",
+    "website": "https://www.cbannoncpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Cynthia Bannon"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Cynthia Bannon",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.cbannoncpa.com/index.htm",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo-name CPA in Clear Lake / Webster area. Houston SE submarket."
+  },
+  {
+    "legal_name": "Albert Okagbue CPA LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Bellaire",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77401",
+    "phone": "(832) 848-2765",
+    "website": "https://www.okagbuecpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Albert Okagbue (owner)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Albert Okagbue",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.okagbuecpa.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners", "service_mix", "padgett_affiliation"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Padgett franchise affiliate — owner is independent operator using Padgett brand + national-network support. Solo owner. Premium Bellaire location."
+  },
+  {
+    "legal_name": "Brunet, Wolfe & Company, CPAs",
+    "dba_name": null,
+    "address": "24610 Kingsland Blvd",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77494",
+    "phone": "(281) 391-5220",
+    "website": "https://www.bwpcpas.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 2,
+    "partners": ["Brunet (named)", "Wolfe (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.bwpcpas.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Two-name firm in Katy. Year founded not on landing — enrich. Named partners → succession-relevant target."
+  },
+  {
+    "legal_name": "Sheffield, Trackwell & Rapp, LLC",
+    "dba_name": null,
+    "address": "23410 Grand Reserve Dr., Suite 201",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77494",
+    "phone": "(281) 346-1240",
+    "website": "https://strcpafirm.com/",
+    "year_established": 1980,
+    "service_mix": "full_service",
+    "partner_count": 3,
+    "partners": ["Sheffield (named)", "Trackwell (named)", "Rapp (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://strcpafirm.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["year_established_proxy_45yrs", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "45+ yrs experience claim. Three-name firm with offices in Katy + Houston + The Woodlands. Audit + tax + transaction-advisory mix."
+  },
+  {
+    "legal_name": "The Rascon CPA Firm, PLLC",
+    "dba_name": null,
+    "address": "1095 Evergreen Circle #200",
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77380",
+    "phone": "(832) 482-4611",
+    "website": "https://www.rasconcpafirm.com/",
+    "year_established": 2019,
+    "service_mix": "full_service",
+    "partner_count": 2,
+    "partners": ["Melissa Rascon, CPA (founder)", "Amy Barry, CPA"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Melissa Rascon",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.rasconcpafirm.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["year_established_proxy_2019_copyright", "partners", "service_mix"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Young firm (founded 2019) — LIKELY LOW base-rate score, unlikely A-tier. Included for completeness; expected to land C/D in scoring."
+  },
+  {
+    "legal_name": "A Strong CPA, LLC",
+    "dba_name": null,
+    "address": "24 Waterway Ave, Suite 250",
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77380",
+    "phone": "(281) 288-1788",
+    "website": "https://astrongcpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Angela Strong (founder)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Angela Strong",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://astrongcpa.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo-name CPA in The Woodlands. Year founded not stated — enrich. Multi-industry (banking, construction, energy, healthcare)."
+  },
+  {
+    "legal_name": "Crowl, Cameron & Associates PLLC",
+    "dba_name": null,
+    "address": "303 Longmire Rd., Suite 201",
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77304",
+    "phone": "(936) 539-2133",
+    "website": "https://www.crowlcameron.com/",
+    "year_established": 1984,
+    "service_mix": "full_service",
+    "partner_count": 2,
+    "partners": ["Crowl (named)", "Cameron (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.crowlcameron.com/",
+        "fetched_at": "2026-05-16T16:10:00Z",
+        "fields": ["year_established_proxy_40yrs", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "40+ yrs tenure. Property + sales tax specialty. Two-name firm. Strong A-tier candidate pending owner-age verification."
+  },
+  {
+    "legal_name": "Lindsey K CPA, PLLC",
+    "dba_name": null,
+    "address": "333 N Rivershire Dr Ste 285",
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77304",
+    "phone": "(936) 238-7627",
+    "website": "https://www.lindseykcpa.com/",
+    "year_established": null,
+    "service_mix": "tax_bookkeeping",
+    "partner_count": 1,
+    "partners": ["Lindsey K (owner)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Lindsey K",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.lindseykcpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA. Construction industry specialty. Founded year not stated — enrich."
+  },
+  {
+    "legal_name": "Sarah Jones CPA, LLC",
+    "dba_name": null,
+    "address": "1336 League Line Road Suite 300",
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77304",
+    "phone": "(936) 228-2231",
+    "website": "https://www.sarahjonescpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Sarah Jones, CPA (founder, 20+ yrs tenure)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Sarah Jones",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.sarahjonescpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA, 20+ yrs. Offers premium-tier 'Tax Free Millionaire' courses → operator who's productizing = NOT coasting. Lower L3 expected."
+  },
+  {
+    "legal_name": "Kimes, Stephens & Webb, CPA, P.C.",
+    "dba_name": null,
+    "address": "17207 Kuykendahl Rd, Ste #260",
+    "city": "Spring",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77379",
+    "phone": "(281) 320-9365",
+    "website": "https://www.kimescpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 3,
+    "partners": ["Kimes (named)", "Stephens (named)", "Webb (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.kimescpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Three-name partnership in Spring TX. Year founded + partner ages need enrich."
+  },
+  {
+    "legal_name": "McDaniel Accounting Services P.C.",
+    "dba_name": null,
+    "address": "1525 Lakeville Drive, Suite #215",
+    "city": "Kingwood",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77339",
+    "phone": "(281) 419-7000",
+    "website": "https://www.mmcdanielcpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["McDaniel (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.mmcdanielcpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo-name CPA in Kingwood. Year founded + owner age need enrich."
+  },
+  {
+    "legal_name": "Mathison CPA LLC",
+    "dba_name": null,
+    "address": "11803 Grant Road, Suite 212",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77429",
+    "phone": "(832) 660-3496",
+    "website": "https://mathisoncpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Mathison (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://mathisoncpa.com/index.php",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA in Cypress. Year founded + owner age need enrich."
+  },
+  {
+    "legal_name": "Peterson CPA Firm P.C.",
+    "dba_name": null,
+    "address": "339 East Parkwood Ave",
+    "city": "Friendswood",
+    "county": "Galveston",
+    "state": "TX",
+    "zip": "77546",
+    "phone": "(281) 482-1240",
+    "website": "https://www.cpapeterson.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 2,
+    "partners": ["Don Peterson (founder)", "Joe (partner, surname not on landing)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Don Peterson",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.cpapeterson.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Named-founder + 'Joe' partner shown in team photo caption. Multi-location (Friendswood + League City + Galveston coverage). Strong succession candidate."
+  },
+  {
+    "legal_name": "Randell M. Naquin, CPA, PLLC",
+    "dba_name": null,
+    "address": "2511 Foxglove Dr",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77584",
+    "phone": "(713) 818-0807",
+    "website": "https://rmncpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Randell M. Naquin (owner)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Randell M. Naquin",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://rmncpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA in Pearland. Healthcare specialty. Year founded + owner age need enrich."
+  },
+  {
+    "legal_name": "Michelle Graham CPA LLC",
+    "dba_name": null,
+    "address": "25 Big Trail",
+    "city": "Missouri City",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77459",
+    "phone": "(832) 690-6235",
+    "website": "https://www.michellegrahamcpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Michelle Graham"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Michelle Graham",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.michellegrahamcpa.com/about.php",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA — Missouri City suburb of Houston. Serves Sugar Land + Pearland too."
+  },
+  {
+    "legal_name": "Saluja & Associates CPA PLLC",
+    "dba_name": null,
+    "address": "1400 Broadfield Blvd, Suite 200",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77084",
+    "phone": "(832) 848-5155",
+    "website": "https://salujaassociatescpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Manmeet Saluja"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Manmeet Saluja",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://salujaassociatescpa.com/sugar-land/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo-name CPA. US-Canada cross-border specialty. Sugar Land + Houston coverage. Year founded + owner age need enrich."
+  },
+  {
+    "legal_name": "Schultz & Company, CPA's",
+    "dba_name": null,
+    "address": "56 Sugar Creek Center Blvd, Suite 200",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(281) 305-5960",
+    "website": "https://www.schultzco.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.schultzco.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix", "address", "secondary_office_wichita_falls"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Sugar Land HQ with Wichita Falls satellite — multi-region small firm. Year founded + partners need enrich."
+  },
+  {
+    "legal_name": "Jeffery A. Davidson, CPA, PC",
+    "dba_name": null,
+    "address": "131 Brooks Street, Suite 400",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(281) 238-4442",
+    "website": "https://www.davidson.cpa/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Jeffery A. Davidson (owner)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Jeffery A. Davidson",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.davidson.cpa/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA in Sugar Land. Construction, agriculture, franchises, oil & gas, medical, real estate verticals. Year founded + owner age need enrich."
+  },
+  {
+    "legal_name": "Saleem Lakhani CPA PLLC",
+    "dba_name": null,
+    "address": "1600 Hwy 6 Suite 200",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(713) 364-9786",
+    "website": "https://www.slakcpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Saleem Lakhani (owner)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Saleem Lakhani",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.slakcpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA in Sugar Land. Year founded + owner age need enrich."
+  },
+  {
+    "legal_name": "Moderhak and Associates PC",
+    "dba_name": null,
+    "address": "101 Southwestern Blvd, Suite 130",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(713) 541-6900",
+    "website": "https://moderhakassociates.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "Sugar Land CPA search secondary",
+        "url": "https://moderhakassociates.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Sugar Land firm. Construction + medical + insurance specialty. Year founded + partner detail need enrich."
+  },
+  {
+    "legal_name": "CETH CPA, PC",
+    "dba_name": null,
+    "address": "12808 W. Airport Blvd, Ste 319",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(832) 408-2836",
+    "website": "https://www.cethcpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Tony Ho (contact / principal)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Tony Ho",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.cethcpa.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Sugar Land solo CPA. Forensic + succession + business valuation services."
+  },
+  {
+    "legal_name": "Kenwood & Associates, P.C.",
+    "dba_name": "KenwoodPC",
+    "address": "14090 Southwest Freeway, Suite 200",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(281) 243-2300",
+    "website": "https://www.kenwoodpc.com/",
+    "year_established": 1985,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.kenwoodpc.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["year_established", "service_mix", "address", "secondary_office_memorial"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "40-yr-old firm with Sugar Land HQ + Memorial office. Bankruptcy & receivership niche → likely senior partners. Partner names need enrich."
+  },
+  {
+    "legal_name": "Edward J. Walsh & Associates",
+    "dba_name": null,
+    "address": "2302 Postoffice St., Suite 602, Moody National Bank Tower",
+    "city": "Galveston",
+    "county": "Galveston",
+    "state": "TX",
+    "zip": "77550",
+    "phone": "(409) 763-4626",
+    "website": "https://www.walshcpa.com/",
+    "year_established": 1932,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Eddie Walsh (managing principal per eddie@walshcpa.com)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Edward J. Walsh",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.walshcpa.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["year_established", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "93-yr firm (founded 1932). Multi-generational practice. Expatriate niche + HOA niche. Named-owner solo today. STRONG A-tier candidate pending live team-page check."
+  },
+  {
+    "legal_name": "Lane Gorman Trubitt, LLC",
+    "dba_name": "LGT",
+    "address": null,
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "phone": null,
+    "website": "https://www.lgt-cpa.com/",
+    "year_established": 1950,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.lgt-cpa.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["year_established", "service_mix", "primeglobal_affiliation"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "75-yr firm. Member of PrimeGlobal (alliance — independently owned, NOT a national-firm acquisition). Top 200 IPA, 17th largest Dallas/Houston. 2,700+ clients. Likely too large for A-tier solo; valid B-tier."
+  },
+  {
+    "legal_name": "Patten and Company LLC",
+    "dba_name": "Patten & Company",
+    "address": "10000 N Central Expressway, Suite 290",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75231",
+    "phone": "(214) 696-1922",
+    "website": "https://ptcpas.com/",
+    "year_established": 1969,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://ptcpas.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["year_established", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "56-yr-old firm. Oil & gas + private equity + HNW specialty. Partner names need enrich."
+  },
+  {
+    "legal_name": "Steven E Miller, CPA PC",
+    "dba_name": "Steven Miller & Co.",
+    "address": "One Stratford Park, Suite 420, 18383 Preston Rd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75252",
+    "phone": "(214) 361-1131",
+    "website": "https://www.smtaxcpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Steven E Miller (owner)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Steven E Miller",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.smtaxcpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA in Preston Rd corridor. International tax + expat specialty."
+  },
+  {
+    "legal_name": "Rex Draughn CPA",
+    "dba_name": null,
+    "address": null,
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "phone": "(972) 955-9159",
+    "website": "https://cpa-dallas.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Rex Draughn (owner, 20+ yrs tenure)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Rex Draughn",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://cpa-dallas.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "service_mix"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA, North Dallas, 20+ yrs. Construction + oil & gas + restaurant niche."
+  },
+  {
+    "legal_name": "L&H CPAs & Advisors",
+    "dba_name": null,
+    "address": "10000 North Central Expressway, Suite 710",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75231",
+    "phone": "(972) 421-1099",
+    "website": "https://www.lhcpafirm.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [
+      "Scott Henvey (referenced)",
+      "Bryan Davis, CPA",
+      "Michelle Macy",
+      "Jeannie Williams"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.lhcpafirm.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Boutique firm. Family office + wealth management mix. 4 senior team members visible. Partner-vs-staff role disambiguation needs enrich."
+  },
+  {
+    "legal_name": "Henry & Peters PC",
+    "dba_name": null,
+    "address": "8000 Warren Pkwy, #103 (Frisco); 3304 S Broadway Ave (Tyler); 2101 Judson Road (Longview)",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75034",
+    "phone": "(469) 956-5400",
+    "website": "https://www.henrypeters.com/",
+    "year_established": 1926,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.henrypeters.com/cpas-plano-tx/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["year_established", "service_mix", "addresses"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "100-yr-old firm. Oil & gas + financial-institutions + ag specialty. 3 locations (Tyler HQ + Longview + Frisco). Likely a multi-partner regional firm — not A-tier solo, but credible B-tier."
+  },
+  {
+    "legal_name": "K. Evans & Associates, CPAs",
+    "dba_name": null,
+    "address": "4433 Punjab Way, Suite 102",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75033",
+    "phone": "(972) 335-9754",
+    "website": "https://www.kevanscpas.com/",
+    "year_established": 1951,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.kevanscpas.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["year_established_proxy_73yrs", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "73-yr-old firm. Frisco/North Texas. Estate planning + biz valuation + succession planning offered to clients — meta succession signal."
+  },
+  {
+    "legal_name": "Tracy Burr, CPA",
+    "dba_name": null,
+    "address": "5379 Northshore Drive",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75034",
+    "phone": "(214) 938-8312",
+    "website": "https://www.tracyburrcpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Tracy Burr (owner, 39+ yrs in tax practice)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Tracy Burr",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.tracyburrcpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA — 39+ yrs of tax practice → likely 62+ yrs old. STRONG A-tier candidate pending owner-age verification and live successor-check."
+  },
+  {
+    "legal_name": "Driskell & Associates, LLC",
+    "dba_name": null,
+    "address": "9300 John Hickman Parkway, Suite #1301",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75035",
+    "phone": "(214) 238-2543",
+    "website": "https://www.cpadriskell.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": ["Driskell (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.cpadriskell.com/about-us.htm",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Frisco firm. Construction + hospitality + medical + oil & gas + retail. Owner age + tenure need enrich."
+  },
+  {
+    "legal_name": "Parish PLLC",
+    "dba_name": null,
+    "address": "6160 Warren Parkway, Suite 100",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75034",
+    "phone": "(469) 425-3911",
+    "website": "https://www.parishfirm.cpa/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": ["Parish (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.parishfirm.cpa/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["service_mix", "address", "secondary_office_colleyville"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Frisco + Colleyville offices. Family Office specialty. Year founded + owner age need enrich."
+  },
+  {
+    "legal_name": "Carrell and Co CPAs",
+    "dba_name": null,
+    "address": "5900 S. Lake Forest Drive Suite 110",
+    "city": "McKinney",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75070",
+    "phone": "(972) 542-8889",
+    "website": "https://carrellandcompany.com/",
+    "year_established": 1996,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://carrellandcompany.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["year_established", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "29-yr-old firm. McKinney Chamber + Mainstreet member. 60 yrs combined partner experience claim. AICPA Peer Review."
+  },
+  {
+    "legal_name": "Bland Garvey PC",
+    "dba_name": "Bland Garvey CPA",
+    "address": "2600 N. Central Expressway, Suite 550",
+    "city": "Richardson",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75080",
+    "phone": "(972) 231-2503",
+    "website": "https://www.blandgarvey.com/",
+    "year_established": 1975,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.blandgarvey.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["year_established_proxy_50yrs", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "50-yr firm. Operates affiliated RIA (Bland Garvey Wealth Advisors LLC) — implies higher-end practice. Medical practice consulting niche."
+  },
+  {
+    "legal_name": "Leake CPA, PC",
+    "dba_name": null,
+    "address": "210 W. Davis Street #104 (Mesquite); 801 E. Campbell Road #250 (Richardson); 6851 Virginia Pkwy #214 (McKinney)",
+    "city": "Mesquite",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75149",
+    "phone": "(972) 285-8733",
+    "website": "https://www.leakecpa.com/",
+    "year_established": 1985,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.leakecpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["year_established_proxy_40yrs", "service_mix", "addresses"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "40-yr family-owned. 3 offices (Mesquite + Richardson + McKinney). Family-owned succession-prone."
+  },
+  {
+    "legal_name": "Shost and Company, P.C., CPA's",
+    "dba_name": null,
+    "address": "1301 Central Expressway S., Suite 105",
+    "city": "Allen",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75013",
+    "phone": "(972) 248-6070",
+    "website": "https://www.shostcpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": ["Shost (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.shostcpa.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Named-principal firm in Allen. Year founded + partner detail need enrich."
+  },
+  {
+    "legal_name": "Alex Tong, CPA & Associates",
+    "dba_name": null,
+    "address": "101 E Park Blvd, Suite 1100",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75074",
+    "phone": "(972) 423-8880",
+    "website": "https://www.cpataxinfo.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Alex Tong, CPA (founder)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Alex Tong",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.cpataxinfo.com/about.php",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Plano solo-named CPA. 2011 Angie's List Super Service award → established. Year founded + owner age need enrich."
+  },
+  {
+    "legal_name": "PW Associates, PLLC",
+    "dba_name": "PriceKubecka prior brand — verify",
+    "address": null,
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "phone": "(972) 402-6170",
+    "website": "https://pwawco.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://pwawco.com/plano-texas-accounting-firm/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix", "russell_bedford_affiliation", "phones"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Member of Russell Bedford International (alliance, NOT owned). International-trade specialty. Dallas + Houston coverage. Year founded + partner detail need enrich."
+  },
+  {
+    "legal_name": "Pittman, Powers & Associates, L.L.P.",
+    "dba_name": null,
+    "address": "1000 South Main Street, Suite 190",
+    "city": "Grapevine",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76051",
+    "phone": "(817) 481-7505",
+    "website": "https://www.ppacpa.com/",
+    "year_established": 1972,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": ["Pittman (named)", "Powers (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.ppacpa.com/firmprofile.php",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["year_established", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "53-yr firm. Two named partners. Serves Southlake/Colleyville/Keller. Strong B-tier; A-tier viable if owner ages verify."
+  },
+  {
+    "legal_name": "Milbern Ray & Company, LLP",
+    "dba_name": null,
+    "address": "2102 E State Hwy 114, Suite 200",
+    "city": "Southlake",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76092",
+    "phone": "(817) 552-7661",
+    "website": "https://www.milbern-ray.com/",
+    "year_established": 1969,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.milbern-ray.com/",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["year_established", "service_mix", "address", "15plus_cpas"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "56-yr firm. 15+ CPAs on staff → multi-partner. DFW area. Likely B-tier (too large for solo A-tier)."
+  },
+  {
+    "legal_name": "McIlvain & Associates",
+    "dba_name": null,
+    "address": "1110 Kimball Avenue, Suite 100",
+    "city": "Southlake",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76092",
+    "phone": "(817) 545-1277",
+    "website": "https://mcilvain.net/",
+    "year_established": 1988,
+    "service_mix": "tax_bookkeeping",
+    "partner_count": 1,
+    "partners": ["Sandy McIlvain (founder per secondary news)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Sandy McIlvain",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://mcilvain.net/",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      },
+      {
+        "source": "Community Impact news 2019",
+        "url": "https://communityimpact.com/dallas-fort-worth/grapevine-colleyville-southlake/impacts/2019/12/10/accounting-firm-relocates-from-colleyville-will-open-new-building-at-highland-corner-office-park-in-southlake/",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["founder_name", "year_established"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "37-yr firm founded by Sandy McIlvain. Founder likely 60+. Strong A-tier candidate pending live successor-check."
+  },
+  {
+    "legal_name": "Lange & Associates, P.C.",
+    "dba_name": null,
+    "address": "6300 Ridglea Place, Ste. 500",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76116",
+    "phone": "(817) 335-3800",
+    "website": "https://www.langecpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": ["Field Lange (per email field@langecpa.com)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Field Lange",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.langecpa.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Named-principal firm. Year founded + partner count need enrich."
+  },
+  {
+    "legal_name": "Chris Green CPA",
+    "dba_name": null,
+    "address": "412 Ridgewood Road",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76107",
+    "phone": "(817) 624-3838",
+    "website": "https://www.chrisgreencpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Chris Green (owner)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Chris Green",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.chrisgreencpa.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA. Healthcare + law firm niche. Owner age + tenure need enrich."
+  },
+  {
+    "legal_name": "Barg & Henson CPAs, PLLC",
+    "dba_name": null,
+    "address": "1300 S University Dr Ste 312",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76107",
+    "phone": "(817) 870-1057",
+    "website": "https://www.barg-henson.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 2,
+    "partners": ["Barg (named)", "Henson (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.barg-henson.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Two-name FW firm. Oil & gas + manufacturing + law firm niche. Succession planning offered to clients."
+  },
+  {
+    "legal_name": "Douglas R. McDougal, CPA, PC",
+    "dba_name": null,
+    "address": "9500 Ray White Rd",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76244",
+    "phone": "(817) 715-1844",
+    "website": "https://www.mcdougalcpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Douglas R. McDougal, CPA (licensed since 1991, 25+ yrs experience)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": "1991",
+    "license_holder_name": "Douglas R. McDougal",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.mcdougalcpa.com/about.htm",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["license_year_proxy", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA, licensed since 1991 — 34 yrs tenure → likely 60+ yr owner. STRONG A-tier candidate. Medical + law + retail niche. Verify with live team page in enrich."
+  },
+  {
+    "legal_name": "PSK LLP",
+    "dba_name": null,
+    "address": "3001 Medlin Drive, Suite 100",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76015",
+    "phone": "(817) 664-3000",
+    "website": "https://www.pskcpa.com/",
+    "year_established": 1964,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.pskcpa.com/",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["year_established", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "61-yr firm in Arlington. Likely multi-partner regional. B-tier candidate."
+  },
+  {
+    "legal_name": "Shelton, Mead & Shelton, PLLC",
+    "dba_name": null,
+    "address": "800 E Border St",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76010",
+    "phone": "(817) 461-5551",
+    "website": "https://www.smscpatx.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 3,
+    "partners": ["Shelton (named)", "Mead (named)", "Shelton (named, possibly family member)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.smscpatx.com/",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Three-name firm with two 'Sheltons' — possible father-son or sibling firm. Family-owned succession-prone."
+  },
+  {
+    "legal_name": "Al Carroll CPA, PLLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "phone": null,
+    "website": "https://arlington-cpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Al Carroll (owner)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Al Carroll",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://arlington-cpa.com/",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["partners", "service_mix"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA — landing page is minimal. About page + phone need enrich. Possibly elderly owner (low engagement digital footprint)."
+  },
+  {
+    "legal_name": "Waters Vollmering Beavers & Adams LLP",
+    "dba_name": null,
+    "address": "990 N. Walnut Creek, Suite 1001",
+    "city": "Mansfield",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76063",
+    "phone": "(817) 473-0228",
+    "website": "https://www.wva-cpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": ["Waters (named)", "Vollmering (named)", "Beavers (named)", "Adams (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.wva-cpa.com/",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["service_mix", "address", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Four-name partnership in Mansfield. 'Nearly a century of expertise' → multi-generational founders. Audit-focused."
+  },
+  {
+    "legal_name": "Peter Marshall & Company, P.C.",
+    "dba_name": null,
+    "address": "3861 Long Prairie Rd., Suite 100",
+    "city": "Flower Mound",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "75028",
+    "phone": "(972) 355-3930",
+    "website": "https://www.marshallcpafirm.com/",
+    "year_established": 1990,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Peter Marshall (principal, 35+ yrs)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Peter Marshall",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.marshallcpafirm.com/",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["year_established_proxy_35yrs", "partners", "service_mix"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "35+ yr solo-named firm in Flower Mound. Owner likely 60+. STRONG A-tier pending owner-age verification."
+  },
+  {
+    "legal_name": "KHA Accountants, PLLC",
+    "dba_name": null,
+    "address": "2401 Internet Blvd, Suite 103 (Frisco); 314 E Hickory Street, Suite 101 (Denton)",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75034",
+    "phone": "(972) 221-2500",
+    "website": "https://kha.cpa/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://kha.cpa/",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["service_mix", "addresses", "phones"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Frisco + Denton offices. Mortgage banking + oilfield services + transportation niche. Year founded + partner count need enrich."
+  },
+  {
+    "legal_name": "Egon Stockenbojer, CPA",
+    "dba_name": null,
+    "address": "1511 West Koenig Lane",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78756",
+    "phone": "(512) 450-0344",
+    "website": "https://www.texastaxpro.com/",
+    "year_established": 1995,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Egon Stockenbojer, CPA (proprietor, 30+ yrs experience)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Egon Stockenbojer",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.texastaxpro.com/",
+        "fetched_at": "2026-05-16T16:10:00Z",
+        "fields": ["year_established_proxy_30yrs", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA, 30+ yrs experience. Real-estate-professional niche. Owner likely 60+. STRONG A-tier pending owner-age verification."
+  },
+  {
+    "legal_name": "Millan & Co. PC",
+    "dba_name": null,
+    "address": "812 San Antonio Street, Suite L17",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78701",
+    "phone": "(512) 479-6819",
+    "website": "https://millancpa.com/",
+    "year_established": 2006,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://millancpa.com/",
+        "fetched_at": "2026-05-16T16:10:00Z",
+        "fields": [
+          "year_established_proxy_2006_copyright",
+          "service_mix",
+          "address",
+          "tsbpa_peer_reviewed"
+        ]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "TSBPA peer reviewed. Medical practices + legal + real estate niche. 19 yrs tenure — middling base-rate."
+  },
+  {
+    "legal_name": "Austin & Company, PC",
+    "dba_name": "Jeffrey S. Austin and Company, PC",
+    "address": "4601 Spicewood Springs Road, Building I, Suite 200",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78759",
+    "phone": "(512) 343-2525",
+    "website": "https://www.austintexasaccountant.com/",
+    "year_established": 2000,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Jeffrey S. Austin, CPA"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Jeffrey S. Austin",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.austintexasaccountant.com/about-the-firm",
+        "fetched_at": "2026-05-16T16:10:00Z",
+        "fields": ["year_established", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "25-yr solo-named firm. Nationwide individual + biz client base. Strong B-tier; A-tier viable pending owner-age verification."
+  },
+  {
+    "legal_name": "Hollis CPA Firm",
+    "dba_name": null,
+    "address": "9600 Great Hills Trail, Suite 150 W",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78759",
+    "phone": "(512) 539-0440",
+    "website": "https://www.holliscpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Cameron Hollis, CPA"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Cameron Hollis",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.holliscpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA. 'Take Two Review' branded service → productized → likely NOT coasting. Younger owner; lower A-tier likelihood."
+  },
+  {
+    "legal_name": "Tanya L. Stokes, CPA",
+    "dba_name": null,
+    "address": "9501 N Capital of Texas HWY, Suite 101",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78759",
+    "phone": "(512) 419-0897",
+    "website": "https://www.cpa-in-austin.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Tanya L. Stokes"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Tanya L. Stokes",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.cpa-in-austin.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA. Construction + medical + real estate niche. Year founded + owner age need enrich."
+  },
+  {
+    "legal_name": "Faske Lay & Co., L.L.P.",
+    "dba_name": null,
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "phone": "(512) 346-9623",
+    "website": "https://www.faskelay.com/",
+    "year_established": 1985,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.faskelay.com/",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["year_established_proxy_40yrs", "service_mix"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "40-yr firm. Austin + Georgetown offices. Top 25 Austin Business Journal-ranked. Founder ages need enrich."
+  },
+  {
+    "legal_name": "Ray CPA, P.C.",
+    "dba_name": null,
+    "address": "3000 Joe DiMaggio Blvd., Suite 91",
+    "city": "Round Rock",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78665",
+    "phone": "(512) 786-2052",
+    "website": "https://www.theroundrockcpa.com/",
+    "year_established": 2003,
+    "service_mix": "full_service",
+    "partner_count": 4,
+    "partners": [
+      "Josh Ray, CPA, CITP, MS (founder, 2003)",
+      "James Lynch, JD, MBA",
+      "George Libby III, CPA, MST",
+      "Frank Fischer, CPA"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Josh Ray",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.theroundrockcpa.com/about.php",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["year_established", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "22-yr-old firm in Round Rock. Multi-CPA team. Forensic + restaurant + medical niche."
+  },
+  {
+    "legal_name": "Lange, Poteet & Co., LLP",
+    "dba_name": null,
+    "address": "615 Belknap Pl.",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78212",
+    "phone": "(210) 735-6181",
+    "website": "https://www.lp.cpa/",
+    "year_established": 1967,
+    "service_mix": "tax_bookkeeping",
+    "partner_count": null,
+    "partners": ["Lange (named)", "Poteet (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.lp.cpa/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["year_established", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "58-yr firm. 'Servicing many of its clients' families for over fifty years' → multi-generational. No audit services listed (tax + accounting + consulting). Strong A-tier candidate pending owner-age verification."
+  },
+  {
+    "legal_name": "Akin Doherty Klein & Feuge PC",
+    "dba_name": "ADKF",
+    "address": "9601 McAllister Fwy, Suite 800 (SA); 371 N. Main St STE 202 (Boerne); 672 Ridge Hill Dr STE A (New Braunfels)",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78216",
+    "phone": "(210) 829-1300",
+    "website": "https://www.adkf.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 4,
+    "partners": ["Akin (named)", "Doherty (named)", "Klein (named)", "Feuge (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.adkf.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["partners", "service_mix", "addresses", "largest_locally_owned_san_antonio"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'largest locally owned accounting firm in San Antonio.' 4-name partnership + 3 offices. Year founded need enrich. Likely multi-partner regional firm — B-tier candidate."
+  },
+  {
+    "legal_name": "Rodriguez Reiffert & Co., P.C.",
+    "dba_name": null,
+    "address": "40 NE Loop 410, Suite 410",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78216",
+    "phone": "(210) 822-9950",
+    "website": "https://www.cpasat.com/",
+    "year_established": 1985,
+    "service_mix": "full_service",
+    "partner_count": 3,
+    "partners": [
+      "Joe Rodriguez, CPA, CFP, CFE, CLU",
+      "Pamela Rodriguez Reiffert, CPA",
+      "Julia Sutton, CPA"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.cpasat.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["year_established_proxy_40yrs", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "40-yr firm, three CPAs incl. father-daughter (Joe Rodriguez + Pamela Rodriguez Reiffert). Construction + dental + medical + hospitality + law niche. Dental specialty intersects Gideon's existing dental list. STRONG A-tier candidate pending verification."
+  },
+  {
+    "legal_name": "Richard J. Garcia, CPA, PC",
+    "dba_name": null,
+    "address": "2208 San Pedro Avenue",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78212",
+    "phone": "(210) 349-1040",
+    "website": "https://richardjgarciacpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Richard J. Garcia (owner)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Richard J. Garcia",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://richardjgarciacpa.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo CPA. Estate planning + elder care + biz valuation + succession planning. Year founded + owner age need enrich."
+  },
+  {
+    "legal_name": "abip CPAs & Advisors",
+    "dba_name": "abip PC / abip SA PC / abip Advisors LLC",
+    "address": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "phone": "(210) 341-2581",
+    "website": "https://www.abipcpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.abipcpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["service_mix", "phones", "alternative_practice_structure"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Alternative practice structure (separate attest + advisory entities). Houston + SA + New Braunfels. Texas Utility Districts specialty. Year founded + partner detail need enrich. Likely B-tier (mid-size)."
+  },
+  {
+    "legal_name": "Wendi M. Stratta CPA PLLC",
+    "dba_name": null,
+    "address": "1733 Briarcrest Dr, Suite #201",
+    "city": "Bryan",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": "77802",
+    "phone": "(979) 978-7910",
+    "website": "https://strattacpa.com/",
+    "year_established": null,
+    "service_mix": "tax_bookkeeping",
+    "partner_count": 1,
+    "partners": ["Wendi M. Stratta (founder, 36+ yrs experience)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Wendi M. Stratta",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://strattacpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["partners", "service_mix", "address", "NOT_ACCEPTING_NEW_CLIENTS_FLAG"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "HEIGHTENED SUCCESSION SIGNAL: Site explicitly states 'unable to take on new clients at this time' as of May 2026. 36+ yrs experience → owner likely 60+. STRONG A-tier candidate — likely actively constraining intake because winding down. Live successor-check (no partner listed) is the gate; deep-dive priority."
+  },
+  {
+    "legal_name": "Brewer, Eyeington, Patout & Co. LLP",
+    "dba_name": null,
+    "address": "111 E. 27th St., Suite 100 (Bryan); 217 E. Washington Ave (Navasota); 710 S. Madison (Madisonville)",
+    "city": "Bryan",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": "77803",
+    "phone": "(979) 268-1350",
+    "website": "https://www.bepcocpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": [
+      "Brewer (named)",
+      "Eyeington (named)",
+      "Patout (named)",
+      "Glyna Brown (joined via Glyna & Ray Brown PC merger)",
+      "Ray Brown (joined via merger)"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.bepcocpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["partners", "service_mix", "addresses", "merger_note"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Three-office regional firm. Recent merger (Glyna & Ray Brown PC absorbed) — growth mode. Year founded + ages need enrich."
+  },
+  {
+    "legal_name": "Ingram, Wallis & Co.",
+    "dba_name": null,
+    "address": null,
+    "city": "Bryan",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": null,
+    "phone": null,
+    "website": "https://www.ingram-wallis.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 7,
+    "partners": [
+      "James D. Ingram, III",
+      "Tom Wallis",
+      "James D. Ingram, IV",
+      "Rick Webb",
+      "Diana Wagner",
+      "Melissa Suehs",
+      "Teja Templeton Ruiz"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.ingram-wallis.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["partners", "service_mix", "tenure_proxy_40yrs"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "40+ yr firm. Father-son Ingram (III + IV) → succession PARTIALLY underway. Strong B-tier; A-tier unlikely because successor already in place."
+  },
+  {
+    "legal_name": "Thompson, Derrig & Craig, P.C.",
+    "dba_name": null,
+    "address": "1598 Copperfield Parkway",
+    "city": "College Station",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": "77845",
+    "phone": "(979) 260-9696",
+    "website": "https://tdc.cpa/",
+    "year_established": 1994,
+    "service_mix": "full_service",
+    "partner_count": 6,
+    "partners": [
+      "Kyle Cox, CPA",
+      "Alan Dock, CPA, CMA",
+      "Logan Kendrick, CPA, ABV",
+      "Lyn Kuciemba, CPA",
+      "James Larkin, CPA",
+      "A.J. Taylor, CPA",
+      "Dillard Leverkuhn (additional)",
+      "Woody Thompson (retired shareholder 2023)"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://tdc.cpa/team/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["year_established", "partners", "service_mix", "retired_partner_note"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "31-yr firm. 6 active partners + 1 retired (Woody Thompson, 2023) — succession already underway, NOT coasting. Likely C/D in scoring."
+  },
+  {
+    "legal_name": "Lott, Vernon & Company PC",
+    "dba_name": null,
+    "address": "109 East Ave B",
+    "city": "Killeen",
+    "county": "Bell",
+    "state": "TX",
+    "zip": "76541",
+    "phone": "(254) 526-0571",
+    "website": "https://www.lottvernoncpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 2,
+    "partners": ["Lott (named)", "Vernon (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.lottvernoncpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["service_mix", "addresses", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Two-name firm Killeen + Temple + Copperas Cove. Year founded + ages need enrich."
+  },
+  {
+    "legal_name": "Brockway, Gersbach, Franklin, Niemeier, PC",
+    "dba_name": null,
+    "address": "3520 SW H.K. Dodgen Loop",
+    "city": "Temple",
+    "county": "Bell",
+    "state": "TX",
+    "zip": "76504",
+    "phone": "(254) 773-9907",
+    "website": "https://templecpa.com/",
+    "year_established": 1976,
+    "service_mix": "full_service",
+    "partner_count": 6,
+    "partners": [
+      "Cindy Franklin (Tax, Acting President)",
+      "Terri Marshall (Tax)",
+      "Kerri Meier (Tax)",
+      "Heather Clark (Tax)",
+      "Adam Haberer (Audit)",
+      "Daniel Jones (Audit)"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://templecpa.com/firm-profile/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": [
+          "year_established",
+          "partners",
+          "service_mix",
+          "founding_partner_deceased_april_2025"
+        ]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "49-yr firm. NAMED FOUNDING PARTNER STEPHEN NIEMEIER PASSED APRIL 2025 — currently has 'Acting President.' Major succession event in progress. Watch closely; may be too late for B/A-tier but worth monitoring."
+  },
+  {
+    "legal_name": "Pattillo, Brown & Hill, L.L.P.",
+    "dba_name": null,
+    "address": "401 W State Highway 6",
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": "76710",
+    "phone": "(254) 772-4901",
+    "website": "https://www.pbhcpa.com/",
+    "year_established": 1923,
+    "service_mix": "audit_focused",
+    "partner_count": null,
+    "partners": [],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.pbhcpa.com/about-us/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["year_established", "service_mix", "addresses", "staff_size_130plus"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "102-yr firm. 130+ professionals → too large for solo A-tier. Multi-state (TX + NM). Government audit + bank audit specialty. Likely B-tier or C-tier (too institutional)."
+  },
+  {
+    "legal_name": "Bolinger, Segars, Gilbert & Moss LLP",
+    "dba_name": "BSG&M",
+    "address": "8215 Nashville Ave",
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": "79423",
+    "phone": "(806) 747-3806",
+    "website": "https://www.bsgm.com/",
+    "year_established": null,
+    "service_mix": "audit_focused",
+    "partner_count": 20,
+    "partners": [
+      "Robert Cobb, CPA",
+      "Greg Gilbert, CPA",
+      "Tim Baugh, CPA",
+      "Nathan Paden, CPA",
+      "Randy Robbins, CPA",
+      "Bill Miller, CPA",
+      "David Copeland, CPA",
+      "Trey Rowe, CPA",
+      "Matt Willis, CPA",
+      "Clay Adrian, CPA",
+      "Kacey Gast, CPA",
+      "Adam Bailey, CPA",
+      "Tyler Canady, CPA",
+      "Krista Pauda, CPA",
+      "Lauren Young, CPA",
+      "Kendra Caldwell, CPA",
+      "Jarrod Bryant, CPA",
+      "Erin Dipprey, CPA",
+      "Jason Miller, CPA",
+      "Kristy Frye, CPA",
+      "Bob Beam, CPA (Of Counsel)",
+      "Wade Wilson, CPA (Of Counsel)"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.bsgm.com/our-partners/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "service_mix", "address", "industry_specializations"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "20 active partners + 2 Of Counsel. Electric coop + telecom + government audit niche. TOO LARGE for solo A-tier; valid as B-tier benchmark."
+  },
+  {
+    "legal_name": "Brad R. Smith, CPA PC",
+    "dba_name": null,
+    "address": "8008 Slide Rd #19",
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": "79424",
+    "phone": "(806) 798-8619",
+    "website": "https://bradrsmithcpa.com/",
+    "year_established": 1996,
+    "service_mix": "tax_bookkeeping",
+    "partner_count": 1,
+    "partners": ["Brad R. Smith (founder, 30+ yrs)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Brad R. Smith",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://bradrsmithcpa.com/accounting-lubbock-tx/small-business-accounting/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["year_established", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "29-yr solo CPA. Owner 30+ yrs industry experience → likely 55-65 yrs. STRONG A-tier pending owner-age verification."
+  },
+  {
+    "legal_name": "WilsonHaag, PLLC",
+    "dba_name": null,
+    "address": "418 S. Polk Street, Suite 200",
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": "79101",
+    "phone": "(806) 372-3331",
+    "website": "https://wilsonhaag.com/",
+    "year_established": 1975,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": ["Wilson (named)", "Haag (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://wilsonhaag.com/locations/amarillo-cpa/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": [
+          "year_established_proxy_40yrs",
+          "service_mix",
+          "addresses_amarillo_overland_park_ks"
+        ]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "50-yr firm. AICPA + Texas CPA + Kansas CPA member. Two-state footprint (TX + KS Overland Park). Succession planning offered. Owner ages need enrich."
+  },
+  {
+    "legal_name": "LPT CPAs + Advisors PLLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": null,
+    "phone": "(806) 373-4884",
+    "website": "https://www.lpt.cpa/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 3,
+    "partners": [
+      "Sam Lovelady (40+ yrs in public accounting, estate/tax/succession specialty)",
+      "Terry Pruiett (10+ yrs in public accounting, tax consulting)",
+      "Johnny Terra, CPA (small biz taxation + biz development)"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.lpt.cpa/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "service_mix", "phone", "20_professionals"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Three-partner firm with senior partner Sam Lovelady (40+ yrs → likely 65+). Succession planning offered to clients = meta signal. STRONG candidate."
+  },
+  {
+    "legal_name": "Glenn, Prather & Company",
+    "dba_name": null,
+    "address": null,
+    "city": "Midland",
+    "county": "Midland",
+    "state": "TX",
+    "zip": null,
+    "phone": null,
+    "website": "https://www.gpc-cpa.com/",
+    "year_established": 1978,
+    "service_mix": "full_service",
+    "partner_count": 6,
+    "partners": [
+      "Mary Glenn, CPA (founder, 1978)",
+      "Floyd Prather, CCP, CPA",
+      "Connie Rives, CPA",
+      "Chris Keegan, CPA",
+      "Michael Jones, CPA",
+      "Marjorie Ozio, CPA"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Mary Glenn",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.gpc-cpa.com/about-us",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": [
+          "year_established",
+          "partners",
+          "service_mix",
+          "addresses_midland_cedar_park_austin"
+        ]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "47-yr firm founded by Mary Glenn — Midland native → if still active, likely 70+. STRONG A-tier candidate. Two-office (Midland + Austin/Cedar Park). Live team page check required."
+  },
+  {
+    "legal_name": "Wathen, DeShong & Juncker, LLP",
+    "dba_name": null,
+    "address": "4140 Gladys Avenue, Suite 101",
+    "city": "Beaumont",
+    "county": "Jefferson",
+    "state": "TX",
+    "zip": "77706",
+    "phone": "(409) 838-1605",
+    "website": "https://www.wdjcpa.com/",
+    "year_established": 1968,
+    "service_mix": "full_service",
+    "partner_count": 3,
+    "partners": [
+      "Wathen (named)",
+      "DeShong (named)",
+      "Juncker (named)",
+      "Stanley 'Chip' Majors, CPA",
+      "Jane Burns"
+    ],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.wdjcpa.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["year_established", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "57-yr firm. Three-name partnership + named additional partner. Construction + healthcare + nonprofit niche. Strong B-tier; A-tier viable on owner-age."
+  },
+  {
+    "legal_name": "Barrett & Thomas, P.C.",
+    "dba_name": null,
+    "address": null,
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "zip": null,
+    "phone": "(903) 561-5122",
+    "website": "https://barrett-thomascpa.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 4,
+    "partners": ["Rick Barrett", "Michael Thomas", "Laurie Billings", "Nathan Dunham"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://barrett-thomascpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "service_mix", "phone"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Four-partner Tyler firm. Forensic accounting + biz valuation niche. Year founded + ages need enrich."
+  },
+  {
+    "legal_name": "The Burkett Firm",
+    "dba_name": null,
+    "address": "2082 Three Lakes Parkway",
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "zip": "75703",
+    "phone": "(903) 525-6491",
+    "website": "https://burkettcpafirm.com/",
+    "year_established": 2016,
+    "service_mix": "full_service",
+    "partner_count": 1,
+    "partners": ["Nick Burkett (founder, 2016)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Nick Burkett",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://burkettcpafirm.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["year_established", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "9-yr-old firm. Solo founder, younger CPA. NOT A-tier — included for cohort completeness. Likely C/D in scoring."
+  },
+  {
+    "legal_name": "LEE & KIM CPAs, PLLC",
+    "dba_name": null,
+    "address": "5337 Yorkton Blvd. Bldg. 3, Suite 301",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78413",
+    "phone": "(361) 225-4431",
+    "website": "https://www.leeandkimcpas.com/",
+    "year_established": null,
+    "service_mix": "full_service",
+    "partner_count": 2,
+    "partners": ["Lee (named)", "James J. Kim, CPA, CFPR, PFS"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "James J. Kim",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.leeandkimcpas.com/smallbiz.php",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Two-partner Corpus Christi firm. Year founded + ages need enrich."
+  },
+  {
+    "legal_name": "Marcus, Fairall, Bristol + Co., PLLC",
+    "dba_name": null,
+    "address": "230 Thunderbird Dr Ste G",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79912",
+    "phone": "(915) 775-1040",
+    "website": "https://marcfair.com/",
+    "year_established": 1995,
+    "service_mix": "full_service",
+    "partner_count": null,
+    "partners": ["David Marcus (managing partner, CFF)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "David Marcus",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://marcfair.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["year_established_proxy_30yrs", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "30-yr firm El Paso + Las Cruces NM. Forensic + fraud investigation niche. Managing partner named — solo-managing or 2-3 partner. Year founded + ages need enrich."
+  },
+  {
+    "legal_name": "Napier & Follett, LLP",
+    "dba_name": null,
+    "address": "5915 Silver Springs Drive 6-B",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79912",
+    "phone": "(915) 633-6555",
+    "website": "https://www.fcnapier.com/",
+    "year_established": 2004,
+    "service_mix": "full_service",
+    "partner_count": 2,
+    "partners": ["Napier (named)", "Follett (named)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.fcnapier.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["year_established_proxy_20yrs", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "20+ yr two-name El Paso firm. Forensic + IRS rep niche. Year founded + ages need enrich."
+  },
+  {
+    "legal_name": "Gonzalo Salas CPA LLC",
+    "dba_name": null,
+    "address": "1112 Montana Ave.",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79902",
+    "phone": "(915) 533-2100",
+    "website": "https://gsalascpa.com/",
+    "year_established": 2009,
+    "service_mix": "tax_bookkeeping",
+    "partner_count": 1,
+    "partners": ["Gonzalo Salas, CPA (owner, 2009)"],
+    "license_number": null,
+    "license_type": "CPA Firm",
+    "license_issue_date": null,
+    "license_holder_name": "Gonzalo Salas",
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://gsalascpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["year_established", "partners", "service_mix", "address"]
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "16-yr-old El Paso solo CPA. Owner age likely mid-career. Lower A-tier likelihood."
+  }
+]

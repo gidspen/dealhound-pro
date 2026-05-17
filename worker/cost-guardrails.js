@@ -80,6 +80,19 @@ const TIER_MONTHLY_CAPS = {
 // The skill emits: DEALHOUND_TOKENS: {"input_tokens":NNN,"output_tokens":NNN}
 const TOKEN_LINE_RE = /DEALHOUND_TOKENS:\s*(\{[^\n]+\})/;
 
+// ── CapExceededError ──────────────────────────────────────────────────────────
+
+class CapExceededError extends Error {
+  constructor(message, { kind, totalCost, capAmount, statusCode } = {}) {
+    super(message);
+    this.name = 'CapExceededError';
+    this.kind = kind; // 'per_skill' | 'monthly_cap'
+    this.totalCost = totalCost;
+    this.capAmount = capAmount;
+    this.statusCode = statusCode || (kind === 'monthly_cap' ? 402 : 500);
+  }
+}
+
 // ── CostTracker ───────────────────────────────────────────────────────────────
 
 /**
@@ -135,6 +148,22 @@ class CostTracker {
     }
 
     return this._state();
+  }
+
+  /**
+   * Same as trackTokenLine, but THROWS CapExceededError when the cap fires.
+   * Use this from call sites that prefer exception-based flow over flag-based.
+   */
+  trackTokenLineOrThrow(text) {
+    const state = this.trackTokenLine(text);
+    if (state.capped) {
+      throw new CapExceededError(RUN_CAPPED_MESSAGE, {
+        kind: 'per_skill',
+        totalCost: state.totalCost,
+        capAmount: state.capAmount,
+      });
+    }
+    return state;
   }
 
   _state() {
@@ -278,6 +307,7 @@ const RUN_CAPPED_MESSAGE = 'run capped — refine criteria for more depth';
 
 module.exports = {
   CostTracker,
+  CapExceededError,
   checkAndReserveMonthlyBudget,
   recordComputeUsed,
   SKILL_CAPS,

@@ -1,0 +1,1710 @@
+[
+  {
+    "legal_name": "Enhanced Eye Care Texas",
+    "dba_name": "EEC",
+    "address": "5325 McPherson Blvd Suite #125",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76123",
+    "phone": "(817) 935-8280",
+    "website": "https://www.enhancedeyecaretx.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Hiep Duong",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.enhancedeyecaretx.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member (independent). Family-owned. 2 ODs (Duong + DeMaggio). SW Fort Worth Tarrant. Comprehensive + diabetic + pediatric + myopia.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Hiep Duong",
+    "owner_age_estimate": 36,
+    "owner_age_source": "optometry_grad_year_proxy_2014",
+    "owner_tenure_years": 12,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_for_succession",
+        "direction": "disqualifying",
+        "evidence": "Dr. Hiep Duong is a 2014 graduate of University of Houston College of Optometry. ~12 yrs in practice, est age ~36. Far below 55+ retirement window.",
+        "source": "linkedin_directory_search",
+        "source_url": "https://www.healthgrades.com/providers/hiep-duong-xylfhvn",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "No Google evidence of MyEyeDr/EyeCare Partners/Acuity/Keplr acquisition. Practice remains independent Vision Source member.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Enhanced+Eye+Care+Texas%22+acquired",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "google_search",
+        "url": "https://www.healthgrades.com/providers/hiep-duong-xylfhvn",
+        "fetched_at": "2026-05-15T20:00:00Z",
+        "fields": ["graduation_year"]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.enhancedeyecaretx.com/",
+        "fetched_at": "2026-05-15T20:01:00Z",
+        "fields": ["doctors", "tech_status"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — owner is 2014 grad, age proxy ~36. No retirement window. Independent and active but does not meet 55+ age + 15+ yr tenure spine threshold. (Note: spine verification_notes flagged this practice as A-tier — that scoring did not account for owner age.)"
+  },
+  {
+    "legal_name": "Southwest Family Eye Health Center",
+    "dba_name": null,
+    "address": "1300 W Rosedale St Suite B",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76104",
+    "phone": "(817) 885-7951",
+    "website": "https://www.swfamilyeye.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Jeremy E. Loy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.swfamilyeye.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo OD Dr. Loy. Hospital district FW. Specialty: vision therapy + scleral + ortho-K + sports vision + neuro-optometric rehab. Strong medical-eye-care positioning. Solo + no successor visible.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Jeremy E. Loy",
+    "owner_age_estimate": 46,
+    "owner_age_source": "optometry_grad_year_proxy_2005",
+    "owner_tenure_years": 21,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_below_age_threshold",
+        "direction": "disqualifying",
+        "evidence": "Dr. Loy graduated Illinois College of Optometry 2005, plus M.S. Univ. of Minnesota; 10 yrs at SW Family Eye. Total ~21 yr OD career, age proxy ~46. Below 55+ retirement window.",
+        "source": "google_search",
+        "source_url": "https://www.swfamilyeye.com/team/jeremy-e-loy-od/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "No Google evidence of MyEyeDr/EyeCare Partners acquisition. Independent solo practice.",
+        "source": "google_search",
+        "source_url": "https://www.swfamilyeye.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.swfamilyeye.com/our-eye-doctors/",
+        "fetched_at": "2026-05-15T20:02:00Z",
+        "fields": ["doctor_bio"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://americanboardofoptometry.org/optometrist-location/loy-jeremy-e-od/",
+        "fetched_at": "2026-05-15T20:02:30Z",
+        "fields": ["graduation_year"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — owner age proxy ~46. Too young to meet 55+ threshold despite strong medical-eye-care niche. Solo + specialty positioning (neuro-optometric rehab, vision therapy) would be A-tier on operating profile but disqualifies on owner_age. Re-check in 8-10 yrs."
+  },
+  {
+    "legal_name": "Altig Optical",
+    "dba_name": null,
+    "address": "3451 Western Center Boulevard",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76137",
+    "phone": "(817) 847-0030",
+    "website": "https://www.altigoptical.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. William D Altig",
+    "year_established": 1992,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.altigoptical.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Dr. Altig in private practice since 1985 (41 yrs) + opened Altig Optical 1992 (34 yrs). Solo OD (site references plural 'optometrists' but only one named — verify). Glaucoma + AMD + cataract + scleral. STRONG A-tier candidate (age + tenure pattern).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. William D Altig",
+    "owner_age_estimate": 66,
+    "owner_age_source": "practice_start_1985_proxy",
+    "owner_tenure_years": 41,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 34,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 4,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_in_retirement_window",
+        "direction": "positive",
+        "evidence": "Dr. Altig in private practice since 1985 — 41 yrs. Per incirclexec.com bio confirms '31-year career in eye care' (article year unspecified). Age proxy ~66+. Strong retirement-window candidate.",
+        "source": "incirclexec",
+        "source_url": "https://incirclexec.com/william-d-altig-od-optometrist-and-owner/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_associate_hired",
+        "direction": "negative",
+        "evidence": "Live team-page fetch shows 3 associates beyond Dr. Altig: Dr. Samantha Reynolds (former childhood patient — implicit succession signal), Dr. Amanda Chamberlin, Dr. Raley Gray. Earlier associate Dr. Neha Patel mentioned in older bios. Multi-OD practice with possible groomed successor.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.altigoptical.com/our-eye-care-clinic/our-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "No Google evidence of MyEyeDr/EyeCare Partners acquisition.",
+        "source": "google_search",
+        "source_url": "https://www.altigoptical.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.altigoptical.com/our-eye-care-clinic/our-doctors/",
+        "fetched_at": "2026-05-15T20:03:00Z",
+        "fields": ["associate_count", "successor_signal"]
+      },
+      {
+        "source": "incirclexec",
+        "url": "https://incirclexec.com/william-d-altig-od-optometrist-and-owner/",
+        "fetched_at": "2026-05-15T20:03:30Z",
+        "fields": ["career_length"]
+      }
+    ],
+    "enrichment_notes": "B-tier — owner age + tenure profile fits, BUT 3 associate hires (notably Reynolds as 'childhood patient') signals internal succession likely already underway. Not a clean wedge; family-internal handoff plausible. Worth softer outreach as 'is the practice for sale or are associates buying you out?'"
+  },
+  {
+    "legal_name": "Fort Worth Eye Center",
+    "dba_name": null,
+    "address": "5329 Sycamore School Rd Ste 113",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76123",
+    "phone": "(817) 489-5065",
+    "website": "https://fortwortheyecenter.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Dan Lam",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://fortwortheyecenter.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent. Dr. Lam owner + Dr. Manning. 2 ODs. SW Fort Worth. Glaucoma + diabetic + ortho-K + MiSight + scleral. Serves Benbrook/Crowley/Joshua.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Dan Lam",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_unknown_likely_younger",
+        "direction": "neutral",
+        "evidence": "Dr. Lam graduated from Rosenberg School of Optometry (UIWRSO opened 2008, first graduates 2012). Therefore Lam graduated 2012 or later — age proxy <40, tenure <14 yrs. Below age threshold.",
+        "source": "live_website_fetch",
+        "source_url": "https://fortwortheyecenter.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "No Google evidence of MyEyeDr/EyeCare Partners acquisition.",
+        "source": "google_search",
+        "source_url": "https://fortwortheyecenter.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_capex_tech",
+        "direction": "negative",
+        "evidence": "Eaglet 3D Mapping for scleral fitting. Modern specialty tech — active operator.",
+        "source": "live_website_fetch",
+        "source_url": "https://fortwortheyecenter.com/about/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://fortwortheyecenter.com/about/",
+        "fetched_at": "2026-05-15T20:04:00Z",
+        "fields": ["doctor_bio", "tech_stack"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — Rosenberg School of Optometry (UIW) first class graduated 2012. Dr. Lam therefore age <40 and tenure <14 yrs. Below 55/15 threshold. Modern capex signals active operator, not coasting."
+  },
+  {
+    "legal_name": "VisualEyes",
+    "dba_name": null,
+    "address": "6037 Harris Parkway",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76132",
+    "phone": "(817) 294-2800",
+    "website": "https://visualeyeswest.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Keira R. West",
+    "year_established": 2001,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://visualeyeswest.com/our-practice/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member. Founder Dr. West est 2001 (25 yrs). 3 ODs (West, Le, Gajjar). Family-focused. Diabetic + dry eye + myopia + OptiLight. Strong tenure + multi-OD growth pattern.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Keira R. West",
+    "owner_age_estimate": 50,
+    "owner_age_source": "optometry_grad_year_proxy_2001",
+    "owner_tenure_years": 25,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 25,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 3,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_below_age_threshold",
+        "direction": "disqualifying",
+        "evidence": "Dr. West graduated May 2001 (UHCO Magna Cum Laude). 25 yrs in practice. Age proxy ~50 — just below 55 threshold.",
+        "source": "live_website_fetch",
+        "source_url": "https://visualeyeswest.com/our-practice/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "growth_mode_associate_hires",
+        "direction": "negative",
+        "evidence": "Practice expanded 2001 → 2005 → 2019 (3 relocations/expansions). 3-OD growth team (West + Le + Gajjar 2015 grad). OptiLight by Lumenis tech (modern capex). Active growth, not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://visualeyeswest.com/our-practice/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "Independent Vision Source member. No acquisition evidence.",
+        "source": "google_search",
+        "source_url": "https://visualeyeswest.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://visualeyeswest.com/our-practice/",
+        "fetched_at": "2026-05-15T20:05:00Z",
+        "fields": ["doctors", "year_founded", "associates"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — owner is too young (~50) and practice is in active growth/expansion mode (3 ODs, modern OptiLight tech, multiple relocations). Profile is growth-stage independent, not retirement-window coaster."
+  },
+  {
+    "legal_name": "Eagle Ranch Vision",
+    "dba_name": null,
+    "address": "7201 Boat Club Road",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "phone": "(817) 750-2233",
+    "website": "https://www.eagleranchvision.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Corey Giammarco",
+    "year_established": 2005,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.eagleranchvision.com/our-practice/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent (verified — no AEG / MyEyeDr disclosure in footer). Est 2005. 6 ODs (Giammarco, Broadway, Spangenberg, Aston II, Russo, Vandiver). Multi-OD large practice — successor risk; verify owner-of-record before scoring.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Corey Giammarco (presumptive)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 21,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 6,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "size_too_large_for_target",
+        "direction": "disqualifying",
+        "evidence": "6 ODs (Giammarco, Broadway, Spangenberg, Aston II, Russo, Vandiver). Multi-doctor group practice with shared brand 'Eagle Ranch Vision Source'. Likely $5M+ revenue, above small-biz ETA threshold for single-OD-succession plays.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.eagleranchvision.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_present_team_practice",
+        "direction": "negative",
+        "evidence": "6-OD team established 2005 (21 yrs). All listed equally on team page — no senior/owner hierarchy. Likely partnership structure with internal succession. Not a coaster, not a clean wedge.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.eagleranchvision.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "No MyEyeDr/EyeCare Partners acquisition evidence.",
+        "source": "google_search",
+        "source_url": "https://www.eagleranchvision.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.eagleranchvision.com/",
+        "fetched_at": "2026-05-15T20:06:00Z",
+        "fields": ["doctor_count", "founding_year"]
+      }
+    ],
+    "enrichment_notes": "DECLINE on size/structure — 6 ODs in shared brand is too large for solo-OD-succession wedge. Partnership/group practice typically transitions internally, not via outside ETA."
+  },
+  {
+    "legal_name": "Arlington Vision Source",
+    "dba_name": null,
+    "address": "1334 E Pioneer Pkwy",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76010",
+    "phone": "(817) 461-4453",
+    "website": "https://www.arlingtoneyedoctors.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Isaac Schunk",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.arlingtoneyedoctors.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "addresses", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vision Source member (independent within cooperative). 2 Arlington locations. 4 ODs (Schunk, Curtis, Truong, Patel). Pediatric + dry eye + myopia + scleral + ortho-K.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Isaac Schunk (founder/owner)",
+    "owner_age_estimate": 42,
+    "owner_age_source": "optometry_grad_year_proxy_2010",
+    "owner_tenure_years": 16,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 4,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_for_succession",
+        "direction": "disqualifying",
+        "evidence": "Dr. Schunk grad Indiana 2010, did Army service, now owner of Eyecare by Design + Arlington Vision Source. Age proxy ~42. Senior associate Dr. Curtis (1982 grad, ~67) is winding-down associate not owner.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.arlingtoneyedoctors.com/our-eye-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_growth",
+        "direction": "negative",
+        "evidence": "Schunk founder of 2+ Vision Source-affiliated practices (Eyecare by Design + Arlington Vision Source). Growth-mode owner-operator, not seller.",
+        "source": "healthgrades",
+        "source_url": "https://www.healthgrades.com/group-directory/tx-texas/arlington/vision-source-professional-eyecare-x6kjn4",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "No MyEyeDr/EyeCare Partners acquisition evidence.",
+        "source": "google_search",
+        "source_url": "https://www.arlingtoneyedoctors.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.arlingtoneyedoctors.com/our-eye-doctors/",
+        "fetched_at": "2026-05-15T20:07:00Z",
+        "fields": ["doctors", "grad_years"]
+      },
+      {
+        "source": "healthgrades",
+        "url": "https://www.healthgrades.com/group-directory/tx-texas/arlington/vision-source-professional-eyecare-x6kjn4",
+        "fetched_at": "2026-05-15T20:07:30Z",
+        "fields": ["owner_multi_location"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — owner Schunk is ~42, growth-mode, runs 2+ practices. Senior associate Curtis is winding down but not the owner of record. Not a succession target."
+  },
+  {
+    "legal_name": "Mansfield Vision Center LLC",
+    "dba_name": "Mansfield Vision Center",
+    "address": "990 US 287 Suite 109",
+    "city": "Mansfield",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76063",
+    "phone": "(817) 453-4682",
+    "website": "https://mansfieldvision.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Kyle Cooke",
+    "year_established": 2003,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://mansfieldvision.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Locally-owned. 2 ODs (Cooke + Martin). Opened before 2004 (~22+ yrs). Voted Best Optometrist multi-year (2015-2025). Cataract + LASIK co-management. Mansfield Tarrant SE.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "2003-07",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Kyle Cooke",
+    "owner_age_estimate": 48,
+    "owner_age_source": "practice_open_2003_proxy_uhco_grad",
+    "owner_tenure_years": 23,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 23,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_below_age_threshold",
+        "direction": "disqualifying",
+        "evidence": "Dr. Cooke attended UHCO, Mansfield resident since 1998, opened practice July 2003 — implies UHCO grad ~2001-2003. Age proxy ~48. Below 55+ threshold despite 23 yrs ownership.",
+        "source": "live_website_fetch",
+        "source_url": "https://mansfieldvision.com/about-us/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "No MyEyeDr/EyeCare Partners acquisition.",
+        "source": "google_search",
+        "source_url": "https://mansfieldvision.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://mansfieldvision.com/about-us/",
+        "fetched_at": "2026-05-15T20:08:00Z",
+        "fields": ["year_founded", "doctor_history"]
+      }
+    ],
+    "enrichment_notes": "DECLINE on age — Cooke is ~48 yrs old. Below 55 threshold despite 23-yr ownership. Re-check in 7-10 yrs."
+  },
+  {
+    "legal_name": "Sonie Family Eyecare",
+    "dba_name": null,
+    "address": "213 E Debbie Lane",
+    "city": "Mansfield",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76063",
+    "phone": "(817) 477-6684",
+    "website": "https://www.sonieeyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Evelyn Ayidu-Omo",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.sonieeyecare.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent solo TG glaucoma-specialist Dr. Ayidu-Omo. Mansfield Tarrant SE. Glaucoma + AMD + diabetic + myopia + designer frames (Tom Ford, Gucci, Prada). Solo OD signal.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Evelyn Ayidu-Omo",
+    "owner_age_estimate": 50,
+    "owner_age_source": "career_arc_proxy_22yr_total_us_tenure",
+    "owner_tenure_years": 22,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_below_threshold_and_new_venture",
+        "direction": "disqualifying",
+        "evidence": "Dr. Ayidu-Omo: Univ of Benin (Nigeria) optometry grad + 6 yrs Nigeria practice + Inter American (Puerto Rico) OD + 16 yrs corporate Arlington Texas → opened Sonie Mansfield as new venture. Age proxy ~50 (Nigeria grad ~22 + 6 + 16 = age 44 at US start + recent move). Total US tenure ~22 yrs. New practice owner not in retirement window.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.sonieeyecare.com/our-doctor.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_capex_tech",
+        "direction": "negative",
+        "evidence": "Envision by Inmode RF/IPL dry-eye tech (modern). Designer optical (Tom Ford, Gucci, Prada). Active operator with growth investment.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.sonieeyecare.com/our-doctor.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_or_distress",
+        "direction": "positive",
+        "evidence": "No TX Optometry Board disciplinary found; no MyEyeDr/EyeCare Partners acquisition.",
+        "source": "google_search",
+        "source_url": "https://www.sonieeyecare.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.sonieeyecare.com/our-doctor.html",
+        "fetched_at": "2026-05-15T20:09:00Z",
+        "fields": ["career_arc", "tech_stack"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — Ayidu-Omo recently launched private practice after 16 yrs corporate optometry. New owner-operator, not retirement-window. Active capex (Inmode dry eye)."
+  },
+  {
+    "legal_name": "Southlake Family Eye Care",
+    "dba_name": "KJK Eye Care LLC",
+    "address": "510 E Southlake Blvd Suite 100",
+    "city": "Southlake",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76092",
+    "phone": "(817) 481-1665",
+    "website": "https://www.southlakefamilyeyecare.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Kirk J. Koogler",
+    "year_established": 1997,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.southlakefamilyeyecare.com/our-practice.html",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo OD Dr. Koogler. Est January 1997 (29 yrs — top tenure). Premium Southlake ZIP — high-income Tarrant suburb. Small team (4 staff total). No associate hiring visible. STRONG A-tier candidate (solo + long tenure + premium ZIP).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Kirk J. Koogler",
+    "owner_age_estimate": 56,
+    "owner_age_source": "uhco_grad_year_proxy_1995",
+    "owner_tenure_years": 31,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 29,
+    "employee_count_estimate": 4,
+    "provider_count_estimate": 1,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_at_age_threshold",
+        "direction": "positive",
+        "evidence": "Dr. Koogler grad UHCO Magna Cum Laude May 1995. Practice founded January 1997. 31 yrs in practice, 29 yrs as owner. Age proxy ~56.",
+        "source": "google_search",
+        "source_url": "https://doctor.webmd.com/doctor/kirk-koogler-1cb70cc4-b582-4629-b4b1-1af9298a3543-overview",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "solo_no_successor_long_tenure",
+        "direction": "positive",
+        "evidence": "Live team-page fetch confirms ZERO associate ODs — solo doctor. 4 staff: Kim (paraoptometric), Kelsey (tech/CL), Nycol (receptionist), Tiffany (optician 6 yrs). No successor groomed. Classic coasting-solo pattern.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.southlakefamilyeyecare.com/our-practice.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "tech_stack_unspecified",
+        "direction": "neutral",
+        "evidence": "Website mentions services but NO specific tech callouts (OCT, optomap, dry-eye device). Suggests minimal modern capex investment — consistent with coasting hypothesis.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.southlakefamilyeyecare.com/our-practice.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "PECAA portal lists KJK Eye Care LLC dba Southlake Family Eye Care — independent membership in Professional Eye Care Associates of America (independent buying group). No MyEyeDr/EyeCare Partners acquisition.",
+        "source": "pecaa",
+        "source_url": "https://portal.pecaa.com/practice/kjk-eye-care-llc-dba-southlake-family-eye-care/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.southlakefamilyeyecare.com/our-practice.html",
+        "fetched_at": "2026-05-15T20:10:00Z",
+        "fields": ["solo_check", "staff_count"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://doctor.webmd.com/doctor/kirk-koogler-1cb70cc4-b582-4629-b4b1-1af9298a3543-overview",
+        "fetched_at": "2026-05-15T20:10:30Z",
+        "fields": ["graduation_year"]
+      },
+      {
+        "source": "pecaa",
+        "url": "https://portal.pecaa.com/practice/kjk-eye-care-llc-dba-southlake-family-eye-care/",
+        "fetched_at": "2026-05-15T20:10:45Z",
+        "fields": ["entity_name", "buying_group"]
+      }
+    ],
+    "enrichment_notes": "A-MINUS — solo, 29-yr tenure, no successor, no modern capex callouts, premium Southlake ZIP, entity KJK Eye Care LLC. Owner age proxy (~56) is at the lower edge of the 55+ window — softer A. Borderline call: A-tier on tenure+solo+no-successor profile; A-minus only because owner younger than peer candidates. Top candidate for outreach."
+  },
+  {
+    "legal_name": "North Texas Eye Care",
+    "dba_name": null,
+    "address": "101 River Oaks Drive #100",
+    "city": "Southlake",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76092",
+    "phone": "(817) 562-2101",
+    "website": "https://www.ntxeyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Gregory Kloesel",
+    "year_established": 1992,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.ntxeyecare.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo TG glaucoma-specialist Dr. Kloesel since 1992 (34 yrs tenure — top-tier). Premium Southlake. Multi-generational patient base ('many families they started with are still with them, now bringing in their children and grandchildren'). STRONG A-tier candidate (solo + 34 yrs + premium ZIP + classic coasting indicator).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Gregory Kloesel",
+    "owner_age_estimate": 62,
+    "owner_age_source": "uhco_grad_year_proxy_1989",
+    "owner_tenure_years": 37,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 34,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_in_retirement_window",
+        "direction": "positive",
+        "evidence": "Dr. Kloesel grad UHCO Magna Cum Laude 1989. Founded NTX Eye Care 1992. 37 yrs in practice, 34 yrs as owner. Age proxy ~62 — solid 55+ retirement window.",
+        "source": "google_search",
+        "source_url": "https://www.ntxeyecare.com/about-us/dr-gregory-kloesel/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "solo_no_successor_long_tenure",
+        "direction": "positive",
+        "evidence": "Live website confirms NO associate ODs — solo practice. Self-describes 'over 30 years experience' and 'multi-generational patient base' (children and grandchildren of original patients). Classic coasting indicator.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.ntxeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "tech_stack_unspecified",
+        "direction": "neutral",
+        "evidence": "Site references 'the latest technology' but no specific brand callouts (OCT, optomap, etc) — consistent with coasting/low modern capex.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.ntxeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "Independent. No MyEyeDr/EyeCare Partners/Acuity/Keplr evidence.",
+        "source": "google_search",
+        "source_url": "https://www.ntxeyecare.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.ntxeyecare.com/",
+        "fetched_at": "2026-05-15T20:11:00Z",
+        "fields": ["solo_check", "tenure_self_report"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.ntxeyecare.com/about-us/dr-gregory-kloesel/",
+        "fetched_at": "2026-05-15T20:11:30Z",
+        "fields": ["graduation_year"]
+      }
+    ],
+    "enrichment_notes": "A-TIER TOP — solo 34-yr tenure, age ~62, no successor, no modern capex flags, premium Southlake ZIP, multi-generational patient base (classic coasting tell). Strongest candidate in batch."
+  },
+  {
+    "legal_name": "Vision Plus",
+    "dba_name": null,
+    "address": "3331 Wurzbach Rd B",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78238",
+    "phone": "(210) 520-6353",
+    "website": "https://www.visionplustx.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Thomas J. Goldstein",
+    "year_established": 1994,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.visionplustx.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent. Dr. Goldstein since 1994 (32 yrs — top tenure). 2 ODs (Goldstein + Sanchez). NW San Antonio. Saturday hours (positive signal). Strong tenure + associate hiring pattern.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Thomas J. Goldstein (Optometrist/Owner) + Jennifer Goldstein (Business Manager/Co-owner)",
+    "owner_age_estimate": 64,
+    "owner_age_source": "noecno_grad_year_proxy_1986",
+    "owner_tenure_years": 40,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 32,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "linkedin",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_in_retirement_window",
+        "direction": "positive",
+        "evidence": "Dr. Goldstein: BS Pharmacy SOSU 1982 + OD Northeastern State (NSU OK) 1986. 40 yrs total OD career. Opened Vision Plus 1994. Age proxy ~64.",
+        "source": "google_search",
+        "source_url": "https://eyedoctor.io/optometrist/thomas-j-goldstein-od-san-antonio/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "family_co_ownership",
+        "direction": "neutral",
+        "evidence": "Spouse Jennifer Goldstein listed as Co-owner / Business Manager on LinkedIn. Classic family-run small business structure. No OD-successor in family identified.",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/jennifer-goldstein-a5b92529/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "saturday_hours_positive",
+        "direction": "neutral",
+        "evidence": "Spine notes Saturday hours (active operator signal). Associate Dr. Sanchez may be junior partner — verify role.",
+        "source": "website",
+        "source_url": "https://www.visionplustx.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "Independent. No MyEyeDr/EyeCare Partners acquisition evidence.",
+        "source": "google_search",
+        "source_url": "https://www.visionplustx.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "google_search",
+        "url": "https://eyedoctor.io/optometrist/thomas-j-goldstein-od-san-antonio/",
+        "fetched_at": "2026-05-15T20:12:00Z",
+        "fields": ["graduation_year", "career_arc"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/jennifer-goldstein-a5b92529/",
+        "fetched_at": "2026-05-15T20:12:30Z",
+        "fields": ["co_owner_spouse"]
+      }
+    ],
+    "enrichment_notes": "A-TIER — owner age 64, 32-yr ownership, family-run (Tom + Jennifer). Associate Sanchez present but unclear if buying-in successor or career associate. Strong retirement-window candidate with classic husband-wife operator structure (high seller-receptivity pattern)."
+  },
+  {
+    "legal_name": "Vista Vision Premier Family Eyecare",
+    "dba_name": "Vista Vision",
+    "address": "427 N Loop 1604 W Suite 203",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78232",
+    "phone": "(210) 960-5494",
+    "website": "https://www.vistavisionsa.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Toni Racoma",
+    "year_established": 2017,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.vistavisionsa.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo TG glaucoma-specialist Dr. Racoma. Est 2017 — under 15-yr tenure threshold; spine-valid but lower preference. North SA. OCT + digital retinal photo + perimetry (good capex). Pediatric (ages 6mo+).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Toni Racoma",
+    "owner_age_estimate": 45,
+    "owner_age_source": "biomedical_eng_2003_johns_hopkins_optometry_2007_proxy",
+    "owner_tenure_years": 19,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 9,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_for_succession",
+        "direction": "disqualifying",
+        "evidence": "Dr. Racoma: Biomedical Eng Johns Hopkins 2003 + OD Pennsylvania College of Optometry (Valedictorian) 2007 + residency 2008. Opened Vista Vision 2017. Age proxy ~45 (BME 2003 = ~age 22).",
+        "source": "live_website_fetch",
+        "source_url": "https://www.vistavisionsa.com/doctors",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_capex_tech",
+        "direction": "negative",
+        "evidence": "OCT + digital retinal photo + perimetry — modern medical capex on a 9-yr-old practice. Active investor in clinical tech.",
+        "source": "website",
+        "source_url": "https://www.vistavisionsa.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "Independent solo. No acquisition evidence.",
+        "source": "google_search",
+        "source_url": "https://www.vistavisionsa.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.vistavisionsa.com/doctors",
+        "fetched_at": "2026-05-15T20:13:00Z",
+        "fields": ["education", "year_founded"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — owner age ~45, only 9 yrs as owner, active modern capex. Founder-build-mode profile, not retirement target."
+  },
+  {
+    "legal_name": "Lifetime Family Eye Care",
+    "dba_name": null,
+    "address": "9310 Guilbeau Rd",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78250",
+    "phone": "(210) 982-3225",
+    "website": "https://saeyecare.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Urchna Morar",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://saeyecare.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent local small business. 2 ODs (Morar + Choy). West/NW SA. Accepts wide medical + vision insurance (UHC, BCBS, Aetna). Successor risk if Choy is associate.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Urchna Morar",
+    "owner_age_estimate": 39,
+    "owner_age_source": "nova_southeastern_grad_2012_proxy",
+    "owner_tenure_years": 14,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_for_succession",
+        "direction": "disqualifying",
+        "evidence": "Dr. Morar grad NOVA Southeastern 2012. ~14 yrs OD career. Age proxy ~39.",
+        "source": "google_search",
+        "source_url": "https://www.saeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_booking_tech",
+        "direction": "negative",
+        "evidence": "Uses eyecloudpro + opticalpos modern platforms (forms, scheduling). Active operator.",
+        "source": "live_website_fetch",
+        "source_url": "https://saeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "Independent. No acquisition evidence.",
+        "source": "google_search",
+        "source_url": "https://saeyecare.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://saeyecare.com/",
+        "fetched_at": "2026-05-15T20:14:00Z",
+        "fields": ["doctors", "tech_stack"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — Morar is too young (39, ~14 yrs out of school). Modern booking/EHR stack. Not retirement-window."
+  },
+  {
+    "legal_name": "Eyes on Texas Vision Care, PLLC",
+    "dba_name": "Eyes on Texas Vision Care",
+    "address": "Blanco Road",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "phone": "(210) 826-1720",
+    "website": "https://eyesontxvision.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Marc Kessner",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://eyesontxvision.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo OD Dr. Kessner, US Army veteran (2x Iraq). Site references 'either of our San Antonio offices' — possibly 2 locations. Vision therapy + sports vision + glaucoma + LASIK co-mgmt. Verify second address.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Marc Kessner",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_unknown_iraq_war_veteran",
+        "direction": "neutral",
+        "evidence": "Kessner is 2x Iraq War veteran (2003-2011 deployment window). Service-after-OD age proxy suggests grad ~2000-2003. Age proxy ~50. Below 55 threshold.",
+        "source": "google_search",
+        "source_url": "https://eyesontxvision.com/meet-the-optometrist",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "Independent solo. No acquisition evidence.",
+        "source": "google_search",
+        "source_url": "https://eyesontxvision.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://eyesontxvision.com/about",
+        "fetched_at": "2026-05-15T20:15:00Z",
+        "fields": ["doctor_bio_partial"]
+      }
+    ],
+    "enrichment_notes": "DECLINE on age proxy — Iraq War veteran timeline suggests age ~50. Below 55 threshold. Solo + medical positioning would be A-tier on operating profile but disqualifies on age."
+  },
+  {
+    "legal_name": "Northwest Family Eyecare",
+    "dba_name": "NWFEC",
+    "address": "6450 Northwest Loop 410 Suite 115",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78238",
+    "phone": "(210) 521-2085",
+    "website": "https://nwfamilyeyecaresa.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Rosa C. Suarez-Reyna",
+    "year_established": 2013,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://nwfamilyeyecaresa.com/our-practice/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo TG glaucoma-specialist Dr. Suarez-Reyna founded 2013 (~13 yrs — just below 15-yr threshold). Independent. Diabetic + dry eye + digital eye strain + emergency. Strong solo + medical positioning.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Rosa C. Suarez-Reyna",
+    "owner_age_estimate": 45,
+    "owner_age_source": "uhco_grad_year_proxy_2006",
+    "owner_tenure_years": 20,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 13,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_for_succession",
+        "direction": "disqualifying",
+        "evidence": "Dr. Suarez-Reyna grad UHCO May 2006. 20 yrs total OD career. Founded NWFEC 2013 (13 yrs ownership). Age proxy ~45.",
+        "source": "live_website_fetch",
+        "source_url": "https://nwfamilyeyecaresa.com/our-practice/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "Independent. No acquisition evidence.",
+        "source": "google_search",
+        "source_url": "https://nwfamilyeyecaresa.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://nwfamilyeyecaresa.com/our-practice/",
+        "fetched_at": "2026-05-15T20:16:00Z",
+        "fields": ["graduation_year", "founding_year"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — owner ~45, only 13 yrs ownership. Below 55+/15+ thresholds."
+  },
+  {
+    "legal_name": "EYES of Cresta Bella",
+    "dba_name": null,
+    "address": "19739 W Interstate 10 #112",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78257",
+    "phone": "(210) 361-7720",
+    "website": "https://eyesofcrestabella.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Angela Garza Offoegbu",
+    "year_established": 2020,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://eyesofcrestabella.com/our-practice/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo OD Dr. Garza Offoegbu, est 2020 — too new for 15-yr threshold but spine-valid. Premium NW SA (Cresta Bella area / La Cantera-adjacent). Full medical eye care + myopia + laser consult.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Angela Garza Offoegbu",
+    "owner_age_estimate": 38,
+    "owner_age_source": "tob_practice_start_2014_proxy_uhco_grad",
+    "owner_tenure_years": 12,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 6,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_for_succession",
+        "direction": "disqualifying",
+        "evidence": "Dr. Offoegbu grad UHCO Magna Cum Laude, practicing in San Antonio since 2014. Founded EYES of Cresta Bella 2020. Age proxy ~38 (12-yr career).",
+        "source": "live_website_fetch",
+        "source_url": "https://eyesofcrestabella.com/our-practice/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "Independent. No acquisition evidence.",
+        "source": "google_search",
+        "source_url": "https://eyesofcrestabella.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://eyesofcrestabella.com/our-practice/",
+        "fetched_at": "2026-05-15T20:17:00Z",
+        "fields": ["graduation_year", "founding_year"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — owner age ~38, 6-yr-old practice. Builder/founder profile, not retirement-window."
+  },
+  {
+    "legal_name": "Mi Vision Eye Care",
+    "dba_name": null,
+    "address": "4522 Fredericksburg Rd Suite B36",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78201",
+    "phone": "(210) 923-2020",
+    "website": "https://mivisioneyecare.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Pedro Cuba",
+    "year_established": 2011,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://mivisioneyecare.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo OD Dr. Cuba since 2011 (~15 yrs). Latino + veteran-owned. SA Eagle Pass secondary location. On-site lab + 5,000+ frames + Cartier/Gucci. Spanish-speaking. Sunday hours (rare positive).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Pedro Cuba",
+    "owner_age_estimate": 55,
+    "owner_age_source": "non_traditional_career_arc_army_gulf_war_then_optometry_2011",
+    "owner_tenure_years": 15,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 15,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_at_threshold_non_traditional_arc",
+        "direction": "positive",
+        "evidence": "Dr. Cuba: Peru-born, US Army Gulf War + S. Korea service, then Bio + Bus Admin UT Dallas, then OD Inter-American (Puerto Rico) 2011. Non-traditional career arc — Gulf War veterans typically 50+ today. Age proxy ~55+. Founded Mi Vision 2011 (~15 yrs).",
+        "source": "google_search",
+        "source_url": "https://mivisioneyecare.com/about-us/meet-doctor-cuba/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_capex_present",
+        "direction": "negative",
+        "evidence": "OCT + Humphrey Visual Field Analyzer + on-site lab + 5,000+ frame inventory. Cartier/Gucci. Active capex, not coasting. Sunday hours (active operator).",
+        "source": "live_website_fetch",
+        "source_url": "https://mivisioneyecare.com/about-us/meet-doctor-cuba/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_growth",
+        "direction": "negative",
+        "evidence": "Mi Vision Corp manages 2 locations (San Antonio + Eagle Pass per spine). Possibly more — verify. Growth-mode operator.",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/pedro-cuba-76b7a538/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "Independent. No acquisition evidence.",
+        "source": "google_search",
+        "source_url": "https://mivisioneyecare.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://mivisioneyecare.com/about-us/meet-doctor-cuba/",
+        "fetched_at": "2026-05-15T20:18:00Z",
+        "fields": ["career_arc", "tech_stack"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://mivisioneyecare.com/about-us/meet-doctor-cuba/",
+        "fetched_at": "2026-05-15T20:18:30Z",
+        "fields": ["graduation_year"]
+      }
+    ],
+    "enrichment_notes": "B-tier — owner age proxy ~55 fits, but only 15 yrs OD career and ACTIVE growth mode (2+ locations, OCT, Humphrey VF, on-site lab, Sunday hours). Builder-operator profile, not coasting. Decline on coasting-tells layer."
+  },
+  {
+    "legal_name": "Alamo Eye Institute",
+    "dba_name": null,
+    "address": "18720 Stone Oak Parkway Suite 119",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78258",
+    "phone": "(210) 697-3821",
+    "website": "https://www.alamoeyeinstitute.com/",
+    "practice_type": "ophthalmology_practice_NOT_OD",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "MD_ophthalmologist",
+    "license_holder_name": "Dr. Lynnell C. Lowry, MD",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.alamoeyeinstitute.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "spine_misclassification_MD_not_OD",
+    "verification_notes": "Solo OD Dr. Lowry. Stone Oak premium ZIP. Comprehensive exams + CL fittings + LASIK. Refraction-leaning service mix (verify medical billing depth).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Lynnell C. Lowry, MD",
+    "owner_age_estimate": 59,
+    "owner_age_source": "george_washington_md_1993_proxy",
+    "owner_tenure_years": 33,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 0,
+        "signal_key": "spine_misclassification_md_not_od",
+        "direction": "disqualifying",
+        "evidence": "Dr. Lynnell C. Lowry is an MD ophthalmologist (George Washington University SOM 1993, ophthalmology residency UT San Antonio), NOT an OD optometrist. Alamo Eye Institute is an ophthalmology practice. Listed alongside her solo MD work at Lowry Clinic. This entry does not belong in the optometry spine.",
+        "source": "google_search",
+        "source_url": "https://doctor.webmd.com/doctor/lynnell-lowry-e579cf74-545f-de11-86ed-001f29e3bb62-overview",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "neutral",
+        "evidence": "Independent. No acquisition evidence — but irrelevant given spine misclassification.",
+        "source": "google_search",
+        "source_url": "https://www.alamoeyeinstitute.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "google_search",
+        "url": "https://doctor.webmd.com/doctor/lynnell-lowry-e579cf74-545f-de11-86ed-001f29e3bb62-overview",
+        "fetched_at": "2026-05-15T20:19:00Z",
+        "fields": ["physician_type_MD"]
+      },
+      {
+        "source": "lowry_clinic",
+        "url": "https://thelowryclinic.com/alamo-eye-institute",
+        "fetched_at": "2026-05-15T20:19:30Z",
+        "fields": ["practice_type"]
+      }
+    ],
+    "enrichment_notes": "REMOVE FROM SPINE — Dr. Lowry is an MD ophthalmologist, not an OD. Alamo Eye Institute is an ophthalmology practice (ophthalmology + LASIK), out of scope for optometry-acquisition pipeline."
+  },
+  {
+    "legal_name": "The Eye Clinic",
+    "dba_name": null,
+    "address": "11864 Bandera Rd",
+    "city": "Helotes",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78023",
+    "phone": "(210) 695-2222",
+    "website": "https://www.theeyeclinic-online.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Celeste Acosta",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.theeyeclinic-online.com/",
+        "fetched_at": "2026-05-15T18:00:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent. 2 ODs (Acosta + McClure). Helotes Bexar NW. Full medical + dry eye + myopia + scleral + migraine lenses. On-site lab. Multi-OD partner pattern — verify ownership.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Celeste Acosta",
+    "owner_age_estimate": 50,
+    "owner_age_source": "uhco_grad_year_proxy_2000",
+    "owner_tenure_years": 26,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "live_website_fetch",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_below_age_threshold_long_ownership",
+        "direction": "neutral",
+        "evidence": "Dr. Acosta grad UHCO 2000. Returned to Helotes (hometown) 2010 to purchase The Eye Clinic. 16 yrs as owner-operator, 26 yrs OD career. Age proxy ~50. Just below 55 threshold but solid tenure.",
+        "source": "google_search",
+        "source_url": "https://www.theeyeclinic-online.com/team/dr-celeste-acosta/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_associate_present",
+        "direction": "negative",
+        "evidence": "Dr. Ashley McClure is second OD on staff (associate or partner unclear from team page). Multi-OD pattern reduces clean wedge.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.theeyeclinic-online.com/our-eye-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "self_described_locally_owned_long_term",
+        "direction": "positive",
+        "evidence": "Self-describes: 'not a retail chain or high-volume practice. We're a locally owned, medically guided optometry clinic that focuses on real diagnostics, long-term eye health, and patient relationships that span generations.' Multi-generational patient base — classic coasting indicator.",
+        "source": "google_search",
+        "source_url": "https://www.theeyeclinic-online.com/team/dr-celeste-acosta/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_recent_acquisition_evidence",
+        "direction": "positive",
+        "evidence": "Independent. No acquisition evidence.",
+        "source": "google_search",
+        "source_url": "https://www.theeyeclinic-online.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.theeyeclinic-online.com/our-eye-doctors/",
+        "fetched_at": "2026-05-15T20:20:00Z",
+        "fields": ["doctor_count", "self_description"]
+      },
+      {
+        "source": "google_search",
+        "url": "https://www.theeyeclinic-online.com/team/dr-celeste-acosta/",
+        "fetched_at": "2026-05-15T20:20:30Z",
+        "fields": ["graduation_year"]
+      }
+    ],
+    "enrichment_notes": "B-tier — Acosta age ~50 just below 55, 16 yrs ownership, multi-generational patient base (classic coasting tell), 'not high-volume' self-description. Associate Dr. McClure present (successor risk). Worth soft outreach but lower priority than top A-tier."
+  }
+]

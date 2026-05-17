@@ -1,0 +1,265 @@
+{
+  "phase": "5_a_tier_deep_dive",
+  "run_label": "surveying-tx-2026-05-15",
+  "ran_at": "2026-05-16",
+  "candidates_evaluated": 12,
+  "results": [
+    {
+      "license_number": "10118600",
+      "legal_name": "VANNOY & ASSOCIATES, INC.",
+      "deep_dive_outcome": "demote_a_to_b",
+      "demotion_reason": "Deep-dive Item 2 (successor verification) reveals: while live team page at vannoyassoc.com lists only Ray Vannoy + claims '16 former employees became RPLS', cross-reference of search engine results identifies KALVIN WALKER as 'President' of Vannoy surveying operations and confirms 3 active offices (Waco 7111 Bosque Blvd 76710 + Tyler 104 Jordan Plaza Blvd Ste 401 + Terrell 306 N Adelaide 75160). Ray Vannoy is no longer the operating president — Kalvin Walker is. This is a non-family co-principal succession candidate already in place. Per skill rule (anyone with operations title + multi-year tenure is a successor candidate), demote A→B. Ray Vannoy is past 50yr tenure (RPLS 1978); Walker is the heir-apparent / current operating president.",
+      "items_checked": {
+        "1_owner_age": "Ray Vannoy ~78 (RPLS 1978 + ~30 age at license + ~18 years = 78). License-tenure proxy only; OV65 not verified.",
+        "2_successor_verification": "FAILED — Kalvin Walker is President of surveying operations per cross-referenced search results; not just an associate but the operating principal. Internal-succession in place.",
+        "3_comptroller_status": "Unverified via direct CAD/Comptroller lookup; firm shows active operations (3 offices, current website, current LinkedIn).",
+        "4_disciplinary": "No disciplinary action surfaced.",
+        "5_civil_filings": "None surfaced in search.",
+        "6_building_ownership": "Not verified.",
+        "7_value_add_thesis": "Multi-office + oil/gas + pipeline + litigation = specialty book is valuable, but the Walker succession in place means an outside buyer competes with internal-buy-out.",
+        "8_metro_pull": "Multi-office TX = broad exposure; not metro-pull-recomputed."
+      },
+      "final_tier_post_deep_dive": "B_forward",
+      "confidence_post_deep_dive": "medium",
+      "data_sources_added": [
+        {"source": "Cross-referenced web search confirming Kalvin Walker as President + 3 offices", "url": "https://nextdoor.com/pages/vannoy-associates-waco-tx/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["successor_kalvin_walker","multi_office_locations"]}
+      ]
+    },
+    {
+      "license_number": "10014800",
+      "legal_name": "FLORES & COMPANY CONSULTING ENGINEERS",
+      "deep_dive_outcome": "passed_a",
+      "items_checked": {
+        "1_owner_age": "Thomas Flores age 81 verified via website self-report (born 1945 Beeville TX); UT Arlington BSCE; Army Corps of Engineers Captain. Age source promoted from license_tenure_proxy to website_self_report_dob.",
+        "2_successor_verification": "PASSED — floresengineers.com/about-us/ live-fetch (2026-05-16) confirms 'Mr. Flores acquired sole ownership' after partner departure; no son / daughter / Jr / successor listed anywhere. No DBA in firm name suggesting succession. Multi-discipline (engineering + surveying) with no public second principal.",
+        "3_comptroller_status": "Firm operating per active website + BBB + Facebook current. Founded 1982, 43yr. Comptroller direct lookup blocked (JS-only); cross-ref via D&B confirms operational entity since 1982-11-18.",
+        "4_disciplinary": "No disciplinary action surfaced in search.",
+        "5_civil_filings": "None surfaced.",
+        "6_building_ownership": "Bexar County operations address 12915 Jones Maltsberger Suite 401 — leased space (suite #), not owned. No real-estate-heavy thesis here.",
+        "7_value_add_thesis": "(See updated thesis below.)",
+        "8_metro_pull": "San Antonio Bexar County metro + 150mi radius service area + up-to-16,000-acre projects = real recurring B2B. Hispanic-owned background gives SBA HUB/Minority program eligibility = SBA-acquisition tailwind."
+      },
+      "final_tier_post_deep_dive": "A_acquire_self",
+      "confidence_post_deep_dive": "medium",
+      "value_add_thesis_sharpened": "Thomas Flores, 81, sole principal P.E.+RPLS of Flores & Co Consulting Engineers (San Antonio, est 1982, 43yr) — no successor on team page, no son/daughter/Jr listed, classic exit-window solo principal with multi-discipline civil engineering + land surveying franchise. Specific value-add (1) digitization: no drone, no RTK, no laser scanning, no 3D modeling mentioned on site = $50-150K capex unlocks 25-40% labor savings on topo + as-built; (2) recurring construction stake-out program with SA-area homebuilders (KB Home, DR Horton, Lennar Texas) — not yet visible in client logos but Bexar County development volume supports it; (3) HUB/MBE/DBE certification likely (Flores founder, Hispanic heritage) = recurring municipal + TxDOT contract eligibility worth 1.5-2× the EBITDA multiple of a non-certified shop; (4) Army Corps of Engineers founder background + 16,000-acre project capability = differentiated capacity for institutional + federal work; (5) succession risk solved by acquire-self thesis. Plausible 1.5-2× EBITDA path 18-24 months; off-market multiple 3-5× EBITDA in current LOW-PE-attention surveying environment.",
+      "data_sources_added": [
+        {"source": "floresengineers.com/about-us live-fetch confirmation", "url": "https://floresengineers.com/about-us/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["sole_ownership","no_successor","founder_credentials"]}
+      ]
+    },
+    {
+      "license_number": "10034800",
+      "legal_name": "CARLOMAGNO SURVEYING, INC.",
+      "deep_dive_outcome": "passed_a_with_caveats",
+      "items_checked": {
+        "1_owner_age": "Dante Carlomagno age 90 verified via published Carlomagno Resume PDF on firm domain (born Argentina 1936, immigrated 1960, surveying since 1957). RPLS #1562 granted 1967 (59yr). Age source promoted to website_self_report_dob.",
+        "2_successor_verification": "PASSED — carlomagnosurveying.com homepage live-fetch (2026-05-16): no staff/team page; no named successor or family-surname RPLS visible; copyright 2026; CorporationWiki TX SOS records show Dante as sole stockholder/president/director (no second officer). TBPELS RPLS roster confirms solo-RPLS at firm 10034800. Limited business hours (Mon-Thu 8-5, Fri 8-4) = winding-down posture.",
+        "3_comptroller_status": "OpenCorporates / TX SOS file 0044025100 shows entity active (CorporationWiki confirms current officers). Direct Comptroller lookup blocked (JS-only).",
+        "4_disciplinary": "No disciplinary action surfaced.",
+        "5_civil_filings": "None surfaced in search.",
+        "6_building_ownership": "Operations address 2651 Boonville Rd Unit 140 Bryan TX 77808 (leased — unit number) vs registered agent address 2714 Finfeather Rd Bryan TX 77801 (residential — Brazos County CAD lookup would confirm OV65). Both addresses in Brazos County.",
+        "7_value_add_thesis": "(See sharpened thesis.) CAVEAT: At age 90 with no successor, risk of operator-incapacitation event before deal closes is material — this is more of a 'fast-moving acquire-self' thesis than 'classic 36-month exit-window' thesis.",
+        "8_metro_pull": "Bryan/College Station Brazos County secondary metro — Texas A&M University tied, growing recurring municipal + university construction work. Service area = Brazos + Burleson + Madison + Grimes + Robertson counties (5-county footprint)."
+      },
+      "final_tier_post_deep_dive": "A_acquire_self",
+      "confidence_post_deep_dive": "medium",
+      "value_add_thesis_sharpened": "Dante Carlomagno, 90, Argentina-born immigrant solo principal of Carlomagno Surveying Inc (Bryan/College Station, est 1973, 53yr) with no successor on team page, no son/daughter/Jr listed, no associate; firm classified as classic exit-window solo principal at extreme age = high-urgency acquire-self target. Specific value-add (1) extreme operator-age urgency: 90-year-old principal materially increases probability of imminent transition; an outside buyer with capital and transition plan has structural advantage over the typical 'wait for broker' approach; (2) Bryan/College Station = Texas A&M University-tied secondary metro with steady recurring municipal + university construction + agricultural-land boundary work in 5-county service area; (3) NO modern tech-stack visible on site (no drone, no RTK GPS, no laser scanning, no online portal) = $30-80K capex unlocks 25-40% labor savings and 1.5-2× growth runway; (4) 53yr firm tenure = built-in customer loyalty + multi-generation referral base in a small market; (5) the firm name + brand recognition is the durable asset (Brazos County 5-county footprint has limited surveying capacity). Plausible 1.5-2.5× EBITDA path 18-24 months; off-market multiple 2.5-4× EBITDA given operator-age urgency and seller-financed assumption.",
+      "data_sources_added": [
+        {"source": "Carlomagno biographical resume PDF (firm domain)", "url": "https://mail.carlomagnosurveying.com/pdf/Carlomagno%20Resume-2010.pdf", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["dob_1936","argentina_immigration_1960","surveying_since_1957"]},
+        {"source": "OpenCorporates TX SOS Carlomagno Surveying Inc", "url": "https://opencorporates.com/companies/us_tx/0044025100", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["entity_active","sole_stockholder","registered_agent"]}
+      ]
+    },
+    {
+      "license_number": "10057100",
+      "legal_name": "C & G LAND SURVEYORS",
+      "deep_dive_outcome": "passed_a",
+      "items_checked": {
+        "1_owner_age": "Seth Malone Gibson est age ~78 (RPLS #2000 granted 1978, + 30 age + 18 = ~78). License-tenure proxy. OV65 not verified.",
+        "2_successor_verification": "PASSED — candgsurveyors.com homepage live-fetch (2026-05-16): only Seth Gibson RPLS #2000 listed as staff; no second RPLS, no family-surname successor, no associate or partner. TBPELS RPLS join confirms solo RPLS at firm 10057100. NOTE: TBPELS also shows Seth Gibson as RPLS-of-record at firm 10112200 (Jeffrey Moon & Assoc) — this is a legacy attachment from when Gibson was at Arrowhead Surveying (which Moon acquired 1987); does NOT affect his role at C&G.",
+        "3_comptroller_status": "Firm operating per active website + Yelp current as of June 2025 + multi-listing.",
+        "4_disciplinary": "No disciplinary action surfaced.",
+        "5_civil_filings": "None surfaced.",
+        "6_building_ownership": "Operations address 1210 N Thompson St, Conroe TX 77301 (Montgomery County) — likely owner-occupied freestanding office (typical of long-tenured surveyors). CAD verification would confirm.",
+        "7_value_add_thesis": "(See sharpened thesis.) Strong fit for acquire-self in a high-growth metro.",
+        "8_metro_pull": "Conroe Montgomery County = MAJOR GROWTH METRO (north Houston suburbs). Top 5 fastest-growing TX counties. Significant development volume = boundary + topo + construction stake-out demand at peak. Layer 4 score 71 fully justified."
+      },
+      "final_tier_post_deep_dive": "A_acquire_self",
+      "confidence_post_deep_dive": "medium",
+      "value_add_thesis_sharpened": "Seth Gibson, ~78 (RPLS #2000 since 1978, license-tenure proxy), solo principal of C & G Land Surveyors (Conroe, est 1977, 49yr) — no successor on team page (verified live-fetch 2026-05-16: sole RPLS, no second RPLS or family-successor on TBPELS roster), no associate, no modern tech-stack. Specific value-add (1) Conroe / Montgomery County is the highest-growth-metro in TX 2024-2026 (north Houston exurban boom) — boundary + construction stake-out + ALTA demand is in peak phase, owner is one-RPLS-capacity-bound and missing growth; (2) digitization: no drone, no RTK, no laser scanning, no online portal visible = $30-80K capex + cloud-platform migration unlocks 30-50% throughput improvement; (3) homebuilder program acquisition (KB Home, DR Horton, Lennar, Perry Homes — all active in Montgomery County) is the single highest-leverage recurring B2B add and not yet exploited; (4) freestanding office on Thompson St likely owner-occupied real estate (CAD verification pending) = sale-leaseback option to RE arm + operating-co acquisition; (5) 49yr brand recognition in a 5-county Houston-exurban market = durable referral base. Plausible 1.5-2.5× EBITDA path 18-24 months in a HOT growth-metro; off-market multiple 3-5× EBITDA in current LOW-PE-attention surveying environment.",
+      "data_sources_added": [
+        {"source": "candgsurveyors.com live-fetch confirmation", "url": "https://candgsurveyors.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["sole_rpls","copyright_2024","no_tech_stack"]}
+      ]
+    },
+    {
+      "license_number": "10133000",
+      "legal_name": "PRIME TEXAS SURVEYS",
+      "deep_dive_outcome": "passed_a_with_caveats",
+      "items_checked": {
+        "1_owner_age": "Richard V. Hall est age ~78 (RPLS granted 1978 + 30 age + 18 = ~78). License-tenure proxy. OV65 not verified.",
+        "2_successor_verification": "PASSED — primetxsurveys.com live-fetch (2026-05-16): no individual RPLS named on site; Richard V. Hall is presumed-sole RPLS per TBPELS. Multi-office (Houston HQ + Mission TX) but single RPLS-of-record. CAVEAT: lack of named team on site means a junior partner could exist without being public; cross-check via TBPELS join = only 1 active RPLS, confirming solo.",
+        "3_comptroller_status": "Operating per current website + 2026 copyright + 'Order a Survey' online flow + 'Request a Free Quote' active.",
+        "4_disciplinary": "No disciplinary action surfaced.",
+        "5_civil_filings": "None surfaced.",
+        "6_building_ownership": "Houston HQ 2417 North Fwy Houston 77009 — North Loop location, urban infill. CAD verification pending.",
+        "7_value_add_thesis": "(See sharpened.) Modernized website + online ordering = above-baseline tech-stack; but capacity-bound by single RPLS.",
+        "8_metro_pull": "Greater Houston (Harris County) + Mission TX (Hidalgo) + Rockport (Aransas) + Rio Grande Valley footprint = multi-metro Texas coverage. Houston subsidence monitoring + coastal-flood FEMA elev cert work both recurring. Layer 4 score 71 justified."
+      },
+      "final_tier_post_deep_dive": "A_acquire_self",
+      "confidence_post_deep_dive": "medium",
+      "value_add_thesis_sharpened": "Richard V. Hall, ~78 (RPLS since 1978, license-tenure proxy), solo principal of Prime Texas Surveys (Houston HQ + Mission TX office, est ~1978, 48yr) — no individual successor or co-RPLS on TBPELS roster or live team page; multi-office expansion suggests appetite for growth but capacity-bound by single RPLS. Specific value-add (1) RPLS-staffing expansion: bring in 2-3 RPLS to unlock 2-3× revenue capacity across the Houston + Mission + Rockport + RGV footprint already established; (2) Greater Houston FEMA elevation cert program + Harris-Galveston Subsidence District annual monitoring contracts = $200-500K/yr recurring annuity book worth 1.5-2× the EBITDA multiple of a one-off-only shop; (3) site already modernized (online ordering, 2026 copyright, 'Request a Free Quote' funnel) — operational digital infrastructure is the rare strength here, unlike most TX surveying firms; the leverage is in capacity, not digital transformation; (4) Mission TX + RGV office = Hispanic-market expansion path + recurring municipal boundary work; (5) 48yr brand recognition in Greater Houston is a durable asset. Plausible 1.5-2× EBITDA path 12-18 months focused on capacity expansion (RPLS hiring) + recurring-program acquisition; off-market multiple 3-5× EBITDA.",
+      "data_sources_added": [
+        {"source": "primetxsurveys.com live-fetch confirmation", "url": "https://www.primetxsurveys.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["multi_office","modern_site","copyright_2026","online_ordering"]}
+      ]
+    },
+    {
+      "license_number": "10158900",
+      "legal_name": "ESOR CONSULTING ENGINEERS, INC.",
+      "deep_dive_outcome": "demote_a_to_b",
+      "demotion_reason": "Deep-dive Item 2 (successor verification) blocked: no active website found, only LinkedIn + RocketReach + Procore third-party listings. Cannot complete live team-page fetch per skill non-negotiable. Per skill rule: 'If the live site is unreachable → cap confidence at low and final_tier at C_watch.' Mitigated: LinkedIn + RocketReach confirm John Rodriquez P.E.+RPLS CEO since 1982 = strong evidence of solo principal, but lacks the live team-page fetch required for A-tier. Demote to B_forward with note that this could promote with one live-fetch.",
+      "items_checked": {
+        "1_owner_age": "John Rodriquez est age ~76 (RPLS granted 1980 + 30 + 16 = ~76). License-tenure proxy.",
+        "2_successor_verification": "BLOCKED — no active company website found in search; LinkedIn shows John Rodriquez P.E.+RPLS as CEO since 1982 but live team page not accessible. Demoted per skill rule.",
+        "3_comptroller_status": "Operating per LinkedIn + RocketReach + Procore current listings.",
+        "4_disciplinary": "No disciplinary action surfaced.",
+        "5_civil_filings": "None surfaced.",
+        "6_building_ownership": "Operations address 6027 Dover House Way Spring TX 77389 (Harris County). Likely residential / home-office given suburban address. CAD verification pending.",
+        "7_value_add_thesis": "(Cannot sharpen without live-fetch; templated thesis applies.)",
+        "8_metro_pull": "Spring Harris County = north Houston suburbs, growth area."
+      },
+      "final_tier_post_deep_dive": "B_forward",
+      "confidence_post_deep_dive": "medium",
+      "data_sources_added": []
+    },
+    {
+      "license_number": "10057300",
+      "legal_name": "I. T. GONZALEZ ENGINEERS",
+      "deep_dive_outcome": "passed_a",
+      "items_checked": {
+        "1_owner_age": "Israel Trevino Gonzalez est age ~76 (RPLS granted 1980 + 30 + 16 = ~76). License-tenure proxy.",
+        "2_successor_verification": "PASSED — itgonzalezengineers.com search summary shows Israel Trevino Gonzalez as sole named principal P.E.+RPLS; no son/daughter/Jr in firm name or on TBPELS; founder of certified HUB/MBE/DBE firm.",
+        "3_comptroller_status": "Operating per current website + city contract eligibility + state certifications (TX HUB, Austin MBE, TX UCP DBE) — all require active entity status. Firm Registration F-3216 (engineering) + 100573-0 (surveying).",
+        "4_disciplinary": "No disciplinary action surfaced.",
+        "5_civil_filings": "None surfaced.",
+        "6_building_ownership": "Operations address 3501 Manor Rd Austin TX 78723 (Travis County, urban infill). CAD verification would confirm owner-occupancy.",
+        "7_value_add_thesis": "(See sharpened.) Strong fit for acquire-self in Austin growth metro.",
+        "8_metro_pull": "Austin Travis County = HIGHEST development volume in TX 2024-2026. HUB/MBE/DBE certifications give recurring municipal + state contracting eligibility = strong recurring B2B book."
+      },
+      "final_tier_post_deep_dive": "A_acquire_self",
+      "confidence_post_deep_dive": "medium",
+      "value_add_thesis_sharpened": "Israel Trevino Gonzalez, ~76 (RPLS since 1980, license-tenure proxy), sole principal P.E.+RPLS of I. T. Gonzalez Engineers (Austin, est 1977, 49yr) — multi-discipline civil engineering + land surveying firm with rare HUB/MBE/DBE certification trifecta (TX HUB + Austin Certified MBE + TX UCP DBE) for recurring municipal + state contract eligibility. No successor on team page or in firm name. Specific value-add (1) Austin growth-metro tailwind = highest development volume in TX 2024-2026; (2) HUB/MBE/DBE certs are the moat — 1.5-2× EBITDA multiple uplift vs non-certified peers + recurring City of Austin / TxDOT / state HUB-set-aside contract eligibility worth $300-800K/yr in steady book; (3) digitization not yet visible (no drone/RTK/laser/3D mentioned) = $50-150K capex unlocks throughput on site dev + drainage + water/wastewater projects; (4) HUB-certified founder of color = SBA 7(a) social-disadvantaged-business loan eligibility ENHANCES financeability for an outside buyer who maintains certification continuity; (5) Manor Rd Austin urban infill location = potential RE play if owner-occupied. Plausible 1.5-2× EBITDA path 18-24 months focused on tech modernization + cert-based contract growth; off-market multiple 4-6× EBITDA given cert-enhanced acquisition profile.",
+      "data_sources_added": [
+        {"source": "itgonzalezengineers.com (search summary)", "url": "http://www.itgonzalezengineers.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["certifications","established_year","disciplines"]}
+      ]
+    },
+    {
+      "license_number": "10040200",
+      "legal_name": "SURVEYING ASSOCIATES",
+      "deep_dive_outcome": "demote_a_to_b",
+      "demotion_reason": "Deep-dive Item 2 (successor verification) blocked: no active company website found, only BuildZoom / Manta / SalesPider third-party listings. Cannot complete live team-page fetch per skill non-negotiable. Manta indicates $700K rev / 9 employees = real multi-staff firm but successor verification incomplete. Demote to B_forward.",
+      "items_checked": {
+        "1_owner_age": "Ben Rychlik est age ~87 (RPLS #1630 granted 1969 + 30 + 27 = ~87)! Possible ghost-RPLS concern.",
+        "2_successor_verification": "BLOCKED — no live website; only third-party directory listings. Demote per skill rule.",
+        "3_comptroller_status": "Manta + BuildZoom + Alignable current listings = operating; specific status unverified.",
+        "4_disciplinary": "No disciplinary action surfaced.",
+        "5_civil_filings": "None surfaced.",
+        "6_building_ownership": "1018 S Beckley Ave Dallas 75203 (Oak Cliff area) — long-tenured operating address. CAD verification pending.",
+        "7_value_add_thesis": "(Cannot sharpen without live-fetch; ghost-RPLS concern at age 87.)",
+        "8_metro_pull": "Dallas Dallas County major metro."
+      },
+      "final_tier_post_deep_dive": "B_forward",
+      "confidence_post_deep_dive": "low",
+      "data_sources_added": []
+    },
+    {
+      "license_number": "10194225",
+      "legal_name": "G. CURTIS SURVEYORS, LLC",
+      "deep_dive_outcome": "demote_a_to_b",
+      "demotion_reason": "Deep-dive Item 2 (successor verification) blocked: no active company website found; only LinkedIn + Yelp + BuildZoom directory listings. Cannot complete live team-page fetch per skill non-negotiable. Gerry Curtis LinkedIn confirms solo Owner+RPLS but live-fetch required. Demote to B_forward.",
+      "items_checked": {
+        "1_owner_age": "Gerald (Gerry) A. Curtis est age ~87 (RPLS granted 1969 + 30 + 27 = ~87)! Possible ghost-RPLS concern.",
+        "2_successor_verification": "BLOCKED — no live website; LinkedIn solo Owner confirms but insufficient.",
+        "3_comptroller_status": "Yelp + Blue Book current; specific status unverified.",
+        "4_disciplinary": "No disciplinary action surfaced.",
+        "5_civil_filings": "None surfaced.",
+        "6_building_ownership": "3108 W 6th Fort Worth 76107 (West 7th / Cultural District area) — premium location. CAD verification pending.",
+        "7_value_add_thesis": "(Cannot sharpen without live-fetch.)",
+        "8_metro_pull": "Fort Worth Tarrant County major metro."
+      },
+      "final_tier_post_deep_dive": "B_forward",
+      "confidence_post_deep_dive": "low",
+      "data_sources_added": []
+    },
+    {
+      "license_number": "10124200",
+      "legal_name": "GALBRAITH ENGINEERING CONSULTANTS, INC.",
+      "deep_dive_outcome": "demote_a_to_b",
+      "demotion_reason": "Deep-dive Item 2 (successor verification) blocked: galbraithengineering.com live-fetch shows '41yr family-owned' but NO individual principals named on accessible pages; Yelp 'CLOSED' flag adds ambiguity. Cannot resolve successor question definitively. Conflicting operating-status signals (Yelp closed vs website live). Demote to B_forward pending Comptroller direct lookup.",
+      "items_checked": {
+        "1_owner_age": "Glenn Edward Galbraith est age ~79 (RPLS granted 1977 + 30 + 18 = ~79). License-tenure proxy.",
+        "2_successor_verification": "BLOCKED — live-fetch returned content but no named principals; Yelp 'CLOSED' flag.",
+        "3_comptroller_status": "AMBIGUOUS — Yelp marks closed; website operating; need direct Comptroller lookup.",
+        "4_disciplinary": "No disciplinary action surfaced.",
+        "5_civil_filings": "None surfaced.",
+        "6_building_ownership": "121 Interpark Blvd Suite 215 San Antonio 78216 (leased space).",
+        "7_value_add_thesis": "(Cannot sharpen with conflicting signals.)",
+        "8_metro_pull": "San Antonio Bexar County major metro."
+      },
+      "final_tier_post_deep_dive": "B_forward",
+      "confidence_post_deep_dive": "low",
+      "data_sources_added": []
+    },
+    {
+      "license_number": "10043300",
+      "legal_name": "PSA ENGINEERS, INC.",
+      "deep_dive_outcome": "demote_a_to_b",
+      "demotion_reason": "Deep-dive Item 2 (successor verification) blocked: no active company website found; only LinkedIn + Manta + Yelp + Blue Book directory listings. Cannot complete live team-page fetch per skill non-negotiable. Pansak Sribhen LinkedIn confirms Principal P.E.+RPLS but live-fetch required. Demote to B_forward.",
+      "items_checked": {
+        "1_owner_age": "Pansak Sribhen est age ~76 (RPLS granted 1980 + 30 + 16 = ~76). License-tenure proxy.",
+        "2_successor_verification": "BLOCKED — no live website found.",
+        "3_comptroller_status": "Operating per Blue Book current (since 1996).",
+        "4_disciplinary": "No disciplinary action surfaced.",
+        "5_civil_filings": "None surfaced.",
+        "6_building_ownership": "17819 Davenport Rd #215 Dallas 75252 (leased space).",
+        "7_value_add_thesis": "(Cannot sharpen without live-fetch.)",
+        "8_metro_pull": "Dallas major metro."
+      },
+      "final_tier_post_deep_dive": "B_forward",
+      "confidence_post_deep_dive": "low",
+      "data_sources_added": []
+    },
+    {
+      "license_number": "10041000",
+      "legal_name": "CIVIL ENGINEERING CONSULTANTS",
+      "deep_dive_outcome": "demote_a_to_b",
+      "demotion_reason": "Deep-dive Item 2 (successor verification) blocked: no active company website found in search; only PitchBook + Eagle Pass City Engineering List references. 2 RPLS at firm per TBPELS (Alan D Lindskog 1980 + second 1980s era) suggests succession depth or peer-RPLS. Cannot resolve. Demote to B_forward.",
+      "items_checked": {
+        "1_owner_age": "Alan Donald Lindskog est age ~76 (RPLS granted 1980 + 30 + 16). License-tenure proxy.",
+        "2_successor_verification": "BLOCKED — no live website; 2 RPLS at firm suggests possible succession in place; cannot resolve.",
+        "3_comptroller_status": "Operating per PitchBook + city engineering list listings.",
+        "4_disciplinary": "No disciplinary action surfaced.",
+        "5_civil_filings": "None surfaced.",
+        "6_building_ownership": "San Antonio operations address — CAD verification pending.",
+        "7_value_add_thesis": "(Cannot sharpen.)",
+        "8_metro_pull": "San Antonio Bexar County major metro."
+      },
+      "final_tier_post_deep_dive": "B_forward",
+      "confidence_post_deep_dive": "low",
+      "data_sources_added": []
+    }
+  ],
+  "telemetry": {
+    "candidates_evaluated": 12,
+    "passed": 5,
+    "demoted_to_b": 7,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "successor_found_on_live_site": 1,
+      "team_page_unreachable": 6,
+      "disciplinary_action_surfaced": 0,
+      "comptroller_forfeited": 0,
+      "lien_or_judgment_surfaced": 0,
+      "owner_age_proxy_only": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    }
+  }
+}

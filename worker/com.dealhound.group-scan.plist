@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.dealhound.group-scan</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/node</string>
+        <string>/Users/gideonspencer/dealhound-pro/worker/group-scan-runner.js</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/gideonspencer/dealhound-pro</string>
+
+    <!-- Source env from project .env file so RESEND_API_KEY, SUPABASE_* etc. are available.
+         LaunchAgent processes do not inherit shell env — these must be explicit. -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>DOTENV_PATH</key>
+        <string>/Users/gideonspencer/dealhound-pro/.env</string>
+        <key>HOME</key>
+        <string>/Users/gideonspencer</string>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+
+    <key>StartInterval</key>
+    <integer>3600</integer>
+
+    <key>KeepAlive</key>
+    <false/>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/gideonspencer/dealhound-pro/worker/logs/group-scan-runner.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/gideonspencer/dealhound-pro/worker/logs/group-scan-runner.err.log</string>
+</dict>
+</plist>

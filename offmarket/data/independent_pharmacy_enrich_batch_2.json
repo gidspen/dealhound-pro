@@ -1,0 +1,3607 @@
+[
+  {
+    "spine_index": 50,
+    "legal_name": "Good Life Pharmacy",
+    "dba_name": "Good Life Pharmacy",
+    "address": "26108 Overlook Pkwy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78260",
+    "phone": "(210) 819-4515",
+    "website": "https://www.goodlifepharm.com/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Riyad Hasanali, PharmD",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": 2014,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.goodlifepharm.com/meet-our-staff/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["owner_name", "year_established", "pharmacists"]
+      },
+      {
+        "source": "google",
+        "url": "https://www.linkedin.com/in/aziz-hasanali-98555216a/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["owner_name", "co_owner"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Two-location independent founded 2014 by brothers Riyad (PharmD) and Aziz Hasanali. Two SA locations (Overlook Pkwy + Nacogdoches Rd). RxLocal platform.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Riyad Hasanali (PharmD) and Aziz Hasanali (brothers, co-owners)",
+    "owner_age_estimate": 42,
+    "owner_age_source": "founding_date_proxy",
+    "owner_tenure_years": 12,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 12,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "young_two_brother_ownership",
+        "direction": "disqualifying",
+        "evidence": "Brothers Riyad (PharmD) + Aziz Hasanali founded in 2014. Two co-owners both likely 35-50. Strong successor structure between siblings. Not aging out.",
+        "source": "website_about",
+        "source_url": "https://www.goodlifepharm.com/meet-our-staff/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_growth",
+        "direction": "negative",
+        "evidence": "Two stores under one owner-pharmacist team, growth mode. Stephanie May (PharmD) joined 2018 as additional pharmacist.",
+        "source": "website_about",
+        "source_url": "https://www.goodlifepharm.com/meet-our-staff/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_rxlocal_platform",
+        "direction": "negative",
+        "evidence": "Uses RxLocal patient-facing app (PioneerRx platform = modern tech stack). Modern website.",
+        "source": "website",
+        "source_url": "https://www.goodlifepharm.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "no_distress_or_acquisition_found",
+        "direction": "negative",
+        "evidence": "No FDA warning letters, no DEA actions, not on LEIE, not on Texas Medicaid Fraud watch. No acquisition by chain/PE found.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Good+Life+Pharmacy%22+San+Antonio+acquired+OR+sold",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.goodlifepharm.com/meet-our-staff/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["owner_name", "year_established"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — Young (founded 2014) two-brother independent in growth mode. Doesn't fit aging-out coast pattern. C-tier or below.",
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 51,
+    "legal_name": "Rite Away Pharmacy",
+    "dba_name": "Rite-Away Pharmacy & Medical Supply",
+    "address": "2235 Thousand Oaks (multi-location)",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78232",
+    "phone": "(210) 490-2733",
+    "website": "https://riteawaypharmacy.com/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Jitendra Chaudhary, PharmD (PIC #2)",
+    "banner_program": "Independent (RxLocal) / Health Mart",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://riteawaypharmacy.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["owner_name", "multi_location"]
+      },
+      {
+        "source": "news",
+        "url": "https://news4sanantonio.com/news/local/san-antonio-area-pharmacy-and-pharmacist-to-pay-fine-after-alleged-unlawful-opioid-distribution",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["distress_signal"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-operated multi-location SA chain (4-5 stores incl. Pleasanton Rd, Thousand Oaks). Pharmacist-owner Jitendra Chaudhary. Significant DEA opioid settlement.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Jitendra Chaudhary, PharmD (family operation)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": true,
+    "distress_reasons": [
+      "DEA/opioid distribution settlement: $275,000 fine for alleged unlawful opioid distribution"
+    ],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "dea_opioid_settlement",
+        "direction": "disqualifying",
+        "evidence": "$275,000 fine and pharmacist sanction over alleged unlawful opioid distribution. Major regulatory distress = federal DEA action history. Disqualifying for clean SBA financing.",
+        "source": "news4sanantonio",
+        "source_url": "https://news4sanantonio.com/news/local/san-antonio-area-pharmacy-and-pharmacist-to-pay-fine-after-alleged-unlawful-opioid-distribution",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_chain",
+        "direction": "negative",
+        "evidence": "Multi-store independent (Pleasanton Rd, Thousand Oaks, others). Larger than typical solo-coast target.",
+        "source": "rxlocal",
+        "source_url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio/rite-away-pharmacy-2115-pleasanton-rd-ste-100",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "news4sanantonio",
+        "url": "https://news4sanantonio.com/news/local/san-antonio-area-pharmacy-and-pharmacist-to-pay-fine-after-alleged-unlawful-opioid-distribution",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["distress", "DEA"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — DEA opioid distribution settlement = serious regulatory distress; not SBA financeable cleanly; reputational and licensing risk. Skip.",
+    "data_completeness": 0.6
+  },
+  {
+    "spine_index": 52,
+    "legal_name": "Legends Pharmacy",
+    "dba_name": "Legends Pharmacy",
+    "address": "6601 Blanco Rd",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78216",
+    "phone": "(210) 735-2323",
+    "website": "https://legendspharmacy.com/",
+    "license_type": "Class A (Community Pharmacy) / LTC",
+    "license_holder_name": "Angela DiPaolo, RPh, PharmD (VP Pharmacy Ops)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": 2002,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://legendspharmacy.com/about-us/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["owner_name", "year_established", "services"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Long-term care / wholesale pharmacy, not retail. Servicing nursing homes, assisted living, hospice. NOT walk-in retail — fails the Class A retail target profile.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Angela DiPaolo, RPh, PharmD (VP, longtime executive — original Director of Operations in 2002)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "tenure_proxy",
+    "owner_tenure_years": 24,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 24,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "LTC_wholesale_not_retail",
+        "direction": "disqualifying",
+        "evidence": "Wholesale pharmacy serving nursing homes / hospice / assisted living — NOT walk-in retail Class A. Different valuation model (LTC market) and outside the on-thesis solo-pharmacist-retail target.",
+        "source": "website",
+        "source_url": "https://legendspharmacy.com/about-us/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_owner",
+        "direction": "positive",
+        "evidence": "DiPaolo joined 2002 as Director, 24 yrs tenure, ~55. If she is also owner, this would be aging-out signal.",
+        "source": "website",
+        "source_url": "https://legendspharmacy.com/about-us/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://legendspharmacy.com/about-us/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["business_model"]
+      }
+    ],
+    "enrichment_notes": "RECLASSIFY/DISQUALIFY — LTC institutional pharmacy, not retail walk-in. Spine independence verification incorrect for our retail thesis. Skip.",
+    "data_completeness": 0.7
+  },
+  {
+    "spine_index": 53,
+    "legal_name": "Peoples Pharmacy",
+    "dba_name": "Peoples Rx",
+    "address": "3201 W Anderson Ln",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78757",
+    "phone": "(512) 444-8866",
+    "website": "https://peoplesrx.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": "Bill Swail, RPh (founder)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 1980,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://peoplesrx.com/about-us/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["owner_name", "year_established", "founder"]
+      },
+      {
+        "source": "communityimpact",
+        "url": "https://communityimpact.com/austin/central-austin/business/2016/10/26/taking-holistic-approach-rx-peoples-pharmacy-owner-bill-swail-says-shops-beloved-austin/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["owner_name", "succession_signal"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1980 by Bill Swail. 150+ employees across 4 locations (Anderson, Westbank, Lamar/Westgate, Round Rock). Holistic/wellness positioning + compounding. Daughter Jeneen Schloz active in business = strong succession.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Bill Swail (founder, RPh); daughter Jeneen Schloz active",
+    "owner_age_estimate": 73,
+    "owner_age_source": "founding_date_proxy",
+    "owner_tenure_years": 46,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 46,
+    "employee_count_estimate": 150,
+    "provider_count_estimate": null,
+    "employee_count_source": "linkedin_company",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "family_successor_in_place",
+        "direction": "disqualifying",
+        "evidence": "Daughter Jeneen Schloz is actively co-running the business. Strong family succession = unlikely to sell outside family. Owner is 70+, but successor is in place.",
+        "source": "communityimpact",
+        "source_url": "https://communityimpact.com/austin/central-austin/business/2016/10/26/taking-holistic-approach-rx-peoples-pharmacy-owner-bill-swail-says-shops-beloved-austin/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "scaled_multi_location",
+        "direction": "negative",
+        "evidence": "4 locations, 150+ employees, compounding + retail + wellness. Too large for solo-coast target (probably $20M+ revenue).",
+        "source": "website",
+        "source_url": "https://peoplesrx.com/about-us/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_brand_active",
+        "direction": "negative",
+        "evidence": "Active Facebook, modern site, recent Austin Chamber press, holistic/wellness positioning trending in market.",
+        "source": "facebook",
+        "source_url": "https://www.facebook.com/PeoplesRx/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "communityimpact",
+        "url": "https://communityimpact.com/austin/central-austin/business/2016/10/26/taking-holistic-approach-rx-peoples-pharmacy-owner-bill-swail-says-shops-beloved-austin/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["successor"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — Family-owned multi-location chain ($20M+) with daughter as active successor. Beloved Austin brand. Not selling.",
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 54,
+    "legal_name": "Peoples Pharmacy (Westbank)",
+    "dba_name": "Peoples Rx Westbank",
+    "address": "4201 Westbank Dr",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78746",
+    "phone": "(512) 327-8877",
+    "website": "https://peoplesrx.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": "Bill Swail, RPh (founder of parent)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://peoplesrx.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["parent_company"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Sister location of Peoples Pharmacy (idx=53). Same parent ownership (Bill Swail + family).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Bill Swail; daughter Jeneen Schloz",
+    "owner_age_estimate": 73,
+    "owner_age_source": "founding_date_proxy",
+    "owner_tenure_years": 46,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 46,
+    "employee_count_estimate": 150,
+    "provider_count_estimate": null,
+    "employee_count_source": "linkedin_company",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "duplicate_of_idx_53",
+        "direction": "disqualifying",
+        "evidence": "This is the Westbank branch of Peoples Rx — same family-owned chain with active daughter successor.",
+        "source": "website",
+        "source_url": "https://peoplesrx.com/locations/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DUPLICATE/DISQUALIFY — sister location of Peoples Rx (idx 53). Same parent. Skip.",
+    "data_completeness": 0.7
+  },
+  {
+    "spine_index": 55,
+    "legal_name": "Lamar Plaza Drug Store",
+    "dba_name": "Martin's Wellness & Compounding Pharmacy at Lamar Plaza",
+    "address": "1509 S Lamar Blvd",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78704",
+    "phone": "(512) 442-6777",
+    "website": "https://martinswellness.com/lamar-plaza-drug-store",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": "Lynh Warnken, PharmD (PIC); Jim Martin, RPh (group owner)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 1966,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://martinswellness.com/blog/post/pharmacist-jim-martin",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["owner_name", "founder", "acquisition_history"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "60-year-old Zilker-area Austin pharmacy, acquired by Jim and Dorinda Martin in 2009 to be part of Martin's Wellness group. Lynh Warnken is PIC and minority owner. Group has multiple stores under Martin's Wellness brand.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Jim and Dorinda Martin (group owners); Lynh Warnken, PharmD (PIC/local owner)",
+    "owner_age_estimate": 67,
+    "owner_age_source": "tenure_proxy",
+    "owner_tenure_years": 17,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": "2009-10-01",
+    "years_in_business": 60,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_17_years",
+        "direction": "positive",
+        "evidence": "Jim Martin acquired 2009; PharmD with co-owner wife. 17 years operating + likely 60-67 yrs old (acquired at ~50). Aging-out range.",
+        "source": "website",
+        "source_url": "https://martinswellness.com/blog/post/pharmacist-jim-martin",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "compounding_specialty_mix",
+        "direction": "positive",
+        "evidence": "Compounding + community Rx + wellness. Strong margin mix.",
+        "source": "website",
+        "source_url": "https://martinswellness.com/lamar-plaza-drug-store",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_store_group_owner",
+        "direction": "negative",
+        "evidence": "Part of Martin's Wellness group (multiple stores) — larger than solo-coast target.",
+        "source": "website",
+        "source_url": "https://martinswellness.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "PIC_local_owner_partner",
+        "direction": "positive",
+        "evidence": "Lynh Warnken listed as PIC AND Owner of Lamar Plaza. Indicates layered ownership / equity-for-PIC model = potential future buyout pathway.",
+        "source": "website",
+        "source_url": "https://martinswellness.com/pharmacy-pharmacists",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://martinswellness.com/blog/post/pharmacist-jim-martin",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["owner_age", "acquisition_history"]
+      }
+    ],
+    "enrichment_notes": "B-tier — Multi-store Martin's Wellness group (likely $5-15M aggregate revenue), Jim Martin ~67. Possible aging-out pathway, but PE-active wellness compounding category may have suitors already.",
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 56,
+    "legal_name": "Vina Pharmacy",
+    "dba_name": "Vina Pharmacy",
+    "address": "11207 N Lamar Blvd Ste A",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78753",
+    "phone": "(512) 977-8844",
+    "website": "https://www.vinapharmacy.com/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Debbie Huynh, RPh (owner)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "communityimpact",
+        "url": "https://communityimpact.com/austin/news/2013/09/24/vina-pharmacy/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name", "history", "languages"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/benjamin-casey-3021267",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["PIC"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo-owner pharmacy. Debbie Huynh started business after HEB pharmacist role ended ~2002. Moved from Payton Gin Rd to N Lamar 2011. Vietnamese/Spanish/English staff. North Lamar (Asian community).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Debbie Huynh, RPh",
+    "owner_age_estimate": 56,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_tenure_years": 24,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "linkedin",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_owner_long_tenure",
+        "direction": "positive",
+        "evidence": "Debbie Huynh worked HEB pharmacist since ~2002, opened independent ~2011, now operating 15+ years independently. Solo owner ~56. Strong fit for aging-out coast.",
+        "source": "communityimpact",
+        "source_url": "https://communityimpact.com/austin/news/2013/09/24/vina-pharmacy/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "ethnic_community_niche",
+        "direction": "positive",
+        "evidence": "Vietnamese/Spanish/English service model. Loyal customer base in N Austin Asian community = recurring Rx defensible against chains.",
+        "source": "communityimpact",
+        "source_url": "https://communityimpact.com/austin/news/2013/09/24/vina-pharmacy/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "drive_thru_free_delivery",
+        "direction": "negative",
+        "evidence": "Has drive-thru + free delivery = active service model. Not coasting purely on legacy traffic.",
+        "source": "communityimpact",
+        "source_url": "https://communityimpact.com/austin/news/2013/09/24/vina-pharmacy/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "PIC_separate_from_owner",
+        "direction": "positive",
+        "evidence": "Benjamin Casey listed as Pharmacist-in-Charge on LinkedIn — separate from owner Huynh. Indicates owner may be reducing chair time = pre-exit signal.",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/benjamin-casey-3021267",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "communityimpact",
+        "url": "https://communityimpact.com/austin/news/2013/09/24/vina-pharmacy/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name", "history"]
+      }
+    ],
+    "enrichment_notes": "A/B-tier — Solo Vietnamese-American pharmacist-owner, 15+ yr tenure, ethnic-community niche, separate PIC. Strong off-market acquisition fit.",
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 57,
+    "legal_name": "AM Pharmacy",
+    "dba_name": "AM Pharmacy",
+    "address": "10401 Anderson Mill Rd Ste 112B",
+    "city": "Austin",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78750",
+    "phone": "(512) 270-4899",
+    "website": "https://www.ampharmacy.org/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 2016,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.ampharmacy.org/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["year_established"]
+      },
+      {
+        "source": "austinbcc",
+        "url": "https://www.austinbcc.org/list/member/am-pharmacy-austin-18",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["membership"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-owned Austin pharmacy founded 2016. Greater Austin Black Chamber member. Founded too recently to be aging-out target (only 10 years).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 10,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 10,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "recent_founding_growth_mode",
+        "direction": "disqualifying",
+        "evidence": "Founded 2016 = young pharmacy in growth mode. Not aging-out coast pattern.",
+        "source": "website",
+        "source_url": "https://www.ampharmacy.org/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DISQUALIFY — Too young (10 yr tenure). Not coast pattern.",
+    "data_completeness": 0.5
+  },
+  {
+    "spine_index": 58,
+    "legal_name": "East Austin Medicine Shop",
+    "dba_name": "East Austin Medicine Shop",
+    "address": "1909 E 38th 1/2 St Ste C2",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78723",
+    "phone": "(512) 643-0999",
+    "website": "https://www.pharmacistrecommends.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": "Felipe Aguirre, RPh (since Jan 2016)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 2015,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.pharmacistrecommends.com/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["year_established", "services"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/felipe-aguirre-177a9b50/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Vietnamese/Spanish-speaking East Austin community pharmacy. Felipe Aguirre on staff since Jan 2016. Founded 2015 = young. Compounding + vaccinations + pet meds.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Felipe Aguirre, RPh (likely owner-PIC)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 11,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 11,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "young_pharmacy_11_yr",
+        "direction": "disqualifying",
+        "evidence": "Founded 2015. Owner-pharmacist career stage too early for aging-out coast.",
+        "source": "website",
+        "source_url": "https://www.pharmacistrecommends.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "active_compounding_services",
+        "direction": "negative",
+        "evidence": "Active compounding + vaccinations + pet meds = full-service active practice. Not coasting.",
+        "source": "website",
+        "source_url": "https://www.pharmacistrecommends.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DISQUALIFY — Young, active practice. Not aging out.",
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 59,
+    "legal_name": "Tarrytown Pharmacy",
+    "dba_name": "Tarrytown Pharmacy",
+    "address": "2727 Exposition Blvd",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78703",
+    "phone": "(512) 478-6419",
+    "website": "https://www.tarrytownpharmacy.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": "Mark Newberry, PharmD (3rd gen owner)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": 1941,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.tarrytownpharmacy.com/pages/about",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name", "year_established", "generations"]
+      },
+      {
+        "source": "ut_austin",
+        "url": "https://pharmacy.utexas.edu/directory/mark-newberry",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name", "credentials"]
+      },
+      {
+        "source": "kxan",
+        "url": "https://www.kxan.com/news/local/austin/tarrytown-pharmacy-celebrates-84-years-in-austin/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["year_established"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "85-year-old Austin landmark, 3rd gen Newberry family ownership. Mark Newberry (PharmD 2003) is current owner. Wife Leslie active. Family compounding pharmacy, premium West Austin neighborhood (Tarrytown).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Mark Newberry, PharmD (3rd gen); Leslie Newberry (wife)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "license_grad_year",
+    "owner_tenure_years": 23,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 85,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "3rd_gen_active_owner_mid_50s",
+        "direction": "disqualifying",
+        "evidence": "Mark Newberry graduated UT PharmD 2003 = ~50 today. Active 3rd gen owner, family legacy, recently celebrated 84 years. Too young + too engaged to be near-term seller.",
+        "source": "ut_austin",
+        "source_url": "https://pharmacy.utexas.edu/directory/mark-newberry",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "premium_neighborhood_landmark",
+        "direction": "negative",
+        "evidence": "Tarrytown is one of Austin's wealthiest neighborhoods. Landmark family pharmacy with NCPA & McKesson recognition (Pharmacy of the Year 2008).",
+        "source": "website",
+        "source_url": "https://www.tarrytownpharmacy.com/pages/about",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_innovation_leader",
+        "direction": "negative",
+        "evidence": "Sheridan 'America's Pharmacist' Dec 2025 cover feature — 'The Tarrytown Way' — industry-leading innovation. Not coasting at all.",
+        "source": "sheridan",
+        "source_url": "https://digitaleditions.sheridan.com/article/The+Tarrytown+way/5070783/856717/article.html",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "kxan",
+        "url": "https://www.kxan.com/news/local/austin/tarrytown-pharmacy-celebrates-84-years-in-austin/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["years_in_business"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — Active 3rd gen, industry-leading innovator, family legacy pharmacy. Not a sale candidate.",
+    "data_completeness": 0.9
+  },
+  {
+    "spine_index": 60,
+    "legal_name": "Nau's Enfield Pharmacy",
+    "dba_name": "Nau's Enfield Drug",
+    "address": "1115 W Lynn St",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78703",
+    "phone": null,
+    "website": "https://www.facebook.com/Naus/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Lambert Labay, RPh (deceased; family operated until 2023 closure)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": 1951,
+    "data_sources": [
+      {
+        "source": "cbsaustin",
+        "url": "https://cbsaustin.com/news/local/lambert-labay-the-man-behind-longtime-landmark-naus-enfield-drug-has-died",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name", "death", "closure"]
+      },
+      {
+        "source": "kvue",
+        "url": "https://www.kvue.com/article/money/economy/boomtown-2040/naus-enfield-drug-closing-austin-clarksville/269-c8c379c8-7184-4522-841d-a6a52fa80553",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["closure_2023"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "CLOSED — Lambert Labay (1959 UT pharmacy grad, bought store 1972) died. Family lost lease in 2023; store permanently closed March 2023. Spine record is STALE.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "closed_dissolved",
+    "registered_agent": null,
+    "owner_name": "Lambert Labay (deceased)",
+    "owner_age_estimate": null,
+    "owner_age_source": "deceased",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 72,
+    "employee_count_estimate": 0,
+    "provider_count_estimate": 0,
+    "employee_count_source": "closed",
+    "is_distressed": true,
+    "distress_reasons": ["Pharmacy CLOSED 2023 — lease not renewed; owner Lambert Labay died"],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "permanently_closed_2023",
+        "direction": "disqualifying",
+        "evidence": "Yelp marked CLOSED, news 2023 confirmed permanent closure when family couldn't renew lease. Owner Lambert Labay deceased. Spine record stale — should be removed from active target list.",
+        "source": "yelp",
+        "source_url": "https://www.yelp.com/biz/naus-enfield-drug-austin",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "cbsaustin",
+        "url": "https://cbsaustin.com/news/local/lambert-labay-the-man-behind-longtime-landmark-naus-enfield-drug-has-died",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["entity_status"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY/STALE — Pharmacy closed 2023, owner deceased. Remove from active spine.",
+    "data_completeness": 0.7
+  },
+  {
+    "spine_index": 61,
+    "legal_name": "Crestview Pharmacy",
+    "dba_name": "Crestview Pharmacy",
+    "address": "7100 Woodrow Ave",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78757",
+    "phone": "(512) 452-9535",
+    "website": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Jerry Harper, RPh (retired 2017); David Harper, RPh (brother)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": 1964,
+    "data_sources": [
+      {
+        "source": "fox7austin",
+        "url": "https://www.fox7austin.com/news/old-crestview-pharmacy-closing-its-doors-for-good",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["closure", "owner_name"]
+      },
+      {
+        "source": "violetcrownvoices",
+        "url": "https://violetcrownvoices.com/2012/3676",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["founder", "history"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "CLOSED Feb 28 2017 — Harper family pharmacy (founded 1964 by J.D. Harper). Sons Jerry (39yr tenure) and David (32yr tenure) ran until closure. Spine record STALE.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "closed_dissolved",
+    "registered_agent": null,
+    "owner_name": "Jerry Harper, RPh (retired); David Harper, RPh",
+    "owner_age_estimate": null,
+    "owner_age_source": "retired",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 53,
+    "employee_count_estimate": 0,
+    "provider_count_estimate": 0,
+    "employee_count_source": "closed",
+    "is_distressed": true,
+    "distress_reasons": ["Pharmacy CLOSED 2017 (owner retirement); spine record stale"],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "closed_2017",
+        "direction": "disqualifying",
+        "evidence": "Yelp marked CLOSED. Fox7Austin documented Feb 28 2017 closure when Jerry Harper retired. Spine stale.",
+        "source": "yelp",
+        "source_url": "https://www.yelp.com/biz/crestview-pharmacy-austin",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "fox7austin",
+        "url": "https://www.fox7austin.com/news/old-crestview-pharmacy-closing-its-doors-for-good",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["entity_status"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY/STALE — Closed 2017. Remove from active spine.",
+    "data_completeness": 0.7
+  },
+  {
+    "spine_index": 62,
+    "legal_name": "Medsavers Pharmacy",
+    "dba_name": "MedSavers Pharmacy",
+    "address": "1800 W 35th St",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78703",
+    "phone": "(512) 465-9292",
+    "website": "https://www.medsaverspharmacy.com/",
+    "license_type": "Class A (Community Pharmacy) - cash-only",
+    "license_holder_name": "Chris Johnson, RPh (UT 1995, owner)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": 2005,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.medsaverspharmacy.com/about-us",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name", "year_established", "business_model"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/chris-johnson-78235947/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "First cash-only pharmacy in Austin. Chris Johnson, RPh (UT BS Pharmacy 1995). Opened April 11, 2005. Now part of Well Revolution Care network for primary care integration.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Chris Johnson, RPh",
+    "owner_age_estimate": 53,
+    "owner_age_source": "license_grad_year",
+    "owner_tenure_years": 31,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 21,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "linkedin",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_owner_pharmacist_31yr_tenure",
+        "direction": "positive",
+        "evidence": "Chris Johnson UT 1995 → 31 yrs licensed, owner since 2005. Likely ~53. Solo owner.",
+        "source": "website",
+        "source_url": "https://www.medsaverspharmacy.com/about-us",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "cash_only_model",
+        "direction": "mixed",
+        "evidence": "Cash-only model = no PBM dependency = higher margins but capped TAM. Recently joined Well Revolution Care = partnership network.",
+        "source": "wellrevolution",
+        "source_url": "https://www.wellrevolution.com/care-location/medsavers-pharmacy",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "innovative_business_model_advocacy",
+        "direction": "negative",
+        "evidence": "Chris is publicly active (Digital Pharmacist blog feature). Active advocate, not coasting.",
+        "source": "digitalpharmacist",
+        "source_url": "https://www.digitalpharmacist.com/blog/cash-only-community-pharmacy/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier — Solo owner, 21 yr tenure, but actively engaged + innovative cash-only positioning. Possible if owner ages out, not imminent.",
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 63,
+    "legal_name": "Neighborhood Pharmacy",
+    "dba_name": "Neighborhood Pharmacy",
+    "address": "2620 E 7th St",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78702",
+    "phone": "(512) 476-4751",
+    "website": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Jose I Gutierrez, RPh",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "pharmacygps",
+        "url": "https://pharmacygps.com/drugstore/neighborhood-pharmacy-1861681058/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "East Austin (78702) solo-owner pharmacy. Jose Gutierrez, RPh listed as owner. No website found = aging-out tell.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Jose I Gutierrez, RPh",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "rxlocal",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "no_website_phone_only",
+        "direction": "positive",
+        "evidence": "No website found beyond directory listings. Phone-only intake = strong coasting tell.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=Neighborhood+Pharmacy+Austin+TX+78702",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "east_austin_hispanic_neighborhood",
+        "direction": "positive",
+        "evidence": "78702 East Austin = predominantly Hispanic. Sub-market nudge +3 (cultural pharmacy loyalty, Medicaid mix).",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "solo_pharmacist_owner",
+        "direction": "positive",
+        "evidence": "Jose Gutierrez sole RPh on directory record. Solo-owner profile.",
+        "source": "pharmacygps",
+        "source_url": "https://pharmacygps.com/drugstore/neighborhood-pharmacy-1861681058/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "pharmacygps",
+        "url": "https://pharmacygps.com/drugstore/neighborhood-pharmacy-1861681058/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "enrichment_notes": "A-tier candidate — Solo owner, no website, Hispanic East Austin neighborhood, classic coast pattern. Needs deeper age/tenure verification (LinkedIn / TX licensing).",
+    "data_completeness": 0.6
+  },
+  {
+    "spine_index": 64,
+    "legal_name": "Brodie Lane Pharmacy",
+    "dba_name": "Brodie Lane Pharmacy",
+    "address": "8916 Brodie Ln Ste 300",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78748",
+    "phone": "(512) 362-8083",
+    "website": "https://brodielanepharmacy.com/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Aaron Williams, PharmD (Oklahoma 2007 grad)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://brodielanepharmacy.com/about/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name", "year_established", "credentials"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Aaron Williams + Marisa Williams (husband-wife co-owners). PharmD U-Oklahoma 2007. Moved to Austin 2007, opened independent later. NPI WILLIAMS DRUG COMPANY 1851818249.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Aaron Williams, PharmD; Marisa Williams (co-owners)",
+    "owner_age_estimate": 44,
+    "owner_age_source": "license_grad_year",
+    "owner_tenure_years": 19,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "younger_owner_44_couple",
+        "direction": "disqualifying",
+        "evidence": "Aaron Williams PharmD 2007, ~44 today. Wife co-owns. 19-year career, but pharmacy itself is younger. Active community advocate (Volunteer Healthcare Clinic, TPA).",
+        "source": "website",
+        "source_url": "https://brodielanepharmacy.com/about/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_social_advocacy",
+        "direction": "negative",
+        "evidence": "Active Instagram (@brodielanerx), TPA community work, modern marketing. Not coasting.",
+        "source": "instagram",
+        "source_url": "https://www.instagram.com/brodielanerx/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DISQUALIFY — Young couple-owned (early-mid 40s), 19 yr career, active engagement. Not aging out.",
+    "data_completeness": 0.8
+  },
+  {
+    "spine_index": 65,
+    "legal_name": "Northwest Hills Pharmacy",
+    "dba_name": "Northwest Hills Pharmacy at Davenport",
+    "address": "3801 N Capital of TX Hwy Ste G-200",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78746",
+    "phone": "(512) 329-8667",
+    "website": "https://shopnorthwesthills.com/",
+    "license_type": "Class A (Community Pharmacy) + LTC",
+    "license_holder_name": "Tom Sansing, RPh; Greg Sansing (3rd gen)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": 1962,
+    "data_sources": [
+      {
+        "source": "communityimpact",
+        "url": "https://communityimpact.com/austin/news/2012/03/14/northwest-hills-in-davenport/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_name", "year_established", "generations"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/dong-kim-pharmd-58b01b95",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["PIC"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1962 by Clyde Sansing as Highland Park Pharmacy. Moved to Far West Blvd 1978. 3rd gen Sansing family (Tom RPh + son Greg PharmD + Caitlin) now operating. LTC arm separate (3801 N Capital G205).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Tom Sansing, RPh (2nd gen); Greg Sansing (3rd gen, retail manager)",
+    "owner_age_estimate": 70,
+    "owner_age_source": "tenure_proxy_generation",
+    "owner_tenure_years": 48,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 64,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "linkedin",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "3rd_gen_active_succession",
+        "direction": "disqualifying",
+        "evidence": "Tom Sansing (2nd gen RPh) likely ~70; son Greg + Caitlin running retail side; another son Tom also pharmacist. Active 3rd gen succession = no aging-out exit pressure.",
+        "source": "communityimpact",
+        "source_url": "https://communityimpact.com/austin/news/2012/03/14/northwest-hills-in-davenport/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "premium_neighborhood",
+        "direction": "negative",
+        "evidence": "Davenport / Northwest Hills = wealthy Austin area, strong customer base.",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "communityimpact",
+        "url": "https://communityimpact.com/austin/news/2012/03/14/northwest-hills-in-davenport/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["successor"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — 3rd gen succession active. Family legacy pharmacy.",
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 66,
+    "legal_name": "Lamar Family Pharmacy",
+    "dba_name": "Lamar Family Pharmacy",
+    "address": "8738 N Lamar Blvd Ste C",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78753",
+    "phone": "(512) 765-5831",
+    "website": "https://www.lamarfamilyrx.us/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": null,
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.lamarfamilyrx.us/",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["website_exists"]
+      },
+      {
+        "source": "rxless",
+        "url": "https://www.rxless.com/pharmacies/texas/austin/lamar-family-pharmacy/8738-N-Lamar-Blvd-Ste-C/1760847560",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["NPI"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "North Lamar (78753) independent. Limited public info on owner-pharmacist. M-F 9-6, Sat 9-2.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "thin_web_presence",
+        "direction": "positive",
+        "evidence": "Minimal public information. Website (lamarfamilyrx.us) but no team page / owner-bio surfaced in search. Phone-and-print model.",
+        "source": "google",
+        "source_url": "https://www.google.com/search?q=%22Lamar+Family+Pharmacy%22+Austin+owner",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "north_lamar_hispanic_demo",
+        "direction": "positive",
+        "evidence": "78753 = ethnically diverse North Lamar corridor (Vietnamese, Hispanic). Pharmacy-loyal community.",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier candidate — Low-info / coast pattern, ethnic neighborhood. Needs deeper licensing pull to verify owner age.",
+    "data_completeness": 0.45
+  },
+  {
+    "spine_index": 67,
+    "legal_name": "Ridgmar Pharmacy",
+    "dba_name": "Ridgmar Pharmacy",
+    "address": "2524 Mall Cir",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76116",
+    "phone": "(817) 737-7377",
+    "website": "http://ridgmar.kkspharmacytx.com/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 2002,
+    "data_sources": [
+      {
+        "source": "drgalen",
+        "url": "https://drgalen.org/pharmacy/ridgmar-pharmacy-tx-us",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["year_established"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Domain on kkspharmacytx.com subdomain suggests this is part of a Pakistani/South-Asian owned group (KKS Pharmacy of Texas). Templated micro-site.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 24,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "kks_group_subdomain",
+        "direction": "negative",
+        "evidence": "Website on 'kkspharmacytx.com' subdomain indicates part of a multi-pharmacy KKS group. Not pure solo coast.",
+        "source": "domain_inspection",
+        "source_url": "http://ridgmar.kkspharmacytx.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "24_yr_independent",
+        "direction": "positive",
+        "evidence": "Founded 2002 = 24 years operating.",
+        "source": "drgalen",
+        "source_url": "https://drgalen.org/pharmacy/ridgmar-pharmacy-tx-us",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "drgalen",
+        "url": "https://drgalen.org/pharmacy/ridgmar-pharmacy-tx-us",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["year_established"]
+      }
+    ],
+    "enrichment_notes": "C-tier — Group-owned (KKS), templated tech, needs owner identification through TSBP / Comptroller.",
+    "data_completeness": 0.5
+  },
+  {
+    "spine_index": 68,
+    "legal_name": "Lake Worth Pharmacy",
+    "dba_name": "Lake Worth Pharmacy",
+    "address": "4701 Boat Club Rd Ste 115",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76135",
+    "phone": "(817) 237-7877",
+    "website": "https://www.facebook.com/lakeworthpharmacy/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 1979,
+    "data_sources": [
+      {
+        "source": "facebook",
+        "url": "https://www.facebook.com/lakeworthpharmacy/",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["history"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "47-year-old NW Fort Worth pharmacy. No dedicated website (Facebook + mygnp listing only). Owner not surfaced in public search.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 47,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "47_yr_legacy_pharmacy",
+        "direction": "positive",
+        "evidence": "47 years in business = founder generation likely retired or aging-out by now (would be 70s if original owner still active).",
+        "source": "facebook",
+        "source_url": "https://www.facebook.com/lakeworthpharmacy/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_dedicated_website",
+        "direction": "positive",
+        "evidence": "No standalone website — only Facebook + banner microsite. Strong coasting tell.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Lake+Worth+Pharmacy%22+Fort+Worth",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "A/B-tier — 47 yr legacy, no website, no public owner info = classic coast pattern. Need TSBP licensing data.",
+    "data_completeness": 0.45
+  },
+  {
+    "spine_index": 69,
+    "legal_name": "Beach Street Pharmacy",
+    "dba_name": "Beach Street Pharmacy",
+    "address": "7630 N Beach St Ste 170",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76137",
+    "phone": "(817) 427-8774",
+    "website": "https://www.beachstreetpharmacytx.com/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.beachstreetpharmacytx.com/",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["existence"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "North Fort Worth/Watauga independent. Limited info on owner. Locally owned per banner listing.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "thin_public_presence",
+        "direction": "positive",
+        "evidence": "Minimal owner/about info publicly available. Templated banner microsite. Suggests low marketing investment = coasting.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Beach+Street+Pharmacy%22+Fort+Worth+owner",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "C-tier — Needs TSBP / Comptroller pull to identify owner.",
+    "data_completeness": 0.3
+  },
+  {
+    "spine_index": 70,
+    "legal_name": "Meadowbrook Pharmacy",
+    "dba_name": "Meadowbrook Pharmacy",
+    "address": "6624 Meadowbrook Dr",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76112",
+    "phone": "(817) 451-6900",
+    "website": "https://meadowbrookpharmacytx.com/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Abdul Majeed Rasul (President)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 2009,
+    "data_sources": [
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/fort-worth/profile/pharmacy/meadowbrook-pharmacy-0825-235980806",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["owner_name", "year_established"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Abdul Majeed Rasul, President. Founded 2009. Part of a Dallas-Fort Worth area pharmacy group (per website). Same Meadowbrook Dr cluster as Hovic Pharmacy (idx 77).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "2009-04-23",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Abdul Majeed Rasul",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 17,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 17,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "17_yr_independent_solo_president",
+        "direction": "positive",
+        "evidence": "Founded 2009, President A.M. Rasul. 17 years operating.",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/fort-worth/profile/pharmacy/meadowbrook-pharmacy-0825-235980806",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "part_of_DFW_group",
+        "direction": "negative",
+        "evidence": "Site states part of a group of independent pharmacies in DFW. Not pure solo operation.",
+        "source": "website",
+        "source_url": "https://meadowbrookpharmacytx.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/fort-worth/profile/pharmacy/meadowbrook-pharmacy-0825-235980806",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "enrichment_notes": "B-tier — Solo-named owner, 17 yr tenure, group affiliation muddies aging-out tell.",
+    "data_completeness": 0.6
+  },
+  {
+    "spine_index": 71,
+    "legal_name": "Perrone Pharmacy",
+    "dba_name": "Perrone Pharmacy",
+    "address": "3921 Benbrook Blvd",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76116",
+    "phone": "(817) 738-2135",
+    "website": "https://www.perronepharmacy.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": "Kim Perrone, RPh (UT 1980); Paula Perrone (CEO)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 1952,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.perronepharmacy.com/about-us/",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["owner_name", "year_established", "history"]
+      },
+      {
+        "source": "fortworthreport",
+        "url": "https://fortworthreport.org/2024/05/25/made-in-tarrant-perrone-pharmacy-ceo-reflects-on-fathers-72-year-legacy-in-fort-worth/",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["legacy", "owner_age"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1952 by Paul Perrone (UT pharmacy WWII vet). Founder died 2004. Daughters Paula (CEO) and Kim Perrone (RPh UT 1980) now run. Largest independent retail pharmacy in TX. ~73 yrs old business.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "1952-04-22",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Paula Perrone (CEO); Kim Perrone, RPh",
+    "owner_age_estimate": 67,
+    "owner_age_source": "license_grad_year",
+    "owner_tenure_years": 46,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 74,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "two_aging_sisters_no_3rd_gen",
+        "direction": "positive",
+        "evidence": "Kim Perrone UT 1980 = ~67 today. Paula likely similar age. No mentioned 3rd gen succession in public press. Sisters running 'largest independent retail pharmacy in TX' = MAJOR aging-out exit candidate.",
+        "source": "fortworthreport",
+        "source_url": "https://fortworthreport.org/2024/05/25/made-in-tarrant-perrone-pharmacy-ceo-reflects-on-fathers-72-year-legacy-in-fort-worth/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "very_large_compounding_retail",
+        "direction": "negative",
+        "evidence": "Self-described 'largest independent retail pharmacy in TX' — likely $20M+ revenue. Above solo-coast SBA-7a target zone; may attract PE compounding consolidator (Cardinal, ABC, ICS).",
+        "source": "fwtx_magazine",
+        "source_url": "https://fwtx.com/sponsored-article/perrone-pharmacy-compound-prescriptions-about/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "scholarship_perrone_legacy",
+        "direction": "negative",
+        "evidence": "UNT Health Science Center has Perrone Scholarship in his honor — strong legacy. Family unlikely to sell to outsiders quickly.",
+        "source": "unthsc",
+        "source_url": "https://www.unthsc.edu/newsroom/story/perrone-scholarship-honor-fort-worth-pharmacist/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "fortworthreport",
+        "url": "https://fortworthreport.org/2024/05/25/made-in-tarrant-perrone-pharmacy-ceo-reflects-on-fathers-72-year-legacy-in-fort-worth/",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["owner_age", "succession"]
+      }
+    ],
+    "enrichment_notes": "A-tier (larger size) — Two aging Perrone sisters, no public 3rd gen, $20M+ compounding-retail. Long-shot but big prize.",
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 72,
+    "legal_name": "Bailey's Pharmacy",
+    "dba_name": "Bailey's Pharmacy",
+    "address": "6700 W Vickery Blvd Ste B",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76116",
+    "phone": "(817) 862-7412",
+    "website": "https://www.baileypharmacy.com/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Dr. Trisha Bailey (parent owner)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 2011,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.baileypharmacy.com/about-us",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["owner_name", "year_established"]
+      }
+    ],
+    "platform_affiliation_check": "platform_affiliated",
+    "verification_notes": "Part of Dr. Trisha Bailey's Medical Hotspots, Inc network (founded 2011). $100M+ portfolio. Multiple locations under Bailey's Medical brand. NOT a coasting solo independent.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Trisha Bailey (Medical Hotspots Inc / Bailey's Medical)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 15,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 15,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "platform_owned_multi_state",
+        "direction": "disqualifying",
+        "evidence": "Bailey's Medical operates 9 companies and is part of Dr. Trisha Bailey's $100M portfolio. Platform-owned, not independent solo. Owner is younger Connecticut-based entrepreneur.",
+        "source": "website",
+        "source_url": "https://www.baileysmedical.com/about-us",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DISQUALIFY — Platform-owned multi-state operation, not a coast solo. Failed independence verification.",
+    "data_completeness": 0.7
+  },
+  {
+    "spine_index": 73,
+    "legal_name": "Daniel Drug Inc",
+    "dba_name": "Daniel Drug",
+    "address": "3409 W 7th St",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76107",
+    "phone": "(817) 332-6386",
+    "website": "https://www.danieldrug.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.danieldrug.com/pharmacy-about-us",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["services"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independent W 7th St Fort Worth pharmacy with compounding, immunizations, Medicare/Medicaid. Owner name not surfaced publicly.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "compounding_capability",
+        "direction": "positive",
+        "evidence": "Compounding services = higher margin / sticky niche.",
+        "source": "website",
+        "source_url": "https://www.danieldrug.com/pharmacy-compounding-services",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modest_web_presence",
+        "direction": "positive",
+        "evidence": "Templated site, no team/about owner page. Coasting / phone-led.",
+        "source": "website",
+        "source_url": "https://www.danieldrug.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B/C-tier — Needs TSBP licensing pull. Compounding + coast pattern = potentially interesting.",
+    "data_completeness": 0.35
+  },
+  {
+    "spine_index": 74,
+    "legal_name": "Hall's Pharmacy",
+    "dba_name": "Hall's Specialty Pharmacy / Hall's Long Term Care Pharmacy",
+    "address": "708 Pennsylvania Ave",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76104",
+    "phone": "(817) 877-3677",
+    "website": "https://www.hallsspecialtyrx.com/",
+    "license_type": "Class A (Community Pharmacy) / Specialty / LTC",
+    "license_holder_name": "Lewis Hall (President of LTC arm)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.hallsspecialtyrx.com/",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["business_model"]
+      },
+      {
+        "source": "wfaa",
+        "url": "https://www.wfaa.com/article/news/crime/owner-of-fort-worth-pharmacy-behind-nearly-60-million-kickback-scheme-sentenced/287-6fffbaa3-7e32-4145-92ab-e4c45ab5d952",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["distress_signal"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Hall family pharmacy with multiple arms (Specialty, LTC, IV/Institutional). Original owner Louis Hall. Important note: Richard Hall (different family member) was convicted in $60M kickback scheme via Rxpress/Xpress Compounding (DIFFERENT entity, but Hall surname overlap).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Lewis Hall (LTC arm); Hall family",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "multi_arm_specialty_LTC",
+        "direction": "disqualifying",
+        "evidence": "Multi-arm structure (Specialty + LTC + IV) = institutional pharmacy more than retail. Different target profile and valuation.",
+        "source": "website",
+        "source_url": "https://www.hallsspecialtyrx.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "surname_overlap_with_dea_case",
+        "direction": "mixed",
+        "evidence": "Richard Hall (FW pharmacy owner) was convicted in 2018 of $60M kickback scheme via Rxpress/Xpress Compounding — different entity but local surname cluster requires verification before approach.",
+        "source": "wfaa",
+        "source_url": "https://www.wfaa.com/article/news/crime/owner-of-fort-worth-pharmacy-behind-nearly-60-million-kickback-scheme-sentenced/287-6fffbaa3-7e32-4145-92ab-e4c45ab5d952",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "wfaa",
+        "url": "https://www.wfaa.com/article/news/crime/owner-of-fort-worth-pharmacy-behind-nearly-60-million-kickback-scheme-sentenced/287-6fffbaa3-7e32-4145-92ab-e4c45ab5d952",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["distress"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY/CAUTION — Specialty/LTC focus + Hall surname caution flag from separate kickback case. Skip.",
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 75,
+    "legal_name": "Industrial & Family Pharmacy",
+    "dba_name": "Industrial & Family Pharmacy",
+    "address": "2301 NE 28th St",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76106",
+    "phone": "(817) 625-6265",
+    "website": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": null,
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/industrial-and-family-pharmacy-fort-worth",
+        "fetched_at": "2026-05-16T20:10:00Z",
+        "fields": ["existence"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "NE Fort Worth (north-side, working-class Hispanic neighborhood). 76106 corridor. No website, no public owner identification.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "no_website_low_marketing",
+        "direction": "positive",
+        "evidence": "No website found beyond directory listings. Phone-only, classic coast tell.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Industrial+and+Family+Pharmacy%22+Fort+Worth",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "ne_fw_working_class_hispanic",
+        "direction": "positive",
+        "evidence": "76106 corridor = Hispanic-majority working class. Cultural pharmacy loyalty. Submarket nudge +3.",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "A-tier candidate (low-info) — No website + Hispanic working-class submarket + 'family' branding = aging-out coast pattern. Needs TSBP / Comptroller pull.",
+    "data_completeness": 0.3
+  },
+  {
+    "spine_index": 76,
+    "legal_name": "McCart Pharmacy",
+    "dba_name": "McCart Pharmacy LLC",
+    "address": "4237 McCart Ave",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76115",
+    "phone": "(817) 924-7200",
+    "website": "http://www.mccartpharmacy.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": null,
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "http://www.mccartpharmacy.com/",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["services"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Retail Rx + compounding + immunizations. South Fort Worth (76115). 'Permanent pharmacist and one standby' = solo or near-solo operation. Owner not named.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": 2,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "single_pharmacist_plus_standby",
+        "direction": "positive",
+        "evidence": "Website explicitly states 'permanent pharmacist and one standby for emergency and continuity' = solo-owner operation, no succession.",
+        "source": "website",
+        "source_url": "http://www.mccartpharmacy.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "compounding_capability",
+        "direction": "positive",
+        "evidence": "Compounding services = higher margin niche.",
+        "source": "website",
+        "source_url": "http://www.mccartpharmacy.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "south_fw_working_class",
+        "direction": "positive",
+        "evidence": "76115 corridor = working-class South Fort Worth. Loyal pharmacy base.",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "A-tier — Explicit solo pharmacist + compounding + working-class submarket. Strong coast pattern. Needs owner identification via TSBP.",
+    "data_completeness": 0.5
+  },
+  {
+    "spine_index": 77,
+    "legal_name": "Hovic Pharmacy",
+    "dba_name": "Hovic Pharmacy",
+    "address": "6306 Meadowbrook Dr",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76112",
+    "phone": "(817) 888-3132",
+    "website": "https://hovicpharmacy.com/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Mr Gibril (per customer reviews)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://hovicpharmacy.com/",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["services"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-owned full-service pharmacy on Meadowbrook Dr (East Fort Worth). Mr. Gibril (Gambian-origin name?) as pharmacist per customer reviews. Med sync + immunizations + counseling.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Mr. Gibril (pharmacist)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "family_solo_pharmacist",
+        "direction": "positive",
+        "evidence": "Family-owned, single pharmacist (Mr. Gibril) operating East FW pharmacy.",
+        "source": "website",
+        "source_url": "https://hovicpharmacy.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "east_fw_meadowbrook_corridor",
+        "direction": "positive",
+        "evidence": "Meadowbrook Dr (76112) = working-class East Fort Worth.",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier — Solo pharmacist family pharmacy. Needs TSBP pull for owner age verification.",
+    "data_completeness": 0.5
+  },
+  {
+    "spine_index": 78,
+    "legal_name": "Park Place Pharmacy",
+    "dba_name": "A-Class Park Place Pharmacy",
+    "address": "1601 Park Place Ave Ste B",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76110",
+    "phone": "(817) 924-9292",
+    "website": "https://www.fortworth.com/listing/park-place-pharmacy/9223/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Nannie Johnson, RPh (Pharmacist-in-Charge)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": 1995,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/nannie-johnson-76286669/",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["PIC"]
+      },
+      {
+        "source": "fortworth_chamber",
+        "url": "https://www.fortworth.com/listing/park-place-pharmacy/9223/",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["year_established"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Opened 1995 = 31 yrs in business. Nannie Johnson is PIC and also at Well Care Pharmacy = may be staff-PIC rather than owner. Owner not explicitly identified.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 31,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "31_yr_business_PIC_works_elsewhere",
+        "direction": "positive",
+        "evidence": "31-year-old pharmacy + Nannie Johnson PIC works at TWO pharmacies (Park Place + Well Care) = owner may be absentee or aging out, hiring contract PIC.",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/nannie-johnson-76286669/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier — Aging pharmacy + contract PIC pattern = absentee owner potentially seeking exit.",
+    "data_completeness": 0.5
+  },
+  {
+    "spine_index": 79,
+    "legal_name": "Green Cross Pharmacy",
+    "dba_name": "Green Cross Pharmacy",
+    "address": "1305 Airport Fwy Ste 110",
+    "city": "Bedford",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76021",
+    "phone": "(817) 354-7771",
+    "website": "https://greencross.kkspharmacytx.com/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Pradip Mehta, RPh",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://greencross.kkspharmacytx.com/about_us.html",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["owner_name", "background"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Pradip Mehta, RPh — career drug manufacturing pre-pharmacy, now retail. Part of KKS pharmacy of Texas group (same templated domain as Ridgmar idx=67).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Pradip Mehta, RPh (likely PIC, possibly owner)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "career_proxy",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": 2,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "second_career_pharmacist",
+        "direction": "positive",
+        "evidence": "Pradip Mehta had earlier drug manufacturing career before retail Rx = older industry veteran. Likely 60+.",
+        "source": "website",
+        "source_url": "https://greencross.kkspharmacytx.com/about_us.html",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "kks_group_subdomain",
+        "direction": "negative",
+        "evidence": "Same KKS group as Ridgmar idx=67. Group-owned reduces solo coast appeal.",
+        "source": "domain_inspection",
+        "source_url": "https://greencross.kkspharmacytx.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier — Aging owner (60+), but group affiliation. May be group consolidation play more than solo target.",
+    "data_completeness": 0.6
+  },
+  {
+    "spine_index": 80,
+    "legal_name": "Glenview Professional Pharmacy",
+    "dba_name": "Glenview Professional Pharmacy",
+    "address": "7640 Glenview Dr Ste A",
+    "city": "Richland Hills",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76180",
+    "phone": "(817) 284-1489",
+    "website": "https://www.glenviewrx.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": "Larry Cowan, RPh (Owner-PIC); Mita Mehta (President/Co-owner)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": 1965,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.glenviewrx.com/about-us",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["owner_name", "year_established"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/larry-cowan-a821a82a/",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "61-yr-old NE Tarrant pharmacy with 8 pharmacists, compounding. Larry Cowan (owner+PIC) + Mita Mehta (President/Co-owner). Larger team than typical solo.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Larry Cowan, RPh; Mita Mehta",
+    "owner_age_estimate": 65,
+    "owner_age_source": "tenure_proxy",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 61,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 8,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "61_yr_business_aging_owner",
+        "direction": "positive",
+        "evidence": "Larry Cowan is owner + PIC. 1965 founding = aging-out generation. Co-owner Mita Mehta may be next-gen leadership.",
+        "source": "website",
+        "source_url": "https://www.glenviewrx.com/about-us",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "scaled_8_pharmacists",
+        "direction": "negative",
+        "evidence": "8 pharmacists on staff = $5M+ revenue. Above typical solo-coast target.",
+        "source": "website",
+        "source_url": "https://www.glenviewrx.com/about-us",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier — Aging owner + co-owner; scaled (8 pharmacists). Possible larger acquisition. Compounding adds value.",
+    "data_completeness": 0.7
+  },
+  {
+    "spine_index": 81,
+    "legal_name": "Brown's Pharmacy",
+    "dba_name": "Brown's Pharmacy",
+    "address": "2021 N MacArthur Blvd Ste 120",
+    "city": "Irving",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75061",
+    "phone": "(972) 254-8156",
+    "website": "https://www.brownsrx.com/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 1973,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.brownsrx.com/about-us/",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["year_established", "founder"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1973 by Mr. Buddy Brown. Current owners are husband+wife pharmacist couple (names not surfaced publicly). 53 yrs in business.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Husband-wife pharmacist couple (post-Buddy Brown)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 53,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "53_yr_business_couple_owner",
+        "direction": "positive",
+        "evidence": "Founded 1973 by Buddy Brown. Now husband-wife couple owns. Strong aging-out signal but with potential built-in succession (couple-owned).",
+        "source": "website",
+        "source_url": "https://www.brownsrx.com/about-us/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "hispanic_irving_corridor",
+        "direction": "positive",
+        "evidence": "75061 Irving = high Hispanic population corridor. Submarket nudge +3.",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "A/B-tier — Long-tenured couple-owned. Need TSBP pull to identify current owners.",
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 82,
+    "legal_name": "Total Pharmacy Ennis",
+    "dba_name": "Total Pharmacy Ennis",
+    "address": "329 N Shiloh Rd Ste B (also 2046 Forest Ln 140 Garland)",
+    "city": "Garland",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75042",
+    "phone": "(972) 276-7071",
+    "website": "https://www.wellrevolution.com/care-location/total-pharmacy-ennis",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "wellrevolution",
+        "url": "https://www.wellrevolution.com/care-location/total-pharmacy-ennis",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["affiliation"]
+      }
+    ],
+    "platform_affiliation_check": "platform_affiliated",
+    "verification_notes": "Now part of Well Revolution Care network (same as MedSavers idx=62). Co-located primary care + LTC arm. Locally owned but partnered with Well Revolution platform.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": true,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "well_revolution_care_partner",
+        "direction": "negative",
+        "evidence": "Now part of Well Revolution Care multi-location partner network = consolidated platform play. Not pure solo independent.",
+        "source": "wellrevolution",
+        "source_url": "https://www.wellrevolution.com/care-location/total-pharmacy-ennis",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "garland_diverse_corridor",
+        "direction": "positive",
+        "evidence": "75042 Garland = high Asian/Hispanic mix. Cultural pharmacy loyalty.",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "wellrevolution",
+        "url": "https://www.wellrevolution.com/care-location/total-pharmacy-ennis",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["platform_affiliation"]
+      }
+    ],
+    "enrichment_notes": "C-tier — Platform-partnered, may have already monetized exit option. Skip for pure off-market thesis.",
+    "data_completeness": 0.4
+  },
+  {
+    "spine_index": 83,
+    "legal_name": "Frisco Pharmacy",
+    "dba_name": "Frisco Pharmacy",
+    "address": "14550 State Hwy 121 Ste 150",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75035",
+    "phone": "(469) 305-7058",
+    "website": "https://friscopharmacy.net/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 2017,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://friscopharmacy.net/",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["year_established"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2017 = 9 years. Locally owned. Owner not publicly named. Frisco = high-growth booming suburb.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 9,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 9,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "young_pharmacy_9_yr",
+        "direction": "disqualifying",
+        "evidence": "Founded 2017 = too young for aging-out coast pattern. Growth-stage business.",
+        "source": "website",
+        "source_url": "https://friscopharmacy.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "frisco_booming_submarket",
+        "direction": "negative",
+        "evidence": "Frisco = fastest-growing US suburb. High chain density (CVS/Walgreens dense). Sub-market 0/-3 for solo independent.",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DISQUALIFY — Young, growth-stage, high-competition submarket.",
+    "data_completeness": 0.5
+  },
+  {
+    "spine_index": 84,
+    "legal_name": "McKinney Pharmacy",
+    "dba_name": "McKinney Pharmacy / Northside Medical Supply",
+    "address": "1601 W University Dr",
+    "city": "McKinney",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75069",
+    "phone": "(214) 842-8445",
+    "website": "https://www.mckinneypharmacy.net/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 1907,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.mckinneypharmacy.net/",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["year_established"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-owned since 1907 = 119 yrs in business. Veterinary compounding specialty. Valarie M. as Manager (per Yelp). Possibly multiple Mehta/Patel ownership generations. NOTE: phone discrepancy — spine lists (214) 842-8445, other sources show (972) 562-8700.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 119,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "119_yr_legacy_family_pharmacy",
+        "direction": "positive",
+        "evidence": "1907 founding = oldest pharmacy in batch. Multi-generational family business. Strong aging-out signal IF current generation is final.",
+        "source": "website",
+        "source_url": "https://www.mckinneypharmacy.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "veterinary_compounding_niche",
+        "direction": "positive",
+        "evidence": "Veterinary compounding = niche, defensible, high-margin.",
+        "source": "website",
+        "source_url": "https://www.mckinneypharmacy.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "phone_data_mismatch",
+        "direction": "mixed",
+        "evidence": "Spine lists (214) 842-8445; web sources show (972) 562-8700. Possible separate-but-affiliated entity (McKinneyCare Pharmacy & Compounding at 4601 Medical Ctr Dr) is being conflated. NEEDS DISAMBIGUATION.",
+        "source": "yelp",
+        "source_url": "https://www.yelp.com/biz/mckinney-pharmacy-mckinney-2",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "A-tier (if right entity) — 119-yr legacy + vet compounding niche. NEEDS phone/address disambiguation before approach.",
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 85,
+    "legal_name": "Southern Star Pharmacy",
+    "dba_name": "Southern Star Pharmacy",
+    "address": "6101 Windhaven Pkwy Ste 125",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75093",
+    "phone": "(972) 677-7891",
+    "website": "https://southernstarrx.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": "Syeda Ahmed (Director of Pharmacy)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://southernstarrx.com/",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["staff"]
+      },
+      {
+        "source": "businesswire",
+        "url": "https://www.businesswire.com/news/home/20250730097097/en/Raman-Bhaumik-and-TSP-Launch-New-Provider-Portal-to-Streamline-Compounded-Prescription-Ordering-and-Compliance",
+        "fetched_at": "2026-05-16T20:15:00Z",
+        "fields": ["affiliated_companies"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Likely sister-pharmacy to Texas Star Pharmacy (idx=86) under Raman Bhaumik (TSP group). Active provider portal, modern compounding infrastructure.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Raman Bhaumik (parent group TSP); Syeda Ahmed (Director)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "tsp_group_affiliated_compounding",
+        "direction": "negative",
+        "evidence": "Sister of Texas Star Pharmacy under Raman Bhaumik's TSP group. Modern tech stack, active growth (new provider portal 2025). Not coasting.",
+        "source": "businesswire",
+        "source_url": "https://www.businesswire.com/news/home/20250730097097/en/Raman-Bhaumik-and-TSP-Launch-New-Provider-Portal-to-Streamline-Compounded-Prescription-Ordering-and-Compliance",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DISQUALIFY — TSP group sister pharmacy, modern + growing. Not coast pattern.",
+    "data_completeness": 0.65
+  },
+  {
+    "spine_index": 86,
+    "legal_name": "Texas Star Pharmacy",
+    "dba_name": "Thesis Pharmacy (recently rebranded from Texas Star)",
+    "address": "Plano",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75024",
+    "phone": "(972) 519-8475",
+    "website": "https://www.texasstarpharmacy.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": "Raman Bhaumik, PharmD; Jay Bhaumik (co-owners)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "businesswire",
+        "url": "https://www.businesswire.com/news/home/20251125310333/en/Jay-Raman-Bhaumik-Announce-Thesis-Pharmacy-Rebranding-from-Texas-Star-Signaling-Precision-Growth-and-National-Expansion",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["owner_name", "rebranding"]
+      },
+      {
+        "source": "raman_bhaumik_bio",
+        "url": "https://plano.ramanbhaumik.com/about/",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["owner_name", "background"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Raman Bhaumik (PharmD, multi-state licensed) + husband Jay Bhaumik. 5x best pharmacy in Plano. Rebranded to Thesis Pharmacy Nov 2025 signaling national expansion. Active growth-mode.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Raman Bhaumik, PharmD; Jay Bhaumik",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "rebrand_national_expansion",
+        "direction": "disqualifying",
+        "evidence": "Rebranded Texas Star to Thesis Pharmacy in Nov 2025 'signaling precision growth and national expansion'. Active acquirer / expansion mode, not seller.",
+        "source": "businesswire",
+        "source_url": "https://www.businesswire.com/news/home/20251125310333/en/Jay-Raman-Bhaumik-Announce-Thesis-Pharmacy-Rebranding-from-Texas-Star-Signaling-Precision-Growth-and-National-Expansion",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "businesswire",
+        "url": "https://www.businesswire.com/news/home/20251125310333/en/Jay-Raman-Bhaumik-Announce-Thesis-Pharmacy-Rebranding-from-Texas-Star-Signaling-Precision-Growth-and-National-Expansion",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["growth_mode"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — Active growth and national expansion. Not aging out.",
+    "data_completeness": 0.75
+  },
+  {
+    "spine_index": 87,
+    "legal_name": "Live Oak Pharmacy",
+    "dba_name": "Live Oak Pharmacy",
+    "address": "2011 W Spring Creek Pkwy Ste 1500",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75023",
+    "phone": "(972) 532-1008",
+    "website": "https://www.liveoakpharmacy.info/",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Bilal (UJordan College of Pharmacy 2004, owner-PIC)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": 2018,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.liveoakpharmacy.info/about-us",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["owner_name", "year_established"]
+      }
+    ],
+    "platform_affiliation_check": "platform_affiliated",
+    "verification_notes": "Bilal (Jordan-trained pharmacist, immigrated to US, retail chain manager pre-Live Oak). Opened 2018. Now part of Well Revolution Care network.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Bilal (last name not surfaced)",
+    "owner_age_estimate": 47,
+    "owner_age_source": "license_grad_year",
+    "owner_tenure_years": 22,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 8,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "young_pharmacy_8_yr",
+        "direction": "disqualifying",
+        "evidence": "Opened 2018 = 8 years. Owner Bilal ~47. Too young for aging-out coast pattern.",
+        "source": "website",
+        "source_url": "https://www.liveoakpharmacy.info/about-us",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "well_revolution_care_partner",
+        "direction": "disqualifying",
+        "evidence": "Part of Well Revolution Care multi-location partner network = platform-affiliated.",
+        "source": "wellrevolution",
+        "source_url": "https://www.wellrevolution.com/care-location/live-oak-pharmacy",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DISQUALIFY — Young + platform-affiliated.",
+    "data_completeness": 0.7
+  },
+  {
+    "spine_index": 88,
+    "legal_name": "Texas Health Prescription Shop",
+    "dba_name": "Texas Health Prescription Shop Plano",
+    "address": "6130 W Parker Rd Ste 100",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75093",
+    "phone": "(972) 981-8445",
+    "website": null,
+    "license_type": "Class A (Community Pharmacy) - hospital-system-affiliated",
+    "license_holder_name": "Pam Crews (Pharmacy Manager)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/pam-crews-210570b/",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["affiliation"]
+      }
+    ],
+    "platform_affiliation_check": "hospital_affiliated",
+    "verification_notes": "LinkedIn lists Pam Crews as 'Pharmacy Manager, Texas Health Prescription Shop Plano - Texas Health Resources'. = Texas Health Resources (hospital system) OWNED outpatient pharmacy. Fails independence verification (spine error).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Texas Health Resources (hospital system)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "hospital_system_owned",
+        "direction": "disqualifying",
+        "evidence": "Owned by Texas Health Resources (major DFW hospital system). NOT independent. Spine verification error.",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/pam-crews-210570b/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/pam-crews-210570b/",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["affiliation"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY/STALE — Spine erroneously classified hospital-owned outpatient pharmacy as independent. Should be removed from active target list.",
+    "data_completeness": 0.65
+  },
+  {
+    "spine_index": 89,
+    "legal_name": "Pharmcare LLC",
+    "dba_name": "Pharmcare",
+    "address": "1834 Broadway St Ste 106",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77581",
+    "phone": "(281) 996-7500",
+    "website": "https://www.pharmcarepharmacy.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding + Specialty + LTC",
+    "license_holder_name": "Trang H. Le, RPh (UH 1989, President)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.pharmcarepharmacy.com/",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["owner_name", "services"]
+      },
+      {
+        "source": "npi",
+        "url": "https://npiprofile.com/npi/1992784367",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["owner_name", "title"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Trang H Le RPh (UH 1989). 20+ yrs in business (Pearland + Friendswood). Compounding + Specialty + LTC. Solo female pharmacist-owner.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Trang H. Le, RPh",
+    "owner_age_estimate": 60,
+    "owner_age_source": "license_grad_year",
+    "owner_tenure_years": 37,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 20,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_owner_37_yr_career",
+        "direction": "positive",
+        "evidence": "Trang Le UH 1989 = 37 yr pharmacist career, ~60 today. President of LLC. Strong aging-out coast candidate.",
+        "source": "npi",
+        "source_url": "https://npiprofile.com/npi/1992784367",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "compounding_specialty_LTC_mix",
+        "direction": "positive",
+        "evidence": "Multi-service: Compounding + Specialty + LTC + retail. High-margin diversified mix.",
+        "source": "website",
+        "source_url": "https://www.pharmcarepharmacy.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "vietnamese_americal_owner_pearland",
+        "direction": "positive",
+        "evidence": "Vietnamese surname Le; Pearland has growing SE Asian community.",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "npi",
+        "url": "https://npiprofile.com/npi/1992784367",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "enrichment_notes": "A-tier — Solo female pharmacist-owner ~60, 37 yr career, compounding/specialty mix, diversified rev. Strong target.",
+    "data_completeness": 0.8
+  },
+  {
+    "spine_index": 90,
+    "legal_name": "Pets and People Pharmacy",
+    "dba_name": "Pets & People Pharmacy",
+    "address": "9215 Broadway St Ste 113",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77584",
+    "phone": "(281) 741-5825",
+    "website": "https://petspeoplepharmacy.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding + Veterinary Compounding",
+    "license_holder_name": "James Dykes, RPh (Owner-PIC)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://petspeoplepharmacy.com/about-us",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["owner_name", "services"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "James Dykes owner-operator. Veterinary compounding + retail Rx. Pearland.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "James Dykes, RPh",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_pharmacist_owner_named",
+        "direction": "positive",
+        "evidence": "James Dykes is owner-operator-PIC. Solo pharmacist.",
+        "source": "website",
+        "source_url": "https://petspeoplepharmacy.com/about-us",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "vet_compounding_specialty",
+        "direction": "positive",
+        "evidence": "Veterinary compounding = niche, high-margin. Sticky customer base (vet referrals).",
+        "source": "website",
+        "source_url": "https://petspeoplepharmacy.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier — Solo owner-pharmacist, niche compounding. Need TSBP age verification.",
+    "data_completeness": 0.6
+  },
+  {
+    "spine_index": 91,
+    "legal_name": "Country Place Pharmacy",
+    "dba_name": "Country Place Pharmacy",
+    "address": "2404 Smith Ranch Rd Ste 100",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77584",
+    "phone": "(713) 436-3344",
+    "website": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": null,
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "rxlocal",
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/pearland/country-place-pharmacy",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["existence"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Country Place (Pearland 77584 — Hispanic majority suburban). No website found, no public owner identification. Hazel's Compounding Rx is at adjacent address — different entity.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "no_web_presence",
+        "direction": "positive",
+        "evidence": "No website found, only directory listings. Phone-only operation = coast tell.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Country+Place+Pharmacy%22+Pearland",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier — Needs TSBP / Comptroller pull for owner identification.",
+    "data_completeness": 0.3
+  },
+  {
+    "spine_index": 92,
+    "legal_name": "Family Pharmacy Care",
+    "dba_name": "Family Pharmacy Care",
+    "address": "10905 Memorial Hermann Dr Ste 102",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77584",
+    "phone": "(281) 315-3770",
+    "website": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Pham Nguyen, RPh (authorized official)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "pharmacygps",
+        "url": "https://pharmacygps.com/drugstore/family-pharmacy-care-1912276403/",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Pham Nguyen (Vietnamese-American RPh) authorized official. Memorial Hermann medical district Pearland location. Possibly part of broader 'Family Pharmacy' network (familyrx.net has multi-location Texas group).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Pham Nguyen, RPh",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_named_owner_vietnamese_american",
+        "direction": "positive",
+        "evidence": "Pham Nguyen identified as authorized official / owner. SE Asian-American pharmacist serving diversified Pearland.",
+        "source": "pharmacygps",
+        "source_url": "https://pharmacygps.com/drugstore/family-pharmacy-care-1912276403/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "co_located_with_medical",
+        "direction": "negative",
+        "evidence": "On Memorial Hermann Dr medical campus = referral-dependent location. Less defensible long-term independence.",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "pharmacygps",
+        "url": "https://pharmacygps.com/drugstore/family-pharmacy-care-1912276403/",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "enrichment_notes": "B-tier — Vietnamese-American solo owner. Memorial Hermann referral-dependent. Need TSBP age verification.",
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 93,
+    "legal_name": "Rx-Care Pharmacy",
+    "dba_name": "Rx-Care Pharmacy LLC #1",
+    "address": "7121 Broadway St Ste 1206",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77581",
+    "phone": "(281) 412-0377",
+    "website": null,
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": null,
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "rxless",
+        "url": "https://www.rxless.com/pharmacies/texas/pearland/rx-care-pharmacy-llc/7121-Broadway-St/1477640670",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["services"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Pearland 77581 community pharmacy. Compounding + delivery. No public owner identification.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "no_web_presence",
+        "direction": "positive",
+        "evidence": "No standalone website. Phone-only operation = coast tell.",
+        "source": "google_search",
+        "source_url": "https://www.google.com/search?q=%22Rx-Care+Pharmacy%22+Pearland",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "compounding_capability",
+        "direction": "positive",
+        "evidence": "Compounding services = higher margin niche.",
+        "source": "rxless",
+        "source_url": "https://www.rxless.com/pharmacies/texas/pearland/rx-care-pharmacy-llc/7121-Broadway-St/1477640670",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier — No web + compounding. Need TSBP pull.",
+    "data_completeness": 0.3
+  },
+  {
+    "spine_index": 94,
+    "legal_name": "WeCare Pharmacy",
+    "dba_name": "WeCare Pharmacy / WeCareRx",
+    "address": "4732 Sugar Grove Blvd Ste 203",
+    "city": "Stafford",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77477",
+    "phone": "(281) 783-8300",
+    "website": "https://wecarepharm.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding + Specialty",
+    "license_holder_name": "Xuan Huynh, PharmD (Owner-PIC, Compounding)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.wecarepharm.com/about-us.php",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["owner_name", "credentials"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Xuan Huynh, PharmD = Vietnamese-American compounding pharmacist-in-charge and owner. Stafford location + Houston satellite (wecare-rx.com).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Xuan Huynh, PharmD",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_compounding_owner",
+        "direction": "positive",
+        "evidence": "Xuan Huynh PharmD = solo compounding pharmacist-owner.",
+        "source": "website",
+        "source_url": "https://www.wecarepharm.com/about-us.php",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "vietnamese_american_owner_stafford",
+        "direction": "positive",
+        "evidence": "Stafford 77477 = Asian-American population corridor. Cultural pharmacy loyalty.",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "A/B-tier — Solo Vietnamese-American compounding owner. Need TSBP for age + tenure verification.",
+    "data_completeness": 0.6
+  },
+  {
+    "spine_index": 95,
+    "legal_name": "Healthchoice Pharmacy",
+    "dba_name": "Healthchoice Pharmacy / Healthchoice Management Services LLC",
+    "address": "12930 Dairy Ashford Rd Ste 303",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(281) 741-8358",
+    "website": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": null,
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "npi",
+        "url": "https://npino.com/pharmacy/1114341369-healthchoice-pharmacy/",
+        "fetched_at": "2026-05-16T20:20:00Z",
+        "fields": ["entity_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Healthchoice Management Services LLC. Multi-location (Houston + Sugar Land). No public owner identification.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "multi_location_management_co",
+        "direction": "negative",
+        "evidence": "'Management Services LLC' naming + multi-location structure = group operation, not pure solo coast.",
+        "source": "npi",
+        "source_url": "https://npino.com/pharmacy/1114341369-healthchoice-pharmacy/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "C-tier — Group-structured LLC, ambiguous independent status. Skip until TSBP / Comptroller confirms.",
+    "data_completeness": 0.3
+  },
+  {
+    "spine_index": 96,
+    "legal_name": "Rite Care Pharmacy (Sugar Land)",
+    "dba_name": "Rite Care Pharmacy",
+    "address": "15271 Southwest Fwy",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(713) 955-5700",
+    "website": "https://www.ritecarerx.net/locations/sugar-land-tx-pharmacy",
+    "license_type": "Class A (Community Pharmacy)",
+    "license_holder_name": "Queen Ozigboh, RPh (PIC)",
+    "banner_program": "Independent (RxLocal)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "ritecarerx_website",
+        "url": "https://www.ritecarerx.net/locations/sugar-land-tx-pharmacy",
+        "fetched_at": "2026-05-16T20:25:00Z",
+        "fields": ["multi_location"]
+      }
+    ],
+    "platform_affiliation_check": "platform_affiliated",
+    "verification_notes": "Multi-location Ritecare brand (Sugar Land + Dallas). Queen Ozigboh PIC. Nigerian-American name pattern. Operating under 'Dallas Community Pharmacy' brand umbrella — multi-store organization.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 4,
+        "signal_key": "multi_location_brand",
+        "direction": "negative",
+        "evidence": "Sugar Land + Dallas locations under 'Dallas Community Pharmacy' / Ritecare umbrella = group operation, not pure solo coast.",
+        "source": "ritecarerx_website",
+        "source_url": "https://www.ritecarerx.net/locations/sugar-land-tx-pharmacy",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "named_PIC_separate_from_owner",
+        "direction": "positive",
+        "evidence": "Queen Ozigboh listed as PIC = contract/staff role; owner may be absentee.",
+        "source": "providerwire",
+        "source_url": "https://providerwire.com/pharmacy/texas/sugar-land/the-rite-pharmacy-inc-1356658470",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "providerwire",
+        "url": "https://providerwire.com/pharmacy/texas/sugar-land/the-rite-pharmacy-inc-1356658470",
+        "fetched_at": "2026-05-16T20:25:00Z",
+        "fields": ["entity_name"]
+      }
+    ],
+    "enrichment_notes": "B/C-tier — Group-owned multi-location, contract PIC = staff-run. Need Comptroller entity drill.",
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 97,
+    "legal_name": "Katy Medical Complex Pharmacy",
+    "dba_name": "Katy Medical Complex Pharmacy",
+    "address": "21700 Kingsland Blvd Ste 105",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77450",
+    "phone": "(713) 829-6497",
+    "website": "https://katymedicalpharmacy.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": 2004,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://katymedicalpharmacy.com/",
+        "fetched_at": "2026-05-16T20:25:00Z",
+        "fields": ["year_established", "services"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2004 = 22 yrs in business. Modern tech: virtual appointments, eMAR, online refills. Owner not publicly identified.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 22,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "22_yr_business",
+        "direction": "positive",
+        "evidence": "22 years in business = mature operation, owner likely 50+.",
+        "source": "website",
+        "source_url": "https://katymedicalpharmacy.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Virtual appts, eMAR, online refills = active modernization, not coasting.",
+        "source": "website",
+        "source_url": "https://katymedicalpharmacy.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "compounding_capability",
+        "direction": "positive",
+        "evidence": "Compounding + DME + immunizations = full-service mix.",
+        "source": "website",
+        "source_url": "https://katymedicalpharmacy.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier — Mature business with modern operations. Not pure coast. Need owner identification.",
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 98,
+    "legal_name": "Spring Green Pharmacy",
+    "dba_name": "Spring Green Pharmacy",
+    "address": "1443 FM 1463 Rd Ste 650",
+    "city": "Katy",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77494",
+    "phone": "(281) 942-4330",
+    "website": "https://springgreenpharmacy.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.springgreenpharmacy.com/about-us",
+        "fetched_at": "2026-05-16T20:25:00Z",
+        "fields": ["services"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Independently owned. Compounding + pet medications. West Katy / Cinco Ranch area. Owner not surfaced publicly.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "compounding_pet_meds",
+        "direction": "positive",
+        "evidence": "Compounding + pet medication niche.",
+        "source": "website",
+        "source_url": "https://springgreenpharmacy.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "katy_77494_high_growth",
+        "direction": "negative",
+        "evidence": "77494 = booming West Katy / Cinco Ranch suburb, high chain density. Sub-market 0 (neutral baseline).",
+        "source": "addr_inference",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "C/B-tier — Compounding niche but high-competition booming suburb. Need TSBP owner pull.",
+    "data_completeness": 0.4
+  },
+  {
+    "spine_index": 99,
+    "legal_name": "Life Pharmacy",
+    "dba_name": "Life Pharmacy LLC",
+    "address": "23541 Westheimer Pkwy Ste 130",
+    "city": "Katy",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77494",
+    "phone": "(713) 665-5050",
+    "website": "https://www.lifepharmacyrx.com/",
+    "license_type": "Class A (Community Pharmacy) + Compounding + Medical Weight Loss",
+    "license_holder_name": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.lifepharmacyrx.com/",
+        "fetched_at": "2026-05-16T20:25:00Z",
+        "fields": ["business_model", "services"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Pharmacist-owned retail + compounding + medical weight loss niche (GLP-1 etc). West Katy. Owner not publicly named.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "recent_acquisition": false,
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "medical_weight_loss_growth_niche",
+        "direction": "negative",
+        "evidence": "Medical weight loss / GLP-1 compounding = hot growth category (regulatory uncertain post-FDA scrutiny but high revenue). Active growth mode.",
+        "source": "website",
+        "source_url": "https://www.lifepharmacyrx.com/medical-weight-loss-in-katy-texas",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "fda_glp1_scrutiny_risk",
+        "direction": "mixed",
+        "evidence": "GLP-1 compounding market is in FDA-driven contraction (2024-2026 enforcement). High revenue but high regulatory risk.",
+        "source": "general_industry_knowledge",
+        "source_url": null,
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "pharmacist_owned",
+        "direction": "positive",
+        "evidence": "Website explicitly states 'pharmacist-owned retail pharmacy'.",
+        "source": "website",
+        "source_url": "https://www.lifepharmacyrx.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "B-tier — Pharmacist-owned, but growth-mode (GLP-1 compounding) with FDA regulatory overhang. Not classic coast.",
+    "data_completeness": 0.5
+  }
+]

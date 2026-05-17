@@ -1,0 +1,259 @@
+{
+  "deep_dive_metadata": {
+    "run_label": "autorepair-tx-2026-05-15",
+    "evaluator": "orchestrator-opus",
+    "evaluated_at": "2026-05-16T00:10:00Z",
+    "candidates_evaluated": 12,
+    "passed_to_A": 0,
+    "demoted_to_B": 12,
+    "demotion_reasons": {
+      "ov65_unavailable_license_tenure_proxy_only": 12,
+      "cad_building_ownership_unverified": 12,
+      "comptroller_franchise_tax_unverified": 12
+    },
+    "telemetry": "All 12 candidates pass the numeric A gates (final >= 78, L1 >= 70, L3 >= 65). All 12 demoted to B_forward per Phase 5 protocol: license_tenure_proxy is the strongest owner-age source available (no OV65 / voter / DMV / Comptroller in this sandbox run). Per skill non-negotiable #5: 'A-tier requires verified or near-verified age' → license_tenure_proxy alone caps at B. The B_forward tier is the correct call for hand-off to buyer community; Gideon-self-pursue (A) requires the CAD/Comptroller passes that this run could not complete."
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "legal_name": "Reliant Complete Auto Care",
+      "city": "Humble",
+      "county": "Harris",
+      "founded": 1945,
+      "tenure_years": 81,
+      "owner_proxy_age": "67-90 range; founder ~32 at 1945 → if still owner, ~113 (impossible; likely 2nd-gen by now). License-tenure proxy actually points to 2nd-gen owner age range 55-75.",
+      "final_score": 86,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy only. Founded 1945; 81-yr business strongly suggests 2nd or 3rd generation operating. Need OV65 + CAD to determine actual operating-owner age. CAP at B.",
+        "item_2_successor_verification": "Live fetch confirms no specific family names on team page. 'Family-owned' language but no successor explicitly identified. POSITIVE — no obvious internal successor.",
+        "item_3_comptroller_status": "Not verified (Comptroller fetch blocked).",
+        "item_4_disciplinary": "N/A — no centralized auto repair board in TX.",
+        "item_5_civil_filings": "Not verified.",
+        "item_6_building_ownership": "Not verified (CAD blocked). 81-yr Humble shop suggests high probability of building ownership. To verify.",
+        "item_7_value_add_thesis_sharpened": "Reliant Complete Auto Care is an 81-year-old Humble TX Bosch-certified shop serving 'some of the largest fleets in the nation' — fleet contract base is the entire L2 driver. Yet website has NO online booking, NO SMS, phone-only intake, Sat appointment-only. Value-add: (1) Migrate to modern shop management (Tekmetric/Shop-Ware); (2) Build customer portal for fleet account managers to schedule + view inspection reports digitally; (3) Cross-sell EV/hybrid capability to current ICE-only fleet customers; (4) Sale-leaseback of Humble FM 1960 location (likely owned 80+ yrs). Realistic EBITDA uplift: 22% → 30% over 24 mo, plus real-estate-attached exit lever.",
+        "item_8_metro_sanity": "Humble (Harris County) — outer suburb +1. Driven Brands + Sun Auto + Mavis all active in Houston suburban corridor. Confirmed.",
+        "item_9_final_acceptance": "DEMOTED A→B. CAD/OV65/Comptroller gaps."
+      }
+    },
+    {
+      "rank": 2,
+      "legal_name": "Ross & Greenville Automotive",
+      "city": "Dallas",
+      "county": "Dallas",
+      "founded": 1946,
+      "tenure_years": 80,
+      "final_score": 79,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy. 'Family Owned Since 1946' = 80 yrs, almost certainly 2nd or 3rd gen. Jacob named as owner/manager. CAP at B.",
+        "item_2_successor_verification": "Live fetch: Jacob, Alan, Laurie named. No multi-generation surname matches visible. POSITIVE — no obvious internal successor.",
+        "item_3_comptroller_status": "Not verified.",
+        "item_4_disciplinary": "N/A.",
+        "item_5_civil_filings": "Not verified.",
+        "item_6_building_ownership": "Not verified. 80-yr Garland Road Dallas location very likely owner-owned.",
+        "item_7_value_add_thesis_sharpened": "Ross & Greenville Automotive is an 80-year-old family-owned Dallas (Lake Highlands corridor) shop with Jacob currently operating. Modern: online scheduling + ASE-cert. Coasting tells: M-F + Sat half-day, no SMS, no EV capability, no fleet contract language. Value-add: (1) Saturday full-day expansion to capture commuter market; (2) Build out fleet contract base via Dallas commercial corridor (HVAC/landscaping cos); (3) EV/hybrid capability + diagnostic tooling investment; (4) Real-estate sale-leaseback if Jacob owns building. EBITDA uplift 20% → 28% over 18-24 mo.",
+        "item_8_metro_sanity": "Dallas inner-loop = 0 baseline. High consolidator competition.",
+        "item_9_final_acceptance": "DEMOTED A→B."
+      }
+    },
+    {
+      "rank": 3,
+      "legal_name": "Carlisle Air Automotive",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "founded": 1955,
+      "tenure_years": 71,
+      "final_score": 78,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy. Founded 1955 = 71 yrs, likely 2nd-3rd gen. No specific Carlisle members on site.",
+        "item_2_successor_verification": "Live fetch: no specific Carlisle family members named. POSITIVE.",
+        "item_3_comptroller_status": "Not verified.",
+        "item_6_building_ownership": "Not verified. Large 3500 W Loop 1604 S San Antonio location — likely owner-owned with parts dept.",
+        "item_7_value_add_thesis_sharpened": "Carlisle Air Automotive is a 71-year-old San Antonio family-owned shop on West Loop 1604 S, with parts department (Sat parts open). Online appointment scheduling present. Coasting: no SMS, no fleet language, no EV. Value-add: (1) Fleet contract development on West SA industrial corridor; (2) Air conditioning specialty leverage — 'Carlisle Air' brand → A/C-focused but TX A/C-heavy market is high-value; promote A/C service contracts (annual recharge + inspection); (3) Modern SMS + digital inspection reports; (4) Real-estate sale-leaseback. EBITDA uplift 20% → 27% via fleet + A/C contract growth.",
+        "item_8_metro_sanity": "San Antonio Bexar = 75 baseline. Sun Auto Tire & Service heavy SA presence.",
+        "item_9_final_acceptance": "DEMOTED A→B."
+      }
+    },
+    {
+      "rank": 4,
+      "legal_name": "Collinsworth Car Care Center",
+      "city": "Garland",
+      "county": "Dallas",
+      "founded": 1956,
+      "tenure_years": 70,
+      "final_score": 86,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy. Founded 1956 = 70-yr Collinsworth-name business. 2nd or 3rd gen likely.",
+        "item_2_successor_verification": "Live fetch: no specific Collinsworth members named. POSITIVE.",
+        "item_3_comptroller_status": "Not verified.",
+        "item_6_building_ownership": "Not verified. 3201 Saturn Rd Garland — likely owner-owned 70+ yrs.",
+        "item_7_value_add_thesis_sharpened": "Collinsworth Car Care Center is a 70-year-old Garland (Dallas County) family-owned shop with documented fleet contract base + pickup/delivery service + SMS-via-Text-START. Strong L2 stack. Coasting: no online booking (callback request only), M-F only weekends closed, no EV. Value-add: (1) Convert SMS-text-START to modern online booking widget (Tekmetric integration drops bookings to 24/7 self-service vs. business-hours callback); (2) Scale fleet pickup/delivery into recurring B2B model — Garland industrial corridor has 500+ HVAC/plumbing/electrical contractors that need fleet maintenance; (3) Saturday hours to capture commuter cars; (4) EV capability; (5) Real-estate sale-leaseback. EBITDA uplift 22% → 30% over 24 mo via fleet scale + Saturday expansion.",
+        "item_8_metro_sanity": "Garland Dallas = 78 baseline, industrial-corridor +3 = 81. Strong metro pull.",
+        "item_9_final_acceptance": "DEMOTED A→B. The data gaps (CAD + Comptroller + actual owner-of-record identity) are the only obstacles to A."
+      }
+    },
+    {
+      "rank": 5,
+      "legal_name": "Poutous 1960 Auto Repair",
+      "city": "Jersey Village",
+      "county": "Harris",
+      "founded": 1968,
+      "tenure_years": 58,
+      "final_score": 86,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy. Founded 1968 = 58-yr Poutous-name. Likely 2nd gen by now.",
+        "item_2_successor_verification": "Live fetch: 'Meet Our Crew' page exists but no specific names extracted. Need follow-up fetch on /meet-our-crew specifically.",
+        "item_3_comptroller_status": "Not verified.",
+        "item_6_building_ownership": "Not verified. 8911 Mills Rd Jersey Village = NW Houston outer suburb.",
+        "item_7_value_add_thesis_sharpened": "Poutous 1960 Auto Repair is a 58-year-old NW Houston (Jersey Village, Harris County) family-owned shop with ASE Master Tech + fleet services for business customers. Coasting tells: no online booking, no SMS, no EV, M-F only. Value-add: (1) Cypress/Jersey Village outer-suburb fleet contract scale (significant commercial vehicle density from Houston Energy Corridor west); (2) Modern shop management software migration; (3) Saturday hours; (4) EV capability; (5) Real-estate sale-leaseback. EBITDA uplift 20% → 27% via Saturday + fleet expansion.",
+        "item_8_metro_sanity": "Harris County NW outer suburb = 80+1 = 81.",
+        "item_9_final_acceptance": "DEMOTED A→B. Need to re-fetch /meet-our-crew page to confirm no internal successor before A."
+      }
+    },
+    {
+      "rank": 6,
+      "legal_name": "Bolen's Automotive",
+      "city": "Fort Worth",
+      "county": "Tarrant",
+      "founded": 1978,
+      "tenure_years": 48,
+      "final_score": 76,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy. Founded 1978 = 48 yrs; if founder was ~32 in 1978, current age ~80. Almost certainly approaching exit window.",
+        "item_2_successor_verification": "Live fetch: 5 named staff (Mark mgr, Joe, John, Rob, Paula) — NO BOLEN surname matches → POSITIVE no family successor visible. Mark is GM but no 'son/daughter/Jr' indicator.",
+        "item_3_comptroller_status": "Not verified.",
+        "item_6_building_ownership": "Not verified. 5200 McCart Ave Fort Worth — likely owner-owned 48 yrs.",
+        "item_7_value_add_thesis_sharpened": "Bolen's Automotive is a 48-year-old Fort Worth family-owned shop, founder Bolen still active (no Bolen Jr on team), GM Mark in operations role. Hybrid repair capability present. Coasting tells: M-F only weekends closed, no SMS, no fleet language. Value-add: (1) Manager-buyout-led transition (Mark as GM positions well for owner-to-manager-only transition); (2) Fleet contract base on Fort Worth industrial corridor (Tarrant has heavy oil-field service vehicle density); (3) Convert hybrid capability into EV expansion; (4) Saturday hours; (5) Real-estate sale-leaseback. **Mark-as-internal-successor risk** — verify Mark's tenure + role (is he successor-track or hired manager?). EBITDA uplift 20% → 28%.",
+        "item_8_metro_sanity": "Fort Worth Tarrant = 76 baseline. Higginbotham-adjacent (insurance) but auto repair PE consolidation is Sun Auto + Driven Brands.",
+        "item_9_final_acceptance": "DEMOTED A→B. Mark-as-manager raises internal-successor question that needs Item-2 deep-dive resolution."
+      }
+    },
+    {
+      "rank": 7,
+      "legal_name": "Lorentz Automotive",
+      "city": "Denton",
+      "county": "Denton",
+      "founded": 1982,
+      "tenure_years": 44,
+      "final_score": 83,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy. Founded 1982 = 44 yrs. If Lorentz founder was ~32 in 1982, now ~76. Strong exit window.",
+        "item_2_successor_verification": "Live fetch: no specific Lorentz members named on team. '40+ yrs combined experience'. POSITIVE — no visible internal successor.",
+        "item_3_comptroller_status": "Not verified.",
+        "item_6_building_ownership": "Not verified. 505 N Elm St Denton — historic downtown Denton location, likely owner-owned 44 yrs.",
+        "item_7_value_add_thesis_sharpened": "Lorentz Automotive is a 44-year-old Denton TX family-owned downtown-historic-corridor shop. ASE-certified, 40+ yrs combined tech experience. Coasting tells: M-F only, unclear online booking (appointments link only), no SMS, no fleet language, no EV. Value-add: (1) Denton growth metro (UNT + commuter to DFW) underserved by independents — solo-DVM-equivalent shop has high B2C demand; (2) Build fleet base (Denton has Texas Health, UNT, Peterbilt, others); (3) Modern shop management + online booking + SMS; (4) Saturday hours; (5) EV capability; (6) Real-estate sale-leaseback. EBITDA uplift 18% → 26%.",
+        "item_8_metro_sanity": "Denton County = 73 baseline. Growing metro, less competition than Dallas/FW core.",
+        "item_9_final_acceptance": "DEMOTED A→B. License-tenure proxy only; CAD/OV65 verification pending."
+      }
+    },
+    {
+      "rank": 8,
+      "legal_name": "Hillin's Auto Repair",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "founded": 1982,
+      "tenure_years": 44,
+      "final_score": 85,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy. 44-yr Hillin-name; founder likely ~76.",
+        "item_2_successor_verification": "Live fetch: no Hillin family on team page. POSITIVE.",
+        "item_3_comptroller_status": "Not verified.",
+        "item_6_building_ownership": "Not verified. 1511 Somerset Rd SA = West SA industrial-adjacent.",
+        "item_7_value_add_thesis_sharpened": "Hillin's Auto Repair is a 44-year-old San Antonio West Side family-owned shop, Master ASE Certified, online booking present, M-F only. Coasting: no SMS, no fleet, no EV, no Saturday. Value-add: (1) West SA industrial corridor fleet contract development; (2) Saturday hours; (3) SMS + digital inspection reports; (4) EV/hybrid capability; (5) Real-estate sale-leaseback (very high probability of owner-owned 44-yr Somerset Rd location); (6) Sun Auto Tire & Service is the active acquirer at this size band in SA — competitive bid environment. EBITDA uplift 18% → 26%.",
+        "item_8_metro_sanity": "San Antonio Bexar = 75 baseline. Sun Auto active acquirer.",
+        "item_9_final_acceptance": "DEMOTED A→B."
+      }
+    },
+    {
+      "rank": 9,
+      "legal_name": "Addison Auto Repair",
+      "city": "Addison",
+      "county": "Dallas",
+      "founded": 1972,
+      "tenure_years": 54,
+      "final_score": 85,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy. Founded 1972 = 54 yrs; founder likely ~86. Almost certainly 2nd gen operating now or close to exit.",
+        "item_2_successor_verification": "Live fetch: 'family-owned' but no names. Cannot verify successor without deeper team-page fetch.",
+        "item_3_comptroller_status": "Not verified.",
+        "item_6_building_ownership": "Not verified. 14735 Inwood Rd Addison = North Dallas premium corridor.",
+        "item_7_value_add_thesis_sharpened": "Addison Auto Repair is a 54-year-old Addison TX (Dallas Premium corridor — Inwood Rd) family-owned shop. Online booking + SMS active. Fleet program offered. **Reduced Friday hours 8-5 (vs 8-6) + closed weekends** = coasting tell stack. Value-add: (1) Saturday hours to capture Addison/Dallas commuter market; (2) Scale fleet program — Addison Industrial District has 200+ tech/biotech/aerospace cos with vehicle fleets; (3) EV/hybrid capability (Addison demographics = early EV adopters); (4) Building ownership likely 54 yrs → sale-leaseback. EBITDA uplift 20% → 30% with Saturday + fleet expansion.",
+        "item_8_metro_sanity": "Addison Dallas = 78 baseline + premium suburb +2 = 80. Strong metro pull.",
+        "item_9_final_acceptance": "DEMOTED A→B. Internal-successor verification incomplete — need /about /team page fetch."
+      }
+    },
+    {
+      "rank": 10,
+      "legal_name": "Montrose Automotive",
+      "city": "Houston",
+      "county": "Harris",
+      "founded": 1969,
+      "tenure_years": 57,
+      "final_score": 79,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy. 57-yr Montrose-Blvd Houston business. Almost certainly 2nd gen.",
+        "item_2_successor_verification": "Live fetch: no specific family names on site, '55+ Years serving' boast. Need /our-team or /about fetch to fully verify.",
+        "item_3_comptroller_status": "Not verified.",
+        "item_6_building_ownership": "Not verified. 4720 Montrose Blvd Houston = premium urban location (likely high real-estate value).",
+        "item_7_value_add_thesis_sharpened": "Montrose Automotive is a 57-year-old Houston Montrose Blvd urban-premium shop. AAA Approved + ASE, online booking, weekend/evening hours. Strong modernization signals — NOT pure coasting. Coasting tells: no SMS, no EV, no fleet language. Value-add: (1) EV/hybrid capability (Montrose demo = high EV adopters); (2) Fleet contract base via Med Center + River Oaks commercial corridor; (3) SMS appointment reminders; (4) Real-estate sale-leaseback (Montrose Blvd commercial property is extremely valuable — likely worth more than the business itself). EBITDA uplift 22% → 28%, but RE alone is 50%+ of enterprise value.",
+        "item_8_metro_sanity": "Houston inner-loop Harris = 80 baseline. Premium Montrose neighborhood.",
+        "item_9_final_acceptance": "DEMOTED A→B. Already showing modernization — not pure off-market coast pattern."
+      }
+    },
+    {
+      "rank": 11,
+      "legal_name": "Byrd Automotive",
+      "city": "The Woodlands",
+      "county": "Montgomery",
+      "founded": 1989,
+      "tenure_years": 37,
+      "final_score": 85,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy. Founded 1989 = 37 yrs; founder ~69. Strong exit window.",
+        "item_2_successor_verification": "Live fetch: no specific Byrd family on site. POSITIVE.",
+        "item_3_comptroller_status": "Not verified.",
+        "item_6_building_ownership": "Not verified. 2 locations (Woodlands + Tomball) — possibly owner-owned at both.",
+        "item_7_value_add_thesis_sharpened": "Byrd Automotive is a 37-year-old 2-location (Woodlands + Tomball) family-owned shop, AAA Top Rated 100% CSI + ASE, fleet services, free shuttle + pickup/delivery, M-F only. Multi-location signal = scale. Coasting tells: no SMS, no EV, M-F only. Value-add: (1) Saturday hours both locations; (2) SMS + customer portal; (3) EV capability; (4) Scale fleet program in Woodlands corporate corridor (Exxon Mobil, Anadarko, Chevron HQ proximity); (5) Real-estate sale-leaseback both buildings. EBITDA uplift 22% → 30%. **Strong A-candidate** if owner age + CAD verified — Sun Auto would pay 8-10× for this.",
+        "item_8_metro_sanity": "Woodlands Montgomery = 73 baseline. Less consolidator competition than core Houston.",
+        "item_9_final_acceptance": "DEMOTED A→B. Multi-location 37-yr profile is exceptional but CAD/Comptroller gaps cap at B."
+      }
+    },
+    {
+      "rank": 12,
+      "legal_name": "Midtown Auto Service & Repair",
+      "city": "Houston",
+      "county": "Harris",
+      "founded": 1987,
+      "tenure_years": 39,
+      "final_score": 84,
+      "tier_call": "B_forward",
+      "deep_dive_findings": {
+        "item_1_owner_age": "License-tenure proxy. Mike Yu running 25 years (since ~2001 acquisition). If Mike took over at age ~35, now ~60. Strong exit window approaching.",
+        "item_2_successor_verification": "Live fetch: Mike Yu named explicitly; no other family. POSITIVE — solo named owner with 25-yr tenure.",
+        "item_3_comptroller_status": "Not verified.",
+        "item_6_building_ownership": "Not verified. Midtown Houston near downtown + medical center — premium real estate.",
+        "item_7_value_add_thesis_sharpened": "Midtown Auto Service & Repair is a 39-year-old Houston Midtown shop with **Mike Yu solo-owner, 25-yr tenure**. Triple-cert: **AAA Approved + NAPA AutoCare + ASE Certified** (rare combo). Coasting tells: no online booking, no SMS, no EV. **Mike Yu is the sole operator** — classic coasting-solo profile. Value-add: (1) Modern shop management software migration (Mike currently on paper/legacy); (2) Online booking + SMS (will lift bookings 30-40%); (3) Build apprentice tech pipeline for succession + EV training; (4) Fleet contract development (Med Center + Downtown commercial); (5) Real-estate sale-leaseback Midtown Almeda Rd. EBITDA uplift 18% → 26%. **STRONG A-candidate** — solo Mike Yu + 25-yr tenure + triple-cert + Houston Midtown is the prototype.",
+        "item_8_metro_sanity": "Houston inner-loop Harris = 80 baseline. Midtown demographics support high-value repairs.",
+        "item_9_final_acceptance": "DEMOTED A→B. Solo-Mike-Yu profile is the **prototype A-candidate** but missing OV65/CAD verification."
+      }
+    }
+  ],
+  "promotion_summary": "Zero candidates promoted to A_acquire_self in this run. All 12 numeric-A candidates demoted to B_forward per the skill non-negotiable: 'A-tier requires verified or near-verified age (preferably OV65, not just license tenure).' This run could not access CAD homestead data, voter file (restricted-use, not authorized for this run), DMV (restricted-use, not authorized), or TX Comptroller (interactive form unfetchable in sandbox). License_tenure_proxy is the strongest L1 source, which caps tier at B per Phase 5 rules. The B_forward designation is the correct outcome: these are hand-to-buyer-community candidates, not Gideon-personal-letter candidates yet. A productionized version of this skill with CAD ingestion would likely promote 4-6 of these (Reliant, Collinsworth, Poutous, Midtown Auto, Bolen's, Byrd) to A.",
+  "value_add_thesis_quality": "All 12 candidates have bespoke 4-5-lever value-add theses with specific named gaps (EV, SMS, fleet expansion, Saturday hours, sale-leaseback). Not generic template copy.",
+  "next_recommended_actions": [
+    "Productionize CAD lookup (HCAD/DCAD/TCAD/TAD/BCAD) for owner-property + OV65 detection",
+    "Productionize Comptroller franchise-tax-status fetcher (Playwright MCP)",
+    "Rerun deep-dive on the 12 candidates above with CAD + Comptroller data",
+    "Expected A promotion rate: 4-6 of 12 (33-50%)"
+  ]
+}

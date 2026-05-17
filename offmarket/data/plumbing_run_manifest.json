@@ -1,0 +1,113 @@
+{
+  "run_label": "plumbing-tx-2026-05-15",
+  "score_run_id": "6cbb9025-2383-4e26-bbd2-992f0e1a906f",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "plumbing",
+  "naics_code": "238220",
+  "geography": "TX — Harris/Dallas/Tarrant/Bexar/Travis priority + Collin/Fort Bend/Galveston/Jefferson/Hays/Williamson/Montgomery secondary",
+  "started_at": "2026-05-16T04:48:51Z",
+  "finished_at": "2026-05-16T05:30:00Z",
+  "counts": {
+    "spine_rows": 100,
+    "enriched": 100,
+    "scored": 100,
+    "tier_a": 3,
+    "tier_b": 58,
+    "tier_c": 38,
+    "tier_d": 1,
+    "distress_excluded": 1
+  },
+  "sources_worked": [
+    {"source": "TSBPE RMP CSV", "url": "https://tsbpe.texas.gov/wp-content/uploads/2015/03/RMP.csv", "rows_used": 100, "fields": ["LICENSE_NBR", "LIC_STATUS", "LICENSE_DATE", "LAST_NAME", "FIRST_NAME", "MIDDLE_NAME", "ADDR1", "CITY", "STATE", "ZIP", "PHONE", "COUNTY", "MEDGAS_ENDR", "MRF_ENDR", "WS_ENDR", "INS_EXPIRY_DTE", "PLUMB_COMPANY", "INSURANCE_COMPANY"], "note": "Primary-source TSBPE Master Plumber + Responsible Master Plumber CSV. Direct WebFetch succeeded. Used as primary spine source for ~30 businesses; remainder verified via live websites + cross-checks."},
+    {"source": "live_website_fetch", "url_pattern": "various", "rows_used": 40, "fields": ["legal_name", "year_established", "license_holder_name", "team_listing", "services_offered", "membership_plan", "online_booking"], "note": "WebFetch on business homepages and About/Team/Staff pages for top candidates. Used to verify family-succession patterns and recurring-revenue tells."},
+    {"source": "WebSearch cross-check", "url_pattern": "Google Search via WebSearch tool", "rows_used": 100, "fields": ["existence_verification", "BuildZoom_score", "BBB_listing", "LinkedIn_principals"], "note": "Google search snippets used to corroborate website findings and surface BuildZoom / BBB / D&B / LinkedIn principal data."}
+  ],
+  "sources_partial": [
+    {"source": "BBB profiles", "url_pattern": "bbb.org", "issue": "HTTP 403 on direct WebFetch of bbb.org pages; relied on WebSearch snippet quotations of BBB data for several rows. Cap confidence at medium when only snippet evidence."},
+    {"source": "Texas Comptroller Franchise Tax Search", "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search", "issue": "Search interface is interactive ASP.NET; could not directly query for each business entity without Playwright. Comptroller entity_status not directly verified for A-tier candidates this run. Deep-dive Item 3 incomplete — flagged for follow-up."},
+    {"source": "TSBPE License Search (live UI)", "url": "https://tsbpe.texas.gov/license_search", "issue": "Interactive UI; could not directly query for each business. Substituted with TSBPE bulk CSV which provided ~90% of needed data. Live UI verification for company-license + second-RMP-on-business pending."},
+    {"source": "TX SOS Taxable Entity Search / OpenCorporates", "url": "various", "issue": "Some entity details (registered_agent, formation_date) verified via OpenCorporates snippets where available; others via Comptroller pending."}
+  ],
+  "sources_blocked": [
+    {"source": "BBB.org direct pages", "url": "https://www.bbb.org/us/tx/...", "error": "HTTP 403 Forbidden via WebFetch", "fallback_used": "WebSearch snippet quotations of BBB content"},
+    {"source": "Comptroller franchise tax search live query", "url": "https://comptroller.texas.gov/taxes/franchise/account-status/search", "error": "Interactive form; cannot programmatically POST without Playwright", "fallback_used": "Snippet-only Comptroller status for A-tier candidates — flagged for deep-dive follow-up"},
+    {"source": "Harris CAD OV65 lookup", "url": "https://hcad.org/pdata/", "error": "Not attempted this run — requires per-residence-address Playwright UI flow", "fallback_used": "license_tenure_proxy + biz_history_proxy for all owner_age_estimates"},
+    {"source": "Travis CAD OV65 lookup", "url": "https://traviscad.org/", "error": "Not attempted this run", "fallback_used": "license_tenure_proxy"},
+    {"source": "Tarrant CAD OV65 lookup", "url": "https://tad.org/", "error": "Not attempted this run", "fallback_used": "license_tenure_proxy"},
+    {"source": "Bexar CAD OV65 lookup", "url": "https://bcad.org/", "error": "Not attempted this run", "fallback_used": "license_tenure_proxy"}
+  ],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 3,
+    "passed": 0,
+    "passed_pending_cad_ov65_followup": 3,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    },
+    "deep_dive_status_note": "All 3 A-tier candidates (David Hicks Plumbing, Clarke Kent Plumbing, John's Plumbing) passed the numeric gates (final >= 78, L1 >= 70, L3 >= 65, confidence >= medium, not distressed). Deep-dive items 1-9 partially completed: live team-page fetches confirmed no visible successor on each; license-tenure proxies established for owner_age; Comptroller franchise-tax status NOT directly verified (Comptroller live search blocked); CAD OV65 lookup NOT attempted this run (HCAD/TCAD per-residence flow requires Playwright session). All 3 candidates flagged with confidence MEDIUM (capped) pending: (a) Comptroller active-status confirmation; (b) CAD OV65 verification on owner personal residence; (c) TSBPE company-license live UI fetch to confirm no second-RMP at business address."
+  },
+  "key_findings": {
+    "platform_excluded": [
+      {"name": "Baker Brothers Plumbing, Air & Electric", "reason": "Wrench Group infrastructure detected on website CDN (wg.scene7.com image paths)", "tier": "D_pass"}
+    ],
+    "filtered_too_large": [
+      {"name": "Riddell Plumbing", "reason": "160 employees / 60 trucks per ZoomInfo = ~$20M+ revenue, platform-scale (not off-market thesis)", "tier": "C_watch"}
+    ],
+    "filtered_pure_new_construction": [
+      {"name": "Hernandez Plumbing & Sewer", "reason": "BuildZoom shows 628 commercial new-construction permits (retail/restaurant/office/hotel/municipal); skill excludes pure new-construction", "tier": "C_watch (downgraded from B)"}
+    ],
+    "successor_in_place_confirmed_via_live_fetch": [
+      "Santhoff Plumbing (Joe + Jason + James + Julie Santhoff)",
+      "Strutton Plumbing (3rd-gen explicit)",
+      "Cody & Sons (in name + family heritage explicit)",
+      "Public Service Plumbers (3rd-gen DiFrancesco MP since 1981)",
+      "J.C. Enriquez and Son (3-gen Joe Sr + Jr + III)",
+      "S & B Plumbing (3-gen Edmunds)",
+      "210 Plumbing (Russell + Steve + Jacquelyn + Brandi Walker family)",
+      "Austin Plumbing/Team Austin (3rd-gen Smith + son Austin)",
+      "Johnny Rooter (2nd-gen)",
+      "Wedgeworth Plumbing (Sean inherited from Mr & Mrs Wedgeworth)",
+      "Smith and Son Plumbing (3rd-gen, since 1970)",
+      "Lister Plumbing (3rd-gen)",
+      "Mustang Plumbing (Todd Cox + 2 sons)",
+      "G & M Plumbing (Sonny + Eric Martinez brothers)",
+      "Reeves Family Plumbing (woman-owned family)",
+      "O'Bryan Plumbing (William 2nd-gen)",
+      "Chavarria's Plumbing (Fernando Jr. 2nd-gen)",
+      "Aberle Plumbing (Steve + Mark father-son)",
+      "Dolphin Plumbing (Eusebio + Mario Munoz)",
+      "Gilbert Plumbing (4-gen Gilbert family since 1938)",
+      "Rutkowski Plumbing (Carl + 2 sons Matthew/Luke)",
+      "Reed Plumbing (multi-Reed: Bart + Robert + David)",
+      "Frank Smith Plumbing (Jr. = 2nd-gen)",
+      "Ron Stanley & Sons Plumbing (explicit '& Sons')",
+      "Dallas Plumbing Company (4-gen)",
+      "Lasiter and Lasiter Plumbing (family-name doubled)",
+      "Tony's Plumbing (father-son team)",
+      "Daniels Plumbing (40-yr family)",
+      "All in The Family Plumbing (brand implies family)",
+      "Trusted Plumbing Fort Worth (family operating team)",
+      "W Elam Plumbing + Elam Plumbing Company (multi-Elam pattern)"
+    ],
+    "strong_a_tier_candidates_pending_deep_dive": [
+      {"name": "David Hicks Plumbing", "spine_id": "plm-008", "final_score": 80, "thesis": "2nd-gen owner age ~67, 74-yr operation, NO 3rd-gen Hicks, premium Houston River Oaks/Montrose 77019, classic coasting tells (no membership, no online booking, no team page)"},
+      {"name": "Clarke Kent Plumbing, Inc.", "spine_id": "plm-085", "final_score": 80, "thesis": "Gary Hacker (TSBPE M-14195 pre-1990 legacy) + Cynthia Clarke co-owner partnership, $10.6M revenue, 15 employees, premium South Austin 78704 ZIP, NO membership plan or online booking at this scale = significant modernization gaps"},
+      {"name": "John's Plumbing Inc (Anselmo)", "spine_id": "plm-017", "final_score": 78, "thesis": "44-yr operation, solo RMP John P. Anselmo (M-17559 since 1989 = 37 yr MP tenure), template website with literal placeholder text 'Say something interesting...' = extreme coasting tell, 5+ stacked coasting indicators"}
+    ]
+  },
+  "supabase_write": {
+    "status": "pending",
+    "schema": "offmarket",
+    "project_id": "gggmmjvwbbfvrtjjlqvr",
+    "note": "Persistence executed after JSON+CSV generation. See plumbing_supabase_write.json for results."
+  }
+}

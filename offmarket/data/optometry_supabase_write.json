@@ -1,0 +1,32 @@
+{
+  "status": "written",
+  "businesses_written": 79,
+  "business_scores_written": 79,
+  "business_signals_written": 272,
+  "neutral_signals_dropped": 20,
+  "errors": [],
+  "verification_counts": {
+    "businesses": 79,
+    "scores": 79,
+    "signals": 272,
+    "score_runs_business_count": 79,
+    "scores_by_tier": {
+      "A_acquire_self": 0,
+      "B_forward": 14,
+      "C_watch": 35,
+      "D_pass": 30
+    }
+  },
+  "score_run_id": "5c31880f-db38-46fb-a1c2-663a0e41a1f6",
+  "run_label": "optometry-tx-2026-05-15",
+  "rpc_function": "public.offmarket_persist_optometry_row(jsonb)",
+  "input_file": "/Users/gideonspencer/dealhound-pro/.claude/worktrees/fervent-kilby-9ed36a/offmarket/data/optometry_targets.json",
+  "input_rows": 79,
+  "runner_script": "/tmp/optometry_supabase_sql/persist_runner.py",
+  "notes": [
+    "Created SECURITY DEFINER RPC offmarket_persist_optometry_row patterned on fire RPC; differences: vertical='optometry', naics default '621320', raw_enrichment maps optometry-specific fields (practice_type, vision_source_member, optical_attached, recent_acquisition, enrichment_notes).",
+    "Initial run had 1 failure (row 45, Mansfield Vision Center LLC) due to malformed entity_formation_date='2003-07'. Added safe_date() helper to coerce partial YYYY-MM and YYYY values to full ISO dates. Re-ran (idempotent upserts) — all 79 succeeded.",
+    "Dropped 20 'neutral' direction signals (DB CHECK constraint blocks them).",
+    "Updated offmarket.score_runs.business_count from 0 to 79."
+  ]
+}

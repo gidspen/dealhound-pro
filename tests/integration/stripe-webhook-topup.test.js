@@ -96,15 +96,26 @@ describe('Flow K — Stripe top-up webhook', () => {
     expect(result.body.runs_limit).toBe(15);
   });
 
-  it('paywall: free user (no tier) is blocked with no_subscription reason', async () => {
-    const { checkPaywall } = await import('../../api/_lib/paywall.js');
+  it('paywall: free user with 0 runs is allowed (free first run)', async () => {
+    const { checkPaywall, FREE_RUNS } = await import('../../api/_lib/paywall.js');
 
-    await seedUser({ email: testEmail }); // no tier
+    await seedUser({ email: testEmail }); // no tier, 0 runs
+
+    const result = await checkPaywall(testEmail, supabase);
+    expect(result.allowed).toBe(true);
+    expect(result.free_run).toBe(true);
+    expect(result.tier_limit).toBe(FREE_RUNS);
+  });
+
+  it('paywall: free user past FREE_RUNS is blocked with free_run_used reason', async () => {
+    const { checkPaywall, FREE_RUNS } = await import('../../api/_lib/paywall.js');
+
+    await seedUser({ email: testEmail, runs_used: FREE_RUNS }); // no tier, free quota exhausted
 
     const result = await checkPaywall(testEmail, supabase);
     expect(result.allowed).toBe(false);
     expect(result.status).toBe(402);
-    expect(result.body.reason).toBe('no_subscription');
+    expect(result.body.reason).toBe('free_run_used');
     expect(result.body.tier).toBeNull();
   });
 

@@ -1,0 +1,64 @@
+{
+  "run_label": "fence-contractor-tx-2026-05-16-w2c",
+  "score_run_id": "4bd1c1eb-0683-4200-ba9b-5ca2fbe7a3c1",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "fence_contractor",
+  "naics_code": "238990",
+  "geography": "TX — Dallas/Tarrant/Collin/Denton/Harris/Fort Bend/Brazoria/Bexar/Comal/Travis/Williamson/Hays + rural Hood/Parker/Wise/Wood/Smith",
+  "target_volume_min": 50,
+  "target_volume_max": 80,
+  "started_at": "2026-05-16T22:30:00Z",
+  "finished_at": null,
+  "counts": {
+    "spine_rows": 0,
+    "enriched": 0,
+    "scored": 0,
+    "tier_a": 0,
+    "tier_b": 0,
+    "tier_c": 0,
+    "tier_d": 0,
+    "distress_excluded": 0
+  },
+  "sources_worked": [],
+  "sources_partial": [],
+  "sources_blocked": [],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 0,
+    "passed": 0,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    }
+  },
+  "supabase_write": {"status": "in_progress", "reason": "score_runs row inserted; businesses pending"},
+  "exclusion_list_chain_pe": [
+    "Long Fence Co.",
+    "Heras Fence",
+    "Ameri-Fence",
+    "Big Country Fence",
+    "TruGuard Fence",
+    "Sears Fence",
+    "Fence Outlet",
+    "Aluminum Fence Atlanta",
+    "Allied Fence",
+    "Buzz Custom Fence",
+    "Texas Fence Company",
+    "LiveFence",
+    "Hercules Fence"
+  ],
+  "notes": [
+    "TX has no general fence-contractor license. TDLR licenses Automatic Gate Operators (AGO) — used as cross-reference for fence+gate companies.",
+    "Spine method: AFA TX member directory + BBB TX accredited fence pages + Google Maps independents + TDLR AGO licensee data.",
+    "Sub-market nudges: DFW +3, Austin +3, Premium ZIPs (Park Cities, Memorial, Westlake, Southlake) +5, rural ag-fence +2.",
+    "First fence contractor vertical run — establishing config for verticals.md follow-up patch."
+  ]
+}

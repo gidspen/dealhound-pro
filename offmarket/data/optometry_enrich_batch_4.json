@@ -1,0 +1,2171 @@
+[
+  {
+    "legal_name": "Boerne Vision Center",
+    "dba_name": null,
+    "address": "124 E Bandera Road Suite 403",
+    "city": "Boerne",
+    "county": "Kendall",
+    "state": "TX",
+    "zip": "78006",
+    "phone": "(830) 331-8745",
+    "website": "https://boernevisioncenter.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Susan L. Johnson",
+    "year_established": 2012,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://boernevisioncenter.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "addresses", "year_established", "doctors"]
+      },
+      {
+        "source": "website",
+        "url": "https://boernevisioncenter.com/aboutus/drjohnson/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_credentials", "family_info"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/boerne/profile/optometry/boerne-vision-center-0825-1000145954",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name"]
+      },
+      {
+        "source": "zocdoc",
+        "url": "https://www.zocdoc.com/doctor/susan-johnson-od-292232",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "County corrected to Kendall (Boerne is in Kendall County, not Bexar). Independent multi-OD practice. Dr. Susan L. Johnson + Dr. Rebecca Sheeder + Dr. Aum Patel (ODs) + Dr. Charles Brodrick MD + Dr. Jessica Lee MD (MD/OD hybrid). 2 locations (Boerne + Fair Oaks Ranch). Founded 2012 by Dr. Johnson. No TOB disciplinary. No litigation found. No recent PE acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Susan L. Johnson",
+    "owner_age_estimate": 42,
+    "owner_age_source": "biographical_proxy",
+    "owner_tenure_years": 14,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 14,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 5,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_too_young",
+        "direction": "disqualifying",
+        "evidence": "Dr. Johnson has 3 young children per her bio — strongly indicates mid-30s to early-40s age; not in retirement window for 12-36 mo sale",
+        "source": "website",
+        "source_url": "https://boernevisioncenter.com/aboutus/drjohnson/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_below_threshold",
+        "direction": "negative",
+        "evidence": "Founded 2012 = 14 yrs tenure — below 15-yr long-tenured threshold",
+        "source": "website",
+        "source_url": "https://boernevisioncenter.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_multi_OD",
+        "direction": "negative",
+        "evidence": "2 locations + 5 providers (3 ODs + 2 MDs) — at or above target ceiling for solo-owner micro-acquisition",
+        "source": "website",
+        "source_url": "https://boernevisioncenter.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_growth_mode",
+        "direction": "negative",
+        "evidence": "Modern blog (2025 vision trends), active social, MD/OD hybrid expansion — owner-operator in build mode, not coasting",
+        "source": "website",
+        "source_url": "https://boernevisioncenter.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched team pages — practice is in growth/expansion mode, not transition. Owner mid-career.",
+        "source": "live_fetch",
+        "source_url": "https://boernevisioncenter.com/aboutus/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://boernevisioncenter.com/aboutus/drjohnson/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["family_info"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/boerne/profile/optometry/boerne-vision-center-0825-1000145954",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["entity_status"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — owner has 3 young children (mid-career, not retirement). Plus only 14 yrs tenure, growth mode, and oversized (5 providers + 2 locations). Not a target."
+  },
+  {
+    "legal_name": "Bristol Family Eyecare",
+    "dba_name": null,
+    "address": "14058 Bee Cave Parkway Building D Suite A",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78738",
+    "phone": "(512) 643-9792",
+    "website": "https://www.bristolfamilyeyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Dan Bristol",
+    "year_established": 2004,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.bristolfamilyeyecare.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "addresses", "doctors"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.bristolfamilyeyecare.com/about-us/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["year_established", "owner"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.bristolfamilyeyecare.com/meet-your-team/dr-dan-bristol/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_credentials", "education"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2004 (22 yrs) by Dr. Dan Bristol — Southern College of Optometry 1998. 5 ODs (Bristol, Nelson, Smith [AuD per spine note - audiologist], Silverio, Aloisio). 3 Austin-metro locations (Bee Cave, Georgetown, Lakeway). Georgetown = Williamson Co (not Travis). Lakeway = Travis. Owner has young soccer/gymnastics kids = still mid-career. No TOB discipline. No recent PE acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Dan Bristol",
+    "owner_age_estimate": 52,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 22,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 22,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 5,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_proxy",
+        "direction": "neutral",
+        "evidence": "SCO 1998 grad = ~52 yrs old; mid-career — possible 10-15 yr horizon, not 12-36 mo",
+        "source": "website",
+        "source_url": "https://www.bristolfamilyeyecare.com/meet-your-team/dr-dan-bristol/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "active_advanced_degree",
+        "direction": "negative",
+        "evidence": "Earned business degree 2022 — actively investing in career, not winding down",
+        "source": "website",
+        "source_url": "https://www.bristolfamilyeyecare.com/meet-your-team/dr-dan-bristol/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_young_children",
+        "direction": "disqualifying",
+        "evidence": "Young soccer/gymnastics kids — not retirement-window candidate",
+        "source": "website",
+        "source_url": "https://www.bristolfamilyeyecare.com/meet-your-team/dr-dan-bristol/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_multi_OD",
+        "direction": "negative",
+        "evidence": "3 locations + 5 providers (incl. audiologist) — growth/platform pattern, above target ceiling",
+        "source": "website",
+        "source_url": "https://www.bristolfamilyeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched about page — practice 'recently reopened' Georgetown location 2024-2025 = expansion mode, not transition",
+        "source": "live_fetch",
+        "source_url": "https://www.bristolfamilyeyecare.com/about-us/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.bristolfamilyeyecare.com/about-us/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["year_established"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.bristolfamilyeyecare.com/meet-your-team/dr-dan-bristol/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — Owner mid-career (52, young kids, just got biz degree, expansion mode). 3 locations puts size above target. Not a 12-36 mo seller."
+  },
+  {
+    "legal_name": "Pak Family Eye Care",
+    "dba_name": null,
+    "address": "4301 West William Cannon Drive A100",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78749",
+    "phone": "(512) 891-9969",
+    "website": "https://www.pakfamilyeyecare.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "unknown",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Peter Pak + Dr. Linda Pak (husband-wife co-owners)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.pakfamilyeyecare.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "addresses"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.pakfamilyeyecare.com/doctors",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["doctors", "family_info"]
+      },
+      {
+        "source": "yahoo_local",
+        "url": "https://local.yahoo.com/info-64190029-Pak-Family-Eye-Care/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Costco-adjacent leased optometry model — Dr. Peter Pak (UH grad) + wife Dr. Linda Pak co-own, plus 3 associate ODs (Fuentes, Nguyen, Sanchez). 3 locations next to Costco (Austin/William Cannon = Travis, Cedar Park = Williamson, Kyle = Hays). Husband-wife committed operation. No TOB discipline. No recent acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Peter Pak",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 5,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "husband_wife_co_owners",
+        "direction": "negative",
+        "evidence": "Peter + Linda Pak co-own — committed dual-owner operation, not solo-owner-coasting profile",
+        "source": "website",
+        "source_url": "https://www.pakfamilyeyecare.com/doctors",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "costco_leased_model",
+        "direction": "negative",
+        "evidence": "Costco-adjacent leased model — economics + Costco patient flow make this a different acquisition profile than independent main-street practice",
+        "source": "yelp",
+        "source_url": "https://www.yelp.com/biz/pak-family-eye-care-austin",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_multi_OD",
+        "direction": "negative",
+        "evidence": "3 locations + 5 providers — above target ceiling",
+        "source": "website",
+        "source_url": "https://www.pakfamilyeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched doctors page — no successor or transition language; 3 ODs added beyond founders (active recruiting), suggests build mode",
+        "source": "live_fetch",
+        "source_url": "https://www.pakfamilyeyecare.com/doctors",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.pakfamilyeyecare.com/doctors",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["doctors"]
+      }
+    ],
+    "enrichment_notes": "PASS — Costco-leased model, husband-wife co-owners, 3 locations / 5 providers. Wrong acquisition profile (lease + Costco dependency) and not solo-coaster. Spine listed 'Dr. Pak' as owner; corrected to Peter + Linda."
+  },
+  {
+    "legal_name": "Parmer Eye Care",
+    "dba_name": null,
+    "address": "9900 W Parmer Lane Suite 210",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78717",
+    "phone": "(737) 339-3081",
+    "website": "https://www.parmereyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Sundra Lemanski",
+    "year_established": 1998,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.parmereyecare.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.parmereyecare.com/team/dr-sundra-lemanski/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education", "tenure"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/sundra-lemanski-2632126/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/parmer-eye-care-profile_b467bd05fc5d696a",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["company_profile"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded ~1996-1998 by Dr. Sundra Lemanski (UH grad 1995, Bachelor 1992). Owner/President 30 yrs. 3 ODs (Lemanski, Sharma, Taing). North Austin Parmer corridor. In-house membership plan (recurring revenue). Female-owned. No TOB discipline. No recent acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Sundra Lemanski",
+    "owner_age_estimate": 56,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 30,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 28,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_proxy",
+        "direction": "positive",
+        "evidence": "UH grad 1995, Bachelor 1992 → ~56 yrs; entering retirement window 5-12 yrs out",
+        "source": "website",
+        "source_url": "https://www.parmereyecare.com/team/dr-sundra-lemanski/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "30 yrs owner/operator at same practice — exceptional tenure",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/sundra-lemanski-2632126/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_in_target",
+        "direction": "positive",
+        "evidence": "Single location, 3 ODs — in target acquisition size band for solo-owner micro-deal",
+        "source": "website",
+        "source_url": "https://www.parmereyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "recurring_revenue_membership_plan",
+        "direction": "positive",
+        "evidence": "In-house vision membership plan = predictable subscription revenue tail",
+        "source": "spine",
+        "source_url": "https://www.parmereyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "neutral",
+        "evidence": "Live-fetched team page — Sharma + Taing are mid-career associates (no apparent family-successor); could be either internal succession or sale candidate",
+        "source": "live_fetch",
+        "source_url": "https://www.parmereyecare.com/our-eye-doctors/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.parmereyecare.com/team/dr-sundra-lemanski/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/sundra-lemanski-2632126/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/parmer-eye-care-profile_b467bd05fc5d696a",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["company_profile"]
+      }
+    ],
+    "enrichment_notes": "B-TIER candidate. Dr. Lemanski 30 yrs owner-operator (~56 yrs old), single location, 3-OD size in target band, recurring revenue model. Not in immediate retirement window but classic 5-10 yr horizon. Worth deeper homestead/OV65 check on Lemanski."
+  },
+  {
+    "legal_name": "Eyes of Texas Vision Care",
+    "dba_name": "Eyes of Texas Vision",
+    "address": "1518 West Koenig Lane",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78756",
+    "phone": "(512) 454-5117",
+    "website": "https://eyesoftxaustin.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Fern Yee",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://eyesoftxaustin.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo OD Dr. Fern Yee. Central Austin (Koenig/Allandale). Vision therapy + dry eye + myopia control + diabetic + LASIK consult. No founded date on landing pages. Limited online detail — could not confirm owner age, grad year, or tenure from public sources. No TOB discipline, no acquisition news.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Fern Yee",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_OD_owner",
+        "direction": "positive",
+        "evidence": "Single OD on staff — classic solo-owner profile",
+        "source": "website",
+        "source_url": "https://eyesoftxaustin.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "neutral",
+        "evidence": "Live-fetched landing page — no team or about detail surfaced; thin online footprint could be a coasting tell, or just minimal marketing investment",
+        "source": "live_fetch",
+        "source_url": "https://eyesoftxaustin.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_age_unknown",
+        "direction": "neutral",
+        "evidence": "Could not confirm Dr. Yee's graduation year or age from public sources — needs TOB license issue-date lookup",
+        "source": "unknown",
+        "source_url": "https://eyesoftxaustin.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "INSUFFICIENT DATA. Solo-OD profile fits target shape, but owner age, tenure, and year established could not be confirmed via public web. Needs TOB license issue-date lookup + manual verification."
+  },
+  {
+    "legal_name": "Eye Capitol",
+    "dba_name": null,
+    "address": "1144 Airport Blvd Suite 235",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78702",
+    "phone": "(512) 928-5808",
+    "website": "https://www.eyecapitol.com/",
+    "practice_type": "mixed",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Michael Chavez",
+    "year_established": 2011,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.eyecapitol.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      },
+      {
+        "source": "healthgrades",
+        "url": "https://www.healthgrades.com/providers/michael-chavez-275y8",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo OD Dr. Michael Chavez (UH 2006 grad). Vision Source member. Founded 2011 = 15 yrs tenure. East Austin Airport Blvd. Family-owned, bilingual. Site brand: '100% local with no corporate additives' — anti-PE messaging. Strong independent positioning. No TOB discipline. No acquisition news.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Michael Chavez",
+    "owner_age_estimate": 44,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 15,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 15,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_too_young",
+        "direction": "disqualifying",
+        "evidence": "UH 2006 grad = ~44 yrs old; not in retirement window for 12-36 mo sale",
+        "source": "healthgrades",
+        "source_url": "https://www.healthgrades.com/providers/michael-chavez-275y8",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "anti_PE_brand_signal",
+        "direction": "negative",
+        "evidence": "'100% local with no corporate additives' messaging — owner explicitly signaling anti-private-equity values; unlikely to sell to PE rollup",
+        "source": "spine",
+        "source_url": "https://www.eyecapitol.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_in_target",
+        "direction": "positive",
+        "evidence": "Solo OD, single location — in target size band",
+        "source": "website",
+        "source_url": "https://www.eyecapitol.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched site — active reviews/marketing, no successor language, owner mid-career",
+        "source": "live_fetch",
+        "source_url": "https://www.eyecapitol.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "healthgrades",
+        "url": "https://www.healthgrades.com/providers/michael-chavez-275y8",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — owner too young (~44, 20 yrs into career), explicit anti-corporate brand. Not a 12-36 mo seller."
+  },
+  {
+    "legal_name": "Look + See Vision Care",
+    "dba_name": null,
+    "address": "2007 S 1st St Suite 104",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78704",
+    "phone": "(512) 774-6002",
+    "website": "https://lookandseevision.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Tammy Vo",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://lookandseevision.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      },
+      {
+        "source": "website",
+        "url": "https://lookandseevision.com/about/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education", "staff"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/tammy-vo-778048bb/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founder Dr. Tammy Vo (UH College of Optometry grad, Magna Cum Laude; BA UT Austin in piano). Solo founder + 2 associate ODs (Dr. Erica Payne, Dr. Nicole Lee). Lee moved to Austin 2022 = recent hire. Site language 'born out of Dr. Vo's desire to have her own business' = founder still actively building. South Lamar Austin. No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Tammy Vo",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "solo_founder_with_associates",
+        "direction": "neutral",
+        "evidence": "Founder + 2 associates added recently (Lee 2022) — active recruiting suggests build mode not coast",
+        "source": "website",
+        "source_url": "https://lookandseevision.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_growth_mode",
+        "direction": "negative",
+        "evidence": "Recent staff additions, modern dry eye tech (Mibo Thermoflo, Neurolens) = capex spending = build mode",
+        "source": "live_fetch",
+        "source_url": "https://lookandseevision.com/about/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched about page — practice in growth/expansion mode (2022 hire), no transition language",
+        "source": "live_fetch",
+        "source_url": "https://lookandseevision.com/about/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://lookandseevision.com/about/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["staff", "owner_education"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/tammy-vo-778048bb/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "enrichment_notes": "Likely DISQUALIFY — Founder still actively hiring/growing (added Lee 2022). Tenure and exact age not confirmable but recent expansion + 'build mode' signals = not a 12-36 mo seller."
+  },
+  {
+    "legal_name": "Austin Optometry Group",
+    "dba_name": null,
+    "address": "8105 Shoal Creek Blvd Suite A",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78757",
+    "phone": "(512) 454-4641",
+    "website": "https://www.austinoptometrygrp.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Aaron T. Wolf",
+    "year_established": 1976,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.austinoptometrygrp.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "year_established"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.austinoptometrygrp.com/our-doctor.html",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "broadcastmed",
+        "url": "https://pv.broadcastmed.io/b/sp/aaron-wolf-291",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_credentials"]
+      },
+      {
+        "source": "tangiblescience_podcast",
+        "url": "https://tangiblescience.com/blogs/talking-with-tangible-podcasts/eye-care-practice-insights",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["practice_insights"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Practice founded 1976 (50 yrs). Dr. Aaron Wolf (Baylor BA Biology, UH OD 2009) bought practice 2009 — 17 yrs as owner. Solo founder owner, recently added Dr. Ku as associate. FAAO, FSLS, FIAOMC. Active key-opinion-leader / podcast/industry consulting work = HIGH industry profile. Specialty: scleral, ortho-K, dry eye. Independent. No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Aaron T. Wolf",
+    "owner_age_estimate": 42,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 17,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 50,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_too_young",
+        "direction": "disqualifying",
+        "evidence": "UH OD 2009 = ~42 yrs old; well outside retirement window",
+        "source": "website",
+        "source_url": "https://www.austinoptometrygrp.com/our-doctor.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "second_generation_owner",
+        "direction": "negative",
+        "evidence": "Dr. Wolf is 2nd-gen owner (bought 2009 from 1976 founder) — succession already happened; this is now stable mid-career operator",
+        "source": "website",
+        "source_url": "https://www.austinoptometrygrp.com/our-doctor.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "high_industry_profile",
+        "direction": "negative",
+        "evidence": "Wolf is key-opinion-leader, consults for multiple vision-care companies, top scleral specialist in TX — actively building industry brand, not winding down",
+        "source": "broadcastmed",
+        "source_url": "https://pv.broadcastmed.io/b/sp/aaron-wolf-291",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched doctor page — added Dr. Ku as associate (growth), no transition language",
+        "source": "live_fetch",
+        "source_url": "https://www.austinoptometrygrp.com/our-doctor.html",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.austinoptometrygrp.com/our-doctor.html",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "broadcastmed",
+        "url": "https://pv.broadcastmed.io/b/sp/aaron-wolf-291",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_credentials"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — 50-yr practice tenure is the only positive signal but owner is mid-career (42, 17 yrs in), is a KOL/consultant, recently added associate. The 1976 founder already exited 2009. Not a 12-36 mo seller."
+  },
+  {
+    "legal_name": "Ranch Road Vision Source",
+    "dba_name": null,
+    "address": "7300 Ranch Rd 2222 Suite 112",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78730",
+    "phone": "(512) 893-2020",
+    "website": "https://www.ranchroadvision.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Shazeen Ali",
+    "year_established": 2015,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.ranchroadvision.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "year_established", "doctors"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.ranchroadvision.com/team/dr-shazeen-ali/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/shazeen-ali-o-d-73479730/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2015 by Dr. Shazeen Ali (UH College of Optometry 2013 grad). 11 yrs tenure, ~37-39 yrs old. Solo OD + audiologist. NW Austin RR2222 corridor. Vision Source member. No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Shazeen Ali",
+    "owner_age_estimate": 38,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 11,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 11,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_too_young",
+        "direction": "disqualifying",
+        "evidence": "UH 2013 grad = ~38 yrs old; not in retirement window for 12-36 mo",
+        "source": "website",
+        "source_url": "https://www.ranchroadvision.com/team/dr-shazeen-ali/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_below_threshold",
+        "direction": "negative",
+        "evidence": "11 yrs ownership — well below 15-yr long-tenured threshold",
+        "source": "website",
+        "source_url": "https://www.ranchroadvision.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched team page — practice has audiologist + active marketing/SEO = build mode",
+        "source": "live_fetch",
+        "source_url": "https://www.ranchroadvision.com/team/dr-shazeen-ali/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.ranchroadvision.com/team/dr-shazeen-ali/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/shazeen-ali-o-d-73479730/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — owner ~38, 11 yrs tenure, build mode. Not a target."
+  },
+  {
+    "legal_name": "Tanglewood Vision Center",
+    "dba_name": null,
+    "address": "2110 Slaughter Lane Suite 123",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78748",
+    "phone": "(512) 280-0520",
+    "website": "https://tanglewoodvision.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Joseph J. McGowan",
+    "year_established": 1999,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://tanglewoodvision.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "year_established"]
+      },
+      {
+        "source": "website",
+        "url": "https://tanglewoodvision.com/about-us/doctors-staff/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["doctors", "owner_education"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/austin/profile/optometrist/tanglewood-vision-center-0825-63032",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Tanglewood Vision Center PLLC founded 1999 (27 yrs). Owner: Dr. Joseph J. McGowan (St. Mary's 1993, UH OD 1998 grad, OGS 2000) — ~52 yrs old. Associate: Dr. Virginia Mock (UGA 2005, SCCO 2009). Office Manager: Carisa Jones. South Austin Slaughter Ln. No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Joseph J. McGowan",
+    "owner_age_estimate": 52,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 27,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 27,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "27 yrs owner/founder Dr. McGowan — exceptional tenure",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/austin/profile/optometrist/tanglewood-vision-center-0825-63032",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_age_proxy",
+        "direction": "neutral",
+        "evidence": "UH 1998 grad = ~52 yrs; mid-career, possible 10-15 yr horizon",
+        "source": "website",
+        "source_url": "https://tanglewoodvision.com/about-us/doctors-staff/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_in_target",
+        "direction": "positive",
+        "evidence": "Single location, 2 ODs (owner + associate Mock) — classic target size band",
+        "source": "website",
+        "source_url": "https://tanglewoodvision.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "neutral",
+        "evidence": "Live-fetched team page — associate Dr. Mock (16 yrs in optometry) could be internal-succession candidate. McGowan family info shows wife/family but no kids in the business",
+        "source": "live_fetch",
+        "source_url": "https://tanglewoodvision.com/about-us/doctors-staff/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://tanglewoodvision.com/about-us/doctors-staff/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["doctors"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/austin/profile/optometrist/tanglewood-vision-center-0825-63032",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_name"]
+      }
+    ],
+    "enrichment_notes": "B-TIER candidate. Owner 27 yrs (~52), single location, 2-OD size in target band, possible internal-succession ambiguity. Worth homestead/age verification."
+  },
+  {
+    "legal_name": "Austin Vision Center",
+    "dba_name": null,
+    "address": "2415 Exposition Blvd Suite D",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78703",
+    "phone": "(512) 477-2282",
+    "website": "https://austinvisioncenter.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Clay Barnett",
+    "year_established": 1987,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://austinvisioncenter.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "year_established"]
+      },
+      {
+        "source": "website",
+        "url": "https://austinvisioncenter.com/about-us/team/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["doctors", "owner_name"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/clay-barnett-a097252a/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      },
+      {
+        "source": "drgalen",
+        "url": "https://drgalen.org/physician/dr-cary-clayton-barnett-optometrist-tx-us",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_credentials"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Practice founded 1987. Current owner: Dr. Clay Barnett (UH OD, Beta Sigma Kappa) + Dr. Tien Pham (associate). Spine note listed Dr. Pham as owner — CORRECTED to Barnett per team page + LinkedIn. Barnett ALSO owns Steiner Eye Care (separate practice) — multi-practice operator. Barnett has 3 young children (John, William, Evelyn) = mid-career. Tarrytown / West Austin. No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Clay Barnett",
+    "owner_age_estimate": 42,
+    "owner_age_source": "biographical_proxy",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 39,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 2,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_too_young",
+        "direction": "disqualifying",
+        "evidence": "Three young kids (John, William, Evelyn) — owner mid 30s-40s; not in retirement window",
+        "source": "website",
+        "source_url": "https://austinvisioncenter.com/about-us/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "second_generation_owner",
+        "direction": "negative",
+        "evidence": "1987 founder already exited; Barnett is later-generation owner who has been actively growing — also owns Steiner Eye Care (multi-practice)",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/clay-barnett-a097252a/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "multi_practice_owner",
+        "direction": "negative",
+        "evidence": "Barnett owns 2 practices (Austin Vision Center + Steiner Eye Care) — active operator-investor profile, not a coaster",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/clay-barnett-a097252a/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched team page — owner mid-career, no transition signals",
+        "source": "live_fetch",
+        "source_url": "https://austinvisioncenter.com/about-us/team/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://austinvisioncenter.com/about-us/team/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_name", "family_info"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/clay-barnett-a097252a/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      },
+      {
+        "source": "drgalen",
+        "url": "https://drgalen.org/physician/dr-cary-clayton-barnett-optometrist-tx-us",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_credentials"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — spine listed Pham; correct owner is Barnett (mid-career, 3 young kids, multi-practice operator including Steiner Eye Care). Not a 12-36 mo seller."
+  },
+  {
+    "legal_name": "Round Rock Eyes",
+    "dba_name": null,
+    "address": "481 Sundance Pkwy #100",
+    "city": "Round Rock",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78681",
+    "phone": "(512) 255-9995",
+    "website": "https://roundrockeyes.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Brett Hamilton",
+    "year_established": 2012,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://roundrockeyes.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      },
+      {
+        "source": "website",
+        "url": "https://roundrockeyes.com/about/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_credentials"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/brett-hamilton-1776816/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "County corrected to Williamson. Solo OD Dr. Brett Hamilton, SCO 2003 grad (~46 yrs). Owner of Round Rock Eyes since 2012 (14 yrs). Single location. 'Locally owned independent practice' branding. No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Brett Hamilton",
+    "owner_age_estimate": 46,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 14,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 14,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_too_young",
+        "direction": "disqualifying",
+        "evidence": "SCO 2003 grad = ~46 yrs; not in retirement window",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/brett-hamilton-1776816/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_in_target",
+        "direction": "positive",
+        "evidence": "Solo OD, single location — in target size band",
+        "source": "website",
+        "source_url": "https://roundrockeyes.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched about page — single OD active marketing, no transition language",
+        "source": "live_fetch",
+        "source_url": "https://roundrockeyes.com/about/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://roundrockeyes.com/about/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/brett-hamilton-1776816/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — owner ~46, 14 yrs tenure. Mid-career; not a 12-36 mo seller."
+  },
+  {
+    "legal_name": "Cedar Park Vision",
+    "dba_name": null,
+    "address": "908 W Whitestone Suite 100",
+    "city": "Cedar Park",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78613",
+    "phone": "(512) 259-2020",
+    "website": "https://cedarparkvision.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Kimberly Wampler",
+    "year_established": 2007,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://cedarparkvision.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      },
+      {
+        "source": "website",
+        "url": "https://cedarparkvision.com/team/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["doctors", "owner_education", "family_info"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/dr-kim-wampler-739b81a/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "County corrected to Williamson. Independent family-owned. Drs. Kim Wampler + Jeff Wineinger (husband-wife co-owners) took ownership 2007 (19 yrs). Wineinger 30 yrs experience (~grad 1996, ~55 yrs); Wampler UH grad, kids Cole (17) + Alexis (Baylor) — Wampler ~50-52 yrs. Associate Dr. Katherine Dang (UIWRSO) + Dr. Taylor Rains (UH; started as paraoptometric tech here) = internal-succession candidate. Long-tenured optical mgr Aslyne (25+ yrs optical, 15+ at CPV). No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Kimberly Wampler (+ Dr. Jeff Wineinger, husband co-owner)",
+    "owner_age_estimate": 52,
+    "owner_age_source": "biographical_proxy",
+    "owner_tenure_years": 19,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 25,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 3,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "Wampler + Wineinger 19 yrs ownership; Wineinger 30 yrs in profession",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/dr-kim-wampler-739b81a/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "husband_wife_co_owners",
+        "direction": "negative",
+        "evidence": "Wampler + Wineinger committed dual-owner OD operation — not solo coaster",
+        "source": "website",
+        "source_url": "https://cedarparkvision.com/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "internal_successor_visible",
+        "direction": "negative",
+        "evidence": "Dr. Taylor Rains rose from paraoptometric tech to OD at CPV — clear internal-succession pipeline",
+        "source": "website",
+        "source_url": "https://cedarparkvision.com/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_in_target",
+        "direction": "positive",
+        "evidence": "Single location, 3 ODs — target band size",
+        "source": "website",
+        "source_url": "https://cedarparkvision.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_industry_engagement",
+        "direction": "negative",
+        "evidence": "Wampler on TOA Board of Trustees + leads Young ODs of America Austin chapter — actively engaged, not coasting",
+        "source": "website",
+        "source_url": "https://cedarparkvision.com/team/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched team page — visible internal-succession candidate (Rains) and active industry engagement; Wineinger may retire first but Wampler continues, then Rains succeeds = no external-sale window",
+        "source": "live_fetch",
+        "source_url": "https://cedarparkvision.com/team/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://cedarparkvision.com/team/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["doctors", "family_info"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/dr-kim-wampler-739b81a/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "enrichment_notes": "PASS — strong tenure but husband-wife co-owners + clear internal-succession candidate (Dr. Rains promoted from tech). Likely internal transition, not external sale. Wineinger could retire first (older) but Wampler continues."
+  },
+  {
+    "legal_name": "Cedar Park Eye Care",
+    "dba_name": null,
+    "address": "210 N Lakeline Blvd Suite 100",
+    "city": "Cedar Park",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78613",
+    "phone": "(512) 643-5820",
+    "website": "https://www.cedarparkeyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Dennis Roland McCarty",
+    "year_established": 2002,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.cedarparkeyecare.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.cedarparkeyecare.com/team/dr-dennis-mccarty-o-d/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_credentials", "family_info"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/dennis-mccarty-od-0623895/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      },
+      {
+        "source": "npiprofile",
+        "url": "https://npiprofile.com/npi/1083785950",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_npi"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "County corrected to Williamson. Solo OD Dr. Dennis McCarty (UH OD 2000 grad, ~50 yrs old). Founded Cedar Park Eye Care 2002 (24 yrs tenure). 2 kids (Jolie + James). Most of family lives within miles. Closed weekends + mid-day lunch closure (mild coasting signal). Mid-career active, but TOA leadership and CE involvement suggest engaged not coasting. No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Dennis Roland McCarty",
+    "owner_age_estimate": 50,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 24,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 24,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_too_young",
+        "direction": "disqualifying",
+        "evidence": "UH 2000 grad = ~50 yrs old; not in retirement window for 12-36 mo",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/dennis-mccarty-od-0623895/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "24 yrs sole owner-operator",
+        "source": "website",
+        "source_url": "https://www.cedarparkeyecare.com/team/dr-dennis-mccarty-o-d/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_in_target",
+        "direction": "positive",
+        "evidence": "Solo OD, single location — target band",
+        "source": "website",
+        "source_url": "https://www.cedarparkeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "reduced_hours_coasting_tell",
+        "direction": "positive",
+        "evidence": "Closed Mon-Fri 12-2 for lunch + closed weekends — mild coasting / lifestyle-practice signal",
+        "source": "spine",
+        "source_url": "https://www.cedarparkeyecare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_industry_engagement",
+        "direction": "negative",
+        "evidence": "Past President + Secretary Central Texas Optometric Society; current TOA CE committee — actively engaged in profession",
+        "source": "website",
+        "source_url": "https://www.cedarparkeyecare.com/team/dr-dennis-mccarty-o-d/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "neutral",
+        "evidence": "Live-fetched team page — single OD with no associate visible; family info shows 2 kids (ages not stated) — could be young or teen",
+        "source": "live_fetch",
+        "source_url": "https://www.cedarparkeyecare.com/team/dr-dennis-mccarty-o-d/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.cedarparkeyecare.com/team/dr-dennis-mccarty-o-d/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education", "family_info"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/dennis-mccarty-od-0623895/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "enrichment_notes": "B-TIER candidate but soft. Owner ~50 (too young for immediate retirement), but 24-yr tenure, solo, reduced hours = classic coasting lifestyle practice. 8-15 yr horizon, not 12-36 mo. Worth ongoing monitoring."
+  },
+  {
+    "legal_name": "Crystal Falls Vision Center",
+    "dba_name": "CFVC",
+    "address": "3550 Lakeline Blvd Ste 180",
+    "city": "Leander",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78641",
+    "phone": "(512) 337-4283",
+    "website": "https://crystalfallsvisioncenter.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Brad Mathew",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://crystalfallsvisioncenter.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address"]
+      },
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/crystal-falls-vision-center-leander",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_credentials"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "County corrected to Williamson. Solo OD Dr. Brad Mathew (Illinois College of Optometry 2006 grad, ~44 yrs old). Worked Houston 9 yrs as associate, moved to Central Texas 2014 to own — 12 yrs owner. Independent. RevolutionPHR patient portal (modern). No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Brad Mathew",
+    "owner_age_estimate": 44,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 12,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_too_young",
+        "direction": "disqualifying",
+        "evidence": "ICO 2006 grad = ~44 yrs old; not in retirement window",
+        "source": "yelp",
+        "source_url": "https://www.yelp.com/biz/crystal-falls-vision-center-leander",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_below_threshold",
+        "direction": "negative",
+        "evidence": "12 yrs as owner — below 15-yr threshold",
+        "source": "yelp",
+        "source_url": "https://www.yelp.com/biz/crystal-falls-vision-center-leander",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_capex",
+        "direction": "negative",
+        "evidence": "RevolutionPHR patient portal — modern tech investment = active operator",
+        "source": "spine",
+        "source_url": "https://crystalfallsvisioncenter.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched landing page — mid-career first-gen owner who just opened practice 2014, no transition signals",
+        "source": "live_fetch",
+        "source_url": "https://crystalfallsvisioncenter.com/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "yelp",
+        "url": "https://www.yelp.com/biz/crystal-falls-vision-center-leander",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — owner ~44, 12 yrs tenure, modern tech. Mid-career; not a 12-36 mo seller."
+  },
+  {
+    "legal_name": "Lakeline Vision Source",
+    "dba_name": null,
+    "address": "3419 El Salido Pkwy Ste 100",
+    "city": "Cedar Park",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78613",
+    "phone": "(512) 918-3937",
+    "website": "https://www.lakelinevision.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Laurie Sorrenson",
+    "year_established": 1995,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.lakelinevision.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.lakelinevision.com/team/dr-laurie-sorrenson-faao/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education", "family_info"]
+      },
+      {
+        "source": "vision_source",
+        "url": "https://visionsource.com/doctors/advisory-board/laurie-sorrenson/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["industry_role"]
+      },
+      {
+        "source": "women_in_optometry",
+        "url": "https://www.womeninoptometry.com/promoting-yourself/article/family-matters-at-lakeline-vision-source/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["family_succession"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "County corrected to Williamson. Founded 1995 (31 yrs) by Dr. Laurie Sorrenson (UH OD 1985 grad — ~63-65 yrs old, retirement window). Board Certified. 10 ODs incl. son Eric Hammond OD = clear family-successor. Vision Source advisory board member. Distinguished Alumna UH 2002. Substantial multi-OD group (likely $3M+ revenue). No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Laurie Sorrenson",
+    "owner_age_estimate": 64,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 31,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 31,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 10,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_proxy",
+        "direction": "positive",
+        "evidence": "UH 1985 grad = ~63-65 yrs; in retirement window",
+        "source": "website",
+        "source_url": "https://www.lakelinevision.com/team/dr-laurie-sorrenson-faao/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "31 yrs sole founder-owner — exceptional tenure",
+        "source": "website",
+        "source_url": "https://www.lakelinevision.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "family_successor_blocked",
+        "direction": "disqualifying",
+        "evidence": "Son Eric Hammond OD already practices at Lakeline — clear family-internal succession in place; will NOT sell externally",
+        "source": "women_in_optometry",
+        "source_url": "https://www.womeninoptometry.com/promoting-yourself/article/family-matters-at-lakeline-vision-source/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_above_target",
+        "direction": "negative",
+        "evidence": "10 ODs — likely $3M+ revenue; far above target ceiling for solo-owner micro-acquisition. Also a PE/platform-attractive target if Sorrenson ever did sell",
+        "source": "website",
+        "source_url": "https://www.lakelinevision.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "high_industry_profile",
+        "direction": "negative",
+        "evidence": "Vision Source Advisory Board, UH faculty, TOA Optometrist of the Year — extremely high industry profile, not coasting",
+        "source": "vision_source",
+        "source_url": "https://visionsource.com/doctors/advisory-board/laurie-sorrenson/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "disqualifying",
+        "evidence": "Live-fetched team page — son Eric Hammond OD on staff + 8 other associates = bulletproof internal-succession path",
+        "source": "live_fetch",
+        "source_url": "https://www.lakelinevision.com/our-doctors/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.lakelinevision.com/team/dr-laurie-sorrenson-faao/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "vision_source",
+        "url": "https://visionsource.com/doctors/advisory-board/laurie-sorrenson/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["industry_role"]
+      },
+      {
+        "source": "women_in_optometry",
+        "url": "https://www.womeninoptometry.com/promoting-yourself/article/family-matters-at-lakeline-vision-source/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["family_succession"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — strong age/tenure signals but son Eric Hammond OD already in practice = locked internal succession. Plus size (10 ODs) above target ceiling. Not an acquisition candidate."
+  },
+  {
+    "legal_name": "Great Hills Eye Care",
+    "dba_name": null,
+    "address": "10401 Research Blvd Suite A",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78759",
+    "phone": "(512) 345-2000",
+    "website": "https://greathillseyecare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Andrew (Drew) Provost",
+    "year_established": 2012,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://greathillseyecare.com/our-practice/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "addresses", "year_established", "doctors"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/drdrewprovost/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      },
+      {
+        "source": "communityimpact",
+        "url": "https://communityimpact.com/sponsored/sponsored/2023/07/23/great-hills-eye-care-setting-the-standard-in-comprehensive-eye-care-in-the-austin-metro/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["company_profile"]
+      },
+      {
+        "source": "crunchbase",
+        "url": "https://www.crunchbase.com/person/drew-provost-d556",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2012 by Dr. Drew Provost (SCO grad, prior practice in Atlanta 6 yrs before relocating). 7 ODs across 4 Austin-metro locations (N Austin, Pflugerville, Georgetown, Liberty Hill — 3 outside Travis County). 40,000+ patients. Growing platform — Provost is the operator, not retiring. ~46-48 yrs old. No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Andrew (Drew) Provost",
+    "owner_age_estimate": 47,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 14,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 14,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 7,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_too_young",
+        "direction": "disqualifying",
+        "evidence": "Founder ~47; not in retirement window",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/drdrewprovost/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_above_target",
+        "direction": "negative",
+        "evidence": "4 locations + 7 ODs + 40,000 patients — multi-location platform, not solo-owner. Likely PE-rollup target rather than micro-acquisition target",
+        "source": "communityimpact",
+        "source_url": "https://communityimpact.com/sponsored/sponsored/2023/07/23/great-hills-eye-care-setting-the-standard-in-comprehensive-eye-care-in-the-austin-metro/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_growth_mode",
+        "direction": "negative",
+        "evidence": "Grew from 1 to 4 locations since 2012 + active community marketing (Community Impact 2023 feature) = build mode",
+        "source": "communityimpact",
+        "source_url": "https://communityimpact.com/sponsored/sponsored/2023/07/23/great-hills-eye-care-setting-the-standard-in-comprehensive-eye-care-in-the-austin-metro/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched our-practice page — active expansion, 7-OD bench depth = either PE-target or internal-cascade; not solo-owner deal",
+        "source": "live_fetch",
+        "source_url": "https://greathillseyecare.com/our-practice/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/drdrewprovost/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      },
+      {
+        "source": "communityimpact",
+        "url": "https://communityimpact.com/sponsored/sponsored/2023/07/23/great-hills-eye-care-setting-the-standard-in-comprehensive-eye-care-in-the-austin-metro/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["company_profile"]
+      }
+    ],
+    "enrichment_notes": "DISQUALIFY — wrong size + wrong life stage. Provost is a platform operator in growth mode, not a coasting solo-owner. If a deal happens here it'd be PE-rollup, not micro-acquisition."
+  },
+  {
+    "legal_name": "Aspire Vision Care",
+    "dba_name": null,
+    "address": "17261 Smyers Lane Suite 100",
+    "city": "Round Rock",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78681",
+    "phone": "(512) 360-8969",
+    "website": "https://www.aspirevisioncare.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "true",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Nancy Guenthner",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.aspirevisioncare.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.aspirevisioncare.com/team/nancy-guenthner-od-fcovd-developmental-optometrist/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/nancyguenthner/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "County corrected to Williamson. Founded by Dr. Nancy Guenthner + husband Chris Guenthner (business manager). UH College of Optometry grad Summa Cum Laude; UT-Austin BS High Honors. 4 ODs (Guenthner, Lumby, Zagst, Rodriguez). Specialty: developmental + vision therapy + ortho-K. Vision Source member. Husband-wife committed operation. No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Nancy Guenthner",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 4,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "husband_wife_co_owners",
+        "direction": "negative",
+        "evidence": "Nancy + Chris Guenthner (husband as business manager) — committed dual-owner operation",
+        "source": "website",
+        "source_url": "https://www.aspirevisioncare.com/team/nancy-guenthner-od-fcovd-developmental-optometrist/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_in_target",
+        "direction": "positive",
+        "evidence": "4 ODs single location — at upper edge of target band",
+        "source": "website",
+        "source_url": "https://www.aspirevisioncare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "specialty_niche",
+        "direction": "neutral",
+        "evidence": "Developmental optometry + vision therapy is a sticky-patient specialty niche; differentiator",
+        "source": "spine",
+        "source_url": "https://www.aspirevisioncare.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "negative",
+        "evidence": "Live-fetched team page — 3 associate ODs (Lumby, Zagst, Rodriguez) + Aspire Vision Training Center = build-mode + internal-succession depth",
+        "source": "live_fetch",
+        "source_url": "https://www.aspirevisioncare.com/our-eye-doctors/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_age_unknown",
+        "direction": "neutral",
+        "evidence": "Could not confirm Dr. Guenthner's graduation year from public sources — needs TOB license issue-date check",
+        "source": "unknown",
+        "source_url": "https://www.aspirevisioncare.com/team/nancy-guenthner-od-fcovd-developmental-optometrist/",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.aspirevisioncare.com/team/nancy-guenthner-od-fcovd-developmental-optometrist/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/nancyguenthner/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_role"]
+      }
+    ],
+    "enrichment_notes": "PASS — husband-wife co-owners, multi-OD with growth (Training Center), specialty niche. Not a solo-owner-coasting deal. Owner age could not be confirmed."
+  },
+  {
+    "legal_name": "Texas State Optical Sugar Land",
+    "dba_name": "TSO Sugar Land",
+    "address": "13879 Southwest Freeway",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(281) 238-5668",
+    "website": "https://www.tsosugarland.com/",
+    "practice_type": "medical_eye_care",
+    "vision_source_member": "false",
+    "optical_attached": "true",
+    "license_number": null,
+    "license_type": "OD",
+    "license_holder_name": "Dr. Robert Le",
+    "year_established": 1997,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.tsosugarland.com/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["legal_name", "address", "doctors"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.tsosugarland.com/about-us.html",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["year_established"]
+      },
+      {
+        "source": "tso_corp",
+        "url": "https://tso.com/eye-doctor/Robert-Le-344/Sugar-Land-TSO-96/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "healthgrades",
+        "url": "https://www.healthgrades.com/providers/robert-le-ymsmk",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_credentials"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "County corrected to Fort Bend. TSO Sugar Land is a doctor-owned-and-operated TSO franchise/co-op location (each TSO is independently owned). Dr. Robert Le (Texas A&M UG, UH OD 1994 grad — ~57 yrs old). Owner since 1997 = 29 yrs. Patented Le Duc meibomian forceps. Former UHCO adjunct clinical professor. Closed Wednesdays = MILD coasting tell. Family: wife Diana + 2 kids (Riana, Christopher) + 5 dogs. No TOB discipline. No acquisition.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dr. Robert Le",
+    "owner_age_estimate": 57,
+    "owner_age_source": "graduation_year_proxy",
+    "owner_tenure_years": 29,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 29,
+    "employee_count_estimate": null,
+    "provider_count_estimate": 1,
+    "employee_count_source": "website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_proxy",
+        "direction": "positive",
+        "evidence": "UH OD 1994 = ~57 yrs; entering retirement window (5-10 yr horizon)",
+        "source": "tso_corp",
+        "source_url": "https://tso.com/eye-doctor/Robert-Le-344/Sugar-Land-TSO-96/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_long",
+        "direction": "positive",
+        "evidence": "29 yrs solo owner of same TSO location (since 1997)",
+        "source": "website",
+        "source_url": "https://www.tsosugarland.com/about-us.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_in_target",
+        "direction": "positive",
+        "evidence": "Solo OD, single TSO location — classic micro-acquisition target size band",
+        "source": "website",
+        "source_url": "https://www.tsosugarland.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "reduced_hours_coasting_tell",
+        "direction": "positive",
+        "evidence": "Closed Wednesdays — mild lifestyle/coasting signal for 29-yr solo owner",
+        "source": "spine",
+        "source_url": "https://www.tsosugarland.com/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_entrepreneurial_history",
+        "direction": "neutral",
+        "evidence": "Invented Le Duc meibomian forceps (medical device sold worldwide) + former UHCO adjunct professor — entrepreneurial but past-tense — current focus appears to be the practice",
+        "source": "tso_corp",
+        "source_url": "https://tso.com/eye-doctor/Robert-Le-344/Sugar-Land-TSO-96/",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 3,
+        "signal_key": "successor_check_live_fetch",
+        "direction": "positive",
+        "evidence": "Live-fetched about page — solo OD, no associate visible, no family-OD successor language (kids Riana + Christopher not described as ODs); no transition language disclosed",
+        "source": "live_fetch",
+        "source_url": "https://www.tsosugarland.com/about-us.html",
+        "observed_at": "2026-05-15"
+      },
+      {
+        "layer": 2,
+        "signal_key": "tso_cooperative_model",
+        "direction": "neutral",
+        "evidence": "TSO is doctor-owned cooperative (NOT corporate franchise) — members keep equity. Affiliation is brand/services, not control — acquisition possible but subject to TSO ROFR/transfer policies",
+        "source": "website",
+        "source_url": "https://www.tsosugarland.com/about-us.html",
+        "observed_at": "2026-05-15"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "website",
+        "url": "https://www.tsosugarland.com/about-us.html",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["year_established"]
+      },
+      {
+        "source": "tso_corp",
+        "url": "https://tso.com/eye-doctor/Robert-Le-344/Sugar-Land-TSO-96/",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_education"]
+      },
+      {
+        "source": "healthgrades",
+        "url": "https://www.healthgrades.com/providers/robert-le-ymsmk",
+        "fetched_at": "2026-05-15T19:30:00Z",
+        "fields": ["owner_credentials"]
+      }
+    ],
+    "enrichment_notes": "STRONG A-TIER candidate. Dr. Robert Le solo owner 29 yrs (~57), Closed Wednesdays = mild coasting, no family-OD successor visible, single location. Caveat: TSO cooperative may have ROFR/transfer policy. Worth deep CAD/homestead check + TSO transfer rules diligence."
+  }
+]

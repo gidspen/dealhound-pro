@@ -1,0 +1,1729 @@
+[
+  {
+    "legal_name": "Mid-West Electric Co Inc",
+    "dba_name": null,
+    "address": "3828 Pinemont",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77018",
+    "phone": "7136810627",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17308",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Mid-West Electric Co Inc",
+    "license_expiration_date": "07/23/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671004Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "midwestelectric.com",
+      "midwestelectrical.com",
+      "midwestelectricservices.com",
+      "midwestelectricco.com"
+    ],
+    "enrichment": {
+      "legal_name": "Mid-West Electric Co Inc",
+      "enrichment_status": "mid",
+      "website": "https://mid-westelectric.com/",
+      "owner_name": "Cappadonna family (4th generation; founded by brothers John & Phillip Cappadonna in Midland 1948; Mitchell A. + Mitchell P. Cappadonna opened Houston office 1975)",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 51,
+      "years_in_business": 78,
+      "entity_founded": 1948,
+      "service_types": [
+        "electrical contracting",
+        "service & maintenance",
+        "low-voltage",
+        "corporate",
+        "education",
+        "healthcare",
+        "hospitality"
+      ],
+      "tech_stack": {
+        "online_booking": "yes (Schedule Service form)",
+        "customer_portal": "no",
+        "field_service_software": "not_visible",
+        "copyright_year": "not_displayed",
+        "ev_charger_offered": "not_mentioned",
+        "generator_install_offered": "not_mentioned"
+      },
+      "team_page_findings": "Live fetch https://mid-westelectric.com/about-us/ \u2014 no individuals named on page (privacy); 4th-generation Cappadonna family-owned per company history. Matthew Cappadonna listed at company per Growjo. Multi-location TX operation. Commercial-heavy focus.",
+      "successor_check_evidence": "4th-generation family business with active Cappadonna family members per Growjo (Matthew Cappadonna). Internal succession clearly in place. NOT a coasting-solo-owner profile.",
+      "successor_check_direction": "negative",
+      "data_sources": [
+        {
+          "source": "TDLR EC bulk CSV",
+          "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "Live about page fetch",
+          "url": "https://mid-westelectric.com/about-us/",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Precision Electric Llc",
+    "dba_name": null,
+    "address": "4814 Kentington Drive",
+    "city": "Alvin",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77511",
+    "phone": "2813310158",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17315",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Precision Electric Llc",
+    "license_expiration_date": "08/13/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671007Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "precisionelectric.com",
+      "precisionelectrical.com",
+      "precisionelectricservices.com"
+    ],
+    "enrichment_status": "spine_only",
+    "enrichment": null
+  },
+  {
+    "legal_name": "Keiser Electric, Inc.",
+    "dba_name": null,
+    "address": "4017 Clay Ave Ste E",
+    "city": "Haltom City",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76117",
+    "phone": "8173192796",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17317",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Keiser Electric, Inc.",
+    "license_expiration_date": "03/07/2027",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671009Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "keiserelectric.com",
+      "keiserelectrical.com",
+      "keiserelectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Keiser Electric, Inc.",
+      "enrichment_status": "mid",
+      "website": "https://keiserelectric.com/",
+      "owner_name": "Alan Keiser",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 71,
+      "years_in_business": 71,
+      "entity_founded": 1955,
+      "service_types": [
+        "residential",
+        "commercial",
+        "standby generators",
+        "solar panel integration",
+        "EV chargers"
+      ],
+      "tech_stack": {
+        "online_booking": "no",
+        "customer_portal": "no",
+        "field_service_software": "not_visible",
+        "copyright_year": "not_displayed",
+        "ev_charger_offered": "yes (implied \u2014 listed on residential pages)",
+        "generator_install_offered": "yes (standby generators)",
+        "modern_billing_visible": "no"
+      },
+      "team_page_findings": "Live fetch https://keiserelectric.com/ (2026-05-15) \u2014 about page thin, no team members named. 71 yrs in business (1955), owner Alan Keiser per BuildZoom. Instagram handle '@keiserelectricinc1955' confirms founding year.",
+      "successor_check_evidence": "Live about-us fetch returned thin content with no team members named. 71 yrs in business almost certainly means a second-generation Keiser is in operations; cannot confirm via live fetch. Per protocol, capping confidence at LOW and tier at C_watch until team page can be fully verified.",
+      "successor_check_direction": "disqualifying",
+      "data_sources": [
+        {
+          "source": "TDLR EC bulk CSV",
+          "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "Live homepage fetch",
+          "url": "https://keiserelectric.com/",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Dausin Electric Co",
+    "dba_name": null,
+    "address": "8007 Ne Loop 410",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78219",
+    "phone": "2106616736",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17323",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Dausin Electric Co",
+    "license_expiration_date": "08/06/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671011Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "dausinelectric.com",
+      "dausinelectrical.com",
+      "dausinelectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Dausin Electric Co",
+      "enrichment_status": "deep",
+      "website": "https://www.dausinelectric.com/",
+      "owner_name": "Ronald Dausin + Irene Dausin (founders, 1985)",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 41,
+      "years_in_business": 41,
+      "entity_founded": 1985,
+      "employee_count_estimate": 150,
+      "service_van_count_estimate": null,
+      "service_types": [
+        "commercial new construction & remodel",
+        "residential",
+        "utility"
+      ],
+      "tech_stack": {
+        "online_booking": "yes (Schedule Your Service Today)",
+        "customer_portal": "no",
+        "field_service_software": "not_visible",
+        "copyright_year": "2016 (10 yrs stale)",
+        "ev_charger_offered": "not_mentioned",
+        "generator_install_offered": "not_mentioned",
+        "modern_billing_visible": "no"
+      },
+      "team_page_findings": "Live fetch https://www.dausinelectric.com/company/about (2026-05-15) \u2014 founders Ronald + Irene Dausin (1985, ~41 yrs tenure). Only one current name on page: Charles Shiley (photo caption, no title). No second-generation Dausin family named on site. 150 employees per Yelp/Buzzfile.",
+      "successor_check_evidence": "Live about page reveals NO second-generation Dausin family employees, only one current employee named (Charles Shiley, no title). Copyright 2016 is 10 years stale. However: 150-employee size puts this at $15-25M+ revenue \u2014 PLATFORM-SCALE, not SBA-friendly bolt-on; better fit for B_forward to PE community than A_acquire_self.",
+      "successor_check_direction": "positive",
+      "data_sources": [
+        {
+          "source": "TDLR EC bulk CSV",
+          "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "Live about page fetch",
+          "url": "https://www.dausinelectric.com/company/about",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "Live homepage fetch",
+          "url": "https://www.dausinelectric.com/",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "deep"
+  },
+  {
+    "legal_name": "Travis Electric",
+    "dba_name": null,
+    "address": "2139 William Travis",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78238",
+    "phone": "2105099546",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17326",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Travis Electric",
+    "license_expiration_date": "08/07/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671014Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "traviselectric.com",
+      "traviselectrical.com",
+      "traviselectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Travis Electric",
+      "enrichment_status": "mid",
+      "website": "https://travis-electricservices.com/",
+      "owner_name": "Rogelio B. Garcia / Rocky Garcia",
+      "owner_tenure_years": 42,
+      "years_in_business": 42,
+      "entity_founded": 1984,
+      "service_types": [
+        "residential",
+        "Boerne/SA area routine maintenance, emergency repair, upgrades"
+      ],
+      "team_page_findings": "Per Yelp + company description: Rogelio Garcia + son/co-owner Rocky Garcia \u2014 family-owned since 1984. Internal succession in place (Garcia surname carries forward). Some confusion with another Travis Electric LLC (Travis Turner, Oregon native) \u2014 ambiguous identity.",
+      "successor_check_evidence": "Rocky Garcia is named co-owner. Family-succession appears in place. AMBIGUOUS \u2014 two separate 'Travis Electric' entities at the same SA address may exist; without disambiguation cap confidence.",
+      "successor_check_direction": "negative",
+      "data_sources": [
+        {
+          "source": "TDLR EC bulk CSV",
+          "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "Yelp listing",
+          "url": "https://www.yelp.com/biz/travis-electric-san-antonio",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Voltmaster Electric Inc",
+    "dba_name": null,
+    "address": "17329 Queenslake Dr",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77429",
+    "phone": "2819336910",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17329",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Voltmaster Electric Inc",
+    "license_expiration_date": "07/26/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671016Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "voltmasterelectric.com",
+      "voltmasterelectrical.com",
+      "voltmasterelectricservices.com"
+    ],
+    "enrichment_status": "spine_only",
+    "enrichment": null
+  },
+  {
+    "legal_name": "Mather Electric Llc",
+    "dba_name": null,
+    "address": "12900 Trails End Road Suite D",
+    "city": "Leander",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78641",
+    "phone": "5128448948",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17332",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Mather Electric Llc",
+    "license_expiration_date": "07/23/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671018Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "matherelectric.com",
+      "matherelectrical.com",
+      "matherelectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Mather Electric Llc",
+      "enrichment_status": "deep",
+      "website": "https://matherelectric.com/",
+      "owner_name": "Dale Mather (VP, 40+ yrs experience), Melanie Mather (President), with Bobby + Jillian Mather in 2nd-gen roles",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 24,
+      "years_in_business": 24,
+      "entity_founded": 2002,
+      "service_types": [
+        "commercial",
+        "industrial",
+        "exterior lighting"
+      ],
+      "is_residential": false,
+      "tech_stack": {
+        "online_booking": "no",
+        "customer_portal": "no",
+        "site_platform": "old",
+        "copyright_year": "not_displayed",
+        "ev_charger_offered": "no",
+        "generator_install_offered": "no"
+      },
+      "team_page_findings": "Live fetch https://www.matherelectric.com/about.html \u2014 Bobby Mather + Jillian Mather are 2nd-generation family on team. IBEW Local 520 union shop = commercial/industrial only, NOT residential service. Excluded from residential thesis.",
+      "successor_check_evidence": "2nd-gen Mather family on team + commercial/industrial union shop, not residential service. Wrong vertical.",
+      "successor_check_direction": "negative",
+      "exclude_reason": "commercial_industrial_union_shop_not_residential",
+      "data_sources": [
+        {
+          "source": "TDLR EC bulk CSV",
+          "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "Live about page fetch",
+          "url": "https://www.matherelectric.com/about.html",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "deep"
+  },
+  {
+    "legal_name": "Cummings Electrical, L.P.",
+    "dba_name": null,
+    "address": "14900 Grand River Rd Ste 124",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76155",
+    "phone": "8173555300",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17336",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Cummings Electrical, L.P.",
+    "license_expiration_date": "07/23/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671021Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "cummingselectric.com",
+      "cummingselectrical.com",
+      "cummingselectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Cummings Electrical, L.P.",
+      "enrichment_status": "mid",
+      "website": "https://www.cummingselec.com/",
+      "service_types": [
+        "commercial",
+        "industrial",
+        "DFW's largest"
+      ],
+      "exclude_reason": "commercial_industrial_too_large",
+      "successor_check_direction": "negative",
+      "data_sources": [
+        {
+          "source": "WebSearch",
+          "url": "https://www.cummingselec.com/",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Puckett Electric Co, Inc",
+    "dba_name": null,
+    "address": "2602 Industrial Ln",
+    "city": "Garland",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75041",
+    "phone": "9728640020",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17345",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Puckett Electric Co, Inc",
+    "license_expiration_date": "07/23/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671023Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "puckettelectric.com",
+      "puckettelectrical.com",
+      "puckettelectricservices.com",
+      "puckettelectricco.com"
+    ],
+    "enrichment": {
+      "legal_name": "Puckett Electric Co, Inc",
+      "enrichment_status": "mid",
+      "website": "https://www.puckettelectric.com/",
+      "owner_name": "Puckett family (3rd generation, since 1976)",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 50,
+      "years_in_business": 50,
+      "entity_founded": 1976,
+      "service_types": [
+        "residential",
+        "commercial",
+        "maintenance"
+      ],
+      "tech_stack": {
+        "online_booking": "not_visible",
+        "ev_charger_offered": "not_visible",
+        "generator_install_offered": "not_visible"
+      },
+      "team_page_findings": "Per company about page: 3rd-generation Puckett family. Clear internal-succession-in-place. NOT a coasting-solo profile.",
+      "successor_check_evidence": "3rd generation Puckett family explicitly named. Internal succession in place.",
+      "successor_check_direction": "negative",
+      "data_sources": [
+        {
+          "source": "TDLR EC bulk CSV",
+          "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "Company about page",
+          "url": "https://www.puckettelectric.com/about",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Colwell Electric",
+    "dba_name": null,
+    "address": "6829 Guhn Road",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77040",
+    "phone": "7138494427",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17352",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Colwell Electric",
+    "license_expiration_date": "02/02/2027",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671025Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "colwellelectric.com",
+      "colwellelectrical.com",
+      "colwellelectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Colwell Electric",
+      "enrichment_status": "mid",
+      "website": "https://www.colwellelectric.com/",
+      "owner_name": "Colwell family (2nd-generation, 3 generations of service per about page; founded 1990)",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 36,
+      "years_in_business": 36,
+      "entity_founded": 1990,
+      "employee_count_estimate": 50,
+      "service_types": [
+        "residential",
+        "commercial",
+        "automatic transfer switches",
+        "emergency response"
+      ],
+      "tech_stack": {
+        "online_booking": "not_visible",
+        "ev_charger_offered": "not_visible",
+        "generator_install_offered": "implied (transfer switches)"
+      },
+      "team_page_findings": "Per about page: 2nd-generation family-owned + 7 Master Electricians + multiple factory-trained technicians. Multiple internal succession candidates.",
+      "successor_check_evidence": "2nd-generation + 7 Master Electricians on staff. Multiple internal successors. NOT an off-market thesis.",
+      "successor_check_direction": "negative",
+      "data_sources": [
+        {
+          "source": "TDLR EC bulk CSV",
+          "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "About page",
+          "url": "https://www.colwellelectric.com/about/",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Zubras Electric, Inc",
+    "dba_name": null,
+    "address": "4221 Cedar Lake Drive",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75227",
+    "phone": "2143196900",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17356",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Zubras Electric, Inc",
+    "license_expiration_date": "07/23/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671028Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "zubraselectric.com",
+      "zubraselectrical.com",
+      "zubraselectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Zubras Electric, Inc",
+      "enrichment_status": "deep",
+      "website": "https://zubraselectric.com/",
+      "owner_name": "Simon E. Zubras (President), Phyllis B. Zubras (Sec/Treasurer)",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 31,
+      "years_in_business": 31,
+      "entity_founded": 1995,
+      "employee_count_estimate": null,
+      "service_van_count_estimate": null,
+      "service_types": [
+        "residential electrical",
+        "commercial",
+        "energy management",
+        "Generac generator service",
+        "remodel",
+        "24-hour emergency"
+      ],
+      "tech_stack": {
+        "online_booking": "no",
+        "customer_portal": "no",
+        "field_service_software": "not_visible",
+        "copyright_year": "2026 (active)",
+        "ev_charger_offered": "no",
+        "generator_install_offered": "yes (Generac)",
+        "modern_billing_visible": "no",
+        "radio_or_phone_intake": "radio_dispatched (old-school)"
+      },
+      "team_page_findings": "Live fetch https://zubraselectric.com/about/ \u2014 no named individuals on the page; about page very thin. Founders Simon E. Zubras (President) and Phyllis B. Zubras (Secretary/Treasurer) per Angi listing. Family-owned 21+ years. No second-generation Zubras visible on site.",
+      "successor_check_evidence": "Live about page lists no named team members and no second-generation Zubras; copyright shows 2026 (site active) but team page is thin enough that this evidence is medium-confidence. 'Radio-dispatched service technicians' phrasing is a coasting tell.",
+      "successor_check_direction": "positive",
+      "data_sources": [
+        {
+          "source": "TDLR EC bulk CSV",
+          "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "Live about page fetch",
+          "url": "https://zubraselectric.com/about/",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "Live homepage fetch",
+          "url": "https://zubraselectric.com/",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "deep"
+  },
+  {
+    "legal_name": "Lyons Electric Inc",
+    "dba_name": null,
+    "address": "3400 Mocha Trail",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78728",
+    "phone": "5125874977",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17365",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Lyons Electric Inc",
+    "license_expiration_date": "07/31/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671030Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "lyonselectric.com",
+      "lyonselectrical.com",
+      "lyonselectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Lyons Electric Inc",
+      "enrichment_status": "deep",
+      "website": "https://www.lyonselectric.com/",
+      "owner_name": "Steven Lyons (and Donna Lyons)",
+      "owner_age_estimate": null,
+      "owner_age_source": "linkedin_grad_proxy",
+      "owner_tenure_years": 23,
+      "years_in_business": 23,
+      "entity_founded": 2003,
+      "owner_career_started": 1972,
+      "employee_count_estimate": null,
+      "service_van_count_estimate": null,
+      "service_types": [
+        "residential electrical repair",
+        "ceiling fans",
+        "outlets",
+        "phone lines"
+      ],
+      "tech_stack": {
+        "online_booking": "no",
+        "customer_portal": "no",
+        "field_service_software": "not_visible",
+        "copyright_year": "not_displayed",
+        "ev_charger_offered": "no",
+        "generator_install_offered": "no",
+        "modern_billing_visible": "no",
+        "site_platform": "WordPress + Elegant Themes (older)"
+      },
+      "team_page_findings": "Live fetch https://www.lyonselectric.com/about-us/ \u2014 Steven Lyons (Master Electrician since 1972, founded business 2003) and wife Donna Lyons. No staff or successor names. Native Austinites. No second-generation Lyons mentioned.",
+      "successor_check_evidence": "Live about page shows founder-owners Steven and Donna Lyons; no second-generation Lyons family, no additional Master Electricians, no successor candidates named.",
+      "successor_check_direction": "positive",
+      "data_sources": [
+        {
+          "source": "TDLR EC bulk CSV",
+          "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "Live about-us fetch",
+          "url": "https://www.lyonselectric.com/about-us/",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "Live homepage fetch",
+          "url": "https://www.lyonselectric.com/",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "deep"
+  },
+  {
+    "legal_name": "Express Electrical Services Inc",
+    "dba_name": null,
+    "address": "502 Freeport",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77015",
+    "phone": "7134554928",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17370",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Express Electrical Services Inc",
+    "license_expiration_date": "07/23/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671033Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "expresselectric.com",
+      "expresselectrical.com",
+      "expresselectricservices.com",
+      "expresselectricalservices.com"
+    ],
+    "enrichment_status": "spine_only",
+    "enrichment": null
+  },
+  {
+    "legal_name": "Petri Electric, Inc",
+    "dba_name": null,
+    "address": "907 N Bowser Road",
+    "city": "Richardson",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75081",
+    "phone": "9726445407",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17375",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Petri Electric, Inc",
+    "license_expiration_date": "07/25/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671035Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "petrielectric.com",
+      "petrielectrical.com",
+      "petrielectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Petri Electric, Inc",
+      "enrichment_status": "mid",
+      "website": "https://petri-electric.com/",
+      "owner_name": "Petri family",
+      "owner_tenure_years": 46,
+      "years_in_business": 46,
+      "entity_founded": 1980,
+      "service_types": [
+        "residential",
+        "commercial",
+        "industrial"
+      ],
+      "team_page_findings": "Per LinkedIn + company materials: residential/commercial/industrial mix; LinkedIn emphasizes commercial/industrial. No live team-page fetch.",
+      "successor_check_evidence": "No live team-page fetch performed; can't promote to A. Tilts commercial/industrial which weakens residential thesis.",
+      "successor_check_direction": "disqualifying",
+      "data_sources": [
+        {
+          "source": "TDLR EC bulk CSV",
+          "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Garrin Electric, Inc",
+    "dba_name": null,
+    "address": "4846 Don Drive",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75247",
+    "phone": "2145281555",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17378",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Garrin Electric, Inc",
+    "license_expiration_date": "04/02/2027",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671037Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "garrinelectric.com",
+      "garrinelectrical.com",
+      "garrinelectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Garrin Electric, Inc",
+      "enrichment_status": "mid",
+      "website": null,
+      "exclude_reason": "yelp_listed_as_closed_may_2026",
+      "successor_check_direction": "disqualifying",
+      "data_sources": [
+        {
+          "source": "Yelp",
+          "url": "https://www.yelp.com/biz/garrin-electric-dallas",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Major Electric",
+    "dba_name": null,
+    "address": "206 W Rolling Wood St",
+    "city": "Pinehurst",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77362",
+    "phone": "2816423388",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17379",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Major Electric",
+    "license_expiration_date": "04/23/2027",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671040Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "majorelectric.com",
+      "majorelectrical.com",
+      "majorelectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Major Electric",
+      "enrichment_status": "mid",
+      "exclude_reason": "no_web_presence_could_not_verify",
+      "successor_check_direction": "disqualifying",
+      "data_sources": [
+        {
+          "source": "WebSearch \u2014 no listings",
+          "url": "https://www.google.com/search",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Tiger Electrical Contractors, Inc",
+    "dba_name": null,
+    "address": "1438 Crescent Drive Suite 205",
+    "city": "Carrollton",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75006",
+    "phone": "2146764723",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17381",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Tiger Electrical Contractors, Inc",
+    "license_expiration_date": "07/23/2025",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671042Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "tigerelectric.com",
+      "tigerelectrical.com",
+      "tigerelectricservices.com",
+      "tigerelectricalcontractors.com"
+    ],
+    "enrichment": {
+      "legal_name": "Tiger Electrical Contractors, Inc",
+      "enrichment_status": "mid",
+      "website": null,
+      "owner_name": "William Payne",
+      "owner_tenure_years": 35,
+      "years_in_business": 35,
+      "entity_founded": 1991,
+      "team_page_findings": "Per Bluebook + BuildZoom: William Payne owner, 101 projects, 18 other licenses suggests larger commercial focus. No live team-page fetch.",
+      "successor_check_evidence": "No live team-page fetch performed; per protocol cap at C_watch.",
+      "successor_check_direction": "disqualifying",
+      "data_sources": [
+        {
+          "source": "BuildZoom",
+          "url": "https://www.buildzoom.com/contractor/tiger-electrical-contractors-inc",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Awl Electric, Inc",
+    "dba_name": null,
+    "address": "1100 El Buey Rd",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77034",
+    "phone": "7138628556",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17385",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Awl Electric, Inc",
+    "license_expiration_date": "07/23/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671044Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "awlelectric.com",
+      "awlelectrical.com",
+      "awlelectricservices.com"
+    ],
+    "enrichment_status": "spine_only",
+    "enrichment": null
+  },
+  {
+    "legal_name": "Groves Electrical Service, Inc",
+    "dba_name": null,
+    "address": "2410 Squire Place",
+    "city": "Farmers Branch",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75234",
+    "phone": "9724842717",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17392",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Groves Electrical Service, Inc",
+    "license_expiration_date": "08/06/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671047Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "groveselectric.com",
+      "groveselectrical.com",
+      "groveselectricservices.com",
+      "groveselectricalservice.com"
+    ],
+    "enrichment_status": "spine_only",
+    "enrichment": null
+  },
+  {
+    "legal_name": "Richard's Electric Lp",
+    "dba_name": null,
+    "address": "200 Industrial Blvd",
+    "city": "Cedar Park",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78613",
+    "phone": "5122594595",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17395",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Richard'S Electric Lp",
+    "license_expiration_date": "10/13/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671049Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "richardselectric.com",
+      "richardselectrical.com",
+      "richardselectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Richard's Electric Lp",
+      "enrichment_status": "mid",
+      "website": "https://richards-electric.com/",
+      "owner_name": "Richard Mauck",
+      "owner_tenure_years": 39,
+      "years_in_business": 39,
+      "entity_founded": 1987,
+      "service_types": [
+        "commercial",
+        "industrial"
+      ],
+      "exclude_reason": "commercial_industrial_focus_not_residential",
+      "successor_check_direction": "negative",
+      "data_sources": [
+        {
+          "source": "BuildZoom",
+          "url": "https://www.buildzoom.com/contractor/richards-electric-lp",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Inland Electric Inc",
+    "dba_name": null,
+    "address": "13118 Mula Ct",
+    "city": "Stafford",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77477",
+    "phone": "2815685680",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17406",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Inland Electric Inc",
+    "license_expiration_date": "07/25/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671051Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "inlandelectric.com",
+      "inlandelectrical.com",
+      "inlandelectricservices.com"
+    ],
+    "enrichment": {
+      "legal_name": "Inland Electric Inc",
+      "enrichment_status": "mid",
+      "website": "https://inlandelec.com/",
+      "owner_name": "Carl G Markowski",
+      "service_types": [
+        "commercial primary",
+        "residential"
+      ],
+      "exclude_reason": "commercial_primary_focus",
+      "successor_check_direction": "disqualifying",
+      "data_sources": [
+        {
+          "source": "BuildZoom",
+          "url": "https://www.buildzoom.com/contractor/inland-electric-inc",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Commercial Electrical Contractors Inc",
+    "dba_name": null,
+    "address": "16103 Grant Rd Ste G",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77429",
+    "phone": "7132908026",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17411",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Commercial Electrical Contractors Inc",
+    "license_expiration_date": "07/23/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671053Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "commercialelectric.com",
+      "commercialelectrical.com",
+      "commercialelectricservices.com",
+      "commercialelectricalcontractors.com"
+    ],
+    "enrichment_status": "spine_only",
+    "enrichment": null
+  },
+  {
+    "legal_name": "Carl Electric Co Inc",
+    "dba_name": null,
+    "address": "3519 Copeland Dr",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78219",
+    "phone": "2102252715",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17421",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Carl Electric Co Inc",
+    "license_expiration_date": "07/31/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671057Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "carlelectric.com",
+      "carlelectrical.com",
+      "carlelectricservices.com",
+      "carlelectricco.com"
+    ],
+    "enrichment": {
+      "legal_name": "Carl Electric Co Inc",
+      "enrichment_status": "mid",
+      "website": "https://carlelectric.com/",
+      "owner_name": "Carl family (2nd & 3rd generation, since 1972)",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 54,
+      "years_in_business": 54,
+      "entity_founded": 1972,
+      "service_types": [
+        "residential",
+        "commercial",
+        "electrical installations",
+        "maintenance"
+      ],
+      "tech_stack": {
+        "online_booking": "create_account_portal (rudimentary)",
+        "customer_portal": "yes (basic)",
+        "ev_charger_offered": "not_visible",
+        "generator_install_offered": "not_visible"
+      },
+      "team_page_findings": "Per BBB and company materials: 2nd and 3rd generation Carl family running it. Clear internal-succession-in-place \u2014 multi-generational family operation. NOT a coasting-solo-owner profile.",
+      "successor_check_evidence": "2nd & 3rd generation family directly named in company history. Internal succession in place.",
+      "successor_check_direction": "negative",
+      "data_sources": [
+        {
+          "source": "TDLR EC bulk CSV",
+          "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+          "fetched_at": "2026-05-15"
+        },
+        {
+          "source": "BBB profile + company materials",
+          "url": "https://www.bbb.org/us/tx/san-antonio/profile/electrician/carl-electric-co-0825-11680",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Powersource Electric Company Inc",
+    "dba_name": null,
+    "address": "1820 Bedford Rd, Suite G",
+    "city": "Bedford",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76021",
+    "phone": "8175719267",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17423",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Powersource Electric Company Inc",
+    "license_expiration_date": "07/30/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671061Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "powersourceelectric.com",
+      "powersourceelectrical.com",
+      "powersourceelectricservices.com",
+      "powersourceelectriccompany.com"
+    ],
+    "enrichment": {
+      "legal_name": "Powersource Electric Company Inc",
+      "enrichment_status": "mid",
+      "owner_name": "Ronnie Davis",
+      "owner_tenure_years": 21,
+      "years_in_business": 21,
+      "employee_count_estimate": 15,
+      "team_page_findings": "Per Yellow Pages + listings: 15 licensed electricians, 20+ years. Multiple Master Electricians = multiple internal successors.",
+      "successor_check_evidence": "15 licensed electricians implies multiple Master Electricians on staff; internal-buy-in candidates likely. No live team page fetched.",
+      "successor_check_direction": "disqualifying",
+      "data_sources": [
+        {
+          "source": "Yellow Pages",
+          "url": "https://www.yellowpages.com/bedford-tx/powersource-electric-company-inc",
+          "fetched_at": "2026-05-15"
+        }
+      ]
+    },
+    "enrichment_status": "mid"
+  },
+  {
+    "legal_name": "Sonlight Electric, Inc.",
+    "dba_name": null,
+    "address": "5424 Hopper Road",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77016",
+    "phone": "2819877174",
+    "website": null,
+    "naics_code": "238210",
+    "license_number": "17436",
+    "license_type": "Electrical Contractor",
+    "license_subtype": "EC",
+    "license_status": "Active",
+    "license_holder_name": "Sonlight Electric, Inc.",
+    "license_expiration_date": "09/03/2026",
+    "license_issue_year_estimate": 2004,
+    "data_sources": [
+      {
+        "source": "TDLR Electrical Contractor bulk CSV",
+        "url": "https://www.tdlr.texas.gov/dbproduction2/Lteecele.csv",
+        "fetched_at": "2026-05-16T04:51:42.671063Z",
+        "fields": [
+          "legal_name",
+          "license_number",
+          "license_type",
+          "license_holder_name",
+          "address",
+          "city",
+          "county",
+          "state",
+          "zip",
+          "phone",
+          "license_expiration_date"
+        ]
+      }
+    ],
+    "verification_notes": "Sourced from TDLR Electrical Contractor active license roster \u2014 real, currently-operating TX Electrical Contractor license. License number used as tenure proxy.",
+    "domain_candidates": [
+      "sonlightelectric.com",
+      "sonlightelectrical.com",
+      "sonlightelectricservices.com"
+    ],
+    "enrichment_status": "spine_only",
+    "enrichment": null
+  }
+]

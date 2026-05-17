@@ -33,9 +33,11 @@ const {
   RUN_CAPPED_MESSAGE,
 } = require('./cost-guardrails');
 const { runFindDealsHeaded } = require('./pty-runner');
+const { runBuyBoxScheduler } = require('./buy-box-scheduler');
 const { signMagicLink } = require('../api/_lib/magic-link');
 const { sendFreeScanCompleteEmail } = require('./email-sender');
 const { addToKitNurture } = require('./kit-nurture');
+const { capture: posthogCapture } = require('../api/_lib/posthog');
 
 // Load env from ../.env.local (worker/ lives inside dealhound-pro/)
 const envPath = process.env.DOTENV_PATH || path.join(__dirname, '../.env.local');
@@ -163,6 +165,149 @@ async function finalizeJob(jobId, status, error) {
 async function updateSearchStatus(searchId, status) {
   if (!searchId) return;
   await supabase.from('deal_searches').update({ status }).eq('id', searchId);
+}
+
+// ── Post-PTY pipeline fallback ────────────────────────────────────────────────
+// Step 4a (pipeline.py — load raw-listings-*.json, dedup, hard-filter, persist
+// to Supabase) runs inside the PTY session. If the orchestrating Claude
+// misinterprets scraper bail-out lines like
+//   "[crexi] 5 consecutive failures — bailing"
+//   "[crexi] wall-time cap hit (240s >= 240s) — bailing with API taglines..."
+// as scrape failures, it skips Step 4a entirely. Result: raw-listings-*.json
+// files exist on disk, but zero rows land in the deals table. The silent-zero
+// guard catches the symptom; this fallback fixes the cause.
+//
+// Bail-out lines were added in PR #67 to fix the 90-min Crexi enrichment hang
+// on cold worker profiles. They are NORMAL output, not errors — the scraper
+// still exits 0 and the listings are saved. This fallback is the deterministic
+// safety net so the worker doesn't depend on Claude correctly interpreting
+// "bailing" vs "failed".
+//
+// Best-effort: if pipeline.py also fails (e.g., Supabase 4xx), the scan still
+// completes and the silent-zero guard fires. Scoring (Step 4b inline) is
+// not re-attempted here — that requires Claude. Users get raw filtered
+// listings without scores, which the dashboard handles gracefully.
+//
+// Dependency-injection seams (fsImpl, spawnImpl, skillDir) exist so unit
+// tests can drive the function with fakes and no module-level mocking. In
+// production the defaults are the real Node modules and the on-disk skill.
+async function maybeFallbackPipeline(job, spawnEnv, supabaseClient, deps = {}) {
+  const fsImpl = deps.fs || fs;
+  const spawnImpl = deps.spawn || spawn;
+  const skillDir = deps.skillDir || path.join(os.homedir(), '.claude/skills/find-deals');
+  const pipelinePy = path.join(skillDir, 'pipeline.py');
+
+  if (!fsImpl.existsSync(pipelinePy)) return;
+  if (!job.search_id) return;
+
+  // raw-listings-*.json must be fresh (written within last 2h = within this
+  // run). Same 2h window as maybeFallbackScore for symmetry — see comment there.
+  const freshRawFiles = fsImpl
+    .readdirSync(skillDir)
+    .filter((f) => f.startsWith('raw-listings-') && f.endsWith('.json'))
+    .map((f) => path.join(skillDir, f))
+    .filter((p) => {
+      try {
+        return Date.now() - fsImpl.statSync(p).mtimeMs < 2 * 60 * 60 * 1000;
+      } catch (_) {
+        return false;
+      }
+    });
+
+  if (freshRawFiles.length === 0) return;
+
+  // Only run if pipeline.py hasn't already persisted for this search_id.
+  const { count } = await supabaseClient
+    .from('deals')
+    .select('*', { count: 'exact', head: true })
+    .eq('search_id', job.search_id);
+
+  if (count > 0) return;
+
+  log(
+    `[PIPELINE] raw-listings-*.json fresh but 0 deals for search_id — running pipeline.py fallback`,
+    { job: job.id, rawFiles: freshRawFiles.length }
+  );
+
+  await new Promise((resolve) => {
+    const proc = spawnImpl('python3', [pipelinePy], {
+      env: spawnEnv,
+      cwd: skillDir,
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    proc.stdout.on('data', (d) => process.stdout.write(d));
+    proc.stderr.on('data', (d) => process.stderr.write(d));
+    proc.on('close', (code) => {
+      if (code === 0) {
+        log(`[PIPELINE] pipeline.py fallback complete`, { job: job.id });
+      } else {
+        log(`WARN: [PIPELINE] pipeline.py exited ${code} — listings may be missing`, {
+          job: job.id,
+        });
+      }
+      resolve();
+    });
+    proc.on('error', (err) => {
+      log(`WARN: [PIPELINE] pipeline.py spawn error — ${err.message}`, { job: job.id });
+      resolve();
+    });
+  });
+}
+
+// ── Post-PTY scorer fallback ──────────────────────────────────────────────────
+// Step 4b (inline scoring) runs inside the PTY session. Step 4c (scorer.py)
+// persists to Supabase and emits SCAN COMPLETE. If the PTY exits between 4b
+// and 4c (crash, timeout, fallback exit), scored-inline.json exists but no
+// deals have score_breakdown. This function detects that state and runs
+// scorer.py --persist-only directly — no AI calls, pure Supabase persistence.
+//
+// This is best-effort: if scorer.py also fails, the scan is still marked
+// complete so the user sees their raw filtered results.
+async function maybeFallbackScore(job, spawnEnv, supabaseClient) {
+  const skillDir = path.join(os.homedir(), '.claude/skills/find-deals');
+  const scorerPy = path.join(skillDir, 'scorer.py');
+  const scoredInline = path.join(skillDir, 'scored-inline.json');
+
+  if (!fs.existsSync(scorerPy) || !fs.existsSync(scoredInline)) return;
+
+  // scored-inline.json must be fresh (written in last 2h = within this run)
+  const stat = fs.statSync(scoredInline);
+  if (Date.now() - stat.mtimeMs > 2 * 60 * 60 * 1000) return;
+
+  // Only needed if no deals are already scored for this search
+  const { count: scoredCount } = await supabaseClient
+    .from('deals')
+    .select('*', { count: 'exact', head: true })
+    .eq('search_id', job.search_id)
+    .not('score_breakdown', 'is', null);
+
+  if (scoredCount > 0) return;
+
+  log(`[SCORER] scored-inline.json fresh but 0 scored deals — running scorer.py fallback`, {
+    job: job.id,
+  });
+
+  await new Promise((resolve) => {
+    const proc = spawn('python3', [scorerPy, '--persist-only'], {
+      env: spawnEnv,
+      cwd: skillDir,
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    proc.stdout.on('data', (d) => process.stdout.write(d));
+    proc.stderr.on('data', (d) => process.stderr.write(d));
+    proc.on('close', (code) => {
+      if (code === 0) {
+        log(`[SCORER] scorer.py fallback complete`, { job: job.id });
+      } else {
+        log(`WARN: [SCORER] scorer.py exited ${code} — scores may be missing`, { job: job.id });
+      }
+      resolve(); // always resolve — scoring is best-effort, scan still succeeded
+    });
+    proc.on('error', (err) => {
+      log(`WARN: [SCORER] scorer.py spawn error — ${err.message}`, { job: job.id });
+      resolve();
+    });
+  });
 }
 
 // ── Buy box temp file ─────────────────────────────────────────────────────────
@@ -568,12 +713,22 @@ async function processPendingJobs() {
             if (job.buy_box) headedBuyBoxFile = writeBuyBoxFile(job.buy_box);
             const { env } = composeSpawnConfig(job, process.env, headedBuyBoxFile);
             try {
-              return await runFindDealsHeaded({
+              const result = await runFindDealsHeaded({
                 claudeBin: CLAUDE_BIN,
                 env,
                 jobId: job.id,
                 skill: 'deal scan',
               });
+              // Safety net 1: if raw-listings-*.json files were written but
+              // pipeline.py never ran (orchestrator misread scraper bail-out
+              // lines as failures), persist raw listings + filter results now.
+              // Must run BEFORE the scorer fallback — pipeline produces the
+              // survivors-for-scoring.json input that downstream steps rely on.
+              await maybeFallbackPipeline(job, env, supabase);
+              // Safety net 2: if scored-inline.json was written but scorer.py never
+              // ran (PTY died between Step 4b and 4c), persist scores now.
+              await maybeFallbackScore(job, env, supabase);
+              return result;
             } finally {
               if (headedBuyBoxFile && fs.existsSync(headedBuyBoxFile))
                 fs.unlinkSync(headedBuyBoxFile);
@@ -773,6 +928,15 @@ async function handleFreeScanCompletion(job, supabaseClient) {
   });
   log(`[free-scan] email result for ${userEmail}`, emailResult);
 
+  // 5b. PostHog: free_scan_email_sent
+  if (emailResult.ok) {
+    await posthogCapture({
+      event: 'free_scan_email_sent',
+      distinctId: userEmail,
+      properties: { search_id: job.search_id, agent_name: agentName },
+    });
+  }
+
   // 6. Kit nurture handoff
   const kitResult = await addToKitNurture({
     email: userEmail,
@@ -823,12 +987,35 @@ async function main() {
 
   await processPendingJobs();
 
+  // Run the buy-box scheduler once on startup before entering the interval loop.
+  // Gate real scraping: when WORKER_TEST_MODE=true, the scheduler still writes
+  // deal_searches + scrape_jobs rows (that IS the test surface), but
+  // processPendingJobs() is already gated at its top so it won't spawn Claude.
+  try {
+    const summary = await runBuyBoxScheduler(supabase);
+    if (summary.scheduled > 0) {
+      log(`[scheduler] startup tick — scheduled ${summary.scheduled}, skipped ${summary.skipped}`);
+    }
+  } catch (err) {
+    log('ERROR in buy-box scheduler (startup)', err.message);
+  }
+
   setInterval(async () => {
     await guard.tryRun(async () => {
       try {
         await processPendingJobs();
       } catch (err) {
         log('ERROR in poll loop', err.message);
+      }
+
+      // Run buy-box scheduler on every tick alongside the job queue.
+      try {
+        const summary = await runBuyBoxScheduler(supabase);
+        if (summary.scheduled > 0) {
+          log(`[scheduler] tick — scheduled ${summary.scheduled}, skipped ${summary.skipped}`);
+        }
+      } catch (err) {
+        log('ERROR in buy-box scheduler (tick)', err.message);
       }
     });
   }, POLL_INTERVAL_MS);
@@ -849,4 +1036,6 @@ module.exports = {
   SCAN_TIMEOUT_MS,
   runFindDeals,
   runFindDealsTestMode,
+  runBuyBoxScheduler,
+  maybeFallbackPipeline,
 };

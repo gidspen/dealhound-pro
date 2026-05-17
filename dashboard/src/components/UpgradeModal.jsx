@@ -1,4 +1,4 @@
-import { useState } from 'preact/hooks';
+import { useState, useEffect } from 'preact/hooks';
 import { upgradeModal, email } from '../lib/state.js';
 
 // Reads `upgradeModal.value` to decide what to render:
@@ -11,6 +11,16 @@ export function UpgradeModal() {
   const m = upgradeModal.value;
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState(null);
+
+  useEffect(() => {
+    if (!m) return;
+    if (window.posthog) {
+      window.posthog.capture('upgrade_modal_shown', {
+        reason: m.reason || null,
+        tier: m.tier || null,
+      });
+    }
+  }, [m ? m.reason : null]);
 
   if (!m) return null;
 
@@ -48,6 +58,7 @@ export function UpgradeModal() {
 
       const { url } = await res.json();
       if (!url) throw new Error('No checkout URL returned');
+      if (window.posthog) window.posthog.capture('checkout_started', { tier });
       window.location.href = url;
     } catch (e) {
       setErr(e.message || 'Could not start checkout. Try again or email gideon@stonemontcap.com.');

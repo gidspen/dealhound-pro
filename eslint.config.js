@@ -53,12 +53,17 @@ module.exports = [
   {
     files: [
       'api/*.js',
+      'api/_lib/chat-compute.js',
       'api/_lib/deal-files-handler.js',
       'api/_lib/magic-link.js',
       'api/_lib/magic-link-route.js',
       'api/_lib/paywall.js',
+      'api/_lib/posthog.js',
       'api/_lib/progress.js',
       'api/_lib/scan-trigger.js',
+      'api/_lib/buy-box-limits.js',
+      'api/_lib/buy-box-name.js',
+      'api/_lib/save-buy-box.js',
       'worker/**/*.js',
       'emails/**/*.js',
     ],

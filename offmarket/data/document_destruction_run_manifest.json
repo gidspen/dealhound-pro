@@ -1,0 +1,54 @@
+{
+  "run_label": "document-destruction-tx-2026-05-16-w6c",
+  "score_run_id": "a9574d7d-8b32-4f4b-bd84-c60207fea109",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "document_destruction",
+  "naics_codes": ["561990", "562998"],
+  "geography": "TX — Harris/Dallas/Tarrant/Collin/Denton/Bexar/Travis/Fort Bend/Montgomery",
+  "started_at": "2026-05-17T04:39:24Z",
+  "exclusions": {
+    "pe_platforms_or_chains": [
+      "Iron Mountain (IRM)",
+      "Shred-it (Stericycle / now Iron Mountain)",
+      "Stericycle (SRCL)",
+      "Cintas Document Management (CTAS)",
+      "Recall (acquired by Iron Mountain)",
+      "Securus Records Management",
+      "ProShred (franchise)",
+      "All Shred Services Inc (regional)",
+      "Texas Shredding (Cintas brand)",
+      "Northwest Document Destruction (multi-state)",
+      "Confidential Materials Management (PE)",
+      "TitanShred (chain)"
+    ]
+  },
+  "spine_sources_targeted": [
+    "NAID AAA Certified Member Directory (naidonline.org)",
+    "i-SIGMA Member Directory (isigmaonline.org)",
+    "BBB accredited shredding TX",
+    "Google Maps 'document shredding [TX city]'",
+    "TX Comptroller Taxable Entity Search (NAICS 561990/562998)"
+  ],
+  "sources_worked": [],
+  "sources_partial": [],
+  "sources_blocked": [],
+  "counts": {
+    "spine_rows": 0,
+    "enriched": 0,
+    "scored": 0,
+    "tier_a": 0,
+    "tier_b": 0,
+    "tier_c": 0,
+    "tier_d": 0,
+    "distress_excluded": 0
+  },
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 0,
+    "passed": 0,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {}
+  },
+  "supabase_write": {"status": "score_run_inserted_pending_businesses", "reason": ""}
+}
