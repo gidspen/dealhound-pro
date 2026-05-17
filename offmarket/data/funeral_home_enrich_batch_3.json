@@ -34,7 +34,11 @@
       "verified_via": "spine-level fetch only; no about-page deep-dive performed"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.celestialfh.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.celestialfh.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "Hispanic-surname Pasadena solo independent; spine confirms Benavidez-family ownership and 'not a corporation' positioning but no founding year or generational depth. Promising for ETA if owner is 55+ — needs Comptroller entity pull + TFSC license-tenure check at full enrichment to confirm age proxy."
@@ -74,7 +78,11 @@
       "verified_via": "spine-level fetch only"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.dynastymemorial.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.dynastymemorial.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Houston/Pearland/Pasadena LLC with affiliated cemetery (Dynasty Memorial Gardens). 'International' branding implies repatriation business — niche cash-flow asset. NFDA membership confirms legitimate independent. NEEDS: owner identity, founding year, license-tenure proxy."
@@ -116,8 +124,17 @@
       "verified_via": "live-fetch of Our-History page 2026-05-16 — no current family or staff successor disclosed; Mitchell is a non-family acquirer"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://blackandclark.com/43/Our-History.html", "fetched_at": "2026-05-16T19:30:00Z"},
-      {"source": "live_fetch", "url": "https://blackandclark.com/43/Our-History.html", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["owner_tenure","service_mix","successor_status"]}
+      {
+        "source": "spine",
+        "url": "https://blackandclark.com/43/Our-History.html",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      },
+      {
+        "source": "live_fetch",
+        "url": "https://blackandclark.com/43/Our-History.html",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["owner_tenure", "service_mix", "successor_status"]
+      }
     ],
     "data_completeness": 0.7,
     "notes": "A-TIER CANDIDATE: 112-year community institution, single location, owner Linda Mitchell is 35+ year industry vet, 20 years as CEO (age est. ~60). No cremation, no celebration-of-life, no family successor = classic coasting profile. Black-owned historic asset with deep Oak Cliff embed. PRIORITY: Dallas CAD on 2517 E Illinois (15,000 sf building) for ownership status, TFSC license search for any FDL employed beyond Mitchell, Dallas County clerk for any owner deed transfers."
@@ -157,7 +174,11 @@
       "verified_via": "spine-level fetch only"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.aguerofuneral.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.aguerofuneral.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "Webb County independent. Solo-operator profile fits ETA target but lacks any depth data. Needs full enrichment pass (about page, license, founder identity)."
@@ -198,8 +219,17 @@
       "verified_via": "live-fetch 2026-05-16 — staff photos visible but no successor names disclosed"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.joejacksonfuneralchapels.com/", "fetched_at": "2026-05-16T19:30:00Z"},
-      {"source": "live_fetch", "url": "https://www.joejacksonfuneralchapels.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["service_mix","awards","memberships"]}
+      {
+        "source": "spine",
+        "url": "https://www.joejacksonfuneralchapels.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      },
+      {
+        "source": "live_fetch",
+        "url": "https://www.joejacksonfuneralchapels.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["service_mix", "awards", "memberships"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "B-TIER WATCH: 112-year Laredo independent with surprisingly modern service mix (on-site crematorium, live streaming, tribute videos) and active community presence (2023 Reader's Choice). NOT showing coasting tells — operator is investing. SIFH membership = quality benchmark. Still A-tier if owner has succession gap, but live signals trend toward 'still building.' NEEDS: current generation/owner name, family-vs-employee succession question."
@@ -239,7 +269,11 @@
       "verified_via": "spine indicates Valdez as sole funeral director"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.vadelfuneralhome.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.vadelfuneralhome.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Textbook solo-operator candidate. Rito J. Valdez is the sole FDL of record. Need TFSC tenure for age proxy and Maverick County CAD for any homestead/business deed dates. Border-town location is double-edged: lower competition + lower transaction multiples."
@@ -279,7 +313,11 @@
       "verified_via": "spine notes '4 children working with Connie Garza'"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.rudygarzafunerals.com/about-us/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.rudygarzafunerals.com/about-us/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "B-TIER WATCH: Founder widow with 4 children involved = succession in motion but no decision yet. Vertical integration (FH + Ashland Memorial Park + Harlingen Monument Co) creates valuable but complex deal. If kids are aligned and capable, intra-family succession is likely. If they split, sale to outsider is plausible in 3-5 years. NEEDS: child names + roles, license-tenure for each."
@@ -319,7 +357,11 @@
       "verified_via": "spine — needs successor identity"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.memorialfuneral.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.memorialfuneral.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "B-tier candidate. SIFH membership signals quality operator, but founder ages and co-founder deaths suggest succession pressure building. Two locations (Edinburg + San Juan since 1994). NEEDS: De Leon successor identity (children?), Garza heir status, SIFH member roster confirmation."
@@ -359,7 +401,11 @@
       "verified_via": "spine-level fetch only"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://familyfuneral.net/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://familyfuneral.net/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.2,
     "notes": "Lowest-information entry in this batch. Generic name + no year + no owner = likely smaller/newer competitor. Skip-tier unless TFSC + Comptroller reveal long tenure."
@@ -399,7 +445,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.eickenhorstfuneral.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.eickenhorstfuneral.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "DECLINE: Founded 2011 — owner unlikely aging out unless health-event. Outside the 25-40 year tenure sweet spot. Watch in 10 years."
@@ -439,7 +489,11 @@
       "verified_via": "spine — needs about page deep-fetch"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.riosfuneraldirectors.com/about-us/about-us", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.riosfuneraldirectors.com/about-us/about-us",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "B/A-tier watch: 36-year Hispanic-surname operator in growing exurb. If founder is 60-70 and kids haven't taken over, this is a target. NEEDS: Rios founder identity, family-vs-non-family successor question."
@@ -479,7 +533,11 @@
       "verified_via": "spine notes multi-gen Beck family"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.cremationaustin.com/funeral-home/beck-funeral-home-cedar-park/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.cremationaustin.com/funeral-home/beck-funeral-home-cedar-park/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "B-tier: high-quality multi-gen Williamson Co operator with Austin-metro tailwind. Three locations + active independence stance = unlikely to sell to consolidator but could sell to ETA. NEEDS: current Beck owner name + age, generation depth, kid-in-business status."
@@ -521,8 +579,17 @@
       "verified_via": "live-fetch 2026-05-16 — no successors, no children-in-business mentioned"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.mesquite-funeralhome.com/", "fetched_at": "2026-05-16T19:30:00Z"},
-      {"source": "live_fetch", "url": "https://www.mesquite-funeralhome.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["owner_bio","service_mix","successor_status"]}
+      {
+        "source": "spine",
+        "url": "https://www.mesquite-funeralhome.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      },
+      {
+        "source": "live_fetch",
+        "url": "https://www.mesquite-funeralhome.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["owner_bio", "service_mix", "successor_status"]
+      }
     ],
     "data_completeness": 0.7,
     "notes": "A-TIER CANDIDATE: Michael Keith Moore, born/raised in Mesquite, 34-year industry vet (licensed 1992), founded the business 2008. Solo owner-operator, age ~60. Anti-corporate stance + Gmail address + single location + no successor = textbook ETA target. Mesquite is healthy E-Dallas suburb (~150k pop, growing). PRIORITY: Dallas CAD on 721 Gross Rd, Moore residential homestead lookup, TFSC second-FDL search for any employee."
@@ -562,7 +629,11 @@
       "verified_via": "spine notes Niklaus Dawson dual-provisional 2023"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.chamberlandfunerals.com/our-story", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.chamberlandfunerals.com/our-story",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "DECLINE for immediate ETA: Chamberlains are recent operators (2014 acquisition) building, not coasting. Adding FDLs signals growth mode. Watch in 15-20 years."
@@ -602,7 +673,11 @@
       "verified_via": "spine-level fetch only"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.pilarfuneralhomes.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.pilarfuneralhomes.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "Information-thin. International shipping niche could be high-margin but lacks succession data. Needs full enrichment pass."
@@ -642,7 +717,11 @@
       "verified_via": "spine-level fetch only"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.stewartfamilyfuneral.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.stewartfamilyfuneral.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "Information-thin. Tyler is healthy demographic market. Needs about-page + Smith CAD pull + TFSC tenure for any worthwhile signal."
@@ -682,7 +761,11 @@
       "verified_via": "spine — three-name brand = at minimum two non-original partners"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.brookssterlinggarrett.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.brookssterlinggarrett.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "Three-name brand + 75-year Brooks lineage = partnership consolidation already happened. Possible candidate if surviving partner(s) aging out. NEEDS: identification of current managing partner, TFSC tenure for each name partner."
@@ -722,7 +805,11 @@
       "verified_via": "spine-level fetch only"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.blackscarthage.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.blackscarthage.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "Small rural E TX two-location operator. Needs about-page + Panola/Harrison CAD + TFSC pull."
@@ -762,7 +849,11 @@
       "verified_via": "spine — late Milton Williams III; current operator unidentified"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.peoplesfh.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.peoplesfh.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Active succession window: 3rd-gen Williams deceased, current operator unidentified in spine. Possible 4th-gen takeover OR family selling. PRIORITY: identify current Williams generation managing the business, TFSC license search for 'Williams'."
@@ -802,7 +893,11 @@
       "verified_via": "spine confirms Fuqua III (3rd gen) in VP role"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.texarkanagazette.com/news/2022/apr/23/texarkana-funeral-home-a-trusted-partner-since/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.texarkanagazette.com/news/2022/apr/23/texarkana-funeral-home-a-trusted-partner-since/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "DECLINE for solo-owner ETA: multi-location vertically-integrated regional operator at $10M+ revenue. Active intra-family succession (Vickers + Thomas III). Larger than typical ETA target — consider as upper-bound search-fund target only."
@@ -842,7 +937,11 @@
       "verified_via": "spine-level fetch only; site was previously 403-blocked"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.owensandbrumley.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.owensandbrumley.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "RELATED ENTITY watch: 'Brown Owens & Brumley' in Fort Worth (index 25, in batch 2) shares the Owens & Brumley name — possible spin-off, family branch, or sold-but-shared-brand. Wichita Falls is a small-metro coasting market. NEEDS: owner identity, year of any sale-event, ownership relationship to Brown Owens & Brumley."
@@ -882,7 +981,11 @@
       "verified_via": "spine-level fetch only"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.wellsfuneralhome.org/about/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.wellsfuneralhome.org/about/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "B-tier candidate: 74-year single-location Wichita Falls FH. Generational depth implied but unverified. NEEDS: owner identity (Wells family?), Wichita CAD on building, TFSC license tenure."
@@ -922,7 +1025,11 @@
       "verified_via": "spine-level fetch only"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://dannelfuneralhome.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://dannelfuneralhome.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "B-tier: 100+ year Grayson Co. operator. Sherman/Denison is North Texoma steady market. Single location = solo-owner profile. NEEDS: owner identity, Dannel family generational depth, TFSC tenure, Grayson CAD pull on 302 S. Walnut."
@@ -962,7 +1069,7 @@
       "verified_via": "spine confirms 3rd-gen active"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://npwelch.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      { "source": "spine", "url": "https://npwelch.com/", "fetched_at": "2026-05-16T19:30:00Z" }
     ],
     "data_completeness": 0.5,
     "notes": "B-TIER WATCH: Midland Permian Basin vertically-integrated regional family operator. Pet cremation arm (Companions) is a distinguishing differentiated revenue. Multi-location complexity makes this a search-fund / lower-mid-market target, not a solo-ETA. NEEDS: 4th-gen Welch family entry into business?"
@@ -1002,7 +1109,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.willowbrk.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.willowbrk.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "DECLINE: Founded 2020. Sparky Clark may be retirement-age senior but business itself is young and growing. Outside target window unless owner health-event forces exit."
@@ -1042,7 +1153,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.carrowayfuneralhome.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.carrowayfuneralhome.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "LP structure is the key signal — typically used for family estate/inheritance planning. Multi-gen indicated. NEEDS: ownership investigation (Carroway-Claybar relationship), TX SOS file for the LP, GP/LP partner identities."
@@ -1082,7 +1197,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.allfamiliesmortuary.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.allfamiliesmortuary.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "Multi-county discount-style operator. Geographic dispersion (Lufkin/Hearne/Burke/Madisonville covers 100+ miles) suggests scale-by-acquisition. NEEDS: owner identity + founding year — likely a roll-up under one family."
@@ -1122,7 +1241,7 @@
       "verified_via": "spine-level fetch only"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://borenconner.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      { "source": "spine", "url": "https://borenconner.com/", "fetched_at": "2026-05-16T19:30:00Z" }
     ],
     "data_completeness": 0.35,
     "notes": "B/A-tier watch: 120-year Smith/Cherokee Co operator. Two-name partnership-brand suggests at least one ownership transition already happened. Bullard/Jacksonville are small E TX towns, classic ETA scale. PRIORITY: identify current Boren or Conner descendant or non-family owner."
@@ -1162,7 +1281,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.thememorialchapels.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.thememorialchapels.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Multi-county roll-up structure. Houston outpost is geographically separated — could be a sub-brand. NEEDS: owner identity, ownership concentration, founding year."
@@ -1202,7 +1325,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.cypresscreekfuneralhome.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.cypresscreekfuneralhome.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "B-tier watch: 25-year Cavazos family operator in growing N Houston corridor. DBA branding suggests sophistication. NEEDS: founder name + age, generational depth, location of headquarters/owner residence in Harris CAD."
@@ -1242,7 +1369,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.vazquezfuneralhome.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.vazquezfuneralhome.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "A-TIER WATCH: 34-year Hispanic family operator with 3 strategic Houston locations (covers Northwest, North, Northeast Houston Hispanic-heavy submarkets). Founder likely 60-70. Anti-corporate stance suggests legacy-protection mindset = will sell to right buyer (not chain). PRIORITY: founder name + age, Harris CAD on all 3 locations."
@@ -1282,7 +1413,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.jenkinsfunerals.life/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.jenkinsfunerals.life/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "A/B-tier: 79-year single-location Highland Lakes operator. Burnet/Marble Falls is fast-growing Hill Country retirement market = increasing baby-boomer mortality. Service area (Burnet, Bertram, Marble Falls, Liberty Hill, Spicewood, Kingsland, Llano, Horseshoe Bay) is wealthy 2nd-home/retirement corridor = high preneed potential. NEEDS: owner identity + Jenkins generation depth."
@@ -1322,7 +1457,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://legendstricounty.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://legendstricounty.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "Information-thin. DFS marketing affiliation + generic 'Legends' brand suggests newer entrant. Skip unless TFSC reveals long tenure."
@@ -1362,7 +1501,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.luxfhcares.com/", "fetched_at": "2026-05-16T19:30:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.luxfhcares.com/",
+        "fetched_at": "2026-05-16T19:30:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "B-tier candidate: Solo-operator (Kenny Lux) in fast-growing New Braunfels (Comal Co, Austin-SA I-35 corridor). On-site crematory = serious investment. NEEDS: Kenny Lux age + TFSC license tenure, any FDL successor names."
@@ -1402,7 +1545,11 @@
       "verified_via": "spine — Chance Rosser (son) in business"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.rosserfuneralhome.net/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.rosserfuneralhome.net/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "B-TIER: Active intra-family succession (Perry/Mindi to Chance). Cleburne is growing exurb of DFW = solid market. Succession-in-progress reduces seller probability. If Chance lacks interest/capacity, that flips back to A-tier. Watch in 5-7 years."
@@ -1442,7 +1589,11 @@
       "verified_via": "spine indicates multi-gen Lucas family roll-up"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.familyowned.net/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.familyowned.net/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "DECLINE for solo-ETA: 10-location $20M+ regional family roll-up. This is search-fund / lower-mid-market PE territory only. Lucas family is sophisticated consolidator (not coaster). However, if Lucas family is itself succession-stressed (no kids in business), it could be a single-transaction private-equity target. Stretch upper-bound consideration."
@@ -1481,7 +1632,11 @@
       "verified_via": "ownership concentration with index 62"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://blessingfuneralhome.net/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://blessingfuneralhome.net/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "DUPLICATE OWNERSHIP with index 62 (Family Owned Funeral Homes / Lucas family). Not a separate target — flag for dedupe at scoring time."
@@ -1522,7 +1677,11 @@
       "verified_via": "spine — 5th-gen Higginbothams majority stockholders"
     },
     "data_sources": [
-      {"source": "spine", "url": "http://www.higginbothamfuneralhomecrossplains.com/about-us/our-story", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "http://www.higginbothamfuneralhomecrossplains.com/about-us/our-story",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "DECLINE for solo-ETA: 14-location regional roll-up at ~$15-25M revenue. Sophisticated 5th-gen family corp with split from sister general-merchandise business in 2000. Multi-stockholder structure = sale requires consensus. Pure search-fund or PE target only."
@@ -1562,7 +1721,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.dixonfuneralhome.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.dixonfuneralhome.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "B-tier: 35-year Brazoria Co operator (south of Houston). Two locations are manageable scale for ETA. NEEDS: Dixon founder identity, generational status, TFSC license tenure."
@@ -1602,7 +1765,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.lakesidemfh.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.lakesidemfh.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Brazoria/Matagorda Co operator. Direct competitor to Dixon (same Brazoria city). NEEDS: owner identity, founding year."
@@ -1642,7 +1809,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.salinasfh.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.salinasfh.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Multi-county RGV Hispanic-family operator. 3 locations may be too dispersed for solo ETA. NEEDS: founder identity, year, generational status."
@@ -1681,7 +1852,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.garzamemorialfh.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.garzamemorialfh.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "Brownsville solo-family operator. NEEDS: founder identity + age + year established for any tier assignment."
@@ -1710,17 +1885,18 @@
     "fdl_count": null,
     "has_cemetery": false,
     "preneed_mentioned": null,
-    "coasting_tells": [
-      "single Brownsville location",
-      "no founder/year disclosed"
-    ],
+    "coasting_tells": ["single Brownsville location", "no founder/year disclosed"],
     "successor_indicators": {
       "family_successor_present": null,
       "non_family_FDL_present": null,
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.deltafuneraldirectors.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.deltafuneraldirectors.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.2,
     "notes": "Information-thin. Brownsville solo. NEEDS full enrichment pass to determine viability."
@@ -1760,7 +1936,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://sunsetmemorialfuneralhome.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://sunsetmemorialfuneralhome.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "A/B-tier: 100-year Ortiz family Brownsville operator. Single location = solo profile. NEEDS: current generation identity + age."
@@ -1800,7 +1980,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.mccalebfuneralhome.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.mccalebfuneralhome.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "B/A-tier: 50-year vertically-integrated Hidalgo Co operator. FH + cemetery = full-cycle revenue + ICCFA membership signals quality. NEEDS: owner identity, McCaleb family generational status."
@@ -1840,7 +2024,11 @@
       "verified_via": "spine — 3-name family team but generational depth unclear"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.hawkinsfh.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.hawkinsfh.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "B-tier watch: 30-42 year Hawkins family operator with 3 family principals. If Priscilla is the daughter (vs. sister), there's intra-family succession. If sister, generation is aging together = sell-event likely 5-10 years. NEEDS: relationship between the 3 Hawkins, ages."
@@ -1880,7 +2068,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.jlevyfuneralhome.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.jlevyfuneralhome.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "A/B-tier: 158-year Galveston institution. Single location, historic island market with stable demographic. Hyphenated brand suggests two ownership families merged. NEEDS: current owner identity, Levy/Termini family status, Galveston CAD on 2128 Broadway."
@@ -1920,7 +2112,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://carnesfuneralhome.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://carnesfuneralhome.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "B-tier: 20-year solo owner-operator Jay Carnes. Civic engagement (Chamber pres) = social capital + likely 55-65 age. Two-location Houston-Galveston corridor. NEEDS: Jay Carnes age + any kid-in-business, Galveston CAD."
@@ -1949,17 +2145,14 @@
     "fdl_count": null,
     "has_cemetery": false,
     "preneed_mentioned": null,
-    "coasting_tells": [
-      "single Galveston location",
-      "no founder/year disclosed"
-    ],
+    "coasting_tells": ["single Galveston location", "no founder/year disclosed"],
     "successor_indicators": {
       "family_successor_present": null,
       "non_family_FDL_present": null,
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.wynnfh.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      { "source": "spine", "url": "https://www.wynnfh.com/", "fetched_at": "2026-05-16T20:00:00Z" }
     ],
     "data_completeness": 0.2,
     "notes": "Information-thin Galveston solo. Needs full enrichment for any signal."
@@ -1999,7 +2192,11 @@
       "verified_via": "spine — Hayes family branding suggests intra-family"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.hayesfuneralhome.com/our-facilities", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.hayesfuneralhome.com/our-facilities",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "A/B-tier: 54-year Hayes family operator. Vertical integration (FH + cemetery) = $2-4M revenue estimate. Hitchcock is small Galveston Co. town with steady demographic. NEEDS: founder identity, current generation."
@@ -2039,7 +2236,11 @@
       "verified_via": "spine — Wiley family branding"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.wileyfuneralhome.com/about/wiley-funeral-home-and-cremation-services-glen-rose", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.wileyfuneralhome.com/about/wiley-funeral-home-and-cremation-services-glen-rose",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Hood Co./Somervell Co. operator. Granbury is fast-growing Hill Country retirement market. Glen Rose has Dinosaur Valley tourist economy. NEEDS: founder identity + year."
@@ -2079,7 +2280,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.stephenvillefh.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.stephenvillefh.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "OWNERSHIP RELATIONSHIP QUESTION: Stephenville FH was originally Higginbotham FH (1881-1945) — same lineage as index 64. Possibly spun off in 1945. PRIORITY: confirm if Stephenville FH is owned by Higginbotham of TX (in which case dedupe) OR independent now. Tax records on 120 W South Loop will tell."
@@ -2119,7 +2324,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.lacyfuneral.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.lacyfuneral.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "If Stephenville FH (index 78) is owned by Higginbotham, then Lacy is the only truly local independent. NEEDS: Lacy founder identity + year, TFSC tenure."
@@ -2159,7 +2368,11 @@
       "verified_via": "spine — 5 generations indicated"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.taylorbros.net/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.taylorbros.net/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "B-tier watch: 117-year 5-gen Taylor family operator. Active multi-gen succession reduces seller probability. Matagorda Co coastal-rural market with petrochem/industrial economy. NEEDS: current gen owner age, 6th-gen presence."
@@ -2199,7 +2412,11 @@
       "verified_via": "spine — '& Sons' brand"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.jrobinsonfd.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.jrobinsonfd.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "DECLINE: Younger Bay City competitor to Taylor Bros (index 80). Decade+ tenure is too short for ETA window."
@@ -2239,7 +2456,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.goodenhattonfh.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.goodenhattonfh.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "Wharton Co. solo FH. Hyphenated brand suggests at least one prior ownership transition. NEEDS: current owner identity + founding year."
@@ -2279,7 +2500,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.slavikfuneralhome.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.slavikfuneralhome.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "Jackson Co rural ethnic-Czech-heritage operator. Single county footprint. NEEDS: Slavik founder identity + year."
@@ -2319,7 +2544,11 @@
       "verified_via": "spine — Karen Anderson licensed 2000 = 2nd gen"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.brenhammemorialchapel.com/about-us", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.brenhammemorialchapel.com/about-us",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "B-tier: Elton B. Anderson acquired 1977, Karen (daughter, licensed 2000) now likely 50s and operating. Single-location Brenham (Washington Co) = classic rural Texas town. Brenham is healthy (Blue Bell HQ, growing exurb of Houston/Austin). NEEDS: Karen Anderson age confirmation, Elton's status (deceased? semi-retired?), any 3rd-gen entry."
@@ -2359,7 +2588,11 @@
       "verified_via": "spine"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.phillipsandluckey.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.phillipsandluckey.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Three-county rural Central TX operator. Hyphenated brand = historical partnership. NEEDS: Phillips and Luckey identities, current owner + age."
@@ -2398,7 +2631,7 @@
       "verified_via": "ownership concentration with index 50"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://npwelch.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      { "source": "spine", "url": "https://npwelch.com/", "fetched_at": "2026-05-16T20:00:00Z" }
     ],
     "data_completeness": 0.5,
     "notes": "DUPLICATE OWNERSHIP with index 50 (Nalley-Pickle & Welch Midland). Flag for dedupe at scoring."
@@ -2438,7 +2671,11 @@
       "verified_via": "spine — founders still named in branding, no successors mentioned"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.bbb.org/us/tx/big-spring/profile/funeral-homes/myers-smith-funeral-home-0825-21001170", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.bbb.org/us/tx/big-spring/profile/funeral-homes/myers-smith-funeral-home-0825-21001170",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "A-TIER PRIORITY: Bill Myers and Floyd 'Smitty' Smith founded 1985, presumably aging 75-80 now. Single Big Spring location, 41-year solo partnership, no successor mentioned. Big Spring is small W TX oilfield town (~28k pop) — competing against Welch family NP&W. ANTI-CHAIN stance + founder ages = will sell to right buyer, won't list with consolidator. PRIORITY: Howard CAD on 301 E 24th St (likely founder-owned), TFSC for both license tenures, any FDL hires."
@@ -2478,7 +2715,11 @@
       "verified_via": "spine — three-name brand"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.bellcypertseale.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.bellcypertseale.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Scurry Co (Snyder) oilfield-town operator. Three-name brand suggests history of partnership-buyouts. NEEDS: current managing partner identity, TFSC tenure for surviving name."
@@ -2518,7 +2759,11 @@
       "verified_via": "spine-level partial verification only — needs re-attempt"
     },
     "data_sources": [
-      {"source": "spine", "url": "https://www.hannahfh.com/", "fetched_at": "2026-05-16T20:00:00Z"}
+      {
+        "source": "spine",
+        "url": "https://www.hannahfh.com/",
+        "fetched_at": "2026-05-16T20:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "B-tier: 95-year Port Arthur (Jefferson Co) operator. Port Arthur is declining/coasting petrochem town = lower preneed-funding stability. NEEDS: owner identity, Hannah family generational status, re-fetch with browser automation if needed."

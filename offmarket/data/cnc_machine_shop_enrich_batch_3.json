@@ -27,10 +27,8 @@
       "family_successor_present": null,
       "verified_via": "spine flagged as excluded (NC HQ, not Texas)"
     },
-    "data_sources": [
-      "spine notes: HQ in Gastonia NC, misleading domain name"
-    ],
-    "data_completeness": 0.10,
+    "data_sources": ["spine notes: HQ in Gastonia NC, misleading domain name"],
+    "data_completeness": 0.1,
     "enrichment_notes": "EXCLUDED per spine — Texas-named but NC HQ. No enrichment performed."
   },
   {
@@ -90,9 +88,7 @@
     "modern_equipment": true,
     "cad_cam_modern": true,
     "owner_owns_building": null,
-    "coasting_tells": [
-      "no public owner identity on site"
-    ],
+    "coasting_tells": ["no public owner identity on site"],
     "successor_indicators": {
       "second_gen_present": null,
       "family_successor_present": null,
@@ -101,7 +97,7 @@
     "data_sources": [
       "spine: DNV-90001-2015 (ISO 9001:2015) logo, League City coastal Houston metro, small/independent"
     ],
-    "data_completeness": 0.40,
+    "data_completeness": 0.4,
     "enrichment_notes": "ISO 9001:2015 indicates modern QMS. Small shop on Galveston coast. Flag for Comptroller / SOS pull for owner identity."
   },
   {
@@ -132,9 +128,7 @@
       "family_successor_present": null,
       "verified_via": "spine notes only — public owner name not surfaced"
     },
-    "data_sources": [
-      "spine: founded 1998 by 'three-man team', AS9100D + ISO 9001, 130,000+ sqft"
-    ],
+    "data_sources": ["spine: founded 1998 by 'three-man team', AS9100D + ISO 9001, 130,000+ sqft"],
     "data_completeness": 0.55,
     "enrichment_notes": "SIZE FLAG: 130,000+ sqft + AS9100 + multi-industry suggests revenue may exceed $30M small-biz ceiling. KEPT pending Comptroller sales-data check. Owner age estimated from founder cohort assumption (founder age 27-30 at 1998 launch → 55-58 today)."
   },
@@ -211,10 +205,8 @@
       "family_successor_present": null,
       "verified_via": "spine notes only"
     },
-    "data_sources": [
-      "spine: 25,000+ sqft, SE Texas Golden Triangle, independent"
-    ],
-    "data_completeness": 0.30,
+    "data_sources": ["spine: 25,000+ sqft, SE Texas Golden Triangle, independent"],
+    "data_completeness": 0.3,
     "enrichment_notes": "Beaumont/Port Arthur petrochem corridor. Independent. Lacks founding-year and certs visibility. Flag for SOS + Comptroller pull."
   },
   {
@@ -292,7 +284,7 @@
       "spine: Family-owned 3rd-generation, founded April 1, 2000",
       "live-fetch ctxmachining.com 2026-05-16: 'third generation family owned and operated machine shop located in Central Texas', up to 10 machinists"
     ],
-    "data_completeness": 0.60,
+    "data_completeness": 0.6,
     "enrichment_notes": "Explicit 3rd-generation family ownership. Rick & Paul Sacket likely sons of 2nd-gen owner. Machining career traceable to 1989 (plastics-mfg origin). Small (10 machinists). Niche: hydraulic cylinder + O&G. STRONG ETA candidate — multi-generation family suggests succession-readiness."
   },
   {
@@ -371,7 +363,7 @@
       "spine: L.L.P. partnership, Houston O&G since 1981, 44-yr tenure",
       "live-fetch alpaprecision.com 2026-05-16"
     ],
-    "data_completeness": 0.50,
+    "data_completeness": 0.5,
     "enrichment_notes": "TOP ETA TARGET PROFILE: 45-yr tenure under partnership structure, niche exotic-alloy O&G, no certs (built on relationships not certifications), founder likely late 60s. Houston O&G recovery from 2020 trough = enterprise value recovering. Flag for SOS — L.L.P. names should be public record."
   },
   {
@@ -526,7 +518,7 @@
     "data_sources": [
       "spine: Baytown petrochem corridor, specialty mechanical/field-machining with CNC offering"
     ],
-    "data_completeness": 0.30,
+    "data_completeness": 0.3,
     "enrichment_notes": "BORDERLINE: field-machining + valve repair is closer to industrial services than pure CNC job shop. Spine flagged 'confirm pure-CNC scope'. Baytown petrochem corridor. Flag for SOS + scope review."
   },
   {
@@ -551,19 +543,14 @@
     "modern_equipment": true,
     "cad_cam_modern": true,
     "owner_owns_building": null,
-    "coasting_tells": [
-      "young firm (2019) — not coasting",
-      "no address on accessed page"
-    ],
+    "coasting_tells": ["young firm (2019) — not coasting", "no address on accessed page"],
     "successor_indicators": {
       "second_gen_present": false,
       "family_successor_present": false,
       "verified_via": "spine notes — CEO Long Tao since 2019"
     },
-    "data_sources": [
-      "spine: CEO Long Tao since 2019, Houston, tight tolerances 0.05mm"
-    ],
-    "data_completeness": 0.40,
+    "data_sources": ["spine: CEO Long Tao since 2019, Houston, tight tolerances 0.05mm"],
+    "data_completeness": 0.4,
     "enrichment_notes": "NOT a coasting target — young (7-yr), owner-led, in growth phase. Tight tolerance niche (0.05mm). Founder ~45yo. POOR ETA fit on coasting/age axis but viable as a strategic add-on. Flag for SOS."
   },
   {
@@ -678,9 +665,7 @@
       "family_successor_present": null,
       "verified_via": "NTMA directory only"
     },
-    "data_sources": [
-      "NTMA North Texas member directory"
-    ],
+    "data_sources": ["NTMA North Texas member directory"],
     "data_completeness": 0.15,
     "enrichment_notes": "NEEDS DEEPER ENRICHMENT: Only public footprint is NTMA membership. PLLC = small (sole-prop or 2-person). Flag for SOS pull (PLLC name should show registered owners)."
   },
@@ -706,10 +691,7 @@
     "modern_equipment": true,
     "cad_cam_modern": true,
     "owner_owns_building": null,
-    "coasting_tells": [
-      "address/phone not surfaced from public pages",
-      "no public owner identity"
-    ],
+    "coasting_tells": ["address/phone not surfaced from public pages", "no public owner identity"],
     "successor_indicators": {
       "second_gen_present": null,
       "family_successor_present": null,
@@ -718,7 +700,7 @@
     "data_sources": [
       "spine: NTMA North Texas member, founded 2001, ISO 9001 + AS9100 per LinkedIn"
     ],
-    "data_completeness": 0.40,
+    "data_completeness": 0.4,
     "enrichment_notes": "Dual-cert (ISO 9001 + AS9100) DFW contract mfg. 25-yr tenure. Owner ~55. Flag for SOS to capture ownership name."
   },
   {
@@ -743,19 +725,14 @@
     "modern_equipment": null,
     "cad_cam_modern": null,
     "owner_owns_building": null,
-    "coasting_tells": [
-      "no public website surfaced",
-      "NTMA membership only public footprint"
-    ],
+    "coasting_tells": ["no public website surfaced", "NTMA membership only public footprint"],
     "successor_indicators": {
       "second_gen_present": null,
       "family_successor_present": null,
       "verified_via": "NTMA directory only"
     },
-    "data_sources": [
-      "NTMA North Texas member directory"
-    ],
-    "data_completeness": 0.10,
+    "data_sources": ["NTMA North Texas member directory"],
+    "data_completeness": 0.1,
     "enrichment_notes": "NEEDS DEEPER ENRICHMENT: Only NTMA membership confirms existence. Flag for SOS lookup + Comptroller match."
   },
   {
@@ -793,7 +770,7 @@
     "data_sources": [
       "spine: NTMA member, Dallas, miniature aluminum extrusion + secondary CNC fab"
     ],
-    "data_completeness": 0.30,
+    "data_completeness": 0.3,
     "enrichment_notes": "BORDERLINE SCOPE: primary process is aluminum extrusion not CNC machining. Spine flagged for scope review at scoring. NTMA membership keeps it in spine for now."
   },
   {
@@ -818,18 +795,13 @@
     "modern_equipment": null,
     "cad_cam_modern": null,
     "owner_owns_building": null,
-    "coasting_tells": [
-      "no public website",
-      "NTMA membership only public footprint"
-    ],
+    "coasting_tells": ["no public website", "NTMA membership only public footprint"],
     "successor_indicators": {
       "second_gen_present": null,
       "family_successor_present": null,
       "verified_via": "NTMA directory only"
     },
-    "data_sources": [
-      "NTMA North Texas member directory"
-    ],
+    "data_sources": ["NTMA North Texas member directory"],
     "data_completeness": 0.15,
     "enrichment_notes": "NEEDS DEEPER ENRICHMENT: NTMA + Fort Worth city only. LLC structure. Flag for SOS pull."
   },
@@ -865,9 +837,7 @@
       "family_successor_present": null,
       "verified_via": "Facebook business page only"
     },
-    "data_sources": [
-      "Facebook business page, NTMA membership"
-    ],
+    "data_sources": ["Facebook business page, NTMA membership"],
     "data_completeness": 0.25,
     "enrichment_notes": "COASTING PROFILE: rural Denton county (Krum) shop with Facebook-only web presence. Likely owner-operator. Flag for SOS + Comptroller."
   },
@@ -903,9 +873,7 @@
       "family_successor_present": null,
       "verified_via": "NTMA directory only"
     },
-    "data_sources": [
-      "NTMA North Texas member directory"
-    ],
+    "data_sources": ["NTMA North Texas member directory"],
     "data_completeness": 0.15,
     "enrichment_notes": "NEEDS DEEPER ENRICHMENT: etmusa.com not fetched. http:// (not https) is mild coasting signal. Flag for SOS."
   },
@@ -1021,7 +989,7 @@
       "spine: founded 1986, 20,000+ sqft NW San Antonio",
       "live-fetch c-ftool.com/about 2026-05-16: Steve Collier garage start + brother Robert, AS9100D + ISO 9001:2015 + ITAR DDTC, 5-axis CNC + CNC lathes + CMM"
     ],
-    "data_completeness": 0.80,
+    "data_completeness": 0.8,
     "enrichment_notes": "EXCELLENT ETA TARGET: 40-yr Collier-brothers ownership, AS9100D + ISO 9001 + ITAR, aerospace+defense+semicon+biomed customer mix, 5-axis modern equipment. Owners ~65 (founder 1986 + 27-30 yo at start). ITAR-registered = defense contracts. Flag for SOS to verify exact founding date + check for successor announcement."
   },
   {
@@ -1059,7 +1027,7 @@
       "spine: founded 1946, ISO 9001:2008 + AS9100, inner San Antonio",
       "live-fetch anthonymachine.com 2026-05-16: ISO 9001 + AS 9100 + ASME + SAMA + SME + TACA confirmed"
     ],
-    "data_completeness": 0.70,
+    "data_completeness": 0.7,
     "enrichment_notes": "OUTSTANDING ETA PROFILE: 80-yr tenure (oldest in this batch), ISO 9001 + AS 9100 certified, multiple industry associations. Multi-generation Anthony family ownership likely (3rd or 4th gen). Inner-SA legacy real estate likely owned outright. Strong candidate for retirement-driven sale. SOS lookup priority."
   },
   {

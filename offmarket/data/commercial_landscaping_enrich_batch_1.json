@@ -39,8 +39,8 @@
       "verified_via": "live-fetch of homepage 2026-05-16 + web search"
     },
     "data_sources": [
-      {"url": "https://www.yellowroselandscape.com/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "web_search:Yellow_Rose_Plano_founder", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://www.yellowroselandscape.com/", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "web_search:Yellow_Rose_Plano_founder", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.7,
     "notes": "PRIME succession candidate. Bert Blair founded 1981 (Texas Tech '75 → ~73 years old). Merged with Roger Staubach's landscape company year 1 — strong commercial backbone (schools, churches, athletic fields). No visible successor on website."
@@ -86,8 +86,8 @@
       "verified_via": "live-fetch of /about-us 2026-05-16 (returned content but no founder name)"
     },
     "data_sources": [
-      {"url": "https://www.hou-scape.com/about-us", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "web_search:Hou-Scape_owner", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://www.hou-scape.com/about-us", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "web_search:Hou-Scape_owner", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.55,
     "notes": "37-year operator. 200+ employees + 'family-owned' but team page hidden — common pattern for owners not ready to be public-facing about succession. WBE/DBE/HUB certifications mean owner is likely a woman or minority — high signal for owner age 60+. Strong commercial mix (HOA, parks, government, education, retail, hospitals). Possibly too large but worth scoring."
@@ -133,8 +133,11 @@
       "verified_via": "web search + NALP press 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.mnlsa.com/about-maldonado/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "https://blog.landscapeprofessionals.org/level-up-maldonado/", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://www.mnlsa.com/about-maldonado/", "fetched_at": "2026-05-16T12:00:00Z" },
+      {
+        "url": "https://blog.landscapeprofessionals.org/level-up-maldonado/",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "POSSIBLY TOO LARGE (500 employees, 6 locations). Family-owned 2nd-gen brothers run it post-father retirement. NALP Level Up profile = active growth posture, NOT coasting. DEPRIORITIZE — they're scaling, not exiting."
@@ -182,8 +185,8 @@
       "verified_via": "live-fetch of homepage 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://yorklandscaping.com/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "https://yorklandscaping.com/about/", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://yorklandscaping.com/", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "https://yorklandscaping.com/about/", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.5,
     "notes": "34-year tenure, family-owned, but ownership identity opacity is a strong tell — either small-shop or owner-not-ready-to-show. 15+ DFW municipalities served. Worth Texas Comptroller lookup + LinkedIn dig for owner name."
@@ -231,8 +234,8 @@
       "verified_via": "live-fetch + BBB search 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://brookway.com/about-us", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "bbb_listing_search", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://brookway.com/about-us", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "bbb_listing_search", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.75,
     "notes": "Woman-owned, 29 years. Two co-owners (Karen + LaRonda) suggests partnership rather than family dynasty — these structures often look to exit together once both ready. FEMA storm-restoration adds resilient revenue layer. Strong HOA/multi-family stickiness. Solid succession candidate."
@@ -278,8 +281,8 @@
       "verified_via": "live-fetch + LinkedIn search 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://triplehlawns.com/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "linkedin:wilfredo-hernandez-triple-h", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://triplehlawns.com/", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "linkedin:wilfredo-hernandez-triple-h", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.55,
     "notes": "22 years but mixed-trade pattern (lawn+fencing+pressure washing) signals smaller-shop owner-operator. Younger company, owner likely still in growth mode — DEPRIORITIZE for succession scoring."
@@ -327,8 +330,8 @@
       "verified_via": "live-fetch + LinkedIn 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://swplandscaping.com/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "linkedin:jim-curtice-72414559", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://swplandscaping.com/", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "linkedin:jim-curtice-72414559", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.75,
     "notes": "PRIME succession candidate. Jim Curtice (UH alum, licensed horticulturist), founded 1987, still President 39 years later. River Oaks/Bellaire/Memorial — premium book of business. No visible successor. Coasting tells abundant (empty testimonial section, no tech stack)."
@@ -371,8 +374,8 @@
       "verified_via": "live-fetch about page 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.ctxlandscaping.com/about", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "web_search:Castro_Family_Austin", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://www.ctxlandscaping.com/about", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "web_search:Castro_Family_Austin", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.6,
     "notes": "Spine had 'founded_year: null' — confirmed established 2017 (only 9 yrs). DEPRIORITIZE: too young, founder Jose Castro likely still in 40s-50s, son Uriel just stepping up = pre-exit family dynasty in formation."
@@ -419,8 +422,8 @@
       "verified_via": "live-fetch about page + web search 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://hillhorticulture.com/about-us", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "web_search:Hill_Horticulture_Moreno", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://hillhorticulture.com/about-us", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "web_search:Hill_Horticulture_Moreno", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.8,
     "notes": "Strong succession candidate. Founder John Hill exited 2013 → current owner Marc Moreno III hit 23-yr tenure. Husband-wife team often signals next exit. No children mentioned in succession — likely sale, not handoff. Worth direct outreach."
@@ -469,7 +472,7 @@
       "verified_via": "live-fetch 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://designscapessa.com/", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://designscapessa.com/", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.4,
     "notes": "Small-shop pattern. Owner 'Oscar' personally executes work — likely a 1-crew operator, sub-typical-target size. DEPRIORITIZE unless Comptroller lookup reveals 20+ year tenure."
@@ -512,7 +515,7 @@
       "verified_via": "live-fetch 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://way2grolandscape.net/", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://way2grolandscape.net/", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.65,
     "notes": "DEPRIORITIZE. Tim Massey too young for succession exit; 12-yr tenure barely qualifies. Good HOA/commercial book but owner in growth phase."
@@ -559,7 +562,7 @@
       "verified_via": "live-fetch about page 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.jponceandson.com/about", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://www.jponceandson.com/about", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.6,
     "notes": "Mid-succession family shop. Father Javier + son Jai — already through 1st gen transition. Tiny-shop signals (Gmail, no commercial testimonials, no licenses) suggest sub-target-size. DEPRIORITIZE."
@@ -606,8 +609,8 @@
       "verified_via": "live-fetch 2026-05-16 + LinkedIn"
     },
     "data_sources": [
-      {"url": "https://terraturf.com/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "linkedin:matt-brady-terra-turf", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://terraturf.com/", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "linkedin:matt-brady-terra-turf", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.7,
     "notes": "32-year founder still at the helm. Some 2012-era tech adoption (portal, routing) but stale relative to modern landscape SaaS. M-F-only hours signal residential-leaning service profile. Solid candidate, owner ~58."
@@ -653,8 +656,8 @@
       "verified_via": "live-fetch + LinkedIn 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://bklawn.com/about-us/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "linkedin:bill-kennedy-landscape", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://bklawn.com/about-us/", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "linkedin:bill-kennedy-landscape", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.75,
     "notes": "Unique tell: owner has dual career as attorney since 2007. Bill Kennedy ran landscape as 'pay for law school' company that became permanent — classic coasting pattern (low motivation to scale or sell). Owner only ~50 — too young for typical exit, but divided focus = potential sale candidate if right offer."
@@ -701,8 +704,11 @@
       "verified_via": "live-fetch + web search 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.grassperson.com/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "https://www.grassperson.com/culture-blog/the-grassperson-story-who-we-are-and-what-we-stand-for", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://www.grassperson.com/", "fetched_at": "2026-05-16T12:00:00Z" },
+      {
+        "url": "https://www.grassperson.com/culture-blog/the-grassperson-story-who-we-are-and-what-we-stand-for",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "Already through one succession event (Brian Gasperson → Jack & Ann in 2017). Current owners 9-yr tenure, modernizing tech stack. NOT a coaster — actively investing. DEPRIORITIZE for near-term exit, but could be 3-5 year horizon."
@@ -750,8 +756,8 @@
       "verified_via": "live-fetch + web search 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://landscapeprotx.com/about-us/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "web_search:LPT_Dallas_owner", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://landscapeprotx.com/about-us/", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "web_search:LPT_Dallas_owner", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.7,
     "notes": "Strong commercial-only operator: 36 yrs, 280 commercial properties, 18-yr avg supervisor experience. CEO Manish Raj. Recently certified MWBE — may signal new ownership push or strategic positioning. Worth deep dive — institutional commercial book = high-value target."
@@ -799,8 +805,8 @@
       "verified_via": "live-fetch + zoominfo 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://prestonwoodlandscape.com/about-us/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "linkedin:tavis-macduff-prestonwood", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://prestonwoodlandscape.com/about-us/", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "linkedin:tavis-macduff-prestonwood", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.75,
     "notes": "Owner Jeremy Saylor brought in professional President Tavis Macduff — classic pre-sale grooming pattern. 27-yr tenure, Amazon/Marriott/Valero institutional book = real strategic value. PRIME succession target — worth direct outreach."
@@ -848,8 +854,8 @@
       "verified_via": "live-fetch + web search 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://bclandscapingdfw.com/about/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "linkedin:cticer-bc-landscaping", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://bclandscapingdfw.com/about/", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "linkedin:cticer-bc-landscaping", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.8,
     "notes": "Solid succession candidate. Bill Ticer founded 2001 after long ChemLawn career — likely now 60+. Wife Carole runs operations. No children in business. 80%+ staff tenure 10+ years = sticky team. Worth direct outreach — small enough for SBA-financed acquisition."
@@ -898,8 +904,8 @@
       "verified_via": "live-fetch + Nextdoor 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.fortbendbrothers.com/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "nextdoor:dickinson-pressure-washing-co", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://www.fortbendbrothers.com/", "fetched_at": "2026-05-16T12:00:00Z" },
+      { "url": "nextdoor:dickinson-pressure-washing-co", "fetched_at": "2026-05-16T12:00:00Z" }
     ],
     "data_completeness": 0.45,
     "notes": "Small-shop owner-operator (Matthew Dickinson). 'Brothers' branding but only Matthew identified. Multi-trade (landscape + pressure washing). DEPRIORITIZE — sub-target-size, recent founding, single-operator."
@@ -946,8 +952,14 @@
       "verified_via": "live-fetch + voyage dallas + linkedin 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://southernbotanical.com/about-us/our-history/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "https://voyagedallas.com/interview/meet-jason-craven-southern-botanical-inc-medical-district-near-utsw/", "fetched_at": "2026-05-16T12:00:00Z"}
+      {
+        "url": "https://southernbotanical.com/about-us/our-history/",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      },
+      {
+        "url": "https://voyagedallas.com/interview/meet-jason-craven-southern-botanical-inc-medical-district-near-utsw/",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "DEPRIORITIZE. Jason Craven only ~48 years old, scaling not exiting. 400+ employees = beyond SBA-financed target. Top-100 nationally ranked = growth profile. Likely PE platform target eventually but not coaster-style succession."
@@ -988,9 +1000,18 @@
       "verified_via": "web search businesswire + privsource 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.businesswire.com/news/home/20231107844688/en/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "https://lincolnroadmgmt.com/lincoln-road-completes-the-acquisition-of-silversand-services-and-sli-landscape-and-combines-them-with-zodega-landscaping/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "https://peprofessional.com/2023/11/lincoln-roads-new-platform-corners-houston-landscaping-market/", "fetched_at": "2026-05-16T12:00:00Z"}
+      {
+        "url": "https://www.businesswire.com/news/home/20231107844688/en/",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      },
+      {
+        "url": "https://lincolnroadmgmt.com/lincoln-road-completes-the-acquisition-of-silversand-services-and-sli-landscape-and-combines-them-with-zodega-landscaping/",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      },
+      {
+        "url": "https://peprofessional.com/2023/11/lincoln-roads-new-platform-corners-houston-landscaping-market/",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      }
     ],
     "data_completeness": 0.95,
     "notes": "*** EXCLUDE FROM TARGET LIST *** Silversand was acquired by Lincoln Road Global Management LLC in November 2023 and merged with SLI Landscape and Zodega Landscaping into a Houston-area PE rollup platform. Founder Somir Paul transitioned to Senior Advisor role. This is now PE-backed — falls outside the independent / family-owned acquisition target profile. Spine note correctly flagged 'independence_verified: null' — confirmed exclude. Update spine to reflect."
@@ -1038,8 +1059,11 @@
       "verified_via": "live-fetch about + web search + corporationwiki 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://techscapeinc.com/our-story/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "https://www.corporationwiki.com/Texas/Dallas/wayne-m-winner/32296718.aspx", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://techscapeinc.com/our-story/", "fetched_at": "2026-05-16T12:00:00Z" },
+      {
+        "url": "https://www.corporationwiki.com/Texas/Dallas/wayne-m-winner/32296718.aspx",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      }
     ],
     "data_completeness": 0.9,
     "notes": "Mid-succession family business — already through 1st gen transition. Wayne (~73) handed off to Kevin (~47). Kevin's tenure 26 years. Next exit window: 3-7 years when Kevin reaches mid-50s. Strong institutional commercial book. DEPRIORITIZE for near-term, MEDIUM-priority for 3-5 yr pipeline."
@@ -1080,9 +1104,15 @@
       "verified_via": "trivest + privateequityinfo + lmclandscapepartners.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://lmclandscapepartners.com/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "https://www.trivest.com/companies/lmc-landscape-partners/", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "https://privateequityinfo.com/directory/private-equity-portfolio-company/3/lmc-landscape-partners", "fetched_at": "2026-05-16T12:00:00Z"}
+      { "url": "https://lmclandscapepartners.com/", "fetched_at": "2026-05-16T12:00:00Z" },
+      {
+        "url": "https://www.trivest.com/companies/lmc-landscape-partners/",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      },
+      {
+        "url": "https://privateequityinfo.com/directory/private-equity-portfolio-company/3/lmc-landscape-partners",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      }
     ],
     "data_completeness": 0.95,
     "notes": "*** EXCLUDE FROM TARGET LIST *** Lawn Management Company is now an operating subsidiary within LMC Landscape Partners — a PE platform formed 2021 with Trivest Partners. Family (Bill, Brad, Kyle Cox) transitioned to PE model. The platform actively acquires other landscape companies (founder/family-owned, commercial). Spine note 'independence_verified: true' was incorrect — confirmed PE-affiliated. Update spine."
@@ -1123,9 +1153,18 @@
       "verified_via": "monarchlandscape.com + audaxprivateequity.com + onerock.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.monarchlandscape.com/texscapeservices", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "https://www.audaxprivateequity.com/portfolio/monarch-landscape-companies", "fetched_at": "2026-05-16T12:00:00Z"},
-      {"url": "https://www.onerock.com/news/one-rock-capital-partners-sells-monarch-landscape-companies-to-audax-private-equity/", "fetched_at": "2026-05-16T12:00:00Z"}
+      {
+        "url": "https://www.monarchlandscape.com/texscapeservices",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      },
+      {
+        "url": "https://www.audaxprivateequity.com/portfolio/monarch-landscape-companies",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      },
+      {
+        "url": "https://www.onerock.com/news/one-rock-capital-partners-sells-monarch-landscape-companies-to-audax-private-equity/",
+        "fetched_at": "2026-05-16T12:00:00Z"
+      }
     ],
     "data_completeness": 0.95,
     "notes": "*** EXCLUDE FROM TARGET LIST *** Texscape Services is part of Monarch Landscape Companies — PE rollup currently owned by Audax Private Equity (acquired from One Rock Capital April 2022). Spine note 'independence_verified: null' correctly flagged — confirmed exclude. 'Founded in 2010' on monarch.com → likely 2-3 year-old acquisition. Update spine."

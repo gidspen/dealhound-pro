@@ -41,7 +41,11 @@
       "verified_via": "live-fetch of https://apgaragedoors.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://apgaragedoors.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "service_area,no_online_booking,copyright_2022,yahoo_email"}
+      {
+        "url": "https://apgaragedoors.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "service_area,no_online_booking,copyright_2022,yahoo_email"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Highland Village residential-only small operator. Yahoo email + stale 2022 copyright + no About page = classic coaster signature. Owner not disclosed — would need TX SOS lookup. ~14 years in business per their own copy. Small fleet (est 3 trucks). MODERATE candidate — independent and small, but identity unknown."
@@ -85,8 +89,16 @@
       "verified_via": "expertise.com directory listing 2026-05-16 (site itself returned 403)"
     },
     "data_sources": [
-      {"url": "https://awardgaragedoor.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "site_returned_403"},
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "30_year_family"}
+      {
+        "url": "https://awardgaragedoor.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "site_returned_403"
+      },
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "30_year_family"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Site refused automated fetch (403). 30-yr Richardson family business per directory listing. Owner age likely 55-70 given tenure. STRONG candidate based on tenure + family signal but needs phone outreach / TX SOS lookup to verify owner identity and entity status."
@@ -135,7 +147,11 @@
       "verified_via": "live-fetch of https://matthewshomesupply.com 2026-05-16 (footer credit Parker Matthews)"
     },
     "data_sources": [
-      {"url": "https://matthewshomesupply.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "founder,year,services,copyright_2016"}
+      {
+        "url": "https://matthewshomesupply.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "founder,year,services,copyright_2016"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "Classic coaster — Matthews family-name brand since 1983 (43 yrs), copyright 2016 = 10-yr-stale website, mixed legacy product line. Parker Matthews named in footer credit. Owner likely 60-75. STRONG INCLUDE — long tenure, founder named, low-tech operation, no online booking = highly likely to have a 1-truck-mentality coaster running this. Verify entity at TX SOS."
@@ -181,7 +197,11 @@
       "verified_via": "live-fetch of https://www.texasgaragedoorandopener.com/about/ 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.texasgaragedoorandopener.com/about/", "fetched_at": "2026-05-16T22:00:00Z", "field": "founded_2000,DFW+Houston,modern_site"}
+      {
+        "url": "https://www.texasgaragedoorandopener.com/about/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "founded_2000,DFW+Houston,modern_site"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "26-yr tenure but modern site + 2-metro coverage suggests larger operator, not classic solo-owner coaster. Site freshness is a NEGATIVE signal for distress/coasting. Likely above target size. WEAKER candidate vs other Plano operators."
@@ -228,7 +248,11 @@
       "verified_via": "live-fetch of https://121overheaddoors.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://121overheaddoors.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "since_1999,7_cities,modern_site"}
+      {
+        "url": "https://121overheaddoors.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "since_1999,7_cities,modern_site"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Allen-based 27-yr operator. Residential focus, 7-city footprint, modern site but no owner identity. Decent tenure-based candidate but freshness undermines coaster narrative. MODERATE."
@@ -271,8 +295,16 @@
       "verified_via": "live-fetch of https://applegaragedoor.com 2026-05-16 (301 redirect to anytimegaragedoor.com)"
     },
     "data_sources": [
-      {"url": "https://applegaragedoor.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "301_redirect_to_anytime_rollup"},
-      {"url": "https://www.anytimegaragedoor.com/about-us", "fetched_at": "2026-05-16T22:00:00Z", "field": "rollup_brands_list"}
+      {
+        "url": "https://applegaragedoor.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "301_redirect_to_anytime_rollup"
+      },
+      {
+        "url": "https://www.anytimegaragedoor.com/about-us",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "rollup_brands_list"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "EXCLUDE — Apple Garage Door has been acquired by Anytime Garage Door, a multi-state 11-city rollup. Independence_verified flag in spine is INCORRECT. Spine should be updated."
@@ -319,7 +351,11 @@
       "verified_via": "live-fetch of https://www.mckinneydoors.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.mckinneydoors.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "address,phone,10_year_history,bbb_5star,modern_site_2024"}
+      {
+        "url": "https://www.mckinneydoors.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "address,phone,10_year_history,bbb_5star,modern_site_2024"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "McKinney mixed residential/commercial; ~10-yr tenure makes coaster narrative weaker. Modern site = actively managed. WEAK candidate for off-market 12-36mo seller — likely still in growth phase, not coasting."
@@ -366,7 +402,11 @@
       "verified_via": "live-fetch of https://www.blakeandsonsgaragedoors.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.blakeandsonsgaragedoors.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "phone,hours,modern_site,family_name_brand"}
+      {
+        "url": "https://www.blakeandsonsgaragedoors.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "phone,hours,modern_site,family_name_brand"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Family-name brand (Blake & Sons) suggests succession-in-progress. M-F-only hours = lifestyle-business signal. Modern site reduces coaster confidence. MODERATE — needs LinkedIn/SOS lookup to confirm Blake family identity and tenure."
@@ -412,7 +452,11 @@
       "verified_via": "live-fetch of https://www.twobrothersgds.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.twobrothersgds.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "address,phone,10_year_history,modern_site,sibling_owned"}
+      {
+        "url": "https://www.twobrothersgds.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "address,phone,10_year_history,modern_site,sibling_owned"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Active sibling-owned operation with 30+ city DFW reach. Online booking + 24/7 service + recent blog = NOT coasting. WEAK candidate — too active/growing to be a seller in 12-36mo window."
@@ -460,7 +504,11 @@
       "verified_via": "live-fetch of https://trurolloverheaddoor.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://trurolloverheaddoor.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "since_2000,yahoo_email,address,33_cities,dated_site"}
+      {
+        "url": "https://trurolloverheaddoor.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "since_2000,yahoo_email,address,33_cities,dated_site"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Pilot Point small-town 26-yr operator. Yahoo email + dated site + no owner identity = CLASSIC COASTER SIGNATURE. Owner likely 55-70+. STRONG INCLUDE — long tenure, exurban location, low-tech operations."
@@ -507,7 +555,11 @@
       "verified_via": "live-fetch of https://garagedoorrepairslittleelm.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://garagedoorrepairslittleelm.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "18_year_history,family_owned,bbb_AAA,7_day_hours"}
+      {
+        "url": "https://garagedoorrepairslittleelm.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "18_year_history,family_owned,bbb_AAA,7_day_hours"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Family-owned, 18 yrs, AAA BBB. 7-day extended hours = active operation. MODERATE candidate — long enough tenure for owner to be eyeing exit but pace suggests not coasting yet."
@@ -554,7 +606,11 @@
       "verified_via": "live-fetch of https://prostargaragedoors.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://prostargaragedoors.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "3_locations,residential,modern_site"}
+      {
+        "url": "https://prostargaragedoors.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "3_locations,residential,modern_site"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Frisco-area residential operator with 3 locations. No owner identity or tenure data on site. Multi-location growth + modern site = likely active operator, NOT a coaster. WEAK candidate."
@@ -600,7 +656,11 @@
       "verified_via": "live-fetch of https://supremegaragedoortx.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://supremegaragedoortx.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "phone,10_year_history,online_booking,bbb_a_plus,modern_site"}
+      {
+        "url": "https://supremegaragedoortx.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "phone,10_year_history,online_booking,bbb_a_plus,modern_site"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Carrollton/Dallas operator, ~12-yr tenure, online booking + BBB A+ + modern site = HIGHLY ACTIVE, growing operator. WEAK candidate — not coasting."
@@ -648,7 +708,11 @@
       "verified_via": "live-fetch of https://www.qualitygd.com 2026-05-16 (after 301 from qualitygaragedoorandgates.com)"
     },
     "data_sources": [
-      {"url": "https://www.qualitygd.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "phone,25_year_history,maintenance_plan,online_booking,5star"}
+      {
+        "url": "https://www.qualitygd.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "phone,25_year_history,maintenance_plan,online_booking,5star"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Richardson-based (not Carrollton as spine indicates). 25-yr tenure but modern site + maintenance plan + active online presence = NOT coasting. Has recently rebranded URL. WEAK candidate — operator engaged in growth/modernization."
@@ -695,7 +759,11 @@
       "verified_via": "live-fetch of https://garagedoorsrockwall.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://garagedoorsrockwall.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "wylie_address,placeholder_content,expired_coupons"}
+      {
+        "url": "https://garagedoorsrockwall.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "wylie_address,placeholder_content,expired_coupons"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Wylie boutique with site placeholder content (Slide title, Write your caption here remnants) — indicates an UNFINISHED or NEGLECTED website. Domain/city mismatch (rockwall URL, Wylie address). Possible distress signal. MODERATE — needs further verification but the digital decay is striking."
@@ -744,7 +812,11 @@
       "verified_via": "live-fetch of https://cabrerasirondoors.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://cabrerasirondoors.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "phone,address,family_owned,iron_specialty,copyright_2018"}
+      {
+        "url": "https://cabrerasirondoors.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "phone,address,family_owned,iron_specialty,copyright_2018"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Cabrera family-owned Plano specialty iron-door shop. Copyright 2018 = stale website (8-yr decay). Specialty business outside core garage-door pure-play. CAUTION — may be too niche / boutique for typical garage-door acquisition thesis. Consider for cross-vertical custom-door buyer pool but not a clean garage-door target."
@@ -791,7 +863,11 @@
       "verified_via": "live-fetch of https://champion-garage-door-service.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://champion-garage-door-service.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "phone,address,workiz_booking,modern_payments,blog,24_city_area"}
+      {
+        "url": "https://champion-garage-door-service.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "phone,address,workiz_booking,modern_payments,blog,24_city_area"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Houston Workiz-enabled operator. Modern tech stack (online booking, digital payments, blog) = actively growing, NOT coasting. WEAK candidate for off-market 12-36 mo seller."
@@ -837,7 +913,11 @@
       "verified_via": "live-fetch of https://sggaragedoors.net 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://sggaragedoors.net", "fetched_at": "2026-05-16T22:00:00Z", "field": "pay_per_call_lead_gen_disclaimer,not_a_direct_provider"}
+      {
+        "url": "https://sggaragedoors.net",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "pay_per_call_lead_gen_disclaimer,not_a_direct_provider"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "EXCLUDE — Website is a lead-aggregator front, not a real business. Spine independence verification is INCORRECT. Spine should be amended to remove S.G Garage Doors from target list."
@@ -880,8 +960,16 @@
       "verified_via": "live-fetch of https://neighborhoodgaragedoorhouston.com 2026-05-16 (301 redirect to multi-state chain)"
     },
     "data_sources": [
-      {"url": "https://neighborhoodgaragedoorhouston.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "301_redirect_to_multistate_chain"},
-      {"url": "http://neighborhoodgaragedoorservices.com/texas/houston", "fetched_at": "2026-05-16T22:00:00Z", "field": "13_state_chain"}
+      {
+        "url": "https://neighborhoodgaragedoorhouston.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "301_redirect_to_multistate_chain"
+      },
+      {
+        "url": "http://neighborhoodgaragedoorservices.com/texas/houston",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "13_state_chain"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "EXCLUDE — Not an independent Houston operator; part of Neighborhood Garage Door Services multi-state chain (13+ states). Spine independence verification is INCORRECT."
@@ -928,7 +1016,11 @@
       "verified_via": "live-fetch of https://allkindsofdoors.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://allkindsofdoors.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "phone,squarespace,diversified_doors"}
+      {
+        "url": "https://allkindsofdoors.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "phone,squarespace,diversified_doors"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "NW Houston diversified door dealer (garage + entry + storm). Squarespace site + 2020 service map = light digital footprint. MODERATE candidate — needs LinkedIn/SOS lookup for owner identity and tenure."
@@ -975,7 +1067,11 @@
       "verified_via": "live-fetch of https://heightsgaragedoorrepairhouston.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://heightsgaragedoorrepairhouston.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "phone,address,10_year_history,copyright_2015,dated_design"}
+      {
+        "url": "https://heightsgaragedoorrepairhouston.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "phone,address,10_year_history,copyright_2015,dated_design"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Houston Heights operator. Copyright 2015 = 11-year-stale website is a STRONG coasting signal. Only 10-yr tenure though. MODERATE candidate — needs owner/age verification but digital decay is unmistakable."
@@ -1022,7 +1118,11 @@
       "verified_via": "live-fetch of https://garagedoorfamily.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://garagedoorfamily.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "phone,multi_city,modern_site,online_booking,1000_clients"}
+      {
+        "url": "https://garagedoorfamily.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "phone,multi_city,modern_site,online_booking,1000_clients"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Multi-city growing operator (Katy + Dallas + Magnolia + Celina). Modern site + 1000+ customers + multi-metro = ABOVE typical solo-owner target. WEAK candidate — likely growth-mode, not coasting."
@@ -1065,7 +1165,11 @@
       "verified_via": "spine flag 2026-05-16 — direct site not provided"
     },
     "data_sources": [
-      {"url": "https://www.bestpickreports.com/garage-doors/houston", "fetched_at": "2026-05-16", "field": "46_yr_history_directory_only"}
+      {
+        "url": "https://www.bestpickreports.com/garage-doors/houston",
+        "fetched_at": "2026-05-16",
+        "field": "46_yr_history_directory_only"
+      }
     ],
     "data_completeness": 0.2,
     "notes": "FLAG: Likely a ProLift Doors franchise (national multi-market brand). Spine already flagged. EXCLUDE pending TX SOS verification — high probability not independent."
@@ -1108,7 +1212,11 @@
       "verified_via": "directory listing only — no live fetch possible"
     },
     "data_sources": [
-      {"url": "https://www.bestpickreports.com/garage-doors/houston", "fetched_at": "2026-05-16", "field": "family_owned_directory_only"}
+      {
+        "url": "https://www.bestpickreports.com/garage-doors/houston",
+        "fetched_at": "2026-05-16",
+        "field": "family_owned_directory_only"
+      }
     ],
     "data_completeness": 0.15,
     "notes": "INSUFFICIENT DATA — No website in spine. Needs phone outreach or TX SOS lookup (LLC entity) to verify owner identity and tenure. Family-owned per directory but cannot confirm specifics."
@@ -1156,7 +1264,11 @@
       "verified_via": "live-fetch of https://crowndoor.net 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://crowndoor.net", "fetched_at": "2026-05-16T22:00:00Z", "field": "founded_1991,address,family_owned,dated_site"}
+      {
+        "url": "https://crowndoor.net",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "founded_1991,address,family_owned,dated_site"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Houston family-owned since 1991 (35-yr tenure). Dated site + no modern ops tech + no owner ID = STRONG coaster signature. Owner age likely 60-75 given tenure. STRONG INCLUDE — long-tenure family operator, low-tech profile. Needs SOS lookup for entity status and owner identity."
@@ -1202,7 +1314,11 @@
       "verified_via": "live-fetch of https://firstcallgaragedoors.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://firstcallgaragedoors.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "address_correction_richmond,phone,10_year_history,online_booking,home_advisor"}
+      {
+        "url": "https://firstcallgaragedoors.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "address_correction_richmond,phone,10_year_history,online_booking,home_advisor"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Richmond (not Sugar Land per spine). ~10-yr tenure with modern site + online booking + active marketing = NOT coasting. WEAK candidate."
@@ -1245,7 +1361,11 @@
       "verified_via": "live-fetch of https://alliancegaragedoorstx.com 2026-05-16 (returned only tracking pixel)"
     },
     "data_sources": [
-      {"url": "https://alliancegaragedoorstx.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "tracking_pixel_only"}
+      {
+        "url": "https://alliancegaragedoorstx.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "tracking_pixel_only"
+      }
     ],
     "data_completeness": 0.1,
     "notes": "INSUFFICIENT DATA — Website returned only tracking pixel (likely Cloudflare bot-blocking or aggressive cache). Cannot verify founding, owner, or tenure. Needs human visit or TX SOS lookup."
@@ -1288,7 +1408,11 @@
       "verified_via": "live-fetch of https://totalaccesscontroltx.com 2026-05-16 (ECONNREFUSED)"
     },
     "data_sources": [
-      {"url": "https://totalaccesscontroltx.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "site_offline_econnrefused"}
+      {
+        "url": "https://totalaccesscontroltx.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "site_offline_econnrefused"
+      }
     ],
     "data_completeness": 0.15,
     "notes": "INSUFFICIENT DATA — Site refused connection. Commercial/access-control specialty (not pure garage-door). Needs TX SOS lookup and phone outreach. SITE OFFLINE could itself be a distress signal."
@@ -1336,7 +1460,11 @@
       "verified_via": "live-fetch of https://pearlandgaragedoors.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://pearlandgaragedoors.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "phone,address,copyright_2017,limited_hours,dated_design"}
+      {
+        "url": "https://pearlandgaragedoors.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "phone,address,copyright_2017,limited_hours,dated_design"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Pearland residential operator. Copyright 2017 = 9-yr-stale website. Limited M-F daytime hours = lifestyle business signal. STRONG coaster signature, but owner identity + tenure still unknown. MODERATE-STRONG candidate pending owner verification."
@@ -1385,7 +1513,11 @@
       "verified_via": "live-fetch of https://garagedoorrepairsrosharon.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://garagedoorrepairsrosharon.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "since_2001,phone,address,copyright_2013,milestone_seo_template"}
+      {
+        "url": "https://garagedoorrepairsrosharon.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "since_2001,phone,address,copyright_2013,milestone_seo_template"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "STRONG COASTER — Rosharon small-town 25-yr operator, 13-year-stale website built by third-party SEO agency, generic URL, low $29 service fee. Owner identity unknown but profile screams coaster. STRONG INCLUDE — needs phone outreach + TX SOS for owner identity."
@@ -1428,8 +1560,16 @@
       "verified_via": "live-fetch of https://accentgaragellc.com 2026-05-16 (301 redirect to anytimegaragedoor.com)"
     },
     "data_sources": [
-      {"url": "https://accentgaragellc.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "301_redirect_to_anytime_rollup"},
-      {"url": "https://www.anytimegaragedoor.com/about-us", "fetched_at": "2026-05-16T22:00:00Z", "field": "rollup_brands_list"}
+      {
+        "url": "https://accentgaragellc.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "301_redirect_to_anytime_rollup"
+      },
+      {
+        "url": "https://www.anytimegaragedoor.com/about-us",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "rollup_brands_list"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "EXCLUDE — Accent Garage Doors has been acquired by Anytime Garage Door (same rollup as Apple Garage Door idx 40). Spine independence_verified flag is INCORRECT. Spine should be updated."
@@ -1472,8 +1612,16 @@
       "verified_via": "spine directory source 2026-05-16 (site itself returned 403)"
     },
     "data_sources": [
-      {"url": "https://woodlandsgaragedoor.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "site_returned_403_cloudflare"},
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "owners_Justin_Robin_Hodges"}
+      {
+        "url": "https://woodlandsgaragedoor.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "site_returned_403_cloudflare"
+      },
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands",
+        "fetched_at": "2026-05-16",
+        "field": "owners_Justin_Robin_Hodges"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Husband-wife operation (Justin + Robin Hodges) per spine directory. Cloudflare blocking live fetch. STRONG candidate concept — owner-couple in The Woodlands area — but needs phone outreach or LinkedIn for owner age and tenure. Verified independent."
@@ -1516,7 +1664,11 @@
       "verified_via": "live-fetch attempts of https://perrydoors.com 2026-05-16 (ECONNREFUSED on both apex and www)"
     },
     "data_sources": [
-      {"url": "https://perrydoors.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "site_offline_econnrefused"}
+      {
+        "url": "https://perrydoors.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "site_offline_econnrefused"
+      }
     ],
     "data_completeness": 0.15,
     "notes": "INSUFFICIENT DATA + SITE OFFLINE — Perry family-name brand in Spring/N-Houston but site cannot be reached. SITE OFFLINE could be a distress signal (server expired) OR a coaster who doesn't notice their site is down. Needs phone outreach + TX SOS lookup."
@@ -1562,7 +1714,11 @@
       "verified_via": "live-fetch of https://discountgaragedoorandopener.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://discountgaragedoorandopener.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "phone,founded_2001,veteran_owned,gmail,wordpress"}
+      {
+        "url": "https://discountgaragedoorandopener.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "phone,founded_2001,veteran_owned,gmail,wordpress"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "VETERAN-OWNED 25-yr Conroe operator. Discount-pricing positioning + Gmail + veteran cohort = STRONG coaster candidate. Owner likely 55-75. STRONG INCLUDE — needs SOS lookup for owner identity."
@@ -1611,8 +1767,16 @@
       "verified_via": "live-fetch of https://beelineoverheaddoor.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://beelineoverheaddoor.com", "fetched_at": "2026-05-16T22:00:00Z", "field": "phone,copyright_2017,40_yr_combined"},
-      {"url": "https://www.thebluebook.com/iProView/1496504/", "fetched_at": "2026-05-16", "field": "blue_book_2017"}
+      {
+        "url": "https://beelineoverheaddoor.com",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "phone,copyright_2017,40_yr_combined"
+      },
+      {
+        "url": "https://www.thebluebook.com/iProView/1496504/",
+        "fetched_at": "2026-05-16",
+        "field": "blue_book_2017"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Spring/Woodlands LLC, 9-year-stale website, 40+ yrs combined founder experience. Implies older founder cohort (likely 55-70). STRONG INCLUDE — long tenure proxy + stale digital footprint + LLC entity for SOS lookup."

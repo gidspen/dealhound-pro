@@ -17,14 +17,38 @@
         "BBB profiles, Yelp listings, LinkedIn for ownership and founding-year confirmation"
       ],
       "exclusion_log": [
-        {"name": "DuraServ LLC (Coppell, TX)", "reason": "Acquired June 2024 by Leonard Green & Partners (PE). Largest commercial OH door consolidator in US. PE-backed — excluded per acquisition criteria."},
-        {"name": "Cedar Park Overhead Doors (Cedar Park, TX)", "reason": "Acquired June 2024 by Gridiron Capital's GarageCo Holdings platform. PE-backed — excluded."},
-        {"name": "Overhead Door Company of Houston", "reason": "Owned by DH Pace Company (Olathe, KS) — large multi-state consolidator. Excluded from independent target list."},
-        {"name": "Aaron Overhead Doors (Houston)", "reason": "On exclude-list per skill brief — AmeriPro / Aaron Overhead Door brand."},
-        {"name": "Precision Door Service locations", "reason": "Authority Brands franchise (Apax PE)."},
-        {"name": "A1 Garage Service / A1 Garage Service Plus locations", "reason": "Berkshire Partners — most aggressive consolidator."},
-        {"name": "365 Overhead Garage Door / 365 Garage Door Repair", "reason": "Multi-state operator (TX, GA, FL, others); flagged as potential rollup — excluded for cautious independence."},
-        {"name": "Pros On Call (Austin)", "reason": "Pros On Call is a national multi-trade brand operating in many states (locksmith + garage door franchise-like) — excluded."}
+        {
+          "name": "DuraServ LLC (Coppell, TX)",
+          "reason": "Acquired June 2024 by Leonard Green & Partners (PE). Largest commercial OH door consolidator in US. PE-backed — excluded per acquisition criteria."
+        },
+        {
+          "name": "Cedar Park Overhead Doors (Cedar Park, TX)",
+          "reason": "Acquired June 2024 by Gridiron Capital's GarageCo Holdings platform. PE-backed — excluded."
+        },
+        {
+          "name": "Overhead Door Company of Houston",
+          "reason": "Owned by DH Pace Company (Olathe, KS) — large multi-state consolidator. Excluded from independent target list."
+        },
+        {
+          "name": "Aaron Overhead Doors (Houston)",
+          "reason": "On exclude-list per skill brief — AmeriPro / Aaron Overhead Door brand."
+        },
+        {
+          "name": "Precision Door Service locations",
+          "reason": "Authority Brands franchise (Apax PE)."
+        },
+        {
+          "name": "A1 Garage Service / A1 Garage Service Plus locations",
+          "reason": "Berkshire Partners — most aggressive consolidator."
+        },
+        {
+          "name": "365 Overhead Garage Door / 365 Garage Door Repair",
+          "reason": "Multi-state operator (TX, GA, FL, others); flagged as potential rollup — excluded for cautious independence."
+        },
+        {
+          "name": "Pros On Call (Austin)",
+          "reason": "Pros On Call is a national multi-trade brand operating in many states (locksmith + garage door franchise-like) — excluded."
+        }
       ],
       "caveats": [
         "Truck counts are ESTIMATES based on reported team size, BBB / LinkedIn employee counts, and 'service trucks' references on websites. Not direct fleet counts.",
@@ -54,9 +78,21 @@
     "website": "https://hollywoodcrawford.com",
     "phone": "(210) 494-3434",
     "data_sources": [
-      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_residential_#7"},
-      {"url": "https://hollywoodcrawford.com/about-us/", "fetched_at": "2026-05-16", "field": "ownership,address,founded"},
-      {"url": "https://communityimpact.com/sponsored/sponsored/2022/10/31/family-owned-hollywood-crawford-door-co-reflects-on-75-years-of-business/", "fetched_at": "2026-05-16", "field": "75_year_anniversary,family_ownership"}
+      {
+        "url": "https://doors.org/resources/ida-top-100-door-dealers/",
+        "fetched_at": "2026-05-16",
+        "field": "ida_top_100_residential_#7"
+      },
+      {
+        "url": "https://hollywoodcrawford.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "field": "ownership,address,founded"
+      },
+      {
+        "url": "https://communityimpact.com/sponsored/sponsored/2022/10/31/family-owned-hollywood-crawford-door-co-reflects-on-75-years-of-business/",
+        "fetched_at": "2026-05-16",
+        "field": "75_year_anniversary,family_ownership"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1947 by Harry & Merle Crosland. Bought by Doyle Benton (longtime installer) in 1979. Now 3-generation family business — son-in-law Randy Oliver has run it since ~1981. IDEA-accredited dealer. No PE / franchise affiliation. STRONG INCLUDE — long tenure, multi-generation, IDA Top 100."
@@ -76,8 +112,16 @@
     "website": "https://planooverhead.com",
     "phone": "(972) 422-1695",
     "data_sources": [
-      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#36,top_50_residential_#16"},
-      {"url": "https://planooverhead.com", "fetched_at": "2026-05-16", "field": "address,phone,founded,family_owned"}
+      {
+        "url": "https://doors.org/resources/ida-top-100-door-dealers/",
+        "fetched_at": "2026-05-16",
+        "field": "ida_top_100_revenue_#36,top_50_residential_#16"
+      },
+      {
+        "url": "https://planooverhead.com",
+        "fetched_at": "2026-05-16",
+        "field": "address,phone,founded,family_owned"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned and operated since 1977 — started in owner's home. 'All employees full-time & in-house.' No franchise or PE affiliation. STRONG INCLUDE — IDA Top 100, 48-year tenure, family operation."
@@ -97,9 +141,21 @@
     "website": "https://www.actiongaragedoor.com",
     "phone": "(972) 423-9907",
     "data_sources": [
-      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#86"},
-      {"url": "https://www.actiongaragedoor.com/about-us/", "fetched_at": "2026-05-16", "field": "founded,family_owned,multi_market"},
-      {"url": "https://www.bbb.org/us/tx/plano/profile/garage-doors/action-garage-door-repair-specialists-0875-8001510", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+      {
+        "url": "https://doors.org/resources/ida-top-100-door-dealers/",
+        "fetched_at": "2026-05-16",
+        "field": "ida_top_100_revenue_#86"
+      },
+      {
+        "url": "https://www.actiongaragedoor.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "field": "founded,family_owned,multi_market"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/plano/profile/garage-doors/action-garage-door-repair-specialists-0875-8001510",
+        "fetched_at": "2026-05-16",
+        "field": "bbb_profile"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned since 1984 — same location 40 years, 400K+ customers. Operates DFW, Houston, Austin, Sherman-Denison. Larger regional independent — flagged as 'family-owned multi-market,' not solo-owner. NO PE / franchise affiliation evident."
@@ -119,8 +175,16 @@
     "website": "https://www.killeenoverheaddoors.com",
     "phone": "(254) 526-3858",
     "data_sources": [
-      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#95"},
-      {"url": "https://www.killeenoverheaddoors.com/", "fetched_at": "2026-05-16", "field": "founded,family"}
+      {
+        "url": "https://doors.org/resources/ida-top-100-door-dealers/",
+        "fetched_at": "2026-05-16",
+        "field": "ida_top_100_revenue_#95"
+      },
+      {
+        "url": "https://www.killeenoverheaddoors.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1991 by Jim & Rochelle Luster (24-year Army veteran). 2nd-gen with sons Dennis and Brett. IDA Top 100 #95. Named Top 100 dealer by 1997. STRONG INCLUDE — multi-generational, Central TX market (off main metros)."
@@ -140,8 +204,16 @@
     "website": "https://www.lga-garagedoor.com",
     "phone": "(832) 479-3003",
     "data_sources": [
-      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#56,top_50_residential_#35"},
-      {"url": "https://www.lga-garagedoor.com/", "fetched_at": "2026-05-16", "field": "address,ida_member"}
+      {
+        "url": "https://doors.org/resources/ida-top-100-door-dealers/",
+        "fetched_at": "2026-05-16",
+        "field": "ida_top_100_revenue_#56,top_50_residential_#35"
+      },
+      {
+        "url": "https://www.lga-garagedoor.com/",
+        "fetched_at": "2026-05-16",
+        "field": "address,ida_member"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "IDA Member, BBB A+, Clopay / LiftMaster Master Dealer. Locally operated, no franchise / parent. Second location in Pflugerville (Austin area). Founded year not on site — needs SOS check."
@@ -161,8 +233,16 @@
     "website": "https://alamodoorsystems.com",
     "phone": "(210) 657-1150",
     "data_sources": [
-      {"url": "https://doors.org/ida-scholarship/donors/", "fetched_at": "2026-05-16", "field": "ida_scholarship_donor"},
-      {"url": "https://alamodoorsystems.com", "fetched_at": "2026-05-16", "field": "founded_1976,address,phone"}
+      {
+        "url": "https://doors.org/ida-scholarship/donors/",
+        "fetched_at": "2026-05-16",
+        "field": "ida_scholarship_donor"
+      },
+      {
+        "url": "https://alamodoorsystems.com",
+        "fetched_at": "2026-05-16",
+        "field": "founded_1976,address,phone"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "50 years operating San Antonio. 'Local Company, National Reputation.' IDA scholarship donor. No franchise or PE language. STRONG INCLUDE — long-tenure independent."
@@ -182,8 +262,16 @@
     "website": "https://www.abcdoors.com",
     "phone": "(713) 723-1500",
     "data_sources": [
-      {"url": "https://www.abcdoors.com/", "fetched_at": "2026-05-16", "field": "founded,family,no_subs"},
-      {"url": "https://www.yelp.com/biz/abc-doors-houston", "fetched_at": "2026-05-16", "field": "address"}
+      {
+        "url": "https://www.abcdoors.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded,family,no_subs"
+      },
+      {
+        "url": "https://www.yelp.com/biz/abc-doors-houston",
+        "fetched_at": "2026-05-16",
+        "field": "address"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned 50+ years (since 1971). Serves Houston + Austin. No subcontractors policy. STRONG INCLUDE — long tenure family business."
@@ -203,8 +291,16 @@
     "website": "https://spectrumoverheaddoor.com",
     "phone": "(281) 748-9542",
     "data_sources": [
-      {"url": "https://spectrumoverheaddoor.com/about/", "fetched_at": "2026-05-16", "field": "founder_Travis_Sweitzer,founded_2006,team_size"},
-      {"url": "https://www.bbb.org/us/tx/houston/profile/garage-doors/spectrum-overhead-door-llc-0915-90025054", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+      {
+        "url": "https://spectrumoverheaddoor.com/about/",
+        "fetched_at": "2026-05-16",
+        "field": "founder_Travis_Sweitzer,founded_2006,team_size"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/houston/profile/garage-doors/spectrum-overhead-door-llc-0915-90025054",
+        "fetched_at": "2026-05-16",
+        "field": "bbb_profile"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded by Travis Sweitzer in 2006, 6 employees + 4+ technicians. Second location in Channelview. Sole proprietor / family-run. INCLUDE — solo-owner archetype, 20-year tenure approaching."
@@ -224,7 +320,11 @@
     "website": "https://garagedoordoctor.biz",
     "phone": "(281) 638-9332",
     "data_sources": [
-      {"url": "https://garagedoordoctor.biz", "fetched_at": "2026-05-16", "field": "founded_1987,family,no_subs"}
+      {
+        "url": "https://garagedoordoctor.biz",
+        "fetched_at": "2026-05-16",
+        "field": "founded_1987,family,no_subs"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-run since 1987. 'Staff are either employees or family.' 10K+ 5-star reviews. STRONG INCLUDE — long-tenure family residential service."
@@ -244,8 +344,16 @@
     "website": "https://hendersongaragedoor.com",
     "phone": "(281) 422-1099",
     "data_sources": [
-      {"url": "https://hendersongaragedoor.com/", "fetched_at": "2026-05-16", "field": "founder_John_Henderson,founded_1989"},
-      {"url": "https://cca.baytownchamber.com/NewsArticle.aspx?dbid2=TXBTWN&newsid=193463", "fetched_at": "2026-05-16", "field": "chamber_news_history"}
+      {
+        "url": "https://hendersongaragedoor.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founder_John_Henderson,founded_1989"
+      },
+      {
+        "url": "https://cca.baytownchamber.com/NewsArticle.aspx?dbid2=TXBTWN&newsid=193463",
+        "fetched_at": "2026-05-16",
+        "field": "chamber_news_history"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1989 by John Henderson. 6 service trucks, 6-acre property with warehouse. 30+ yrs industry experience. STRONG INCLUDE — long-tenure family business, Houston east-side."
@@ -265,8 +373,16 @@
     "website": "https://www.txohd.com",
     "phone": "(817) 295-4848",
     "data_sources": [
-      {"url": "https://www.txohd.com/about/", "fetched_at": "2026-05-16", "field": "founded_1986,family_owned"},
-      {"url": "https://www.txohd.com/locations/", "fetched_at": "2026-05-16", "field": "burleson_cleburne_woodlands"}
+      {
+        "url": "https://www.txohd.com/about/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_1986,family_owned"
+      },
+      {
+        "url": "https://www.txohd.com/locations/",
+        "fetched_at": "2026-05-16",
+        "field": "burleson_cleburne_woodlands"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned since 1986. Two locations: Burleson + Cleburne. Houston / Woodlands location at 'The Woodlands, TX 77354.' Multi-market within TX/LA/OK commercial. STRONG INCLUDE — large family-owned regional."
@@ -286,8 +402,16 @@
     "website": "https://familychristiandoors.com",
     "phone": "(817) 282-5677",
     "data_sources": [
-      {"url": "https://familychristiandoors.com/about-us/", "fetched_at": "2026-05-16", "field": "founder_Brandon_Bailey,founded_2003"},
-      {"url": "https://www.bbb.org/us/tx/haltom-city/profile/garage-doors/family-christian-doors-llc-0825-133500594", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+      {
+        "url": "https://familychristiandoors.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "field": "founder_Brandon_Bailey,founded_2003"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/haltom-city/profile/garage-doors/family-christian-doors-llc-0825-133500594",
+        "fetched_at": "2026-05-16",
+        "field": "bbb_profile"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 2003 by Brandon Bailey (DFW). Faith-based, family-run. Multiple DFW locations. INCLUDE — 22-yr tenure, owner-operator."
@@ -307,8 +431,16 @@
     "website": "https://aaronsgaragedoor.com",
     "phone": "(210) 690-7555",
     "data_sources": [
-      {"url": "https://aaronsgaragedoor.com/", "fetched_at": "2026-05-16", "field": "family_owned,founded"},
-      {"url": "https://www.bbb.org/us/tx/san-antonio/profile/garage-door-repair/aarons-garage-door-0825-90116993", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+      {
+        "url": "https://aaronsgaragedoor.com/",
+        "fetched_at": "2026-05-16",
+        "field": "family_owned,founded"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/san-antonio/profile/garage-door-repair/aarons-garage-door-0825-90116993",
+        "fetched_at": "2026-05-16",
+        "field": "bbb_profile"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Locally family-owned San Antonio shop since 1997. NOT a franchise — distinct from 'Aaron Overhead Doors' (Houston excluded). 28-year tenure. STRONG INCLUDE."
@@ -328,8 +460,16 @@
     "website": "https://mojogaragedoors.com",
     "phone": "(210) 997-7777",
     "data_sources": [
-      {"url": "https://mojogaragedoors.com/", "fetched_at": "2026-05-16", "field": "owner_Moses_Mizrahi,20_years"},
-      {"url": "https://www.bbb.org/us/tx/san-antonio/profile/garage-doors/mojo-garage-door-service-0825-1000131566", "fetched_at": "2026-05-16", "field": "bbb_2016_accredited"}
+      {
+        "url": "https://mojogaragedoors.com/",
+        "fetched_at": "2026-05-16",
+        "field": "owner_Moses_Mizrahi,20_years"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/san-antonio/profile/garage-doors/mojo-garage-door-service-0825-1000131566",
+        "fetched_at": "2026-05-16",
+        "field": "bbb_2016_accredited"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Owner: Moses Mizrahi. ~20 years in business San Antonio. Family-owned, locally operated, 1000+ 5-star local reviews. INCLUDE — solo-owner archetype."
@@ -349,7 +489,11 @@
     "website": "https://helotesoverheaddoors.com",
     "phone": "(210) 695-9085",
     "data_sources": [
-      {"url": "https://helotesoverheaddoors.com/about-us/", "fetched_at": "2026-05-16", "field": "founder_Tracy_Dever,founded_1985,son_Nathan"}
+      {
+        "url": "https://helotesoverheaddoors.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "field": "founder_Tracy_Dever,founded_1985,son_Nathan"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Multi-generational family-owned since 1985. Founded by Tracy Dever; son Nathan Dever now runs it. 40-year tenure. STRONG INCLUDE — owner transition already underway."
@@ -369,8 +513,16 @@
     "website": "https://amrgaragedoors.com",
     "phone": "(281) 928-1837",
     "data_sources": [
-      {"url": "https://amrgaragedoors.com/", "fetched_at": "2026-05-16", "field": "family_owned,founded"},
-      {"url": "https://www.bbb.org/us/tx/houston/profile/garage-doors/amr-garage-doors-gates-0915-90074140", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+      {
+        "url": "https://amrgaragedoors.com/",
+        "fetched_at": "2026-05-16",
+        "field": "family_owned,founded"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/houston/profile/garage-doors/amr-garage-doors-gates-0915-90074140",
+        "fetched_at": "2026-05-16",
+        "field": "bbb_profile"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned Houston, founded ~2015–2018 (slight discrepancy across sources). 25+ years combined tech experience. INCLUDE but borderline on tenure (under 15 yrs)."
@@ -390,8 +542,16 @@
     "website": "https://www.cornerstoneoverheaddoor.com",
     "phone": "(713) 690-3667",
     "data_sources": [
-      {"url": "https://www.cornerstoneoverheaddoor.com/", "fetched_at": "2026-05-16", "field": "family_operated,custom_doors"},
-      {"url": "https://www.bbb.org/us/tx/houston/profile/garage-door-repair/cornerstone-overhead-doors-llc-0915-90061743", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+      {
+        "url": "https://www.cornerstoneoverheaddoor.com/",
+        "fetched_at": "2026-05-16",
+        "field": "family_operated,custom_doors"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/houston/profile/garage-door-repair/cornerstone-overhead-doors-llc-0915-90061743",
+        "fetched_at": "2026-05-16",
+        "field": "bbb_profile"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Owner Iris Espinoza, established 2007. Local manufacturing of custom garage doors (cedar / wood / glass / steel). Custom-builder homes in The Woodlands, River Oaks, Memorial. STRONG INCLUDE — specialty / high-margin."
@@ -411,8 +571,16 @@
     "website": "https://hutchinsgaragedoors.com",
     "phone": "(512) 388-4400",
     "data_sources": [
-      {"url": "https://hutchinsgaragedoors.com", "fetched_at": "2026-05-16", "field": "founded_1997,Grenier_family_2011"},
-      {"url": "https://www.bbb.org/us/tx/austin/profile/garage-door-repair/hutchins-garage-doors-0825-46944", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+      {
+        "url": "https://hutchinsgaragedoors.com",
+        "fetched_at": "2026-05-16",
+        "field": "founded_1997,Grenier_family_2011"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/austin/profile/garage-door-repair/hutchins-garage-doors-0825-46944",
+        "fetched_at": "2026-05-16",
+        "field": "bbb_profile"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1997 by 'Hutch.' Grenier family (Don & Dan) bought 2011. CAUTION: site references 'sister company Cedar Park Overhead Doors' — Cedar Park was acquired by GarageCo (Gridiron Capital) in June 2024. Independence post-2024 needs re-verification via TX SOS — may have been rolled into GarageCo platform."
@@ -432,8 +600,16 @@
     "website": "https://hannahsgaragedoors.com",
     "phone": "(512) 944-0124",
     "data_sources": [
-      {"url": "https://hannahsgaragedoors.com", "fetched_at": "2026-05-16", "field": "owner_Quinton_Hannah,founded_2001"},
-      {"url": "https://www.bbb.org/us/tx/austin/profile/garage-door-repair/hannahs-garage-doors-0825-1000166711", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+      {
+        "url": "https://hannahsgaragedoors.com",
+        "fetched_at": "2026-05-16",
+        "field": "owner_Quinton_Hannah,founded_2001"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/austin/profile/garage-door-repair/hannahs-garage-doors-0825-1000166711",
+        "fetched_at": "2026-05-16",
+        "field": "bbb_profile"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Owner Quinton Hannah — veteran-owned, started doing doors in 1997, business founded 2001. Small veteran crew. STRONG INCLUDE — 24-year tenure, solo-owner."
@@ -453,7 +629,11 @@
     "website": "https://armstrongdoorsaustin.com",
     "phone": "(512) 903-8544",
     "data_sources": [
-      {"url": "https://armstrongdoorsaustin.com", "fetched_at": "2026-05-16", "field": "founded_2010,locally_owned"}
+      {
+        "url": "https://armstrongdoorsaustin.com",
+        "fetched_at": "2026-05-16",
+        "field": "founded_2010,locally_owned"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Locally owned, started Oak Hill, founded 2010. 15-year tenure. INCLUDE — borderline tenure but clear solo-owner independent."
@@ -473,7 +653,11 @@
     "website": "https://aactionoverhead.com",
     "phone": "(512) 335-7441",
     "data_sources": [
-      {"url": "https://aactionoverhead.com/about-us/", "fetched_at": "2026-05-16", "field": "austin_round_rock_independent"}
+      {
+        "url": "https://aactionoverhead.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "field": "austin_round_rock_independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Austin / Round Rock area independent. Long-running per BBB and directory listings. Need TX SOS / founding-year verification. NOT same as Action Garage Door (Plano)."
@@ -493,7 +677,11 @@
     "website": "https://fratexgarage.com",
     "phone": "(512) 661-7370",
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,family_owned"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family_owned"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned Round Rock per directory. Needs SOS / founding-year verification."
@@ -513,7 +701,11 @@
     "website": "https://ridgelinegaragedoor.com",
     "phone": "(512) 333-0149",
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Pflugerville independent. Needs SOS verification."
@@ -533,7 +725,11 @@
     "website": "https://rsoverheaddoor.com",
     "phone": "(512) 246-3993",
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Pflugerville / Austin independent."
@@ -553,7 +749,11 @@
     "website": "https://www.tovargaragedoors.com",
     "phone": "(817) 583-3299",
     "data_sources": [
-      {"url": "https://www.tovargaragedoors.com/garage-door-installation-company/", "fetched_at": "2026-05-16", "field": "founders_Pedro_Alfonso_Tovar,founded_2001"}
+      {
+        "url": "https://www.tovargaragedoors.com/garage-door-installation-company/",
+        "fetched_at": "2026-05-16",
+        "field": "founders_Pedro_Alfonso_Tovar,founded_2001"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned by brothers Pedro and Alfonso Tovar since 2001. Serves DFW + Fort Worth. Note: also has Fort Worth presence at 76112. STRONG INCLUDE — 24-year sibling partnership."
@@ -573,7 +773,11 @@
     "website": "https://alphaomegadoors.com",
     "phone": "(817) 595-1551",
     "data_sources": [
-      {"url": "http://alphaomegadoors.com/about/", "fetched_at": "2026-05-16", "field": "founder_Mike_Porter,founded_2001"}
+      {
+        "url": "http://alphaomegadoors.com/about/",
+        "fetched_at": "2026-05-16",
+        "field": "founder_Mike_Porter,founded_2001"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned since 2001 by Mike Porter. Faith-based, custom cedar doors specialty. STRONG INCLUDE — 24-yr tenure."
@@ -593,7 +797,11 @@
     "website": "https://mikesoverhead.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "DFW-area independent."
@@ -613,7 +821,11 @@
     "website": "https://arnoldsgaragedoorservice.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Fort Worth family-owned per directory."
@@ -633,7 +845,11 @@
     "website": "https://johnnybsgaragedoorsfortworth.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Fort Worth family-owned per directory."
@@ -653,7 +869,11 @@
     "website": "https://kellertx-garagedoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_listing,30_years"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,30_years"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Keller-area independent, 30 yrs experience."
@@ -673,7 +893,11 @@
     "website": "https://alamodoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_listing,family,25_years"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family,25_years"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Arlington family-owned, 25 yrs in service. NOTE: distinct from 'Alamo Door Systems' (San Antonio) — different entities. Verify TX SOS."
@@ -693,7 +917,11 @@
     "website": "https://thegoodguysdoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Dallas family-operated."
@@ -713,7 +941,11 @@
     "website": "https://hollywoodohd.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Dallas independent. NOTE: similar-name to Hollywood-Crawford (San Antonio) but DIFFERENT entity. Verify TX SOS."
@@ -733,7 +965,11 @@
     "website": "https://metrogaragedoor.net",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,family_run_20_years"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family_run_20_years"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Locally owned, family-run ~20 yrs. Dallas + Plano locations."
@@ -753,7 +989,11 @@
     "website": "https://nationoverheaddoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas", "fetched_at": "2026-05-16", "field": "directory_listing,family_owned"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family_owned"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Dallas family-owned."
@@ -773,7 +1013,11 @@
     "website": "https://apgaragedoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "North-DFW independent."
@@ -793,7 +1037,11 @@
     "website": "https://awardgaragedoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,family_30_years"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family_30_years"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned 30+ years Richardson. STRONG INCLUDE — long tenure."
@@ -813,7 +1061,11 @@
     "website": "https://matthewshomesupply.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,family_business_1983"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family_business_1983"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family business since 1983 — 42 years. STRONG INCLUDE."
@@ -833,7 +1085,11 @@
     "website": "https://www.texasgaragedoorandopener.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.texasgaragedoorandopener.com/about/", "fetched_at": "2026-05-16", "field": "founded_2000,family_owned"}
+      {
+        "url": "https://www.texasgaragedoorandopener.com/about/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_2000,family_owned"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned since 2000. Serves DFW + Houston. STRONG INCLUDE — 25-year tenure."
@@ -853,7 +1109,11 @@
     "website": "https://121overheaddoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,since_1999"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,since_1999"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Allen / North DFW independent, since 1999. 26-year tenure."
@@ -873,7 +1133,11 @@
     "website": "https://applegaragedoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,since_2001"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,since_2001"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Allen-based independent since 2001."
@@ -893,7 +1157,11 @@
     "website": "https://www.mckinneydoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "McKinney family-owned independent."
@@ -913,7 +1181,11 @@
     "website": "https://www.blakeandsonsgaragedoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Prosper / North DFW family business (Blake + sons — family-name = strong independence signal)."
@@ -933,7 +1205,11 @@
     "website": "https://www.twobrothersgds.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Denton-county sibling-owned independent (name signal)."
@@ -953,7 +1229,11 @@
     "website": "https://trurolloverheaddoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Pilot Point / exurban DFW independent."
@@ -973,7 +1253,11 @@
     "website": "https://garagedoorrepairslittleelm.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Little Elm family-owned."
@@ -993,7 +1277,11 @@
     "website": "https://prostargaragedoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Frisco family-owned."
@@ -1013,7 +1301,11 @@
     "website": "https://supremegaragedoortx.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,10_years"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,10_years"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Carrollton independent, 10+ yrs."
@@ -1033,7 +1325,11 @@
     "website": "https://qualitygaragedoorandgates.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,since_2014"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,since_2014"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Carrollton, established 2014. Borderline tenure."
@@ -1053,7 +1349,11 @@
     "website": "https://garagedoorsrockwall.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,boutique"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,boutique"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Wylie / Rockwall boutique independent."
@@ -1073,7 +1373,11 @@
     "website": "https://cabrerasirondoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Plano family-owned, iron-door specialty."
@@ -1093,7 +1397,11 @@
     "website": "https://champion-garage-door-service.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Inner-Houston independent."
@@ -1113,7 +1421,11 @@
     "website": "https://sggaragedoors.net",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,veteran_family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,veteran_family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Houston veteran + family-owned."
@@ -1133,7 +1445,11 @@
     "website": "https://neighborhoodgaragedoorhouston.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Garden Oaks Houston independent."
@@ -1153,7 +1469,11 @@
     "website": "https://allkindsofdoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Northwest Houston (Hempstead Rd) family-owned."
@@ -1173,7 +1493,11 @@
     "website": "https://heightsgaragedoorrepairhouston.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Heights neighborhood Houston independent."
@@ -1193,7 +1517,11 @@
     "website": "https://garagedoorfamily.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://garagedoorfamily.com/", "fetched_at": "2026-05-16", "field": "family_owned,independent"}
+      {
+        "url": "https://garagedoorfamily.com/",
+        "fetched_at": "2026-05-16",
+        "field": "family_owned,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Houston / Katy family-owned independent."
@@ -1213,7 +1541,11 @@
     "website": null,
     "phone": "(281) 954-2678",
     "data_sources": [
-      {"url": "https://www.bestpickreports.com/garage-doors/houston", "fetched_at": "2026-05-16", "field": "directory_listing,46_year_history"}
+      {
+        "url": "https://www.bestpickreports.com/garage-doors/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,46_year_history"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Houston, 46-yr service history per Best Pick Reports. CAUTION: a 'ProLift Garage Doors of Houston' brand exists as a franchise of ProLift Doors (multi-market). Verify TX SOS — may be franchise. Flagged."
@@ -1233,7 +1565,11 @@
     "website": null,
     "phone": "(281) 954-0583",
     "data_sources": [
-      {"url": "https://www.bestpickreports.com/garage-doors/houston", "fetched_at": "2026-05-16", "field": "directory_listing,family_owned"}
+      {
+        "url": "https://www.bestpickreports.com/garage-doors/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family_owned"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Houston family-owned per Best Pick Reports."
@@ -1253,7 +1589,11 @@
     "website": "https://crowndoor.net",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "NW Houston family-owned."
@@ -1273,7 +1613,11 @@
     "website": "https://firstcallgaragedoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Sugar Land family-owned."
@@ -1293,7 +1637,11 @@
     "website": "https://alliancegaragedoorstx.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Richmond / Fort Bend independent."
@@ -1313,7 +1661,11 @@
     "website": "https://totalaccesscontroltx.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land", "fetched_at": "2026-05-16", "field": "directory_listing,locally_operated"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,locally_operated"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Stafford / Fort Bend, commercial / access-control focus. Locally operated."
@@ -1333,7 +1685,11 @@
     "website": "https://pearlandgaragedoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/pearland", "fetched_at": "2026-05-16", "field": "directory_listing,locally_owned"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/pearland",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,locally_owned"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Pearland locally-owned independent."
@@ -1353,7 +1709,11 @@
     "website": "https://garagedoorrepairsrosharon.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/pearland", "fetched_at": "2026-05-16", "field": "directory_listing,since_2001"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/pearland",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,since_2001"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Brazoria / South Houston suburb, since 2001. 24-yr tenure."
@@ -1373,7 +1733,11 @@
     "website": "https://accentgaragellc.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/pearland", "fetched_at": "2026-05-16", "field": "directory_listing,since_2005"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/pearland",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,since_2005"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Manvel / Pearland-area independent since 2005. 20-yr tenure."
@@ -1393,7 +1757,11 @@
     "website": "https://woodlandsgaragedoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,family_Justin_Robin_Hodges"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family_Justin_Robin_Hodges"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned by Justin and Robin Hodges. The Woodlands / Conroe area."
@@ -1413,7 +1781,11 @@
     "website": "https://perrydoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,locally_owned"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,locally_owned"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Spring (north Houston) locally-owned."
@@ -1433,7 +1805,11 @@
     "website": "https://discountgaragedoorandopener.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,veteran_owned"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,veteran_owned"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Conroe veteran-owned and operated."
@@ -1453,8 +1829,16 @@
     "website": "https://beelineoverheaddoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://beelineoverheaddoor.com/", "fetched_at": "2026-05-16", "field": "family_owned,40_years_combined_exp"},
-      {"url": "https://www.thebluebook.com/iProView/1496504/", "fetched_at": "2026-05-16", "field": "blue_book_2017"}
+      {
+        "url": "https://beelineoverheaddoor.com/",
+        "fetched_at": "2026-05-16",
+        "field": "family_owned,40_years_combined_exp"
+      },
+      {
+        "url": "https://www.thebluebook.com/iProView/1496504/",
+        "fetched_at": "2026-05-16",
+        "field": "blue_book_2017"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Locally-owned family business, The Woodlands / Spring. 40+ yrs combined exp."
@@ -1474,7 +1858,11 @@
     "website": "https://ohdconroe.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": false,
     "independence_notes": "FLAG: 'Overhead Door' brand prefix often denotes Overhead Door Corporation Red Ribbon Distributor (independent franchise-style relationship). Conroe location not confirmed as DH Pace owned vs independent — needs SOS verification before outreach."
@@ -1494,7 +1882,11 @@
     "website": "https://cypressgarageandgates.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/cypress", "fetched_at": "2026-05-16", "field": "directory_listing,30_years"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/cypress",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,30_years"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Cypress (NW Harris) independent, 30+ yrs experience."
@@ -1514,7 +1906,11 @@
     "website": "https://alpinegaragedoorstx.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/cypress", "fetched_at": "2026-05-16", "field": "directory_listing,10_years"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/cypress",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,10_years"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Cypress independent, 10+ yrs."
@@ -1534,7 +1930,11 @@
     "website": "https://katygaragedoordoctor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land", "fetched_at": "2026-05-16", "field": "directory_listing,locally_owned"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,locally_owned"
+      }
     ],
     "independence_verified": false,
     "independence_notes": "POSSIBLE DUPLICATE / RELATION to Garage Door Doctor (Houston, garagedoordoctor.biz). Same brand / different web domain. Verify ownership before treating as distinct target."
@@ -1554,7 +1954,11 @@
     "website": "https://garagedoorguyshouston.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "West Houston independent."
@@ -1574,7 +1978,11 @@
     "website": "https://houstondiscountdoorrepair.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Spring Branch / NW Houston independent."
@@ -1594,7 +2002,11 @@
     "website": "https://ohanagaragedoorrepair.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Katy / NW Houston family-owned ('Ohana' = Hawaiian for family — strong family-name signal)."
@@ -1614,7 +2026,11 @@
     "website": "https://germangaragedoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "West Houston independent."
@@ -1634,7 +2050,11 @@
     "website": "https://acjhoustongaragedoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "West Houston independent (initials suggest founder family-name)."
@@ -1654,7 +2074,11 @@
     "website": "https://rbgaragedoorshouston.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "SW Houston independent."
@@ -1674,7 +2098,11 @@
     "website": "https://psgaragedoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Central / Third Ward Houston independent."
@@ -1694,7 +2122,11 @@
     "website": "https://tacgaragedoorservicetx.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "North Houston independent."
@@ -1714,7 +2146,11 @@
     "website": "https://fixngotx.net",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Operates BOTH Houston AND Austin (10011 Stonelake Blvd) per directory — multi-market. Verify whether single owner or franchise. Flagged."
@@ -1734,7 +2170,11 @@
     "website": "https://aaronsgaragedoor.com",
     "phone": "(210) 690-7555",
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Second / showroom address for Aaron's Garage Door Service (same company as Jackwood Dr) — see related record for ownership detail. Single record for the business; duplicated here for completeness of addresses found."
@@ -1754,7 +2194,11 @@
     "website": "https://sanantoniogaragedoorspecialist.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "San Antonio family-owned independent."
@@ -1774,7 +2218,11 @@
     "website": "https://asapgaragedoorstx.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "San Antonio independent."
@@ -1794,7 +2242,11 @@
     "website": "https://sagarageguru.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "San Antonio family-owned."
@@ -1814,7 +2266,11 @@
     "website": "https://jerrygaragedoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "San Antonio family-operated (Jerry — owner first-name signal)."
@@ -1834,7 +2290,11 @@
     "website": "https://perrysgaragedoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Universal City (NE San Antonio) family-owned."
@@ -1854,7 +2314,11 @@
     "website": "https://premiumoverheaddoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,since_2000"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,since_2000"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "San Antonio established 2000. 25-year tenure."
@@ -1874,7 +2338,11 @@
     "website": "https://drl-garagedoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,20_years"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,20_years"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "NE San Antonio independent, 20+ yrs."
@@ -1894,7 +2362,11 @@
     "website": "https://austinsgaragedoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "East Austin independent."
@@ -1914,7 +2386,11 @@
     "website": "https://austingaragedoormechanics.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "North Austin independent."
@@ -1934,7 +2410,11 @@
     "website": "https://garagedooron.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,family"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "South Austin family-owned."
@@ -1954,7 +2434,11 @@
     "website": "https://garagedoor-austin.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "NW Austin independent."
@@ -1974,7 +2458,11 @@
     "website": "https://austinoverheaddoorcompany.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": false,
     "independence_notes": "FLAG: 'Overhead Door' brand prefix may indicate Red Ribbon Distributor relationship. Verify TX SOS / independence."
@@ -1994,7 +2482,11 @@
     "website": "https://matamorosdoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Kyle / South Austin family-name independent."
@@ -2014,7 +2506,11 @@
     "website": "https://austinsgaragedoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Pflugerville / North Austin independent."
@@ -2034,7 +2530,11 @@
     "website": "https://theupandupdoors.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "West Austin independent."
@@ -2054,7 +2554,11 @@
     "website": "https://vipgaragedoorservices.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Round Rock independent."
@@ -2074,7 +2578,11 @@
     "website": "https://customdoorcenter.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Georgetown (N Austin) independent custom-door shop."
@@ -2094,7 +2602,11 @@
     "website": "https://garagedoorsrepairtomball.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Tomball (NW Houston exurb) independent."
@@ -2114,7 +2626,11 @@
     "website": "https://lakewoodlandsgaragedoor.com",
     "phone": null,
     "data_sources": [
-      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+      {
+        "url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands",
+        "fetched_at": "2026-05-16",
+        "field": "directory_listing,independent"
+      }
     ],
     "independence_verified": true,
     "independence_notes": "The Woodlands independent."

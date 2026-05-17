@@ -50,7 +50,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.shostcpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["portal", "service_mix", "email_for_owner"]}
+      {
+        "url": "https://www.shostcpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["portal", "service_mix", "email_for_owner"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Solo-named Allen, TX firm. Templated CPASiteSolutions website. Owner identity opaque (only mike@ email). Year founded, owner age, license year all unverified. C-tier without further data."
@@ -81,7 +85,11 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 1,
-    "partners": ["Alex Tong, CPA (founder/principal)", "Mike Littlejohn (associate, possibly EA)", "Carol Wu (logo presence, role unclear)"],
+    "partners": [
+      "Alex Tong, CPA (founder/principal)",
+      "Mike Littlejohn (associate, possibly EA)",
+      "Carol Wu (logo presence, role unclear)"
+    ],
     "staff_count_estimate": 3,
     "service_mix": "full_service",
     "audit_attest_offered": false,
@@ -106,7 +114,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.cpataxinfo.com/about.php", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["partners", "portal", "service_mix"]}
+      {
+        "url": "https://www.cpataxinfo.com/about.php",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["partners", "portal", "service_mix"]
+      }
     ],
     "data_completeness": 0.45,
     "notes": "Plano solo-named firm with two associates. Year founded, owner age unverified. B/C-tier."
@@ -161,7 +173,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://pwawco.com/plano-texas-accounting-firm/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["service_mix", "russell_bedford_affiliation", "stale_copyright_2024"]}
+      {
+        "url": "https://pwawco.com/plano-texas-accounting-firm/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["service_mix", "russell_bedford_affiliation", "stale_copyright_2024"]
+      }
     ],
     "data_completeness": 0.35,
     "notes": "Russell Bedford International alliance member (independent, not owned). Multi-partner firm with opaque ownership disclosure. Outdated copyright (2024) on a marketing-focused site is a yellow flag. Fractional CFO + advisory focus. B/C-tier; not solo A-tier."
@@ -217,7 +233,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.ppacpa.com/firmprofile.php", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_established", "service_mix", "portal"]}
+      {
+        "url": "https://www.ppacpa.com/firmprofile.php",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_established", "service_mix", "portal"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "54-yr Grapevine firm. Founders Pittman + Powers likely 70+ given firm started 1972. Opaque on team page is a coaster tell. B-tier; A-tier viable on owner-age confirmation."
@@ -274,7 +294,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.milbern-ray.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_established", "service_mix", "15plus_cpas"]}
+      {
+        "url": "https://www.milbern-ray.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_established", "service_mix", "15plus_cpas"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "57-yr Southlake firm. 15+ CPAs => multi-partner mid-size, too large for solo A-tier. Founders' age unverified. B-tier."
@@ -331,8 +355,16 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://mcilvain.net/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["service_mix", "portal", "copyright_2026"]},
-      {"url": "https://communityimpact.com/dallas-fort-worth/grapevine-colleyville-southlake/impacts/2019/12/10/...", "fetched_at": "2026-05-16T16:40:00Z", "fields": ["founder_name", "year_established"]}
+      {
+        "url": "https://mcilvain.net/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["service_mix", "portal", "copyright_2026"]
+      },
+      {
+        "url": "https://communityimpact.com/dallas-fort-worth/grapevine-colleyville-southlake/impacts/2019/12/10/...",
+        "fetched_at": "2026-05-16T16:40:00Z",
+        "fields": ["founder_name", "year_established"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "38-yr solo-named firm founded by Sandy McIlvain. Likely founder age 60+ given 1988 start. STRONG A-tier candidate. Bookkeeping-tax mix (no advisory/audit) suggests classic 'tax compliance shop' coasting profile. Site has spelling typo + empty team page = dated digital presence."
@@ -388,7 +420,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.langecpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["portal", "service_mix", "owner_email_signal"]}
+      {
+        "url": "https://www.langecpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["portal", "service_mix", "owner_email_signal"]
+      }
     ],
     "data_completeness": 0.35,
     "notes": "Fort Worth firm. Field Lange is principal. Templated site, no team bio, year founded unverified. C-tier without more data."
@@ -444,7 +480,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.chrisgreencpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["service_mix", "portal"]}
+      {
+        "url": "https://www.chrisgreencpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["service_mix", "portal"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Fort Worth solo CPA, healthcare + law firm niche. Year founded, owner age unverified. C-tier without further data."
@@ -500,7 +540,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.barg-henson.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["partners", "portal", "aicpa_seal", "service_mix"]}
+      {
+        "url": "https://www.barg-henson.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["partners", "portal", "aicpa_seal", "service_mix"]
+      }
     ],
     "data_completeness": 0.45,
     "notes": "Fort Worth two-name firm. AICPA seal shown. Oil & gas + manufacturing + law firm niche. Founder ages unverified. B-tier."
@@ -557,7 +601,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.mcdougalcpa.com/about.htm", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["license_year_1991", "Texas_AM_alum", "portal", "service_mix"]}
+      {
+        "url": "https://www.mcdougalcpa.com/about.htm",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["license_year_1991", "Texas_AM_alum", "portal", "service_mix"]
+      }
     ],
     "data_completeness": 0.7,
     "notes": "PRIORITY A-tier candidate. Solo CPA, Fort Worth, licensed 1991 (35 yrs tenure). Texas A&M alum + track/XC team => grad year likely 1985-1989 (age 18-22) => born ~1963-67 => age 59-63 in 2026. No successor in firm. Big 4 + senior manager local CPA background => quality book. Strong fit for ETA / search funds."
@@ -588,7 +636,11 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": null,
-    "partners": ["Norman Ervin (founder, 1964)", "Harold Prater (founder, 1964)", "Current generation: Pickens, Snodgrass, Koch (per acronym)"],
+    "partners": [
+      "Norman Ervin (founder, 1964)",
+      "Harold Prater (founder, 1964)",
+      "Current generation: Pickens, Snodgrass, Koch (per acronym)"
+    ],
     "staff_count_estimate": null,
     "service_mix": "full_service",
     "audit_attest_offered": true,
@@ -613,8 +665,16 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.pskcpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_established_1964", "service_mix", "portal"]},
-      {"url": "https://fortworthreport.org/2022/05/19/psk-announces-new-partner/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["recent_partner_promotion"]}
+      {
+        "url": "https://www.pskcpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_established_1964", "service_mix", "portal"]
+      },
+      {
+        "url": "https://fortworthreport.org/2022/05/19/psk-announces-new-partner/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["recent_partner_promotion"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "62-yr Arlington regional firm. Founders Norman Ervin + Harold Prater (1964) long retired/deceased; brand renamed to Pickens Snodgrass Koch (3rd-gen). Active succession (2022 new partner). Not a coasting target — C/D-tier for ETA acquisition."
@@ -645,7 +705,11 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 3,
-    "partners": ["Shelton (named)", "Mead (named)", "Shelton (named — possibly family member of first Shelton)"],
+    "partners": [
+      "Shelton (named)",
+      "Mead (named)",
+      "Shelton (named — possibly family member of first Shelton)"
+    ],
     "staff_count_estimate": null,
     "service_mix": "full_service",
     "audit_attest_offered": false,
@@ -670,7 +734,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.smscpatx.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["partners", "service_mix", "portal"]}
+      {
+        "url": "https://www.smscpatx.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["partners", "service_mix", "portal"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Arlington 3-partner firm with two Sheltons (likely family). Family-owned succession may already be underway, reducing coasting-likely. B/C-tier."
@@ -726,7 +794,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://arlington-cpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["partners_minimal", "portal_present"]}
+      {
+        "url": "https://arlington-cpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["partners_minimal", "portal_present"]
+      }
     ],
     "data_completeness": 0.25,
     "notes": "Solo Al Carroll CPA. Bare-bones website (no address, phone, About content) strongly signals an elderly owner with minimal digital engagement — classic coasting-tell pattern. Year founded, owner age all unverified. Worth deep-dive on TSBPA license lookup."
@@ -782,7 +854,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.wva-cpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["partners", "peer_review_aicpa", "service_mix", "portal"]}
+      {
+        "url": "https://www.wva-cpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["partners", "peer_review_aicpa", "service_mix", "portal"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Mansfield 4-name partnership. Confirmed AICPA peer-reviewed + TSCPA member. Audit + employee benefit plan focus. 'Nearly a century' phrase => 4 partners avg ~25 yrs each => likely 55-70 yr cohort. B-tier with A-tier upside if owner-age verifies."
@@ -839,8 +915,16 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.marshallcpafirm.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["35plus_yrs", "portal", "service_mix"]},
-      {"url": "https://www.facebook.com/PeterMarshallCPA/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["founded_1984"]}
+      {
+        "url": "https://www.marshallcpafirm.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["35plus_yrs", "portal", "service_mix"]
+      },
+      {
+        "url": "https://www.facebook.com/PeterMarshallCPA/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["founded_1984"]
+      }
     ],
     "data_completeness": 0.7,
     "notes": "PRIORITY A-tier candidate. 42-yr solo-founder firm Flower Mound (also Frisco office). Peter Marshall likely 65-70 yr (founded 1984). No named successor. Strong tax + audit + advisory mix in a high-growth DFW suburb. Excellent ETA target."
@@ -894,7 +978,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://kha.cpa/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["service_mix", "portal", "peer_review_link", "two_offices"]}
+      {
+        "url": "https://kha.cpa/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["service_mix", "portal", "peer_review_link", "two_offices"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Frisco + Denton offices. Mortgage banking + oilfield + transportation niche. Modern .cpa TLD + assurance offering suggests growth-mode mid-size, not coasting. C-tier for ETA targets."
@@ -951,7 +1039,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.texastaxpro.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["30plus_yrs", "AICPA_seal", "portal", "service_mix"]}
+      {
+        "url": "https://www.texastaxpro.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["30plus_yrs", "AICPA_seal", "portal", "service_mix"]
+      }
     ],
     "data_completeness": 0.65,
     "notes": "PRIORITY A-tier candidate. 31-yr solo Austin CPA. Real estate professional niche. AICPA member. No successor. Stable Austin location since 1995, niche book. Strong fit for ETA."
@@ -982,7 +1074,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 1,
-    "partners": ["Richard K. Millan, CPA (President)", "Ryan Millan, CPA (joined 2020 — likely son/successor)", "Nathan Daubendiek, CPA (Tax Manager, joined 2017)", "Samantha Grothe (Firm Administrator, 2010)"],
+    "partners": [
+      "Richard K. Millan, CPA (President)",
+      "Ryan Millan, CPA (joined 2020 — likely son/successor)",
+      "Nathan Daubendiek, CPA (Tax Manager, joined 2017)",
+      "Samantha Grothe (Firm Administrator, 2010)"
+    ],
     "staff_count_estimate": 9,
     "service_mix": "full_service",
     "audit_attest_offered": true,
@@ -1007,7 +1104,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://millancpa.com/about-us/meet-our-accountants", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["team_roster", "Ryan_Millan_family_successor", "peer_review"]}
+      {
+        "url": "https://millancpa.com/about-us/meet-our-accountants",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["team_roster", "Ryan_Millan_family_successor", "peer_review"]
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Austin family-owned firm. Richard K. Millan founded 2006 (30+ yrs experience). Son Ryan Millan, CPA joined 2020 = family successor in place. Reduces A-tier likelihood (internal exit). C-tier — likely sells internally, not externally."
@@ -1064,7 +1165,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.austintexasaccountant.com/about-the-firm", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_established", "AICPA_TSCPA_member", "service_mix"]}
+      {
+        "url": "https://www.austintexasaccountant.com/about-the-firm",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_established", "AICPA_TSCPA_member", "service_mix"]
+      }
     ],
     "data_completeness": 0.6,
     "notes": "26-yr Austin solo CPA. Jeffrey S. Austin, prior partner at Austin Berrier Darling. Nationwide client base + AICPA/TSCPA active. B+ tier with A-tier upside if age verifies."
@@ -1119,7 +1224,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.holliscpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["eSig", "modern_portal", "productized_service"]}
+      {
+        "url": "https://www.holliscpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["eSig", "modern_portal", "productized_service"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Austin solo CPA, modern productized service ('Take Two Review'). Cameron Hollis appears younger growth operator (eSign, modern portal). NOT an A-tier coasting target. D-tier for ETA."
@@ -1175,7 +1284,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.cpa-in-austin.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["partners", "service_mix", "no_team_page"]}
+      {
+        "url": "https://www.cpa-in-austin.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["partners", "service_mix", "no_team_page"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Austin solo CPA, niche book. Year founded + owner age unverified. C-tier without further data."
@@ -1206,7 +1319,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": null,
-    "partners": ["Howard Faske (founder, 1984)", "Ben Ryon (founder, 1984)", "Dick Singhaus (founder, 1984)", "Connie Clark, CPA, CSEP, CITP (current partner per LinkedIn)"],
+    "partners": [
+      "Howard Faske (founder, 1984)",
+      "Ben Ryon (founder, 1984)",
+      "Dick Singhaus (founder, 1984)",
+      "Connie Clark, CPA, CSEP, CITP (current partner per LinkedIn)"
+    ],
     "staff_count_estimate": null,
     "service_mix": "full_service",
     "audit_attest_offered": null,
@@ -1232,8 +1350,16 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.faskelay.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["40_yrs", "two_offices", "ABJ_top25", "portal"]},
-      {"url": "https://www.linkedin.com/in/conniebclark/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["Connie_Clark_current_partner"]}
+      {
+        "url": "https://www.faskelay.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["40_yrs", "two_offices", "ABJ_top25", "portal"]
+      },
+      {
+        "url": "https://www.linkedin.com/in/conniebclark/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["Connie_Clark_current_partner"]
+      }
     ],
     "data_completeness": 0.6,
     "notes": "42-yr Austin firm Top 25. Founders Howard Faske + Ben Ryon + Dick Singhaus (1984). 2nd gen led by Connie Clark CPA. Active succession in progress. B-tier benchmark, not coasting target for ETA."
@@ -1264,7 +1390,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 4,
-    "partners": ["Josh Ray, CPA, CITP, MS (founder)", "James Lynch, JD, MBA (Texas bar + USTC)", "George Libby III, CPA, MST (TX+MI licensed)", "Frank Fischer, CPA (20+ yrs banking + TX/CA licensed, Indonesian native)"],
+    "partners": [
+      "Josh Ray, CPA, CITP, MS (founder)",
+      "James Lynch, JD, MBA (Texas bar + USTC)",
+      "George Libby III, CPA, MST (TX+MI licensed)",
+      "Frank Fischer, CPA (20+ yrs banking + TX/CA licensed, Indonesian native)"
+    ],
     "staff_count_estimate": 14,
     "service_mix": "full_service",
     "audit_attest_offered": true,
@@ -1289,7 +1420,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.theroundrockcpa.com/about.php", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_established", "4_partners", "AICPA_TSCPA"]}
+      {
+        "url": "https://www.theroundrockcpa.com/about.php",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_established", "4_partners", "AICPA_TSCPA"]
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Round Rock 23-yr 4-partner firm. Josh Ray founder, likely 50 yr (not coasting target). Multi-state partners + diversified specialties. D-tier for ETA — too young + growing."
@@ -1320,7 +1455,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 4,
-    "partners": ["Pat E. Lange, CPA", "J. Kevin Robison, CPA", "Christopher L. Halvorson, CPA", "J. Raymond Strauch, Jr., CPA (Partner Emeritus)"],
+    "partners": [
+      "Pat E. Lange, CPA",
+      "J. Kevin Robison, CPA",
+      "Christopher L. Halvorson, CPA",
+      "J. Raymond Strauch, Jr., CPA (Partner Emeritus)"
+    ],
     "staff_count_estimate": 24,
     "service_mix": "tax_bookkeeping",
     "audit_attest_offered": false,
@@ -1345,7 +1485,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.lp.cpa/team", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["24_staff", "4_partners", "emeritus", "service_mix"]}
+      {
+        "url": "https://www.lp.cpa/team",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["24_staff", "4_partners", "emeritus", "service_mix"]
+      }
     ],
     "data_completeness": 0.7,
     "notes": "59-yr SA firm. 4 partners + Partner Emeritus Strauch. 24-person staff. Internal succession in motion. B/C-tier; potentially open to external buyer if successor pipeline thins."
@@ -1401,7 +1545,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.adkf.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["largest_locally_owned", "3_offices", "service_mix"]}
+      {
+        "url": "https://www.adkf.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["largest_locally_owned", "3_offices", "service_mix"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "ADKF self-described 'largest locally owned' SA accounting firm. 3 offices (SA + Boerne + New Braunfels). Multi-partner regional => too large for solo A-tier. B-tier benchmark."
@@ -1432,7 +1580,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 3,
-    "partners": ["Joe Rodriguez, CPA, CFP, CFE, CLU (founder)", "Pamela Rodriguez Reiffert, CPA (UTSA Master's; daughter of founder)", "Julia Sutton, CPA", "Robert C. Cole, CPA (additional team)"],
+    "partners": [
+      "Joe Rodriguez, CPA, CFP, CFE, CLU (founder)",
+      "Pamela Rodriguez Reiffert, CPA (UTSA Master's; daughter of founder)",
+      "Julia Sutton, CPA",
+      "Robert C. Cole, CPA (additional team)"
+    ],
     "staff_count_estimate": null,
     "service_mix": "full_service",
     "audit_attest_offered": true,
@@ -1457,8 +1610,16 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.cpasat.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["partners", "service_mix", "portal"]},
-      {"url": "https://www.cpasat.com/pamela-rodriguez-reiffert.php", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["pamela_UTSA_TSCPA_leadership"]}
+      {
+        "url": "https://www.cpasat.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["partners", "service_mix", "portal"]
+      },
+      {
+        "url": "https://www.cpasat.com/pamela-rodriguez-reiffert.php",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["pamela_UTSA_TSCPA_leadership"]
+      }
     ],
     "data_completeness": 0.7,
     "notes": "45-yr SA firm. Joe Rodriguez (founder, CPA/CFP/CFE/CLU) likely ~70+. Daughter Pamela Rodriguez Reiffert (CPA, UTSA, TSCPA leadership) is operating partner — family succession in place. Reduces A-tier likelihood. Dental + medical + construction + law specialty intersects Gideon's existing target verticals."
@@ -1515,7 +1676,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://richardjgarciacpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["service_mix", "sbcglobal_email", "portal"]}
+      {
+        "url": "https://richardjgarciacpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["service_mix", "sbcglobal_email", "portal"]
+      }
     ],
     "data_completeness": 0.45,
     "notes": "SA solo CPA. Estate/elder/succession-planning service mix + sbcglobal.net legacy email = strong coaster tells. Year founded, age unverified. B/A-tier candidate if age confirms — 'legacy ISP' tells common in 60+ owners."
@@ -1546,7 +1711,23 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": null,
-    "partners": ["Courtney Brokaw", "Scott Irvine", "Gosia Konda", "Richard Dyo", "Janet Pittman", "Rich Majeres", "Roberta Cowart", "Alphonso Anderson", "Yelina Dager", "Michael Del Toro", "Teresa Ferruzzo", "Mark Biegler", "Gayle Havel", "Kirby Johnson", "Tim Konzen"],
+    "partners": [
+      "Courtney Brokaw",
+      "Scott Irvine",
+      "Gosia Konda",
+      "Richard Dyo",
+      "Janet Pittman",
+      "Rich Majeres",
+      "Roberta Cowart",
+      "Alphonso Anderson",
+      "Yelina Dager",
+      "Michael Del Toro",
+      "Teresa Ferruzzo",
+      "Mark Biegler",
+      "Gayle Havel",
+      "Kirby Johnson",
+      "Tim Konzen"
+    ],
     "staff_count_estimate": 15,
     "service_mix": "full_service",
     "audit_attest_offered": true,
@@ -1571,7 +1752,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.abipcpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["team_roster", "alternative_practice_structure", "specialty_utility_districts"]}
+      {
+        "url": "https://www.abipcpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["team_roster", "alternative_practice_structure", "specialty_utility_districts"]
+      }
     ],
     "data_completeness": 0.6,
     "notes": "Multi-partner SA regional firm w/ alternative practice structure. Houston + SA + New Braunfels. Texas Utility Districts specialty. NOT A-tier coasting — modern brand + 15+ team. C/D-tier."
@@ -1629,8 +1814,16 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://strattacpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["not_accepting_new_clients", "owner_bio", "service_mix"]},
-      {"url": "https://www.linkedin.com/in/wendi-stratta-66691b39/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["BBA_Abilene_Christian_1990", "CPA_1992"]}
+      {
+        "url": "https://strattacpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["not_accepting_new_clients", "owner_bio", "service_mix"]
+      },
+      {
+        "url": "https://www.linkedin.com/in/wendi-stratta-66691b39/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["BBA_Abilene_Christian_1990", "CPA_1992"]
+      }
     ],
     "data_completeness": 0.85,
     "notes": "TOP-PRIORITY A-TIER CANDIDATE. 36-yr solo CPA Bryan TX. CPA since 1992 (age 58). EXPLICIT website notice 'unable to take new clients May 2026' = active wind-down. No successor, no portal, no e-sig — classic owner-fatigue + book-protection signals. Best fit in batch 2 for ETA / search-fund outreach."
@@ -1661,7 +1854,13 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 5,
-    "partners": ["Brewer (named)", "Eyeington (named)", "Patout (named)", "Glyna Brown (joined via merger)", "Ray Brown (joined via merger)"],
+    "partners": [
+      "Brewer (named)",
+      "Eyeington (named)",
+      "Patout (named)",
+      "Glyna Brown (joined via merger)",
+      "Ray Brown (joined via merger)"
+    ],
     "staff_count_estimate": null,
     "service_mix": "full_service",
     "audit_attest_offered": true,
@@ -1686,7 +1885,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.bepcocpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["partners", "recent_merger", "portal"]}
+      {
+        "url": "https://www.bepcocpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["partners", "recent_merger", "portal"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Bryan/Navasota/Madisonville regional firm. Recent merger expansion => not coasting. D-tier for ETA acquisition."
@@ -1717,7 +1920,16 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 7,
-    "partners": ["James D. Ingram, III (founder, retired 2012)", "Tom Wallis (founding partner)", "James D. Ingram, IV (Texas A&M 1981, prior Arthur Andersen Dallas)", "Rick Webb", "Diana Wagner", "Melissa Suehs", "Teja Templeton Ruiz", "Scott G. Krchnak"],
+    "partners": [
+      "James D. Ingram, III (founder, retired 2012)",
+      "Tom Wallis (founding partner)",
+      "James D. Ingram, IV (Texas A&M 1981, prior Arthur Andersen Dallas)",
+      "Rick Webb",
+      "Diana Wagner",
+      "Melissa Suehs",
+      "Teja Templeton Ruiz",
+      "Scott G. Krchnak"
+    ],
     "staff_count_estimate": null,
     "service_mix": "full_service",
     "audit_attest_offered": true,
@@ -1743,10 +1955,26 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.ingram-wallis.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["156yrs_collective", "founders", "portal"]},
-      {"url": "https://www.ingram-wallis.com/our-founders.html", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["founded_1979"]},
-      {"url": "https://www.ingram-wallis.com/james-ingram-iv.html", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["Texas_AM_1981"]},
-      {"url": "https://www.dignitymemorial.com/obituaries/bryan-tx/james-ingram-7753653", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["founder_obituary"]}
+      {
+        "url": "https://www.ingram-wallis.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["156yrs_collective", "founders", "portal"]
+      },
+      {
+        "url": "https://www.ingram-wallis.com/our-founders.html",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["founded_1979"]
+      },
+      {
+        "url": "https://www.ingram-wallis.com/james-ingram-iv.html",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["Texas_AM_1981"]
+      },
+      {
+        "url": "https://www.dignitymemorial.com/obituaries/bryan-tx/james-ingram-7753653",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["founder_obituary"]
+      }
     ],
     "data_completeness": 0.8,
     "notes": "47-yr Bryan firm. Founder James D. Ingram III retired 2012 (deceased per obituary). Son James D. Ingram IV (Texas A&M 1981, age ~67) leads with Tom Wallis. 7-partner cohort. Father-son family succession ALREADY done, but 2nd-gen is itself near retirement. WATCH-LIST: not a near-term acquisition but worth monitoring as Ingram IV approaches 70."
@@ -1777,7 +2005,16 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 6,
-    "partners": ["Kyle Cox, CPA (licensed 2016)", "Alan Dock, CPA, CMA (shareholder July 2025)", "Logan Kendrick, CPA, ABV (licensed 2014, shareholder 2021, ex-KPMG Dallas)", "Lyn Kuciemba, CPA (licensed 1989, shareholder 2014, Texas A&M cum laude 2000)", "James Larkin, CPA (licensed 2000, shareholder 2014, ex-Arthur Andersen + E&Y)", "A.J. Taylor, CPA (licensed 2011, shareholder 2021, ex-E&Y San Antonio)", "Woody Thompson (retired shareholder 2023, still serving tax clients)", "Dillard Leverkuhn (emeritus)"],
+    "partners": [
+      "Kyle Cox, CPA (licensed 2016)",
+      "Alan Dock, CPA, CMA (shareholder July 2025)",
+      "Logan Kendrick, CPA, ABV (licensed 2014, shareholder 2021, ex-KPMG Dallas)",
+      "Lyn Kuciemba, CPA (licensed 1989, shareholder 2014, Texas A&M cum laude 2000)",
+      "James Larkin, CPA (licensed 2000, shareholder 2014, ex-Arthur Andersen + E&Y)",
+      "A.J. Taylor, CPA (licensed 2011, shareholder 2021, ex-E&Y San Antonio)",
+      "Woody Thompson (retired shareholder 2023, still serving tax clients)",
+      "Dillard Leverkuhn (emeritus)"
+    ],
     "staff_count_estimate": 50,
     "service_mix": "full_service",
     "audit_attest_offered": true,
@@ -1801,7 +2038,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://tdc.cpa/team/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["6_partners", "succession_2023", "AICPA_TSCPA"]}
+      {
+        "url": "https://tdc.cpa/team/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["6_partners", "succession_2023", "AICPA_TSCPA"]
+      }
     ],
     "data_completeness": 0.85,
     "notes": "32-yr College Station firm with 6 active CPA shareholders, ~50 staff. Woody Thompson retired 2023 (still active part-time). Multi-generational succession actively executed. D-tier for ETA — internal succession healthy."
@@ -1857,7 +2098,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.lottvernoncpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["partners", "service_mix", "portal"]}
+      {
+        "url": "https://www.lottvernoncpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["partners", "service_mix", "portal"]
+      }
     ],
     "data_completeness": 0.35,
     "notes": "Killeen 2-name firm. Year founded + age unverified. Service mix tilted to elder/estate = older client base. B-tier candidate, A-tier viable on age verification."
@@ -1888,7 +2133,16 @@
     "is_distressed": false,
     "distress_reasons": ["Lost named founding shareholder Stephen Niemeier 4/9/2025"],
     "partner_count": 6,
-    "partners": ["Mike Brockway (founder, 1976)", "Stephen Niemeier (DIED 4/9/2025 age 67, Baylor accounting grad, shareholder since 1991)", "Cindy Franklin (Tax, Acting President)", "Terri Marshall (Tax)", "Kerri Meier (Tax)", "Heather Clark (Tax)", "Adam Haberer (Audit)", "Daniel Jones (Audit)"],
+    "partners": [
+      "Mike Brockway (founder, 1976)",
+      "Stephen Niemeier (DIED 4/9/2025 age 67, Baylor accounting grad, shareholder since 1991)",
+      "Cindy Franklin (Tax, Acting President)",
+      "Terri Marshall (Tax)",
+      "Kerri Meier (Tax)",
+      "Heather Clark (Tax)",
+      "Adam Haberer (Audit)",
+      "Daniel Jones (Audit)"
+    ],
     "staff_count_estimate": 30,
     "service_mix": "full_service",
     "audit_attest_offered": true,
@@ -1913,8 +2167,21 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://templecpa.com/firm-profile/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_1976", "Niemeier_died_april_2025", "Cindy_Franklin_acting_president", "AICPA_peer_review"]},
-      {"url": "https://www.tdtnews.com/obituaries/article_6e924a9c-b3ae-4f82-a60f-835b2365c550.html", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["age_67", "Baylor_accounting"]}
+      {
+        "url": "https://templecpa.com/firm-profile/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": [
+          "year_1976",
+          "Niemeier_died_april_2025",
+          "Cindy_Franklin_acting_president",
+          "AICPA_peer_review"
+        ]
+      },
+      {
+        "url": "https://www.tdtnews.com/obituaries/article_6e924a9c-b3ae-4f82-a60f-835b2365c550.html",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["age_67", "Baylor_accounting"]
+      }
     ],
     "data_completeness": 0.9,
     "notes": "PRIORITY A-TIER WATCH. 50-yr Temple firm. Named founding-era shareholder Stephen Niemeier (lead audit partner + president, age 67, Baylor grad) died April 9, 2025. Cindy Franklin holding ACTING president title — major succession transition active. 6 remaining partners but split tax/audit; named partner death creates structural pressure. Strong candidate to monitor for distressed-sale signals over next 12-24 months."
@@ -1945,7 +2212,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": null,
-    "partners": ["Frank L. Wilcox (founder, 1923 — Waco's first CPA)", "Pat Pattillo (former Mayor of Waco)", "Rodney Brown", "Walter Hill"],
+    "partners": [
+      "Frank L. Wilcox (founder, 1923 — Waco's first CPA)",
+      "Pat Pattillo (former Mayor of Waco)",
+      "Rodney Brown",
+      "Walter Hill"
+    ],
     "staff_count_estimate": 130,
     "service_mix": "audit_focused",
     "audit_attest_offered": true,
@@ -1969,7 +2241,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.pbhcpa.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_1923", "130plus_pros", "peer_review_2025_letter", "5_offices"]}
+      {
+        "url": "https://www.pbhcpa.com/about-us/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_1923", "130plus_pros", "peer_review_2025_letter", "5_offices"]
+      }
     ],
     "data_completeness": 0.65,
     "notes": "103-yr Waco firm. 5-office multi-state (TX + NM) with 130+ professionals. Government + bank audit specialty. Far too institutional for solo A-tier ETA targets. D-tier — likely sells to top-25 national if ever."
@@ -2000,7 +2276,30 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 22,
-    "partners": ["Robert Cobb, CPA (joined 1980, partner 1987, managing partner 2000-2015)", "Greg Gilbert, CPA (joined 1985, partner 1996; son of founder Orland Gilbert)", "Tim Baugh, CPA (partner 2000)", "Nathan Paden, CPA (partner 2000)", "Randy Robbins, CPA (partner 2001)", "Bill Miller, CPA (partner 2004)", "David Copeland, CPA (partner 2014)", "Trey Rowe, CPA (partner 2014)", "Matt Willis, CPA (partner 2014)", "Clay Adrian, CPA (CPA 1996)", "Kacey Gast, CPA (CPA 2007)", "Adam Bailey, CPA (partner 2018)", "Tyler Canady, CPA (CPA 2013)", "Krista Pauda, CPA (partner 2022)", "Lauren Young, CPA (CPA 2015)", "Kendra Caldwell, CPA (joined 2006)", "Jarrod Bryant, CPA (partner 2023)", "Erin Dipprey, CPA (CPA 2011)", "Jason Miller, CPA (CPA 2016)", "Kristy Frye, CPA (partner 2026 — most recent)", "Bob Beam, CPA (Of Counsel)", "Wade Wilson, CPA (Of Counsel)"],
+    "partners": [
+      "Robert Cobb, CPA (joined 1980, partner 1987, managing partner 2000-2015)",
+      "Greg Gilbert, CPA (joined 1985, partner 1996; son of founder Orland Gilbert)",
+      "Tim Baugh, CPA (partner 2000)",
+      "Nathan Paden, CPA (partner 2000)",
+      "Randy Robbins, CPA (partner 2001)",
+      "Bill Miller, CPA (partner 2004)",
+      "David Copeland, CPA (partner 2014)",
+      "Trey Rowe, CPA (partner 2014)",
+      "Matt Willis, CPA (partner 2014)",
+      "Clay Adrian, CPA (CPA 1996)",
+      "Kacey Gast, CPA (CPA 2007)",
+      "Adam Bailey, CPA (partner 2018)",
+      "Tyler Canady, CPA (CPA 2013)",
+      "Krista Pauda, CPA (partner 2022)",
+      "Lauren Young, CPA (CPA 2015)",
+      "Kendra Caldwell, CPA (joined 2006)",
+      "Jarrod Bryant, CPA (partner 2023)",
+      "Erin Dipprey, CPA (CPA 2011)",
+      "Jason Miller, CPA (CPA 2016)",
+      "Kristy Frye, CPA (partner 2026 — most recent)",
+      "Bob Beam, CPA (Of Counsel)",
+      "Wade Wilson, CPA (Of Counsel)"
+    ],
     "staff_count_estimate": null,
     "service_mix": "audit_focused",
     "audit_attest_offered": true,
@@ -2025,7 +2324,16 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.bsgm.com/our-partners/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["20_active_partners", "2_of_counsel", "succession_ladder", "industry_specializations"]}
+      {
+        "url": "https://www.bsgm.com/our-partners/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": [
+          "20_active_partners",
+          "2_of_counsel",
+          "succession_ladder",
+          "industry_specializations"
+        ]
+      }
     ],
     "data_completeness": 0.85,
     "notes": "20-partner Lubbock firm. Orland Gilbert founder => son Greg Gilbert partner since 1996. Robert Cobb (joined 1980) is most senior. Active partner promotion 2026 (Kristy Frye) = succession well-handled. TOO LARGE for solo A-tier. D-tier for ETA."
@@ -2082,7 +2390,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://bradrsmithcpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_1996", "solo", "active_marketing"]}
+      {
+        "url": "https://bradrsmithcpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_1996", "solo", "active_marketing"]
+      }
     ],
     "data_completeness": 0.65,
     "notes": "30-yr Lubbock solo CPA. Founded 1996, owner age ~58. Active marketing for new clients (counter-coaster signal). No portal, no successor. B-tier candidate; A-tier dampened by 'still hungry for new clients' tone."
@@ -2138,7 +2450,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://wilsonhaag.com/locations/amarillo-cpa/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["since_1975", "AICPA_TXCPA_KSCPA", "portal"]}
+      {
+        "url": "https://wilsonhaag.com/locations/amarillo-cpa/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["since_1975", "AICPA_TXCPA_KSCPA", "portal"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "51-yr Amarillo firm with KS office. AICPA + TX + KS CPA member. Founder identities opaque. B-tier benchmark; A-tier viable on owner-age verification (founders likely 70+)."
@@ -2169,7 +2485,11 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 3,
-    "partners": ["Sam Lovelady (senior partner, 40+ yrs, prior Lovelady Christy + Associates, West Texas A&M alum; estate/tax/succession specialty)", "Terry Pruiett (10+ yrs in public accounting)", "Johnny Terra, CPA (Wayland Baptist alum, 2020 Top 20 Under 40)"],
+    "partners": [
+      "Sam Lovelady (senior partner, 40+ yrs, prior Lovelady Christy + Associates, West Texas A&M alum; estate/tax/succession specialty)",
+      "Terry Pruiett (10+ yrs in public accounting)",
+      "Johnny Terra, CPA (Wayland Baptist alum, 2020 Top 20 Under 40)"
+    ],
     "staff_count_estimate": 20,
     "service_mix": "full_service",
     "audit_attest_offered": null,
@@ -2194,8 +2514,16 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.lpt.cpa/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["3_partners", "20_pros", "service_mix"]},
-      {"url": "https://www.linkedin.com/in/sam-lovelady-b4132318/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["WTAM_alum", "prior_firm_lovelady_christy"]}
+      {
+        "url": "https://www.lpt.cpa/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["3_partners", "20_pros", "service_mix"]
+      },
+      {
+        "url": "https://www.linkedin.com/in/sam-lovelady-b4132318/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["WTAM_alum", "prior_firm_lovelady_christy"]
+      }
     ],
     "data_completeness": 0.75,
     "notes": "PRIORITY A-TIER WATCH. 20-pro Amarillo firm w/ senior partner Sam Lovelady (~65+, 40+ yrs). Prior firm name 'Lovelady, Christy + Associates' suggests recent rebrand; Sam serves Amarillo civic boards extensively (winding-down indicator). Junior partners exist but tenure gap is significant. Strong candidate for ETA over 12-36 months."
@@ -2226,7 +2554,15 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 6,
-    "partners": ["Mary Glenn, CPA (founder, 1978; Midland native; managing partner)", "Floyd Prather, CCP, CPA (BBA UT Austin 1979, CPA 1987; born ~1957, age 69 in 2026; co-founder)", "Connie Rives, CPA (joined 2005)", "Chris Keegan, CPA (Texas A&M 2003, joined 2008, born ~1981)", "Michael Jones, CPA (joined 2011, CPA 2019)", "Marjorie Ozio, CPA (joined 2017, CPA 2015, Louisiana native)", "Jamison Franich, EA (joined 2018, EA 2016)"],
+    "partners": [
+      "Mary Glenn, CPA (founder, 1978; Midland native; managing partner)",
+      "Floyd Prather, CCP, CPA (BBA UT Austin 1979, CPA 1987; born ~1957, age 69 in 2026; co-founder)",
+      "Connie Rives, CPA (joined 2005)",
+      "Chris Keegan, CPA (Texas A&M 2003, joined 2008, born ~1981)",
+      "Michael Jones, CPA (joined 2011, CPA 2019)",
+      "Marjorie Ozio, CPA (joined 2017, CPA 2015, Louisiana native)",
+      "Jamison Franich, EA (joined 2018, EA 2016)"
+    ],
     "staff_count_estimate": 10,
     "service_mix": "full_service",
     "audit_attest_offered": null,
@@ -2253,8 +2589,16 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.gpc-cpa.com/about-us", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_1978", "6_partners", "team_bios", "portal_sharefile"]},
-      {"url": "https://www.linkedin.com/in/mary-glenn-1b581a19", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["managing_partner_title"]}
+      {
+        "url": "https://www.gpc-cpa.com/about-us",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_1978", "6_partners", "team_bios", "portal_sharefile"]
+      },
+      {
+        "url": "https://www.linkedin.com/in/mary-glenn-1b581a19",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["managing_partner_title"]
+      }
     ],
     "data_completeness": 0.85,
     "notes": "PRIORITY A-TIER WATCH. Mary Glenn (founder 1978, ~70 yr, still managing partner, Midland native) + Floyd Prather (~69). Junior generation present but not yet equity-equal. Two-office spread late in career. Modern tech stack but founder still active = 12-36 month succession window. Strong candidate for ETA at right entry point."
@@ -2285,7 +2629,14 @@
     "is_distressed": false,
     "distress_reasons": [],
     "partner_count": 5,
-    "partners": ["Wathen (named)", "DeShong (named)", "Juncker (named)", "Stanley 'Chip' Majors, CPA", "Jane Burns", "Pat O'Neill"],
+    "partners": [
+      "Wathen (named)",
+      "DeShong (named)",
+      "Juncker (named)",
+      "Stanley 'Chip' Majors, CPA",
+      "Jane Burns",
+      "Pat O'Neill"
+    ],
     "staff_count_estimate": null,
     "service_mix": "full_service",
     "audit_attest_offered": true,
@@ -2310,7 +2661,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.wdjcpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_1968", "aprio_alliance", "TSCPA", "top_500_firms"]}
+      {
+        "url": "https://www.wdjcpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_1968", "aprio_alliance", "TSCPA", "top_500_firms"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "58-yr Beaumont firm. Aprio Alliance member (independent), Top 500 Firms. 5-partner cohort with named successors (Stanley Majors, Jane Burns, Pat O'Neill). B-tier benchmark; A-tier viable on founder-age confirmation."
@@ -2365,7 +2720,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://barrett-thomascpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["4_partners", "forensic_valuation_specialty", "scheduling"]}
+      {
+        "url": "https://barrett-thomascpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["4_partners", "forensic_valuation_specialty", "scheduling"]
+      }
     ],
     "data_completeness": 0.45,
     "notes": "Tyler 4-partner firm with forensic + biz valuation niche. Year founded + ages unverified. B/C-tier."
@@ -2420,7 +2779,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://burkettcpafirm.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_2016", "sister_firm_burkett_courington"]}
+      {
+        "url": "https://burkettcpafirm.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_2016", "sister_firm_burkett_courington"]
+      }
     ],
     "data_completeness": 0.45,
     "notes": "10-yr-old Tyler firm. Nick Burkett young growth operator. Sister forensic firm. NOT A-tier coasting. D-tier for ETA."
@@ -2476,7 +2839,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.leeandkimcpas.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["partners", "service_mix", "portal"]}
+      {
+        "url": "https://www.leeandkimcpas.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["partners", "service_mix", "portal"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Corpus Christi 2-name firm. Year founded + ages unverified. Lee firstname missing — opaque ownership. B/C-tier."
@@ -2532,7 +2899,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://marcfair.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_1995", "forensic_specialty", "AICPA_CFF"]}
+      {
+        "url": "https://marcfair.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_1995", "forensic_specialty", "AICPA_CFF"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "31-yr El Paso/Las Cruces firm. David Marcus managing partner. Forensic + fraud niche => non-tax core. B-tier; A-tier viable on age verification."
@@ -2588,7 +2959,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://www.fcnapier.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_2004", "partners", "service_mix"]}
+      {
+        "url": "https://www.fcnapier.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_2004", "partners", "service_mix"]
+      }
     ],
     "data_completeness": 0.45,
     "notes": "22-yr El Paso 2-name firm. Forensic + IRS rep niche. Ages unverified. B/C-tier."
@@ -2644,7 +3019,11 @@
     },
     "tsbpa_disciplinary_history": "unknown",
     "data_sources": [
-      {"url": "https://gsalascpa.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["year_2009", "AICPA_TSCPA_logos", "copyright_stale"]}
+      {
+        "url": "https://gsalascpa.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["year_2009", "AICPA_TSCPA_logos", "copyright_stale"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "17-yr El Paso solo CPA. Mid-career operator. Stale copyright (2020-2021) suggests low digital engagement but not necessarily winding down. C-tier."

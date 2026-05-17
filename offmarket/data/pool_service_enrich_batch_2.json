@@ -66,9 +66,7 @@
         "observed_at": "2026-05-16"
       }
     ],
-    "data_sources_added": [
-      "https://www.yelp.com/biz/rs-blue-pool-services-frisco"
-    ],
+    "data_sources_added": ["https://www.yelp.com/biz/rs-blue-pool-services-frisco"],
     "enrichment_notes": "Likely DQ: too small (solo route) and too modern to be a coasting target."
   },
   {
@@ -327,7 +325,13 @@
         "source": "website",
         "url": "https://bluequalitypools.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["12_plus_years_service", "5500_customers", "service_area_20_cities", "photo_reports", "instant_quote_chat"]
+        "fields": [
+          "12_plus_years_service",
+          "5500_customers",
+          "service_area_20_cities",
+          "photo_reports",
+          "instant_quote_chat"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -438,9 +442,7 @@
         "observed_at": "2026-05-16"
       }
     ],
-    "data_sources_added": [
-      "https://www.linkedin.com/in/david-leach-0a92883"
-    ],
+    "data_sources_added": ["https://www.linkedin.com/in/david-leach-0a92883"],
     "enrichment_notes": "HIGH PRIORITY TARGET — named owner (David Leach), 30+ yrs experience, no modernization, identifiable for outreach."
   },
   {
@@ -463,13 +465,23 @@
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/ben-rushing-016b6312/",
         "fetched_at": "2026-05-16",
-        "fields": ["ben_rushing_owner", "argyle_tx_resident", "unt_alumnus", "prior_xdrenaline_director"]
+        "fields": [
+          "ben_rushing_owner",
+          "argyle_tx_resident",
+          "unt_alumnus",
+          "prior_xdrenaline_director"
+        ]
       },
       {
         "source": "website_about",
         "url": "https://southlakepools.com/about-us/",
         "fetched_at": "2026-05-16",
-        "fields": ["founded_end_of_2007", "wife_amanda", "four_children_high_school_middle_elementary", "sms_optin"]
+        "fields": [
+          "founded_end_of_2007",
+          "wife_amanda",
+          "four_children_high_school_middle_elementary",
+          "sms_optin"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -510,9 +522,7 @@
         "observed_at": "2026-05-16"
       }
     ],
-    "data_sources_added": [
-      "https://www.linkedin.com/in/ben-rushing-016b6312/"
-    ],
+    "data_sources_added": ["https://www.linkedin.com/in/ben-rushing-016b6312/"],
     "enrichment_notes": "DQ: owner ~mid-40s with school-age kids = not retirement window. Reject."
   },
   {
@@ -672,9 +682,7 @@
         "observed_at": "2026-05-16"
       }
     ],
-    "data_sources_added": [
-      "https://www.linkedin.com/in/kimn-nierman-933b3011/"
-    ],
+    "data_sources_added": ["https://www.linkedin.com/in/kimn-nierman-933b3011/"],
     "enrichment_notes": "HIGH PRIORITY TARGET — clearly identified founder, retirement window age, family business with adult children. Quality outreach."
   },
   {
@@ -697,7 +705,12 @@
         "source": "website",
         "url": "https://www.summertimepoolservice.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["20_plus_years_experience", "service_area_north_dfw", "free_estimate_form", "smart_automation_mention"]
+        "fields": [
+          "20_plus_years_experience",
+          "service_area_north_dfw",
+          "free_estimate_form",
+          "smart_automation_mention"
+        ]
       },
       {
         "source": "manta",
@@ -744,9 +757,7 @@
         "observed_at": "2026-05-16"
       }
     ],
-    "data_sources_added": [
-      "https://www.manta.com/c/mhxq547/summertime-pool-service-llc"
-    ],
+    "data_sources_added": ["https://www.manta.com/c/mhxq547/summertime-pool-service-llc"],
     "enrichment_notes": "MARGINAL: short LLC tenure, owner not fully identified. Pass."
   },
   {
@@ -1004,7 +1015,13 @@
         "source": "website",
         "url": "https://www.simplifiedpools.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["2026_copyright", "ai_pool_assistant_24_7", "online_book_quote", "sms_alerts", "veteran_owned_local"]
+        "fields": [
+          "2026_copyright",
+          "ai_pool_assistant_24_7",
+          "online_book_quote",
+          "sms_alerts",
+          "veteran_owned_local"
+        ]
       }
     ],
     "platform_affiliation_check": "independent_too_modern",
@@ -1082,7 +1099,11 @@
         "source": "website",
         "url": "https://poolcarespecialists.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["serving_since_2009", "copyright_2008_2026", "social_facebook_instagram_twitter_tiktok_youtube_pinterest"]
+        "fields": [
+          "serving_since_2009",
+          "copyright_2008_2026",
+          "social_facebook_instagram_twitter_tiktok_youtube_pinterest"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1158,7 +1179,13 @@
         "source": "website",
         "url": "https://www.aaffordablepoolspa.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["over_three_decades", "service_area", "request_a_quote_form", "tdlr_433", "bbb_accredited"]
+        "fields": [
+          "over_three_decades",
+          "service_area",
+          "request_a_quote_form",
+          "tdlr_433",
+          "bbb_accredited"
+        ]
       },
       {
         "source": "buildzoom",
@@ -1239,7 +1266,13 @@
         "source": "website",
         "url": "https://clearchoicepoolcaretx.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["since_2004", "service_area_dfw_30_cities", "2026_copyright", "99_swim_ready_guarantee", "non_commissioned_techs"]
+        "fields": [
+          "since_2004",
+          "service_area_dfw_30_cities",
+          "2026_copyright",
+          "99_swim_ready_guarantee",
+          "non_commissioned_techs"
+        ]
       },
       {
         "source": "cross_timbers_gazette",
@@ -1326,7 +1359,11 @@
         "source": "legacy_obituary",
         "url": "https://www.legacy.com/us/obituaries/sanantonio/name/allan-fuqua-obituary?id=26315181",
         "fetched_at": "2026-05-16",
-        "fields": ["allan_fuqua_co_founder_1983", "betty_fuqua_co_founder", "daughter_terry_fikes_married_ralph"]
+        "fields": [
+          "allan_fuqua_co_founder_1983",
+          "betty_fuqua_co_founder",
+          "daughter_terry_fikes_married_ralph"
+        ]
       },
       {
         "source": "website",
@@ -1464,9 +1501,7 @@
         "observed_at": "2026-05-16"
       }
     ],
-    "data_sources_added": [
-      "https://www.linkedin.com/in/jeff-jakubowski-84b0445/"
-    ],
+    "data_sources_added": ["https://www.linkedin.com/in/jeff-jakubowski-84b0445/"],
     "enrichment_notes": "MEDIUM: identified owner + affluent route, but tenure unknown. Tenure check needed."
   },
   {
@@ -1562,7 +1597,11 @@
         "source": "website",
         "url": "https://budnikpools.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["north_and_central_san_antonio", "2021_copyright_stale", "social_placeholder_links"]
+        "fields": [
+          "north_and_central_san_antonio",
+          "2021_copyright_stale",
+          "social_placeholder_links"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1644,7 +1683,12 @@
         "source": "website",
         "url": "https://coopercustompools.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["over_15_years", "boerne_new_braunfels_2_offices", "2026_copyright", "social_4_platforms"]
+        "fields": [
+          "over_15_years",
+          "boerne_new_braunfels_2_offices",
+          "2026_copyright",
+          "social_4_platforms"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1685,9 +1729,7 @@
         "observed_at": "2026-05-16"
       }
     ],
-    "data_sources_added": [
-      "https://business.boerne.org/list/member/cooper-custom-pools-24487"
-    ],
+    "data_sources_added": ["https://business.boerne.org/list/member/cooper-custom-pools-24487"],
     "enrichment_notes": "DQ: father-son succession already in-house, plus active growth profile."
   },
   {
@@ -1716,7 +1758,11 @@
         "source": "website",
         "url": "https://newbraunfelspoolservice.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["comal_guadalupe_counties_exclusively", "weekly_biweekly_monthly_service_options", "30_years_industry_service"]
+        "fields": [
+          "comal_guadalupe_counties_exclusively",
+          "weekly_biweekly_monthly_service_options",
+          "30_years_industry_service"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1757,9 +1803,7 @@
         "observed_at": "2026-05-16"
       }
     ],
-    "data_sources_added": [
-      "https://newbraunfelspoolservice.com/about"
-    ],
+    "data_sources_added": ["https://newbraunfelspoolservice.com/about"],
     "enrichment_notes": "HIGH PRIORITY TARGET — clearly identified couple-owners, 20+ yr tenure, limited modernization, hill country market."
   },
   {
@@ -1782,7 +1826,12 @@
         "source": "website",
         "url": "https://bluepeakpools.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["service_area_sa_nb_boerne_bulverde_canyon_lake", "schedule_online_quote_online", "digital_reports_email_or_text", "2026_copyright"]
+        "fields": [
+          "service_area_sa_nb_boerne_bulverde_canyon_lake",
+          "schedule_online_quote_online",
+          "digital_reports_email_or_text",
+          "2026_copyright"
+        ]
       }
     ],
     "platform_affiliation_check": "independent_likely_modern",
@@ -1846,7 +1895,12 @@
         "source": "website_about",
         "url": "https://hillcountrypoolsaustin.com/about-us/",
         "fetched_at": "2026-05-16",
-        "fields": ["founded_1972", "lifelong_austin_resident", "two_men_two_trucks_at_founding", "third_generation"]
+        "fields": [
+          "founded_1972",
+          "lifelong_austin_resident",
+          "two_men_two_trucks_at_founding",
+          "third_generation"
+        ]
       },
       {
         "source": "dignity_memorial_obituary",
@@ -1858,7 +1912,10 @@
         "source": "swimming_pool_dealers",
         "url": "https://swimming-pool-dealers.cmac.ws/angly-surrenden-hill/4650/",
         "fetched_at": "2026-05-16",
-        "fields": ["dissolved_law_practice_bought_hill_country_pools", "grandson_forest_hill_james_joined_2015"]
+        "fields": [
+          "dissolved_law_practice_bought_hill_country_pools",
+          "grandson_forest_hill_james_joined_2015"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -1996,7 +2053,13 @@
         "source": "website",
         "url": "https://www.pyramidpoolsatx.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["2023_copyright", "small_independent_family_owned", "owner_handles_service_calls", "5dpoolguy_youtube", "tdlr_1436_rail_contractor"]
+        "fields": [
+          "2023_copyright",
+          "small_independent_family_owned",
+          "owner_handles_service_calls",
+          "5dpoolguy_youtube",
+          "tdlr_1436_rail_contractor"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2069,7 +2132,10 @@
         "source": "linkedin",
         "url": "https://www.linkedin.com/in/rickb1/",
         "fetched_at": "2026-05-16",
-        "fields": ["rick_beaubouef_president", "mostly_self_employed_throughout_adult_career_in_pools"]
+        "fields": [
+          "rick_beaubouef_president",
+          "mostly_self_employed_throughout_adult_career_in_pools"
+        ]
       },
       {
         "source": "zoominfo",
@@ -2081,7 +2147,13 @@
         "source": "website",
         "url": "https://easypools.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["ipssa_member", "apec_member", "cbp_cpo_csp_certified", "2026_copyright", "renovation_wishlist_builder"]
+        "fields": [
+          "ipssa_member",
+          "apec_member",
+          "cbp_cpo_csp_certified",
+          "2026_copyright",
+          "renovation_wishlist_builder"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2157,7 +2229,11 @@
         "source": "website_about",
         "url": "https://www.aruba-pools.com/about-us",
         "fetched_at": "2026-05-16",
-        "fields": ["jason_founded_2011", "two_decades_experience_since_1999", "wife_nikki_joined_2021_full_time"]
+        "fields": [
+          "jason_founded_2011",
+          "two_decades_experience_since_1999",
+          "wife_nikki_joined_2021_full_time"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2221,7 +2297,13 @@
         "source": "website",
         "url": "https://www.thepoolpolice.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["keith_mallette_owner", "cpo_25_plus_years", "family_owned_since_2000", "owner_oversees_every_route", "no_call_center"]
+        "fields": [
+          "keith_mallette_owner",
+          "cpo_25_plus_years",
+          "family_owned_since_2000",
+          "owner_oversees_every_route",
+          "no_call_center"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2580,9 +2662,7 @@
         "observed_at": "2026-05-16"
       }
     ],
-    "data_sources_added": [
-      "https://www.bizapedia.com/tx/mcmaster-pools-llc.html"
-    ],
+    "data_sources_added": ["https://www.bizapedia.com/tx/mcmaster-pools-llc.html"],
     "enrichment_notes": "MEDIUM: identified owner with premium Lake Travis route, but tenure ~10 years."
   },
   {
@@ -2681,7 +2761,13 @@
         "source": "website",
         "url": "https://www.tranquilopools.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["corpus_christi_native", "cpo_certified", "digital_logs_photo_updates", "2025_copyright", "mustang_island_jensen_beach_fl"]
+        "fields": [
+          "corpus_christi_native",
+          "cpo_certified",
+          "digital_logs_photo_updates",
+          "2025_copyright",
+          "mustang_island_jensen_beach_fl"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -2731,9 +2817,7 @@
         "observed_at": "2026-05-16"
       }
     ],
-    "data_sources_added": [
-      "https://www.bizapedia.com/tx/tranquilo-pools-llc.html"
-    ],
+    "data_sources_added": ["https://www.bizapedia.com/tx/tranquilo-pools-llc.html"],
     "enrichment_notes": "MEDIUM-LOW: tenure unknown, multi-state expansion mode."
   },
   {
@@ -2875,9 +2959,7 @@
         "observed_at": "2026-05-16"
       }
     ],
-    "data_sources_added": [
-      "https://www.linkedin.com/in/dane-blacka-376886210"
-    ],
+    "data_sources_added": ["https://www.linkedin.com/in/dane-blacka-376886210"],
     "enrichment_notes": "PASS: multi-metro expansion mode + unknown tenure."
   },
   {
@@ -2969,7 +3051,12 @@
         "source": "website",
         "url": "https://www.mfspaandpool.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["300_plus_pools_built", "gunite_pools_and_spas_specialty", "highland_lakes_horseshoe_bay_kingsland_burnet", "2015_2026_copyright"]
+        "fields": [
+          "300_plus_pools_built",
+          "gunite_pools_and_spas_specialty",
+          "highland_lakes_horseshoe_bay_kingsland_burnet",
+          "2015_2026_copyright"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3039,7 +3126,11 @@
         "source": "website",
         "url": "https://www.lwpools.com/",
         "fetched_at": "2026-05-16",
-        "fields": ["family_owned_burnet", "2026_copyright", "burnet_lampasas_bertram_marble_falls_horseshoe_bay_kingsland_buchanan_dam"]
+        "fields": [
+          "family_owned_burnet",
+          "2026_copyright",
+          "burnet_lampasas_bertram_marble_falls_horseshoe_bay_kingsland_buchanan_dam"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3111,7 +3202,11 @@
         "source": "website_about",
         "url": "https://kencofun.com/about/",
         "fetched_at": "2026-05-16",
-        "fields": ["founded_1976_ken_mattheyer", "noticed_need_for_pool_store_east_tx", "two_locations_nacogdoches_longview"]
+        "fields": [
+          "founded_1976_ken_mattheyer",
+          "noticed_need_for_pool_store_east_tx",
+          "two_locations_nacogdoches_longview"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",
@@ -3183,7 +3278,11 @@
         "source": "website_about",
         "url": "https://www.easttexaspoolservice.com/about-us",
         "fetched_at": "2026-05-16",
-        "fields": ["founded_1969_mack_odom", "sons_ken_and_mark_engineering_background", "57_years_in_business"]
+        "fields": [
+          "founded_1969_mack_odom",
+          "sons_ken_and_mark_engineering_background",
+          "57_years_in_business"
+        ]
       }
     ],
     "platform_affiliation_check": "independent",

@@ -38,7 +38,11 @@
       "verified_via": "live-fetch of /about-us 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.mccoyandharrison.com/about-us", "fetched_at": "2026-05-16T20:00:00Z", "field": "owner_family,year,services"}
+      {
+        "url": "https://www.mccoyandharrison.com/about-us",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "owner_family,year,services"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "Historic Black-owned business since 1925, Houston Third Ward. Founders Homer E. McCoy Sr. (1920s) and Homer E. McCoy Jr. (1950s, 50-yr veteran by 1996). Current principals are 3rd-gen daughters (Helen McCoy Abernathy + Brenda McCoy Lee). 4th gen has 'begun working' but not named — implies family-succession in progress but principals not yet handed off. Strong potential coaster: long-tenure operator, owner age likely 65-75, daughters not necessarily aggressive growth operators. Cremation + preneed offered; no cemetery component."
@@ -83,9 +87,21 @@
       "verified_via": "legacy.com obituary + website team pages + Facebook 2023 post"
     },
     "data_sources": [
-      {"url": "https://www.crowderfuneralhome.com/about/about-us", "fetched_at": "2026-05-16T20:00:00Z", "field": "founders,year"},
-      {"url": "https://www.crowderfuneralhome.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "locations,phones"},
-      {"url": "https://www.legacy.com/us/obituaries/name/ronald-crowder-obituary?id=38461007", "fetched_at": "2026-05-16T20:00:00Z", "field": "succession_event_2022"}
+      {
+        "url": "https://www.crowderfuneralhome.com/about/about-us",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founders,year"
+      },
+      {
+        "url": "https://www.crowderfuneralhome.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "locations,phones"
+      },
+      {
+        "url": "https://www.legacy.com/us/obituaries/name/ronald-crowder-obituary?id=38461007",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "succession_event_2022"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "MAJOR SUCCESSION EVENT — Ron Crowder Sr. (2nd-gen owner/operator, 50+ year FDL) died Dec 2022 at age 74. James Crowder Jr. ('Bim') and John Crowder now operate the 5-location network. 3rd-gen presence (Matthew Crowder) named on site but role unclear. Five locations, family-management dispersion post-2022 death = HIGH probability seller within 12-36 months. Independent, no chain. Family network spans Galveston / Brazoria / Harris counties."
@@ -131,7 +147,11 @@
       "verified_via": "live-fetch /about-us + Google search of Justin Mabrie biography"
     },
     "data_sources": [
-      {"url": "https://www.mabriemortuary.com/about-us", "fetched_at": "2026-05-16T20:00:00Z", "field": "founder,year,staff,services"}
+      {
+        "url": "https://www.mabriemortuary.com/about-us",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founder,year,staff,services"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Founder Dr. Herman J. Mabrie III, M.D. is still an active ENT surgeon AND principal owner — funeral home is secondary venture born from grief over sister Imelda's 1991 death. Founder is ~75. Son Justin Mabrie MBA is FDL in Charge (succession-able). Single location Houston Third Ward / Museum District. Independent Black-owned. Distinctive cultural positioning. Founder age + dual-career (medicine + funeral home) = HIGH likelihood of seeking exit if son commits to running."
@@ -178,9 +198,21 @@
       "verified_via": "Austin Chronicle + KVUE + KXAN obituaries of Lois Villaseñor 2020"
     },
     "data_sources": [
-      {"url": "https://mission.funeraltechweb.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "locations,services"},
-      {"url": "https://www.austinchronicle.com/features/inside-the-eastside-family-funeral-home-running-since-jim-crow-13284255/", "fetched_at": "2026-05-16T20:00:00Z", "field": "ownership,history"},
-      {"url": "https://www.kvue.com/article/news/health/coronavirus/lois-villasenor-dies-coronavirus-mission-funeral-home/269-4cad7a3a-8f09-466b-a378-08aa8985841d", "fetched_at": "2026-05-16T20:00:00Z", "field": "matriarch_death_2020"}
+      {
+        "url": "https://mission.funeraltechweb.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "locations,services"
+      },
+      {
+        "url": "https://www.austinchronicle.com/features/inside-the-eastside-family-funeral-home-running-since-jim-crow-13284255/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "ownership,history"
+      },
+      {
+        "url": "https://www.kvue.com/article/news/health/coronavirus/lois-villasenor-dies-coronavirus-mission-funeral-home/269-4cad7a3a-8f09-466b-a378-08aa8985841d",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "matriarch_death_2020"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "Austin's oldest family-owned funeral home (1959). Hispanic / Mexican-American community niche. Matriarch Lois Villaseñor died COVID 2020 — emotional + operational succession blow. Charles II in his ~65s, no clear 3rd-gen heir named publicly. 4 locations (Heritage Chapel, Serenity Chapel, Los Angeles FH San Marcos, Mission Pet Memorials). STRONG seller candidate within 12-36 months given founder death + 34-year tenure of current operator."
@@ -228,8 +260,16 @@
       "verified_via": "live-fetch /history-and-staff + OGR 2016 award announcement"
     },
     "data_sources": [
-      {"url": "https://www.kreidlerfuneralhome.com/about-us/history-and-staff", "fetched_at": "2026-05-16T20:00:00Z", "field": "generations,staff,year"},
-      {"url": "https://www.ogr.org/index.php?option=com_dailyplanetblog&view=entry&year=2016&month=05&day=09&id=38:john-kreidler-honored-with-association-s-top-award", "fetched_at": "2026-05-16T20:00:00Z", "field": "industry_recognition"}
+      {
+        "url": "https://www.kreidlerfuneralhome.com/about-us/history-and-staff",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "generations,staff,year"
+      },
+      {
+        "url": "https://www.ogr.org/index.php?option=com_dailyplanetblog&view=entry&year=2016&month=05&day=09&id=38:john-kreidler-honored-with-association-s-top-award",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "industry_recognition"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "5-generation Kreidler family. John M. Kreidler is 77 (Air Force vet + Dec 1972 start). 5th-gen son William R. Kreidler has been Vice President since 2002 — orderly succession nearly complete. Independent McAllen institution. RGV market dominance. Likely 'last chance' acquisition before full-family-handoff to William; may consider sale only if price reflects 5-gen legacy."
@@ -275,8 +315,16 @@
       "verified_via": "web search of Lewis Funeral Home succession 2011-2026"
     },
     "data_sources": [
-      {"url": "https://www.lewisfuneralhome.com/about-us", "fetched_at": "2026-05-16T20:00:00Z", "field": "founder_lineage"},
-      {"url": "https://www.legacy.com/funeral-homes/texas/san-antonio/lewis-funeral-home-san-antonio/fh-16550", "fetched_at": "2026-05-16T20:00:00Z", "field": "succession_history"}
+      {
+        "url": "https://www.lewisfuneralhome.com/about-us",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founder_lineage"
+      },
+      {
+        "url": "https://www.legacy.com/funeral-homes/texas/san-antonio/lewis-funeral-home-san-antonio/fh-16550",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "succession_history"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "HIGHEST-PROBABILITY SELLER in early batch. Founder Frank E. Lewis (1909) → stepson Vernon Larremore (1960-1989) → Robert Washington Jr. (1989-2011) → widow Lois C. Washington (2011-current). Lois is operating as widow-president with NO blood successor identified. 117-year-old historic Black-owned San Antonio institution. Very high cultural value; very high desire to keep legacy intact. Independent operator search-fund / ETA buyer is perfect counter-narrative to consolidator pitch."
@@ -323,9 +371,21 @@
       "verified_via": "live-fetch /about-us + LinkedIn Craig Cates profile + Corporation Wiki director listing"
     },
     "data_sources": [
-      {"url": "https://meadowlawn.net/", "fetched_at": "2026-05-16T20:00:00Z", "field": "cemetery,crematory,services"},
-      {"url": "https://www.linkedin.com/in/craig-cates-305a1610/", "fetched_at": "2026-05-16T20:00:00Z", "field": "ownership,tenure"},
-      {"url": "https://www.corporationwiki.com/Texas/San-Antonio/craig-a-cates/30999226.aspx", "fetched_at": "2026-05-16T20:00:00Z", "field": "director_listing"}
+      {
+        "url": "https://meadowlawn.net/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "cemetery,crematory,services"
+      },
+      {
+        "url": "https://www.linkedin.com/in/craig-cates-305a1610/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "ownership,tenure"
+      },
+      {
+        "url": "https://www.corporationwiki.com/Texas/San-Antonio/craig-a-cates/30999226.aspx",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "director_listing"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "VERY STRONG TARGET. 63-year-old funeral home + 154-year-old cemetery property (first burial 1872). Craig Cates is widower-operator since 2020, ~71 years old, 45-year tenure, NO blood family successor. 94-acre cemetery + dual crematory + on-site funeral home = vertical integration with perpetual care trust assets. Wife was the Weller bloodline; her 2020 death removes legacy pressure. Cates is industry-savvy (former TFSC board) — would expect fair valuation but is in classic post-spouse exit window."
@@ -372,8 +432,16 @@
       "verified_via": "live-fetch homepage + Google search of Castillo family"
     },
     "data_sources": [
-      {"url": "https://www.castillofuneralhome.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "tagline,services"},
-      {"url": "https://www.legacy.com/funeral-homes/texas/san-antonio/castillo-funeral-home/fh-8892", "fetched_at": "2026-05-16T20:00:00Z", "field": "year_established_1984"}
+      {
+        "url": "https://www.castillofuneralhome.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "tagline,services"
+      },
+      {
+        "url": "https://www.legacy.com/funeral-homes/texas/san-antonio/castillo-funeral-home/fh-8892",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "year_established_1984"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Information opaque on this one — site doesn't disclose owner names or specific history. Established 1984 per Legacy.com. Mexican-American SA niche. May be related to 'Castillo Mission Funeral Home' (since 1936, older entity). Has on-site crematory. Would require phone outreach or BBB/Comptroller lookup to determine specific principal age and successor status."
@@ -420,9 +488,21 @@
       "verified_via": "missionparks.com /about + sahheron.com + samoversandshakers.com profiles"
     },
     "data_sources": [
-      {"url": "https://www.missionparks.com/about-us/about-mission-park", "fetched_at": "2026-05-16T20:00:00Z", "field": "founder,4th_gen,locations"},
-      {"url": "https://samoversandshakers.com/robert-tips/", "fetched_at": "2026-05-16T20:00:00Z", "field": "ceo_role,family"},
-      {"url": "https://saheron.com/mission-park-mid-rise-apartment-condo/", "fetched_at": "2026-05-16T20:00:00Z", "field": "diversification_real_estate"}
+      {
+        "url": "https://www.missionparks.com/about-us/about-mission-park",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founder,4th_gen,locations"
+      },
+      {
+        "url": "https://samoversandshakers.com/robert-tips/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "ceo_role,family"
+      },
+      {
+        "url": "https://saheron.com/mission-park-mid-rise-apartment-condo/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "diversification_real_estate"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "OUT OF SCALE FOR INDIE ETA BUYER. 14 facilities, vertically integrated, MTM Life Insurance subsidiary, 119 years old, $XX MM revenue likely. Notable signals: owner Dick Tips diversifying into real estate + food delivery (capital reallocation away from funeral). Regulatory controversy 2025 around wife Kristin Tips' TFSC lobbying. 5th-gen Robert Tips Jr. (born ~2012) is far too young to step in. FLAG for PE-roll-up channel, NOT individual ETA buyer."
@@ -469,9 +549,21 @@
       "verified_via": "live-fetch /ourteam.php + hccommunityjournal.com 2024 Grimes expansion article"
     },
     "data_sources": [
-      {"url": "https://grimesfuneralchapels.com/ourteam.php", "fetched_at": "2026-05-16T20:00:00Z", "field": "staff,credentials"},
-      {"url": "https://grimesfuneralchapels.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "year,services"},
-      {"url": "https://www.hccommunityjournal.com/article_4bb78ba2-33b9-11ef-b6fa-1bbddfd608f3.html", "fetched_at": "2026-05-16T20:00:00Z", "field": "expansion,cemetery_acquisition"}
+      {
+        "url": "https://grimesfuneralchapels.com/ourteam.php",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "staff,credentials"
+      },
+      {
+        "url": "https://grimesfuneralchapels.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "year,services"
+      },
+      {
+        "url": "https://www.hccommunityjournal.com/article_4bb78ba2-33b9-11ef-b6fa-1bbddfd608f3.html",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "expansion,cemetery_acquisition"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "LOWER PRIORITY — younger 3rd-gen owner (Johnny Grimes ~52) actively expanding (Garden of Memories cemetery acquisition) + 4th-gen grandson Hunter Grimes already in apprenticeship. This is a buying / growing operator, not a coaster. Skip for ETA buyer outreach unless they want to be acquired by a Grimes consolidation."
@@ -518,8 +610,16 @@
       "verified_via": "live-fetch /about-us/our-staff"
     },
     "data_sources": [
-      {"url": "https://www.affoplano.com/about-us/our-staff", "fetched_at": "2026-05-16T20:00:00Z", "field": "founders,staff,credentials"},
-      {"url": "https://www.affoplano.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "year,services"}
+      {
+        "url": "https://www.affoplano.com/about-us/our-staff",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founders,staff,credentials"
+      },
+      {
+        "url": "https://www.affoplano.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "year,services"
+      }
     ],
     "data_completeness": 0.8,
     "notes": "LOWER PRIORITY for coaster-seller hunt. Rick + Melanie Allen are too young (50s-60s) and son Conner Allen is already 'Director of Strategic Growth' = operator is in GROWTH mode, not exit. They'd more likely be a buyer or roll-up than a seller. Strong vertically-integrated operator (florist, community ambassadors). Note for future passes only if industry shifts."
@@ -566,8 +666,16 @@
       "verified_via": "live-fetch homepage + obituary of Lester McDowell Jan 2021"
     },
     "data_sources": [
-      {"url": "https://www.mcdowellfuneralhome.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "locations,year"},
-      {"url": "https://www.mcdowellfuneralhome.com/obituary/Lester-McDowell", "fetched_at": "2026-05-16T20:00:00Z", "field": "founder_death_2021,daughters_successors"}
+      {
+        "url": "https://www.mcdowellfuneralhome.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "locations,year"
+      },
+      {
+        "url": "https://www.mcdowellfuneralhome.com/obituary/Lester-McDowell",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "founder_death_2021,daughters_successors"
+      }
     ],
     "data_completeness": 0.65,
     "notes": "STRONG TARGET. Founder Lester McDowell died Jan 2021 at age 69. Daughters Andrea + 1 sister inherited; both FDLs but in their 40s-early 50s. 5 years post-death, website not refreshed = either coasting under daughters' leadership OR they're stretched thin running 3 locations across 2 counties. Black-owned Waco/Hillsboro market. WORTH PHONE OUTREACH — they're 5 years past major succession event."
@@ -614,8 +722,16 @@
       "verified_via": "Google search of Marc Fuentes biography + BBB"
     },
     "data_sources": [
-      {"url": "https://www.guardianfhcremation.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "services,founding"},
-      {"url": "https://www.bbb.org/us/tx/corpus-christi-tx/profile/funeral-homes/guardian-funeral-home-cremation-services-0825-1000108799", "fetched_at": "2026-05-16T20:00:00Z", "field": "ownership"}
+      {
+        "url": "https://www.guardianfhcremation.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "services,founding"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/corpus-christi-tx/profile/funeral-homes/guardian-funeral-home-cremation-services-0825-1000108799",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "ownership"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "MODERATE TARGET. Marc Fuentes Sr. is classic owner-operator coaster: veteran, in funeral business since age 13 (50+ year career), age ~67, single location, son already licensed FDL 6 years. Lower-cost cremation-forward positioning = may struggle as Corpus Christi sees increased cremation competition. Father could exit to son for retirement OR sell entire family business at right price. Owner age + tenure + clear son-successor = highly approachable for buyer who'll honor son-as-employee transition."
@@ -662,8 +778,16 @@
       "verified_via": "live-fetch /about-us/our-staff + BBB profile"
     },
     "data_sources": [
-      {"url": "https://www.sawyergeorgefuneralhome.com/about-us/our-staff", "fetched_at": "2026-05-16T20:00:00Z", "field": "staff"},
-      {"url": "https://www.sawyergeorgefuneralhome.com/", "fetched_at": "2026-05-16T20:00:00Z", "field": "year,founders"}
+      {
+        "url": "https://www.sawyergeorgefuneralhome.com/about-us/our-staff",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "staff"
+      },
+      {
+        "url": "https://www.sawyergeorgefuneralhome.com/",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "field": "year,founders"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "STRONG TARGET. Two-couple founder partnership (Sawyer + George) since 1985 — 41 years; founders likely 70-75. Roland + Bettye George absent from current staff page (passive/retired). Non-family operations lead (Angela Cockrill, FDL/Embalmer) is the running operator. Roy George (Funeral Assistant) is sole 2nd-gen family member identified — limited succession depth. CLASSIC PARTNERSHIP-EXIT setup: aging partners, no full bench, non-family operational manager in place who could be retained by buyer. Single location simplifies due diligence."

@@ -47,7 +47,11 @@
       "founded_year": 1960,
       "website": "https://www.bigbend.com",
       "phone": "800-592-4781",
-      "data_sources": ["bigbend.com", "USTelecom Member Spotlight", "Big Bend Sentinel TDS acquisition 2024"],
+      "data_sources": [
+        "bigbend.com",
+        "USTelecom Member Spotlight",
+        "Big Bend Sentinel TDS acquisition 2024"
+      ],
       "independence_verified": true,
       "independence_notes": "Third-generation family-owned independent ILEC. Acquired TDS Telecom's Alpine and Fort Stockton operations in 2024. TTA member. Not affiliated with AT&T/Spectrum/CenturyLink/Frontier."
     },
@@ -579,7 +583,10 @@
       "founded_year": 1953,
       "website": "https://totelcom.net",
       "phone": "254-893-1000",
-      "data_sources": ["totelcom.net", "TTA member directory (listed as Terrell Telephone/Totelcom)"],
+      "data_sources": [
+        "totelcom.net",
+        "TTA member directory (listed as Terrell Telephone/Totelcom)"
+      ],
       "independence_verified": true,
       "independence_notes": "Independent ILEC (formerly Terrell Telephone). TTA member."
     },
@@ -617,7 +624,12 @@
       "founded_year": 1899,
       "website": "https://highline-texas.com",
       "phone": "979-357-4411",
-      "data_sources": ["highline-texas.com", "highlinefast.com", "TTA member directory", "CPF BOOT grant announcement"],
+      "data_sources": [
+        "highline-texas.com",
+        "highlinefast.com",
+        "TTA member directory",
+        "CPF BOOT grant announcement"
+      ],
       "independence_verified": true,
       "independence_notes": "Independent regional fiber provider; heritage ILEC operations 126+ years. Multi-state but TX-focused. Not part of any major carrier roster."
     },
@@ -1327,13 +1339,85 @@
   ],
   "total_records": 68,
   "geographic_coverage": {
-    "panhandle_west_texas": ["XIT", "Big Bend Telephone", "Five Area", "South Plains", "Taylor", "Poka Lambro", "Mid-Plains", "West Texas Rural Telephone", "Cap Rock", "Wes-Tex", "Dell Telephone", "Resound Networks", "AW Broadband", "Plains Internet"],
-    "east_texas": ["Etex", "Eastex", "Peoples", "Cumby", "Blossom", "Lake Livingston", "BTEL/Brazoria", "Texas Cellnet", "East Texas Broadband", "Express WISP", "Freedom WISP"],
-    "hill_country": ["HCTC", "GVTC", "Bandera Electric", "Pedernales Connect", "Bee Creek", "Nexstream", "Zeecon", "Invisalink", "Hill Country Wireless", "Indian Creek", "Maverick", "Texxa"],
-    "south_texas_rgv": ["VTX1/Valley Telephone", "Riviera Telephone", "Sinlar Broadband", "Twin Communications"],
-    "central_texas": ["CTTC", "Colorado Valley", "Totelcom", "Coleman County", "Farm-to-Market", "Western Broadband", "Waco WiFi", "Altitude ISP", "VGI Technology", "GVEC", "CG Communications"],
-    "north_texas": ["Nortex", "Santa Rosa/Syntrio", "Brazos", "United Cooperative Services", "Hilliary", "WiSEisp", "Cirra", "TekWav", "ElektraFi"],
-    "southeast_texas": ["Highline Texas", "Skynet WISP", "Rock Solid Internet", "Southwest Texas Communications"],
+    "panhandle_west_texas": [
+      "XIT",
+      "Big Bend Telephone",
+      "Five Area",
+      "South Plains",
+      "Taylor",
+      "Poka Lambro",
+      "Mid-Plains",
+      "West Texas Rural Telephone",
+      "Cap Rock",
+      "Wes-Tex",
+      "Dell Telephone",
+      "Resound Networks",
+      "AW Broadband",
+      "Plains Internet"
+    ],
+    "east_texas": [
+      "Etex",
+      "Eastex",
+      "Peoples",
+      "Cumby",
+      "Blossom",
+      "Lake Livingston",
+      "BTEL/Brazoria",
+      "Texas Cellnet",
+      "East Texas Broadband",
+      "Express WISP",
+      "Freedom WISP"
+    ],
+    "hill_country": [
+      "HCTC",
+      "GVTC",
+      "Bandera Electric",
+      "Pedernales Connect",
+      "Bee Creek",
+      "Nexstream",
+      "Zeecon",
+      "Invisalink",
+      "Hill Country Wireless",
+      "Indian Creek",
+      "Maverick",
+      "Texxa"
+    ],
+    "south_texas_rgv": [
+      "VTX1/Valley Telephone",
+      "Riviera Telephone",
+      "Sinlar Broadband",
+      "Twin Communications"
+    ],
+    "central_texas": [
+      "CTTC",
+      "Colorado Valley",
+      "Totelcom",
+      "Coleman County",
+      "Farm-to-Market",
+      "Western Broadband",
+      "Waco WiFi",
+      "Altitude ISP",
+      "VGI Technology",
+      "GVEC",
+      "CG Communications"
+    ],
+    "north_texas": [
+      "Nortex",
+      "Santa Rosa/Syntrio",
+      "Brazos",
+      "United Cooperative Services",
+      "Hilliary",
+      "WiSEisp",
+      "Cirra",
+      "TekWav",
+      "ElektraFi"
+    ],
+    "southeast_texas": [
+      "Highline Texas",
+      "Skynet WISP",
+      "Rock Solid Internet",
+      "Southwest Texas Communications"
+    ],
     "permian": ["Reach Broadband"],
     "statewide_or_multi_region": ["Nextlink Internet"]
   },

@@ -16,8 +16,18 @@
     "website": "https://teamtct.com/",
     "phone": "(210) 622-5757",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2203204", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","phone","power_units","mc_number"]},
-      {"source": "website", "url": "https://teamtct.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year","specialty","family_owned"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2203204",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "phone", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://teamtct.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year", "specialty", "family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned South Texas frac sand hauler. Self-describes as 'family-owned business...over 45 years of logistics excellence and 10+ years of experience hauling frac sand.' Fleet sized down from 200+ tractors to 41 between 2024-2025."
@@ -39,7 +49,12 @@
     "website": "https://www.palletizedtrucking.com/",
     "phone": "(713) 225-3303",
     "data_sources": [
-      {"source": "website", "url": "https://www.palletizedtrucking.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","family_owned","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.palletizedtrucking.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned and operated since 1969. Specialized/oversized/overweight hauling, rig moving, oilfield, project cargo. Fleet of 300+ trailers (exceeds power-unit range; flagged for separate verification of trucks vs trailers)."
@@ -61,7 +76,12 @@
     "website": "https://www.bassetrucklinesanantoniotx.com/",
     "phone": "(210) 226-3167",
     "data_sources": [
-      {"source": "website", "url": "https://www.bassetrucklinesanantoniotx.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","family_owned","usdot","mc"]}
+      {
+        "source": "website",
+        "url": "https://www.bassetrucklinesanantoniotx.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "family_owned", "usdot", "mc"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned since 1929. South Texas/border specialist (San Antonio, Del Rio, Laredo, Eagle Pass). Certified Hazmat carrier; bonded. Multi-trade FTL/LTL with hazmat capacity supports independent specialty hauling thesis."
@@ -83,7 +103,12 @@
     "website": "https://www.mclohotshot.com/",
     "phone": "(432) 888-7625",
     "data_sources": [
-      {"source": "website", "url": "https://www.mclohotshot.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","family_owned","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.mclohotshot.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned hot shot trucking serving Permian Basin oilfield, construction, manufacturing. Operating as owner-operator interstate carrier under DOT."
@@ -105,7 +130,12 @@
     "website": "https://hotshottexas.net/",
     "phone": "(281) 227-2777",
     "data_sources": [
-      {"source": "website", "url": "https://hotshottexas.net/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","city","founded_year","family_owned","specialty"]}
+      {
+        "source": "website",
+        "url": "https://hotshottexas.net/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "city", "founded_year", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned since 1974 by Joe Burns. LTL/hot shot, forklift delivery; Houston-area + nationwide. 52+ years of operation aligns with long-tenured solo-owner thesis."
@@ -127,7 +157,12 @@
     "website": "https://www.earthhaulers.com/",
     "phone": "(817) 540-2777",
     "data_sources": [
-      {"source": "website", "url": "https://www.earthhaulers.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","city","founded_year","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.earthhaulers.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "city", "founded_year", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Founded 1977. DFW metroplex topsoil/aggregate/sand hauler. Family-owned status not on website (needs verification); no platform affiliation found."
@@ -149,8 +184,18 @@
     "website": "https://panhandleexpress.com/",
     "phone": "(806) 364-2021",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1592966", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "website", "url": "https://panhandleexpress.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year","specialty"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1592966",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://panhandleexpress.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Panhandle grain/feed/agricultural hauler. Above 50-truck target fleet size band (102 power units). Flag for cross-vertical inclusion only — likely too large for buyer thesis. Independent (no platform affiliation found)."
@@ -172,7 +217,12 @@
     "website": "https://www.plainstransportation.com/about/",
     "phone": "(806) 372-9290",
     "data_sources": [
-      {"source": "website", "url": "https://www.plainstransportation.com/about/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","family_owned","txta_member"]}
+      {
+        "source": "website",
+        "url": "https://www.plainstransportation.com/about/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "family_owned", "txta_member"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1968 (hobby), incorporated 1973 by Dick Gripp. Originally cattle hauler, now refrigerated. Family-owned (Gripp family). TXTA member, Truckload Carriers Assoc, SmartWay."
@@ -194,7 +244,12 @@
     "website": "https://www.reliantfieldservice.com/",
     "phone": "(713) 621-2502",
     "data_sources": [
-      {"source": "website", "url": "https://www.reliantfieldservice.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","fleet_size","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.reliantfieldservice.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "fleet_size", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Crude oil, condensate, fuel, LPG hauler. 42 trucks + 47 trailers; Eagle Ford + Permian operations with Three Rivers and Corpus Christi yards. Family-ownership not stated; flag for verification."
@@ -216,8 +271,18 @@
     "website": "https://hondotx.com/",
     "phone": "(325) 812-1636",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=4111063", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","usdot"]},
-      {"source": "website", "url": "https://hondotx.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year","family_owned","specialty"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=4111063",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "usdot"]
+      },
+      {
+        "source": "website",
+        "url": "https://hondotx.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Permian Basin water transfer specialist. Founded 2023, recently acquired Hyflow Water Solutions (Dec 2025). Self-describes as 'generational water transfer service business that fathers can pass on to sons.' Brayden Woods CEO. NOTE: <3 years tenure—does not yet meet long-tenured acquisition profile."
@@ -239,7 +304,12 @@
     "website": "https://www.bigstartrucking.com/",
     "phone": "(877) 782-7340",
     "data_sources": [
-      {"source": "website", "url": "https://www.bigstartrucking.com/about", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year","fleet_size","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.bigstartrucking.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year", "fleet_size", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Founded 1999 by Link Clifton. Eagle Ford + Permian crude hauling division since 2011. 200+ trucks (EXCLUDED: exceeds 10-50 fleet target). HQ Oklahoma City. Listed only for visibility — DROP from buyer-ready set."
@@ -261,7 +331,12 @@
     "website": "https://timables.floridawebcompany.com/",
     "phone": "(903) 986-2078",
     "data_sources": [
-      {"source": "website", "url": "https://timables.floridawebcompany.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","fleet_size"]}
+      {
+        "source": "website",
+        "url": "https://timables.floridawebcompany.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "fleet_size"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "East Texas frac sand hauler since 1988 — grew from 2 trucks to over 100 trucks (EXCEEDS 50-truck target). Founder Tim Ables still active per name. Service area: TX, LA, OK, AR. Independent (no platform affiliation found). Flag for cross-vertical only — exceeds size band."
@@ -283,7 +358,12 @@
     "website": "https://www.theglovercompany.com/",
     "phone": "(325) 392-2561",
     "data_sources": [
-      {"source": "website", "url": "https://www.theglovercompany.com/winch-trucks-general-trucking", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","city","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.theglovercompany.com/winch-trucks-general-trucking",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "city", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Owner Mike Glover. Winch trucks, floats, dropdecks, equipment trailers for oilfield in Permian Basin + Concho Valley (Ozona, Midland, Odessa, Big Lake, San Angelo). Owner-operated suggests family-style operation."
@@ -305,7 +385,12 @@
     "website": "https://gmtruckingmidland.com/",
     "phone": "(432) 934-6525",
     "data_sources": [
-      {"source": "website", "url": "https://gmtruckingmidland.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","specialty"]}
+      {
+        "source": "website",
+        "url": "https://gmtruckingmidland.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Vacuum trucks, pump/kill trucks, hot oilers serving Permian Basin (Midland, Odessa, Andrews, Big Lake, Pecos). Family-ownership not stated."
@@ -327,7 +412,12 @@
     "website": "https://www.diamondpumptransport.com/",
     "phone": "(432) 203-0264",
     "data_sources": [
-      {"source": "website", "url": "https://www.diamondpumptransport.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.diamondpumptransport.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "'Locally owned and operated' oilfield transportation, Permian Basin focused. Pump trucks, hot oil trucks, acid pumping, water hauling, tank cleaning. Midland and Pecos service areas."
@@ -349,7 +439,12 @@
     "website": "https://www.tikitrucking.com/",
     "phone": "(512) 422-8851",
     "data_sources": [
-      {"source": "website", "url": "https://www.tikitrucking.com/about", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","family_owned","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.tikitrucking.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned 2006. Two divisions: aggregate (sand, gravel, rock, asphalt, scrap, non-haz waste) AND dry bulk/pneumatic (cement, fly ash). 'Passed on from generation to generation.'"
@@ -371,7 +466,12 @@
     "website": "https://redbirdtrucking.com/",
     "phone": "(512) 392-3550",
     "data_sources": [
-      {"source": "website", "url": "https://redbirdtrucking.com/pneumatic-trucking/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","founded_year","specialty"]}
+      {
+        "source": "website",
+        "url": "https://redbirdtrucking.com/pneumatic-trucking/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "founded_year", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Pneumatic dry-bulk specialist hauling cement, fly ash, lime, mineral fill. DBE certified. Late-model Kenworth/Freightliner fleet, in-house maintenance, 24/7 logistics. Family ownership not stated."
@@ -393,7 +493,12 @@
     "website": "https://deekingtrucking.com/",
     "phone": "(806) 670-9537",
     "data_sources": [
-      {"source": "website", "url": "https://deekingtrucking.com/cattle-division/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","city","founded_year","family_owned","specialty"]}
+      {
+        "source": "website",
+        "url": "https://deekingtrucking.com/cattle-division/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "city", "founded_year", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned and operated since 1992 (King family with deep livestock expertise). Cattle hauling from feedyards to Tyson Foods; mixed fleet of company drivers + owner-operators."
@@ -415,7 +520,12 @@
     "website": "https://www.premiertanktrucks.com/",
     "phone": "(713) 524-8550",
     "data_sources": [
-      {"source": "website", "url": "https://www.premiertanktrucks.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","family_owned"]}
+      {
+        "source": "website",
+        "url": "https://www.premiertanktrucks.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned since 2003. Fluid hauling, frac fluid, drilling mud, production water. Yards in Karnes City (Eagle Ford) and Hillsboro (Barnett)."
@@ -437,8 +547,18 @@
     "website": "https://www.luckeyfeedlot.com/",
     "phone": "(830) 665-3624",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1613477", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units"]},
-      {"source": "website", "url": "https://www.luckeyfeedlot.com/cattle-commodity-hauling", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["address","specialty"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1613477",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.luckeyfeedlot.com/cattle-commodity-hauling",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["address", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Associated with Luckey Custom Feedlot Inc (est. 1982). Cattle, feed liquids, bulk grains, cotton seed hulls, DDG. 6 trucks/8 trailers/6 drivers — below 10-50 band; flag as smaller operator."
@@ -460,7 +580,12 @@
     "website": "https://www.jpitrucking.com/",
     "phone": "(832) 740-4901",
     "data_sources": [
-      {"source": "website", "url": "https://www.jpitrucking.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","family_owned","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.jpitrucking.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned hauling/trucking for select fill, sand, crushed concrete, topsoil, aggregates. HUB-certified. 'Over a decade of experience'."
@@ -482,7 +607,12 @@
     "website": "https://www.mipe.com/",
     "phone": "(713) 943-8250",
     "data_sources": [
-      {"source": "website", "url": "https://www.mipe.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","city","founded_year"]}
+      {
+        "source": "website",
+        "url": "https://www.mipe.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "city", "founded_year"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Privately owned, 60+ years (founded 1965). Crude oil hauling + petroleum transport, San Antonio HQ. Long employee tenure noted."
@@ -504,7 +634,12 @@
     "website": "https://indecacrudexpress.com/",
     "phone": "(432) 563-2749",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2978046", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2978046",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Privately owned crude oil hauler, Permian Basin focused. Shell Goal Zero Awards 2017/2019/2020. 98 power units EXCEEDS 50-truck cap — flag for visibility only."
@@ -526,8 +661,18 @@
     "website": "https://www.penncotransport.com/",
     "phone": "(817) 439-2094",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1292521", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "website", "url": "https://www.penncotransport.com/about-pennco-oil-transport", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year","family_owned"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1292521",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.penncotransport.com/about-pennco-oil-transport",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year", "family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned since 2004. Crude oil + condensate hauling across TX. 15 power units; long employee retention emphasis. ISN + Veriforce safety members."
@@ -549,8 +694,18 @@
     "website": "https://texashotoilers.com/",
     "phone": "(979) 542-9341",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1938349", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units"]},
-      {"source": "website", "url": "https://texashotoilers.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year","family_owned"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1938349",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units"]
+      },
+      {
+        "source": "website",
+        "url": "https://texashotoilers.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year", "family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned and operated since 1982. Offices in Giddings, Madisonville, Caldwell, Tilden. 26 Hot Oil Units + frac water heater. Intrastate hazmat carrier."
@@ -572,7 +727,12 @@
     "website": "https://www.wdtmilk.com/",
     "phone": "(254) 918-5100",
     "data_sources": [
-      {"source": "website", "url": "https://www.wdtmilk.com/about", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","founded_year","family_owned"]}
+      {
+        "source": "website",
+        "url": "https://www.wdtmilk.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "founded_year", "family_owned"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Honeycutt family-founded (1967). Corporate HQ Cabool MO; TX terminal Stephenville. Bulk food-grade/milk leader nationwide. Out-of-state HQ — flag as borderline match for TX-domiciled filter."
@@ -594,8 +754,18 @@
     "website": null,
     "phone": "(903) 885-2340",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=109646", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "trade_press", "url": "https://www.bulktransporter.com/archive/article/21649520/texas-milk-transporter-responds-to-shifting-market-production", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["family_owned","founded_year","operations"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=109646",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "trade_press",
+        "url": "https://www.bulktransporter.com/archive/article/21649520/texas-milk-transporter-responds-to-shifting-market-production",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["family_owned", "founded_year", "operations"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned (C.D. Ballard, president). Acquired by Ballard family in 1980s and consolidated; daughters Tammy Ballard Acker (Ballard Drivers Inc) + Terri Monday active. Refrigerated milk transport since 1967. 29 power units in Sulphur Springs entity (broader Ballard Enterprises operates ~70-100 trucks across Hopkins + Erath counties)."
@@ -617,7 +787,12 @@
     "website": "https://hrlcorp.com/",
     "phone": "(713) 928-9940",
     "data_sources": [
-      {"source": "website", "url": "https://hrlcorp.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","family_owned"]}
+      {
+        "source": "website",
+        "url": "https://hrlcorp.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned by Dennis & Julie Carroll, founded 2013. Note: HRL is primarily 3PL/warehousing + cross-dock + refrigerated, so trucking is secondary to storage. Flag for NAICS check (likely 484 + 493)."
@@ -639,8 +814,18 @@
     "website": "https://www.jaharristrucking.com/",
     "phone": "(713) 672-6900",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1257879", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "website", "url": "https://www.jaharristrucking.com/about", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1257879",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.jaharristrucking.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded May 2004 by Jaime A. Harris and Rogelio Gonzalez (Houston Ship Channel area). Flatbeds, single/double drops, stretch trailers, RGNs, vans, gooseneck, container. Specializes in oilfield/heavy equipment + petrochemical. Self-described as family-led with Joe Harris joining in 2005. 15 power units per SAFER (other refs say 30; flag for verification)."
@@ -662,8 +847,18 @@
     "website": "https://dunagintransport.com/",
     "phone": "(325) 928-5253",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2077527", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "website", "url": "https://dunagintransport.com/about/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year","family_owned"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2077527",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://dunagintransport.com/about/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year", "family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned 40+ years. Fluid + waste mgmt for O&G in TX, NM, OK. Big Country + Permian. 120 power units EXCEEDS 50 — flag as too large; include for cross-vertical only."
@@ -685,7 +880,12 @@
     "website": "https://ahrensbrotherstransport.com/",
     "phone": "(979) 836-1660",
     "data_sources": [
-      {"source": "website", "url": "https://ahrensbrotherstransport.com/trucking-services/lpg-transport/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","city","founded_year","fleet_size"]}
+      {
+        "source": "website",
+        "url": "https://ahrensbrotherstransport.com/trucking-services/lpg-transport/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "city", "founded_year", "fleet_size"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1978. 19 power units + 22 LPG tank trailers + 6 asphalt oil trailers. LPG + asphalt transport TX/OK/LA. 'Ahrens Brothers' name implies family-formed though website doesn't state explicitly."
@@ -707,8 +907,18 @@
     "website": "https://hd5transport.com/",
     "phone": "(512) 848-5891",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2175920", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "website", "url": "https://hd5transport.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year","specialty"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2175920",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://hd5transport.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Central TX (Dripping Springs HQ + San Angelo office). NGL/Y-grade/raw mix/propane hauling. 'Family-orientated' culture but ownership structure not stated."
@@ -730,8 +940,18 @@
     "website": "https://pulidotransport.com/",
     "phone": "(832) 243-4658",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1345468", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "website", "url": "https://pulidotransport.com/about-us/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year","founder"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1345468",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://pulidotransport.com/about-us/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year", "founder"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1995 by Joe Pulido (former truck driver). Lubricants, waxes, chemicals across lower 48. Terminals in Houston + Beaumont. Asset-based (owns own equipment)."
@@ -753,8 +973,18 @@
     "website": "https://www.forerunnerag.com/",
     "phone": "(806) 346-2092",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=732476", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "directory", "url": "https://www.livestocknetwork.com/Cattle_Trucking_Companies/companyDetails.cfm?user_company_id=15758", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["specialty"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=732476",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "directory",
+        "url": "https://www.livestocknetwork.com/Cattle_Trucking_Companies/companyDetails.cfm?user_company_id=15758",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "27 power units. Livestock, grain, feed, hay, dry bulk. Nearly two decades in Texas Panhandle. James Barrett associated. No platform affiliation; independent."
@@ -776,7 +1006,12 @@
     "website": null,
     "phone": "(559) 786-0920",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1945776", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1945776",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "19 power units. General freight + milk hauling in Texas Panhandle dairy belt (Castro County). 1.47M annual mileage. Phone number is 559 (CA) area code — flag for ownership verification, may be CA-controlled."
@@ -798,7 +1033,12 @@
     "website": null,
     "phone": "(903) 822-3320",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2166062", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2166062",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "20 power units, 4 employee drivers. East TX (Mt Enterprise). General freight, logs/lumber, oilfield equipment, water well. Family-ownership not yet verified."
@@ -820,7 +1060,12 @@
     "website": null,
     "phone": "(432) 813-2969",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1703893", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1703893",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "49 power units (top of target range). Permian-based oilfield carrier: general freight, metal, machinery, oilfield, utility, construction. Independent (no platform affiliation found)."
@@ -842,8 +1087,18 @@
     "website": "https://wtxfracsandlogistics.com/",
     "phone": "(432) 208-3159",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3115781", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "website", "url": "https://wtxfracsandlogistics.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["specialty"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3115781",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://wtxfracsandlogistics.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "40 power units. Permian frac sand specialist + bottom drop + hot shot. West TX + SE NM. Family/independent status unverified."
@@ -865,8 +1120,18 @@
     "website": "https://bresincorp.energy/",
     "phone": "(915) 242-3957",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3715907", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "website", "url": "https://bresincorp.energy/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["specialty"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3715907",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://bresincorp.energy/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "14 power units. 'Built in Texas and proven in the Permian.' Sand + oilfield hauling. Seminole TX HQ. Family/independent inferred from messaging."
@@ -888,8 +1153,18 @@
     "website": "https://viperss.net/",
     "phone": "(432) 241-0917",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3276691", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "website", "url": "https://viperss.net/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["family_owned","specialty"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3276691",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://viperss.net/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned with 70+ years industry experience. Crane services, heavy haul, dirt + oilfield construction. Midland, Odessa, Pecos, Hobbs (NM)."
@@ -911,8 +1186,18 @@
     "website": null,
     "phone": "(254) 527-3342",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=136632", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units"]},
-      {"source": "directory", "url": "https://www.livestocknetwork.com/Cattle_Trucking_Companies/companyDetails.cfm/user_company_id/13320/CAPITOL-LAND-AND-LIVESTOCK/PAUL-CASEY/SCHWERTNER/TX/254-527-3342/254-534-0498", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=136632",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units"]
+      },
+      {
+        "source": "directory",
+        "url": "https://www.livestocknetwork.com/Cattle_Trucking_Companies/companyDetails.cfm/user_company_id/13320/CAPITOL-LAND-AND-LIVESTOCK/PAUL-CASEY/SCHWERTNER/TX/254-527-3342/254-534-0498",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Cattle hauling since 1946. Schwertner family operation (founded by Bernard Schwertner & sons, originally Austrian immigrants 1877). Multi-generational. 11 power units; runs ~400K head/year through facility. Paul Casey contact."
@@ -934,7 +1219,12 @@
     "website": null,
     "phone": "(806) 578-4262",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2185274", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2185274",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "9 power units, dual oilfield equipment + livestock authority. Intrastate. Family-ownership unverified; deep Hereford ag region."
@@ -956,7 +1246,12 @@
     "website": null,
     "phone": "(254) 559-5404",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=785769", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=785769",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "36 power units, intrastate saltwater/fresh water hauler. West Central TX (Stephens County). Independent (no platform affiliation found). Family-ownership unverified."
@@ -978,7 +1273,12 @@
     "website": "https://wmdewey.com/",
     "phone": "(713) 672-7511",
     "data_sources": [
-      {"source": "website", "url": "https://wmdewey.com/trucking-services/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","fleet_size","family_owned"]}
+      {
+        "source": "website",
+        "url": "https://wmdewey.com/trucking-services/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "fleet_size", "family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Texas' oldest oilfield trucking & hauling company since 1895. Roots: Sour Lake (TX 1st major oil discovery). McDowell family acquired Dewey interests mid-1950s; 2nd + 3rd generation still active. Pipe-hauling leader 125+ years. 40 company tractors + 110 flatbeds + owner-operators."
@@ -1000,7 +1300,12 @@
     "website": "https://www.kimrad.com/",
     "phone": "(866) 359-3882",
     "data_sources": [
-      {"source": "website", "url": "https://www.kimrad.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","family_owned","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.kimrad.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned, founded by Brad and Kimila Pohlmeier October 2003. Regional cargo transport: liquid asphalt, crude oil, anhydrous ammonia, petrochemicals, milk/food-grade, fertilizers, dry bulk. Texas Panhandle hub."
@@ -1022,7 +1327,12 @@
     "website": "https://coledistributing.net/",
     "phone": "(903) 303-5571",
     "data_sources": [
-      {"source": "website", "url": "https://coledistributing.net/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","fleet_size","family_owned"]}
+      {
+        "source": "website",
+        "url": "https://coledistributing.net/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "fleet_size", "family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned bulk fuel delivery (gasoline, diesel, oils, lubricants, DEF) across TX/OK/LA. 25 vehicles. NOTE: Primary line is fuel distribution to retailers — flag for NAICS verification (484220 vs 424720 fuel wholesale)."
@@ -1044,7 +1354,12 @@
     "website": "https://qwtransport.com/",
     "phone": "(214) 432-3582",
     "data_sources": [
-      {"source": "website", "url": "https://qwtransport.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","family_owned","fleet_size"]}
+      {
+        "source": "website",
+        "url": "https://qwtransport.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "family_owned", "fleet_size"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned + operated. '50 truck drivers in the family' delivering petroleum to 1000+ c-stores, big-box retailers, commercial accounts across TX. NOTE: Likely fuel wholesale → flag NAICS."
@@ -1066,7 +1381,12 @@
     "website": "https://www.petroleumexpress.com/",
     "phone": "(713) 223-0231",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1922866", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1922866",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "21 power units, interstate liquids/gases carrier. Houston ship channel area. HAZMAT-certified drivers, on-site fleet maintenance. Family-ownership unverified."
@@ -1088,7 +1408,12 @@
     "website": "https://galaxyfreightservices.com/",
     "phone": "(281) 442-7447",
     "data_sources": [
-      {"source": "website", "url": "https://galaxyfreightservices.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","family_owned"]}
+      {
+        "source": "website",
+        "url": "https://galaxyfreightservices.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned since 1970 (2nd generation). 54+ years experience. Heavy machinery, industrial equipment, hot shot moves, air + ocean freight + trucking."
@@ -1110,7 +1435,12 @@
     "website": "https://www.zamcotrucking.com",
     "phone": "(210) 628-1224",
     "data_sources": [
-      {"source": "website", "url": "https://www.zamcotrucking.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","family_owned","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.zamcotrucking.com",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned since 1980 (founded by Luis C. Zamora). End-dump + dump truck aggregate hauling. DBE/MBE/SBE/HUB for TXDOT jobs. San Antonio metro."
@@ -1132,7 +1462,12 @@
     "website": "https://sisuenergyllc.com/",
     "phone": null,
     "data_sources": [
-      {"source": "website", "url": "https://sisuenergyllc.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","city","specialty"]}
+      {
+        "source": "website",
+        "url": "https://sisuenergyllc.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "city", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "All-pneumatic frac sand hauler, 100% owner-operator model. Fort Worth HQ. Service areas: STX, NTX, WTX, SETX, PA, OH. Independent — family-ownership not stated. NOTE: 100% owner-operator means low asset base → flag for buy-side fit."
@@ -1154,8 +1489,18 @@
     "website": "https://www.riostruckingco.com/",
     "phone": "(979) 589-1099",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1968138", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units"]},
-      {"source": "website", "url": "https://www.riostruckingco.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year","specialty"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1968138",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.riostruckingco.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Founded 1988. 7 power units SAFER (website claims 20+ units incl. dump trucks). HUB/DBE certified. Brazos Valley aggregate/heavy equipment + demolition. Below 10-truck band — flag."
@@ -1177,7 +1522,12 @@
     "website": "https://atitransports.com/",
     "phone": "(281) 452-7070",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=728166", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=728166",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Hot asphalt, hot liquids, crude/fuel oils. 159 power units (EXCEEDS 50 cap; flag for visibility only). Channelview/Houston HQ since 1997. Terminals in TX, OK, AR, TN."
@@ -1199,7 +1549,12 @@
     "website": "https://www.loomistrucking.com/",
     "phone": "(713) 455-6566",
     "data_sources": [
-      {"source": "website", "url": "https://www.loomistrucking.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","founded_year","family_owned"]}
+      {
+        "source": "website",
+        "url": "https://www.loomistrucking.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "founded_year", "family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned by Judy and Terry Loomis since 1993. Hotshot + 1 semi trailer. Very small operation — flag fleet size."
@@ -1221,7 +1576,12 @@
     "website": null,
     "phone": "(830) 569-3871",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2161206", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2161206",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "27 power units, 25 employees. Atascosa County (South TX/Eagle Ford). Sand, gravel, grain, feed, hay, construction materials. Private property interstate. Family-ownership unverified."
@@ -1243,8 +1603,18 @@
     "website": "https://hearntrucking.com/",
     "phone": "(817) 613-1005",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=944902", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "website", "url": "https://hearntrucking.com/about-hearn/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["founded_year","family_owned","specialty"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=944902",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://hearntrucking.com/about-hearn/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["founded_year", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Founded 1987 by Jack Hearn Jr. (3rd-generation trucker). Started with 1 truck; now 55 power units (just above 50-truck cap — include with flag). Multi-service: livestock, refrigerated, dry bulk cement, dry bulk sand, flatbed."
@@ -1266,8 +1636,18 @@
     "website": "https://www.odentransport.com/",
     "phone": "(432) 530-7078",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2364755", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "website", "url": "https://www.odentransport.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["specialty"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2364755",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.odentransport.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Founded by BJ Oden (~18 years industry experience per website). Heavy equipment, oilfield, agricultural, construction. Permian-focused. 6 power units — below 10-truck band, flag for size."
@@ -1289,7 +1669,12 @@
     "website": null,
     "phone": "(806) 392-6349",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3306201", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3306201",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Cotton/cotton byproducts hauling. 6 power units — below 10-truck band, flag for size. Intrastate non-haz."
@@ -1311,7 +1696,12 @@
     "website": "https://www.petroleumexpress.com/",
     "phone": "(713) 223-0231",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1922866", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1922866",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Note: duplicate of earlier Petroleum Express entry — retain. 21 power units, interstate liquids/gases hauler at Houston Ship Channel."
@@ -1333,8 +1723,18 @@
     "website": "https://www.allstarfuel.com/",
     "phone": "(806) 296-6353",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=229835", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]},
-      {"source": "directory", "url": "https://www.plainviewtexaschamber.com/cm-business/allstar-fuel-a-fred-garrison-oil-company/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["family_owned"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=229835",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      },
+      {
+        "source": "directory",
+        "url": "https://www.plainviewtexaschamber.com/cm-business/allstar-fuel-a-fred-garrison-oil-company/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned (Gary Garrison, owner). Hazmat tanker for liquids/gases. Texas Panhandle (Plainview). 51 power units — top of target range. Texas Food & Fuel Association member."
@@ -1356,7 +1756,12 @@
     "website": null,
     "phone": "(409) 246-8242",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1979584", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1979584",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "29 years operating. East Texas timber/lumber hauler. Todd R Mayo, President. 2 power units — well below 10-truck cap, flag as small fleet."
@@ -1378,7 +1783,12 @@
     "website": null,
     "phone": "(806) 763-5301",
     "data_sources": [
-      {"source": "directory", "url": "https://carrieratlas.com/tx/lubbock/petroleum-transport-inc/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","fleet_size","mc_number"]}
+      {
+        "source": "directory",
+        "url": "https://carrieratlas.com/tx/lubbock/petroleum-transport-inc/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "fleet_size", "mc_number"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "19 trucks, hazmat-certified, interstate liquids/gases hauler. NOTE: SAFER record currently marked INACTIVE — flag for status verification before contact. Lubbock fuel hauling specialist."
@@ -1400,7 +1810,12 @@
     "website": "https://www.coastalplainsllc.com/",
     "phone": "(817) 917-7240",
     "data_sources": [
-      {"source": "website", "url": "https://www.coastalplainsllc.com/services/hauling-local-otr/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.coastalplainsllc.com/services/hauling-local-otr/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Multi-commodity tanker hauler: crude, cryogenics (N2, O2, CO2, Ar), CNG, water, diesel, jet fuel. Operates 24/7 in Permian Basin and beyond. Address/founding year not on public site."
@@ -1422,7 +1837,12 @@
     "website": "https://meridian-trucking.com/",
     "phone": "(432) 756-0187",
     "data_sources": [
-      {"source": "website", "url": "https://meridian-trucking.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","specialty"]}
+      {
+        "source": "website",
+        "url": "https://meridian-trucking.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "'Midland born' Permian oilfield carrier. Fleet: flatbeds, dry vans, step decks, RGN, vac tankers, hydrovac, hot shot. Pecos, Big Spring, Loving County service area. Family ownership not stated."
@@ -1444,7 +1864,12 @@
     "website": "https://www.ironwheel-es.com/",
     "phone": "(432) 242-3506",
     "data_sources": [
-      {"source": "website", "url": "https://www.ironwheel-es.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.ironwheel-es.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Frac sand + flatbed + water hauling, oilfield chemicals + acid. Founded/run by Benjamin Kail (oil & gas since 2011). Permian Basin focus. Family-ownership status unverified."
@@ -1466,7 +1891,12 @@
     "website": "https://texastruckinggroup.com/",
     "phone": null,
     "data_sources": [
-      {"source": "website", "url": "https://texastruckinggroup.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","city","family_owned","specialty"]}
+      {
+        "source": "website",
+        "url": "https://texastruckinggroup.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "city", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Self-described as 'Houston-based, family-owned logistics carrier'. Flatbed + intermodal + energy/construction/manufacturing. HazMat certified. Asset-based (owns trucks + specialized trailers). USDOT not on landing page — flag for verification."
@@ -1488,7 +1918,12 @@
     "website": "https://twistednail.com/",
     "phone": "(254) 651-3597",
     "data_sources": [
-      {"source": "website", "url": "https://twistednail.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","founded_year","family_owned","specialty"]}
+      {
+        "source": "website",
+        "url": "https://twistednail.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "founded_year", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned. 150+ local owner-operators (100% owner-operator model — flag for low-asset profile). Aggregate hauler: limestone, river rock, granite, sand, fill, recycled. Central TX (Austin, Bryan, Killeen, Round Rock, San Antonio, Temple, Waco)."
@@ -1510,7 +1945,12 @@
     "website": "https://www.ussandandgravel.com/",
     "phone": "(866) 770-3478",
     "data_sources": [
-      {"source": "website", "url": "https://www.ussandandgravel.com/about-us", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","family_owned","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.ussandandgravel.com/about-us",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "family_owned", "specialty"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned by Casey and Celeste Raitz. Stephenville HQ. Sand/gravel/aggregate hauling. 60+ employees. Fleet of Freightliner + Western Star. Specific USDOT, fleet size, founding year not on website — flag for verification."
@@ -1532,7 +1972,12 @@
     "website": "https://www.nicholstrans.com/",
     "phone": "(903) 986-2244",
     "data_sources": [
-      {"source": "website", "url": "https://www.nicholstrans.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","city","founded_year","specialty"]}
+      {
+        "source": "website",
+        "url": "https://www.nicholstrans.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "city", "founded_year", "specialty"]
+      }
     ],
     "independence_verified": false,
     "independence_notes": "Founded 1995. Heavy haul + RGN trucking, East Texas (Kilgore, Longview, Tyler, Henderson). Serves mining, energy, construction, logging. Family-ownership not explicitly stated."
@@ -1554,7 +1999,12 @@
     "website": "https://www.txpanhandlelogistics.com/",
     "phone": "(806) 240-5206",
     "data_sources": [
-      {"source": "website", "url": "https://www.txpanhandlelogistics.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","city","founded_year","family_owned"]}
+      {
+        "source": "website",
+        "url": "https://www.txpanhandlelogistics.com/",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "city", "founded_year", "family_owned"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Family-owned AND woman-owned. Refrigerated transport for perishables, dairy, fresh produce, flowers, pharma; general freight. Texas Panhandle service area (Dimmitt, Hereford, Muleshoe). NOTE: website mixes 'Weather Seal Insulation' branding — likely sister business, flag for verification."
@@ -1576,7 +2026,12 @@
     "website": "https://diamondbenergy.com/",
     "phone": "(806) 785-1300",
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2120653", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","address","power_units","mc_number"]}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2120653",
+        "fetched_at": "2026-05-16T00:00:00Z",
+        "fields": ["legal_name", "address", "power_units", "mc_number"]
+      }
     ],
     "independence_verified": true,
     "independence_notes": "Ben Burkholder, President. Texas-based (Lubbock + West TX roots). Crude oil + fluid hauling + field services. 129 power units (EXCEEDS 50 cap; flag for cross-vertical only). Sister company Salty Dawg Trucking."

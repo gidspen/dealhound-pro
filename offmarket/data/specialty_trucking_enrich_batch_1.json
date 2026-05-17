@@ -42,8 +42,12 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2203204", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "website", "url": "https://teamtct.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2203204",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      { "source": "website", "url": "https://teamtct.com/", "fetched_at": "2026-05-16T00:00:00Z" }
     ],
     "data_completeness": 0.65,
     "notes": "DISTRESS/MOTIVATION FLAG: 74% fleet contraction 2024-2025 (200→41 tractors) is the dominant signal. Either owner is downsizing toward exit OR business is in oilfield-cycle distress. Specialty (frac sand) is volatile — Eagle Ford-Permian crash exposure. Family-owned framing + 15yr tenure + post-peak posture = motivated seller profile. Verify founder identity via TX Comptroller."
@@ -91,7 +95,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.palletizedtrucking.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.palletizedtrucking.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "STRONG A-TIER profile: 57-year tenure, family-owned, heavy-haul/project cargo niche (high barrier to entry, defensible customers). Need to verify USDOT and power-unit count vs trailer count (300+ trailers is unusually high — possible trailer pool for owner-operators). Houston Ship Channel/petrochem customer concentration is high-value. Generational succession question is the gate."
@@ -139,7 +147,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.bassetrucklinesanantoniotx.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.bassetrucklinesanantoniotx.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "EXCEPTIONAL TENURE: 97 years, MC# under 12,000 (pre-1950 ICC authority). Highly defensible border-region niche with hazmat capacity. Cross-generation succession question is the key — at 97 years, family may be at inflection point. Need power-unit count from FMCSA SAFER for size-band fit."
@@ -183,7 +195,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.mclohotshot.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.mclohotshot.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "SMALLER PROFILE: Hot shot owner-operator format with 13yr tenure. Below A-tier age band (25yr+) but plausible B-tier if Permian crude/completion cycle motivates exit. Need USDOT, owner age, fleet size to grade properly."
@@ -231,7 +247,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://hotshottexas.net/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://hotshottexas.net/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "A-TIER OWNER-AGE PROFILE: Founder Joe Burns named, 52yr tenure → owner ~75. Aging-out signal strong. Need fleet size + USDOT to confirm size-band fit. Hot shot + forklift delivery niche is mature/defensible."
@@ -277,7 +297,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.earthhaulers.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.earthhaulers.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "B-TIER candidate. 49yr tenure suggests founder is aging out. Need owner name from comptroller + fleet size to grade. Aggregate hauling in DFW corridor = stable customer demand."
@@ -321,8 +345,16 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1592966", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "website", "url": "https://panhandleexpress.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1592966",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://panhandleexpress.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "SIZE EXCLUDE: 102 power units exceeds 50-truck target band. Flag for cross-vertical visibility only — buyer thesis prefers 10-50 trucks for sponsor-LBO economics. Drop from buyer-ready set."
@@ -370,7 +402,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.plainstransportation.com/about/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.plainstransportation.com/about/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "A-TIER tenure (53yr) + named founder Dick Gripp + refrigerated specialty (food-grade, defensible) + TX Panhandle dairy belt = strong profile. Need fleet size confirmation + current operating principal (2nd gen Gripp?)."
@@ -416,7 +452,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.reliantfieldservice.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.reliantfieldservice.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "B-TIER candidate. 15yr tenure too short for A-tier coasting profile. Corporate office suite format suggests professional management vs solo-founder. Verify ownership structure — if PE-owned/sponsor-backed, drop from set."
@@ -460,8 +500,12 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=4111063", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "website", "url": "https://hondotx.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=4111063",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      { "source": "website", "url": "https://hondotx.com/", "fetched_at": "2026-05-16T00:00:00Z" }
     ],
     "data_completeness": 0.5,
     "notes": "EXCLUDE FROM BUYER SET: <3yr tenure, active acquirer (roll-up posture), young founder. Does NOT match coasting/aging-out thesis. Flag as competitive M&A actor in Permian water space — useful intel but not target."
@@ -501,7 +545,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.bigstartrucking.com/about", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.bigstartrucking.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "EXCLUDE FROM BUYER SET: 200+ trucks far exceeds 10-50 size band. HQ Oklahoma City (not TX-domiciled). Listed only for visibility. DROP."
@@ -548,7 +596,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://timables.floridawebcompany.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://timables.floridawebcompany.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "SIZE FLAG: 100+ trucks exceeds 50-truck buyer cap. A-tier coasting profile otherwise (named founder, 38yr tenure, dated website, no platform affiliation). Flag for cross-vertical visibility only — likely too large for buyer thesis."
@@ -594,7 +646,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.theglovercompany.com/winch-trucks-general-trucking", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.theglovercompany.com/winch-trucks-general-trucking",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "Solo-owner small-town Permian heavy-haul operator. Need USDOT, fleet size, founding year, and Mike Glover age verification. If 25yr+ tenure with named founder near retirement, strong A-tier candidate."
@@ -638,7 +694,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://gmtruckingmidland.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://gmtruckingmidland.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.25,
     "notes": "INSUFFICIENT DATA — needs USDOT, owner name, founding year, fleet size before grading. Permian oilfield specialty (vacuum, pump/kill, hot oilers) is defensible niche if profile fits."
@@ -683,7 +743,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.diamondpumptransport.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.diamondpumptransport.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Insufficient data — needs USDOT + owner + founding year. 'Locally owned' framing fits independent profile; Permian acid/tank cleaning niche is defensible. Worth deeper enrichment in batch 2."
@@ -728,7 +792,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.tikitrucking.com/about", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.tikitrucking.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "B-TIER. Austin metro aggregate + pneumatic dry bulk is high-demand niche. 20yr tenure with generational succession language. Need fleet size + USDOT + owner age."
@@ -773,7 +841,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://redbirdtrucking.com/pneumatic-trucking/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://redbirdtrucking.com/pneumatic-trucking/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "C-TIER. 14yr tenure + modernized fleet + in-house maintenance suggests active investment, not coasting. Doesn't match aging-out thesis. DROP unless succession-event signal emerges."
@@ -820,7 +892,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://deekingtrucking.com/cattle-division/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://deekingtrucking.com/cattle-division/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "A-TIER candidate. 34yr family tenure + named founder Dee King + cattle/livestock niche (defensible, USDA-cycle stable) + Panhandle dairy/cattle hub. Need fleet size + Dee King age verification."
@@ -866,7 +942,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.premiertanktrucks.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.premiertanktrucks.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "B-TIER. 23yr family tenure + Eagle Ford/Barnett fluid hauling. Need fleet size + owner identity. Frac fluid/drilling mud niche is defensible but cycle-exposed."
@@ -912,8 +992,16 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1613477", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "website", "url": "https://www.luckeyfeedlot.com/cattle-commodity-hauling", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1613477",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://www.luckeyfeedlot.com/cattle-commodity-hauling",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "SIZE FLAG: 6 trucks below 10-truck band. 44yr family tenure but trucking is ancillary to feedlot. Likely sold WITH feedlot, not standalone. DROP unless feedlot+trucking package fits buyer thesis."
@@ -959,7 +1047,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.jpitrucking.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.jpitrucking.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "INSUFFICIENT DATA. ~10-15yr tenure + family-owned + HUB-certified. C-TIER pending founding year and owner verification."
@@ -1005,7 +1097,7 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.mipe.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      { "source": "website", "url": "https://www.mipe.com/", "fetched_at": "2026-05-16T00:00:00Z" }
     ],
     "data_completeness": 0.45,
     "notes": "A-TIER tenure (61yr) + privately owned + crude oil specialty. Need USDOT + fleet size + ownership identity. Could be PE-owned or family — must verify. Long employee tenure suggests classic family operation."
@@ -1045,7 +1137,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2978046", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2978046",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "SIZE FLAG: 98 power units exceeds 50-truck buyer cap. Strong customer relationship (Shell) but too large for sponsor-LBO economics. Flag for visibility only."
@@ -1093,8 +1189,16 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1292521", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "website", "url": "https://www.penncotransport.com/about-pennco-oil-transport", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1292521",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://www.penncotransport.com/about-pennco-oil-transport",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "B+ TIER. 22yr family tenure + 15-truck fleet (sweet spot size band) + long employee retention. Need owner age + identity. Strong B-tier candidate; if 1st gen founder is near retirement, upgrades to A-tier."
@@ -1142,8 +1246,16 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1938349", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "website", "url": "https://texashotoilers.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1938349",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://texashotoilers.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "A-TIER candidate. 44yr family tenure + 28-truck fleet (perfect size band) + Eagle Ford hot oil specialty + multi-yard footprint. Need owner identity + age. Strong target for buyer thesis."
@@ -1183,7 +1295,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://www.wdtmilk.com/about", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://www.wdtmilk.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "JURISDICTION FLAG: Corporate HQ Cabool, MO — NOT TX-domiciled. TX terminal Stephenville is operational outpost. DROP from TX-domiciled filter; out-of-state ownership profile."
@@ -1232,8 +1348,16 @@
       "verified_via": "trade_press_bulk_transporter"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=109646", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "trade_press", "url": "https://www.bulktransporter.com/archive/article/21649520/texas-milk-transporter-responds-to-shifting-market-production", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=109646",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "trade_press",
+        "url": "https://www.bulktransporter.com/archive/article/21649520/texas-milk-transporter-responds-to-shifting-market-production",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "A-TIER STRONG. Named founder C.D. Ballard (~75), 2nd-gen daughters identified (Tammy Ballard Acker, Terri Monday), 29-truck fleet (right in band), 59yr tenure, refrigerated milk niche (defensible, USDA-regulated). NO website = old-school. Active succession could mean: (1) handing off internally, OR (2) considering sale after 2nd gen takes over. Highest priority target so far."
@@ -1277,7 +1401,7 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://hrlcorp.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      { "source": "website", "url": "https://hrlcorp.com/", "fetched_at": "2026-05-16T00:00:00Z" }
     ],
     "data_completeness": 0.4,
     "notes": "NAICS FLAG: 3PL/warehousing primary, trucking secondary (likely NAICS 484+493). Doesn't match pure specialty trucking thesis. Spine flagged for NAICS verification. DROP unless trucking-only carve-out possible."
@@ -1325,8 +1449,16 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1257879", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "website", "url": "https://www.jaharristrucking.com/about", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1257879",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://www.jaharristrucking.com/about",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.65,
     "notes": "B+ TIER. 22yr tenure, named founders, family-led with verified 2nd-gen Joe Harris joined 2005, heavy-haul Houston Ship Channel niche. Fleet size 15-30 (sweet spot). Verify CSA + entity status."
@@ -1359,18 +1491,23 @@
     "csa_score_source": "unverified",
     "safety_rating": null,
     "founded_year": 1981,
-    "coasting_tells": [
-      "Family-owned 40+ years",
-      "Merkel TX (Taylor County) — small West TX town"
-    ],
+    "coasting_tells": ["Family-owned 40+ years", "Merkel TX (Taylor County) — small West TX town"],
     "successor_indicators": {
       "second_gen_present": "likely_45yr_tenure",
       "family_successor_present": "unverified",
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2077527", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "website", "url": "https://dunagintransport.com/about/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2077527",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://dunagintransport.com/about/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "SIZE FLAG: 120 power units EXCEEDS 50-truck buyer cap. Strong A-tier coasting profile otherwise (45yr family tenure, Big Country/Permian fluid hauling). Flag for cross-vertical visibility only."
@@ -1417,7 +1554,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "website", "url": "https://ahrensbrotherstransport.com/trucking-services/lpg-transport/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "website",
+        "url": "https://ahrensbrotherstransport.com/trucking-services/lpg-transport/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "A-TIER candidate. 48yr 'Ahrens Brothers' founding cohort = aging-out signal. 19 power units (perfect size band). LPG+asphalt specialty (hazmat barriers). Need owner identity + 2nd-gen succession status. Strong target."
@@ -1462,8 +1603,16 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2175920", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "website", "url": "https://hd5transport.com/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2175920",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://hd5transport.com/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "B/C-TIER. 15yr tenure too young for A-tier coasting. NGL specialty is defensible. Need owner identity to assess succession motivation."
@@ -1511,8 +1660,16 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1345468", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "website", "url": "https://pulidotransport.com/about-us/", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1345468",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "website",
+        "url": "https://pulidotransport.com/about-us/",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "A-TIER STRONG. Named founder Joe Pulido (former truck driver, classic solo-founder narrative), 31yr tenure, 29-truck fleet (perfect band), Houston/Beaumont petrochem corridor. ~65 owner age = aging-out window. Asset-based + chemical specialty = defensible. Need succession verification (any Pulido children active?)."
@@ -1559,8 +1716,16 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=732476", "fetched_at": "2026-05-16T00:00:00Z"},
-      {"source": "directory", "url": "https://www.livestocknetwork.com/Cattle_Trucking_Companies/companyDetails.cfm?user_company_id=15758", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=732476",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      },
+      {
+        "source": "directory",
+        "url": "https://www.livestocknetwork.com/Cattle_Trucking_Companies/companyDetails.cfm?user_company_id=15758",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "B-TIER. 20yr Panhandle ag tenure + 27-truck fleet (perfect band) + independent + diversified ag mix. Need founding year + James Barrett verification. If approaching A-tier age, upgrade."
@@ -1606,7 +1771,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1945776", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1945776",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "JURISDICTION FLAG: 559 (CA) phone area code suggests CA-controlled ownership. TX domicile but possibly out-of-state principal. Verify before targeting — could be sister entity to CA dairy hauler. DROP if confirmed CA-controlled."
@@ -1652,7 +1821,11 @@
       "verified_via": "spine_independence_notes_2026-05-16"
     },
     "data_sources": [
-      {"source": "fmcsa_safer", "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2166062", "fetched_at": "2026-05-16T00:00:00Z"}
+      {
+        "source": "fmcsa_safer",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2166062",
+        "fetched_at": "2026-05-16T00:00:00Z"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "Insufficient data — no website, no owner identity, no founding year. 20-truck fleet (perfect band) + East TX rural location + no online presence = classic coasting profile signals BUT cannot verify without TX Comptroller lookup and SOS records. Worth deeper enrichment in batch 2."

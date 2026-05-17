@@ -47,8 +47,16 @@
       "verified_via": "Fort Worth Report obituary Feb 16 2026"
     },
     "data_sources": [
-      {"url": "https://www.rattikintitle.com/about/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,family_owned,underwriters,locations"},
-      {"url": "https://fortworthreport.org/2026/02/16/services-set-for-jack-rattikin-iii-fort-worth-title-company-ceo-and-president/", "fetched_at": "2026-05-16T22:00:00Z", "field": "owner_succession_event_2026"}
+      {
+        "url": "https://www.rattikintitle.com/about/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,family_owned,underwriters,locations"
+      },
+      {
+        "url": "https://fortworthreport.org/2026/02/16/services-set-for-jack-rattikin-iii-fort-worth-title-company-ceo-and-president/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "owner_succession_event_2026"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "PRIORITY A-TIER: LIVE SUCCESSION EVENT. CEO Jack Rattikin III deceased Feb 2026. 82-year 3rd-gen family business with title plant back to 1845, 8 offices Fort Worth metro, 5 underwriter appointments. Succession path NOT publicly named — direct outreach to family timing window is open. This is THE textbook live succession trigger event in the spine."
@@ -72,7 +80,14 @@
     "is_distressed": false,
     "distress_reasons": [],
     "location_count": 17,
-    "underwriters_appointed": ["Alliant National", "AmTrust Financial", "DOMA", "First National Title Insurance Company (FNTIC)", "Title Resources Guaranty Company", "First American Title Company"],
+    "underwriters_appointed": [
+      "Alliant National",
+      "AmTrust Financial",
+      "DOMA",
+      "First National Title Insurance Company (FNTIC)",
+      "Title Resources Guaranty Company",
+      "First American Title Company"
+    ],
     "tlta_member": null,
     "tlta_member_source": "unverified",
     "alta_best_practices": null,
@@ -94,7 +109,11 @@
       "verified_via": "company_about_page_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://senderatitle.com/about/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,locations"}
+      {
+        "url": "https://senderatitle.com/about/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,locations"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Founder-attorney-controlled 25-yr title agency, 17 offices across Tarrant + DFW. Chuck Brown sole principal also runs separate law firm. High coasting-risk profile but no acute succession trigger. Owner age estimate is moderate confidence — needs LinkedIn / bar admission cross-check."
@@ -118,7 +137,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "location_count": 100,
-    "underwriters_appointed": ["First National Title Insurance Company (owned by same principal)", "First American", "Stewart", "Fidelity National"],
+    "underwriters_appointed": [
+      "First National Title Insurance Company (owned by same principal)",
+      "First American",
+      "Stewart",
+      "Fidelity National"
+    ],
     "tlta_member": true,
     "tlta_member_source": "inferred_from_largest_independent_status",
     "alta_best_practices": true,
@@ -136,8 +160,16 @@
       "verified_via": "industry_press_2020_2024_acquisitions_Porter_GPS_Title"
     },
     "data_sources": [
-      {"url": "https://ctot.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,locations"},
-      {"url": "https://shaddocknational.com/about/the-shaddock-experience/", "fetched_at": "2026-05-16T22:00:00Z", "field": "ownership_history"}
+      {
+        "url": "https://ctot.com/about-us/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,locations"
+      },
+      {
+        "url": "https://shaddocknational.com/about/the-shaddock-experience/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "ownership_history"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "EXCLUDE FROM A-TIER: Vertically integrated agency-underwriter combo. Bill Shaddock owns Capital Title AND First National Title Insurance (top-10 US underwriter). Active acquirer (Porter Title 2020, GPS Title 2020, others). Not a small acquisition target — would be 9-figure+ buyout. Listed for completeness only."
@@ -184,8 +216,16 @@
       "verified_via": "Killeen Daily Herald 150th anniversary article 2026"
     },
     "data_sources": [
-      {"url": "https://monteithtitle.com/about-monteith/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,locations"},
-      {"url": "https://kdhnews.com/news/region/monteith-abstract-title-company-now-oldest-title-company-in-texas-after-150-years-of-service/article_029509d7-cf4f-5a48-a015-2b9e865b73e7.html", "fetched_at": "2026-05-16T22:00:00Z", "field": "ownership_history,founded_year"}
+      {
+        "url": "https://monteithtitle.com/about-monteith/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,locations"
+      },
+      {
+        "url": "https://kdhnews.com/news/region/monteith-abstract-title-company-now-oldest-title-company-in-texas-after-150-years-of-service/article_029509d7-cf4f-5a48-a015-2b9e865b73e7.html",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "ownership_history,founded_year"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "PRIORITY A-TIER FLAGGED: Oldest title company in Texas (150 years, 1876 founding). Turner family ownership 75 years (3 generations). 7-office Bell County concentration — regional monopoly profile. Premium succession-risk target — multi-generational, very long tenure, regional concentration. Owner age estimate moderate confidence — needs Turner family LinkedIn check."
@@ -209,7 +249,17 @@
     "is_distressed": false,
     "distress_reasons": [],
     "location_count": 6,
-    "underwriters_appointed": ["Commonwealth Land Title", "Fidelity National Title", "First American Title", "First National Title Insurance Company", "Old Republic National Title", "Stewart Title Guaranty", "Texan Title Insurance Company", "Title Resources Guaranty Company", "WFG National Title"],
+    "underwriters_appointed": [
+      "Commonwealth Land Title",
+      "Fidelity National Title",
+      "First American Title",
+      "First National Title Insurance Company",
+      "Old Republic National Title",
+      "Stewart Title Guaranty",
+      "Texan Title Insurance Company",
+      "Title Resources Guaranty Company",
+      "WFG National Title"
+    ],
     "tlta_member": true,
     "tlta_member_source": "inferred_premier_east_TX_authority_9_underwriters",
     "alta_best_practices": null,
@@ -230,7 +280,11 @@
       "verified_via": "sos_filing_pull_required"
     },
     "data_sources": [
-      {"url": "https://centraltitleco.com/about-central-title/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,underwriters,locations"}
+      {
+        "url": "https://centraltitleco.com/about-central-title/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,underwriters,locations"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "BLOCKED: ownership identity unknown. East TX premier authority — Gregg, Smith, Harrison, Upshur, Rusk counties. Owns sovereign title plants. 9 underwriter appointments. Long history (114 yrs) makes it A-tier candidate IF current owner is identified and is founder-line. Requires SOS filing pull before promotion."
@@ -278,7 +332,11 @@
       "verified_via": "company_about_page_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.chapintitle.com/about/about-chapin-title-company/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,locations,phone"}
+      {
+        "url": "https://www.chapintitle.com/about/about-chapin-title-company/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,locations,phone"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "PRIORITY A-TIER FLAGGED: Sole-owner couple Phil + Ruth Adams, 28-yr tenure since 1998 acquisition. 154-year company, oldest business in Sherman. Karen Castleman as President (non-owner) creates possible internal succession path but family successor not confirmed. Adams couple likely 70+ in 2026. Sherman + Gainesville + Pilot Point. Premium succession-risk candidate."
@@ -320,7 +378,11 @@
       "verified_via": "company_home_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://redrivertitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,locations,phone"}
+      {
+        "url": "https://redrivertitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,locations,phone"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "LOWER PRIORITY: Mother-to-son succession just completed 2023. New 2nd-gen owner Shawn KinCannon just started — unlikely to sell soon. Sherman + Anna + Whitesboro offices. Skip for current pass."
@@ -361,7 +423,11 @@
       "verified_via": "company_about_page_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://graysontitle.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,locations,phone"}
+      {
+        "url": "https://graysontitle.com/about-us/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,locations,phone"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "LOWER PRIORITY: New ownership only 7 years in (Riddels couple acquired 2019 from Vest family). Long-tenured original Vest family already exited. Skip for current pass — too early in new-owner cycle."
@@ -385,7 +451,16 @@
     "is_distressed": false,
     "distress_reasons": [],
     "location_count": 1,
-    "underwriters_appointed": ["Alamo Title Company", "Fidelity National Title", "Chicago Title", "First American Title", "First American Title Guaranty", "Old Republic National Title", "Stewart Title Guaranty", "WFG National Title"],
+    "underwriters_appointed": [
+      "Alamo Title Company",
+      "Fidelity National Title",
+      "Chicago Title",
+      "First American Title",
+      "First American Title Guaranty",
+      "Old Republic National Title",
+      "Stewart Title Guaranty",
+      "WFG National Title"
+    ],
     "tlta_member": null,
     "tlta_member_source": "unverified",
     "alta_best_practices": null,
@@ -406,7 +481,11 @@
       "verified_via": "sos_filing_pull_required"
     },
     "data_sources": [
-      {"url": "https://www.coletitle.org/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,underwriters,address,phone"}
+      {
+        "url": "https://www.coletitle.org/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,underwriters,address,phone"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "BLOCKED: ownership identity unknown. 131-year-old Bonham TX title operation with strong rural-county dominance. Requires SOS pull + TDI license-holder check before A-tier promotion. High base-rate A-tier potential if owner identified."
@@ -450,7 +529,11 @@
       "verified_via": "sos_filing_pull_required"
     },
     "data_sources": [
-      {"url": "https://www.kaufmancountytitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,address"}
+      {
+        "url": "https://www.kaufmancountytitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,address"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "BLOCKED: ownership identity unknown. 153-yr-old Kaufman TX title operation. Kaufman County is rapidly growing DFW exurb — high RE volume. Requires SOS pull + TDI license-holder cross-check. High base-rate potential if owner identified as long-tenured."
@@ -474,7 +557,14 @@
     "is_distressed": false,
     "distress_reasons": [],
     "location_count": 2,
-    "underwriters_appointed": ["Fidelity National", "Texan Title Insurance Company", "First American", "Williston Financial Group (WFG)", "Old Republic Title", "Commonwealth Land Title"],
+    "underwriters_appointed": [
+      "Fidelity National",
+      "Texan Title Insurance Company",
+      "First American",
+      "Williston Financial Group (WFG)",
+      "Old Republic Title",
+      "Commonwealth Land Title"
+    ],
     "tlta_member": null,
     "tlta_member_source": "unverified",
     "alta_best_practices": null,
@@ -495,7 +585,11 @@
       "verified_via": "company_about_page_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://twincitytitle.com/about-us", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,underwriters,address,phone,locations"}
+      {
+        "url": "https://twincitytitle.com/about-us",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,underwriters,address,phone,locations"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "MEDIUM PRIORITY: Attorney-partnership structure (Langdon Davis law firm partners). 45 yrs, 2 TX + AR offices. Partner identities not publicly disclosed — succession risk concentrated in unknown number of senior partners. Requires SOS pull + bar admission cross-check to map partner ages."
@@ -540,7 +634,11 @@
       "verified_via": "company_team_page_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://moneylaw.com/team/brent-money/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner"}
+      {
+        "url": "https://moneylaw.com/team/brent-money/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "LOWER PRIORITY: Younger title entity (2013), title fee office added 2016. Money family 7-generation Hunt County legacy is strong brand asset but Brent Money is mid-career — not late-stage succession trigger. Locations Greenville, Sulphur Springs, Emory, Prosper, Sherman."
@@ -587,7 +685,11 @@
       "verified_via": "company_home_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://kincy-sabine.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,address,phone"}
+      {
+        "url": "https://kincy-sabine.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,address,phone"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "MEDIUM PRIORITY: 130-yr Hunt County operation, DBA Hunt County Titles Inc. Bobby Stovall as President + 3 named staff (Janet Kalka, Paige Spradling, Chris Blakemore). Family ownership not stated but solo office + long tenure = high coasting profile. Requires SOS pull to verify shareholder structure."
@@ -631,7 +733,11 @@
       "verified_via": "sos_filing_pull_required"
     },
     "data_sources": [
-      {"url": "http://hcaco.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,underwriters,address,phone"}
+      {
+        "url": "http://hcaco.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,underwriters,address,phone"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "BLOCKED: ownership identity unknown. HTTP-only URL is itself a coasting tell. 3 local attorneys + 4 underwriters + 1911 founding. Sole locally-owned title co in Hopkins County. Requires SOS pull."
@@ -655,7 +761,11 @@
     "is_distressed": false,
     "distress_reasons": [],
     "location_count": 2,
-    "underwriters_appointed": ["Stewart Title Guaranty", "Fidelity National Title", "Old Republic National Title"],
+    "underwriters_appointed": [
+      "Stewart Title Guaranty",
+      "Fidelity National Title",
+      "Old Republic National Title"
+    ],
     "tlta_member": null,
     "tlta_member_source": "unverified",
     "alta_best_practices": null,
@@ -678,7 +788,11 @@
       "verified_via": "company_home_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://atcathens.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,underwriters,owner,phone"}
+      {
+        "url": "https://atcathens.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,underwriters,owner,phone"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "MEDIUM PRIORITY: Solo-principal Shirley Ward, 62-year-old company. Athens TX + second East TX location. No named successor — succession risk concentrated in single individual. A-tier candidate if Ward is verified 65+."
@@ -722,7 +836,11 @@
       "verified_via": "sos_filing_pull_required"
     },
     "data_sources": [
-      {"url": "https://www.etextitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,address,phone,locations"}
+      {
+        "url": "https://www.etextitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,address,phone,locations"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "BLOCKED: ownership identity + founding year unknown. 10 East TX offices: Smith, Cherokee, Gregg, Harrison, Panola, Rusk, Upshur, Van Zandt, Wood counties. Single underwriter (Alliant) is unusual — flag for hidden parent-company check before A-tier."
@@ -766,7 +884,11 @@
       "verified_via": "company_about_page_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://assuredtitleco.com/aboutAssuredTitle.html", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,owner,address,phone"}
+      {
+        "url": "https://assuredtitleco.com/aboutAssuredTitle.html",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,owner,address,phone"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "MEDIUM PRIORITY: Solo-partner principal Brenda Head Hampy. Tyler TX single office, claims capable in all 254 TX counties. Owner age + tenure unverified. Requires SOS pull + LinkedIn cross-check."
@@ -811,7 +933,11 @@
       "verified_via": "company_about_page_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.titlehoustonholdings.com/about-us", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,address,locations"}
+      {
+        "url": "https://www.titlehoustonholdings.com/about-us",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,address,locations"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "MEDIUM PRIORITY: John Duncan Jr. (Duncan family is prominent Houston dynasty — multiple businesses, philanthropy) + Frank Vandiver. 2 offices Voss + Post Oak. Duncan/Vandiver family-business mode. Requires deeper Duncan-family verification."
@@ -835,7 +961,9 @@
     "is_distressed": false,
     "distress_reasons": [],
     "location_count": 2,
-    "underwriters_appointed": ["Lawyers Title Insurance Corporation (Fidelity National Financial sub)"],
+    "underwriters_appointed": [
+      "Lawyers Title Insurance Corporation (Fidelity National Financial sub)"
+    ],
     "tlta_member": null,
     "tlta_member_source": "unverified",
     "alta_best_practices": null,
@@ -855,8 +983,16 @@
       "verified_via": "company_home_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.texhomeland.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,underwriters,address,phone"},
-      {"url": "https://www.texhomeland.com/our-story", "fetched_at": "2026-05-16T22:00:00Z", "field": "owner"}
+      {
+        "url": "https://www.texhomeland.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,underwriters,address,phone"
+      },
+      {
+        "url": "https://www.texhomeland.com/our-story",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "owner"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "LOWER-MEDIUM PRIORITY: Donna Rodriguez (CPA/JD) sole owner since 2015. Single underwriter (Lawyers Title / FNF). Conroe + Huntsville. Mid-career owner — no acute succession trigger yet."
@@ -880,7 +1016,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "location_count": 3,
-    "underwriters_appointed": ["Old Republic Title", "Westcor", "WFG National Title", "First American Title"],
+    "underwriters_appointed": [
+      "Old Republic Title",
+      "Westcor",
+      "WFG National Title",
+      "First American Title"
+    ],
     "tlta_member": null,
     "tlta_member_source": "unverified",
     "alta_best_practices": null,
@@ -897,7 +1038,11 @@
       "verified_via": "company_home_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://fptitletx.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,underwriters,owner,address,locations"}
+      {
+        "url": "https://fptitletx.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,underwriters,owner,address,locations"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "LOWER PRIORITY: Veteran-owned, Conroe + Spring + The Woodlands. Mid-career partnership structure (Cree + Catrett). 4 underwriters appointed. Founding year unknown."
@@ -921,7 +1066,14 @@
     "is_distressed": false,
     "distress_reasons": [],
     "location_count": 3,
-    "underwriters_appointed": ["Old Republic", "Stewart Title", "Title Resources Guaranty", "Texan Title Insurance", "First American Title", "Legacy Star"],
+    "underwriters_appointed": [
+      "Old Republic",
+      "Stewart Title",
+      "Title Resources Guaranty",
+      "Texan Title Insurance",
+      "First American Title",
+      "Legacy Star"
+    ],
     "tlta_member": true,
     "tlta_member_source": "inferred_128_year_walker_county_dominance",
     "alta_best_practices": null,
@@ -943,7 +1095,11 @@
       "verified_via": "company_about_page_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://walkercountytitle.com/about/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,address,phone"}
+      {
+        "url": "https://walkercountytitle.com/about/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,address,phone"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "PRIORITY A-TIER FLAGGED: 128-yr Walker County operation. 3rd-gen attorney Alvin Martin (since 2016). Multi-county dominance: Walker (since 1898), San Jacinto (since 1972), Madison/Mustang Title (since 2020). Premium succession profile — multi-gen + long tenure + small-county dominance + attorney structure. Mid-career 3rd gen makes acute trigger less likely, but base-rate A-tier."
@@ -987,7 +1143,11 @@
       "verified_via": "sos_filing_pull_required"
     },
     "data_sources": [
-      {"url": "https://huntsvilleabstract.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,underwriters,address"}
+      {
+        "url": "https://huntsvilleabstract.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,underwriters,address"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "BLOCKED: ownership identity + founding year unknown. Serves Madison + Trinity + Walker counties. Secondary player against Walker County Title. Requires SOS pull."
@@ -1011,7 +1171,10 @@
     "is_distressed": false,
     "distress_reasons": [],
     "location_count": 1,
-    "underwriters_appointed": ["Alliant National Title Insurance Company", "First National Title Insurance Company"],
+    "underwriters_appointed": [
+      "Alliant National Title Insurance Company",
+      "First National Title Insurance Company"
+    ],
     "tlta_member": null,
     "tlta_member_source": "unverified",
     "alta_best_practices": null,
@@ -1032,7 +1195,11 @@
       "verified_via": "company_home_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://leoncountytitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,underwriters"}
+      {
+        "url": "https://leoncountytitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,underwriters"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "LOWER PRIORITY: Recent succession (2021) to long-tenured employee Tisha Wilson. Wilson likely 50ish, just started 5 years in. Mallard family already exited."
@@ -1077,7 +1244,11 @@
       "verified_via": "company_about_page_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.trincotitle.com/about", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,owner,address,phone"}
+      {
+        "url": "https://www.trincotitle.com/about",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,owner,address,phone"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "LOWER-MEDIUM PRIORITY: Solo-owner Andrew Boyce. Formerly Hutson Abstract (Polk County Abstract family historically). Sole-county focus Trinity TX. Founding year unverified."
@@ -1123,7 +1294,11 @@
       "verified_via": "company_home_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://ewabstract.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,owner"}
+      {
+        "url": "https://ewabstract.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,owner"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "PRIORITY A-TIER FLAGGED: Rutta family 69-year ownership, 3rd-gen. Sole locally-owned title co in Colorado County. In-house real estate attorney. Strong multi-generational A-tier profile — owner identity inside Rutta family lineage needs SOS verification."
@@ -1168,7 +1343,11 @@
       "verified_via": "company_home_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://texascountrytitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,address,phone,locations"}
+      {
+        "url": "https://texascountrytitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,address,phone,locations"
+      }
     ],
     "data_completeness": 0.6,
     "notes": "MEDIUM-HIGH PRIORITY: Solo attorney owner Mark Humble running 10 offices across Cameron, Rockdale, Giddings, Caldwell, Marlin, La Grange, Columbus, Bastrop, Brenham, Lexington (rural Central TX). Single-owner attorney structure controlling large multi-county footprint = high coasting risk. Owner age unverified."
@@ -1213,7 +1392,11 @@
       "verified_via": "company_our_story_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://ftcwaco.com/our-story/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,address,phone"}
+      {
+        "url": "https://ftcwaco.com/our-story/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,address,phone"
+      }
     ],
     "data_completeness": 0.65,
     "notes": "PRIORITY A-TIER FLAGGED: Founder John Sheehy still active after 43 years. Solo-owner attorney profile + aging workforce + Waco metro concentration. High base-rate succession trigger candidate. Owner age estimate moderate confidence — needs bar admission cross-check."
@@ -1258,7 +1441,11 @@
       "verified_via": "company_brazos_valley_page_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.utitle.com/brazos-valley", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,owner,address,phone,locations"}
+      {
+        "url": "https://www.utitle.com/brazos-valley",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,owner,address,phone,locations"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "MEDIUM PRIORITY: Jennifer Price as operations head. 4 Brazos Valley offices including Love Title & Abstract (Franklin acquisition). Founding year + ownership requires SOS pull."
@@ -1302,7 +1489,11 @@
       "verified_via": "sos_filing_pull_required"
     },
     "data_sources": [
-      {"url": "https://www.cityof.com/tx/san-antonio/service-title-company-734544", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,address,phone"}
+      {
+        "url": "https://www.cityof.com/tx/san-antonio/service-title-company-734544",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,address,phone"
+      }
     ],
     "data_completeness": 0.35,
     "notes": "BLOCKED: ownership identity unknown + live site unreachable (ECONNREFUSED). Multiple coasting tells (neglected web, 30+ yr tenure, undisclosed ownership). High base-rate potential if owner identified. Requires SOS pull + TDI license-holder cross-check."
@@ -1346,7 +1537,11 @@
       "verified_via": "company_about_page_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://presidiotitle.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner"}
+      {
+        "url": "https://presidiotitle.com/about-us/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "MEDIUM PRIORITY: 'Largest San Antonio-based title company' claim. Three named founders (first-name only) — Brandon, Maureen, Don. Requires SOS pull for full identities + ownership shares. Founder-led 21 yrs places owners likely mid-50s to mid-60s."
@@ -1391,7 +1586,11 @@
       "verified_via": "sos_filing_pull_required"
     },
     "data_sources": [
-      {"url": "https://www.acorn-title.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,address,phone,license_number,underwriters"}
+      {
+        "url": "https://www.acorn-title.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,address,phone,license_number,underwriters"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "BLOCKED: ownership identity + founding year unknown. ONLY company in spine with explicit TDI license number captured (3339657). Boutique single-office SA. Requires SOS pull."
@@ -1415,7 +1614,15 @@
     "is_distressed": false,
     "distress_reasons": [],
     "location_count": 5,
-    "underwriters_appointed": ["Alamo Title Company", "Chicago Title", "Commonwealth Land Title", "Fidelity National Title", "First American Title", "Stewart Title Guaranty", "WFG National Title"],
+    "underwriters_appointed": [
+      "Alamo Title Company",
+      "Chicago Title",
+      "Commonwealth Land Title",
+      "Fidelity National Title",
+      "First American Title",
+      "Stewart Title Guaranty",
+      "WFG National Title"
+    ],
     "tlta_member": true,
     "tlta_member_source": "inferred_oldest_local_comal_county_67yr",
     "alta_best_practices": null,
@@ -1440,7 +1647,11 @@
       "verified_via": "company_directory_search_2026-05-16_live_fetch_failed"
     },
     "data_sources": [
-      {"url": "http://nbtitle.com/", "fetched_at": "2026-05-16T22:00:00Z", "field": "legal_name,founded_year,owner,underwriters"}
+      {
+        "url": "http://nbtitle.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "field": "legal_name,founded_year,owner,underwriters"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "PRIORITY A-TIER FLAGGED: 2nd-gen Riedel family ownership, 67 years. 5 offices in fastest-growing TX corridor (New Braunfels, Seguin, Canyon Lake, San Marcos, La Vernia — Comal + Guadalupe + Hays counties). Nile Riedel likely late 60s. TLS cert failure on site indicates neglected web — classic coasting tell. Site re-fetch required before A-tier deep-dive."
