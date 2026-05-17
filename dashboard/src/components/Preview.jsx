@@ -191,6 +191,8 @@ function ScanDealList() {
   );
 }
 
+const DEAL_PROGRESS_BAR_ENABLED = false;
+
 const DEAL_STAGES = [
   { key: 'new', label: 'New' },
   { key: 'reviewing', label: 'Review' },
@@ -436,7 +438,7 @@ function DealDetail() {
             </div>
           </div>
 
-          <DealProgressBar status={deal.deal_status} />
+          {DEAL_PROGRESS_BAR_ENABLED && <DealProgressBar status={deal.deal_status} />}
 
           {/* Badges row */}
           <div class="deal-detail-badges">
