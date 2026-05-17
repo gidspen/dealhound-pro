@@ -1,0 +1,2122 @@
+[
+  {
+    "_meta": {
+      "vertical": "garage_door_service",
+      "naics_code": "238290",
+      "state": "TX",
+      "generated_at": "2026-05-16",
+      "agent": "spine-fetch-garage-door",
+      "target_count_min": 80,
+      "target_count_max": 120,
+      "verified_count": 92,
+      "sources_used": [
+        "doors.org IDA Top 100 Door Dealers",
+        "expertise.com city directories (Houston, Dallas, Fort Worth, San Antonio, Austin, Plano, Frisco, Sugar Land, Pearland, The Woodlands, Round Rock, Cypress)",
+        "bestpickreports.com Houston",
+        "Company websites for independence verification",
+        "BBB profiles, Yelp listings, LinkedIn for ownership and founding-year confirmation"
+      ],
+      "exclusion_log": [
+        {"name": "DuraServ LLC (Coppell, TX)", "reason": "Acquired June 2024 by Leonard Green & Partners (PE). Largest commercial OH door consolidator in US. PE-backed — excluded per acquisition criteria."},
+        {"name": "Cedar Park Overhead Doors (Cedar Park, TX)", "reason": "Acquired June 2024 by Gridiron Capital's GarageCo Holdings platform. PE-backed — excluded."},
+        {"name": "Overhead Door Company of Houston", "reason": "Owned by DH Pace Company (Olathe, KS) — large multi-state consolidator. Excluded from independent target list."},
+        {"name": "Aaron Overhead Doors (Houston)", "reason": "On exclude-list per skill brief — AmeriPro / Aaron Overhead Door brand."},
+        {"name": "Precision Door Service locations", "reason": "Authority Brands franchise (Apax PE)."},
+        {"name": "A1 Garage Service / A1 Garage Service Plus locations", "reason": "Berkshire Partners — most aggressive consolidator."},
+        {"name": "365 Overhead Garage Door / 365 Garage Door Repair", "reason": "Multi-state operator (TX, GA, FL, others); flagged as potential rollup — excluded for cautious independence."},
+        {"name": "Pros On Call (Austin)", "reason": "Pros On Call is a national multi-trade brand operating in many states (locksmith + garage door franchise-like) — excluded."}
+      ],
+      "caveats": [
+        "Truck counts are ESTIMATES based on reported team size, BBB / LinkedIn employee counts, and 'service trucks' references on websites. Not direct fleet counts.",
+        "Service mix labels (residential / commercial / mixed) derived from website language; verify before high-conviction outreach.",
+        "Independence verified at website-footer + ownership search level. Recommend secondary TX SOS registered-agent check before final outreach.",
+        "O'Brien Garage Doors (Austin) flagged: family-owned but multi-state (15+ metros). Treat as 'larger independent regional,' not solo-owner.",
+        "Hutchins Garage Doors (Austin) historically a 'sister company' to Cedar Park Overhead Doors per their About page (status post-Gridiron acquisition unclear — flagged for re-verification).",
+        "Texas Overhead Door (txohd.com — Burleson/Cleburne) NOT same as Plano Overhead Garage Door — different entities.",
+        "Action Garage Door Repair Specialists (Plano) — IDA Top 100 #86, family-owned since 1984, multi-market within TX (DFW, Houston, Austin, Sherman). Larger than typical solo-owner but stays family-owned per public statements.",
+        "Killeen Overhead Doors — IDA Top 100 #95, founded 1991 by Jim & Rochelle Luster, multi-generation (sons Dennis and Brett). Verified independent.",
+        "Phone numbers verified where present in source; many directory pages omit phones — left null rather than fabricate."
+      ]
+    }
+  },
+  {
+    "legal_name": "Hollywood-Crawford Door Co.",
+    "dba_name": "Hollywood-Crawford Door Co.",
+    "address": "11234 Gordon Rd",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78216",
+    "estimated_truck_count": 15,
+    "service_mix": "mixed",
+    "ida_member": true,
+    "founded_year": 1947,
+    "website": "https://hollywoodcrawford.com",
+    "phone": "(210) 494-3434",
+    "data_sources": [
+      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_residential_#7"},
+      {"url": "https://hollywoodcrawford.com/about-us/", "fetched_at": "2026-05-16", "field": "ownership,address,founded"},
+      {"url": "https://communityimpact.com/sponsored/sponsored/2022/10/31/family-owned-hollywood-crawford-door-co-reflects-on-75-years-of-business/", "fetched_at": "2026-05-16", "field": "75_year_anniversary,family_ownership"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1947 by Harry & Merle Crosland. Bought by Doyle Benton (longtime installer) in 1979. Now 3-generation family business — son-in-law Randy Oliver has run it since ~1981. IDEA-accredited dealer. No PE / franchise affiliation. STRONG INCLUDE — long tenure, multi-generation, IDA Top 100."
+  },
+  {
+    "legal_name": "Plano Overhead Garage Door",
+    "dba_name": "Plano Overhead Garage Door",
+    "address": "1100 N Central Expy Ste A",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75074",
+    "estimated_truck_count": 12,
+    "service_mix": "mixed",
+    "ida_member": true,
+    "founded_year": 1977,
+    "website": "https://planooverhead.com",
+    "phone": "(972) 422-1695",
+    "data_sources": [
+      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#36,top_50_residential_#16"},
+      {"url": "https://planooverhead.com", "fetched_at": "2026-05-16", "field": "address,phone,founded,family_owned"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned and operated since 1977 — started in owner's home. 'All employees full-time & in-house.' No franchise or PE affiliation. STRONG INCLUDE — IDA Top 100, 48-year tenure, family operation."
+  },
+  {
+    "legal_name": "Action Garage Door Repair Specialists, Inc.",
+    "dba_name": "Action Garage Door",
+    "address": "1224 Millard Dr",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75074",
+    "estimated_truck_count": 30,
+    "service_mix": "mixed",
+    "ida_member": true,
+    "founded_year": 1984,
+    "website": "https://www.actiongaragedoor.com",
+    "phone": "(972) 423-9907",
+    "data_sources": [
+      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#86"},
+      {"url": "https://www.actiongaragedoor.com/about-us/", "fetched_at": "2026-05-16", "field": "founded,family_owned,multi_market"},
+      {"url": "https://www.bbb.org/us/tx/plano/profile/garage-doors/action-garage-door-repair-specialists-0875-8001510", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned since 1984 — same location 40 years, 400K+ customers. Operates DFW, Houston, Austin, Sherman-Denison. Larger regional independent — flagged as 'family-owned multi-market,' not solo-owner. NO PE / franchise affiliation evident."
+  },
+  {
+    "legal_name": "Killeen Overhead Doors, Inc.",
+    "dba_name": "Killeen Overhead Doors",
+    "address": "1505 Martin Luther King Jr Blvd",
+    "city": "Killeen",
+    "county": "Bell",
+    "state": "TX",
+    "zip": "76543",
+    "estimated_truck_count": 10,
+    "service_mix": "mixed",
+    "ida_member": true,
+    "founded_year": 1991,
+    "website": "https://www.killeenoverheaddoors.com",
+    "phone": "(254) 526-3858",
+    "data_sources": [
+      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#95"},
+      {"url": "https://www.killeenoverheaddoors.com/", "fetched_at": "2026-05-16", "field": "founded,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1991 by Jim & Rochelle Luster (24-year Army veteran). 2nd-gen with sons Dennis and Brett. IDA Top 100 #95. Named Top 100 dealer by 1997. STRONG INCLUDE — multi-generational, Central TX market (off main metros)."
+  },
+  {
+    "legal_name": "LGA Garage Door Service",
+    "dba_name": "LGA Garage Door",
+    "address": "6515 Spring Cypress Rd",
+    "city": "Spring",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77379",
+    "estimated_truck_count": 15,
+    "service_mix": "residential",
+    "ida_member": true,
+    "founded_year": null,
+    "website": "https://www.lga-garagedoor.com",
+    "phone": "(832) 479-3003",
+    "data_sources": [
+      {"url": "https://doors.org/resources/ida-top-100-door-dealers/", "fetched_at": "2026-05-16", "field": "ida_top_100_revenue_#56,top_50_residential_#35"},
+      {"url": "https://www.lga-garagedoor.com/", "fetched_at": "2026-05-16", "field": "address,ida_member"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "IDA Member, BBB A+, Clopay / LiftMaster Master Dealer. Locally operated, no franchise / parent. Second location in Pflugerville (Austin area). Founded year not on site — needs SOS check."
+  },
+  {
+    "legal_name": "Alamo Door Systems of Texas, Inc.",
+    "dba_name": "Alamo Door Systems",
+    "address": "16358 Nacogdoches Rd",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78247",
+    "estimated_truck_count": 12,
+    "service_mix": "mixed",
+    "ida_member": true,
+    "founded_year": 1976,
+    "website": "https://alamodoorsystems.com",
+    "phone": "(210) 657-1150",
+    "data_sources": [
+      {"url": "https://doors.org/ida-scholarship/donors/", "fetched_at": "2026-05-16", "field": "ida_scholarship_donor"},
+      {"url": "https://alamodoorsystems.com", "fetched_at": "2026-05-16", "field": "founded_1976,address,phone"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "50 years operating San Antonio. 'Local Company, National Reputation.' IDA scholarship donor. No franchise or PE language. STRONG INCLUDE — long-tenure independent."
+  },
+  {
+    "legal_name": "ABC Doors of Houston",
+    "dba_name": "ABC Doors",
+    "address": "5100 S Willow Dr",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77035",
+    "estimated_truck_count": 18,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 1971,
+    "website": "https://www.abcdoors.com",
+    "phone": "(713) 723-1500",
+    "data_sources": [
+      {"url": "https://www.abcdoors.com/", "fetched_at": "2026-05-16", "field": "founded,family,no_subs"},
+      {"url": "https://www.yelp.com/biz/abc-doors-houston", "fetched_at": "2026-05-16", "field": "address"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned 50+ years (since 1971). Serves Houston + Austin. No subcontractors policy. STRONG INCLUDE — long tenure family business."
+  },
+  {
+    "legal_name": "Spectrum Overhead Door LLC",
+    "dba_name": "Spectrum Overhead Door",
+    "address": "11020 Katy Fwy Ste 116b",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77043",
+    "estimated_truck_count": 5,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": 2006,
+    "website": "https://spectrumoverheaddoor.com",
+    "phone": "(281) 748-9542",
+    "data_sources": [
+      {"url": "https://spectrumoverheaddoor.com/about/", "fetched_at": "2026-05-16", "field": "founder_Travis_Sweitzer,founded_2006,team_size"},
+      {"url": "https://www.bbb.org/us/tx/houston/profile/garage-doors/spectrum-overhead-door-llc-0915-90025054", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded by Travis Sweitzer in 2006, 6 employees + 4+ technicians. Second location in Channelview. Sole proprietor / family-run. INCLUDE — solo-owner archetype, 20-year tenure approaching."
+  },
+  {
+    "legal_name": "Garage Door Doctor",
+    "dba_name": "Garage Door Doctor",
+    "address": "11242 Brittmoore Park Dr",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77041",
+    "estimated_truck_count": 12,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": 1987,
+    "website": "https://garagedoordoctor.biz",
+    "phone": "(281) 638-9332",
+    "data_sources": [
+      {"url": "https://garagedoordoctor.biz", "fetched_at": "2026-05-16", "field": "founded_1987,family,no_subs"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-run since 1987. 'Staff are either employees or family.' 10K+ 5-star reviews. STRONG INCLUDE — long-tenure family residential service."
+  },
+  {
+    "legal_name": "Henderson Garage Door Services, LLC",
+    "dba_name": "Henderson Garage Door",
+    "address": "628 Cedar Bayou Rd",
+    "city": "Baytown",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77520",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 1989,
+    "website": "https://hendersongaragedoor.com",
+    "phone": "(281) 422-1099",
+    "data_sources": [
+      {"url": "https://hendersongaragedoor.com/", "fetched_at": "2026-05-16", "field": "founder_John_Henderson,founded_1989"},
+      {"url": "https://cca.baytownchamber.com/NewsArticle.aspx?dbid2=TXBTWN&newsid=193463", "fetched_at": "2026-05-16", "field": "chamber_news_history"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1989 by John Henderson. 6 service trucks, 6-acre property with warehouse. 30+ yrs industry experience. STRONG INCLUDE — long-tenure family business, Houston east-side."
+  },
+  {
+    "legal_name": "Texas Overhead Door",
+    "dba_name": "Texas Overhead Door (TXOHD)",
+    "address": "122 NW Hillery St",
+    "city": "Burleson",
+    "county": "Johnson",
+    "state": "TX",
+    "zip": "76028",
+    "estimated_truck_count": 20,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 1986,
+    "website": "https://www.txohd.com",
+    "phone": "(817) 295-4848",
+    "data_sources": [
+      {"url": "https://www.txohd.com/about/", "fetched_at": "2026-05-16", "field": "founded_1986,family_owned"},
+      {"url": "https://www.txohd.com/locations/", "fetched_at": "2026-05-16", "field": "burleson_cleburne_woodlands"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned since 1986. Two locations: Burleson + Cleburne. Houston / Woodlands location at 'The Woodlands, TX 77354.' Multi-market within TX/LA/OK commercial. STRONG INCLUDE — large family-owned regional."
+  },
+  {
+    "legal_name": "Family Christian Doors, LLC",
+    "dba_name": "Family Christian Doors",
+    "address": "2809 Haltom Rd",
+    "city": "Haltom City",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76117",
+    "estimated_truck_count": 8,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 2003,
+    "website": "https://familychristiandoors.com",
+    "phone": "(817) 282-5677",
+    "data_sources": [
+      {"url": "https://familychristiandoors.com/about-us/", "fetched_at": "2026-05-16", "field": "founder_Brandon_Bailey,founded_2003"},
+      {"url": "https://www.bbb.org/us/tx/haltom-city/profile/garage-doors/family-christian-doors-llc-0825-133500594", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2003 by Brandon Bailey (DFW). Faith-based, family-run. Multiple DFW locations. INCLUDE — 22-yr tenure, owner-operator."
+  },
+  {
+    "legal_name": "Aaron's Garage Door Service",
+    "dba_name": "Aaron's Garage Door",
+    "address": "5314 Jackwood Dr",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78238",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 1997,
+    "website": "https://aaronsgaragedoor.com",
+    "phone": "(210) 690-7555",
+    "data_sources": [
+      {"url": "https://aaronsgaragedoor.com/", "fetched_at": "2026-05-16", "field": "family_owned,founded"},
+      {"url": "https://www.bbb.org/us/tx/san-antonio/profile/garage-door-repair/aarons-garage-door-0825-90116993", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally family-owned San Antonio shop since 1997. NOT a franchise — distinct from 'Aaron Overhead Doors' (Houston excluded). 28-year tenure. STRONG INCLUDE."
+  },
+  {
+    "legal_name": "Mojo Garage Door Service",
+    "dba_name": "Mojo Garage Door",
+    "address": "11103 San Pedro Ave #225",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78216",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 2007,
+    "website": "https://mojogaragedoors.com",
+    "phone": "(210) 997-7777",
+    "data_sources": [
+      {"url": "https://mojogaragedoors.com/", "fetched_at": "2026-05-16", "field": "owner_Moses_Mizrahi,20_years"},
+      {"url": "https://www.bbb.org/us/tx/san-antonio/profile/garage-doors/mojo-garage-door-service-0825-1000131566", "fetched_at": "2026-05-16", "field": "bbb_2016_accredited"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Owner: Moses Mizrahi. ~20 years in business San Antonio. Family-owned, locally operated, 1000+ 5-star local reviews. INCLUDE — solo-owner archetype."
+  },
+  {
+    "legal_name": "Helotes Overhead Garage Doors and Contracting, LLC",
+    "dba_name": "Helotes Overhead Doors",
+    "address": "12682 FM 1560 N Ste 205",
+    "city": "Helotes",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78023",
+    "estimated_truck_count": 7,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 1985,
+    "website": "https://helotesoverheaddoors.com",
+    "phone": "(210) 695-9085",
+    "data_sources": [
+      {"url": "https://helotesoverheaddoors.com/about-us/", "fetched_at": "2026-05-16", "field": "founder_Tracy_Dever,founded_1985,son_Nathan"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Multi-generational family-owned since 1985. Founded by Tracy Dever; son Nathan Dever now runs it. 40-year tenure. STRONG INCLUDE — owner transition already underway."
+  },
+  {
+    "legal_name": "AMR Garage Doors & Gates",
+    "dba_name": "AMR Garage Doors & Gates",
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77084",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 2015,
+    "website": "https://amrgaragedoors.com",
+    "phone": "(281) 928-1837",
+    "data_sources": [
+      {"url": "https://amrgaragedoors.com/", "fetched_at": "2026-05-16", "field": "family_owned,founded"},
+      {"url": "https://www.bbb.org/us/tx/houston/profile/garage-doors/amr-garage-doors-gates-0915-90074140", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned Houston, founded ~2015–2018 (slight discrepancy across sources). 25+ years combined tech experience. INCLUDE but borderline on tenure (under 15 yrs)."
+  },
+  {
+    "legal_name": "Cornerstone Overhead Garage Doors, LLC",
+    "dba_name": "Cornerstone Overhead Garage Doors",
+    "address": "2411 Karbach St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77092",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 2007,
+    "website": "https://www.cornerstoneoverheaddoor.com",
+    "phone": "(713) 690-3667",
+    "data_sources": [
+      {"url": "https://www.cornerstoneoverheaddoor.com/", "fetched_at": "2026-05-16", "field": "family_operated,custom_doors"},
+      {"url": "https://www.bbb.org/us/tx/houston/profile/garage-door-repair/cornerstone-overhead-doors-llc-0915-90061743", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Owner Iris Espinoza, established 2007. Local manufacturing of custom garage doors (cedar / wood / glass / steel). Custom-builder homes in The Woodlands, River Oaks, Memorial. STRONG INCLUDE — specialty / high-margin."
+  },
+  {
+    "legal_name": "Hutchins Garage Doors",
+    "dba_name": "Hutchins Garage Doors",
+    "address": "1417 W William Cannon Dr",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78745",
+    "estimated_truck_count": 12,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 1997,
+    "website": "https://hutchinsgaragedoors.com",
+    "phone": "(512) 388-4400",
+    "data_sources": [
+      {"url": "https://hutchinsgaragedoors.com", "fetched_at": "2026-05-16", "field": "founded_1997,Grenier_family_2011"},
+      {"url": "https://www.bbb.org/us/tx/austin/profile/garage-door-repair/hutchins-garage-doors-0825-46944", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1997 by 'Hutch.' Grenier family (Don & Dan) bought 2011. CAUTION: site references 'sister company Cedar Park Overhead Doors' — Cedar Park was acquired by GarageCo (Gridiron Capital) in June 2024. Independence post-2024 needs re-verification via TX SOS — may have been rolled into GarageCo platform."
+  },
+  {
+    "legal_name": "Hannah's Garage Doors",
+    "dba_name": "Hannah's Garage Doors",
+    "address": "8411 Red Willow Dr",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78736",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": 2001,
+    "website": "https://hannahsgaragedoors.com",
+    "phone": "(512) 944-0124",
+    "data_sources": [
+      {"url": "https://hannahsgaragedoors.com", "fetched_at": "2026-05-16", "field": "owner_Quinton_Hannah,founded_2001"},
+      {"url": "https://www.bbb.org/us/tx/austin/profile/garage-door-repair/hannahs-garage-doors-0825-1000166711", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Owner Quinton Hannah — veteran-owned, started doing doors in 1997, business founded 2001. Small veteran crew. STRONG INCLUDE — 24-year tenure, solo-owner."
+  },
+  {
+    "legal_name": "Armstrong Garage Doors, Inc.",
+    "dba_name": "Armstrong Garage Doors",
+    "address": "13359 N Hwy 183 Ste 406 #140",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78750",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 2010,
+    "website": "https://armstrongdoorsaustin.com",
+    "phone": "(512) 903-8544",
+    "data_sources": [
+      {"url": "https://armstrongdoorsaustin.com", "fetched_at": "2026-05-16", "field": "founded_2010,locally_owned"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned, started Oak Hill, founded 2010. 15-year tenure. INCLUDE — borderline tenure but clear solo-owner independent."
+  },
+  {
+    "legal_name": "Aaction Overhead Door, Inc.",
+    "dba_name": "Aaction Overhead Door",
+    "address": null,
+    "city": "Round Rock",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78664",
+    "estimated_truck_count": 8,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://aactionoverhead.com",
+    "phone": "(512) 335-7441",
+    "data_sources": [
+      {"url": "https://aactionoverhead.com/about-us/", "fetched_at": "2026-05-16", "field": "austin_round_rock_independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Austin / Round Rock area independent. Long-running per BBB and directory listings. Need TX SOS / founding-year verification. NOT same as Action Garage Door (Plano)."
+  },
+  {
+    "legal_name": "Fratex Garage Door Specialists",
+    "dba_name": "Fratex Garage Door Specialists",
+    "address": null,
+    "city": "Round Rock",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78664",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://fratexgarage.com",
+    "phone": "(512) 661-7370",
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,family_owned"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned Round Rock per directory. Needs SOS / founding-year verification."
+  },
+  {
+    "legal_name": "RidgeLine Overhead Garage Door",
+    "dba_name": "RidgeLine Overhead Garage Door",
+    "address": null,
+    "city": "Pflugerville",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78660",
+    "estimated_truck_count": 4,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://ridgelinegaragedoor.com",
+    "phone": "(512) 333-0149",
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Pflugerville independent. Needs SOS verification."
+  },
+  {
+    "legal_name": "R&S Overhead Garage Door of Austin",
+    "dba_name": "R&S Overhead Garage Door",
+    "address": null,
+    "city": "Pflugerville",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78660",
+    "estimated_truck_count": 4,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://rsoverheaddoor.com",
+    "phone": "(512) 246-3993",
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Pflugerville / Austin independent."
+  },
+  {
+    "legal_name": "Tovar Garage Doors & Openers LLC",
+    "dba_name": "Tovar Garage Doors",
+    "address": "9812 East Hwy 67",
+    "city": "Alvarado",
+    "county": "Johnson",
+    "state": "TX",
+    "zip": "76009",
+    "estimated_truck_count": 8,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 2001,
+    "website": "https://www.tovargaragedoors.com",
+    "phone": "(817) 583-3299",
+    "data_sources": [
+      {"url": "https://www.tovargaragedoors.com/garage-door-installation-company/", "fetched_at": "2026-05-16", "field": "founders_Pedro_Alfonso_Tovar,founded_2001"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned by brothers Pedro and Alfonso Tovar since 2001. Serves DFW + Fort Worth. Note: also has Fort Worth presence at 76112. STRONG INCLUDE — 24-year sibling partnership."
+  },
+  {
+    "legal_name": "Alpha & Omega Door Company",
+    "dba_name": "Alpha & Omega Door",
+    "address": "2637 Gravel Dr",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76118",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 2001,
+    "website": "https://alphaomegadoors.com",
+    "phone": "(817) 595-1551",
+    "data_sources": [
+      {"url": "http://alphaomegadoors.com/about/", "fetched_at": "2026-05-16", "field": "founder_Mike_Porter,founded_2001"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned since 2001 by Mike Porter. Faith-based, custom cedar doors specialty. STRONG INCLUDE — 24-yr tenure."
+  },
+  {
+    "legal_name": "Mike's Overhead Doors Co.",
+    "dba_name": "Mike's Overhead Doors",
+    "address": null,
+    "city": "Azle",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76020",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://mikesoverhead.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "DFW-area independent."
+  },
+  {
+    "legal_name": "Arnold's Garage Door Service",
+    "dba_name": "Arnold's Garage Door Service",
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://arnoldsgaragedoorservice.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Fort Worth family-owned per directory."
+  },
+  {
+    "legal_name": "Johnny B's Garage Doors And Service",
+    "dba_name": "Johnny B's Garage Doors",
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76135",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://johnnybsgaragedoorsfortworth.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Fort Worth family-owned per directory."
+  },
+  {
+    "legal_name": "Keller Garage Doors",
+    "dba_name": "Keller Garage Doors",
+    "address": null,
+    "city": "Keller",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76248",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://kellertx-garagedoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_listing,30_years"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Keller-area independent, 30 yrs experience."
+  },
+  {
+    "legal_name": "Alamo Doors and Gates",
+    "dba_name": "Alamo Doors and Gates",
+    "address": null,
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76011",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://alamodoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/fort-worth", "fetched_at": "2026-05-16", "field": "directory_listing,family,25_years"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Arlington family-owned, 25 yrs in service. NOTE: distinct from 'Alamo Door Systems' (San Antonio) — different entities. Verify TX SOS."
+  },
+  {
+    "legal_name": "The Good Guys Door Company",
+    "dba_name": "The Good Guys Door Company",
+    "address": "3621 Frankford Rd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75287",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://thegoodguysdoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Dallas family-operated."
+  },
+  {
+    "legal_name": "Hollywood Overhead Door Co.",
+    "dba_name": "Hollywood Overhead Door",
+    "address": "9525 White Rock Trl",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75238",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://hollywoodohd.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Dallas independent. NOTE: similar-name to Hollywood-Crawford (San Antonio) but DIFFERENT entity. Verify TX SOS."
+  },
+  {
+    "legal_name": "Metro Garage Door Repair",
+    "dba_name": "Metro Garage Door Repair",
+    "address": "2564 Southwell Rd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75229",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://metrogaragedoor.net",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,family_run_20_years"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned, family-run ~20 yrs. Dallas + Plano locations."
+  },
+  {
+    "legal_name": "Nation Overhead Door & Gate",
+    "dba_name": "Nation Overhead Door & Gate",
+    "address": "14806 Venture Dr",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75234",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://nationoverheaddoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas", "fetched_at": "2026-05-16", "field": "directory_listing,family_owned"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Dallas family-owned."
+  },
+  {
+    "legal_name": "All Pro Garage Doors",
+    "dba_name": "All Pro Garage Doors",
+    "address": null,
+    "city": "Highland Village",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "75077",
+    "estimated_truck_count": 5,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://apgaragedoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/dallas", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "North-DFW independent."
+  },
+  {
+    "legal_name": "AWard Garage Door",
+    "dba_name": "AWard Garage Door",
+    "address": "303 Wake Dr",
+    "city": "Richardson",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75081",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://awardgaragedoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,family_30_years"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned 30+ years Richardson. STRONG INCLUDE — long tenure."
+  },
+  {
+    "legal_name": "Matthews Home Supply",
+    "dba_name": "Matthews Home Supply",
+    "address": "821 Jupiter Rd Ste 405",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75074",
+    "estimated_truck_count": 8,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 1983,
+    "website": "https://matthewshomesupply.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,family_business_1983"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family business since 1983 — 42 years. STRONG INCLUDE."
+  },
+  {
+    "legal_name": "Texas Garage Door & Opener",
+    "dba_name": "Texas Garage Door and Opener",
+    "address": null,
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75094",
+    "estimated_truck_count": 8,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 2000,
+    "website": "https://www.texasgaragedoorandopener.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.texasgaragedoorandopener.com/about/", "fetched_at": "2026-05-16", "field": "founded_2000,family_owned"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned since 2000. Serves DFW + Houston. STRONG INCLUDE — 25-year tenure."
+  },
+  {
+    "legal_name": "121 Overhead Door",
+    "dba_name": "121 Overhead Door",
+    "address": null,
+    "city": "Allen",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75002",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 1999,
+    "website": "https://121overheaddoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,since_1999"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Allen / North DFW independent, since 1999. 26-year tenure."
+  },
+  {
+    "legal_name": "Apple Garage Door",
+    "dba_name": "Apple Garage Door",
+    "address": "101 N Greenville Ave",
+    "city": "Allen",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75002",
+    "estimated_truck_count": 5,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": 2001,
+    "website": "https://applegaragedoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,since_2001"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Allen-based independent since 2001."
+  },
+  {
+    "legal_name": "McKinney Garage Doors",
+    "dba_name": "McKinney Garage Doors",
+    "address": null,
+    "city": "McKinney",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75072",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://www.mckinneydoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "McKinney family-owned independent."
+  },
+  {
+    "legal_name": "Blake & Sons Garage Doors",
+    "dba_name": "Blake & Sons Garage Doors",
+    "address": null,
+    "city": "Prosper",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75078",
+    "estimated_truck_count": 4,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://www.blakeandsonsgaragedoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Prosper / North DFW family business (Blake + sons — family-name = strong independence signal)."
+  },
+  {
+    "legal_name": "Two Brothers Garage Door Repair",
+    "dba_name": "Two Brothers Garage Door Repair",
+    "address": null,
+    "city": "Corinth",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "76210",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://www.twobrothersgds.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Denton-county sibling-owned independent (name signal)."
+  },
+  {
+    "legal_name": "Tru-Roll Overhead Door",
+    "dba_name": "Tru-Roll Overhead Door",
+    "address": null,
+    "city": "Pilot Point",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "76258",
+    "estimated_truck_count": 4,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://trurolloverheaddoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Pilot Point / exurban DFW independent."
+  },
+  {
+    "legal_name": "Titan Garage Doors",
+    "dba_name": "Titan Garage Doors",
+    "address": null,
+    "city": "Little Elm",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "75068",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://garagedoorrepairslittleelm.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Little Elm family-owned."
+  },
+  {
+    "legal_name": "ProStar Garage Doors",
+    "dba_name": "ProStar Garage Doors",
+    "address": null,
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75034",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://prostargaragedoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/frisco", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Frisco family-owned."
+  },
+  {
+    "legal_name": "Supreme Garage Door And Gate",
+    "dba_name": "Supreme Garage Door And Gate",
+    "address": "1600 N Stemmons Fwy #104",
+    "city": "Carrollton",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75006",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://supremegaragedoortx.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,10_years"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Carrollton independent, 10+ yrs."
+  },
+  {
+    "legal_name": "Quality Garage Door Services",
+    "dba_name": "Quality Garage Door Services",
+    "address": "4210 First St",
+    "city": "Carrollton",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75010",
+    "estimated_truck_count": 4,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 2014,
+    "website": "https://qualitygaragedoorandgates.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,since_2014"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Carrollton, established 2014. Borderline tenure."
+  },
+  {
+    "legal_name": "RC Garage Doors",
+    "dba_name": "RC Garage Doors",
+    "address": "219 Northridge Dr",
+    "city": "Wylie",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75098",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://garagedoorsrockwall.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,boutique"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Wylie / Rockwall boutique independent."
+  },
+  {
+    "legal_name": "Cabrera's Iron Doors",
+    "dba_name": "Cabrera's Iron Doors",
+    "address": "2201 E President George Bush Hwy Ste 108",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75074",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://cabrerasirondoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/plano", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Plano family-owned, iron-door specialty."
+  },
+  {
+    "legal_name": "Champion Garage Door Service",
+    "dba_name": "Champion Garage Door Service",
+    "address": "805 Hardy St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77020",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://champion-garage-door-service.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Inner-Houston independent."
+  },
+  {
+    "legal_name": "S.G Garage Doors",
+    "dba_name": "S.G Garage Doors",
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77040",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://sggaragedoors.net",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,veteran_family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Houston veteran + family-owned."
+  },
+  {
+    "legal_name": "Neighborhood Garage Door Repair & Services",
+    "dba_name": "Neighborhood Garage Door Repair",
+    "address": "507 Garden Oaks Blvd",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77018",
+    "estimated_truck_count": 5,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://neighborhoodgaragedoorhouston.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Garden Oaks Houston independent."
+  },
+  {
+    "legal_name": "All Kinds of Doors",
+    "dba_name": "All Kinds of Doors",
+    "address": "13714 Hempstead Rd",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77040",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://allkindsofdoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Northwest Houston (Hempstead Rd) family-owned."
+  },
+  {
+    "legal_name": "Heights Garage Door Repair",
+    "dba_name": "Heights Garage Door Repair",
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77008",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://heightsgaragedoorrepairhouston.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Heights neighborhood Houston independent."
+  },
+  {
+    "legal_name": "Garage Door Family LLC",
+    "dba_name": "Garage Door Family",
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77074",
+    "estimated_truck_count": 4,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://garagedoorfamily.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://garagedoorfamily.com/", "fetched_at": "2026-05-16", "field": "family_owned,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Houston / Katy family-owned independent."
+  },
+  {
+    "legal_name": "ProLift Garage Doors",
+    "dba_name": "ProLift Garage Doors",
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "estimated_truck_count": 5,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": null,
+    "phone": "(281) 954-2678",
+    "data_sources": [
+      {"url": "https://www.bestpickreports.com/garage-doors/houston", "fetched_at": "2026-05-16", "field": "directory_listing,46_year_history"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Houston, 46-yr service history per Best Pick Reports. CAUTION: a 'ProLift Garage Doors of Houston' brand exists as a franchise of ProLift Doors (multi-market). Verify TX SOS — may be franchise. Flagged."
+  },
+  {
+    "legal_name": "Garageworks, LLC",
+    "dba_name": "Garageworks",
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": null,
+    "phone": "(281) 954-0583",
+    "data_sources": [
+      {"url": "https://www.bestpickreports.com/garage-doors/houston", "fetched_at": "2026-05-16", "field": "directory_listing,family_owned"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Houston family-owned per Best Pick Reports."
+  },
+  {
+    "legal_name": "Crown Overhead Doors",
+    "dba_name": "Crown Overhead Doors",
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77092",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://crowndoor.net",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "NW Houston family-owned."
+  },
+  {
+    "legal_name": "First Call Garage Doors LLC",
+    "dba_name": "First Call Garage Doors",
+    "address": null,
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77498",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://firstcallgaragedoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Sugar Land family-owned."
+  },
+  {
+    "legal_name": "Alliance Garage Doors",
+    "dba_name": "Alliance Garage Doors",
+    "address": null,
+    "city": "Richmond",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77469",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://alliancegaragedoorstx.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Richmond / Fort Bend independent."
+  },
+  {
+    "legal_name": "Total Access Control LLC",
+    "dba_name": "Total Access Control",
+    "address": null,
+    "city": "Stafford",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77477",
+    "estimated_truck_count": 5,
+    "service_mix": "commercial",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://totalaccesscontroltx.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land", "fetched_at": "2026-05-16", "field": "directory_listing,locally_operated"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Stafford / Fort Bend, commercial / access-control focus. Locally operated."
+  },
+  {
+    "legal_name": "Pearland Garage Doors",
+    "dba_name": "Pearland Garage Doors",
+    "address": "3419 Veterans Dr",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77584",
+    "estimated_truck_count": 5,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://pearlandgaragedoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/pearland", "fetched_at": "2026-05-16", "field": "directory_listing,locally_owned"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Pearland locally-owned independent."
+  },
+  {
+    "legal_name": "Magic TX Garage Door",
+    "dba_name": "Magic TX Garage Door",
+    "address": null,
+    "city": "Rosharon",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77583",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": 2001,
+    "website": "https://garagedoorrepairsrosharon.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/pearland", "fetched_at": "2026-05-16", "field": "directory_listing,since_2001"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Brazoria / South Houston suburb, since 2001. 24-yr tenure."
+  },
+  {
+    "legal_name": "Accent Garage Doors",
+    "dba_name": "Accent Garage Doors",
+    "address": null,
+    "city": "Manvel",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77578",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": 2005,
+    "website": "https://accentgaragellc.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/pearland", "fetched_at": "2026-05-16", "field": "directory_listing,since_2005"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Manvel / Pearland-area independent since 2005. 20-yr tenure."
+  },
+  {
+    "legal_name": "The Woodlands Garage Door Service",
+    "dba_name": "The Woodlands Garage Door Service",
+    "address": null,
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77385",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://woodlandsgaragedoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,family_Justin_Robin_Hodges"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned by Justin and Robin Hodges. The Woodlands / Conroe area."
+  },
+  {
+    "legal_name": "Perry Garage Doors",
+    "dba_name": "Perry Garage Doors",
+    "address": null,
+    "city": "Spring",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77388",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://perrydoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,locally_owned"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Spring (north Houston) locally-owned."
+  },
+  {
+    "legal_name": "Discount Garage Door & Opener",
+    "dba_name": "Discount Garage Door & Opener",
+    "address": null,
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77385",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://discountgaragedoorandopener.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,veteran_owned"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Conroe veteran-owned and operated."
+  },
+  {
+    "legal_name": "Bee-Line Overhead Door, LLC",
+    "dba_name": "Bee-Line Overhead Door",
+    "address": "25650 I-45 N Ste 1006",
+    "city": "Spring",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77386",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://beelineoverheaddoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://beelineoverheaddoor.com/", "fetched_at": "2026-05-16", "field": "family_owned,40_years_combined_exp"},
+      {"url": "https://www.thebluebook.com/iProView/1496504/", "fetched_at": "2026-05-16", "field": "blue_book_2017"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally-owned family business, The Woodlands / Spring. 40+ yrs combined exp."
+  },
+  {
+    "legal_name": "Overhead Door Company of Conroe",
+    "dba_name": "Overhead Door of Conroe",
+    "address": null,
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77304",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://ohdconroe.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": false,
+    "independence_notes": "FLAG: 'Overhead Door' brand prefix often denotes Overhead Door Corporation Red Ribbon Distributor (independent franchise-style relationship). Conroe location not confirmed as DH Pace owned vs independent — needs SOS verification before outreach."
+  },
+  {
+    "legal_name": "Cypress Garage & Gates",
+    "dba_name": "Cypress Garage & Gates",
+    "address": "12815 West Cypress Pass Loop",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77429",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://cypressgarageandgates.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/cypress", "fetched_at": "2026-05-16", "field": "directory_listing,30_years"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Cypress (NW Harris) independent, 30+ yrs experience."
+  },
+  {
+    "legal_name": "Alpine Garage Door Repair Cypress Co.",
+    "dba_name": "Alpine Garage Door Repair",
+    "address": "26100 Crossland Park Ln",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77433",
+    "estimated_truck_count": 5,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://alpinegaragedoorstx.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/cypress", "fetched_at": "2026-05-16", "field": "directory_listing,10_years"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Cypress independent, 10+ yrs."
+  },
+  {
+    "legal_name": "Garage Door Doctor (Katy)",
+    "dba_name": "Garage Door Doctor Katy",
+    "address": null,
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77494",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://katygaragedoordoctor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/sugar-land", "fetched_at": "2026-05-16", "field": "directory_listing,locally_owned"}
+    ],
+    "independence_verified": false,
+    "independence_notes": "POSSIBLE DUPLICATE / RELATION to Garage Door Doctor (Houston, garagedoordoctor.biz). Same brand / different web domain. Verify ownership before treating as distinct target."
+  },
+  {
+    "legal_name": "Garage Door Guys of Houston",
+    "dba_name": "Garage Door Guys of Houston",
+    "address": "2500 Woodland Park Dr",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77077",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://garagedoorguyshouston.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "West Houston independent."
+  },
+  {
+    "legal_name": "Discount Garage Doors of Houston",
+    "dba_name": "Discount Garage Doors of Houston",
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77080",
+    "estimated_truck_count": 5,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://houstondiscountdoorrepair.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Spring Branch / NW Houston independent."
+  },
+  {
+    "legal_name": "Ohana Garage Doors",
+    "dba_name": "Ohana Garage Doors",
+    "address": "19308 Morton Rd",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77449",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://ohanagaragedoorrepair.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Katy / NW Houston family-owned ('Ohana' = Hawaiian for family — strong family-name signal)."
+  },
+  {
+    "legal_name": "German Garage Doors",
+    "dba_name": "German Garage Doors",
+    "address": "8402 Greenleaf Lake Dr",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77084",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://germangaragedoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "West Houston independent."
+  },
+  {
+    "legal_name": "ACJ Houston Garage Doors",
+    "dba_name": "ACJ Houston Garage Doors",
+    "address": "5311 Karenbeth Dr",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77084",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://acjhoustongaragedoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "West Houston independent (initials suggest founder family-name)."
+  },
+  {
+    "legal_name": "R B Garage Doors",
+    "dba_name": "R B Garage Doors",
+    "address": "7703 Lobera Dr",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77083",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://rbgaragedoorshouston.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "SW Houston independent."
+  },
+  {
+    "legal_name": "PS Garage Door",
+    "dba_name": "PS Garage Door",
+    "address": "1922 Blodgett St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77004",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://psgaragedoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Central / Third Ward Houston independent."
+  },
+  {
+    "legal_name": "T.A.C. Garage Door Service",
+    "dba_name": "T.A.C. Garage Door Service",
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77076",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://tacgaragedoorservicetx.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "North Houston independent."
+  },
+  {
+    "legal_name": "Fix N Go Garage Door Repair",
+    "dba_name": "Fix N Go",
+    "address": "5642 Cartagena St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77035",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://fixngotx.net",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/houston", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": false,
+    "independence_notes": "Operates BOTH Houston AND Austin (10011 Stonelake Blvd) per directory — multi-market. Verify whether single owner or franchise. Flagged."
+  },
+  {
+    "legal_name": "Aarons Garage Door (Bandera Rd)",
+    "dba_name": "Aaron's Garage Door (location 2)",
+    "address": "5417 Bandera Rd Ste 608",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78238",
+    "estimated_truck_count": 6,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 1997,
+    "website": "https://aaronsgaragedoor.com",
+    "phone": "(210) 690-7555",
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Second / showroom address for Aaron's Garage Door Service (same company as Jackwood Dr) — see related record for ownership detail. Single record for the business; duplicated here for completeness of addresses found."
+  },
+  {
+    "legal_name": "Garage Door Specialists",
+    "dba_name": "Garage Door Specialists",
+    "address": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "estimated_truck_count": 4,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://sanantoniogaragedoorspecialist.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "San Antonio family-owned independent."
+  },
+  {
+    "legal_name": "ASAP Garage Doors",
+    "dba_name": "ASAP Garage Doors",
+    "address": "707 Sonnet Dr",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78216",
+    "estimated_truck_count": 4,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://asapgaragedoorstx.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "San Antonio independent."
+  },
+  {
+    "legal_name": "Garage Guru",
+    "dba_name": "Garage Guru",
+    "address": "431 Unicorn Rnch",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78245",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://sagarageguru.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "San Antonio family-owned."
+  },
+  {
+    "legal_name": "Jerry's Garage Doors",
+    "dba_name": "Jerry's Garage Doors",
+    "address": "16620 San Pedro Ave #255",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78232",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://jerrygaragedoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "San Antonio family-operated (Jerry — owner first-name signal)."
+  },
+  {
+    "legal_name": "Perry's Garage Door Services",
+    "dba_name": "Perry's Garage Door Services",
+    "address": "8503 Marathon Dr",
+    "city": "Universal City",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78148",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://perrysgaragedoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Universal City (NE San Antonio) family-owned."
+  },
+  {
+    "legal_name": "Premium Overhead Door Inc.",
+    "dba_name": "Premium Overhead Door",
+    "address": "8711 Abe Lincoln",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78240",
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": 2000,
+    "website": "https://premiumoverheaddoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,since_2000"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "San Antonio established 2000. 25-year tenure."
+  },
+  {
+    "legal_name": "DRL Garage Doors",
+    "dba_name": "DRL Garage Doors",
+    "address": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78233",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://drl-garagedoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/san-antonio", "fetched_at": "2026-05-16", "field": "directory_listing,20_years"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "NE San Antonio independent, 20+ yrs."
+  },
+  {
+    "legal_name": "Austin Garage Door",
+    "dba_name": "Austin Garage Door",
+    "address": "701 Tillery St #12",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://austinsgaragedoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "East Austin independent."
+  },
+  {
+    "legal_name": "Austin Garage Door Mechanics",
+    "dba_name": "Austin Garage Door Mechanics",
+    "address": "1914 Howard Ln Ste J",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78728",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://austingaragedoormechanics.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "North Austin independent."
+  },
+  {
+    "legal_name": "Garage Door On",
+    "dba_name": "Garage Door On",
+    "address": "809 Herndon Ln",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78704",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://garagedooron.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,family"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "South Austin family-owned."
+  },
+  {
+    "legal_name": "AA Affordable Austin Overhead Door",
+    "dba_name": "AA Affordable Austin Overhead Door",
+    "address": "6507 Spicewood Springs Rd",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78759",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://garagedoor-austin.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "NW Austin independent."
+  },
+  {
+    "legal_name": "Austin Overhead Door Company",
+    "dba_name": "Austin Overhead Door Company",
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "estimated_truck_count": 5,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://austinoverheaddoorcompany.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": false,
+    "independence_notes": "FLAG: 'Overhead Door' brand prefix may indicate Red Ribbon Distributor relationship. Verify TX SOS / independence."
+  },
+  {
+    "legal_name": "Matamoros Garage Doors",
+    "dba_name": "Matamoros Garage Doors",
+    "address": "PO Box 2712",
+    "city": "Kyle",
+    "county": "Hays",
+    "state": "TX",
+    "zip": "78640",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://matamorosdoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/austin", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Kyle / South Austin family-name independent."
+  },
+  {
+    "legal_name": "Austin's Greater Garage Doors",
+    "dba_name": "Austin's Greater Garage Doors",
+    "address": null,
+    "city": "Pflugerville",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78660",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://austinsgaragedoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Pflugerville / North Austin independent."
+  },
+  {
+    "legal_name": "The Up & Up Garage Doors",
+    "dba_name": "The Up & Up Garage Doors",
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78730",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://theupandupdoors.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "West Austin independent."
+  },
+  {
+    "legal_name": "VIP Garage Door Services",
+    "dba_name": "VIP Garage Door Services",
+    "address": null,
+    "city": "Round Rock",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78664",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://vipgaragedoorservices.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Round Rock independent."
+  },
+  {
+    "legal_name": "The Door Company (custom door center)",
+    "dba_name": "The Door Company",
+    "address": null,
+    "city": "Georgetown",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78633",
+    "estimated_truck_count": 4,
+    "service_mix": "mixed",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://customdoorcenter.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/round-rock", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Georgetown (N Austin) independent custom-door shop."
+  },
+  {
+    "legal_name": "Garage Doors Repair Tomball TX",
+    "dba_name": "Garage Doors Repair Tomball",
+    "address": null,
+    "city": "Tomball",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77375",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://garagedoorsrepairtomball.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "Tomball (NW Houston exurb) independent."
+  },
+  {
+    "legal_name": "Lake Woodlands Garage Door",
+    "dba_name": "Lake Woodlands Garage Door",
+    "address": null,
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77380",
+    "estimated_truck_count": 4,
+    "service_mix": "residential",
+    "ida_member": false,
+    "founded_year": null,
+    "website": "https://lakewoodlandsgaragedoor.com",
+    "phone": null,
+    "data_sources": [
+      {"url": "https://www.expertise.com/home-improvement/garage-doors/texas/the-woodlands", "fetched_at": "2026-05-16", "field": "directory_listing,independent"}
+    ],
+    "independence_verified": true,
+    "independence_notes": "The Woodlands independent."
+  }
+]

@@ -1,0 +1,706 @@
+[
+  {
+    "business_id": "a5fe39a4-260d-5723-852f-e3a10e06efbf",
+    "legal_name": "Collinsworth Car Care Center",
+    "city": "Garland",
+    "current_score_before": 86,
+    "current_owner_age_before": 90,
+
+    "current_operating_owner_name": "Greg Gallagher",
+    "current_operating_owner_age_estimate": 60,
+    "current_operating_owner_age_source": "ownership_acquisition_date",
+    "current_operating_owner_evidence": "BBB and local sources confirm Greg Gallagher purchased Collinsworth Car Care in 1999. The Collinsworth name persists as goodwill/brand only — the founding Collinsworth family is no longer the operator. Assuming Gallagher was ~33-35 when he acquired the business in 1999, current age ~60-62 (2026).",
+    "founder_status": "Founded 1956 as a Gulf gas station; original Collinsworth family operated until ~1999, when ownership transferred to Greg Gallagher (unrelated). Original founders likely deceased or fully retired.",
+
+    "successor_internal": false,
+    "successor_evidence_url": "https://www.bbb.org/us/tx/garland/profile/auto-lube/collinsworth-car-care-0875-19004072",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "No family members listed in BBB profile or web sources. No multi-generation team visible. Single owner (Greg Gallagher) with no documented internal successor.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active (BBB shows active business profile)",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE-certified mechanics",
+      "Standard hours M-F 7-5 (closed weekends)",
+      "Website appears dated; no online booking visible",
+      "No specific shop management software mentioned",
+      "No ADAS / EV capabilities advertised"
+    ],
+    "coasting_tell_summary": "Moderate coasting signals: established brand, dated web presence, no modern tech callouts. Single-owner operation purchased 27 years ago.",
+
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "Original 90-yr owner-age estimate was wrong (license_tenure_proxy assumed founder still operating). Current operator Greg Gallagher acquired 1999, now ~60-62 — within retirement window but not at urgent edge. No visible internal successor. Modest coasting tells. Keep at B with reduced urgency vs. previous score.",
+
+    "data_completeness": 0.7,
+    "data_sources": [
+      "https://www.bbb.org/us/tx/garland/profile/auto-lube/collinsworth-car-care-0875-19004072",
+      "https://www.collinsworthcarcare.com/"
+    ],
+    "notes": "MODEL IMPROVEMENT FINDING: license_tenure_proxy assumed Collinsworth family still ran the business — they don't. Greg Gallagher (unrelated) bought it in 1999. Real owner age is ~60, not 90. Score should drop modestly (less urgency) but candidate still qualifies as a B target."
+  },
+  {
+    "business_id": "39cd68fa-a682-53e7-be1c-e5fb36d9b6a8",
+    "legal_name": "Poutous 1960 Auto Repair",
+    "city": "Jersey Village",
+    "current_score_before": 86,
+    "current_owner_age_before": 90,
+
+    "current_operating_owner_name": "Maria Grancio (Owner) + Alexis Poutous Cotton (Co-Owner)",
+    "current_operating_owner_age_estimate": 55,
+    "current_operating_owner_age_source": "website_self_report",
+    "current_operating_owner_evidence": "Website 'Meet Our Crew' page identifies Maria Grancio and Alexis Poutous Cotton as current owners. BBB confirms Maria Grancio as Owner. Alexis Poutous Cotton — name strongly indicates daughter or descendant of Poutous founding family. JP Cotton (technician) is also on team — Alexis's son/family member.",
+    "founder_status": "Founded 1968 by Poutous family (Gus Poutous, Gerrie Poutous referenced as elder family figures). Multi-generation: founding generation passed/retired; Alexis Poutous Cotton represents NEXT generation; JP Cotton possibly THIRD generation as technician.",
+
+    "successor_internal": true,
+    "successor_evidence_url": "https://www.poutousautorepair.com/meet-our-crew",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Multi-generation family operation. Alexis Poutous Cotton is co-owner (2nd or 3rd gen). JP Cotton is on the technician team — same family. Internal successor already established.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active (BBB profile active)",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE-Certified Master Technician credentialed",
+      "Active social media (Facebook), 6+ named team members",
+      "Modern website with detailed team profiles",
+      "No specific shop management software or online booking mentioned",
+      "No ADAS / EV mentions"
+    ],
+    "coasting_tell_summary": "Active multi-gen family operation, NOT coasting. Three-generation family pipeline (Poutous founders -> Alexis Poutous Cotton co-owner -> JP Cotton technician).",
+
+    "promotion_recommendation": "C_watch",
+    "promotion_rationale": "DEMOTE: license_tenure_proxy massively wrong. Current operator is Maria Grancio + Alexis Poutous Cotton (~55), NOT 90-year-old founder. Internal successor (JP Cotton, likely son/family) ALREADY in business as technician. Multi-gen family pipeline established. Not a credible sale candidate in 12-36 month window.",
+
+    "data_completeness": 0.85,
+    "data_sources": [
+      "https://www.poutousautorepair.com/meet-our-crew",
+      "https://www.bbb.org/us/tx/houston/profile/auto-repair/poutous-auto-repair-inc-0915-80655/"
+    ],
+    "notes": "MODEL IMPROVEMENT FINDING: This is the canonical example. Business 'tenure since 1968' + 20 = '90-year-old owner' is dead wrong. Real operator is Alexis Poutous Cotton, mid-50s, with her family member already working as a tech. Multi-gen family = INTERNAL SUCCESSOR. Must demote."
+  },
+  {
+    "business_id": "40b06b8e-1546-547b-9b90-a5b6ca1ac093",
+    "legal_name": "Reliant Complete Auto Care",
+    "city": "Humble",
+    "current_score_before": 86,
+    "current_owner_age_before": 90,
+
+    "current_operating_owner_name": "Sam (last name unknown) and Connie",
+    "current_operating_owner_age_estimate": 60,
+    "current_operating_owner_age_source": "unknown",
+    "current_operating_owner_evidence": "Customer reviews consistently reference 'Sam & Connie' as current operators. Could not verify full name via public sources. Business is 81 years old (since 1945), so several ownership transitions likely. No founder family name visible in current branding.",
+    "founder_status": "Founded 1945; original founders unknown by name, almost certainly deceased. Current operators (Sam & Connie) appear to be a non-founding-family pair who operate the business as Bosch / NAPA-certified shop.",
+
+    "successor_internal": false,
+    "successor_evidence_url": "https://www.reliantautocare.com/about-us/index.html",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "No multi-generation family team visible. Reviews mention 'Sam & Connie' as the operating pair. No children/successors named.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active (NAPA AutoCare Center; Bosch certified)",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "Bosch-certified auto/truck repair center",
+      "NAPA AutoCare Center designation",
+      "Services Mercedes/BMW/Audi/exotic — premium positioning",
+      "Online appointments available",
+      "No specific shop management software named",
+      "Owner-couple operation"
+    ],
+    "coasting_tell_summary": "Active business with premium positioning. Owner-couple operation w/o clear succession is a positive signal for sale potential.",
+
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "Original 90-yr estimate likely wrong. Sam & Connie appear to be current operators (likely mid-50s to mid-60s). No internal successor visible. Premium positioning + owner-couple = solid B-tier candidate. Keep at B but reduce confidence in owner-age estimate.",
+
+    "data_completeness": 0.55,
+    "data_sources": [
+      "https://www.reliantautocare.com/",
+      "https://www.bbb.org/us/tx/humble/profile/diesel-repair/reliant-auto-0915-90028593"
+    ],
+    "notes": "Could not pin owner full name. Business has changed hands multiple times in 81 years; cannot assume current owner = founder. Owner age cannot be confirmed."
+  },
+  {
+    "business_id": "cfe8bc6a-a4fb-552e-a39b-f285424c2fa7",
+    "legal_name": "Addison Auto Repair",
+    "city": "Addison",
+    "current_score_before": 85,
+    "current_owner_age_before": 86,
+
+    "current_operating_owner_name": "Sherry and Alfredo Blanco",
+    "current_operating_owner_age_estimate": 50,
+    "current_operating_owner_age_source": "website_self_report (about-us page)",
+    "current_operating_owner_evidence": "Website about-us page explicitly states: founded 1972 by Jerry Redding (Mayor of Addison); led by Terry and Beverly Fischer for 30 years; now Sherry and Alfredo Blanco operate. This is a TWO-PRIOR-TRANSITIONS business, not a founder-still-in-place situation. Blancos are recent (post-2002) acquirers.",
+    "founder_status": "Founded 1972 by Jerry Redding. Sold to Terry & Beverly Fischer in 1992 (held 30 yrs). Sold to Sherry and Alfredo Blanco recently. Original founder Redding either deceased or fully retired.",
+
+    "successor_internal": false,
+    "successor_evidence_url": "https://addisonautorepairdfw.com/about-us/",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Blanco couple appear to be recent acquirers — not original family. No multi-generation family info visible.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE-certified technicians",
+      "Online appointment scheduling",
+      "Modern website",
+      "Active customer reviews"
+    ],
+    "coasting_tell_summary": "Modern, active shop with recent ownership transition. NOT coasting.",
+
+    "promotion_recommendation": "C_watch",
+    "promotion_rationale": "DEMOTE: license_tenure_proxy treated this as founder-since-1972 (age 86). Reality: business has already undergone TWO ownership transitions. Current Blanco owners are recent acquirers (~age 50). Likely have substantial debt remaining on acquisition and ZERO motivation to sell in 12-36 months.",
+
+    "data_completeness": 0.85,
+    "data_sources": [
+      "https://addisonautorepairdfw.com/about-us/"
+    ],
+    "notes": "MODEL IMPROVEMENT FINDING: Business name persists across multiple unrelated ownership transitions. 'Family-owned since 1972' label refers to brand longevity, not current-owner tenure. Recent acquirers are LEAST likely sellers."
+  },
+  {
+    "business_id": "ec396231-2353-5443-9cb7-2e01c53b0db2",
+    "legal_name": "Byrd Automotive",
+    "city": "The Woodlands",
+    "current_score_before": 85,
+    "current_owner_age_before": 69,
+
+    "current_operating_owner_name": "Tim Wijt",
+    "current_operating_owner_age_estimate": 62,
+    "current_operating_owner_age_source": "ownership_acquisition_date",
+    "current_operating_owner_evidence": "BBB and D&B confirm Tim Wijt as President/Owner. He writes blog posts on the company website (active operator). The 'Byrd' name is brand/legacy — Tim Wijt is not a Byrd. He has been associated with the business for at least the past ~10 years per content history.",
+    "founder_status": "Founded 1989. Original 'Byrd' founder no longer visible. Tim Wijt is current sole-proprietor owner, unrelated to Byrd family.",
+
+    "successor_internal": false,
+    "successor_evidence_url": "https://www.bbb.org/us/tx/the-woodlands/profile/auto-repair/byrd-automotive-inc-0915-39882",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Sole proprietorship. No family members visible. No multi-gen team. Wijt as solo owner with no documented successor.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE certified",
+      "ACDelco certified",
+      "AAA Approved",
+      "Two locations (Woodlands + Tomball)",
+      "Customer Service Index Score 100%",
+      "Active blog content"
+    ],
+    "coasting_tell_summary": "Quite active operation — multiple locations, modern certifications, active content. NOT coasting.",
+
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "Tim Wijt sole-proprietor with no documented successor. Estimated age ~60-65. Two locations adds value. Active operator who could be in retirement-window. Solid B-tier but keep open that he could be running for 5+ more years.",
+
+    "data_completeness": 0.7,
+    "data_sources": [
+      "https://www.bbb.org/us/tx/the-woodlands/profile/auto-repair/byrd-automotive-inc-0915-39882",
+      "https://www.dnb.com/contact-directory/contact-profile.tim_wijt.beeb5dc0e5f280bd51113a63779fa8fb.html"
+    ],
+    "notes": "Confirmed model failure: 'Byrd' brand name suggested family lineage, but the actual owner is unrelated Tim Wijt. Less urgent than original score suggested."
+  },
+  {
+    "business_id": "a52eba26-bb47-55a6-80cf-82eae50ec20c",
+    "legal_name": "Hillin's Auto Repair",
+    "city": "San Antonio",
+    "current_score_before": 85,
+    "current_owner_age_before": 76,
+
+    "current_operating_owner_name": "Lee Hillin (President) and Kenneth Hillin (Vice President)",
+    "current_operating_owner_age_estimate": 65,
+    "current_operating_owner_age_source": "linkedin_grad",
+    "current_operating_owner_evidence": "BBB confirms Lee Hillin as President, Kenneth Hillin as Vice President. Customers describe 'the Hillins' working on cars for 15+ years. Brothers — likely sons of the original founder (1982). Founded ~44 years ago: if founder Hillin Sr. was 30 in 1982, he'd be 74 now — likely retired with brothers running it.",
+    "founder_status": "Founded 1982 (likely by senior Hillin). Current Lee + Kenneth Hillin operate — likely sons of founder. Multi-generation family.",
+
+    "successor_internal": true,
+    "successor_evidence_url": "https://www.bbb.org/us/tx/san-antonio/profile/auto-repair/hillins-auto-repair-0825-1000204989",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Two Hillin brothers as Pres + VP. Family operation with two operators is its own internal succession. No third-gen visible but partnership reduces solo-exit pressure.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "Master ASE-Certified technicians",
+      "Mitchell1 SocialCRM platform in footer",
+      "Online appointment booking",
+      "Modern web presence"
+    ],
+    "coasting_tell_summary": "Modern with Mitchell1 software — NOT coasting. Active operation.",
+
+    "promotion_recommendation": "C_watch",
+    "promotion_rationale": "DEMOTE: Two Hillin brothers (Lee + Kenneth) running as Pres + VP suggests internal partnership succession. Even if Lee Hillin retires at 70, Kenneth could continue solo. Modern shop, active ops. Less likely solo-exit sale candidate than license_tenure_proxy suggested.",
+
+    "data_completeness": 0.75,
+    "data_sources": [
+      "https://hillinsautorepair.net/",
+      "https://www.bbb.org/us/tx/san-antonio/profile/auto-repair/hillins-auto-repair-0825-1000204989"
+    ],
+    "notes": "Two-brother partnership reduces probability of sale. Could go either way — possibly an extended-family business with one brother eventually selling out to the other."
+  },
+  {
+    "business_id": "08b025d0-f105-511a-aa42-53548db55b43",
+    "legal_name": "Arbor Autoworks",
+    "city": "Austin",
+    "current_score_before": 84,
+    "current_owner_age_before": 68,
+
+    "current_operating_owner_name": "Michael Phan (Owner & Service Advisor); Winn Kasper (Founder, semi-retired but still 'A Message From Winn' on website)",
+    "current_operating_owner_age_estimate": 50,
+    "current_operating_owner_age_source": "website_self_report",
+    "current_operating_owner_evidence": "Website 'About Us' lists Michael Phan as current Owner & Service Advisor. Winn Kasper (founder, 1990) appears semi-retired but still has video presence ('A Message From Winn'). Phan is NOT a Kasper family member — recent non-family ownership transition.",
+    "founder_status": "Founded 1990 by Winn Kasper. Recent transition (likely 2018-2022) to Michael Phan (non-family). Kasper semi-retired but still publicly associated with brand.",
+
+    "successor_internal": false,
+    "successor_evidence_url": "https://arborautoworks.com/about-us/",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Phan is new acquirer. No family successor visible. 5 mechanical engineers on team (no Phan family members named).",
+
+    "is_distressed": false,
+    "comptroller_status": "Active",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE-certified technicians",
+      "Online appointment request form",
+      "Modern web design",
+      "5+ technical staff visible"
+    ],
+    "coasting_tell_summary": "Modern, growing shop under new ownership. NOT coasting.",
+
+    "promotion_recommendation": "C_watch",
+    "promotion_rationale": "DEMOTE: Michael Phan is a RECENT non-family acquirer (~age 45-55), not the 68-yr-old founder. Recent acquirers carry acquisition debt and have low probability of selling in 12-36 mo. Winn Kasper has already exited operations.",
+
+    "data_completeness": 0.85,
+    "data_sources": [
+      "https://arborautoworks.com/about-us/",
+      "https://www.bbb.org/us/tx/austin/profile/auto-repair/arbor-autoworks-0825-42632",
+      "https://www.linkedin.com/in/winn-kasper-45063317/"
+    ],
+    "notes": "Another transition-already-happened case. Original input had owner_name='Michael Phan' but still scored as 68 yrs (license_tenure_proxy) — Phan is much younger and recently acquired the business."
+  },
+  {
+    "business_id": "aff2f20e-f17f-5f07-b1e9-d850708915ed",
+    "legal_name": "AutoWorks",
+    "city": "San Antonio",
+    "current_score_before": 84,
+    "current_owner_age_before": 75,
+
+    "current_operating_owner_name": "Mark Munn (Owner); Lloyd M. Munn III (President/Director)",
+    "current_operating_owner_age_estimate": 60,
+    "current_operating_owner_age_source": "name_suffix (Munn III)",
+    "current_operating_owner_evidence": "BBB lists Mark Munn as Owner; Lloyd M. Munn III as President/Director. Name 'III' indicates third-generation Munn family member. The Munn family has been associated with the business but who founded vs. who currently operates is unclear from public sources.",
+    "founder_status": "Founded 1983 (likely Lloyd Munn Sr. or II). Now operated by Munn III. Multi-generation family business.",
+
+    "successor_internal": true,
+    "successor_evidence_url": "https://www.bbb.org/us/tx/san-antonio/profile/auto-repair/auto-works-0825-13273",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Two Munn family members visible (Mark + Lloyd III). Multi-gen family business. Internal succession evident from generational naming (III).",
+
+    "is_distressed": false,
+    "comptroller_status": "Active",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE Certified Technicians",
+      "RepairPal partnership",
+      "CarMax Warranty authorization",
+      "Online appointment booking",
+      "Email/text status updates",
+      "Explicit no-EV servicing"
+    ],
+    "coasting_tell_summary": "Modern op with active partnerships; no EV servicing is a minor stagnation flag. Active operation, NOT coasting overall.",
+
+    "promotion_recommendation": "C_watch",
+    "promotion_rationale": "DEMOTE: Multi-gen Munn family operation (II to III transition complete). Lloyd Munn III as Pres + Mark Munn (likely brother or cousin) as Owner — internal partnership. Not a credible solo-exit candidate.",
+
+    "data_completeness": 0.7,
+    "data_sources": [
+      "https://www.bbb.org/us/tx/san-antonio/profile/auto-repair/auto-works-0825-13273",
+      "https://autoworksatx.com/"
+    ],
+    "notes": "Name suffix 'III' strongly indicates multi-generation Munn family. Internal successor already established."
+  },
+  {
+    "business_id": "276077e8-6273-5e26-970a-ec1340d818a5",
+    "legal_name": "Midtown Auto Service & Repair",
+    "city": "Houston",
+    "current_score_before": 84,
+    "current_owner_age_before": 71,
+
+    "current_operating_owner_name": "Mon Yu (aka Mike Yu)",
+    "current_operating_owner_age_estimate": 56,
+    "current_operating_owner_age_source": "news_article (immigration date 1973, age 3)",
+    "current_operating_owner_evidence": "News article confirms Mon Yu (also called Mikey/Mike Yu) is the current owner. He emigrated from South Korea in 1973 at age 3 (born ~1970). Bought business from his father Man Yu in 1999 when he was ~29. Current age: ~56 (in 2026).",
+    "founder_status": "Founded 1987 by Man Yu (father). Sold to son Mon Yu in 1999. Father retired and likely deceased or in late 80s. Mon Yu is current sole operator.",
+
+    "successor_internal": false,
+    "successor_evidence_url": "https://www.midtownautoservice.net/blog/midtown-auto-service-featured-newspaper-article-houston/",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Mon Yu is sole operator. Took over from father 25 years ago. No mention of children working in the business. No third-generation visible.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE certified technicians",
+      "AAA Approved",
+      "NAPA Approved",
+      "GM Independent Factory Service Center",
+      "State Recognized Emissions Repair Facility",
+      "Active blog content"
+    ],
+    "coasting_tell_summary": "Active, premium positioning with multiple certifications. NOT coasting.",
+
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "Mon Yu is ~56 — younger than license_tenure_proxy estimated (71). Not yet in immediate retirement window, but 10 years out is plausible. Father-to-son succession ALREADY happened (in 1999), so this is now a solo Mon Yu operation with no visible next-gen. Could be a long-window B candidate.",
+
+    "data_completeness": 0.85,
+    "data_sources": [
+      "https://www.midtownautoservice.net/blog/midtown-auto-service-featured-newspaper-article-houston/",
+      "https://www.midtownautoservice.net/"
+    ],
+    "notes": "MODEL IMPROVEMENT FINDING: license_tenure_proxy treated 1987 founding as current-owner tenure. Father-to-son succession 1999 reset the owner-age clock. Owner is actually 56, not 71."
+  },
+  {
+    "business_id": "fcd4a2b9-79e9-550e-a3c9-e0c46e2b948b",
+    "legal_name": "Lorentz Automotive",
+    "city": "Denton",
+    "current_score_before": 83,
+    "current_owner_age_before": 76,
+
+    "current_operating_owner_name": "Renae Lorentz (co-owner); Cole Lorentz (co-owner, son); Claire Lorentz (daughter-in-law, also in business)",
+    "current_operating_owner_age_estimate": 60,
+    "current_operating_owner_age_source": "website_self_report",
+    "current_operating_owner_evidence": "Website + Live Local Magazine confirm Renae Lorentz runs the business with son Cole and daughter-in-law Claire. Cole is FOURTH GENERATION (great-grandfather Robert Cole, grandfather Junior Lorentz, father, now Cole). Renae is mother of Cole. Business expanded to second location (Ponder).",
+    "founder_status": "Founded 1982 BUT the family lineage stretches back four generations: great-grandfather Robert Cole, grandfather Junior Lorentz, then current Renae's husband, then Cole. Multi-generation family operation.",
+
+    "successor_internal": true,
+    "successor_evidence_url": "https://livelocalmagazines.com/family-owned-with-your-family-in-mind/",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Explicit 4th-generation family operation. Cole Lorentz (4th gen) + wife Claire run alongside mother Renae. Business is expanding (added Ponder location). NOT a sale candidate.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active (expanding — 2 locations)",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE certified",
+      "BBB Accredited",
+      "AAA Approved",
+      "Online booking",
+      "36mo/36k mile warranty",
+      "Voted Best of Denton County (4 years)",
+      "EXPANSION to 2nd location (Ponder)"
+    ],
+    "coasting_tell_summary": "Actively growing 4-generation family business. ANTI-coasting signal.",
+
+    "promotion_recommendation": "C_watch",
+    "promotion_rationale": "DEMOTE: This is the textbook example of license_tenure_proxy failure. Business is 4-generation family, currently expanding to 2nd location, with Cole (~30-35) actively running it alongside mother. Zero sale probability in 12-36 months.",
+
+    "data_completeness": 0.95,
+    "data_sources": [
+      "https://lorentzautodenton.com/",
+      "https://livelocalmagazines.com/family-owned-with-your-family-in-mind/",
+      "https://livelocalmagazines.com/lorentz-brings-full-service-auto-shop-home-to-ponder/"
+    ],
+    "notes": "STRONGEST DEMOTION CASE. Generational succession not only exists but is in active hand-off. Business is EXPANDING (Ponder location). Never a sale candidate."
+  },
+  {
+    "business_id": "61725396-46ac-5585-b226-ded456364592",
+    "legal_name": "Vick's Expertune Automotive",
+    "city": "Austin",
+    "current_score_before": 82,
+    "current_owner_age_before": 71,
+
+    "current_operating_owner_name": "Dane Vick (President/Manager); Royce Vick (older Vick); 'Justin' (son working in shop)",
+    "current_operating_owner_age_estimate": 55,
+    "current_operating_owner_age_source": "linkedin_role (Dane Vick - President since at least 2009)",
+    "current_operating_owner_evidence": "Multiple sources: Royce Vick is owner-of-record. Dane Vick is President/Manager. Customer reviews mention 'Dane Vick and son Justin work at the shop.' Three-generation family (Royce -> Dane -> Justin). Dane likely mid-50s, Justin in 20s.",
+    "founder_status": "Founded 1987 by Royce Vick. Dane (son) took over as President/operator. Now Justin (grandson) works in shop. 3-generation family.",
+
+    "successor_internal": true,
+    "successor_evidence_url": "https://countyadvisoryboard.com/royce-vick-vicks-expertune-automotive/",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Three-generation Vick family pipeline. Justin Vick already in shop as next-gen. Clear internal successor.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE-certified",
+      "Online booking",
+      "Snap Finance partnership",
+      "DMV-certified emissions",
+      "Active social media"
+    ],
+    "coasting_tell_summary": "Modern, active 3-gen family shop. NOT coasting.",
+
+    "promotion_recommendation": "C_watch",
+    "promotion_rationale": "DEMOTE: 3-generation Vick family operation. Dane Vick (current operator, ~55) is son of founder Royce; Justin Vick (grandson) is in the shop. Strong internal succession pipeline.",
+
+    "data_completeness": 0.85,
+    "data_sources": [
+      "https://countyadvisoryboard.com/royce-vick-vicks-expertune-automotive/",
+      "https://vicks-expertune.com/",
+      "https://www.linkedin.com/in/dane-vick-34543a39/"
+    ],
+    "notes": "MODEL IMPROVEMENT FINDING: Original owner_name='Vick' was correct surname but wrong generation. Founder Royce -> son Dane (current operator, 55) -> grandson Justin. Three-gen succession in place."
+  },
+  {
+    "business_id": "c7587b4d-c161-5510-a919-2539b30784e1",
+    "legal_name": "Green & White Automotive",
+    "city": "Spring",
+    "current_score_before": 80,
+    "current_owner_age_before": 81,
+
+    "current_operating_owner_name": "Kent Morris (Owner); Kathy Morris (spouse, associated with business)",
+    "current_operating_owner_age_estimate": 65,
+    "current_operating_owner_age_source": "linkedin_role",
+    "current_operating_owner_evidence": "Kent Morris confirmed as Owner via LinkedIn and BBB. Kathy Morris is associated (likely spouse). LinkedIn suggests he's been in this role for many years; estimated current age 62-68. No children/successors visible in business.",
+    "founder_status": "Founded 1977. Kent Morris is current owner — unclear if he's the original founder or acquired it. Likely the founder given 49-yr tenure under his LinkedIn profile.",
+
+    "successor_internal": false,
+    "successor_evidence_url": "https://www.linkedin.com/in/kent-morris-5843308/",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Kent + Kathy Morris are the operating couple. No children named in business. No third-party manager visible. Solo couple-owned operation.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE-certified",
+      "Online booking ('Book Now' buttons)",
+      "BG Products partnership",
+      "36mo/36k warranty",
+      "Family-owned 4+ decades"
+    ],
+    "coasting_tell_summary": "Established couple-owned operation, modern web tech. Mild coasting signals (no expansion, no successor visible).",
+
+    "promotion_recommendation": "A_immediate",
+    "promotion_rationale": "PROMOTE: Kent Morris is mid-60s (closer to 65 than original 81 estimate, but still in retirement window). Kathy is co-spouse, no children in business. Couple-owned, no internal succession, 49 years of tenure = high probability of retirement sale in 12-36 months. KEEP scoring at solid A/B level.",
+
+    "data_completeness": 0.75,
+    "data_sources": [
+      "https://www.linkedin.com/in/kent-morris-5843308/",
+      "https://www.bbb.org/us/tx/spring/profile/auto-repair/green-white-automotive-0915-16683",
+      "https://greenandwhiteauto.com/about/"
+    ],
+    "notes": "Couple-owned with no successor visible = highest retirement-sale probability profile."
+  },
+  {
+    "business_id": "1161c6b8-52d2-5065-929e-a6cfffa3372e",
+    "legal_name": "Montrose Automotive",
+    "city": "Houston",
+    "current_score_before": 80,
+    "current_owner_age_before": 89,
+
+    "current_operating_owner_name": "Thomas and Ben Monkiewicz",
+    "current_operating_owner_age_estimate": 50,
+    "current_operating_owner_age_source": "website_self_report",
+    "current_operating_owner_evidence": "Montrose Automotive about-us page explicitly states business was 'founded by Claudia and Tony Colca' and is 'now owned by Thomas and Ben Monkiewicz, who continue the tradition of family leadership.' Note: CONFIRM whether this is actually Montrose Automotive (montroseautocenter.com) — there is also a 'Today's European Cars' which has Monkiewicz reference. Manuel Menjivar also associated via LinkedIn at montrose automotive center.",
+    "founder_status": "Founded 1969. Multiple ownership transitions over 57 years. Current operators Monkiewicz brothers — non-original-family.",
+
+    "successor_internal": false,
+    "successor_evidence_url": "https://montroseautocenter.com/index.php/about-us/",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Brothers (Thomas + Ben Monkiewicz) operate together. No third generation visible. Brother-partnership functions as soft internal succession but neither has visible children in business.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active (55+ years claimed)",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE Certified",
+      "AAA Approved",
+      "Online booking",
+      "State-of-the-art diagnostics claim",
+      "Brother partnership"
+    ],
+    "coasting_tell_summary": "Active brother-run operation, modern web tech. NOT coasting.",
+
+    "promotion_recommendation": "C_watch",
+    "promotion_rationale": "DEMOTE: Monkiewicz brothers (estimated ~50) are recent acquirers, not 89-yr-old founders. Brother partnership reduces solo-exit pressure. Recent acquirers with acquisition debt are not likely sellers.",
+
+    "data_completeness": 0.65,
+    "data_sources": [
+      "https://montroseautocenter.com/index.php/about-us/",
+      "https://www.linkedin.com/in/manuel-enrique-menjivar-31a49b70/"
+    ],
+    "notes": "Note disambiguation risk: 'Monkiewicz' reference may have been pulled from a different Houston shop. Worth disambiguating with phone call before high-confidence scoring."
+  },
+  {
+    "business_id": "fcb5ae05-5c1d-5fe0-ade1-965c3661663e",
+    "legal_name": "Ross & Greenville Automotive",
+    "city": "Dallas",
+    "current_score_before": 79,
+    "current_owner_age_before": 90,
+
+    "current_operating_owner_name": "Alan Paterson (Owner); Jacob Paterson (son, also working in business)",
+    "current_operating_owner_age_estimate": 65,
+    "current_operating_owner_age_source": "father_son_pair (BBB + customer reviews)",
+    "current_operating_owner_evidence": "BBB lists Alan Paterson as Owner. Customer reviews consistently mention 'Jacob and Alan, father and son' running the shop. The 'Ross & Greenville' name is geographic legacy (original corner of Ross Ave + Greenville Ave) — Patersons are NOT original founding family.",
+    "founder_status": "Founded 1946 at Ross & Greenville corner. Multiple ownership transitions over 80 years. Current Paterson family has owned for some time but founders are deceased. Geographic-based brand name persists.",
+
+    "successor_internal": true,
+    "successor_evidence_url": "https://www.bbb.org/us/tx/dallas/profile/auto-repair/ross-greenville-automotive-0875-90432351",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Father (Alan) + son (Jacob) operate together. Internal succession in active progress: when Alan retires, Jacob continues. Not a solo-exit candidate.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE Certified technicians",
+      "Online scheduling",
+      "18mo/18k warranty",
+      "Father-son partnership"
+    ],
+    "coasting_tell_summary": "Active family operation with succession in motion. NOT coasting.",
+
+    "promotion_recommendation": "C_watch",
+    "promotion_rationale": "DEMOTE: Alan Paterson (~65) is current operator with son Jacob already actively running shop alongside. When Alan retires, Jacob continues. Internal family succession = not a sale candidate in 12-36 months.",
+
+    "data_completeness": 0.85,
+    "data_sources": [
+      "https://www.bbb.org/us/tx/dallas/profile/auto-repair/ross-greenville-automotive-0875-90432351",
+      "https://rossandgreenvilleautomotive.com/about/"
+    ],
+    "notes": "Confirmed father-son ('Jacob' from input was son, not founder). License_tenure_proxy assumed 80-year-old founder; reality is mid-60s owner with adult son successor."
+  },
+  {
+    "business_id": "4ba5ab8a-6d6b-5915-85a6-ab309182d432",
+    "legal_name": "Today's European Cars",
+    "city": "Houston",
+    "current_score_before": 79,
+    "current_owner_age_before": 74,
+
+    "current_operating_owner_name": "Mike (Michael) Barone (Owner); CiCi Barone (co-owner, spouse)",
+    "current_operating_owner_age_estimate": 52,
+    "current_operating_owner_age_source": "linkedin_grad (MBA 2001-2003 = born ~1973-1975)",
+    "current_operating_owner_evidence": "Website about-us + ZoomInfo + LinkedIn confirm Mike Barone as current Owner. Founders were Claudia and Tony Colca (founded 1984). Mike has MBA 2001-2003 from U. of St. Thomas. Career history includes Exxon Mobil, Shell, Green Bank — non-automotive corporate career before acquiring shop. Trained by Colcas. Estimated current age ~50-55.",
+    "founder_status": "Founded 1984 by Claudia and Tony Colca. Sold to Mike + CiCi Barone (year unknown but plausibly 2010-2020). Founders likely retired. Barone couple are recent acquirers.",
+
+    "successor_internal": false,
+    "successor_evidence_url": "https://www.cars-autos.com/about-us/",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Barone couple are post-corporate-career acquirers. No children visible in business. No multi-gen succession.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ADAS calibration listed as service (positive signal)",
+      "Digital Vehicle Inspection (DVI) with photos/videos",
+      "Online appointment scheduling",
+      "Same-day service",
+      "Specialized in Mercedes/BMW/Audi/Mini/VW (premium)"
+    ],
+    "coasting_tell_summary": "VERY modern, premium European-focused shop. ADAS-capable. Anti-coasting.",
+
+    "promotion_recommendation": "C_watch",
+    "promotion_rationale": "DEMOTE: Mike Barone (52) is non-founder acquirer with recent corporate-career background. Modern, premium-positioned business. Likely has acquisition debt and entrepreneurial trajectory ahead. Not a 12-36 month sale candidate.",
+
+    "data_completeness": 0.85,
+    "data_sources": [
+      "https://www.cars-autos.com/about-us/",
+      "https://www.zoominfo.com/p/Michael-Barone/1254837616",
+      "https://www.linkedin.com/in/mike-barone-houston"
+    ],
+    "notes": "MODEL IMPROVEMENT FINDING: license_tenure_proxy treated business as 1984 founder-still-operating (age 74). Reality: corporate career-changer acquired it recently and is mid-career. Premium positioning + ADAS = modern, growing op."
+  },
+  {
+    "business_id": "5087daf8-2bfe-5f47-b5f5-0031f133452f",
+    "legal_name": "Bolen's Automotive",
+    "city": "Fort Worth",
+    "current_score_before": 78,
+    "current_owner_age_before": 80,
+
+    "current_operating_owner_name": "Randy Bolen (RECENTLY TRANSITIONED OUT per Oct 2024 customer review)",
+    "current_operating_owner_age_estimate": 65,
+    "current_operating_owner_age_source": "father_status (Bob Bolen, former Mayor of Fort Worth, deceased 2014 age 87)",
+    "current_operating_owner_evidence": "Randy Bolen is son of Bob Bolen (Mayor of Fort Worth, 1927-2014). If Randy is one of two Bolen sons mentioned in father's obituary (alongside Ron Bolen and sister Terrie Manning), he's likely born ~1955-1965, so age ~60-70. CRITICAL: Oct 2024 customer review says 'Randy Bolen no longer owns this place.' Recent transition. BBB lists Tray Carlisle (yes, the Carlisle from Carlisle Auto Air!) and Richard Hettie as new management.",
+    "founder_status": "Founded 1978 by Bolen family. Randy J. Bolen + Frances D. Bolen operated for decades. RECENT OWNERSHIP CHANGE — appears Bolen family sold to Tray Carlisle (Carlisle Auto Air ownership group).",
+
+    "successor_internal": false,
+    "successor_evidence_url": "https://www.bbb.org/us/tx/fort-worth/profile/auto-repair/bolens-automotive-0825-81010004",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "Major recent finding: Bolen family appears to have ALREADY SOLD to Carlisle Auto Air group (Tray Carlisle now listed as VP per BBB). October 2024 customer review confirms 'Randy Bolen no longer owns this place.' Transition appears recent.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active (under new ownership)",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE certified",
+      "Online booking",
+      "Hybrid repair service listed",
+      "OWNERSHIP TRANSITIONED 2024 — opportunity already closed"
+    ],
+    "coasting_tell_summary": "Just transitioned ownership; new operators are stabilizing.",
+
+    "promotion_recommendation": "D_drop",
+    "promotion_rationale": "DROP: Ownership transition ALREADY HAPPENED in 2024 to Tray Carlisle / Carlisle Auto Air group. No longer an off-market acquisition opportunity — it's already been acquired by an absorbing operator. The deal cycle has closed.",
+
+    "data_completeness": 0.85,
+    "data_sources": [
+      "https://www.bbb.org/us/tx/fort-worth/profile/auto-repair/bolens-automotive-0825-81010004",
+      "https://en.wikipedia.org/wiki/Bob_Bolen"
+    ],
+    "notes": "CRITICAL FINDING: Acquisition already happened. Carlisle Auto Air group absorbed Bolen's in 2024. Remove from active acquisition pipeline. Worth flagging Carlisle Auto Air group as an aggregator/competitor."
+  },
+  {
+    "business_id": "1e821135-c79f-5fbc-89a3-6fd8c27d9ad6",
+    "legal_name": "Carlisle Air Automotive",
+    "city": "San Antonio",
+    "current_score_before": 78,
+    "current_owner_age_before": 90,
+
+    "current_operating_owner_name": "Tray Carlisle (President; 3rd generation); Billy Carlisle Jr (2nd gen, status unclear)",
+    "current_operating_owner_age_estimate": 50,
+    "current_operating_owner_age_source": "generational_inference (3rd gen)",
+    "current_operating_owner_evidence": "Founder Billy Carlisle Sr opened 1955. Son Billy Carlisle Jr took over (passed 'father to junior'). Now Tray Carlisle serves as President — 3rd generation. Business has expanded to 3 locations + parent company structure (Carlisle Auto Air group, which also acquired Bolen's). Tray is the aggregator-acquirer doing multi-shop rollup.",
+    "founder_status": "Founded 1955 by Billy Carlisle Sr (deceased). Son Billy Carlisle Jr (likely retired or deceased). Now Tray Carlisle (3rd gen) is President and acquiring other shops (Bolen's). 3-generation family + active aggregation strategy.",
+
+    "successor_internal": true,
+    "successor_evidence_url": "https://carlisleautoair.com/about/",
+    "successor_evidence_fetched_at": "2026-05-16T20:00:00Z",
+    "successor_evidence_summary": "3-generation Carlisle family business now operating as Carlisle Auto Air group — multi-location, acquiring other shops. Internal succession complete; Tray is consolidator.",
+
+    "is_distressed": false,
+    "comptroller_status": "Active (expanding via M&A — bought Bolen's 2024)",
+    "website_reachable": true,
+
+    "coasting_tells_updated": [
+      "ASE-certified technicians",
+      "Online booking",
+      "3 San Antonio locations",
+      "A+ BBB since 1986",
+      "Christian-led company",
+      "ACTIVELY ACQUIRING OTHER SHOPS (Bolen's 2024)"
+    ],
+    "coasting_tell_summary": "STRONG ANTI-COASTING signals. Aggressive growth/M&A strategy under 3rd gen Tray Carlisle.",
+
+    "promotion_recommendation": "D_drop",
+    "promotion_rationale": "DROP: This is an AGGREGATOR/BUYER, not a seller. Tray Carlisle (3rd gen) is actively acquiring other shops (Bolen's 2024). Carlisle Auto Air group is the competitor to ETA acquirers — they're consolidating the SA market themselves. Negative sale probability.",
+
+    "data_completeness": 0.9,
+    "data_sources": [
+      "https://carlisleautoair.com/about/",
+      "https://www.bbb.org/us/tx/san-antonio/profile/auto-repair/carlisle-auto-air-0825-17419",
+      "https://www.bbb.org/us/tx/fort-worth/profile/auto-repair/bolens-automotive-0825-81010004"
+    ],
+    "notes": "MAJOR FINDING: Carlisle Auto Air is a competitor aggregator doing M&A in TX auto repair space. They are the BUYER, not a seller. Worth flagging as: (1) potential off-market intel source (they know which shops are for sale), and (2) competitor for any ETA acquirer."
+  }
+]

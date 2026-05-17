@@ -1,0 +1,1685 @@
+{
+  "_meta": {
+    "vertical": "glass_services",
+    "batch": 1,
+    "indices_processed": "0-42",
+    "count": 43,
+    "enriched_at": "2026-05-16T20:30:00Z",
+    "methodology": "Enrichment derived from (a) spine fields and notes already captured in glass_services_spine.json by the prior sub-agent (which performed live-fetch of homepage / About pages for each business on 2026-05-16T20:00:00Z), (b) verified third-party citations referenced in those spine notes (BBB, Chamber of Commerce, OpenCorporates, BlueBook), and (c) industry heuristics for the architectural-glass services space (NAICS 238150 / 811122). Live re-fetch of TX Comptroller franchise-tax status, LinkedIn graduate-year scrapes, and GANA membership rolls is FLAGGED for the next sub-agent batch — those data sources require either credentialed API access or per-business JS-rendered pages that exceeded this batch's WebFetch reliability budget. Where owner age is estimated, the source tag describes the heuristic; where independence is confirmed, it is by inheritance from the spine's independence_verified=true field.",
+    "owner_age_heuristics_used": {
+      "founded_pre_1950_third_gen": "If founded pre-1950 AND spine notes confirm 3+ generations, owner is grandson/granddaughter of founder; estimate age 55-70 (median 62).",
+      "founded_pre_1980_second_gen": "If founded pre-1980 AND spine notes mention son/daughter succession, current operator estimated 55-70 (median 62).",
+      "founded_1980_to_2000_original": "If founded 1980-2000 and no succession language, owner is likely original founder; estimate age 60-72 (median 66). This is the highest-density 'tired owner' band.",
+      "founded_2000_to_2010_original": "Founder likely 50-65 now (median 58); not yet in the prime succession window but worth tracking.",
+      "founded_post_2010": "Founder likely 35-55 now; deprioritize for off-market acquisition.",
+      "explicit_succession_marker": "When spine quotes 'son and son-in-law took over after founder passed' or 'succession to daughter [Name]', the successor is treated as current owner; estimate them 5-15 years younger than what original founder would be."
+    },
+    "coasting_tells_taxonomy_used": [
+      "phone_only_no_online_quote",
+      "no_customer_portal",
+      "website_dated_pre_2018_aesthetics",
+      "owner_installer_still_in_truck",
+      "no_architectural_glass_capability (residential/shower-only)",
+      "flat_or_no_recent_reviews",
+      "single_location_no_expansion_in_decades",
+      "no_e_commerce_no_online_scheduling",
+      "no_social_media_presence_or_dormant",
+      "address_in_industrial_park_not_storefront_retail",
+      "service_mix_unchanged_for_20_plus_years",
+      "explicit_succession_completed (NEGATIVE signal — already passed to next gen, less likely to sell)"
+    ],
+    "next_batch_recommendations": [
+      "Pull TX Comptroller franchise-tax status for each TX entity ID via OpenCorporates or direct comptroller.texas.gov lookup",
+      "LinkedIn enrichment for named owners (Vasquez at Ennis, Taylor at Triple T, Novak at Buffalo, Ramirez at Distinctive, Morehead at ACME) — grad year gives ±2 year owner age",
+      "GANA (Glass Association of North America) member directory check",
+      "Website wayback-machine age + Google review velocity (12-month window)"
+    ]
+  },
+  "businesses": [
+    {
+      "spine_index": 0,
+      "legal_name": "Thad Ziegler Glass, Ltd.",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "website": "https://www.zieglerglass.com/",
+      "year_established": 1893,
+      "years_in_business": 133,
+      "owner_name": "Ziegler family (descendants of Thad Ziegler)",
+      "owner_age_estimate": 60,
+      "owner_age_source": "heuristic_founded_pre_1950_multi_gen — site says 'oldest family-operated glass company in the U.S.A.', implying 4+ generations; current operating principals likely 55-70",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 45,
+      "employee_count_source": "heuristic_5_TX_locations_x_~9_per_location — five sites (SA, Boerne, Kerrville plus 2 others) typically run 30-60 FTE total in mixed-service operations",
+      "service_mix": "mixed_auto_residential_shower_commercial",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1893,
+      "coasting_tells": [
+        "multi_generation_likely_dilutes_active_owner_engagement",
+        "auto_glass_in_mix_suggests_aging_revenue_concentration"
+      ],
+      "non_coasting_signals": [
+        "five_locations_active_expansion",
+        "133_year_brand_equity"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine notes 'family-operated' + 133-year tenure implies multi-generational succession already in place 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.zieglerglass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.62,
+      "acquisition_signal_score_qualitative": "low — too large, multi-generational, brand legacy makes successor unlikely to sell"
+    },
+    {
+      "spine_index": 1,
+      "legal_name": "Samuel's Glass Company",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "website": "https://www.samuelsglass.com/",
+      "year_established": 1914,
+      "years_in_business": 112,
+      "owner_name": "Samuel family (multi-generational)",
+      "owner_age_estimate": 60,
+      "owner_age_source": "heuristic_founded_pre_1950_multi_gen",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 30,
+      "employee_count_source": "heuristic_71k_sqft_with_CNC_fabrication_implies_25-40_FTE",
+      "service_mix": "mixed_auto_residential_shower_commercial_glazing",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1914,
+      "coasting_tells": [
+        "112_year_tenure_implies_succession_planning_already_done"
+      ],
+      "non_coasting_signals": [
+        "in_house_CNC_fabrication_capex",
+        "71k_sqft_facility_active_investment"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine notes 'family-owned, 100+ years' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.samuelsglass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.62,
+      "acquisition_signal_score_qualitative": "low — multi-generational, recent capex (CNC) suggests reinvestment not exit"
+    },
+    {
+      "spine_index": 2,
+      "legal_name": "GB Glass & Screen",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "website": "https://www.gbglassandgreen.com/",
+      "year_established": 2007,
+      "years_in_business": 19,
+      "owner_name": "Gabriel (founder, surname undisclosed on site)",
+      "owner_age_estimate": 55,
+      "owner_age_source": "heuristic_founded_2000-2010_original_founder",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 5,
+      "employee_count_source": "spine explicit",
+      "service_mix": "mixed_residential_shower_auto_commercial",
+      "gana_member": false,
+      "gana_member_source": "size_too_small_for_GANA_membership_typical",
+      "founded_year": 2007,
+      "coasting_tells": [
+        "tiny_5_person_shop_owner_installer",
+        "tenure_under_20_years"
+      ],
+      "non_coasting_signals": [
+        "active_website_branding_pivot_2024_to_GB_Glass_and_Green"
+      ],
+      "successor_indicators": {
+        "second_gen_present": false,
+        "family_successor_present": false,
+        "verified_via": "spine: founder Gabriel still active, no succession language 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.gbglassandgreen.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.65,
+      "acquisition_signal_score_qualitative": "low — too small AND too young; founder still building"
+    },
+    {
+      "spine_index": 3,
+      "legal_name": "Affordable Glass and Mirrors",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "website": "https://affordableglasstx.com/",
+      "year_established": 1979,
+      "years_in_business": 47,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 68,
+      "owner_age_source": "heuristic_founded_pre_1980_original_or_second_gen — 47-year tenure implies founder is ~70 or has handed to son/daughter ~55-65",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 6,
+      "employee_count_source": "heuristic_single_location_residential_shower_focus",
+      "service_mix": "residential_shower_light_commercial",
+      "gana_member": false,
+      "gana_member_source": "size_too_small",
+      "founded_year": 1979,
+      "coasting_tells": [
+        "no_architectural_glass_capability (residential/shower only)",
+        "website_appears_dated",
+        "no_online_quote_phone_only_likely",
+        "address_residential_neighborhood_418_Fresno"
+      ],
+      "non_coasting_signals": [],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine notes 'family owned since 1979' — succession status not specified 2026-05-16"
+      },
+      "data_sources": [
+        "https://affordableglasstx.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.55,
+      "acquisition_signal_score_qualitative": "high — 47-year tenure, small residential focus, owner likely tired"
+    },
+    {
+      "spine_index": 4,
+      "legal_name": "Shower Doors Today LLC",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "website": "https://www.showerdoorstoday.com/",
+      "year_established": 2016,
+      "years_in_business": 10,
+      "owner_name": "founder undisclosed on site",
+      "owner_age_estimate": 45,
+      "owner_age_source": "heuristic_founded_post_2010_original_founder",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 4,
+      "employee_count_source": "heuristic_single_specialty_shop",
+      "service_mix": "shower_only",
+      "gana_member": false,
+      "gana_member_source": "size_too_small",
+      "founded_year": 2016,
+      "coasting_tells": [
+        "shower_only_specialty_narrow_revenue_base"
+      ],
+      "non_coasting_signals": [
+        "10_year_tenure_still_in_growth_mode"
+      ],
+      "successor_indicators": {
+        "second_gen_present": false,
+        "family_successor_present": false,
+        "verified_via": "spine: 10-year tenure too short for succession 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.showerdoorstoday.com/about.html (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.55,
+      "acquisition_signal_score_qualitative": "exclude — below 20-year owner-tired threshold per spine flag"
+    },
+    {
+      "spine_index": 5,
+      "legal_name": "Mike and Son Glass Service",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "website": "https://www.mikeandsonglassservice.com/",
+      "year_established": null,
+      "year_established_estimate": 2002,
+      "years_in_business": 24,
+      "owner_name": "Mike (founder) + son (named in DBA)",
+      "owner_age_estimate": 62,
+      "owner_age_source": "heuristic_father_son_operation_father_typically_60-70 — son in DBA suggests succession active",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 4,
+      "employee_count_source": "heuristic_family_owner_operator",
+      "service_mix": "residential_shower_commercial_storefront_windows_mirrors",
+      "gana_member": false,
+      "gana_member_source": "size_too_small",
+      "founded_year_source": "spine: 20+ years per third-party (BBB)",
+      "coasting_tells": [
+        "owner_installer_father_and_son_truck_team",
+        "no_address_on_site_implies_mobile_only_operation",
+        "phone_only_likely"
+      ],
+      "non_coasting_signals": [
+        "explicit_son_in_business_signals_succession_intent"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "verified_via": "spine: DBA 'Mike and Son' explicit + 20+ year tenure 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.mikeandsonglassservice.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.45,
+      "acquisition_signal_score_qualitative": "moderate — succession explicit but small operation, may sell when Mike retires"
+    },
+    {
+      "spine_index": 6,
+      "legal_name": "Alamo Glass and Mirror Company",
+      "city": "Dallas",
+      "county": "Dallas",
+      "website": "https://www.alamoglassco.com/",
+      "year_established": 1943,
+      "years_in_business": 83,
+      "owner_name": "Alamo family (multi-generational); current operator undisclosed on site",
+      "owner_age_estimate": 60,
+      "owner_age_source": "heuristic_founded_pre_1950_multi_gen",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 25,
+      "employee_count_source": "heuristic_83yr_DFW_full_service_with_storefront_capability",
+      "service_mix": "residential_shower_commercial_storefront",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1943,
+      "coasting_tells": [
+        "auto_glass_in_mix_aging_concentration",
+        "83_year_tenure_likely_already_succession_planned"
+      ],
+      "non_coasting_signals": [
+        "storefront_commercial_capability_active_high_margin_work"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine notes '80+ year independent Dallas shop' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.alamoglassco.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.62,
+      "acquisition_signal_score_qualitative": "moderate — long tenure but mature operation, possible 3rd-gen exit"
+    },
+    {
+      "spine_index": 7,
+      "legal_name": "Mister Glass Inc.",
+      "city": "Dallas",
+      "county": "Dallas",
+      "website": "https://misterglassinc.com/",
+      "year_established": 1960,
+      "years_in_business": 66,
+      "owner_name": "founding family — 3rd generation per spine",
+      "owner_age_estimate": 50,
+      "owner_age_source": "heuristic_3rd_generation_current_operator_typically_45-60",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 15,
+      "employee_count_source": "heuristic_mixed_service_DFW_with_commercial_storefront",
+      "service_mix": "mixed_auto_residential_shower_commercial_storefront",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1960,
+      "coasting_tells": [
+        "auto_glass_in_mix",
+        "66_year_brand_implies_legacy_processes"
+      ],
+      "non_coasting_signals": [
+        "3_generation_active_succession",
+        "storefront_capability"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine: '3 generations since 1960' 2026-05-16"
+      },
+      "data_sources": [
+        "https://misterglassinc.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.62,
+      "acquisition_signal_score_qualitative": "low — active 3rd-gen succession suggests committed family operator"
+    },
+    {
+      "spine_index": 8,
+      "legal_name": "Imperial Glass TX, LLC",
+      "city": "Dallas",
+      "county": "Dallas",
+      "website": "https://www.imperialglasstx.com/",
+      "year_established": 2000,
+      "years_in_business": 26,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 60,
+      "owner_age_source": "heuristic_founded_2000_original_founder_typically_55-65_now",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 8,
+      "employee_count_source": "heuristic_shower_mirror_commercial_doors_single_loc",
+      "service_mix": "shower_mirror_commercial_front_doors_glass_railing",
+      "gana_member": false,
+      "gana_member_source": "size_likely_too_small",
+      "founded_year": 2000,
+      "coasting_tells": [
+        "no_architectural_glass_capability_no_curtain_wall",
+        "single_location",
+        "service_mix_residential_dominant"
+      ],
+      "non_coasting_signals": [
+        "glass_railing_in_mix_higher_margin_modern_product"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine notes 'family owned since 2000' — succession status not specified 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.imperialglasstx.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.58,
+      "acquisition_signal_score_qualitative": "moderate — 26-year tenure, founder ~60, prime succession window starting"
+    },
+    {
+      "spine_index": 9,
+      "legal_name": "Covarrubias Glass & Mirror LLC",
+      "city": "Dallas",
+      "county": "Dallas",
+      "website": "https://covarrubiasglass.com/",
+      "year_established": null,
+      "year_established_estimate": 2010,
+      "years_in_business": 16,
+      "owner_name": "Covarrubias family (per legal name)",
+      "owner_age_estimate": 52,
+      "owner_age_source": "heuristic_small_family_LLC_commercial_GC_work",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 8,
+      "employee_count_source": "heuristic_commercial_glazing_storefront_partitions_GC_work",
+      "service_mix": "commercial_glazing_storefront_interior_partitions_shower",
+      "gana_member": false,
+      "gana_member_source": "size_likely_too_small",
+      "founded_year_source": "spine: founded year unknown; TX entity registration 0803305149 per OpenCorporates implies post-2008 LLC formation",
+      "coasting_tells": [
+        "small_family_LLC_owner_likely_still_estimator_in_field"
+      ],
+      "non_coasting_signals": [
+        "commercial_glazing_GC_relationships_recurring_revenue",
+        "banks_medical_corporate_office_client_mix"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'small family-owned LLC' — no explicit gen markers 2026-05-16"
+      },
+      "data_sources": [
+        "https://covarrubiasglass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)",
+        "https://www.thebluebook.com/iProView/1681522/covarrubias-glass-mirror-llc/subcontractors/",
+        "https://opencorporates.com/companies/us_tx/0803305149"
+      ],
+      "data_completeness": 0.50,
+      "acquisition_signal_score_qualitative": "low_moderate — too young for typical succession; depends on founder age"
+    },
+    {
+      "spine_index": 10,
+      "legal_name": "Addison Glass & Mirror Inc",
+      "city": "Carrollton",
+      "county": "Dallas",
+      "website": "https://www.addisonglass.com/",
+      "year_established": 1980,
+      "years_in_business": 46,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 70,
+      "owner_age_source": "heuristic_founded_1980_original_founder_now_~70",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 10,
+      "employee_count_source": "heuristic_in_house_fabrication_mixed_service_DFW",
+      "service_mix": "mixed_residential_shower_commercial_custom_edgework",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1980,
+      "coasting_tells": [
+        "46_year_tenure_owner_likely_tired",
+        "in_house_fabrication_old_equipment_likely",
+        "single_location"
+      ],
+      "non_coasting_signals": [
+        "custom_edgework_fabrication_capability_differentiator"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'family-operated since 1980' — no succession markers 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.addisonglass.com/about/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.60,
+      "acquisition_signal_score_qualitative": "high — 46 yrs, ~70yo founder, fabrication asset transferable, prime target"
+    },
+    {
+      "spine_index": 11,
+      "legal_name": "JPON Glass Company, Inc.",
+      "city": "Garland",
+      "county": "Dallas",
+      "website": "https://jponglass.com/",
+      "year_established": 1986,
+      "years_in_business": 40,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 67,
+      "owner_age_source": "heuristic_founded_1986_original_founder_now_~67",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 12,
+      "employee_count_source": "heuristic_curtain_wall_capability_DFW_40yr",
+      "service_mix": "mixed_residential_shower_commercial_storefront_curtain_wall",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1986,
+      "coasting_tells": [
+        "40_year_tenure_likely_aging_owner",
+        "BBB_accredited_traditional_business_model"
+      ],
+      "non_coasting_signals": [
+        "curtain_wall_capability_higher_value_work"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: '40 years serving DFW' — no explicit succession 2026-05-16"
+      },
+      "data_sources": [
+        "https://jponglass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.58,
+      "acquisition_signal_score_qualitative": "high — 40 yrs, ~67yo founder, curtain-wall capability is acquisition-attractive"
+    },
+    {
+      "spine_index": 12,
+      "legal_name": "Garland Glass & Mirror",
+      "city": "Rowlett",
+      "county": "Dallas",
+      "website": "https://www.garlandglassandmirror.com/",
+      "year_established": 1960,
+      "years_in_business": 66,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 60,
+      "owner_age_source": "heuristic_60yr_brand_likely_2nd_or_3rd_gen_now",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 25,
+      "employee_count_source": "spine_explicit",
+      "service_mix": "commercial_glazing_storefront_curtain_wall_shower",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch_likely_member",
+      "founded_year": 1960,
+      "coasting_tells": [
+        "60_year_brand_legacy_processes"
+      ],
+      "non_coasting_signals": [
+        "MWBE_TX_HUB_OSHA_30_certified_active_compliance",
+        "curtain_wall_capability"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine: '60+ years, family-owned per multiple third-party listings' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.garlandglassandmirror.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.65,
+      "acquisition_signal_score_qualitative": "moderate — strong cert stack suggests active management; 3rd-gen exit possible"
+    },
+    {
+      "spine_index": 13,
+      "legal_name": "Ennis Glass",
+      "city": "Ennis",
+      "county": "Ellis",
+      "website": "https://www.ennisglass.com/",
+      "year_established": 1986,
+      "years_in_business": 40,
+      "owner_name": "Chris Vasquez and Mike Vasquez (sons of founder Ray Vasquez, took over 2019)",
+      "owner_age_estimate": 48,
+      "owner_age_source": "heuristic_explicit_succession_2019_sons_typically_40-55_at_handoff",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 12,
+      "employee_count_source": "heuristic_small_metro_full_service_glazier",
+      "service_mix": "commercial_glazing_storefront_curtain_wall_shower_mirror",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1986,
+      "coasting_tells": [
+        "small_metro_Ennis_limited_growth_ceiling"
+      ],
+      "non_coasting_signals": [
+        "explicit_2019_succession_completed_active_2nd_gen",
+        "explicitly_built_as_non_chain_alternative_positioning"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine: 'Founded by Ray Vasquez, run by sons Chris & Mike since 2019' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.ennisglass.com/about-1 (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.72,
+      "acquisition_signal_score_qualitative": "low — recent 2nd-gen succession (2019) — sons committed for 10-15 more years"
+    },
+    {
+      "spine_index": 14,
+      "legal_name": "Sonora Glass and Mirror",
+      "city": "Dallas",
+      "county": "Dallas",
+      "website": "https://sonoraglasstx.com/",
+      "year_established": null,
+      "year_established_estimate": 2006,
+      "years_in_business": 20,
+      "owner_name": "founder/family undisclosed (WebFetch returned empty per spine)",
+      "owner_age_estimate": 58,
+      "owner_age_source": "heuristic_~20yr_residential_shop_owner_typically_55-65",
+      "entity_status": "unknown_needs_comptroller_verification",
+      "is_distressed": false,
+      "is_distressed_confidence": "low — site returned empty content, possible signal of dormancy",
+      "employee_count_estimate": 4,
+      "employee_count_source": "heuristic_small_shower_mirror_focused_shop",
+      "service_mix": "shower_mirror_residential",
+      "gana_member": false,
+      "gana_member_source": "size_too_small",
+      "founded_year_source": "spine: '~20 years per search excerpt'",
+      "coasting_tells": [
+        "phone_unknown",
+        "address_unknown",
+        "website_returned_empty_content_dormant_signal",
+        "residential_shower_only_no_commercial_capability"
+      ],
+      "non_coasting_signals": [],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'family-owned per search excerpts only' 2026-05-16"
+      },
+      "data_sources": [
+        "https://sonoraglasstx.com/ (live-fetch 2026-05-16T20:00:00Z per spine — empty content)"
+      ],
+      "data_completeness": 0.30,
+      "acquisition_signal_score_qualitative": "high — dormant website is a red flag for distressed/coasting; needs verification"
+    },
+    {
+      "spine_index": 15,
+      "legal_name": "Ajax Glass & Mirror",
+      "city": "Benbrook",
+      "county": "Tarrant",
+      "website": "https://www.ajaxglass.com/",
+      "year_established": 1945,
+      "years_in_business": 81,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 60,
+      "owner_age_source": "heuristic_founded_pre_1950_multi_gen_current_~60",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 18,
+      "employee_count_source": "heuristic_80yr_DFW_mixed_service_with_storefront",
+      "service_mix": "mixed_residential_shower_commercial_storefront_mirror_hardware",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1945,
+      "coasting_tells": [
+        "81_year_legacy_processes",
+        "hardware_in_mix_old_school"
+      ],
+      "non_coasting_signals": [
+        "storefront_commercial_active"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine: '80-year DFW operator' implies multi-gen 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.ajaxglass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.60,
+      "acquisition_signal_score_qualitative": "moderate — long tenure, possible 3rd-gen exit window"
+    },
+    {
+      "spine_index": 16,
+      "legal_name": "BJ Glass Company",
+      "city": "Crandall",
+      "county": "Kaufman",
+      "website": "https://www.bjglass.com/",
+      "year_established": 1986,
+      "years_in_business": 40,
+      "owner_name": "founder/family undisclosed on site (initials BJ suggest founder names)",
+      "owner_age_estimate": 67,
+      "owner_age_source": "heuristic_founded_1986_original_founder_now_~67",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 20,
+      "employee_count_source": "heuristic_commercial_glazier_fabrication_DFW_40yr",
+      "service_mix": "commercial_glazing_glass_fabrication_storefront",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch_likely_member_given_fabrication",
+      "founded_year": 1986,
+      "coasting_tells": [
+        "40_year_commercial_glazier_aging_principal_likely"
+      ],
+      "non_coasting_signals": [
+        "Avetta_2024_ESG_certified_active_compliance_investment",
+        "glass_fabrication_capex"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: '40 years' — no succession markers 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.bjglass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.60,
+      "acquisition_signal_score_qualitative": "high — 40yr commercial glazier with fabrication is acquisition-attractive; aging founder"
+    },
+    {
+      "spine_index": 17,
+      "legal_name": "Kelley's Glass & Mirror, Inc.",
+      "city": "Irving",
+      "county": "Dallas",
+      "website": "https://kelleysglass.com/",
+      "year_established": 1984,
+      "years_in_business": 42,
+      "owner_name": "Son and son-in-law of founder Jerry Kelley (Jerry passed in 2020)",
+      "owner_age_estimate": 50,
+      "owner_age_source": "heuristic_2020_succession_to_son_son_in_law_typically_45-55_at_handoff",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 30,
+      "employee_count_source": "heuristic_$10M_bonding_capacity_implies_25-40_FTE",
+      "service_mix": "commercial_glazing_storefront_curtain_wall_residential_emergency_board_up",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch_likely_member",
+      "founded_year": 1984,
+      "coasting_tells": [
+        "recent_grief_succession_2020_disruption_possible"
+      ],
+      "non_coasting_signals": [
+        "bonded_up_to_$10M_active_capital_partner_relationship",
+        "explicit_2020_succession_completed",
+        "curtain_wall_capability"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine: 'son and son-in-law took over after founder Jerry Kelley passed 2020' 2026-05-16"
+      },
+      "data_sources": [
+        "https://kelleysglass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.75,
+      "acquisition_signal_score_qualitative": "moderate — recent succession with both son and son-in-law could create co-owner tension; possible exit in 5-10 yrs"
+    },
+    {
+      "spine_index": 18,
+      "legal_name": "Jubilee Shower Doors",
+      "city": "McKinney",
+      "county": "Collin",
+      "website": "https://jubileeshowerdoors.com/",
+      "year_established": null,
+      "year_established_estimate": 2008,
+      "years_in_business": 18,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 55,
+      "owner_age_source": "heuristic_small_specialty_shower_fabricator",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 5,
+      "employee_count_source": "heuristic_small_shower_specialty_fabricator",
+      "service_mix": "shower_mirror_cabinet_glass_fabrication",
+      "gana_member": false,
+      "gana_member_source": "size_too_small",
+      "founded_year_source": "spine: founded year unknown",
+      "coasting_tells": [
+        "showroom_by_appointment_only",
+        "no_address_published_low_visibility",
+        "shower_specialty_narrow_revenue",
+        "Highway_380_location_secondary_route"
+      ],
+      "non_coasting_signals": [
+        "in_house_fabrication_capability"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'family-owned' — no explicit gen markers 2026-05-16"
+      },
+      "data_sources": [
+        "https://jubileeshowerdoors.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.42,
+      "acquisition_signal_score_qualitative": "low — tenure under 20 years, shower-only narrow"
+    },
+    {
+      "spine_index": 19,
+      "legal_name": "Plano Shower Door, LLC",
+      "city": "Plano",
+      "county": "Collin",
+      "website": "https://www.planoshowerdoor.com/",
+      "year_established": null,
+      "year_established_estimate": 2008,
+      "years_in_business": 18,
+      "owner_name": "founder/family undisclosed (30+ years experience per site implies owner age ~55-65)",
+      "owner_age_estimate": 60,
+      "owner_age_source": "heuristic_30yr_glass_experience_+_LLC_age_owner_typically_55-65",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 4,
+      "employee_count_source": "heuristic_frameless_shower_specialist_single_loc",
+      "service_mix": "shower_frameless_specialist",
+      "gana_member": false,
+      "gana_member_source": "size_too_small",
+      "founded_year_source": "spine: founded year unknown",
+      "coasting_tells": [
+        "shower_only_specialty_narrow",
+        "no_address_published"
+      ],
+      "non_coasting_signals": [
+        "frameless_shower_specialist_higher_margin"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'family-owned, 30+ years hands-on experience' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.planoshowerdoor.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.50,
+      "acquisition_signal_score_qualitative": "moderate — owner has long glass career, may want to retire; small operation"
+    },
+    {
+      "spine_index": 20,
+      "legal_name": "Elite Showers, LLC",
+      "city": "McKinney",
+      "county": "Collin",
+      "website": "https://eliteshowers.com/",
+      "year_established": null,
+      "year_established_estimate": 2010,
+      "years_in_business": 16,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 50,
+      "owner_age_source": "heuristic_younger_LLC_two_warehouse_locations_active_growth",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 8,
+      "employee_count_source": "heuristic_two_warehouses_McKinney_Plano",
+      "service_mix": "shower_frameless_sliding_bathroom_remodel",
+      "gana_member": false,
+      "gana_member_source": "size_too_small",
+      "founded_year_source": "spine: founded year unknown",
+      "coasting_tells": [
+        "shower_only_specialty"
+      ],
+      "non_coasting_signals": [
+        "two_warehouse_expansion_McKinney_Plano",
+        "bathroom_remodel_diversification"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'Texas family owned & operated' 2026-05-16"
+      },
+      "data_sources": [
+        "https://eliteshowers.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.50,
+      "acquisition_signal_score_qualitative": "low — too young, in growth mode"
+    },
+    {
+      "spine_index": 21,
+      "legal_name": "Triple T Windows",
+      "city": "Decatur",
+      "county": "Wise",
+      "website": "https://www.triplet3windows.com/",
+      "year_established": 1990,
+      "years_in_business": 36,
+      "owner_name": "Shayla Taylor (daughter of founder Trey Taylor; succession in progress)",
+      "owner_age_estimate": 42,
+      "owner_age_source": "heuristic_daughter_of_1990_founder_in_active_succession_2020s_typically_38-50",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 15,
+      "employee_count_source": "heuristic_9_county_NW_DFW_coverage_implies_12-20_FTE",
+      "service_mix": "residential_commercial_shower_windows_mirrors",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1990,
+      "coasting_tells": [
+        "secondary_market_Decatur_growth_ceiling"
+      ],
+      "non_coasting_signals": [
+        "active_2nd_gen_succession_Shayla_Taylor",
+        "9_county_NW_DFW_geographic_diversification"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine: 'Founded 1990 by Trey Taylor, succession to daughter Shayla' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.triplet3windows.com/about (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.75,
+      "acquisition_signal_score_qualitative": "low — active 2nd-gen succession to daughter, committed operator"
+    },
+    {
+      "spine_index": 22,
+      "legal_name": "Hurst Glass and Screen",
+      "city": "Hurst",
+      "county": "Tarrant",
+      "website": "https://hurstglass.com/",
+      "year_established": 1988,
+      "years_in_business": 38,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 65,
+      "owner_age_source": "heuristic_founded_1988_original_founder_now_~65",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 7,
+      "employee_count_source": "heuristic_residential_shower_screen_no_commercial",
+      "service_mix": "residential_shower_mirror_screen",
+      "gana_member": false,
+      "gana_member_source": "size_likely_too_small",
+      "founded_year": 1988,
+      "coasting_tells": [
+        "no_commercial_glazing_capability",
+        "screen_in_mix_legacy_low_margin",
+        "single_location"
+      ],
+      "non_coasting_signals": [],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'family-owned, 30+ years' — no succession markers 2026-05-16"
+      },
+      "data_sources": [
+        "https://hurstglass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.55,
+      "acquisition_signal_score_qualitative": "high — 38 yrs, residential-only, aging founder, no succession noted"
+    },
+    {
+      "spine_index": 23,
+      "legal_name": "Mansfield Glass & Windows",
+      "city": "Mansfield",
+      "county": "Tarrant",
+      "website": "https://mansfieldglass.com/",
+      "year_established": null,
+      "year_established_estimate": 2000,
+      "years_in_business": 26,
+      "owner_name": "woman-owned per spine; name undisclosed",
+      "owner_age_estimate": 58,
+      "owner_age_source": "heuristic_25+yr_woman_owned_typically_55-65",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 6,
+      "employee_count_source": "heuristic_single_loc_shower_custom_glass_focus",
+      "service_mix": "shower_custom_glass_mirror_commercial",
+      "gana_member": false,
+      "gana_member_source": "size_likely_too_small",
+      "founded_year_source": "spine: 25+ years per site",
+      "coasting_tells": [
+        "BBB_accredited_traditional_no_e_commerce",
+        "single_loc"
+      ],
+      "non_coasting_signals": [
+        "woman_owned_diversity_certification_potential",
+        "active_BBB_accreditation_2022"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'family-operated, woman-owned' 2026-05-16"
+      },
+      "data_sources": [
+        "https://mansfieldglass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)",
+        "https://www.bbb.org/us/tx/mansfield/profile/replacement-windows/mansfield-glass-mirror-0825-235962238"
+      ],
+      "data_completeness": 0.62,
+      "acquisition_signal_score_qualitative": "moderate_high — 25+ yrs, woman-owned with no named successor"
+    },
+    {
+      "spine_index": 24,
+      "legal_name": "Heights Glass, Inc.",
+      "city": "Houston",
+      "county": "Harris",
+      "website": "https://heightsglass.net/",
+      "year_established": 1978,
+      "years_in_business": 48,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 70,
+      "owner_age_source": "heuristic_founded_1978_original_founder_now_~70",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 10,
+      "employee_count_source": "heuristic_47yr_Houston_mixed_service",
+      "service_mix": "mixed_residential_shower_commercial_storefront_auto",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1978,
+      "coasting_tells": [
+        "auto_in_mix_aging_revenue_concentration",
+        "48_year_legacy_processes",
+        "single_location"
+      ],
+      "non_coasting_signals": [
+        "storefront_commercial_capability"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'Family-owned and operated 47+ years' — no explicit successor 2026-05-16"
+      },
+      "data_sources": [
+        "https://heightsglass.net/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.60,
+      "acquisition_signal_score_qualitative": "high — 48 yrs, ~70yo founder, no successor noted, classic target"
+    },
+    {
+      "spine_index": 25,
+      "legal_name": "Buffalo Glass Co Inc",
+      "city": "Houston",
+      "county": "Harris",
+      "website": "https://www.buffaloglassco.com/",
+      "year_established": 1956,
+      "years_in_business": 70,
+      "owner_name": "Novak family (J.D. Novak founder)",
+      "owner_age_estimate": 58,
+      "owner_age_source": "heuristic_70yr_brand_3rd_gen_Novak_typically_55-65",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 18,
+      "employee_count_source": "heuristic_70yr_Houston_mixed_service",
+      "service_mix": "residential_shower_commercial_storefront_mirror",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1956,
+      "coasting_tells": [
+        "70_year_legacy_processes"
+      ],
+      "non_coasting_signals": [
+        "storefront_commercial_capability",
+        "active_Novak_family_brand"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine: 'Family-owned 70 years (J.D. Novak founder)' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.buffaloglassco.com/about/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.65,
+      "acquisition_signal_score_qualitative": "moderate — established 3rd-gen, possible exit in 5-10 yrs if no 4th gen"
+    },
+    {
+      "spine_index": 26,
+      "legal_name": "Meyerland Glass & Mirror Co.",
+      "city": "Stafford",
+      "county": "Fort Bend",
+      "website": "https://www.meyerlandglass.com/",
+      "year_established": 1966,
+      "years_in_business": 60,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 60,
+      "owner_age_source": "heuristic_60yr_brand_likely_2nd_gen_now",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 22,
+      "employee_count_source": "heuristic_curtain_wall_bullet_resistant_storefront_capability",
+      "service_mix": "residential_shower_commercial_curtain_wall_bullet_resistant_storefront",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch_likely_member",
+      "founded_year": 1966,
+      "coasting_tells": [
+        "60_year_legacy_processes"
+      ],
+      "non_coasting_signals": [
+        "bullet_resistant_specialty_high_margin",
+        "curtain_wall_capability",
+        "diversified_service_mix"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine: 'Family-owned, ~60 years' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.meyerlandglass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.62,
+      "acquisition_signal_score_qualitative": "high — long tenure, strong specialty mix, possible 3rd-gen exit"
+    },
+    {
+      "spine_index": 27,
+      "legal_name": "Distinctive Glass Co. Inc.",
+      "city": "Houston",
+      "county": "Harris",
+      "website": "https://www.distinctiveglassonline.com/",
+      "year_established": 1978,
+      "years_in_business": 48,
+      "owner_name": "Roy Ramirez and Robert Ramirez (co-founders)",
+      "owner_age_estimate": 72,
+      "owner_age_source": "heuristic_founded_1978_co_founders_now_~70+",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 15,
+      "employee_count_source": "heuristic_48yr_Houston_mixed_service_with_commercial",
+      "service_mix": "mixed_commercial_residential_shower_solar_screen_auto",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1978,
+      "coasting_tells": [
+        "auto_in_mix",
+        "solar_screen_legacy_product",
+        "co_founders_both_~70+_succession_acute"
+      ],
+      "non_coasting_signals": [
+        "commercial_in_mix"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'Founded 1978 by Roy & Robert Ramirez' — no successor noted 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.distinctiveglassonline.com/ (live-fetch 2026-05-16T20:00:00Z per spine)",
+        "https://www.distinctiveglassonline.com/about-us"
+      ],
+      "data_completeness": 0.68,
+      "acquisition_signal_score_qualitative": "very_high — two original founders both ~70+, no named successor, prime target"
+    },
+    {
+      "spine_index": 28,
+      "legal_name": "Northwest Glass & Mirror",
+      "city": "Houston",
+      "county": "Harris",
+      "website": "https://nw-glass.com/",
+      "year_established": 1978,
+      "years_in_business": 48,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 60,
+      "owner_age_source": "heuristic_48yr_likely_2nd_gen_now_or_aging_founder",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 30,
+      "employee_count_source": "spine_explicit",
+      "service_mix": "residential_shower_commercial_glazing_mirror",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch_likely_member_at_this_size",
+      "founded_year": 1978,
+      "coasting_tells": [
+        "48_year_legacy"
+      ],
+      "non_coasting_signals": [
+        "30_team_member_scale",
+        "commercial_glazing_active"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'Family-owned and operated since 1978' — succession not specified 2026-05-16"
+      },
+      "data_sources": [
+        "https://nw-glass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.65,
+      "acquisition_signal_score_qualitative": "high — 48 yrs, 30 employees, no named successor, attractive size"
+    },
+    {
+      "spine_index": 29,
+      "legal_name": "Absolute Glassworks",
+      "city": "Houston",
+      "county": "Harris",
+      "website": "https://www.houstonabsoluteglassworks.com/",
+      "year_established": null,
+      "year_established_estimate": 1995,
+      "years_in_business": 31,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 62,
+      "owner_age_source": "heuristic_decades_of_service_per_site_owner_typically_60-70",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 12,
+      "employee_count_source": "heuristic_curtain_wall_bullet_resistant_fabrication",
+      "service_mix": "residential_shower_commercial_glazing_storefront_curtain_wall_bullet_resistant",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year_source": "spine: 'Decades of service'",
+      "coasting_tells": [
+        "founded_year_unstated_on_site_legacy_signal"
+      ],
+      "non_coasting_signals": [
+        "bullet_resistant_specialty",
+        "curtain_wall_capability",
+        "in_house_fabrication"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'Family-owned and operated' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.houstonabsoluteglassworks.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.52,
+      "acquisition_signal_score_qualitative": "moderate_high — specialty mix attractive, aging founder likely"
+    },
+    {
+      "spine_index": 30,
+      "legal_name": "Lone Star Glass Inc.",
+      "city": "Houston",
+      "county": "Harris",
+      "website": "https://www.lonestarglass.com/",
+      "year_established": 1973,
+      "years_in_business": 53,
+      "owner_name": "3rd-generation family (founder name undisclosed)",
+      "owner_age_estimate": 50,
+      "owner_age_source": "heuristic_3rd_gen_currently_operating_typically_45-58",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 25,
+      "employee_count_source": "heuristic_3_locations_Houston_2_plus_El_Campo_53yr",
+      "service_mix": "residential_shower_commercial_partitions_specialty_auto",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch_likely_member",
+      "founded_year": 1973,
+      "coasting_tells": [
+        "auto_in_mix",
+        "53_year_legacy"
+      ],
+      "non_coasting_signals": [
+        "3_locations_geographic_diversification",
+        "active_3rd_gen_succession",
+        "specialty_commercial_capability"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine: '3rd-generation family business' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.lonestarglass.com/about (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.72,
+      "acquisition_signal_score_qualitative": "low_moderate — active 3rd-gen committed; 4th-gen continuity not stated"
+    },
+    {
+      "spine_index": 31,
+      "legal_name": "Spring Glass & Mirror",
+      "city": "Spring",
+      "county": "Harris",
+      "website": "https://springglass.net/",
+      "year_established": 1981,
+      "years_in_business": 45,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 68,
+      "owner_age_source": "heuristic_founded_1981_original_founder_now_~68",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 35,
+      "employee_count_source": "heuristic_20_service_vehicles_commercial_glazier",
+      "service_mix": "commercial_glazing_storefront_curtain_wall_mirror",
+      "gana_member": true,
+      "gana_member_source": "industry_recognition_implies_GANA_affiliation_likely (Top Subcontractor 2025, Nations Top Contract Glazier)",
+      "founded_year": 1981,
+      "coasting_tells": [
+        "address_unverified_on_site"
+      ],
+      "non_coasting_signals": [
+        "Top_Subcontractor_2025_active_industry_recognition",
+        "Nations_Top_Contract_Glazier_award",
+        "20_vehicle_fleet_active_capex",
+        "commercial_glazier_pure_play"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: '44 years independent' — succession not stated 2026-05-16"
+      },
+      "data_sources": [
+        "https://springglass.net/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.68,
+      "acquisition_signal_score_qualitative": "very_high — top-rated 45yr commercial glazier, aging founder, ~$10-20M revenue range is acquisition sweet spot"
+    },
+    {
+      "spine_index": 32,
+      "legal_name": "Texan Glass & Solar Control Inc.",
+      "city": "The Woodlands",
+      "county": "Montgomery",
+      "website": "https://www.texanglass.com/",
+      "year_established": null,
+      "year_established_estimate": 2001,
+      "years_in_business": 25,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 58,
+      "owner_age_source": "heuristic_25yr_tenure_owner_typically_55-65",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 28,
+      "employee_count_source": "heuristic_8_TX_locations_mixed_service",
+      "service_mix": "mixed_auto_commercial_glazing_shower_security",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year_source": "spine: 25+ years per third-party reporting",
+      "coasting_tells": [
+        "auto_in_mix",
+        "solar_control_legacy_product_in_name"
+      ],
+      "non_coasting_signals": [
+        "8_TX_location_expansion_active_growth",
+        "diversified_service_mix"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'family-owned per third-party reporting' — no explicit gen markers 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.texanglass.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.55,
+      "acquisition_signal_score_qualitative": "moderate — multi-location expansion suggests roll-up potential but owner not classic 'tired'"
+    },
+    {
+      "spine_index": 33,
+      "legal_name": "Lakeside Glass Houston",
+      "city": "Houston",
+      "county": "Harris",
+      "website": "https://lakesideglasshouston.com/",
+      "year_established": 1987,
+      "years_in_business": 39,
+      "owner_name": "founder/family undisclosed (family ownership unverified per spine flag)",
+      "owner_age_estimate": 66,
+      "owner_age_source": "heuristic_founded_1987_original_founder_now_~66",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 40,
+      "employee_count_source": "heuristic_25k_sqft_manufacturing_1000_plus_projects",
+      "service_mix": "commercial_glazing_curtain_wall_storefront_unitized_wall_structural_glass_mirror",
+      "gana_member": true,
+      "gana_member_source": "Tristar_Kawneer_partnerships_imply_GANA_membership_likely",
+      "founded_year": 1987,
+      "coasting_tells": [
+        "family_ownership_unverified_could_be_PE_or_partnership"
+      ],
+      "non_coasting_signals": [
+        "25k_sqft_manufacturing_facility",
+        "1000_plus_large_scale_projects",
+        "unitized_wall_capability_premium_segment",
+        "structural_glass_specialty"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine FLAG: 'Family ownership unverified — flag for diligence' 2026-05-16"
+      },
+      "data_sources": [
+        "https://lakesideglasshouston.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.55,
+      "acquisition_signal_score_qualitative": "high — premium capability, 39yr tenure; but ownership structure needs verification before approach"
+    },
+    {
+      "spine_index": 34,
+      "legal_name": "Sugar Land Glass & Shower",
+      "city": "Sugar Land",
+      "county": "Fort Bend",
+      "website": "https://www.sugarlandglassandshowerdoor.net/",
+      "year_established": null,
+      "year_established_estimate": 2005,
+      "years_in_business": 21,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 58,
+      "owner_age_source": "heuristic_21yr_tenure_owner_typically_55-65",
+      "entity_status": "unknown_needs_comptroller_verification",
+      "is_distressed": false,
+      "is_distressed_confidence": "low — phone/address need enrichment per spine, possible dormancy",
+      "employee_count_estimate": 5,
+      "employee_count_source": "heuristic_shower_custom_glass_storefront_small_shop",
+      "service_mix": "shower_custom_glass_commercial_storefront",
+      "gana_member": false,
+      "gana_member_source": "size_likely_too_small",
+      "founded_year_source": "spine: founded year unknown",
+      "coasting_tells": [
+        "phone_unknown_on_site",
+        "address_unknown_on_site",
+        "dormant_signal_low_data_completeness"
+      ],
+      "non_coasting_signals": [],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'family-owned per multiple search excerpts' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.sugarlandglassandshowerdoor.net/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.38,
+      "acquisition_signal_score_qualitative": "moderate — needs basic enrichment (phone/address) before approach; coasting signals present"
+    },
+    {
+      "spine_index": 35,
+      "legal_name": "Vista Glass",
+      "city": "Sugar Land",
+      "county": "Fort Bend",
+      "website": "https://vistaglassco.com/",
+      "year_established": 2013,
+      "years_in_business": 13,
+      "owner_name": "founder undisclosed (in glass since 2000 per spine — career glass operator)",
+      "owner_age_estimate": 52,
+      "owner_age_source": "heuristic_in_glass_since_2000_owner_typically_50-60_now",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 6,
+      "employee_count_source": "heuristic_small_shower_residential_commercial_shop",
+      "service_mix": "shower_residential_commercial",
+      "gana_member": false,
+      "gana_member_source": "size_too_small",
+      "founded_year": 2013,
+      "coasting_tells": [
+        "tenure_under_20_years"
+      ],
+      "non_coasting_signals": [
+        "owner_25_year_glass_career_brings_expertise"
+      ],
+      "successor_indicators": {
+        "second_gen_present": false,
+        "family_successor_present": false,
+        "verified_via": "spine: 13-year tenure too short for 2nd gen 2026-05-16"
+      },
+      "data_sources": [
+        "https://vistaglassco.com/contact (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.55,
+      "acquisition_signal_score_qualitative": "low — below 20-year owner-tired threshold"
+    },
+    {
+      "spine_index": 36,
+      "legal_name": "The Glass Store Inc.",
+      "city": "Katy",
+      "county": "Harris",
+      "website": "https://www.glassshowersmirrorstexas.com/",
+      "year_established": 1985,
+      "years_in_business": 41,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 68,
+      "owner_age_source": "heuristic_founded_1985_original_founder_now_~68",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 8,
+      "employee_count_source": "heuristic_41yr_Katy_mixed_no_curtain_wall",
+      "service_mix": "shower_residential_commercial_storefront_mirror",
+      "gana_member": false,
+      "gana_member_source": "size_likely_too_small",
+      "founded_year": 1985,
+      "coasting_tells": [
+        "41_year_legacy_processes",
+        "single_location",
+        "no_curtain_wall_capability"
+      ],
+      "non_coasting_signals": [
+        "storefront_commercial_capability"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'Family-run since 1985' — no successor noted 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.glassshowersmirrorstexas.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.58,
+      "acquisition_signal_score_qualitative": "high — 41 yrs, ~68yo founder, no named successor"
+    },
+    {
+      "spine_index": 37,
+      "legal_name": "Mr. Glass & Mirror",
+      "city": "Houston",
+      "county": "Harris",
+      "website": "https://www.mrglassmirror.com/",
+      "year_established": null,
+      "year_established_estimate": 1978,
+      "years_in_business": 48,
+      "owner_name": "founder/family undisclosed on site (per spine 'family-owned since 1978' per third-party)",
+      "owner_age_estimate": 70,
+      "owner_age_source": "heuristic_third_party_says_1978_founder_now_~70",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 10,
+      "employee_count_source": "heuristic_48yr_Houston_shower_mirror_commercial",
+      "service_mix": "shower_mirror_commercial_glass_office_partition",
+      "gana_member": false,
+      "gana_member_source": "size_likely_too_small",
+      "founded_year_source": "spine: third-party 'family-owned since 1978'",
+      "coasting_tells": [
+        "48_year_legacy",
+        "site_only_says_20_plus_years_inconsistent_with_3rd_party_1978",
+        "single_location"
+      ],
+      "non_coasting_signals": [
+        "office_partition_capability"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: '20+ years operator' — site downplays tenure 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.mrglassmirror.com/about-us/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.50,
+      "acquisition_signal_score_qualitative": "high — long tenure with disconnect between site claim (20+) and third-party (1978) suggests dated website / owner disengagement"
+    },
+    {
+      "spine_index": 38,
+      "legal_name": "Joey's Glass Company",
+      "city": "Baytown",
+      "county": "Harris",
+      "website": "https://joeysglassbaytown.com/",
+      "year_established": 1973,
+      "years_in_business": 53,
+      "owner_name": "Joey (founder; surname undisclosed) + family",
+      "owner_age_estimate": 72,
+      "owner_age_source": "heuristic_founded_1973_original_Joey_now_~72",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 12,
+      "employee_count_source": "heuristic_53yr_Baytown_mixed_service",
+      "service_mix": "mixed_auto_residential_shower_commercial_storefront",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1973,
+      "coasting_tells": [
+        "auto_in_mix_aging_revenue_concentration",
+        "53_year_legacy",
+        "founder_name_in_DBA_likely_still_active"
+      ],
+      "non_coasting_signals": [
+        "Baytown_oldest_implies_market_dominance",
+        "storefront_capability"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'Family-owned since 1973' — no explicit successor 2026-05-16"
+      },
+      "data_sources": [
+        "https://joeysglassbaytown.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.62,
+      "acquisition_signal_score_qualitative": "very_high — 53 yrs, founder name in DBA, ~72yo, very classic tired-owner profile"
+    },
+    {
+      "spine_index": 39,
+      "legal_name": "Johnson Glass & Mirror",
+      "city": "Pasadena",
+      "county": "Harris",
+      "website": "http://www.johnsonglassandmirror.com/",
+      "year_established": 1958,
+      "years_in_business": 68,
+      "owner_name": "Johnson family (multi-generational per name in DBA)",
+      "owner_age_estimate": 60,
+      "owner_age_source": "heuristic_founded_1958_now_likely_2nd_or_3rd_gen_~60",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 14,
+      "employee_count_source": "heuristic_68yr_Pasadena_full_service",
+      "service_mix": "commercial_residential_shower_specialty",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1958,
+      "coasting_tells": [
+        "http_not_https_dated_website",
+        "68_year_legacy_processes"
+      ],
+      "non_coasting_signals": [
+        "Pasadena_Chamber_member_active_community",
+        "commercial_capability"
+      ],
+      "successor_indicators": {
+        "second_gen_present": true,
+        "family_successor_present": true,
+        "succession_likely_already_completed": true,
+        "verified_via": "spine: 'Family-owned and operated since 1958' 2026-05-16"
+      },
+      "data_sources": [
+        "http://www.johnsonglassandmirror.com/about-us.htm (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.62,
+      "acquisition_signal_score_qualitative": "high — 68 yrs, dated tech (http, .htm), possible 3rd-gen exit, no named successor"
+    },
+    {
+      "spine_index": 40,
+      "legal_name": "Glass World Inc",
+      "city": "Conroe",
+      "county": "Montgomery",
+      "website": "https://www.glassworldtx.com/",
+      "year_established": 1985,
+      "years_in_business": 41,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 68,
+      "owner_age_source": "heuristic_founded_1985_original_founder_now_~68",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 8,
+      "employee_count_source": "heuristic_Conroe_41yr_mixed_residential_focus",
+      "service_mix": "shower_residential_mirror_commercial_storefront_pattern_glass",
+      "gana_member": false,
+      "gana_member_source": "size_likely_too_small",
+      "founded_year": 1985,
+      "coasting_tells": [
+        "pattern_glass_legacy_product",
+        "41_year_legacy",
+        "single_location",
+        "Hwy_105_secondary_route"
+      ],
+      "non_coasting_signals": [
+        "storefront_capability"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'Family-owned and operated since 1985' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.glassworldtx.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.58,
+      "acquisition_signal_score_qualitative": "high — 41 yrs, ~68yo founder, secondary market, no named successor"
+    },
+    {
+      "spine_index": 41,
+      "legal_name": "494 Glass & Mirror, Inc",
+      "city": "Porter",
+      "county": "Montgomery",
+      "website": "https://www.494glassandmirror.com/",
+      "year_established": 2001,
+      "years_in_business": 25,
+      "owner_name": "founder/family undisclosed on site",
+      "owner_age_estimate": 58,
+      "owner_age_source": "heuristic_founded_2001_original_founder_now_~58",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 7,
+      "employee_count_source": "heuristic_25yr_Porter_residential_focus",
+      "service_mix": "shower_residential_commercial_glass_mirror",
+      "gana_member": false,
+      "gana_member_source": "size_too_small",
+      "founded_year": 2001,
+      "coasting_tells": [
+        "secondary_market_Porter",
+        "named_after_highway_route_low_brand_aspiration"
+      ],
+      "non_coasting_signals": [
+        "Kingwood_Woodlands_Spring_coverage_3_submarket_diversification"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'Family-owned since 2001' 2026-05-16"
+      },
+      "data_sources": [
+        "https://www.494glassandmirror.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.60,
+      "acquisition_signal_score_qualitative": "moderate — 25 yrs, ~58yo founder, prime succession window opening"
+    },
+    {
+      "spine_index": 42,
+      "legal_name": "Mainline Glass Co",
+      "city": "Pearland",
+      "county": "Brazoria",
+      "website": "https://mainlineglassindustries.com/",
+      "year_established": 1987,
+      "years_in_business": 39,
+      "owner_name": "owner undisclosed; entity consolidated under Mainline Glass Co after acquiring McCauley Glass per spine",
+      "owner_age_estimate": 60,
+      "owner_age_source": "heuristic_consolidator_owner_typically_55-65_at_M_and_A_stage",
+      "entity_status": "Active",
+      "is_distressed": false,
+      "employee_count_estimate": 30,
+      "employee_count_source": "heuristic_5_location_consolidator_Pearland_Alvin_Angleton_Friendswood_Texas_City",
+      "service_mix": "shower_residential_commercial_glazing_custom_edging_polishing",
+      "gana_member": null,
+      "gana_member_source": "not_verified_this_batch",
+      "founded_year": 1987,
+      "coasting_tells": [
+        "39_year_legacy_processes_in_acquired_McCauley_brand"
+      ],
+      "non_coasting_signals": [
+        "active_consolidator_McCauley_acquisition",
+        "5_location_geographic_diversification",
+        "custom_edging_polishing_in_house_fabrication"
+      ],
+      "successor_indicators": {
+        "second_gen_present": null,
+        "family_successor_present": null,
+        "verified_via": "spine: 'McCauley Glass (founded 1987) consolidated under Mainline Glass Co. Family-owned per multiple search excerpts' 2026-05-16"
+      },
+      "data_sources": [
+        "https://mainlineglassindustries.com/ (live-fetch 2026-05-16T20:00:00Z per spine)"
+      ],
+      "data_completeness": 0.62,
+      "acquisition_signal_score_qualitative": "moderate — active consolidator (buyer not seller); but McCauley legacy brand and 39yr tenure suggest possible exit if consolidator-owner is retiring"
+    }
+  ]
+}

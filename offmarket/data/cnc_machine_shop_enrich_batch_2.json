@@ -1,0 +1,1381 @@
+[
+  {
+    "_meta": {
+      "batch": "cnc_machine_shop_enrich_batch_2",
+      "spine_indices_covered": "29-57 (29 businesses, the LAST 29 of the CNC machine shop spine)",
+      "fetched_at": "2026-05-16T20:30:00Z",
+      "method": "WebFetch of About/History pages where reachable + targeted WebSearch for owner identification + cross-reference to spine independence_notes. Entity-status verification deferred to Comptroller spot-check phase (most rows already noted 'Active' status implicit from spine; PE-rollup exclusions flagged here).",
+      "schema_notes": "Same field set as garage_door_enrich_batch_1 / painting_contractor_enrich_batch_1, adapted to CNC vertical: estimated_truck_count → not_applicable (replaced with estimated_machine_count); has_maintenance_plan → not_applicable (replaced with cad_cam_software_in_use); ida_member → not_applicable (replaced with ntma_member and as9100_certified).",
+      "critical_exclusions_discovered_this_batch": [
+        "Owens Machine and Tool (spine_idx 45) — acquired by Precision Aerospace Holdings May 2024 (PE roll-up, same parent as Decatur Machine Services and Applegate EDM). EXCLUDE from target pool.",
+        "Icon Machine Company (spine_idx 50) — acquired by Precision Aerospace Holdings August 2022. EXCLUDE from target pool.",
+        "Neo Industries (spine_idx 52) — recent ownership transition in 2019 (Jerry Simmons CEO, Obie D Day President; original founder Bill Horn retired 2006). Not a coasting solo-owner — FLAG as recent acquisition, not 12-36 month seller.",
+        "Texas Contract Manufacturing Group (spine_idx 37) — multi-subsidiary group (already marked EXCLUDED in spine). Confirm exclusion.",
+        "C & M Machining LP — Sugar Land branch (spine_idx 28) — same legal entity as Navasota C & M (spine_idx 23 in batch_1). DEDUPLICATE.",
+        "B&R Productions — San Antonio service branch (spine_idx 42) — same legal entity as New Waverly B&R (spine_idx 21 in batch_1). DEDUPLICATE."
+      ],
+      "high_conviction_a_tier_from_this_batch": [
+        "Manda Machine Company (spine_idx 35) — 74-yr tenure, 3rd-gen Ellard brothers running, ISO+AS9100, Dallas",
+        "Cameron Machine Shop (spine_idx 34) — 1967 founding, 3rd-gen Christi Cameron 2007 succession, 25k sqft, woman-owned",
+        "Bates Machine & Mfg (spine_idx 29) — founder Earl Bates Jr deceased 2019, 2nd/3rd gen Paul Bates + Mary Kaye Wilson now operating, 3-gen status proven",
+        "Continental Manufacturing (spine_idx 32) — 3rd-gen (Doc Eldon→David Ward→Judd Stretcher), 70+ yr tenure, but verify size (parent Continental NH3 is family-controlled)",
+        "Halsey Manufacturing (spine_idx 31) — Don Halsey founder 1979, no public successor named, 45+ yrs"
+      ]
+    }
+  },
+  {
+    "spine_index": 29,
+    "legal_name": "Bates Machine & Mfg., Inc.",
+    "city": "Farmersville",
+    "county": "Collin",
+    "website": "https://batesmachineonline.com",
+    "year_established": 1975,
+    "years_in_business": 51,
+    "owner_name": "Paul Bates & Mary Kaye Wilson (2nd gen, children of founder Earl Bates Jr. who lived 1922-2019)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "founder_succession_proxy_earl_bates_jr_died_2019_children_inherited",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 12,
+    "service_mix": "diversified (aerospace, medical, oil&gas, automotive, defense, ag, construction, renewables)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "Founder Earl Bates Jr passed away 2019; succession transition implicit",
+      "Family-owned & operated since 1975 — 51-yr tenure",
+      "Brochure-style website with no online quoting; phone-first intake (972) 782-7351",
+      "No CAD/CAM software disclosed on website",
+      "No certifications disclosed on website (no ISO 9001, no AS9100, no ITAR)",
+      "Farmersville (rural Collin county, NE of McKinney) — off main metro = less PE consolidator attention",
+      "Marketing copy emphasizes '3-generation machine shop service experience' — soft-sell, not growth-oriented",
+      "Three-paragraph site with limited capabilities depth = classic small/coasting tell"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "third_gen_present": null,
+      "verified_via": "Earl Bates Jr obituary (Turrentine-Jackson-Morrow funeral home, 2019) — survived by Paul Bates and Mary Kaye Wilson, both of Farmersville TX, both presumed active in company per company self-description of '3-generation experience'"
+    },
+    "data_sources": [
+      {"url": "https://batesmachineonline.com/about/", "fetched_at": "2026-05-16", "field": "founding_year_1975, family_owned_status"},
+      {"url": "https://www.turrentinejacksonmorrow.com/obituaries/earl-bates", "fetched_at": "2026-05-16", "field": "founder_name, founder_lifespan_1922_2019, surviving_children_paul_mary_kaye"},
+      {"url": "https://www.facebook.com/p/Bates-Machine-Mfg-Inc-61562258250112/", "fetched_at": "2026-05-16", "field": "social_presence_active"}
+    ],
+    "data_completeness": 0.78,
+    "high_conviction_signals": [
+      "51-yr tenure (founded 1975)",
+      "Founder deceased 2019 — 2nd gen now owns, ~6 yrs into transition window",
+      "Sibling co-owners (Paul + Mary Kaye) = potential exit catalyst when one wants to retire / cash out",
+      "Rural Farmersville = off-PE radar",
+      "No external certifications (ISO/AS) = anti-PE-roll-up tell (PE acquirers usually drive certifications)"
+    ],
+    "notes": "Strong A-tier candidate. Diversified industry mix (11 industries) suggests recession-resistant book. Validate cash health via Texas Workforce employer reports or DataAxle."
+  },
+  {
+    "spine_index": 30,
+    "legal_name": "Starke Machine Co.",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://www.starkemachine.com",
+    "year_established": 1980,
+    "years_in_business": 46,
+    "owner_name": "Owner name not publicly disclosed (Dwayne Burgamy appears on LinkedIn as Starke leadership — role unconfirmed)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "founding_year_proxy_1980_founder_likely_70s",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 65,
+    "service_mix": "aerospace + defense (ITAR registered) + general CNC turning/milling production",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": true,
+    "iso_9001_certified": true,
+    "coasting_tells": [
+      "Founder/owner name kept off website (privacy tell — closely held, not promoted)",
+      "Founded 1980, started in 'small building on Warfield Street' — classic founder-garage origin",
+      "Relocated to 20,000 sqft current location 1996 — 30 years in same facility (settled, not expanding)",
+      "Brochure-style 'About Us' with generic 'state of the art equipment' language (no specific brands disclosed)",
+      "Site shows only North FW location at 2109 Brennan Ave (single location)",
+      "AS9100/ISO9001 certified — credentialed for aerospace but no growth-mode social presence"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "third_gen_present": null,
+      "verified_via": "no public successor information; Dwayne Burgamy on LinkedIn but role unconfirmed"
+    },
+    "data_sources": [
+      {"url": "https://www.starkemachine.com/about-us/", "fetched_at": "2026-05-16", "field": "founding_year_1980, 20k_sqft, certifications, history"},
+      {"url": "https://www.zoominfo.com/c/starke-machine-co/348429785", "fetched_at": "2026-05-16", "field": "revenue_estimate_9.6M, employee_count_estimate_65"},
+      {"url": "https://www.linkedin.com/in/dwayneburgamy/", "fetched_at": "2026-05-16", "field": "leadership_dwayne_burgamy"}
+    ],
+    "data_completeness": 0.70,
+    "high_conviction_signals": [
+      "46-yr tenure (1980 founding)",
+      "ZoomInfo estimates ~$9.6M revenue / ~65 employees — UPPER bound of small/medium target",
+      "AS9100 + ISO 9001 + ITAR = aerospace-defense credentials → strong contract base",
+      "Owner kept off website = founder-led, name privacy",
+      "Single 20k sqft Fort Worth location (Brennan Ave) = no growth chasing"
+    ],
+    "notes": "Solid B+ candidate. ZoomInfo revenue figure puts it right at $10M sweet spot. Verify owner identity via Texas SOS franchise tax filings."
+  },
+  {
+    "spine_index": 31,
+    "legal_name": "Halsey Manufacturing",
+    "city": "Denton",
+    "county": "Denton",
+    "website": "https://www.halseymfg.com",
+    "year_established": 1979,
+    "years_in_business": 47,
+    "owner_name": "Don Halsey (Founder + CEO)",
+    "owner_age_estimate": 72,
+    "owner_age_source": "UNT_production_management_grad_plus_47yr_tenure",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 25,
+    "service_mix": "diversified (aerospace, aircraft, auto, electronics, medical, food service, telecom, robotics, oil&gas, security)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": true,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "Founder still active as CEO 47 years in — well past typical retirement age",
+      "Brochure-style website with no online quoting",
+      "Specific equipment listed (HAAS, Ganesh, Hitachi, Hwacheon, Trotec) — mostly value-tier brands, no flagship DMG Mori/Mazak/Okuma",
+      "Trotec laser engraving = side-hustle revenue (not a precision-CNC growth signal)",
+      "No ISO 9001 / AS9100 certifications — anti-aerospace-growth tell (despite serving aerospace clients)",
+      "Single Facebook page as only social presence",
+      "Cited client list (Samsung, Lockheed Martin, Peterbilt) impressive but no published case studies / portfolio updates → static brand",
+      "No successor name surfaced — single-decisionmaker risk"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "third_gen_present": false,
+      "verified_via": "Denton County Magazine 2021 article + multiple business directories — only Don Halsey named as principal"
+    },
+    "data_sources": [
+      {"url": "https://www.halseymfg.com/", "fetched_at": "2026-05-16", "field": "founded_1979, equipment_brands, industries"},
+      {"url": "https://www.dentoncountymagazine.com/business_services/made-in-denton-county-halsey-manufacturing/article_662e21ba-67f9-11eb-b69b-9fbec12a4428.html", "fetched_at": "2026-05-16", "field": "founder_don_halsey, UNT_degree, philosophy"},
+      {"url": "https://halseymfg.com/equipment.html", "fetched_at": "2026-05-16", "field": "equipment_HAAS_Ganesh_Hitachi_Hwacheon_Trotec"}
+    ],
+    "data_completeness": 0.80,
+    "high_conviction_signals": [
+      "47-yr tenure with founder still active = classic age-driven seller setup",
+      "Don Halsey ~72yr old based on UNT grad + apprenticeship + 1979 founding",
+      "Top-tier clients (Lockheed Martin, Samsung, Peterbilt) = revenue quality high",
+      "No certifications = will be cheap to PE-grade (acquirer can run ISO/AS9100 in year 1)",
+      "Solo principal with no public successor = succession liquidity event likely 24-36 months"
+    ],
+    "notes": "Top A-tier candidate. Don Halsey age + tenure + named-customer-list creates classic coasting-with-real-cash profile. Verify via TX SOS officer filings."
+  },
+  {
+    "spine_index": 32,
+    "legal_name": "Continental Manufacturing",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.continental-manufacturing.com",
+    "year_established": 1954,
+    "years_in_business": 72,
+    "owner_name": "Judd Stretcher (President of parent Continental NH3 Products — 3rd gen). Founders: 'Doc' Eldon (grandfather) → David Ward (father, 2nd gen) → Judd Stretcher (3rd gen, current).",
+    "owner_age_estimate": 55,
+    "owner_age_source": "3rd_gen_succession_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 35,
+    "service_mix": "CNC turning, milling, Swiss machining, screw machining, 7-axis; ASME-certified pressure fittings (anhydrous ammonia) — captive feed to parent Continental NH3 Products",
+    "cad_cam_software_in_use": "SolidWorks + Mastercam",
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "Parent company (Continental NH3 Products) is family-owned, 3rd gen, captive-shop structure (machining division feeds parent ag-equipment business)",
+      "Doc Eldon founded ~1954 — 72-yr tenure",
+      "28,000 sqft facility, single Dallas location",
+      "Website calls out 'state of the art equipment' but no specific brand disclosure",
+      "ASME certified but no ISO 9001 / AS9100 → captive-customer driven, not external-aerospace driven",
+      "No social media beyond LinkedIn",
+      "Phone: 800-537-5642 (toll-free) → general industrial / mid-market sales channel, not e-commerce"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "third_gen_present": true,
+      "verified_via": "Continental NH3 Products company history page — 'currently run by their 3rd generation of family that is as passionate as their original proprietor, their grandfather Doc Eldon and their father David Ward.' Judd Stretcher named as current President of NH3 parent."
+    },
+    "data_sources": [
+      {"url": "https://www.continental-manufacturing.com/about-us.html", "fetched_at": "2026-05-16", "field": "founder_doc_eldon, founded_1954, solidworks_mastercam, asme_cert"},
+      {"url": "https://www.continentalnh3.com/company-history.html", "fetched_at": "2026-05-16", "field": "3rd_gen_succession, doc_eldon_grandfather, david_ward_father, judd_stretcher_president"},
+      {"url": "https://rocketreach.co/continental-nh3-profile_b466d40ffc5d6051", "fetched_at": "2026-05-16", "field": "leadership_judd_stretcher"}
+    ],
+    "data_completeness": 0.78,
+    "high_conviction_signals": [
+      "72-yr tenure (founded 1954) — top of cohort",
+      "3rd-gen leadership confirmed in place (Judd Stretcher)",
+      "Captive shop to family ag-equipment biz = revenue cushion + family-business-sale complexity",
+      "SolidWorks + Mastercam disclosed (CAD/CAM modern enough)",
+      "Inner Dallas (75208) location — owns building likely"
+    ],
+    "notes": "B-tier candidate due to PARENT-CO complexity: Continental Manufacturing is a division of Continental NH3 Products (an ag-equipment family business). Any sale would need to detach the captive shop from the parent. NOT a classic solo-owner exit. Buyer would need to negotiate carve-out with the Stretcher/Ward family. Add to scorer as flag-for-special-structure."
+  },
+  {
+    "spine_index": 33,
+    "legal_name": "Dallas Precision Machining (DPM)",
+    "city": "Carrollton",
+    "county": "Dallas",
+    "website": "https://dallasprecisionmachining.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Sister company of Pacific Sensor LLC (Carrollton TX). William Ritter listed as VP of Pacific Sensor — likely same-ownership structure. No DPM-specific founder disclosed.",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": 8,
+    "employee_count_estimate": 20,
+    "service_mix": "aerospace + defense + medical (CNC machining + sheet metal fab)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": true,
+    "iso_9001_certified": true,
+    "coasting_tells": [
+      "Two-machine garage origin (per website) — small-shop founding story",
+      "Sister company structure (Pacific Sensor) introduces ownership complexity — NOT classic solo-owner",
+      "16,000 sqft single Carrollton location",
+      "Specific equipment disclosed (Mazak INTEGREX i-100H, Haas VF-series, Leadwell T-7SMY, Cosen C-320NC) — mix of premium (Mazak) + value-tier (Haas/Leadwell)",
+      "ITAR + ISO 9001:2015 + AS9100D — fully aerospace-credentialed but no growth-mode marketing"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "third_gen_present": null,
+      "verified_via": "No public history page — relationship to Pacific Sensor undisclosed beyond 'sister company'"
+    },
+    "data_sources": [
+      {"url": "https://dallasprecisionmachining.com/", "fetched_at": "2026-05-16", "field": "16k_sqft, equipment_mazak_haas_leadwell, certifications, sister_co_pacific_sensor"},
+      {"url": "https://rocketreach.co/pacific-sensor-llc-profile_b54bd9b7f9a62ef5", "fetched_at": "2026-05-16", "field": "william_ritter_vp_pacific_sensor"}
+    ],
+    "data_completeness": 0.55,
+    "high_conviction_signals": [
+      "Sister-co structure with Pacific Sensor LLC = parent group, not solo-owner",
+      "Strong equipment + aerospace credentials = real revenue base",
+      "No public founder/founding-year = closely held"
+    ],
+    "notes": "C-tier candidate. FLAG: Sister-company structure violates solo-owner thesis. Would only be acquirable as part of Pacific Sensor combined deal. Investigate Pacific Sensor LLC ownership separately before pursuing."
+  },
+  {
+    "spine_index": 34,
+    "legal_name": "Cameron Machine Shop, Inc.",
+    "city": "Richardson",
+    "county": "Dallas",
+    "website": "https://cameronmachineshop.com",
+    "year_established": 1967,
+    "years_in_business": 59,
+    "owner_name": "Christi Cameron (President, 3rd gen; daughter of Pat Cameron). Founders: Porter Cameron + son Pat Cameron in 1967.",
+    "owner_age_estimate": 55,
+    "owner_age_source": "took_over_2007_implies_~35yo_then_=_2026_age_~54",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": 12,
+    "employee_count_estimate": 25,
+    "service_mix": "general CNC machining + precision weldments + grinding + heat treating + plating (general industrial)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": true,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "59-yr tenure (founded 1967, NOTE: spine had 1968, corrected to 1967 per official history page)",
+      "Pat Cameron led 1970s-2007 (~37 years!), then daughter Christi took over 2007 = settled multi-gen rhythm",
+      "First CNC purchase 1980, first CMM 1993 = adopts tech a beat behind cutting edge",
+      "Phone not on website ('contact form only') — phone-shy = mature/coasting tell",
+      "Same 25,000 sqft Richardson facility since 1971 (relocated from S Sherman St) — 55 years same building",
+      "NTMA + NFIB + woman-owned tags but no ISO/AS9100 → general industrial book, not aerospace-growth",
+      "Solo decision-maker (Christi) + already 2nd transition successful → succession knowledge present"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "third_gen_present": true,
+      "fourth_gen_present": null,
+      "verified_via": "cameronmachineshop.com/history page — Porter Cameron founded 1967, Pat Cameron 2nd gen, Christi Cameron 3rd gen took over 2007"
+    },
+    "data_sources": [
+      {"url": "https://cameronmachineshop.com/history/", "fetched_at": "2026-05-16", "field": "founders_porter_pat_cameron, 1967_founded, christi_took_over_2007, 25k_sqft_facility_history"},
+      {"url": "https://www.linkedin.com/in/christi-cameron-92ba0011/", "fetched_at": "2026-05-16", "field": "christi_cameron_president"},
+      {"url": "https://cameronmachineshop.com/about/", "fetched_at": "2026-05-16", "field": "ntma_nfib_woman_owned_certs"}
+    ],
+    "data_completeness": 0.85,
+    "high_conviction_signals": [
+      "59-yr tenure (1967)",
+      "3rd-gen owner-operator (Christi Cameron) has been at helm 19 years",
+      "Single woman-owner = clear single decision-maker",
+      "4th gen not yet public = succession question open",
+      "Building owned since 1971 = real-estate value upside",
+      "Classic 'general industrial' diversification = recession-proof customer mix"
+    ],
+    "notes": "CLASSIC A-tier target profile. 3rd-gen owner approaching mid-50s with no announced 4th-gen successor → 12-36 month exit window plausible. Building ownership creates additional asset value. Validate cash by EFI fence + payroll proxies."
+  },
+  {
+    "spine_index": 35,
+    "legal_name": "Manda Machine Company, Inc.",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://mandamachine.com",
+    "year_established": 1950,
+    "years_in_business": 76,
+    "owner_name": "Andy Ellard (GM/Owner, 33-yr tenure) + Todd Ellard (Operations Mgr/Owner, 38-yr tenure) — 3rd gen, grandchildren of founders Joe & Mary Manda",
+    "owner_age_estimate": 60,
+    "owner_age_source": "38yr_industry_tenure_+_3rd_gen_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 30,
+    "service_mix": "precision metal manufacturing + assembly + distribution (general CNC + manual machining)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": true,
+    "iso_9001_certified": true,
+    "coasting_tells": [
+      "76-yr tenure (founded 1950) — OLDEST in entire spine",
+      "Co-owners Andy + Todd Ellard = brothers, classic sibling-owner succession-trigger setup",
+      "ISO 9001 not until 2008 (58 years after founding) and AS9100D not until 2023 — slow tech adoption",
+      "No equipment brands or square footage disclosed on website",
+      "Three social media channels (FB, IG @mandamachine, LinkedIn) but limited posting frequency",
+      "Phone-first: (214) 352-5946",
+      "Dallas inner-loop location at 2683 Myrtle Springs — likely owns the building (Dallas industrial corridor since 1950)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "third_gen_present": true,
+      "fourth_gen_present": null,
+      "verified_via": "mandamachine.com/about page — explicit 3rd-gen Ellard brothers (Andy + Todd, grandchildren of Joe + Mary Manda)"
+    },
+    "data_sources": [
+      {"url": "https://mandamachine.com/about/", "fetched_at": "2026-05-16", "field": "founders_joe_mary_manda_1950, andy_ellard_33yr, todd_ellard_38yr, iso_2008, as9100d_2023"}
+    ],
+    "data_completeness": 0.85,
+    "high_conviction_signals": [
+      "76-yr tenure — OLDEST in cohort",
+      "Sibling co-owners (Andy + Todd Ellard) approaching 60 = succession-decision pressure",
+      "AS9100D just acquired 2023 = fresh aerospace credential adds saleable IP",
+      "No 4th-gen named publicly = succession question",
+      "Dallas inner location since 1950 = high real estate value",
+      "Both brothers will need to agree to sell — possible deadlock or aligned exit"
+    ],
+    "notes": "TOP A-tier candidate. The Ellard brothers are textbook co-owner succession case: 35+ year tenures each, late-50s/early-60s, just invested in AS9100 cert (sale-prep tell), no published 4th-gen. Approach with sibling-aligned exit framing."
+  },
+  {
+    "spine_index": 36,
+    "legal_name": "Automatic Products Corporation (APC)",
+    "city": "Garland",
+    "county": "Dallas",
+    "website": "https://www.ap-corp.com",
+    "year_established": 1957,
+    "years_in_business": 69,
+    "owner_name": "G. Christopher (Chris) Tedford — President since 2007 (3rd gen). Gary E. Tedford — Chairman (2nd gen, became Pres 1980). Founder: Charles E. Tedford (1957).",
+    "owner_age_estimate": 52,
+    "owner_age_source": "3rd_gen_succession_proxy_2007_handoff",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 120,
+    "service_mix": "screw machining + Swiss CNC + multi-axis milling/turning — aerospace, defense, energy, HVAC, beverage, valve, automotive",
+    "cad_cam_software_in_use": null,
+    "ntma_member": true,
+    "as9100_certified": true,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "69-yr tenure (1957)",
+      "118,000 sqft facility (established 1997) — LARGE for solo-owner thesis, FLAG for revenue cap",
+      "3rd-gen Chris Tedford at helm 19 years",
+      "AS9100 + ITAR + FFL + SAM (federal-channel credentialed)",
+      "'69 years of business' headline = mature posture, not growth-chasing",
+      "LinkedIn only social channel — no IG/FB growth-mode signaling",
+      "Production Machining magazine + PMPA member profile (industry insider, not consumer-marketed)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "third_gen_present": true,
+      "fourth_gen_present": null,
+      "verified_via": "Production Machining magazine member profile + AP Corp About page — Charles E founded 1957, Gary became Pres 1980, Chris became Pres 2007"
+    },
+    "data_sources": [
+      {"url": "https://www.ap-corp.com/about-us/", "fetched_at": "2026-05-16", "field": "tedford_family_3gen, 118k_sqft, founded_1957"},
+      {"url": "https://www.productionmachining.com/articles/member-profile-automatic-products-corporation", "fetched_at": "2026-05-16", "field": "charles_tedford_1957_brown_sharpe, gary_1980_pres, chris_3rd_gen"},
+      {"url": "https://www.linkedin.com/in/chris-tedford-96528215a/", "fetched_at": "2026-05-16", "field": "chris_tedford_president_role"}
+    ],
+    "data_completeness": 0.88,
+    "high_conviction_signals": [
+      "FLAG: 118,000 sqft + 69-yr tenure + aerospace/defense + Swiss screw → likely $30M+ revenue, MAY EXCEED size cap",
+      "3rd-gen succession in place 19 years",
+      "Brown & Sharpe origin equipment story = founder-craftsman heritage",
+      "No 4th gen named publicly"
+    ],
+    "notes": "FLAG: Likely TOO LARGE for solo-owner-coasting thesis ($30M+ revenue). 118k sqft + screw machining at scale + multi-industry book. Retained for documentation but score below A/B/C tier on size grounds. PMPA member profile suggests this is a leading shop, not coasting."
+  },
+  {
+    "spine_index": 37,
+    "legal_name": "Texas Contract Manufacturing Group (TCMG)",
+    "city": "Austin",
+    "county": "Travis",
+    "website": "https://www.tcmgco.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "EXCLUDED — multi-subsidiary group (Apex Machining + IMT Precision + Lor-Van + Unitech Tool & Machine + Weiser Engineering)",
+    "owner_age_estimate": null,
+    "owner_age_source": "n/a",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "EXCLUDED — operates 5 subsidiary shops, not a Texas-independent",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": true,
+    "iso_9001_certified": true,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "third_gen_present": null,
+      "verified_via": "Spine already excluded — TCMG operates 5 subsidiary shops"
+    },
+    "data_sources": [
+      {"url": "https://www.tcmgco.com/services-and-capabilities/precision-machining", "fetched_at": "2026-05-16", "field": "multi_subsidiary_group_structure"}
+    ],
+    "data_completeness": 0.20,
+    "high_conviction_signals": [
+      "EXCLUDED — confirmed multi-subsidiary group, not target"
+    ],
+    "notes": "EXCLUSION CONFIRMED. Multi-subsidiary group (5 shops). Do not include in target output."
+  },
+  {
+    "spine_index": 38,
+    "legal_name": "Austin Precision Machining and Manufacturing (APMM)",
+    "city": "Pflugerville",
+    "county": "Travis",
+    "website": "https://austinprecisionmachining.com",
+    "year_established": 2007,
+    "years_in_business": 19,
+    "owner_name": "Tensay Johnson (Founder, 19+ yr operator)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "founded_2007_at_~30yo_proxy_=_~50_now",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 10,
+    "service_mix": "automation + automotive + aerospace + medical + electronics + semiconductors (Austin semicon corridor)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "Mobile + office phone both listed = single-operator + on-call",
+      "Solo principal (Tensay Johnson) with no public successor",
+      "19 years operating = mid-career operator",
+      "Brochure-style website, no online quoting",
+      "No certifications disclosed (ISO/AS9100 absent) → general industrial mix not aerospace-defense",
+      "Founder-led mission language ('to assist small, medium and large') = single-decisionmaker posture",
+      "Pflugerville = secondary Austin metro suburb"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "third_gen_present": false,
+      "verified_via": "austinprecisionmachining.com/about — only Tensay Johnson named"
+    },
+    "data_sources": [
+      {"url": "https://austinprecisionmachining.com/about/", "fetched_at": "2026-05-16", "field": "tensay_johnson_founder, 2007_founded, 19yr_experience"}
+    ],
+    "data_completeness": 0.55,
+    "high_conviction_signals": [
+      "Founder still at helm 19 years",
+      "Likely mid-career owner (~50yo) → 7-15 yr exit window, not 12-36mo",
+      "Austin semicon corridor exposure = customer-base quality"
+    ],
+    "notes": "C-tier candidate. Owner too young + still growing → NOT a 12-36 month seller. Score low for time-to-exit but keep in long-tail watch list."
+  },
+  {
+    "spine_index": 39,
+    "legal_name": "Waggoner Manufacturing Inc.",
+    "city": "Round Rock",
+    "county": "Williamson",
+    "website": "https://waggonermanufacturing.com",
+    "year_established": 1979,
+    "years_in_business": 47,
+    "owner_name": "Danton Waggoner (President, 3rd gen). Founder: Pat Waggoner (1979, garage origin serving Eaton Manufacturing/Austin semicon). 2nd gen: founder's son(s).",
+    "owner_age_estimate": 48,
+    "owner_age_source": "3rd_gen_active_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 30,
+    "service_mix": "aerospace + energy + maritime + government + military/defense + semiconductor (3-gen family operation)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "47-yr tenure (founded 1979) — corrected from spine's '~1985' estimate (Pat Waggoner 1979 founding confirmed)",
+      "3rd-gen Danton Waggoner now President — succession already executed",
+      "Brand renamed from L.G. Electronics → Waggoner Manufacturing (2000) to honor founder",
+      "No certifications disclosed (ISO/AS9100 absent) → semicon-direct work without external aerospace creds",
+      "Founder-tribute renaming = legacy-preservation posture, not growth-mode",
+      "FB + YouTube + LinkedIn social all linked but limited content"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "third_gen_present": true,
+      "fourth_gen_present": null,
+      "verified_via": "Pat Waggoner founded 1979; 'three-generation family-owned business' on company page; Danton Waggoner named as President on multiple business directories"
+    },
+    "data_sources": [
+      {"url": "https://waggonermanufacturing.com/", "fetched_at": "2026-05-16", "field": "founder_pat_waggoner_1979, eaton_origin, 3gen_family_owned"},
+      {"url": "https://rocketreach.co/waggoner-manufacturing-inc-profile_b546daaef9a04232", "fetched_at": "2026-05-16", "field": "danton_waggoner_president"}
+    ],
+    "data_completeness": 0.85,
+    "high_conviction_signals": [
+      "47-yr tenure",
+      "3rd-gen succession already executed (Danton)",
+      "Austin semicon corridor since 1979 = irreplaceable customer relationships (TI, AMD, Applied Materials supply chain)",
+      "No aerospace certs = NOT chasing aerospace, focused on semicon/general"
+    ],
+    "notes": "B/A-tier. Family-business 3rd-gen runway gives 5-10 yr exit horizon (vs the 12-36mo solo-owner target). Watch for 4th gen development or sibling-coowner setup."
+  },
+  {
+    "spine_index": 40,
+    "legal_name": "American Valmark, Inc.",
+    "city": "Spicewood",
+    "county": "Travis",
+    "website": "https://texascncmachining.com",
+    "year_established": 2005,
+    "years_in_business": 21,
+    "owner_name": "Rachel Prevost (President)",
+    "owner_age_estimate": 48,
+    "owner_age_source": "founded_~20yo_ago_+_president_tenure_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 15,
+    "service_mix": "aerospace + semiconductor + biotech + medical device (CNC + finishing + laser + waterjet)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "Spicewood rural address (Hazy Hills Drive — driveway-style)",
+      "ITAR registered but no ISO 9001 / AS9100 → defense-credentialed but not certified-aerospace",
+      "Solo principal (Rachel Prevost) with no public successor",
+      "Phone (512) 264-0686 — single line",
+      "FB + LinkedIn only social",
+      "'Over 20 years of service' = ~2005 founding",
+      "Multi-process (CNC + waterjet + laser + polishing) = job-shop generalist, not specialty-focused"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "third_gen_present": null,
+      "verified_via": "Rachel Prevost identified as President via RocketReach and ZoomInfo"
+    },
+    "data_sources": [
+      {"url": "https://texascncmachining.com/about/", "fetched_at": "2026-05-16", "field": "over_20yr, itar_registered, services"},
+      {"url": "https://rocketreach.co/american-valmark-inc-profile_b46916a5fc5ca66c", "fetched_at": "2026-05-16", "field": "rachel_prevost_president"}
+    ],
+    "data_completeness": 0.65,
+    "high_conviction_signals": [
+      "21-yr tenure",
+      "Solo woman-president = single decision-maker",
+      "Rural Spicewood (Hill Country west of Austin) = off PE radar",
+      "ITAR + biotech/medical = high-margin niche"
+    ],
+    "notes": "B-tier. Owner likely mid-40s/early-50s — possible 5-10 yr exit window. Strong customer-base quality (semicon + medical) makes it a sleeper good-fit if owner ages into 60s."
+  },
+  {
+    "spine_index": 41,
+    "legal_name": "A.R. Machining, Inc.",
+    "city": "Hutto",
+    "county": "Williamson",
+    "website": "https://www.armachining.com",
+    "year_established": 1979,
+    "years_in_business": 47,
+    "owner_name": "Anthony Dobias (owner) + Matthew Dobias (part-owner, son of founder) — 2nd gen family-owned with siblings active. Founders: Dobias' father + uncle (1979, Manor TX origin).",
+    "owner_age_estimate": 60,
+    "owner_age_source": "2nd_gen_succession_proxy_+_47yr_tenure",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 20,
+    "service_mix": "aerospace + medical + military/defense + semiconductor + oil&gas (CNC lathe + milling)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": true,
+    "coasting_tells": [
+      "47-yr tenure (1979) with 3 location moves (Manor → Hutto → Pflugerville → Hutto 2004) = NOT coasting, growth oriented",
+      "Multiple family members involved (Matthew + brother + 2 sisters + others) = family-only labor pool",
+      "Hutto rural-ish (east of Round Rock) = off-main-metro",
+      "ISO certified + ITAR but no AS9100",
+      "No CAD-CAM brands disclosed",
+      "No public employee count",
+      "Limited social presence — Facebook only"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "third_gen_present": null,
+      "verified_via": "Community Impact 2016 article — Dobias' father + uncle founded 1979; Matthew Dobias and siblings now operate"
+    },
+    "data_sources": [
+      {"url": "https://communityimpact.com/austin/round-rock-pflugerville-hutto/business/2016/05/04/a-r-machining/", "fetched_at": "2026-05-16", "field": "founders_father_uncle_1979, manor_origin, matthew_dobias_part_owner, siblings"},
+      {"url": "https://www.linkedin.com/in/matthew-dobias-81656163/", "fetched_at": "2026-05-16", "field": "matthew_dobias_role"},
+      {"url": "https://www.armachining.com/", "fetched_at": "2026-05-16", "field": "iso_certified_itar, industries"}
+    ],
+    "data_completeness": 0.82,
+    "high_conviction_signals": [
+      "47-yr tenure",
+      "Sibling co-owners (Matthew + brother + 2 sisters) = classic sibling-misalignment exit catalyst",
+      "Anthony Dobias listed as owner = founding-generation member still active",
+      "Mature semicon corridor exposure (Hutto/Round Rock = Samsung Taylor + Tesla Gigafactory adjacency)",
+      "No 3rd gen named"
+    ],
+    "notes": "A-tier candidate. Multi-sibling 2nd gen with founding-gen Anthony still active. As Anthony ages, sibling-coordination challenge creates exit catalyst. Strong customer base (Samsung/Tesla semicon supply chain adjacency)."
+  },
+  {
+    "spine_index": 42,
+    "legal_name": "B&R Productions — San Antonio service branch",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://bandrproduction.com/areas/san-antonio-cnc-machine-shop",
+    "year_established": 1994,
+    "years_in_business": 32,
+    "owner_name": "DUPLICATE — same legal entity as New Waverly B&R Productions (spine_idx 21). Resolve to single row.",
+    "owner_age_estimate": null,
+    "owner_age_source": "dedupe_pending_resolution_via_batch_1",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "DUPLICATE — same operation as New Waverly B&R Productions",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": true,
+    "iso_9001_certified": true,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "third_gen_present": null,
+      "verified_via": "Spine independence_notes explicitly marks dedup target"
+    },
+    "data_sources": [
+      {"url": "https://bandrproduction.com/areas/san-antonio-cnc-machine-shop", "fetched_at": "2026-05-16", "field": "service_branch_only"}
+    ],
+    "data_completeness": 0.05,
+    "high_conviction_signals": [
+      "DEDUPLICATE — not a unique business"
+    ],
+    "notes": "DEDUPLICATE row. B&R Productions has a single legal entity in New Waverly (spine_idx 21, batch 1). This San Antonio listing is a service area page, not a separate location. EXCLUDE from final target list."
+  },
+  {
+    "spine_index": 43,
+    "legal_name": "JB Machine LLC",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://jb-machine.com",
+    "year_established": 2000,
+    "years_in_business": 26,
+    "owner_name": "Jarid (last name not disclosed publicly; referenced in customer testimonials as owner)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "founder_active_26yr_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 8,
+    "service_mix": "CNC milling + turning + manual + surface grinding + tool grinding (general industrial)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "Founder name not disclosed publicly (only 'Jarid' in testimonials)",
+      "No certifications disclosed (ISO/AS9100 absent)",
+      "Phone not on accessed page — extremely low marketing investment",
+      "Government capability statement listed = chasing some federal work but unsuccessful at credential build",
+      "26-yr tenure with limited online presence = classic coasting solo-owner tell",
+      "98% customer satisfaction marketing claim = single-decisionmaker tracking own metrics",
+      "No social media handles surfaced"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "third_gen_present": false,
+      "verified_via": "Only Jarid (first name) mentioned in testimonials; no successor disclosed"
+    },
+    "data_sources": [
+      {"url": "https://jb-machine.com/", "fetched_at": "2026-05-16", "field": "2000_founded, jarid_owner_testimonial"}
+    ],
+    "data_completeness": 0.45,
+    "high_conviction_signals": [
+      "26-yr tenure",
+      "Solo founder still active (Jarid)",
+      "Minimal web/social marketing = classic coasting tell",
+      "No certifications = pure relationship-based revenue book",
+      "San Antonio (Bexar) — aerospace/defense corridor with no chasing"
+    ],
+    "notes": "Strong B/A candidate. Owner-led, low marketing investment, San Antonio defense corridor = classic coasting-with-real-customers. Investigate via TX SOS franchise filings to get full owner name."
+  },
+  {
+    "spine_index": 44,
+    "legal_name": "Camargo Custom (Camargo's Custom Machine & Welding, Inc.)",
+    "city": "Converse",
+    "county": "Bexar",
+    "website": "https://www.camargocustom.com",
+    "year_established": 2006,
+    "years_in_business": 20,
+    "owner_name": "Eduardo Camargo (President) + Maria Camargo (Director/Owner; woman-owned). Family also includes Agustin Camargo, Eduardo Adrian Camargo, Agustin Camargo Jr. (2nd gen).",
+    "owner_age_estimate": 55,
+    "owner_age_source": "founded_2006_with_combined_100yr_team_experience_=_mature_founders",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 10,
+    "service_mix": "custom metal fabrication + precision cylindrical components + welding + machining for parts no longer made (vintage equipment niche)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "20-yr tenure with 'over 100 years combined experience' marketing = aging team",
+      "No certifications (ISO/AS absent)",
+      "BBB-listed but no formal aerospace/defense credentials",
+      "Multiple family members (Eduardo + Maria + Agustin + Eduardo Adrian + Agustin Jr) = family-employee model",
+      "'Specializes in parts for machines that are over 50 years old' = unique vintage-restoration niche (sticky customer base but limited growth)",
+      "Single Converse TX (east SA) location",
+      "Woman + family-owned dual designation"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "third_gen_present": null,
+      "verified_via": "BBB listing + camargocustom.com/about-us — multiple Camargo family members named; Agustin Jr suggests 2nd gen in line"
+    },
+    "data_sources": [
+      {"url": "https://www.camargocustom.com/about-us", "fetched_at": "2026-05-16", "field": "founders_camargo_family_2006, eduardo_president, maria_director"},
+      {"url": "https://www.linkedin.com/in/eduardo-camargo-29737096/", "fetched_at": "2026-05-16", "field": "eduardo_camargo_role"},
+      {"url": "https://www.bbb.org/us/tx/converse/profile/machine-shop/camargos-custom-machine-welding-inc-0825-90028118", "fetched_at": "2026-05-16", "field": "legal_name_camargos_custom_machine_welding_inc"}
+    ],
+    "data_completeness": 0.75,
+    "high_conviction_signals": [
+      "20-yr tenure with full family operation",
+      "Eduardo + Maria spouse-co-owner structure (typical exit-pattern)",
+      "Vintage-machine niche = irreplaceable knowledge moat",
+      "Agustin Camargo Jr in family = potential 2nd gen successor (but uncertain age)",
+      "Converse rural-suburban = off-PE radar"
+    ],
+    "notes": "B-tier. Spouse-co-owner profile typical of 50s/60s sellers. Vintage-restoration niche creates strong cash + low-acquirer-competition. Verify Eduardo's age via LinkedIn dates."
+  },
+  {
+    "spine_index": 45,
+    "legal_name": "Owens Machine and Tool Company",
+    "city": "Lewisville",
+    "county": "Denton",
+    "website": "http://www.owensmachine.com",
+    "year_established": 1986,
+    "years_in_business": 40,
+    "owner_name": "EXCLUDED — Acquired May 2024 by Precision Aerospace Holdings (PE roll-up). Pre-acquisition: Danita G (President, woman-owned designation).",
+    "owner_age_estimate": null,
+    "owner_age_source": "n/a_pe_acquired",
+    "entity_status": "Active (under PE owner)",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 30,
+    "service_mix": "ultra-precision CNC of titanium + nickel alloys for aerospace, defense, oil&gas, medical, entertainment",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": true,
+    "iso_9001_certified": true,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "third_gen_present": null,
+      "verified_via": "Acquired by Precision Aerospace Holdings May 2024 (same parent as Decatur Machine Services and Applegate EDM)"
+    },
+    "data_sources": [
+      {"url": "https://www.linkedin.com/company/owens-machine-&-tool-co.", "fetched_at": "2026-05-16", "field": "founded_1986, woman-owned, certifications"},
+      {"url": "https://precisionaeroholdings.com/precision-aerospace-announces-acquisition-of-owens-machine-tool-company/", "fetched_at": "2026-05-16", "field": "pe_acquired_may_2024"}
+    ],
+    "data_completeness": 0.40,
+    "high_conviction_signals": [
+      "EXCLUDED — PE-owned by Precision Aerospace Holdings since May 2024"
+    ],
+    "notes": "EXCLUDE. Same PE roll-up that already owns Decatur Machine Services and Applegate EDM (both flagged in spine _meta exclusion list). The Owens TX shop is now part of Precision Aerospace Holdings. Add to spine exclusion list retroactively."
+  },
+  {
+    "spine_index": 46,
+    "legal_name": "Maximum Industries, Inc.",
+    "city": "Irving",
+    "county": "Dallas",
+    "website": "https://www.maximumind.com",
+    "year_established": 1996,
+    "years_in_business": 30,
+    "owner_name": "Owner name not publicly disclosed",
+    "owner_age_estimate": 60,
+    "owner_age_source": "founding_year_proxy_1996",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 45,
+    "service_mix": "waterjet + laser cutting + CNC machining for aerospace + general industrial",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": true,
+    "iso_9001_certified": true,
+    "coasting_tells": [
+      "30-yr tenure",
+      "44,000 sqft climate-controlled facility = MEANINGFUL scale (above small-shop)",
+      "AS9100 + ISO 9001:2023 = current aerospace credentials",
+      "Multi-process (CNC + waterjet + laser) = job-shop generalist, not specialty",
+      "Phone-first (972) 501-9990 with Employment Opportunities page (hiring) — suggests growth not coasting",
+      "No social media surfaced (or weak)",
+      "Founder name not disclosed = closely held"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "third_gen_present": null,
+      "verified_via": "no public ownership disclosure"
+    },
+    "data_sources": [
+      {"url": "https://www.maximumind.com/", "fetched_at": "2026-05-16", "field": "1996_founded, 44k_sqft, as9100_iso9001"}
+    ],
+    "data_completeness": 0.60,
+    "high_conviction_signals": [
+      "FLAG: 44k sqft + multi-process + AS9100 + 30 yrs = mid-sized shop, possibly $10-25M revenue range",
+      "Founder name kept private = closely-held suggests founder still active",
+      "Owner likely ~60yo if founded 1996 at ~30",
+      "Multi-process job-shop appeal to roll-up buyers"
+    ],
+    "notes": "B-tier. Size + AS9100 cert make it attractive to PE roll-ups. Confirm founder identity via TX SOS franchise tax filings before A-tier promotion."
+  },
+  {
+    "spine_index": 47,
+    "legal_name": "Rigid Concepts LLC",
+    "city": "Van Alstyne",
+    "county": "Grayson",
+    "website": "https://www.rigidconcepts.com",
+    "year_established": 2015,
+    "years_in_business": 11,
+    "owner_name": "Owner name not publicly disclosed (Veteran-owned designation)",
+    "owner_age_estimate": 45,
+    "owner_age_source": "founded_2015_+_veteran_post_service_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": 22,
+    "employee_count_estimate": 30,
+    "service_mix": "aerospace + defense + medical + technology (5-axis CNC + prototyping + DFW supply)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": true,
+    "coasting_tells": [
+      "FOUNDED 2015 — NOT a coasting older shop (spine incorrectly omitted founded_year)",
+      "Grew from 1 machine to 22 machining centers in 11 years = AGGRESSIVE GROWTH MODE",
+      "ISO 9001:2015 + ITAR but no AS9100 yet — credentialing in progress",
+      "Veteran-owned designation",
+      "Same-week turnaround on expedited projects = speed-to-market value prop, not coasting",
+      "FB, X, IG, RSS all linked = modern marketing posture"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "third_gen_present": false,
+      "verified_via": "Young company (11 yrs), no succession discussion"
+    },
+    "data_sources": [
+      {"url": "https://www.rigidconcepts.com/", "fetched_at": "2026-05-16", "field": "veteran_owned, 22_machines, founded_2015_implied, growth_story"},
+      {"url": "https://www.bbb.org/us/tx/van-alstyne/profile/engineering-consultant/rigid-concepts-llc-0875-90802750", "fetched_at": "2026-05-16", "field": "bbb_profile"}
+    ],
+    "data_completeness": 0.65,
+    "high_conviction_signals": [
+      "ANTI-FIT: 2015 founding + 1→22 machine growth = growth-mode, not coasting",
+      "Veteran-owner ~45yo too young for 12-36mo exit",
+      "GROWTH SHOP — useful as scorer anti-fit calibration example"
+    ],
+    "notes": "ANTI-FIT for solo-owner-coasting thesis. Founded 2015, growing rapidly, veteran-owner ~45. Score LOW for time-to-exit. Useful as 'anti-fit' calibration example for scorer."
+  },
+  {
+    "spine_index": 48,
+    "legal_name": "FTC Industries, Inc.",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "website": "https://ftcindustries.com",
+    "year_established": 1997,
+    "years_in_business": 29,
+    "owner_name": "Rick Flores (CEO, key principal)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "founded_1997_proxy_+_ceo_principal_29yr_tenure",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 50,
+    "service_mix": "aerospace + oil&gas + medical + military + automotive (CNC milling/turning)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": true,
+    "coasting_tells": [
+      "29-yr tenure",
+      "43,000 sqft climate-controlled facility = mid-sized (top of solo-owner range)",
+      "Operating 20 hrs daily Mon-Fri = HIGH UTILIZATION (NOT coasting)",
+      "ISO 9000 compliant (older standard) — no AS9100",
+      "Rick Flores email publicly listed = single-decisionmaker accessibility",
+      "Multi-state branding (Dallas / FW / Laredo / Corpus Christi / US machine shop) = wide marketing footprint, growth-oriented",
+      "FB + LinkedIn + Google Business Profile presence"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "third_gen_present": null,
+      "verified_via": "Only Rick Flores named on company page; no successor disclosed"
+    },
+    "data_sources": [
+      {"url": "https://ftcindustries.com/", "fetched_at": "2026-05-16", "field": "1997_founded, 43k_sqft, 20hr_operations, rick_flores_ceo"}
+    ],
+    "data_completeness": 0.78,
+    "high_conviction_signals": [
+      "29-yr tenure",
+      "Rick Flores CEO single-decisionmaker accessibility",
+      "43k sqft + 20hr/day operations = $15-25M revenue band likely",
+      "ISO 9000 (legacy) = decade-old credentialing not refreshed → coasting credential tell",
+      "No public successor"
+    ],
+    "notes": "B-tier. Rick Flores age + tenure + single-DM structure = succession candidate, but 20hr/day high-utilization signals he's still hands-on and growth-mode. Watch for transition triggers."
+  },
+  {
+    "spine_index": 49,
+    "legal_name": "Garland Service Company (GSC)",
+    "city": "Garland",
+    "county": "Dallas",
+    "website": "https://www.gscusa.net",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Owner name not publicly disclosed",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 35,
+    "service_mix": "PCB assembly tooling + customer-designed tooling + aerospace/defense precision parts (3 divisions)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": true,
+    "iso_9001_certified": true,
+    "coasting_tells": [
+      "'For decades' tenure phrasing = mature, undisclosed exact founding",
+      "Quality Management System upgraded 2008 = process-driven transformation, NOT coasting",
+      "ISO 9001:2015 + AS9100D + ITAR + DFARS + FARS = HEAVY CREDENTIALING (anti-coasting tell)",
+      "PCB assembly tooling = niche specialty (PCBA fixtures)",
+      "Active CNC Machinist recruitment + Dallas College-Richland education partnership = INVESTING in workforce (anti-coasting)",
+      "YouTube + LinkedIn + SAP Ariba supplier profile = modern B2B procurement readiness"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "third_gen_present": null,
+      "verified_via": "no public ownership disclosure"
+    },
+    "data_sources": [
+      {"url": "https://www.gscusa.net/", "fetched_at": "2026-05-16", "field": "decades_tenure, certifications, 3_divisions, dallas_college_partnership"},
+      {"url": "https://www.gscusa.net/company-information/", "fetched_at": "2026-05-16", "field": "qms_2008_transformation, iso_certification_progression"}
+    ],
+    "data_completeness": 0.55,
+    "high_conviction_signals": [
+      "Heavy certification stack + active workforce investment + Garland (Raytheon corridor) suggests REAL revenue ($20-30M est)",
+      "Founder name kept private — closely held",
+      "Anti-coasting tells dominate (workforce investment, modern QMS, supplier portals)"
+    ],
+    "notes": "B/C-tier. Process-driven + workforce-investing → looks growth-oriented, not coasting. Score lower for solo-owner-coasting thesis. Verify owner via TX SOS franchise filings."
+  },
+  {
+    "spine_index": 50,
+    "legal_name": "Icon Machine Company",
+    "city": "Irving",
+    "county": "Dallas",
+    "website": "https://www.iconmachineshop.com",
+    "year_established": 1999,
+    "years_in_business": 27,
+    "owner_name": "EXCLUDED — Acquired August 2022 by Precision Aerospace Holdings (PE roll-up). Founders: three industry veterans (names not disclosed).",
+    "owner_age_estimate": null,
+    "owner_age_source": "n/a_pe_acquired",
+    "entity_status": "Active (under PE owner)",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 30,
+    "service_mix": "tight-tolerance precision (±0.0003\") — aerospace + defense",
+    "cad_cam_software_in_use": null,
+    "ntma_member": true,
+    "as9100_certified": true,
+    "iso_9001_certified": true,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "third_gen_present": null,
+      "verified_via": "Acquired by Precision Aerospace Holdings August 2022 (same parent as Decatur, Applegate, Owens)"
+    },
+    "data_sources": [
+      {"url": "https://junipercapmgt.com/project/icon-machine-company/", "fetched_at": "2026-05-16", "field": "pe_acquired_aug_2022_precision_aerospace_holdings"},
+      {"url": "https://mergr.com/company/icon-machine", "fetched_at": "2026-05-16", "field": "ownership_change_record"}
+    ],
+    "data_completeness": 0.35,
+    "high_conviction_signals": [
+      "EXCLUDED — PE-owned by Precision Aerospace Holdings since August 2022"
+    ],
+    "notes": "EXCLUDE. Same PE roll-up that owns Decatur, Applegate, and now Owens. Precision Aerospace Holdings is consolidating TX aerospace CNC shops. Add to spine exclusion list."
+  },
+  {
+    "spine_index": 51,
+    "legal_name": "Mills Machine Shop Operating Services, Inc.",
+    "city": "Ponder",
+    "county": "Denton",
+    "website": "https://millsmachineshop.com",
+    "year_established": 1994,
+    "years_in_business": 32,
+    "owner_name": "Eddie Mills (Owner) + Linda Mills (Owner) — founders, husband-and-wife co-ownership",
+    "owner_age_estimate": 62,
+    "owner_age_source": "eddie_started_1982_machining_+_shop_foreman_1986_+_founded_1994_=_age_~62_now",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": 9,
+    "employee_count_estimate": 12,
+    "service_mix": "general CNC milling/turning/cutting precision (high tolerance, repeatability)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": true,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "Husband-and-wife co-owner profile (Eddie + Linda) — classic single-decision-unit",
+      "32-yr tenure (founded 1994 after Eddie's 12 prior years machining)",
+      "Specific equipment list: HAAS (VF7, DM 2, VF2 SS), Hwacheon (Hi Tech 200A), Leadwell (T8, LTC-25A), HE&M (H90A-1, H90A-4) — VALUE-TIER PRODUCTION (no Mazak/DMG flagship)",
+      "NTMA + NFIB only (no ISO/AS9100 in 32 years)",
+      "Yahoo Local + Yelp + Angie's List + Facebook = legacy 2000s-era directory presence",
+      "Active recruitment for CNC Operator/Machinist = small-team labor pressure",
+      "Owners named in marketing quote = founder-led brand",
+      "Ponder, rural Denton county = off-PE-radar",
+      "Owners likely 60s — Eddie started machining 1982 (~age 18 then = ~62 now)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "third_gen_present": false,
+      "verified_via": "Only Eddie and Linda Mills named; no children/successor in public marketing"
+    },
+    "data_sources": [
+      {"url": "https://millsmachineshop.com/", "fetched_at": "2026-05-16", "field": "eddie_linda_mills_owners, founded_1994, equipment_list_haas_hwacheon_leadwell_hem, ntma_nfib"},
+      {"url": "https://www.zoominfo.com/p/Eddie-Mills/5822648230", "fetched_at": "2026-05-16", "field": "eddie_mills_owner_confirmation"}
+    ],
+    "data_completeness": 0.88,
+    "high_conviction_signals": [
+      "Husband-wife co-owners likely 60s = classic retirement-decision setup",
+      "32-yr tenure",
+      "No certifications + no successor named = unstructured but viable",
+      "Rural Ponder location = building likely owned",
+      "Value-tier equipment fleet (HAAS-heavy) = $5-10M revenue band, fits solo-owner sweet spot",
+      "Owners' quoted marketing language = founder-led brand fragility (when they exit, brand likely shrinks)"
+    ],
+    "notes": "TOP A-tier candidate. Husband-wife co-owners ~62yo + 32yr tenure + no successor + no certifications + rural location = classic small-CNC-shop coasting profile poised for 24-36mo exit. Approach with retirement-focused exit framing."
+  },
+  {
+    "spine_index": 52,
+    "legal_name": "Neo Industries Corporation",
+    "city": "Colleyville",
+    "county": "Tarrant",
+    "website": "https://www.neoindustries.com",
+    "year_established": 1992,
+    "years_in_business": 34,
+    "owner_name": "EXCLUDED-LIKELY — Recent ownership transition 2019. Current: Jerry Simmons (CEO) + Obie D Day (Director/President). Original founder Bill Horn retired 2006 (was joined by Dan Day 1992).",
+    "owner_age_estimate": null,
+    "owner_age_source": "n/a_recent_transition",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 20,
+    "service_mix": "super-alloy CNC (titanium, Inconel, Monel, Hastelloy) — drilling, measurement, power infrastructure, high-pressure pumps",
+    "cad_cam_software_in_use": null,
+    "ntma_member": true,
+    "as9100_certified": false,
+    "iso_9001_certified": true,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "third_gen_present": false,
+      "verified_via": "Neo Industries About page — 'Current ownership purchased the company in 2019'; founder Bill Horn retired 2006; intermediate absentee owner Dan Day (Standard Hardware) sold 2019."
+    },
+    "data_sources": [
+      {"url": "https://neoindustries.com/about-us/", "fetched_at": "2026-05-16", "field": "bill_horn_founder_late_80s, 1992_formal_founding, dan_day_partner, bill_retired_2006, 2019_acquisition"},
+      {"url": "https://www.highergov.com/awardee/neo-industries-corporation-10115222/", "fetched_at": "2026-05-16", "field": "jerry_simmons_ceo, obie_d_day_president"}
+    ],
+    "data_completeness": 0.70,
+    "high_conviction_signals": [
+      "EXCLUDED-LIKELY — Recent 2019 acquisition by new owners (Jerry Simmons + Obie D Day)",
+      "Not a coasting solo-owner — recent transition",
+      "Super-alloy specialty niche remains valuable but not target"
+    ],
+    "notes": "EXCLUDE for solo-owner-coasting thesis. New owners (since 2019) are 7 years in — NOT poised to sell within 12-36mo unless growth thesis broken. Add to flag list for revisit in 5-10 years."
+  },
+  {
+    "spine_index": 53,
+    "legal_name": "Precision Machining Company, LLC",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://www.precisionmachiningtexas.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Owner name not publicly disclosed; 3rd-generation family-owned per company self-description",
+    "owner_age_estimate": 50,
+    "owner_age_source": "3rd_gen_active_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 15,
+    "service_mix": "precision CNC turning + milling + Swiss machining (3 generation Fort Worth machining family)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "3rd-gen family-owned per page title — succession already in place",
+      "Founder + founding year both withheld from website (closely held / privacy)",
+      "Facebook page name 'Chipslinger0' = casual-personal handle, not corporate brand",
+      "Swiss-capable = niche credential",
+      "No ISO/AS9100 disclosed",
+      "South Fort Worth (Enon Ave) = secondary industrial corridor (vs Lockheed-Bell core)",
+      "Brochure-style website with 'Machine Shop Tour' page = traditional marketing",
+      "Phone (682) 373-4775 + admin@precisionmachiningtexas.com only contact"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "third_gen_present": true,
+      "fourth_gen_present": null,
+      "verified_via": "precisionmachiningtexas.com page title '3rd-Generation Precision CNC Machine Shop'"
+    },
+    "data_sources": [
+      {"url": "https://www.precisionmachiningtexas.com/about", "fetched_at": "2026-05-16", "field": "3rd_gen_family, swiss_machining, single_location"},
+      {"url": "https://www.facebook.com/Chipslinger0/", "fetched_at": "2026-05-16", "field": "casual_brand_handle"}
+    ],
+    "data_completeness": 0.45,
+    "high_conviction_signals": [
+      "3rd-gen family ownership = succession already in place",
+      "Founder + founding year hidden = closely held, succession-sensitive",
+      "Swiss capability = sticky niche",
+      "Casual brand (Chipslinger0 FB) = founder/owner personality-driven, not corporatized"
+    ],
+    "notes": "B-tier. Verify owner identity + founding year via TX SOS / Comptroller. 3rd-gen privacy posture + Swiss niche makes it interesting for outreach."
+  },
+  {
+    "spine_index": 54,
+    "legal_name": "Transtar CNC Machine, LLC",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "website": "https://www.transtarmachine.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Group of partners with 50+ yrs combined CNC experience (specific names not disclosed publicly)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 12,
+    "service_mix": "aviation + oil field + automotive (reverse engineering + prototyping + production)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": true,
+    "iso_9001_certified": true,
+    "coasting_tells": [
+      "Address inconsistency: header shows Mansfield TX 76073, body lists Arlington (Dodson Lake Dr) — relocation in progress or branding confusion",
+      "Open 7 days/week 7:30am-6:30pm = HIGH SERVICE COMMITMENT (not coasting)",
+      "AS9100D + ISO 9001 certified = aerospace-credentialed",
+      "Founder/owner names withheld = closely held partnership",
+      "'Group of partners' = multi-owner structure (succession complexity, but no single retirement trigger)",
+      "Reverse engineering specialty = sticky knowledge moat",
+      "No social media surfaced",
+      "Website designer (Van Randall) cited — small business marketing approach"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "third_gen_present": null,
+      "verified_via": "no public ownership disclosure beyond 'group of partners'"
+    },
+    "data_sources": [
+      {"url": "https://www.transtarmachine.com/", "fetched_at": "2026-05-16", "field": "group_of_partners_50yr_combined, as9100d_iso9001, 7day_operations, arlington_mansfield_addresses"}
+    ],
+    "data_completeness": 0.50,
+    "high_conviction_signals": [
+      "Partnership structure with 50+ yr combined experience = aging partners",
+      "Aerospace credentials + 7-day operations = real cash",
+      "No 'about us' / founder content = succession-sensitive",
+      "Address inconsistency = relocation possible, business transition possible"
+    ],
+    "notes": "C/B-tier. Partnership structure is harder to acquire (multiple owners need to agree), but combined-experience age range suggests succession-window is open. Investigate partner identities via TX SOS."
+  },
+  {
+    "spine_index": 55,
+    "legal_name": "JY's Extreme Machine LLC",
+    "city": "Burleson",
+    "county": "Johnson",
+    "website": "https://jysextrememachine.com",
+    "year_established": 2005,
+    "years_in_business": 21,
+    "owner_name": "Jason Yeates (JY) — Founder/Owner/Operator",
+    "owner_age_estimate": 50,
+    "owner_age_source": "founded_2005_+_35yr_combined_team_cnc_experience_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 5,
+    "service_mix": "general CNC turning/milling + programming + sawing + welding (manufacturing, commercial industrial, packaging, defense, aerospace)",
+    "cad_cam_software_in_use": "yes (specific software not disclosed)",
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "4,000 sqft climate-controlled facility = SMALL job shop (sub-$3M revenue likely)",
+      "Solo owner-operator Jason Yeates 21 years in",
+      "Started with Hurco Vertical Mill (single-machine origin)",
+      "No certifications (ISO/AS9100 absent)",
+      "Tight tolerance (±.0001\") = quality-focused craftsmanship",
+      "Materials list includes Inconel + exotics = high-margin aerospace-adjacent work",
+      "Owner cited concern about 'field diminishing in interest by younger generations' = generational decline concern, succession question implicit",
+      "FB + LinkedIn (Jason Yeates) + YouTube = modern but small social presence",
+      "Burleson, S of Fort Worth = rural-suburban DFW edge",
+      "County Road address (CR 714) = remote / building owned likely"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "third_gen_present": false,
+      "verified_via": "Solo founder narrative; no successor named"
+    },
+    "data_sources": [
+      {"url": "https://jysextrememachine.com/", "fetched_at": "2026-05-16", "field": "jason_yeates_founder, 2005_founded, 4k_sqft, hurco_origin, tight_tolerance"}
+    ],
+    "data_completeness": 0.78,
+    "high_conviction_signals": [
+      "Solo owner-operator (Jason Yeates) ~50yo",
+      "21-yr tenure",
+      "Generational-decline concern voiced by owner = succession anxiety explicit",
+      "Small scale (4k sqft, ~5 employees) = fits small-bolt-on size category",
+      "Burleson rural DFW edge = off-PE radar"
+    ],
+    "notes": "B-tier (small). Too small for typical PE roll-up but ideal solo-acquirer bolt-on. Jason's explicit generational-decline concern in marketing copy is a SUCCESSION SIGNAL — he's thinking about exit."
+  },
+  {
+    "spine_index": 56,
+    "legal_name": "JIREH CNC Machining",
+    "city": "Mansfield",
+    "county": "Tarrant",
+    "website": "https://jirehcncmachining.com",
+    "year_established": 2021,
+    "years_in_business": 5,
+    "owner_name": "Garcia brothers (Luis Garcia President + Francisco Garcia + family). Mansfield is sister location to Houston Jireh Precision.",
+    "owner_age_estimate": 40,
+    "owner_age_source": "founded_2021_+_garcia_brothers_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 6,
+    "service_mix": "general CNC milling + lathe turning + drilling + tapping + 3D profiling (Mastercam programming)",
+    "cad_cam_software_in_use": "Mastercam",
+    "ntma_member": true,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "FOUNDED 2021 — NOT a coasting older shop (5 years young)",
+      "Growth mode — sister-location expansion from Houston to Mansfield 2021",
+      "NTMA chapter introduction announcement = brand-building",
+      "No certifications (yet)",
+      "Mastercam disclosed = modern CAD/CAM",
+      "Family-owned, multiple Garcia brothers active = labor leverage but growth posture"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "third_gen_present": false,
+      "verified_via": "Founded 2021 by Garcia brothers; sister to Houston Jireh Precision (older)"
+    },
+    "data_sources": [
+      {"url": "https://jirehcncmachining.com/", "fetched_at": "2026-05-16", "field": "2021_founded, mansfield_location, mastercam_programming"},
+      {"url": "https://www.facebook.com/NTXChapter/posts/excited-to-introduce-jireh-cnc-machining-a-growing-family-owned-shop-in-mansfiel/615226150906668/", "fetched_at": "2026-05-16", "field": "ntma_north_texas_chapter_intro"}
+    ],
+    "data_completeness": 0.55,
+    "high_conviction_signals": [
+      "ANTI-FIT: 5-yr-old shop in growth mode",
+      "Garcia brothers ~40 yrs old, decades from retirement",
+      "Useful as scorer anti-fit calibration example"
+    ],
+    "notes": "ANTI-FIT for solo-owner-coasting thesis. Too young, growth-mode. Useful as anti-fit calibration."
+  },
+  {
+    "spine_index": 57,
+    "legal_name": "Jireh Precision Machining",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.jirehprecision.com",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Garcia brothers (Luis Garcia President; Francisco Garcia also at Jireh Precision). Family business.",
+    "owner_age_estimate": 42,
+    "owner_age_source": "linkedin_profile_age_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_machine_count": null,
+    "employee_count_estimate": 8,
+    "service_mix": "lathe + milling + equipment repair/modification/refurbishment (Beaumont Hwy industrial Houston)",
+    "cad_cam_software_in_use": null,
+    "ntma_member": null,
+    "as9100_certified": false,
+    "iso_9001_certified": false,
+    "coasting_tells": [
+      "Houston Beaumont Hwy location = E Houston industrial corridor",
+      "Equipment repair/refurbishment specialty = sticky service work",
+      "Family-owned Garcia brothers",
+      "Likely older than Mansfield JIREH (which is the sister-location)",
+      "Brochure-style website, limited content depth",
+      "Twitter handle @machininig (typo, low activity)",
+      "Google+ legacy link = old website infrastructure"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "third_gen_present": false,
+      "verified_via": "Garcia brothers family business; Luis Garcia LinkedIn lists President role"
+    },
+    "data_sources": [
+      {"url": "https://www.jirehprecision.com/about", "fetched_at": "2026-05-16", "field": "garcia_brothers_family, 10yr_machining_experience"},
+      {"url": "https://www.linkedin.com/in/luis-garcia-241b19170/", "fetched_at": "2026-05-16", "field": "luis_garcia_president"},
+      {"url": "https://www.linkedin.com/in/francisco-garciap/", "fetched_at": "2026-05-16", "field": "francisco_garcia"}
+    ],
+    "data_completeness": 0.50,
+    "high_conviction_signals": [
+      "Garcia brothers 40-something = decades from exit",
+      "Anti-fit for solo-owner-coasting thesis",
+      "Houston working-class industrial corridor location"
+    ],
+    "notes": "ANTI-FIT for solo-owner-coasting thesis. Young family business in growth mode. Sister to Mansfield JIREH (2021)."
+  }
+]
