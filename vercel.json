@@ -14,7 +14,8 @@
     "api/stripe-webhook.js": { "maxDuration": 10 },
     "api/free-scan-start.js": { "maxDuration": 10 },
     "api/buy-box.js": { "maxDuration": 10 },
-    "api/buy-boxes.js": { "maxDuration": 10 }
+    "api/buy-boxes.js": { "maxDuration": 10 },
+    "api/waitlist.js": { "maxDuration": 10 }
   },
   "rewrites": [
     { "source": "/api/magic-link", "destination": "/api/scan-report?_action=magic-link" },
