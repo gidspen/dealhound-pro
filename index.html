@@ -837,7 +837,7 @@
         <span class="nav-powered">Powered by <a href="https://incredibleai.pro" target="_blank">Incredible AI</a></span>
         <a href="#how-it-works" class="nav-link">How It Works</a>
         <a href="#pricing" class="nav-link">Pricing</a>
-        <a href="/dashboard" class="btn-nav">Free Scan</a>
+        <a href="#get-started" class="btn-nav">Join the Waitlist</a>
       </div>
     </div>
   </nav>
@@ -848,7 +848,7 @@
       <div class="hero-inner">
         <div class="hero-eyebrow">
           <span class="dot"></span>
-          31,400+ Deals Analyzed
+          Coming Soon — Join the Waitlist
         </div>
 
         <h1>Your <em>AI deal team.</em></h1>
@@ -857,12 +857,14 @@
           Most investors spend more time searching than evaluating. Your agent fixes that — checking 30+ marketplaces every day, scoring every listing against your exact criteria, and bringing back only the deals worth your time. Ranked, with the reasoning behind each one.
         </p>
 
-        <div class="hero-capture">
-          <a href="/dashboard" class="btn-primary" style="padding:16px 32px; font-size:0.9rem;">Get My First Free Scan &rarr;</a>
+        <div class="hero-capture" id="hero-form">
+          <input type="email" id="hero-email" placeholder="your@email.com" autocomplete="email" />
+          <button class="btn-primary" onclick="submitWaitlist('hero')" style="padding:16px 24px; font-size:0.9rem;">Sign Up for the Waitlist &rarr;</button>
         </div>
-        <p class="hero-disclaimer">
-          <strong>First scan is free.</strong> Takes 2 minutes. No credit card required.
+        <p class="hero-disclaimer" id="hero-disclaimer">
+          <strong>Coming soon.</strong> Be the first to know when we launch.
         </p>
+        <p class="success-msg" id="hero-success">You're on the list. We'll email you when we launch.</p>
       </div>
     </div>
   </section>
@@ -934,7 +936,7 @@
           </div>
           <div class="sample-watermark">Sample deal card from your daily report</div>
           <div style="margin-top: 24px; text-align: center;">
-            <a href="/dashboard" class="btn-primary" style="padding:14px 28px; font-size:0.85rem;">Get My First Free Scan &rarr;</a>
+            <a href="#get-started" class="btn-primary" style="padding:14px 28px; font-size:0.85rem;">Sign Up for the Waitlist &rarr;</a>
           </div>
         </div>
       </div>
@@ -1015,8 +1017,8 @@
       </div>
 
       <div style="margin-top: 48px; text-align: center;">
-        <a href="/dashboard" class="btn-primary" style="padding:14px 32px; font-size:0.88rem;">Get My First Free Scan &rarr;</a>
-        <p style="font-size:0.78rem; color:var(--cream-sub); margin-top:12px;">2 minutes to set up. No credit card required.</p>
+        <a href="#get-started" class="btn-primary" style="padding:14px 32px; font-size:0.88rem;">Sign Up for the Waitlist &rarr;</a>
+        <p style="font-size:0.78rem; color:var(--cream-sub); margin-top:12px;">Coming soon. Be first in line when we launch.</p>
       </div>
     </div>
   </section>
@@ -1041,7 +1043,7 @@
             <li>Ranked deal report emailed to you</li>
             <li>Shareable report link</li>
           </ul>
-          <a href="/free-scan" class="btn-full ghost">Run a Free Scan &rarr;</a>
+          <a href="#get-started" class="btn-full ghost">Join the Waitlist &rarr;</a>
         </div>
 
         <div class="pricing-card featured">
@@ -1083,11 +1085,13 @@
   <section class="final-cta" id="get-started">
     <div class="container">
       <h2>Stop hunting manually.<br><em>Start closing.</em></h2>
-      <p>Tell your AI agent what to find. First scan is free.</p>
-      <div style="margin-top:8px;">
-        <a href="/dashboard" class="btn-primary" style="padding:16px 36px; font-size:0.9rem; display:inline-block; text-decoration:none;">Get My First Free Scan &rarr;</a>
+      <p>Deal Hound is launching soon. Drop your email and we'll let you know the moment it's live.</p>
+      <div class="final-capture" style="margin-top:8px;">
+        <input type="email" id="final-email" placeholder="your@email.com" autocomplete="email" />
+        <button class="btn-primary" onclick="submitWaitlist('final')" style="white-space:nowrap;">Sign Up for the Waitlist &rarr;</button>
       </div>
-      <p style="font-size:0.78rem; color:var(--cream-sub); margin-top:16px;">2 minutes to set up. No credit card required.</p>
+      <p class="success-msg" id="final-success">You're on the list. We'll email you when we launch.</p>
+      <p style="font-size:0.78rem; color:var(--cream-sub); margin-top:16px;">No spam. One email when we launch.</p>
     </div>
   </section>
 
@@ -1115,6 +1119,35 @@
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 20);
     }, { passive: true });
+
+    async function submitWaitlist(source) {
+      const emailEl = document.getElementById(source + '-email');
+      const successEl = document.getElementById(source + '-success');
+      const disclaimerEl = document.getElementById(source + '-disclaimer');
+      const email = emailEl ? emailEl.value.trim() : '';
+      if (!email) { emailEl && emailEl.focus(); return; }
+
+      try {
+        const res = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        if (res.ok) {
+          const d = await res.json();
+          if (window.posthog) posthog.capture('waitlist_signup', { email, source });
+          if (d.redirect) { window.location.href = d.redirect; return; }
+          if (emailEl) emailEl.closest('.hero-capture, .final-capture').style.display = 'none';
+          if (disclaimerEl) disclaimerEl.style.display = 'none';
+          if (successEl) successEl.style.display = 'block';
+        } else {
+          const d = await res.json();
+          alert(d.error || 'Something went wrong. Please try again.');
+        }
+      } catch {
+        alert('Could not connect. Please try again.');
+      }
+    }
 
     async function startCheckout(tier) {
       const btn = event.currentTarget;
