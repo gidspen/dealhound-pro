@@ -1,0 +1,1660 @@
+[
+  {
+    "spine_index": 0,
+    "legal_name": "CARRCO Painting Contractors, Inc.",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.carrcopainting.com/",
+    "year_established": 1994,
+    "years_in_business": 32,
+    "owner_name": "Carr family (founders) — specific principal not disclosed on website",
+    "owner_age_estimate": 60,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": 500,
+    "employee_count_estimate": 500,
+    "service_mix": "commercial / industrial",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "30+ years operating same brand (founded 1994)",
+      "Three-city footprint (Dallas/Fort Worth/Austin) — meaningful scale",
+      "Family-owned commercial/industrial — not a high-growth resi shop"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes — website fetch already noted family-owned"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.carrcopainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, address, phone, crew_size, ownership"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "TOO LARGE for 5-30 crew target (500+ employees, behaves like regional commercial GC-painter). Retained in spine for reference. Useful as upper-bound calibration for scorer — would likely fail crew-size filter but family-owned + 32 years is the canonical profile."
+  },
+  {
+    "spine_index": 1,
+    "legal_name": "Premier Painting LLC",
+    "city": "Prosper",
+    "county": "Collin",
+    "website": "https://premierpaintingdfw.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Roman Surovtsev",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Single-owner shop with explicit 'non-franchised' self-description (defensive positioning)",
+      "No founded year disclosed on website",
+      "Premium suburb (Prosper, Collin County) — high-priced market"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "spine independence_notes — website fetch 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://premierpaintingdfw.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, city, zip, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Solo-owner shop. Slavic surname (Surovtsev) suggests first-gen immigrant owner — typical 1990s/2000s arrival pattern; if founder is 50-60, succession risk is real. Need founded_year + owner age to score properly. Owner LinkedIn not surfaced in spine."
+  },
+  {
+    "spine_index": 2,
+    "legal_name": "Marquis Perkins LLC",
+    "city": "Plano",
+    "county": "Collin",
+    "website": "https://spraytexpainting.com/",
+    "year_established": 2016,
+    "years_in_business": 10,
+    "owner_name": "Marquis Perkins and partner (two UNT friends)",
+    "owner_age_estimate": 32,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": ["Strong online presence (750+ Google reviews) — NOT coasting"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "spine independence_notes"
+    },
+    "data_sources": [
+      {
+        "url": "https://spraytexpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, dba, founded_year, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "LOW FIT for solo-owner-coasting profile. Young company (10 years), young founders (UNT grads), strong online marketing (750+ reviews). Sister company to Yellow Rose Painting (Temple). Growth-mode operator, unlikely seller in 12-36 months. Flag for scorer as anti-fit example."
+  },
+  {
+    "spine_index": 3,
+    "legal_name": "Platinum Painting of Dallas",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.platinumpaintingdallas.com/",
+    "year_established": 2008,
+    "years_in_business": 18,
+    "owner_name": "Karl and Marjorie Pickens (husband/wife)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "18 years operating + sister Frisco branch",
+      "10,000+ homes serviced (mature operator)",
+      "Husband/wife team — common solo-owner-coasting structure"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.platinumpaintingdallas.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "Husband/wife operator with two branches (Dallas + Frisco). Same owners on both — not a franchise. Mature operator entering mid-50s presumed age. Strong fit profile for 'tired husband/wife wants out' thesis. If owner is 55-60, succession risk = HIGH in 12-36 months especially if no employed family members."
+  },
+  {
+    "spine_index": 4,
+    "legal_name": "Brady Painting Contractors",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://bradypaint.com/",
+    "year_established": 1975,
+    "years_in_business": 51,
+    "owner_name": "Brady family (specific principal not disclosed on website)",
+    "owner_age_estimate": 70,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "residential",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "51 years in business — extreme tenure",
+      "Long-tenured employees (decades) — classic coasting tell",
+      "Same Houston location 50+ years",
+      "Residential-only focus suggests low organizational complexity"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://bradypaint.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "STRONG FIT for solo-owner-coasting thesis. 51-year operator. If original founder = current owner, age likely 70+. If 2nd-gen, age likely 50-65. Either way, succession-ready window. Long-tenured employees = stable cash flow, low growth, classic coasting. Houston Harris County residential market. Verify owner name + family successor via live About page fetch before outreach."
+  },
+  {
+    "spine_index": 5,
+    "legal_name": "Prime House Painting",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://primehp.com/",
+    "year_established": null,
+    "years_in_business": 15,
+    "owner_name": "Jorge Ruiz and Daniela Nino (family)",
+    "owner_age_estimate": 45,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": ["Family-owned couple operator", "~15 years operating — mid-tenure"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://primehp.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Mid-tenure family-owned (Ruiz/Nino). 15 years operating Houston Heights area. Likely first-gen owners ~40-50 age. NOT yet in classic succession window unless health/burnout factors present. Verify founded year + owner age before scoring."
+  },
+  {
+    "spine_index": 6,
+    "legal_name": "Mallard Commercial Painting",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://mallardcommercialpainting.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "commercial / multi-family",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Ownership not disclosed on website — common in coasting commercial shops",
+      "Multi-vertical commercial focus (industrial/office/retail/F&B/medical/multifamily) suggests established relationships"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://mallardcommercialpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "city, services"
+      }
+    ],
+    "data_completeness": 0.25,
+    "notes": "INSUFFICIENT DATA for scoring. No founded year, no phone, no owner name. Independence inferred only via 'not in franchise lists'. Need TX Comptroller filing for entity status + formation date + registered agent BEFORE outreach. Houston commercial painting is a competitive vertical."
+  },
+  {
+    "spine_index": 7,
+    "legal_name": "Milam & Co. Painting, Inc.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.milampainting.com/",
+    "year_established": 1972,
+    "years_in_business": 54,
+    "owner_name": "Milam family (specific principal not disclosed)",
+    "owner_age_estimate": 70,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed (residential, commercial, specialty/faux)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "54 years operating — extreme tenure",
+      "Minority-owned independent — typically family-succession structures",
+      "Specialty faux/exotic textures = niche, low-volume, hand-crafted (consistent with owner-operator coasting)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.milampainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "STRONG long-tenured profile. 54 years in business + specialty/faux niche + Houston minority-owned. Founder almost certainly retired or deceased; current operator likely 2nd-gen mid-60s+. Verify family successor presence and Comptroller filing. High-likelihood succession candidate."
+  },
+  {
+    "spine_index": 8,
+    "legal_name": "Carnival Custom Painting",
+    "city": "Georgetown",
+    "county": "Williamson",
+    "website": "https://carnivalpaintingaustin.com/",
+    "year_established": 2005,
+    "years_in_business": 21,
+    "owner_name": null,
+    "owner_age_estimate": 50,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "21 years operating Austin metro",
+      "Family business — typical solo-owner structure"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://carnivalpaintingaustin.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "Mid-tenure (21 years) family business. 25+ years combined team experience — implies tenured employees. Georgetown TX (Williamson County) — high-growth Austin suburb. If owner is mid-50s, succession window opening. Owner name not disclosed = follow-up call needed."
+  },
+  {
+    "spine_index": 9,
+    "legal_name": "Barton Springs Painting",
+    "city": "Austin",
+    "county": "Travis",
+    "website": "https://bartonspringspainting.com/",
+    "year_established": 2006,
+    "years_in_business": 20,
+    "owner_name": null,
+    "owner_age_estimate": 50,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "20 years operating",
+      "Family-claimed 40 years painting experience — implies tenured patriarch in business",
+      "3-year warranty + $1M insurance = mature operator"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "spine independence_notes — '40 years painting experience in family' implies multi-gen"
+    },
+    "data_sources": [
+      {
+        "url": "https://bartonspringspainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Austin family small business since 2006. '40 years painting experience in family' implies dad/uncle/older relative was the original tradesperson — current owner may be 2nd-gen who started this brand. Need About page fetch for owner name + relationship structure."
+  },
+  {
+    "spine_index": 10,
+    "legal_name": "Tex Painting LLC",
+    "city": "Austin",
+    "county": "Travis",
+    "website": "https://texpainting.com/",
+    "year_established": null,
+    "years_in_business": 15,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed (residential, commercial, multi-family)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Ownership not disclosed = anonymized operator (common in commercial shops)",
+      "15+ years operating Austin metro"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://texpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, phone, services"
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Anonymized operator. Multi-family + commercial focus suggests B2B contractor relationships. Verify owner via TX Comptroller (LLC filing) for formation date + registered agent + manager name. Austin commercial-painting market is moderately consolidated."
+  },
+  {
+    "spine_index": 11,
+    "legal_name": "Home Pros Painting and Home Repairs of San Antonio",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://www.homeprospaintsa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "residential",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Self-positions as 'alternative to franchises' (defensive)",
+      "Woman-owned family-run = small operator",
+      "5-year exterior warranty = serious craftsmanship"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.homeprospaintsa.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "Woman-owned residential painter in San Antonio. No founded_year disclosed = data gap. 'Home Repairs' diversification suggests handyman-style operator, may not be pure painting NAICS 238320. Verify NAICS code via TX Comptroller before scoring."
+  },
+  {
+    "spine_index": 12,
+    "legal_name": "Hendrick Painting",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://hendrickpainting.com/",
+    "year_established": 1999,
+    "years_in_business": 27,
+    "owner_name": "Dan Hendrick",
+    "owner_age_estimate": 55,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Founder-named brand (Dan Hendrick) = solo operator",
+      "27 years operating same SA market",
+      "Family-owned/operated structure"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://hendrickpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "MODERATE FIT. 27-year solo operator (Dan Hendrick) in San Antonio. If founder was 28-30 at founding, current age = 55-57 — approaching but not yet in classic succession window. Founder-named brand = no obvious successor branding. Check LinkedIn for Dan Hendrick + son/daughter on team for succession signal."
+  },
+  {
+    "spine_index": 13,
+    "legal_name": "Quality Painting & Remodeling",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://www.qualitypaintingtx.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed (painting + remodeling)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Generic brand name ('Quality Painting') = not personality-driven owner",
+      "Multi-service (painting + remodeling) = potential NAICS mismatch"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.qualitypaintingtx.com/",
+        "fetched_at": "2026-05-16",
+        "field": "city, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.25,
+    "notes": "LOW DATA. No founded year, no owner name. Generic 'Quality Painting' branding common across multiple states. Remodeling diversification may push into NAICS 236118 vs 238320. SA + Universal City + Schertz + New Braunfels coverage suggests modest commercial footprint. Verify entity status BEFORE outreach."
+  },
+  {
+    "spine_index": 14,
+    "legal_name": "Maverick Painting, Inc.",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "http://www.maverickpainting.com/",
+    "year_established": 2003,
+    "years_in_business": 23,
+    "owner_name": "Herman Boone",
+    "owner_age_estimate": 60,
+    "owner_age_source": "linkedin_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "commercial (healthcare specialty)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "SSL certificate EXPIRED on direct website fetch — classic neglected-IT coasting tell",
+      "23 years operating same DFW market",
+      "Healthcare facility specialty = relationship-driven, low-volume",
+      "Family-owned commercial = single-decision-maker exit structure"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes — Bluebook + ZoomInfo references"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.bluebook.com/iProView/931452/maverick-painting-inc",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, founded_year, phone"
+      },
+      {
+        "url": "https://www.zoominfo.com/p/Herman-Boone/-1156528399",
+        "fetched_at": "2026-05-16",
+        "field": "address, services"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "STRONG signal — EXPIRED SSL CERTIFICATE on company website is a textbook 'owner has stopped paying attention to digital infrastructure' coasting tell. Herman Boone listed in ZoomInfo. 23-year commercial healthcare painter = relationship-based, stable revenue. Owner likely 55-65. HIGH priority for follow-up."
+  },
+  {
+    "spine_index": 15,
+    "legal_name": "F.A. McComas Inc.",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://famccomasinc.com/",
+    "year_established": 1931,
+    "years_in_business": 95,
+    "owner_name": "McComas family (specific principal not disclosed)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "commercial / industrial / historical / medical / retail / municipal",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "95 years operating — EXTREME tenure (founded during Great Depression)",
+      "Family-owned 85+ years (per spine notes)",
+      "Multi-vertical commercial = relationship moat, low marketing spend",
+      "South Texas territory specialty"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "spine independence_notes — 85+ years family ownership implies multi-gen"
+    },
+    "data_sources": [
+      {
+        "url": "https://famccomasinc.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, phone, ownership"
+      },
+      {
+        "url": "https://www.yelp.com/biz/mccomas-f-a-painting-san-antonio",
+        "fetched_at": "2026-05-16",
+        "field": "address"
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "EXCEPTIONAL FIT. 95-year-old family painter. Almost certainly 3rd or 4th gen by now. Multi-decade municipal/historical/medical relationships = recurring revenue. Owner age likely 55-70. Industrial coatings + historical restoration = high-margin niches. Verify current principal via TX Comptroller filing AND About page. STRONG outreach target."
+  },
+  {
+    "spine_index": 16,
+    "legal_name": "Hutch-N-Son Quality Painting & Drywall",
+    "city": "Plano",
+    "county": "Collin",
+    "website": "https://www.hutchnsonpainting.com/",
+    "year_established": 1985,
+    "years_in_business": 41,
+    "owner_name": "Pete Kernan Hutchinson Jr. (President)",
+    "owner_age_estimate": 62,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": 12,
+    "employee_count_estimate": 12,
+    "service_mix": "mixed",
+    "pdca_member": true,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "41 years operating — long tenure",
+      "Senior crew members 10-18 year tenure = tenured employees coasting tell",
+      "In-house crew, no subcontractors = owner-operator with direct labor",
+      "Plano Chamber Small Business of the Year 2015 (10+ years ago, no recent awards mentioned)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes — 'Jr.' designation implies Sr. predecessor"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.hutchnsonpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, phone, ownership, crew_size, pdca_member"
+      },
+      {
+        "url": "https://hutchnsonpaint.net/",
+        "fetched_at": "2026-05-16",
+        "field": "crew_size, ownership, pdca_member"
+      }
+    ],
+    "data_completeness": 0.85,
+    "notes": "TIER-1 IDEAL FIT. Pete Hutchinson Jr. (President) — 'Jr.' indicates 2nd-gen. 41 years operating, 12 employees (perfect 5-30 target), VERIFIED PDCA member, in-house crew, tenured employees, family-owned. If Pete Jr. is in his 60s and no Pete III in business, this is canonical succession candidate. STRONG outreach priority."
+  },
+  {
+    "spine_index": 17,
+    "legal_name": "Absolute Painting, Inc.",
+    "city": "McKinney",
+    "county": "Collin",
+    "website": "https://absoluteptg.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Wes Stafish",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": ["A+ BBB rating = stable operator", "Family-owned status not explicit"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://absoluteptg.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, city, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Owner-operator Wes Stafish in McKinney. No founded year disclosed. Verify Stafish age via LinkedIn before scoring. DFW Metroplex coverage."
+  },
+  {
+    "spine_index": 18,
+    "legal_name": "Gutierrez Painting",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://www.gutierrezpainting.net/",
+    "year_established": 2007,
+    "years_in_business": 19,
+    "owner_name": "Gutierrez brothers (two)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": 16,
+    "employee_count_estimate": 16,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Family legacy traces back to 1960s Levelland TX painting tradition",
+      "Brother partnership = potential succession-complication",
+      "19 years current iteration + multi-generational family history"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "spine independence_notes — 1960s family painting tradition"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.gutierrezpainting.net/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, crew_size, ownership"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "GOOD FIT. 16 employees (in 5-30 sweet spot). Two-brother partnership = clean succession buyout structure. 1960s family painting tradition in Levelland — 3rd gen could be operating now. Brothers likely mid-40s to early-50s. Verify whether either has health/relocation pressure."
+  },
+  {
+    "spine_index": 19,
+    "legal_name": "B&A Fort Worth Painting Contractors",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://bapaintingdfw.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Ryan Place neighborhood specialty (Fort Worth historic district) suggests neighborhood-relationship-based marketing"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://bapaintingdfw.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, city, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Low data. Family-owned residential/commercial in Fort Worth's Ryan Place historic neighborhood. Initials 'B&A' suggest two founders. Verify TX Comptroller entity record for formation date + members."
+  },
+  {
+    "spine_index": 20,
+    "legal_name": "Rangel Construction & Painting",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://rangelconstructionpainting.com/",
+    "year_established": null,
+    "years_in_business": 25,
+    "owner_name": "Jesse Rangel",
+    "owner_age_estimate": 55,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed (painting + construction)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "25+ years operating",
+      "Multi-generational family-owned",
+      "MBE/SBE certified = relationship-based govt contracting"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "spine independence_notes — multi-generational"
+    },
+    "data_sources": [
+      {
+        "url": "https://rangelconstructionpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "city, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "MODERATE FIT. Jesse Rangel + multi-gen family. MBE/SBE certifications worth verifying — those certs can transfer with sale if structured properly (value-add for buyer). Construction + painting mix = potential NAICS overlap concern (236118 vs 238320). 'Construction' may dominate revenue."
+  },
+  {
+    "spine_index": 21,
+    "legal_name": "C&Z Enterprises, LLC",
+    "city": "Pflugerville",
+    "county": "Travis",
+    "website": "https://czpainting.com/",
+    "year_established": 2002,
+    "years_in_business": 24,
+    "owner_name": null,
+    "owner_age_estimate": 55,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "commercial / multi-family",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "24 years operating",
+      "4-city footprint (Austin/Dallas/Houston/SA) without consolidated brand = potential coasting indicator",
+      "Family-owned status not explicit"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://czpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone"
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "MODERATE FIT. 24-year commercial/multifamily painter with 4-city Texas coverage. 'C&Z' initials = two founders. Statewide coverage without big-brand marketing suggests recurring B2B relationships — common in coasting commercial shops. Verify TX Comptroller for members/manager."
+  },
+  {
+    "spine_index": 22,
+    "legal_name": "Manco Painting Inc.",
+    "city": "Katy",
+    "county": "Fort Bend",
+    "website": "https://mancopainting.com/",
+    "year_established": 1981,
+    "years_in_business": 45,
+    "owner_name": null,
+    "owner_age_estimate": 68,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "45 years operating same brand",
+      "Phone number = (281) 599-1981 — birth year of company embedded in phone — vanity-phone signal of long-tenured owner pride",
+      "Coverage area sprawl: Katy/West Houston/Memorial/Sugar Land/Cypress/Woodlands — passive territory accumulation"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://mancopainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, city, phone"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "STRONG long-tenured profile. 45 years operating Katy. Phone number ends -1981 = vanity number tied to founding year (proudly-aging-owner pattern). Owner almost certainly 65+. CRITICAL data gap: no owner name disclosed. Texas Comptroller filing should disclose Inc principals. STRONG outreach target."
+  },
+  {
+    "spine_index": 23,
+    "legal_name": "Smart Painting",
+    "city": "Elgin",
+    "county": "Bastrop",
+    "website": "https://paintingsmart.com/",
+    "year_established": 1972,
+    "years_in_business": 54,
+    "owner_name": null,
+    "owner_age_estimate": 70,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": 100,
+    "employee_count_estimate": 200,
+    "service_mix": "commercial / multi-family / education / hospitality / senior living / student housing",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "54 years operating same brand",
+      "350K+ multifamily units completed — institutional scale",
+      "Family-owned despite institutional scale = no professional outside management",
+      "Multi-vertical commercial = relationship moat"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "spine independence_notes — 50+ years family-owned implies multi-gen"
+    },
+    "data_sources": [
+      {
+        "url": "https://paintingsmart.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, ownership, services"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "TOO LARGE for 5-30 crew target (350K+ multifamily units served implies 100+ crew). However institutional scale + family-ownership + 54-year tenure is rare — flagged in spine notes as 'large independent edge case'. Score it but expect failed crew-size gate. Owner age likely 65+."
+  },
+  {
+    "spine_index": 24,
+    "legal_name": "Pro Painters",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://mypropainters.com/",
+    "year_established": 1995,
+    "years_in_business": 31,
+    "owner_name": null,
+    "owner_age_estimate": 60,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed (commercial + residential + power washing + roof coating + custom carpentry)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "31 years operating",
+      "Service-scope creep (carpentry + roof coating + power washing) suggests revenue chasing = mature operator adding adjacencies",
+      "Generic 'Pro Painters' brand = anonymized operator"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://mypropainters.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, address, zip, phone"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "MODERATE FIT. 31-year operator with diversified services (custom carpentry + roof coating). Service-creep pattern = owner squeezing more from existing customers, often a late-stage pattern. Generic branding + no owner name disclosed. Verify owner identity + age via TX Comptroller."
+  },
+  {
+    "spine_index": 25,
+    "legal_name": "Borders Painting LLC",
+    "city": "Round Rock",
+    "county": "Williamson",
+    "website": "https://www.borderspainting.com/",
+    "year_established": 2016,
+    "years_in_business": 10,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": ["Only 10 years — not yet in coasting window"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.borderspainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, phone, services"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "LOW FIT for coasting thesis. 10 years operating, 1,100+ jobs = ~110 jobs/year = active growth-mode operator. Round Rock + Austin metro = high-growth market. Likely first-gen owner mid-career. Unlikely seller in 12-36 months unless health or partnership dissolution."
+  },
+  {
+    "spine_index": 26,
+    "legal_name": "Hardy's Painting",
+    "city": "Roanoke",
+    "county": "Denton",
+    "website": "https://hardyspainting.com/",
+    "year_established": 1992,
+    "years_in_business": 34,
+    "owner_name": "Hardy (father) and Magally Hardy (daughter, Sales & Marketing)",
+    "owner_age_estimate": 62,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed (painting + remodeling)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "34 years operating",
+      "Daughter Magally already in Sales & Marketing — succession underway",
+      "Premium suburb coverage (Trophy Club/Westlake/Southlake/Keller/Grapevine/Flower Mound)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "spine independence_notes — daughter actively managing Sales & Marketing"
+    },
+    "data_sources": [
+      {
+        "url": "https://hardyspainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "INTERESTING CASE. Active multi-gen succession (daughter Magally in operations). Could be (a) 'daughter is being groomed = NOT for sale' OR (b) 'daughter is interim caretaker until exit'. Either way, family-internal transition often forces a market-test offer. Premium DFW suburb territory = high enterprise value. Owner age likely 60-65 if started business ~30."
+  },
+  {
+    "spine_index": 27,
+    "legal_name": "H & H Painting",
+    "city": "Keller",
+    "county": "Tarrant",
+    "website": "https://hhpaint.com/",
+    "year_established": null,
+    "years_in_business": 52,
+    "owner_name": null,
+    "owner_age_estimate": 72,
+    "owner_age_source": "career_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Owner has been painting since 1974 — 52 years career",
+      "NO sub-contracting (owner crew only) = small-scale operation",
+      "Most business from referrals = no active marketing/sales engine",
+      "40+ years brand operating"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes — keepitinkeller.com listing"
+    },
+    "data_sources": [
+      {
+        "url": "https://keepitinkeller.com/business/hh-painting/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, phone, zip, ownership"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "TIER-1 CLASSIC FIT. Owner painting since 1974 = age ~72 (assuming started at 20). 'No subs, referral-only, family-owned 40+ years' is the canonical solo-owner-coasting profile. If owner has no son/daughter on team, succession is a forced sale. Keller TX (Tarrant) = high-priced market. CRITICAL data gap: owner name + family successor presence. STRONG outreach priority."
+  },
+  {
+    "spine_index": 28,
+    "legal_name": "Supreme Painting",
+    "city": "Colleyville",
+    "county": "Tarrant",
+    "website": "https://supremepainting.com/",
+    "year_established": 1985,
+    "years_in_business": 41,
+    "owner_name": "Dalton Tomlinson",
+    "owner_age_estimate": 65,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": true,
+    "coasting_tells": [
+      "41 years operating",
+      "Lifetime warranty interior + 7-yr exterior = serious mature operator",
+      "DFW FAVORITE Painting Contractor 2025 = active reputation = NOT pure coasting"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://supremepainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, ownership"
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "STRONG FIT but qualified — Dalton Tomlinson (founder) still recognized by name. 41 years operating, 65 estimated age. Lifetime warranty + 2025 awards = ACTIVE engagement, not coasting. Could be at the 'tired but proud' inflection point — common 12-36 month seller profile. Colleyville (1560 E Southlake Blvd) = premium Tarrant suburb. Verify family-successor status."
+  },
+  {
+    "spine_index": 29,
+    "legal_name": "Tellez & Son's Painting Inc.",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://tellezpaintingsa.com/",
+    "year_established": 1982,
+    "years_in_business": 44,
+    "owner_name": "Jesse Tellez Jr. (President)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "founding_year_proxy + 'Jr.' designation",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed (residential + commercial + power washing)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "44 years operating",
+      "Brand explicitly multi-gen ('& Son's') — succession already in name",
+      "Jesse Tellez Sr. (founder, presumed) likely deceased or retired",
+      "Jr. as president = 2nd-gen leading"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "spine independence_notes + BBB record + brand name '& Son's'"
+    },
+    "data_sources": [
+      {
+        "url": "https://tellezpaintingsa.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/san-antonio/profile/painting-contractors/tellez-sons-painting-inc-0825-90068193",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, address, zip, phone"
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "GOOD FIT. 44 years operating + 2nd-gen Jesse Jr. as President. If Jesse Jr. is 60+ and no 3rd-gen ('Tellez & Grand-Son's' isn't a thing), this is succession-ready. SA West Side (78221) historic operator. Check for siblings on team."
+  },
+  {
+    "spine_index": 30,
+    "legal_name": "Carroll Custom Painting",
+    "city": "Rockwall",
+    "county": "Rockwall",
+    "website": "https://www.carrollcustompainting.com/",
+    "year_established": 1966,
+    "years_in_business": 60,
+    "owner_name": "Chris Carroll (2nd gen, took over 2005); Philip Carroll (founder, presumed retired/deceased)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "succession_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed (high-end residential focus)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "60 years operating — extreme tenure",
+      "2nd-gen Chris took over 2005 = 21 years running it (mid-career exhaustion window)",
+      "High-end residential focus = niche, low-volume, owner-craftsman style",
+      "Rockwall TX (Rockwall County) — exurban DFW lake market, slower-growth"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": false,
+      "verified_via": "spine independence_notes + BBB record"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.carrollcustompainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/rockwall/profile/painting-contractors/carroll-custom-painting-0875-90005472",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, address"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "TIER-1 IDEAL FIT. Chris Carroll (2nd-gen) running for 21 years, currently ~60. Original founder Philip presumably retired. High-end residential = relationship-based, low marketing spend, classic coasting. 60-year brand legacy = trusted referral engine. If Chris has no kids in the business, this is canonical 'tired 2nd-gen with no 3rd-gen' succession profile. STRONG outreach target."
+  },
+  {
+    "spine_index": 31,
+    "legal_name": "Dan Keenan Painting Co., Inc.",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.dankeenanpaintco.net/",
+    "year_established": 1992,
+    "years_in_business": 34,
+    "owner_name": "Dan Keenan (founder); Richard Deatherage (VP, joined 1996)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "career_proxy (started painting 1982)",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Dan started painting 1982 = 44-year career",
+      "VP Richard Deatherage joined 1996 = 30-year tenured executive",
+      "$2M liability + 3-yr guarantee = mature operator",
+      "Both Sherwin-Williams + Benjamin Moore relationships",
+      "Founder-named brand = solo-owner identity"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.dankeenanpaintco.net/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip"
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "VERY STRONG FIT. Dan Keenan started painting 1982 = ~64 years old now. VP Deatherage 30-year tenure = trusted #2 (potential employee-buyer pathway). Founder-named brand = NO obvious family succession. If Dan is 65 and no Keenan Jr., this is classic succession-ready owner. North Dallas (75229 = Preston Hollow adjacent) high-net-worth market. STRONG outreach target."
+  },
+  {
+    "spine_index": 32,
+    "legal_name": "Excellence In Painting",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://excellenceinpainting.net/",
+    "year_established": 2016,
+    "years_in_business": 10,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Only 10 years operating = not yet coasting",
+      "Generic 'Excellence In Painting' branding"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.excellenceinpainting.net/about-us",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, zip, ownership"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "LOW FIT for coasting thesis. Young 10-year company, Cypress/NW Houston. 'Texas Strong' branding = first-gen owner with marketing energy. Unlikely seller in 12-36 months unless health/relocation. Skip for outreach unless additional data emerges."
+  },
+  {
+    "spine_index": 33,
+    "legal_name": "S&R Trice Painting, Inc.",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://srtricepainting.com/",
+    "year_established": 1987,
+    "years_in_business": 39,
+    "owner_name": "Sonny Trice and Randy Trice (brothers, co-founders)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": 75,
+    "employee_count_estimate": 75,
+    "service_mix": "commercial / industrial / residential",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "39 years operating",
+      "Two-brother partnership = clean buyout structure for one or both",
+      "HUB certified = government/institutional relationships",
+      "Country clubs, churches, high-rises, bridges, hospitals, schools = recurring B2B"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes + Privco listing"
+    },
+    "data_sources": [
+      {
+        "url": "https://srtricepainting.com/About%20Us.html",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, ownership"
+      },
+      {
+        "url": "https://www.privco.com/company/sandr-trice-painting",
+        "fetched_at": "2026-05-16",
+        "field": "crew_size, revenue"
+      }
+    ],
+    "data_completeness": 0.65,
+    "notes": "TOO LARGE for 5-30 crew target (50-99 employees). Retain for scorer reference. Sonny + Randy Trice almost certainly 60s+. HUB certified + institutional client mix = high enterprise value. Brother partnership = 50/50 ownership exits often happen when one wants out and the other doesn't want to buy out. Verify whether one brother has retired."
+  },
+  {
+    "spine_index": 34,
+    "legal_name": "Cadena's Painting LLC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://cadenaspainting.com/",
+    "year_established": 1997,
+    "years_in_business": 29,
+    "owner_name": "Cadena family (specific principal not disclosed)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed (residential + HOA + multi-family + commercial property mgmt)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "29 years operating",
+      "HOA + property mgmt contracts = recurring revenue moat",
+      "Serves Houston + Sugar Land + commercial = mature territory"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://cadenaspainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "MODERATE FIT. 29-year operator with HOA + property mgmt = recurring revenue (attractive to buyer). Hispanic family-owned. If founder is mid-50s, succession window opening. Owner name not disclosed = needs TX Comptroller filing lookup."
+  },
+  {
+    "spine_index": 35,
+    "legal_name": "Tito Perez Painting Co., Inc.",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "website": "https://www.titoperezpaintingcompany.com/",
+    "year_established": 1995,
+    "years_in_business": 31,
+    "owner_name": "Tito Perez (founder); wife (bookkeeper); son (marketing); daughter (joining)",
+    "owner_age_estimate": 62,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "31 years operating",
+      "2,000+ homes serviced = mature operator",
+      "Family-roles fully built out (wife/son/daughter) = succession structure already organized"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "spine independence_notes — 'son runs marketing, daughter joining'"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.titoperezpaintingcompany.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, phone, ownership"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/sugar-land/profile/painting-contractors/tito-perez-painting-co-inc-0915-43001250",
+        "fetched_at": "2026-05-16",
+        "field": "address_status"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "INTERESTING CASE. Multi-gen family structure already built. Two scenarios: (a) son+daughter buy from Tito = no external exit OR (b) family team is preparing to sell as a coordinated transition. Sugar Land (Fort Bend) = wealthy Houston suburb, high enterprise value. Tito Perez likely 60-65 if started business ~30. Worth outreach — internal succession plans sometimes pivot to external sale when valuations come in higher than expected."
+  },
+  {
+    "spine_index": 36,
+    "legal_name": "Vey's Painting & Refinishing",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://veyspaintingandrefinishing.com/",
+    "year_established": null,
+    "years_in_business": 30,
+    "owner_name": null,
+    "owner_age_estimate": 55,
+    "owner_age_source": "career_proxy (30+ years experience)",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": 3,
+    "employee_count_estimate": 5,
+    "service_mix": "specialty (interior + door/cabinet refinishing + drywall repair)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Female-owned owner-operator = single-person decision authority",
+      "30+ years experience = mature operator",
+      "Specialty niche (door/cabinet refinishing) = high-touch, low-volume = low employee count"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://veyspaintingandrefinishing.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip, phone"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Likely TOO SMALL for buyer interest (owner-operator with 3-5 person crew, specialty niche). 30+ years experience tells us owner is 50s-60s. Specialty refinishing = hard to scale, hard to sell (much of value walks out the door with owner). Skip unless buyer specifically wants the refinishing niche."
+  },
+  {
+    "spine_index": 37,
+    "legal_name": "Professional Painters of Houston",
+    "city": "Houston",
+    "county": "Harris",
+    "website": null,
+    "year_established": null,
+    "years_in_business": 20,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "NO WEBSITE — Facebook-only presence = severe digital-neglect coasting tell",
+      "20+ years operating without website = owner unwilling to invest in digital infra",
+      "Limited online presence = inbound marketing dead, referral-only"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes — Facebook listing only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.facebook.com/professionalpaintersofhouston/",
+        "fetched_at": "2026-05-16",
+        "field": "city, zip, ownership"
+      }
+    ],
+    "data_completeness": 0.2,
+    "notes": "STRONG digital-neglect signal (no website after 20+ years). HOWEVER, spine flags 'verify deeper before outreach' — could be (a) classic coasting profile or (b) inactive/quasi-dormant business. CRITICAL: confirm operating status via TX Comptroller + Google Maps + recent FB posts before outreach. If active, this is a HIGH-priority no-website coaster."
+  },
+  {
+    "spine_index": 38,
+    "legal_name": "Paint Ovations",
+    "city": "Plano",
+    "county": "Collin",
+    "website": "https://paintovations.com/",
+    "year_established": 1995,
+    "years_in_business": 31,
+    "owner_name": "Ron Bledsoe",
+    "owner_age_estimate": 62,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "31 years operating",
+      "Owner-led with founder name identified (Ron Bledsoe)",
+      "Plano + Dallas territory = mature suburban DFW residential market"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://paintovations.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "GOOD FIT. Ron Bledsoe leading for 31 years. If started business at ~30, current age = 60-62. Plano (Collin County) = premium suburb. Owner-named brand suggests no obvious succession plan. Check Ron Bledsoe LinkedIn for grad year + family-in-business signal. Moderate-strong outreach target."
+  },
+  {
+    "spine_index": 39,
+    "legal_name": "21st Century Painting and Roofing",
+    "city": "Austin",
+    "county": "Travis",
+    "website": "https://www.21stcenturytexas.com/",
+    "year_established": 1996,
+    "years_in_business": 30,
+    "owner_name": null,
+    "owner_age_estimate": 60,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed (painting + roofing)",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "30 years operating",
+      "Painting + roofing diversification = mature operator chasing more wallet share per customer",
+      "Generic '21st Century' brand = no founder personality identity"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.21stcenturytexas.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, city, services"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "MODERATE FIT. 30-year Austin operator with painting+roofing diversification. Multi-service shops often face NAICS classification ambiguity (238320 vs 238160). Owner name not disclosed = data gap. Roofing dominates if revenue is mixed — may not score well as a 'painter'. Verify dominant revenue stream before scoring."
+  },
+  {
+    "spine_index": 40,
+    "legal_name": "Allstar Painting Company, LLC",
+    "city": "Prosper",
+    "county": "Collin",
+    "website": "http://allstarpaintingcompany.com/",
+    "year_established": 2008,
+    "years_in_business": 18,
+    "owner_name": null,
+    "owner_age_estimate": 50,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "residential",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "HTTP (not HTTPS) website — SSL not enabled, classic neglected-IT coasting tell",
+      "18 years operating",
+      "Generic 'Allstar' branding common across multiple states"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "http://allstarpaintingcompany.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "STRONG digital-neglect signal — HTTP-only website (no SSL) in 2026 is rare and indicates owner has not maintained web infra. 18 years operating Prosper + Collin County + McKinney = mature exurban DFW market. Family-owned + locally operated. Owner age likely 50-55 if started business ~30. Verify TX Comptroller filing + owner identity. MODERATE outreach target — digital neglect is the strongest signal here."
+  },
+  {
+    "spine_index": 41,
+    "legal_name": "PaintMor",
+    "city": "McKinney",
+    "county": "Collin",
+    "website": "https://paintmor.com/",
+    "year_established": 2005,
+    "years_in_business": 21,
+    "owner_name": "Tim Cann",
+    "owner_age_estimate": 55,
+    "owner_age_source": "founding_year_proxy",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "21 years operating",
+      "PO Box address (no physical office disclosed) = small operator",
+      "Owner-named operator (Tim Cann)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://paintmor.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, city, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "MODERATE FIT. Tim Cann, 20-year operator across Plano/Allen/Frisco/McKinney/Richardson = sweet spot DFW Collin/Dallas County suburbs. PO Box-only suggests owner-operator + crews-in-trucks structure (NOT a shop with overhead). If Tim is mid-50s and no obvious successor on website, succession risk emerges in 5-10 years. Check Tim Cann LinkedIn."
+  },
+  {
+    "spine_index": 42,
+    "legal_name": "Performance Painting",
+    "city": "McKinney",
+    "county": "Collin",
+    "website": "https://dallashousepainter.com/",
+    "year_established": 2013,
+    "years_in_business": 13,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active",
+    "is_distressed": false,
+    "estimated_crew_count": null,
+    "employee_count_estimate": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "has_repaint_program": false,
+    "coasting_tells": [
+      "Only 13 years operating = pre-coasting window",
+      "10-year warranty = serious operator",
+      "200+ 5-star reviews + A+ BBB = ACTIVE marketing engine = NOT coasting",
+      "McKinney Chamber active = community-engaged owner"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine independence_notes 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://performancegroupco.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "LOW FIT for coasting thesis. 13-year operator with active marketing (200+ reviews, A+ BBB, 10-yr warranty, Chamber engaged). Downtown McKinney location = visible operator. This is GROWTH-mode, not coasting. Skip unless health/burnout factor surfaces. Useful as scorer anti-fit calibration example."
+  }
+]

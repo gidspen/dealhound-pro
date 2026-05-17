@@ -1,0 +1,3340 @@
+[
+  {
+    "legal_name": "R.S. Blue Pool Services",
+    "dba_name": "R.S. Blue Pool Services",
+    "address": null,
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "phone": "(469) 971-9199",
+    "website": "https://rsbluepoolservices.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Renato S.",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://rsbluepoolservices.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["service_area", "owner_first_name", "online_quote_form", "sms_communication"]
+      },
+      {
+        "source": "yelp_and_local_directories",
+        "url": "https://www.yelp.com/biz/rs-blue-pool-services-frisco",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_first_name_renato_s"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Solo owner-operator (Renato S., surname not public) running Frisco/Plano/McKinney/Allen route. Modern site (2026 copyright), text-first comms, 4-step online estimate form. NOT a coasting tell — this is a young/modern operation.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Renato S. (surname undisclosed publicly)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": 2,
+    "provider_count_estimate": null,
+    "employee_count_source": "solo_operator_no_team_page",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Modern 2026 copyright site with 4-step interactive estimate form and text-first customer support. NOT coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://rsbluepoolservices.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_identity_undisclosed",
+        "direction": "negative",
+        "evidence": "Owner first name only (Renato) — no surname publicly on website or directories. Limits ownership verification and outreach.",
+        "source": "website_and_yelp",
+        "source_url": "https://rsbluepoolservices.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": ["https://www.yelp.com/biz/rs-blue-pool-services-frisco"],
+    "enrichment_notes": "Likely DQ: too small (solo route) and too modern to be a coasting target."
+  },
+  {
+    "legal_name": "Sterling Pool Service, Inc.",
+    "dba_name": "Sterling Pool Service",
+    "address": "6801 Eastview Dr",
+    "city": "Sachse",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75048",
+    "phone": "(888) 973-0274",
+    "website": "https://www.sterlingpoolservice.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": 1987,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.sterlingpoolservice.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["year_established_1987", "service_area", "family_owned"]
+      },
+      {
+        "source": "kcm_partner_community",
+        "url": "https://community.kcm.org/business-directory/175/sterling-pool-service",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_business_since_1986"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-owned since 1987 (some listings cite 1986), 39 years tenure. Sachse, Wylie, Murphy, Plano, Allen route — strong DFW NE corridor. Listed in Kenneth Copeland Ministries partner community — religious/values brand. No online booking; phone-first (888-toll-free). 2026 copyright. Owner name not surfaced — needs Comptroller lookup.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 39,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 39,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_match",
+        "direction": "positive",
+        "evidence": "39 years in business (1987 founding) places the founder in classic retirement window — exactly the long-tenured coasting profile target.",
+        "source": "website",
+        "source_url": "https://www.sterlingpoolservice.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_online_booking_phone_first",
+        "direction": "positive",
+        "evidence": "No online quote/booking system — phone-first toll-free (888-) and contact form only. Classic coasting tell for legacy operators.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.sterlingpoolservice.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_identity_undisclosed_on_web",
+        "direction": "negative",
+        "evidence": "Owner/principal name not surfaced from website, BBB summaries, or Yelp. Needs Comptroller/SOS direct query to identify license holder for outreach.",
+        "source": "web_searches",
+        "source_url": "https://www.sterlingpoolservice.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://community.kcm.org/business-directory/175/sterling-pool-service"
+    ],
+    "enrichment_notes": "HIGH PRIORITY TARGET pending owner ID. 39-year tenure, owner-operator family, no modernization."
+  },
+  {
+    "legal_name": "Miracle Pool Service, Inc.",
+    "dba_name": "Miracle Pool Service",
+    "address": null,
+    "city": "Garland",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "phone": "(972) 840-6858",
+    "website": "https://www.miraclepoolservice.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Noel Conley",
+    "year_established": 1995,
+    "data_sources": [
+      {
+        "source": "poolpromag",
+        "url": "https://poolpromag.com/growing-and-giving-back/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founder_noel_conley", "founded_1995", "founder_story"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/garland/profile/pool-service/miracle-pool-service-inc-0875-90006573",
+        "fetched_at": "2026-05-16",
+        "fields": ["noel_conley_jr_president", "noel_conley_treasurer_secretary"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Multi-location pool service (PoolPro magazine profile 'Growing and Giving Back'). Noel Conley founded 1995, ran out of home with one truck. Now Noel Conley Jr. is President, Noel Conley is Treasurer/Secretary. Father-son succession appears already in motion — son is the operator. Potential succession path but Jr. may be in 40s/50s and not selling.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Noel Conley Sr. (Treasurer) and Noel Conley Jr. (President)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "industry_profile_tenure_proxy",
+    "owner_tenure_years": 31,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 31,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "industry_publication_growing_business",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "father_son_succession_in_place",
+        "direction": "negative",
+        "evidence": "Noel Conley Jr. already President while Noel Sr. holds Treasurer/Secretary — succession is intra-family. Less likely a third-party sale candidate. PoolPro magazine profile titled 'Growing and Giving Back' suggests active growth mode.",
+        "source": "poolpro_magazine_and_bbb",
+        "source_url": "https://poolpromag.com/growing-and-giving-back/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_growth_industry_recognition",
+        "direction": "negative",
+        "evidence": "Featured in PoolPro magazine for growth — not coasting profile.",
+        "source": "poolpro_magazine",
+        "source_url": "https://poolpromag.com/growing-and-giving-back/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://poolpromag.com/growing-and-giving-back/",
+      "https://www.bbb.org/us/tx/garland/profile/pool-service/miracle-pool-service-inc-0875-90006573"
+    ],
+    "enrichment_notes": "LIKELY DQ: father-son succession already executing internally, plus active growth profile. Not a coasting/retirement-window target."
+  },
+  {
+    "legal_name": "King Pool Care",
+    "dba_name": "King Pool Care",
+    "address": "2704 Wood Creek",
+    "city": "Mesquite",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75181",
+    "phone": "(214) 735-8721",
+    "website": null,
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "David King",
+    "year_established": 2000,
+    "data_sources": [
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/mesquite/profile/pool-service/king-pool-care-0875-90024112",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_2000_by_david_king", "ipssa_member", "water_chem_certified"]
+      },
+      {
+        "source": "facebook",
+        "url": "https://www.facebook.com/kingpoolcare/",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_owned"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2000 by David King — 26 years tenure as owner-operator. IPSSA member, water chemistry certified. Family-owned. Serves wide DFW East/NE radius (Addison, Allen, Combine, Crandall, Dallas, Fate, Forney, Frisco, Garland, Heath, Hebron, Highland Park, Kaufman, Lake Highlands, Lavon, Lucas, McKinney, Mesquite, Murphy, Parker, Plano, Richardson, Rockwall, Rowlett, Royse City, Sachse, Sunnyvale, Terrell, Wylie). No standalone website — extreme coasting tell.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "David King",
+    "owner_age_estimate": 60,
+    "owner_age_source": "tenure_proxy_26_years_owner_operator",
+    "owner_tenure_years": 26,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 26,
+    "employee_count_estimate": 3,
+    "provider_count_estimate": null,
+    "employee_count_source": "solo_or_small_team_inferred_no_website",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_named_owner",
+        "direction": "positive",
+        "evidence": "26 years owner-operator, David King clearly identified — high outreach quality and retirement-window adjacent.",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/mesquite/profile/pool-service/king-pool-care-0875-90024112",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_company_website",
+        "direction": "positive",
+        "evidence": "No company website at all — strong coasting/non-modernization signal for a 26-year-old business.",
+        "source": "spine_data",
+        "source_url": "spine",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "ipssa_membership",
+        "direction": "positive",
+        "evidence": "IPSSA member and water chemistry certified — meets credibility bar but not roll-up acquirer footprint.",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/mesquite/profile/pool-service/king-pool-care-0875-90024112",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.bbb.org/us/tx/mesquite/profile/pool-service/king-pool-care-0875-90024112",
+      "https://www.facebook.com/kingpoolcare/"
+    ],
+    "enrichment_notes": "HIGH PRIORITY TARGET — clean named owner (David King), 26 yrs, no website, IPSSA credentialed, family-owned, wide established route. Classic coasting profile."
+  },
+  {
+    "legal_name": "Blue Quality Pools LLC",
+    "dba_name": "Blue Quality Pools",
+    "address": null,
+    "city": "Rockwall",
+    "county": "Rockwall",
+    "state": "TX",
+    "zip": null,
+    "phone": "(469) 655-4552",
+    "website": "https://bluequalitypools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://bluequalitypools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "12_plus_years_service",
+          "5500_customers",
+          "service_area_20_cities",
+          "photo_reports",
+          "instant_quote_chat"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "12+ years service, 5,500+ total customers claimed, photo service reports after every visit, instant pool quote chat assistant — MODERN tech stack. 20+ city service footprint across DFW NE. 2026 copyright. Owner name not surfaced. Family-owned positioning.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 12,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 12,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "5500_customer_claim_implies_moderate_scale",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Modern site with chat assistant 'Instant pool quote', photo service reports per visit, 2026 copyright. Active growth-mode operator.",
+        "source": "live_website_fetch",
+        "source_url": "https://bluequalitypools.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_identity_undisclosed",
+        "direction": "negative",
+        "evidence": "Owner not named on About page or in directories — limits outreach quality.",
+        "source": "website_and_searches",
+        "source_url": "https://bluequalitypools.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "LIKELY DQ: too modern (chat AI, photo reports), too young (12 yrs), unidentified owner — not a coasting target."
+  },
+  {
+    "legal_name": "North Texas Pool Service, Inc.",
+    "dba_name": "North Texas Pool Service",
+    "address": "1701 N Greenville Ave, Richardson, TX (also 9330 LBJ Freeway, Suite 900, Dallas)",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75243",
+    "phone": "(214) 989-3888",
+    "website": "https://northtexaspoolservice.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "David Leach",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/david-leach-0a92883",
+        "fetched_at": "2026-05-16",
+        "fields": ["david_leach_president"]
+      },
+      {
+        "source": "website",
+        "url": "https://northtexaspoolservice.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["30_years_experience", "service_area", "no_online_quote", "phone_first"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "David Leach is President. Site references service crew with '30+ years of experience' (likely refers to owner). Phone-first contact (no online booking). Two locations (Richardson + Dallas LBJ Freeway). Owner email david@northtexaspoolservice.com.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "David Leach",
+    "owner_age_estimate": 60,
+    "owner_age_source": "30_plus_years_experience_proxy",
+    "owner_tenure_years": 30,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 30,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_named_owner",
+        "direction": "positive",
+        "evidence": "David Leach, President, with 30+ years experience referenced. Identified owner = high outreach quality.",
+        "source": "linkedin_and_website",
+        "source_url": "https://www.linkedin.com/in/david-leach-0a92883",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_online_booking_phone_first",
+        "direction": "positive",
+        "evidence": "No online quote/booking system. Phone-first contact only — classic coasting tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://northtexaspoolservice.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": ["https://www.linkedin.com/in/david-leach-0a92883"],
+    "enrichment_notes": "HIGH PRIORITY TARGET — named owner (David Leach), 30+ yrs experience, no modernization, identifiable for outreach."
+  },
+  {
+    "legal_name": "Southlake Pools",
+    "dba_name": "Southlake Pools",
+    "address": null,
+    "city": "Colleyville",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "phone": "(972) 890-8022",
+    "website": "https://southlakepools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Ben Rushing",
+    "year_established": 2007,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/ben-rushing-016b6312/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "ben_rushing_owner",
+          "argyle_tx_resident",
+          "unt_alumnus",
+          "prior_xdrenaline_director"
+        ]
+      },
+      {
+        "source": "website_about",
+        "url": "https://southlakepools.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "founded_end_of_2007",
+          "wife_amanda",
+          "four_children_high_school_middle_elementary",
+          "sms_optin"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Ben Rushing founded end of 2007 (19 years) after stint as Director of Operations at Xdrenaline. Wife Amanda. Four kids (high school, middle, elementary — narrows owner age to ~mid-40s). UNT alumnus. Active SMS opt-in (modern), 2023-25 copyright (slightly stale footer). Lives in Argyle, TX.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Ben Rushing",
+    "owner_age_estimate": 45,
+    "owner_age_source": "linkedin_kids_age_proxy_high_school_to_elementary",
+    "owner_tenure_years": 19,
+    "owner_homestead_address": "Argyle, TX (city only)",
+    "owner_property_deed_date": null,
+    "years_in_business": 19,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_for_retirement_window",
+        "direction": "negative",
+        "evidence": "Owner Ben Rushing has children currently in high school down to elementary — places owner in ~mid-40s. Outside the 58-72 retirement window target.",
+        "source": "website_about_and_linkedin",
+        "source_url": "https://southlakepools.com/about-us/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "sms_modernization_present",
+        "direction": "negative",
+        "evidence": "SMS opt-in/automated reminders/marketing messages active — modern tech stack.",
+        "source": "live_website_fetch",
+        "source_url": "https://southlakepools.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": ["https://www.linkedin.com/in/ben-rushing-016b6312/"],
+    "enrichment_notes": "DQ: owner ~mid-40s with school-age kids = not retirement window. Reject."
+  },
+  {
+    "legal_name": "Marina Pool Services, LLC",
+    "dba_name": "Marina Pool Services",
+    "address": null,
+    "city": "Grapevine",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "phone": "(817) 896-1120",
+    "website": "https://www.marinapoolservices.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Mustafa Bash Imam",
+    "year_established": 2017,
+    "data_sources": [
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/grapevine/profile/pool-service/marina-pool-service-0825-1000217603",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_mustafa_bash_imam", "llc_started_2017_04_10", "20_years_pool_experience"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.marinapoolservices.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["2024_copyright", "service_area", "free_estimate_form"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "LLC formed 2017-04-10. Owner Mustafa Bash Imam has 20+ years pool industry experience, email marinapools@yahoo.com (yahoo = old-school). 2024 copyright (1 year stale). Solo/small DFW Tarrant route. Strong indie operator profile but tenure of LLC only 9 years.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "2017-04-10",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Mustafa Bash Imam",
+    "owner_age_estimate": 50,
+    "owner_age_source": "20_plus_years_industry_proxy",
+    "owner_tenure_years": 9,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 9,
+    "employee_count_estimate": 2,
+    "provider_count_estimate": null,
+    "employee_count_source": "solo_inferred",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identified",
+        "direction": "positive",
+        "evidence": "Mustafa Bash Imam clearly named on BBB record as Owner/Member.",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/grapevine/profile/pool-service/marina-pool-service-0825-1000217603",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "yahoo_email_old_school",
+        "direction": "positive",
+        "evidence": "Primary contact email is yahoo.com (marinapools@yahoo.com) — coasting/lo-fi operator tell.",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/grapevine/profile/pool-service/marina-pool-service-0825-1000217603",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "short_business_tenure",
+        "direction": "negative",
+        "evidence": "LLC formed 2017 (9 years) — not in the 20+ year tenure target band, but owner has 20+ years industry experience overall.",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/grapevine/profile/pool-service/marina-pool-service-0825-1000217603",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.bbb.org/us/tx/grapevine/profile/pool-service/marina-pool-service-0825-1000217603"
+    ],
+    "enrichment_notes": "MEDIUM PRIORITY: identified owner with 20+ yrs industry, but LLC only 9 yrs. Marginal coasting fit."
+  },
+  {
+    "legal_name": "Sunny Day Pools, LLC",
+    "dba_name": "Sunny Day Pools",
+    "address": null,
+    "city": "Keller",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "phone": "(817) 993-1111",
+    "website": "https://www.sunnydaypools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Kimn Nierman",
+    "year_established": 2009,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/kimn-nierman-933b3011/",
+        "fetched_at": "2026-05-16",
+        "fields": ["kimn_nierman_partner", "ex_advertising_columbus_ohio", "moved_to_keller_2009"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/justin/profile/pool-maintenance/sunny-day-pools-llc-0875-91349158",
+        "fetched_at": "2026-05-16",
+        "fields": ["llc_justin_tx", "family_business"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founder Kimn Nierman left advertising career in Columbus OH, moved to Keller TX in 2009 to start Sunny Day Pools. Four adult children + their families followed in 2010 — family business. 2026 copyright, digital service reports referenced. Career change to pool service at midlife suggests owner currently ~60-65. Strong outreach quality.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Kimn Nierman",
+    "owner_age_estimate": 62,
+    "owner_age_source": "linkedin_career_arc_advertising_career_then_2009_pivot",
+    "owner_tenure_years": 17,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 17,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "family_business_4_adult_children_implied",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_in_retirement_window",
+        "direction": "positive",
+        "evidence": "Kimn Nierman pivoted from advertising career (likely 25+ yrs experience pre-2009) to pool service at midlife. Estimated current age ~62 — within retirement window.",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/kimn-nierman-933b3011/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "family_business_succession_potential",
+        "direction": "positive",
+        "evidence": "Four adult children and their families followed the founder to Texas in 2010 — multigen family ownership opportunity for outside sale or already in succession discussions.",
+        "source": "linkedin_and_local_press",
+        "source_url": "https://www.linkedin.com/in/kimn-nierman-933b3011/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "digital_service_reports_present",
+        "direction": "negative",
+        "evidence": "Digital service reports referenced in testimonial — minor modernization. 2026 copyright. Mixed signal — moderately modern.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.sunnydaypools.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": ["https://www.linkedin.com/in/kimn-nierman-933b3011/"],
+    "enrichment_notes": "HIGH PRIORITY TARGET — clearly identified founder, retirement window age, family business with adult children. Quality outreach."
+  },
+  {
+    "legal_name": "Summertime Pool Service, LLC",
+    "dba_name": "Summertime Pool Service",
+    "address": "228 Longford Ct",
+    "city": "Keller",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76248",
+    "phone": "(817) 881-2257",
+    "website": "https://www.summertimepoolservice.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Omar (surname undisclosed)",
+    "year_established": 2015,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.summertimepoolservice.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "20_plus_years_experience",
+          "service_area_north_dfw",
+          "free_estimate_form",
+          "smart_automation_mention"
+        ]
+      },
+      {
+        "source": "manta",
+        "url": "https://www.manta.com/c/mhxq547/summertime-pool-service-llc",
+        "fetched_at": "2026-05-16",
+        "fields": ["llc_2015"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "LLC formed 2015 in TX, owner Omar referenced repeatedly in customer reviews (full surname not surfaced). 20+ years industry experience. North FW + Keller + Southlake route. Smart automation upsell — moderate modernization. Owner identification incomplete.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Omar (surname undisclosed publicly)",
+    "owner_age_estimate": 45,
+    "owner_age_source": "20_plus_years_industry_proxy",
+    "owner_tenure_years": 11,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 11,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identity_only_first_name",
+        "direction": "negative",
+        "evidence": "Only 'Omar' surfaces in reviews. No surname publicly available — outreach quality limited.",
+        "source": "yelp_and_website",
+        "source_url": "https://www.summertimepoolservice.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "short_tenure_LLC",
+        "direction": "negative",
+        "evidence": "LLC formed 2015 — only 11 years. Below 20-year long-tenure threshold for coasting target.",
+        "source": "manta",
+        "source_url": "https://www.manta.com/c/mhxq547/summertime-pool-service-llc",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": ["https://www.manta.com/c/mhxq547/summertime-pool-service-llc"],
+    "enrichment_notes": "MARGINAL: short LLC tenure, owner not fully identified. Pass."
+  },
+  {
+    "legal_name": "Gohlke Custom Pools, Inc.",
+    "dba_name": "Gohlke Pools",
+    "address": null,
+    "city": "Denton",
+    "county": "Denton",
+    "state": "TX",
+    "zip": null,
+    "phone": "(940) 384-7665",
+    "website": "https://gohlkepools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Matt Gohlke",
+    "year_established": 1958,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/matt-gohlke-b6a8118/",
+        "fetched_at": "2026-05-16",
+        "fields": ["matt_gohlke_president"]
+      },
+      {
+        "source": "website_history",
+        "url": "https://gohlkepools.com/company-history/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_1958_gene_gohlke", "matt_purchased_1992", "third_gen_grant_connor"]
+      },
+      {
+        "source": "voyage_dallas",
+        "url": "https://voyagedallas.com/interview/meet-matt-gohlke-gohlke-pools-denton-county/",
+        "fetched_at": "2026-05-16",
+        "fields": ["matt_tcu_1984"]
+      },
+      {
+        "source": "poolspanews_top50",
+        "url": "https://www.poolspanews.com/companies/top-50-builders/gohlke-pools_o",
+        "fetched_at": "2026-05-16",
+        "fields": ["top_50_builder_top_50_service"]
+      }
+    ],
+    "platform_affiliation_check": "independent_too_large",
+    "verification_notes": "Founded 1958 by Gene Gohlke. Matt Gohlke (TCU '84) joined 1984, bought firm 1992 from father. Sons Grant and Connor are 3rd generation. ~100 employees. Pool & Spa News #7 Service / #17 Builder nationally. New pool construction + service + renovation + retail + Sundance Spas. Gene Gohlke passed away Feb 8, 2026 at age 90. Multi-line business with retail store.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Matt Gohlke",
+    "owner_age_estimate": 64,
+    "owner_age_source": "tcu_graduation_1984_proxy",
+    "owner_tenure_years": 42,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 68,
+    "employee_count_estimate": 100,
+    "provider_count_estimate": null,
+    "employee_count_source": "website_team_page_nearly_100",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "size_too_large_for_target",
+        "direction": "disqualifying",
+        "evidence": "Nearly 100 employees, multi-department business (Service + Construction + Renovation + Retail + Sundance Spa dealer). Pool & Spa News Top 50 Service AND Top 50 Builder. Massive multi-vertical operation — outside small-business target band.",
+        "source": "website_and_industry_press",
+        "source_url": "https://gohlkepools.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "third_gen_succession_in_place",
+        "direction": "negative",
+        "evidence": "Grant and Connor (Matt's sons) are 3rd generation in the business. Intra-family succession already executing.",
+        "source": "company_history",
+        "source_url": "https://gohlkepools.com/company-history/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_age_in_window",
+        "direction": "positive",
+        "evidence": "Matt Gohlke ~64 yrs old, founder generation just passed (Feb 2026). Within retirement window personally but operation too big for our target.",
+        "source": "linkedin_and_obituary",
+        "source_url": "https://gohlkepools.com/gohlke-pools-celebrates-65-years-serving-denton-county/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.linkedin.com/in/matt-gohlke-b6a8118/",
+      "https://gohlkepools.com/company-history/",
+      "https://voyagedallas.com/interview/meet-matt-gohlke-gohlke-pools-denton-county/",
+      "https://www.poolspanews.com/companies/top-50-builders/gohlke-pools_o"
+    ],
+    "enrichment_notes": "DISQUALIFY: ~100 employees + 3rd gen succession already in place. Too large for small-business target."
+  },
+  {
+    "legal_name": "Mariner Pools, LLC",
+    "dba_name": "Mariner Pools",
+    "address": null,
+    "city": "Flower Mound",
+    "county": "Denton",
+    "state": "TX",
+    "zip": null,
+    "phone": "(469) 409-7441",
+    "website": "https://www.mariner-pools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Kyle McGilvery and Max Holloway",
+    "year_established": 2021,
+    "data_sources": [
+      {
+        "source": "cross_timbers_gazette",
+        "url": "https://www.crosstimbersgazette.com/2021/07/15/mariner-pools-on-target/",
+        "fetched_at": "2026-05-16",
+        "fields": ["kyle_mcgilvery_max_holloway_marcus_hs_clay_target", "founded_2021"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.mariner-pools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["2021_copyright"]
+      }
+    ],
+    "platform_affiliation_check": "independent_too_young",
+    "verification_notes": "Founded 2021-05-11 by Kyle McGilvery and Max Holloway, Marcus High School Clay Target shooting buddies. Very young owners (early 20s). Active growth-mode startup. 2021 copyright (stale footer — possibly inattentive).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "2021-05-11",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Kyle McGilvery and Max Holloway",
+    "owner_age_estimate": 24,
+    "owner_age_source": "marcus_hs_clay_target_team_friendship_2021_founding",
+    "owner_tenure_years": 5,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 5,
+    "employee_count_estimate": 3,
+    "provider_count_estimate": null,
+    "employee_count_source": "young_startup_inferred",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_for_retirement_window",
+        "direction": "disqualifying",
+        "evidence": "Owners are early-20s (Marcus HS clay target shooting friendship → founded 2021 right after school). Outside the 58-72 retirement window by 30+ years.",
+        "source": "cross_timbers_gazette",
+        "source_url": "https://www.crosstimbersgazette.com/2021/07/15/mariner-pools-on-target/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.crosstimbersgazette.com/2021/07/15/mariner-pools-on-target/"
+    ],
+    "enrichment_notes": "DQ: very young owners (~24). Not a retirement-window target."
+  },
+  {
+    "legal_name": "Luxe Pool Care, LLC",
+    "dba_name": "Luxe Pool Care",
+    "address": "114 Stone Canyon Drive",
+    "city": "Highland Village",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "75077",
+    "phone": "(469) 993-3854",
+    "website": "https://luxepoolcaretx.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Alex (surname undisclosed)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://luxepoolcaretx.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["2025_copyright", "service_area", "online_quote_form", "family_owned"]
+      },
+      {
+        "source": "yelp_and_local_directories",
+        "url": "https://nextdoor.com/pages/luxe-pool-care-flower-mound-tx/",
+        "fetched_at": "2026-05-16",
+        "fields": ["customer_review_alex"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Customer reviews reference 'Alex with Luxe Pool Care' as the operator. Social media icons placeholder (Facebook, Instagram, LinkedIn) — non-functional. 2025 copyright. Highland Village/Flower Mound/Coppell route. Owner surname not surfaced publicly.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Alex (surname undisclosed publicly)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": 2,
+    "provider_count_estimate": null,
+    "employee_count_source": "solo_or_micro_team_inferred",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identity_first_name_only",
+        "direction": "negative",
+        "evidence": "Only 'Alex' surfaces, no surname. Social icons present but non-functional. Limits outreach.",
+        "source": "website_and_searches",
+        "source_url": "https://luxepoolcaretx.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "broken_social_links",
+        "direction": "positive",
+        "evidence": "Social media icons exist as placeholder dead links — coasting/low-effort tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://luxepoolcaretx.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "MARGINAL: ID owner needed. Pass unless Comptroller/SOS yields name."
+  },
+  {
+    "legal_name": "Simplified Pools",
+    "dba_name": "Simplified Pools",
+    "address": "1611 Commons Circle, Ste 100",
+    "city": "Northlake",
+    "county": "Denton",
+    "state": "TX",
+    "zip": null,
+    "phone": "(469) 455-1054",
+    "website": "https://www.simplifiedpools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": 2020,
+    "data_sources": [
+      {
+        "source": "community_impact",
+        "url": "https://communityimpact.com/dallas-fort-worth/flower-mound-highland-village-argyle/business/2023/05/23/simplified-pools-now-offering-services-in-northlake/",
+        "fetched_at": "2026-05-16",
+        "fields": ["veteran_owned_family_owned_since_2020"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.simplifiedpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "2026_copyright",
+          "ai_pool_assistant_24_7",
+          "online_book_quote",
+          "sms_alerts",
+          "veteran_owned_local"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent_too_modern",
+    "verification_notes": "Veteran-owned + family-owned since 2020. Modern operation: AI pool concierge 24/7, Book Online, SMS alerts before arrival, digital reports per service, retail shop integration. 2026 copyright. Owner name not surfaced publicly. Aggressive growth-mode startup.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 6,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 6,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "disqualifying",
+        "evidence": "AI pool concierge, 24/7 chat, SMS alerts, online booking, digital reports — among most modern tech stacks observed. NOT coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.simplifiedpools.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "young_business",
+        "direction": "disqualifying",
+        "evidence": "Founded 2020 — only 6 years. Below tenure threshold.",
+        "source": "community_impact",
+        "source_url": "https://communityimpact.com/dallas-fort-worth/flower-mound-highland-village-argyle/business/2023/05/23/simplified-pools-now-offering-services-in-northlake/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://communityimpact.com/dallas-fort-worth/flower-mound-highland-village-argyle/business/2023/05/23/simplified-pools-now-offering-services-in-northlake/"
+    ],
+    "enrichment_notes": "DQ: too new, too modern."
+  },
+  {
+    "legal_name": "Pool Care Specialists",
+    "dba_name": "Pool Care Specialists",
+    "address": "2201 Long Prairie Rd",
+    "city": "Flower Mound",
+    "county": "Denton",
+    "state": "TX",
+    "zip": null,
+    "phone": "(972) 829-8485",
+    "website": "https://poolcarespecialists.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": "CPO/CPI",
+    "license_holder_name": "Doug Holcombe",
+    "year_established": 2008,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/doug-holcombe/",
+        "fetched_at": "2026-05-16",
+        "fields": ["doug_holcombe_co_founder_president_cpo_cpi"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/flower-mound/profile/pool-service/pool-care-specialists-0875-90385712",
+        "fetched_at": "2026-05-16",
+        "fields": ["doug_holcombe_business_owner", "denise_holcombe_co_owner"]
+      },
+      {
+        "source": "website",
+        "url": "https://poolcarespecialists.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "serving_since_2009",
+          "copyright_2008_2026",
+          "social_facebook_instagram_twitter_tiktok_youtube_pinterest"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Co-Owners Doug Holcombe (CPO CPI, Co-Founder/President) and Denise Holcombe. 22 years in operation per Rocketreach. Active across Facebook/Instagram/X/TikTok/YouTube/Pinterest — modern digital presence. Poolside Tech automation upsell. Instant Quote tool. Healthy tech adoption — not coasting.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Doug Holcombe (with Denise Holcombe)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "22_year_business_tenure_proxy",
+    "owner_tenure_years": 18,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 18,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identified_named_couple",
+        "direction": "positive",
+        "evidence": "Doug + Denise Holcombe clearly named as Co-Owners. Strong outreach quality.",
+        "source": "bbb_and_linkedin",
+        "source_url": "https://www.linkedin.com/in/doug-holcombe/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_modern_marketing",
+        "direction": "negative",
+        "evidence": "6 active social media platforms (FB/IG/X/TikTok/YouTube/Pinterest), Poolside Tech automation upsells, Instant Quote tool. Active growth profile, not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://poolcarespecialists.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "industry_award_nominations",
+        "direction": "negative",
+        "evidence": "Best of awards #1 for Swimming Pool Maintenance. Engaged with industry — not coasting.",
+        "source": "search_summary",
+        "source_url": "https://poolcarespecialists.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.linkedin.com/in/doug-holcombe/",
+      "https://www.bbb.org/us/tx/flower-mound/profile/pool-service/pool-care-specialists-0875-90385712"
+    ],
+    "enrichment_notes": "MARGINAL: identified couple-owners but active growth profile + heavy modernization. Probably DQ as 'too modern, not coasting'."
+  },
+  {
+    "legal_name": "A Affordable Pool & Spa Service Inc.",
+    "dba_name": "A-Affordable Pool & Spa",
+    "address": "1616 W Hebron Pkwy, Suite 104",
+    "city": "Carrollton",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75010",
+    "phone": "(972) 416-4487",
+    "website": "https://www.aaffordablepoolspa.com/",
+    "service_mix": "residential",
+    "license_number": "TDLR #433 / #14971 / AEC2299",
+    "license_type": "Electrician + Pool Contractor + Contractor",
+    "license_holder_name": null,
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.aaffordablepoolspa.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "over_three_decades",
+          "service_area",
+          "request_a_quote_form",
+          "tdlr_433",
+          "bbb_accredited"
+        ]
+      },
+      {
+        "source": "buildzoom",
+        "url": "https://www.buildzoom.com/contractor/a-affordable-pool-and-spa-service-inc",
+        "fetched_at": "2026-05-16",
+        "fields": ["multi_license_433_14971_aec2299"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Over 30 years service. Multi-license: TDLR #433 (pool), #14971 (general contractor), AEC2299 (master electrician). BBB accredited. Online quote form, financing options, Mon-Sat hours. Strong credentialed operator. Owner name NOT surfaced from public records — needs Comptroller/SOS query.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": 60,
+    "owner_age_source": "30_plus_year_tenure_proxy",
+    "owner_tenure_years": 30,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 30,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_30_plus_years",
+        "direction": "positive",
+        "evidence": "Over three decades in operation. Strong long-tenure match.",
+        "source": "website",
+        "source_url": "https://www.aaffordablepoolspa.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "multi_license_credentialed",
+        "direction": "positive",
+        "evidence": "Holds 3 separate state licenses (pool contractor, general contractor, master electrician) — high-credential operator. Hard to replicate, defensible.",
+        "source": "buildzoom",
+        "source_url": "https://www.buildzoom.com/contractor/a-affordable-pool-and-spa-service-inc",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_identity_undisclosed",
+        "direction": "negative",
+        "evidence": "30-yr business but no owner name on website or BBB summary surfaced. Needs Comptroller/SOS lookup.",
+        "source": "web_searches",
+        "source_url": "https://www.aaffordablepoolspa.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.buildzoom.com/contractor/a-affordable-pool-and-spa-service-inc"
+    ],
+    "enrichment_notes": "HIGH PRIORITY pending owner ID. 30+ yr tenure, multi-credentialed, in DFW corridor."
+  },
+  {
+    "legal_name": "Clear Choice Pool Care Maintenance LLC",
+    "dba_name": "Clear Choice Pool Care",
+    "address": null,
+    "city": "Lewisville",
+    "county": "Denton",
+    "state": "TX",
+    "zip": null,
+    "phone": "(469) 451-0222",
+    "website": "https://clearchoicepoolcaretx.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Brad (Business Development; surname undisclosed)",
+    "year_established": 2004,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://clearchoicepoolcaretx.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "since_2004",
+          "service_area_dfw_30_cities",
+          "2026_copyright",
+          "99_swim_ready_guarantee",
+          "non_commissioned_techs"
+        ]
+      },
+      {
+        "source": "cross_timbers_gazette",
+        "url": "https://www.crosstimbersgazette.com/2024/03/08/clear-choice-pool-care-new-name-same-great-service/",
+        "fetched_at": "2026-05-16",
+        "fields": ["company_renamed_2024_to_clear_choice", "formerly_flower_mound_pool_care"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2004 in Flower Mound, recently rebranded (March 2024) from 'Flower Mound Pool Care' to 'Clear Choice Pool Care'. 22 years tenure. Brad referenced as business development manager. 30+ city service footprint across DFW metroplex. Recent rebrand is a notable signal — could be growth or could be ownership change. 2026 copyright, active social.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 22,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 22,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_22_years",
+        "direction": "positive",
+        "evidence": "Founded 2004, 22-year tenure in operation.",
+        "source": "website",
+        "source_url": "https://clearchoicepoolcaretx.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "recent_rebrand_2024",
+        "direction": "ambiguous",
+        "evidence": "March 2024 rebrand from 'Flower Mound Pool Care' to 'Clear Choice Pool Care'. Could indicate ownership transition or simple repositioning. Worth Comptroller diligence.",
+        "source": "cross_timbers_gazette",
+        "source_url": "https://www.crosstimbersgazette.com/2024/03/08/clear-choice-pool-care-new-name-same-great-service/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_identity_undisclosed",
+        "direction": "negative",
+        "evidence": "Owner not named publicly. Brad surfaces as business development but ownership unclear.",
+        "source": "web_searches",
+        "source_url": "https://clearchoicepoolcaretx.com/company/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.crosstimbersgazette.com/2024/03/08/clear-choice-pool-care-new-name-same-great-service/"
+    ],
+    "enrichment_notes": "MEDIUM: 22-year tenure but recent rebrand introduces ownership uncertainty. Investigate further."
+  },
+  {
+    "legal_name": "Sunray Pool Service, L.L.C.",
+    "dba_name": "Sunray Pools",
+    "address": "11919 Rail Dr",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "phone": "(210) 637-0044",
+    "website": "https://sunraypool.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Ralph Fikes",
+    "year_established": 1983,
+    "data_sources": [
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/san-antonio/profile/pool-service/sunray-pool-service-co-0825-13535",
+        "fetched_at": "2026-05-16",
+        "fields": ["ralph_fikes_president", "limited_partnership_started_1983_01_01"]
+      },
+      {
+        "source": "legacy_obituary",
+        "url": "https://www.legacy.com/us/obituaries/sanantonio/name/allan-fuqua-obituary?id=26315181",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "allan_fuqua_co_founder_1983",
+          "betty_fuqua_co_founder",
+          "daughter_terry_fikes_married_ralph"
+        ]
+      },
+      {
+        "source": "website",
+        "url": "https://sunraypool.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "fields": ["three_generations", "founded_1983", "chemical_service_85", "full_cleaning_192"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1983 by Allan and Betty Fuqua (Allan died 2021 at age 87). Daughter Terry Fikes married Ralph Fikes — Ralph is current President. THREE-generation family business spanning 43 years. Active Facebook/Instagram. Service pricing publicly listed ($85 chemical, $192 full cleaning) — old-school transparency. 2026 copyright. Strong long-tenure target.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "1983-01-01",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Ralph Fikes (with Terry Fikes nee Fuqua)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "second_gen_son_in_law_owner_of_43_year_family_biz",
+    "owner_tenure_years": 43,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 43,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_43_years_named_owners",
+        "direction": "positive",
+        "evidence": "43-year family business with clearly named Ralph Fikes (President) and wife Terry Fikes (daughter of founders Allan + Betty Fuqua). Founder generation deceased 2021. Second-gen ownership classic retirement-window profile.",
+        "source": "bbb_and_obituary",
+        "source_url": "https://www.bbb.org/us/tx/san-antonio/profile/pool-service/sunray-pool-service-co-0825-13535",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "three_generations_mentioned_but_third_gen_unclear",
+        "direction": "positive",
+        "evidence": "Website claims 'three generations' but second-gen owners (Ralph/Terry) likely now ~65. Third generation involvement not publicly clarified — could mean succession opportunity.",
+        "source": "website",
+        "source_url": "https://sunraypool.com/about-us/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "old_school_pricing_transparency",
+        "direction": "positive",
+        "evidence": "Publishes flat service pricing ($85 chemical, $192 full clean) — old-school straightforward pricing model.",
+        "source": "website",
+        "source_url": "https://sunraypool.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.bbb.org/us/tx/san-antonio/profile/pool-service/sunray-pool-service-co-0825-13535",
+      "https://www.legacy.com/us/obituaries/sanantonio/name/allan-fuqua-obituary?id=26315181"
+    ],
+    "enrichment_notes": "HIGH PRIORITY TARGET — 43 yrs, named second-gen owners in retirement window, San Antonio market."
+  },
+  {
+    "legal_name": "The Pool Guys",
+    "dba_name": "The Pool Guys",
+    "address": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "phone": "(210) 570-5217",
+    "website": "https://thepoolguys.net/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Jeff Jakubowski",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/jeff-jakubowski-84b0445/",
+        "fetched_at": "2026-05-16",
+        "fields": ["jeff_jakubowski_owner"]
+      },
+      {
+        "source": "website",
+        "url": "https://thepoolguys.net/",
+        "fetched_at": "2026-05-16",
+        "fields": ["2026_copyright", "service_area_alamo_heights_stone_oak", "family_owned"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Owner Jeff Jakubowski, San Antonio Metro. Family-owned. Premier zip codes — Alamo Heights, Castle Hills, Hollywood Park, Stone Oak, Terrell Hills (affluent route). Active social (Facebook, Instagram, YouTube). 24-hour callback contact form. No online booking. Year established not surfaced.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Jeff Jakubowski",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identified",
+        "direction": "positive",
+        "evidence": "Jeff Jakubowski clearly named as Owner on LinkedIn. Strong outreach quality.",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/jeff-jakubowski-84b0445/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "affluent_route_alamo_heights_stone_oak",
+        "direction": "positive",
+        "evidence": "Premier SA zip codes (Alamo Heights, Stone Oak, Castle Hills, Terrell Hills) — high-margin route, sticky residential accounts.",
+        "source": "website",
+        "source_url": "https://thepoolguys.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "year_established_unknown",
+        "direction": "negative",
+        "evidence": "Founding year not surfaced on website, BBB, or LinkedIn. Need tenure data.",
+        "source": "web_searches",
+        "source_url": "https://thepoolguys.net/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": ["https://www.linkedin.com/in/jeff-jakubowski-84b0445/"],
+    "enrichment_notes": "MEDIUM: identified owner + affluent route, but tenure unknown. Tenure check needed."
+  },
+  {
+    "legal_name": "Blue Oasis Pool Services LLC",
+    "dba_name": "Blue Oasis Pool Services",
+    "address": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "phone": "(210) 347-5505",
+    "website": "https://www.blueoasistx.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Kolby Callantine",
+    "year_established": 2022,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.blueoasistx.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_2022", "family_owned", "2024_copyright_stale"]
+      },
+      {
+        "source": "linkedin_company",
+        "url": "https://www.linkedin.com/in/blue-oasis-a8bb14261",
+        "fetched_at": "2026-05-16",
+        "fields": ["kolby_callantine_operator"]
+      }
+    ],
+    "platform_affiliation_check": "independent_too_young",
+    "verification_notes": "Founded 2022, only 4 years tenure. Kolby Callantine identified. Phone-based booking. 2024 copyright (1-2 yrs stale).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Kolby Callantine",
+    "owner_age_estimate": 30,
+    "owner_age_source": "young_startup_2022_likely_owner_in_20s_30s",
+    "owner_tenure_years": 4,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 4,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "too_young_business_too_young_owner",
+        "direction": "disqualifying",
+        "evidence": "Founded 2022 (4 years). Kolby Callantine likely young owner (20s-30s). Far outside retirement window and below tenure threshold.",
+        "source": "website",
+        "source_url": "https://www.blueoasistx.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DQ: 4-year-old business, young owner."
+  },
+  {
+    "legal_name": "Budnik Pool Service",
+    "dba_name": "Budnik Pools",
+    "address": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "phone": "(210) 722-6297",
+    "website": "https://budnikpools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Jeff Budnik",
+    "year_established": 2013,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/jeff-budnik-b5839191/",
+        "fetched_at": "2026-05-16",
+        "fields": ["jeff_budnik_owner"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/san-antonio/profile/pool-leak-detection/budnik-pool-service-0825-1000139057",
+        "fetched_at": "2026-05-16",
+        "fields": ["sole_prop_started_2013_01_01", "15_years_hands_on_experience"]
+      },
+      {
+        "source": "website",
+        "url": "https://budnikpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "north_and_central_san_antonio",
+          "2021_copyright_stale",
+          "social_placeholder_links"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Sole prop, started 2013-01-01 by Jeff Budnik. 15+ years industry experience. 90% referrals. 2021 copyright is stale (5 yrs old) — strong coasting tell. Social media placeholder links. North + Central SA route. Solo owner-operator profile.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "2013-01-01",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Jeff Budnik",
+    "owner_age_estimate": 50,
+    "owner_age_source": "15_year_industry_proxy",
+    "owner_tenure_years": 13,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 13,
+    "employee_count_estimate": 2,
+    "provider_count_estimate": null,
+    "employee_count_source": "sole_prop_implies_solo_or_micro",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identified",
+        "direction": "positive",
+        "evidence": "Jeff Budnik clearly identified as sole prop owner.",
+        "source": "bbb_and_linkedin",
+        "source_url": "https://www.bbb.org/us/tx/san-antonio/profile/pool-leak-detection/budnik-pool-service-0825-1000139057",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "stale_website_copyright_2021",
+        "direction": "positive",
+        "evidence": "Copyright 2021 — site untouched for 5 years. Classic coasting tell. Social icons are placeholder/non-functional.",
+        "source": "live_website_fetch",
+        "source_url": "https://budnikpools.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "moderate_tenure_13_years",
+        "direction": "ambiguous",
+        "evidence": "13-year business — below the 20-year ideal but within the 'long-tenured' adjacent band. Owner age likely ~50, below ideal retirement window.",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/san-antonio/profile/pool-leak-detection/budnik-pool-service-0825-1000139057",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.linkedin.com/in/jeff-budnik-b5839191/",
+      "https://www.bbb.org/us/tx/san-antonio/profile/pool-leak-detection/budnik-pool-service-0825-1000139057"
+    ],
+    "enrichment_notes": "MEDIUM: solo owner-operator with classic coasting site tells (2021 copyright, dead social), but only 13 years and owner ~50."
+  },
+  {
+    "legal_name": "Cooper Custom Pools",
+    "dba_name": "Cooper Custom Pools",
+    "address": null,
+    "city": "Boerne",
+    "county": "Kendall",
+    "state": "TX",
+    "zip": null,
+    "phone": "(830) 446-6219",
+    "website": "https://coopercustompools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Randy Cooper (business management contact)",
+    "year_established": 2009,
+    "data_sources": [
+      {
+        "source": "boerne_chamber",
+        "url": "https://business.boerne.org/list/member/cooper-custom-pools-24487",
+        "fetched_at": "2026-05-16",
+        "fields": ["randy_cooper_business_management"]
+      },
+      {
+        "source": "website",
+        "url": "https://coopercustompools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "over_15_years",
+          "boerne_new_braunfels_2_offices",
+          "2026_copyright",
+          "social_4_platforms"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded by 'owner's father' in 2009 per search; over 15 years. Randy Cooper listed as business management contact (Boerne Chamber). Two offices (Boerne + New Braunfels). Family-owned with father-son succession path. Active social (FB/IG/X/Google), free estimate form, 2026 copyright — modernizing.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Randy Cooper (current operator, son of founder)",
+    "owner_age_estimate": 45,
+    "owner_age_source": "father_founder_son_operator_inference",
+    "owner_tenure_years": 17,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 17,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "father_son_succession_in_place",
+        "direction": "negative",
+        "evidence": "Father founded 2009, son (Randy Cooper) now runs the business. Intra-family transfer already executing.",
+        "source": "boerne_chamber_and_search",
+        "source_url": "https://business.boerne.org/list/member/cooper-custom-pools-24487",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_marketing_2_offices",
+        "direction": "negative",
+        "evidence": "2 office locations, 2026 copyright, 4 active social platforms. Growth-mode operator.",
+        "source": "website",
+        "source_url": "https://coopercustompools.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": ["https://business.boerne.org/list/member/cooper-custom-pools-24487"],
+    "enrichment_notes": "DQ: father-son succession already in-house, plus active growth profile."
+  },
+  {
+    "legal_name": "New Braunfels Pool Services",
+    "dba_name": "New Braunfels Pool Services / New Braunfels Pool Company",
+    "address": null,
+    "city": "New Braunfels",
+    "county": "Comal",
+    "state": "TX",
+    "zip": null,
+    "phone": "(830) 481-7990",
+    "website": "https://newbraunfelspoolservice.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Keith Hargrove (with Amanda Hargrove)",
+    "year_established": 1998,
+    "data_sources": [
+      {
+        "source": "web_search_summary",
+        "url": "https://newbraunfelspoolservice.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_1998_dale_fowler", "sold_2006_keith_and_amanda_hargrove"]
+      },
+      {
+        "source": "website",
+        "url": "https://newbraunfelspoolservice.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "comal_guadalupe_counties_exclusively",
+          "weekly_biweekly_monthly_service_options",
+          "30_years_industry_service"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1998 by Dale Fowler. Fowler sold the business 2006 to Keith & Amanda Hargrove (current owners — 20 years of ownership). 28 years business tenure / 20 years current owner tenure. Serves Comal + Guadalupe counties exclusively. Multi-frequency service options. No public e-booking visible.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Keith Hargrove (with Amanda Hargrove)",
+    "owner_age_estimate": 58,
+    "owner_age_source": "20_year_owner_tenure_couple_proxy",
+    "owner_tenure_years": 20,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 28,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "long_owner_tenure_named_couple",
+        "direction": "positive",
+        "evidence": "Keith + Amanda Hargrove bought business 2006 from founder Dale Fowler. 20-year owner tenure, 28 year business tenure. Couple in retirement-window age band. High-quality outreach target.",
+        "source": "search_summary",
+        "source_url": "https://newbraunfelspoolservice.com/about",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "limited_modernization",
+        "direction": "positive",
+        "evidence": "Phone-first with biweekly/monthly service options, exclusive geographic focus. No e-booking, no SMS automation. Coasting tells visible.",
+        "source": "website",
+        "source_url": "https://newbraunfelspoolservice.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": ["https://newbraunfelspoolservice.com/about"],
+    "enrichment_notes": "HIGH PRIORITY TARGET — clearly identified couple-owners, 20+ yr tenure, limited modernization, hill country market."
+  },
+  {
+    "legal_name": "BluePeak Pool Care",
+    "dba_name": "BluePeak Pool Care",
+    "address": "7400 Blanco Rd",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78216",
+    "phone": "(210) 273-3978",
+    "website": "https://bluepeakpools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://bluepeakpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "service_area_sa_nb_boerne_bulverde_canyon_lake",
+          "schedule_online_quote_online",
+          "digital_reports_email_or_text",
+          "2026_copyright"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent_likely_modern",
+    "verification_notes": "Schedule Online + Free Quote functionality. Digital service reports delivered by email or text. Active Facebook/Instagram. 2026 copyright. Multi-county Hill Country footprint. Year founded not surfaced. Owner not surfaced. Highly modernized — not a coasting profile.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "disqualifying",
+        "evidence": "Online scheduling + online quoting + digital reports via email/text = full modernization. Not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://bluepeakpools.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "year_founded_and_owner_unknown",
+        "direction": "negative",
+        "evidence": "Founding year and owner name not surfaced. Limits assessment quality.",
+        "source": "web_searches",
+        "source_url": "https://bluepeakpools.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DQ: highly modern tech stack, low data on owner/tenure."
+  },
+  {
+    "legal_name": "Hill Country Pools, Inc.",
+    "dba_name": "Hill Country Pools",
+    "address": "3720 Far West Blvd",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "phone": "(512) 343-2237",
+    "website": "https://hillcountrypoolsaustin.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Surrenden Hill Angly (founder, deceased); Forest Hill James (3rd gen)",
+    "year_established": 1972,
+    "data_sources": [
+      {
+        "source": "website_about",
+        "url": "https://hillcountrypoolsaustin.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "founded_1972",
+          "lifelong_austin_resident",
+          "two_men_two_trucks_at_founding",
+          "third_generation"
+        ]
+      },
+      {
+        "source": "dignity_memorial_obituary",
+        "url": "https://www.dignitymemorial.com/obituaries/austin-tx/surrenden-angly-8210201",
+        "fetched_at": "2026-05-16",
+        "fields": ["surrenden_angly_obituary"]
+      },
+      {
+        "source": "swimming_pool_dealers",
+        "url": "https://swimming-pool-dealers.cmac.ws/angly-surrenden-hill/4650/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "dissolved_law_practice_bought_hill_country_pools",
+          "grandson_forest_hill_james_joined_2015"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1972 (one van, two trucks). Surrenden Hill Angly — Austin native, dissolved her law practice, bought existing pool business, grew it 40 years. In 2015 grandson Forest Hill James joined full-time after UT Austin. 2016 Forest became part-owner. Surrenden has passed (obituary exists). 3rd generation now owns. HCP Construction is sister company. 2025 copyright on site.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Forest Hill James (3rd gen, owner-operator)",
+    "owner_age_estimate": 32,
+    "owner_age_source": "ut_austin_2015_grad_proxy",
+    "owner_tenure_years": 11,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 54,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "third_gen_young_owner",
+        "direction": "negative",
+        "evidence": "Forest Hill James (3rd gen, grandson) joined 2015 after UT Austin — likely ~32 now. Outside retirement window.",
+        "source": "swimming_pool_dealers",
+        "source_url": "https://swimming-pool-dealers.cmac.ws/angly-surrenden-hill/4650/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "long_history_54_years_brand_strength",
+        "direction": "positive",
+        "evidence": "54 years business tenure with strong Austin brand. Owner generation transitioned 2016 — too recent for re-transition demand.",
+        "source": "website",
+        "source_url": "https://hillcountrypoolsaustin.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://hillcountrypoolsaustin.com/about-us/",
+      "https://www.dignitymemorial.com/obituaries/austin-tx/surrenden-angly-8210201",
+      "https://swimming-pool-dealers.cmac.ws/angly-surrenden-hill/4650/"
+    ],
+    "enrichment_notes": "DQ: 3rd-gen succession just completed in 2016 to young owner. Not a retirement-window target."
+  },
+  {
+    "legal_name": "Reliable Pool Care, LLC",
+    "dba_name": "Reliable Pool Care",
+    "address": "3616 Far West Blvd",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "phone": "(512) 336-2273",
+    "website": "https://reliablepoolcareaustin.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Bryan Thompson",
+    "year_established": 2009,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/bryan-thompson-5b846517/",
+        "fetched_at": "2026-05-16",
+        "fields": ["bryan_thompson_founder"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/austin/profile/pool-service/reliable-pool-care-llc-0825-90067074",
+        "fetched_at": "2026-05-16",
+        "fields": ["llc_started_2009_06_17", "incorporated_2009_09_29"]
+      },
+      {
+        "source": "website",
+        "url": "https://reliablepoolcareaustin.com/about/",
+        "fetched_at": "2026-05-16",
+        "fields": ["2009_2026_copyright", "facebook_instagram_active", "schedule_service_link"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2009 by Bryan Thompson (worked alongside his father in pool industry before founding solo). Father-son industry pedigree but Bryan is solo owner. 17 year tenure. Active social. 2009-2026 copyright shows live maintenance. Word-of-mouth driven, anti-franchise positioning.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "2009-06-17",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Bryan Thompson",
+    "owner_age_estimate": 45,
+    "owner_age_source": "linkedin_career_arc_father_in_pool_industry",
+    "owner_tenure_years": 17,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 17,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_below_retirement_window",
+        "direction": "negative",
+        "evidence": "Bryan Thompson founded 2009 — likely ~28-30 then, currently ~45. Below the 58-72 retirement window.",
+        "source": "bbb_and_linkedin",
+        "source_url": "https://www.linkedin.com/in/bryan-thompson-5b846517/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.linkedin.com/in/bryan-thompson-5b846517/",
+      "https://www.bbb.org/us/tx/austin/profile/pool-service/reliable-pool-care-llc-0825-90067074"
+    ],
+    "enrichment_notes": "DQ: owner ~45, outside retirement window."
+  },
+  {
+    "legal_name": "Pyramid Pool Service",
+    "dba_name": "Pyramid Pool Service",
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "phone": "(512) 981-6360",
+    "website": "https://www.pyramidpoolsatx.com/",
+    "service_mix": "residential",
+    "license_number": "TDLR #1436",
+    "license_type": "RAIL Contractor",
+    "license_holder_name": null,
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.pyramidpoolsatx.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "2023_copyright",
+          "small_independent_family_owned",
+          "owner_handles_service_calls",
+          "5dpoolguy_youtube",
+          "tdlr_1436_rail_contractor"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Small independent family-owned. Owner personally handles service calls. Greater Austin route (Georgetown, Liberty Hill, Bee Cave, Lakeway, Rollingwood, Barton Hills, Central Austin). TDLR #1436 RAIL Contractor licensed. Active YouTube (@5DPoolGuy — 5D=Pyramid?). 2023 copyright is stale. Owner identity not surfaced publicly.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": 2,
+    "provider_count_estimate": null,
+    "employee_count_source": "solo_or_micro_team_inferred",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "stale_website_2023_copyright",
+        "direction": "positive",
+        "evidence": "Copyright frozen at 2023 — three years stale. Owner handles all service calls personally.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.pyramidpoolsatx.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "tdlr_licensed",
+        "direction": "positive",
+        "evidence": "TDLR #1436 RAIL Contractor — defensible credential.",
+        "source": "website",
+        "source_url": "https://www.pyramidpoolsatx.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_identity_undisclosed",
+        "direction": "negative",
+        "evidence": "Owner name not surfaced from website/BBB/socials.",
+        "source": "web_searches",
+        "source_url": "https://www.pyramidpoolsatx.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "MEDIUM: solo licensed operator with coasting tells (stale site, hands-on owner). Owner ID needed."
+  },
+  {
+    "legal_name": "Easy Pools, Inc.",
+    "dba_name": "Easy Pools",
+    "address": "PO Box 340066",
+    "city": "Lakeway",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "phone": "(512) 266-6592",
+    "website": "https://easypools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": "CBP/CPO/CSP",
+    "license_holder_name": "Richard 'Rick' Beaubouef",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/rickb1/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "rick_beaubouef_president",
+          "mostly_self_employed_throughout_adult_career_in_pools"
+        ]
+      },
+      {
+        "source": "zoominfo",
+        "url": "https://www.zoominfo.com/p/Richard-Beaubouef/1407684100",
+        "fetched_at": "2026-05-16",
+        "fields": ["richard_beaubouef_president"]
+      },
+      {
+        "source": "website",
+        "url": "https://easypools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "ipssa_member",
+          "apec_member",
+          "cbp_cpo_csp_certified",
+          "2026_copyright",
+          "renovation_wishlist_builder"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Owner Richard 'Rick' Beaubouef — self-employed throughout adult career in pool industry. Heavy credentials: IPSSA member, APEC (Aquatic Professionals Education Council) member, CBP®/CPO®/CSP® certified. Active in TX legislative advocacy for pool industry. Lakeway TX, M-F 8-5. Strong industry leader profile — but probably above 'coasting' band given his active advocacy involvement.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Richard 'Rick' Beaubouef",
+    "owner_age_estimate": 60,
+    "owner_age_source": "linkedin_full_adult_career_in_pools",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identified_likely_retirement_window",
+        "direction": "positive",
+        "evidence": "Rick Beaubouef — full adult career in pool industry, IPSSA/APEC member, multiple certifications. Likely ~60.",
+        "source": "linkedin_and_website",
+        "source_url": "https://www.linkedin.com/in/rickb1/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "high_credential_ipssa_apec",
+        "direction": "positive",
+        "evidence": "Multiple industry credentials (IPSSA, APEC, CBP, CPO, CSP) plus TX legislative advocacy involvement — high-value owner with strong reputation.",
+        "source": "linkedin_and_website",
+        "source_url": "https://easypools.com/organizations-associations/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 4,
+        "signal_key": "active_industry_advocate_not_coasting",
+        "direction": "ambiguous",
+        "evidence": "TX state legislative pool industry advocate — active engagement may indicate he's NOT coasting. Worth investigating if he's preparing his business for sale before exiting advocacy role.",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/rickb1/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.linkedin.com/in/rickb1/",
+      "https://www.zoominfo.com/p/Richard-Beaubouef/1407684100"
+    ],
+    "enrichment_notes": "HIGH PRIORITY TARGET — clearly named owner, retirement-window age, deep credentials. Note active advocacy is a 'not coasting' tell."
+  },
+  {
+    "legal_name": "Aruba Pools Inc",
+    "dba_name": "Aruba Pools",
+    "address": null,
+    "city": "Cedar Park",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": null,
+    "phone": "(512) 900-0902",
+    "website": "https://www.aruba-pools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": "CPO",
+    "license_holder_name": "Jason Scism and Nikki Scism",
+    "year_established": 2011,
+    "data_sources": [
+      {
+        "source": "website_about",
+        "url": "https://www.aruba-pools.com/about-us",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "jason_founded_2011",
+          "two_decades_experience_since_1999",
+          "wife_nikki_joined_2021_full_time"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Husband-wife owners. Jason Scism founded 2011 after starting pool industry in 1999. Wife Nikki joined full-time 2021. CPO certified team. Active Facebook/Instagram. 2026 copyright. Central Texas route (Austin, Round Rock, Hutto, Cedar Park).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Jason and Nikki Scism",
+    "owner_age_estimate": 50,
+    "owner_age_source": "since_1999_industry_proxy_27_yr_industry_experience",
+    "owner_tenure_years": 15,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 15,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identified_named_couple",
+        "direction": "positive",
+        "evidence": "Jason and Nikki Scism clearly named as husband-wife co-owners. High outreach quality.",
+        "source": "website_about",
+        "source_url": "https://www.aruba-pools.com/about-us",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_below_retirement_window",
+        "direction": "negative",
+        "evidence": "Jason started in industry 1999 — likely ~22-25 then. Currently ~50. Below retirement window.",
+        "source": "website_about",
+        "source_url": "https://www.aruba-pools.com/about-us",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "DQ: owner couple likely ~50, below retirement window. Wife joined just 2021 — actively growing."
+  },
+  {
+    "legal_name": "The Pool Police",
+    "dba_name": "The Pool Police",
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "phone": "(512) 300-4136",
+    "website": "https://www.thepoolpolice.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": "CPO",
+    "license_holder_name": "Keith Mallette",
+    "year_established": 2000,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.thepoolpolice.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "keith_mallette_owner",
+          "cpo_25_plus_years",
+          "family_owned_since_2000",
+          "owner_oversees_every_route",
+          "no_call_center"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2000 by Keith Mallette. 25+ years Central Texas pool experience as CPO. Family-owned. 'Owner is reachable, not behind a call center' — direct-contact model. Premium West Austin route (Steiner Ranch, Lakeway, Cedar Park, West Austin, Bee Cave, Lost Creek, River Place). Active across Facebook/Google/Nextdoor/Yelp/Instagram/TikTok. No online booking — free estimate via phone only. 2026 copyright.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Keith Mallette",
+    "owner_age_estimate": 58,
+    "owner_age_source": "25_plus_year_industry_proxy_founded_2000",
+    "owner_tenure_years": 26,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 26,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identified_in_retirement_window",
+        "direction": "positive",
+        "evidence": "Keith Mallette — clearly named founder, 26 years in business, CPO, ~58 years old (entering retirement window).",
+        "source": "website",
+        "source_url": "https://www.thepoolpolice.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "phone_first_no_online_booking",
+        "direction": "positive",
+        "evidence": "Free estimate via phone only — no online booking. Owner personally oversees every route.",
+        "source": "website",
+        "source_url": "https://www.thepoolpolice.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "premium_route_austin_west",
+        "direction": "positive",
+        "evidence": "Premium West Austin zip codes (Steiner Ranch, Lakeway, Bee Cave, Lost Creek) — high-margin sticky residential accounts.",
+        "source": "website",
+        "source_url": "https://www.thepoolpolice.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "HIGH PRIORITY TARGET — clearly named owner-operator, 26 yrs, premium route, in retirement window, phone-first old-school operation."
+  },
+  {
+    "legal_name": "Texas Pool Star",
+    "dba_name": "Texas Pool Star",
+    "address": "411 Fife Dr",
+    "city": "Spicewood",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78669",
+    "phone": null,
+    "website": "http://www.texaspoolstar.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Jared Morris",
+    "year_established": 2004,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/texaspoolstar",
+        "fetched_at": "2026-05-16",
+        "fields": ["jared_morris_owner_operator"]
+      },
+      {
+        "source": "rocketreach",
+        "url": "https://rocketreach.co/jared-morris-email_369460712",
+        "fetched_at": "2026-05-16",
+        "fields": ["jared_morris_small_business_owner_spicewood"]
+      },
+      {
+        "source": "website",
+        "url": "http://www.texaspoolstar.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["since_2004", "owner_operated", "no_online_booking", "no_copyright_year"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Jared Morris, owner-operator since 2004 (22 years). Aquatic certified, insured. Spicewood/Briarcliff/Lakeway/Bee Cave route. HTTP (not HTTPS) website. No online booking. No copyright year. Web design credit only.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Jared Morris",
+    "owner_age_estimate": 55,
+    "owner_age_source": "22_year_owner_operator_tenure_proxy",
+    "owner_tenure_years": 22,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 22,
+    "employee_count_estimate": 2,
+    "provider_count_estimate": null,
+    "employee_count_source": "small_solo_inferred",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identified",
+        "direction": "positive",
+        "evidence": "Jared Morris — clearly named owner-operator on LinkedIn and RocketReach.",
+        "source": "linkedin",
+        "source_url": "https://www.linkedin.com/in/texaspoolstar",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "http_no_https_old_school",
+        "direction": "positive",
+        "evidence": "Website still on HTTP not HTTPS. No online booking. No visible copyright year. Strong coasting tells.",
+        "source": "live_website_fetch",
+        "source_url": "http://www.texaspoolstar.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_22_years",
+        "direction": "positive",
+        "evidence": "22-year owner-operator tenure — qualifies for long-tenured target band.",
+        "source": "website",
+        "source_url": "http://www.texaspoolstar.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.linkedin.com/in/texaspoolstar",
+      "https://rocketreach.co/jared-morris-email_369460712"
+    ],
+    "enrichment_notes": "HIGH PRIORITY TARGET — clearly named owner, 22 yrs, HTTP-only old-school website, Hill Country premium route."
+  },
+  {
+    "legal_name": "Best Pool Cleaning Co",
+    "dba_name": "Best Pool Cleaning Company",
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "phone": "(512) 702-5934",
+    "website": "https://www.thebestpoolcleaning.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Alex Sanborn",
+    "year_established": 2023,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/alex-sanborn-962994b6/",
+        "fetched_at": "2026-05-16",
+        "fields": ["alex_sanborn_founder_northwestern_alumnus"]
+      },
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/austin/profile/pool-repair/best-pool-cleaning-co-0825-1000225821",
+        "fetched_at": "2026-05-16",
+        "fields": ["started_2023_12_15", "sole_proprietorship"]
+      }
+    ],
+    "platform_affiliation_check": "independent_too_young",
+    "verification_notes": "Sole prop founded 2023-12-15 by Alex Sanborn (Northwestern alum). Only 2.4 years old. Very young business — actively growing. Texas native, born SA, raised Houston, settled Austin. Active social. SMS-first.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": "2023-12-15",
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Alex Sanborn",
+    "owner_age_estimate": 35,
+    "owner_age_source": "northwestern_grad_recent_career_pivot",
+    "owner_tenure_years": 2,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 2,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "sole_prop",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "too_young_business_and_owner",
+        "direction": "disqualifying",
+        "evidence": "Founded 2023-12-15 (2.4 years). Owner Alex Sanborn is Northwestern grad, mid-30s. Both well below thresholds.",
+        "source": "bbb_and_linkedin",
+        "source_url": "https://www.bbb.org/us/tx/austin/profile/pool-repair/best-pool-cleaning-co-0825-1000225821",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.linkedin.com/in/alex-sanborn-962994b6/",
+      "https://www.bbb.org/us/tx/austin/profile/pool-repair/best-pool-cleaning-co-0825-1000225821"
+    ],
+    "enrichment_notes": "DQ: 2-year-old startup, young founder."
+  },
+  {
+    "legal_name": "Prime Pool Service",
+    "dba_name": "Prime Pool Service",
+    "address": "12014 N Lamar",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "phone": "(512) 441-3473",
+    "website": "https://www.primepoolservice.com/",
+    "service_mix": "residential_and_commercial",
+    "license_number": "TICL 1417",
+    "license_type": "TICL",
+    "license_holder_name": "Mike Bernoski",
+    "year_established": 2009,
+    "data_sources": [
+      {
+        "source": "aqua_magazine_acquisition",
+        "url": "https://www.aquamagazine.com/news/community-news/company-sales-mergers/article/15638484/pool-troopers-acquires-prime-pool-service",
+        "fetched_at": "2026-05-16",
+        "fields": ["acquired_by_pool_troopers_2023_11_01", "21st_pool_troopers_acquisition"]
+      },
+      {
+        "source": "thirdcoast_capital",
+        "url": "https://www.thirdcoastca.com/pool-troopers-prime-pool-service",
+        "fetched_at": "2026-05-16",
+        "fields": ["mike_bernoski_founder_president", "deal_advisor_third_coast_capital"]
+      },
+      {
+        "source": "prnewswire_sps",
+        "url": "https://www.prnewswire.com/news-releases/nations-largest-pool-service-company-sps-poolcare-acquires-leading-pe-backed-competitor-302669059.html",
+        "fetched_at": "2026-05-16",
+        "fields": ["sps_poolcare_acquired_pool_troopers_jan_2026"]
+      },
+      {
+        "source": "pitchbook",
+        "url": "https://pitchbook.com/profiles/company/539864-11",
+        "fetched_at": "2026-05-16",
+        "fields": ["acquired_pe_backed_pool_troopers"]
+      }
+    ],
+    "platform_affiliation_check": "disqualifying_acquired_by_pe_consolidator",
+    "verification_notes": "Founded 2009 by Mike Bernoski. ACQUIRED Nov 1, 2023 by Pool Troopers (PE-backed by Shoreline Equity Partners — Prime was their 21st acquisition). Pool Troopers itself then ACQUIRED by SPS PoolCare in Jan 2026. Prime is now part of nation's largest PE-rolled-up pool service consolidator. Site still operating under Prime brand but ownership is PE/strategic.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "active_acquired_subsidiary",
+    "registered_agent": null,
+    "owner_name": "SPS PoolCare (via Pool Troopers acquisition; founder Mike Bernoski exited)",
+    "owner_age_estimate": null,
+    "owner_age_source": "n_a_post_acquisition",
+    "owner_tenure_years": 14,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 17,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "recent_pe_acquisition_disqualifying",
+        "direction": "disqualifying",
+        "evidence": "Acquired Nov 1, 2023 by Pool Troopers (PE-backed by Shoreline Equity Partners) as their 21st rollup. Then in Jan 2026, Pool Troopers acquired by SPS PoolCare (nation's largest PE-rolled pool consolidator). Founder Mike Bernoski exited. NOT an off-market target — this is the buyer.",
+        "source": "aqua_magazine_and_third_coast",
+        "source_url": "https://www.aquamagazine.com/news/community-news/company-sales-mergers/article/15638484/pool-troopers-acquires-prime-pool-service",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.aquamagazine.com/news/community-news/company-sales-mergers/article/15638484/pool-troopers-acquires-prime-pool-service",
+      "https://www.thirdcoastca.com/pool-troopers-prime-pool-service",
+      "https://www.prnewswire.com/news-releases/nations-largest-pool-service-company-sps-poolcare-acquires-leading-pe-backed-competitor-302669059.html",
+      "https://pitchbook.com/profiles/company/539864-11"
+    ],
+    "enrichment_notes": "DISQUALIFY: PE-acquired Nov 2023, now part of SPS PoolCare consolidator. Add to exclusion list."
+  },
+  {
+    "legal_name": "McMaster Pools, LLC",
+    "dba_name": "McMaster Pools",
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78734",
+    "phone": "(512) 962-5576",
+    "website": "https://www.mcmasterpools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Richard McMaster",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "bizapedia",
+        "url": "https://www.bizapedia.com/tx/mcmaster-pools-llc.html",
+        "fetched_at": "2026-05-16",
+        "fields": ["mcmaster_pools_llc_austin"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.mcmasterpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["over_10_years", "2026_copyright", "lake_travis_route", "no_online_booking"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Richard McMaster, owner. Over 10 years service. Lake Travis/Lakeway/Bee Cave premium route. 2026 copyright. Social media icons present but placeholder URLs. No online booking — Schedule an Estimate link. Solo owner-operator profile.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Richard McMaster",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 10,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 10,
+    "employee_count_estimate": 2,
+    "provider_count_estimate": null,
+    "employee_count_source": "small_solo_inferred",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identified",
+        "direction": "positive",
+        "evidence": "Richard McMaster identified as owner on Bizapedia + reviews.",
+        "source": "bizapedia",
+        "source_url": "https://www.bizapedia.com/tx/mcmaster-pools-llc.html",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "placeholder_social_links",
+        "direction": "positive",
+        "evidence": "Social media icons exist but URLs not populated — coasting tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.mcmasterpools.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "moderate_tenure_10_years",
+        "direction": "negative",
+        "evidence": "10-year tenure — below long-tenure threshold.",
+        "source": "website",
+        "source_url": "https://www.mcmasterpools.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": ["https://www.bizapedia.com/tx/mcmaster-pools-llc.html"],
+    "enrichment_notes": "MEDIUM: identified owner with premium Lake Travis route, but tenure ~10 years."
+  },
+  {
+    "legal_name": "T&T Pool Care",
+    "dba_name": "T&T Pool Care",
+    "address": null,
+    "city": "Hutto",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": null,
+    "phone": "(512) 317-5847",
+    "website": "https://www.tandtpoolcare.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": null,
+    "year_established": 2017,
+    "data_sources": [
+      {
+        "source": "search_summary",
+        "url": "https://www.tandtpoolcare.com/about-us",
+        "fetched_at": "2026-05-16",
+        "fields": ["established_2017", "family_owned_operated_hutto"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.tandtpoolcare.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["hutto_round_rock_pflugerville", "facebook_instagram_links"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Established 2017, family-owned in Hutto. Owner not identified publicly (only initials T&T). 9 year tenure. Email tandtpoolcare@gmail.com (gmail = not branded domain — coasting tell for old operators, but pretty standard for newer indies).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 9,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 9,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_unidentified",
+        "direction": "negative",
+        "evidence": "Owner not identified — only company initials 'T&T'. Limits outreach quality.",
+        "source": "web_searches",
+        "source_url": "https://www.tandtpoolcare.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "short_tenure_9_years",
+        "direction": "negative",
+        "evidence": "9-year tenure — below long-tenure threshold.",
+        "source": "website",
+        "source_url": "https://www.tandtpoolcare.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "PASS: short tenure + unidentified owner."
+  },
+  {
+    "legal_name": "Tranquilo Pools LLC",
+    "dba_name": "Tranquilo Pools",
+    "address": null,
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": null,
+    "phone": "(361) 239-8789",
+    "website": "https://www.tranquilopools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": "CPO",
+    "license_holder_name": "Mark Howard",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "bizapedia",
+        "url": "https://www.bizapedia.com/tx/tranquilo-pools-llc.html",
+        "fetched_at": "2026-05-16",
+        "fields": ["tranquilo_pools_llc_corpus_christi"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.tranquilopools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "corpus_christi_native",
+          "cpo_certified",
+          "digital_logs_photo_updates",
+          "2025_copyright",
+          "mustang_island_jensen_beach_fl"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Mark Howard, Corpus Christi native, CPO-certified, owner of Tranquilo Pools LLC. Multi-region (Corpus, Padre Island, Flour Bluff, North Beach, South Side, Bay Area, Calallen, Jensen Beach FL, Mustang Island). Digital logs + photo updates per visit. 2025 copyright. Year founded not surfaced.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Mark Howard",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identified",
+        "direction": "positive",
+        "evidence": "Mark Howard — clearly named owner, Corpus Christi native, CPO.",
+        "source": "website",
+        "source_url": "https://www.tranquilopools.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "moderate_modernization",
+        "direction": "negative",
+        "evidence": "Digital logs and photo updates after each visit — moderate modernization. Multi-region (TX + FL) suggests growth focus.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.tranquilopools.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "year_founded_unknown",
+        "direction": "negative",
+        "evidence": "Year established not surfaced. Tenure uncertain.",
+        "source": "web_searches",
+        "source_url": "https://www.tranquilopools.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": ["https://www.bizapedia.com/tx/tranquilo-pools-llc.html"],
+    "enrichment_notes": "MEDIUM-LOW: tenure unknown, multi-state expansion mode."
+  },
+  {
+    "legal_name": "Pool Masters",
+    "dba_name": "Pool Masters",
+    "address": "600 Cut Off Rd",
+    "city": "Port Aransas",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78373",
+    "phone": "(361) 749-7030",
+    "website": "https://www.poolmastersstx.com/",
+    "service_mix": "residential_str_property_mgmt",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Tyler Kalla",
+    "year_established": 2008,
+    "data_sources": [
+      {
+        "source": "search_summary",
+        "url": "https://www.bbb.org/us/tx/port-aransas/profile/pool-maintenance/pool-masters-0825-1000140351",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_tyler_kalla", "established_2008"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.poolmastersstx.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_owned", "2025_copyright", "str_property_coordination"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Tyler Kalla, owner. Established 2008 (18 years). Family-owned. Port Aransas + Corpus + Rockport + Aransas Pass + Padre Island + Portland route (coastal STR-heavy). STR property management coordination service — niche. Yelp-only social. Quote via contact page. 2025 copyright.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Tyler Kalla",
+    "owner_age_estimate": 45,
+    "owner_age_source": "18_year_owner_tenure_proxy",
+    "owner_tenure_years": 18,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 18,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_identified_solid_tenure",
+        "direction": "positive",
+        "evidence": "Tyler Kalla, 18 years owner-operator. Coastal STR-heavy market — defensible niche.",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/port-aransas/profile/pool-maintenance/pool-masters-0825-1000140351",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "str_property_mgmt_niche",
+        "direction": "positive",
+        "evidence": "STR property management coordination — niche service mix that fits coastal vacation-rental geography.",
+        "source": "website",
+        "source_url": "https://www.poolmastersstx.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.bbb.org/us/tx/port-aransas/profile/pool-maintenance/pool-masters-0825-1000140351"
+    ],
+    "enrichment_notes": "MEDIUM-HIGH: 18 yrs, identified owner, STR niche. Owner likely 40s — below retirement window but watchable."
+  },
+  {
+    "legal_name": "Ranch Hand Pool Services",
+    "dba_name": "Ranch Hand Pool Services",
+    "address": null,
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": null,
+    "phone": "(361) 283-2710",
+    "website": "https://www.ranchhandpoolservice.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Dane Blacka and/or Matt Brennan",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "linkedin",
+        "url": "https://www.linkedin.com/in/dane-blacka-376886210",
+        "fetched_at": "2026-05-16",
+        "fields": ["dane_blacka_ranch_hand_pool_services"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.ranchhandpoolservice.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["2023_copyright", "online_booking", "remodel_service_houston_san_antonio_austin"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Dane Blacka has LinkedIn linked to Ranch Hand Pool Services; Matt Brennan also referenced. Corpus base, expansion into Houston/SA/Austin for remodels. Book Online option available — modernizing. 2023 copyright is stale. Active FB/IG.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Dane Blacka and/or Matt Brennan",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "expansion_mode_multi_metro_remodel",
+        "direction": "negative",
+        "evidence": "Coastal HQ but offers remodel service to Houston, San Antonio, Austin — multi-metro expansion mode, not coasting.",
+        "source": "website",
+        "source_url": "https://www.ranchhandpoolservice.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "year_founded_unknown",
+        "direction": "negative",
+        "evidence": "Year established not surfaced. Tenure uncertain.",
+        "source": "web_searches",
+        "source_url": "https://www.ranchhandpoolservice.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": ["https://www.linkedin.com/in/dane-blacka-376886210"],
+    "enrichment_notes": "PASS: multi-metro expansion mode + unknown tenure."
+  },
+  {
+    "legal_name": "Wade In The Water Pool Services LLC",
+    "dba_name": "Wade In The Water Pool & Spa Services",
+    "address": "15715 S Padre Island Dr Ste 101",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78418",
+    "phone": "(361) 658-8581",
+    "website": "https://www.wadeinthewaterpools.com/",
+    "service_mix": "residential_commercial",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Jeff Alloway",
+    "year_established": 2010,
+    "data_sources": [
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/corpus-christi/profile/swimming-pools/wade-in-the-water-pool-services-llc-0825-1000144288",
+        "fetched_at": "2026-05-16",
+        "fields": ["jeff_alloway_owner", "new_ownership_2024_10_24"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.wadeinthewaterpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["since_2010", "national_plaster_council_member", "cpo_certified_technicians"]
+      }
+    ],
+    "platform_affiliation_check": "independent_recent_ownership_change",
+    "verification_notes": "Founded 2010. Per BBB: 'Date of New Ownership: 10/24/2024' — Jeff Alloway is owner since Oct 2024 (recent transaction). National Plaster Council member. CPO techs. Coastal market. 14 year business tenure but only ~1.5 yr owner tenure.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Jeff Alloway (since Oct 2024)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 1,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 16,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "recent_ownership_change_2024",
+        "direction": "disqualifying",
+        "evidence": "BBB records show new ownership 10/24/2024. Jeff Alloway is recent buyer, not retirement-window seller. Outreach value as target = zero in the short term.",
+        "source": "bbb",
+        "source_url": "https://www.bbb.org/us/tx/corpus-christi/profile/swimming-pools/wade-in-the-water-pool-services-llc-0825-1000144288",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.bbb.org/us/tx/corpus-christi/profile/swimming-pools/wade-in-the-water-pool-services-llc-0825-1000144288"
+    ],
+    "enrichment_notes": "DQ: recent ownership change Oct 2024 — new owner just bought, not selling. Watch in 5-10 years."
+  },
+  {
+    "legal_name": "Marble Falls Spa and Pools",
+    "dba_name": "Marble Falls Spa & Pool",
+    "address": "1612 N US Highway 281",
+    "city": "Marble Falls",
+    "county": "Burnet",
+    "state": "TX",
+    "zip": null,
+    "phone": "(830) 693-8292",
+    "website": "https://www.mfspaandpool.com/",
+    "service_mix": "residential_construction_retail",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Lee Beuershausen",
+    "year_established": 1981,
+    "data_sources": [
+      {
+        "source": "search_summary_about",
+        "url": "https://mfspaandpool.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_1981", "lee_beuershausen_took_over_1992"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.mfspaandpool.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "300_plus_pools_built",
+          "gunite_pools_and_spas_specialty",
+          "highland_lakes_horseshoe_bay_kingsland_burnet",
+          "2015_2026_copyright"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1981. Lee Beuershausen took over in 1992 — 34 years owner tenure (one of longest in batch). 300+ pools built. Multi-line: gunite construction + spa retail + service. Highland Lakes coverage (Marble Falls, Horseshoe Bay, Kingsland, Burnet). 2015-2026 copyright range = active maintenance. Industry logos shown (likely PHTA/etc).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Lee Beuershausen",
+    "owner_age_estimate": 65,
+    "owner_age_source": "34_year_owner_tenure_proxy_assumed_30_at_takeover_1992",
+    "owner_tenure_years": 34,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 45,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_in_retirement_window_long_tenure",
+        "direction": "positive",
+        "evidence": "Lee Beuershausen took over 1992 — 34-year owner tenure. Likely 60s, in retirement window. Business has 45-year overall tenure.",
+        "source": "about_page_summary",
+        "source_url": "https://mfspaandpool.com/about-us/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "multi_line_service_construction_retail",
+        "direction": "ambiguous",
+        "evidence": "300+ gunite pools built — construction-heavy. Multi-vertical (service + construction + retail) makes the operation more complex for a small buyer. Hill Country market.",
+        "source": "website",
+        "source_url": "https://www.mfspaandpool.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [],
+    "enrichment_notes": "HIGH PRIORITY TARGET — 34 yr owner tenure (Lee Beuershausen), Hill Country premium market, retirement-window age. Multi-vertical may add complexity."
+  },
+  {
+    "legal_name": "Living Waters Pool Service",
+    "dba_name": "Living Waters Pool Service",
+    "address": null,
+    "city": "Burnet",
+    "county": "Burnet",
+    "state": "TX",
+    "zip": null,
+    "phone": null,
+    "website": "https://www.lwpools.com/",
+    "service_mix": "residential",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Jeff (surname undisclosed)",
+    "year_established": null,
+    "data_sources": [
+      {
+        "source": "facebook",
+        "url": "https://www.facebook.com/people/Living-Waters-Pool-Service/61574828901674/",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_business_burnet"]
+      },
+      {
+        "source": "website",
+        "url": "https://www.lwpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "family_owned_burnet",
+          "2026_copyright",
+          "burnet_lampasas_bertram_marble_falls_horseshoe_bay_kingsland_buchanan_dam"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Family-owned in Burnet, Texas Hill Country. Owner 'Jeff' first-named in customer reviews. No phone number on website. No online quote form. Most coasting tells. 2026 copyright. Year founded not surfaced. Owner surname not surfaced.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Jeff (surname undisclosed publicly)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": null,
+    "employee_count_estimate": 2,
+    "provider_count_estimate": null,
+    "employee_count_source": "small_family_inferred",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 3,
+        "signal_key": "minimal_modernization_no_phone_no_quote",
+        "direction": "positive",
+        "evidence": "No phone number on website, no online quote form, contact form only — extreme coasting tells. Single-county route.",
+        "source": "website",
+        "source_url": "https://www.lwpools.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_identity_first_name_only",
+        "direction": "negative",
+        "evidence": "Only 'Jeff' surfaces — no surname. Outreach requires direct entity lookup.",
+        "source": "web_searches",
+        "source_url": "https://www.lwpools.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.facebook.com/people/Living-Waters-Pool-Service/61574828901674/"
+    ],
+    "enrichment_notes": "MEDIUM (pending owner ID): strong coasting profile (no phone, no quote, no socials, Burnet small market). FB page shows founded recently (page ID 61574828901674 suggests 2024+ FB establishment). May be younger business than appearances."
+  },
+  {
+    "legal_name": "Kenco Pools",
+    "dba_name": "Kenco Pools, Spas and Billiards",
+    "address": null,
+    "city": "Nacogdoches",
+    "county": "Nacogdoches",
+    "state": "TX",
+    "zip": "75964",
+    "phone": "(936) 569-0785",
+    "website": "https://kencofun.com/",
+    "service_mix": "residential_retail_spas_billiards",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Kenneth L Mattheyer (with Debra Mattheyer)",
+    "year_established": 1976,
+    "data_sources": [
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/nacogdoches/profile/pool-contractors/kenco-pools-0825-7004243",
+        "fetched_at": "2026-05-16",
+        "fields": ["ken_mattheyer_president", "debra_mattheyer_director", "established_1976"]
+      },
+      {
+        "source": "website_about",
+        "url": "https://kencofun.com/about/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "founded_1976_ken_mattheyer",
+          "noticed_need_for_pool_store_east_tx",
+          "two_locations_nacogdoches_longview"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1976 by Ken Mattheyer (50-year tenure). Wife Debra is Director. Multi-line: pools + spas + billiards + service + retail. Two locations (Nacogdoches + Longview). Service area includes Lufkin. Latham Visualizer tool referenced — minor modernization. 2026 copyright. East TX market.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Kenneth L Mattheyer (with Debra Mattheyer)",
+    "owner_age_estimate": 75,
+    "owner_age_source": "50_year_owner_tenure_proxy_started_at_25",
+    "owner_tenure_years": 50,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 50,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "extreme_tenure_50_years_named_owners",
+        "direction": "positive",
+        "evidence": "Ken Mattheyer founded 1976, still President 50 years later. Wife Debra is Director. Likely ~75 years old — squarely in late retirement / succession-imminent window.",
+        "source": "bbb_and_about_page",
+        "source_url": "https://kencofun.com/about/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "multi_vertical_retail_service_construction",
+        "direction": "ambiguous",
+        "evidence": "Multi-line operation (pools + spas + billiards + retail + service + renovations) and 2 stores — more complex than pure-play service route.",
+        "source": "website",
+        "source_url": "https://kencofun.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.bbb.org/us/tx/nacogdoches/profile/pool-contractors/kenco-pools-0825-7004243"
+    ],
+    "enrichment_notes": "HIGH PRIORITY TARGET — Ken Mattheyer ~75 yrs old, 50-year owner tenure, husband-wife operation, no kids surfaced in public records (succession likely external). Multi-vertical retail-heavy may not fit pure service route thesis but worth deep-dive."
+  },
+  {
+    "legal_name": "East Texas Pool Service, Inc.",
+    "dba_name": "East Texas Pool Service",
+    "address": "2324 ESE Loop 323",
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "zip": "75701",
+    "phone": "(903) 534-5595",
+    "website": "http://www.easttexaspoolservice.com/",
+    "service_mix": "residential_retail_service_construction",
+    "license_number": null,
+    "license_type": null,
+    "license_holder_name": "Mark D. Odom (with Ken Odom; sons of founder Mack Odom)",
+    "year_established": 1969,
+    "data_sources": [
+      {
+        "source": "bbb",
+        "url": "https://www.bbb.org/us/tx/tyler/profile/pool-supplies/east-texas-pool-service-inc-1075-22000402",
+        "fetched_at": "2026-05-16",
+        "fields": ["mark_d_odom_president"]
+      },
+      {
+        "source": "website_about",
+        "url": "https://www.easttexaspoolservice.com/about-us",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "founded_1969_mack_odom",
+          "sons_ken_and_mark_engineering_background",
+          "57_years_in_business"
+        ]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1969 by Mack Odom (57 years!). Sons Ken Odom and Mark D. Odom (engineering backgrounds) now run it — Mark D. Odom is President. Multi-line: retail products + service + financing. HTTP-only (not HTTPS) website. Tagline 'I Don't Work, I Just Pool Around'. Founder generation likely deceased or fully retired. Second-gen brothers running.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Mark D. Odom (President, with brother Ken Odom)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "second_generation_brothers_proxy",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 57,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "long_tenure_57_years_second_gen_in_retirement_window",
+        "direction": "positive",
+        "evidence": "57-year business, second-gen brothers (Mark + Ken Odom) running. Mark is President. Both have prior engineering careers — joined business as adults, likely 60s now. Strong succession-window profile.",
+        "source": "bbb_and_about",
+        "source_url": "https://www.bbb.org/us/tx/tyler/profile/pool-supplies/east-texas-pool-service-inc-1075-22000402",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "http_only_old_school_website",
+        "direction": "positive",
+        "evidence": "HTTP-only website (no HTTPS) — extreme tech laggard tell.",
+        "source": "live_website_fetch",
+        "source_url": "http://www.easttexaspoolservice.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "multi_vertical_retail_service",
+        "direction": "ambiguous",
+        "evidence": "Multi-line operation (retail products + service + financing). More complex than pure service route.",
+        "source": "website",
+        "source_url": "http://www.easttexaspoolservice.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      "https://www.bbb.org/us/tx/tyler/profile/pool-supplies/east-texas-pool-service-inc-1075-22000402"
+    ],
+    "enrichment_notes": "HIGH PRIORITY TARGET — Mark D. Odom (President), 57-year family business, second-gen brothers in retirement window, HTTP-only old-school site. Tyler/East TX market. Multi-vertical caveat — may be more retail-heavy than service-heavy."
+  }
+]

@@ -1,0 +1,1171 @@
+[
+  {
+    "legal_name": "Broussard's Mortuary",
+    "dba_name": null,
+    "address": "2000 McFaddin Avenue",
+    "city": "Beaumont",
+    "county": "Jefferson",
+    "state": "TX",
+    "zip": "77701",
+    "phone": "(409) 832-1621",
+    "website": "https://broussards1889.com/",
+    "year_established": 1889,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://broussards1889.com/about-us",
+        "fetched_at": "2026-05-16T19:00:00Z",
+        "fields": ["legal_name", "year_established", "generations", "locations"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1889 by Alexander Broussard. Five generations. Recent transition from 4th-gen Jim Broussard to 5th-gen Blue Broussard III and Jayme Broussard Toeppich. Six locations across SE TX.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Blue Broussard III; Jayme Broussard Toeppich (5th gen)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 137,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "recent_5th_gen_succession",
+        "direction": "disqualifying",
+        "evidence": "Jim Broussard (4th gen) announced transfer to 5th gen Blue Broussard III and Jayme Broussard Toeppich. Jayme appointed CEO; she completed a 2016 Rice University Graduate Certificate in Leadership (suggesting ~2010s college grad, ~30-40s today). Succession just completed — owners not aging out for ~20-30 years.",
+        "source": "beaumont_business_journal",
+        "source_url": "http://www.beaumontbusinessjournal.com/local/broussards-mortuary-transitions-fifth-generation",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_scale",
+        "direction": "negative",
+        "evidence": "Six locations (Beaumont x2, Kountze, Nederland, Silsbee, Winnie) plus on-site crematory. Larger than typical solo-owner target.",
+        "source": "live_website_fetch",
+        "source_url": "https://broussards1889.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_operations",
+        "direction": "negative",
+        "evidence": "Modern website, fresh obituaries (May 2026), uses Passare CRM platform per Passare testimonial page. Crematorium added recently. Active leadership transition.",
+        "source": "live_website_fetch",
+        "source_url": "https://broussards1889.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "explicit_anti_corporate_branding",
+        "direction": "positive",
+        "evidence": "Website explicitly distinguishes from 'corporate funeral home buyouts and takeovers' — but with young new owners just installed, this is generational commitment not sale signal.",
+        "source": "live_website_fetch",
+        "source_url": "https://broussards1889.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://broussards1889.com/about-us",
+        "fetched_at": "2026-05-16T19:05:00Z",
+        "fields": ["generations", "successor_names"]
+      },
+      {
+        "source": "beaumont_business_journal",
+        "url": "http://www.beaumontbusinessjournal.com/local/broussards-mortuary-transitions-fifth-generation",
+        "fetched_at": "2026-05-16T19:06:00Z",
+        "fields": ["succession_transition"]
+      }
+    ],
+    "enrichment_notes": "DECLINE: 5th-gen succession just completed; new owners (Jayme + Blue III) are young, well-trained, actively expanding. This is a strong family business but NOT a likely seller in 12-36 months. Place on long watch.",
+    "data_completeness": 0.6
+  },
+  {
+    "legal_name": "Claybar Funeral Home",
+    "dba_name": null,
+    "address": "504 N. 5th St",
+    "city": "Orange",
+    "county": "Orange",
+    "state": "TX",
+    "zip": "77630",
+    "phone": "(409) 886-4445",
+    "website": "https://www.claybarfuneralhome.com/",
+    "year_established": 1946,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.claybarfuneralhome.com/about-us",
+        "fetched_at": "2026-05-16T19:10:00Z",
+        "fields": ["legal_name", "year_established", "generations", "leadership"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1946 by Ambrose and Lannie Claybar. 3 generations active: Brown Claybar (Chairman, 2nd gen) and Warren Claybar (President, 3rd gen, elected May 2007). Operates 3 funeral home locations + 5 cemeteries + crematory + florist.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Warren Claybar (President); Brown Claybar (Chairman of the Board)",
+    "owner_age_estimate": 75,
+    "owner_age_source": "news_article_2011_explicit_age_59_brown_claybar",
+    "owner_tenure_years": 53,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 80,
+    "employee_count_estimate": 19,
+    "provider_count_estimate": null,
+    "employee_count_source": "website_staff_listing",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_75_explicit",
+        "direction": "positive",
+        "evidence": "Brown Claybar (Chairman) was 59 in 2011 per local news article = approx 74-75 in 2026. Warren Claybar (President, 3rd gen) elected to lead in May 2007 — likely 50s-60s now and runs operations day-to-day.",
+        "source": "the_record_newspaper_2011",
+        "source_url": "https://www.therecordlive.com/story/2011/04/15/news/claybar-named-the-record-person-of-the-year/8849.html",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_civic_engagement",
+        "direction": "positive",
+        "evidence": "Brown Claybar served 9 years as Orange Mayor + city council + school board — heavy civic involvement = social capital, ties to community = succession likely intra-family (Warren), not external sale.",
+        "source": "the_record_newspaper_2011",
+        "source_url": "https://www.therecordlive.com/story/2011/04/15/news/claybar-named-the-record-person-of-the-year/8849.html",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "vertical_integration_scale",
+        "direction": "negative",
+        "evidence": "Vertically integrated: 3 funeral home locations, 5 cemeteries, crematory, full-service florist (Blooms by Trendz). Larger than typical solo-owner target — possibly $5M+ revenue.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.claybarfuneralhome.com/about-us/our-location",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_operations",
+        "direction": "negative",
+        "evidence": "New state-of-the-art crematory completed 2022. Modern website with online obituaries. Roughly 19 staff members listed. Not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.claybarfuneralhome.com/about-us/our-staff",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "intra_family_succession_in_progress",
+        "direction": "positive",
+        "evidence": "Warren already President since 2007 (3rd gen); Brown still Chairman; succession partially complete. If Warren has children entering business this would be 4-gen.",
+        "source": "website",
+        "source_url": "https://www.claybarfuneralhome.com/about-us",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.claybarfuneralhome.com/about-us",
+        "fetched_at": "2026-05-16T19:10:00Z",
+        "fields": ["leadership_roles", "generations"]
+      },
+      {
+        "source": "the_record_newspaper_2011",
+        "url": "https://www.therecordlive.com/story/2011/04/15/news/claybar-named-the-record-person-of-the-year/8849.html",
+        "fetched_at": "2026-05-16T19:11:00Z",
+        "fields": ["owner_age", "civic_engagement"]
+      }
+    ],
+    "enrichment_notes": "B-TIER WATCH: Warren (3rd gen) is the operational owner — likely 50s-60s, succession in active phase. Brown (2nd gen, 75) as Chairman could trigger sale on his retirement, but more likely succession to 4th gen if available. Vertically integrated business is larger than typical ETA target. Watch for Warren retirement signals or generational gap.",
+    "data_completeness": 0.7
+  },
+  {
+    "legal_name": "Combest Family Funeral Homes & Crematory",
+    "dba_name": null,
+    "address": "2210 Broadway St",
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": "79401",
+    "phone": "(806) 749-4483",
+    "website": "https://www.combestfamilyfuneralhomes.com/",
+    "year_established": 2010,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.combestfamilyfuneralhomes.com/about/about-us",
+        "fetched_at": "2026-05-16T19:15:00Z",
+        "fields": ["legal_name", "owners", "locations"]
+      }
+    ],
+    "platform_affiliation_check": "chain_acquired_2022_LEGACY_FUNERAL_GROUP",
+    "verification_notes": "REJECT: Legacy Funeral Group acquired Combest Family Funeral Homes from Kevin and Tonya Combest in May 2022. Legacy Funeral Group (founded 1998) operates in TX, FL, AL, LA, NM, OK, KS, NV — one of fastest-growing consolidators. Kevin Combest now serves as Director of Compliance for Legacy Funeral Group. Independence claim in original spine was INCORRECT — needs correction.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Legacy Funeral Group (corporate consolidator)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 64,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 0,
+        "signal_key": "chain_affiliation_disqualifying",
+        "direction": "disqualifying",
+        "evidence": "Acquired by Legacy Funeral Group in May 2022. Legacy is a multi-state funeral consolidator with operations in 8 states. NOT independent any longer.",
+        "source": "legacy_funeral_group_press_release",
+        "source_url": "https://www.legacyfuneralgroup.com/press/combest-family-funeral-homes-joins-the-legacy-family",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 0,
+        "signal_key": "nfda_confirmation_acquisition",
+        "direction": "disqualifying",
+        "evidence": "NFDA (National Funeral Directors Association) confirmed acquisition. Legacy now owns the Lubbock + Tahoka + O'Donnell locations.",
+        "source": "nfda_news",
+        "source_url": "https://nfda.org/news/in-the-news/members-in-the-news/id/6540/legacy-funeral-group-acquires-combest-family-funeral-homes",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "legacy_funeral_group_press",
+        "url": "https://www.legacyfuneralgroup.com/press/combest-family-funeral-homes-joins-the-legacy-family",
+        "fetched_at": "2026-05-16T19:16:00Z",
+        "fields": ["chain_affiliation"]
+      },
+      {
+        "source": "kates_boylston_industry_news",
+        "url": "https://www.kates-boylston.com/industry_news/kevin-combest-rejoins-funeral-industry-as-director-of-compliance-for-legacy-funeral-group/article_51a38c0a-0534-548e-bc8c-581e3060be72.html",
+        "fetched_at": "2026-05-16T19:17:00Z",
+        "fields": ["kevin_combest_current_role"]
+      }
+    ],
+    "enrichment_notes": "EXCLUDE — CHAIN OWNED. Acquired by Legacy Funeral Group May 2022. Owners already sold. Spine record was stale. Add Legacy Funeral Group to exclusion list (alongside SCI/Dignity/Carriage etc.).",
+    "data_completeness": 0.9
+  },
+  {
+    "legal_name": "Sunset Funeral Homes",
+    "dba_name": null,
+    "address": "750 North Carolina",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": null,
+    "phone": "(915) 594-4424",
+    "website": "https://www.sunsetfuneralhomes.net/",
+    "year_established": 1989,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.sunsetfuneralhomes.net/",
+        "fetched_at": "2026-05-16T19:20:00Z",
+        "fields": ["legal_name", "year_established", "locations"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1989 by Joe F. Ramos and Rudy C. Robles. 4 El Paso locations (East 1989, Northeast 1996, West 2001, Americas newer). Current owners: Joe Ramos and Belinda Ramos. Rudy Robles Jr. (2nd gen) and Michael Ramos (likely 2nd gen) on staff. Independent — no chain affiliation found. 58+ staff per website.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Joe F. Ramos and Belinda Ramos",
+    "owner_age_estimate": 72,
+    "owner_age_source": "founder_tenure_proxy_co_founded_1989",
+    "owner_tenure_years": 37,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 37,
+    "employee_count_estimate": 58,
+    "provider_count_estimate": null,
+    "employee_count_source": "website_staff_listing",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "founder_owner_aging",
+        "direction": "positive",
+        "evidence": "Joe F. Ramos co-founded 1989 — if 35-40 at founding, he's now 72-77. Likely succession decision window (12-36 months). Rudy Robles Jr. (2nd gen) and Michael Ramos visible on staff = potential intra-family succession candidates.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.sunsetfuneralhomes.net/about/our-staff",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "size_potentially_above_eta_target",
+        "direction": "negative",
+        "evidence": "4 locations + on-site crematory + 58+ staff + self-describes 'one of fastest growing funeral firms in Texas'. Multi-location chain in El Paso. Probably $7M-$15M revenue. UPPER edge of independent operator size.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.sunsetfuneralhomes.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_operations_passare",
+        "direction": "negative",
+        "evidence": "Uses Passare platform for preneed planning (plan.passare.com/preplan/Sunset). On-site crematory. Multi-location vendor. Not coasting on tech.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.sunsetfuneralhomes.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "second_gen_already_at_business",
+        "direction": "positive",
+        "evidence": "Rudy C. Robles Jr (co-founder's son) confirmed at business. Michael Ramos likely Joe's son. Intra-family succession candidates already trained = sale less likely unless they decline.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.sunsetfuneralhomes.net/about/our-staff",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.sunsetfuneralhomes.net/about/our-staff",
+        "fetched_at": "2026-05-16T19:21:00Z",
+        "fields": ["owner_names", "staff_count"]
+      },
+      {
+        "source": "parting_com_directory",
+        "url": "https://www.parting.com/funeral-home/tx/el-paso/sunset-funeral-homes-east-79915/",
+        "fetched_at": "2026-05-16T19:22:00Z",
+        "fields": ["founders", "second_generation"]
+      }
+    ],
+    "enrichment_notes": "B-TIER WATCH: 2 co-founders aging into late 60s-70s, intra-family succession in progress (Rudy Jr + likely Michael Ramos). 4 locations + 58 staff likely puts revenue $7M-$15M = ABOVE typical ETA target. If 2nd gen sons decline succession, this becomes a 2026-2028 sale. Watch for changes in leadership listings on website.",
+    "data_completeness": 0.65
+  },
+  {
+    "legal_name": "Boxwell Brothers Funeral Directors",
+    "dba_name": null,
+    "address": "2800 Paramount Blvd",
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": "79109",
+    "phone": "(806) 355-8156",
+    "website": "https://www.boxwellbrothers.com/",
+    "year_established": 1924,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.boxwellbrothers.com/our-legacy",
+        "fetched_at": "2026-05-16T19:25:00Z",
+        "fields": ["legal_name", "year_established", "family_generations", "locations"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1924 by Howard and Paul Boxwell. 4 generations: 1st Howard+Paul (1920s); 2nd Ivan; 3rd Jim (d. Aug 2024 age 85) and Mike Boxwell (now sole 2nd gen survivor); 4th Brad (joined 1998) and Bart (joined 1991), Mike's sons; 5th Blakely Boxwell Stephens joined 2018. 6 Panhandle locations.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Mike Boxwell (3rd gen, ~80); Brad Boxwell (4th gen); Bart Boxwell (4th gen); Blakely Boxwell Stephens (5th gen)",
+    "owner_age_estimate": 80,
+    "owner_age_source": "obituary_proxy_brother_jim_boxwell_died_aug_2024_age_85",
+    "owner_tenure_years": 60,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 102,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "explicit_3rd_gen_aging_out",
+        "direction": "positive",
+        "evidence": "Jim Boxwell (3rd gen co-leader) died August 10, 2024 at age 85. His brother Mike Boxwell (also 3rd gen) is now sole 3rd-gen survivor — likely late 70s-mid 80s. Active succession TO 4th gen Brad and Bart underway.",
+        "source": "boxwell_brothers_obituary",
+        "source_url": "https://www.boxwellbrothers.com/obituaries/james-boxwell",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "4th_gen_already_operating",
+        "direction": "negative",
+        "evidence": "Brad joined 1998 (28 years), Bart joined 1991 (35 years). Both are seasoned 4th-gen funeral directors. Blakely (5th gen) onboarded 2018. Strong intra-family succession in place = sale less likely. Brad/Bart are themselves likely 50-60.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.boxwellbrothers.com/our-legacy",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_scale",
+        "direction": "negative",
+        "evidence": "6 locations across Panhandle (Amarillo, Dumas, Vega, Panhandle, Claude, Stratford). Likely $4M-$8M revenue. Above solo-owner ETA threshold.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.boxwellbrothers.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "explicit_independence_commitment",
+        "direction": "negative",
+        "evidence": "Site explicitly states commitment to staying independent. With 4th + 5th generations in place, this is a multi-generational holdout — strong anti-sale signal.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.boxwellbrothers.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "boxwell_legacy_page",
+        "url": "https://www.boxwellbrothers.com/our-legacy",
+        "fetched_at": "2026-05-16T19:25:00Z",
+        "fields": ["full_family_history", "succession_dates"]
+      },
+      {
+        "source": "obituary_jim_boxwell",
+        "url": "https://www.boxwellbrothers.com/obituaries/james-boxwell",
+        "fetched_at": "2026-05-16T19:26:00Z",
+        "fields": ["age_proxy", "sole_surviving_3rd_gen"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — strong intra-family succession to 4th+5th gen. Mike (~80) aging but Brad/Bart at peak operational age with Blakely positioned for the future. 6 locations is above typical ETA target size. Explicit independence stance. Watch list only if Brad/Bart unexpectedly retire early or Blakely transitions out.",
+    "data_completeness": 0.75
+  },
+  {
+    "legal_name": "Rector Funeral Home",
+    "dba_name": null,
+    "address": "2800 S Osage St",
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": "79103",
+    "phone": "(806) 374-1500",
+    "website": "https://www.rectorfuneralhome.com/",
+    "year_established": 1996,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.rectorfuneralhome.com/",
+        "fetched_at": "2026-05-16T19:30:00Z",
+        "fields": ["legal_name", "year_established"]
+      }
+    ],
+    "platform_affiliation_check": "independent_recently_transferred",
+    "verification_notes": "Founded 1996. Facebook post (page ID 61580149462745, dated Feb 23 — likely 2025 or 2026) announced 'Rector Funeral Home is now under new local ownership.' Previous owners NOT named. New owners NOT publicly identified. Single location Amarillo.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "new local owner (unidentified, transferred ~Feb 2025 or 2026)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 30,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 0,
+        "signal_key": "recent_ownership_transfer_completed",
+        "direction": "disqualifying",
+        "evidence": "Facebook post on new business page (ID 61580149462745) announces 'Rector Funeral Home is now under new local ownership' — transfer already completed. Original owners already exited.",
+        "source": "facebook",
+        "source_url": "https://www.facebook.com/61580149462745/posts/we-are-honored-to-share-that-rector-funeral-home-is-now-under-new-local-ownershi/122132504199004982/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "new_local_owner_likely_holding",
+        "direction": "negative",
+        "evidence": "New local ownership announcement = fresh acquisition. New owners unlikely to flip within 12-36 months.",
+        "source": "facebook",
+        "source_url": "https://www.facebook.com/61580149462745/posts/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "facebook_new_ownership_announcement",
+        "url": "https://www.facebook.com/61580149462745/posts/we-are-honored-to-share-that-rector-funeral-home-is-now-under-new-local-ownershi/122132504199004982/",
+        "fetched_at": "2026-05-16T19:31:00Z",
+        "fields": ["ownership_change"]
+      }
+    ],
+    "enrichment_notes": "EXCLUDE — RECENTLY TRANSFERRED. New local ownership announcement on Facebook (~early 2025/2026). Original owner already sold. New owner in holding/transition phase = wrong timing. Re-check in 5-10 years.",
+    "data_completeness": 0.5
+  },
+  {
+    "legal_name": "Griffin Mortuary Funeral Home & Chapel",
+    "dba_name": null,
+    "address": "1715 E Broadway",
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": "79403",
+    "phone": "(806) 744-9000",
+    "website": "https://www.griffinmortuaryservices.com/",
+    "year_established": 2004,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.griffinmortuaryservices.com/",
+        "fetched_at": "2026-05-16T19:35:00Z",
+        "fields": ["legal_name", "year_established", "address"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2004. Owner: Willie Griffin Jr. (business manager, family-owned). Single location Lubbock. Tukios platform. BBB-accredited. No chain affiliation. Family-owned and operated.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Willie Griffin Jr.",
+    "owner_age_estimate": 58,
+    "owner_age_source": "founder_tenure_proxy_22_years_at_business",
+    "owner_tenure_years": 22,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 22,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 2,
+        "signal_key": "small_solo_owner_size",
+        "direction": "positive",
+        "evidence": "Single location Lubbock. Family-owned. Smaller scale = likely $1M-$3M revenue, typical ETA target size.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.griffinmortuaryservices.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "tenure_22_years",
+        "direction": "neutral",
+        "evidence": "Founded 2004 = 22 years. If Willie Griffin Jr. was 35-40 at founding, he's 57-62 today. Pre-aging-out window but trending in that direction.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.griffinmortuaryservices.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tukios_platform",
+        "direction": "negative",
+        "evidence": "Uses Tukios funeral software platform. BBB-accredited. Active obituary listings. Not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.griffinmortuaryservices.com/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.griffinmortuaryservices.com/",
+        "fetched_at": "2026-05-16T19:35:00Z",
+        "fields": ["address", "platform"]
+      },
+      {
+        "source": "bbb_business_profile",
+        "url": "https://www.bbb.org/us/tx/lubbock/profile/funeral-director/griffin-mortuary-0875-30340",
+        "fetched_at": "2026-05-16T19:36:00Z",
+        "fields": ["principal_contact_name"]
+      }
+    ],
+    "enrichment_notes": "C-TIER: Younger business (22 years), owner likely 55-62. Single location. Active operations. Not yet in aging-out window. Recheck in 5-7 years. Limited public info on Willie Griffin Jr.'s age = data_completeness 0.55.",
+    "data_completeness": 0.55
+  },
+  {
+    "legal_name": "Sugar Land Mortuary",
+    "dba_name": "WMS Sugar Land Mortuary, LLC",
+    "address": "1818 Eldridge Rd",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "phone": "(281) 277-1818",
+    "website": "https://slmortuary.com/",
+    "year_established": 2010,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://slmortuary.com/",
+        "fetched_at": "2026-05-16T19:40:00Z",
+        "fields": ["legal_name", "address"]
+      },
+      {
+        "source": "buzzfile",
+        "url": "https://www.buzzfile.com/business/Sugarland-Mortuary-281-277-1818",
+        "fetched_at": "2026-05-16T19:41:00Z",
+        "fields": ["year_established_proxy"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Owner L. Donnell Williams (also known as Larry Donnell Williams), President of WMS Sugar Land Mortuary, LLC. Single location Sugar Land. Self-describes as 'only locally owned and operated funeral service provider and crematory in Sugar Land.' Site emphasizes anti-corporate positioning.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "L. Donnell Williams (Larry Donnell Williams)",
+    "owner_age_estimate": 44,
+    "owner_age_source": "blog_post_2011_explicit_age_29",
+    "owner_tenure_years": 16,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 16,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_for_aging_out",
+        "direction": "disqualifying",
+        "evidence": "L. Donnell Williams was 29 in a July 2011 blog post = born ~1982. In 2026 he's ~44 years old. Far below aging-out window. Wrong timing for ETA acquisition target.",
+        "source": "blog_post_2011_avenidas_funeral",
+        "source_url": "http://avenidasfuneralchapel.blogspot.com/2011/07/you-get-what-you-pay-for.html",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "small_solo_owner_size",
+        "direction": "positive",
+        "evidence": "Single location Sugar Land with on-site crematory. Smaller scale = likely $1.5M-$3M revenue. Right size for ETA target.",
+        "source": "live_website_fetch",
+        "source_url": "https://slmortuary.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_operations",
+        "direction": "negative",
+        "evidence": "Owner built palatial facility from ground up; previously operated 2 facilities in Oakland CA before TX. Has on-site crematory. Modern, well-capitalized — not coasting.",
+        "source": "blog_post_2011_avenidas_funeral",
+        "source_url": "http://avenidasfuneralchapel.blogspot.com/2011/07/you-get-what-you-pay-for.html",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "blog_post_avenidas_funeral_chapel",
+        "url": "http://avenidasfuneralchapel.blogspot.com/2011/07/you-get-what-you-pay-for.html",
+        "fetched_at": "2026-05-16T19:41:00Z",
+        "fields": ["owner_age_explicit_2011", "background"]
+      },
+      {
+        "source": "corporationwiki",
+        "url": "https://www.corporationwiki.com/Texas/Sugar-Land/larry-donnell-williams/39117080.aspx",
+        "fetched_at": "2026-05-16T19:42:00Z",
+        "fields": ["entity_legal_name", "owner_role"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — owner too young (~44). Wrong timing. Building career, not winding down. Recheck in 20+ years.",
+    "data_completeness": 0.7
+  },
+  {
+    "legal_name": "Trevino-Smith Funeral Home And Crematory",
+    "dba_name": null,
+    "address": "2610 South Texas Ave",
+    "city": "Bryan",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": "77802",
+    "phone": "(979) 822-2424",
+    "website": "https://www.trevinosmithfh.com/",
+    "year_established": 2007,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.trevinosmithfh.com/",
+        "fetched_at": "2026-05-16T19:45:00Z",
+        "fields": ["legal_name", "addresses"]
+      },
+      {
+        "source": "bcs_chamber_of_commerce",
+        "url": "https://business.bcschamber.org/list/member/trevino-smith-funeral-home-crematory-5118",
+        "fetched_at": "2026-05-16T19:46:00Z",
+        "fields": ["year_established_owner_tenure"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 2007 by Agustin Trevino Jr. (President) with stepfather Dale Smith and mother. Trevino started his funeral career in Brazos Valley over 18 years ago. 2 locations: Bryan and Madisonville. Texas HUB-certified (Historically Underutilized Business).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Agustin Trevino Jr. (President); Dale Smith (stepfather, co-founder)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": 19,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 19,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_unknown_likely_younger",
+        "direction": "neutral",
+        "evidence": "Agustin Trevino Jr. (Jr suffix indicates younger generation) started funeral career 18+ years ago. If he started at 23-30, he's now 42-50. Active career, not aging out. Stepfather Dale Smith might be older signal but he's not the operational owner.",
+        "source": "kbtx_news",
+        "source_url": "https://www.kbtx.com/2021/01/27/local-funeral-homes-stretched-thin-by-covid-19-deaths/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "small_solo_owner_size",
+        "direction": "positive",
+        "evidence": "2 locations (Bryan main + Madisonville). On-site crematory. Family-owned. Probably $1.5M-$3M revenue. Right size for ETA target.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.trevinosmithfh.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "engaged_in_news_media",
+        "direction": "negative",
+        "evidence": "Trevino visible in March 2025 news article fighting against rising prices (tariffs) — actively engaged, not coasting.",
+        "source": "kbtx_news_2025",
+        "source_url": "https://www.kbtx.com/2025/03/26/death-taxes-tied-with-tariffs-bryan-funeral-home-fights-against-rising-prices/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "hispanic_minority_owned_hub_certified",
+        "direction": "positive",
+        "evidence": "TX HUB-certified business (Historically Underutilized Business) — supports independence positioning. Niche market in Brazos Valley.",
+        "source": "bcs_chamber",
+        "source_url": "https://business.bcschamber.org/list/member/trevino-smith-funeral-home-crematory-5118",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "kbtx_news_covid_2021",
+        "url": "https://www.kbtx.com/2021/01/27/local-funeral-homes-stretched-thin-by-covid-19-deaths/",
+        "fetched_at": "2026-05-16T19:46:00Z",
+        "fields": ["owner_tenure_proxy"]
+      },
+      {
+        "source": "bcs_chamber_directory",
+        "url": "https://business.bcschamber.org/list/member/trevino-smith-funeral-home-crematory-5118",
+        "fetched_at": "2026-05-16T19:47:00Z",
+        "fields": ["hub_certification", "background"]
+      }
+    ],
+    "enrichment_notes": "C-TIER: Younger operational owner (Trevino Jr., likely 40s-50s). Not in aging window. Right size for ETA. Active operations. Recheck in 10-15 years if stepfather Dale Smith retiring triggers sale. Limited owner age data.",
+    "data_completeness": 0.55
+  },
+  {
+    "legal_name": "Callaway-Jones Funeral Home and Crematory",
+    "dba_name": null,
+    "address": "3001 S College Ave",
+    "city": "Bryan",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": "77801",
+    "phone": "(979) 822-3717",
+    "website": "https://www.callawayjones.com/",
+    "year_established": 1952,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.callawayjones.com/",
+        "fetched_at": "2026-05-16T19:50:00Z",
+        "fields": ["legal_name", "address", "year_established"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded late 1952. 5 generations: 3rd gen Raymond Callaway Jones (deceased 2009); 4th gen Mike Jones (born 1956, deceased 2004 at age 48); 5th gen Cody D. Jones (owner, son of Mike) + mother Lorene A. Jones. Also operates Cozart Funeral Home and Restever Memorial Park Cemetery.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Cody D. Jones (5th gen, owner); Lorene A. Jones (mother)",
+    "owner_age_estimate": 40,
+    "owner_age_source": "young_funeral_professional_award_2014",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 74,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_for_aging_out",
+        "direction": "disqualifying",
+        "evidence": "Cody Jones received inaugural Young Funeral Professional of the Year Award in 2014 (typically awarded to age 40 or younger). Father Mike Jones born 1956, died 2004 — Cody likely born late 1980s. Now ~35-40 years old. NOT aging out.",
+        "source": "callaway_jones_award_page",
+        "source_url": "https://callawayjones.com/cody-jones-receives-young-funeral-professional-year-award/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "harvard_program_strong_industry_engagement",
+        "direction": "negative",
+        "evidence": "Cody participated in Meet The Mentors Funeral Program at Harvard University. Strong industry engagement = building career, not winding down.",
+        "source": "callaway_jones_award_page",
+        "source_url": "https://callawayjones.com/cody-jones-receives-young-funeral-professional-year-award/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_entity_scale",
+        "direction": "negative",
+        "evidence": "Operates Callaway-Jones + Cozart Funeral Home + Restever Memorial Park Cemetery. Multi-entity = larger than typical solo-owner target.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.callawayjones.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_operations",
+        "direction": "negative",
+        "evidence": "Active LinkedIn, Twitter/X presence. New Funeral Center built and opened. Modern.",
+        "source": "callaway_jones_website",
+        "source_url": "https://www.callawayjones.com/bryan-texas-funeral-center-now-open",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "callaway_jones_award_page",
+        "url": "https://callawayjones.com/cody-jones-receives-young-funeral-professional-year-award/",
+        "fetched_at": "2026-05-16T19:51:00Z",
+        "fields": ["owner_age_estimate", "engagement"]
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.callawayjones.com/bryan-texas-funeral-center-now-open",
+        "fetched_at": "2026-05-16T19:52:00Z",
+        "fields": ["growth_expansion"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — 5th gen Cody Jones (40-ish) is in active growth phase, not aging out. Strong intra-family succession already complete. Multi-entity scale. Watch in 20+ years if needed.",
+    "data_completeness": 0.7
+  },
+  {
+    "legal_name": "Thompson's Harveson & Cole Funeral Homes & Crematory",
+    "dba_name": "Thompsons Cremations & Funeral Services",
+    "address": "4350 River Oaks Boulevard",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76114",
+    "phone": "(817) 336-0345",
+    "website": "https://www.thompsonfunerals.com/",
+    "year_established": 1911,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.thompsonfunerals.com/about-us",
+        "fetched_at": "2026-05-16T19:55:00Z",
+        "fields": ["legal_name", "year_established", "family_generations"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 1911 by Quincy Adams Harveson. Guy Thompson + Kathleen bought 1981 (3rd gen). Daughter Lucinda (Cindy) Thompson ran it; Martin Thompson (Lucinda's brother) acquired April 2020 as 'keeping it in family.' Currently led by Martin Thompson, wife Janice Thompson, son Jon Thompson (4th gen).",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Martin Thompson; Janice Thompson; Jon Thompson (son, 4th gen)",
+    "owner_age_estimate": 72,
+    "owner_age_source": "tenure_proxy_started_at_business_1976_22yrs_before_1998",
+    "owner_tenure_years": 50,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 115,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_age_aging_window",
+        "direction": "positive",
+        "evidence": "Martin Thompson worked at father Guy's funeral home 22 years before opening Grapevine in 1998 = started 1976. If at 22 in 1976, born ~1954, now ~72. RIGHT IN THE AGING-OUT WINDOW.",
+        "source": "deathcare_industry_article",
+        "source_url": "https://deathcareindustry.com/keeping-it-in-the-family-martin-thompson-son-cremation-funeral-service-acquires-thompsons-harveson-cole-funeral-home/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "4th_gen_already_operating",
+        "direction": "negative",
+        "evidence": "Jon Thompson (Martin's son, 4th gen) actively in business. Intra-family succession candidate already in place.",
+        "source": "deathcare_industry_article",
+        "source_url": "https://deathcareindustry.com/keeping-it-in-the-family-martin-thompson-son-cremation-funeral-service-acquires-thompsons-harveson-cole-funeral-home/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 0,
+        "signal_key": "intra_family_consolidation_april_2020",
+        "direction": "neutral",
+        "evidence": "Martin Thompson acquired sister Cindy's Thompson's Harveson & Cole April 2020. Consolidated under combined entity Thompsons Cremations & Funeral Services. Family-owned, but business is undergoing transformation.",
+        "source": "deathcare_industry_article",
+        "source_url": "https://deathcareindustry.com/keeping-it-in-the-family-martin-thompson-son-cremation-funeral-service-acquires-thompsons-harveson-cole-funeral-home/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_scale",
+        "direction": "negative",
+        "evidence": "Operates Thompson's Harveson & Cole + Martin Thompson & Son Funeral Home. Multi-location, 100+ year old business. Likely $4M-$8M revenue, above solo-owner target.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.thompsonfunerals.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "explicit_dfw_minority_independent",
+        "direction": "positive",
+        "evidence": "Self-describes as 'one of the few remaining family-owned and managed funeral homes in the Dallas/Fort Worth metroplex' — minority in heavily-consolidated market. If Jon Thompson does not continue, this is a likely future sale.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.thompsonfunerals.com/about-us",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "deathcare_industry_article",
+        "url": "https://deathcareindustry.com/keeping-it-in-the-family-martin-thompson-son-cremation-funeral-service-acquires-thompsons-harveson-cole-funeral-home/",
+        "fetched_at": "2026-05-16T19:55:00Z",
+        "fields": ["acquisition_2020", "family_structure"]
+      },
+      {
+        "source": "thompson_funeral_history",
+        "url": "https://thompsonfunerals.com/legacy/history/",
+        "fetched_at": "2026-05-16T19:56:00Z",
+        "fields": ["full_history"]
+      }
+    ],
+    "enrichment_notes": "A-TIER WATCH: Martin (~72) in aging-out window with son Jon (4th gen) in business. Three potential outcomes: (1) Jon takes over (most likely given 4 gens), (2) sale to consolidator if Jon declines, (3) hybrid. Multi-entity scale above ETA target. Watch for Jon's role expansion signals or external sale signals in next 24-36 months.",
+    "data_completeness": 0.75
+  },
+  {
+    "legal_name": "Brown Owens & Brumley Family Funeral & Crematory",
+    "dba_name": null,
+    "address": "3208 Bishop Dr, Arlington",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "phone": "(817) 335-4557",
+    "website": "https://www.brownowensbrumley.com/",
+    "year_established": 1988,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://www.brownowensbrumley.com/about-us/our-history",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["legal_name", "year_established", "family_generations"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Roots 1879 (George L. Gause); current entity 1988 when Joe B. Brown (born 1/29/1932, died 7/3/2000) acquired Gause-Ware Owens & Brumley. 2nd gen Monte Joe Brown (Joe's son) led after 2000. JUST RETIRED Aug 2, 2025 — succeeded by 3rd gen Jake Brown (son), wife Sabri, and Tori Brown (daughter). New location opened. Henderson Street facility closed.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Jake Brown (3rd gen); Sabri Brown; Tori Brown (3rd gen); Monte Joe Brown (retired 8/2/2025)",
+    "owner_age_estimate": null,
+    "owner_age_source": "tenure_proxy_3rd_generation_younger_owners",
+    "owner_tenure_years": null,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 38,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 0,
+        "signal_key": "succession_just_completed_aug_2025",
+        "direction": "disqualifying",
+        "evidence": "Memorial Celebration Aug 2, 2025 explicitly marked retirement of Monte & Chris Brown. Henderson Street location closed; 3rd gen Jake + Sabri + Tori opened new location. Succession completed.",
+        "source": "fort_worth_report",
+        "source_url": "https://fortworthreport.org/2025/07/29/brown-owens-brumley-family-funeral-home-crematory-memorial-celebration/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "3rd_gen_young_active_growth",
+        "direction": "negative",
+        "evidence": "Tori Brown is a Keller Central High School graduate ~1 year into business. Jake is her brother. Young owners, growing not winding down.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.brownowensbrumley.com/about-us/our-history",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "expansion_signal",
+        "direction": "negative",
+        "evidence": "Closed Henderson Street, opened new location. Active expansion mode.",
+        "source": "fort_worth_report",
+        "source_url": "https://fortworthreport.org/2025/07/29/brown-owens-brumley-family-funeral-home-crematory-memorial-celebration/",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "fort_worth_report",
+        "url": "https://fortworthreport.org/2025/07/29/brown-owens-brumley-family-funeral-home-crematory-memorial-celebration/",
+        "fetched_at": "2026-05-16T20:01:00Z",
+        "fields": ["retirement_succession_2025"]
+      },
+      {
+        "source": "live_website_history_page",
+        "url": "https://www.brownowensbrumley.com/about-us/our-history",
+        "fetched_at": "2026-05-16T20:02:00Z",
+        "fields": ["full_history", "leadership"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — succession just completed Aug 2025 to young 3rd gen owners. Wrong timing. Recheck in 25+ years.",
+    "data_completeness": 0.85
+  },
+  {
+    "legal_name": "Lighthouse Funeral and Cremation Services",
+    "dba_name": "Seven C's Mortuary Service, LLC",
+    "address": "3707 Wolflin Ave (also 4207 SW 21st Ave)",
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": null,
+    "phone": "(806) 418-6509",
+    "website": "https://lighthousefunerals.com/",
+    "year_established": 2017,
+    "data_sources": [
+      {
+        "source": "website",
+        "url": "https://lighthousefunerals.com/",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["legal_name", "year_established"]
+      },
+      {
+        "source": "bbb_business_profile",
+        "url": "https://www.bbb.org/us/tx/amarillo/profile/funeral-homes/lighthouse-funeral-home-and-cremation-services-0815-99129531",
+        "fetched_at": "2026-05-16T20:06:00Z",
+        "fields": ["year_established_proxy"]
+      }
+    ],
+    "platform_affiliation_check": "independent",
+    "verification_notes": "Founded 11/1/2017 by Joel Carver. Entity: Seven C's Mortuary Service, LLC. Amarillo native, Amarillo College Mortuary Science grad. 10+ years funeral experience. Patricia Garcia appointed Managing Partner July 30, 2024 — joint leadership structure. Self-describes as low-cost alternative to corporate-priced services.",
+    "entity_sos_file_number": null,
+    "entity_formation_date": null,
+    "entity_status": "unknown",
+    "registered_agent": null,
+    "owner_name": "Joel Carver (Founder/Owner); Patricia Garcia (Managing Partner)",
+    "owner_age_estimate": 38,
+    "owner_age_source": "tenure_proxy_10_plus_years_funeral_experience",
+    "owner_tenure_years": 9,
+    "owner_homestead_address": null,
+    "owner_property_deed_date": null,
+    "years_in_business": 9,
+    "employee_count_estimate": null,
+    "provider_count_estimate": null,
+    "employee_count_source": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "signals": [
+      {
+        "layer": 1,
+        "signal_key": "owner_too_young_for_aging_out",
+        "direction": "disqualifying",
+        "evidence": "Joel Carver has '10+ years' of funeral experience and recently founded (2017). Amarillo College mortuary science graduate. Active in Boy Scouts. Likely 33-42 years old. NOT aging out.",
+        "source": "lighthouse_about_page",
+        "source_url": "https://snail-avocado-9f84.squarespace.com/about",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "managing_partner_just_added",
+        "direction": "negative",
+        "evidence": "Patricia Garcia appointed Managing Partner July 30, 2024. Indicates business GROWING — owner is bringing in partner to scale, not winding down.",
+        "source": "lighthouse_news",
+        "source_url": "https://lighthousefunerals.com/lighthouse-funeral-home-appoints-patricia-garcia-as-managing-partner/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "small_but_growing",
+        "direction": "neutral",
+        "evidence": "Recently founded (2017). Multiple addresses suggesting 2 locations. Low-cost positioning — likely smaller revenue ~$800K-$2M.",
+        "source": "live_website_fetch",
+        "source_url": "https://lighthousefunerals.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_low_cost_disruptor_positioning",
+        "direction": "negative",
+        "evidence": "Self-positioned as 'low-cost alternative to corporate-priced services' using technology to reduce expenses. Founder motivated by consolidation in industry. Growth-stage business.",
+        "source": "lighthouse_about_page",
+        "source_url": "https://snail-avocado-9f84.squarespace.com/about",
+        "observed_at": "2026-05-16"
+      }
+    ],
+    "data_sources_added": [
+      {
+        "source": "lighthouse_about_page",
+        "url": "https://snail-avocado-9f84.squarespace.com/about",
+        "fetched_at": "2026-05-16T20:05:00Z",
+        "fields": ["owner_background", "tenure"]
+      },
+      {
+        "source": "lighthouse_news_2024",
+        "url": "https://lighthousefunerals.com/lighthouse-funeral-home-appoints-patricia-garcia-as-managing-partner/",
+        "fetched_at": "2026-05-16T20:06:00Z",
+        "fields": ["managing_partner_appointment"]
+      },
+      {
+        "source": "corporationwiki_seven_cs",
+        "url": "https://www.corporationwiki.com/Texas/Amarillo/joel-carver/108199130.aspx",
+        "fetched_at": "2026-05-16T20:07:00Z",
+        "fields": ["legal_entity_name"]
+      }
+    ],
+    "enrichment_notes": "DECLINE — owner too young (~38), business too new (2017). Growth/expansion phase, not aging out. Just added managing partner for scale. Wrong timing. Recheck in 25+ years.",
+    "data_completeness": 0.7
+  }
+]

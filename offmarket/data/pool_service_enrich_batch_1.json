@@ -1,0 +1,1918 @@
+[
+  {
+    "spine_index": 0,
+    "legal_name": "R Pools LLC",
+    "city": "Spring",
+    "county": "Harris",
+    "website": "https://www.rpoolsllc.com/",
+    "year_established": 2000,
+    "years_in_business": 26,
+    "owner_name": "Brandon (surname undisclosed)",
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed; not verified via Comptroller)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "owner name not published on website (only first name 'Brandon')",
+      "no online customer portal",
+      "no specific pool-route software (Field Routes/Pool Office Manager) referenced",
+      "limited public owner identity = avoiding marketing"
+    ],
+    "modern_tech_signals": [
+      "free online quote",
+      "text/SMS contact option",
+      "weekly service-package pricing displayed"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of rpoolsllc.com homepage 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.rpoolsllc.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founding_year_2000", "owner_first_name", "service_packages", "SMS_option"]
+      }
+    ],
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 1,
+    "legal_name": "Boardwalk Pools LLC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://boardwalkpoolstx.com/",
+    "year_established": null,
+    "years_in_business": 20,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no owner name published",
+      "exact founding year not disclosed (vague '20+ years')",
+      "no customer portal",
+      "no SMS reminder system mentioned",
+      "no IPSSA membership"
+    ],
+    "modern_tech_signals": [
+      "online instant pool pricing tool",
+      "Google reviews integration (4.9)",
+      "Facebook + Instagram presence"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of boardwalkpoolstx.com/about-us 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://boardwalkpoolstx.com/about-us",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_owned_claim", "20+_years_experience", "services"]
+      }
+    ],
+    "data_completeness": 0.4
+  },
+  {
+    "spine_index": 2,
+    "legal_name": "Manning Pool Service",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://manningpoolservice.com/",
+    "year_established": 2001,
+    "years_in_business": 25,
+    "owner_name": "Jeff Manning and Susan Manning (co-founders)",
+    "owner_age_estimate": 62,
+    "owner_age_source": "founded 2001 + 50+ years combined pool experience + 'guided sons' language implies founders ~55-65",
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": 15,
+    "employee_count_estimate": 25,
+    "weekly_account_count": 450,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no customer portal mentioned",
+      "no SMS reminder system",
+      "no pool route software named (Field Routes/Pool Office Manager)",
+      "IPSSA not mentioned"
+    ],
+    "modern_tech_signals": [
+      "pool automation/variable-speed offerings",
+      "featured KPRC Channel 2 / Houston Life",
+      "16-step service process documented"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "live-fetch of manningpoolservice.com/about 2026-05-16; 'Jeff has guided his sons to become masters in the trade' = explicit son-succession path"
+    },
+    "data_sources": [
+      {
+        "url": "https://manningpoolservice.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "co-founders",
+          "founded_2001",
+          "450_pools_weekly",
+          "son_succession_language",
+          "50+_yrs_combined_experience"
+        ]
+      }
+    ],
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 3,
+    "legal_name": "Team Pool Service",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://teampoolservice.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": true,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no owner name published",
+      "no founding year disclosed",
+      "no customer portal",
+      "no SMS reminders mentioned",
+      "no operational metrics published"
+    ],
+    "modern_tech_signals": [
+      "11 service areas listed",
+      "HomeAdvisor 4.9 rating",
+      "Certified Pool Operators + IPSSA membership"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of teampoolservice.com/about 2026-05-16; family-owned claim but no specific successor language"
+    },
+    "data_sources": [
+      {
+        "url": "https://teampoolservice.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_owned_claim", "IPSSA_member", "CPO_certified", "service_areas"]
+      }
+    ],
+    "data_completeness": 0.3
+  },
+  {
+    "spine_index": 4,
+    "legal_name": "The Pool Initiative LLC",
+    "city": "Magnolia",
+    "county": "Montgomery",
+    "website": "https://www.thepoolinitiative.com/",
+    "year_established": 2019,
+    "years_in_business": 7,
+    "owner_name": "Erinn Dethloff",
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no online customer portal",
+      "no SMS reminder system",
+      "no specific pool-route software referenced"
+    ],
+    "modern_tech_signals": [
+      "quote request form",
+      "TikTok, Threads, Facebook, Instagram presence",
+      "2021 merger with another local pool service shows active operator"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of thepoolinitiative.com/about 2026-05-16; short tenure since 2019"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.thepoolinitiative.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Erinn_Dethloff", "founded_2019", "2021_merger"]
+      }
+    ],
+    "data_completeness": 0.45,
+    "fit_warning": "FOUNDED 2019 + age unknown — too new and likely too young an owner for coast-and-sell ICP"
+  },
+  {
+    "spine_index": 5,
+    "legal_name": "Lone Star Pool Services",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://lonestarpoolcleaning.com/",
+    "year_established": 2008,
+    "years_in_business": 18,
+    "owner_name": "Charles McKenney",
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": true,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no customer portal mentioned",
+      "no SMS reminders",
+      "no pool route software named"
+    ],
+    "modern_tech_signals": [
+      "BBB A-rated accredited",
+      "IPSSA water chemistry certification",
+      "Certified Pool/Spa Operator + Inspector via NSPF"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of lonestarpoolcleaning.com/about-us 2026-05-16; no family/successor language"
+    },
+    "data_sources": [
+      {
+        "url": "https://lonestarpoolcleaning.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Charles_McKenney", "founded_2008", "IPSSA_member", "NSPF_CPO/CPI"]
+      }
+    ],
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 6,
+    "legal_name": "Aloha Swimming Pools Inc",
+    "city": "Spring",
+    "county": "Harris",
+    "website": "https://alohapoolstx.com/",
+    "year_established": 1982,
+    "years_in_business": 44,
+    "owner_name": "Brian Prewitt (VP); founded by Loy Easter in 1982; biz registered Sep 1, 1999",
+    "owner_age_estimate": 62,
+    "owner_age_source": "Founder Loy Easter (1982); Brian Prewitt VP since at least 1999 — Brian likely 55-65, Loy likely 70+ (semi-retired)",
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "mixed",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "40+ year tenure with no owner full name published",
+      "no customer portal",
+      "no SMS reminders",
+      "no specific software mentioned",
+      "only BBB accreditation referenced, no IPSSA"
+    ],
+    "modern_tech_signals": ["basic contact forms"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of alohapoolstx.com 2026-05-16; 'Brian and Chris' both listed but unclear if Chris is family successor or partner"
+    },
+    "data_sources": [
+      {
+        "url": "https://alohapoolstx.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["40+_years_tenure", "family_operated", "two_contact_persons"]
+      },
+      {
+        "url": "BBB + web search May 2026",
+        "fetched_at": "2026-05-16",
+        "fields": ["founder_Loy_Easter", "VP_Brian_Prewitt", "founded_1982", "registered_1999"]
+      }
+    ],
+    "data_completeness": 0.65,
+    "fit_signal": "STRONG — Founder Loy Easter (likely 70+, possibly retired); VP Brian Prewitt running operations; 44-year tenure, minimal modernization = high coast-and-sell probability + possible succession-driven sale"
+  },
+  {
+    "spine_index": 7,
+    "legal_name": "Aqua Premier Pool Services, LLC",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "website": "https://aquapremierpools.com/",
+    "year_established": 2008,
+    "years_in_business": 18,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no owner name published",
+      "no IPSSA membership",
+      "no customer portal",
+      "no SMS reminder system",
+      "no specific pool-route software"
+    ],
+    "modern_tech_signals": [
+      "online quote system",
+      "Facebook + Instagram + TikTok presence",
+      "8 service categories"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of aquapremierpools.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://aquapremierpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_2008", "services", "online_quotes"]
+      }
+    ],
+    "data_completeness": 0.4
+  },
+  {
+    "spine_index": 8,
+    "legal_name": "The Pool Boys",
+    "city": "League City",
+    "county": "Galveston",
+    "website": "https://poolboys.com/",
+    "year_established": 2011,
+    "years_in_business": 15,
+    "owner_name": "Justin Morehead and Zac Nicklas (co-owners)",
+    "owner_age_estimate": 45,
+    "owner_age_source": "founded 2011 + ongoing fleet expansion suggests owners early-to-mid 40s",
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": 11,
+    "employee_count_estimate": 15,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": "TICL 728",
+    "coasting_tells": [
+      "no customer portal",
+      "no SMS reminders mentioned",
+      "no specific pool-route software"
+    ],
+    "modern_tech_signals": [
+      "fleet of 14 vehicles (2 vans + 9 trucks + additions in 2025)",
+      "'POOL Principles' employee development program",
+      "active fleet expansion through 2025 (NOT coasting)",
+      "dispatch email system"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of poolboys.com/about-us 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://poolboys.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "fields": ["co-owners", "founded_2011", "14_vehicles", "TICL_728", "active_2025_expansion"]
+      }
+    ],
+    "data_completeness": 0.7,
+    "fit_warning": "ACTIVELY GROWING — multi-owner + 2025 fleet expansion suggests not coasting, not ready to sell"
+  },
+  {
+    "spine_index": 9,
+    "legal_name": "Kraken Pool Services",
+    "city": "Friendswood",
+    "county": "Galveston",
+    "website": "https://krakenpoolservicestx.com/",
+    "year_established": 2023,
+    "years_in_business": 3,
+    "owner_name": "John Carlson and Chris Malbrough (firefighter co-owners)",
+    "owner_age_estimate": 45,
+    "owner_age_source": "Captain-rank firefighters typically 40-55",
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "mixed",
+    "ipssa_member": false,
+    "tpcl_license": "TICL 1370",
+    "coasting_tells": [
+      "owners are still firefighters (side business)",
+      "no customer portal yet",
+      "no specific pool-route software"
+    ],
+    "modern_tech_signals": [
+      "free quote request system",
+      "SMS opt-in",
+      "Facebook presence",
+      "20+ municipalities serviced"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of krakenpoolservicestx.com/about 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://krakenpoolservicestx.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["co-owners_firefighters", "founded_Jan_2023", "TICL_1370"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "fit_warning": "FOUNDED 2023 — too short tenure for coast-and-sell. Side business by firefighter partners; not classic owner-tired profile"
+  },
+  {
+    "spine_index": 10,
+    "legal_name": "C&E Pristine, LLC",
+    "city": "Webster",
+    "county": "Harris",
+    "website": "https://cepristinepools.com/",
+    "year_established": 2016,
+    "years_in_business": 10,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": 3,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "owners not publicly named",
+      "no IPSSA membership",
+      "no customer portal",
+      "no SMS reminders mentioned",
+      "no specific pool route software"
+    ],
+    "modern_tech_signals": ["office email published", "3-route fleet documented"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of cepristinepools.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://cepristinepools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["address", "phone", "services"]
+      }
+    ],
+    "data_completeness": 0.35
+  },
+  {
+    "spine_index": 11,
+    "legal_name": "Patten Pool Repair",
+    "city": "Spring",
+    "county": "Montgomery",
+    "website": "https://pattenpool.com/",
+    "year_established": 1982,
+    "years_in_business": 44,
+    "owner_name": "Ron Patten",
+    "owner_age_estimate": 68,
+    "owner_age_source": "1982 founding + 30+ years operational experience implies founder ~25-30 at start, now ~65-70",
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": 1500,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": "TICL 802",
+    "coasting_tells": [
+      "no second-gen successor language despite 44-year tenure",
+      "no customer portal",
+      "no SMS reminders",
+      "no specific pool route software (Field Routes/POM)",
+      "site states minimal advertising",
+      "4.6 stars (flat) on customer rating"
+    ],
+    "modern_tech_signals": [
+      "TICL 802 (low/early license number — long license tenure)",
+      "1500+ customer base = scaled operation"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of pattenpool.com/about 2026-05-16; Ron Patten named but no son/daughter mentioned"
+    },
+    "data_sources": [
+      {
+        "url": "https://pattenpool.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Ron_Patten", "founded_1982", "1500+_customers", "TICL_802"]
+      }
+    ],
+    "data_completeness": 0.75,
+    "fit_signal": "STRONG — Ron Patten est. age 68, 44-year tenure, 1500+ customers, minimal modernization, no visible successor"
+  },
+  {
+    "spine_index": 12,
+    "legal_name": "Preferred Pools",
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "website": "https://yourpreferredpools.com/",
+    "year_established": 2011,
+    "years_in_business": 15,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": 1,
+    "employee_count_estimate": 4,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "owner full name not published",
+      "exact founding year vague (15+ years)",
+      "no customer portal",
+      "no quote system noted",
+      "no SMS reminders",
+      "no specific pool route software",
+      "only 1 vehicle visible in gallery photo (small operation)"
+    ],
+    "modern_tech_signals": [
+      "named staff members suggest team operation (Joe Patterson, Josh Koenig, Jim, Wayne)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of yourpreferredpools.com 2026-05-16; family-owned claim, no specific names"
+    },
+    "data_sources": [
+      {
+        "url": "https://yourpreferredpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_owned_claim", "15+_years", "staff_first_names"]
+      }
+    ],
+    "data_completeness": 0.35
+  },
+  {
+    "spine_index": 13,
+    "legal_name": "Fox Family Pools, LLC",
+    "city": "Humble",
+    "county": "Harris",
+    "website": "https://www.foxfamilypools.com/",
+    "year_established": 1978,
+    "years_in_business": 48,
+    "owner_name": "Lisa Holbrook (office manager since 1994) and Thomas Holbrook (co-owner)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "Lisa Holbrook joined as office manager in 1994 → 32 years tenure, likely now 55-65; co-owners likely similar age",
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "mixed",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no individual owner names on website (just 'family owned')",
+      "no IPSSA membership",
+      "no customer portal",
+      "no SMS reminders",
+      "no specific pool route software",
+      "limited operational metrics published"
+    ],
+    "modern_tech_signals": [
+      "'Houston's Top 3 Pool Builder' recognition",
+      "100+ years combined team experience",
+      "free estimates"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": true,
+      "verified_via": "Community Impact 2023 article + live-fetch of foxfamilypools.com 2026-05-16; 1978 founding + Holbrook family operating since 1994 suggests ownership transition already happened (1978 founder → Holbrooks 1994), no third-gen named"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.foxfamilypools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_1978", "family_owned", "Top_3_Houston_builder"]
+      }
+    ],
+    "data_completeness": 0.6,
+    "fit_signal": "MODERATE — 48-year tenure, Holbrooks ~65, no clear successor named, classic coasting profile"
+  },
+  {
+    "spine_index": 14,
+    "legal_name": "Clear Blue Water Pools Service and Repair",
+    "city": "Kingwood",
+    "county": "Harris",
+    "website": "https://cbwpools.com/",
+    "year_established": 2011,
+    "years_in_business": 15,
+    "owner_name": "Josh Sandberg",
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "mixed",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no customer portal",
+      "no SMS reminders",
+      "no specific pool route software",
+      "no IPSSA membership"
+    ],
+    "modern_tech_signals": ["Facebook + Google Business presence", "quote form"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of cbwpools.com/about 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://cbwpools.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Josh_Sandberg", "13+_years"]
+      }
+    ],
+    "data_completeness": 0.4
+  },
+  {
+    "spine_index": 15,
+    "legal_name": "FSL Blue Pools",
+    "city": "Humble",
+    "county": "Harris",
+    "website": "https://fslbluepools.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "mixed",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no owner name published",
+      "no founding year disclosed",
+      "no customer portal",
+      "no SMS reminders",
+      "no specific pool route software",
+      "minimal operational disclosure"
+    ],
+    "modern_tech_signals": ["sprinkler installation added as service (diversification)"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of fslbluepools.com 2026-05-16; minimal public information"
+    },
+    "data_sources": [
+      {
+        "url": "https://fslbluepools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["location", "services"]
+      }
+    ],
+    "data_completeness": 0.2,
+    "fit_warning": "LOW DATA — insufficient public info for confident scoring; recommend skip or deep-dive verification"
+  },
+  {
+    "spine_index": 16,
+    "legal_name": "P.Jays Pool Services",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://pjayspools.com/",
+    "year_established": 2010,
+    "years_in_business": 16,
+    "owner_name": "Paul Johnson",
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "mixed",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no customer portal",
+      "no SMS reminder system",
+      "no specific pool route software",
+      "no IPSSA membership"
+    ],
+    "modern_tech_signals": [
+      "gmail business email (somewhat informal)",
+      "named owner accountability"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of pjayspools.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://pjayspools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Paul_Johnson", "15+_years", "family_owned"]
+      }
+    ],
+    "data_completeness": 0.45
+  },
+  {
+    "spine_index": 17,
+    "legal_name": "Pool Spark Sugar Land",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "website": "https://www.poolservicesugarlandtx.com/",
+    "year_established": 2021,
+    "years_in_business": 5,
+    "owner_name": "Mason Batchelor",
+    "owner_age_estimate": 32,
+    "owner_age_source": "founded 2021 + younger operator language suggests 28-35",
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no customer portal",
+      "no SMS reminder system mentioned",
+      "no specific pool route software"
+    ],
+    "modern_tech_signals": [
+      "45+ Google reviews (5-star)",
+      "online consultation scheduling",
+      "fully insured"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of poolservicesugarlandtx.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.poolservicesugarlandtx.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Mason_Batchelor", "founded_2021", "Greatwood_route"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "fit_warning": "TOO YOUNG — Founded 2021, young owner. Does NOT fit coast-and-sell profile"
+  },
+  {
+    "spine_index": 18,
+    "legal_name": "Lanterra Pools",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://lanterrapools.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "mixed",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no owner name published",
+      "no founding year disclosed",
+      "no operational metrics",
+      "no IPSSA membership",
+      "no customer portal",
+      "no SMS reminders",
+      "no specific pool route software"
+    ],
+    "modern_tech_signals": [],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of lanterrapools.com 2026-05-16; minimal public information"
+    },
+    "data_sources": [
+      {
+        "url": "https://lanterrapools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["services", "service_area"]
+      }
+    ],
+    "data_completeness": 0.2,
+    "fit_warning": "LOW DATA — insufficient owner/age/tenure information"
+  },
+  {
+    "spine_index": 19,
+    "legal_name": "Richard's Total Backyard Solutions / RBS Opco, LLC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://richardstbs.com/",
+    "year_established": 1987,
+    "years_in_business": 39,
+    "owner_name": null,
+    "owner_age_estimate": 65,
+    "owner_age_source": "1987 founding + 35+ years operations implies founder now ~60-70",
+    "entity_status": "Active (presumed; RBS Opco LLC structure suggests possible PE/recap)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": "RAIC-1282",
+    "coasting_tells": [
+      "owner full name not on About page",
+      "no IPSSA membership noted",
+      "no SMS reminders explicitly mentioned",
+      "no specific pool route software"
+    ],
+    "modern_tech_signals": [
+      "Richard's E-Pay portal (online payment system) = modern tech",
+      "multiple request forms",
+      "two locations (Houston + Montgomery)",
+      "40+ years tenure with established branding"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of richardstbs.com 2026-05-16; legal entity 'RBS Opco, LLC' suggests holdco/op-co structure used in PE/family-recap"
+    },
+    "data_sources": [
+      {
+        "url": "https://richardstbs.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_1987", "RAIC_1282", "E-Pay_portal", "two_locations"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "fit_warning": "STRUCTURAL FLAG — 'RBS Opco, LLC' entity naming is non-typical for solo-owner; possible prior recapitalization or PE-affiliated — may NOT be true off-market candidate"
+  },
+  {
+    "spine_index": 20,
+    "legal_name": "Nabors Pools, LLC",
+    "city": "Katy",
+    "county": "Harris",
+    "website": "https://naborspools.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "owner Nabors family member not named publicly",
+      "no founding year disclosed",
+      "no IPSSA membership",
+      "no specific pool route software"
+    ],
+    "modern_tech_signals": [
+      "customer portal available",
+      "text messaging capability",
+      "Certified Pool & Spa Operators on staff",
+      "tagline 'Nabors Helping Neighbors'"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of naborspools.com 2026-05-16; family-owned but no specific successor"
+    },
+    "data_sources": [
+      {
+        "url": "https://naborspools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_owned", "CPO_certified", "customer_portal", "SMS"]
+      }
+    ],
+    "data_completeness": 0.4
+  },
+  {
+    "spine_index": 21,
+    "legal_name": "Friendswood Sparkling Pool Service",
+    "city": "Friendswood",
+    "county": "Galveston",
+    "website": "http://www.poolservicefriendswood.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "owner name not published",
+      "no founding year disclosed",
+      "no customer portal",
+      "no SMS reminders",
+      "no specific pool route software",
+      "no IPSSA membership"
+    ],
+    "modern_tech_signals": [
+      "tiered service plan structure ($149/$209 monthly)",
+      "online quote request"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of poolservicefriendswood.com 2026-05-16; 'family managed' but no detail"
+    },
+    "data_sources": [
+      {
+        "url": "http://www.poolservicefriendswood.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_managed", "service_plans"]
+      }
+    ],
+    "data_completeness": 0.25
+  },
+  {
+    "spine_index": 22,
+    "legal_name": "GoodLife Pools, LLC",
+    "city": "Magnolia",
+    "county": "Montgomery",
+    "website": "https://goodlifepoolstx.com/",
+    "year_established": 2020,
+    "years_in_business": 6,
+    "owner_name": "Kenny Zientek and Bryan Disdier (co-owners)",
+    "owner_age_estimate": 38,
+    "owner_age_source": "founded 2020 + family-oriented hardscape/pool builder focus = younger operator demo, est 30-45",
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no customer portal",
+      "no specific pool route software",
+      "no IPSSA membership"
+    ],
+    "modern_tech_signals": [
+      "consultation scheduling system",
+      "contact form",
+      "pool financing offered"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of goodlifepoolstx.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://goodlifepoolstx.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["co-owners_Zientek_Disdier", "founded_2020", "pool_financing"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "fit_warning": "TOO YOUNG / TOO NEW — founded 2020, young multi-owner = does NOT fit coast-and-sell"
+  },
+  {
+    "spine_index": 23,
+    "legal_name": "Willsha Pools",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://willshapools.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no owner name published",
+      "no founding year disclosed",
+      "no operational metrics",
+      "no customer portal",
+      "no SMS reminders",
+      "no specific pool route software",
+      "no IPSSA membership"
+    ],
+    "modern_tech_signals": ["two phone numbers (suggests scaled small business)"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of willshapools.com 2026-05-16; minimal information"
+    },
+    "data_sources": [
+      {
+        "url": "https://willshapools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["services", "DFW_service_area"]
+      }
+    ],
+    "data_completeness": 0.2,
+    "fit_warning": "LOW DATA — insufficient owner/tenure information"
+  },
+  {
+    "spine_index": 24,
+    "legal_name": "Noah's Pool Service, LLC",
+    "city": "Southlake",
+    "county": "Tarrant",
+    "website": "https://noahspoolservice.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Noah (surname undisclosed)",
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "owner surname not published",
+      "no founding year disclosed",
+      "no SMS reminders explicitly mentioned",
+      "no IPSSA membership"
+    ],
+    "modern_tech_signals": [
+      "transparent tiered pricing ($23/$30/$40 per week)",
+      "Client Resources section (portal-like)",
+      "$100 referral credit program"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of noahspoolservice.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://noahspoolservice.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Noah_first_name", "tiered_pricing", "referral_program"]
+      }
+    ],
+    "data_completeness": 0.4
+  },
+  {
+    "spine_index": 25,
+    "legal_name": "Panther City Pools",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://panthercitypools.co/",
+    "year_established": 2018,
+    "years_in_business": 8,
+    "owner_name": "Josh and Ron (co-founders, Marine Corps veterans, surnames undisclosed)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "Marine Corps service 1997 + Josh 5-year service ending 2000 + Ron retired 2016 = founders early-to-mid 50s",
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": 4,
+    "employee_count_estimate": null,
+    "weekly_account_count": 250,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": ["surnames not disclosed", "no IPSSA membership"],
+    "modern_tech_signals": [
+      "technician app",
+      "detailed email after each service (timestamp + breakdown)",
+      "photo documentation",
+      "fast text/email response",
+      "Marine Corps veteran-owned"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of panthercitypools.co 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://panthercitypools.co/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "co-founders_Marine_vets",
+          "founded_Sept_2018",
+          "250_pools",
+          "app_+_email_reporting"
+        ]
+      }
+    ],
+    "data_completeness": 0.65,
+    "fit_warning": "TOO NEW + MODERN TECH — founded 2018, technician app + automated reporting = active operator, NOT coasting"
+  },
+  {
+    "spine_index": 26,
+    "legal_name": "Fort Worth Local Pool Maintenance",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://poolmaintenancefortworth.com/",
+    "year_established": 2017,
+    "years_in_business": 9,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "owner name not published",
+      "no customer portal",
+      "no SMS reminders",
+      "no IPSSA membership",
+      "no specific pool route software"
+    ],
+    "modern_tech_signals": ["19-zip-code service coverage", "service plan structure"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of poolmaintenancefortworth.com 2026-05-16; family-run claim but no detail"
+    },
+    "data_sources": [
+      {
+        "url": "https://poolmaintenancefortworth.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_2017", "family_run", "FW_coverage"]
+      }
+    ],
+    "data_completeness": 0.35,
+    "fit_warning": "TOO NEW — founded 2017, only 9 years tenure"
+  },
+  {
+    "spine_index": 27,
+    "legal_name": "Anomaly Pool Services Company, LLC",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": "https://www.anomalypoolservices.io/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Bryson McDade, AK Surani, David Butler (3 co-founders)",
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "mixed",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": ["no IPSSA membership"],
+    "modern_tech_signals": [
+      "free instant online quote",
+      "SMS appointment notifications",
+      "post-cleaning video documentation",
+      "web-based customer portal",
+      "BBB A+ Rated",
+      "Google Guaranteed Badge",
+      "HomeAdvisor 5-star",
+      "Nextdoor verified",
+      "40+ Google 5-star reviews",
+      "CPO certified technicians"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of anomalypoolservices.io 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.anomalypoolservices.io/",
+        "fetched_at": "2026-05-16",
+        "fields": ["3_co-founders", "CPO", "customer_portal", "SMS", "video_docs"]
+      }
+    ],
+    "data_completeness": 0.65,
+    "fit_warning": "FULLY MODERN + 3 CO-FOUNDERS — heavy tech stack, multi-owner structure = does NOT fit solo-owner coast-and-sell"
+  },
+  {
+    "spine_index": 28,
+    "legal_name": "Blazin Blue Pools",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Ruben Rodriguez",
+    "owner_age_estimate": null,
+    "owner_age_source": "IPSSA Tarrant County Chapter President role typically held by mid-career operators (40-55)",
+    "entity_status": "Active (presumed; LLC status not confirmed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": true,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no website (significant coasting tell — IPSSA Chapter President but no web presence)",
+      "no online quotes",
+      "no customer portal",
+      "no SMS systems",
+      "phone-only sales channel"
+    ],
+    "modern_tech_signals": ["IPSSA Tarrant County Chapter President (active in industry network)"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "IPSSA Tarrant officer roster (ipssatc.org/officers)"
+    },
+    "data_sources": [
+      {
+        "url": "https://ipssatc.org/officers",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Ruben_Rodriguez", "IPSSA_president"]
+      }
+    ],
+    "data_completeness": 0.25,
+    "fit_signal": "MODERATE — no website is a strong coasting tell; IPSSA leadership suggests scaled operation; needs phone-based qualification"
+  },
+  {
+    "spine_index": 29,
+    "legal_name": "Red White and Blue Pool Services Inc.",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Andrew Rousseau",
+    "owner_age_estimate": null,
+    "owner_age_source": "IPSSA Tarrant Vice President role typically held by mid-career operators",
+    "entity_status": "Active (Inc.; Comptroller status not verified)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": true,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no website (significant coasting tell)",
+      "no online quotes",
+      "no customer portal",
+      "phone-only sales channel",
+      "patriotic naming = often older established operator demographic"
+    ],
+    "modern_tech_signals": [
+      "Inc. corporate structure (suggests longer tenure)",
+      "IPSSA Tarrant County VP"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "IPSSA Tarrant officer roster (ipssatc.org/officers)"
+    },
+    "data_sources": [
+      {
+        "url": "https://ipssatc.org/officers",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Andrew_Rousseau", "IPSSA_VP", "Inc_entity"]
+      }
+    ],
+    "data_completeness": 0.25,
+    "fit_signal": "MODERATE — no website + Inc. structure suggests longer-tenure phone-only operator; classic coasting profile"
+  },
+  {
+    "spine_index": 30,
+    "legal_name": "Dunbars Pool Repair",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Charles Dunbar",
+    "owner_age_estimate": null,
+    "owner_age_source": "IPSSA Tarrant County Treasurer; typically held by mid-late career operators",
+    "entity_status": "Unknown (likely sole proprietor/LLC; not verified)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": true,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no website",
+      "no online presence beyond IPSSA listing",
+      "phone-only sales channel",
+      "760 area code suggests CA origin (post-move, possibly retiring to TX)"
+    ],
+    "modern_tech_signals": ["IPSSA Tarrant County Treasurer"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "IPSSA Tarrant officer roster (ipssatc.org/officers)"
+    },
+    "data_sources": [
+      {
+        "url": "https://ipssatc.org/officers",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Charles_Dunbar", "IPSSA_Treasurer", "CA_origin_phone"]
+      }
+    ],
+    "data_completeness": 0.2,
+    "fit_signal": "MODERATE — no website + likely older CA-relo owner = classic small route, needs phone outreach to qualify"
+  },
+  {
+    "spine_index": 31,
+    "legal_name": "Kaizen Pools",
+    "city": "Godley",
+    "county": "Johnson",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Cody Garrett",
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Unknown",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": true,
+    "tpcl_license": null,
+    "coasting_tells": ["no website", "rural Johnson County location", "phone-only sales"],
+    "modern_tech_signals": [
+      "IPSSA Tarrant County Secretary",
+      "'Kaizen' (continuous improvement) naming suggests modern-mindset operator"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "IPSSA Tarrant officer roster"
+    },
+    "data_sources": [
+      {
+        "url": "https://ipssatc.org/officers",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Cody_Garrett", "IPSSA_Secretary"]
+      }
+    ],
+    "data_completeness": 0.2,
+    "fit_warning": "INSUFFICIENT DATA — name connotes modern-mindset operator (Kaizen = continuous improvement methodology), likely younger; may not fit coast profile"
+  },
+  {
+    "spine_index": 32,
+    "legal_name": "Texas Tropics Swimming Pools",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Dustin Gardner",
+    "owner_age_estimate": null,
+    "owner_age_source": "IPSSA Region 12 Chapter Rep role typically held by mid-career operators",
+    "entity_status": "Unknown",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": true,
+    "tpcl_license": null,
+    "coasting_tells": ["no website", "phone-only sales"],
+    "modern_tech_signals": ["IPSSA Region 12 Chapter Representative (regional network leadership)"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "IPSSA Tarrant officer roster"
+    },
+    "data_sources": [
+      {
+        "url": "https://ipssatc.org/officers",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Dustin_Gardner", "IPSSA_chapter_rep"]
+      }
+    ],
+    "data_completeness": 0.2,
+    "fit_signal": "MODERATE — no website + IPSSA leadership = classic owner-operator route business"
+  },
+  {
+    "spine_index": 33,
+    "legal_name": "Sun Valley Pool Service",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": null,
+    "year_established": 1982,
+    "years_in_business": 44,
+    "owner_name": null,
+    "owner_age_estimate": 60,
+    "owner_age_source": "2nd-gen family ownership + 1982 founding = current owner likely 50s-60s",
+    "entity_status": "Unknown (per spine — URL not surfaced)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no working website found",
+      "44-year tenure without active digital presence",
+      "phone-only sales"
+    ],
+    "modern_tech_signals": ["2nd generation has retained ownership (succession completed)"],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "spine notes (multiple search references confirming 2nd-gen status)"
+    },
+    "data_sources": [
+      {
+        "url": "spine notes",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_1982", "2nd_gen_family"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "fit_signal": "MODERATE — 2nd-gen + 44 years + no website = classic mature coast operation; needs more verification (URL/owner name)"
+  },
+  {
+    "spine_index": 34,
+    "legal_name": "Charlie's Pool Service LLC",
+    "city": "Lewisville",
+    "county": "Denton",
+    "website": "https://charliespoolservice.com/",
+    "year_established": 1984,
+    "years_in_business": 42,
+    "owner_name": "Charlie (surname undisclosed)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "1984 founding + Charlie as founder name = founder now ~62-72; assuming start at ~22-28",
+    "entity_status": "Active (LLC)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "owner surname not published despite 42-year tenure",
+      "no IPSSA membership",
+      "no customer portal",
+      "no SMS reminders explicit",
+      "no specific pool route software",
+      "10% new customer promo (typical small-route marketing)",
+      "limited operational disclosure"
+    ],
+    "modern_tech_signals": [
+      "active website with testimonials",
+      "Mon-Fri 9-7 hours (longer than typical)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of charliespoolservice.com 2026-05-16; per spine snippets opened 1984"
+    },
+    "data_sources": [
+      {
+        "url": "https://charliespoolservice.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Charlie", "founded_1984", "service_areas"]
+      }
+    ],
+    "data_completeness": 0.5,
+    "fit_signal": "STRONG — 42-year tenure, original founder name 'Charlie' still on biz, est. owner 65+, no visible successor — high coast-and-sell probability"
+  },
+  {
+    "spine_index": 35,
+    "legal_name": "Frisco Pool Service Inc.",
+    "city": "Frisco",
+    "county": "Denton",
+    "website": "https://friscopools.com/",
+    "year_established": 1996,
+    "years_in_business": 30,
+    "owner_name": null,
+    "owner_age_estimate": 60,
+    "owner_age_source": "30+ years tenure + TICL #389 (low number = early licensee) = owner likely 55-70",
+    "entity_status": "Active (Inc.)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": "TICL 389",
+    "coasting_tells": [
+      "owner name not published",
+      "no IPSSA membership",
+      "no customer portal",
+      "no SMS reminders",
+      "no specific pool route software",
+      "minimal owner-led marketing"
+    ],
+    "modern_tech_signals": [
+      "Jandy/Polaris/Pentair warranty service center (technical accreditation)",
+      "active 30+ year operation",
+      "TICL 389 (very low/early license)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of friscopools.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://friscopools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["30+_years", "TICL_389", "warranty_center", "Inc_entity"]
+      }
+    ],
+    "data_completeness": 0.5,
+    "fit_signal": "STRONG — 30+ year tenure, Inc. entity, early TICL license, warranty center = scaled operation; needs owner identity verification"
+  },
+  {
+    "spine_index": 36,
+    "legal_name": "Texas Clear Pools",
+    "city": "McKinney",
+    "county": "Collin",
+    "website": "https://texasclearpools.com/",
+    "year_established": 2016,
+    "years_in_business": 10,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "owner name not published",
+      "no IPSSA membership",
+      "no customer portal",
+      "no SMS reminders",
+      "no specific pool route software"
+    ],
+    "modern_tech_signals": [
+      "9+ years McKinney/Collin tenure",
+      "physical address listed (commercial location)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of texasclearpools.com/about 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://texasclearpools.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["9+_years", "family_owned"]
+      }
+    ],
+    "data_completeness": 0.4,
+    "fit_warning": "BORDERLINE TENURE — 10 years; typical for ETA target but owner identity unknown"
+  },
+  {
+    "spine_index": 37,
+    "legal_name": "Hydra Pool Services",
+    "city": "Frisco",
+    "county": "Collin",
+    "website": "https://www.hydrapoolservices.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "mixed",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "owner name not published",
+      "no founding year disclosed",
+      "no IPSSA membership"
+    ],
+    "modern_tech_signals": [
+      "visit reports with photos after each service",
+      "'same day, same tech, every week' consistency commitment",
+      "transparent monthly billing",
+      "background-checked technicians",
+      "no long-term contracts"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of hydrapoolservices.com/about 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.hydrapoolservices.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["photo_reports", "service_model", "background_checks"]
+      }
+    ],
+    "data_completeness": 0.35,
+    "fit_warning": "ACTIVELY MODERN — photo reports + consistency model suggest active operator, not coasting"
+  },
+  {
+    "spine_index": 38,
+    "legal_name": "A&C Pools",
+    "city": "Frisco",
+    "county": "Collin",
+    "website": "https://aandcpools.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Alan (surname undisclosed)",
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": "TICL 831",
+    "coasting_tells": [
+      "owner surname not published",
+      "no IPSSA membership",
+      "no specific pool route software named"
+    ],
+    "modern_tech_signals": [
+      "MyPoolPortal client login (modern customer portal)",
+      "weekly email service reports",
+      "text messaging program",
+      "free consultations",
+      "TICL 831 license",
+      "expansion plans noted"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of aandcpools.com 2026-05-16; 'treat us like family' language but no specific successor"
+    },
+    "data_sources": [
+      {
+        "url": "https://aandcpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "owner_Alan",
+          "TICL_831",
+          "MyPoolPortal",
+          "weekly_email",
+          "SMS_program",
+          "expansion_plans"
+        ]
+      }
+    ],
+    "data_completeness": 0.5,
+    "fit_warning": "ACTIVELY MODERN + EXPANDING — MyPoolPortal + expansion plans = active growth, not coasting"
+  },
+  {
+    "spine_index": 39,
+    "legal_name": "Cerulean Pool Services / THREE24, LLC",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.ceruleanpro.com/",
+    "year_established": 2016,
+    "years_in_business": 10,
+    "owner_name": "Josh Bates",
+    "owner_age_estimate": null,
+    "owner_age_source": "Alabama upbringing + 2016 founding suggests mid-career operator (30s-40s)",
+    "entity_status": "Active (LLC)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "no customer portal mentioned",
+      "no SMS reminders",
+      "no specific pool route software"
+    ],
+    "modern_tech_signals": [
+      "Christian/values-based brand",
+      "luxury-residential niche positioning",
+      "Highland Park + 14-city service area"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of ceruleanpro.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.ceruleanpro.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Josh_Bates", "founded_2016", "Alabama_origin", "luxury_niche"]
+      }
+    ],
+    "data_completeness": 0.45,
+    "fit_warning": "TOO NEW + OWNER LIKELY YOUNG — 10 years tenure, founder probably 35-45, doesn't fit coast profile"
+  },
+  {
+    "spine_index": 40,
+    "legal_name": "Executive Blue Pools",
+    "city": "Frisco",
+    "county": "Collin",
+    "website": "https://executivebluepools.com/",
+    "year_established": 2013,
+    "years_in_business": 13,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": true,
+    "tpcl_license": "RAIL",
+    "coasting_tells": [
+      "owner name not published",
+      "no customer portal",
+      "no SMS reminders",
+      "no specific pool route software"
+    ],
+    "modern_tech_signals": [
+      "IPSSA Water Chemistry Certification + IPSSA Membership",
+      "RAIL License (Residential Appliance Installer)",
+      "CPO Certification + PHTA credentials",
+      "$1M+ liability insurance",
+      "Hundreds of Collin County families served weekly",
+      "200+ five-star reviews"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of executivebluepools.com/about 2026-05-16; family business since 2014"
+    },
+    "data_sources": [
+      {
+        "url": "https://executivebluepools.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_2013", "IPSSA_+_CPO_+_PHTA", "RAIL_license", "200+_reviews"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "fit_warning": "MODERATE — 13 years tenure, scaled operation; needs owner identity + age verification"
+  },
+  {
+    "spine_index": 41,
+    "legal_name": "Aqua Clean Pool Service",
+    "city": "Plano",
+    "county": "Collin",
+    "website": "https://aquacleanpoolservice.com/",
+    "year_established": 1997,
+    "years_in_business": 29,
+    "owner_name": "Scott (surname undisclosed)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "1997 founding + 20+ years experience claim = owner now ~55-65",
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": null,
+    "employee_count_estimate": null,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": "TICL 568",
+    "coasting_tells": [
+      "owner surname not published despite 29-year tenure",
+      "no IPSSA membership",
+      "no customer portal",
+      "no SMS reminders",
+      "no specific pool route software",
+      "no annual contracts (suggests loose customer mgmt)",
+      "7-day operation 8am-8pm = solo-operator style"
+    ],
+    "modern_tech_signals": ["Energy Star Approved certification", "TICL 568 license"],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of aquacleanpoolservice.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://aquacleanpoolservice.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Scott", "20+_years_experience", "TICL_568", "Energy_Star"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "fit_signal": "STRONG — Scott owner-operator since 1997 (29 years), est. age 60, minimal modernization, no visible successor = high coast-and-sell probability"
+  },
+  {
+    "spine_index": 42,
+    "legal_name": "R.S. Blue Pool Services",
+    "city": "Frisco",
+    "county": "Collin",
+    "website": "https://rsbluepoolservices.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Renato (surname undisclosed)",
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "entity_status": "Active (presumed)",
+    "is_distressed": false,
+    "estimated_truck_count": 1,
+    "employee_count_estimate": 1,
+    "weekly_account_count": null,
+    "service_mix": "residential",
+    "ipssa_member": false,
+    "tpcl_license": null,
+    "coasting_tells": [
+      "owner surname not published",
+      "no founding year disclosed",
+      "no formal business registration details published",
+      "no IPSSA membership",
+      "no customer portal",
+      "no annual contracts",
+      "text-first support = solo-operator mode"
+    ],
+    "modern_tech_signals": [
+      "automated text-draft estimate generator (4-step form)",
+      "fast text-first support",
+      "no long-term contracts"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of rsbluepoolservices.com 2026-05-16; 'Family-owned · No contracts' tagline"
+    },
+    "data_sources": [
+      {
+        "url": "https://rsbluepoolservices.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Renato", "text-first", "family_owned"]
+      }
+    ],
+    "data_completeness": 0.35,
+    "fit_warning": "SOLO OPERATOR — Renato appears to be solo owner-operator handling everything via text; very small route, may not have enough scale for ETA"
+  }
+]

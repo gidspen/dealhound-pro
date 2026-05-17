@@ -1,0 +1,1987 @@
+[
+  {
+    "spine_index": 0,
+    "legal_name": "Briargrove Pharmacy & Gifts",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.briargroverx.com/",
+    "year_established": 1968,
+    "years_in_business": 58,
+    "owner_name": "Antoun and Sally Salib, PharmD",
+    "owner_age_estimate": 45,
+    "owner_age_source": "ownership_transfer_2013 (new ownership took over a 1968 store; Sally Salib LinkedIn shows PharmD ~mid-career; owners are NOT the legacy founders)",
+    "owner_tenure_years": 13,
+    "entity_status": "Active (assumed; live since 2013 ownership)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 4,
+    "compounding_capability": "yes - non-sterile compounding",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Prescription filling", "Compounding", "Gifts/retail front", "Delivery"],
+    "coasting_tells": ["Operated under same brand since 1968 (legacy continuity)"],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": true,
+      "verified_via": "WebSearch about-page summary; Salib is husband+wife team (Antoun ops, Sally PharmD)"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.briargroverx.com/about",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "LinkedIn",
+        "url": "https://www.linkedin.com/in/sally-salib-41166b299/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.78,
+    "acquisition_disqualifier": "Recent 2013 ownership change — owners are mid-career, not exit-ready. Skip for short-term acquisition; revisit in 10y."
+  },
+  {
+    "spine_index": 1,
+    "legal_name": "Southend Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Survam Patel, PharmC (associated; primary owner not confirmed)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown — pending Comptroller verification",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "yes (per Healthgrades)",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Compounding", "Medicaid", "Handicap accessible", "Delivery"],
+    "coasting_tells": [
+      "No website (only rented RxLocal microsite)",
+      "No demonstrable digital presence"
+    ],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "Healthgrades + RxLocal page (no team data)"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston/southend-pharmacy-415-westheimer-rd-ste-103",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "Healthgrades",
+        "url": "https://www.healthgrades.com/pharmacy/southend-pharmacy-pfufun",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.3,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 2,
+    "legal_name": "Texas Unicare Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Community/Retail"],
+    "coasting_tells": ["No website", "No public team/about info"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "RxLocal + NPI record only"
+    },
+    "data_sources": [
+      {
+        "source": "NPI",
+        "url": "https://npiregistry.cms.hhs.gov/provider-view/1518370808",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.18,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 3,
+    "legal_name": "Piney Point Village Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://houstoncompoundingpharmacy.com/",
+    "year_established": 1965,
+    "years_in_business": 61,
+    "owner_name": "George Tompkins, RPh",
+    "owner_age_estimate": 70,
+    "owner_age_source": "linkedin + 1965-establishment context — owner is currently in charge of legacy store; Tompkins shown as Owner of long-time business (likely BS-RPh, age range 65-75)",
+    "owner_tenure_years": null,
+    "entity_status": "unknown — pending Comptroller verification",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 2,
+    "compounding_capability": "yes - full compounding pharmacy",
+    "banner_program": "Independent (RxLocal)",
+    "services": [
+      "Conventional Rx",
+      "Compounding (advertised as 'Houston Compounding Pharmacy')",
+      "Health screenings",
+      "Delivery"
+    ],
+    "coasting_tells": [
+      "Legacy 1965 storefront — long-tenured owner",
+      "Website domain reflects compounding focus but design appears pre-2015"
+    ],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": false,
+      "verified_via": "WebSearch about-page and LinkedIn"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://houstoncompoundingpharmacy.com/about-us",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "LinkedIn",
+        "url": "https://www.linkedin.com/in/george-tompkins-0a677a29/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.72,
+    "acquisition_score_hint": "STRONG — 61yr legacy, single-owner-pharmacist, compounding capability adds value. High succession-risk target."
+  },
+  {
+    "spine_index": 4,
+    "legal_name": "OHC Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://ohcpharmacy.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "yes",
+    "banner_program": "Independent (RxLocal)",
+    "services": [
+      "DME (durable medical equipment)",
+      "Telehealth",
+      "Compounding",
+      "Wellness",
+      "Weight loss"
+    ],
+    "coasting_tells": [
+      "Has Instagram presence (@ohcpharmacy) — NOT a coasting tell; suggests modernized op"
+    ],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "ohcpharmacy.com (no detailed team page returned)"
+    },
+    "data_sources": [
+      { "source": "WebSearch", "url": "https://ohcpharmacy.com/", "fetched_at": "2026-05-16" }
+    ],
+    "data_completeness": 0.3,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 5,
+    "legal_name": "Bissonnet Discount Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Discount retail Rx"],
+    "coasting_tells": [
+      "No website",
+      "No public team info",
+      "'Discount' branding suggests price-driven low-margin operation"
+    ],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "no published team info"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston/bissonnet-discount-pharmacy",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.15,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 6,
+    "legal_name": "Alliance Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Augustine Nioku, RPh (presumed PharmD/RPh)",
+    "owner_age_estimate": null,
+    "owner_age_source": "name_only — no graduation year or tenure data",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal); part of Texas Alliance Pharmacy group",
+    "services": ["Community/Retail"],
+    "coasting_tells": ["No website beyond directory listings", "Single solo-owner operation"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "directory listings only"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://thealliancepharmacy.org/about-us/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.3,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 7,
+    "legal_name": "Vecino Pharmacy Services",
+    "city": "Houston",
+    "county": "Harris",
+    "website": null,
+    "year_established": 1999,
+    "years_in_business": 27,
+    "owner_name": "Vecino Health Centers (non-profit FQHC parent)",
+    "owner_age_estimate": null,
+    "owner_age_source": "non_applicable - 501c3",
+    "owner_tenure_years": null,
+    "entity_status": "Active (non-profit)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "FQHC pharmacy (NOT independent)",
+    "services": ["DME", "Walk-In", "Medicaid", "Delivery"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "GuideStar 501c3 confirmation"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://vecinohealthcenters.org/locations/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "GuideStar",
+        "url": "https://www.guidestar.org/profile/76-0622208",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.45,
+    "acquisition_disqualifier": "NON-INDEPENDENT — owned by Vecino Health Centers, a 501c3 FQHC. Not an acquisition target. Remove from spine."
+  },
+  {
+    "spine_index": 8,
+    "legal_name": "First Choice Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://firstchoicepharmacy.pharmacy/",
+    "year_established": null,
+    "years_in_business": 20,
+    "owner_name": "Tri Le, RPh (Owner/Pharmacist)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "20yr_business_tenure_proxy (PharmD graduate ~2005 + ~25 = ~50)",
+    "owner_tenure_years": 20,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 1,
+    "compounding_capability": "yes",
+    "banner_program": "Independent (RxLocal)",
+    "services": [
+      "Prescription medications",
+      "Compounding",
+      "Medication delivery",
+      "Long-term care services"
+    ],
+    "coasting_tells": ["Solo-PharmD owner-operator"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "pharmacygps.com NPI record"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://pharmacygps.com/drugstore/first-choice-pharmacy-inc-1669793436/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.62,
+    "acquisition_score_hint": "MEDIUM — solo owner, 20yr business, but owner only ~50. Less near-term exit pressure."
+  },
+  {
+    "spine_index": 9,
+    "legal_name": "We Care Rx Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.mywecarerx.com/",
+    "year_established": 2017,
+    "years_in_business": 9,
+    "owner_name": "Dr. Brandy Williams, PharmD",
+    "owner_age_estimate": 40,
+    "owner_age_source": "founded_2017_proxy (recent PharmD graduate or mid-career)",
+    "owner_tenure_years": 9,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "yes",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Prescription refills/transfers", "Delivery", "Compounding", "Immunization"],
+    "coasting_tells": ["None — modern 2017 founding, online ordering presence"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "website about-us"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.mywecarerx.com/about-us",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.65,
+    "acquisition_disqualifier": "Young pharmacy (2017), young owner. Not a succession-risk target."
+  },
+  {
+    "spine_index": 10,
+    "legal_name": "Citizens Professional Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "http://www.citizenspharmacytx.com/",
+    "year_established": 1986,
+    "years_in_business": 40,
+    "owner_name": "Nilkanth K Patel (Owner)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "40yr_tenure_proxy (BS-RPh era + 40yr operator, est. ~65)",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Prescription drugs", "Specialty drugs", "Personal pharmaceutical services"],
+    "coasting_tells": [
+      "Website appears pre-2015 design (HTTP only)",
+      "No online refills visible",
+      "40-year-tenured owner"
+    ],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "citizenspharmacytx.com (limited team data)"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "http://www.citizenspharmacytx.com/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "OpenNPI",
+        "url": "https://opennpi.com/provider/1659382141",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.68,
+    "acquisition_score_hint": "STRONG — 40yr legacy, single owner ~65, low digital adoption. High succession-risk profile."
+  },
+  {
+    "spine_index": 11,
+    "legal_name": "Apteek Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.apteekpharmacy.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Kunal Patel, PharmD (with wife Priti)",
+    "owner_age_estimate": 42,
+    "owner_age_source": "houstonia_article_2020_proxy (described as mid-career River Oaks concierge service)",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 1,
+    "compounding_capability": "yes - compounding featured prominently",
+    "banner_program": "Independent (RxLocal); NCPA member",
+    "services": ["Compounding", "MTM", "Immunizations", "Concierge personalized care"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": true,
+      "verified_via": "Houstonia magazine; husband+wife operation"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.apteekpharmacy.com/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "Houstonia",
+        "url": "https://www.houstoniamag.com/health-and-wellness/2020/04/concierge-service-river-oaks-apteek-pharmacy",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.62,
+    "acquisition_disqualifier": "Mid-career husband+wife owners. Not exit-ready."
+  },
+  {
+    "spine_index": 12,
+    "legal_name": "Park Plaza Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.parkplazapharmacy.org/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Edison Asonye, PD/RPh and Sandra Asonye",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 2,
+    "compounding_capability": "yes - compounding listed",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Compounding", "Medication therapy management", "Immunizations", "Delivery"],
+    "coasting_tells": ["Website on .org domain (unusual for retail)", "Templated layout"],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": true,
+      "verified_via": "about-us; husband+wife both listed as pharmacists"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://parkplazapharmacy.org/index.php/about-us",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.55,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 13,
+    "legal_name": "BrightMed Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Christi Zhao (VP, authorized person)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Community/Retail"],
+    "coasting_tells": ["No independent website"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "NPI + GNP store page"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.mygnp.com/pharmacies/brightmed-pharmacy-houston-tx-77036/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.32,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 14,
+    "legal_name": "La Rx Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.larx-tx.com/",
+    "year_established": 2015,
+    "years_in_business": 11,
+    "owner_name": "Trinh Nguyen, PharmD (Pharmacist In Charge)",
+    "owner_age_estimate": 40,
+    "owner_age_source": "tsu_pharmd_2015_licensure (10+ yr retail experience by license date)",
+    "owner_tenure_years": 11,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 2,
+    "pharmacist_count": 1,
+    "compounding_capability": "unknown",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Retail Rx", "Immunizations (1000+ flu shots)", "Patient care"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "larx-tx.com about-us page"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.larx-tx.com/aboutus.html",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.62,
+    "acquisition_disqualifier": "Young pharmacist owner (~40), recent founding. Not succession-risk target."
+  },
+  {
+    "spine_index": 15,
+    "legal_name": "Biocare Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.biocarepharmacy.us/",
+    "year_established": 2010,
+    "years_in_business": 16,
+    "owner_name": "Annie Truong and Chau Phan, RPh (compounding specialists, 20+ yr exp)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "20yr_experience_proxy (rPh ~1995-2000 graduates)",
+    "owner_tenure_years": 16,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 2,
+    "compounding_capability": "yes - compounding pharmacy w/ federal/state govt contracts",
+    "banner_program": "Good Neighbor Pharmacy / Health Mart",
+    "services": ["Compounding", "Government contracting", "Community retail"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": false,
+      "verified_via": "biocarepharmacy.us about page"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.biocarepharmacy.us/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.65,
+    "acquisition_score_hint": "MEDIUM — woman-owned compounding pharmacy with govt contracts adds enterprise value, but owners only ~50."
+  },
+  {
+    "spine_index": 16,
+    "legal_name": "Tru Med Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://trumedrx.net/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Dr. Truman Warren, RPh (associated; Bay City location ownership)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal_for_houston_location",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 2,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Medical supplies/equipment", "Community retail"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "limited team data"
+    },
+    "data_sources": [
+      { "source": "WebSearch", "url": "https://trumedrx.net/", "fetched_at": "2026-05-16" }
+    ],
+    "data_completeness": 0.35,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 17,
+    "legal_name": "HMU Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.hmutx.com/pharmacy/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Zahraa (PIC, ~retail since 2015)",
+    "owner_age_estimate": 36,
+    "owner_age_source": "retail_since_2015 (10yr exp, est. PharmD ~2013, ~36)",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 1,
+    "compounding_capability": "specialty (urology focus)",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Specialty pharmacy", "Urologic conditions/care"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "hmutx.com staff page"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.hmutx.com/pharmacy/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.5,
+    "acquisition_disqualifier": "Young pharmacist; specialty pharmacy aligned with urology clinic. Not succession-risk target."
+  },
+  {
+    "spine_index": 18,
+    "legal_name": "Cypress Compounding Pharmacy",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://ccpharmacy.com/",
+    "year_established": 2013,
+    "years_in_business": 13,
+    "owner_name": "Nick Davis, PharmD (with wife Sandra, both UT Austin College of Pharmacy class of 2010)",
+    "owner_age_estimate": 40,
+    "owner_age_source": "linkedin_grad_ut_austin_2010 (PharmD 2010 + 24 = ~36, plus 4yrs = ~40)",
+    "owner_tenure_years": 13,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 2,
+    "compounding_capability": "yes - dedicated compounding pharmacy",
+    "banner_program": "Independent",
+    "services": [
+      "Compounding (sterile/non-sterile)",
+      "Patient-specific formulations",
+      "Provider education"
+    ],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": true,
+      "verified_via": "ccpharmacy.com about-us"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://ccpharmacy.com/about-us",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "LinkedIn",
+        "url": "https://www.linkedin.com/in/nick-davis-pharmd-rph-084b4236/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.78,
+    "acquisition_disqualifier": "Young husband+wife team (~40), founded 2013. Not exit-ready."
+  },
+  {
+    "spine_index": 19,
+    "legal_name": "Preston Road Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": null,
+    "year_established": 1939,
+    "years_in_business": 87,
+    "owner_name": "Jonathon Lipe (Owner)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal_on_age (owner is not original founder; 87yr legacy store)",
+    "owner_tenure_years": null,
+    "entity_status": "Active (verified via BBB and PitchBook)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Community retail", "Gift shop attached"],
+    "coasting_tells": [
+      "No independent website (BBB only)",
+      "Long-tenured legacy store under multi-generation ownership"
+    ],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "BBB + PitchBook"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.bbb.org/us/tx/dallas/profile/pharmacy/preston-road-pharmacy-0875-90282091",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "MyGNP",
+        "url": "https://www.mygnp.com/pharmacies/preston-road-pharmacy-dallas-tx-75205/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.6,
+    "acquisition_score_hint": "STRONG — 87yr legacy Highland Park location, branded gift shop, single-owner. Premium territory."
+  },
+  {
+    "spine_index": 20,
+    "legal_name": "Palmer Pharmacy Plus",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "yes (per reviews)",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Compounding", "Community retail", "LTC"],
+    "coasting_tells": ["No independent website", "Single-location LTC operation"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "no public team data"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.mygnp.com/pharmacies/palmer-pharmacy-plus-dallas-tx-75220/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.3,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 21,
+    "legal_name": "KK's Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://dallas.kkspharmacytx.com/",
+    "year_established": 1996,
+    "years_in_business": 30,
+    "owner_name": "Kamlesh 'KK' Kurani, RPh (with wife Sadhna; UK-trained RPh)",
+    "owner_age_estimate": 62,
+    "owner_age_source": "founded_1996_RPh_proxy (UK pharmacy training pre-1990, est. ~62-68)",
+    "owner_tenure_years": 30,
+    "entity_status": "Active (per DnB)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 5,
+    "pharmacist_count": 8,
+    "compounding_capability": "unknown",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Multi-location retail", "Compounding (advertised)", "Community-focused"],
+    "coasting_tells": [
+      "Website appears pre-2018 layout",
+      "Multi-store group has owner-operator pharmacists across locations"
+    ],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": true,
+      "verified_via": "kkspharmacytx about-us page (founder partnership with Abdul Rasul + Myra)"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://dallas.kkspharmacytx.com/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "WebSearch",
+        "url": "http://www.kkspharmacytx.com/about_us.html",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.75,
+    "acquisition_score_hint": "STRONG — KK is ~62-68 with 30yr operation across 5 stores. Multi-store independent + GNP banner = enterprise-quality target. PE-grade prospect for roll-up."
+  },
+  {
+    "spine_index": 22,
+    "legal_name": "Meridian Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "www.meridianpharmacy.com (per phone reference)",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal (Sterling Day listed as biz dev only)",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 3,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Multi-location retail", "Drug therapy management"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": false,
+      "verified_via": "Healthgrades + ZoomInfo (multi-location)"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.mygnp.com/pharmacies/meridian-pharmacy-dallas-tx-75218/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.4,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 23,
+    "legal_name": "Fiesta MLK Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "http://www.fiestamlkpharmacy.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Sirisha (PharmD, 20+ yr practicing pharmacist)",
+    "owner_age_estimate": 48,
+    "owner_age_source": "20yr_practice_proxy (PharmD ~2003 + ~24 = ~47)",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 1,
+    "compounding_capability": "unknown",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Community retail", "Inside Fiesta Grocery", "Investing in tech"],
+    "coasting_tells": ["No website beyond template", "Single solo-OWN PharmD"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "fiestamlkpharmacy.com community profile"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "http://www.fiestamlkpharmacy.com/community-pharmacy-pharmacy-profile",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.45,
+    "acquisition_disqualifier": "In-store grocery pharmacy lease dependency (Fiesta Mart). Not a freestanding acquisition target."
+  },
+  {
+    "spine_index": 24,
+    "legal_name": "Preston Road Apothecary Inc",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": null,
+    "year_established": 1939,
+    "years_in_business": 87,
+    "owner_name": "Jonathon Lipe (President/Owner)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal_on_age (likely same Jonathon Lipe as Preston Road Pharmacy entry 19 — same owner, multi-store independent)",
+    "owner_tenure_years": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Community retail"],
+    "coasting_tells": ["No website beyond GNP store page"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "MyGNP + Healthgrades"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.mygnp.com/pharmacies/preston-road-apothecary-inc-dallas-tx-75231/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.55,
+    "duplicate_note": "Likely same ownership as spine_index 19 (Preston Road Pharmacy); appears to be a sister store at different address. Treat as multi-location holding owned by Jonathon Lipe."
+  },
+  {
+    "spine_index": 25,
+    "legal_name": "Oak Lawn Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://oaklawnpharmacy.com/",
+    "year_established": 2010,
+    "years_in_business": 16,
+    "owner_name": "Sean Gatz, PharmD (PIC); rebranded from Pride Pharmacy 2020",
+    "owner_age_estimate": 42,
+    "owner_age_source": "modern_op_2010_founding_proxy",
+    "owner_tenure_years": 16,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["PrEP", "HIV specialty medications", "Community retail", "Free delivery"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "oaklawnpharmacy.com team page"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://oaklawnpharmacy.com/the-team",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "Dallas Voice",
+        "url": "https://dallasvoice.com/oak-lawn-pharmacy-resumes-full-service/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.65,
+    "acquisition_disqualifier": "HIV-specialty niche, young owner, modern op. Not succession-risk target."
+  },
+  {
+    "spine_index": 26,
+    "legal_name": "Trinity Family Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Tommy Lee Jones (Managing Officer, Trinity Drugs LLC)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": null,
+    "distress_reasons": [
+      "NOTE: A 'Trinity Pharmacy' (separate entity in Carrollton) had a 2017 DEA settlement — verify this is not the same entity before final target list"
+    ],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Community retail", "Medicaid/Medicare"],
+    "coasting_tells": ["No website"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "NPI + RxLocal"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://npiprofile.com/npi/1407253966",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "DEA",
+        "url": "https://www.dea.gov/press-releases/2017/02/06/trinity-pharmacy-owner-reach-settlement-resolve-allegations",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.32,
+    "acquisition_disqualifier": "POTENTIAL DEA HISTORY — confirm Trinity Family Pharmacy (Dallas) is NOT the same entity as the 2017 DEA settlement Trinity Pharmacy (Carrollton). If same ownership group, disqualify."
+  },
+  {
+    "spine_index": 27,
+    "legal_name": "Abrams Royal Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.arp-rx.com/",
+    "year_established": 1980,
+    "years_in_business": 46,
+    "owner_name": "Bob Scarbrough (founder); daughters Lark Swofford and Codi (current operators)",
+    "owner_age_estimate": 75,
+    "owner_age_source": "founded_1980_natural_awakenings_article (40yr article 2019 + founder still active)",
+    "owner_tenure_years": 46,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 2,
+    "pharmacist_count": 3,
+    "compounding_capability": "yes - compounding-only pharmacy (one of largest independent in US)",
+    "banner_program": "Independent (RxLocal)",
+    "services": [
+      "Pharmaceutical compounding",
+      "Bioidentical hormone replacement therapy (BHRT)",
+      "Multiple chemical sensitivity formulations",
+      "Nutritional counseling",
+      "Veterinary compounding"
+    ],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": true,
+      "verified_via": "arp-rx.com staff page; daughters running it"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.arp-rx.com/our-beginning",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "Natural Awakenings",
+        "url": "https://www.nadallas.com/2019/12/29/293256/pioneering-abrams-royal-compounding-pharmacy-celebrates-40-years",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.85,
+    "acquisition_score_hint": "VERY STRONG — 46yr legacy, founder 75+, second-gen daughters as operators (potential family-buyout exit), specialty compounding niche (BHRT/MCS) = pricing power. Top-tier target with succession runway."
+  },
+  {
+    "spine_index": 28,
+    "legal_name": "Aldridge's Family Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.aldridgesrx.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Howard Aldridge (owner/pharmacist; described as 'majority of his career' in Dallas)",
+    "owner_age_estimate": 62,
+    "owner_age_source": "career_majority_proxy (decades of service Dallas, est. 60-65)",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 1,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Community retail"],
+    "coasting_tells": ["Solo-PharmD owner with long tenure", "Templated RxLocal site"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "aldridgesrx.com about-us"
+    },
+    "data_sources": [
+      { "source": "WebSearch", "url": "https://www.aldridgesrx.com/", "fetched_at": "2026-05-16" }
+    ],
+    "data_completeness": 0.55,
+    "acquisition_score_hint": "MEDIUM-STRONG — solo owner with long career, family-named storefront on Bonnie View, no apparent successor. Succession-risk profile."
+  },
+  {
+    "spine_index": 29,
+    "legal_name": "Dougherty's Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.doughertys.com/",
+    "year_established": 1929,
+    "years_in_business": 97,
+    "owner_name": "Multi-generational; W.B. Dougherty founder, Joe B. Park (50+ yr PIC), now public Delaware corp",
+    "owner_age_estimate": null,
+    "owner_age_source": "non_applicable - publicly_held_corp (SEC 10-K filings)",
+    "owner_tenure_years": 97,
+    "entity_status": "Public company (Delaware corp; previously SEC-registered)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 2,
+    "pharmacist_count": null,
+    "compounding_capability": "yes - long-tradition compounding",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Hand-compounded medications", "DME", "Multi-location"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "SEC filings + Yelp closed-location notice"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.doughertys.com/about-us",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "SEC",
+        "url": "https://www.sec.gov/Archives/edgar/data/1080029/000168316819001381/doughertys_10k-123118.htm",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.72,
+    "acquisition_disqualifier": "PUBLIC CORP — Dougherty's Pharmacy Inc is a Delaware corporation with SEC filings. Not an independent solo-owner target. Disqualify from acquisition-scorer pool but keep as a comparable benchmark for valuation."
+  },
+  {
+    "spine_index": 30,
+    "legal_name": "Dr. Deano's Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": null,
+    "year_established": 1998,
+    "years_in_business": 28,
+    "owner_name": "Dr. Deano (referenced by store brand; no separate confirmation)",
+    "owner_age_estimate": 58,
+    "owner_age_source": "founded_1998_PharmD_proxy (PharmD grad ~1995 + 28 = ~53-58)",
+    "owner_tenure_years": 28,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 1,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Community retail"],
+    "coasting_tells": ["No website", "Eponymous brand without successor pharmacist visible"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "Manta + NPI"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.manta.com/c/mm294b2/dr-deano-s-pharmacy",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.45,
+    "acquisition_score_hint": "MEDIUM — solo PharmD eponymous storefront, 28yr tenure, no digital presence."
+  },
+  {
+    "spine_index": 31,
+    "legal_name": "Bluitt's Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Wilbert Earl Bluitt (Owner)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "linkedin_owner_listing (long-time independent operator, eponymous brand, est. age 60-70)",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": null,
+    "distress_reasons": [
+      "NOTE: Yelp shows 'CLOSED' status on one listing — needs verification before scoring"
+    ],
+    "location_count": 1,
+    "pharmacist_count": 1,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Vendor Drug Program (Medicaid)", "Community retail Oak Cliff"],
+    "coasting_tells": ["No website", "Yelp closed/inactive listing"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "LinkedIn + Yelp"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.linkedin.com/in/wilbert-bluitt-0a270418/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "Yelp",
+        "url": "https://www.yelp.com/biz/bluitts-pharmacy-dallas",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.5,
+    "acquisition_disqualifier": "POTENTIAL CLOSURE — Yelp shows one Bluitt's listing as 'CLOSED'. Verify operating status before targeting."
+  },
+  {
+    "spine_index": 32,
+    "legal_name": "White Rock Pharmacy",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.white-rockpharmacy.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Community retail", "Wellness"],
+    "coasting_tells": ["No team/about info on website"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "site has no public team data"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.white-rockpharmacy.com/pharmacy-about-us",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.35,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 33,
+    "legal_name": "Presbyterian Prescription Shoppe",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Texas Health Resources (likely parent — operates as 'Texas Health Prescription Shop')",
+    "owner_age_estimate": null,
+    "owner_age_source": "non_applicable - hospital_system_owned",
+    "owner_tenure_years": null,
+    "entity_status": "Active (hospital-system-owned)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Texas Health Presbyterian-affiliated",
+    "services": ["Hospital-outpatient retail"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "RxLess listing labeled 'Texas Health Prescription Shop'"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.rxless.com/pharmacies/texas/dallas/texas-health-prescription-shop/8200-Walnut-Hill-Ln/1740375377",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.4,
+    "acquisition_disqualifier": "NON-INDEPENDENT — affiliated with Texas Health Resources / Texas Health Presbyterian Hospital Dallas. Hospital outpatient pharmacy. Remove from spine."
+  },
+  {
+    "spine_index": 34,
+    "legal_name": "South San Medical Building Pharmacy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": null,
+    "year_established": 1985,
+    "years_in_business": 41,
+    "owner_name": "Richard Leal, RPh (Owner/Pharmacist)",
+    "owner_age_estimate": 66,
+    "owner_age_source": "founded_1985_BSRPh_proxy (BS-RPh era, founder still operator, est. ~65-70)",
+    "owner_tenure_years": 41,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 1,
+    "compounding_capability": "unknown",
+    "banner_program": "Good Neighbor Pharmacy / Health Mart",
+    "services": ["DME", "Delivery", "Immunizations", "Medicaid"],
+    "coasting_tells": [
+      "Several staff with 20+ year tenure (loyal but aging staff base)",
+      "No website"
+    ],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "BBB + MyGNP + Healthgrades"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.bbb.org/us/tx/san-antonio/profile/pharmacy/south-san-medical-building-pharmacy-0825-90084101",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.75,
+    "acquisition_score_hint": "STRONG — 41yr legacy, solo BS-RPh founder ~66, 20yr staff loyalty = relationship moat. Classic succession-risk profile."
+  },
+  {
+    "spine_index": 35,
+    "legal_name": "Alamo City Pharmacy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://alamocitypharmacy.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Sara Elizondo (PIC at Alamo City Pharmacy LLC)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 1,
+    "compounding_capability": "yes",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Prescription", "Compounding"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "LinkedIn + GNP store page"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.mygnp.com/pharmacies/alamo-city-pharmacy-san-antonio-tx-78218/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.42,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 36,
+    "legal_name": "Shavano Oaks Pharmacy at Westover Hills",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Christina Marie Baker Hickerson, PharmD (Pharmacy Director)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 3,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Community retail"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": false,
+      "verified_via": "NPI + MyGNP (multi-location Shavano Oaks group)"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.mygnp.com/pharmacies/shavano-oaks-pharmacy-westover-hills-san-antonio-tx-78251/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "NPI",
+        "url": "https://npiprofile.com/npi/1235550815",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.5,
+    "acquisition_score_hint": "MEDIUM — multi-location Shavano Oaks group under Christina Hickerson PharmD as director."
+  },
+  {
+    "spine_index": 37,
+    "legal_name": "Shavano Oaks Pharmacy (Paesanos)",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Christina Marie Baker Hickerson, PharmD (same as spine_index 36)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 3,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": ["Community retail"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": false,
+      "verified_via": "NPI multi-location group"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio/shavano-oaks-pharmacy-3603-paesanos-pkwy-ste-102",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.45,
+    "duplicate_note": "Sister location of spine_index 36 — same ownership Christina Hickerson PharmD. Treat as multi-store independent group."
+  },
+  {
+    "spine_index": 38,
+    "legal_name": "Davila Pharmacy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://www.davilapharmacy.com/",
+    "year_established": 1955,
+    "years_in_business": 71,
+    "owner_name": "Rodolfo 'Rudy' Davila, Jr. (Founder/CEO) + Rudy Davila (son, VP/CFO/PharmD/Owner)",
+    "owner_age_estimate": 91,
+    "owner_age_source": "BS_pharmacy_ut_1955 (UT 1955 grad + 24 + 71 yrs ownership = ~91)",
+    "owner_tenure_years": 71,
+    "entity_status": "Active (per Spectrum News profile)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 2,
+    "compounding_capability": "yes",
+    "banner_program": "Good Neighbor Pharmacy",
+    "services": [
+      "Compounding",
+      "Home Medical Equipment",
+      "Community retail (the barrio for 70 years)"
+    ],
+    "coasting_tells": [
+      "Multi-generation legacy back to 1904 Davila Food Store",
+      "Long-tenured founder (90+) still on masthead"
+    ],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": true,
+      "verified_via": "Spectrum News + LinkedIn (son Rudy Jr. is PharmD successor)"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.davilapharmacy.com/about",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "Spectrum",
+        "url": "https://spectrumlocalnews.com/tx/san-antonio/news/2020/02/04/davila-pharmacy--aiding-the-barrio-for-65-years-",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.85,
+    "acquisition_disqualifier": "Family successor in place (son Rudy Jr. is active PharmD owner). Tightly-held generational asset; sale likely only on patriarch's death. Long-term watch list, not active target."
+  },
+  {
+    "spine_index": 39,
+    "legal_name": "Oakdell Pharmacy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://oakdellpharmacy.com/",
+    "year_established": 1969,
+    "years_in_business": 57,
+    "owner_name": "Jeff Carson, RPh (UT College of Pharmacy 1996; third-gen pharmacist; son of John R. Carson founder)",
+    "owner_age_estimate": 53,
+    "owner_age_source": "linkedin_ut_pharmacy_1996_grad (1996 + 24 = ~50, + 3yr = ~53)",
+    "owner_tenure_years": 30,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 3,
+    "pharmacist_count": 6,
+    "compounding_capability": "yes - sterile compounding (FDA inspected 2017)",
+    "banner_program": "Health Mart",
+    "services": [
+      "Compounding",
+      "Medical equipment",
+      "Vaccines (full panel)",
+      "Veterinary pharmacy"
+    ],
+    "coasting_tells": [
+      "FDA State Referral Letter 2017 — minor compounding issue documented but not enforcement action",
+      "Stone Oak location closed (consolidation)"
+    ],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": true,
+      "verified_via": "oakdellpharmacy.com about + Facebook video by Jeff Carson"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://oakdellpharmacy.com/about/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "KSAT",
+        "url": "https://www.ksat.com/news/2017/07/13/family-mourning-loss-of-founders-of-oakdell-pharmacy-chain/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "FDA",
+        "url": "https://www.fda.gov/about-fda/oakdell-pharmacy-llc-san-antonio-tx-state-referral-letter-issued-12212017",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.85,
+    "acquisition_disqualifier": "Family-held third-generation business under active second-gen PharmD operator (Jeff Carson ~53). Not exit-ready. Long-term watch list."
+  },
+  {
+    "spine_index": 40,
+    "legal_name": "Oakdell Pharmacy - Stone Oak",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": null,
+    "year_established": 1969,
+    "years_in_business": 57,
+    "owner_name": "Jeff Carson, RPh (same parent as spine_index 39)",
+    "owner_age_estimate": 53,
+    "owner_age_source": "linkedin_grad_1996",
+    "owner_tenure_years": 30,
+    "entity_status": "CLOSED (Yelp lists CLOSED)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 3,
+    "pharmacist_count": null,
+    "compounding_capability": null,
+    "banner_program": "Health Mart",
+    "services": [],
+    "coasting_tells": ["LOCATION CLOSED per Yelp"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "Yelp CLOSED status"
+    },
+    "data_sources": [
+      {
+        "source": "Yelp",
+        "url": "https://www.yelp.com/biz/oakdell-pharmacy-in-stone-oak-san-antonio",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.55,
+    "acquisition_disqualifier": "LOCATION CLOSED — Stone Oak Oakdell shut down. Remove from spine."
+  },
+  {
+    "spine_index": 41,
+    "legal_name": "Oakdell Pharmacy - Medical Center",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://oakdellpharmacy.com/",
+    "year_established": 1969,
+    "years_in_business": 57,
+    "owner_name": "Jeff Carson, RPh (same parent as spine_index 39)",
+    "owner_age_estimate": 53,
+    "owner_age_source": "linkedin_grad_1996",
+    "owner_tenure_years": 30,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 3,
+    "pharmacist_count": null,
+    "compounding_capability": "yes",
+    "banner_program": "Health Mart",
+    "services": ["Compounding", "Medical equipment", "Vaccines", "Veterinary pharmacy"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": true,
+      "verified_via": "oakdellpharmacy.com location page"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://southtexasmed.com/business-listings/oakdell-pharmacy/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.55,
+    "duplicate_note": "Sister location of spine_index 39 (Oakdell parent). Same ownership."
+  },
+  {
+    "spine_index": 42,
+    "legal_name": "Broadway Pharmacy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://www.broadwayrx.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "David W. (Owner; surname truncated in source)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": [
+      "Personal-service neighborhood retail",
+      "Alamo Heights / Terrell Hills / Olmos Park focus"
+    ],
+    "coasting_tells": ["Website on .com domain but limited public team/about info"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "Facebook + Yelp"
+    },
+    "data_sources": [
+      { "source": "WebSearch", "url": "https://www.broadwayrx.com/", "fetched_at": "2026-05-16" }
+    ],
+    "data_completeness": 0.35,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 43,
+    "legal_name": "Hill's Drug Store",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://hillsdrugs.com/",
+    "year_established": 1951,
+    "years_in_business": 75,
+    "owner_name": "Arthur Siller (founder; Tech High School 1952); current ownership not disclosed beyond family-owned status",
+    "owner_age_estimate": 92,
+    "owner_age_source": "tech_hs_1952_proxy (assuming founder still active: 1934 birth + 92 = current; likely family successor in active role)",
+    "owner_tenure_years": 75,
+    "entity_status": "Active (Texas Domestic For-Profit Corp filed 3/12/1948)",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": 2,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": [
+      "Pharmacy",
+      "Medical equipment (HME/DME)",
+      "Wellness consultations",
+      "Home delivery"
+    ],
+    "coasting_tells": ["75yr legacy storefront", "Multi-generational family-owned"],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": false,
+      "verified_via": "hillsdrugs.com (LinkedIn shows Celso Cuellar Jr as part-time relief pharmacist, not owner)"
+    },
+    "data_sources": [
+      { "source": "WebSearch", "url": "https://hillsdrugs.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "Newswire",
+        "url": "https://www.newswire.com/news/hills-drug-store-a-trusted-pharmacy-in-san-antonio-continues-legacy-of-203593",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.72,
+    "acquisition_score_hint": "VERY STRONG — 75yr legacy, founder Arthur Siller ~92, no clear successor pharmacist on staff. Top-tier succession-risk target. PE-grade."
+  },
+  {
+    "spine_index": 44,
+    "legal_name": "Carvajal Pharmacy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://www.carvajalpharmacy.com/",
+    "year_established": 1969,
+    "years_in_business": 57,
+    "owner_name": "Raymond, Charles, and Mark Carvajal (3 brothers; Raymond Owner per LinkedIn)",
+    "owner_age_estimate": 78,
+    "owner_age_source": "founded_1969_proxy + linkedin_raymond_owner (founder cohort, est. 75-82)",
+    "owner_tenure_years": 57,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 4,
+    "pharmacist_count": 5,
+    "compounding_capability": "yes",
+    "banner_program": "Independent (RxLocal); + LTC division",
+    "services": [
+      "4-store retail",
+      "Long-term care pharmacy (statewide TX)",
+      "Mail order",
+      "LTC for nursing homes, hospices, group homes, mental health clinics"
+    ],
+    "coasting_tells": ["57yr legacy multi-location group", "Three-brother ownership (all 70s+)"],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": true,
+      "verified_via": "carvajalpharmacy.com about + LinkedIn"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.carvajalpharmacy.com/about-us",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "LinkedIn",
+        "url": "https://www.linkedin.com/in/raymond-caevajal-59715434/",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.82,
+    "acquisition_score_hint": "VERY STRONG — 57yr legacy, three brothers age ~75-80, 4 retail + LTC + mail order = highest enterprise value in spine. PE roll-up target. Top-tier."
+  },
+  {
+    "spine_index": 45,
+    "legal_name": "Netcare Pharmacy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Raj Milan Chhadua, PharmD (Owner/Managing Partner) + Michael Buchmeier (Owner)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 2,
+    "pharmacist_count": 2,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Community retail (Bandera + Military Dr locations)"],
+    "coasting_tells": ["No website beyond BBB and NPI directory pages"],
+    "successor_indicators": {
+      "second_pharmacist_present": true,
+      "family_successor_present": false,
+      "verified_via": "NPI + BBB profile"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.bbb.org/us/tx/san-antonio/profile/pharmacy/netcare-pharmacy-1-0825-90096852",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.42,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 46,
+    "legal_name": "Westover Hills Pharmacy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://www.westoverhillsrx.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown — Yelp shows 'CLOSED' on prior listing",
+    "is_distressed": null,
+    "distress_reasons": [
+      "Verify operating status — Yelp lists location at 9793 Culebra Rd as CLOSED"
+    ],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Community retail (Northwest SA)"],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "no team data"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.westoverhillsrx.com/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "Yelp",
+        "url": "https://www.yelp.com/biz/westover-hills-pharmacy-san-antonio",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.3,
+    "acquisition_disqualifier": "POTENTIAL CLOSURE — verify operating status before targeting."
+  },
+  {
+    "spine_index": 47,
+    "legal_name": "Village Square Pharmacy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://www.villagesquarepharmacy.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Community retail (Northeast SA)"],
+    "coasting_tells": ["Limited public team info"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "no team data"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.villagesquarepharmacy.com/contact",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.28,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 48,
+    "legal_name": "Babcock Square Pharmacy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": null,
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "no_signal",
+    "owner_tenure_years": null,
+    "entity_status": "unknown",
+    "is_distressed": null,
+    "distress_reasons": [
+      "NOTE: Yelp shows nearby 'ASP CARES' at 2414 Babcock Rd which may be a competitor or rebrand; verify Babcock Square Pharmacy LLC at 5824 Babcock Rd is still operating independently"
+    ],
+    "location_count": 1,
+    "pharmacist_count": null,
+    "compounding_capability": "unknown",
+    "banner_program": "Independent (RxLocal)",
+    "services": ["Community retail"],
+    "coasting_tells": ["No website", "Limited online presence"],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "DnB + NPI"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.dnb.com/business-directory/company-profiles.babcock_pharmacy_llc.189b7cfdf0b072850aa20889efbbe6e9.html",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.25,
+    "acquisition_disqualifier": null
+  },
+  {
+    "spine_index": 49,
+    "legal_name": "Stone Oak Pharmacy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "website": "https://www.stoneoakpharmacy.net/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Ernesto Garza Gongora, PharmD (Owner)",
+    "owner_age_estimate": null,
+    "owner_age_source": "no_grad_year_signal",
+    "owner_tenure_years": null,
+    "entity_status": "Active — but received FMD-145 FDA letter 2019",
+    "is_distressed": null,
+    "distress_reasons": [
+      "FDA FMD-145 letter issued March 2019 — regulatory observation, not enforcement, but flag for diligence"
+    ],
+    "location_count": 1,
+    "pharmacist_count": 1,
+    "compounding_capability": "yes - specialty compounding featured",
+    "banner_program": "Independent (RxLocal)",
+    "services": [
+      "Compounding (specialty)",
+      "Retail prescriptions",
+      "DME",
+      "Delivery",
+      "Hormone consultations"
+    ],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_pharmacist_present": false,
+      "family_successor_present": false,
+      "verified_via": "stoneoakpharmacy.net about + FDA letter"
+    },
+    "data_sources": [
+      {
+        "source": "WebSearch",
+        "url": "https://www.stoneoakpharmacy.net/about-us",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "FDA",
+        "url": "https://www.fda.gov/about-fda/fda-commissioner/stone-oak-pharmacy-san-antonio-tx-fmd-145-letter-issued-03142019",
+        "fetched_at": "2026-05-16"
+      }
+    ],
+    "data_completeness": 0.62,
+    "acquisition_score_hint": "MEDIUM — single-owner compounding pharmacy, but 2019 FDA letter requires deeper diligence. Hormone consultations + specialty compounding = pricing power, but regulatory history is a knock against."
+  }
+]

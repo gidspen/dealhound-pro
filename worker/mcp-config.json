@@ -1,0 +1,15 @@
+{
+  "_comment": "Worker-only MCP config. Loaded via `claude --mcp-config worker/mcp-config.json --strict-mcp-config` in pty-runner.js so the worker-spawned claude subprocess uses its OWN browser profile, isolated from any interactive Claude Code session Gideon may be running concurrently. Avoids 'Browser is already in use for ~/.dealhound-chrome-profile' deadlocks audited 2026-05-15. The user-scope MCP at ~/.dealhound-chrome-profile is left untouched so interactive scans keep their warm cookies.",
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--user-data-dir",
+        "/Users/gideonspencer/.dealhound-worker-chrome-profile",
+        "--headless"
+      ]
+    }
+  }
+}

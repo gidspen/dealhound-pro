@@ -228,6 +228,95 @@ class TestLoadCachedRobustness(unittest.TestCase):
         self.assertIsNone(result)
 
 
+class TestBexarOV65Proxy(unittest.TestCase):
+    """Finding 3 (2026-05-15 deep-dive): Bexar OV65 inferred from OTHER + tax savings."""
+
+    def test_explicit_ov65_still_works_without_proxy(self):
+        # Sanity: when "OV65" appears explicitly, ov65=True and ov65_inferred=False
+        # so we don't double-count.
+        result = extract_exemptions("Exemption: OV65\nTax Due (with exemption): $1.00\nTax Due (without exemption): $100.00")
+        self.assertTrue(result["ov65"])
+        # Even though savings parses as $99, we don't *also* mark ov65_inferred=True
+        # because the proxy only fires for the "OTHER + savings" case. With "OV65"
+        # already explicit, the inference path is a no-op.
+        self.assertFalse(result["ov65_inferred"])
+        self.assertTrue(result["ov65_any"])
+
+    def test_bexar_other_plus_6k_savings_infers_ov65(self):
+        # Whitaker Insurance pattern (2026-05-15 deep-dive)
+        text = (
+            "Exemptions: HS, OTHER\n"
+            "Tax Due (with exemption): $1,977.80\n"
+            "Tax Due (without exemption): $8,185.58\n"
+        )
+        result = extract_exemptions(text)
+        self.assertFalse(result["ov65"])  # no explicit OV65 text
+        self.assertTrue(result["ov65_inferred"])
+        self.assertEqual(result["ov65_inference_source"], "bexar_other_exemption_savings_proxy")
+        self.assertTrue(result["ov65_any"])
+        self.assertEqual(result["tax_savings_amount"], 6208)  # 8185.58 - 1977.80 = 6207.78 → 6208
+
+    def test_bexar_other_with_low_savings_does_not_infer(self):
+        # Under $6K savings → could just be standard homestead, not OV65
+        text = (
+            "Exemptions: HS, OTHER\n"
+            "Tax Due (with exemption): $5,000.00\n"
+            "Tax Due (without exemption): $7,000.00\n"
+        )
+        result = extract_exemptions(text)
+        self.assertFalse(result["ov65"])
+        self.assertFalse(result["ov65_inferred"])
+        self.assertIsNone(result["ov65_inference_source"])
+        self.assertEqual(result["tax_savings_amount"], 2000)
+
+    def test_bexar_other_without_savings_does_not_infer(self):
+        # OTHER alone with no tax-savings comparison → cannot infer
+        text = "Exemptions: HS, OTHER\nAppraised Value: 361,000"
+        result = extract_exemptions(text)
+        self.assertFalse(result["ov65_inferred"])
+        self.assertIsNone(result["tax_savings_amount"])
+
+    def test_other_word_in_unrelated_context_no_inference(self):
+        # The word "OTHER" appearing in unrelated context (e.g., neighborhood name)
+        # shouldn't trigger the proxy without tax-savings evidence.
+        text = "Neighborhood: SOMETHING OTHER PLACE\nAppraised Value: 200,000"
+        result = extract_exemptions(text)
+        self.assertFalse(result["ov65_inferred"])
+
+    def test_dcad_tax_ceiling_infers_ov65(self):
+        # Animal Hospital of Valley Ranch / Chaikin pattern (2026-05-15 deep-dive)
+        text = (
+            "Property Detail\n"
+            "School Tax Ceiling: $5,849.95\n"
+            "County Tax Ceiling: $1,120.70\n"
+            "Homestead Exemption applied\n"
+        )
+        result = extract_exemptions(text)
+        self.assertTrue(result["tax_ceiling"])
+        self.assertTrue(result["ov65_inferred"])
+        self.assertEqual(result["ov65_inference_source"], "dcad_tax_ceiling_line")
+        self.assertTrue(result["homestead"])
+        self.assertTrue(result["ov65_any"])
+
+    def test_ov65_any_combines_explicit_and_inferred(self):
+        # Convenience flag should be true regardless of which side fires
+        explicit = extract_exemptions("Exemption: OV65")
+        inferred = extract_exemptions("Tax Ceiling: $5,000")
+        neither = extract_exemptions("Homestead exemption")
+        self.assertTrue(explicit["ov65_any"])
+        self.assertTrue(inferred["ov65_any"])
+        self.assertFalse(neither["ov65_any"])
+
+    def test_backward_compat_existing_callers_unchanged(self):
+        # Older callers using result["ov65"] only must still get the same booleans
+        # they did before this change.
+        result = extract_exemptions("OV65 Senior")
+        self.assertTrue(result["ov65"])  # original behavior preserved
+        result = extract_exemptions("Homestead")
+        self.assertTrue(result["homestead"])
+        self.assertFalse(result["ov65"])
+
+
 class TestCloudflareChallenge(unittest.TestCase):
     def test_returns_true_on_cf_challenge_form(self):
         self.assertTrue(is_cloudflare_challenge('<form id="cf-challenge-form">'))

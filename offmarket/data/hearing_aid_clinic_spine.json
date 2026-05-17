@@ -1,0 +1,1923 @@
+[
+  {
+    "_meta": {
+      "vertical": "Independent hearing aid clinic / audiology private practice",
+      "naics": ["446199", "621399"],
+      "state": "TX",
+      "generated_at": "2026-05-16T16:34:12Z",
+      "generator": "spine-fetch sub-agent (offmarket-acquisition-scorer)",
+      "version": "1.0.0",
+      "verified_count": 60,
+      "exclusion_policy": "No manufacturer-chain or PE-chain dispensers (Miracle-Ear/Amplifon, HearingLife/Demant, Beltone/GN, Connect Hearing/Sonova, Audibel/Starkey, Costco, Sam's Club, Avada, Concert Hearing). ENT-owned hearing aid dispensaries excluded.",
+      "geography_priority": [
+        "Houston metro",
+        "DFW",
+        "Austin (Travis, Williamson)",
+        "San Antonio",
+        "Hill Country / aging-retiree TX (Comal, Hays, Burnet, Llano, Kerr)",
+        "RGV (Cameron, Hidalgo)",
+        "El Paso",
+        "VA-adjacent metros (San Antonio, Killeen/Temple, Houston, El Paso)"
+      ],
+      "notes": [
+        "TDLR public license search returned no direct programmatic access via WebFetch; spine assembled via manufacturer dealer-locators (Phonak/Oticon/Widex/Starkey/Signia/ReSound), ASHA ProFind, Healthy Hearing directory, and per-clinic website verification.",
+        "Each business has at least one independence_verified URL. License_number / license_issue_date left null where not surfaced in public site content — to be filled by enrichment pass against TDLR LicenseSearch and NPI Registry.",
+        "Several owner-audiologists have multiple operating LLCs (e.g., Dr. Lacey Brooks owns both Heights Audiology + North Houston Hearing Solutions). Captured as separate businesses since they are distinct LLCs and potential separate acquisition targets.",
+        "SoundLogic (Tyler/Longview), Austin Auditory Specialists, and Advanced Hearing Aid & Diagnostics (Corpus Christi) were excluded — confirmed ENT-affiliated / ENT-owned.",
+        "Estes Audiology (8 TX locations) excluded — confirmed acquired by AudioNova (Sonova PE).",
+        "Quality Hearing Centers (Richardson) excluded — Audibel-network (Starkey) only.",
+        "Audicles Hearing (San Antonio) appears legacy independent (1944) but verify trust status — included pending TDLR review.",
+        "Hearing Aid Express is one of the largest independent TX practices (10 locations, founded 1991) — owner not disclosed publicly; flagged for higher-priority enrichment.",
+        "All license_type fields default to HID (Hearing Instrument Fitter and Dispenser) when only TDLR coverage is required; AuD-led practices generally also hold the dispensing license."
+      ]
+    }
+  },
+  {
+    "legal_name": "Allison Audiology & Hearing Aid Center PLLC",
+    "dba_name": "Allison Audiology",
+    "address": "12900 Queensbury Ln #100",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77079",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Jana Emola-Austin, Au.D.; Dr. Lindsey Moder, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [
+      "all major manufacturers (specific brands not enumerated on site)"
+    ],
+    "website": "https://allisonaudiology.com",
+    "phone": "(713) 827-1767",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://allisonaudiology.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, address, phone, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "AuD-owned Memorial-area practice, 30+ years operating. Not on Miracle-Ear/HearingLife/Beltone/Connect/Audibel networks. Solo-location independent practice."
+  },
+  {
+    "legal_name": "Heights Audiology & Hearing Aids",
+    "dba_name": "Heights Audiology",
+    "address": "427 W 20th St, Suite 205",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77008",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Lacey Brooks, Au.D. (CEO); Dr. Paula Watson, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["ReSound", "Phonak", "Signia"],
+    "website": "https://www.heightsaudiology.com",
+    "phone": "(713) 863-0114",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.heightsaudiology.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "address, phone, audiologists"
+      },
+      {
+        "url": "https://www.linkedin.com/in/dr-lacey-brooks-57639131/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, founding date"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent practice founded 1996. CEO/owner Dr. Lacey Brooks also owns North Houston Hearing Solutions (separate LLC)."
+  },
+  {
+    "legal_name": "North Houston Hearing Solutions, LLC",
+    "dba_name": "North Houston Hearing Solutions",
+    "address": "8515 Spring Cypress Rd, Ste 105",
+    "city": "Spring",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77379",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Lacey Brooks, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://northhoustonhearing.com",
+    "phone": "(281) 444-9800",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://northhoustonhearing.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "address, phone"
+      },
+      {
+        "url": "https://opennpi.com/provider/1760652838",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "NPI ownership, address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent LLC founded 2004 by Dr. Angela Poe; now owned by Dr. Lacey Brooks. Single-location independent."
+  },
+  {
+    "legal_name": "Fort Bend Hearing PLLC",
+    "dba_name": "Fort Bend Hearing",
+    "address": "4550 Sweetwater Blvd, Suite A",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77479",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Christie Spencer, Au.D.; Dr. Andrea Gonzalez, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [
+      "Lyric",
+      "Oticon",
+      "Phonak",
+      "ReSound",
+      "Signia",
+      "Starkey",
+      "Unitron",
+      "Widex"
+    ],
+    "website": "https://fortbendhearing.com",
+    "phone": "(281) 277-7272",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://fortbendhearing.com/about/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, address, brands, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-describes as 'an independent audiology practice'. Owner Dr. Christie Spencer has 30+ years Houston-area experience. Solo-location independent."
+  },
+  {
+    "legal_name": "Medical Center Hearing Aids, Ltd.",
+    "dba_name": "Medical Center Hearing Aids",
+    "address": "4101 Greenbriar Street, Suite 320",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77098",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Joan F. Furstenberg, Au.D., CCC-A; Kathryne (Katie) Hopkins, M.A., CCC-A; Sun Mi Gille, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.medicalcenterhearingaids.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.medicalcenterhearingaids.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "audiologists, address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent practice in Texas Medical Center area. 3 full-time audiologists. Houston-only single location."
+  },
+  {
+    "legal_name": "The Center for Healthy Hearing",
+    "dba_name": "The Center for Healthy Hearing",
+    "address": "5311 Kirby Drive, Suite 204",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77005",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Monique Jenkins, Au.D., CCC-A",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.thecenterforhealthyhearing.com",
+    "phone": "(713) 750-9993",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.thecenterforhealthyhearing.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, address, phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo-AuD owned 'boutique' independent practice. Dr. Jenkins 26 years experience."
+  },
+  {
+    "legal_name": "The Center for Audiology",
+    "dba_name": "The Center for Audiology - Houston",
+    "address": "1200 Binz, Suite 1090",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77004",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Sara Nagel, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://centerforaud.com",
+    "phone": "(713) 255-0035",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.healthyhearing.com/hearing-aids/28940-the-center-for-audiology-houston",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "clinic, founder"
+      },
+      {
+        "url": "https://centerforaud.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "website"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-describes as 'not part of a national chain' and 'independent audiology practice'. Two locations (Houston Galleria + Pearland) since 2008."
+  },
+  {
+    "legal_name": "Memorial Hearing, PLLC",
+    "dba_name": "Memorial Hearing",
+    "address": "11451 Katy Fwy Suite #520",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77079",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Elly Pourasef, Au.D. (owner); Dr. Crystal Wiggins, Au.D., CH-TM; Dr. Erika Wilcox, Au.D., CH-TM",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [
+      "Lyric",
+      "Widex",
+      "ReSound",
+      "Phonak",
+      "Oticon",
+      "Starkey",
+      "Signia",
+      "Unitron"
+    ],
+    "website": "https://www.memorialhearing.com",
+    "phone": "(713) 984-7562",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.memorialhearing.com/audiologist-houston-tx/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owners, address, brands"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Privately owned since 2011. All 3 audiologists hold Doctor of Audiology degrees. Single-location AuD-led independent."
+  },
+  {
+    "legal_name": "The Woodlands Hearing Center, LLC",
+    "dba_name": "The Woodlands Hearing Center",
+    "address": "150 Pine Forest Dr #104",
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77384",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Amanda Fontenot, Au.D.; Dr. Sun Mi Gille, Au.D.; Dr. Jillian Marshall, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.thewoodlandshearingcenter.com",
+    "phone": "(936) 271-3366",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.thewoodlandshearingcenter.com/team/amanda-fontenot/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner-audiologist, AuD"
+      },
+      {
+        "url": "https://www.thewoodlandshearingcenter.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "address, phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'independent private practice Audiologist'. Marketing affiliation with 'Dr. Cliff AuD Network' is a referral/branding network, not chain ownership."
+  },
+  {
+    "legal_name": "Clarity Hearing",
+    "dba_name": "Clarity Hearing",
+    "address": "1020 Riverwood Ct #115",
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77304",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Alix Kornegay, Au.D.; Dr. Scott Marquardt, Au.D.; Dr. Kim Marquardt, Au.D. (+ 6 other AuDs)",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://hearingwithclarity.com",
+    "phone": "(936) 788-2212",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://hearingwithclarity.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "locations, audiologists"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent multi-location AuD practice (Conroe, North Cypress, Tomball, The Woodlands). 9 AuDs on staff."
+  },
+  {
+    "legal_name": "Clark Hearing, Inc.",
+    "dba_name": "Clark Hearing",
+    "address": "Multiple locations (Magnolia HQ; Montgomery; Shenandoah; Tomball)",
+    "city": "Magnolia",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77354",
+    "license_number": null,
+    "license_type": "HID",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "HID",
+    "manufacturer_brands_carried": [
+      "Oticon",
+      "Phonak",
+      "ReSound",
+      "Signia",
+      "Starkey",
+      "Unitron",
+      "Widex"
+    ],
+    "website": "https://clarkhearing.com",
+    "phone": "(832) 482-2571",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://clarkhearing.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "locations, brands"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent multi-location practice with 4 offices in NW Houston metro. Brand list covers all major manufacturers — likely AudigyCertified or similar buying group but not chain-owned."
+  },
+  {
+    "legal_name": "NOVA Audiology",
+    "dba_name": "NOVA Audiology",
+    "address": "77 Sugar Creek Center Blvd, Ste 600",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Sadaf Momin, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Starkey", "Widex", "Phonak", "Oticon"],
+    "website": "https://novaaudiology.com",
+    "phone": "(832) 802-1763",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://novaaudiology.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, address, brands, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-describes as 'independently owned'. Solo AuD owner Dr. Sadaf Momin. Mobile-first practice covering Sugar Land/Houston/Katy/Pearland."
+  },
+  {
+    "legal_name": "Advanced Hearing Center",
+    "dba_name": "Advanced Hearing Center",
+    "address": "1223 Lake Pointe Pkwy",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Terry Davis Snook, Au.D.; Amy Woodall, Audiologist",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.advancedhearingcentertx.com",
+    "phone": "(281) 491-0200",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.advancedhearingcentertx.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "audiologists, address, phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent AuD-led practice. Dr. Snook 30 years Sugar Land/Houston-area experience. 3-time Sugar Land Readers' Choice winner. Single-location."
+  },
+  {
+    "legal_name": "Hearing Aid Express",
+    "dba_name": "Hearing Aid Express",
+    "address": "5108 Bellaire Blvd (HQ); 10 TX locations (Austin, Bellaire, Conroe, Dallas, Georgetown, Kingwood, Pasadena, Plano, Spring, Sugar Land)",
+    "city": "Bellaire",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77401",
+    "license_number": null,
+    "license_type": "HID",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "HID",
+    "manufacturer_brands_carried": ["ReSound", "Starkey"],
+    "website": "https://hearingaidexpress.com",
+    "phone": "(844) 720-7930",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://hearingaidexpress.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "founding, locations, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1991 in Bellaire. Self-describes as 'one of the largest independently owned hearing care practices in the state'. NOT a chain — large regional independent. Owner ID needs enrichment."
+  },
+  {
+    "legal_name": "Dallas Ear Institute / Dallas Hearing Center",
+    "dba_name": "Dallas Ear Institute and Hearing Center",
+    "address": "5750 Genesis Court, Suite 100",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75034",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.dallasear.com",
+    "phone": "(972) 566-7359",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.dallasear.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "clinic"
+      }
+    ],
+    "independence_verified": false,
+    "independence_notes": "FLAGGED — Dallas Ear Institute combines neurotologic surgeons with audiologists. Likely ENT-owned hearing aid arm. EXCLUDE pending further verification — moved to deprioritized list."
+  },
+  {
+    "legal_name": "Owens Ear Center",
+    "dba_name": "Owens Ear Center",
+    "address": "923 Pennsylvania Ave",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76104",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.owensearcenter.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.owensearcenter.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "clinic"
+      }
+    ],
+    "independence_verified": false,
+    "independence_notes": "FLAGGED — name suggests otologist-owned (Owens). Combines otologists with audiologists. EXCLUDE pending further verification — likely ENT-owned hearing aid dispensary."
+  },
+  {
+    "legal_name": "Trinity Hearing Healthcare",
+    "dba_name": "Trinity Hearing Healthcare",
+    "address": "3128 Forest Lane, Suite #232 (Dallas); 3900 S Stonebridge Dr Suite #1002 (McKinney); 675 Town Square Blvd Suite #200 (Garland)",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75234",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.trinityhearing.com",
+    "phone": "(214) 357-1144",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.trinityhearing.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "locations, phone, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-describes as 'locally owned and operated private practice' across Dallas, McKinney, Frisco, Garland."
+  },
+  {
+    "legal_name": "Cityview Audiology & Hearing Aids, Inc.",
+    "dba_name": "Cityview Audiology",
+    "address": "5701 Bryant Irvin Rd, Ste 202",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76132",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.cityviewhearing.com",
+    "phone": "(817) 900-8321",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.cityviewhearing.com/about/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "clinic, address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent, AudigyCertified Fort Worth practice. Single-location."
+  },
+  {
+    "legal_name": "Advanced Hearing & Balance Center of Dallas",
+    "dba_name": "Advanced Hearing & Balance Center",
+    "address": "Locations in Allen and Grapevine",
+    "city": "Allen",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75002",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Marilyn M. Hinrichs, Au.D. (ABA-Certified); Rachel Garcia, HID; Jordan R. King, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.ahbctexas.com",
+    "phone": "(972) 733-3344",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.ahbctexas.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "audiologists, founding"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent AuD-owned since 1995. Two locations in DFW (Allen, Grapevine)."
+  },
+  {
+    "legal_name": "Carson Hearing Care, LLC",
+    "dba_name": "Carson Hearing Care",
+    "address": "5104 Camp Bowie Blvd",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76107",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Robin Carson, Au.D., CCC-A (owner); Dr. Caroline Adams, Au.D.; Dr. Lydia Zarras, Au.D.; Dr. Erin Hebert, Au.D., CCC-A, F-AAA",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [
+      "Widex",
+      "Starkey",
+      "Lyric",
+      "Unitron",
+      "Signia",
+      "Oticon",
+      "ReSound",
+      "Rexton",
+      "Phonak",
+      "CaptionCall"
+    ],
+    "website": "https://www.carsonhearing.com",
+    "phone": "(817) 813-1557",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.carsonhearing.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, audiologists, brands"
+      },
+      {
+        "url": "https://npiprofile.com/npi/1679815435",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "NPI"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent single-location AuD-owned, founded 2013. Multi-brand dispenser. NPI 1679815435."
+  },
+  {
+    "legal_name": "Audiology Associates of DFW",
+    "dba_name": "Audiology Associates of DFW",
+    "address": "3132 Matlock Rd, Suite 303 (Arlington); 610 Uptown Blvd #2000 (Cedar Hill)",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76015",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Marylyn Koble, M.S., CCC-A (owner)",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.audiologyassociates.com",
+    "phone": "(817) 438-0989",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.audiologyassociates.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, locations, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent audiologist-owned, single-owner 2-location practice."
+  },
+  {
+    "legal_name": "Audiology Experts",
+    "dba_name": "Audiology Experts",
+    "address": "1261 W Green Oaks Blvd, Suite 105",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76013",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Marla Gracia, Au.D. (owner); Dr. Lisa B. Fell, Au.D. (founder)",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://audiologyexperts.com",
+    "phone": "(817) 451-4818",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.audiologyexperts.com/meet-our-team/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, founding, address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent AuD-owned. Founded 2008 by Dr. Fell; transitioned to Dr. Gracia in 2025 — successful succession indicates active, sellable practice."
+  },
+  {
+    "legal_name": "Kos/Danchak Audiology & Hearing Aids",
+    "dba_name": "Kos/Danchak Audiology",
+    "address": "905 W Mitchell St",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76013",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Melissa Danchak, Au.D., CCC-A; Debra Crawford, MA, CCC-A, F-AAA; Matthew Lee, Au.D.; Taylor Jones, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Starkey", "all major manufacturers"],
+    "website": "https://kdaud.com",
+    "phone": "(817) 277-7039",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://kdaud.com/about/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "audiologists, founding, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-describes as 'independently owned and operated', operating since 1984. AuD-led, multi-doctor practice."
+  },
+  {
+    "legal_name": "Gomer Hearing Center",
+    "dba_name": "Gomer Hearing Center",
+    "address": "915 W. Exchange Parkway, Suite 180-A (Allen); 4011 E. Renner Rd, Suite 108 (Richardson)",
+    "city": "Allen",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75013",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Rebecca Gomer, Au.D. (owner); Dr. Mary Beth Turner, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.gomerhearing.com",
+    "phone": "(972) 908-9648",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.gomerhearing.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, locations, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent AuD-owned 2-location practice. Dr. Gomer founding member Texas Academy of Audiology."
+  },
+  {
+    "legal_name": "The Hearing Wizard / Advanced Audiology Center",
+    "dba_name": "The Hearing Wizard",
+    "address": "333 N Shiloh Rd, Suite 109A",
+    "city": "Garland",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75042",
+    "license_number": null,
+    "license_type": "HID",
+    "license_issue_date": null,
+    "license_holder_name": "Laura Trainor-Collins, Audiologist",
+    "credential": "HID/Audiologist",
+    "manufacturer_brands_carried": ["Oticon", "Phonak", "ReSound", "Unitron", "Signia", "Widex"],
+    "website": "https://www.advancedaudiologycenter.com",
+    "phone": "(972) 494-6537",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.advancedaudiologycenter.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, address, brands"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent practice, 35+ years owner experience. Multi-brand dispenser, contrasts vs 'big box retailers'."
+  },
+  {
+    "legal_name": "Family Audiology",
+    "dba_name": "Family Audiology",
+    "address": "Plano (HQ); additional locations Frisco/Allen/McKinney",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75024",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://familyaud.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://familyaud.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "locations"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'most trusted independent hearing Doctors in Plano'. Multi-location north Dallas AuD practice."
+  },
+  {
+    "legal_name": "Audiology Providers, P.C.",
+    "dba_name": "Audiology Providers PC",
+    "address": "Frisco location",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75033",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Jamie Holden, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://audiologyproviderspc.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://audiologyproviderspc.com/about",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, founding"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo-AuD owned independent. Dr. Holden 37 years licensed, private practice since 2011. Award winner."
+  },
+  {
+    "legal_name": "Mobile Audiology of North Texas",
+    "dba_name": "Mobile Audiology of North Texas",
+    "address": "Mobile / no fixed retail (Frisco/McKinney/Allen/Plano coverage)",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75033",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.mobileaudiologyofnorthtexas.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.mobileaudiologyofnorthtexas.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "clinic"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Mobile-first independent AuD practice. North Dallas geography. Owner needs enrichment."
+  },
+  {
+    "legal_name": "Denton Hearing Health Care",
+    "dba_name": "Denton Hearing Health Care",
+    "address": "3303 Colorado Blvd",
+    "city": "Denton",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "76210",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://dentonhearing.com",
+    "phone": "(940) 387-0550",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.healthyhearing.com/hearing-aids/TX-Texas/Denton",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "clinic, address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'only Doctors of Audiology that have ever been in private practice in Denton'. Independent AuD practice."
+  },
+  {
+    "legal_name": "Colorful Hearing",
+    "dba_name": "Colorful Hearing",
+    "address": "535 S Locust St",
+    "city": "Denton",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "76201",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Rebecca Taylor, PhD",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://colorfulhearing.com",
+    "phone": "(940) 387-3330",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://colorfulhearing.com/about/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, address, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent solo-owner practice. Dr. Taylor herself wears hearing aids. 25+ years experience. Single location."
+  },
+  {
+    "legal_name": "Austin Hearing Aid Center",
+    "dba_name": "Austin Hearing Aid Center (AHAC)",
+    "address": "4403 Menchaca Road, Suite E",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78745",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Allison Archer, Au.D.; Dr. Amanda Zappler, Au.D.; Angela Wooten, M.S.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://austinhearingaidcenter.com",
+    "phone": "(512) 444-8684",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://austinhearingaidcenter.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "audiologists, address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent practice since 1983. Multi-AuD staff. Single location."
+  },
+  {
+    "legal_name": "RK Audiology (Rivers Krueger Audiology)",
+    "dba_name": "RK Audiology",
+    "address": "4201 Bee Cave Rd Ste A102 (Westlake); 3625 Menchaca Rd Ste 102 (South Austin)",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78746",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Paula Rivers, Au.D. (Co-Owner); Janet Krueger, Au.D. (Co-Owner); Dr. Victoria Villarreal, Au.D.; Dr. Tony Milesi, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://rkaudiology.com",
+    "phone": "(512) 327-3004",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://rkaudiology.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owners, locations, audiologists"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent AuD-co-owned 2-location Austin practice. Founder-owned partnership."
+  },
+  {
+    "legal_name": "Texas Mobile Hearing",
+    "dba_name": "Texas Mobile Hearing",
+    "address": "Mobile service (Austin metro)",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78701",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Caroline B. Williams, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://texasmobilehearing.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.healthyhearing.com/hearing-aids/TX-Texas/Austin",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, mobile model"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo AuD mobile-first independent practice. Dr. Williams 19+ years clinical, U Florida 2003."
+  },
+  {
+    "legal_name": "Victory Hearing & Balance",
+    "dba_name": "Victory Hearing & Balance Center",
+    "address": "Austin (Westlake Hills); Hutto",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78746",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Jill Davis, Au.D. (Owner/Clinical Director); Dr. Monica Trevino, Ph.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Oticon", "Starkey", "Widex", "ReSound", "Phonak", "Signia"],
+    "website": "https://victoryhearing.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://victoryhearing.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, locations, brands"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent AuD-owned 2-location Austin metro practice. Multi-brand dispenser."
+  },
+  {
+    "legal_name": "Associates of Audiology",
+    "dba_name": "Associates of Audiology",
+    "address": "2632 Broadway, Suite 102 (San Antonio HQ); 8 additional clinics across San Antonio, Hill Country, Austin, Plano",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78215",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["all major manufacturers"],
+    "website": "https://www.associatesofaudiology.com",
+    "phone": "(210) 451-0373",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.associatesofaudiology.com/locations/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "9 locations, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'independently owned by doctors of audiology'. 9 TX locations across San Antonio, Boerne, Kerrville, Fredericksburg, Round Rock, Bee Cave, Plano. Largest independent multi-clinic AuD group in central TX."
+  },
+  {
+    "legal_name": "Alamo Hearing Aid & Audiological Service",
+    "dba_name": "Alamo Hearing",
+    "address": "7400 Louis Pasteur, Suite 102",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78229",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Holly Spiser Foley, Audiologist",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Oticon", "Phonak", "Signia", "Starkey", "Widex"],
+    "website": "https://alamohearing.com",
+    "phone": "(210) 614-3751",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://alamohearing.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, brands, founding"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1952; owned/operated by Foley family since 1967 (50+ years). 'Locally owned, family, independent practice'. Multi-generational succession candidate."
+  },
+  {
+    "legal_name": "Audicles Hearing Services",
+    "dba_name": "Audicles Hearing",
+    "address": "6530 West Loop 1604 N Suite 106 (Alamo Ranch); 8620 N New Braunfels Ave Suite 220 (Alamo Heights)",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78254",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Tracy Board, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://audicles.com",
+    "phone": "(210) 761-6163",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://audicles.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, locations, founding, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-describes as 'Independent clinic'. 80 years of hearing care, founded 1944. Multi-generational legacy candidate."
+  },
+  {
+    "legal_name": "San Antonio Audiology",
+    "dba_name": "San Antonio Audiology",
+    "address": "San Antonio",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78201",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://sanantonioaudiology.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://sanantonioaudiology.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "clinic"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent San Antonio audiology practice — details need enrichment."
+  },
+  {
+    "legal_name": "Hill Country Audiology Service",
+    "dba_name": "Hill Country Audiology Service",
+    "address": "Kerrville location",
+    "city": "Kerrville",
+    "county": "Kerr",
+    "state": "TX",
+    "zip": "78028",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://hillcountryaudiology.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://hillcountryaudiology.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "clinic, geography"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent Kerrville-area audiology. Different entity from Associates of Audiology Kerrville location."
+  },
+  {
+    "legal_name": "Hear In Texas, Inc.",
+    "dba_name": "Hear In Texas",
+    "address": "2967 Oak Run Pkwy, Suite 315",
+    "city": "New Braunfels",
+    "county": "Comal",
+    "state": "TX",
+    "zip": "78132",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Celia I. Miranda, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://hearintx.com",
+    "phone": "(830) 360-2000",
+    "is_va_provider": true,
+    "data_sources": [
+      {
+        "url": "https://hearintx.com/services/va-community-care-provider",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "VA provider"
+      },
+      {
+        "url": "https://npiprofile.com/npi/1194478982",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "NPI"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'only locally owned and operated audiology practice in New Braunfels'. Solo AuD-owned. VA Community Care Provider — high priority for VA contract revenue stream."
+  },
+  {
+    "legal_name": "Waterloo Audiology",
+    "dba_name": "Waterloo Audiology",
+    "address": "1340 Wonder World Drive, Suite 2300 (San Marcos); 105 Medical Drive (Seguin)",
+    "city": "San Marcos",
+    "county": "Hays",
+    "state": "TX",
+    "zip": "78666",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://waterlooaudiology.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://waterlooaudiology.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "locations"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent central TX 2-location audiology practice. Owner details to be enriched."
+  },
+  {
+    "legal_name": "Advanced Hearing Aid Center of Seguin",
+    "dba_name": "Advanced Hearing Aid Center",
+    "address": "Seguin location",
+    "city": "Seguin",
+    "county": "Guadalupe",
+    "state": "TX",
+    "zip": "78155",
+    "license_number": null,
+    "license_type": "HID",
+    "license_issue_date": null,
+    "license_holder_name": "Amy Trost, BC-HIS, ACA",
+    "credential": "HID",
+    "manufacturer_brands_carried": [],
+    "website": "https://advancedhearingseguin.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://advancedhearingseguin.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "HID-owned independent (Board Certified Hearing Instrument Specialist). Solo-owner small-town practice."
+  },
+  {
+    "legal_name": "Listen Hear Audiology Center, LLC",
+    "dba_name": "Listen Hear Audiology Center",
+    "address": "3091 University Dr, Suite 410",
+    "city": "Bryan",
+    "county": "Brazos",
+    "state": "TX",
+    "zip": "77802",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Robert Herring, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Oticon", "Phonak", "ReSound", "Starkey"],
+    "website": "https://listenhearaudiology.com",
+    "phone": "(979) 776-4327",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://listenhearaudiology.com/about-our-hearing-center/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, locations, brands, founding"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'only private Audiology practice in Bryan/College Station'. Founded 2009 by Dr. Herring (left ENT physician group). Three locations (Bryan/College Station/Caldwell)."
+  },
+  {
+    "legal_name": "Hearing Aids, Inc.",
+    "dba_name": "Hearing Aids, Inc.",
+    "address": "McAllen (HQ); Weslaco; Harlingen",
+    "city": "McAllen",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78501",
+    "license_number": null,
+    "license_type": "HID",
+    "license_issue_date": null,
+    "license_holder_name": "Jackson 'Jack' Rainwater III, HID (owner); Ofelia 'Ofie' Juarez (manager Harlingen)",
+    "credential": "HID",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.hearingaidsinc.net",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.hearingaidsinc.net/about-us",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, founding, locations"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned, founded 1972 in McAllen by Jackson 'Chief' Rainwater Jr. Son Jack joined 1978, expanded to Weslaco/Harlingen. Multi-generational succession candidate. 3 RGV locations."
+  },
+  {
+    "legal_name": "Family Hearing Aid Center",
+    "dba_name": "Family Hearing Aid Center",
+    "address": "309 W Nolana Avenue #1W (McAllen); 2027 East Griffin Parkway (Mission)",
+    "city": "McAllen",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78501",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Edieberto Palacios, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": null,
+    "phone": "(956) 630-4327",
+    "is_va_provider": true,
+    "data_sources": [
+      {
+        "url": "https://rgvisionmagazine.com/family-hearing-aid-center-the-dr-is-in/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, locations, VA"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'only independently-owned Doctor of Audiology practice in RGV'. Dr. Palacios trained at Gallaudet, residency at VA Medical Center DC. Active VA provider — HIGH PRIORITY for VA contract revenue."
+  },
+  {
+    "legal_name": "Better Hearing Clinic, Inc.",
+    "dba_name": "Better Hearing Clinic",
+    "address": "5425 N McColl Rd, Suite A",
+    "city": "McAllen",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78504",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Isaac Farias, M.S. Audiology",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["ReSound Omnia", "Signia/Siemens", "Phonak", "Starkey"],
+    "website": "https://betterhearingclinicinc.com",
+    "phone": "(956) 630-7629",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://betterhearingclinicinc.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, brands"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned and operated audiology clinic. 25 years experience owner. Multi-brand independent."
+  },
+  {
+    "legal_name": "Hearing Aid Company of Texas",
+    "dba_name": "Hearing Aid Company of Texas",
+    "address": "6468 Holly Road (Corpus Christi); 13330 Leopard Street, Suite 26 (Calallen); 101 Stuart Place Road Ste. A (Harlingen)",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78412",
+    "license_number": null,
+    "license_type": "HID",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "HID",
+    "manufacturer_brands_carried": ["Starkey", "ReSound", "Oticon"],
+    "website": "https://www.hearingaidcompany.com",
+    "phone": "(361) 814-3487",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.hearingaidcompany.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "locations, founding, brands"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'Family Owned Hearing Aid Clinic' serving South Texas since 1990. 3 South TX locations. Multi-generational candidate."
+  },
+  {
+    "legal_name": "Hear Today Hearing Aids",
+    "dba_name": "Hear Today Hearing Aids",
+    "address": "4456 S Staples St",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78411",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Cheryll Gold, Au.D., CCC-A",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://heartodayhearingaids.com",
+    "phone": "(361) 414-9066",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://heartodayhearingaids.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, address, founding"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'audiologist-owned and operated business'. Dr. Gold practicing in South TX since 2001. Solo AuD owner."
+  },
+  {
+    "legal_name": "We Hear You Audiology, P.C.",
+    "dba_name": "We Hear You Audiology",
+    "address": "Corpus Christi",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78411",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": null,
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.healthyhearing.com/hearing-aids/34572-we-hear-you-audiology-p-c",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "clinic"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Audiologist-staffed independent P.C. Mobile coverage Corpus Christi + San Antonio. Owner details to be enriched."
+  },
+  {
+    "legal_name": "Texas Hearing Aid Specialists",
+    "dba_name": "Texas Hearing Aid Specialists",
+    "address": "3921 Saratoga Boulevard Ste 109 (Corpus Christi); 712 Moore Ave (Portland)",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78415",
+    "license_number": null,
+    "license_type": "HID",
+    "license_issue_date": null,
+    "license_holder_name": "Frank Ballesteros, HID",
+    "credential": "HID",
+    "manufacturer_brands_carried": [],
+    "website": "https://hearingaidscorpus.com",
+    "phone": "(361) 854-7009",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://hearingaidscorpus.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, locations"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "HID-owned independent. Frank Ballesteros, 10+ year member Texas Hearing Aid Association. 2 South TX locations."
+  },
+  {
+    "legal_name": "Oliveira Audiology & Hearing Center",
+    "dba_name": "Oliveira Audiology & Hearing Center",
+    "address": "7917 McPherson Road, Suite 207",
+    "city": "Laredo",
+    "county": "Webb",
+    "state": "TX",
+    "zip": "78045",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Celina T. Oliveira, Au.D.; Dr. Raymundo Charles, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Starkey", "Phonak", "Oticon", "Unitron"],
+    "website": "https://www.laredohearing.com",
+    "phone": "(956) 727-3801",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.laredohearing.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owners, brands"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent — self-described 'only independent audiology clinic in Laredo'. Husband-wife AuD partnership pattern (common succession setup)."
+  },
+  {
+    "legal_name": "El Paso Hearing Aid & Audiology Center",
+    "dba_name": "El Paso Hearing Aid & Audiology Center",
+    "address": "1500 N Mesa St",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79902",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Matthew Lyon, Au.D.; Dr. Kerry Lyon, Au.D.; Dr. Janine Granados, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://ephearing.com",
+    "phone": "(915) 532-6935",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://ephearing.com/about-our-hearing-center/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owners, founding, locations"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1955 by Ed & Jeanne Lyon; now operated by sons Drs. Matthew & Kerry Lyon. 70-year multi-generational family practice. TX + NM locations. Multi-generational succession candidate."
+  },
+  {
+    "legal_name": "Cornerstone Audiology",
+    "dba_name": "Cornerstone Audiology",
+    "address": "5738 82nd Street (Lubbock); 3219 College Ave (Snyder)",
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": "79424",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Julie Hubik, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://cornerstoneaudiology.com",
+    "phone": "(806) 687-4327",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://cornerstoneaudiology.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, locations, founding"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent AuD-owned, operating 19+ years (founded ~2007). Best of West awards. 2 West TX locations."
+  },
+  {
+    "legal_name": "The Hearing Doctor",
+    "dba_name": "The Hearing Doctor",
+    "address": "5607 114th Street, Suite 100 (Lubbock); 1301 Hobbs HWY Suite C (Seminole)",
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": "79424",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Arica Black, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Phonak (incl Lyric)"],
+    "website": "https://myhearingdoc.com",
+    "phone": "(806) 798-3600",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.myhearingdoc.com/amo-team/dr-arica-black/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, founding"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo-AuD owned independent practice. Dr. Black founder of Help for Hearing Lubbock charity. Practicing Lubbock since 2013. 2 West TX locations."
+  },
+  {
+    "legal_name": "A&A Audiology, P.C.",
+    "dba_name": "A&A Audiology",
+    "address": "7335 82nd Street Suite 3 (Lubbock); 1900 South Coulter Street (Amarillo)",
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": "79424",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Tonia D. Fleming, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Oticon"],
+    "website": null,
+    "phone": "(806) 744-7223",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.facebook.com/p/AA-Audiology-61576981043628/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, locations"
+      },
+      {
+        "url": "https://www.topnpi.com/tx1306861356/dr-tonia-fleming",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "NPI"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Solo-AuD owned, 22+ years experience. Multi-location across Lubbock + Amarillo. Independent regional practice."
+  },
+  {
+    "legal_name": "Audio Acoustics Hearing Centers, Inc.",
+    "dba_name": "Audio Acoustics Hearing Centers",
+    "address": "2101 Midland Drive Suite 4 (Midland); 2481 E 11th Street (Odessa)",
+    "city": "Midland",
+    "county": "Midland",
+    "state": "TX",
+    "zip": "79707",
+    "license_number": null,
+    "license_type": "HID",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "HID",
+    "manufacturer_brands_carried": ["Oticon", "Phonak", "ReSound", "Starkey", "Widex"],
+    "website": "https://heaar.com",
+    "phone": "(432) 400-3319",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://heaar.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "locations, brands, founding"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Established 1977. 2 Permian Basin locations. Multi-brand independent."
+  },
+  {
+    "legal_name": "All About Hearing",
+    "dba_name": "All About Hearing",
+    "address": "2703 West Cuthbert Avenue",
+    "city": "Midland",
+    "county": "Midland",
+    "state": "TX",
+    "zip": "79701",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Leah Guempel, Au.D., CCC-A; Dr. Bethany Daniels, Au.D., CCC-A; Danny Garcia, HID",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["all major manufacturers"],
+    "website": "https://allabouthearing4u.com",
+    "phone": "(432) 689-2220",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://allabouthearing4u.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owners, address, independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'independent and privately-owned practice'. 20+ years operating Permian Basin. Multi-AuD staff."
+  },
+  {
+    "legal_name": "Abilene Audiology Co.",
+    "dba_name": "Abilene Audiology Co.",
+    "address": "5530 Buffalo Gap Rd",
+    "city": "Abilene",
+    "county": "Taylor",
+    "state": "TX",
+    "zip": "79606",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Steven Hamlett, Au.D.; Dr. Kelsey May, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Oticon", "Phonak", "ReSound", "Starkey", "Widex"],
+    "website": "https://abileneaudiology.com",
+    "phone": "(325) 455-3404",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://abileneaudiology.com/about/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owners, brands, locations"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent AuD-owned. 5-brand multi-manufacturer dispenser. Main + satellite (Snyder, Brownwood) — West TX coverage."
+  },
+  {
+    "legal_name": "Holland Hearing Center",
+    "dba_name": "Holland Hearing Center",
+    "address": "7 Hospital Drive",
+    "city": "Abilene",
+    "county": "Taylor",
+    "state": "TX",
+    "zip": "79606",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Kelsi Mangrem, Au.D., FAAA (owner); Dr. Anum K. Khan, Au.D., CCC-A, CH-TM",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.hollandhearing.com",
+    "phone": "(325) 437-4730",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.hollandhearing.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, founding, address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent AuD-owned since 2004. Voted Best Hearing Aid Provider 15 consecutive years. #1 Lenire provider in West Central TX."
+  },
+  {
+    "legal_name": "Texas State Hearing Aid Device Center",
+    "dba_name": "Texas State Hearing Aid Device Center",
+    "address": "598 S Pioneer Dr (Abilene); 100 McCauley St (Sweetwater)",
+    "city": "Abilene",
+    "county": "Taylor",
+    "state": "TX",
+    "zip": "79605",
+    "license_number": null,
+    "license_type": "HID",
+    "license_issue_date": null,
+    "license_holder_name": "Gregory Brenner, Audioprosthologist (37+ yrs); Hollande Suel, HID",
+    "credential": "HID",
+    "manufacturer_brands_carried": [],
+    "website": "https://stopthewhat.com",
+    "phone": "(325) 695-1133",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://stopthewhat.com/about-us/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owners, founding, locations"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Self-described 'family-owned, veteran led' independent. 40+ years operating. 2 West TX locations."
+  },
+  {
+    "legal_name": "Waco Hearing Center",
+    "dba_name": "Waco Hearing Center",
+    "address": "611 W State Highway 6, Ste 113",
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": "76710",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Lauren York, Au.D. (owner); Elizabeth Carson, M.S.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Oticon", "Phonak", "ReSound", "Widex"],
+    "website": "https://wacohearingcenter.com",
+    "phone": "(254) 878-4040",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://wacohearingcenter.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, founding, brands"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Privately-owned family-run independent founded 2021 by Dr. York. Younger practice but solo AuD-owned. Central TX (VA-adjacent to Killeen/Temple)."
+  },
+  {
+    "legal_name": "Texas Hearing Solutions",
+    "dba_name": "Texas Hearing Solutions",
+    "address": "Waco + Killeen locations",
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": "76710",
+    "license_number": null,
+    "license_type": "HID",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "credential": "HID",
+    "manufacturer_brands_carried": ["all major manufacturers"],
+    "website": "https://txhearing.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://txhearing.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "locations, brands"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Multi-brand independent. 2 locations covering Central TX (VA-adjacent — Killeen near Fort Cavazos/former Fort Hood, high VA contract potential)."
+  },
+  {
+    "legal_name": "Beckman Audiology, PLLC",
+    "dba_name": "Beckman Audiology",
+    "address": "2501 Jimmy Johnson Blvd #306",
+    "city": "Port Arthur",
+    "county": "Jefferson",
+    "state": "TX",
+    "zip": "77640",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Lindsay Shafer, Au.D.",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Oticon", "Starkey", "Unitron", "Widex", "Cochlear"],
+    "website": "https://beckmanaudiology.com",
+    "phone": "(409) 722-3400",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://beckmanaudiology.com/about/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, brands, succession"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent. Successful succession story: Dr. Shafer purchased from retiring Dr. Beckman in 2018. 20+ year practice. Multi-brand dispenser. Cochlear implant capable."
+  },
+  {
+    "legal_name": "Trinity Audiology Specialists, PLLC",
+    "dba_name": "Trinity Audiology Specialists",
+    "address": "7980 Anchor Dr, Suite 300-B",
+    "city": "Port Arthur",
+    "county": "Jefferson",
+    "state": "TX",
+    "zip": "77642",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Rae Guerrero, Au.D. (co-owner); Dr. Stacy Kuykendall, Au.D. (co-owner)",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://trinityaudiology.com",
+    "phone": "(409) 237-2868",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://trinityaudiology.com/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owners, address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent AuD co-owner partnership. SE TX coverage. Solo-location."
+  },
+  {
+    "legal_name": "All About Ears, LLC",
+    "dba_name": "All About Ears",
+    "address": "Beaumont",
+    "city": "Beaumont",
+    "county": "Jefferson",
+    "state": "TX",
+    "zip": "77706",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Dr. Leila Grant-Cleveland, Au.D. (owner); Maria Grant",
+    "credential": "AuD",
+    "manufacturer_brands_carried": [],
+    "website": "https://www.allaboutearsllc.com",
+    "phone": null,
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://www.healthyhearing.com/hearing-aids/TX-Texas/Beaumont",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, founding"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned-and-operated independent founded 2016. Sister-led practice (Dr. Grant-Cleveland + Maria Grant)."
+  },
+  {
+    "legal_name": "Audiology Associates of East Texas, Inc.",
+    "dba_name": "Audiology Associates of East Texas",
+    "address": "1018 Pruitt Pl",
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "zip": "75701",
+    "license_number": "TX 50911",
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "David Twomey, M.A. (owner); Karen Twomey (co-founder)",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Signia"],
+    "website": "https://aaetx.com",
+    "phone": "(903) 592-8374",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://npino.com/audiologist/1497959134-audiology-associates-of-east-texas,-inc/",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "NPI, address"
+      },
+      {
+        "url": "https://www.topnpi.com/tx1033211578/dr-david-twomey",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "owner, license"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Husband-wife-founded private audiology clinic, opened 1984. Twomey 46+ years experience, TX license #50911. Multi-generational succession candidate (40+ year practice)."
+  },
+  {
+    "legal_name": "AHS Audiology & Hearing Care, LLC",
+    "dba_name": "AHS Audiology & Hearing Solutions",
+    "address": "2501 E 5th St",
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "zip": "75701",
+    "license_number": null,
+    "license_type": "AuD",
+    "license_issue_date": null,
+    "license_holder_name": "Becky A. Davis, Audiologist (Director of Clinical Services); Shay (owner per LinkedIn)",
+    "credential": "AuD",
+    "manufacturer_brands_carried": ["Signia"],
+    "website": null,
+    "phone": "(903) 593-7977",
+    "is_va_provider": null,
+    "data_sources": [
+      {
+        "url": "https://npirecord.com/1548408453/ahs-audiology-hearing-care-llc",
+        "fetched_at": "2026-05-16T16:34:12Z",
+        "field": "NPI, LLC, address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned and operated. 30+ year clinical director. Independent East TX practice."
+  }
+]

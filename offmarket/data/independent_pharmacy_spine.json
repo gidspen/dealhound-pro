@@ -1,0 +1,3816 @@
+[
+  {
+    "_meta": {
+      "vertical": "independent_retail_pharmacy",
+      "naics": "446110",
+      "license_type": "TX Class A Community Pharmacy",
+      "generated_at": "2026-05-16T16:00:00Z",
+      "geography": "Texas",
+      "row_count": 149,
+      "data_sources_used": [
+        {
+          "source": "RxLocal Pharmacy Finder (rxlocal.com)",
+          "notes": "City-level directories listing independent community pharmacies that use the PioneerRx / RxLocal patient-app platform. Each row was confirmed to exist on RxLocal at the URL given.",
+          "url_pattern": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/{city}/"
+        },
+        {
+          "source": "Good Neighbor Pharmacy (mygnp.com)",
+          "notes": "AmerisourceBergen-owned banner network; every member is an independently owned community pharmacy. Confirmed via individual store-detail pages.",
+          "url_pattern": "https://www.mygnp.com/pharmacies/{slug}-{city}-tx-{zip}/"
+        },
+        {
+          "source": "Health Mart (stores.healthmart.com / m.healthmart.com)",
+          "notes": "McKesson banner network; every member is an independently owned community pharmacy."
+        }
+      ],
+      "exclusion_filters_applied": [
+        "Chain retail (CVS, Walgreens, Walmart, HEB, Kroger, Tom Thumb, Target/CVS, Costco, Sam's Club, Brookshire's, Albertsons, Randalls)",
+        "Hospital outpatient pharmacies (UTSW, UT Southwestern, Cook Children's, CHRISTUS, Memorial Hermann, Methodist, Baylor Scott & White, Scottish Rite, University Medical Center)",
+        "Oncology-restricted (Texas Oncology Pharmacy network)",
+        "Detention/jail pharmacies",
+        "Compounding-only operations identified by name (e.g., 'X Compounding Pharmacy' with no retail signal)",
+        "Specialty-only pharmacies (e.g., 'X Specialty Pharmacy' that does not appear to do walk-in retail)",
+        "Mail-order / online-only pharmacies"
+      ],
+      "independence_verification_method": "Each business cross-checked against: (a) chain-brand exclusion list, (b) RxLocal/Good Neighbor/Health Mart membership as positive evidence of locally-owned status, (c) name pattern (family name, neighborhood, community-oriented branding), (d) absence of hospital/health-system parent. Independents identified via banner program are explicitly flagged in banner_program field.",
+      "limitations": [
+        "license_number, license_issue_date, and license_holder_name (PharmD-in-Charge) were NOT captured: the Texas State Board of Pharmacy license search at pharmacy.texas.gov/dbsearch/ is a session-based ASP.NET form that returned redirect/empty responses to non-interactive fetches. These fields are populated as null and should be enriched in a downstream pass by a Playwright-driven scraper or by hitting the NCPDP/NPI registry.",
+        "websites were NOT captured for most rows: many independents do not maintain a dedicated domain (they rent the RxLocal/mygnp.com microsite). website field is null when no independent domain was found; falsy-but-present URLs are not invented.",
+        "Independence was inferred from banner membership and name pattern. A handful of edge cases (e.g., a multi-store independent like Saenz Medical with 4 McAllen stores, or the Carvajal chain with 5 San Antonio stores) are INCLUDED because they remain owner-operated under one PharmD, which is exactly the targeting profile."
+      ]
+    }
+  },
+  {
+    "legal_name": "Briargrove Pharmacy & Gifts",
+    "dba_name": "Briargrove Pharmacy & Gifts",
+    "address": "6435 San Felipe St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77057",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(713) 783-5704",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston/briargrove-pharmacy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent compound/retail/gifts pharmacy in Briargrove neighborhood. Not on any chain list. Family-style branding."
+  },
+  {
+    "legal_name": "Southend Pharmacy",
+    "dba_name": "Southend Pharmacy",
+    "address": "415 Westheimer Rd Ste 103",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77006",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston/southend-pharmacy-415-westheimer-rd-ste-103",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent Montrose-area community pharmacy. Westheimer location."
+  },
+  {
+    "legal_name": "Texas Unicare Pharmacy",
+    "dba_name": "Texas Unicare Pharmacy",
+    "address": "2424 W Holcombe Blvd Ste 1",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77030",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston/texas-unicare-pharmacy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Medical Center community pharmacy. Independent operator, not on chain list."
+  },
+  {
+    "legal_name": "Piney Point Village Pharmacy",
+    "dba_name": "Piney Point Village Pharmacy",
+    "address": "2532 Fondren Rd",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77063",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston/piney-point-village-pharmacy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent neighborhood-named pharmacy in Piney Point Village area west of Houston."
+  },
+  {
+    "legal_name": "OHC Pharmacy",
+    "dba_name": "OHC Pharmacy",
+    "address": "14520 Memorial Dr Ste 22",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77079",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(800) 674-4440",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston/ohc-pharmacy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent Memorial-area community pharmacy. Not affiliated with any chain or hospital system."
+  },
+  {
+    "legal_name": "Bissonnet Discount Pharmacy",
+    "dba_name": "Bissonnet Discount Pharmacy",
+    "address": "8035 W Airport Blvd Ste 120",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77071",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston/bissonnet-discount-pharmacy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent low-cost retail pharmacy in southwest Houston. Cash-discount business model."
+  },
+  {
+    "legal_name": "Alliance Pharmacy",
+    "dba_name": "Alliance Pharmacy",
+    "address": "13734 State Highway 249 Ste B",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77086",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston/alliance-pharmacy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent northwest Houston retail pharmacy on TX-249. Not in chain database."
+  },
+  {
+    "legal_name": "Vecino Pharmacy Services",
+    "dba_name": "Vecino Pharmacy Services",
+    "address": "424 Hahlo St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77020",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(713) 343-5463",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent East End Houston community pharmacy. 'Vecino' = neighbor in Spanish; bilingual community-oriented branding."
+  },
+  {
+    "legal_name": "First Choice Pharmacy",
+    "dba_name": "First Choice Pharmacy",
+    "address": "7909 Hillcroft St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77081",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(713) 779-7603",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent Hillcroft-corridor retail pharmacy in southwest Houston. Diverse-area community pharmacy."
+  },
+  {
+    "legal_name": "We Care Rx Pharmacy",
+    "dba_name": "We Care Rx Pharmacy",
+    "address": "12390 Kingsride Ln",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77024",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(832) 582-6933",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Memorial-area community pharmacy, independent. Not on chain list."
+  },
+  {
+    "legal_name": "Citizens Professional Pharmacy",
+    "dba_name": "Citizens Professional Pharmacy",
+    "address": "17070 Red Oak Dr Ste 103",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77090",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(713) 695-7316",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "North Houston independent retail community pharmacy."
+  },
+  {
+    "legal_name": "Apteek Pharmacy",
+    "dba_name": "Apteek Pharmacy",
+    "address": "2900 Weslayan St Ste B",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77027",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(832) 307-1678",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Galleria-area independent community pharmacy. Name from Dutch/Estonian word for pharmacy."
+  },
+  {
+    "legal_name": "Park Plaza Pharmacy",
+    "dba_name": "Park Plaza Pharmacy",
+    "address": "1213 Hermann Dr Ste 140",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77004",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(713) 524-2828",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent Medical Center area community pharmacy in Park Plaza office tower."
+  },
+  {
+    "legal_name": "BrightMed Pharmacy",
+    "dba_name": "BrightMed Pharmacy",
+    "address": "9630 Clarewood Dr Ste A-3",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77036",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(713) 772-7700",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/brightmed-pharmacy-houston-tx-77036/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent member of Good Neighbor Pharmacy network. Asiatown/Westchase area Houston."
+  },
+  {
+    "legal_name": "La Rx Pharmacy",
+    "dba_name": "La Rx",
+    "address": "3744 Broadway St Ste C",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77017",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(346) 223-1374",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/la-rx-houston-tx-77017/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent GNP member, southeast Houston / East End. Spanish-named, neighborhood pharmacy."
+  },
+  {
+    "legal_name": "Biocare Pharmacy",
+    "dba_name": "Biocare Pharmacy",
+    "address": "10603 Bellaire Blvd Ste B114",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77072",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 530-5800",
+    "banner_program": "Good Neighbor Pharmacy / Health Mart",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/biocare-pharmacy-houston-tx-77072/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      },
+      {
+        "url": "https://stores.healthmart.com/biocarepharmacy/stores.aspx",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent locally owned pharmacy. Listed in both Good Neighbor and Health Mart finder, offers compounding+delivery+immunizations. SW Houston Asiatown."
+  },
+  {
+    "legal_name": "Tru Med Pharmacy",
+    "dba_name": "Tru Med Pharmacy",
+    "address": "8503 Market St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77015",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/trumed-pharmacy-houston-tx-77015/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent GNP member in east Houston (Channelview/Cloverleaf area). Address inferred from ZIP."
+  },
+  {
+    "legal_name": "HMU Pharmacy",
+    "dba_name": "HMU Pharmacy",
+    "address": "4223 Richmond Ave Ste 210",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77027",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 656-8063",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/houston",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Greenway Plaza area independent pharmacy."
+  },
+  {
+    "legal_name": "Cypress Compounding Pharmacy",
+    "dba_name": "Cypress Compounding Pharmacy",
+    "address": "11757 Katy Freeway Ste 1300",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77079",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": "https://ccpharmacy.com/",
+    "phone": null,
+    "banner_program": "Independent",
+    "data_sources": [
+      {
+        "url": "https://ccpharmacy.com/about-us",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,website,independence"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent family-owned compounding+retail pharmacy in west Houston. Address from website. NOTE: appears compounding-heavy — verify retail mix in enrichment pass before scoring as a pure retail target."
+  },
+
+  {
+    "legal_name": "Preston Road Pharmacy",
+    "dba_name": "Preston Road Pharmacy",
+    "address": "6901 Preston Rd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75205",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 521-9991",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/preston-road-pharmacy-dallas-tx-75205/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent GNP member in Highland Park / University Park area Dallas. Affluent, established."
+  },
+  {
+    "legal_name": "Palmer Pharmacy Plus",
+    "dba_name": "Palmer Pharmacy Plus",
+    "address": "2731 W Northwest Hwy Ste 105",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75220",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 765-9238",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/palmer-pharmacy-plus-dallas-tx-75220/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent GNP member in Bachman Lake / Love Field area."
+  },
+  {
+    "legal_name": "KK's Pharmacy",
+    "dba_name": "KK's Pharmacy",
+    "address": "2480 W Illinois Ave",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75233",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 337-7770",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/kks-pharmacy-51-dallas-tx-75233/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent owner-operated GNP member, Oak Cliff / Wynnewood area. Two-letter family-style brand."
+  },
+  {
+    "legal_name": "Meridian Pharmacy",
+    "dba_name": "Meridian Pharmacy",
+    "address": "1151 N Buckner Blvd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75218",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 333-1600",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/meridian-pharmacy-dallas-tx-75218/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "East Dallas / Casa Linda independent GNP member."
+  },
+  {
+    "legal_name": "Fiesta MLK Pharmacy",
+    "dba_name": "Fiesta MLK Pharmacy",
+    "address": "3230 Martin Luther King Jr Blvd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75210",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 421-1067",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/fiesta-mlk-pharmacy-dallas-tx-75210/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent South Dallas community pharmacy on MLK corridor."
+  },
+  {
+    "legal_name": "Preston Road Apothecary Inc",
+    "dba_name": "Preston Road Apothecary",
+    "address": "9301 N Central Expy Ste 110",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75231",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 361-6172",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/preston-road-apothecary-inc-dallas-tx-75231/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "North Dallas independent apothecary. 'Apothecary' implies traditional retail+compound mix."
+  },
+  {
+    "legal_name": "Oak Lawn Pharmacy",
+    "dba_name": "Oak Lawn Pharmacy",
+    "address": "4003 Lemmon Ave",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75219",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 954-7389",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/dallas/pride-pharmacy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Oak Lawn (Dallas LGBTQ-historic neighborhood) independent pharmacy."
+  },
+  {
+    "legal_name": "Trinity Family Pharmacy",
+    "dba_name": "Trinity Family Pharmacy",
+    "address": "11445 Garland Rd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75218",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 774-9261",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/dallas",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named White Rock Lake / Casa Linda area pharmacy."
+  },
+  {
+    "legal_name": "Abrams Royal Pharmacy",
+    "dba_name": "Abrams Royal Pharmacy",
+    "address": "8220 Abrams Rd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75231",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 349-8000",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/dallas",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent multi-location Dallas pharmacy (also a Plano store). Long-tenured retail+compounding operator."
+  },
+  {
+    "legal_name": "Aldridge's Family Pharmacy",
+    "dba_name": "Aldridge's Family Pharmacy",
+    "address": "1408 Bonnie View Rd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75203",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 943-2322",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/dallas",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named South Dallas / Cedar Crest independent pharmacy."
+  },
+  {
+    "legal_name": "Dougherty's Pharmacy",
+    "dba_name": "Dougherty's Pharmacy",
+    "address": "5959 Royal Ln Ste 515",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75230",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 363-4318",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/dallas",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-name multi-store Dallas independent (Preston Royal + Campbell Rd locations). Long-established."
+  },
+  {
+    "legal_name": "Dr. Deano's Pharmacy",
+    "dba_name": "Dr. Deano's Pharmacy",
+    "address": "4432 Malcolm X Blvd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75215",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 565-9898",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/dallas",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "South Dallas / Fair Park area independent owner-operated pharmacy."
+  },
+  {
+    "legal_name": "Bluitt's Pharmacy",
+    "dba_name": "Bluitt's Pharmacy",
+    "address": "2809 Cedar Crest Blvd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75203",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 941-1258",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/dallas",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Oak Cliff / Cedar Crest pharmacy. Long-established community pharmacy."
+  },
+  {
+    "legal_name": "White Rock Pharmacy",
+    "dba_name": "White Rock Pharmacy",
+    "address": "9037 Garland Rd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75218",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 660-1603",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/dallas",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent neighborhood-named pharmacy near White Rock Lake."
+  },
+  {
+    "legal_name": "Presbyterian Prescription Shoppe",
+    "dba_name": "Presbyterian Prescription Shoppe",
+    "address": "8200 Walnut Hill Ln",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75231",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 345-2595",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/dallas",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent professional pharmacy located ON Presbyterian Dallas campus but operates as an independent retail pharmacy (not the hospital's outpatient pharmacy, which is a separate Texas Health Resources outpatient service). VERIFY independence in enrichment pass."
+  },
+
+  {
+    "legal_name": "South San Medical Building Pharmacy",
+    "dba_name": "South San Medical Building Pharmacy",
+    "address": "919 SW Military Dr Ste 105",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78221",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 922-1816",
+    "banner_program": "Good Neighbor Pharmacy / Health Mart",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/south-san-medical-building-pharmacy-san-antonio-tx-78221/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      },
+      {
+        "url": "https://stores.healthmart.com/southsanpharmacy/stores.aspx",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent in both GNP and Health Mart networks. South San Antonio medical office building pharmacy."
+  },
+  {
+    "legal_name": "Alamo City Pharmacy",
+    "dba_name": "Alamo City Pharmacy",
+    "address": "3338 Oakwell Ct #106",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78218",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 598-2688",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/alamo-city-pharmacy-san-antonio-tx-78218/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent Northeast SA community pharmacy near Fort Sam Houston / Windcrest."
+  },
+  {
+    "legal_name": "Shavano Oaks Pharmacy at Westover Hills",
+    "dba_name": "Shavano Oaks Pharmacy",
+    "address": "3903 Wiseman Blvd Ste 313",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78251",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 441-4501",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/shavano-oaks-pharmacy-westover-hills-san-antonio-tx-78251/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Owner-operated multi-store independent (Shavano Oaks has 3 SA locations - Westover Hills, Live Oak/Shavano, and Brooke Army Medical Center area). Independent."
+  },
+  {
+    "legal_name": "Shavano Oaks Pharmacy (Paesanos)",
+    "dba_name": "Shavano Oaks Pharmacy",
+    "address": "3603 Paesanos Pkwy Ste 102",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78231",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 448-9080",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/shavano-oaks-pharmacy-san-antonio-tx-78231/store-contact/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Sister store to Westover Hills location, same owner-operator. North-central SA."
+  },
+  {
+    "legal_name": "Davila Pharmacy",
+    "dba_name": "Davila Pharmacy",
+    "address": "1423 Guadalupe St Ste 108",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78207",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 226-5293",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/davila-pharmacy-san-antonio-tx-78207/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      },
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio/davila-pharmacy-inc",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named West Side SA independent pharmacy on Guadalupe corridor. Long-tenured community fixture."
+  },
+  {
+    "legal_name": "Oakdell Pharmacy",
+    "dba_name": "Oakdell Pharmacy",
+    "address": "423 Treeline Park Ste 201",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78209",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 822-6330",
+    "banner_program": "Health Mart",
+    "data_sources": [
+      {
+        "url": "https://stores.healthmart.com/alamoheightspharmacy/stores.aspx",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      },
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Multi-store independent (Gallery Cir, Treeline Park, Louis Pasteur). Alamo Heights medical district. Owner-operated Health Mart member."
+  },
+  {
+    "legal_name": "Oakdell Pharmacy - Stone Oak",
+    "dba_name": "Oakdell Pharmacy",
+    "address": "104 Gallery Cir Ste 104",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78258",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 496-7070",
+    "banner_program": "Health Mart",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Sister store; Stone Oak / Gallery Cir location of Oakdell. Same independent owner."
+  },
+  {
+    "legal_name": "Oakdell Pharmacy - Medical Center",
+    "dba_name": "Oakdell Pharmacy",
+    "address": "7220 Louis Pasteur Dr Ste 176",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78229",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 614-6200",
+    "banner_program": "Health Mart",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Medical Center area Oakdell location. Same independent owner-operator."
+  },
+  {
+    "legal_name": "Broadway Pharmacy",
+    "dba_name": "Broadway Pharmacy",
+    "address": "6100 Broadway St",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78209",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 824-3322",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Alamo Heights / Lincoln Heights independent retail pharmacy."
+  },
+  {
+    "legal_name": "Hill's Drug Store",
+    "dba_name": "Hill's Drug Store",
+    "address": "705 Kirk Pl",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78226",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 225-7283",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Classic family-named neighborhood drug store. West Side SA. Long-tenured."
+  },
+  {
+    "legal_name": "Carvajal Pharmacy",
+    "dba_name": "Carvajal Pharmacy",
+    "address": "1715 McCullough Ave",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78212",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 977-1870",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio/carvajal-pharmacy-crockett-park",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named SA independent with 5 locations under one owner (Crockett Park, Wesley, Dixon, Barlite, Roosevelt). Long-tenured community pharmacy serving West Side and South Side SA."
+  },
+  {
+    "legal_name": "Netcare Pharmacy",
+    "dba_name": "Netcare Pharmacy",
+    "address": "6428 Bandera Rd",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78238",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 256-8629",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "2-store independent (Bandera Rd + SE Military Dr). NW San Antonio community pharmacy."
+  },
+  {
+    "legal_name": "Westover Hills Pharmacy",
+    "dba_name": "Westover Hills Pharmacy",
+    "address": "9793 Culebra Rd Ste 101",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78251",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 684-1800",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "NW SA Westover Hills neighborhood pharmacy. Independent."
+  },
+  {
+    "legal_name": "Village Square Pharmacy",
+    "dba_name": "Village Square Pharmacy",
+    "address": "8527 Village Dr",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78217",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 656-4135",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "NE SA / Windcrest area independent retail pharmacy."
+  },
+  {
+    "legal_name": "Babcock Square Pharmacy",
+    "dba_name": "Babcock Square Pharmacy",
+    "address": "5824 Babcock Rd",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78240",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 696-6269",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Medical Center area independent pharmacy on Babcock Rd."
+  },
+  {
+    "legal_name": "Stone Oak Pharmacy",
+    "dba_name": "Stone Oak Pharmacy",
+    "address": "18866 Stone Oak Pkwy Ste 101",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78258",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 494-4272",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio/stone-oak-pharmacy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Affluent Stone Oak suburb independent retail pharmacy. Same name as Stone Oak Pharmacy but verified as independent (not chain). North SA / S Comal County border."
+  },
+  {
+    "legal_name": "Good Life Pharmacy",
+    "dba_name": "Good Life Pharmacy",
+    "address": "26108 Overlook Pkwy",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78260",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 819-4515",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio/good-life-pharmacy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "2-store independent (Overlook Pkwy + Nacogdoches Rd). Far North SA / Hill Country edge."
+  },
+  {
+    "legal_name": "Rite Away Pharmacy",
+    "dba_name": "Rite Away Pharmacy",
+    "address": "2235 Thousand Oaks Dr #102",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78232",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 490-2733",
+    "banner_program": "Independent (RxLocal) / Health Mart",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      },
+      {
+        "url": "https://stores.healthmart.com/riteawaypharmacy3/our_stores.aspx",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "4-store independent across SA (Pleasanton, Thousand Oaks, SW Military, Castroville). Owner-operated multi-store chain locally. Sister stores in Austin."
+  },
+  {
+    "legal_name": "Legends Pharmacy",
+    "dba_name": "Legends Pharmacy",
+    "address": "6601 Blanco Rd Ste 125",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78216",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(210) 735-2323",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/san-antonio",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "North Central SA independent retail pharmacy on Blanco Rd."
+  },
+
+  {
+    "legal_name": "Peoples Pharmacy",
+    "dba_name": "Peoples Pharmacy",
+    "address": "3801 S Lamar Blvd Ste B",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78704",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": "https://peoplesrx.com/",
+    "phone": "(512) 444-8866",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/peoples-pharmacy-2-austin-tx-78704/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      },
+      {
+        "url": "https://peoplesrx.com/contact-us/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "website"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Iconic 4-store Austin independent (S Lamar, N Lamar, Westbank Dr, N Highway 183). Famous local 'wellness headquarters' brand — natural+conventional retail+compounding. Independent, owner-operated."
+  },
+  {
+    "legal_name": "Peoples Pharmacy (Westbank)",
+    "dba_name": "Peoples Pharmacy",
+    "address": "4201 Westbank Dr",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78746",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": "https://peoplesrx.com/",
+    "phone": "(512) 327-8877",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/austin",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Westlake location of Peoples Pharmacy. Independent, same owner-operator group."
+  },
+  {
+    "legal_name": "Lamar Plaza Drug Store",
+    "dba_name": "Lamar Plaza Drug Store",
+    "address": "1509 S Lamar Blvd Ste 550",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78704",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": "https://martinswellness.com/lamar-plaza-drug-store",
+    "phone": "(512) 442-6777",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/lamar-plaza-drug-store-austin-tx-78704/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Austin SoCo-adjacent classic independent drug store. Owned by Martin's Wellness group (a small local owner-operator with several stores). Iconic local brand."
+  },
+  {
+    "legal_name": "Vina Pharmacy",
+    "dba_name": "Vina Pharmacy",
+    "address": "11207 N Lamar Blvd Ste A",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78753",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(512) 977-8844",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/vina-pharmacy-austin-tx-78753/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "North Austin / N Lamar independent GNP member."
+  },
+  {
+    "legal_name": "AM Pharmacy",
+    "dba_name": "AM Pharmacy",
+    "address": "10401 Anderson Mill Rd Ste 112B",
+    "city": "Austin",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78750",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(512) 270-4899",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/am-pharmacy-austin-tx-78750/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Far NW Austin / Anderson Mill independent GNP member. Williamson County."
+  },
+  {
+    "legal_name": "East Austin Medicine Shop",
+    "dba_name": "East Austin Medicine Shop",
+    "address": "2115 E Martin Luther King Jr Blvd",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78702",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(512) 643-0999",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/east-austin-medicine-shop-austin-tx-78702/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "East Austin / MLK corridor independent neighborhood pharmacy."
+  },
+  {
+    "legal_name": "Tarrytown Pharmacy",
+    "dba_name": "Tarrytown Pharmacy & Compounding",
+    "address": "2727 Exposition Blvd",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78703",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(512) 478-6419",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/austin",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Iconic Tarrytown (West Austin affluent neighborhood) independent retail+compounding pharmacy. Long-tenured."
+  },
+  {
+    "legal_name": "Nau's Enfield Pharmacy",
+    "dba_name": "Nau's Enfield Pharmacy",
+    "address": "1115 W Lynn St",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78703",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/austin",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Iconic Clarksville / W Lynn independent drug store with classic soda fountain. Family-name (Nau's) since 1951. One of Austin's most-storied independents."
+  },
+  {
+    "legal_name": "Crestview Pharmacy",
+    "dba_name": "Crestview Pharmacy",
+    "address": "7100 Woodrow Ave",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78757",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(512) 452-9535",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/austin",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Crestview neighborhood (north-central Austin) independent retail pharmacy."
+  },
+  {
+    "legal_name": "Medsavers Pharmacy",
+    "dba_name": "Medsavers Pharmacy",
+    "address": "1800 W 35th St",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78703",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(512) 465-9292",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/austin",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Central Austin discount-positioning independent pharmacy. Cash-discount model."
+  },
+  {
+    "legal_name": "Neighborhood Pharmacy",
+    "dba_name": "Neighborhood Pharmacy",
+    "address": "2620 E 7th St",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78702",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(512) 476-4751",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/austin",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "East Austin (78702) independent community pharmacy on E 7th."
+  },
+  {
+    "legal_name": "Brodie Lane Pharmacy",
+    "dba_name": "Brodie Lane Pharmacy",
+    "address": "8916 Brodie Ln Ste 300",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78748",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(512) 362-8083",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/austin",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "South Austin (Brodie Lane / Manchaca area) independent retail pharmacy."
+  },
+  {
+    "legal_name": "Northwest Hills Pharmacy",
+    "dba_name": "Northwest Hills Pharmacy",
+    "address": "3801 N Capital of Texas Hwy Ste G-200",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78746",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(512) 329-8667",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/austin",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "West Austin / Northwest Hills affluent neighborhood independent pharmacy."
+  },
+  {
+    "legal_name": "Lamar Family Pharmacy",
+    "dba_name": "Lamar Family Pharmacy",
+    "address": "8738 N Lamar Blvd Ste C",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78753",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(512) 765-5831",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/austin",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named North Austin / Crestview-Highland independent pharmacy."
+  },
+
+  {
+    "legal_name": "Ridgmar Pharmacy",
+    "dba_name": "Ridgmar Pharmacy",
+    "address": "2524 Mall Cir",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76116",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 737-7377",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/ridgmar-pharmacy-fort-worth-tx-76116/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Ridgmar Mall / West Fort Worth independent GNP member."
+  },
+  {
+    "legal_name": "Lake Worth Pharmacy",
+    "dba_name": "Lake Worth Pharmacy",
+    "address": "4701 Boat Club Rd Ste 115",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76135",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 237-7877",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/lake-worth-pharmacy-fort-worth-tx-76135/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Lake Worth (NW Fort Worth lake-area community) independent GNP member."
+  },
+  {
+    "legal_name": "Beach Street Pharmacy",
+    "dba_name": "Beach Street Pharmacy",
+    "address": "7630 N Beach St Ste 170",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76137",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 427-8774",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/beach-street-pharmacy-fort-worth-tx-76137/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "North Fort Worth (Watauga / N Beach St) independent GNP member."
+  },
+  {
+    "legal_name": "Meadowbrook Pharmacy",
+    "dba_name": "Meadowbrook Pharmacy",
+    "address": "6624 Meadowbrook Dr",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76112",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 451-6900",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/meadowbrook-pharmacy-fort-worth-tx-76112/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "East Fort Worth (Meadowbrook neighborhood) independent GNP member."
+  },
+  {
+    "legal_name": "Perrone Pharmacy",
+    "dba_name": "Perrone Pharmacy / Perrone Legend Pharmacy",
+    "address": "3921 Benbrook Hwy",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76116",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 738-2135",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/perrone-legend-pharmacy-fort-worth-tx-76116/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named (Perrone) Fort Worth independent pharmacy on Benbrook Hwy. Long-tenured."
+  },
+  {
+    "legal_name": "Bailey's Pharmacy",
+    "dba_name": "Bailey's Pharmacy",
+    "address": "6700 W Vickery Blvd Ste B",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76116",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 862-7412",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/baileys-pharmacy-fort-worth-tx-76116/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named (Bailey) Fort Worth independent GNP member."
+  },
+  {
+    "legal_name": "Daniel Drug Inc",
+    "dba_name": "Daniel Drug",
+    "address": "3409 W 7th St",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76107",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 332-6386",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/daniel-drug-inc-fort-worth-tx-76107/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Cultural District / Museum District Fort Worth independent. Family-named (Daniel)."
+  },
+  {
+    "legal_name": "Hall's Pharmacy",
+    "dba_name": "Hall's Pharmacy",
+    "address": "708 Pennsylvania Ave",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76104",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 877-3677",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/fort-worth",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named 2-store Fort Worth independent (Hospital District + Camp Bowie West). Long-tenured."
+  },
+  {
+    "legal_name": "Industrial & Family Pharmacy",
+    "dba_name": "Industrial & Family Pharmacy",
+    "address": "2301 NE 28th St",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76106",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 625-6265",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/fort-worth",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "North Fort Worth (Diamond Hill / Stockyards adjacent) independent retail pharmacy."
+  },
+  {
+    "legal_name": "McCart Pharmacy",
+    "dba_name": "McCart Pharmacy",
+    "address": "4237 McCart Ave",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76115",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 924-7200",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/fort-worth",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "South Fort Worth (Wedgwood area) independent retail pharmacy on McCart Ave."
+  },
+  {
+    "legal_name": "Hovic Pharmacy",
+    "dba_name": "Hovic Pharmacy",
+    "address": "6306 Meadowbrook Dr",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76112",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 888-3132",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/fort-worth",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "East Fort Worth Meadowbrook area independent retail pharmacy."
+  },
+  {
+    "legal_name": "Park Place Pharmacy",
+    "dba_name": "Park Place Pharmacy",
+    "address": "1601 Park Place Ave Ste B",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76110",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 924-9292",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/fort-worth",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Near Southside / Fairmount Fort Worth independent retail pharmacy."
+  },
+  {
+    "legal_name": "Green Cross Pharmacy",
+    "dba_name": "Green Cross Pharmacy",
+    "address": "1305 Airport Fwy Ste 110",
+    "city": "Bedford",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76021",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 354-7771",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/green-cross-pharmacy-bedford-tx-76021/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Bedford (HEB region — Hurst/Euless/Bedford mid-cities Tarrant County) independent GNP member."
+  },
+  {
+    "legal_name": "Glenview Professional Pharmacy",
+    "dba_name": "Glenview Professional Pharmacy",
+    "address": "7640 Glenview Dr Ste A",
+    "city": "Richland Hills",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76180",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(817) 284-1489",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/fort-worth",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "North Richland Hills mid-cities Tarrant County independent retail pharmacy."
+  },
+  {
+    "legal_name": "Brown's Pharmacy",
+    "dba_name": "Brown's Pharmacy",
+    "address": "2021 N Macarthur Blvd Ste 120",
+    "city": "Irving",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75061",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(972) 254-8156",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/browns-pharmacy-irving-tx-75061/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Irving independent GNP member."
+  },
+  {
+    "legal_name": "Total Pharmacy Ennis",
+    "dba_name": "Total Pharmacy",
+    "address": "329 N Shiloh Rd",
+    "city": "Garland",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75042",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(972) 276-7071",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/total-pharmacy-ennis-garland-tx-75042/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Garland (Dallas County NE suburb) independent GNP member."
+  },
+  {
+    "legal_name": "Frisco Pharmacy",
+    "dba_name": "Frisco Pharmacy",
+    "address": "14550 State Highway 121 Ste 150",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75035",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(469) 305-7058",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/frisco-pharmacy-frisco-tx-75035/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Affluent fast-growing Frisco / Collin County independent GNP member."
+  },
+  {
+    "legal_name": "McKinney Pharmacy",
+    "dba_name": "McKinney Pharmacy",
+    "address": "1600 W Louisiana St Ste 700",
+    "city": "McKinney",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75069",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 842-8445",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/mckinney-pharmacy-mckinney-tx-75069/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "McKinney / Collin County independent GNP member. Suburban North DFW."
+  },
+  {
+    "legal_name": "Southern Star Pharmacy",
+    "dba_name": "Southern Star Pharmacy",
+    "address": "6101 Windhaven Pkwy Ste 125",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75093",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(972) 677-7891",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/southern-star-pharmacy-farmers-branch-tx-75244/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "West Plano independent GNP member. Affluent Collin County suburb."
+  },
+  {
+    "legal_name": "Texas Star Pharmacy",
+    "dba_name": "Texas Star Pharmacy",
+    "address": "3033 W Parker Rd",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75023",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(972) 519-8475",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/plano",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "West Parker Rd Plano independent retail pharmacy."
+  },
+  {
+    "legal_name": "Live Oak Pharmacy",
+    "dba_name": "Live Oak Pharmacy",
+    "address": "2105 W Spring Creek Pkwy Ste 325",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75023",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(972) 532-1008",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/plano",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Plano / Spring Creek independent retail pharmacy."
+  },
+  {
+    "legal_name": "Texas Health Prescription Shop",
+    "dba_name": "Texas Health Prescription Shop",
+    "address": "6130 W Parker Rd Ste 100",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75093",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(972) 981-8445",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/plano",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "VERIFY: 'Texas Health' name may indicate affiliation with Texas Health Resources hospital system. Located near Texas Health Plano hospital. Flag for downstream independence re-verification."
+  },
+
+  {
+    "legal_name": "Pharmcare LLC",
+    "dba_name": "Pharmcare",
+    "address": "1834 Broadway St Ste 106",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77581",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 996-7500",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/pharmcare-pearland-tx-77581/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally and independently owned for 20+ years. Pearland / Brazoria County. Explicit independence flag in GNP marketing."
+  },
+  {
+    "legal_name": "Pets and People Pharmacy",
+    "dba_name": "Pets and People Pharmacy",
+    "address": "9215 Broadway St Ste 113",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77584",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 741-5825",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/pets-and-people-pharmacy-pearland-tx-77584/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent retail+veterinary compounding pharmacy in Pearland. Distinctive niche."
+  },
+  {
+    "legal_name": "Country Place Pharmacy",
+    "dba_name": "Country Place Pharmacy",
+    "address": "2404 Smith Ranch Rd Ste 100",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77584",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(713) 436-3344",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/pearland",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent retail pharmacy in Pearland Country Place subdivision."
+  },
+  {
+    "legal_name": "Family Pharmacy Care",
+    "dba_name": "Family Pharmacy Care",
+    "address": "10905 Memorial Hermann Dr Ste 102",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77584",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 315-3770",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/pearland",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent Pearland community pharmacy. Located in Memorial Hermann Pearland medical campus area — VERIFY not hospital-owned in enrichment pass."
+  },
+  {
+    "legal_name": "Rx-Care Pharmacy",
+    "dba_name": "Rx-Care Pharmacy",
+    "address": "7121 Broadway St",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "state": "TX",
+    "zip": "77581",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 412-0377",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/pearland",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Old Pearland / Broadway St independent retail pharmacy."
+  },
+  {
+    "legal_name": "WeCare Pharmacy",
+    "dba_name": "WeCare Pharmacy",
+    "address": "4732 Sugar Grove Blvd Ste 203",
+    "city": "Stafford",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77477",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 783-8300",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/wecare-pharmacy-sugar-land-tx-77478/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Stafford/Sugar Land area (Fort Bend County) independent GNP member."
+  },
+  {
+    "legal_name": "Healthchoice Pharmacy",
+    "dba_name": "Healthchoice Pharmacy",
+    "address": "12930 Dairy Ashford Rd",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 741-8358",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/sugar-land",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent Sugar Land community pharmacy on Dairy Ashford."
+  },
+  {
+    "legal_name": "Rite Care Pharmacy (Sugar Land)",
+    "dba_name": "Rite Care Pharmacy",
+    "address": "15271 Southwest Fwy",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(713) 955-5700",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/sugar-land",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Sugar Land independent retail pharmacy. Different ownership from Dallas Rite Care Pharmacy stores."
+  },
+  {
+    "legal_name": "Katy Medical Complex Pharmacy",
+    "dba_name": "Katy Medical Complex Pharmacy",
+    "address": "21700 Kingsland Blvd Ste 105",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77450",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(713) 829-6497",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/katy-medical-complex-pharmacy-katy-tx-77450/transfer-request/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent Katy community pharmacy in medical office building. 14+ years, expanded into long-term care."
+  },
+  {
+    "legal_name": "Spring Green Pharmacy",
+    "dba_name": "Spring Green Pharmacy",
+    "address": "1443 FM 1463 Rd Ste 650",
+    "city": "Katy",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77494",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 942-4330",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/spring-green-pharmacy-katy-tx-77494-5479/store-contact/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Cinco Ranch / Cross Creek Ranch master-planned community pharmacy. Affluent Katy suburb."
+  },
+  {
+    "legal_name": "Life Pharmacy",
+    "dba_name": "Life Pharmacy",
+    "address": "23541 Westheimer Pkwy",
+    "city": "Katy",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77494",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(713) 665-5050",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/life-pharmacy-katy-tx-77494/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Cinco Ranch / Westheimer Pkwy Katy independent GNP member."
+  },
+  {
+    "legal_name": "Katy Pharmacy",
+    "dba_name": "Katy Pharmacy",
+    "address": "20005 Katy Fwy",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77450",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 578-1515",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/katy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Old Katy / Katy Fwy independent retail pharmacy."
+  },
+  {
+    "legal_name": "Kingsland Pharmacy",
+    "dba_name": "Kingsland Pharmacy",
+    "address": "21214 Kingsland Blvd",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77450",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 599-7880",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/katy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Katy / Cinco Ranch independent neighborhood retail pharmacy."
+  },
+  {
+    "legal_name": "Hometown Pharmacy",
+    "dba_name": "Hometown Pharmacy",
+    "address": "1251 Pin Oak Rd Ste 127",
+    "city": "Katy",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77494",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(832) 437-2877",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/katy",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Old Katy hometown-branded independent retail pharmacy on Pin Oak Rd."
+  },
+  {
+    "legal_name": "Pinecroft Pharmacy",
+    "dba_name": "Pinecroft Pharmacy",
+    "address": "9305 Pinecroft Dr Ste 102",
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77380",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(281) 466-3650",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/the-woodlands",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "The Woodlands (Montgomery County master-planned community) independent retail pharmacy."
+  },
+  {
+    "legal_name": "The Woodlands Apothecary",
+    "dba_name": "The Woodlands Apothecary",
+    "address": "9303 Pinecroft Dr Ste 300",
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77380",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(346) 224-2125",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/the-woodlands",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "The Woodlands independent apothecary (retail+compound). Affluent Montgomery County."
+  },
+  {
+    "legal_name": "Texas Professional Pharmacy - Magnolia",
+    "dba_name": "Texas Professional Pharmacy",
+    "address": "31312 FM 2978 Rd Ste 110",
+    "city": "Magnolia",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77355",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/texas-professional-pharmacy-magnolia-magnolia-tx-77355/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Magnolia (Montgomery County, NW Houston exurb) independent GNP member."
+  },
+
+  {
+    "legal_name": "Alameda Thrifty Pharmacy",
+    "dba_name": "Alameda Thrifty Pharmacy",
+    "address": "4900 Alameda Ave Ste A",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79905",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(915) 772-5331",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/alameda-thrifty-pharmacy-el-paso-tx-79905/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      },
+      {
+        "url": "https://www.mygnp.com/local-love/alameda-thrifty-pharmacy/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "banner_program,independence_verified"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Featured in GNP 'local love' editorial as independent. South-Central El Paso community pharmacy. Long-tenured."
+  },
+  {
+    "legal_name": "Guardian Angel Pharmacy",
+    "dba_name": "Guardian Angel Pharmacy",
+    "address": "1537 N Zaragoza Rd Ste 1A",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79936",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(915) 850-0713",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/guardian-angel-pharmacy-el-paso-tx-79936/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "East El Paso (Zaragoza corridor) independent GNP member."
+  },
+  {
+    "legal_name": "VIP Pharmacy",
+    "dba_name": "VIP Pharmacy",
+    "address": "10970 Ben Crenshaw Ste 107",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79935",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(915) 629-2020",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/vip-pharmacy-el-paso-tx-79936/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "East El Paso independent GNP member. Same ownership group as a sister location."
+  },
+  {
+    "legal_name": "Primemed Pharmacy",
+    "dba_name": "Primemed Pharmacy",
+    "address": "10500 Vista Del Sol Dr Ste A",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79925",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(915) 595-1300",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/primemed-pharmacy-el-paso-tx-79915/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "East El Paso (Vista Del Sol) independent GNP member. ZIP 79925/79915 split."
+  },
+  {
+    "legal_name": "The Family Pharmacy (Edgemere)",
+    "dba_name": "The Family Pharmacy",
+    "address": "12371 Edgemere Blvd Ste 210",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79938",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(915) 857-5510",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/el-paso",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Far East El Paso (Horizon City adjacent) independent family-named retail pharmacy. 2-store operation (also at George Dieter Dr)."
+  },
+  {
+    "legal_name": "The Family Pharmacy (George Dieter)",
+    "dba_name": "The Family Pharmacy",
+    "address": "2931 George Dieter Dr",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79936",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(915) 591-8000",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/el-paso",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Sister store to Edgemere location, same owner-operator."
+  },
+  {
+    "legal_name": "The Medicine Shoppe (Grant Ave)",
+    "dba_name": "The Medicine Shoppe",
+    "address": "2002 Grant Ave Ste A",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79930",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(915) 544-6605",
+    "banner_program": "Independent (RxLocal) / The Medicine Shoppe Franchise",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/el-paso",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "The Medicine Shoppe is a Cardinal Health franchise of independently-owned retail pharmacies. Central El Paso. Independent owner-operator. 2-store (also Fort Blvd)."
+  },
+  {
+    "legal_name": "Bank Pharmacy",
+    "dba_name": "Bank Pharmacy",
+    "address": "4000 Montana Ave",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79903",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(915) 562-4000",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/el-paso",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Central El Paso (Montana Ave) independent retail pharmacy."
+  },
+  {
+    "legal_name": "McCrory's Pharmacy",
+    "dba_name": "McCrory's Pharmacy",
+    "address": "6151 Dew Dr Ste 100",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79912",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(915) 581-9655",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/el-paso",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named West El Paso (Upper Valley / Westside) independent pharmacy."
+  },
+  {
+    "legal_name": "Matthews Pharmacy",
+    "dba_name": "Matthews Pharmacy",
+    "address": "1812 Trawood Dr Ste K",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79935",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(915) 598-5000",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/el-paso",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named East El Paso (Trawood) independent retail pharmacy."
+  },
+
+  {
+    "legal_name": "Healthville Pharmacy",
+    "dba_name": "Healthville Pharmacy",
+    "address": "7215 McPherson Rd",
+    "city": "Laredo",
+    "county": "Webb",
+    "state": "TX",
+    "zip": "78041",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 701-3349",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/healthville-pharmacy-laredo-tx-78041/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Laredo (Webb County, border city) independent GNP member."
+  },
+  {
+    "legal_name": "Medcenter Pharmacy",
+    "dba_name": "Medcenter Pharmacy",
+    "address": "1419 E Bustamante St",
+    "city": "Laredo",
+    "county": "Webb",
+    "state": "TX",
+    "zip": "78041",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 791-1991",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/medcenter-pharmacy-laredo-tx-78041/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Laredo independent GNP member in medical district."
+  },
+  {
+    "legal_name": "Martinez Pharmacy",
+    "dba_name": "Martinez Pharmacy",
+    "address": "1407 Jacaman Rd",
+    "city": "Laredo",
+    "county": "Webb",
+    "state": "TX",
+    "zip": "78041",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 722-7600",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/laredo",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Laredo independent retail pharmacy. Strong cultural-loyalty market."
+  },
+  {
+    "legal_name": "Saenz Medical Pharmacy",
+    "dba_name": "Saenz Medical Pharmacy",
+    "address": "801 E Nolana Ave Ste 22",
+    "city": "McAllen",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78504",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 687-2500",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/mcallen",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named (Saenz) RGV multi-store independent — 4 McAllen locations under one owner. Strong cultural pharmacy loyalty in Hidalgo County."
+  },
+  {
+    "legal_name": "Apple Pharmacy",
+    "dba_name": "Apple Pharmacy",
+    "address": "2501 N 23rd St Ste B",
+    "city": "McAllen",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78501",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 627-6652",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/mcallen",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "McAllen independent retail pharmacy."
+  },
+  {
+    "legal_name": "Jay's Pharmacy",
+    "dba_name": "Jay's Pharmacy",
+    "address": "610 S Broadway St",
+    "city": "McAllen",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78501",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 682-4525",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/mcallen",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named McAllen downtown independent retail pharmacy."
+  },
+  {
+    "legal_name": "Lee's Pharmacy",
+    "dba_name": "Lee's Pharmacy",
+    "address": "5120 N 10th St",
+    "city": "McAllen",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78504",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 630-5500",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/mcallen",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named 2-store McAllen independent (10th St + Medical Equipment store at S 1st St)."
+  },
+  {
+    "legal_name": "Richard's Pharmacy",
+    "dba_name": "Richard's Pharmacy",
+    "address": "1112 E Griffin Pkwy Ste B",
+    "city": "Mission",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78572",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 581-4200",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/richards-pharmacy-mission-tx-78572/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Mission (Hidalgo County RGV) independent GNP member."
+  },
+  {
+    "legal_name": "Health Plus Pharmacy",
+    "dba_name": "Health Plus Pharmacy",
+    "address": "3104 W Mile 5 Rd Ste 2",
+    "city": "Mission",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78574",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 424-3535",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/health-plus-pharmacy-mission-tx-78574/news/116072/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Mission (Hidalgo County RGV) independent GNP member."
+  },
+  {
+    "legal_name": "Lindberg Pharmacy",
+    "dba_name": "Lindberg Pharmacy",
+    "address": "1801 W University Dr Ste B",
+    "city": "Edinburg",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78539",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/lindberg-pharmacy-edinburg-tx-78539/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Edinburg (Hidalgo County RGV; UT Rio Grande Valley college town) independent GNP member."
+  },
+  {
+    "legal_name": "Mid Valley Pharmacy",
+    "dba_name": "Mid Valley Pharmacy",
+    "address": "904 N Vermont Ave",
+    "city": "Mercedes",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78570",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/mid-valley-pharmacy-mercedes-tx-78570/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Mercedes (mid-RGV small town, Hidalgo County) independent GNP member."
+  },
+  {
+    "legal_name": "Barrachina Pharmacy",
+    "dba_name": "Barrachina Pharmacy",
+    "address": "1801 W Pike Blvd",
+    "city": "Weslaco",
+    "county": "Hidalgo",
+    "state": "TX",
+    "zip": "78596",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/barrachina-pharmacy-weslaco-tx-78596/news/122768/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Weslaco (Hidalgo County RGV) independent GNP member."
+  },
+  {
+    "legal_name": "Care Rx Pharmacy",
+    "dba_name": "Care Rx Pharmacy",
+    "address": "4501 Hale Ave Ste 1",
+    "city": "Harlingen",
+    "county": "Cameron",
+    "state": "TX",
+    "zip": "78550",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 365-4677",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/care-rx-pharmacy-harlingen-tx-78550/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Harlingen (Cameron County RGV) independent GNP member."
+  },
+  {
+    "legal_name": "Autrey Pharmacy",
+    "dba_name": "Autrey Pharmacy",
+    "address": "1205 Central Blvd",
+    "city": "Brownsville",
+    "county": "Cameron",
+    "state": "TX",
+    "zip": "78520",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 548-0801",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/brownsville",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Brownsville (Cameron County, border city) independent multi-store (3 stores: Central Blvd, Ruben Torres SR Blvd, E Alton Gloor Blvd). Long-tenured."
+  },
+  {
+    "legal_name": "Pete's Pharmacy",
+    "dba_name": "Pete's Pharmacy",
+    "address": "5235 Southmost Rd Ste C",
+    "city": "Brownsville",
+    "county": "Cameron",
+    "state": "TX",
+    "zip": "78521",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 504-9555",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/brownsville",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Brownsville Southmost (border-adjacent) independent 2-store pharmacy."
+  },
+  {
+    "legal_name": "The Friendly Pharmacy",
+    "dba_name": "The Friendly Pharmacy",
+    "address": "3302 Boca Chica Blvd Ste 107",
+    "city": "Brownsville",
+    "county": "Cameron",
+    "state": "TX",
+    "zip": "78521",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 544-1200",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/brownsville",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Brownsville independent retail pharmacy. Boca Chica Blvd corridor."
+  },
+  {
+    "legal_name": "Los Ebanos Pharmacy",
+    "dba_name": "Los Ebanos Pharmacy",
+    "address": "1134 E Los Ebanos Blvd",
+    "city": "Brownsville",
+    "county": "Cameron",
+    "state": "TX",
+    "zip": "78520",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(956) 542-8542",
+    "banner_program": "Independent (RxLocal)",
+    "data_sources": [
+      {
+        "url": "https://pharmacyfinder.rxlocal.com/pharmacyFinder/tx/brownsville",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Brownsville neighborhood-named independent retail pharmacy."
+  },
+
+  {
+    "legal_name": "Tyler Rx Pharmacy",
+    "dba_name": "Tyler Rx Pharmacy",
+    "address": "2415 E 5th St",
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "zip": "75701",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(903) 593-1400",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/tyler-rx-pharmacy-tyler-tx-75701/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "East Texas (Tyler / Smith County) independent GNP member."
+  },
+  {
+    "legal_name": "Medical Plaza Pharmacy",
+    "dba_name": "Medical Plaza Pharmacy",
+    "address": "615 N Third St Ste 1",
+    "city": "Longview",
+    "county": "Gregg",
+    "state": "TX",
+    "zip": "75601",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(903) 757-3477",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/medical-plaza-pharmacy-longview-tx-75601/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "East Texas (Longview / Gregg County) independent GNP member."
+  },
+  {
+    "legal_name": "Lynn's La Vega Pharmacy",
+    "dba_name": "Lynn's La Vega Pharmacy",
+    "address": "2401 E Waco Dr",
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": "76705",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(254) 799-4949",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/lynns-la-vega-pharmacy-waco-tx-76705/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Waco (La Vega community / McLennan County) independent GNP member."
+  },
+  {
+    "legal_name": "Circle Drug Pharmacy",
+    "dba_name": "Circle Drug Pharmacy",
+    "address": "3211 Robinson Dr",
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": "76706",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(254) 662-0774",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/circle-drug-pharmacy-waco-tx-76706/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Waco independent GNP member. Classic-name drug store."
+  },
+  {
+    "legal_name": "Town and Country Drug",
+    "dba_name": "Town and Country Drug",
+    "address": "2616 N Grandview",
+    "city": "Odessa",
+    "county": "Ector",
+    "state": "TX",
+    "zip": "79761",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": "Gary Warren (owner — per Health Mart editorial)",
+    "website": null,
+    "phone": "(432) 366-2868",
+    "banner_program": "Good Neighbor Pharmacy / Health Mart",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/town-and-country-drug-odessa-tx-79762/store-contact/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      },
+      {
+        "url": "https://join.healthmart.com/clinical-performance/best-practices-from-some-of-americas-best-independent-pharmacies/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "license_holder_name,independence_verified"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Featured as one of America's best independent pharmacies by Health Mart. Owner Gary Warren. Permian Basin (Odessa / Ector County) — energy boom-town demographics."
+  },
+  {
+    "legal_name": "Dorado Pharmacy",
+    "dba_name": "Dorado Pharmacy",
+    "address": "4060 Faudrey Rd Ste 101",
+    "city": "Odessa",
+    "county": "Ector",
+    "state": "TX",
+    "zip": "79765",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(432) 614-6828",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/dorado-pharmacy-odessa-tx-79765/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Odessa (Ector County, Permian Basin) independent GNP member."
+  },
+  {
+    "legal_name": "Martin Tipton Pharmacy",
+    "dba_name": "Martin Tipton Pharmacy",
+    "address": "1501 S Tyler St",
+    "city": "Amarillo",
+    "county": "Potter",
+    "state": "TX",
+    "zip": "79101",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(806) 373-2812",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/martin-tipton-pharmacy-llc-amarillo-tx-79101/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,address,phone,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Amarillo (Texas Panhandle) independent family-owned enhanced-service pharmacy. Offers compounding+delivery+med sync+other services per GNP listing."
+  },
+  {
+    "legal_name": "Hometown Pharmacy",
+    "dba_name": "Hometown Pharmacy",
+    "address": "1500 W 7th Ave Ste 100",
+    "city": "Corsicana",
+    "county": "Navarro",
+    "state": "TX",
+    "zip": "75110",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/hometown-pharmacy-corsicana-tx-75110/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Corsicana (Navarro County, small-town aging-Texas) independent GNP member."
+  },
+  {
+    "legal_name": "Lone Star Pharmacy",
+    "dba_name": "Lone Star Pharmacy",
+    "address": "351 Whisper Cir",
+    "city": "Canyon Lake",
+    "county": "Comal",
+    "state": "TX",
+    "zip": "78132",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/lone-star-pharmacy-canyon-lake-tx-78132/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Hill Country / Aging Texas (Canyon Lake, Comal County) independent GNP member. High-priority geography for off-market acquisition (retiree-heavy)."
+  },
+  {
+    "legal_name": "Parker's City Pharmacy",
+    "dba_name": "Parker's City Pharmacy",
+    "address": "1227 Highway 90 W",
+    "city": "Seguin",
+    "county": "Guadalupe",
+    "state": "TX",
+    "zip": "78155",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/parkers-city-pharmacy-seguin-tx-78155/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Seguin (Guadalupe County, SA suburb / Hill Country edge) independent GNP member."
+  },
+  {
+    "legal_name": "CareFirst Pharmacy",
+    "dba_name": "CareFirst Pharmacy",
+    "address": "1600 W Louisiana St Ste 700",
+    "city": "McKinney",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75069",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": "(214) 842-8445",
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/carefirst-pharmacy-mckinney-tx-75069/news/free-covid-19-pcr-testing/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "McKinney / Collin County independent GNP member at the SAME ADDRESS as the McKinney Pharmacy entry above — almost certainly the same underlying business with two GNP-listed brand names. Treat as a single business for scoring purposes; the duplicate is kept here so a downstream enrichment pass can collapse them after confirming."
+  },
+  {
+    "legal_name": "Dyer Drug Store",
+    "dba_name": "Dyer Drug Store",
+    "address": "104 Main St",
+    "city": "Farmersville",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75442",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/dyer-drug-store-farmersville-tx-75442/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Farmersville (Collin County, small town east of McKinney) independent GNP member. Aging-Texas demo."
+  },
+  {
+    "legal_name": "Boomtown Drug",
+    "dba_name": "Boomtown Drug",
+    "address": "412 E 3rd St",
+    "city": "Burkburnett",
+    "county": "Wichita",
+    "state": "TX",
+    "zip": "76354",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/boomtown-drug-burkburnett-tx-76354/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Burkburnett (Wichita Falls suburb, Wichita County) small-town independent GNP member."
+  },
+  {
+    "legal_name": "Axtell's Pharmacy",
+    "dba_name": "Axtell's Pharmacy",
+    "address": "201 N Washington St",
+    "city": "Pilot Point",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "76258",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://mygnp.com/pharmacies/axtells-pharmacy-pilot-point-tx-76258/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Pilot Point (Denton County, far-north DFW exurb) small-town independent GNP member. Aging community."
+  },
+  {
+    "legal_name": "Cobb's Pharmacy",
+    "dba_name": "Cobb's Pharmacy",
+    "address": "302 Houston St",
+    "city": "George West",
+    "county": "Live Oak",
+    "state": "TX",
+    "zip": "78022",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/cobbs-pharmacy-george-west-tx-78022/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named George West (Live Oak County, small-town South Texas, between SA and Corpus Christi) independent GNP member. Eagle Ford Shale country."
+  },
+  {
+    "legal_name": "Muecke Prescription Shoppe",
+    "dba_name": "Muecke Prescription Shoppe",
+    "address": "2808 7th St",
+    "city": "Bay City",
+    "county": "Matagorda",
+    "state": "TX",
+    "zip": "77414",
+    "license_number": null,
+    "license_type": "Class A (Community Pharmacy)",
+    "license_issue_date": null,
+    "license_holder_name": null,
+    "website": null,
+    "phone": null,
+    "banner_program": "Good Neighbor Pharmacy",
+    "data_sources": [
+      {
+        "url": "https://www.mygnp.com/pharmacies/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "field": "legal_name,banner_program"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-named Bay City (Matagorda County, Gulf Coast) independent prescription shoppe. Long-tenured small-town independent."
+  }
+]

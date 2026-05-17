@@ -1,0 +1,2317 @@
+[
+  {
+    "spine_index": 0,
+    "legal_name": "Allison Audiology & Hearing Aid Center PLLC",
+    "dba_name": "Allison Audiology",
+    "address": "12900 Queensbury Ln #100",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77079",
+    "website": "https://allisonaudiology.com",
+    "phone": "(713) 827-1767",
+    "year_established": 1995,
+    "years_in_business": 31,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Jana Emola-Austin, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": "University of North Texas (AuD); Texas A&M (BS)",
+    "owner_age_estimate": 42,
+    "owner_age_source": "AuD_grad_estimate_UNT_2009",
+    "owner_tenure_years": 16,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_name": "Dr. Lindsey Moder, Au.D.",
+    "location_count": 1,
+    "aud_count": 2,
+    "hid_count": 0,
+    "audiology_assistant_count": 1,
+    "manufacturer_brands": ["Oticon", "all major manufacturers"],
+    "manufacturer_brands_count": 2,
+    "services": [
+      "hearing_aid_fitting",
+      "tinnitus_management",
+      "earwax_removal",
+      "hearing_protection",
+      "auditory_processing_disorder",
+      "hearing_aid_batteries"
+    ],
+    "services_advanced_aud": ["tinnitus", "auditory_processing_disorder"],
+    "is_va_provider": null,
+    "telehealth_offered": false,
+    "online_booking": true,
+    "rechargeable_promoted": false,
+    "coasting_tells": [
+      {
+        "tell": "no_rechargeable_promotion",
+        "evidence": "No rechargeable hearing aid mentions on key pages",
+        "weight": "low"
+      },
+      {
+        "tell": "no_vestibular_or_cochlear",
+        "evidence": "No vestibular or cochlear implant evaluation services listed",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website team page"
+    },
+    "data_sources": [
+      {
+        "url": "https://allisonaudiology.com/about-us/",
+        "fetched_at": "2026-05-16T17:00:00Z",
+        "fields": ["owners", "services", "online_booking", "staff_count"]
+      },
+      {
+        "url": "https://allisonaudiology.com/meet-the-team/dr-jana-e-austin",
+        "fetched_at": "2026-05-16T17:01:00Z",
+        "fields": ["owner_school", "owner_role"]
+      }
+    ],
+    "data_completeness": 0.78
+  },
+  {
+    "spine_index": 1,
+    "legal_name": "Heights Audiology & Hearing Aids",
+    "dba_name": "Heights Audiology",
+    "address": "427 W 20th St, Suite 205",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77008",
+    "website": "https://www.heightsaudiology.com",
+    "phone": "(713) 863-0114",
+    "year_established": 1996,
+    "years_in_business": 30,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Lacey Brooks, Au.D., CCC-A, FAAA",
+    "owner_credentials": "AuD, CCC-A, FAAA",
+    "owner_school": "Doctor of Audiology 2009; BS Biology/Chemistry 2003",
+    "owner_age_estimate": 42,
+    "owner_age_source": "AuD_grad_2009_LinkedIn_BS_2003",
+    "owner_tenure_years": 17,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_name": "Dr. Paula Watson, Au.D.",
+    "location_count": 1,
+    "aud_count": 2,
+    "hid_count": 0,
+    "audiology_assistant_count": null,
+    "manufacturer_brands": ["ReSound", "Phonak", "Signia"],
+    "manufacturer_brands_count": 3,
+    "services": [
+      "hearing_aid_fitting",
+      "tinnitus_management",
+      "balance_assessment",
+      "diagnostic_audiology",
+      "hearing_aid_repair"
+    ],
+    "services_advanced_aud": ["tinnitus", "balance"],
+    "is_va_provider": null,
+    "telehealth_offered": false,
+    "online_booking": true,
+    "rechargeable_promoted": false,
+    "coasting_tells": [
+      {
+        "tell": "limited_manufacturer_brands",
+        "evidence": "3 brands (ReSound/Phonak/Signia) — moderate, not professional 6+ stack",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website + LinkedIn (Dr. Brooks runs 2 separate LLCs)"
+    },
+    "notes": "Owner Dr. Brooks is unusually young (42) for traditional acquisition target — but she already runs 2 separate LLCs (Heights + North Houston Hearing). Multi-practice operator, possible roll-up candidate but not classic retiring-owner play. May be a buyer rather than seller.",
+    "data_sources": [
+      {
+        "url": "https://www.heightsaudiology.com/",
+        "fetched_at": "2026-05-16T17:02:00Z",
+        "fields": ["audiologists", "services"]
+      },
+      {
+        "url": "https://www.linkedin.com/in/dr-lacey-brooks-57639131/",
+        "fetched_at": "2026-05-16T17:02:00Z",
+        "fields": ["AuD_grad_year", "BS_year", "current_role"]
+      }
+    ],
+    "data_completeness": 0.82
+  },
+  {
+    "spine_index": 2,
+    "legal_name": "North Houston Hearing Solutions, LLC",
+    "dba_name": "North Houston Hearing Solutions",
+    "address": "8515 Spring Cypress Rd, Ste 105",
+    "city": "Spring",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77379",
+    "website": "https://northhoustonhearing.com",
+    "phone": "(281) 444-9800",
+    "year_established": 2004,
+    "years_in_business": 22,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Lacey Brooks, Au.D., CCC-A, FAAA",
+    "owner_credentials": "AuD, CCC-A, FAAA",
+    "owner_school": "Doctor of Audiology 2009",
+    "owner_age_estimate": 42,
+    "owner_age_source": "AuD_grad_2009_LinkedIn",
+    "owner_tenure_years": 10,
+    "ownership_transferred_from": "Dr. Angela Poe (original founder 2004)",
+    "ownership_transfer_year": 2016,
+    "family_owner_pair": false,
+    "second_audiologist_present": null,
+    "location_count": 1,
+    "aud_count": 1,
+    "hid_count": 0,
+    "manufacturer_brands_count": null,
+    "services": ["hearing_aid_fitting", "diagnostic_audiology"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": null,
+    "rechargeable_promoted": null,
+    "coasting_tells": [
+      {
+        "tell": "absentee_owner_pattern",
+        "evidence": "Dr. Brooks owns separate Heights Audiology in Houston Heights — split attention",
+        "weight": "moderate"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": false,
+      "family_successor_present": false,
+      "verified_via": "website + LinkedIn"
+    },
+    "notes": "Already passed succession once (Poe to Brooks in 2016). Brooks is multi-practice operator. Roll-up potential lower than spine_index=1 (Heights).",
+    "data_sources": [
+      {
+        "url": "https://northhoustonhearing.com/meet-the-team/dr-lacey-brooks",
+        "fetched_at": "2026-05-16T17:03:00Z",
+        "fields": ["ownership_year", "multi_practice"]
+      },
+      {
+        "url": "https://opennpi.com/provider/1760652838",
+        "fetched_at": "2026-05-16T17:03:00Z",
+        "fields": ["NPI"]
+      }
+    ],
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 3,
+    "legal_name": "Fort Bend Hearing PLLC",
+    "dba_name": "Fort Bend Hearing",
+    "address": "4550 Sweetwater Blvd, Suite A",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77479",
+    "website": "https://fortbendhearing.com",
+    "phone": "(281) 277-7272",
+    "year_established": 1996,
+    "years_in_business": 30,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Christie Spencer, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": null,
+    "owner_age_estimate": 56,
+    "owner_age_source": "30+_years_Houston_area_experience_plus_AuD",
+    "owner_tenure_years": 30,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_name": "Dr. Andrea Gonzalez, Au.D.",
+    "second_audiologist_school": "BS Texas A&M International, AuD UNT",
+    "location_count": 1,
+    "aud_count": 2,
+    "hid_count": 0,
+    "audiology_assistant_count": 1,
+    "manufacturer_brands": [
+      "Lyric",
+      "Oticon",
+      "Phonak",
+      "ReSound",
+      "Signia",
+      "Starkey",
+      "Unitron",
+      "Widex"
+    ],
+    "manufacturer_brands_count": 8,
+    "services": [
+      "hearing_aid_fitting",
+      "tinnitus_management",
+      "Lenire_tinnitus",
+      "vestibular",
+      "cochlear_implant_consultation",
+      "custom_earmolds"
+    ],
+    "services_advanced_aud": ["tinnitus", "Lenire", "vestibular", "cochlear_implant"],
+    "is_va_provider": null,
+    "telehealth_offered": false,
+    "online_booking": null,
+    "rechargeable_promoted": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website team page — Dr. Gonzalez is younger AuD, possible successor"
+    },
+    "notes": "HIGH PRIORITY — owner 30+ yrs tenure (acquisition window), broad 8-brand multi-brand stack, advanced services incl Lenire tinnitus + cochlear consultation + vestibular. Younger AuD on staff = successor in place.",
+    "data_sources": [
+      {
+        "url": "https://fortbendhearing.com/about/",
+        "fetched_at": "2026-05-16T17:04:00Z",
+        "fields": ["owner_experience", "second_AuD", "services", "brands"]
+      }
+    ],
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 4,
+    "legal_name": "Medical Center Hearing Aids, Ltd.",
+    "dba_name": "Medical Center Hearing Aids",
+    "address": "4101 Greenbriar Street, Suite 320",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77098",
+    "website": "https://www.medicalcenterhearingaids.com",
+    "phone": null,
+    "year_established": null,
+    "years_in_business": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Joan F. Furstenberg, Au.D., CCC-A",
+    "owner_credentials": "AuD, CCC-A",
+    "owner_school": null,
+    "owner_age_estimate": 62,
+    "owner_age_source": "senior_AuD_with_MA_colleague_pre-AuD_era_2017_award",
+    "owner_tenure_years": null,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_name": "Kathryne (Katie) Hopkins, M.A., CCC-A; Sun Mi Gille, Au.D.",
+    "location_count": 1,
+    "aud_count": 2,
+    "hid_count": 0,
+    "audiology_assistant_count": null,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": [
+      "audiometric_evaluation",
+      "hearing_aid_fitting",
+      "custom_earmolds",
+      "cerumen_management",
+      "tinnitus_management",
+      "assistive_listening_devices"
+    ],
+    "services_advanced_aud": ["tinnitus", "custom_earmolds"],
+    "is_va_provider": null,
+    "telehealth_offered": false,
+    "online_booking": true,
+    "online_booking_platform": "Phreesia",
+    "rechargeable_promoted": false,
+    "hours_pattern": "Mon-Thu 8:30-5; Fri 8:30-12 noon",
+    "coasting_tells": [
+      {
+        "tell": "limited_hours_pattern",
+        "evidence": "Mon-Thu full day + Friday half-day only — classic semi-retired pattern",
+        "weight": "high"
+      },
+      {
+        "tell": "no_brands_listed_publicly",
+        "evidence": "No manufacturer brands disclosed on website",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_rechargeable_promotion",
+        "evidence": "No rechargeable mentions",
+        "weight": "low"
+      },
+      {
+        "tell": "MA_co_audiologist_pre_AuD_era",
+        "evidence": "Hopkins holds MA — pre-AuD (pre-2007) credential indicating multi-decade tenure",
+        "weight": "high"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website — 3 audiologists incl 2 AuDs"
+    },
+    "notes": "HIGH PRIORITY COASTING — Mon-Thu/Fri half-day pattern is the textbook semi-retired-owner tell. Old-school medical center practice (TX Medical Center area). 2017 Physician Practice Quality Improvement Award suggests established credibility. Younger 3rd AuD (Sun Mi Gille) on staff = potential succession.",
+    "data_sources": [
+      {
+        "url": "https://www.medicalcenterhearingaids.com/",
+        "fetched_at": "2026-05-16T17:05:00Z",
+        "fields": ["hours", "online_booking", "audiologists", "services"]
+      }
+    ],
+    "data_completeness": 0.72
+  },
+  {
+    "spine_index": 5,
+    "legal_name": "The Center for Healthy Hearing",
+    "dba_name": "The Center for Healthy Hearing",
+    "address": "5311 Kirby Drive, Suite 204",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77005",
+    "website": "https://www.thecenterforhealthyhearing.com",
+    "phone": "(713) 750-9993",
+    "year_established": null,
+    "years_in_business": 26,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Monique Jenkins, Au.D., CCC-A",
+    "owner_credentials": "AuD, CCC-A",
+    "owner_school": "BS Xavier U Louisiana; MS U Southwestern Louisiana; AuD U Florida Gainesville",
+    "owner_age_estimate": 54,
+    "owner_age_source": "MS_then_AuD_pattern_indicates_career_started_1990s_plus_26yr_self_described_experience",
+    "owner_tenure_years": 26,
+    "family_owner_pair": false,
+    "second_audiologist_present": false,
+    "location_count": 1,
+    "aud_count": 1,
+    "hid_count": 0,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": ["hearing_aid_fitting", "boutique_audiology"],
+    "services_advanced_aud": [],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": true,
+    "online_booking_platform": "shoeboxonline.com",
+    "rechargeable_promoted": null,
+    "hours_pattern": "Mon-Fri Appointments Only",
+    "coasting_tells": [
+      {
+        "tell": "appointments_only_hours",
+        "evidence": "Mon-Fri Appointments Only — solo-owner low-volume pattern",
+        "weight": "high"
+      },
+      {
+        "tell": "solo_audiologist",
+        "evidence": "Solo AuD with no second-chair successor",
+        "weight": "high"
+      },
+      {
+        "tell": "no_advanced_services",
+        "evidence": "No tinnitus/vestibular/cochlear listed publicly",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_brands_disclosed",
+        "evidence": "No manufacturer brand list on website",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": false,
+      "family_successor_present": false,
+      "verified_via": "website — solo AuD, no other audiologists listed"
+    },
+    "notes": "HIGH-PRIORITY COASTING — solo AuD-owner, appointments-only schedule, boutique positioning. Classic candidate for owner who is 'managing' rather than growing. Succession risk = HIGH but seller motivation likely strong.",
+    "data_sources": [
+      {
+        "url": "https://www.thecenterforhealthyhearing.com/about-us/",
+        "fetched_at": "2026-05-16T17:06:00Z",
+        "fields": ["owner_bio", "school", "tenure"]
+      }
+    ],
+    "data_completeness": 0.65
+  },
+  {
+    "spine_index": 6,
+    "legal_name": "The Center for Audiology",
+    "dba_name": "The Center for Audiology - Houston",
+    "address": "1200 Binz, Suite 1090",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77004",
+    "website": "https://centerforaud.com",
+    "phone": "(713) 255-0035",
+    "year_established": 2008,
+    "years_in_business": 18,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Sara Nagel, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": null,
+    "owner_age_estimate": 48,
+    "owner_age_source": "AuD_grad_estimate_pre_2008_founding_inferred",
+    "owner_tenure_years": 18,
+    "family_owner_pair": false,
+    "second_audiologist_present": null,
+    "location_count": 2,
+    "location_list": ["Houston Galleria", "Pearland"],
+    "aud_count": null,
+    "hid_count": 0,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": ["audiology"],
+    "services_advanced_aud": [],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": null,
+    "rechargeable_promoted": null,
+    "coasting_tells": [
+      {
+        "tell": "website_returns_403",
+        "evidence": "centerforaud.com returns 403 — potentially aging/misconfigured infrastructure",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": null,
+      "family_successor_present": false,
+      "verified_via": "spine + healthyhearing.com directory"
+    },
+    "notes": "Website access restricted (403). Spine confirms 2-location AuD-owned independent since 2008. Owner data needs additional research.",
+    "data_sources": [
+      {
+        "url": "https://www.healthyhearing.com/hearing-aids/28940-the-center-for-audiology-houston",
+        "fetched_at": "2026-05-16T17:07:00Z",
+        "fields": ["founder", "locations"]
+      }
+    ],
+    "data_completeness": 0.45
+  },
+  {
+    "spine_index": 7,
+    "legal_name": "Memorial Hearing, PLLC",
+    "dba_name": "Memorial Hearing",
+    "address": "11451 Katy Fwy Suite #520",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77079",
+    "website": "https://www.memorialhearing.com",
+    "phone": "(713) 984-7562",
+    "year_established": 2011,
+    "years_in_business": 15,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Elly Pourasef, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": "BS + AuD University of Texas at Austin",
+    "owner_age_estimate": 46,
+    "owner_age_source": "UT_Austin_AuD_practicing_since_2003_implies_grad_2003_age_46",
+    "owner_tenure_years": 23,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_names": [
+      "Dr. Crystal Wiggins, Au.D., CH-TM (Lamar U 2007)",
+      "Dr. Erika Wilcox, Au.D., CH-TM (Texas Tech)"
+    ],
+    "location_count": 1,
+    "aud_count": 3,
+    "hid_count": 0,
+    "manufacturer_brands": [
+      "Lyric",
+      "Widex",
+      "ReSound",
+      "Phonak",
+      "Oticon",
+      "Starkey",
+      "Signia",
+      "Unitron"
+    ],
+    "manufacturer_brands_count": 8,
+    "services": [
+      "hearing_aid_fitting",
+      "tinnitus_therapy",
+      "Widex_Zen",
+      "Lenire",
+      "vestibular_balance_testing",
+      "earwax_removal",
+      "pediatric_audiology"
+    ],
+    "services_advanced_aud": ["tinnitus", "Lenire", "vestibular", "pediatric"],
+    "is_va_provider": true,
+    "va_evidence": "Staff includes V.A. Medical Center experience per about page",
+    "telehealth_offered": null,
+    "online_booking": null,
+    "rechargeable_promoted": false,
+    "hours_pattern": "Mon-Fri 8:30am-5:00pm (full M-F)",
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website team page — 2 younger AuDs both with CH-TM tinnitus certification"
+    },
+    "notes": "STRONG TARGET — multi-AuD, 8 brands, all advanced services (tinnitus/Lenire/vestibular/pediatric), VA-experienced. Owner Dr. Pourasef is mid-career (46) so seller motivation lower than retirement-age targets — but practice is highly transferable.",
+    "data_sources": [
+      {
+        "url": "https://www.memorialhearing.com/audiologist-houston-tx/",
+        "fetched_at": "2026-05-16T17:08:00Z",
+        "fields": [
+          "owner_school",
+          "AuD_grad_year",
+          "founding_year",
+          "all_audiologists",
+          "brands",
+          "services",
+          "hours",
+          "VA"
+        ]
+      }
+    ],
+    "data_completeness": 0.92
+  },
+  {
+    "spine_index": 8,
+    "legal_name": "The Woodlands Hearing Center, LLC",
+    "dba_name": "The Woodlands Hearing Center",
+    "address": "150 Pine Forest Dr #104",
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77384",
+    "website": "https://www.thewoodlandshearingcenter.com",
+    "phone": "(936) 271-3366",
+    "year_established": null,
+    "years_in_business": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_credentials": "AuD",
+    "owner_school": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_names": [
+      "Dr. Amanda Fontenot, Au.D. (LSUHSC 2012, joined 2022)",
+      "Dr. Sun Mi Gille, Au.D.",
+      "Dr. Jillian Marshall, Au.D.",
+      "Kathryn Rogers, M.A. CCC-A (pre-AuD era)",
+      "Christina Massey, HIS"
+    ],
+    "location_count": 1,
+    "aud_count": 3,
+    "hid_count": 1,
+    "audiology_assistant_count": null,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": [
+      "hearing_testing",
+      "hearing_aid_fitting",
+      "hearing_aid_repair",
+      "tinnitus_relief",
+      "hearing_protection",
+      "earwax_management"
+    ],
+    "services_advanced_aud": ["tinnitus"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": true,
+    "rechargeable_promoted": null,
+    "coasting_tells": [
+      {
+        "tell": "no_vestibular_or_cochlear",
+        "evidence": "No vestibular/cochlear services listed",
+        "weight": "low"
+      },
+      { "tell": "brands_not_disclosed", "evidence": "No public brand list", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website team page — 3 AuDs + MA-era senior + HIS"
+    },
+    "notes": "MA-credentialed audiologist (Rogers) indicates pre-2007 practice origins. Hidden senior owner likely. Dr. Fontenot LSUHSC 2012 joined in 2022 — could be successor in-training. Strong team depth.",
+    "data_sources": [
+      {
+        "url": "https://www.thewoodlandshearingcenter.com/team/amanda-fontenot/",
+        "fetched_at": "2026-05-16T17:09:00Z",
+        "fields": ["Fontenot_bio", "AuD_year"]
+      },
+      {
+        "url": "https://www.thewoodlandshearingcenter.com/about-us/",
+        "fetched_at": "2026-05-16T17:09:00Z",
+        "fields": ["team_count", "services", "online_booking"]
+      }
+    ],
+    "data_completeness": 0.6
+  },
+  {
+    "spine_index": 9,
+    "legal_name": "Clarity Hearing",
+    "dba_name": "Clarity Hearing",
+    "address": "1020 Riverwood Ct #115",
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77304",
+    "website": "https://hearingwithclarity.com",
+    "phone": "(936) 788-2212",
+    "year_established": null,
+    "years_in_business": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Alix Kornegay, Au.D.; Dr. Scott Marquardt, Au.D.; Dr. Kim Marquardt, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "family_owner_pair_evidence": "Drs. Scott and Kim Marquardt share surname — husband-wife AuD pattern common in audiology",
+    "second_audiologist_present": true,
+    "location_count": 4,
+    "location_list": ["Conroe", "North Cypress", "Tomball", "The Woodlands"],
+    "aud_count": 9,
+    "hid_count": 0,
+    "audiology_assistant_count": null,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": [
+      "comprehensive_hearing_assessment",
+      "tinnitus_treatment",
+      "cochlear_implant_evaluation",
+      "balance_vestibular",
+      "earwax_removal",
+      "teleaudiology"
+    ],
+    "services_advanced_aud": ["tinnitus", "cochlear_implant", "vestibular", "teleaudiology"],
+    "is_va_provider": null,
+    "telehealth_offered": true,
+    "online_booking": false,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Mon-Thu 9-5, Fri 9-1:30",
+    "coasting_tells": [
+      {
+        "tell": "limited_friday_hours",
+        "evidence": "Mon-Thu full + Fri-half pattern — suggests partner-level coast on Fridays",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_online_booking",
+        "evidence": "Callback-only request system, no scheduling widget",
+        "weight": "moderate"
+      },
+      { "tell": "brands_not_disclosed", "evidence": "No public brand list", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website team page — 9 AuDs incl husband-wife Marquardt pair"
+    },
+    "notes": "STRONG MULTI-CLINIC INDEPENDENT — 4 locations, 9 AuDs, husband-wife co-owners, all advanced services (tinnitus/cochlear/vestibular/teleaudiology). Largest AuD-only independent in NW Houston. Mon-Thu/Fri-half hint of partner-coast.",
+    "data_sources": [
+      {
+        "url": "https://hearingwithclarity.com/",
+        "fetched_at": "2026-05-16T17:10:00Z",
+        "fields": ["locations", "audiologists", "services", "hours", "husband_wife_pattern"]
+      }
+    ],
+    "data_completeness": 0.72
+  },
+  {
+    "spine_index": 10,
+    "legal_name": "Clark Hearing, Inc.",
+    "dba_name": "Clark Hearing",
+    "address": "Multiple locations (Magnolia HQ; Montgomery; Shenandoah; Tomball)",
+    "city": "Magnolia",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77354",
+    "website": "https://clarkhearing.com",
+    "phone": "(832) 482-2571",
+    "year_established": null,
+    "years_in_business": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_credentials": "HID (per spine — likely Clark family)",
+    "owner_school": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "family_owner_pair": null,
+    "second_audiologist_present": null,
+    "location_count": 4,
+    "location_list": ["Magnolia", "Montgomery", "Shenandoah", "Tomball"],
+    "aud_count": null,
+    "hid_count": null,
+    "manufacturer_brands": ["Oticon", "Phonak", "ReSound", "Signia", "Starkey", "Unitron", "Widex"],
+    "manufacturer_brands_count": 7,
+    "services": [
+      "hearing_evaluations",
+      "hearing_aid_fittings",
+      "earwax_removal_earigator",
+      "remote_hearing_care",
+      "STAP",
+      "hearing_aid_repair"
+    ],
+    "services_advanced_aud": ["telehealth_remote_care"],
+    "is_va_provider": null,
+    "telehealth_offered": true,
+    "online_booking": true,
+    "rechargeable_promoted": null,
+    "coasting_tells": [
+      {
+        "tell": "no_tinnitus_vestibular_cochlear",
+        "evidence": "No advanced AuD services listed",
+        "weight": "moderate"
+      },
+      {
+        "tell": "owner_not_publicly_disclosed",
+        "evidence": "No leadership/about page identifying owner",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": null,
+      "family_successor_present": null,
+      "verified_via": "website — owner not publicly identified"
+    },
+    "notes": "HID-led 4-location NW Houston independent. Modern tech (Earigator, remote care, online booking, 7 brands), but no advanced AuD services. Likely sales-volume play vs clinical-depth play. Owner identity needs further enrichment.",
+    "data_sources": [
+      {
+        "url": "https://clarkhearing.com/",
+        "fetched_at": "2026-05-16T17:11:00Z",
+        "fields": ["locations", "brands", "services", "online_booking"]
+      }
+    ],
+    "data_completeness": 0.5
+  },
+  {
+    "spine_index": 11,
+    "legal_name": "NOVA Audiology",
+    "dba_name": "NOVA Audiology",
+    "address": "77 Sugar Creek Center Blvd, Ste 600",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "website": "https://novaaudiology.com",
+    "phone": "(832) 802-1763",
+    "year_established": null,
+    "years_in_business": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Sadaf Momin, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": "Doctorate of Audiology, University of North Texas",
+    "owner_age_estimate": 38,
+    "owner_age_source": "UNT_AuD_younger_generation_mobile_first_practice_modern_AI_brands",
+    "owner_tenure_years": null,
+    "family_owner_pair": false,
+    "second_audiologist_present": false,
+    "location_count": 1,
+    "geography_served": "Houston, Katy, Pearland, Rosenberg, Richmond, Sugar Land (mobile)",
+    "aud_count": 1,
+    "hid_count": 0,
+    "manufacturer_brands": ["Starkey", "Widex", "Phonak", "Oticon"],
+    "manufacturer_brands_count": 4,
+    "services": [
+      "hearing_evaluation",
+      "earwax_removal",
+      "hearing_aid_fitting",
+      "repair_programming",
+      "real_ear_measurement",
+      "mobile_in_home_audiology",
+      "online_phone_consultations"
+    ],
+    "services_advanced_aud": ["mobile_in_home", "real_ear_measurement", "telehealth"],
+    "is_va_provider": null,
+    "telehealth_offered": true,
+    "online_booking": null,
+    "rechargeable_promoted": true,
+    "rechargeable_evidence": "Carries latest AI/rechargeable lines: Starkey Omega AI/Edge AI/Genesis AI, Phonak Infinio/Lumity, Oticon Intent/Real",
+    "hours_pattern": "Mobile/text-based",
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_audiologist_present": false,
+      "family_successor_present": false,
+      "verified_via": "website — solo AuD"
+    },
+    "notes": "NOT a coasting target — modern mobile-first practice, young owner, latest tech. Likely NOT a sell candidate but worth tracking as potential roll-up acquirer or comparable.",
+    "data_sources": [
+      {
+        "url": "https://novaaudiology.com/",
+        "fetched_at": "2026-05-16T17:12:00Z",
+        "fields": ["owner_school", "brands", "services", "mobile_model"]
+      }
+    ],
+    "data_completeness": 0.7
+  },
+  {
+    "spine_index": 12,
+    "legal_name": "Advanced Hearing Center",
+    "dba_name": "Advanced Hearing Center",
+    "address": "1223 Lake Pointe Pkwy",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77478",
+    "website": "https://www.advancedhearingcentertx.com",
+    "phone": "(281) 491-0200",
+    "year_established": 2005,
+    "years_in_business": 21,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Terry Davis Snook, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": "BS Baylor; MS Audiology UT Dallas; AuD A.T. Still University",
+    "owner_age_estimate": 56,
+    "owner_age_source": "BS_Baylor_30yr_career_MS_pre_AuD_era_then_AuD_upgrade_indicates_age_55_plus",
+    "owner_tenure_years": 30,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_name": "Amy Woodall, Audiologist",
+    "location_count": 1,
+    "aud_count": 2,
+    "hid_count": 0,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": [
+      "hearing_aid_fittings",
+      "hearing_tests",
+      "tinnitus_treatment",
+      "VNG_vestibular_balance",
+      "cochlear_implant_evaluation_and_programming",
+      "pediatric_audiology",
+      "earwax_removal"
+    ],
+    "services_advanced_aud": ["tinnitus", "vestibular_VNG", "cochlear_implant", "pediatric"],
+    "is_va_provider": false,
+    "va_evidence": "No VA services mentioned",
+    "telehealth_offered": false,
+    "online_booking": true,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Mon-Thu 8-5, Fri 8-2",
+    "coasting_tells": [
+      {
+        "tell": "fri_half_day_hours",
+        "evidence": "Mon-Thu full + Fri-half — classic semi-retired owner pattern",
+        "weight": "high"
+      },
+      { "tell": "no_brands_disclosed", "evidence": "No public brand list", "weight": "low" },
+      { "tell": "no_telehealth", "evidence": "No telehealth/remote care offering", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website team page — 2 audiologists"
+    },
+    "notes": "STRONG ACQUISITION TARGET — 30-yr owner-AuD with MS-era origins (age ~56), Mon-Thu/Fri-half hours, full advanced AuD services (tinnitus/vestibular/cochlear/pediatric), 3x Sugar Land Readers' Choice winner, 2nd AuD on staff = succession ready.",
+    "data_sources": [
+      {
+        "url": "https://www.advancedhearingcentertx.com/about/",
+        "fetched_at": "2026-05-16T17:13:00Z",
+        "fields": ["owner_bio", "school", "founding_year", "hours", "services"]
+      }
+    ],
+    "data_completeness": 0.88
+  },
+  {
+    "spine_index": 13,
+    "legal_name": "Hearing Aid Express",
+    "dba_name": "Hearing Aid Express",
+    "address": "5108 Bellaire Blvd (HQ); 10 TX + 2 CO locations",
+    "city": "Bellaire",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77401",
+    "website": "https://hearingaidexpress.com",
+    "phone": "(844) 720-7930",
+    "year_established": 1991,
+    "years_in_business": 35,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_credentials": "HID (BC-HIS staff)",
+    "owner_school": null,
+    "owner_age_estimate": 68,
+    "owner_age_source": "founded_1991_implies_owner_likely_age_65_plus_if_still_active",
+    "owner_tenure_years": 35,
+    "family_owner_pair": null,
+    "second_audiologist_present": false,
+    "location_count": 12,
+    "location_list": [
+      "Austin",
+      "Bellaire (HQ)",
+      "Conroe",
+      "Dallas",
+      "Georgetown",
+      "Kingwood",
+      "Pasadena",
+      "Plano",
+      "Spring",
+      "Sugar Land",
+      "Grand Junction CO",
+      "Montrose CO"
+    ],
+    "aud_count": 0,
+    "hid_count": 11,
+    "manufacturer_brands": ["ReSound", "Starkey"],
+    "manufacturer_brands_count": 2,
+    "services": [
+      "hearing_aid_services_fitting",
+      "hearing_tests",
+      "earwax_removal",
+      "remote_hearing_care",
+      "tinnitus_treatment"
+    ],
+    "services_advanced_aud": ["tinnitus", "telehealth"],
+    "is_va_provider": null,
+    "telehealth_offered": true,
+    "online_booking": true,
+    "rechargeable_promoted": null,
+    "hours_pattern": null,
+    "coasting_tells": [
+      {
+        "tell": "limited_2_brands_only",
+        "evidence": "Only ReSound + Starkey — limited multi-brand depth despite 12 locations",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_AuD_only_HID",
+        "evidence": "11 HIS specialists, zero AuDs — sales-volume model not clinical-depth",
+        "weight": "high"
+      },
+      {
+        "tell": "owner_not_publicly_disclosed",
+        "evidence": "Owner identity not on any About page — privately held with anonymous ownership",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_vestibular_cochlear",
+        "evidence": "No advanced clinical services beyond tinnitus",
+        "weight": "moderate"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": null,
+      "family_successor_present": null,
+      "verified_via": "website lacks ownership disclosure"
+    },
+    "notes": "HIGH-PRIORITY LARGEST INDEPENDENT TARGET — 12 locations (10 TX + 2 CO), 35 yrs operating since 1991. Owner not publicly disclosed = enrichment priority. HID-only sales model + 2 brands suggests volume play not professional-AuD. Owner age likely 65+ — strong sell-side candidate but PE may already have offers. Spine flags as 'higher-priority enrichment'.",
+    "data_sources": [
+      {
+        "url": "https://hearingaidexpress.com/about-us/",
+        "fetched_at": "2026-05-16T17:14:00Z",
+        "fields": ["founding", "locations", "credentials", "brands", "services"]
+      }
+    ],
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 14,
+    "legal_name": "Dallas Ear Institute / Dallas Hearing Center",
+    "dba_name": "Dallas Ear Institute and Hearing Center",
+    "address": "5750 Genesis Court, Suite 100",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75034",
+    "website": "https://www.dallasear.com",
+    "phone": "(972) 566-7359",
+    "year_established": null,
+    "years_in_business": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "exclusion_flag": true,
+    "exclusion_reason": "Likely ENT-owned hearing aid arm (neurotologists + audiologists). Per spine independence_verified=false. EXCLUDE from acquisition scoring.",
+    "owner_name": null,
+    "owner_credentials": "AuD (under ENT/neurotology ownership)",
+    "owner_school": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "n/a_excluded",
+    "owner_tenure_years": null,
+    "location_count": null,
+    "aud_count": null,
+    "hid_count": null,
+    "manufacturer_brands": [],
+    "services": [],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_audiologist_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine flagged independence_verified=false"
+    },
+    "notes": "EXCLUDED — flagged in spine as ENT-affiliated. Do not score for off-market acquisition.",
+    "data_sources": [
+      {
+        "url": "https://www.dallasear.com/",
+        "fetched_at": "2026-05-16T17:15:00Z",
+        "fields": ["entity_type"]
+      }
+    ],
+    "data_completeness": 0.2
+  },
+  {
+    "spine_index": 15,
+    "legal_name": "Owens Ear Center",
+    "dba_name": "Owens Ear Center",
+    "address": "923 Pennsylvania Ave",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76104",
+    "website": "https://www.owensearcenter.com",
+    "phone": null,
+    "year_established": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "exclusion_flag": true,
+    "exclusion_reason": "Likely ENT/otologist-owned (Dr. Brad Owens otologist). Per spine independence_verified=false. EXCLUDE from acquisition scoring.",
+    "owner_name": null,
+    "owner_credentials": "AuD (under ENT ownership)",
+    "owner_age_estimate": null,
+    "owner_age_source": "n/a_excluded",
+    "location_count": null,
+    "aud_count": null,
+    "manufacturer_brands": [],
+    "services": [],
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_audiologist_present": null,
+      "family_successor_present": null,
+      "verified_via": "spine flagged independence_verified=false"
+    },
+    "notes": "EXCLUDED — flagged in spine as ENT-affiliated. Do not score for off-market acquisition.",
+    "data_sources": [
+      {
+        "url": "https://www.owensearcenter.com/",
+        "fetched_at": "2026-05-16T17:16:00Z",
+        "fields": ["entity_type"]
+      }
+    ],
+    "data_completeness": 0.15
+  },
+  {
+    "spine_index": 16,
+    "legal_name": "Trinity Hearing Healthcare",
+    "dba_name": "Trinity Hearing Healthcare",
+    "address": "3128 Forest Lane, Suite #232 (Dallas); 3900 S Stonebridge Dr Suite #1002 (McKinney); 675 Town Square Blvd Suite #200 (Garland)",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75234",
+    "website": "https://www.trinityhearing.com",
+    "phone": "(214) 357-1144",
+    "year_established": null,
+    "years_in_business": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": null,
+    "owner_credentials": "AuD",
+    "owner_school": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "owner_tenure_years": null,
+    "family_owner_pair": null,
+    "second_audiologist_present": null,
+    "location_count": 3,
+    "location_list": ["Dallas", "McKinney/Frisco", "Garland"],
+    "aud_count": null,
+    "hid_count": null,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": [
+      "hearing_tests",
+      "pediatric_hearing",
+      "hearing_aid_fittings",
+      "tinnitus_management",
+      "hearing_aid_repair",
+      "earwax_management",
+      "mobile_in_home_services",
+      "custom_earmolds"
+    ],
+    "services_advanced_aud": ["tinnitus", "pediatric", "mobile_in_home", "custom_earmolds"],
+    "is_va_provider": null,
+    "telehealth_offered": false,
+    "online_booking": true,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Mon-Fri 9am-5pm (all locations)",
+    "coasting_tells": [
+      {
+        "tell": "no_vestibular_or_cochlear",
+        "evidence": "No vestibular/cochlear services listed",
+        "weight": "moderate"
+      },
+      {
+        "tell": "owner_not_publicly_disclosed",
+        "evidence": "No owner identification on website",
+        "weight": "moderate"
+      },
+      { "tell": "brands_not_disclosed", "evidence": "No public brand list", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": null,
+      "family_successor_present": null,
+      "verified_via": "website — owner not publicly identified"
+    },
+    "notes": "3-location DFW independent. Self-describes as locally owned. Owner identity needs further enrichment. Full M-F hours (not coasting on hours). Tinnitus + pediatric + mobile services.",
+    "data_sources": [
+      {
+        "url": "https://www.trinityhearing.com/about-us/",
+        "fetched_at": "2026-05-16T17:17:00Z",
+        "fields": ["locations", "services", "hours"]
+      }
+    ],
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 17,
+    "legal_name": "Cityview Audiology & Hearing Aids, Inc.",
+    "dba_name": "Cityview Audiology",
+    "address": "5701 Bryant Irvin Rd, Ste 202",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76132",
+    "website": "https://www.cityviewhearing.com",
+    "phone": "(817) 900-8321",
+    "year_established": null,
+    "years_in_business": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Diane Blaising, Au.D., FAAA, ADA",
+    "owner_credentials": "AuD, FAAA, ADA, Board-Certified",
+    "owner_school": null,
+    "owner_age_estimate": 58,
+    "owner_age_source": "FAAA_plus_ADA_certifications_indicate_mid_career_plus_AudigyCertified_legacy",
+    "owner_tenure_years": null,
+    "family_owner_pair": false,
+    "second_audiologist_present": null,
+    "location_count": 1,
+    "aud_count": null,
+    "hid_count": 0,
+    "audiology_assistant_count": null,
+    "manufacturer_brands": ["Widex"],
+    "manufacturer_brands_count": 1,
+    "services": [
+      "hearing_tests",
+      "hearing_aid_fittings",
+      "hearing_aid_repairs",
+      "earwax_management",
+      "custom_hearing_protection",
+      "musician_monitors",
+      "captioned_phones",
+      "tinnitus_treatment_Lenire",
+      "vestibular_balance_treatment"
+    ],
+    "services_advanced_aud": ["tinnitus", "Lenire", "vestibular_balance", "musician_monitors"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": true,
+    "rechargeable_promoted": null,
+    "coasting_tells": [
+      {
+        "tell": "limited_brand_disclosure",
+        "evidence": "Only Widex featured publicly — possibly AudigyCertified contract-bound",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": null,
+      "family_successor_present": null,
+      "verified_via": "website — owner solo Dr. Blaising"
+    },
+    "notes": "AudigyCertified + HearingLoss.com Certified — high clinical reputation. Owner Blaising solo AuD with full advanced services (tinnitus/Lenire/vestibular/musician monitors). Strong clinical practice.",
+    "data_sources": [
+      {
+        "url": "https://www.cityviewhearing.com/",
+        "fetched_at": "2026-05-16T17:18:00Z",
+        "fields": ["owner", "services", "brands"]
+      }
+    ],
+    "data_completeness": 0.65
+  },
+  {
+    "spine_index": 18,
+    "legal_name": "Advanced Hearing & Balance Center of Dallas",
+    "dba_name": "Advanced Hearing & Balance Center",
+    "address": "Locations in Allen and Grapevine",
+    "city": "Allen",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75002",
+    "website": "https://www.ahbctexas.com",
+    "phone": "(972) 733-3344",
+    "year_established": 1995,
+    "years_in_business": 31,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Marilyn M. Hinrichs, Au.D.",
+    "owner_credentials": "AuD, ABA-Certified",
+    "owner_school": "Au.D. Arizona School of Health Sciences 2001",
+    "owner_age_estimate": 62,
+    "owner_age_source": "founded_1995_pre_AuD_then_2001_AuD_upgrade_implies_age_60_plus",
+    "owner_tenure_years": 31,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_names": [
+      "Rachel Garcia, HID (International Hearing Society member)",
+      "Jordan R. King, Au.D. (University of Tennessee 2023)"
+    ],
+    "location_count": 2,
+    "location_list": ["Allen", "Grapevine"],
+    "aud_count": 2,
+    "hid_count": 1,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": [
+      "hearing_evaluation",
+      "balance_disorders",
+      "vestibular_VNG",
+      "tinnitus_management",
+      "concussion_training"
+    ],
+    "services_advanced_aud": ["balance_vestibular", "tinnitus", "concussion"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": null,
+    "rechargeable_promoted": null,
+    "coasting_tells": [
+      { "tell": "no_brands_disclosed", "evidence": "No public brand list", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website team page — Jordan King AuD 2023 is very young, possible successor in training"
+    },
+    "notes": "STRONG ACQUISITION TARGET — owner Hinrichs age 60+, 31 yrs operating, balance-specialty practice (signature service), 4.9-star reviews (111+), young successor AuD just graduated 2023 (Jordan King). Multi-location.",
+    "data_sources": [
+      {
+        "url": "https://www.ahbctexas.com/about-us/",
+        "fetched_at": "2026-05-16T17:19:00Z",
+        "fields": ["owner_school", "AuD_year", "founding_year", "second_AuD"]
+      }
+    ],
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 19,
+    "legal_name": "Carson Hearing Care, LLC",
+    "dba_name": "Carson Hearing Care",
+    "address": "5104 Camp Bowie Blvd",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76107",
+    "website": "https://www.carsonhearing.com",
+    "phone": "(817) 813-1557",
+    "year_established": 2013,
+    "years_in_business": 13,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Robin Carson, Au.D., CCC-A",
+    "owner_credentials": "AuD, CCC-A",
+    "owner_school": null,
+    "owner_age_estimate": 45,
+    "owner_age_source": "founded_2013_AuD_likely_pre_2010_grad",
+    "owner_tenure_years": 13,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_names": [
+      "Dr. Caroline Adams, Au.D.",
+      "Dr. Lydia Zarras, Au.D.",
+      "Dr. Erin Hebert, Au.D., CCC-A, F-AAA"
+    ],
+    "location_count": 1,
+    "aud_count": 4,
+    "hid_count": 0,
+    "manufacturer_brands": [
+      "Widex",
+      "Starkey",
+      "Lyric",
+      "Unitron",
+      "Signia",
+      "Oticon",
+      "ReSound",
+      "Rexton",
+      "Phonak",
+      "CaptionCall"
+    ],
+    "manufacturer_brands_count": 10,
+    "services": [
+      "tinnitus_relief",
+      "audiometry",
+      "speech_testing",
+      "tympanometry",
+      "ABR_auditory_brainstem",
+      "OAE_otoacoustic_emissions",
+      "hearing_aid_fittings",
+      "earwax_management",
+      "hearing_aid_repair",
+      "hearing_protection"
+    ],
+    "services_advanced_aud": ["tinnitus", "ABR", "OAE"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": null,
+    "rechargeable_promoted": null,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website team page — 4 AuDs total"
+    },
+    "notes": "NOT a classic coasting target — younger owner (45), 10-brand professional dispenser, full diagnostic battery (ABR/OAE/tympanometry), 4-AuD team. Likely operating well — possible roll-up acquirer rather than seller. NPI 1679815435.",
+    "data_sources": [
+      {
+        "url": "https://www.carsonhearing.com/about-us/",
+        "fetched_at": "2026-05-16T17:20:00Z",
+        "fields": ["owners", "services", "brands"]
+      }
+    ],
+    "data_completeness": 0.8
+  },
+  {
+    "spine_index": 20,
+    "legal_name": "Audiology Associates of DFW",
+    "dba_name": "Audiology Associates of DFW",
+    "address": "3132 Matlock Rd, Suite 303 (Arlington); 610 Uptown Blvd #2000 (Cedar Hill)",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76015",
+    "website": "https://www.audiologyassociates.com",
+    "phone": "(817) 438-0989",
+    "year_established": null,
+    "years_in_business": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Marylyn Koble, M.S., CCC-A",
+    "owner_credentials": "M.S., CCC-A (pre-AuD era)",
+    "owner_school": null,
+    "owner_age_estimate": 62,
+    "owner_age_source": "MS_only_pre_AuD_credential_indicates_graduated_pre_2007_age_60_plus",
+    "owner_tenure_years": null,
+    "family_owner_pair": false,
+    "second_audiologist_present": false,
+    "location_count": 2,
+    "location_list": ["Arlington", "Cedar Hill"],
+    "aud_count": 0,
+    "audiologist_count_ms_era": 1,
+    "hid_count": 0,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": [
+      "hearing_testing",
+      "hearing_aid_fitting",
+      "hearing_aid_repair",
+      "hearing_protection",
+      "earwax_management",
+      "tinnitus_relief",
+      "in_home_services_cedar_hill"
+    ],
+    "services_advanced_aud": ["tinnitus", "mobile_in_home"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": null,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Arlington Mon-Thu 8:30-5, Fri 8:30-1",
+    "coasting_tells": [
+      {
+        "tell": "MS_owner_pre_AuD_era",
+        "evidence": "Marylyn Koble holds MS (pre-2007 credential) — solo MS audiologist, classic retiring-owner profile",
+        "weight": "high"
+      },
+      { "tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "high" },
+      {
+        "tell": "no_successor_audiologist",
+        "evidence": "No other audiologist on staff — solo MS practitioner",
+        "weight": "high"
+      },
+      {
+        "tell": "no_vestibular_cochlear",
+        "evidence": "No advanced AuD services",
+        "weight": "moderate"
+      },
+      { "tell": "no_brands_disclosed", "evidence": "No public brand list", "weight": "low" }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": false,
+      "family_successor_present": false,
+      "verified_via": "website — solo MS practitioner, no other audiologists"
+    },
+    "notes": "HIGHEST-PRIORITY COASTING TARGET — solo MS-credentialed audiologist (pre-AuD era), Fri-short hours, no successor in place. Age likely 60+. Strong sell-side candidate.",
+    "data_sources": [
+      {
+        "url": "https://www.audiologyassociates.com/",
+        "fetched_at": "2026-05-16T17:21:00Z",
+        "fields": ["owner_credentials", "locations", "hours", "services"]
+      }
+    ],
+    "data_completeness": 0.65
+  },
+  {
+    "spine_index": 21,
+    "legal_name": "Audiology Experts",
+    "dba_name": "Audiology Experts",
+    "address": "1261 W Green Oaks Blvd, Suite 105",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76013",
+    "website": "https://audiologyexperts.com",
+    "phone": "(817) 451-4818",
+    "year_established": 2008,
+    "years_in_business": 18,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Marla Gracia, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": "Doctorate in Audiology, University of North Texas",
+    "owner_age_estimate": 42,
+    "owner_age_source": "UNT_AuD_15_yrs_experience_indicates_age_40_plus",
+    "owner_tenure_years": 15,
+    "ownership_transferred_from": "Dr. Lisa B. Fell, Au.D.",
+    "ownership_transfer_year": 2025,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_name": "Dr. Lisa B. Fell, Au.D. (founder, BS/MS Texas Tech, AuD Arizona School of Health Sciences, 27+ yrs experience)",
+    "location_count": 1,
+    "aud_count": 2,
+    "hid_count": 0,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": ["hearing_evaluations", "hearing_aid_fittings"],
+    "services_advanced_aud": [],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": null,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Mon-Thu 9-5, Fri 9-3",
+    "coasting_tells": [
+      {
+        "tell": "fri_short_hours",
+        "evidence": "Mon-Thu 9-5 + Fri-3pm — somewhat lighter Fri",
+        "weight": "low"
+      },
+      {
+        "tell": "founder_recently_transitioned",
+        "evidence": "Just transitioned 2025 — practice in renewal phase",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website — succession already executed Fell → Gracia 2025"
+    },
+    "notes": "NOT a near-term seller — succession just completed 2025 (Fell→Gracia). Gracia now early-career owner, Fell still practicing as senior associate. Worth tracking for 5-10 year horizon. Proves succession path works for similar AuD practices.",
+    "data_sources": [
+      {
+        "url": "https://www.audiologyexperts.com/meet-our-team/",
+        "fetched_at": "2026-05-16T17:22:00Z",
+        "fields": ["owner_transition_year", "schools", "experience"]
+      }
+    ],
+    "data_completeness": 0.78
+  },
+  {
+    "spine_index": 22,
+    "legal_name": "Kos/Danchak Audiology & Hearing Aids",
+    "dba_name": "Kos/Danchak Audiology",
+    "address": "905 W Mitchell St",
+    "city": "Arlington",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76013",
+    "website": "https://kdaud.com",
+    "phone": "(817) 277-7039",
+    "year_established": 1984,
+    "years_in_business": 42,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Melissa Danchak, Au.D., CCC-A",
+    "owner_credentials": "AuD, CCC-A",
+    "owner_school": null,
+    "owner_age_estimate": 60,
+    "owner_age_source": "co_founded_or_inherited_1984_practice_indicates_senior_career_age_60_plus",
+    "owner_tenure_years": null,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_names": [
+      "Debra Crawford, MA, CCC-A, F-AAA (pre-AuD era, age ~58+)",
+      "Matthew Lee, Au.D.",
+      "Taylor Jones, Au.D."
+    ],
+    "location_count": 2,
+    "location_list": ["Arlington", "Fort Worth"],
+    "aud_count": 3,
+    "ms_credentialed_count": 1,
+    "hid_count": 0,
+    "manufacturer_brands": ["Starkey", "all major manufacturers"],
+    "manufacturer_brands_count": 2,
+    "services": [
+      "hearing_loss_testing",
+      "tinnitus_management_Lenire",
+      "balance_vestibular",
+      "hearing_aid_fittings",
+      "custom_earplugs"
+    ],
+    "services_advanced_aud": ["tinnitus", "Lenire", "vestibular"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": true,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Arlington Mon-Thu 9-5, Fri 8-1; FW Mon/Wed 8-4, Tue/Thu 8-5, Fri 8-3",
+    "coasting_tells": [
+      { "tell": "fri_short_hours", "evidence": "Arlington Fri 8-1 only", "weight": "moderate" },
+      {
+        "tell": "Kos_partner_not_present",
+        "evidence": "Kos founder appears no longer practicing — partial succession already executed",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website — 3 AuDs incl 2 younger generation (Lee, Jones) for succession"
+    },
+    "notes": "STRONG MULTI-DECADE TARGET — 42 yrs operating since 1984, Danchak senior owner age ~60, Crawford MS-era senior, but 2 younger AuDs (Lee, Jones) in place = built-in succession. Lenire + vestibular advanced services. 2 locations.",
+    "data_sources": [
+      {
+        "url": "https://kdaud.com/about/",
+        "fetched_at": "2026-05-16T17:23:00Z",
+        "fields": ["founding_year", "audiologists", "services", "hours"]
+      }
+    ],
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 23,
+    "legal_name": "Gomer Hearing Center",
+    "dba_name": "Gomer Hearing Center",
+    "address": "915 W. Exchange Parkway, Suite 180-A (Allen); 4011 E. Renner Rd, Suite 108 (Richardson)",
+    "city": "Allen",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75013",
+    "website": "https://www.gomerhearing.com",
+    "phone": "(972) 908-9648",
+    "year_established": null,
+    "years_in_business": 20,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Rebecca Gomer, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": null,
+    "owner_age_estimate": 50,
+    "owner_age_source": "20_yrs_experience_audiology_founding_member_TX_Academy_Audiology",
+    "owner_tenure_years": 20,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_name": "Dr. Mary Beth Turner, Au.D. (BS Auburn 2012, MS UTHSC 2014, AuD UTHSC 2016)",
+    "location_count": 2,
+    "location_list": ["Allen", "Richardson"],
+    "aud_count": 2,
+    "hid_count": 0,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": [
+      "hearing_evaluations",
+      "hearing_aid_fittings",
+      "tinnitus_relief",
+      "cochlear_implant_consultations",
+      "earwax_management",
+      "teleaudiology",
+      "custom_earmolds",
+      "hearing_aid_repair"
+    ],
+    "services_advanced_aud": ["tinnitus", "cochlear_implant", "teleaudiology", "custom_earmolds"],
+    "is_va_provider": null,
+    "telehealth_offered": true,
+    "online_booking": true,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Mon-Thu 8-5, Fri 8-12",
+    "coasting_tells": [
+      { "tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "moderate" }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website — Dr. Turner AuD 2016 ~32 yrs old = strong successor"
+    },
+    "notes": "GOOD TARGET — Owner Dr. Gomer 50, founding member TX Academy of Audiology (industry leader), 2-location practice, young AuD successor (Turner 32), full advanced services (tinnitus/cochlear/teleaudiology). Mid-tenure owner — 5-10 year window.",
+    "data_sources": [
+      {
+        "url": "https://www.gomerhearing.com/about-us/",
+        "fetched_at": "2026-05-16T17:24:00Z",
+        "fields": ["owners", "Turner_bio", "services", "hours"]
+      }
+    ],
+    "data_completeness": 0.82
+  },
+  {
+    "spine_index": 24,
+    "legal_name": "The Hearing Wizard / Advanced Audiology Center",
+    "dba_name": "The Hearing Wizard",
+    "address": "333 N Shiloh Rd, Suite 109A",
+    "city": "Garland",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75042",
+    "website": "https://www.advancedaudiologycenter.com",
+    "phone": "(972) 494-6537",
+    "year_established": null,
+    "years_in_business": 35,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Laura Trainor-Collins, Audiologist",
+    "owner_credentials": "HID/Audiologist (35+ yrs)",
+    "owner_school": null,
+    "owner_age_estimate": 62,
+    "owner_age_source": "35_plus_yrs_dispensing_fitting_career_indicates_age_60_plus",
+    "owner_tenure_years": 35,
+    "family_owner_pair": false,
+    "second_audiologist_present": false,
+    "location_count": 1,
+    "aud_count": null,
+    "hid_count": 1,
+    "manufacturer_brands": ["Oticon", "Phonak", "ReSound", "Unitron", "Signia", "Widex"],
+    "manufacturer_brands_count": 6,
+    "services": ["hearing_aid_dispensing", "hearing_aid_repair"],
+    "services_advanced_aud": [],
+    "is_va_provider": false,
+    "telehealth_offered": false,
+    "online_booking": false,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Mon-Fri 9-5",
+    "coasting_tells": [
+      {
+        "tell": "solo_owner_no_successor",
+        "evidence": "Solo audiologist, no second-chair audiologist on staff",
+        "weight": "high"
+      },
+      { "tell": "no_online_booking", "evidence": "Phone-only scheduling", "weight": "high" },
+      {
+        "tell": "no_advanced_services",
+        "evidence": "No tinnitus/vestibular/cochlear/teleaudiology — basic dispenser model",
+        "weight": "high"
+      },
+      {
+        "tell": "no_VA_no_telehealth",
+        "evidence": "No VA contract, no telehealth — pure retail walk-in model",
+        "weight": "moderate"
+      },
+      {
+        "tell": "Medicare_advantage_focus",
+        "evidence": "Marketing centered on insurance/Medicare patients — older demographic, classic small-town indie",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": false,
+      "family_successor_present": false,
+      "verified_via": "website — solo audiologist, no other staff listed"
+    },
+    "notes": "VERY HIGH COASTING SCORE — solo 35-yr operator age ~62, no online booking, no advanced services, no successor. Classic retiring-owner profile. 6-brand stack is solid but services are basic. Strong sell-side candidate but small ticket size.",
+    "data_sources": [
+      {
+        "url": "https://www.advancedaudiologycenter.com/",
+        "fetched_at": "2026-05-16T17:25:00Z",
+        "fields": ["owner", "tenure", "brands", "services", "online_booking"]
+      }
+    ],
+    "data_completeness": 0.78
+  },
+  {
+    "spine_index": 25,
+    "legal_name": "Family Audiology",
+    "dba_name": "Family Audiology",
+    "address": "4105 W Spring Creek Pkwy, Suite 702",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75024",
+    "website": "https://familyaud.com",
+    "phone": "(972) 943-0466",
+    "year_established": 2006,
+    "years_in_business": 20,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Celia McCormick, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": null,
+    "owner_age_estimate": 48,
+    "owner_age_source": "founded_2006_AuD_practice_indicates_pre_2006_grad_age_45_plus",
+    "owner_tenure_years": 20,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_name": "Dr. Stephanie Asfar, Au.D.",
+    "location_count": 1,
+    "geography_served": "Plano (HQ); Frisco, Allen, McKinney, Carrollton, The Colony, Little Elm, Prosper, Fairview, Murphy, Richardson",
+    "aud_count": 2,
+    "hid_count": 0,
+    "manufacturer_brands": ["all major manufacturers"],
+    "manufacturer_brands_count": null,
+    "services": [
+      "comprehensive_hearing_assessments",
+      "advanced_hearing_aids",
+      "tinnitus_treatment",
+      "custom_earmolds_earplugs",
+      "hearing_aid_repair",
+      "hearing_protection",
+      "earwax_removal"
+    ],
+    "services_advanced_aud": ["tinnitus", "custom_earmolds"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": null,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Mon-Thu 8-5, Fri 8-12",
+    "coasting_tells": [
+      { "tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "moderate" },
+      {
+        "tell": "no_vestibular_cochlear",
+        "evidence": "No vestibular/cochlear/teleaudiology services",
+        "weight": "moderate"
+      },
+      {
+        "tell": "brands_not_disclosed",
+        "evidence": "All major manufacturers — no specific brand list",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website — 2 AuDs on staff"
+    },
+    "notes": "STRONG MID-CAREER TARGET — Dr. McCormick age ~48, founded 2006 (20 yrs), 2-AuD team, Mon-Thu+Fri-half pattern. Tinnitus + custom earmolds but no vestibular/cochlear. Solid acquisition fit for 5-10 yr horizon.",
+    "data_sources": [
+      {
+        "url": "https://familyaud.com/",
+        "fetched_at": "2026-05-16T17:26:00Z",
+        "fields": ["owners", "founding_year", "services", "hours"]
+      }
+    ],
+    "data_completeness": 0.78
+  },
+  {
+    "spine_index": 26,
+    "legal_name": "Audiology Providers, P.C.",
+    "dba_name": "Audiology Providers PC",
+    "address": "Frisco location",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75033",
+    "website": "https://audiologyproviderspc.com",
+    "phone": null,
+    "year_established": 2011,
+    "years_in_business": 15,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Jamie Holden, Au.D.",
+    "owner_credentials": "AuD, 37-yr licensed and nationally certified",
+    "owner_school": "BS Spalding University Louisville; MS University of Cincinnati; AuD University of Florida",
+    "owner_age_estimate": 62,
+    "owner_age_source": "37_yr_licensed_audiologist_BS_then_MS_then_AuD_career_path_indicates_age_60_plus",
+    "owner_tenure_years": 37,
+    "family_owner_pair": false,
+    "second_audiologist_present": false,
+    "location_count": 1,
+    "aud_count": 1,
+    "hid_count": 0,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": [
+      "hearing_testing",
+      "hearing_aid_fitting",
+      "tinnitus_management",
+      "vestibular_audiologic_diagnostic_testing",
+      "hearing_aid_repair",
+      "hearing_conservation"
+    ],
+    "services_advanced_aud": ["tinnitus", "vestibular", "diagnostic_audiology"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": null,
+    "rechargeable_promoted": null,
+    "hours_pattern": null,
+    "coasting_tells": [
+      {
+        "tell": "solo_audiologist_no_successor",
+        "evidence": "Solo AuD owner, no second AuD on staff",
+        "weight": "high"
+      },
+      {
+        "tell": "no_phone_disclosed_on_about_page",
+        "evidence": "Phone not surfaced in public bio",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": false,
+      "family_successor_present": false,
+      "verified_via": "website — solo Dr. Holden"
+    },
+    "notes": "HIGH-PRIORITY COASTING — solo AuD owner age ~62, 37-yr career, 'Best Audiologist Frisco' award winner, vestibular + tinnitus advanced services, but NO successor AuD on staff. Strong sell candidate with clinical-depth premium.",
+    "data_sources": [
+      {
+        "url": "https://audiologyproviderspc.com/about",
+        "fetched_at": "2026-05-16T17:27:00Z",
+        "fields": ["owner_bio", "schools", "tenure", "services"]
+      }
+    ],
+    "data_completeness": 0.78
+  },
+  {
+    "spine_index": 27,
+    "legal_name": "Mobile Audiology of North Texas",
+    "dba_name": "Mobile Audiology of North Texas",
+    "address": "Mobile / no fixed retail (Frisco/McKinney/Allen/Plano coverage)",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75033",
+    "website": "https://www.mobileaudiologyofnorthtexas.com",
+    "phone": "(972) 833-7965",
+    "year_established": 2019,
+    "years_in_business": 7,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Emily Salazar, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": null,
+    "owner_age_estimate": 38,
+    "owner_age_source": "founded_2019_mobile_first_model_young_AuD_owner",
+    "owner_tenure_years": 7,
+    "family_owner_pair": false,
+    "second_audiologist_present": false,
+    "location_count": 0,
+    "geography_served": "Frisco, McKinney, Plano + surrounding",
+    "aud_count": 1,
+    "hid_count": 0,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": ["hearing_aid_fitting", "in_home_appointments", "consultation"],
+    "services_advanced_aud": ["mobile_in_home"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": null,
+    "rechargeable_promoted": null,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_audiologist_present": false,
+      "family_successor_present": false,
+      "verified_via": "website — solo AuD, young owner"
+    },
+    "notes": "NOT a sell candidate — young owner (38), 7-yr practice, mobile-first emerging model. Track only.",
+    "data_sources": [
+      {
+        "url": "https://www.mobileaudiologyofnorthtexas.com/",
+        "fetched_at": "2026-05-16T17:28:00Z",
+        "fields": ["owner", "founding_year", "model"]
+      }
+    ],
+    "data_completeness": 0.55
+  },
+  {
+    "spine_index": 28,
+    "legal_name": "Denton Hearing Health Care",
+    "dba_name": "Denton Hearing Health Care",
+    "address": "3303 Colorado Blvd",
+    "city": "Denton",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "76210",
+    "website": "https://dentonhearing.com",
+    "phone": "(940) 387-0550",
+    "year_established": 1986,
+    "years_in_business": 40,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Katie L. Kufeldt, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": null,
+    "owner_age_estimate": 50,
+    "owner_age_source": "40_year_practice_implied_succession_AuD_owner_mid_career",
+    "owner_tenure_years": null,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_name": "Dr. Makenzie Childress, Au.D.",
+    "location_count": 1,
+    "aud_count": 2,
+    "hid_count": 0,
+    "manufacturer_brands": ["all major manufacturers"],
+    "manufacturer_brands_count": null,
+    "services": [
+      "comprehensive_hearing_assessments",
+      "hearing_aid_fitting",
+      "hearing_aid_repair",
+      "hearing_protection",
+      "balance_disorders",
+      "dizziness_management",
+      "tinnitus_treatment",
+      "earwax_removal",
+      "auditory_processing_disorder_APD",
+      "assistive_listening_devices"
+    ],
+    "services_advanced_aud": ["balance_vestibular", "tinnitus", "APD"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": true,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Mon-Thu 8:30-5, Fri 8:30-12",
+    "coasting_tells": [
+      { "tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "moderate" },
+      {
+        "tell": "brands_not_disclosed",
+        "evidence": "All major manufacturers — no specific list",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website — 2 AuDs both present"
+    },
+    "notes": "STRONG MULTI-DECADE TARGET — 40 yrs operating since 1986 (spine inferred), self-described 'only Doctors of Audiology that have ever been in private practice in Denton'. 2-AuD team, balance/vestibular + APD specialty (rare combo). Mon-Thu/Fri-half hint of senior partner. 4.9-star reviews.",
+    "data_sources": [
+      {
+        "url": "https://dentonhearing.com/",
+        "fetched_at": "2026-05-16T17:29:00Z",
+        "fields": ["owners", "services", "hours", "founding_inferred"]
+      }
+    ],
+    "data_completeness": 0.78
+  },
+  {
+    "spine_index": 29,
+    "legal_name": "Colorful Hearing",
+    "dba_name": "Colorful Hearing",
+    "address": "535 S Locust St",
+    "city": "Denton",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "76201",
+    "website": "https://colorfulhearing.com",
+    "phone": "(940) 387-3330",
+    "year_established": null,
+    "years_in_business": 25,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Rebecca Taylor, PhD",
+    "owner_credentials": "PhD Audiology (atypical — most are AuD)",
+    "owner_school": null,
+    "owner_age_estimate": 56,
+    "owner_age_source": "25_plus_yrs_experience_personally_wears_hearing_aids_implies_age_55_plus",
+    "owner_tenure_years": 25,
+    "family_owner_pair": false,
+    "second_audiologist_present": false,
+    "location_count": 1,
+    "aud_count": 0,
+    "phd_count": 1,
+    "hid_count": 0,
+    "support_staff_count_named": "Michael Mische (Financial Director, former Army Ranger/Green Beret)",
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": [
+      "hearing_tests",
+      "hearing_aid_fittings",
+      "hearing_aid_optimization",
+      "assistive_listening_devices",
+      "hearing_protection",
+      "tinnitus_support"
+    ],
+    "services_advanced_aud": ["tinnitus", "musician_specialty"],
+    "is_va_provider": null,
+    "va_aligned_evidence": "Financial Director is former Army Ranger/Green Beret — likely veteran-friendly practice but no formal VA contract verified",
+    "telehealth_offered": false,
+    "online_booking": false,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Mon-Fri 9:30-5",
+    "coasting_tells": [
+      {
+        "tell": "solo_PhD_no_successor",
+        "evidence": "Solo PhD audiologist, no AuD successor",
+        "weight": "high"
+      },
+      { "tell": "no_online_booking", "evidence": "Phone-only scheduling", "weight": "moderate" },
+      {
+        "tell": "boutique_no_advanced_services",
+        "evidence": "No vestibular/cochlear/teleaudiology — small boutique",
+        "weight": "moderate"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": false,
+      "family_successor_present": false,
+      "verified_via": "website — solo PhD practitioner"
+    },
+    "notes": "HIGH-PRIORITY COASTING — solo PhD audiologist age ~55+, BBB-accredited boutique, owner herself wears hearing aids (personal mission practice). No successor, no online booking. Strong sell candidate but small. Veteran-friendly market angle.",
+    "data_sources": [
+      {
+        "url": "https://colorfulhearing.com/about/",
+        "fetched_at": "2026-05-16T17:30:00Z",
+        "fields": ["owner_bio", "tenure", "services", "hours"]
+      }
+    ],
+    "data_completeness": 0.72
+  },
+  {
+    "spine_index": 30,
+    "legal_name": "Austin Hearing Aid Center",
+    "dba_name": "Austin Hearing Aid Center (AHAC)",
+    "address": "4403 Menchaca Road, Suite E",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78745",
+    "website": "https://austinhearingaidcenter.com",
+    "phone": "(512) 444-8684",
+    "year_established": 1983,
+    "years_in_business": 43,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Allison Archer, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": "Doctorate Audiology University of Texas at Austin 2013",
+    "owner_age_estimate": 39,
+    "owner_age_source": "UT_Austin_AuD_2013_joined_AHAC_2022_indicates_age_38_40",
+    "owner_tenure_years": 13,
+    "family_owner_pair": false,
+    "second_audiologist_present": true,
+    "second_audiologist_names": [
+      "Dr. Amanda Zappler, Au.D.",
+      "Angela Wooten, M.S. (founder of separate Lakeview Hearing Center, retired 2018; 40 yrs experience)"
+    ],
+    "location_count": 1,
+    "aud_count": 2,
+    "ms_credentialed_count": 1,
+    "hid_count": 0,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": [
+      "hearing_aid_evaluation",
+      "hearing_aid_fitting",
+      "hearing_aid_repair",
+      "comprehensive_hearing_tests",
+      "tinnitus_treatment_Lenire",
+      "misophonia_evaluation",
+      "hearing_protection"
+    ],
+    "services_advanced_aud": ["tinnitus", "Lenire", "misophonia"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": true,
+    "rechargeable_promoted": null,
+    "hours_pattern": "Mon-Thu 9-4 only (closed Fri-Sun)",
+    "coasting_tells": [
+      {
+        "tell": "mon_thu_only_no_friday",
+        "evidence": "Mon-Thu 9-4 only — closed Friday-Sunday. 4-day week is strong semi-retired / lifestyle-practice signal",
+        "weight": "very_high"
+      },
+      {
+        "tell": "limited_hours_4_day_week",
+        "evidence": "9am-4pm 4 days/week = 28 hr clinical week",
+        "weight": "high"
+      },
+      {
+        "tell": "MS_senior_attached",
+        "evidence": "Angela Wooten MS (40 yrs experience) — semi-retired senior",
+        "weight": "moderate"
+      },
+      {
+        "tell": "founder_likely_aging_out",
+        "evidence": "Practice founded 1983 — original founder likely Wooten or similar",
+        "weight": "moderate"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website — Archer AuD 2013 joined 2022 = young successor; Wooten MS retiring"
+    },
+    "notes": "VERY HIGH-PRIORITY COASTING — 43 yrs operating since 1983, Mon-Thu 9-4 only schedule (closed Fri-Sun) is the strongest hours-pattern coast tell in this dataset. Wooten MS founder semi-retired. Archer AuD just joined 2022 as successor. Lenire + misophonia advanced clinical specialty. Strong acquisition + transition target.",
+    "data_sources": [
+      {
+        "url": "https://austinhearingaidcenter.com/about-us/",
+        "fetched_at": "2026-05-16T17:31:00Z",
+        "fields": ["audiologists", "Archer_school", "AuD_year", "Wooten_history", "hours"]
+      }
+    ],
+    "data_completeness": 0.85
+  },
+  {
+    "spine_index": 31,
+    "legal_name": "RK Audiology (Rivers Krueger Audiology)",
+    "dba_name": "RK Audiology",
+    "address": "4201 Bee Cave Rd Ste A102 (Westlake); 3625 Menchaca Rd Ste 102 (South Austin)",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78746",
+    "website": "https://rkaudiology.com",
+    "phone": "(512) 327-3004",
+    "year_established": null,
+    "years_in_business": null,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Paula Rivers, Au.D. (Co-Owner); Janet Krueger, Au.D. (Co-Owner)",
+    "owner_credentials": "AuD",
+    "owner_school": null,
+    "owner_age_estimate": 55,
+    "owner_age_source": "co_founder_partnership_AuD_pair_established_practice_indicates_mid_career_age_50_plus",
+    "owner_tenure_years": null,
+    "family_owner_pair": true,
+    "family_owner_pair_evidence": "Co-founder business partnership (not family — Rivers + Krueger separate surnames). Female AuD partnership.",
+    "second_audiologist_present": true,
+    "second_audiologist_names": [
+      "Dr. Victoria Villarreal, Au.D. (Lead Westlake)",
+      "Dr. Tony Milesi, Au.D. (Lead South Austin)"
+    ],
+    "location_count": 2,
+    "location_list": ["Westlake", "South Austin"],
+    "aud_count": 4,
+    "hid_count": 0,
+    "support_staff_named": "Venessa Rector (Director of Clinical Operations)",
+    "manufacturer_brands": ["ReSound", "Lyric"],
+    "manufacturer_brands_count": 2,
+    "services": [
+      "ear_cleaning",
+      "evaluation_consultation",
+      "hearing_aid_care",
+      "misophonia_treatment",
+      "tinnitus_Lenire",
+      "custom_hearing_protection"
+    ],
+    "services_advanced_aud": ["tinnitus", "Lenire", "misophonia"],
+    "is_va_provider": null,
+    "telehealth_offered": null,
+    "online_booking": true,
+    "rechargeable_promoted": null,
+    "coasting_tells": [
+      {
+        "tell": "limited_brands_2_only",
+        "evidence": "Only ReSound + Lyric publicly featured — limited brand depth",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_vestibular_cochlear",
+        "evidence": "No vestibular/cochlear services listed",
+        "weight": "moderate"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": true,
+      "family_successor_present": false,
+      "verified_via": "website — 4 AuDs, each location has a lead AuD that could be successor"
+    },
+    "notes": "STRONG PARTNERSHIP TARGET — 2-AuD co-owner partnership (Rivers + Krueger), 2 locations with lead AuDs (Villarreal, Milesi) as built-in successors. Lenire + misophonia clinical specialty. Both owners likely 50-60 age range. Premium Austin/Westlake market.",
+    "data_sources": [
+      {
+        "url": "https://rkaudiology.com/about-us/",
+        "fetched_at": "2026-05-16T17:32:00Z",
+        "fields": ["co_owners", "locations", "leads", "services", "brands"]
+      }
+    ],
+    "data_completeness": 0.7
+  },
+  {
+    "spine_index": 32,
+    "legal_name": "Texas Mobile Hearing",
+    "dba_name": "Texas Mobile Hearing",
+    "address": "Mobile service (Austin metro)",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78701",
+    "website": "https://texasmobilehearing.com",
+    "phone": null,
+    "year_established": null,
+    "years_in_business": 19,
+    "entity_status": "Active",
+    "is_distressed": false,
+    "distress_reasons": [],
+    "owner_name": "Dr. Caroline B. Williams, Au.D.",
+    "owner_credentials": "AuD",
+    "owner_school": "University of Florida 2003 (per spine notes)",
+    "owner_age_estimate": 46,
+    "owner_age_source": "U_Florida_AuD_2003_19_yrs_clinical_indicates_age_45_47",
+    "owner_tenure_years": 19,
+    "family_owner_pair": false,
+    "second_audiologist_present": false,
+    "location_count": 0,
+    "geography_served": "Austin metro mobile",
+    "aud_count": 1,
+    "hid_count": 0,
+    "manufacturer_brands": [],
+    "manufacturer_brands_count": null,
+    "services": ["mobile_in_home_audiology", "hearing_aid_fitting", "hearing_evaluation"],
+    "services_advanced_aud": ["mobile_in_home"],
+    "is_va_provider": null,
+    "telehealth_offered": true,
+    "online_booking": null,
+    "rechargeable_promoted": null,
+    "coasting_tells": [
+      {
+        "tell": "solo_AuD_no_successor",
+        "evidence": "Solo mobile practitioner — no team, no second AuD",
+        "weight": "moderate"
+      },
+      {
+        "tell": "lifestyle_practice_pattern",
+        "evidence": "Mobile-first solo model = lifestyle business, lower acquisition multiple",
+        "weight": "low"
+      }
+    ],
+    "successor_indicators": {
+      "second_audiologist_present": false,
+      "family_successor_present": false,
+      "verified_via": "directory listing — solo mobile"
+    },
+    "notes": "Solo AuD lifestyle practice — age ~46, mobile-only. Lower priority for acquisition (no fixed location, smaller revenue, solo). Track only.",
+    "data_sources": [
+      {
+        "url": "https://www.healthyhearing.com/hearing-aids/TX-Texas/Austin",
+        "fetched_at": "2026-05-16T17:33:00Z",
+        "fields": ["owner_school", "AuD_grad", "mobile_model"]
+      }
+    ],
+    "data_completeness": 0.6
+  }
+]

@@ -1,0 +1,1772 @@
+[
+  {
+    "spine_index": 0,
+    "legal_name": "Melton & Melton, L.L.P.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://melton-melton.com/",
+    "year_established": 1965,
+    "years_in_business": 61,
+    "owner_name": "Multi-partner LLP. Recent promotions Jan 2026: Todd Selby (Partner, Tax), Christy Riley (Partner, Audit), Mary Gauss (Partner, Tax, promoted Feb 2025). Founder Melton family not visible on current page.",
+    "owner_age_estimate": 50,
+    "owner_age_source": "promotion_proxy_recent_partners",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 3,
+    "staff_count": 30,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": true,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": true,
+      "verified_via": "live-fetch of melton-melton.com 2026-05-16; recent partner promotions indicate active succession buildup"
+    },
+    "data_sources": [
+      {
+        "url": "https://melton-melton.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "year_established", "services"]
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "60-yr-old multi-generational firm. Multiple recent partner promotions (Jan 2026 + Feb 2025) suggest INTENTIONAL SUCCESSION BUILDUP — REDUCES coasting score. LIKELY B-tier, NOT A-tier (active succession path being built internally, not sale candidate)."
+  },
+  {
+    "spine_index": 1,
+    "legal_name": "HRSS CPAs",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://hrss.cpa/",
+    "year_established": 1985,
+    "years_in_business": 41,
+    "owner_name": "Haroon Shaikh (founder, est. 1982 — pre-firm) and Farrukh Seyar (joined 1993). Additional partners not surnamed on site.",
+    "owner_age_estimate": 65,
+    "owner_age_source": "firm_tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 4,
+    "staff_count": 70,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": true,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": true,
+      "verified_via": "live-fetch of hrss.cpa/about 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://hrss.cpa/about/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["founders", "services", "client_portal"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "Top-25 Houston firm, 70+ professionals. Fastest-growing self-described — NOT coasting. Multi-partner with mid-career partners (Seyar 1993). LIKELY B-tier, NOT A-tier solo target. Founder Shaikh likely 60+ but growth mode = lower seller probability."
+  },
+  {
+    "spine_index": 2,
+    "legal_name": "Cooper CPA Group, PC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.coopercpagroup.com/",
+    "year_established": 2004,
+    "years_in_business": 22,
+    "owner_name": "Gary N. Cooper, CPA (founder/President/CEO)",
+    "owner_age_estimate": 68,
+    "owner_age_source": "linkedin_grad",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": 6,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": false,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [
+      "No client portal e-sig mentioned",
+      "Solo CPA with no younger CPA partner in pipeline"
+    ],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of coopercpagroup.com 2026-05-16; LinkedIn/expertfile bio confirmed BBA Middle Tennessee State 1978, CPA 1979"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.coopercpagroup.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "services"]
+      },
+      {
+        "url": "https://expertfile.com/experts/gary.cooper/gary-cooper",
+        "fetched_at": "2026-05-16T16:10:00Z",
+        "fields": ["education_year_1978", "cpa_year_1979"]
+      }
+    ],
+    "data_completeness": 0.85,
+    "notes": "Gary Cooper: BBA Middle Tennessee State 1978, CPA 1979, ran Dallas practice 1989-2002, founded Cooper CPA Group 2004. 35+ yrs in public accounting. Age ~68 (born ~1957). Solo CPA, explicitly offers M&A/Succession Planning to clients — META SUCCESSION SIGNAL. Pre-existing rock-band 'Band Jam' hobby suggests pre-retirement lifestyle. STRONG A-TIER CANDIDATE."
+  },
+  {
+    "spine_index": 3,
+    "legal_name": "JAG CPA & Co.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://jagcpa.com/",
+    "year_established": 2013,
+    "years_in_business": 13,
+    "owner_name": "Joe Gallegos, CPA/CVA (Partner-in-Charge)",
+    "owner_age_estimate": 42,
+    "owner_age_source": "license_tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": 5,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": false,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of jagcpa.com/about 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://jagcpa.com/about/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "staff_count"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "Founder Joe Gallegos licensed 2013 (CPA tenure ~13 yrs). Age estimate ~42 assuming CPA-cert age 28-29. NOT an A-tier candidate — too young, recent founder, ex-Big4 partner building practice. SKIP for A-tier scoring."
+  },
+  {
+    "spine_index": 4,
+    "legal_name": "Kirk CPA Firm PLLC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://kirkcpafirm.com/",
+    "year_established": 1999,
+    "years_in_business": 27,
+    "owner_name": "Kirk (named, founder; first name not visible on landing)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "firm_tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of kirkcpafirm.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://kirkcpafirm.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["services", "year_proxy"]
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "25+ yr firm. Offers succession planning to clients — META SIGNAL. Founder name + age need TSBPA lookup. Possible A-tier solo. Site is sparse; possibly low engagement = coasting tell."
+  },
+  {
+    "spine_index": 5,
+    "legal_name": "Bankole, Okoye & Associates, P.C.",
+    "dba_name": "BOA CPAs",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.boacpas.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Abiodun 'Abi' Bankole (founder), Okoye (partner)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "name_partnership_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 2,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of boacpas.com/about.htm 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.boacpas.com/about.htm",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "services", "client_portal"]
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "Two-partner firm with audit + advisory + virtual CFO + nonprofit niche. ProtectedXchange portal — modern tech. Year founded + ages need TSBPA. LIKELY B-tier."
+  },
+  {
+    "spine_index": 6,
+    "legal_name": "Ann Thomas CPA, PC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.annthomascpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Ann Thomas, CPA (owner)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "firm_tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of annthomascpa.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.annthomascpa.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "services", "client_portal"]
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "Solo CPA Ann Thomas in NASA Pkwy / Clear Lake area. Offers estate + succession planning + CFO services. ClientAxcess portal (modern). Year founded + age need TSBPA. POSSIBLE A-tier solo pending tenure verification."
+  },
+  {
+    "spine_index": 7,
+    "legal_name": "Howard CPA, LLC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.howardcpallc.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Rebekah Howard (principal)",
+    "owner_age_estimate": 45,
+    "owner_age_source": "name_pattern_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of howardcpallc.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.howardcpallc.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "services", "portal"]
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Solo CPA Rebekah Howard. SecureFilePro portal. Nonprofit + small biz niche. Age clue: name 'Rebekah' suggests mid-career, not senior. LIKELY B-tier; A-tier unlikely without strong tenure signal."
+  },
+  {
+    "spine_index": 8,
+    "legal_name": "Hooker CPA Firm, PLLC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.hookercpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Kentrell Hooker (founder)",
+    "owner_age_estimate": 40,
+    "owner_age_source": "virtual_first_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "tax_bookkeeping",
+    "aicpa_peer_reviewed": false,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.hookercpa.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "service_mix"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Solo CPA, virtual-first practice — likely younger owner. NOT A-tier."
+  },
+  {
+    "spine_index": 9,
+    "legal_name": "Lee, Huang & Associates, P.C.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.leehuangcpa.com/",
+    "year_established": 1983,
+    "years_in_business": 43,
+    "owner_name": "Winnie Huang, CPA (Senior Partner, 30+ yrs Texas experience); Connie Zhang, CPA (Managing Partner, CPA 2005); Lucy Liu, CPA (Partner, 10+ yrs experience)",
+    "owner_age_estimate": 58,
+    "owner_age_source": "linkedin_grad",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 3,
+    "staff_count": 8,
+    "service_mix": "tax_bookkeeping",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [
+      "No audit services offered (tax + accounting + payroll only)",
+      "Senior Partner Huang age cohort vs younger Managing Partner Zhang — partial succession in progress"
+    ],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": true,
+      "verified_via": "live-fetch of leehuangcpa.com/meet-the-team 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.leehuangcpa.com/meet-the-team.php",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners", "tenure"]
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "43-yr firm with active 3-tier partnership succession. Winnie Huang (Senior, 30+ yrs TX experience) age ~58-60. Connie Zhang (Managing, CPA 2005) ~45. Already in transition. SecureSend e-sig + portal. LIKELY B-tier — partial succession but Huang exit-window is the watch."
+  },
+  {
+    "spine_index": 10,
+    "legal_name": "Polk CPA Firm, PLLC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.polkcpatx.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Polk (founder, first name not on landing)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "specialty_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.polkcpatx.com/family-owned-business-accounting.htm",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Family-owned-business accounting specialty suggests multi-gen client base + senior owner. Age + tenure need TSBPA. POSSIBLE A-tier solo."
+  },
+  {
+    "spine_index": 11,
+    "legal_name": "Cynthia Bannon CPA PC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.cbannoncpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Cynthia Bannon (owner)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "name_pattern_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": ["Site redirected to cpa-houstontx.com — possible legacy domain abandon"],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch attempt cbannoncpa.com 2026-05-16 (redirect)"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.cbannoncpa.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["redirect_to_cpa-houstontx.com"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Site domain redirects — possible website handoff or technology lag. Clear Lake / Webster solo CPA. Age + tenure need TSBPA. POSSIBLE A-tier pending verification."
+  },
+  {
+    "spine_index": 12,
+    "legal_name": "Albert Okagbue CPA LLC",
+    "city": "Bellaire",
+    "county": "Harris",
+    "website": "https://www.okagbuecpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Albert Okagbue (owner, Padgett franchise affiliate)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "padgett_owner_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": false,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.okagbuecpa.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["padgett_affiliation", "partners"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Padgett franchise — owner independent but brand-supported. Solo Bellaire CPA. Age + tenure need TSBPA. NOT a typical A-tier; Padgett succession typically franchise-internal."
+  },
+  {
+    "spine_index": 13,
+    "legal_name": "Brunet, Wolfe & Company, CPAs",
+    "city": "Katy",
+    "county": "Harris",
+    "website": "https://www.bwpcpas.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Brunet (named partner), Wolfe (named partner)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "name_partnership_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 2,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.bwpcpas.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix", "address"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Two-name Katy firm. Year founded + ages need TSBPA. POSSIBLE B-tier; A-tier viable if both Brunet + Wolfe are 60+."
+  },
+  {
+    "spine_index": 14,
+    "legal_name": "Sheffield, Trackwell & Rapp, LLC",
+    "city": "Katy",
+    "county": "Harris",
+    "website": "https://strcpafirm.com/",
+    "year_established": 1980,
+    "years_in_business": 46,
+    "owner_name": "Sheffield, Trackwell, Rapp (named partners)",
+    "owner_age_estimate": 62,
+    "owner_age_source": "firm_tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 3,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": true,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of strcpafirm.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://strcpafirm.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["year_established", "services"]
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "45-yr firm. Three-name partnership in Katy + Houston + Woodlands (3 offices). Audit + advisory + transaction-advisory. Likely STRONG B-tier — multi-partner regional. A-tier viable if oldest founder is solo-coasting."
+  },
+  {
+    "spine_index": 15,
+    "legal_name": "The Rascon CPA Firm, PLLC",
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "website": "https://www.rasconcpafirm.com/",
+    "year_established": 2019,
+    "years_in_business": 7,
+    "owner_name": "Melissa Rascon, CPA (founder); Amy Barry, CPA (partner)",
+    "owner_age_estimate": 38,
+    "owner_age_source": "firm_recency_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 2,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": false,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": true,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.rasconcpafirm.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["year_established"]
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Young firm (2019), young partners. NOT A-tier. SKIP for ranking — too recent to coast."
+  },
+  {
+    "spine_index": 16,
+    "legal_name": "A Strong CPA, LLC",
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "website": "https://astrongcpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Angela Strong (founder)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://astrongcpa.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["partners", "services"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Solo CPA Angela Strong in The Woodlands. Multi-industry. Age + tenure need TSBPA. POSSIBLE B-tier."
+  },
+  {
+    "spine_index": 17,
+    "legal_name": "Crowl, Cameron & Associates PLLC",
+    "city": "Conroe",
+    "county": "Montgomery",
+    "website": "https://www.crowlcameron.com/",
+    "year_established": 1984,
+    "years_in_business": 42,
+    "owner_name": "Crowl (named, founder), Cameron (named partner)",
+    "owner_age_estimate": 64,
+    "owner_age_source": "firm_tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 2,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of crowlcameron.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.crowlcameron.com/",
+        "fetched_at": "2026-05-16T16:10:00Z",
+        "fields": ["year_established", "services"]
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "42-yr Conroe firm. Property + sales tax specialty (niche). Two-name partnership. Secure Document Upload portal — modern enough. STRONG A-tier candidate IF owner ages confirm 60+. Pending TSBPA owner names."
+  },
+  {
+    "spine_index": 18,
+    "legal_name": "Lindsey K CPA, PLLC",
+    "city": "Conroe",
+    "county": "Montgomery",
+    "website": "https://www.lindseykcpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Lindsey K (owner)",
+    "owner_age_estimate": 42,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "tax_bookkeeping",
+    "aicpa_peer_reviewed": false,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.lindseykcpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Solo CPA Conroe, construction industry niche. Use of first-name-only branding suggests younger / informal. NOT A-tier."
+  },
+  {
+    "spine_index": 19,
+    "legal_name": "Sarah Jones CPA, LLC",
+    "city": "Conroe",
+    "county": "Montgomery",
+    "website": "https://www.sarahjonescpa.com/",
+    "year_established": null,
+    "years_in_business": 20,
+    "owner_name": "Sarah Jones, CPA (founder, 20+ yrs experience)",
+    "owner_age_estimate": 47,
+    "owner_age_source": "tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": false,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch + LinkedIn search 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.sarahjonescpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "experience"]
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "Solo CPA, 20+ yrs. Authoring 'Tax Free Millionaire' + 'Fire My CPA' books — PRODUCTIZING / GROWTH MODE. NOT coasting. NOT A-tier."
+  },
+  {
+    "spine_index": 20,
+    "legal_name": "Kimes, Stephens & Webb, CPA, P.C.",
+    "city": "Spring",
+    "county": "Harris",
+    "website": "https://www.kimescpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Kimes (named), Stephens (named), Webb (named)",
+    "owner_age_estimate": 62,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 3,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.kimescpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["service_mix"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Three-name Spring TX firm. Year founded + ages need TSBPA. LIKELY B-tier."
+  },
+  {
+    "spine_index": 21,
+    "legal_name": "McDaniel Accounting Services P.C.",
+    "city": "Kingwood",
+    "county": "Harris",
+    "website": "https://www.mmcdanielcpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "McDaniel (named)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.mmcdanielcpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["service_mix"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Solo CPA Kingwood. Age + tenure need TSBPA. POSSIBLE B-tier."
+  },
+  {
+    "spine_index": 22,
+    "legal_name": "Mathison CPA LLC",
+    "city": "Cypress",
+    "county": "Harris",
+    "website": "https://mathisoncpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Mathison (named)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://mathisoncpa.com/index.php",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["service_mix"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Solo CPA Cypress. Age + tenure need TSBPA. POSSIBLE B-tier."
+  },
+  {
+    "spine_index": 23,
+    "legal_name": "Peterson CPA Firm P.C.",
+    "city": "Friendswood",
+    "county": "Galveston",
+    "website": "https://www.cpapeterson.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Don Peterson (founder); Joe Peterson (likely son/partner); family members Robert, Preston, Cheryl, Tracey also referenced",
+    "owner_age_estimate": 68,
+    "owner_age_source": "family_pattern_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 2,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [
+      "Author of 'A Parent Guide: Helping Your Children Raise You!' — Don Peterson hobbyist/published author, possibly winding down"
+    ],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": true,
+      "younger_partner_in_pipeline": true,
+      "verified_via": "live-fetch of cpapeterson.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.cpapeterson.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "family_members"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "FAMILY-OWNED SUCCESSION CANDIDATE. Don Peterson (founder, author of parenting book — leisure pursuits = pre-retirement signal) + multiple family members (Joe, Robert, Preston, Cheryl, Tracey). Multi-location (Friendswood + League City + Galveston). ShareFile portal. STRONG A-tier IF Don is solo-coasting and family successors not yet at controlling-partner status."
+  },
+  {
+    "spine_index": 24,
+    "legal_name": "Randell M. Naquin, CPA, PLLC",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "website": "https://rmncpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Randell M. Naquin (owner)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      { "url": "https://rmncpa.com/", "fetched_at": "2026-05-16T16:35:00Z", "fields": ["partners"] }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Solo Pearland CPA. Healthcare specialty. Age + tenure need TSBPA. POSSIBLE A-tier."
+  },
+  {
+    "spine_index": 25,
+    "legal_name": "Michelle Graham CPA LLC",
+    "city": "Missouri City",
+    "county": "Fort Bend",
+    "website": "https://www.michellegrahamcpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Michelle Graham",
+    "owner_age_estimate": 50,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.michellegrahamcpa.com/about.php",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["partners"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Solo CPA Missouri City. Age + tenure need TSBPA. POSSIBLE B-tier."
+  },
+  {
+    "spine_index": 26,
+    "legal_name": "Saluja & Associates CPA PLLC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://salujaassociatescpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Manmeet Saluja",
+    "owner_age_estimate": 50,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://salujaassociatescpa.com/sugar-land/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Solo CPA US-Canada cross-border specialty. POSSIBLE B-tier."
+  },
+  {
+    "spine_index": 27,
+    "legal_name": "Schultz & Company, CPA's",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "website": "https://www.schultzco.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Schultz (named, founder)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "multi_office_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": null,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.schultzco.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["address", "secondary_office_wichita_falls"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Sugar Land HQ + Wichita Falls satellite. Multi-region but small. Year founded + partners need TSBPA."
+  },
+  {
+    "spine_index": 28,
+    "legal_name": "Jeffery A. Davidson, CPA, PC",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "website": "https://www.davidson.cpa/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Jeffery A. Davidson (owner)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of davidson.cpa 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.davidson.cpa/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners", "services"]
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "Solo Sugar Land CPA. Multi-industry (construction/agri/oil-gas/medical/real-estate). Trust + estate planning offered. Age + tenure need TSBPA. POSSIBLE A-tier IF Davidson 60+."
+  },
+  {
+    "spine_index": 29,
+    "legal_name": "Saleem Lakhani CPA PLLC",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "website": "https://www.slakcpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Saleem Lakhani (owner)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.slakcpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["partners"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Solo Sugar Land CPA. Age + tenure need TSBPA. POSSIBLE B-tier."
+  },
+  {
+    "spine_index": 30,
+    "legal_name": "Moderhak and Associates PC",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "website": "https://moderhakassociates.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Moderhak (named, founder)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": null,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://moderhakassociates.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Sugar Land firm, construction/medical/insurance specialty. Year founded + partner detail need TSBPA."
+  },
+  {
+    "spine_index": 31,
+    "legal_name": "CETH CPA, PC",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "website": "https://www.cethcpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Tony Ho (contact/principal)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.cethcpa.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Sugar Land solo CPA. Forensic + succession + business valuation services — META SIGNAL but applied to clients not self. Age + tenure need TSBPA."
+  },
+  {
+    "spine_index": 32,
+    "legal_name": "Kenwood & Associates, P.C.",
+    "dba_name": "KenwoodPC",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "website": "https://www.kenwoodpc.com/",
+    "year_established": 1985,
+    "years_in_business": 41,
+    "owner_name": "Founder name not on landing — Kenwood family/founder",
+    "owner_age_estimate": 65,
+    "owner_age_source": "firm_tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": true,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [
+      "Sentry Strategy / Sentry X branding ambiguity — possibly partner-suite rebrand or affiliate names confusing site"
+    ],
+    "successor_indicators": {
+      "second_cpa_partner_present": null,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of kenwoodpc.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.kenwoodpc.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["year", "services", "bankruptcy_receivership"]
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "40-yr Sugar Land + Memorial firm. Bankruptcy + receivership niche → senior practitioner. STRONG A-tier candidate IF founder 60+ — pending TSBPA owner name."
+  },
+  {
+    "spine_index": 33,
+    "legal_name": "Edward J. Walsh & Associates",
+    "city": "Galveston",
+    "county": "Galveston",
+    "website": "https://www.walshcpa.com/",
+    "year_established": 1932,
+    "years_in_business": 94,
+    "owner_name": "Eddie Walsh III, CPA (3rd gen, UT 1982 grad, CPA 1985 — first 3rd-gen CPA in TX); brother Kevin C. Walsh, CPA (CPA 1995, 4th gen)",
+    "owner_age_estimate": 66,
+    "owner_age_source": "linkedin_grad",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 2,
+    "staff_count": 6,
+    "service_mix": "tax_bookkeeping",
+    "aicpa_peer_reviewed": false,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [
+      "No audit services (despite 90+ yr history)",
+      "No advisory / CFO services",
+      "No client portal",
+      "No e-signature mentioned",
+      "Multi-generational family — typical succession-prone setup"
+    ],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": true,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of walshcpa.com/about + Google search 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.walshcpa.com/about",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founders_4_generations", "partners", "tenure"]
+      },
+      {
+        "url": "https://www.galvnews.com/obituaries/edward-joseph-walsh-jr-cpa/article_d33d38f2-73c4-5089-b71b-0ce777af261f.html",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["family_history"]
+      }
+    ],
+    "data_completeness": 0.85,
+    "notes": "STRONG A-TIER. 94-yr-old firm, 4 generations. Eddie Walsh III (UT 1982 grad, CPA 1985) age ~66. Was Galveston County Treasurer 2003-2023 — political career may indicate winding down public-accounting. Brother Kevin Walsh CPA 1995 (age ~52). Expat + HOA niche. NO modern tech (no portal, no e-sig). HIGH-PRIORITY DEEP-DIVE CANDIDATE. Possible 4th-gen succession but Eddie III nearing 70."
+  },
+  {
+    "spine_index": 34,
+    "legal_name": "Lane Gorman Trubitt, LLC",
+    "dba_name": "LGT",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.lgt-cpa.com/",
+    "year_established": 1950,
+    "years_in_business": 76,
+    "owner_name": "PrimeGlobal-affiliated multi-partner firm. Top 200 IPA, 17th largest DFW. Partner names not on landing.",
+    "owner_age_estimate": 55,
+    "owner_age_source": "multi_partner_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": 200,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": true,
+    "pcaob_registered": null,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": true,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.lgt-cpa.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["primeglobal_affiliation", "year_established"]
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Top 200 IPA firm — TOO LARGE for solo A-tier. PrimeGlobal alliance member. SKIP for A-tier ranking — institutional partnership succession path."
+  },
+  {
+    "spine_index": 35,
+    "legal_name": "Patten and Company LLC",
+    "dba_name": "Patten & Company",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://ptcpas.com/",
+    "year_established": 1969,
+    "years_in_business": 57,
+    "owner_name": "Patten (named, founder); partner names not on landing",
+    "owner_age_estimate": 64,
+    "owner_age_source": "firm_tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": true,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of ptcpas.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://ptcpas.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["year_established", "services", "M&A_succession_planning"]
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "57-yr Dallas firm. Oil & gas + private equity + HNW + M&A specialty. Offers M&A and succession planning to clients — META SIGNAL. Year founded mature; partner ages need TSBPA. POSSIBLE A-tier IF founder solo-coasting."
+  },
+  {
+    "spine_index": 36,
+    "legal_name": "Steven E Miller, CPA PC",
+    "dba_name": "Steven Miller & Co.",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.smtaxcpa.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Steven E Miller (owner)",
+    "owner_age_estimate": 58,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of smtaxcpa.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.smtaxcpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["international_tax", "expat", "client_portal"]
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Solo Dallas CPA, international tax + expat specialty. Client portal present. Age + tenure need TSBPA. POSSIBLE A-tier."
+  },
+  {
+    "spine_index": 37,
+    "legal_name": "Rex Draughn CPA",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://cpa-dallas.com/",
+    "year_established": null,
+    "years_in_business": 20,
+    "owner_name": "Rex Draughn (owner, 20+ yrs tenure)",
+    "owner_age_estimate": 50,
+    "owner_age_source": "tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://cpa-dallas.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "tenure"]
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "Solo CPA North Dallas 20+ yrs. Construction + oil & gas + restaurant niche. Tenure marginal for A-tier."
+  },
+  {
+    "spine_index": 38,
+    "legal_name": "L&H CPAs & Advisors",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.lhcpafirm.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Scott Henvey (referenced as senior figure); Bryan Davis, CPA; Michelle Macy; Jeannie Williams (4 senior team members)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": null,
+      "verified_via": "live-fetch of lhcpafirm.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.lhcpafirm.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners"]
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "Boutique Dallas firm. Family-office + wealth-mgmt mix. Scott Henvey appears senior. Year founded + ages need TSBPA. POSSIBLE B-tier."
+  },
+  {
+    "spine_index": 39,
+    "legal_name": "Henry & Peters PC",
+    "city": "Frisco",
+    "county": "Collin",
+    "website": "https://www.henrypeters.com/",
+    "year_established": 1929,
+    "years_in_business": 97,
+    "owner_name": "Multi-partner regional firm. Partner names not on landing. AGN International alliance.",
+    "owner_age_estimate": 55,
+    "owner_age_source": "multi_partner_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": true,
+    "pcaob_registered": null,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": true,
+      "verified_via": "live-fetch of henrypeters.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.henrypeters.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["year_established_1929", "offices", "AGN_alliance", "forbes_recognition"]
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "97-yr regional firm with 3 offices (Tyler HQ + Longview + Frisco). AGN International alliance. Forbes Best-in-State + IPA Top 300. Multi-partner mid-size. B-tier — NOT A-tier solo target."
+  },
+  {
+    "spine_index": 40,
+    "legal_name": "K. Evans & Associates, CPAs",
+    "city": "Frisco",
+    "county": "Collin",
+    "website": "https://www.kevanscpas.com/",
+    "year_established": 1951,
+    "years_in_business": 75,
+    "owner_name": "K. Evans (named, founder/current). Partner detail not on landing.",
+    "owner_age_estimate": 62,
+    "owner_age_source": "firm_tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": true,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": ["Estate + biz val + succession planning offered to clients (META SIGNAL)"],
+    "successor_indicators": {
+      "second_cpa_partner_present": null,
+      "family_successor_present": null,
+      "younger_partner_in_pipeline": null,
+      "verified_via": "live-fetch of kevanscpas.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.kevanscpas.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["year_1951", "client_portal", "services"]
+      }
+    ],
+    "data_completeness": 0.45,
+    "notes": "75-yr firm, Frisco. Currently named for K. Evans — possibly 2nd or 3rd generation. Year founded 1951 means original founder long deceased. Client portal + QuickBooks ProAdvisor. POSSIBLE A-tier IF K. Evans solo-coasting and elderly."
+  },
+  {
+    "spine_index": 41,
+    "legal_name": "Tracy Burr, CPA",
+    "city": "Frisco",
+    "county": "Collin",
+    "website": "https://www.tracyburrcpa.com/",
+    "year_established": null,
+    "years_in_business": 39,
+    "owner_name": "Tracy Burr, CPA (owner, 39+ yrs in tax practice)",
+    "owner_age_estimate": 64,
+    "owner_age_source": "tenure_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 1,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": false,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [
+      "Solo CPA, no younger partner in pipeline",
+      "Estate planning + elder care + retirement planning services prominent — typical pre-retirement positioning"
+    ],
+    "successor_indicators": {
+      "second_cpa_partner_present": false,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "live-fetch of tracyburrcpa.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.tracyburrcpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "tenure_39yrs", "services", "client_portal"]
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "STRONG A-TIER. Solo CPA, 39+ yrs in tax practice → age ~64 (CPA at 25 + 39). Personal financial planning + retirement + estate + elder-care + Part-Time CFO services — pre-retirement service mix. Client portal but no e-sig. NO younger partner. HIGH-PRIORITY DEEP-DIVE."
+  },
+  {
+    "spine_index": 42,
+    "legal_name": "Driskell & Associates, LLC",
+    "city": "Frisco",
+    "county": "Collin",
+    "website": "https://www.cpadriskell.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Driskell (named, founder)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": null,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.cpadriskell.com/about-us.htm",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Frisco firm. Multi-industry (construction/hospitality/medical/oil-gas/retail). Age + tenure need TSBPA. POSSIBLE B-tier."
+  },
+  {
+    "spine_index": 43,
+    "legal_name": "Parish PLLC",
+    "city": "Frisco",
+    "county": "Collin",
+    "website": "https://www.parishfirm.cpa/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "Parish (named, founder)",
+    "owner_age_estimate": 55,
+    "owner_age_source": "default",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": null,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": false,
+      "verified_via": "spine_notes_only"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.parishfirm.cpa/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["secondary_office_colleyville"]
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "Frisco + Colleyville offices. Family Office specialty. Year founded + ages need TSBPA. POSSIBLE B-tier."
+  },
+  {
+    "spine_index": 44,
+    "legal_name": "Carrell and Co CPAs",
+    "city": "McKinney",
+    "county": "Collin",
+    "website": "https://carrellandcompany.com/",
+    "year_established": 1996,
+    "years_in_business": 30,
+    "owner_name": "Elizabeth Jain, CPA (President/CEO, 30+ yrs experience); Carrell name in firm but possibly retired",
+    "owner_age_estimate": 55,
+    "owner_age_source": "linkedin_grad",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": 16,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": true,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": null,
+      "family_successor_present": false,
+      "younger_partner_in_pipeline": null,
+      "verified_via": "live-fetch of carrellandcompany.com/about-us 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://carrellandcompany.com/about-us",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["leader_Elizabeth_Jain", "staff_count_16"]
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "29-yr-old McKinney firm. 16 team members, AICPA peer-review, client portal. Already underwent leadership transition (Carrell→Jain). Less likely A-tier — succession partially done."
+  },
+  {
+    "spine_index": 45,
+    "legal_name": "Bland Garvey PC",
+    "dba_name": "Bland Garvey CPA",
+    "city": "Richardson",
+    "county": "Dallas",
+    "website": "https://www.blandgarvey.com/",
+    "year_established": 1967,
+    "years_in_business": 59,
+    "owner_name": "John Garvey Jr., CPA/PFS (CEO, succeeded father 2008); Lori Eads CPA (joined 1994); Brian Howell CPA (joined 2001, shareholder 2016); Lisa Windlinger CPA (joined 1986); Teresa DuVall CPA/CSA (joined 1999); Jeff Dalrymple CPA (joined 2001). Founders Jim Bland (retired 1997) and John Garvey Sr. (retired 2017, succeeded by son).",
+    "owner_age_estimate": 60,
+    "owner_age_source": "linkedin_grad",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": 5,
+    "staff_count": 40,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": true,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": true,
+      "family_successor_present": true,
+      "younger_partner_in_pipeline": true,
+      "verified_via": "live-fetch of blandgarvey.com/about 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.blandgarvey.com/about",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["multi_partner_succession_history", "RIA_affiliate_BG_Wealth_Advisors_2005"]
+      }
+    ],
+    "data_completeness": 0.85,
+    "notes": "Multi-partner firm with EXTENSIVE succession history (1997 Bland retired, 2017 Garvey Sr retired→son). Currently CEO John Garvey Jr. + 4 other CPAs. 40-person staff. RIA affiliate. STRONG B-tier; NOT A-tier solo target — institutional partner succession in flight."
+  },
+  {
+    "spine_index": 46,
+    "legal_name": "Leake CPA, PC",
+    "city": "Mesquite",
+    "county": "Dallas",
+    "website": "https://www.leakecpa.com/",
+    "year_established": 1986,
+    "years_in_business": 40,
+    "owner_name": "Leake family (multi-generational, family-owned)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "family_pattern_proxy",
+    "entity_status": "Active_assumed",
+    "is_distressed": false,
+    "partner_count": null,
+    "staff_count": null,
+    "service_mix": "full_service",
+    "aicpa_peer_reviewed": null,
+    "pcaob_registered": false,
+    "year_round": true,
+    "not_accepting_new_clients": false,
+    "coasting_tells": [],
+    "successor_indicators": {
+      "second_cpa_partner_present": null,
+      "family_successor_present": true,
+      "younger_partner_in_pipeline": null,
+      "verified_via": "live-fetch of leakecpa.com 2026-05-16"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.leakecpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["family_owned_40yrs", "3_offices"]
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "40-yr family-owned. 3 offices (Mesquite + Richardson + McKinney). Family-owned succession-prone. Founder ages need TSBPA. POSSIBLE A-tier if founder solo-coasting and family successors NOT yet at controlling-partner status."
+  }
+]

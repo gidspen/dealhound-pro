@@ -1,0 +1,47 @@
+{
+  "run_label": "orthodontic-tx-2026-05-16-w5a",
+  "score_run_id": "f3497802-f859-4e41-b5e4-05f0a445487f",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "orthodontic",
+  "naics_code": "621210",
+  "specialty_filter": "Orthodontics & Dentofacial Orthopedics (TSBDE Specialty Permit + AAO directory)",
+  "geography": "TX — Harris/Dallas/Tarrant/Collin/Denton/Bexar/Comal/Travis/Williamson/Hays/Fort Bend/Montgomery",
+  "started_at": "2026-05-17T04:35:39Z",
+  "finished_at": null,
+  "exclusion_brands": [
+    "Smile Doctors", "Linden Capital", "OrthoSynetics", "OrthoCare Texas",
+    "Heartland Dental Orthodontics", "Pacific Dental Services Ortho",
+    "Aspen Dental Ortho", "Specialty Dental Brands", "Specialty1 Partners",
+    "Quad-C Management", "MB2 Dental Specialty Brands", "Western Dental Ortho",
+    "Diamond Braces", "Ideal Image", "Banner Orthodontics", "Aspen Dental",
+    "Risas Dental Ortho", "Sage Dental Ortho", "Smile Direct Club"
+  ],
+  "counts": {
+    "spine_rows": 0,
+    "enriched": 0,
+    "scored": 0,
+    "tier_a": 0, "tier_b": 0, "tier_c": 0, "tier_d": 0,
+    "distress_excluded": 0
+  },
+  "sources_worked": [],
+  "sources_partial": [],
+  "sources_blocked": [],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 0,
+    "passed": 0,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    }
+  },
+  "supabase_write": {"status": "pending", "reason": "run open"}
+}

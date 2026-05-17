@@ -1,0 +1,1155 @@
+[
+  {
+    "spine_index": 0,
+    "legal_name": "Walkup Company",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.walkupco.com/",
+    "year_established": 1944,
+    "years_in_business": 82,
+    "owner_name": "Walkup family — 4 generations active. Bill Edward Walkup founded Houston operation 1944; family roots in metal trades since 1915 (Walkup Brother's Tin Shop, Waco). Charles Walkup (founder's father) was 1st gen; Bill Walkup was 2nd gen; today 4 generations active.",
+    "owner_age_estimate": 60,
+    "owner_age_source": "generational_math — 4th gen now active means current operating principal likely 50-65; Bill founded in 1944 at ~22 (born 1905), so 3rd and 4th gen now in operating roles",
+    "entity_status": "Active (assumed; not verified via Comptroller in this batch — Comptroller search redirects to interactive form)",
+    "is_distressed": false,
+    "employee_count_estimate": 40,
+    "iso_9001": true,
+    "as9100": false,
+    "specialty": "plate and sheet metal fabrication; laser cutting, bending, plate rolling, prototyping",
+    "customer_mix": "Houston / Gulf Coast industrial",
+    "owner_owns_building": true,
+    "coasting_tells": [
+      "Owner names absent from public website despite 4-gen lineage (Walkup family identity is acknowledged but no individual named — classic private long-tenured operator)",
+      "No CAD/Solidworks/Fusion 360/Mastercam software stack mentioned on capabilities pages",
+      "ISO 9001 is the only listed cert (no AS9100, no ITAR)",
+      "Owns substantial facility — 88,000 sq ft at 5945 Armour Drive since 1958"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "websearch 2026-05-16 — 4 generations of Walkups currently active in company"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.walkupco.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,generations,certifications,equipment"
+      },
+      {
+        "url": "https://www.walkupco.com/history/",
+        "fetched_at": "2026-05-16T20:45:00Z",
+        "field": "founder,family_history,facility_size"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "B-tier base-rate candidate. 82-year run, 4-gen family business with 4th gen now active (active succession). 88K sq ft + 40 employees + ISO 9001 puts revenue likely $15-30M. Multi-gen succession in progress suggests operator NOT yet at exit window — 3rd gen still leading, 4th gen learning. Not a classic 'coasting solo owner' but worth monitoring as 3rd gen ages out."
+  },
+  {
+    "spine_index": 1,
+    "legal_name": "Cameo Fabricators, Inc.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.cameofab.com/",
+    "year_established": 1969,
+    "years_in_business": 57,
+    "owner_name": "Larry Coleman (president, 2nd gen, 35+ years as president). L.V. Coleman (vice president, 3rd gen since 2004). Founder Les Coleman.",
+    "owner_age_estimate": 70,
+    "owner_age_source": "founder_tenure_proxy — Larry has been president 35+ years; if he took over in his 30s in ~1990, he is now ~65-70. L.V. has been VP since 2004 (~22 yrs), likely 45-55 now.",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 35,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "custom pipe fittings, spools, flanges (stainless and exotic alloys) for petrochem/refining/offshore",
+    "customer_mix": "petrochem / refining / offshore / oil / water / gas",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "President Larry Coleman has held the role 35+ years — high tenure / low transition activity",
+      "Most recent capital equipment date is 2019 plate rolling machine (now 6+ years old); 1994 overhead crane",
+      "No ISO 9001 / AS9100 — relies only on ASME / ASTM standards (commodity-grade for sector)",
+      "No CAD/Solidworks/Fusion 360/Mastercam software mentioned",
+      "Customer mix is petrochem-heavy — cyclical and reliant on a few large repeat buyers",
+      "LinkedIn-only social presence"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "live-fetch of /about-us 2026-05-16 — confirms 3 generations (Les→Larry→L.V.)"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.cameofab.com/about-us",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owner_family,year_founded,generations,equipment,specialty"
+      }
+    ],
+    "data_completeness": 0.85,
+    "notes": "Strong A-tier candidate. 3-gen family business, 2nd gen Larry Coleman running 35+ years (now likely 65-70), 3rd gen L.V. Coleman is VP since 2004 but ownership not yet transferred. Petrochem specialty is defensible but commoditized. Owner age suggests 12-36 month sale window. RECOMMEND PRIORITIZE — well-documented family succession path with founder generation ageing out."
+  },
+  {
+    "spine_index": 2,
+    "legal_name": "Patina Metals Inc.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.patinametals.com/",
+    "year_established": 1957,
+    "years_in_business": 69,
+    "owner_name": "Emmott family (no specific principal named publicly; family identity confirmed across website)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — family name confirmed but no individual named; needs CAD/Comptroller pull",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 25,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "ornamental iron / architectural metalwork — spiral stairs, driveway gates, entry doors, canopies, trellises, decorative grilles",
+    "customer_mix": "general contractors / architects / designers / builders / landscape firms / homeowners (premium residential bias)",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "69 years operating — long base rate for owner transition",
+      "Specialty is ornamental/architectural — high-touch, low-volume, premium residential bias = limited succession appeal to younger generation",
+      "No certifications listed",
+      "No CAD software / modern equipment narrative",
+      "No fiber-laser or waterjet — traditional ornamental shop pattern",
+      "Generic Facebook/Twitter share buttons rather than named social channels suggests minimal social investment"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "live-fetch of homepage 2026-05-16 — Emmott family ownership noted but no named individual; needs entity-search"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.patinametals.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,family,specialty,customer_types"
+      },
+      {
+        "url": "https://www.patinametals.com/about-us/",
+        "fetched_at": "2026-05-16T20:45:00Z",
+        "field": "family_status"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "B-tier candidate. 69-year ornamental iron specialist in Houston with Emmott family identity but no named successor on site. Architectural metal is a defensible niche but the absence of a named 2nd/3rd gen suggests classic 'coasting solo owner' profile. PRIORITIZE for entity-search next pass to identify named Emmott principal."
+  },
+  {
+    "spine_index": 3,
+    "legal_name": "Ober and Sons, Inc.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://oberandsons.com/",
+    "year_established": 1986,
+    "years_in_business": 40,
+    "owner_name": "Ron Ober (founder, 1986) and 3 sons: Mike Ober, Ryan Ober, Eric Ober",
+    "owner_age_estimate": 70,
+    "owner_age_source": "founder_tenure_proxy — Ron founded 1986 at typical age 30-40, so now ~65-80; sons likely 35-55",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 15,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "custom steel fabrication, structural welding (AWS certified, City of Houston certified)",
+    "customer_mix": "Houston commercial / structural / mixed; fences, gates, architectural steel, plasma, stainless/aluminum, structural",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Founder Ron Ober still associated with company at 40-year mark — owner now likely 65-80",
+      "3 sons all active = solid succession bench but no clear named leader transition",
+      "No certifications beyond AWS / City of Houston (commodity grade)",
+      "No software stack mentioned",
+      "No social media or project portfolio referenced in available content"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "websearch 2026-05-16 — founder Ron Ober + sons Mike, Ryan, Eric"
+    },
+    "data_sources": [
+      {
+        "url": "https://oberandsons.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,family_status,certifications"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "A-TIER. 40 years, founder Ron Ober still active, 3 sons (Mike, Ryan, Eric) operating. AWS + City of Houston certifications are commodity-grade. Founder age 65-80 puts him in the classic 12-36 month succession window. 3-son bench is strong but creates 'diffuse ownership' dynamic that often pushes sales. PRIORITIZE."
+  },
+  {
+    "spine_index": 4,
+    "legal_name": "JK Welding, LLC",
+    "city": "Cypress",
+    "county": "Harris",
+    "website": "https://jkwelding.net/",
+    "year_established": 2005,
+    "years_in_business": 21,
+    "owner_name": "John King (founder)",
+    "owner_age_estimate": 58,
+    "owner_age_source": "founder_tenure_proxy — founded 2005 by John King, owner-welder pattern, current age 55-65 range",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 25,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "aluminum, stainless, steel fabrication; oilfield skids, custom platforms, sheet metal, railings",
+    "customer_mix": "industrial / commercial / oilfield (Houston, San Antonio, Austin, Dallas regions)",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Active multi-channel social presence (Facebook, Instagram, TikTok, LinkedIn, YouTube) — NOT coasting digitally",
+      "Fiber laser + CNC plasma + Miller-certified equipment — modern shop, post-2015 capability",
+      "Younger company (21 years), owner likely still active",
+      "No CAD/Solidworks/Fusion 360 specifically named, but modern equipment + project galleries imply digital workflow"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of homepage 2026-05-16 — John King is solo founder, no named family successor"
+    },
+    "data_sources": [
+      {
+        "url": "https://jkwelding.net/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owner,equipment,specialty,social_media"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "C-tier — younger, modern, actively-promoted shop. John King (founder, age ~55-60) is not yet at typical succession-age trigger. Modern equipment + active social = NOT a classic coaster. Watch for owner-age progression in 5-10 years. Skip for current sourcing pass."
+  },
+  {
+    "spine_index": 5,
+    "legal_name": "Pinnica, Inc.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.pinnica.net/",
+    "year_established": 1990,
+    "years_in_business": 36,
+    "owner_name": "Pablo Pineiro and Martha Pineiro (founders/owners)",
+    "owner_age_estimate": 65,
+    "owner_age_source": "founder_tenure_proxy — founded 1990, husband-wife team likely now mid-60s+",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 20,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "structural steel fabrication, steel erection, plate fabrication, heavy equipment repair (crane booms — Andrew's Boom Repair legacy)",
+    "customer_mix": "Houston / Pasadena / La Porte industrial + crane operators",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Husband-wife founders still listed as principals after 36 years",
+      "No named 2nd gen or named successor on About page",
+      "No certifications listed (no ISO, no AISC)",
+      "No software stack mentioned",
+      "No modern fiber-laser / waterjet equipment narrative",
+      "Crane boom repair niche is highly specialized but low-growth",
+      "Social presence limited to Facebook + Google Places (minimal)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "live-fetch of /about 2026-05-16 — only Pablo + Martha named"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.pinnica.net/about",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "founders,year,specialty"
+      }
+    ],
+    "data_completeness": 0.6,
+    "notes": "A-TIER. Husband-wife team (Pablo + Martha Pineiro) operating 36 years; both likely in 60s by now. No named successor = strong coaster profile. Crane boom + structural niche = defensible but specialized. Strong candidate for 12-36 month sale window. PRIORITIZE."
+  },
+  {
+    "spine_index": 6,
+    "legal_name": "BHS Welding LLC",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.bhswelding.com/",
+    "year_established": 1996,
+    "years_in_business": 30,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — owners not named on website",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 10,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "structural welding, custom gates/railings, pipe/tube, aluminum/stainless steel, architectural metalwork",
+    "customer_mix": "residential / commercial / industrial / contractors / restaurants / warehouses",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Owner names not disclosed publicly on website",
+      "30 years operating — moderate base rate for owner transition",
+      "No specific certifications beyond generic 'certified and insured'",
+      "No CAD software stack mentioned",
+      "No specific equipment brands mentioned (no laser/waterjet/plasma narrative)",
+      "Payment methods include cash/check/Zelle — small-shop mom-and-pop pattern",
+      "Email is bhswelding1@gmail.com (Gmail, not domain-branded — small-shop pattern)",
+      "No active social media presence — Google Business only"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "live-fetch of homepage 2026-05-16 — family-owned per spine, no named successor"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.bhswelding.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,specialty,services"
+      }
+    ],
+    "data_completeness": 0.5,
+    "notes": "B-tier. 30-year shop with all classic small-shop indicators (Gmail address, cash payments, no name disclosure, no software/cert stack). Family-owned per spine notes — needs entity-search to identify principal. Likely undermarketed, small revenue."
+  },
+  {
+    "spine_index": 7,
+    "legal_name": "ALLWELD Welding and Fabrication",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://allweldhouston.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": "David Currie (LinkedIn-confirmed)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — LinkedIn ID only, no age signal in spine",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 8,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "welding and fabrication for residential, commercial, industrial",
+    "customer_mix": "residential / commercial / industrial — Houston metro",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Very small shop (~8 employees)",
+      "Year founded not stated on website",
+      "No certifications listed",
+      "No specific equipment brands or software mentioned",
+      "Facebook + LinkedIn only — minimal social",
+      "Generic 'high-class machinery' language without specifics"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch of homepage 2026-05-16 — family-owned per spine, David Currie is named principal"
+    },
+    "data_sources": [
+      {
+        "url": "https://allweldhouston.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owner,specialty"
+      }
+    ],
+    "data_completeness": 0.35,
+    "notes": "C/D-tier. Too small (8 employees), founding year unverified, owner age unverified, no certifications. Owner David Currie identified via LinkedIn but no age signal. Below target size band (5-50 with proven revenue base). Skip for current sourcing pass."
+  },
+  {
+    "spine_index": 8,
+    "legal_name": "Channel Sheet Metal, Inc.",
+    "city": "La Porte",
+    "county": "Harris",
+    "website": "https://www.channelsheetmetal.net/",
+    "year_established": 1947,
+    "years_in_business": 79,
+    "owner_name": "Unknown — owners not on website. Facebook handle 'hastelloy1966' suggests reference to either 1966 founding event or early Hastelloy capability date. Stephanie Allen named on LinkedIn (role TBD). Needs deeper entity-search.",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — owners not on website",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 45,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "industrial sheet/plate fabrication in steel, stainless, aluminum, EXOTIC ALLOYS (Hastelloy, Inconel, Alloy 20)",
+    "customer_mix": "Gulf Coast industrial / petrochem owners and contractors / exotic alloy specialty",
+    "owner_owns_building": true,
+    "coasting_tells": [
+      "79 years operating — STRONG base rate for owner transition",
+      "40,000+ sq ft on 21 acres = owns substantial real estate (per spine)",
+      "Owner names absent from public website",
+      "Family-ownership not confirmed on site — needs entity-search",
+      "No ISO 9001 / AS9100 listed despite exotic-alloy specialty",
+      "No CAD/Solidworks/Fusion 360 software stack mentioned",
+      "No specific modern equipment (laser, waterjet) referenced",
+      "Hastelloy/Inconel niche is HIGH-VALUE and defensible — under-marketed asset",
+      "Facebook handle 'hastelloy1966' suggests legacy operator pride in capability — not aggressive marketing"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "live-fetch of /about 2026-05-16 — minimal disclosure; needs entity-search"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.channelsheetmetal.net/about",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,specialty,materials"
+      },
+      {
+        "url": "https://www.facebook.com/hastelloy1966/",
+        "fetched_at": "2026-05-16T20:45:00Z",
+        "field": "facebook_handle"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "STRONG A-tier candidate. 79-year-old Hastelloy/Inconel specialist on 21 acres in La Porte (Houston Ship Channel) with NO online owner disclosure = classic coasting solo-owner pattern. Owns substantial real estate. Exotic-alloy niche is genuinely defensible. PRIORITIZE for entity-search to identify principal in next pass."
+  },
+  {
+    "spine_index": 9,
+    "legal_name": "Bise Welding & Fabricating, Inc.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://bisewelding.com/",
+    "year_established": 1985,
+    "years_in_business": 41,
+    "owner_name": "Kelly D. Bise (Owner / President)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "founder_tenure_proxy — founded 1985 (41 yrs ago); if Kelly founded at age ~30, he is now ~70+; if 2nd gen took over after father founded, likely 55-65",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 20,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "rolled and welded cylinders (ASME SEC VIII DIV 1), plate rolling, steel pipe fab for petroleum/petrochem",
+    "customer_mix": "petroleum / petrochemical / refining / offshore / pipe contractors / vessel fabricators",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "41 years operating — solid base rate for owner age 60+",
+      "Single named principal (Kelly Bise) — no co-owner or named successor",
+      "ASME U, U2, R, S code stamps + AWS D1.1 + API 2B/5L — defensible certification stack but no ISO 9001",
+      "Equipment is plate-rolling-heavy: 7 plate rollers including 1985-era Bertsch model 34 + 13 sub-arc + 21 flux-core — capital base is largely aging",
+      "No CAD software stack mentioned",
+      "No social media presence listed",
+      "Petroleum cyclical customer mix"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "websearch 2026-05-16 — Kelly D. Bise is sole named principal"
+    },
+    "data_sources": [
+      {
+        "url": "https://bisewelding.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,certifications,equipment,specialty"
+      },
+      {
+        "url": "https://www.linkedin.com/in/kelly-bise-4a2615158/",
+        "fetched_at": "2026-05-16T20:45:00Z",
+        "field": "owner_president"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "STRONG A-TIER. 41-year ASME pressure-cylinder specialist run by Kelly D. Bise (likely 55-65). Defensible ASME U/U2/R/S certifications with classic coasting patterns: solo named principal, aging plate rolling equipment, no software stack, no social. PRIORITIZE — high-value defensible niche + sole owner in succession-age window."
+  },
+  {
+    "spine_index": 10,
+    "legal_name": "Falcon Steel Fabricators, Inc.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://falconsteelfab.com/",
+    "year_established": 2010,
+    "years_in_business": 16,
+    "owner_name": "Daniel Morua (owner)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — founded 2010, owner likely 40-60 range",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 30,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "custom structural steel fabrication for refinery, petrochem, oil & gas",
+    "customer_mix": "refinery / petrochem / oil & gas",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Younger company (16 years) — owner likely still 45-60 range",
+      "29,000 sq ft modern facility",
+      "AWS CWI in-house + City of Houston certified — commodity-grade for sector",
+      "No ISO 9001 / AS9100",
+      "Active social media (Facebook, LinkedIn, etc.)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "websearch 2026-05-16 — Daniel Morua is owner"
+    },
+    "data_sources": [
+      {
+        "url": "https://falconsteelfab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,certifications,specialty"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "C-tier. Too young for typical owner-age-driven succession. Modern facility, active digital presence. Owner Daniel Morua identified. Skip for current sourcing pass — re-screen in 5-10 years."
+  },
+  {
+    "spine_index": 11,
+    "legal_name": "Westfield Machine, Inc.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.westfieldmachine.com/",
+    "year_established": 1982,
+    "years_in_business": 44,
+    "owner_name": "Unknown — family-owned per website, no named principal publicly. Spine noted 1992 founding, but websearch reveals 1982 (44 years).",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — family-owned but no named principal",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 25,
+    "iso_9001": true,
+    "as9100": false,
+    "specialty": "large-component structural fabrication, welding, brazing, CNC machining for aerospace, oilfield, heavy industrial, GAS TURBINE",
+    "customer_mix": "aerospace / oilfield / heavy industrial / gas turbine — Texas + Gulf",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Owners not named on website despite 'family owned operation' claim",
+      "API Spec Q1 + API ISO 9001:2015 + Mil-Spec + AWS — STRONG cert stack (above peers)",
+      "Software acceptance: SolidWorks, AutoCAD, GibbsCAM, Shop Talk — DIGITAL workflow present (not coasting)",
+      "44 years operating (corrected from spine's 1992) — solid base rate for owner age 65+",
+      "Gas turbine + aerospace niche is genuinely defensible (long lead-time bids, repeat aerospace-adjacent customers)",
+      "Facebook presence but limited",
+      "25,000 sq ft facility (modest)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "websearch 2026-05-16 — 'family-owned' confirmed, no named principal"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.westfieldmachine.com/large-component-structural-fabrication-services/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,certifications,specialty,software"
+      },
+      {
+        "url": "https://www.westfieldmachine.com/about-westfield-machine/",
+        "fetched_at": "2026-05-16T20:45:00Z",
+        "field": "year_founded_corrected,family_owned"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "STRONG A-TIER. 44-year (corrected) gas-turbine + aerospace specialist with API Q1 + ISO 9001 + Mil-Spec certs and named SolidWorks/AutoCAD/GibbsCAM workflow. Not a classic coaster (digital workflow present) BUT family-owned without named successor + 44-year tenure suggests owner likely 65+. Strong defensible niche. PRIORITIZE for principal identification."
+  },
+  {
+    "spine_index": 12,
+    "legal_name": "Mobil Steel International, Inc.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.mobilsteel.com/",
+    "year_established": 1969,
+    "years_in_business": 57,
+    "owner_name": "Leonard A. Bedell (President & CEO) — current ownership team purchased the company in 2004. Original founders: Dorothy + Dale Manhart (1969).",
+    "owner_age_estimate": null,
+    "owner_age_source": "ownership_change_2004 — Bedell-led ownership team has held for 22 years",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 50,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "structural steel fabrication for petrochem, oil & gas, power utilities, communications",
+    "customer_mix": "petrochem / oil & gas / power utilities / communication / clean fuels",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "OWNERSHIP CHANGE IN 2004 — Bedell-led group purchased from Manhart family",
+      "Spine noted 'founded 1974' is INCORRECT — actually founded 1969 per company history",
+      "Self-describes as 50+ year fabricator — matches 1969 founding",
+      "AISC certified member + AWS affiliate — solid sector certs",
+      "Uses SDS/2 by Design Data — modern detailing software (NOT coasting digitally)",
+      "Self-describes as SBA Small Business — sub-$50M",
+      "Active media presence — Bedell quoted as CEO at industry events",
+      "80,000 sq ft, 1,000 tons/month capacity"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "websearch 2026-05-16 — Bedell-led ownership team purchased 2004, not family-owned"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.mobilsteel.com/about-us/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,certifications,specialty,software"
+      },
+      {
+        "url": "https://www.mobilsteel.com/mobil-steel-day-declared-to-honor-companys-40th-anniversary/",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "founding_history,ownership_change"
+      }
+    ],
+    "data_completeness": 0.8,
+    "notes": "RECONSIDER FOR INCLUSION. Mobil Steel was sold in 2004 to current Bedell-led ownership team. This is NOT a 'family-owned coasting solo owner' profile — it is a professionally-managed CEO-led mid-cap fabricator. Bedell is active in industry (ABC Houston, Texas A&M Kingsville board, lobbying activities) = sophisticated operator. Likely not a willing seller in standard distress/age window. DOWNGRADE to D-tier — does not fit acquisition thesis."
+  },
+  {
+    "spine_index": 13,
+    "legal_name": "Summit Steel Fabricators, Inc.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.summitsteelfab.com/",
+    "year_established": 1988,
+    "years_in_business": 38,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — family-owned but no named principal",
+    "entity_status": "Active (assumed; incorporated 1988 per public records)",
+    "is_distressed": false,
+    "employee_count_estimate": 15,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "structural steel and decorative/ornamental metalwork (gates, stairs, rails, beams, powder coating)",
+    "customer_mix": "Houston commercial + residential ornamental + structural mix; nationwide service",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Spine noted 2000 founding but public records show 1988 — 38 years operating, longer than spine indicated",
+      "Family-owned but no named principal",
+      "No certifications listed",
+      "No software / equipment / brand specifics mentioned",
+      "No social media linked",
+      "Mix of structural + decorative = small job-shop profile"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "websearch 2026-05-16 — 1988 incorporation, family-owned, no named principal"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.summitsteelfab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,family_status"
+      }
+    ],
+    "data_completeness": 0.4,
+    "notes": "B-tier (upgraded). 38 years operating (corrected from spine's 26), family-owned with no named principal — classic coasting pattern. Mid-tenure, small shop. Needs entity-search for principal name."
+  },
+  {
+    "spine_index": 14,
+    "legal_name": "M&M's Welding and Fabricating, Inc.",
+    "city": "Houston",
+    "county": "Harris",
+    "website": "https://www.mmsweldfab.com/",
+    "year_established": 1997,
+    "years_in_business": 29,
+    "owner_name": "Miguel Ortega (owner)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — Miguel Ortega owner since 1997 founding likely; current age 50-70 range",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 20,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "structural steel building erection, Pre-Engineered Metal Buildings (PEMB), commercial / industrial / religious",
+    "customer_mix": "commercial / industrial / religious structures",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "29 years operating",
+      "Twitter and Instagram links present but INACTIVE — clear sign of partial digital coasting",
+      "No certifications mentioned (no AISC, no AWS)",
+      "No software stack named",
+      "No equipment brands listed",
+      "Career Opportunities page exists — active recruiting (offsetting some coast)",
+      "Solo named principal (Miguel Ortega) — no named successor"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "websearch 2026-05-16 — Miguel Ortega owner"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.mmsweldfab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,specialty"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "B-tier. 29-year PEMB erector run by Miguel Ortega with inactive social channels (classic coasting tell), no named certifications, no software stack. Solo named principal — strong coaster profile. Needs age verification but moderate-confidence A-tier candidate if Ortega 60+."
+  },
+  {
+    "spine_index": 15,
+    "legal_name": "South Texas Fabrication and Metal Work",
+    "city": "Splendora",
+    "county": "Montgomery",
+    "website": "https://www.southtexasfabmw.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 12,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "custom gates, metal staircases, structural steel, ornamental ironwork, residential/commercial",
+    "customer_mix": "homeowners / contractors / property managers / builders / industrial",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Founding year not disclosed",
+      "Owner names not disclosed",
+      "Family-status not stated (per spine)",
+      "Bonded and insured only — no certifications",
+      "No equipment brands or software named",
+      "Facebook + Yelp only — limited social",
+      "24/7 emergency services advertised = owner-operator model"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "live-fetch of homepage 2026-05-16 + websearch — no public principal disclosure"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.southtexasfabmw.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,services"
+      }
+    ],
+    "data_completeness": 0.3,
+    "notes": "D-tier. Insufficient data. Founding year unknown, owners unknown, family status unknown. Below research-worthy threshold without entity-search depth. De-prioritize."
+  },
+  {
+    "spine_index": 16,
+    "legal_name": "JT-Fabrication & Welding",
+    "city": "Pearland",
+    "county": "Brazoria",
+    "website": "https://www.jt-fabrication.com/",
+    "year_established": null,
+    "years_in_business": null,
+    "owner_name": null,
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — possible Jarod Tillman (jtfabrications.com, separate entity); Pearland JT-Fabrication owner not confirmed",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 8,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "skids, platforms, pipe supports, oilfield equipment repairs; mobile welding + shop fab",
+    "customer_mix": "oilfield / industrial / commercial in Greater Houston / Pearland / Pasadena",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "No founding year, no owner name, no certifications, no equipment, no software",
+      "Mobile welding + small shop model"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "live-fetch 2026-05-16 — no public principal disclosure"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.jt-fabrication.com/oilfield-metal-fabrication",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,services"
+      }
+    ],
+    "data_completeness": 0.25,
+    "notes": "D-tier. Too small, too little disclosure. Likely owner-welder operation. Note that spine flagged JT-Fabrication as oilfield-only (NAICS 213112) — actually mixed industrial per JT site. Skip."
+  },
+  {
+    "spine_index": 17,
+    "legal_name": "Kieschnick Industries, Inc.",
+    "city": "Beaumont",
+    "county": "Jefferson",
+    "website": "https://kieschnickind.com/",
+    "year_established": 2001,
+    "years_in_business": 25,
+    "owner_name": "Todd Kieschnick (owner / president)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — founded 2001 by Todd, current age likely 45-65",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 25,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "sheet metal, plate, light structural fabrication; shearing, forming, rolling, CNC plasma, punching, welding",
+    "customer_mix": "petrochemical / marine / agricultural / commercial — Beaumont / I-10 corridor",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Solo named principal (Todd Kieschnick) — no co-owner or named successor",
+      "Email is kiesind@sbcglobal.net — SBC Global is a legacy AT&T email service (very dated, owner-personal pattern)",
+      "No certifications listed (no AWS, no ASME)",
+      "No software stack mentioned",
+      "13,000 sq ft facility (modest)",
+      "Strong petrochem corridor positioning (Beaumont I-10)",
+      "25 years operating",
+      "Address per public records: 3050 W Cedar St (spine noted no address)"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "websearch 2026-05-16 — Todd Kieschnick owner/president"
+    },
+    "data_sources": [
+      {
+        "url": "https://kieschnickind.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,family,specialty"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "B-tier. 25-year Beaumont fabricator run by Todd Kieschnick with SBC Global legacy email = classic coasting solo-owner pattern. No certifications, no software, single named principal. Beaumont I-10 corridor is a STRONG petrochem geography. Watch for owner-age progression."
+  },
+  {
+    "spine_index": 18,
+    "legal_name": "LabelleCo Fabrication",
+    "city": "Beaumont",
+    "county": "Jefferson",
+    "website": "https://labellecofab.com/",
+    "year_established": 2012,
+    "years_in_business": 14,
+    "owner_name": "Ryan Merendino (CEO)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — founded 2012, CEO likely 35-55",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 50,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "pipe & structural steel fabrication; 130K sq ft steel fab + 60K sq ft pipe fab",
+    "customer_mix": "oil and gas",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Founded 2012 — only 14 years operating, very young",
+      "190,000 sq ft total — LARGE footprint suggests $50M+ revenue band",
+      "Owns logistics, partnerships with galvanizing/painting facilities",
+      "Active on Facebook and LinkedIn",
+      "CEO-led modern operator (Ryan Merendino) — NOT a coaster",
+      "LIKELY EXCEEDS SIZE CAP"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "websearch 2026-05-16 — Ryan Merendino CEO, founded 2012"
+    },
+    "data_sources": [
+      {
+        "url": "https://labellecofab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,facility"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "EXCLUDE / D-TIER. Founded 2012 by Ryan Merendino — only 14 years old, professionally CEO-led, 190K sq ft total implies likely >$50M revenue. Does not match 'coasting solo owner' thesis. EXCLUDE."
+  },
+  {
+    "spine_index": 19,
+    "legal_name": "Accurate Industries Inc.",
+    "city": "Vidor",
+    "county": "Orange",
+    "website": "https://accurateindustriesinc.com/",
+    "year_established": 2012,
+    "years_in_business": 14,
+    "owner_name": "Bo Jack Davis (likely owner — bojackdavis@accurateindustriesinc.net email; minority + family-owned per company description)",
+    "owner_age_estimate": null,
+    "owner_age_source": "unknown — minority + family-owned HUB-certified",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 35,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "industrial pipe, structural steel, pipeline construction",
+    "customer_mix": "pipeline / industrial — Beaumont / Lake Charles / Port Arthur / Houston corridor",
+    "owner_owns_building": true,
+    "coasting_tells": [
+      "Founded 2012 — only 14 years operating",
+      "Minority and family-owned HUB-certified",
+      "13,000 sq ft shop with 4 overhead cranes + 8-acre laydown yard (owns property)",
+      "Bo Jack Davis email handle suggests likely founder/principal",
+      "Mon-Fri 7:00 AM - 3:30 PM hours = small-shop pattern"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "websearch 2026-05-16 — Bo Jack Davis email associated, no formal title confirmed"
+    },
+    "data_sources": [
+      {
+        "url": "https://accurateindustriesinc.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,facility,family_status"
+      }
+    ],
+    "data_completeness": 0.55,
+    "notes": "C-tier. Founded 2012 (14 years) — younger than ideal. Bo Jack Davis likely principal. Minority + family-owned HUB-certified. Too young for typical succession-age trigger. Skip for current sourcing pass; re-screen in 10+ years."
+  },
+  {
+    "spine_index": 20,
+    "legal_name": "Serpa Fabrication Inc",
+    "dba_name": "R.L.M. Industries",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "website": "https://www.serpafab.com/",
+    "year_established": 1996,
+    "years_in_business": 30,
+    "owner_name": "Rodney Serpa (owner)",
+    "owner_age_estimate": 60,
+    "owner_age_source": "founder_tenure_proxy — founded 1996 (30 yrs ago), if owner-founded in 30s now 60-65",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 15,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "structural steel, ASME coded work, welding",
+    "customer_mix": "Corpus Christi industrial / petrochem",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "ASME coded work — defensible niche",
+      "Single named principal (Rodney Serpa) — sole owner",
+      "DBA 'R.L.M. Industries' (received PPP loan $168,200) — same address",
+      "50+ years combined staff experience = aging workforce",
+      "No certifications detailed (ASME is sector standard)",
+      "No social media linked"
+    ],
+    "successor_indicators": {
+      "second_gen_present": null,
+      "family_successor_present": null,
+      "verified_via": "websearch 2026-05-16 — Rodney Serpa sole owner"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.serpafab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "specialty,certifications"
+      },
+      {
+        "url": "https://www.federalpay.org/paycheck-protection-program/serpa-fabrication-inc-corpus-christi-tx",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "ppp_loan,owner_confirmation"
+      }
+    ],
+    "data_completeness": 0.7,
+    "notes": "B-tier. 30-year Corpus Christi ASME shop run by Rodney Serpa (likely 60). Sole owner, 50+ yrs combined staff experience = long-tenure aging workforce. Classic coaster pattern. Defensible ASME niche in Corpus Christi petrochem corridor. PPP loan received under DBA R.L.M. Industries. Watch for owner-age progression — solid B-tier nearing A."
+  },
+  {
+    "spine_index": 21,
+    "legal_name": "Stainless Steel Products",
+    "dba_name": "SSP MetalWorks",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "website": "https://www.sspmetalworks.com/",
+    "year_established": 1960,
+    "years_in_business": 66,
+    "owner_name": "Danny Alegria (current owner since 2022) — 3rd gen Alegria; prior Rick Alegria (2006-2022), Jorge Alegria (1995-2006)",
+    "owner_age_estimate": 40,
+    "owner_age_source": "owner_transition_2022 — Danny Alegria took over 2022, likely 35-50 range",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 20,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "stainless steel custom fab + multi-metal (carbon, aluminum, copper, brass, exotics); water jet, shear, bend, weld, polish",
+    "customer_mix": "Corpus Christi industrial / commercial / Texas State Aquarium-grade premium custom work",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Recent ownership transfer (2022) to younger Alegria — NOT a coaster (just took over)",
+      "Modern equipment: 2x Omax 80X waterjet, 2x metal shears, 2x hydraulic press brakes, Miller + Lincoln welders — POST-2010 modernization",
+      "12,000 sq ft facility",
+      "66 years operating but recent generational handoff resets coasting clock"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "live-fetch of homepage 2026-05-16 — 3 generations of Alegria family"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.sspmetalworks.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owner_family,year_founded,equipment,generations"
+      }
+    ],
+    "data_completeness": 0.85,
+    "notes": "C-tier — RECENT TRANSITION (2022). Danny Alegria just took over and likely investing in growth, not selling. Skip for current sourcing pass — re-screen in 10-15 years. Excellent equipment modernization in 2010s+."
+  },
+  {
+    "spine_index": 22,
+    "legal_name": "Industrial Fabricators of Corpus Christi",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "website": "https://www.indfabcc.com/",
+    "year_established": 1964,
+    "years_in_business": 62,
+    "owner_name": "Gus Cargile (President / Owner). Gus Cargile III is CEO (likely son — 2nd gen succession in place). Same ownership since 1977 (49 yrs).",
+    "owner_age_estimate": 70,
+    "owner_age_source": "founder_tenure_proxy — same ownership since 1977 (49 yrs); if owner took over at 30, now ~80; if 35-45, now ~75-85",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 100,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "structural steel fab, welding, machining, ASME coded vessels",
+    "customer_mix": "Gulf Coast industrial / petrochem / tanks / vessels — 100+ employees, 2 shifts",
+    "owner_owns_building": true,
+    "coasting_tells": [
+      "Same ownership since 1977 = 49 years — STRONGEST owner-age signal in batch",
+      "185,000 sq ft covered shop on 20 acres = owns substantial real estate",
+      "100+ employees on 2 shifts",
+      "ASME U R stamps + API 650 + ASME B31 + AWS D1.1 = STRONG cert stack for sector",
+      "Gus Cargile III (CEO) suggests father-son 2nd gen succession in place",
+      "No CAD/Solidworks software stack mentioned in available content"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "websearch 2026-05-16 — Gus Cargile (President) + Gus Cargile III (CEO) = father-son active"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.indfabcc.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,ownership_tenure,certifications,facility"
+      },
+      {
+        "url": "https://www.linkedin.com/in/gus-cargile-126023123/",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "owner_president"
+      }
+    ],
+    "data_completeness": 0.8,
+    "notes": "BORDERLINE A-TIER. 100+ employees + 185K sq ft + 20 acres + 2 shifts = revenue likely $20-50M. Cargile family (Gus Sr. + Gus III) — same ownership 49 yrs. ASME U/R + API 650 = legitimately defensible niche. 2nd gen son in CEO role suggests succession in progress. Owner age 75-85. PRIORITIZE — strongest base-rate signal in batch + father-son ownership at peak transition age."
+  },
+  {
+    "spine_index": 23,
+    "legal_name": "Texas Custom Welding LLC",
+    "city": "Aledo",
+    "county": "Parker",
+    "website": "https://www.texascustomwelding.com/",
+    "year_established": 2011,
+    "years_in_business": 15,
+    "owner_name": "Ray Golden and Windy Golden (husband-wife founders)",
+    "owner_age_estimate": 45,
+    "owner_age_source": "linkedin_grad — Ray graduated Aledo HS 1999, current age ~45",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 8,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "mobile + shop welding/fabrication, pipe fencing, gates, railings, carports, deer stands, hog traps, custom",
+    "customer_mix": "residential / agricultural / commercial — Tarrant/Dallas/Parker/Johnson counties",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Ray Golden is 45 — TOO YOUNG for typical succession-age trigger",
+      "Active Facebook presence",
+      "Younger company (15 years)",
+      "Husband-wife team — kids are HS-age (son '24, daughter currently) = family is still raising children, not exiting"
+    ],
+    "successor_indicators": {
+      "second_gen_present": false,
+      "family_successor_present": false,
+      "verified_via": "live-fetch 2026-05-16 — Ray/Windy Golden first gen"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.texascustomwelding.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owners,year_founded,specialty"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "D-tier. Owners too young (mid-40s), kids still in school, no succession trigger. Skip — re-screen in 20+ years."
+  },
+  {
+    "spine_index": 24,
+    "legal_name": "First Quality Fabricating, LLC",
+    "city": "Dallas",
+    "county": "Dallas",
+    "website": "https://www.firstqualityfabricating.com/",
+    "year_established": 1979,
+    "years_in_business": 47,
+    "owner_name": "Richard Thrailkill (founder, still active, US Army 101st Airborne/Ranger vet) + wife Edna Thrailkill (co-founder). Son Rick Thrailkill Jr. is VP (2nd gen). Family runs alongside today.",
+    "owner_age_estimate": 78,
+    "owner_age_source": "founder_tenure_proxy + service_record — Richard served in 101st Airborne (typical age 19-23) before founding 1979; if drafted Vietnam-era 1968-72 at age 20, now ~75-80",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 25,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "sheet metal fabrication — laser cutting, Amada/Safan press brakes, MIG/TIG/robotic welding, CNC punch",
+    "customer_mix": "Dallas/Fort Worth/North Texas manufacturers + Oklahoma",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "Founder Richard Thrailkill STILL ACTIVE at ~78 = TEXTBOOK coasting solo owner",
+      "Son Rick Thrailkill Jr. is VP (2nd gen in succession bench) — clear transition path",
+      "47 years operating",
+      "Amada + Safan press brake equipment — premium European brands",
+      "Robotic welding present (post-2010 modernization)",
+      "No certifications mentioned",
+      "No software stack named",
+      "No social media presence"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": true,
+      "verified_via": "websearch 2026-05-16 — Richard + Edna Thrailkill (founders), Rick Jr. VP. Vietnam-era service indicates founder age ~75-80."
+    },
+    "data_sources": [
+      {
+        "url": "https://www.firstqualityfabricating.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "owner,year_founded,equipment,family"
+      },
+      {
+        "url": "https://www.firstqualityfabricating.com/about-us-2/",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "founder_bio,army_service"
+      },
+      {
+        "url": "https://www.firstqualityfabricating.com/team/thrailkill-4/",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "rick_thrailkill_jr_vp"
+      }
+    ],
+    "data_completeness": 0.9,
+    "notes": "STRONGEST A-TIER IN BATCH. 47-year Dallas sheet-metal fab founded by Richard Thrailkill (Army 101st Airborne/Ranger vet, now ~78) + wife Edna. Son Rick Jr. is VP. Premium Amada + Safan press brakes + robotic welding = modernized capital base. Founder at peak succession-age window with named successor son in place. RECOMMEND TOP PRIORITY for outreach — 12-24 month sale window plausible."
+  },
+  {
+    "spine_index": 25,
+    "legal_name": "Lee Metal Fabrication",
+    "city": "Cleburne",
+    "county": "Johnson",
+    "website": "https://www.leemetalfab.com/",
+    "year_established": 1968,
+    "years_in_business": 58,
+    "owner_name": "Raymond Lee (founder, 1968). Multi-generation family business per company history.",
+    "owner_age_estimate": 80,
+    "owner_age_source": "founder_tenure_proxy — Raymond Lee founded 1968 likely in 20s-30s, now ~80-90; succession to children likely in progress",
+    "entity_status": "Active (assumed)",
+    "is_distressed": false,
+    "employee_count_estimate": 18,
+    "iso_9001": false,
+    "as9100": false,
+    "specialty": "custom metal fab job shop — laser cutting, plasma, CNC press brake, CNC turning/vertical machining, automated robotic welding",
+    "customer_mix": "industrial processing / maintenance/repair / construction / warehousing / retail / manufacturing — DFW/Cleburne area; also farm/ranch (Lee Products division at metalranch.com)",
+    "owner_owns_building": null,
+    "coasting_tells": [
+      "58 years operating — VERY STRONG base rate for ownership transition",
+      "Founder Raymond Lee likely 80+ now",
+      "'Family-run' — multi-gen, but no named 2nd gen on website",
+      "Strong modern equipment: laser, high-def plasma, CNC press brake, CNC turning, AUTOMATED ROBOTIC WELDING — extensive modernization",
+      "Operates dual brand: Lee Metal Fabrication (industrial) + Lee Products / Metal Ranch (farm/ranch retail)",
+      "1-800 toll-free + (817) 641-9893 — old-school marketing pattern",
+      "No certifications listed",
+      "No CAD software specifically named",
+      "No social media presence"
+    ],
+    "successor_indicators": {
+      "second_gen_present": true,
+      "family_successor_present": null,
+      "verified_via": "websearch 2026-05-16 — founder Raymond Lee 1968, family-run, named successor not public"
+    },
+    "data_sources": [
+      {
+        "url": "https://www.leemetalfab.com/",
+        "fetched_at": "2026-05-16T20:30:00Z",
+        "field": "year_founded,family,equipment,specialty"
+      },
+      {
+        "url": "https://www.leemetalfab.com/about/",
+        "fetched_at": "2026-05-16T20:50:00Z",
+        "field": "founder_raymond_lee"
+      }
+    ],
+    "data_completeness": 0.75,
+    "notes": "STRONG A-TIER. 58-year Cleburne job shop founded by Raymond Lee (now likely 80+). Strong modern equipment (laser + plasma + CNC press brake + robotic welding) but classic coasting markers: no named successor publicly, no certifications, 1-800 marketing, no social. Dual brand (Lee Metal Fab + Lee Products/Metal Ranch retail) = additional real estate / customer-base value. PRIORITIZE — high base-rate succession signal + diversified asset base."
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "task": "Wave 6 4-vertical persistence to Supabase offmarket schema",
+  "project_id": "gggmmjvwbbfvrtjjlqvr",
+  "executed_at": "2026-05-16",
+  "total_records_persisted": 293,
+  "total_failed": 0,
+  "total_skipped_invalid": 0,
+  "method": "Direct SQL via execute_sql MCP (offmarket schema not exposed in PostgREST). Used WITH CTE chained INSERTs: businesses -> return id+legal_name -> JOIN VALUES list of scores -> INSERT business_scores. Batched ~25 records per CTE statement.",
+  "by_vertical": {
+    "hvac_commercial": {
+      "source_file": "/Users/gideonspencer/dealhound-pro/.claude/worktrees/laughing-yonath-843b53/offmarket/data/hvac_commercial_targets.json",
+      "score_run_id": "753f9738-f39f-44c0-b37e-13fbfb558b0c",
+      "total_in_file": 93,
+      "valid": 93,
+      "skipped_invalid": 0,
+      "inserted": 93,
+      "verified_in_db": 93
+    },
+    "specialty_trucking": {
+      "source_file": "/Users/gideonspencer/dealhound-pro/.claude/worktrees/laughing-yonath-843b53/offmarket/data/specialty_trucking_targets.json",
+      "score_run_id": "60142bff-46df-4b25-af71-e986ba07e8b8",
+      "total_in_file": 69,
+      "valid": 69,
+      "skipped_invalid": 0,
+      "inserted": 69,
+      "verified_in_db": 69
+    },
+    "independent_isp_wisp": {
+      "source_file": "/Users/gideonspencer/dealhound-pro/.claude/worktrees/laughing-yonath-843b53/offmarket/data/independent_isp_wisp_targets.json",
+      "score_run_id": "a33bd953-2c6f-4b2a-822c-259776969273",
+      "total_in_file": 68,
+      "valid": 68,
+      "skipped_invalid": 0,
+      "inserted": 68,
+      "verified_in_db": 68
+    },
+    "title_company": {
+      "source_file": "/Users/gideonspencer/dealhound-pro/.claude/worktrees/laughing-yonath-843b53/offmarket/data/title_company_targets.json",
+      "score_run_id": "21d57af1-ad30-4e32-a1f2-d7327001ed89",
+      "total_in_file": 63,
+      "valid": 63,
+      "skipped_invalid": 0,
+      "inserted": 63,
+      "verified_in_db": 63
+    }
+  },
+  "verification_result": {
+    "hvac_commercial_score_run_753f9738": 93,
+    "specialty_trucking_score_run_60142bff": 69,
+    "independent_isp_wisp_score_run_a33bd953": 68,
+    "title_company_score_run_21d57af1": 63,
+    "total": 293
+  },
+  "schema_notes": {
+    "offmarket.businesses": "All records inserted with vertical, legal_name, and available address/contact/owner/entity fields. distress_reasons + data_sources as jsonb. license_issue_date cast to ::date.",
+    "offmarket.business_scores": "Linked via business_id returned from businesses RETURNING. score_run_id cast to ::uuid. Tier values normalized to long form (A_acquire_self|B_forward|C_watch|D_pass). All records used layer1_base_rate (not layer1_score); no source field-name normalization needed."
+  }
+}

@@ -1,0 +1,390 @@
+{
+  "vertical": "podiatry",
+  "naics": "621391",
+  "run_label": "podiatry-tx-2026-05-16-w1d",
+  "fetched_at": "2026-05-17",
+  "enrichment_methodology": "Per-row WebSearch + WebFetch on practice website (when available) + cross-check vs NPI registry. Comptroller franchise-tax not directly queried (web form, no API access in sandbox).",
+  "rows": [
+    {"idx": 0, "name": "Shehzad Amlani", "address": "1303 McCullough Ave Ste 333, San Antonio 78212", "city": "San Antonio", "county": "Bexar",
+     "practice_name": "The Podiatry Group of South Texas, P.A.", "website": "thepodiatrygroup.com",
+     "dpm_count_at_practice": "multi (8+ providers across group)", "grad_year": 2019, "yrs_in_practice": 6,
+     "decision": "EXCLUDE — multi-provider group practice (8+ locations Boerne/Hondo/Floresville/Kenedy/Uvalde/Live Oak)",
+     "exclusion_reason": "Regional group practice with 8+ providers / multiple locations — not solo off-market target"},
+
+    {"idx": 1, "name": "Murad Abdel-Qader", "address": "88 Briggs St Ste 170, San Antonio 78224", "city": "San Antonio", "county": "Bexar",
+     "practice_name": "Advanced Family Foot Care Centers", "website": "sanantoniofootspecialist.com",
+     "dpm_count_at_practice": 1, "grad_year": 2002, "yrs_in_practice": 23,
+     "live_team_fetch": {"url": "https://www.sanantoniofootspecialist.com/about", "fetched_at": "2026-05-17",
+       "result": "Solo Dr. Abdel-Qader confirmed. 2026 footer copyright. Online booking via 'Request Appointment'. Diabetic foot care + wound care + diabetic limb salvage = recurring revenue."},
+     "decision": "C_watch — modern practice (2026 footer + online booking) = NOT coasting. ~50s age (2002 grad)."},
+
+    {"idx": 2, "name": "Alexander Blaschke", "address": "8300 Floyd Curl Dr, San Antonio 78229", "city": "San Antonio", "county": "Bexar",
+     "decision": "EXCLUDE — UT Health San Antonio (academic medicine, employed)"},
+
+    {"idx": 3, "name": "Elaine Danial", "address": "4334 N Loop 1604 W Ste 102, San Antonio 78249", "city": "San Antonio", "county": "Bexar",
+     "practice_name": "Bexarfoot Podiatry PLLC", "website": "bexarfoot.com",
+     "dpm_count_at_practice": 1, "yrs_in_practice": 5,
+     "live_team_fetch": {"url": "https://bexarfoot.com/meet-our-doctor-1", "fetched_at": "2026-05-17",
+       "result": "Solo Dr. Danial confirmed. 2019 footer copyright (dated). ZocDoc online booking. Expanding to Boerne 7/2026."},
+     "decision": "D_pass — practice ~5 yrs old, ACTIVELY EXPANDING (Boerne 7/2026) = growth not coasting"},
+
+    {"idx": 4, "name": "Richard Bellacosa", "address": "14615 San Pedro Ave Ste 160, San Antonio 78232", "city": "San Antonio", "county": "Bexar",
+     "practice_name": "Richard Bellacosa DPM", "website": "(no own website found)",
+     "dpm_count_at_practice": 1, "grad_year": "Temple grad (1980s likely)", "yrs_in_practice": "30+",
+     "decision": "A_candidate — Temple grad ~30+ yrs, multi-hospital affiliations (Methodist/CHRISTUS/Baptist/TX Vista), solo, no own website = strong coasting signal in premium SA ZIP"},
+
+    {"idx": 5, "name": "Chad Howze", "address": "6510 Babcock Rd Ste 105, San Antonio 78249", "city": "San Antonio", "county": "Bexar",
+     "practice_name": "San Antonio Family Foot and Ankle", "website": "familyfootsa.com",
+     "dpm_count_at_practice": 1, "yrs_in_practice": "10-15 estimated",
+     "decision": "B_forward — Solo, board cert ABFAS, total ankle replacement specialty, multi-hospital privileges. Modern enough."},
+
+    {"idx": 6, "name": "Suril Amin", "address": "21 Spurs Ln Ste 300, San Antonio 78240", "city": "San Antonio", "county": "Bexar",
+     "grad_year": 2022, "yrs_in_practice": 3,
+     "decision": "D_pass — currently a fellow at SA Sports Medicine, <5 yrs, in training"},
+
+    {"idx": 7, "name": "Andrew Cohen", "address": "6609 Blanco Rd Ste 155, San Antonio 78216", "city": "San Antonio", "county": "Bexar",
+     "practice_name": "Andrew M Cohen DPM", "website": "(no own website found)",
+     "dpm_count_at_practice": 1, "grad_year": 1996, "yrs_in_practice": 29,
+     "decision": "A_candidate — 1996 PCPM grad 28+ yrs solo, no own website, premium 78216 ZIP, 5.0 ratings"},
+
+    {"idx": 8, "name": "Lawrence Czelusta", "address": "8601 Village Dr Ste 104, San Antonio 78217", "city": "San Antonio", "county": "Bexar",
+     "practice_name": "Lawrence A Czelusta DPM PC / North East Foot Center", "website": "(no own website found)",
+     "dpm_count_at_practice": 1, "grad_year": 1977, "yrs_in_practice": 47,
+     "concern": "Birdeye review snippet: 'North East Foot Center permanently closed' — other directories still active. NEEDS VERIFICATION",
+     "decision": "C_watch — possible closure flag (cap tier per skill rules), 1977 Cal grad 47 yrs solo — if active would be a strong A but operational status unclear"},
+
+    {"idx": 9, "name": "Thomas George", "address": "4001 W 15th St Ste 480, Plano 75093", "city": "Plano", "county": "Collin",
+     "grad_year": 2024,
+     "decision": "D_pass — 2024 residency grad, <5 yrs"},
+
+    {"idx": 10, "name": "Harold Shane Brown", "address": "1050 S Preston Rd Ste 119, Celina 75009", "city": "Celina", "county": "Collin",
+     "practice_name": "Celina Total Foot Care PLLC", "website": "shanebrowndpm.com",
+     "dpm_count_at_practice": 1, "grad_year": 2009, "yrs_in_practice": 15,
+     "decision": "B_forward — Solo 15 yrs Celina (exurban Collin), 'foot care in Celina 12+ yrs', diabetic foot exams + routine nail care = recurring revenue"},
+
+    {"idx": 11, "name": "Jeremiah Graff", "address": "2633 Dallas Pkwy Ste 100, Plano 75093", "city": "Plano", "county": "Collin",
+     "practice_name": "Graff Foot, Ankle and Wound Care", "website": "drgraff.com",
+     "dpm_count_at_practice": 1, "grad_year": "Barry salutatorian", "yrs_in_practice": 15,
+     "decision": "C_watch — Solo 15 yrs, modern site, M-F 7-5 + Saturday = NOT coasting hours, multi-city service area = expanding"},
+
+    {"idx": 12, "name": "John Baca", "address": "6300 W Parker Rd Ste 420, Plano 75093", "city": "Plano", "county": "Collin",
+     "practice_name": "Total Foot and Ankle", "website": "totalfootandankletx.com",
+     "dpm_count_at_practice": 1, "grad_year": 2012, "yrs_in_practice": 13,
+     "decision": "B_forward — Solo founder, 13 yrs, modern practice"},
+
+    {"idx": 13, "name": "Jason Dodder", "address": "450 N Standridge Blvd Ste 202, Anna 75409", "city": "Anna", "county": "Collin",
+     "practice_name": "Interventional Partners PLLC",
+     "decision": "EXCLUDE — 'Interventional Partners' MSO/billing entity at exurban Collin location; very small ZIP, likely a satellite, not a primary podiatry practice"},
+
+    {"idx": 14, "name": "Charles Churchwell", "address": "4333 N Josey Ln Ste 102, Carrollton 75010", "city": "Carrollton", "county": "Dallas",
+     "concern": "Yelp shows 'C Stanley Churchwell DPM' at suite 203 as CLOSED 10/2025",
+     "decision": "C_watch — possible closure/distress flag (cap tier per skill rules), need verification"},
+
+    {"idx": 15, "name": "Daniel Armour", "address": "5323 Harry Hines Blvd Stop 7200, Dallas 75390", "city": "Dallas", "county": "Dallas",
+     "decision": "EXCLUDE — UT Southwestern Medical Center (academic medicine, employed)"},
+
+    {"idx": 16, "name": "Donald Blum", "address": "7777 Forest Ln Ste C-435, Dallas 75230", "city": "Dallas", "county": "Dallas",
+     "practice_name": "Southwest Podiatry", "website": "swpfa.com",
+     "dpm_count_at_practice": 2, "grad_year": 1978, "yrs_in_practice": 47,
+     "live_team_fetch": {"url": "https://www.swpfa.com/our-doctors", "fetched_at": "2026-05-17",
+       "result": "Dr. Blum (1979 start) AND Dr. Samuel Nava Jr (1995 start) — partner/associate = internal-buy-in candidate"},
+     "decision": "B_forward — past TX Podiatric Medical Society president (engaged), 2-DPM practice with Dr. Nava = structured internal-buy-in candidate, demote from A"},
+
+    {"idx": 17, "name": "Chris Bowers", "address": "2909 S Hampton Rd Ste B-102, Dallas 75224", "city": "Dallas", "county": "Dallas",
+     "practice_name": "Oak Cliff Podiatry", "grad_year": 1996, "yrs_in_practice": 29,
+     "concern": "Yelp shows 'CLOSED 7/2025' for Bowers DPM at this address",
+     "decision": "C_watch — closure flag, need verification"},
+
+    {"idx": 18, "name": "Helen Gipson", "address": "217 E Camp Wisdom Rd Ste A, Duncanville 75116", "city": "Duncanville", "county": "Dallas",
+     "practice_name": "Helen Gipson DPM", "website": "(no own website found)",
+     "dpm_count_at_practice": 1, "grad_year": 1985, "yrs_in_practice": 41,
+     "decision": "A_candidate — 1985 Kent State grad 41 yrs solo Duncanville (exurban Dallas), no website, 5.0 ratings, accepts 28 insurance plans incl Medicaid"},
+
+    {"idx": 19, "name": "Jamelia Abrams", "address": "2776 Bay Shore Ln, Grand Prairie 75054", "city": "Grand Prairie", "county": "Dallas",
+     "practice_name": "Compassionate Foot Care Clinic PA", "grad_year": 2004, "yrs_in_practice": 21,
+     "concern": "LinkedIn shows Compassionate Foot Care Clinic open Mar 2009-Apr 2011 + May 2012-Aug 2016 — now at HealthDrive Corporation (nursing home rounds). Practice may be inactive at this address.",
+     "decision": "D_pass — practice likely closed/dormant per LinkedIn; she's at HealthDrive now (employed)"},
+
+    {"idx": 20, "name": "Catherine Casteel", "address": "7501 Lakeview Pkwy Ste 230, Rowlett 75088", "city": "Rowlett", "county": "Dallas",
+     "practice_name": "Interventional Partners PLLC",
+     "decision": "EXCLUDE — Interventional Partners MSO/billing entity (same pattern as #13)"},
+
+    {"idx": 21, "name": "Hung Huynh", "address": "6550 Naaman Forest Blvd Ste 200, Garland 75044", "city": "Garland", "county": "Dallas",
+     "practice_name": "North Star Foot and Ankle Associates PA", "website": "northstarfoot.com",
+     "dpm_count_at_practice": "1 (Hung Aden Huynh same person)", "yrs_in_practice": 10,
+     "decision": "C_watch — Solo 10 yrs, modern, Methodist Richardson affiliation, M-F 8-5 standard hours"},
+
+    {"idx": 22, "name": "Brent Bender", "address": "630 N Bishop Ave, Dallas 75208", "city": "Dallas", "county": "Dallas",
+     "practice_name": "Podiatry Associates of Dallas", "website": "podiatryassocdallas.com",
+     "dpm_count_at_practice": 1, "grad_year": 1997, "yrs_in_practice": 28,
+     "live_team_fetch": {"url": "https://podiatryassocdallas.com/", "fetched_at": "2026-05-17",
+       "result": "Solo founder confirmed. 2023 footer copyright = 3 yrs out of date. Phone-only intake. Spanish translation = older copy."},
+     "decision": "A_candidate — 1997 Kent State 28 yrs solo Oak Cliff Dallas, dated site (2023 footer), phone-only intake = coasting"},
+
+    {"idx": 23, "name": "Tuyen Hoang", "address": "2522 Denmark Dr, Garland 75040", "city": "Garland", "county": "Dallas",
+     "practice_name": "Tuyen Hoang DPM", "website": "(no own website found)",
+     "dpm_count_at_practice": 1, "yrs_in_practice": "unknown — license assigned 2007-ish",
+     "decision": "C_watch — Solo, no website, Vietnamese-surname (likely first-gen immigrant practice serving local AsianAm community), accepts Medicare/Medicaid"},
+
+    {"idx": 24, "name": "Brett Gabriel", "address": "1130 Beachview St Ste 200, Dallas 75218", "city": "Dallas", "county": "Dallas",
+     "practice_name": "Lakeside Footcare", "website": "lakesidefootcare.net",
+     "dpm_count_at_practice": 1, "grad_year": 1987, "yrs_in_practice": 38,
+     "decision": "A_candidate — 1987 Des Moines grad 38 yrs solo Lakewood Dallas, White Rock Medical Center affiliation"},
+
+    {"idx": 25, "name": "Damien Dauphinee", "address": "3319 Unicorn Lake Blvd Ste 111, Denton 76210", "city": "Denton", "county": "Denton",
+     "practice_name": "Complete Foot and Ankle Care of North Texas PA", "website": "completefootandanklecare.com",
+     "dpm_count_at_practice": 2,
+     "live_team_fetch": {"url": "https://www.completefootandanklecare.com/our-doctors", "fetched_at": "2026-05-17",
+       "result": "Dr. Dauphinee + Dr. Raafae M. Hussain (board cert ABFAS) — 2 DPMs = internal-buy-in candidate"},
+     "decision": "C_watch — engaged owner (podcast, book published, Mexico missions), 2-DPM = NOT a coasting solo profile"},
+
+    {"idx": 26, "name": "Douglas Arnold", "address": "116 Brookdale Dr, Highland Village 75077", "city": "Highland Village", "county": "Denton",
+     "practice_name": "Douglas Arnold DPM", "website": "douglasarnold5d4.dr-leonardo.com",
+     "dpm_count_at_practice": 1, "grad_year": 1984, "yrs_in_practice": 41,
+     "live_team_fetch": {"url": "https://douglasarnold5d4.dr-leonardo.com/", "fetched_at": "2026-05-17",
+       "result": "Solo Dr. Arnold confirmed. Dr. Leonardo vendor footer 2026 (template, not freshness signal). No online booking, phone-only intake."},
+     "decision": "A_candidate — 1984 Kent State 41 yrs solo Highland Village (Denton, premium suburb), TX license #1535 (early issuance), generic vendor site, phone-only"},
+
+    {"idx": 27, "name": "Tu Dao", "address": "102 N Locust St Ste 102, Denton 76201", "city": "Denton", "county": "Denton",
+     "practice_name": "North Texas Foot & Ankle Specialists", "website": "ntfootdocs.com",
+     "dpm_count_at_practice": "uncertain", "grad_year": 2005, "yrs_in_practice": 20,
+     "decision": "B_forward — Solo 20 yrs, Medical City Denton affiliation"},
+
+    {"idx": 28, "name": "Iwona Ciba", "address": "25722 Kingsland Blvd Ste 201B, Katy 77494", "city": "Katy", "county": "Fort Bend",
+     "practice_name": "Iwona Ciba DPM PLLC", "website": "iwonaciba.dr-leonardo.com",
+     "dpm_count_at_practice": 1, "grad_year": 1995, "yrs_in_practice": 29,
+     "live_team_fetch": {"url": "https://iwonaciba.dr-leonardo.com/", "fetched_at": "2026-05-17",
+       "result": "Solo Dr. Ciba confirmed. Dr. Leonardo vendor site (template footer 2026, not real freshness). NO online booking, phone-only intake."},
+     "decision": "A_candidate — 1995 Barry grad 29 yrs solo Katy, generic vendor site, phone-only, Polish-speaking = niche local relationship-based"},
+
+    {"idx": 29, "name": "Kunal Amin", "address": "7609 Tiki Dr Ste D, Fulshear 77441", "city": "Fulshear", "county": "Fort Bend",
+     "practice_name": "Fulshear Foot and Ankle PLLC", "website": "fulshearfootandankle.com",
+     "dpm_count_at_practice": 2,
+     "decision": "C_watch — Dr. Amin + Dr. Yumna Siddiqui = 2-DPM, modern multi-DPM practice"},
+
+    {"idx": 30, "name": "James Jacobs", "address": "23230 Red River Dr, Katy 77494", "city": "Katy", "county": "Fort Bend",
+     "practice_name": "Your Total Foot Care Specialist PA", "website": "katyfootcare.com",
+     "dpm_count_at_practice": 3,
+     "live_team_fetch": {"url": "https://www.katyfootcare.com/dr-james-m-jacobs/", "fetched_at": "2026-05-17",
+       "result": "Dr. Jacobs (founder 1989) + Dr. Alyssa Pham + Dr. Alecia Williams = 3 DPMs. 2026 footer, online scheduling."},
+     "decision": "B_forward — 1989-founded by Jacobs (35+ yrs tenure = A-tier age proxy), BUT 3-DPM group + modern = internal-buy-in/successor candidate, demote A→B"},
+
+    {"idx": 31, "name": "Douglas Hansen", "address": "915 Gessner Rd Ste 650, Houston 77024", "city": "Houston", "county": "Harris",
+     "practice_name": "Valhalla Foot & Ankle Specialists", "website": "valhallafootankle.com",
+     "dpm_count_at_practice": 1, "yrs_in_practice": 12,
+     "decision": "B_forward — Solo 12 yrs, Army veteran, modern practice"},
+
+    {"idx": 32, "name": "Parth Dixit", "address": "2200 North Loop W Ste 300, Houston 77018", "city": "Houston", "county": "Harris",
+     "practice_name": "Texas Heart and Vein Multispecialty Group",
+     "decision": "EXCLUDE — multispecialty MSO group, not standalone podiatry"},
+
+    {"idx": 33, "name": "Bernard Danna Jr", "address": "7575 San Felipe St Ste 301, Houston 77063", "city": "Houston", "county": "Harris",
+     "practice_name": "Houston Family Foot & Ankle PLLC", "website": "(no own found)",
+     "dpm_count_at_practice": 1, "yrs_in_practice": 17,
+     "decision": "B_forward — Solo 17 yrs, premium Galleria-area ZIP 77063"},
+
+    {"idx": 34, "name": "Tiensi Ho", "address": "10 Arbor Bend Dr, Houston 77070", "city": "Houston", "county": "Harris",
+     "practice_name": "Tiensi Ho DPM", "website": "(no own found)", "dpm_count_at_practice": 1, "yrs_in_practice": 22,
+     "decision": "B_forward — Solo 22 yrs, no own website (directories only) = coasting signal"},
+
+    {"idx": 35, "name": "Leon Belcher II", "address": "4928 Griggs Rd, Houston 77021", "city": "Houston", "county": "Harris",
+     "practice_name": "Leon H Belcher II DPM", "website": "(no own found)",
+     "dpm_count_at_practice": 1, "grad_year": 1990, "yrs_in_practice": 35,
+     "decision": "A_candidate — 1990 Iowa State 35 yrs solo, CHI Saint Luke's + HCA affiliations, ZIP 77021 (Third Ward) = SE Houston African-American community-rooted practice"},
+
+    {"idx": 36, "name": "William Capece", "address": "17490 Highway 3 Ste B100, Webster 77598", "city": "Webster", "county": "Harris",
+     "practice_name": "Center for Foot Disorders / drcapece.com", "website": "drcapece.com",
+     "dpm_count_at_practice": 1, "grad_year": "NYCPM cum laude", "yrs_in_practice": "26+ Clear Lake",
+     "team_page_attempted": {"url1": "drcapece.com TLS error", "url2": "drcapece.net 404"},
+     "decision": "B_forward — Solo 26+ yrs Clear Lake, TLS expired on own site (coasting), Spanish + Castilian speaking. Cap at B due to live-fetch failed."},
+
+    {"idx": 37, "name": "Aleisha Allen", "address": "1140 Business Center Dr Ste 510, Houston 77043", "city": "Houston", "county": "Harris",
+     "practice_name": "Houston Foot Specialists", "website": "houstonfootspecialists.com",
+     "dpm_count_at_practice": 1, "grad_year": 2010, "yrs_in_practice": 15,
+     "live_team_fetch": {"url": "https://www.houstonfootspecialists.com/about-us.aspx", "fetched_at": "2026-05-17",
+       "result": "Solo Dr. Allen 'leads' practice. 2026 footer = current. Online booking 'Request an Appointment'."},
+     "decision": "C_watch — Modern (2026 footer + online booking) = NOT coasting"},
+
+    {"idx": 38, "name": "Adi Akerman", "address": "6699 Chimney Rock Rd Ste 102, Houston 77081", "city": "Houston", "county": "Harris",
+     "practice_name": "Podiatry Associates of Houston - Chimney Rock",
+     "decision": "EXCLUDE — Podiatry Associates of Houston = multi-DPM, multi-location group practice"},
+
+    {"idx": 39, "name": "Jose Barreto", "address": "114 W Drew St, Houston 77006", "city": "Houston", "county": "Harris",
+     "practice_name": "Jose Barreto DPM", "website": "(no own found)",
+     "dpm_count_at_practice": 1, "grad_year": 1997, "yrs_in_practice": 28,
+     "decision": "A_candidate — 1997 Ohio State 28 yrs solo Montrose Houston (premium urban ZIP 77006), Spanish, 2-additional satellite locations"},
+
+    {"idx": 40, "name": "Tommy Ho", "address": "21216 Northwest Fwy Ste 400, Cypress 77429", "city": "Cypress", "county": "Harris",
+     "practice_name": "CLS Health Podiatry Associates - Northwest Fwy",
+     "decision": "EXCLUDE — CLS Health is a large multi-specialty integrated network (100+ providers) — employed"},
+
+    {"idx": 41, "name": "Jaweria Jaweria", "address": "12121 Richmond Ave, Houston 77082", "city": "Houston", "county": "Harris",
+     "decision": "SKIP — could not verify identity / practice. May be data error in NPI registry (Jaweria Jaweria is suspicious — likely first/last name swap)"},
+
+    {"idx": 42, "name": "Taren Cardona", "address": "13810 John Audubon Pkwy Ste B, Webster 77598", "city": "Webster", "county": "Harris",
+     "practice_name": "Clear Lake Foot & Ankle Specialist PA", "website": "clearlakefoot.com",
+     "dpm_count_at_practice": 1, "grad_year": 2009, "yrs_in_practice": "6 as owner (since 2019 transition)",
+     "decision": "D_pass — recent buyer (took over from Dr. Dagley in 2019) = not selling"},
+
+    {"idx": 43, "name": "Hanna Francis", "address": "6302 Canyon Park Dr, Katy 77450", "city": "Katy", "county": "Harris",
+     "practice_name": "Hanna E Francis DPM (possible Westside Podiatry)", "website": "(no own found)",
+     "dpm_count_at_practice": 1, "grad_year": "1994 (31 yrs)", "yrs_in_practice": 31,
+     "decision": "A_candidate — 31 yrs solo Katy, no own website (directories only), premium ZIP 77450"},
+
+    {"idx": 44, "name": "Kenrick Dennis", "address": "902 Frostwood Ste 250, Houston 77024", "city": "Houston", "county": "Harris",
+     "practice_name": "Kenrick J Dennis DPM", "website": "kdfoot.com",
+     "dpm_count_at_practice": 1, "grad_year": 1984, "yrs_in_practice": 42,
+     "live_team_fetch": {"url": "https://www.kdfoot.com/our-podiatric-team/", "fetched_at": "2026-05-17",
+       "result": "Solo Dr. Dennis confirmed. Phone-only intake ('appointment will be confirmed by phone'). No copyright date visible = template."},
+     "decision": "A_candidate — 1984 Cal Podiatric 42 yrs solo Memorial-area Houston (premium ZIP 77024), Memorial Hermann affiliation, phone-only intake = classic coasting"},
+
+    {"idx": 45, "name": "Tarunjeet Bajwa", "address": "9055 Katy Fwy Ste 460, Houston 77024", "city": "Houston", "county": "Harris",
+     "practice_name": "Your Total Foot Care Specialist (same group as #30)",
+     "decision": "EXCLUDE — part of Your Total Foot Care Specialist 4-DPM group with Jacobs (already counted in #30)"},
+
+    {"idx": 46, "name": "Frank Godino", "address": "16218 La Cabana Dr, Houston 77062", "city": "Houston", "county": "Harris",
+     "practice_name": "Frank J Godino DPM", "website": "(no own found)",
+     "dpm_count_at_practice": 1, "yrs_in_practice": 16,
+     "decision": "B_forward — Solo 16 yrs, no own website, Clear Lake area Houston"},
+
+    {"idx": 47, "name": "Candace Been", "address": "806 Hilbig Rd, Conroe 77301", "city": "Conroe", "county": "Montgomery",
+     "decision": "SKIP — could not find verifying public web presence in current Conroe podiatry directory listings"},
+
+    {"idx": 48, "name": "Lori Hillman", "address": "26607 Oak Ridge Dr, The Woodlands 77380", "city": "The Woodlands", "county": "Montgomery",
+     "practice_name": "Dr. Lori J. Hillman DPM", "website": "drlorijhillman.com",
+     "dpm_count_at_practice": 1, "yrs_in_practice": "since 1988 (38 yrs)",
+     "live_team_fetch": {"url": "https://www.drlorijhillman.com/staff", "fetched_at": "2026-05-17",
+       "result": "Solo Dr. Hillman confirmed since 1988. 2026 footer (Officite vendor template — modest update freshness). Online booking available. Diabetic shoes + custom orthotics + wound care = recurring revenue."},
+     "decision": "A_candidate — 38 yrs solo The Woodlands (premium ZIP 77380), 1988-founded, diabetic shoes + custom orthotics = recurring revenue, board-cert ABFAS, recognized."},
+
+    {"idx": 49, "name": "Stacey Curry", "address": "1120 Medical Plaza Dr Ste 180, Shenandoah 77380", "city": "Shenandoah", "county": "Montgomery",
+     "practice_name": "Robert Neville & Associates PA",
+     "decision": "EXCLUDE — multi-DPM group (Neville + Associates)"},
+
+    {"idx": 50, "name": "Daniel Cairns", "address": "1940 E State Hwy 114 Ste 150, Southlake 76092", "city": "Southlake", "county": "Tarrant",
+     "practice_name": "Academy Foot & Ankle Specialists",
+     "decision": "EXCLUDE — Academy Foot & Ankle Specialists = 6-location regional group (Southlake/Keller/Flower Mound/NRH/Argyle/Denton)"},
+
+    {"idx": 51, "name": "William Allred", "address": "311 Westpark Way, Euless 76040", "city": "Euless", "county": "Tarrant",
+     "practice_name": "William S Allred DPM", "website": "(no own found)",
+     "dpm_count_at_practice": 1, "grad_year": 1978, "yrs_in_practice": 47,
+     "decision": "A_candidate — 1978 Cal Podiatric 47 yrs solo Euless (mid-cities Tarrant), 5.0 ratings, no own website"},
+
+    {"idx": 52, "name": "Michael Gibboney", "address": "NAS JRB Fort Worth", "city": "Fort Worth", "county": "Tarrant",
+     "decision": "EXCLUDE — Navy Medicine Readiness & Training Unit (federal employee)"},
+
+    {"idx": 53, "name": "Robert Dominguez", "address": "215 Old Highway 1187, Burleson 76028", "city": "Burleson", "county": "Tarrant",
+     "practice_name": "Lone Star Orthopedics / Texas Health Huguley", "yrs_in_practice": "5",
+     "decision": "D_pass — <5 yrs, AdventHealth/Huguley network-affiliated, 2-DPM with Werner"},
+
+    {"idx": 54, "name": "Michael Downey", "address": "245 West State Highway 114 Ste 300, Southlake 76092", "city": "Southlake", "county": "Tarrant",
+     "practice_name": "MD3 Foot & Ankle (Dr Michael Downey solo)", "website": "md3footandankle.com",
+     "dpm_count_at_practice": 1, "grad_year": 2012, "yrs_in_practice": 13,
+     "decision": "B_forward — Solo 13 yrs, board-cert + fellowship-trained, Methodist + BSWH affiliations"},
+
+    {"idx": 55, "name": "Appolonia Chineme", "address": "2500 Circle Dr, Fort Worth 76119", "city": "Fort Worth", "county": "Tarrant",
+     "decision": "SKIP — no public web presence found / cannot verify practice"},
+
+    {"idx": 56, "name": "Alan Garrett", "address": "800 5th Ave Ste 400, Fort Worth 76104", "city": "Fort Worth", "county": "Tarrant",
+     "practice_name": "Acclaim Multi-Specialty Clinic / JPS Health Network",
+     "decision": "EXCLUDE — Acclaim Health / JPS Health Network employed"},
+
+    {"idx": 57, "name": "Tonyka James", "address": "1325 Pennsylvania Ave Ste 250, Fort Worth 76104", "city": "Fort Worth", "county": "Tarrant",
+     "practice_name": "Innovative Foot and Ankle Surgical Associates / Tonyka A James DPM PLLC", "website": "(no own found)",
+     "dpm_count_at_practice": 1, "yrs_in_practice": "8 (PA prior career)",
+     "decision": "B_forward — Solo PLLC, wound-care focus, multi-disciplinary collaboration model, ~30-yr career path including PA. Recurring wound care = high recurring rev"},
+
+    {"idx": 58, "name": "Gary Chandler", "address": "809 SW Alsbury Blvd Ste 4, Burleson 76028", "city": "Burleson", "county": "Tarrant",
+     "practice_name": "Gary W Chandler DPM", "website": "(no own found)",
+     "dpm_count_at_practice": 1, "grad_year": 1985, "yrs_in_practice": 40,
+     "decision": "A_candidate — 1985 Rosalind Franklin 40 yrs solo Burleson, M-Th 8-4:30 + F 8-12 ONLY (classic reduced hours = coasting), no own website"},
+
+    {"idx": 59, "name": "Arush Angirasa", "address": "2500 W William Cannon Dr Ste 401, Austin 78745", "city": "Austin", "county": "Travis",
+     "decision": "EXCLUDE — Ascension / AdventHealth employed"},
+
+    {"idx": 60, "name": "Demencio Bazan", "address": "1701 E Pflugerville Pkwy, Pflugerville 78660", "city": "Pflugerville", "county": "Travis",
+     "decision": "EXCLUDE — Baylor Scott & White Medical Center employed"},
+
+    {"idx": 61, "name": "Liza Chabokrow", "address": "4131 Spicewood Springs Rd Ste K1, Austin 78759", "city": "Austin", "county": "Travis",
+     "practice_name": "Bluebonnet Foot and Ankle Institute", "dpm_count_at_practice": 2,
+     "decision": "C_watch — 2-DPM (Chabokrow + Kaviani) modern multi-DPM Austin practice"},
+
+    {"idx": 62, "name": "Andrew Chia", "address": "1901 W William Cannon Dr Ste 112, Austin 78745", "city": "Austin", "county": "Travis",
+     "decision": "EXCLUDE — WellMed/Optum (UnitedHealth-owned MSO) employed"},
+
+    {"idx": 63, "name": "Joshel Brown", "address": "5900 Balcones Dr, Austin 78731", "city": "Austin", "county": "Travis",
+     "practice_name": "Austin Podiatry House Calls PLLC", "grad_year": 1999, "yrs_in_practice": 26,
+     "decision": "B_forward — Mobile house-call practice since 2004 (21 yrs); single DPM. Niche geriatric/diabetic recurring care model = strong recurring rev but hard-to-roll-up (no real estate)"},
+
+    {"idx": 64, "name": "Dy Chin", "address": "2600 E Pflugerville Pkwy Bldg 2, Pflugerville 78660", "city": "Pflugerville", "county": "Travis",
+     "grad_year": 2022, "decision": "D_pass — 2022 grad, <5 yrs"},
+
+    {"idx": 65, "name": "Patricia Corrigan", "address": "2318 Boulder Run, Georgetown 78626", "city": "Georgetown", "county": "Williamson",
+     "practice_name": "Patricia J Corrigan I DPM", "website": "(no own found)",
+     "dpm_count_at_practice": 1, "grad_year": 1985, "yrs_in_practice": 40,
+     "decision": "A_candidate — 1985 Drexel 40 yrs solo Georgetown (exurban Williamson w/ rapid growth), no own website, telehealth"},
+
+    {"idx": 66, "name": "Michael Cosimeno", "address": "7 Ridgemeadow Way, Round Rock 78664", "city": "Round Rock", "county": "Williamson",
+     "concern": "NPI phone has NY area code 315 = home address registration / unusual",
+     "decision": "C_watch — Solo 16 yrs, but suspicious phone area code (NY); residence-style address (Ridgemeadow Way), low confidence on practice existence"},
+
+    {"idx": 67, "name": "Jennifer Hamner", "address": "1628 Jerusalem Dr, Round Rock 78664", "city": "Round Rock", "county": "Williamson",
+     "practice_name": "Bluebonnet Podiatry", "website": "(no own found)", "dpm_count_at_practice": 1,
+     "decision": "B_forward — Solo, no public website found, Round Rock"},
+
+    {"idx": 68, "name": "Veronika Boulantsova", "address": "9191 Pinecroft Dr Ste 100, Shenandoah 77380", "city": "Shenandoah", "county": "Montgomery",
+     "practice_name": "Foot & Ankle Specialists of The Woodlands",
+     "decision": "EXCLUDE — multi-location group (The Woodlands/Houston/Huntsville)"},
+
+    {"idx": 69, "name": "Alexandria Armstrong", "address": "7703 Floyd Curl Dr # MC7774, San Antonio 78229", "city": "San Antonio", "county": "Bexar",
+     "decision": "EXCLUDE — UT Health San Antonio resident (employed, not in private practice)"},
+
+    {"idx": 70, "name": "Kent Jarvis", "address": "18450 Highway 59 N, Humble 77338", "city": "Humble", "county": "Harris",
+     "practice_name": "Kent Jarvis DPM", "website": "drkentjarvis.com",
+     "dpm_count_at_practice": 1, "yrs_in_practice": 10,
+     "decision": "B_forward — Solo 10 yrs Humble/Atascocita/Woodlands, board qualified (not yet certified), Spanish-speaking"},
+
+    {"idx": 71, "name": "Rami Basatneh", "address": "1320 N Galloway Ave Ste 105, Mesquite 75149", "city": "Mesquite", "county": "Dallas",
+     "practice_name": "Motion Foot & Ankle Institute", "website": "motionfootandankle.com",
+     "dpm_count_at_practice": "1 (multi-location)",
+     "decision": "C_watch — Mesquite + Forney + Plano + Frisco locations = expanding, not coasting"},
+
+    {"idx": 72, "name": "Fahad Aslam", "address": "1940 E State Hwy 114 Ste 150, Southlake 76092", "city": "Southlake", "county": "Tarrant",
+     "decision": "EXCLUDE — Academy Foot & Ankle Specialists group (same as #50)"},
+
+    {"idx": 73, "name": "Michael Birau", "address": "1601 N Belt Line Rd Ste A, Mesquite 75149", "city": "Mesquite", "county": "Dallas",
+     "practice_name": "Texas Foot & Ankle Specialists PLLC / Beltline Foot and Ankle", "website": "beltlinefootandankle.com",
+     "dpm_count_at_practice": "multi",
+     "decision": "EXCLUDE — multi-DPM multi-location group (Mesquite/Forney/Kaufman)"},
+
+    {"idx": 74, "name": "Raymond Delpak", "address": "399 W Campbell Rd Ste 103, Richardson 75080", "city": "Richardson", "county": "Dallas",
+     "practice_name": "Texas Foot and Ankle Consultants", "website": "txfootandankleconsultants.com",
+     "yrs_in_practice": "established 2019 (6 yrs)",
+     "decision": "D_pass — practice established 2019 = recent founder, not selling"},
+
+    {"idx": 75, "name": "Larry Cohen", "address": "12333 Wetmore Rd, San Antonio 78247", "city": "San Antonio", "county": "Bexar",
+     "practice_name": "Larry J Cohen DPM", "website": "(no own found)",
+     "license_number": "475", "grad_year_proxy": "license #475 = late 1970s issuance",
+     "decision": "A_candidate — TX license #475 (very early issuance) suggests 1970s/1980s grad ~40+ yrs in practice, solo, no own website, north SA suburban"},
+
+    {"idx": 76, "name": "Robert Castillo", "address": "1314 E Sonterra Blvd Ste 302, San Antonio 78258", "city": "San Antonio", "county": "Bexar",
+     "practice_name": "San Antonio Podiatry Associates PLLC",
+     "decision": "EXCLUDE — San Antonio Podiatry Associates = multi-DPM group practice"},
+
+    {"idx": 77, "name": "Simon Balvin", "address": "526 Camden St, San Antonio 78215", "city": "San Antonio", "county": "Bexar",
+     "practice_name": "Downtown Foot and Ankle Center", "website": "(no own found)",
+     "license_number": "0496", "yrs_in_practice": "16+ listed (likely understated)",
+     "decision": "A_candidate — TX license #0496 (very early issuance, late 1970s/1980s) implies 40+ yrs experience, solo downtown SA"},
+
+    {"idx": 78, "name": "Francisco Cuza", "address": "3692 E Sam Houston Pkwy S Ste 100, Pasadena 77505", "city": "Pasadena", "county": "Harris",
+     "practice_name": "McKinney Podiatric Associates PA",
+     "decision": "EXCLUDE — multi-DPM group practice (Cuza is one of 3 DPMs)"},
+
+    {"idx": 79, "name": "Fatima Ansari (et al 11 NPIs)", "address": "12121 Richmond Ave Ste 417, Houston 77082", "city": "Houston", "county": "Harris",
+     "decision": "EXCLUDE — 11 NPIs at one address = large multi-DPM group/clinic, likely a WellMed/Optum or similar MSO satellite"},
+
+    {"idx": 80, "name": "Philip Jimenez (et al 4 NPIs)", "address": "5584 N Shiloh Rd, Garland 75044", "city": "Garland", "county": "Dallas",
+     "practice_name": "Agape Foot Care PA",
+     "decision": "EXCLUDE — Agape Foot Care = 4-DPM group, multi-location (Garland + surroundings)"}
+  ]
+}

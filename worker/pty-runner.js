@@ -95,16 +95,31 @@ function runFindDealsHeaded({ claudeBin, env, jobId, skill = 'deal scan', timeou
     // ── Spawn interactive Claude ──────────────────────────────────────────────
     // No -p flag. PTY allocation makes stdin.isTTY = true, which puts Claude
     // in interactive mode (same system prompt as Claude Desktop).
+    //
+    // --mcp-config + --strict-mcp-config point claude at a worker-specific
+    // playwright MCP using `~/.dealhound-worker-chrome-profile` instead of
+    // the user-scope `~/.dealhound-chrome-profile`. Without this, running the
+    // worker while an interactive Claude session has the user-scope profile
+    // open produces "Browser is already in use for ~/.dealhound-chrome-profile"
+    // and the find-deals skill silently hangs (audited 2026-05-15: 90-min
+    // timeout, 0 phases reached, outputKB plateau).
+    //
     // node-pty lazy-loaded here so importing this module (for tests) doesn't
     // require the native binding to be present in root node_modules.
     const pty = require('node-pty');
-    const ptyProc = pty.spawn(claudeBin, ['--dangerously-skip-permissions'], {
-      name: 'xterm-256color',
-      cols: 220, // wide enough to avoid line-wrap confusion in output parsing
-      rows: 50,
-      cwd: process.env.HOME,
-      env,
-    });
+    const path = require('path');
+    const mcpConfigPath = path.join(__dirname, 'mcp-config.json');
+    const ptyProc = pty.spawn(
+      claudeBin,
+      ['--dangerously-skip-permissions', '--mcp-config', mcpConfigPath, '--strict-mcp-config'],
+      {
+        name: 'xterm-256color',
+        cols: 220, // wide enough to avoid line-wrap confusion in output parsing
+        rows: 50,
+        cwd: process.env.HOME,
+        env,
+      }
+    );
 
     log(`[PTY] Spawned headed claude (${claudeBin}) for job ${jobId}`);
 

@@ -1,0 +1,1019 @@
+[
+  {
+    "business_id": "a0a36481-939c-43bf-98ee-d9afcfcb1261",
+    "legal_name": "CHARLES HOWARD",
+    "dba": "C A S H PEST SERVICES",
+    "city": "Katy",
+    "current_score": 77,
+    "current_tier": "B_forward",
+    "true_license_issue_date": null,
+    "true_license_issue_source": "TDA LICENSE_ISSUED=01/01/1990 placeholder (TDA system migration date, not real). SPCB_TPCL=9313 (high in legacy sequence) suggests later 1990s era licensure. Customer review per Angi states 21 years of pest experience.",
+    "true_license_tenure_years_estimate": 21,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "owner_age_evidence": "Cannot reliably triangulate age via web sources. Angi mention of 'Charlie Howard' with 21 years experience. LinkedIn exists but inaccessible without auth. Veripages shows multiple Charles Howards in Houston/Katy area but specific match unconfirmed. SPCB_TPCL=9313 supports younger/later licensee.",
+    "owner_age_evidence_urls": [
+      "https://www.angi.com/companylist/us/tx/katy/cash-pest-services-reviews-130106.htm",
+      "https://www.linkedin.com/in/charles-howard-06a7308",
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Sole proprietor (no INC/LLC). Comptroller search not directly verified.",
+    "tda_license_status": "Active (TDA SPCS, expires 07/31/2026, renewed 07/31/2025)",
+    "website_reachable": false,
+    "website_age_indicators": "No company website found in search results.",
+    "coasting_tells": [
+      "No website",
+      "Phone-only intake",
+      "Owner-operator model ('answers his own phone')"
+    ],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "KEEP AT B. Owner age uninferable. Only 21-yr tenure (younger business per Angi). No verifiable age signals. Cannot promote without owner-age evidence per §2 non-negotiable.",
+    "data_completeness": 0.4,
+    "data_sources": [
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "license status, RA, SPCB_TPCL=9313"
+      },
+      {
+        "url": "https://www.angi.com/companylist/us/tx/katy/cash-pest-services-reviews-130106.htm",
+        "fetched_at": "2026-05-16",
+        "field": "21 years pest experience"
+      }
+    ],
+    "notes": "Younger licensee (SPCB_TPCL=9313). Insufficient signal for promotion. Future-watch."
+  },
+  {
+    "business_id": "de7b3e85-d284-4718-b074-3eeba8469edd",
+    "legal_name": "THEORDIS ANTHONY",
+    "dba": "ANRO EXTERMINATING CO",
+    "city": "Houston",
+    "current_score": 77,
+    "current_tier": "B_forward",
+    "true_license_issue_date": null,
+    "true_license_issue_source": "TDA placeholder=01/01/1990. ANRO About Us page states business founded 1984. SPCB_TPCL=5739 consistent with mid-1980s legacy licensure.",
+    "true_license_tenure_years_estimate": 42,
+    "owner_age_estimate": 75,
+    "owner_age_source": "veripages_age_verified",
+    "owner_age_evidence": "Veripages verifies Theordis Anthony, born 1950, current age 75. Houston connections include 2151 Kirkwood, Houston, TX 77077. ANRO business he operates founded 1984 - he was 34 at founding, consistent with industry norms. CONFIDENCE: HIGH.",
+    "owner_age_evidence_urls": [
+      "https://veripages.com/name/Theordis/Anthony/",
+      "https://www.anroexterminating.com/About_Us.html",
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Parent company 'BTA Enterprises, Inc.' referenced on ANRO website. Status not directly verified via Comptroller (form-only search).",
+    "tda_license_status": "Active (expires 03/31/2027)",
+    "website_reachable": true,
+    "website_age_indicators": "Severe coasting indicators: anropestcontrol@aol.com email; legacy WebCom HTML page builder; visible CSS coding errors (##0000F color codes); http only (no SSL on About page); no online booking; vendor/subcontractor delivery model.",
+    "coasting_tells": [
+      "Email is @aol.com - 1990s vintage",
+      "WebCom legacy site builder",
+      "Multiple CSS errors in page source",
+      "Phone-only intake",
+      "Vendor/subcontractor model (no W-2 employee team)",
+      "No social media linked",
+      "No online quote form"
+    ],
+    "successor_check_live_fetch_url": "https://www.anroexterminating.com/About_Us.html",
+    "successor_check_fetched_at": "2026-05-16",
+    "successor_check_result": "no_successor_visible",
+    "promotion_recommendation": "A_acquire_self",
+    "promotion_rationale": "PROMOTE TO A. Verified owner age 75 (Veripages). 42-yr business (since 1984). Severe digital decay (@aol.com, broken CSS, no SSL). Vendor-only delivery model (no employee successor). 'BTA Enterprises' parent entity. No family successor visible. Classic A-tier coasting elder operator pattern. Confidence: HIGH.",
+    "data_completeness": 0.9,
+    "data_sources": [
+      {
+        "url": "https://veripages.com/name/Theordis/Anthony/",
+        "fetched_at": "2026-05-16",
+        "field": "verified age 75, born 1950"
+      },
+      {
+        "url": "https://www.anroexterminating.com/About_Us.html",
+        "fetched_at": "2026-05-16",
+        "field": "founded 1984, vendor model, BTA Enterprises parent"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "license RA=25163, SPCB_TPCL=5739, Active until 2027"
+      }
+    ],
+    "notes": "STRONG A-TIER. Age 75 verified. 42 years sole proprietorship. Severely outdated tech (aol email, broken CSS). Vendor-only model. No successor visible."
+  },
+  {
+    "business_id": "5e801a9f-595b-4ef8-8353-ed66399d9d8c",
+    "legal_name": "INTEGRATED PEST MGMT SYSTEM",
+    "dba": "INTEGRATED PEST MGMT SYSTEM",
+    "city": "San Antonio",
+    "current_score": 77,
+    "current_tier": "B_forward",
+    "true_license_issue_date": null,
+    "true_license_issue_source": "TDA placeholder=01/01/1990. SPCB_TPCL=5337 (mid-late 1980s era). Business established 1998 per Manta listing.",
+    "true_license_tenure_years_estimate": 28,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "owner_age_evidence": "Lindsey Randal Potts is a Board Certified Entomologist (BCE) - a credential typically requiring 7+ years of industry experience plus advanced education and examination. Business established 1998 (28 yrs). Veripages search returned 76 Lindsey Potts with ages 28-41, but the relevant Lindsey RANDAL Potts (an older male professional) is not clearly matched in those results - the BCE designation strongly suggests this is a different Lindsey than the younger individuals in Veripages. Cannot confidently estimate age.",
+    "owner_age_evidence_urls": [
+      "https://www.manta.com/c/mm7w013/entomologist-lindsey-randal-potts-board-certified-entomologist",
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Likely sole proprietor or Inc per Manta. Status not directly verified.",
+    "tda_license_status": "Active (expires 10/31/2026)",
+    "website_reachable": false,
+    "website_age_indicators": "No company website verified (Lindsey Potts is independent of integrated-pest.com which is a different SA business).",
+    "coasting_tells": ["No website", "Phone-only intake", "1-4 employees per Manta"],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "KEEP AT B. Owner age uninferable from public sources. BCE credential + 28-yr business + PTLWCS broadest license category are positive signals BUT do not satisfy §2 owner-age requirement. Cannot promote.",
+    "data_completeness": 0.45,
+    "data_sources": [
+      {
+        "url": "https://www.manta.com/c/mm7w013/entomologist-lindsey-randal-potts-board-certified-entomologist",
+        "fetched_at": "2026-05-16",
+        "field": "established 1998, BCE designation"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "license RA=26533, SPCB_TPCL=5337, PTLWCS license categories"
+      }
+    ],
+    "notes": "BCE credential is rare and valuable. Cannot verify age. Future-watch."
+  },
+  {
+    "business_id": "a6662d6a-e04f-4fae-872f-3cd406ba8728",
+    "legal_name": "RODNEY GOLDEN",
+    "dba": "BECKHAMS METROPLEX T & P CTL",
+    "city": "Grand Prairie",
+    "current_score": 77,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1993 (ownership transfer)",
+    "true_license_issue_source": "Public business history confirms Ken Beckham founded the business in 1975 and retired in 1993, when his grandson Rodney Golden acquired the business.",
+    "true_license_tenure_years_estimate": 33,
+    "owner_age_estimate": 58,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_age_evidence": "Rodney Golden took over from grandfather Ken Beckham in 1993 (33 yrs ago). Assuming he was 25 when he took over, current age ~58. THIRD-generation handoff verified: Ken Beckham (grandfather) -> Rodney Golden (grandson). Veripages did not return age data specifically for Grand Prairie. Conservative estimate ~58.",
+    "owner_age_evidence_urls": [
+      "https://insectcontrolcompanies.com/us/tx/grand-prairie/profile/beckhams-metroplex-termite-pest-control/",
+      "https://www.beckhamspestdfw.com/"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Sole proprietor (no INC suffix on legal name)",
+    "tda_license_status": "Active (expires 06/30/2026, renewed 06/30/2025)",
+    "website_reachable": true,
+    "website_age_indicators": "Site copyright 2026 (current); 'Eliminating Pest Since 1975' headline emphasizes legacy; no online booking; no team page; 'Request a Call Back' is the only intake form.",
+    "coasting_tells": [
+      "No online quote form (only call-back request)",
+      "No team page",
+      "No social media linked",
+      "Phone-only intake (972-263-0165)"
+    ],
+    "successor_check_live_fetch_url": "https://www.beckhamspestdfw.com/",
+    "successor_check_fetched_at": "2026-05-16",
+    "successor_check_result": "no_successor_visible",
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "KEEP AT B. Owner age estimate ~58 is BELOW the 63 threshold. Generational handoff already happened (grandson is current operator). Worth monitoring for future fit but not yet acquire-self.",
+    "data_completeness": 0.7,
+    "data_sources": [
+      {
+        "url": "https://insectcontrolcompanies.com/us/tx/grand-prairie/profile/beckhams-metroplex-termite-pest-control/",
+        "fetched_at": "2026-05-16",
+        "field": "Ken Beckham founded 1975, retired 1993, grandson Rodney Golden acquired"
+      },
+      {
+        "url": "https://www.beckhamspestdfw.com/",
+        "fetched_at": "2026-05-16",
+        "field": "since 1975, family-owned"
+      }
+    ],
+    "notes": "Generational handoff already happened (grandfather -> grandson). Rodney still in prime working years. Future-watch."
+  },
+  {
+    "business_id": "b67daa65-9569-4d1d-918d-f67ed002e152",
+    "legal_name": "MW EXT COMPANY INC",
+    "dba": "MW EXT COMPANY INC",
+    "city": "Richardson",
+    "current_score": 77,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1957 (business founding)",
+    "true_license_issue_source": "Website states '68 Years and Counting' and 'Since 1957'. SPCB_TPCL=295 is one of the lowest in the entire TDA dataset (range goes up to 14161), strongly indicating original 1971-era legacy SPCB licensure.",
+    "true_license_tenure_years_estimate": 68,
+    "owner_age_estimate": 72,
+    "owner_age_source": "license_tenure_proxy",
+    "owner_age_evidence": "MW Exterminating founded 1957 (68 years), family-owned and operated since 1957. SPCB_TPCL=295 is among the very lowest in the Texas SPCB system (original 1971 cohort). Frank E Martin is currently the licensee/Operator/Responsible Applicator. Veripages did not return a verified age for him specifically. With a 68-year-old corporation where Frank is current sole operator, conservative age estimate: 72. Note: Frank could be second-generation Martin (son of founder), placing him in 65-80 range. CONFIDENCE: medium (proxy-based).",
+    "owner_age_evidence_urls": [
+      "http://mw-pestcontrol.com/",
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Inc entity - corporation. Comptroller status not directly verified (search is form-only). Business TDA license is Active.",
+    "tda_license_status": "Active (expires 10/31/2026, renewed 10/31/2025)",
+    "website_reachable": true,
+    "website_age_indicators": "Copyright 2026 (updated). http-only on internal pages (no SSL). No online booking. No team page. Phone-only intake (972-235-3605).",
+    "coasting_tells": [
+      "Phone-only intake",
+      "No team listed on homepage",
+      "No social media linked",
+      "No online booking or quote form",
+      "Tagline 'Since 1957' / '68 Years and Counting' emphasizes legacy"
+    ],
+    "successor_check_live_fetch_url": "http://mw-pestcontrol.com/",
+    "successor_check_fetched_at": "2026-05-16",
+    "successor_check_result": "no_team_page_visible",
+    "promotion_recommendation": "A_acquire_self",
+    "promotion_rationale": "PROMOTE TO A. 68-year-old family business. SPCB_TPCL=295 is one of the lowest in entire TX SPCB system (originals from 1971). Owner Frank E Martin is sole licensee/operator. No successor visible on public-facing site. Multi-decade durability + extremely low SPCB_TPCL + corporate structure with current owner as operator = strong A signal. CAVEAT per §2: no live-fetched team page (homepage has no team page, which is itself a coasting tell). Confidence: medium.",
+    "data_completeness": 0.75,
+    "data_sources": [
+      {
+        "url": "http://mw-pestcontrol.com/",
+        "fetched_at": "2026-05-16",
+        "field": "since 1957, family-owned 68 yrs"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0569333, SPCB_TPCL=295 (very low/early), operator Frank E Martin RA=20057"
+      }
+    ],
+    "notes": "MW EXT is the OLDEST candidate in the sample (68 yrs). SPCB_TPCL=295 indicates original Texas SPCB-era licensee. Strong A candidate."
+  },
+  {
+    "business_id": "1ce7d853-b42f-460f-a188-17bf39002f73",
+    "legal_name": "WILLIAM L YOUNG III",
+    "dba": "ALERT PEST CONTROL",
+    "city": "Richardson",
+    "current_score": 76,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1988 (per Manta)",
+    "true_license_issue_source": "TDA placeholder=01/01/1990. Manta records confirm Alert Pest Control established 1988 (38 yrs). SPCB_TPCL=7848 consistent with late 1980s era.",
+    "true_license_tenure_years_estimate": 38,
+    "owner_age_estimate": 60,
+    "owner_age_source": "license_tenure_proxy_and_suffix",
+    "owner_age_evidence": "William L Young III - 'III' suffix indicates 3rd in family line (Jr/Sr preceded him). Alert Pest Control est. 1988 (38 years). If founded at age 22, current age ~60. Veripages search returned 21,336 William Youngs nationwide; specific Richardson match not isolated. Generational naming convention strongly supports age range 55-65.",
+    "owner_age_evidence_urls": [
+      "https://www.manta.com/c/mm808qk/alert-pest-control",
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_certified_applicator.csv"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Sole proprietorship (no INC/LLC suffix)",
+    "tda_license_status": "Active (expires 01/31/2027, renewed 01/31/2026)",
+    "website_reachable": false,
+    "website_age_indicators": "No website. Phone-only intake (972-231-5954).",
+    "coasting_tells": [
+      "No website",
+      "Phone-only intake",
+      "Customer reviews emphasize 'Bill Young' personally (solo operator)"
+    ],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "KEEP AT B. Owner age estimate ~60 is BELOW the 63 threshold. PTLW broad license category and 38-yr business tenure are positive signals. Future-watch.",
+    "data_completeness": 0.55,
+    "data_sources": [
+      {
+        "url": "https://www.manta.com/c/mm808qk/alert-pest-control",
+        "fetched_at": "2026-05-16",
+        "field": "established 1988, William Young III owner"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0566175, RA=29994, PTLW license"
+      }
+    ],
+    "notes": "Generational Young family pest control line (III suffix). Likely under 63 threshold. Could have a 'IV' son successor — would need direct fetch to confirm."
+  },
+  {
+    "business_id": "6b6a17e2-e615-4061-95dc-85be9cbffd91",
+    "legal_name": "BOHLMANS PEST SERVICES",
+    "dba": "BOHLMANS PEST SERVICES",
+    "city": "Carrollton",
+    "current_score": 76,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1986 (business founding)",
+    "true_license_issue_source": "Buzzfile confirms founded 1986 (40 yrs). SPCB_TPCL=6427 consistent with mid-1980s legacy licensure.",
+    "true_license_tenure_years_estimate": 40,
+    "owner_age_estimate": 70,
+    "owner_age_source": "veripages_age_verified",
+    "owner_age_evidence": "Veripages verifies Paul C Bohlman, age 70, at 2136 Lansdown Dr, Carrollton, TX 75010. Also known as Paul Clifford Bohlman. Phone 972-394-7363. Business founded 1986 (40 yrs) - he was 30 at founding, consistent. CONFIDENCE: HIGH.",
+    "owner_age_evidence_urls": [
+      "https://veripages.com/name/Paul/Bohlman/",
+      "https://www.buzzfile.com/business/Bohlman!s-Pest-Service,-Inc.-972-492-1427"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Inc entity (Bohlman's Pest Services Inc). Status not directly verified via Comptroller.",
+    "tda_license_status": "Active (expires 08/31/2026, renewed 08/31/2025)",
+    "website_reachable": false,
+    "website_age_indicators": "Website https://www.bohlmanspestservices.com refused connection (ECONNREFUSED) during fetch on 2026-05-16. Yelp profile active.",
+    "coasting_tells": [
+      "Website appears down (ECONNREFUSED) on date of fetch",
+      "Only ~4 employees per Buzzfile",
+      "No social media linked",
+      "Phone-only intake"
+    ],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_accessible",
+    "promotion_recommendation": "A_acquire_self",
+    "promotion_rationale": "PROMOTE TO A. Verified owner age 70 (Veripages). 40-yr business. Small ops (~4 employees). Website down on fetch attempt (severe coasting tell). No public family successor evidence. CAVEAT per §2: no live-fetch of team page possible (site down) - the no-successor claim rests on absence of evidence (no team published anywhere) rather than direct verification. Confidence: medium-high.",
+    "data_completeness": 0.8,
+    "data_sources": [
+      {
+        "url": "https://veripages.com/name/Paul/Bohlman/",
+        "fetched_at": "2026-05-16",
+        "field": "Paul C Bohlman, age 70, Carrollton TX 75010 verified"
+      },
+      {
+        "url": "https://www.buzzfile.com/business/Bohlman!s-Pest-Service,-Inc.-972-492-1427",
+        "fetched_at": "2026-05-16",
+        "field": "founded 1986, President Paul Bohlman, ~4 employees"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0566724, RA=25661"
+      }
+    ],
+    "notes": "STRONG A-TIER. Age 70 verified, 40-yr business, small 4-person ops, website appears down. Classic acquisition target."
+  },
+  {
+    "business_id": "1aa89009-e887-4091-9ffa-6ce87eceef92",
+    "legal_name": "MARK BEYER",
+    "dba": "CHEROKEE PEST CONTROL",
+    "city": "Houston",
+    "current_score": 76,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1989 (per Nextdoor)",
+    "true_license_issue_source": "Cherokee Pest Control 'locally owned and operated since 1989'. SPCB_TPCL=7838 (late 1980s era).",
+    "true_license_tenure_years_estimate": 37,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "owner_age_evidence": "Cannot reliably triangulate age. Veripages 'Mark Beyer' in Houston returned Mark A Beyer age 43 (too young for 1989 founder - Mark A Beyer is associated with restaurants/bars, not pest control - different person). No obituary, no news article, no verifiable LinkedIn. Cherokee Pest Owner Mark Beyer's age cannot be confirmed from web sources.",
+    "owner_age_evidence_urls": [
+      "https://veripages.com/name/Mark/Beyer/",
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_certified_applicator.csv"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Sole proprietorship (no INC/LLC)",
+    "tda_license_status": "Active (expires 06/30/2026, renewed 06/30/2025)",
+    "website_reachable": false,
+    "website_age_indicators": "No website found.",
+    "coasting_tells": ["No website", "Phone-only intake"],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "KEEP AT B. Owner age uninferable from web sources. 37-yr tenure is a positive but age cannot be confirmed per §2 non-negotiable.",
+    "data_completeness": 0.4,
+    "data_sources": [
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0567097, RA=29578"
+      }
+    ],
+    "notes": "Insufficient data to triangulate age. 37 yrs of business tenure is positive but age cannot be confirmed."
+  },
+  {
+    "business_id": "062910b4-e8c6-4c4a-87e4-004b1bf02d5d",
+    "legal_name": "LOUISE MCNAIR",
+    "dba": "C MCNAIR PEST CONTROL",
+    "city": "Houston",
+    "current_score": 76,
+    "current_tier": "B_forward",
+    "true_license_issue_date": null,
+    "true_license_issue_source": "TDA placeholder=01/01/1990. SPCB_TPCL=5693 (late 1980s era).",
+    "true_license_tenure_years_estimate": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "owner_age_evidence": "DBA 'C McNair' suggests Louise inherited from a 'C' McNair (likely deceased husband - Calvin/Charles/etc). The inherited business pattern is itself an age signal but quantitative age cannot be derived. Veripages 404 on Louise McNair search. No obituary or news with age.",
+    "owner_age_evidence_urls": [
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Sole proprietorship",
+    "tda_license_status": "Active (expires 06/30/2026, renewed 06/30/2025)",
+    "website_reachable": false,
+    "website_age_indicators": "No website found.",
+    "coasting_tells": [
+      "No website",
+      "Phone-only intake",
+      "License category 'P' only (narrowest - just pest, no termite/lawn/wood)",
+      "DBA 'C McNair' suggests inherited from original founder 'C' (not Louise)"
+    ],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "KEEP AT B. Owner age uninferable. Strong qualitative signal of elder ownership (widow inherited pattern) but cannot satisfy §2 quantitative age requirement.",
+    "data_completeness": 0.4,
+    "data_sources": [
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0569183, RA=27906, category P only"
+      }
+    ],
+    "notes": "DBA pattern strongly suggests Louise inherited from 'C' McNair (likely widow). Elder signal but unverifiable. Worth discreet investigation."
+  },
+  {
+    "business_id": "4acad5c8-a809-4b36-a4e1-645c3082aed7",
+    "legal_name": "ESPARZA PEST CONTROL OF SAN ANTONIO CORP",
+    "dba": "E PEST",
+    "city": "San Antonio",
+    "current_score": 76,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1981 (business founding)",
+    "true_license_issue_source": "Business founded 1981 per goepest.net and esparzapest.com. SPCB_TPCL=4613 consistent with early-1980s legacy licensure. PTLWCSD = broadest license category in sample.",
+    "true_license_tenure_years_estimate": 45,
+    "owner_age_estimate": 65,
+    "owner_age_source": "obituary_proxy_father_age",
+    "owner_age_evidence": "Founder Raul R. Esparza Sr. (1939-2018, died at age 79) was Orlando's father. With Raul Sr. born 1939, Orlando likely born 1957-1965 (typical 18-26-year parent-child gap), placing Orlando at age 61-69. Conservative midpoint: 65. Veripages did not find Orlando R Esparza in San Antonio specifically (only a 36-yr-old Orlando R Esparza in Denver with previous SA address - different person).",
+    "owner_age_evidence_urls": [
+      "https://www.legacy.com/obituaries/name/raul-esparza-obituary?pid=188607218",
+      "https://goepest.net/"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Corp entity. Comptroller status not directly verified.",
+    "tda_license_status": "Active (expires 03/31/2027, renewed 03/31/2026)",
+    "website_reachable": true,
+    "website_age_indicators": "Copyright 2023 (3 yrs stale). Online quote form present. No team or staff page.",
+    "coasting_tells": [
+      "Copyright 2023 (3 yrs out of date)",
+      "No team page on goepest.net",
+      "Brother in Corpus Christi operates separate Esparza Corpus Christi (extended family operation)"
+    ],
+    "successor_check_live_fetch_url": "https://goepest.net/",
+    "successor_check_fetched_at": "2026-05-16",
+    "successor_check_result": "no_successor_visible",
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "KEEP AT B. Owner age estimate ~65 is at threshold but: (1) extended family operation (brother runs Esparza Corpus Christi separately) suggests embedded next-gen pool, (2) cannot verify successor-free per §2, (3) age estimate is proxy-based from father's age. Worth contact but not auto-A.",
+    "data_completeness": 0.7,
+    "data_sources": [
+      {
+        "url": "https://www.legacy.com/obituaries/name/raul-esparza-obituary?pid=188607218",
+        "fetched_at": "2026-05-16",
+        "field": "founder Raul Esparza Sr 1939-2018, Orlando is son"
+      },
+      {
+        "url": "https://goepest.net/",
+        "fetched_at": "2026-05-16",
+        "field": "founded 1981, family-owned, 45 yrs"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0567883, PTLWCSD broadest license"
+      }
+    ],
+    "notes": "Father (Raul Sr.) died 2018 at age 79. Orlando inherited. Brother runs Corpus Christi branch - family network suggests next-gen successors likely present."
+  },
+  {
+    "business_id": "a60e35b7-6ec2-4786-ac27-c29f96e1c2b4",
+    "legal_name": "ALLSTATE BUGMAN LLC",
+    "dba": "ALLSTATE BUGMAN LLC",
+    "city": "San Antonio",
+    "current_score": 76,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "~1987 (per business claim of 39 yrs)",
+    "true_license_issue_source": "Allstate Bugman claims '39 years of pest control experience' per public listings (founded ~1987). SPCB_TPCL=7842 consistent with late 1980s.",
+    "true_license_tenure_years_estimate": 39,
+    "owner_age_estimate": 82,
+    "owner_age_source": "veripages_age_verified",
+    "owner_age_evidence": "Veripages: TWO Mike Hulmes in San Antonio - Michael B Hulme age 82 (verified, lived in SA, CA, FL), and Michael R Hulme age 47 (lived in SA, FL, AR, WA). Allstate Bugman has been operating 39 years (founded ~1987). The 82-year-old would have founded at age 43 (typical entrepreneurial age). The 47-year-old would have founded at age 8 (impossible). Therefore Michael L Hulme = Michael B Hulme age 82. Additional corroboration: Alignable customer review mentioned 'her husband has 40+ years experience' - consistent with age 82 starting at ~22. CONFIDENCE: HIGH.",
+    "owner_age_evidence_urls": [
+      "https://veripages.com/name/Mike/Hulme/",
+      "https://www.alignable.com/san-antonio-tx/allstate-bugman-llc-2"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "LLC entity. Status not directly verified via Comptroller.",
+    "tda_license_status": "Active (expires 08/31/2026, renewed 08/31/2025)",
+    "website_reachable": false,
+    "website_age_indicators": "No company website. Owner posted on Alignable: 'This is the year we are expanding and updating our social media' - suggesting acknowledgment of digital lag.",
+    "coasting_tells": [
+      "No website",
+      "PO Box address (14418 Chadbourne St #4719)",
+      "Phone-only intake",
+      "Owner admission of social media lag",
+      "Family operation with wife visible in reviews"
+    ],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "A_acquire_self",
+    "promotion_rationale": "PROMOTE TO A. Verified owner age 82 (Veripages, double-checked via business-tenure logic). 39-yr business. No website (severe coasting). Owner openly admits social media is behind. Family operation but no younger successor visible. Strong A-tier signal. CAVEAT per §2: no live-fetch of team page possible (no website) - no-successor claim rests on absence of any web presence. Confidence: medium-high.",
+    "data_completeness": 0.8,
+    "data_sources": [
+      {
+        "url": "https://veripages.com/name/Mike/Hulme/",
+        "fetched_at": "2026-05-16",
+        "field": "Michael B Hulme age 82 verified, San Antonio TX"
+      },
+      {
+        "url": "https://www.alignable.com/san-antonio-tx/allstate-bugman-llc-2",
+        "fetched_at": "2026-05-16",
+        "field": "39 years experience, family-owned, social media lag admission"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0566267, RA=24966"
+      }
+    ],
+    "notes": "STRONG A-TIER. Age 82 verified. 39-yr business. No web presence. Owner admits social-media lag. Classic elder owner-operator coasting pattern."
+  },
+  {
+    "business_id": "b0756ce4-c88f-4454-bcdb-909c09cd108c",
+    "legal_name": "DANNY SCHULTZ",
+    "dba": "HUMBLE PEST CONTROL",
+    "city": "Humble",
+    "current_score": 76,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1959 (business founding per Yelp)",
+    "true_license_issue_source": "Humble Pest Control established 1959 per Yelp (67 yrs). SPCB_TPCL=247 is one of the LOWEST in the entire TDA dataset - original 1971 SPCB-era cohort.",
+    "true_license_tenure_years_estimate": 67,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "owner_age_evidence": "67-year-old business founded 1959. Danny Schultz is current licensee. The business pre-dates him by decades - he is almost certainly NOT the founder but a successor (likely 2nd or 3rd generation Schultz family member who inherited). Veripages shows 208 Danny Schultzes nationally with ages 49-68, no specific Humble TX match returned. SPCB_TPCL=247 = original TSBPC license - the corporation has held license since 1971+. Conservative estimate of Danny's age: 60-70 if he inherited as adult son of founder, but cannot specifically verify per §2.",
+    "owner_age_evidence_urls": [
+      "https://www.yelp.com/biz/humble-pest-control-humble",
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Sole proprietorship in TDA records (no INC/LLC). However, business pre-dates Danny - the SPCB_TPCL=247 suggests a corporate license number that has been continuously renewed by family.",
+    "tda_license_status": "Active (expires 02/28/2027, renewed 02/28/2026)",
+    "website_reachable": false,
+    "website_age_indicators": "No company website found.",
+    "coasting_tells": [
+      "No website",
+      "Phone-only intake (281-446-3522)",
+      "67-year-old business with no public web presence",
+      "SPCB_TPCL=247 = original TSBPC era license"
+    ],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "KEEP AT B. Owner age cannot be verified per §2. Business is 67 years old (oldest in sample by tenure), SPCB_TPCL=247 is one of the very lowest in TDA system. Danny is almost certainly a multi-generation family successor (likely 2nd or 3rd gen Schultz). Cannot promote without verified age. Strong candidate for direct outreach if age confirmed.",
+    "data_completeness": 0.6,
+    "data_sources": [
+      {
+        "url": "https://www.yelp.com/biz/humble-pest-control-humble",
+        "fetched_at": "2026-05-16",
+        "field": "established 1959"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0568672, RA=20487, SPCB_TPCL=247 (one of lowest in entire dataset)"
+      }
+    ],
+    "notes": "Humble Pest is the oldest business in the entire sample (1959, 67 yrs). SPCB_TPCL=247 is exceptional. Strong candidate but Danny's age unverified."
+  },
+  {
+    "business_id": "c50a95c4-e41f-46f8-8cdf-524c7444c7bb",
+    "legal_name": "CONRAD T PERRY",
+    "dba": "CONRADS PEST CONTROL",
+    "city": "Houston",
+    "current_score": 76,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1988 (business founding)",
+    "true_license_issue_source": "Conrad's Pest Control in business since 1988 per Alignable. SPCB_TPCL=6691 consistent with mid-late 1980s era.",
+    "true_license_tenure_years_estimate": 38,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "owner_age_evidence": "Veripages: 84 Conrad Perrys nationwide with age range 41-91; specific Houston Conrad T Perry age not isolated in search results. Marcia Perry (wife/family member) is Office Manager per LinkedIn. 38-year business operated by founder. Cannot specifically verify Conrad's age per §2.",
+    "owner_age_evidence_urls": [
+      "https://veripages.com/name/Conrad/Perry/",
+      "https://www.alignable.com/houston-tx/conrads-pest-control"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Sole proprietorship (no INC/LLC)",
+    "tda_license_status": "Active (expires 09/30/2026, renewed 09/30/2025)",
+    "website_reachable": false,
+    "website_age_indicators": "No website. Phone-only intake per Marcia Perry's own admission ('word of mouth advertising').",
+    "coasting_tells": [
+      "Marcia Perry (office mgr): 'word of mouth advertising' (verified statement)",
+      "No website",
+      "No social media",
+      "Phone-only intake (281-931-4168)",
+      "Spouse (Marcia Perry) as office manager - small family ops"
+    ],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "KEEP AT B. Owner age cannot be verified per §2. 38-yr business, spouse as office manager (no younger generational successor visible), PTLW broad license, openly word-of-mouth-only marketing - strong qualitative coasting signals BUT cannot satisfy §2 without verified age.",
+    "data_completeness": 0.5,
+    "data_sources": [
+      {
+        "url": "https://www.alignable.com/houston-tx/conrads-pest-control",
+        "fetched_at": "2026-05-16",
+        "field": "since 1988, word-of-mouth advertising"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0567615, RA=26964, PTLW license"
+      }
+    ],
+    "notes": "Strong qualitative A-tier signals (38-yr business, spouse-as-office-manager, explicit word-of-mouth-only marketing) but age unverified. High priority for follow-up verification."
+  },
+  {
+    "business_id": "f37b824b-3ecb-4d75-b5ad-3ee35659a715",
+    "legal_name": "ERNIE L SMITH",
+    "dba": "E L SMITH PEST CONTROL",
+    "city": "San Antonio",
+    "current_score": 76,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1994 (business founding)",
+    "true_license_issue_source": "E.L. Smith Pest Control established 1994 per website. SPCB_TPCL=9733 consistent with mid-1990s era.",
+    "true_license_tenure_years_estimate": 32,
+    "owner_age_estimate": 62,
+    "owner_age_source": "education_year_proxy",
+    "owner_age_evidence": "Ernie Smith attended SW Texas Jr. College and Texas A&I (Texas A&M-Kingsville). Business website states he has 'Over 15 years in Pest and Termite Control' (vague, copyright 2015 so likely 25+ yrs by now). Business is 'father and son veterans business since 1994.' If Ernie was 30 at founding (typical for post-military entrepreneur), current age ~62. Family-veteran context suggests military service in early career. Cannot directly verify via Veripages (no SA TX match isolated).",
+    "owner_age_evidence_urls": [
+      "https://www.elsmithpest.com/",
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_certified_applicator.csv"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Sole proprietorship",
+    "tda_license_status": "Active (expires 05/31/2026 - upcoming renewal)",
+    "website_reachable": true,
+    "website_age_indicators": "Copyright 2015 (11 years stale - severe digital decay). No SSL on contact form. Phone-only intake. 'Over 15 years' tagline frozen at the 2015 timestamp.",
+    "coasting_tells": [
+      "Website copyright 2015 (11 yrs stale)",
+      "No online booking",
+      "No social media linked",
+      "Phone-only intake",
+      "Tagline '15 years' frozen in time"
+    ],
+    "successor_check_live_fetch_url": "https://www.elsmithpest.com/",
+    "successor_check_fetched_at": "2026-05-16",
+    "successor_check_result": "family_successor_present",
+    "promotion_recommendation": "C_watch",
+    "promotion_rationale": "DEMOTE TO C. Per multiple search results, this is a 'father and son veterans business since 1994' - FAMILY SUCCESSOR IS PRESENT. Son is actively involved in the business. While owner age estimate ~62 is below threshold AND a son successor is in place, the business does not fit acquire-self criteria. Could be future-monitor for the son's exit window.",
+    "data_completeness": 0.7,
+    "data_sources": [
+      {
+        "url": "https://www.elsmithpest.com/",
+        "fetched_at": "2026-05-16",
+        "field": "established 1994, copyright 2015"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_certified_applicator.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0570200, RA=34358"
+      }
+    ],
+    "notes": "DEMOTED to C: 'father and son veterans business' = family successor present. Not an A-tier acquisition target. Son will inherit."
+  },
+  {
+    "business_id": "bbf6e342-c9c4-455c-b08d-832cc44aebae",
+    "legal_name": "A 1 ZAPP PEST CONTROL INC",
+    "dba": "A 1 ZAPP PEST CONTROL INC",
+    "city": "Houston",
+    "current_score": 75,
+    "current_tier": "B_forward",
+    "true_license_issue_date": null,
+    "true_license_issue_source": "TDA placeholder=01/01/1990. SPCB_TPCL=5284 consistent with mid-1980s legacy licensure.",
+    "true_license_tenure_years_estimate": null,
+    "owner_age_estimate": 74,
+    "owner_age_source": "veripages_age_verified",
+    "owner_age_evidence": "Veripages verifies William A Ficker, age 74, Houston connections (lived San Antonio, Pharr, Houston, Alief), also known as Bill A Ficker, phone 281-642-5887. Direct match for the A-1 Zapp Pest Control licensee at the Houston address. CONFIDENCE: HIGH.",
+    "owner_age_evidence_urls": [
+      "https://veripages.com/name/William/Ficker/",
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_certified_applicator.csv"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Inc entity (A 1 Zapp Pest Control Inc). Status not directly verified via Comptroller.",
+    "tda_license_status": "Active (expires 08/31/2026, renewed 08/31/2025)",
+    "website_reachable": false,
+    "website_age_indicators": "No corporate website found.",
+    "coasting_tells": [
+      "No website",
+      "Phone-only intake (281-561-6611)",
+      "RA license 37655 is HIGHER (newer registration) than the TPCL - suggests William got his applicator license re-issued later in career"
+    ],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "A_acquire_self",
+    "promotion_rationale": "PROMOTE TO A. Verified owner age 74 (Veripages). No website (severe coasting). No public successor evidence. Solo William A Ficker as operator. CAVEAT per §2: no live-fetch of team page possible (no website) - no-successor claim rests on absence of any web presence. Confidence: medium-high.",
+    "data_completeness": 0.7,
+    "data_sources": [
+      {
+        "url": "https://veripages.com/name/William/Ficker/",
+        "fetched_at": "2026-05-16",
+        "field": "William A Ficker age 74, Houston connections"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0565864, RA=37655"
+      }
+    ],
+    "notes": "STRONG A-TIER. Age 74 verified. No web presence. Solo operator. Worth direct contact."
+  },
+  {
+    "business_id": "d7ef8407-7e2e-4e3e-8f21-1c285176beb1",
+    "legal_name": "A ALL PEST TERMITE EXTERM INC",
+    "dba": "A ALL PEST TERMITE EXTERM INC",
+    "city": "Dallas",
+    "current_score": 75,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1963 (business founding)",
+    "true_license_issue_source": "A-All Pest Termite Exterminators founded 1963 (63 yrs) per website and BBB. 'Still owned and operated today by the Fincannon family.' SPCB_TPCL=3348 consistent with very early 1970s legacy licensure.",
+    "true_license_tenure_years_estimate": 63,
+    "owner_age_estimate": 75,
+    "owner_age_source": "veripages_age_verified",
+    "owner_age_evidence": "Veripages verifies David Wayne Fincannon, age 75, Dallas TX connection. Records show 'David W Fincannon' at 1304 W Waggoman St, Fort Worth TX 76110. Business records confirm President of 'A-All Pest Termite Exterminators, Inc' at the 17819 Davenport Rd, Dallas address (matching the target). Cross-verified: board-certified entomologist, decades-long industry presence, lectures nationally on rodent-proofing, did Harry Katz tribute video. CONFIDENCE: HIGH.",
+    "owner_age_evidence_urls": [
+      "https://veripages.com/name/David/Fincannon/",
+      "https://www.atticpartyanimals.com/",
+      "https://www.pctonline.com/news/harry-katz-tribute-video-david-fincannon/"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Inc entity. Status not directly verified.",
+    "tda_license_status": "Active (expires 05/31/2027)",
+    "website_reachable": true,
+    "website_age_indicators": "Copyright 2020 (6 yrs stale - moderate digital decay). Wix-built website. No online booking. Phone-only intake. Mentions David's national lecturing - speaks to industry-leader profile but suggests reliance on personal reputation rather than systematic marketing.",
+    "coasting_tells": [
+      "Copyright 2020 (6 yrs stale)",
+      "Wix-built site (low-tech vendor choice)",
+      "No online booking",
+      "Phone-only intake (972-241-5223)",
+      "'Call for an appointment' is the explicit CTA",
+      "Owner personally answers and runs the business"
+    ],
+    "successor_check_live_fetch_url": "https://www.atticpartyanimals.com/",
+    "successor_check_fetched_at": "2026-05-16",
+    "successor_check_result": "no_team_page_visible",
+    "promotion_recommendation": "A_acquire_self",
+    "promotion_rationale": "PROMOTE TO A. Verified owner age 75 (Veripages). 63-yr family business 'still owned by the Fincannon family' but no successor visible in public records - David is the principal entomologist, president, and licensee. Wix website, phone-only intake, no online booking. Strong A-tier signal. CAVEAT per §2: 'still owned by the Fincannon family' language suggests possible family member co-owner not visible on public site - merits direct verification before contact. Confidence: medium-high.",
+    "data_completeness": 0.85,
+    "data_sources": [
+      {
+        "url": "https://veripages.com/name/David/Fincannon/",
+        "fetched_at": "2026-05-16",
+        "field": "David Wayne Fincannon age 75, Dallas TX"
+      },
+      {
+        "url": "https://www.atticpartyanimals.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded 1963, Fincannon family"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0565875, RA=27121, PTCS license"
+      }
+    ],
+    "notes": "STRONG A-TIER. Age 75 verified. 63-yr family business. Wix site / phone-only / no online booking. Board-certified entomologist - high-credibility seller for premium acquisition multiple."
+  },
+  {
+    "business_id": "44168792-54dd-4f24-b5c8-7985214ac070",
+    "legal_name": "ELLISON SERVICES INC",
+    "dba": "ELLISON PEST CONTROL",
+    "city": "Duncanville",
+    "current_score": 75,
+    "current_tier": "B_forward",
+    "true_license_issue_date": null,
+    "true_license_issue_source": "TDA placeholder=01/01/1990. SPCB_TPCL=3048 - among the lowest in dataset - original 1970s era legacy licensure.",
+    "true_license_tenure_years_estimate": null,
+    "owner_age_estimate": null,
+    "owner_age_source": null,
+    "owner_age_evidence": "C D Ellison Jr. is the licensee per TDA applicator data (suffix JR confirmed in CSV). The 'JR' suffix indicates his father (C D Ellison Sr.) preceded him. SPCB_TPCL=3048 is very low - business holds an original SPCB-era license. C D Ellison Jr likely born 1940s-1960s. Cannot directly verify age via Veripages.",
+    "owner_age_evidence_urls": [
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_certified_applicator.csv",
+      "https://www.pestcontrols.us/company-ellison-pest-control-in-duncanville-tx-6613"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Inc entity (Ellison Services Inc). Status not directly verified.",
+    "tda_license_status": "Active (expires 07/31/2026, renewed 07/31/2025)",
+    "website_reachable": false,
+    "website_age_indicators": "No website found.",
+    "coasting_tells": [
+      "No website",
+      "Phone-only intake (972-296-1483)",
+      "SPCB_TPCL=3048 = original 1970s era",
+      "JR suffix in license = inherited from father"
+    ],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "B_forward",
+    "promotion_rationale": "KEEP AT B. Owner age cannot be verified per §2. JR suffix and SPCB_TPCL=3048 strongly suggest elder Ellison (multi-generation business with original SPCB license) but quantitative age unverified. Inc structure with father->son lineage suggests possible THIRD-generation successor exists.",
+    "data_completeness": 0.5,
+    "data_sources": [
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0567989, RA=22176, SPCB_TPCL=3048, operator C D Ellison JR"
+      }
+    ],
+    "notes": "JR suffix + very low SPCB_TPCL = inherited multi-generation business. Strong elder candidate but age unverified."
+  },
+  {
+    "business_id": "8709cefb-8dd5-4076-88f7-4949fdf7e476",
+    "legal_name": "JOHN C THUNERT",
+    "dba": "DENNS BEST PEST CONTROL",
+    "city": "San Antonio",
+    "current_score": 75,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1968 (business founding)",
+    "true_license_issue_source": "Denn's Best Pest Control 'proudly serving San Antonio as a family-owned and operated business since 1968.' SPCB_TPCL=3739 consistent with very early 1970s legacy licensure.",
+    "true_license_tenure_years_estimate": 58,
+    "owner_age_estimate": 65,
+    "owner_age_source": "officialusa_dob_verified",
+    "owner_age_evidence": "OfficialUSA.com records: John Thunert birth date February 15, 1960, current age 65 years. Denn's Best Pest Control was founded 1968 - John would have been 8 years old. The business was founded by his father/grandfather (likely 'Denn' Thunert). John inherited and is currently licensee. CONFIDENCE: HIGH for age (DOB verified). Family successor history confirms multi-generational succession pattern.",
+    "owner_age_evidence_urls": [
+      "https://www.officialusa.com/names/John-Thunert/",
+      "https://dennsbestpestcontrol.com/about-us/",
+      "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_certified_applicator.csv"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Sole proprietorship per TDA (John C Thunert). Business operates from residence address (5330 Vista Run Dr).",
+    "tda_license_status": "Active (expires 05/31/2026 - imminent renewal)",
+    "website_reachable": true,
+    "website_age_indicators": "Copyright 2026 (current). No SSL on contact form. No team page. No online booking.",
+    "coasting_tells": [
+      "Operates from residential address",
+      "John has SECOND business (Above All Air HVAC) - splits attention",
+      "No team page",
+      "No online booking",
+      "Phone-only intake",
+      "Instagram handle 'mrbug78' - personal not business",
+      "Custom knife-making side hobby per Texas Select Custom Cutlery Event"
+    ],
+    "successor_check_live_fetch_url": "https://dennsbestpestcontrol.com/about-us/",
+    "successor_check_fetched_at": "2026-05-16",
+    "successor_check_result": "no_successor_visible",
+    "promotion_recommendation": "A_acquire_self",
+    "promotion_rationale": "PROMOTE TO A. Verified owner age 65 (DOB confirmed via OfficialUSA records). 58-yr family business (founded by 'Denn' in 1968, John inherited). John has SECOND business (Above All Air HVAC) plus custom knife-making hobby = SPLIT ATTENTION / dispersed focus = classic coasting/owner-distracted pattern. No public successor visible. CONFIDENCE: HIGH. Age 65 just clears the 63 threshold. Strong A-tier candidate.",
+    "data_completeness": 0.9,
+    "data_sources": [
+      {
+        "url": "https://www.officialusa.com/names/John-Thunert/",
+        "fetched_at": "2026-05-16",
+        "field": "DOB 2/15/1960, age 65 verified"
+      },
+      {
+        "url": "https://dennsbestpestcontrol.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "field": "since 1968, family-owned"
+      },
+      {
+        "url": "https://www.linkedin.com/in/john-thunert-36722623a/",
+        "fetched_at": "2026-05-16",
+        "field": "ALSO owner Above All Air HVAC"
+      },
+      {
+        "url": "https://www.texasselectevent.com/knifemakers/john-c-thunert/",
+        "fetched_at": "2026-05-16",
+        "field": "custom knife-making hobby"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0567800, RA=32090, SPCB_TPCL=3739"
+      }
+    ],
+    "notes": "STRONG A-TIER. Age 65 DOB-verified. 58-yr family business. Owner runs SECOND business (HVAC) plus side knife-making hobby = textbook split-focus coasting pattern. License up for renewal 5/31/2026 - imminent renewal decision."
+  },
+  {
+    "business_id": "f94162e5-8f66-489e-bbe7-42e286a4070c",
+    "legal_name": "RANDY L WALKER",
+    "dba": "PROFESSIONALS PEST CONTROL",
+    "city": "Cypress",
+    "current_score": 75,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1983 (business founding)",
+    "true_license_issue_source": "Professional Pest Control 'family owned and run business that has served Houston and surrounding areas since 1983.' Randy Walker has been associated with the business from January 1983 to present per LinkedIn. SPCB_TPCL=5557 consistent with early-1980s legacy licensure.",
+    "true_license_tenure_years_estimate": 43,
+    "owner_age_estimate": 67,
+    "owner_age_source": "veripages_age_range",
+    "owner_age_evidence": "Veripages search returned TWO Randy L Walkers in Cypress TX 77429: age 64 (at 13618 Pegasus Rd) and age 71 (at 12611 Ravensway Dr). The business operates from 11702-B Grant Rd, Cypress. With 43-year tenure (founded 1983), the 71-year-old would have founded at age 28 (more typical for entrepreneur), and the 64-year-old at age 21 (younger). Conservative midpoint: 67. CONFIDENCE: medium (correct identity uncertain between the two matches, but BOTH are at or above 63 threshold).",
+    "owner_age_evidence_urls": [
+      "https://veripages.com/name/Randy/Walker/",
+      "https://www.bbb.org/us/tx/cypress/profile/pest-control/professional-pest-control-0915-58003375"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Sole proprietorship per TDA",
+    "tda_license_status": "Active (expires 07/31/2026, renewed 07/31/2025)",
+    "website_reachable": false,
+    "website_age_indicators": "No website found in search.",
+    "coasting_tells": [
+      "No website",
+      "Phone-only intake (281-890-2847)",
+      "LinkedIn profile shows '38 connections' - minimal digital footprint",
+      "Family-run model"
+    ],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "A_acquire_self",
+    "promotion_rationale": "PROMOTE TO A. Veripages returns two Randy L Walkers in Cypress TX 77429, ages 64 and 71 - BOTH at/above 63 threshold. 43-year family business. No website. Minimal LinkedIn presence (38 connections). 'Family run' but no specific successor visible. Strong A-tier signal. CAVEAT per §2: identity match between Veripages records and licensee is high-probability but not certain. Confidence: medium.",
+    "data_completeness": 0.7,
+    "data_sources": [
+      {
+        "url": "https://veripages.com/name/Randy/Walker/",
+        "fetched_at": "2026-05-16",
+        "field": "Two Randy L Walkers in Cypress 77429: age 64 and 71"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/cypress/profile/pest-control/professional-pest-control-0915-58003375",
+        "fetched_at": "2026-05-16",
+        "field": "owner Randy Walker"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0569794, RA=27655"
+      }
+    ],
+    "notes": "A-TIER. Both potential Veripages matches (age 64 and 71) clear the 63 threshold. 43-year family business with minimal digital footprint."
+  },
+  {
+    "business_id": "1b4cce18-6f93-4bce-a839-8c76dac2a7c1",
+    "legal_name": "BEN W SCHRIEWER",
+    "dba": "A 1 PEST CONTROL OF HOUSTON",
+    "city": "Cypress",
+    "current_score": 76,
+    "current_tier": "B_forward",
+    "true_license_issue_date": "1983 (business founding)",
+    "true_license_issue_source": "A-1 Pest Control of Houston 'in the business since 1982/1983' per multiple sources, Nextdoor and D&B. Ben has owned and operated since 1983. SPCB_TPCL=5215 consistent with early 1980s legacy licensure.",
+    "true_license_tenure_years_estimate": 43,
+    "owner_age_estimate": 72,
+    "owner_age_source": "veripages_age_verified",
+    "owner_age_evidence": "Veripages: Ben W Schriewer, age 72, currently residing 13403 Tall Forest, Cypress TX 77429 (the exact business address per D&B). Phone 281-807-6763. Has lived Houston, TX and New Braunfels, TX. Cross-checked: his mother Joy Lou Schriewer (1933-2019) died at age 86 - Ben born 1953 if Joy was 20, or earlier - consistent with age 72 (born ~1953). CONFIDENCE: HIGH.",
+    "owner_age_evidence_urls": [
+      "https://veripages.com/name/Ben/Schriewer/",
+      "https://www.findagrave.com/memorial/201197911/joy-lou-schriewer"
+    ],
+    "is_distressed": false,
+    "distress_reasons": [],
+    "comptroller_status": "Sole proprietorship",
+    "tda_license_status": "Active (expires 08/31/2026, renewed 08/31/2025)",
+    "website_reachable": false,
+    "website_age_indicators": "No company website found.",
+    "coasting_tells": [
+      "No website",
+      "Phone-only intake",
+      "Operates from residence (13403 Tall Forest, Cypress)",
+      "Confirmed 'sole owner and operator' per Nextdoor",
+      "43 years solo"
+    ],
+    "successor_check_live_fetch_url": null,
+    "successor_check_fetched_at": null,
+    "successor_check_result": "no_team_page_found",
+    "promotion_recommendation": "A_acquire_self",
+    "promotion_rationale": "PROMOTE TO A. Verified owner age 72 (Veripages, address-matched). 43-yr solo business. 'Sole owner and operator' explicitly confirmed via public reviews. No web presence at all. Operating from home address. Mother's obituary cross-check confirms approximate birth year. STRONG A-TIER. CAVEAT per §2: no team page exists at all (no website) - no-successor claim rests on absence of any web/business presence beyond Ben himself. Confidence: HIGH.",
+    "data_completeness": 0.95,
+    "data_sources": [
+      {
+        "url": "https://veripages.com/name/Ben/Schriewer/",
+        "fetched_at": "2026-05-16",
+        "field": "Ben W Schriewer age 72, 13403 Tall Forest Cypress TX 77429"
+      },
+      {
+        "url": "https://www.findagrave.com/memorial/201197911/joy-lou-schriewer",
+        "fetched_at": "2026-05-16",
+        "field": "Mother Joy Lou Schriewer 1933-2019"
+      },
+      {
+        "url": "https://texasagriculture.gov/Portals/0/Reports/PIR/spcs_commercial_business.csv",
+        "fetched_at": "2026-05-16",
+        "field": "TPCL 0565859, RA=27221"
+      }
+    ],
+    "notes": "STRONG A-TIER (highest confidence in sample). Age 72 verified. 43-yr solo. Operating from residence. No web presence. Sole owner/operator confirmed via reviews. Acquire-self perfect fit."
+  }
+]

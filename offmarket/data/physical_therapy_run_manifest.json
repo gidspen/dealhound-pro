@@ -1,0 +1,38 @@
+{
+  "run_label": "physical-therapy-tx-2026-05-16-w1b",
+  "score_run_id": "a33b72c5-d692-4272-8e81-659939ffed05",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "physical_therapy",
+  "naics": "621340",
+  "geography": "TX — Harris/Dallas/Tarrant/Bexar/Travis/Collin/Denton/Fort Bend/Williamson/Montgomery",
+  "started_at": "2026-05-17T04:26:00Z",
+  "finished_at": null,
+  "counts": {
+    "spine_rows": 0,
+    "enriched": 0,
+    "scored": 0,
+    "tier_a": 0, "tier_b": 0, "tier_c": 0, "tier_d": 0,
+    "distress_excluded": 0
+  },
+  "exclude_platforms": [
+    "ATI Physical Therapy", "Athletico", "US Physical Therapy", "USPH",
+    "Confluent Health", "ProRehab", "KORT", "Plymouth Bay", "BreakThrough PT", "Outpatient Performance Therapy",
+    "FOX Rehabilitation", "Concentra", "Select Medical", "Select Specialty", "NovaCare Rehabilitation", "Physiotherapy Associates",
+    "BenchMark PT", "Upstream Rehabilitation",
+    "Pivot Physical Therapy", "Texas Physical Therapy Specialists",
+    "Methodist", "Houston Methodist", "Baylor Scott & White", "Memorial Hermann",
+    "FYZICAL Therapy & Balance (franchise units)"
+  ],
+  "sources_worked": [],
+  "sources_partial": [],
+  "sources_blocked": [],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 0,
+    "passed": 0,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {}
+  },
+  "supabase_write": {"status": "pending"}
+}

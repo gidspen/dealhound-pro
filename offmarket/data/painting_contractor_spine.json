@@ -1,0 +1,2165 @@
+[
+  {
+    "_meta": {
+      "vertical": "independent_painting_contractors",
+      "naics": "238320",
+      "state": "TX",
+      "geography_priority": [
+        "DFW (Dallas, Tarrant, Collin, Denton)",
+        "Austin (Travis, Williamson)",
+        "Houston (Harris, Fort Bend, Montgomery)",
+        "San Antonio (Bexar)",
+        "Premium-resi suburbs (Sugar Land, Plano, Frisco, Westlake)",
+        "Tier-2 metros (Tyler, Longview, Waco, Killeen, Temple, El Paso, Lubbock, Corpus Christi, Galveston, New Braunfels, San Marcos)"
+      ],
+      "target_crew_size": "5-30",
+      "target_count": "80-120 verified",
+      "actual_verified_count": 86,
+      "fetched_at": "2026-05-16",
+      "primary_sources_attempted": [
+        "PDCA / PCA national member directory (member.pdca.org/page/directory + www.pcapainted.org/member-directory)",
+        "Dallas PDCA chapter (pdcadallas.org/contractors.htm)",
+        "Sherwin-Williams Pro contractor directory",
+        "Benjamin Moore Pro contractor directory",
+        "Expertise.com painting-by-city pages (Dallas, Houston, Austin, San Antonio, Fort Worth, Plano, McKinney, Sugar Land)",
+        "Targeted Google searches per city"
+      ],
+      "sourcing_notes": "PDCA/PCA national directory was behind a state-filter form that WebFetch could not interact with, so direct member-list extraction was not possible. We instead used Expertise.com city pages + Google searches + per-company website verification. Cherry Coatings (1,250+ field staff) was explicitly EXCLUDED from this spine because it exceeds the 5-30 crew target and behaves more like a regional roll-up than a solo-owner shop. Smart Painting (Elgin TX, 50+ years, 350K+ multifamily units completed) likely exceeds the crew target as well but is retained as a 'large independent' edge case for scorer evaluation. All confirmed franchise locations (CertaPro, Five Star, College Pro, House Painters Inc, 360 Painting, PaintCo) were excluded. Where founded year was unstated, the field is null; do not fabricate.",
+      "exclusion_list": [
+        "CertaPro Painters (Authority Brands / Apax franchise)",
+        "College Pro Painters (franchise)",
+        "Five Star Painting (Neighborly franchise)",
+        "House Painters Inc (franchise)",
+        "360 Painting (Premium Service Brands franchise)",
+        "PaintCo (franchise)",
+        "Southern Painting (multi-city Texas painter network — flagged as franchise-style operation)",
+        "Painter Bros (multi-state franchise)",
+        "That 1 Painter (multi-city franchise)",
+        "Klappenberger & Son (multi-state franchise)",
+        "Fresh Coat Painters (multi-state franchise)",
+        "Lime Painting (multi-state franchise)",
+        "Painters USA (regional franchise)",
+        "Sherwin-Williams / Benjamin Moore (paint manufacturers, not contractors)"
+      ]
+    }
+  },
+  {
+    "legal_name": "CARRCO Painting Contractors, Inc.",
+    "dba_name": "CARRCO Painting",
+    "address": "10379 Plano Road",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75238",
+    "estimated_crew_count": 500,
+    "service_mix": "commercial / industrial",
+    "pdca_member": null,
+    "founded_year": 1994,
+    "website": "https://www.carrcopainting.com/",
+    "phone": "(214) 624-7560",
+    "data_sources": [
+      {
+        "url": "https://www.carrcopainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, phone, crew_size, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned commercial/industrial painter. NOT a franchise. 30+ years operating Dallas/Fort Worth/Austin. Crew size FAR exceeds 5-30 target (500+ employees) — flagged as 'too large' but retained for scorer reference; family-owned status is verified."
+  },
+  {
+    "legal_name": "Premier Painting LLC",
+    "dba_name": "Premier Painting DFW",
+    "address": null,
+    "city": "Prosper",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75078",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://premierpaintingdfw.com/",
+    "phone": "(469) 980-1850",
+    "data_sources": [
+      {
+        "url": "https://premierpaintingdfw.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, city, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned, explicitly self-describes as 'non-franchised'. Owner: Roman Surovtsev."
+  },
+  {
+    "legal_name": "Marquis Perkins LLC",
+    "dba_name": "Spray Tex Painting",
+    "address": null,
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2016,
+    "website": "https://spraytexpainting.com/",
+    "phone": "(940) 205-8956",
+    "data_sources": [
+      {
+        "url": "https://spraytexpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, dba, founded_year, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. Founded by two University of North Texas friends. Serves Plano/Denton/Southlake. 750+ Google reviews across DFW."
+  },
+  {
+    "legal_name": "Platinum Painting of Dallas",
+    "dba_name": null,
+    "address": null,
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2008,
+    "website": "https://www.platinumpaintingdallas.com/",
+    "phone": "(214) 347-7269",
+    "data_sources": [
+      {
+        "url": "https://www.platinumpaintingdallas.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded by husband/wife team Karl and Marjorie Pickens. Family-owned, locally operated. NOT a franchise. 10,000+ homes serviced in North Texas. Sister branch: Platinum Painting of Frisco."
+  },
+  {
+    "legal_name": "Brady Painting Contractors",
+    "dba_name": null,
+    "address": "6142 Brookfield Dr.",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77085",
+    "estimated_crew_count": null,
+    "service_mix": "residential",
+    "pdca_member": null,
+    "founded_year": 1975,
+    "website": "https://bradypaint.com/",
+    "phone": "(713) 721-7797",
+    "data_sources": [
+      {
+        "url": "https://bradypaint.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/operated since 1975. 50+ years. Long-tenured employees (decades). Strong fit for solo-owner-coasting profile."
+  },
+  {
+    "legal_name": "Prime House Painting",
+    "dba_name": null,
+    "address": "1105 Studer St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77007",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://primehp.com/",
+    "phone": "(832) 655-6551",
+    "data_sources": [
+      {
+        "url": "https://primehp.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned by Jorge Ruiz and Daniela Nino. Residential + commercial. ~15 years operating."
+  },
+  {
+    "legal_name": "Mallard Commercial Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial / multi-family",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://mallardcommercialpainting.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://mallardcommercialpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "city, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Local Houston commercial painting company. Multi-vertical commercial (industrial/office/retail/F&B/medical/multifamily). Ownership not explicitly disclosed; appears independent (not in franchise lists)."
+  },
+  {
+    "legal_name": "Milam & Co. Painting, Inc.",
+    "dba_name": "Milam & Co.",
+    "address": "4550 Allen St.",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77007",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1972,
+    "website": "https://www.milampainting.com/",
+    "phone": "(713) 869-0225",
+    "data_sources": [
+      {
+        "url": "https://www.milampainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Minority-owned independent. 50+ years in business. Residential, commercial, and specialty (faux/exotic textures). Strong long-tenured-owner profile."
+  },
+  {
+    "legal_name": "Carnival Custom Painting",
+    "dba_name": null,
+    "address": "4500 Williams Dr, #247",
+    "city": "Georgetown",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78628",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://carnivalpaintingaustin.com/",
+    "phone": "(512) 851-2400",
+    "data_sources": [
+      {
+        "url": "https://carnivalpaintingaustin.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned/operated family business. 21+ years in Austin metro, 25+ years combined experience. Serves Greater Austin."
+  },
+  {
+    "legal_name": "Barton Springs Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2006,
+    "website": "https://bartonspringspainting.com/",
+    "phone": "(512) 470-5883",
+    "data_sources": [
+      {
+        "url": "https://bartonspringspainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Austin original family small business since 2006. 40 years painting experience in family. $1M insurance, 3-year warranty."
+  },
+  {
+    "legal_name": "Tex Painting LLC",
+    "dba_name": "Tex Painting",
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://texpainting.com/",
+    "phone": "(512) 298-2050",
+    "data_sources": [
+      {
+        "url": "https://texpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, phone, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "15+ years operating in Austin metro. Residential, commercial, multi-family. Ownership not explicitly disclosed but not in franchise lists."
+  },
+  {
+    "legal_name": "Home Pros Painting and Home Repairs of San Antonio",
+    "dba_name": "Home Pros Painting",
+    "address": "7600 Blanco Rd",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78216",
+    "estimated_crew_count": null,
+    "service_mix": "residential",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://www.homeprospaintsa.com/",
+    "phone": "(210) 910-6662",
+    "data_sources": [
+      {
+        "url": "https://www.homeprospaintsa.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Woman-owned, family-run local business. Explicitly positions as 'alternative to franchises'. 5-year exterior warranty."
+  },
+  {
+    "legal_name": "Hendrick Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1999,
+    "website": "https://hendrickpainting.com/",
+    "phone": "(210) 499-5400",
+    "data_sources": [
+      {
+        "url": "https://hendrickpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/operated since 1999. Founded by Dan Hendrick. 25+ years operating San Antonio."
+  },
+  {
+    "legal_name": "Quality Painting & Remodeling",
+    "dba_name": null,
+    "address": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://www.qualitypaintingtx.com/",
+    "phone": "(210) 721-6009",
+    "data_sources": [
+      {
+        "url": "https://www.qualitypaintingtx.com/",
+        "fetched_at": "2026-05-16",
+        "field": "city, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/operated. Serves SA metro + Universal City, Schertz, New Braunfels."
+  },
+  {
+    "legal_name": "Maverick Painting, Inc.",
+    "dba_name": null,
+    "address": "4110 Cedar Lake Dr., Ste 302",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75227",
+    "estimated_crew_count": null,
+    "service_mix": "commercial",
+    "pdca_member": null,
+    "founded_year": 2003,
+    "website": "http://www.maverickpainting.com/",
+    "phone": "(214) 826-7696",
+    "data_sources": [
+      {
+        "url": "https://www.bluebook.com/iProView/931452/maverick-painting-inc",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, founded_year, phone"
+      },
+      {
+        "url": "https://www.zoominfo.com/p/Herman-Boone/-1156528399",
+        "fetched_at": "2026-05-16",
+        "field": "address, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned commercial painting contractor. Specializes in healthcare facility painting in DFW. Established 2003. SSL certificate expired on direct site fetch."
+  },
+  {
+    "legal_name": "F.A. McComas Inc.",
+    "dba_name": null,
+    "address": "3636 Highpoint St",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial / industrial",
+    "pdca_member": null,
+    "founded_year": 1931,
+    "website": "https://famccomasinc.com/",
+    "phone": "(210) 656-4456",
+    "data_sources": [
+      {
+        "url": "https://famccomasinc.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, phone, ownership"
+      },
+      {
+        "url": "https://www.yelp.com/biz/mccomas-f-a-painting-san-antonio",
+        "fetched_at": "2026-05-16",
+        "field": "address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned for 85+ years (~1931). Commercial, industrial, historical, medical, retail, municipal. South Texas territory."
+  },
+  {
+    "legal_name": "Hutch-N-Son Quality Painting & Drywall",
+    "dba_name": "Hutch-N-Son Painting",
+    "address": "3400 Silverstone Drive",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75023",
+    "estimated_crew_count": 12,
+    "service_mix": "mixed",
+    "pdca_member": true,
+    "founded_year": 1985,
+    "website": "https://www.hutchnsonpainting.com/",
+    "phone": "(972) 978-7962",
+    "data_sources": [
+      {
+        "url": "https://www.hutchnsonpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, phone, ownership, crew_size, pdca_member"
+      },
+      {
+        "url": "https://hutchnsonpaint.net/",
+        "fetched_at": "2026-05-16",
+        "field": "crew_size, ownership, pdca_member"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned since 1985. 12 employees. EXPLICITLY confirmed PDCA member. President: Pete Kernan Hutchinson Jr. In-house crew, no subcontractors. Senior crew members 10-18 year tenure. Plano Chamber 2015 Small Business of the Year. Strong fit profile."
+  },
+  {
+    "legal_name": "Absolute Painting, Inc.",
+    "dba_name": null,
+    "address": null,
+    "city": "McKinney",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://absoluteptg.com/",
+    "phone": "(972) 375-5100",
+    "data_sources": [
+      {
+        "url": "https://absoluteptg.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, city, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independently owned by Wes Stafish. Serves DFW Metroplex. A+ BBB. Family-status not explicitly confirmed; owner-operated."
+  },
+  {
+    "legal_name": "Gutierrez Painting",
+    "dba_name": null,
+    "address": "10113 Lakemont Drive",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76131",
+    "estimated_crew_count": 16,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2007,
+    "website": "https://www.gutierrezpainting.net/",
+    "phone": "(817) 829-9524",
+    "data_sources": [
+      {
+        "url": "https://www.gutierrezpainting.net/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, crew_size, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. 16 skilled professionals. Traces roots to 1960s family painting tradition in Levelland TX. Current iteration founded 2007 by two brothers."
+  },
+  {
+    "legal_name": "B&A Fort Worth Painting Contractors",
+    "dba_name": null,
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://bapaintingdfw.com/",
+    "phone": "(214) 810-5490",
+    "data_sources": [
+      {
+        "url": "https://bapaintingdfw.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, city, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned full-service residential/commercial painting. Ryan Place neighborhood, Fort Worth."
+  },
+  {
+    "legal_name": "Rangel Construction & Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://rangelconstructionpainting.com/",
+    "phone": "(682) 557-0333",
+    "data_sources": [
+      {
+        "url": "https://rangelconstructionpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "city, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "25+ years family-owned. Owner Jesse Rangel. MBE/SBE certified. Multi-generational."
+  },
+  {
+    "legal_name": "C&Z Enterprises, LLC",
+    "dba_name": "C & Z Enterprises",
+    "address": "20304 Frankie Lane",
+    "city": "Pflugerville",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78660",
+    "estimated_crew_count": null,
+    "service_mix": "commercial / multi-family",
+    "pdca_member": null,
+    "founded_year": 2002,
+    "website": "https://czpainting.com/",
+    "phone": "(512) 989-8377",
+    "data_sources": [
+      {
+        "url": "https://czpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Commercial/multifamily painter. Austin/Dallas/Houston/SA coverage. Family-owned status not explicitly stated on site; not in franchise lists. Established 2002."
+  },
+  {
+    "legal_name": "Manco Painting Inc.",
+    "dba_name": null,
+    "address": null,
+    "city": "Katy",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1981,
+    "website": "https://mancopainting.com/",
+    "phone": "(281) 599-1981",
+    "data_sources": [
+      {
+        "url": "https://mancopainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, city, phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "1981-founded. 38+ years. Serves Katy/West Houston/Memorial/Sugar Land/Cypress/Woodlands. Family-status not explicit but profile fits coasting-tenured-owner pattern."
+  },
+  {
+    "legal_name": "Smart Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Elgin",
+    "county": "Bastrop",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial / multi-family",
+    "pdca_member": null,
+    "founded_year": 1972,
+    "website": "https://paintingsmart.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://paintingsmart.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, ownership, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Texas-based family-owned. 50+ years. 350K+ multifamily units completed. Likely exceeds 5-30 crew target — flag for scorer. Education/hospitality/senior living/multifamily/student housing focus."
+  },
+  {
+    "legal_name": "Pro Painters",
+    "dba_name": null,
+    "address": "7600 W. Tidwell Rd. Suite 820",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77040",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1995,
+    "website": "https://mypropainters.com/",
+    "phone": "(832) 831-7591",
+    "data_sources": [
+      {
+        "url": "https://mypropainters.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, address, zip, phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1995. 30+ years operating Houston. Commercial + residential + power washing + roof coating + custom carpentry. Ownership not explicitly disclosed; not in franchise lists."
+  },
+  {
+    "legal_name": "Borders Painting LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Round Rock",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2016,
+    "website": "https://www.borderspainting.com/",
+    "phone": "(512) 921-2127",
+    "data_sources": [
+      {
+        "url": "https://www.borderspainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, phone, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent, not in franchise lists. 1,100+ jobs. Serves Round Rock, Austin, Pflugerville, Georgetown, Hutto, Buda, Cedar Park, Leander, Sun City."
+  },
+  {
+    "legal_name": "Hardy's Painting",
+    "dba_name": "Hardy's Painting & Remodeling",
+    "address": "3836 Bandera Ranch Rd",
+    "city": "Roanoke",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "76262",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1992,
+    "website": "https://hardyspainting.com/",
+    "phone": "(214) 701-7573",
+    "data_sources": [
+      {
+        "url": "https://hardyspainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned since 1992. Daughter Magally owns/manages Sales & Marketing — multi-generational succession underway. Serves Trophy Club, Westlake, Southlake, Keller, Grapevine, Flower Mound."
+  },
+  {
+    "legal_name": "H & H Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Keller",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76244",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://hhpaint.com/",
+    "phone": "(817) 431-0363",
+    "data_sources": [
+      {
+        "url": "https://keepitinkeller.com/business/hh-painting/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, phone, zip, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/operated. 40+ years. Owner has been painting since 1974. NO sub-contracting — owner crew. Most business from referrals. Classic tenured solo-owner profile."
+  },
+  {
+    "legal_name": "Supreme Painting",
+    "dba_name": null,
+    "address": "1560 E Southlake Blvd",
+    "city": "Colleyville",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1985,
+    "website": "https://supremepainting.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://supremepainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1985 by Dalton Tomlinson. Family-owned. 35+ years. Lifetime warranty interior, 7-yr exterior. DFW FAVORITE Painting Contractor 2025."
+  },
+  {
+    "legal_name": "Tellez & Son's Painting Inc.",
+    "dba_name": null,
+    "address": "1427 W Harding Blvd",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78221",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1982,
+    "website": "https://tellezpaintingsa.com/",
+    "phone": "(210) 983-8822",
+    "data_sources": [
+      {
+        "url": "https://tellezpaintingsa.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/san-antonio/profile/painting-contractors/tellez-sons-painting-inc-0825-90068193",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, address, zip, phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned since 1982 (2/27/1982). 43+ years. President Jesse Tellez Jr. Multi-generational ('& Son's'). Residential + commercial + power washing."
+  },
+  {
+    "legal_name": "Carroll Custom Painting",
+    "dba_name": null,
+    "address": "222 Lakeview Dr",
+    "city": "Rockwall",
+    "county": "Rockwall",
+    "state": "TX",
+    "zip": "75087",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1966,
+    "website": "https://www.carrollcustompainting.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.carrollcustompainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/rockwall/profile/painting-contractors/carroll-custom-painting-0875-90005472",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, address"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Started 1966 by Philip Carroll. Son Chris Carroll took over 2005. Multi-generational family ownership. 60 years operating. High-end residential focus. STRONG long-tenured-coasting profile."
+  },
+  {
+    "legal_name": "Dan Keenan Painting Co., Inc.",
+    "dba_name": "Dan Keenan Paint Company",
+    "address": "10106 Coppedge Ln",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75229",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1992,
+    "website": "https://www.dankeenanpaintco.net/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.dankeenanpaintco.net/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Established 1992 by Dan Keenan; Dan started painting 1982. 30+ years. VP Richard Deatherage joined 1996. $2M liability insurance. 3-yr guarantee. Uses Sherwin-Williams + Benjamin Moore."
+  },
+  {
+    "legal_name": "Excellence In Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77070",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2016,
+    "website": "https://excellenceinpainting.net/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.excellenceinpainting.net/about-us",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, zip, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Local family-owned Texas Strong business. Founded 2016. Cypress/NW Houston. Licensed Sherwin-Williams provider."
+  },
+  {
+    "legal_name": "S&R Trice Painting, Inc.",
+    "dba_name": "S & R Trice Painting",
+    "address": "3128 South Main",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": 75,
+    "service_mix": "commercial / industrial / residential",
+    "pdca_member": null,
+    "founded_year": 1987,
+    "website": "https://srtricepainting.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://srtricepainting.com/About%20Us.html",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, ownership"
+      },
+      {
+        "url": "https://www.privco.com/company/sandr-trice-painting",
+        "fetched_at": "2026-05-16",
+        "field": "crew_size, revenue"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Started 1987 as Sonny & Randy Trice Painting. Family-owned (two brothers). 50-99 employees ($1M-$3M annual). HUB certified. Country clubs, churches, high-rises, bridges, hospitals, schools. Crew likely exceeds 5-30 target — flag for scorer."
+  },
+  {
+    "legal_name": "Cadena's Painting LLC",
+    "dba_name": null,
+    "address": "5426 Lotus St",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77085",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1997,
+    "website": "https://cadenaspainting.com/",
+    "phone": "(832) 879-2825",
+    "data_sources": [
+      {
+        "url": "https://cadenaspainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/operated since 1997. 25+ years. Serves Houston, Sugar Land, residential + HOA + multi-family + commercial property mgmt."
+  },
+  {
+    "legal_name": "Tito Perez Painting Co., Inc.",
+    "dba_name": "Tito Perez Painting Company",
+    "address": null,
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1995,
+    "website": "https://www.titoperezpaintingcompany.com/",
+    "phone": "(713) 545-9911",
+    "data_sources": [
+      {
+        "url": "https://www.titoperezpaintingcompany.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, phone, ownership"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/sugar-land/profile/painting-contractors/tito-perez-painting-co-inc-0915-43001250",
+        "fetched_at": "2026-05-16",
+        "field": "address_status"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1995 by Tito Perez. Family-owned: wife is bookkeeper, son runs marketing, daughter joining. 2,000+ homes. 30+ years. Strong succession/family dynamics."
+  },
+  {
+    "legal_name": "Vey's Painting & Refinishing",
+    "dba_name": null,
+    "address": "802 Waverly Street, Unit A",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77007",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://veyspaintingandrefinishing.com/",
+    "phone": "(713) 864-2555",
+    "data_sources": [
+      {
+        "url": "https://veyspaintingandrefinishing.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip, phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Female-owned. 30+ years experience. Specialty: interior, door/cabinet refinishing, drywall repair. Owner-operator small business."
+  },
+  {
+    "legal_name": "Professional Painters of Houston",
+    "dba_name": null,
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77018",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": null,
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.facebook.com/professionalpaintersofhouston/",
+        "fetched_at": "2026-05-16",
+        "field": "city, zip, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "American family-owned/operated. Fully insured. 20+ years in industry. Limited web presence — verify deeper before outreach."
+  },
+  {
+    "legal_name": "Paint Ovations",
+    "dba_name": null,
+    "address": "913 Tanglewood Dr",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75075",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1995,
+    "website": "https://paintovations.com/",
+    "phone": "(972) 741-4995",
+    "data_sources": [
+      {
+        "url": "https://paintovations.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Led by Ron Bledsoe. Serving Plano + Dallas since 1995. 30 years. Family-status not explicitly stated but owner-led independent."
+  },
+  {
+    "legal_name": "21st Century Painting and Roofing",
+    "dba_name": null,
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1996,
+    "website": "https://www.21stcenturytexas.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.21stcenturytexas.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, city, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Since 1996. ~30 years. Serves Austin/Cedar Park/Round Rock/Leander/North Austin. Residential + commercial. Independent (not in franchise lists)."
+  },
+  {
+    "legal_name": "Allstar Painting Company, LLC",
+    "dba_name": null,
+    "address": "1580 Kingsbridge Lane",
+    "city": "Prosper",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75078",
+    "estimated_crew_count": null,
+    "service_mix": "residential",
+    "pdca_member": null,
+    "founded_year": 2008,
+    "website": "http://allstarpaintingcompany.com/",
+    "phone": "(972) 900-4440",
+    "data_sources": [
+      {
+        "url": "http://allstarpaintingcompany.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/locally operated since 2008. Serves Prosper + Collin County + McKinney metro."
+  },
+  {
+    "legal_name": "PaintMor",
+    "dba_name": "PaintMor Painters",
+    "address": "PO Box 1422",
+    "city": "McKinney",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2005,
+    "website": "https://paintmor.com/",
+    "phone": "(972) 309-0161",
+    "data_sources": [
+      {
+        "url": "https://paintmor.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, city, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned since 2005. Owner Tim Cann. 20 years. Plano/Allen/Frisco/McKinney/Richardson."
+  },
+  {
+    "legal_name": "Performance Painting",
+    "dba_name": "Performance Group",
+    "address": "301 S McDonald St",
+    "city": "McKinney",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75069",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2013,
+    "website": "https://dallashousepainter.com/",
+    "phone": "(972) 360-8042",
+    "data_sources": [
+      {
+        "url": "https://performancegroupco.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/operated since 2013. Downtown McKinney. McKinney Chamber active. 10-year warranty. 200+ 5-star reviews. A+ BBB."
+  },
+  {
+    "legal_name": "Platinum Painting of Frisco",
+    "dba_name": null,
+    "address": "6872 Sigma Ln",
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75035",
+    "estimated_crew_count": null,
+    "service_mix": "residential",
+    "pdca_member": null,
+    "founded_year": 2008,
+    "website": "https://www.platinumpaintingfrisco.com/",
+    "phone": "(972) 372-0404",
+    "data_sources": [
+      {
+        "url": "https://www.platinumpaintingfrisco.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Started 2008 by Karl and Marjorie Pickens (same husband/wife team as Platinum Painting of Dallas). Locally owned/operated. 10,000+ homes painted across North Texas. #1 on Angie's List near-decade. Independent branch — not a franchise system."
+  },
+  {
+    "legal_name": "Crest Painting",
+    "dba_name": null,
+    "address": "3419 Westminster Ave STE 374G",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75205",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2009,
+    "website": "https://crestpainting.net/",
+    "phone": "(214) 354-9933",
+    "data_sources": [
+      {
+        "url": "https://crestpainting.net/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip, phone, ownership"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/dallas/profile/painting-contractors/crest-painting-0875-90231965",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Husband/wife team Todd O. Goodwin (Pres) and Elizabeth M. Goodwin (CEO). LLC. BBB Accredited since 2009. A+ rating. Residential + commercial. Open 7 days a week."
+  },
+  {
+    "legal_name": "Memorial Pro Painters",
+    "dba_name": null,
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77080",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2019,
+    "website": "https://www.memorialpaint.com/",
+    "phone": "(832) 786-9494",
+    "data_sources": [
+      {
+        "url": "https://www.memorialpaint.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2019 by Elmer Garcia. Family business — father and brother on team. Younger company than typical target but multi-generational and family-led."
+  },
+  {
+    "legal_name": "Next Door Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2001,
+    "website": "https://www.nextdoorpainting.com/",
+    "phone": "(972) 884-5283",
+    "data_sources": [
+      {
+        "url": "https://www.nextdoorpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/locally operated Austin painting contractor — EXPLICITLY stated 'NOT nationally franchised'. Serves Houston/Dallas/Fort Worth/SA markets. Residential + commercial."
+  },
+  {
+    "legal_name": "Alexandris Painting Company, LLC",
+    "dba_name": null,
+    "address": "1105 E Plano Pkwy, Suite 4",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75074",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2010,
+    "website": "https://www.wepaintdfw.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.wepaintdfw.com/about-us",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2010 by Dimitri Alexandris (2nd-generation painter, native Texan). Family-owned/operated. 5-star/281 reviews on Birdeye."
+  },
+  {
+    "legal_name": "Best Painter of Lubbock",
+    "dba_name": "Best Painter",
+    "address": null,
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://bestpainteroflubbock.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://bestpainteroflubbock.com/",
+        "fetched_at": "2026-05-16",
+        "field": "city, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/operated. FOUR generations in Lubbock. Long succession lineage. Strong fit profile."
+  },
+  {
+    "legal_name": "Pro-Tech Painting & Drywall, LLC",
+    "dba_name": "Protech Painting & Drywall",
+    "address": null,
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": "79424",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://protechpaintinganddrywall.com/",
+    "phone": "(806) 544-0299",
+    "data_sources": [
+      {
+        "url": "https://protechpaintinganddrywall.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned husband/wife team Kim and Dewayne Poehl. 20+ years. Dewayne's father was a drywall contractor; Dewayne previously Sherwin-Williams store manager 7 years. Solid multi-generational fit."
+  },
+  {
+    "legal_name": "Lubbock Painting & Drywall",
+    "dba_name": null,
+    "address": null,
+    "city": "Lubbock",
+    "county": "Lubbock",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://lubbockpaintinganddrywall.com/",
+    "phone": "(806) 749-8040",
+    "data_sources": [
+      {
+        "url": "https://lubbockpaintinganddrywall.com/",
+        "fetched_at": "2026-05-16",
+        "field": "city, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned/operated. 30+ years experience. Lubbock/Wolfforth/Lake Ransom Canyon. Founded year not explicit."
+  },
+  {
+    "legal_name": "Miranda Painting",
+    "dba_name": "3rd Generation Painting",
+    "address": "9825 Trinidad Dr.",
+    "city": "El Paso",
+    "county": "El Paso",
+    "state": "TX",
+    "zip": "79925",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1994,
+    "website": "https://mirandapaintingeptx.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://mirandapaintingeptx.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip, ownership"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/el-paso/profile/painting-contractors/miranda-painting-0895-94120057",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year (BBB file opened 1994)"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "THREE-generation family. 25+ years. Owner Javier Miranda. Three locations El Paso. STRONG multi-generational succession profile."
+  },
+  {
+    "legal_name": "Tri-Mex Commercial",
+    "dba_name": "TRI-MEX",
+    "address": "2330 Laredo St. Unit B",
+    "city": "Corpus Christi",
+    "county": "Nueces",
+    "state": "TX",
+    "zip": "78405",
+    "estimated_crew_count": null,
+    "service_mix": "commercial",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://www.trimexcommercial.com/",
+    "phone": "(361) 884-4200",
+    "data_sources": [
+      {
+        "url": "https://www.trimexcommercial.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Second-generation painters. 38+ years. Faith-based commercial painting. Founded year not explicit; multi-generational."
+  },
+  {
+    "legal_name": "Waco Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1972,
+    "website": "https://wacopainting.com/",
+    "phone": "(254) 723-6145",
+    "data_sources": [
+      {
+        "url": "https://wacopainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "FOURTH-generation company since 1972. 50+ years. Commercial + residential + pressure washing. STRONG long-tenured-coasting fit."
+  },
+  {
+    "legal_name": "BrightNest Painting",
+    "dba_name": null,
+    "address": "924 N 66th Street",
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": "76710",
+    "estimated_crew_count": null,
+    "service_mix": "residential",
+    "pdca_member": null,
+    "founded_year": 2020,
+    "website": "https://brightnestpainting.com/",
+    "phone": "(254) 214-2280",
+    "data_sources": [
+      {
+        "url": "https://brightnestpainting.com/about-us",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 2020 by husband/wife John and Elizabeth Ricker. Young company — flag for scorer as low-tenure outlier."
+  },
+  {
+    "legal_name": "Choice Painting, LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Waco",
+    "county": "McLennan",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://choicepaintingwaco.com/",
+    "phone": "(254) 379-4183",
+    "data_sources": [
+      {
+        "url": "https://choicepaintingwaco.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned/operated. Run by Kyle and Donald (per customer reviews). Serves Waco/Temple/Killeen + Central Texas. Founded year not explicit."
+  },
+  {
+    "legal_name": "Advanced Painting Services",
+    "dba_name": "Advanced Painting",
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial / industrial",
+    "pdca_member": null,
+    "founded_year": 1979,
+    "website": "https://advancedpaint.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://advancedpaint.com/about/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Since 1979. 40+ years. Commercial painting + industrial flooring + construction. Fort Worth based. Long-tenured."
+  },
+  {
+    "legal_name": "Hahn Painting Service",
+    "dba_name": "Hahn Painting",
+    "address": "6202 Connie Ln",
+    "city": "Colleyville",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76034",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2008,
+    "website": "https://hahnpainting.com/",
+    "phone": "(214) 755-6825",
+    "data_sources": [
+      {
+        "url": "https://hahnpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent. Owner Jim Hahn lives locally. Since 2008. 24+ years owner experience. Serves Tarrant + Dallas counties."
+  },
+  {
+    "legal_name": "John McDonald Painting, LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77038",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1981,
+    "website": "https://www.wepainthouston.com/",
+    "phone": "(713) 927-6682",
+    "data_sources": [
+      {
+        "url": "https://www.wepainthouston.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Since 1981. THIRD-generation painting contractor (owner John A McDonald). 30+ years. Family-owned/operated. Katy/Tomball/Sugar Land. Strong multi-generational fit."
+  },
+  {
+    "legal_name": "Texas Precision Painting LLC",
+    "dba_name": null,
+    "address": "3 Grogans Park Dr Ste 102",
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77380",
+    "estimated_crew_count": null,
+    "service_mix": "residential",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://www.texasprecisionpainting.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.bbb.org/us/tx/the-woodlands/profile/painting-contractors/texas-precision-painting-llc-0915-90064682",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, address, zip"
+      },
+      {
+        "url": "https://www.texasprecisionpainting.com/our-company",
+        "fetched_at": "2026-05-16",
+        "field": "address, services, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned/operated family residential painter. Spring/Woodlands area. BBB accredited since 2021. $2M general liability."
+  },
+  {
+    "legal_name": "TWRS Painting Co.",
+    "dba_name": "TWRS Painting",
+    "address": null,
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://www.twrs-painting.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.twrs-painting.com/about",
+        "fetched_at": "2026-05-16",
+        "field": "services, certifications"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Part of SCM Design Group. Fully insured/licensed. 15+ years. EPA Lead Certified. Single-family + commercial + industrial. Family-status not explicit but independent of franchise lists."
+  },
+  {
+    "legal_name": "Streamline Painting & More",
+    "dba_name": null,
+    "address": "206 S Loop 336 W, Suite 307",
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": "77304",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2015,
+    "website": "https://streamlinepaint.com/",
+    "phone": "(281) 572-8332",
+    "data_sources": [
+      {
+        "url": "https://streamlinepaint.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. Since 2015. Montgomery + Harris Counties. Commercial after-hours capable. 20 years combined team experience."
+  },
+  {
+    "legal_name": "Paint Authority",
+    "dba_name": null,
+    "address": null,
+    "city": "Conroe",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "residential",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://paintauthoritytx.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://paintauthoritytx.com/",
+        "fetched_at": "2026-05-16",
+        "field": "city, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned, locally woman-owned/operated. Serves Conroe/Woodlands/Spring."
+  },
+  {
+    "legal_name": "DABS Painting",
+    "dba_name": null,
+    "address": "1251 Pin Oak Rd",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2004,
+    "website": "https://www.dabspaint.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.dabspaint.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Woman-led family business founded by Shelly Rosso 2004. Name = acronym of Rosso family member names. 20+ years. 2-year labor warranty. Katy/Sugar Land/Houston."
+  },
+  {
+    "legal_name": "Katy Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "residential",
+    "pdca_member": null,
+    "founded_year": 1982,
+    "website": "https://katypainting.net/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://katypainting.net/",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, city"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "First official painting company in Katy TX (1982). 40+ years. 7,000+ Katy homes painted. Independent legacy operator — strong fit profile."
+  },
+  {
+    "legal_name": "Texas Star Painting, LLC",
+    "dba_name": "Texas Star Painting",
+    "address": null,
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": null,
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.connectpainters.com/painters-in/texas/prosper/texas-star-painting-llc?pid=114913",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, city"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent LLC. Frisco/Prosper. Founded year not confirmed; verify before outreach."
+  },
+  {
+    "legal_name": "Edwards Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": null,
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.expertise.com/home-improvement/painting/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, city, services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Plano-based independent. Interior/exterior/deck/patio/commercial. Founded year not confirmed; needs deeper verification."
+  },
+  {
+    "legal_name": "Ashcon Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1994,
+    "website": null,
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.expertise.com/home-improvement/painting/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, city"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Since 1994. 30 years operating Plano. Independent (not in franchise lists). Needs additional verification of crew size + ownership type."
+  },
+  {
+    "legal_name": "MQ Painting LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Richardson",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1987,
+    "website": null,
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.expertise.com/home-improvement/painting/texas/mckinney",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, city"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Since 1987. 37 years. Independent Richardson-area. Needs deeper verification of ownership/crew."
+  },
+  {
+    "legal_name": "Sample Painting and Construction",
+    "dba_name": null,
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1997,
+    "website": null,
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, city"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Since 1997. 27 years. Independent Fort Worth. Verify ownership/family status."
+  },
+  {
+    "legal_name": "Constable DFW Painting",
+    "dba_name": null,
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2003,
+    "website": null,
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, city"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Since 2003. 21 years. Fort Worth. Verify ownership."
+  },
+  {
+    "legal_name": "C.K. Painting Services",
+    "dba_name": null,
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": null,
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, city, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned per Expertise.com listing. Fort Worth. Founded year not confirmed."
+  },
+  {
+    "legal_name": "Lone Star Remodeling",
+    "dba_name": null,
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1997,
+    "website": null,
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, city"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Since 1997. 27 years. Fort Worth. Verify ownership/painting focus (vs general remodeling)."
+  },
+  {
+    "legal_name": "Phillips Home Improvements",
+    "dba_name": null,
+    "address": null,
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1997,
+    "website": null,
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.expertise.com/home-improvement/painting/texas/plano",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, city"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Since 1997. Plano. Verify dedicated painting NAICS vs home-improvement umbrella."
+  },
+  {
+    "legal_name": "Paper Moon Painting",
+    "dba_name": null,
+    "address": "5616 I-10, Ste 103",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78201",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1989,
+    "website": "https://papermoonpainting.com/",
+    "phone": "(210) 655-3626",
+    "data_sources": [
+      {
+        "url": "https://papermoonpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned by husband/wife team Peter and Lisa Moon. Founded 1989. 35+ years. Serves Austin + SA. 7-year warranty. Lifetime wallpaper warranty. STRONG tenured-family fit."
+  },
+  {
+    "legal_name": "Vigini Paint and Design, LLC",
+    "dba_name": "Vigini Paint",
+    "address": "301 Blanco Rd",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78209",
+    "estimated_crew_count": null,
+    "service_mix": "mixed (specialty / high-end)",
+    "pdca_member": null,
+    "founded_year": 1998,
+    "website": "https://viginipaintanddesign.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://viginipaintanddesign.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1998 by Nicola Vigini + Leslie Morrison (partnership, not traditional family). First decorative/faux painting company in San Antonio. 27 years. High-end specialty finish niche."
+  },
+  {
+    "legal_name": "Centex Painting and Drywall",
+    "dba_name": null,
+    "address": "4303 Greenlee Drive",
+    "city": "Killeen",
+    "county": "Bell",
+    "state": "TX",
+    "zip": "76542",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2010,
+    "website": "https://www.centexpaintingtx.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.centexpaintingtx.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/operated. Since 2010. Killeen + Temple. 1-year workmanship warranty."
+  },
+  {
+    "legal_name": "Family Painting",
+    "dba_name": null,
+    "address": "2806 Jasmine Ln",
+    "city": "Killeen",
+    "county": "Bell",
+    "state": "TX",
+    "zip": "76549",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2013,
+    "website": "https://familypaintingtx.com/",
+    "phone": "(254) 444-1558",
+    "data_sources": [
+      {
+        "url": "https://familypaintingtx.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/operated since 2013. Bell County + Central Texas. BBB accredited."
+  },
+  {
+    "legal_name": "Yellow Rose Painting",
+    "dba_name": null,
+    "address": "1 E Central Ave, Ste A 310",
+    "city": "Temple",
+    "county": "Bell",
+    "state": "TX",
+    "zip": "76501",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2021,
+    "website": "https://yellowrosepainting.com/",
+    "phone": "(254) 322-3094",
+    "data_sources": [
+      {
+        "url": "https://yellowrosepainting.com/about-us",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, zip, phone, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Co-founded 2021 by Mason (also founded Spray Tex Painting in DFW) and Jason (Waco native). Sister company to Spray Tex Painting. Locally owned/operated, independent."
+  },
+  {
+    "legal_name": "Ford's Quality Painting, LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Longview",
+    "county": "Gregg",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://longviewpainting.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://longviewpainting.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, city, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "30 years operating East Texas. Owner Kenny Ford. Independent. Longview/Tyler/Kilgore."
+  },
+  {
+    "legal_name": "Hanzel Paint Company LLC",
+    "dba_name": "Hanzel Paint Co.",
+    "address": null,
+    "city": "Tyler",
+    "county": "Smith",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://hanzelpaintco.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://hanzelpaintco.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, city, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Husband/wife team Kolby and Kassie Hanzel. Tyler-native owners. Family-led (1st son born 2022). Younger company; verify tenure."
+  },
+  {
+    "legal_name": "Benchmark Painting TX",
+    "dba_name": null,
+    "address": null,
+    "city": "New Braunfels",
+    "county": "Comal",
+    "state": "TX",
+    "zip": "78130",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://www.benchmarkpaintingtx.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.benchmarkpaintingtx.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, zip, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned/locally operated. Founder Neal Sowers — 18 years at Sherwin-Williams + PPG Paints. 22+ years professional paint experience. New Braunfels/Seguin/San Marcos/La Vernia."
+  },
+  {
+    "legal_name": "Freedom Painters LLC",
+    "dba_name": null,
+    "address": "1308 E Common St",
+    "city": "New Braunfels",
+    "county": "Comal",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2019,
+    "website": "https://www.freedompaint.org/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.freedompaint.org/about",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, address, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned husband/wife team Eric + Julie. Founded 2019. Voted #1 'Best House Painting Service' NBTX 2020-2025."
+  },
+  {
+    "legal_name": "Houston Painters Co",
+    "dba_name": null,
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": null,
+    "website": "https://houstonpainters.co/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://houstonpainters.co/",
+        "fetched_at": "2026-05-16",
+        "field": "city, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. Greater Houston + Sugar Land/Missouri City/Fresno/Pearland/Rosenberg. Verify tenure/crew before outreach."
+  },
+  {
+    "legal_name": "First Choice Painting & Remodeling",
+    "dba_name": null,
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77067",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 1995,
+    "website": "https://first-choice-painting-remodeling.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.expertise.com/home-improvement/painting/texas/houston",
+        "fetched_at": "2026-05-16",
+        "field": "founded_year, zip, city"
+      },
+      {
+        "url": "https://first-choice-painting-remodeling.com/Sugar-Land_TX.htm",
+        "fetched_at": "2026-05-16",
+        "field": "services"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Since 1995. 29 years commercial painting Sugar Land/Houston. Verify ownership type."
+  },
+  {
+    "legal_name": "Magic Toolbox Painting LLC",
+    "dba_name": null,
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78753",
+    "estimated_crew_count": null,
+    "service_mix": "mixed",
+    "pdca_member": null,
+    "founded_year": 2018,
+    "website": "https://magictoolboxpaintingtx.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://magictoolboxpaintingtx.com/",
+        "fetched_at": "2026-05-16",
+        "field": "legal_name, founded_year, zip, ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family business since 2018. Owner Luis Rafael Rodriguez Pizzatti. Residential + commercial Austin metro."
+  }
+]

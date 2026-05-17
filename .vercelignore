@@ -1,0 +1,28 @@
+# Research / data artifacts that should not be bundled into Vercel deployments.
+# Including these bloats every serverless function and risks hitting the
+# 50MB unzipped lambda limit. This file was added in PR #65 but lost during
+# the squash-merge to main — restoring here.
+
+# Off-market acquisition scorer run artifacts (JSON spines, enrichment
+# batches, scored datasets, reports) — never needed at runtime.
+offmarket/
+
+# Verification files (ship-approval records, run logs) — never needed at runtime.
+verification/
+
+# Worker development logs and intermediate group-scan runner artifacts.
+worker/logs/
+
+# Local test outputs.
+test-results/
+playwright-report/
+
+# Build cache / large local-only directories.
+.gstack/
+.claude/
+.playwright-mcp/
+.superpowers/
+.vercel/
+
+# Dev-time deal hound chrome profile for Playwright sub-agents.
+.dealhound-chrome-profile/

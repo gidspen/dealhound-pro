@@ -1,0 +1,3931 @@
+{
+  "score_run": {
+    "id": "cced6783-5b94-4026-a389-1b07afae75a5",
+    "run_label": "chiropractic-tx-2026-05-16-w1a",
+    "vertical": "chiropractic",
+    "naics_code": "621310",
+    "model_version": "offmarket-4layer-v0.2",
+    "weights": {
+      "layer1": 0.3,
+      "layer2": 0.25,
+      "layer3": 0.3,
+      "layer4": 0.15
+    },
+    "geography": "TX \u2014 Harris/Dallas/Tarrant/Bexar/Travis/Collin/Denton/Fort Bend/Williamson/Montgomery priority",
+    "generated_at": "2026-05-17T04:39:34.353167+00:00",
+    "business_count": 69,
+    "tier_counts": {
+      "A_acquire_self": 1,
+      "B_forward": 10,
+      "C_watch": 58,
+      "D_pass": 0
+    }
+  },
+  "businesses": [
+    {
+      "legal_name": "Cook Chiropractic Health & Wellness Center",
+      "dba_name": "Cook Chiropractic Center",
+      "address": "3671 Broadway Blvd #500",
+      "city": "Garland",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": "75043",
+      "phone": "(972) 271-2225",
+      "website": "https://www.cookchiropracticcenter.com/",
+      "owner_name": "Dr. Philip Cook, D.C.",
+      "owner_age_estimate": 65,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 39,
+      "years_in_business": 39,
+      "provider_count_estimate": 1,
+      "employee_count_estimate": 4,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.cookchiropracticcenter.com/about",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "owner_name",
+            "founder_year",
+            "team_composition",
+            "credentials"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 1,
+          "signal_key": "owner_age_verification",
+          "direction": "positive",
+          "evidence": "Dr. Philip Cook founded clinic 1986, TCC grad. License-tenure proxy \u2192 est. age ~65 (founded at ~age 26, would be ~65 today). Source: https://www.cookchiropracticcenter.com/about fetched 2026-05-17.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.cookchiropracticcenter.com/about",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "positive",
+          "evidence": "Live team page at https://www.cookchiropracticcenter.com/about (fetched 2026-05-17) lists Dr. Philip Cook as the sole DC. Practice manager Regina Cook (admin role, family). Three other staff slots show placeholder 'John Smith' bios \u2014 no associate DCs identified. No DSO/franchise branding.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.cookchiropracticcenter.com/about",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "dated_website",
+          "direction": "positive",
+          "evidence": "Site has placeholder 'John Smith' bios on team page indicating incomplete/stale staff directory.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.cookchiropracticcenter.com/about",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 78,
+      "layer1_comment": "Dr. Philip Cook, est. ~65, founder since 1986 (39-yr tenure). Owner age is license-tenure proxy (founded ~age 26, would be ~65 today) \u2014 strong tenure signal even without OV65.",
+      "layer2_sellability": 78,
+      "layer2_comment": "Solo 39-yr practice, 1 DC + practice manager (wife Regina) + 4 staff. Three-phase care model (Relief/Corrective/Wellness) indicates wellness-plan structure. Plausible $500K-$800K rev (1 DC + acupuncture + decompression + supplements). Clean Texas Comptroller status assumed (not verified \u2014 flag).",
+      "layer3_behavioral_trigger": 78,
+      "layer3_comment": "4 coasting tells: (1) sole DC verified live-fetch 2026-05-17, (2) recent relocation to new Broadway Blvd address suggests downsizing or owner-driven move, (3) placeholder 'John Smith' bios on team page = stale website, (4) family practice manager only \u2014 no operations infrastructure for scaling. Clean (not distressed).",
+      "layer4_market_pull": 72,
+      "layer4_comment": "Garland (Dallas County) \u2014 major metro but not premium ZIP. SBA 7(a) financeable. Chiropractic ETA/searcher appetite moderate. The Joint franchise + 100% Chiropractic active in DFW for independent acquisitions/conversions.",
+      "final_score": 77,
+      "final_tier": "B_forward",
+      "final_comment": "Dr. Philip Cook, est. ~65 (license-tenure proxy \u2014 OV65 not verified), founded Cook Chiropractic in Garland 1986; 39-yr solo tenure, no associate DC (verified live team-page fetch on cookchiropracticcenter.com 2026-05-17), wife Regina is practice manager. Three-phase wellness care model (Relief/Corrective/Wellness) = recurring-revenue tell. Recent relocation to new Broadway address. Layer 1 below 80 due to age-source-tag = license_tenure_proxy (not OV65) \u2014 caps at B_forward pending CAD verification. Coasting solo profile is clean.",
+      "value_add_thesis": "AI front-desk + recall automation, modern ChiroSpring/Platinum migration, automated review generation, online scheduling beyond the request form, and SoftWave/spinal-decompression upsell \u2014 credible 1.5-2x EBITDA path over 18-24 months. Successor-DC associate-to-owner glide path needed.",
+      "confidence": "medium",
+      "data_completeness": 0.65
+    },
+    {
+      "legal_name": "Texas Back Care",
+      "dba_name": "Texas Back Care",
+      "address": "1424 Airport Freeway, Suite N",
+      "city": "Bedford",
+      "county": "Tarrant",
+      "state": "TX",
+      "zip": "76022",
+      "phone": "(817) 545-1100",
+      "website": "https://texasbackcare.com/",
+      "owner_name": "Dr. Carl M. Naehritz III, D.C., C.M.E.",
+      "owner_age_estimate": 62,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 36,
+      "years_in_business": 36,
+      "provider_count_estimate": 1,
+      "employee_count_estimate": 3,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://texasbackcare.com/about-doctor-carl-naehritz-chiropractor-bedford-tx/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "owner_name",
+            "credentials",
+            "tenure",
+            "founding_year"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 1,
+          "signal_key": "owner_age_verification",
+          "direction": "positive",
+          "evidence": "Dr. Carl Naehritz III, Parker grad 1989 (36 yrs ago). Implied age ~62 (grad at ~26). Source: https://texasbackcare.com/about-doctor-carl-naehritz-chiropractor-bedford-tx/ fetched 2026-05-17.",
+          "source": "live_website_fetch",
+          "source_url": "https://texasbackcare.com/about-doctor-carl-naehritz-chiropractor-bedford-tx/",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "positive",
+          "evidence": "Live about page (fetched 2026-05-17) names only Dr. Carl Naehritz. No associate DCs, no family-surname matches. NMS Diagnostic & Surgical Association credential, DOT Medical Exams, IME's \u2014 solo practitioner serving Hurst/Euless/Bedford 36 yrs.",
+          "source": "live_website_fetch",
+          "source_url": "https://texasbackcare.com/about-doctor-carl-naehritz-chiropractor-bedford-tx/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 72,
+      "layer1_comment": "Dr. Carl Naehritz III, est. ~62 (license-tenure proxy: Parker grad 1989, ~age 26 at grad). 36-yr solo tenure. Owner age source = license_tenure_proxy \u2014 caps Layer 1 below 80 pending OV65 verification.",
+      "layer2_sellability": 75,
+      "layer2_comment": "Solo 36-yr practice, 1 DC. DOT exams + IME + FCE niches suggest worker's comp / employer-services revenue (lumpy but real). Plausible $500K-$900K rev. No website-visible care plans / memberships \u2014 coasting signal more than recurring-revenue signal.",
+      "layer3_behavioral_trigger": 72,
+      "layer3_comment": "3 coasting tells: (1) sole DC verified live-fetch 2026-05-17, (2) niche DOT/IME revenue not modernized to AI intake / portal, (3) no online booking visible on about page. Clean (not distressed).",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Bedford (Tarrant County, mid-cities DFW) \u2014 major metro, ordinary sub-market. SBA 7(a) financeable. Workers-comp/IME niche has steady acquirer demand from regional groups; not heavily PE-rolled.",
+      "final_score": 73,
+      "final_tier": "B_forward",
+      "final_comment": "Dr. Carl Naehritz III, est. ~62 (license-tenure proxy: Parker College 1989), founder of Texas Back Care in Bedford for 36 yrs; sole DC (verified live-fetch on texasbackcare.com 2026-05-17), no associate or family successor. Specialty DOT/IME/FCE niche layered on chiropractic core \u2014 workers-comp adjacent. License_tenure_proxy on age caps tier at B_forward pending OV65 lookup on TAD.",
+      "value_add_thesis": "Modern DOT-exam portal + AI insurance verification, automated review generation, online booking, and worker-comp claims automation. IME volume could be scaled via referral-network CRM. Possible associate-to-owner glide path with a DC who handles the chiropractic adjustments while Naehritz focuses on IME/DOT.",
+      "confidence": "medium",
+      "data_completeness": 0.6
+    },
+    {
+      "legal_name": "Beecher Chiropractic",
+      "dba_name": "Beecher Chiropractic",
+      "address": "1001 Pineloch Dr. #700",
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": "77062",
+      "phone": "(281) 286-1300",
+      "website": "https://beecherchiropractic.com/",
+      "owner_name": "Dr. Ward Beecher, D.C.",
+      "owner_age_estimate": 63,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 35,
+      "years_in_business": 35,
+      "provider_count_estimate": 1,
+      "employee_count_estimate": 3,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://beecherchiropractic.com/about/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "owner_name",
+            "credentials",
+            "tenure",
+            "TBCE_licensure"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 1,
+          "signal_key": "owner_age_verification",
+          "direction": "positive",
+          "evidence": "Dr. Ward Beecher TCC grad 1988, TBCE licensed 1989, full-time practice Houston since 1990 = 35 yrs. Diplomate in chiropractic orthopedics (1994). Implied age ~63. Source: https://beecherchiropractic.com/about/ fetched 2026-05-17.",
+          "source": "live_website_fetch",
+          "source_url": "https://beecherchiropractic.com/about/",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "positive",
+          "evidence": "Live about page (fetched 2026-05-17) names only Dr. Ward Beecher as the DC. Solo practice \u2014 no associates, no partner DCs, no family DC successor. Diplomate in chiropractic orthopedics + chiropractic consulting = subspecialty practice not transferring to internal junior.",
+          "source": "live_website_fetch",
+          "source_url": "https://beecherchiropractic.com/about/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 75,
+      "layer1_comment": "Dr. Ward Beecher, est. ~63 (license-tenure proxy: TCC 1988, TBCE 1989). 35-yr Clear Lake Houston tenure. Diplomate in orthopedics + consulting = specialist who'll retire when ready, not a hand-off type.",
+      "layer2_sellability": 75,
+      "layer2_comment": "Solo 35-yr practice. AADEP member (disability evaluating physicians) \u2014 IME / disability work + chiropractic core. Plausible $500K-$900K rev. Clear Lake area = aerospace/NASA workforce, professional patient base.",
+      "layer3_behavioral_trigger": 75,
+      "layer3_comment": "3+ coasting tells: (1) sole DC live-fetch verified 2026-05-17, (2) about page emphasizes 1994 / 2004 diplomate dates \u2014 no recent CE / new tech mentions, (3) no online booking visible on the about page, (4) hours of operation not even published. Clean (not distressed).",
+      "layer4_market_pull": 78,
+      "layer4_comment": "Clear Lake area Houston (Harris County) \u2014 major metro. SBA 7(a) financeable. Clear Lake/Pearland chiropractic consolidation moderate. AADEP niche is referral-driven, stable demand.",
+      "final_score": 75,
+      "final_tier": "B_forward",
+      "final_comment": "Dr. Ward Beecher, est. ~63 (license-tenure proxy: TCC 1988, TBCE 1989), founded Beecher Chiropractic in Clear Lake Houston 1990; 35-yr solo tenure verified via live about-page fetch on beecherchiropractic.com 2026-05-17. Sub-specialty practice (diplomate orthopedics + consulting + AADEP disability eval). Hours not even published on site \u2014 strong coasting tell. License_tenure_proxy caps Layer 1 below 80 \u2014 tier B_forward pending HCAD OV65 verification.",
+      "value_add_thesis": "AI front-desk + IME-claim automation, online booking (currently absent), automated review generation, telehealth follow-up for orthopedics consults. Clear Lake aerospace patient base = high-income captive demand. Modern PMS migration + recall + associate-to-owner glide path.",
+      "confidence": "medium",
+      "data_completeness": 0.6
+    },
+    {
+      "legal_name": "Stakes Chiropractic Center",
+      "dba_name": "Stakes Chiropractic",
+      "address": "7413 Old Bee Caves Rd",
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": "78735",
+      "phone": "(512) 892-2160",
+      "website": "https://www.stakeschiropractic.com/",
+      "owner_name": "Dr. Douglas Stakes, D.C.",
+      "owner_age_estimate": 68,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 41,
+      "years_in_business": 41,
+      "provider_count_estimate": 1,
+      "employee_count_estimate": 2,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.stakeschiropractic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "owner_name",
+            "credentials",
+            "tenure",
+            "TBCE_licensure_1982",
+            "hours",
+            "navy_vet"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 1,
+          "signal_key": "owner_age_verification",
+          "direction": "positive",
+          "evidence": "Dr. Douglas Stakes TBCE-licensed 1982, practicing Austin since 1984 = 41 yrs. Navy vet, Sam Houston State undergrad. Licensed at ~age 27 \u2192 est. age ~68 today. Source: https://www.stakeschiropractic.com/ fetched 2026-05-17.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.stakeschiropractic.com/",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "positive",
+          "evidence": "Live home/about page (fetched 2026-05-17) shows only Dr. Douglas Stakes \u2014 solo. No associates listed. Practice runs M/W/F mornings and afternoons; W full day; Tu/Th/Sat/Sun closed = reduced 3-day-week hours = classic coasting tell.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.stakeschiropractic.com/",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "reduced_hours",
+          "direction": "positive",
+          "evidence": "Hours: Mon/Wed/Fri only. Wed full day, others half-day. Closed Tu/Th/Sat/Sun. Three-day work week = strong coasting tell.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.stakeschiropractic.com/",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "no_online_booking",
+          "direction": "positive",
+          "evidence": "No online booking system mentioned on website. Phone-only intake.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.stakeschiropractic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 82,
+      "layer1_comment": "Dr. Douglas Stakes, est. ~68 (license-tenure proxy: TBCE 1982, Navy vet pre-chiropractic). 41-yr Austin tenure \u2014 squarely in natural-exit window. Owner-age source license_tenure_proxy; OV65 likely (would qualify by age) but unverified.",
+      "layer2_sellability": 70,
+      "layer2_comment": "Solo 41-yr Austin practice. Activator Method specialty (Advanced Proficiency Rated). Plausible $400K-$700K rev given 3-day-week hours. SW Austin / Oak Hill area \u2014 premium-adjacent. No wellness plan / membership pricing visible.",
+      "layer3_behavioral_trigger": 88,
+      "layer3_comment": "5+ coasting tells: (1) sole DC verified live-fetch 2026-05-17, (2) M/W/F-only hours \u2014 3-day work week, (3) no online booking, (4) no wellness-plan pricing, (5) phone-only intake, (6) website design dated. Clean (not distressed). Strong A-tier behavioral profile.",
+      "layer4_market_pull": 82,
+      "layer4_comment": "Austin (Travis County) \u2014 top-3 TX metro, premium sub-market (Old Bee Caves Rd near Westlake Hills). SBA 7(a) financeable. Austin chiropractic consolidation hot \u2014 The Joint, 100% Chiropractic, Active Health Brands all targeting metros.",
+      "final_score": 80,
+      "final_tier": "A_acquire_self",
+      "final_comment": "Dr. Douglas Stakes, est. ~68 (license-tenure proxy: TBCE 1982, Navy vet, ~age 27 at licensing \u2192 ~68 today), founded Stakes Chiropractic in SW Austin 1984; 41-yr solo tenure verified via live home-page fetch on stakeschiropractic.com 2026-05-17. Practice operates M/W/F only (Wed full day, others half), no online booking, no published wellness plans \u2014 classic 3-day-week coasting-owner-near-retirement profile in a premium catchment (Old Bee Caves Rd, Austin 78735, near Westlake Hills). Activator Method specialty. Layer 1 at 82 (above 70 gate), Layer 3 at 88 (above 65 gate) \u2014 A-tier candidate pending CAD OV65 verification in deep-dive.",
+      "value_add_thesis": "Premium Austin location with severe under-utilization (3-day week). AI front-desk + online scheduling + 5-day operations = immediate 1.6-2x rev. Activator Method patient base is loyal \u2014 wellness plans + maintenance care subscriptions would compound. Associate-to-owner glide path realistic given Stakes's exit timing.",
+      "confidence": "medium",
+      "data_completeness": 0.65
+    },
+    {
+      "legal_name": "Chiropractic Consultants of Houston",
+      "dba_name": "Chiropractic Consultants of Houston",
+      "address": "909 Dairy Ashford St # 103",
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": "77079",
+      "phone": null,
+      "website": "https://www.chiroconsultantshouston.com/",
+      "owner_name": "Dr. Dino Palividas, D.C.",
+      "owner_age_estimate": 64,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 34,
+      "years_in_business": 34,
+      "provider_count_estimate": 1,
+      "employee_count_estimate": 3,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.chiroconsultantshouston.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "owner_name",
+            "tenure_since_1992",
+            "address"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 1,
+          "signal_key": "owner_age_verification",
+          "direction": "positive",
+          "evidence": "Dr. Dino Palividas, same location 34 yrs (since 1992). Implied age ~64 (founded ~age 30). Source: https://www.chiroconsultantshouston.com/ fetched 2026-05-17.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.chiroconsultantshouston.com/",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "positive",
+          "evidence": "Live home page (fetched 2026-05-17) references only 'Dr. Dino' + 'his staff'. No associate DCs, no partner DCs, no family successor named. West Houston Dairy Ashford location 34 yrs (since 1992).",
+          "source": "live_website_fetch",
+          "source_url": "https://www.chiroconsultantshouston.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 72,
+      "layer1_comment": "Dr. Dino Palividas, est. ~64 (license-tenure proxy: 34 yrs at same location since 1992). License-tenure proxy \u2192 caps Layer 1 below 80 pending HCAD verification.",
+      "layer2_sellability": 75,
+      "layer2_comment": "Solo 34-yr West Houston practice on Dairy Ashford. Auto-injury + disc + prenatal/pediatric + massage. Same-day appointments + Sat morning hours = active practice. Plausible $700K-$1.2M rev (1 DC + massage therapist + Sat hours).",
+      "layer3_behavioral_trigger": 70,
+      "layer3_comment": "3 coasting tells: (1) sole DC live-fetch verified 2026-05-17, (2) phone emphasis 'call' over digital, (3) auto-injury niche skews to PI-attorney referrals (not modern intake funnel). Online scheduling does exist \u2014 partially modernized. Clean (not distressed).",
+      "layer4_market_pull": 80,
+      "layer4_comment": "West Houston / Memorial-adjacent (Harris County) \u2014 top-3 TX metro, premium sub-market ZIP 77079. SBA 7(a) financeable. PE roll-up activity moderate.",
+      "final_score": 74,
+      "final_tier": "B_forward",
+      "final_comment": "Dr. Dino Palividas, est. ~64 (license-tenure proxy: 34 yrs same address since 1992), Chiropractic Consultants of Houston on Dairy Ashford (West Houston, premium-ish ZIP 77079). Sole DC verified via live home-page fetch 2026-05-17. Auto-injury / prenatal / massage practice \u2014 same-day + Sat hours indicate active operation, not full coasting. License_tenure_proxy + only 3 visible coasting tells = B_forward.",
+      "value_add_thesis": "PI-attorney CRM modernization + AI claims automation + multi-channel review gen. West Houston catchment is premium. Associate-to-owner glide path with a DC who can take the PI-volume off Dino's shoulders.",
+      "confidence": "medium",
+      "data_completeness": 0.55
+    },
+    {
+      "legal_name": "Innate Chiropractic Healing Arts Center",
+      "dba_name": "Innate Chiropractic",
+      "address": "8100 Washington Ave #210",
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": "77007",
+      "phone": "(713) 521-2104",
+      "website": "https://www.n8chiro.com/",
+      "owner_name": "Dr. Jackie St.Cyr, D.C.",
+      "owner_age_estimate": 58,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 30,
+      "years_in_business": 30,
+      "provider_count_estimate": 1,
+      "employee_count_estimate": 2,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.n8chiro.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "owner_name",
+            "tenure_since_1995",
+            "team",
+            "tech"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 1,
+          "signal_key": "owner_age_verification",
+          "direction": "positive",
+          "evidence": "Dr. Jackie St.Cyr, Parker College DC, certified NetworkSpinal practitioner, EpiEnergetics, Dr. Amen Brain Trainer, Tony Robbins Mastery graduate. Practice since 1995 = 30 yrs. Implied age ~58. Source: https://www.n8chiro.com/ fetched 2026-05-17.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.n8chiro.com/",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "positive",
+          "evidence": "Live site (fetched 2026-05-17) lists only Dr. Jackie St.Cyr as DC + Tina Marie as Life Coach. No associate DC, no family successor. Heights/Memorial area Houston (77007).",
+          "source": "live_website_fetch",
+          "source_url": "https://www.n8chiro.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 58,
+      "layer1_comment": "Dr. Jackie St.Cyr, est. ~58 (license-tenure proxy: 30 yrs since 1995, Parker DC). Falls in 53-57 / 58-62 band \u2014 earlier in natural-exit window than ideal. License_tenure_proxy.",
+      "layer2_sellability": 70,
+      "layer2_comment": "Solo 30-yr Heights practice. NetworkSpinal/EpiEnergetics niche \u2014 cash-pay specialty, not insurance-driven. Plausible $400K-$700K rev. Premium Heights ZIP 77007.",
+      "layer3_behavioral_trigger": 60,
+      "layer3_comment": "2 coasting tells: (1) sole DC verified live-fetch, (2) Life Coach co-located = lifestyle-business profile. Modern tech (INSiGHT Subluxation Station, digital foot scanning) and online booking = NOT fully coasting. Owner is high-conviction operator (Robbins/Amen training).",
+      "layer4_market_pull": 80,
+      "layer4_comment": "Houston Heights (Harris County) \u2014 top-3 TX metro, premium sub-market ZIP 77007 (~$10 nudge). SBA 7(a) financeable. Cash-pay specialty practices have lower acquirer appetite (harder to fit DSO model).",
+      "final_score": 65,
+      "final_tier": "B_forward",
+      "final_comment": "Dr. Jackie St.Cyr, est. ~58 (license-tenure proxy: 30 yrs since 1995), Innate Chiropractic in the Heights (Houston 77007 premium ZIP). Sole DC verified via live n8chiro.com fetch 2026-05-17. NetworkSpinal/EpiEnergetics cash-pay practice \u2014 owner is high-conviction operator with modern tech (INSiGHT scan, online booking) = NOT a classic coasting profile. Layer 1 below the 70 A-tier gate; Layer 3 below the 65 gate. B_forward.",
+      "value_add_thesis": "Cash-pay specialty has limited SBA appetite for outside acquirer but excellent forward target for a younger NetworkSpinal-trained successor DC. Marketing automation + retreat/workshop upsells. Lower probability sale-to-outsider.",
+      "confidence": "medium",
+      "data_completeness": 0.55
+    },
+    {
+      "legal_name": "Holman Wellness Center",
+      "dba_name": "Holman Chiropractic",
+      "address": "27920 Tomball Parkway, Suite 210",
+      "city": "Tomball",
+      "county": "Harris",
+      "state": "TX",
+      "zip": "77375",
+      "phone": "(281) 890-7710",
+      "website": "https://www.holmanwellnesscenter.com/",
+      "owner_name": "Dr. Randy Holman, D.C.",
+      "owner_age_estimate": 60,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 29,
+      "years_in_business": 29,
+      "provider_count_estimate": 1,
+      "employee_count_estimate": 2,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.holmanwellnesscenter.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "owner_name",
+            "credentials",
+            "tenure_since_1996",
+            "hours"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 1,
+          "signal_key": "owner_age_verification",
+          "direction": "positive",
+          "evidence": "Dr. Randy Holman licensed 1993, practicing since 1996 = 29 yrs. Implied age ~60. Source: https://www.holmanwellnesscenter.com/ fetched 2026-05-17.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.holmanwellnesscenter.com/",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "positive",
+          "evidence": "Live home page (fetched 2026-05-17) names only Dr. Randy Holman \u2014 solo. No associates, no partners, no family DC successor. Three-phase care model (Relief/Corrective/Wellness).",
+          "source": "live_website_fetch",
+          "source_url": "https://www.holmanwellnesscenter.com/",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "reduced_hours",
+          "direction": "positive",
+          "evidence": "Hours M/W/F 7:30am-12:45pm + 3-6pm; Tu 8-12 only; Th/Sat/Sun closed = 3.5-day week, classic coasting.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.holmanwellnesscenter.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 65,
+      "layer1_comment": "Dr. Randy Holman, est. ~60 (license-tenure proxy: licensed 1993, practice 1996). 29-yr tenure. Approaching natural-exit window; license_tenure_proxy caps L1.",
+      "layer2_sellability": 72,
+      "layer2_comment": "Solo 29-yr practice. Tomball Parkway location \u2014 NW Houston suburban. Three-phase care model (Relief/Corrective/Wellness) = wellness-plan recurring revenue. Plausible $500K-$800K rev. Online booking + virtual office tour = partially modernized.",
+      "layer3_behavioral_trigger": 70,
+      "layer3_comment": "3 coasting tells: (1) sole DC verified live-fetch, (2) M/W/F-Tu only hours = 3.5-day week, (3) emphasis on homeopathic/herbal supplements = niche but stable. Clean (not distressed). 2022 Houston Award = active enough.",
+      "layer4_market_pull": 78,
+      "layer4_comment": "Tomball (Harris County, NW Houston suburban) \u2014 major metro, ordinary sub-market. SBA 7(a) financeable.",
+      "final_score": 71,
+      "final_tier": "B_forward",
+      "final_comment": "Dr. Randy Holman, est. ~60 (license-tenure proxy: licensed 1993, Holman Wellness Tomball since 1996), 29-yr solo tenure verified via live home-page fetch on holmanwellnesscenter.com 2026-05-17. M/W/F-Tu reduced hours (3.5-day week). Three-phase wellness model = recurring-revenue tell. Layer 1 in 58-62 band (license_tenure_proxy); below 70 A-tier gate. B_forward pending TAD OV65 lookup.",
+      "value_add_thesis": "5-day operations + AI recall automation + supplement-subscription rebuild. Modern PMS (currently appears mid-tier). Tomball suburbanization tailwind. Associate-to-owner glide path.",
+      "confidence": "medium",
+      "data_completeness": 0.6
+    },
+    {
+      "legal_name": "Dr. Phillips Chiropractic Nutrition & Wellness",
+      "dba_name": "Dr. Phillips Chiropractic",
+      "address": "5430 Fredericksburg Rd #506",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": "78229",
+      "phone": "(210) 545-1144",
+      "website": "https://drphillipschiro.com/",
+      "owner_name": "Dr. Phillips, D.C.",
+      "owner_age_estimate": 62,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 33,
+      "years_in_business": 33,
+      "provider_count_estimate": 1,
+      "employee_count_estimate": 2,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://drphillipschiro.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "owner_name",
+            "tenure_33yrs",
+            "legacy_continued"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 1,
+          "signal_key": "owner_age_verification",
+          "direction": "positive",
+          "evidence": "Dr. Phillips, San Antonio 33 yrs, 'legacy continued'. Implied age ~62. Source: https://drphillipschiro.com/ fetched 2026-05-17.",
+          "source": "live_website_fetch",
+          "source_url": "https://drphillipschiro.com/",
+          "observed_at": "2026-05-17"
+        },
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "ambiguous",
+          "evidence": "Live home page (fetched 2026-05-17) names only Dr. Phillips and mentions '33 years of history' / 'legacy continued'. Phrase 'legacy continued' is ambiguous \u2014 could mean owner-handoff already happened OR family-legacy practice. Full team page exists but content not in homepage excerpt. Capping at B per skill non-negotiable \u00a72 absent direct team page fetch.",
+          "source": "live_website_fetch",
+          "source_url": "https://drphillipschiro.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 70,
+      "layer1_comment": "Dr. Phillips, est. ~62 (license-tenure proxy: 33 yrs SA). Cap at L1=70 due to 'legacy continued' language possibly indicating successor already.",
+      "layer2_sellability": 72,
+      "layer2_comment": "Solo 33-yr SA practice. Chiropractic + nutrition + wellness specialty. Online booking + cold-laser tech. Plausible $500K-$800K rev.",
+      "layer3_behavioral_trigger": 58,
+      "layer3_comment": "Ambiguous: 'legacy continued' phrase is the failure-mode warning sign \u2014 could be silent succession already in place. 2 unambiguous coasting tells but the team-page evidence is incomplete. Per non-negotiable \u00a72, capping below 65 A-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "San Antonio (Bexar County) \u2014 major TX metro, ordinary sub-market. SBA 7(a) financeable.",
+      "final_score": 67,
+      "final_tier": "B_forward",
+      "final_comment": "Dr. Phillips, est. ~62 (license-tenure proxy: 33 yrs SA), Dr. Phillips Chiropractic Nutrition & Wellness. Live home-page fetch on drphillipschiro.com 2026-05-17 mentions '33 years of history' + 'legacy continued' \u2014 the latter phrase is the exact \u00a72 failure-mode warning sign and could indicate silent succession. Full team page not directly fetched. Per skill non-negotiable, capping Layer 3 at 58 and tier at B_forward until live team-page fetch can complete.",
+      "value_add_thesis": "Modern PMS + AI nutrition-plan automation + telehealth nutrition consults. San Antonio cash-pay nutrition adjacency is undermined. SUBJECT TO live-team-page re-fetch.",
+      "confidence": "low",
+      "data_completeness": 0.45
+    },
+    {
+      "legal_name": "Peterson Chiropractic",
+      "dba_name": "Peterson Chiropractic",
+      "address": "4230 Gardendale Bldg 201",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": "78229",
+      "phone": null,
+      "website": "https://www.petersonchiropractic.org/",
+      "owner_name": "Dr. Tim Peterson, D.C. (took over 2018 from father Dr. Ward Peterson)",
+      "owner_age_estimate": 45,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 7,
+      "years_in_business": 40,
+      "provider_count_estimate": 2,
+      "employee_count_estimate": 4,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.petersonchiropractic.org/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "owner_succession_2018",
+            "founder_father",
+            "family_team"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "negative",
+          "evidence": "Live page (fetched 2026-05-17) confirms Dr. Tim Peterson took over the practice in 2018 from his father Dr. Ward Peterson (the 1985 founder). Brother + sister + sister-in-law work at the practice (roles unclear). Already a structured internal-buy-in completed \u2014 not a coasting-solo-to-outside-buyer profile. Demoted A\u2192C.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.petersonchiropractic.org/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Dr. Tim Peterson, est. ~45 (took over in 2018 from father; 7-yr ownership tenure). Far from natural-exit window \u2014 'recent buyer' profile per skill anchors.",
+      "layer2_sellability": 75,
+      "layer2_comment": "40-yr practice (since 1985), now Tim's. Torque Release Technique specialty + Schedule Now button + family team. Plausible $700K-$1.2M rev.",
+      "layer3_behavioral_trigger": 30,
+      "layer3_comment": "Successor handoff ALREADY happened (Tim from father Ward, 2018). Not a coasting-solo profile.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "San Antonio (Bexar) \u2014 major metro.",
+      "final_score": 49,
+      "final_tier": "C_watch",
+      "final_comment": "Peterson Chiropractic \u2014 Dr. Tim Peterson took over in 2018 from his father Dr. Ward Peterson (founder 1985, 40-yr practice). Already a completed internal succession; the family team is in operations. Not a coasting-solo-to-outsider profile. C_watch only.",
+      "value_add_thesis": "Not a fit for this thesis \u2014 internal succession already happened.",
+      "confidence": "high",
+      "data_completeness": 0.55
+    },
+    {
+      "legal_name": "South Texas Chiropractic",
+      "dba_name": "South Texas Chiropractic",
+      "address": "540 Oak Centre Drive, Suite 105",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": "78258",
+      "phone": "(210) 493-9119",
+      "website": "https://www.stxchiro.com/",
+      "owner_name": "Dr. David A. Kling, D.C. (Parker 1988)",
+      "owner_age_estimate": 60,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 37,
+      "years_in_business": 37,
+      "provider_count_estimate": 2,
+      "employee_count_estimate": 4,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.stxchiro.com/our-team.html",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "owner_name",
+            "son_DC_associate_2020",
+            "Ring_Dinger"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "negative",
+          "evidence": "Live team page at https://www.stxchiro.com/our-team.html (fetched 2026-05-17) lists Dr. David A. Kling DC AND his son Dr. Austin Kling DC (Parker grad, joined 2020). Internal-buy-in candidate present \u2014 son already at the practice. Demoted A\u2192B per skill rules.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.stxchiro.com/our-team.html",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 70,
+      "layer1_comment": "Dr. David Kling, est. ~60 (Parker 1988, 37-yr tenure). License_tenure_proxy.",
+      "layer2_sellability": 78,
+      "layer2_comment": "37-yr practice, 2 DCs (David + son Austin since 2020). Spinal decompression / Ring Dinger specialty. Saturday hours. Plausible $1M-$1.8M rev.",
+      "layer3_behavioral_trigger": 35,
+      "layer3_comment": "Successor in place: son Dr. Austin Kling joined 2020 from Parker. Internal-buy-in path is the natural succession \u2014 not coasting-to-outsider.",
+      "layer4_market_pull": 78,
+      "layer4_comment": "San Antonio Stone Oak ZIP 78258 = premium sub-market. Major metro.",
+      "final_score": 62,
+      "final_tier": "B_forward",
+      "final_comment": "Dr. David A. Kling (Parker 1988, ~60), founded South Texas Chiropractic 37 yrs ago. Live team-page fetch on stxchiro.com 2026-05-17 confirms his son Dr. Austin Kling (Parker DC, joined 2020) is the associate \u2014 internal-buy-in candidate in place. Demoted A\u2192B. Premium SA sub-market (78258 Stone Oak).",
+      "value_add_thesis": "Not a fit for Gideon's direct-acquisition thesis (succession in place). Forward to community as a B candidate IF the son's buy-in path stalls. Strong location.",
+      "confidence": "high",
+      "data_completeness": 0.6
+    },
+    {
+      "legal_name": "Slaughter Lane Chiropractic",
+      "dba_name": "Slaughter Lane Chiropractic",
+      "address": "3107 West Slaughter Lane",
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": "78748",
+      "phone": null,
+      "website": "https://www.slc-chiro.com/",
+      "owner_name": "Dr. David Wagner, D.C. (founder); Dr. Leon Wagner (son, associate)",
+      "owner_age_estimate": 60,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 33,
+      "years_in_business": 33,
+      "provider_count_estimate": 2,
+      "employee_count_estimate": 4,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.slc-chiro.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "wagner_father_son",
+            "founded_1992"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "negative",
+          "evidence": "Live home page (fetched 2026-05-17) lists Dr. David Wagner DC (founder 1992) + son Dr. Leon Wagner BS DC. Multi-doctor family practice with succession in place. Online booking via promptemr. Demoted A\u2192B.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.slc-chiro.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 70,
+      "layer1_comment": "Dr. David Wagner, est. ~60, 33-yr Austin tenure.",
+      "layer2_sellability": 78,
+      "layer2_comment": "Multi-doc family practice in south Austin. Promptemr online booking. Plausible $1M-$1.5M rev.",
+      "layer3_behavioral_trigger": 38,
+      "layer3_comment": "Successor (son Leon) already at the practice.",
+      "layer4_market_pull": 80,
+      "layer4_comment": "South Austin (Travis) \u2014 major metro.",
+      "final_score": 64,
+      "final_tier": "B_forward",
+      "final_comment": "Dr. David Wagner founded Slaughter Lane Chiropractic 1992 (33 yrs); son Dr. Leon Wagner joined as associate. Live home-page fetch on slc-chiro.com 2026-05-17 confirms multi-doc family-succession structure. Demoted A\u2192B.",
+      "value_add_thesis": "Forward to ETA community if family path falters. Modern Promptemr already in place \u2014 limited tech-modernization upside.",
+      "confidence": "high",
+      "data_completeness": 0.55
+    },
+    {
+      "legal_name": "Casa View Chiropractic Clinic",
+      "dba_name": "Casa View Chiropractic",
+      "address": "10622 Shiloh Rd",
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": "75228",
+      "phone": null,
+      "website": "https://www.casaviewchiropracticclinic.com/",
+      "owner_name": "Dr. Chad Blackwell (took over 1996 from father Dr. Gil Blackwell, founder 1960s)",
+      "owner_age_estimate": 55,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 29,
+      "years_in_business": 60,
+      "provider_count_estimate": 3,
+      "employee_count_estimate": 6,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.casaviewchiropracticclinic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "3_DCs",
+            "founder_1960s",
+            "succession_1996",
+            "medspa"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "negative",
+          "evidence": "Live page (fetched 2026-05-17): 3 DCs (Gilbert founder, Chad current owner, Jeff Vining). Generational succession already happened (Gilbert \u2192 Chad 1996); Vining is the next-generation associate. Plus medspa expansion = scaled multi-service group. Not a coasting-solo profile. Demoted to C/D.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.casaviewchiropracticclinic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 55,
+      "layer1_comment": "Dr. Chad Blackwell ~55, 29-yr ownership tenure (took over 1996). Younger owner profile.",
+      "layer2_sellability": 78,
+      "layer2_comment": "60-yr legacy practice. 3 DCs + medspa. Plausible $1.5M-$3M rev.",
+      "layer3_behavioral_trigger": 25,
+      "layer3_comment": "Active growing practice with medspa expansion. Not coasting.",
+      "layer4_market_pull": 80,
+      "layer4_comment": "Dallas \u2014 major metro.",
+      "final_score": 57,
+      "final_tier": "C_watch",
+      "final_comment": "Casa View Chiropractic Clinic, founded 1960s by Gilbert M. Blackwell, owned since 1996 by son Dr. Chad Blackwell + Dr. Jeff Vining + medspa expansion. Active multi-service group, not a coasting-solo profile. C_watch.",
+      "value_add_thesis": "Active group practice \u2014 wrong thesis. Watch.",
+      "confidence": "high",
+      "data_completeness": 0.55
+    },
+    {
+      "legal_name": "Denton Chiropractic Center",
+      "dba_name": "Denton Chiropractic Center",
+      "address": "1432 Underwood St",
+      "city": "Denton",
+      "county": "Denton",
+      "state": "TX",
+      "zip": "76201",
+      "phone": null,
+      "website": "https://www.dentonchiro.com/",
+      "owner_name": "Dr. Kent Noell (founder); Dr. Melissa Noell (family DC); Dr. Marcus Villarreal; Dr. Susan Aurich; Dr. Faith Kuehl",
+      "owner_age_estimate": 70,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 47,
+      "years_in_business": 47,
+      "provider_count_estimate": 5,
+      "employee_count_estimate": 8,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.dentonchiro.com/about-us/meet-the-team.html",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "5_DCs",
+            "Noell_family_succession",
+            "founded_1978"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "negative",
+          "evidence": "Live meet-the-team page at https://www.dentonchiro.com/about-us/meet-the-team.html (fetched 2026-05-17) lists 5 DCs: founder Kent Noell, Melissa Noell (family-surname match \u2192 family DC successor), Marcus Villarreal, Susan Aurich, Faith Kuehl. Multi-DC group with family succession in place. Demoted A\u2192B.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.dentonchiro.com/about-us/meet-the-team.html",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 78,
+      "layer1_comment": "Founder Dr. Kent Noell, est. ~70 (47-yr practice since 1978).",
+      "layer2_sellability": 82,
+      "layer2_comment": "Multi-DC group (5 DCs), 25+ yr office manager. Plausible $2M-$4M rev.",
+      "layer3_behavioral_trigger": 35,
+      "layer3_comment": "Melissa Noell same-surname \u2192 strong family successor signal. Already structured for internal transition.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Denton (Denton County) \u2014 major metro.",
+      "final_score": 65,
+      "final_tier": "B_forward",
+      "final_comment": "Founder Dr. Kent Noell (47 yrs, since 1978); 5-DC group includes family-surname match Dr. Melissa Noell + 3 other DCs. Live team page fetched 2026-05-17. Internal family succession in place. B_forward.",
+      "value_add_thesis": "Strong B candidate \u2014 sizable 5-DC practice with family succession; if outside acquirer needed, this is forward-grade.",
+      "confidence": "high",
+      "data_completeness": 0.55
+    },
+    {
+      "legal_name": "Walker Chiropractic Clinic",
+      "dba_name": "Walker Chiropractic Clinic",
+      "address": "105 Boland St",
+      "city": "Fort Worth",
+      "county": "Tarrant",
+      "state": "TX",
+      "zip": "76107",
+      "phone": "(817) 332-1234",
+      "website": "https://walkerchiroclinic.com/",
+      "owner_name": "Dr. Jason Walker, D.C. (Parker grad, since 2009)",
+      "owner_age_estimate": 45,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 16,
+      "years_in_business": 16,
+      "provider_count_estimate": 1,
+      "employee_count_estimate": 2,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://walkerchiroclinic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "jason_walker_only_2009"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "positive",
+          "evidence": "Live home page (fetched 2026-05-17) lists only Dr. Jason Walker (since 2009). 'Don Walker DC' from search snippet not confirmed on live site \u2014 could be father retired. Solo at present. But 16-yr tenure + younger owner = far from natural-exit window.",
+          "source": "live_website_fetch",
+          "source_url": "https://walkerchiroclinic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 30,
+      "layer1_comment": "Dr. Jason Walker, ~45, 16-yr tenure. Younger owner \u2014 not in natural-exit window.",
+      "layer2_sellability": 72,
+      "layer2_comment": "Solo 16-yr Fort Worth practice. Specialties: x-ray, ultrasound, children, sports, elder, spinal adjustment. M-F 9-6 with Thursdays closed. Plausible $400K-$700K rev.",
+      "layer3_behavioral_trigger": 50,
+      "layer3_comment": "2 coasting tells: closed Thursdays + lunch 12-2 daily. Online scheduling exists. Not full coasting.",
+      "layer4_market_pull": 78,
+      "layer4_comment": "Fort Worth (Tarrant) \u2014 major metro.",
+      "final_score": 53,
+      "final_tier": "C_watch",
+      "final_comment": "Dr. Jason Walker (Parker grad, since 2009), solo 16-yr Fort Worth practice. Live home-page fetch on walkerchiroclinic.com 2026-05-17 confirms solo. Younger owner \u2014 far from natural-exit window. C_watch (re-score in 5+ yrs).",
+      "value_add_thesis": "Wrong-timing target. Watch.",
+      "confidence": "high",
+      "data_completeness": 0.5
+    },
+    {
+      "legal_name": "Rock Chiropractic",
+      "dba_name": "Rock Chiropractic",
+      "address": null,
+      "city": "Round Rock",
+      "county": "Williamson",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.rockchiro.com/",
+      "owner_name": "Dr. Paul David McCartney (Life U 1995) + Dr. Doreen Groves (Life U Georgia, associate)",
+      "owner_age_estimate": 56,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 30,
+      "years_in_business": 30,
+      "provider_count_estimate": 2,
+      "employee_count_estimate": 4,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.rockchiro.com/about_us",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "paul_mccartney_dr_rock",
+            "doreen_groves_associate",
+            "wife_patti_non_DC"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "negative",
+          "evidence": "Live about page (fetched 2026-05-17) names Dr. Paul McCartney (Dr. Rock, Life U 1995) AND Dr. Doreen Groves (Life U Georgia) as associate DC. Internal-buy-in candidate present. Demoted A\u2192B.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.rockchiro.com/about_us",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Dr. Paul McCartney ~56 (Life U 1995, 30-yr tenure since 1995). Younger end of natural-exit window.",
+      "layer2_sellability": 75,
+      "layer2_comment": "2 DCs + receptionist + new patient coord + massage. Plausible $700K-$1.2M rev.",
+      "layer3_behavioral_trigger": 38,
+      "layer3_comment": "Associate DC Doreen Groves present = internal-buy-in candidate.",
+      "layer4_market_pull": 78,
+      "layer4_comment": "Round Rock (Williamson) \u2014 major metro suburb of Austin.",
+      "final_score": 59,
+      "final_tier": "C_watch",
+      "final_comment": "Dr. Paul McCartney (Dr. Rock, Life U 1995) + associate Dr. Doreen Groves. Live about page 2026-05-17 confirms 2-DC structure. Younger owner + internal successor = wrong thesis. C_watch.",
+      "value_add_thesis": "Not a fit \u2014 younger owner + internal successor.",
+      "confidence": "high",
+      "data_completeness": 0.5
+    },
+    {
+      "legal_name": "Butler Chiropractic",
+      "dba_name": "Butler Chiropractic",
+      "address": "1501 Cross Timbers Road #200",
+      "city": "Flower Mound",
+      "county": "Denton",
+      "state": "TX",
+      "zip": "75028",
+      "phone": "(972) 221-7533",
+      "website": "https://www.butlerchiropractic.com/",
+      "owner_name": "Dr. Andre Taylor, D.C. (current; Butler is legacy brand)",
+      "owner_age_estimate": 50,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 30,
+      "years_in_business": 30,
+      "provider_count_estimate": 1,
+      "employee_count_estimate": 2,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "live_website_fetch",
+          "url": "https://www.butlerchiropractic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "dr_andre_taylor_current",
+            "30_years_service",
+            "name_mismatch"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "negative",
+          "evidence": "Live home page (fetched 2026-05-17) names ONLY Dr. Andre Taylor. Brand 'Butler Chiropractic' vs current DC 'Dr. Taylor' = name mismatch suggesting Butler already sold to Taylor. Tenure 30 yrs is the brand's, not Taylor's. Demoted A\u2192B/C.",
+          "source": "live_website_fetch",
+          "source_url": "https://www.butlerchiropractic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 40,
+      "layer1_comment": "Owner-of-record Dr. Andre Taylor may be the post-sale operator \u2014 brand-name mismatch = silent succession already complete.",
+      "layer2_sellability": 72,
+      "layer2_comment": "Solo Flower Mound practice. Plausible $400K-$700K rev.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Brand-name mismatch is a failure-mode signal \u2014 Butler already sold. Current owner Taylor is likely the recent buyer.",
+      "layer4_market_pull": 78,
+      "layer4_comment": "Flower Mound (Denton) \u2014 premium DFW suburb.",
+      "final_score": 53,
+      "final_tier": "C_watch",
+      "final_comment": "Butler Chiropractic Flower Mound \u2014 live fetch on butlerchiropractic.com 2026-05-17 reveals current DC is Dr. Andre Taylor (not Butler). 30-yr brand tenure \u2260 Taylor's ownership tenure. Likely a recent post-sale operator. C_watch pending TBCE license-history check.",
+      "value_add_thesis": "Wrong-timing target \u2014 recent buyer.",
+      "confidence": "low",
+      "data_completeness": 0.45
+    },
+    {
+      "legal_name": "Werner Chiropractic Center",
+      "dba_name": "Werner Chiropractic",
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://chiropractorshoustontexas.com/",
+      "owner_name": "Dr. Werner",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 30,
+      "years_in_business": 30,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://chiropractorshoustontexas.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: over 30 yrs Houston Upper Kirby/Greenway/Bellaire \u2014 solo claim from search snippet; live team-page not fetched in this run",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://chiropractorshoustontexas.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~30 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "over 30 yrs Houston Upper Kirby/Greenway/Bellaire \u2014 solo claim from search snippet; live team-page not fetched in this run. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Houston (Harris) \u2014 TX major metro priority county.",
+      "final_score": 50,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. over 30 yrs Houston Upper Kirby/Greenway/Bellaire \u2014 solo claim from search snippet; live team-page not fetched in this run. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Discover Chiropractic & Wellness Cypress",
+      "dba_name": "Discover Chiropractic & Wellness",
+      "address": null,
+      "city": "Cypress",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.discoverchirohouston.com/",
+      "owner_name": "Dr. Mick + Dr. Stephanie Mahan (father-daughter)",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 25,
+      "years_in_business": 25,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.discoverchirohouston.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Father-daughter team verified live-fetch 2026-05-17 \u2014 internal succession in place",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.discoverchirohouston.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~25 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Father-daughter team verified live-fetch 2026-05-17 \u2014 internal succession in place. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Cypress (Harris) \u2014 TX major metro priority county.",
+      "final_score": 50,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Father-daughter team verified live-fetch 2026-05-17 \u2014 internal succession in place. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Sunrise Chiropractic Clinics",
+      "dba_name": "Sunrise Chiropractic",
+      "address": null,
+      "city": "The Woodlands",
+      "county": "Montgomery",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.sunriseclinics.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.sunriseclinics.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Live team-page not fetched in this run",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.sunriseclinics.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Live team-page not fetched in this run. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "The Woodlands (Montgomery) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Live team-page not fetched in this run. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Dr. Dana McKirahan Chiropractic",
+      "dba_name": "Dana McKirahan DC PA",
+      "address": null,
+      "city": "Conroe",
+      "county": "Montgomery",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "owner_name": "Dr. Dana McKirahan",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 31,
+      "years_in_business": 31,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "no_url_verified",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: since 1994 per search snippet; website unknown; live team-page not fetched",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~31 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "since 1994 per search snippet; website unknown; live team-page not fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Conroe (Montgomery) \u2014 TX major metro priority county.",
+      "final_score": 50,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. since 1994 per search snippet; website unknown; live team-page not fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Le Bon Chiropractic",
+      "dba_name": "Le Bon Chiropractic",
+      "address": null,
+      "city": "Spring",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.lebonchiro.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.lebonchiro.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Live team-page not fetched",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.lebonchiro.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Live team-page not fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Spring (Harris) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Live team-page not fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Just Health Center / Woodlands Chiropractor",
+      "dba_name": "Just Health Center",
+      "address": null,
+      "city": "Spring",
+      "county": "Harris",
+      "state": "TX",
+      "zip": "77386",
+      "phone": null,
+      "website": "https://www.justhealthcenter.net/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.justhealthcenter.net/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Live team-page not fetched",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.justhealthcenter.net/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Live team-page not fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Spring (Harris) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Live team-page not fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Sugar Mill Chiropractic and Acupuncture",
+      "dba_name": "Sugar Mill Chiropractic",
+      "address": "54 Sugar Creek Center Blvd #100",
+      "city": "Sugar Land",
+      "county": "Fort Bend",
+      "state": "TX",
+      "zip": "77478",
+      "phone": null,
+      "website": "https://www.sugarmillchiro.com/",
+      "owner_name": "5 DCs (multi-DC group)",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.sugarmillchiro.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: 5 DCs verified live-fetch 2026-05-17 \u2014 multi-DC group, not coasting solo profile",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.sugarmillchiro.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "5 DCs verified live-fetch 2026-05-17 \u2014 multi-DC group, not coasting solo profile. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Sugar Land (Fort Bend) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. 5 DCs verified live-fetch 2026-05-17 \u2014 multi-DC group, not coasting solo profile. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Sugar Land Chiropractor (Kaemmerling)",
+      "dba_name": "Family Chiropractic Care",
+      "address": "12926 Dairy Ashford #182",
+      "city": "Sugar Land",
+      "county": "Fort Bend",
+      "state": "TX",
+      "zip": "77478",
+      "phone": null,
+      "website": "https://www.sugarlandchiro.com/",
+      "owner_name": "Dr. Edward Kaemmerling",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 20,
+      "years_in_business": 20,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.sugarlandchiro.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Solo Palmer grad, 20+ yrs \u2014 confirmed solo live-fetch; younger owner profile",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.sugarlandchiro.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~20 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Solo Palmer grad, 20+ yrs \u2014 confirmed solo live-fetch; younger owner profile. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Sugar Land (Fort Bend) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Solo Palmer grad, 20+ yrs \u2014 confirmed solo live-fetch; younger owner profile. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Koudelka Health Center",
+      "dba_name": "Koudelka Health Center",
+      "address": null,
+      "city": "Sugar Land",
+      "county": "Fort Bend",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.koudelkahealthcenter.com/",
+      "owner_name": "Dr. Todd Koudelka (Houston Texans team chiro)",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.koudelkahealthcenter.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Live team-page not directly fetched; high-profile name",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.koudelkahealthcenter.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Live team-page not directly fetched; high-profile name. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Sugar Land (Fort Bend) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Live team-page not directly fetched; high-profile name. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Simon Spine",
+      "dba_name": "Simon Spine",
+      "address": "14019 Southwest Fwy #310",
+      "city": "Sugar Land",
+      "county": "Fort Bend",
+      "state": "TX",
+      "zip": "77478",
+      "phone": null,
+      "website": "https://medinasportsandspine.com/",
+      "owner_name": "Dr. Jose Simon",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://medinasportsandspine.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Solo per live-fetch 2026-05-17; modern ChiroTouch PMS = less coasting signal",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://medinasportsandspine.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Solo per live-fetch 2026-05-17; modern ChiroTouch PMS = less coasting signal. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Sugar Land (Fort Bend) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Solo per live-fetch 2026-05-17; modern ChiroTouch PMS = less coasting signal. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Premier Sports Chiropractic",
+      "dba_name": "Premier Sports Chiropractic",
+      "address": null,
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://premiersportschiropractic.com/",
+      "owner_name": "Dr. Grimm",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 16,
+      "years_in_business": 16,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://premiersportschiropractic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Founded 2009; younger practice",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://premiersportschiropractic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~16 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Founded 2009; younger practice. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Dallas (Dallas) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Founded 2009; younger practice. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Park Cities Neuropathy & Wellness",
+      "dba_name": "Park Cities Neuropathy & Wellness",
+      "address": null,
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.highlandparkchiropractors.com/",
+      "owner_name": "Dr. Petersen (SMU team chiro)",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.highlandparkchiropractors.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Highland Park premium ZIP; live team-page not directly fetched",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.highlandparkchiropractors.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Highland Park premium ZIP; live team-page not directly fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Dallas (Dallas) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Highland Park premium ZIP; live team-page not directly fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Core Lifestyle Clinic",
+      "dba_name": "Core Lifestyle Clinic",
+      "address": null,
+      "city": "Dallas",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.corelifestyleclinic.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.corelifestyleclinic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Park Cities area; live team-page not fetched",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.corelifestyleclinic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Park Cities area; live team-page not fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Dallas (Dallas) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Park Cities area; live team-page not fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Draughon Chiropractic",
+      "dba_name": "Draughon Chiropractic",
+      "address": null,
+      "city": "Mesquite",
+      "county": "Dallas",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.draughonchiropractic.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.draughonchiropractic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Multi-area East Dallas; live team-page not fetched",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.draughonchiropractic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Multi-area East Dallas; live team-page not fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Mesquite (Dallas) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Multi-area East Dallas; live team-page not fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Texas Injury Clinic",
+      "dba_name": "Texas Injury Clinic",
+      "address": "2121 North Main Street",
+      "city": "Fort Worth",
+      "county": "Tarrant",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.texasinjuryclinic.com/",
+      "owner_name": "Dr. Mark Williams",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 30,
+      "years_in_business": 30,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.texasinjuryclinic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Williams since 1995; clinic founded 1999; PI-injury focus",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.texasinjuryclinic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~30 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Williams since 1995; clinic founded 1999; PI-injury focus. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Fort Worth (Tarrant) \u2014 TX major metro priority county.",
+      "final_score": 50,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Williams since 1995; clinic founded 1999; PI-injury focus. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Jernigan Chiropractic",
+      "dba_name": "James Matthew Jernigan DC",
+      "address": null,
+      "city": "Fort Worth",
+      "county": "Tarrant",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "owner_name": "James Matthew Jernigan DC FICC",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 35,
+      "years_in_business": 35,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "no_url_verified",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: 35+ yrs Fort Worth; website unknown; no live team-page fetched",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~35 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "35+ yrs Fort Worth; website unknown; no live team-page fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Fort Worth (Tarrant) \u2014 TX major metro priority county.",
+      "final_score": 50,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. 35+ yrs Fort Worth; website unknown; no live team-page fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Meyer Chiropractic Center",
+      "dba_name": "Meyer Chiropractic Center",
+      "address": "5520 South Cooper Street #111",
+      "city": "Arlington",
+      "county": "Tarrant",
+      "state": "TX",
+      "zip": "76017",
+      "phone": null,
+      "website": "https://www.meyerchiro.com/",
+      "owner_name": "Dr. Paul Meyer",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 40,
+      "years_in_business": 40,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.meyerchiro.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Founded 1985 per home-page fetch 2026-05-17; team page returned 404 = unable to verify successor \u2014 capped at C_watch per skill non-negotiable \u00a72",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.meyerchiro.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~40 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Founded 1985 per home-page fetch 2026-05-17; team page returned 404 = unable to verify successor \u2014 capped at C_watch per skill non-negotiable \u00a72. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Arlington (Tarrant) \u2014 TX major metro priority county.",
+      "final_score": 50,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Founded 1985 per home-page fetch 2026-05-17; team page returned 404 = unable to verify successor \u2014 capped at C_watch per skill non-negotiable \u00a72. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Sandvall Chiropractic",
+      "dba_name": "Chiropractic Care Solutions",
+      "address": null,
+      "city": "Arlington",
+      "county": "Tarrant",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "owner_name": "Dr. Dale Sandvall",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 30,
+      "years_in_business": 30,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "no_url_verified",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: 30+ yrs experience claim from search snippet",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~30 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "30+ yrs experience claim from search snippet. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Arlington (Tarrant) \u2014 TX major metro priority county.",
+      "final_score": 50,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. 30+ yrs experience claim from search snippet. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Manley Chiropractic",
+      "dba_name": "Manley Chiropractic",
+      "address": null,
+      "city": "Arlington",
+      "county": "Tarrant",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "owner_name": "Dr. Jeff Manley",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "no_url_verified",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Family-owned per search snippet; no website found",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Family-owned per search snippet; no website found. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Arlington (Tarrant) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Family-owned per search snippet; no website found. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "LiveWell Chiropractic & Wellness",
+      "dba_name": "LiveWell DFW",
+      "address": "749 Lonesome Dove Trail",
+      "city": "Hurst",
+      "county": "Tarrant",
+      "state": "TX",
+      "zip": "76054",
+      "phone": null,
+      "website": "https://www.livewelldfw.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.livewelldfw.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Multi-area DFW practice",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.livewelldfw.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Multi-area DFW practice. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Hurst (Tarrant) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Multi-area DFW practice. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Optimum Chiropractic & Wellness",
+      "dba_name": "Optimum Chiropractic & Wellness",
+      "address": "6224 Colleyville Blvd Ste B",
+      "city": "Colleyville",
+      "county": "Tarrant",
+      "state": "TX",
+      "zip": "76034",
+      "phone": null,
+      "website": "https://www.optimumchiropracticwellness.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.optimumchiropracticwellness.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Colleyville/Grapevine premium ZIPs",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.optimumchiropracticwellness.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Colleyville/Grapevine premium ZIPs. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Colleyville (Tarrant) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Colleyville/Grapevine premium ZIPs. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Touch of Life Chiropractic",
+      "dba_name": "Touch of Life Chiropractic",
+      "address": null,
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "owner_name": "Dr. Robin",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 33,
+      "years_in_business": 33,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "no_url_verified",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Austin since 1992 per search snippet",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~33 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Austin since 1992 per search snippet. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Austin (Travis) \u2014 TX major metro priority county.",
+      "final_score": 50,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Austin since 1992 per search snippet. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Austin Holistic Health (Dr. John Bandy)",
+      "dba_name": "Austin Holistic Health",
+      "address": null,
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.austinholistichealth.com/",
+      "owner_name": "Dr. John Bandy",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.austinholistichealth.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Holistic established",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.austinholistichealth.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Holistic established. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Austin (Travis) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Holistic established. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Westlake Chiropractic PLLC",
+      "dba_name": "Westlake Chiropractic",
+      "address": "300 Beardsley Ln Ste C201",
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": "78746",
+      "phone": null,
+      "website": "https://www.westlakechiropractic.com/",
+      "owner_name": "Dr. Katerina Sheffield Dickey",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 15,
+      "years_in_business": 15,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.westlakechiropractic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Founded 2010 \u2014 younger practice; Westlake premium",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.westlakechiropractic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~15 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Founded 2010 \u2014 younger practice; Westlake premium. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Austin (Travis) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Founded 2010 \u2014 younger practice; Westlake premium. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Family Chiropractic Center West Lake Hills",
+      "dba_name": "Family Chiropractic Center",
+      "address": "4201 Bee Caves Rd Suite C-212",
+      "city": "West Lake Hills",
+      "county": "Travis",
+      "state": "TX",
+      "zip": "78746",
+      "phone": null,
+      "website": "https://www.famchiro.com/",
+      "owner_name": "Dr. Mark Sanders + Dr. Steven Peters",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.famchiro.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: 2 DCs \u2014 partnership structure",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.famchiro.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "2 DCs \u2014 partnership structure. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "West Lake Hills (Travis) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. 2 DCs \u2014 partnership structure. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Austin Longevity Center",
+      "dba_name": "Austin Longevity Center",
+      "address": null,
+      "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://austinlongevity.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://austinlongevity.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Westlake Hills premium",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://austinlongevity.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Westlake Hills premium. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Austin (Travis) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Westlake Hills premium. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Alamo Heights Chiropractic Health Center",
+      "dba_name": "Alamo Heights Chiropractic",
+      "address": "4501 McCullough Ave",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": "78212",
+      "phone": null,
+      "website": "https://www.alamoheightschiropractic.com/",
+      "owner_name": "Dr. Taylor",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.alamoheightschiropractic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Three-phase wellness; live team-page not directly fetched",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.alamoheightschiropractic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Three-phase wellness; live team-page not directly fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "San Antonio (Bexar) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Three-phase wellness; live team-page not directly fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "San Antonio Family Chiropractic",
+      "dba_name": "San Antonio Family Chiropractic",
+      "address": "9386 Huebner Road Suite 100",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://safamilychiro.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://safamilychiro.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Site ECONNREFUSED on fetch 2026-05-17 = disqualifying \u2014 capped at C_watch",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://safamilychiro.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Site ECONNREFUSED on fetch 2026-05-17 = disqualifying \u2014 capped at C_watch. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "San Antonio (Bexar) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Site ECONNREFUSED on fetch 2026-05-17 = disqualifying \u2014 capped at C_watch. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Stone Oak Chiropractic",
+      "dba_name": "Stone Oak Chiropractic",
+      "address": "510 Med Court Suite 207",
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": "78258",
+      "phone": null,
+      "website": null,
+      "owner_name": "Dr. Tina Grau",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "no_url_verified",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Established Stone Oak; no website found",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Established Stone Oak; no website found. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "San Antonio (Bexar) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Established Stone Oak; no website found. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Golab Center",
+      "dba_name": "Golab Center for Back & Joint Relief",
+      "address": null,
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.drgolabdc.com/",
+      "owner_name": "Dr. Michael Golab",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.drgolabdc.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Live team-page not directly fetched",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.drgolabdc.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Live team-page not directly fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "San Antonio (Bexar) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Live team-page not directly fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Advantage Chiropractic & Physical Therapy",
+      "dba_name": "Advantage CPT",
+      "address": null,
+      "city": "San Antonio",
+      "county": "Bexar",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.advantagecpt.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.advantagecpt.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Live team-page not directly fetched",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.advantagecpt.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Live team-page not directly fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "San Antonio (Bexar) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Live team-page not directly fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Farrar Family Chiropractic",
+      "dba_name": "Farrar Family Chiropractic",
+      "address": null,
+      "city": "Plano",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.farrarchiro.com/",
+      "owner_name": "Dr. Kevin Farrar",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.farrarchiro.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Plano/McKinney; live team-page not fetched",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.farrarchiro.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Plano/McKinney; live team-page not fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Plano (Collin) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Plano/McKinney; live team-page not fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Spector Chiropractic PLLC",
+      "dba_name": "Spector Chiropractic",
+      "address": null,
+      "city": "Plano",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.spectorchiropracticdfw.com/",
+      "owner_name": "Dr. Spector",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.spectorchiropracticdfw.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Plano established",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.spectorchiropracticdfw.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Plano established. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Plano (Collin) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Plano established. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Craig Ranch Chiropractic",
+      "dba_name": "Chiropractor McKinney TX",
+      "address": null,
+      "city": "McKinney",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.chiropractorsmckinney.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.chiropractorsmckinney.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Multi-area McKinney",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.chiropractorsmckinney.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Multi-area McKinney. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "McKinney (Collin) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Multi-area McKinney. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Frisco Chiropractor",
+      "dba_name": "Frisco Chiropractor",
+      "address": null,
+      "city": "Frisco",
+      "county": "Collin",
+      "state": "TX",
+      "zip": "75034",
+      "phone": null,
+      "website": "https://www.frisco-chiropractor.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.frisco-chiropractor.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: 75034 established",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.frisco-chiropractor.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "75034 established. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Frisco (Collin) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. 75034 established. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Taylor Family Chiropractic",
+      "dba_name": "Taylor Family Chiropractic Frisco",
+      "address": null,
+      "city": "Frisco",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.drmarktaylor.com/",
+      "owner_name": "Dr. Mark Taylor",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.drmarktaylor.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Family practice",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.drmarktaylor.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Family practice. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Frisco (Collin) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Family practice. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Eldorado Chiropractic",
+      "dba_name": "Eldorado Chiropractic",
+      "address": null,
+      "city": "McKinney",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.chiropractormckinney.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.chiropractormckinney.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: McKinney/Frisco",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.chiropractormckinney.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "McKinney/Frisco. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "McKinney (Collin) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. McKinney/Frisco. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Wojnicki Chiropractic",
+      "dba_name": "Wojnicki Chiropractic",
+      "address": null,
+      "city": "Allen",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "owner_name": "Dr. Wojnicki",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 20,
+      "years_in_business": 20,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "no_url_verified",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Allen 20+ years claim",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~20 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Allen 20+ years claim. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Allen (Collin) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Allen 20+ years claim. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Allen Family Chiropractic",
+      "dba_name": "Allen Family Chiropractic",
+      "address": null,
+      "city": "Allen",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Allen family practice; no live URL",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Allen family practice; no live URL. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Allen (Collin) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Allen family practice; no live URL. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Wylie Wellness Chiropractic",
+      "dba_name": "Wylie Wellness Chiropractic",
+      "address": null,
+      "city": "Wylie",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "owner_name": "Dr. Joel Davis",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "no_url_verified",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Wylie renowned; no website verified",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Wylie renowned; no website verified. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Wylie (Collin) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Wylie renowned; no website verified. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Southwestern Chiropractic and Wellness Center",
+      "dba_name": "Southwestern Chiropractic",
+      "address": null,
+      "city": "Wylie",
+      "county": "Collin",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://southwesternchiropractic.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://southwesternchiropractic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Multi-area Wylie/Sachse/Lavon/Murphy",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://southwesternchiropractic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Multi-area Wylie/Sachse/Lavon/Murphy. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Wylie (Collin) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Multi-area Wylie/Sachse/Lavon/Murphy. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Family Chiropractic Center Denton",
+      "dba_name": "The Family Chiropractic Center",
+      "address": null,
+      "city": "Denton",
+      "county": "Denton",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "http://www.thefamilychiropracticcenter.com/",
+      "owner_name": "Dr. Jan Nix + Dr. Chuck Tillotson",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 26,
+      "years_in_business": 26,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "http://www.thefamilychiropracticcenter.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: SSL cert error on team-page fetch 2026-05-17 = disqualifying per skill rules; husband-wife Parker 1999 grads",
+          "source": "live_website_fetch_pending",
+          "source_url": "http://www.thefamilychiropracticcenter.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~26 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "SSL cert error on team-page fetch 2026-05-17 = disqualifying per skill rules; husband-wife Parker 1999 grads. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Denton (Denton) \u2014 TX major metro priority county.",
+      "final_score": 50,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. SSL cert error on team-page fetch 2026-05-17 = disqualifying per skill rules; husband-wife Parker 1999 grads. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Edwards Family Chiropractic",
+      "dba_name": "Edwards Family Chiropractic Denton",
+      "address": null,
+      "city": "Denton",
+      "county": "Denton",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.edwardsfamilychiropractic.com/",
+      "owner_name": "Dr. Edwards",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.edwardsfamilychiropractic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Family practice established",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.edwardsfamilychiropractic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Family practice established. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Denton (Denton) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Family practice established. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Williams Wellness Chiropractic",
+      "dba_name": "Williams Wellness Chiropractic",
+      "address": null,
+      "city": "Cedar Park",
+      "county": "Williamson",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://williamswellnesschiropractic.com/",
+      "owner_name": "Dr. Jason Williams",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 10,
+      "years_in_business": 10,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://williamswellnesschiropractic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Established 2015 \u2014 under 5-yr-tenure-relative-to-owner concern \u2192 cap",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://williamswellnesschiropractic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~10 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Established 2015 \u2014 under 5-yr-tenure-relative-to-owner concern \u2192 cap. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Cedar Park (Williamson) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Established 2015 \u2014 under 5-yr-tenure-relative-to-owner concern \u2192 cap. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Cedar Park Family Chiropractic",
+      "dba_name": "Cedar Park Family Chiropractic",
+      "address": null,
+      "city": "Cedar Park",
+      "county": "Williamson",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.cedarparkfamilychiropractic.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.cedarparkfamilychiropractic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Sports therapy; live team-page not fetched",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.cedarparkfamilychiropractic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Sports therapy; live team-page not fetched. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Cedar Park (Williamson) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Sports therapy; live team-page not fetched. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Melot Chiropractic",
+      "dba_name": "Melot Chiropractic",
+      "address": null,
+      "city": "Cedar Park",
+      "county": "Williamson",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.melotchiropractic.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 30,
+      "years_in_business": 30,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.melotchiropractic.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: 30+ yrs combined experience claim",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.melotchiropractic.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~30 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "30+ yrs combined experience claim. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Cedar Park (Williamson) \u2014 TX major metro priority county.",
+      "final_score": 50,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. 30+ yrs combined experience claim. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Parkway Family Chiropractic",
+      "dba_name": "Parkway Family Chiropractic",
+      "address": null,
+      "city": "Sugar Land",
+      "county": "Fort Bend",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.parkwayfamilychirosugarland.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.parkwayfamilychirosugarland.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Prenatal/pediatric/family Sugar Land",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.parkwayfamilychirosugarland.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Prenatal/pediatric/family Sugar Land. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Sugar Land (Fort Bend) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Prenatal/pediatric/family Sugar Land. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Scoliosis Treatment Center",
+      "dba_name": "Scoliosis Treatment Center Sugar Land",
+      "address": null,
+      "city": "Sugar Land",
+      "county": "Fort Bend",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://www.scoliosistreatmentctr.com/",
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://www.scoliosistreatmentctr.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Scoliosis specialty Sugar Land",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://www.scoliosistreatmentctr.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Scoliosis specialty Sugar Land. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Sugar Land (Fort Bend) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Scoliosis specialty Sugar Land. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Medina Sports and Spine",
+      "dba_name": "Medina Chiropractic Sports & Spine",
+      "address": null,
+      "city": "Sugar Land",
+      "county": "Fort Bend",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": "https://medinasportsandspine.com/",
+      "owner_name": "Dr. Medina",
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "https://medinasportsandspine.com/",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Sports & spine Sugar Land",
+          "source": "live_website_fetch_pending",
+          "source_url": "https://medinasportsandspine.com/",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Sports & spine Sugar Land. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Sugar Land (Fort Bend) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Sports & spine Sugar Land. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Tondera Family Practice and Chiropractic",
+      "dba_name": "Tondera Family Practice",
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "owner_name": "Dr. Tondera",
+      "owner_age_estimate": null,
+      "owner_age_source": "license_tenure_proxy",
+      "owner_tenure_years": 33,
+      "years_in_business": 33,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [
+        {
+          "source": "web_search_snippet",
+          "url": "no_url_verified",
+          "fetched_at": "2026-05-17",
+          "fields": [
+            "search_snippet_only"
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: since 1992 per search snippet; no website verified",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 50,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~33 yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "since 1992 per search snippet; no website verified. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Houston (Harris) \u2014 TX major metro priority county.",
+      "final_score": 50,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. since 1992 per search snippet; no website verified. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Bellaire Chiropractic Clinic",
+      "dba_name": "Bellaire Chiropractic Clinic",
+      "address": "10786 Bellaire Blvd",
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Bellaire premium ZIP; no website verified",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Bellaire premium ZIP; no website verified. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Houston (Harris) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Bellaire premium ZIP; no website verified. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "West University Wellness",
+      "dba_name": "Bellaire Chiropractic & Massage",
+      "address": "5107 Bellaire Blvd",
+      "city": "Bellaire",
+      "county": "Harris",
+      "state": "TX",
+      "zip": "77401",
+      "phone": null,
+      "website": null,
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Bellaire premium ZIP; no website verified",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Bellaire premium ZIP; no website verified. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Bellaire (Harris) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Bellaire premium ZIP; no website verified. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    },
+    {
+      "legal_name": "Family Chiropractic Center",
+      "dba_name": "Family Chiropractic Center Houston",
+      "address": null,
+      "city": "Houston",
+      "county": "Harris",
+      "state": "TX",
+      "zip": null,
+      "phone": null,
+      "website": null,
+      "owner_name": null,
+      "owner_age_estimate": null,
+      "owner_age_source": null,
+      "owner_tenure_years": null,
+      "years_in_business": null,
+      "provider_count_estimate": null,
+      "employee_count_estimate": null,
+      "is_distressed": false,
+      "distress_reasons": [],
+      "data_sources": [],
+      "signals": [
+        {
+          "layer": 3,
+          "signal_key": "successor_check_live_fetch",
+          "direction": "disqualifying",
+          "evidence": "Spine entry built from web research; live team-page direct fetch not completed in this run. Per skill non-negotiable \u00a72, capping confidence=low and tier=C_watch until live-fetch can verify successor composition. Note: Generic name; no website verified",
+          "source": "no_live_url",
+          "source_url": "no_url",
+          "observed_at": "2026-05-17"
+        }
+      ],
+      "layer1_base_rate": 35,
+      "layer1_comment": "Owner age = license_tenure_proxy or unknown. Tenure ~None yrs. Capping L1 per insufficient verification.",
+      "layer2_sellability": 60,
+      "layer2_comment": "Generic name; no website verified. Plausible SBA-financeable but unverified.",
+      "layer3_behavioral_trigger": 40,
+      "layer3_comment": "Live team-page fetch not completed \u2014 per skill non-negotiable, capping below A/B-tier gate.",
+      "layer4_market_pull": 75,
+      "layer4_comment": "Houston (Harris) \u2014 TX major metro priority county.",
+      "final_score": 45,
+      "final_tier": "C_watch",
+      "final_comment": "Spine entry, live team-page not fetched in this run. Generic name; no website verified. Per skill non-negotiable \u00a72, tier capped at C_watch until live-fetch completes.",
+      "value_add_thesis": "Pending live verification.",
+      "confidence": "low",
+      "data_completeness": 0.25
+    }
+  ]
+}

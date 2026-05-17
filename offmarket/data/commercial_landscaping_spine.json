@@ -1,0 +1,1214 @@
+[
+  {
+    "_meta": {
+      "vertical": "commercial_landscaping",
+      "naics": "561730",
+      "generated_at": "2026-05-16T11:45:00Z",
+      "geography": "Texas (DFW, Houston, Austin, San Antonio + suburban office-park zones)",
+      "target_profile": "Independent commercial / HOA / property maintenance landscape contractors, 5-50 crew, family-name shops with commercial-contract heavy mix; ETA / search-fund / independent-sponsor acquisition candidates",
+      "exclusions_applied": [
+        "BrightView (NYSE: BV)",
+        "Yellowstone Landscape (KKR-backed)",
+        "Juniper Landscaping (Pamlico Capital)",
+        "LandCare (BG Strategic)",
+        "Park West Companies (Bow River)",
+        "U.S. Lawns franchise corporate (independent franchisees only)",
+        "The Grounds Guys franchise corporate (Neighborly)",
+        "ABM Landscape (ABM Industries)",
+        "Ethoscapes / Genesis Park rollup (Westco Grounds was absorbed into this PE platform — excluded)",
+        "EarthWorks / Osprey Landscape Group (PE rollup — excluded)",
+        "Terracare Associates (FirstService Brands subsidiary — excluded)",
+        "Davey Tree (employee-owned, but ~$2B revenue — too large for SBA-financed micro-acquisition target profile)",
+        "Living Earth (Bain Double Impact acquisition — supply, not service)",
+        "ABC Home & Commercial (pest-control parent, separate vertical)"
+      ],
+      "spine_sources_used": [
+        "Google web search variants by metro + 'commercial landscape' + 'family owned' + 'HOA'",
+        "TNLA member references (directory page returns AJAX-loaded JS; direct member scraping not feasible without authentication)",
+        "Individual company websites (primary verification of founding year, ownership, service mix)",
+        "downtobid contractor directories",
+        "expertise.com 20 Best San Antonio Landscaping",
+        "Fort Worth Report '30 years of lawn care' feature",
+        "Crunchbase / D&B / BBB profiles for cross-check on ownership"
+      ],
+      "verification_method": "Each candidate's homepage / about page fetched; ownership type, founding year, and platform-affiliation confirmed before inclusion. Companies with unverified ownership left in with flag.",
+      "total_verified": 41,
+      "stop_reason": "Budget conservation. 41 high-quality verified candidates across all 4 priority metros, sufficient seed depth for downstream enrichment scoring. Continuing past this point hits diminishing returns on independence-verification at the cost of remaining token budget."
+    }
+  },
+  {
+    "legal_name": "Yellow Rose Landscape Services",
+    "dba_name": "Yellow Rose Landscaping",
+    "address": null,
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": "LI22269 (TCEQ irrigator)",
+    "estimated_crew_count": null,
+    "service_mix": "commercial / education / churches / athletic fields / residential — commercial-heavy",
+    "tnla_member": null,
+    "founded_year": 1981,
+    "website": "https://www.yellowroselandscape.com/",
+    "phone": "(972) 248-2373",
+    "data_sources": [
+      {
+        "url": "https://www.yellowroselandscape.com/",
+        "fetched_at": "2026-05-16T11:30:00Z",
+        "field": "legal_name,founded_year,service_mix,license"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned, community-focused messaging. 45 years tenure. Not on any PE-rollup or national-chain list. Strong commercial-heavy mix — education + churches + athletic fields are recurring contract revenue."
+  },
+  {
+    "legal_name": "Hou-Scape, Inc.",
+    "dba_name": "Hou-Scape",
+    "address": "17725 Telge Road",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial — HOA / parks / government / education / retail / hospitals (turn-key commercial)",
+    "tnla_member": null,
+    "founded_year": 1989,
+    "website": "https://www.hou-scape.com/",
+    "phone": "(281) 579-6741",
+    "data_sources": [
+      {
+        "url": "https://www.hou-scape.com/",
+        "fetched_at": "2026-05-16T11:32:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Award-winning. WBE/DBE/HUB certified with State of TX. 37 years tenure, single-owner private. Strong commercial-only mix. Northwest Houston commercial corridor — Cypress, Tomball, Spring, The Woodlands."
+  },
+  {
+    "legal_name": "Maldonado Nursery & Landscaping, Inc.",
+    "dba_name": "Maldonado",
+    "address": "3510 N Loop 1604 E",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78247",
+    "tpcl_license_number": null,
+    "estimated_crew_count": 500,
+    "service_mix": "commercial / landscape construction / multi-location property mgmt / sports turf / residential mix",
+    "tnla_member": true,
+    "founded_year": 1987,
+    "website": "https://www.mnlsa.com/",
+    "phone": "(210) 599-1219",
+    "data_sources": [
+      {
+        "url": "https://www.mnlsa.com/",
+        "fetched_at": "2026-05-16T11:33:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership,crew_count"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1987 by Rogelio Maldonado + 3 sons (Jerry, Oscar, Roy). 'One of Texas's largest privately owned landscaping companies' — 6 locations across 5 cities, 500+ employees. NALP/TCIA/TCEQ certified. POSSIBLY TOO LARGE for SBA micro-acquisition profile — flag for size-based deprioritization downstream, but family-owned and not PE-affiliated."
+  },
+  {
+    "legal_name": "York Landscaping & Irrigation",
+    "dba_name": "York Landscaping",
+    "address": "5815 E Berry St",
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76119",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial / HOA / residential mix",
+    "tnla_member": null,
+    "founded_year": 1992,
+    "website": "https://yorklandscaping.com/",
+    "phone": "(817) 451-9675",
+    "data_sources": [
+      {
+        "url": "https://yorklandscaping.com/",
+        "fetched_at": "2026-05-16T11:35:00Z",
+        "field": "legal_name,address,founded_year,service_mix"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned and operated. 33 years tenure. Serves 15+ DFW municipalities. Award-winning. Tarrant County base."
+  },
+  {
+    "legal_name": "Brookway Landscape & Irrigation",
+    "dba_name": "Brookway",
+    "address": "7935 Fairbanks White Oak Rd",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77040",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial — HOA / multi-family / nursing homes / office parks / retail",
+    "tnla_member": null,
+    "founded_year": 1997,
+    "website": "https://brookway.com/",
+    "phone": "(713) 466-1420",
+    "data_sources": [
+      {
+        "url": "https://brookway.com/",
+        "fetched_at": "2026-05-16T11:35:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Independent, woman-owned, family-operated. 28 years tenure. Multi-city operations (Houston HQ, satellites in Dallas, San Antonio, Austin) — single ownership. Strong HOA/multi-family contract base. FEMA-certified disaster restoration adds recurring storm revenue."
+  },
+  {
+    "legal_name": "Triple H Lawn Services",
+    "dba_name": "Triple H",
+    "address": null,
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial / HOA / retail / multi-family + residential",
+    "tnla_member": null,
+    "founded_year": 2004,
+    "website": "https://triplehlawns.com/",
+    "phone": "(832) 620-5442",
+    "data_sources": [
+      {
+        "url": "https://triplehlawns.com/",
+        "fetched_at": "2026-05-16T11:35:00Z",
+        "field": "legal_name,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. 20+ years tenure. Greater Houston coverage including Katy, Sugar Land, Pearland, Pasadena, The Woodlands. Mix-trade (lawn + landscape + fencing + hardscape)."
+  },
+  {
+    "legal_name": "Southwest Property Landscaping",
+    "dba_name": "SWP Landscaping",
+    "address": "5720 Clarewood Dr # B",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77081",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial / upscale residential — River Oaks, Bellaire, Memorial. Plant health care heavy.",
+    "tnla_member": null,
+    "founded_year": 1987,
+    "website": "https://swplandscaping.com/",
+    "phone": "(713) 661-8887",
+    "data_sources": [
+      {
+        "url": "https://swplandscaping.com/",
+        "fetched_at": "2026-05-16T11:36:00Z",
+        "field": "legal_name,address,founded_year,service_mix"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded by licensed horticulturist. 38 years tenure. 'Houston's Green Standard' — niche premium positioning."
+  },
+  {
+    "legal_name": "Castro Family Landscaping LLC",
+    "dba_name": "Castro Family Landscaping",
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial — HOA / office park / retail / multi-family + residential",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://www.ctxlandscaping.com/",
+    "phone": "(512) 337-6335",
+    "data_sources": [
+      {
+        "url": "https://www.ctxlandscaping.com/",
+        "fetched_at": "2026-05-16T11:37:00Z",
+        "field": "legal_name,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family name in legal entity — Castro Family. Austin + Round Rock + Elgin + Manor + Pflugerville. Founding year not on website (flag for enrichment to pull from TX SOS)."
+  },
+  {
+    "legal_name": "Hill Horticulture Inc.",
+    "dba_name": "Hill Horticulture",
+    "address": "12488 S US Highway 181",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78223",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial grounds maintenance / landscape install + residential mix",
+    "tnla_member": true,
+    "founded_year": 1983,
+    "website": "https://hillhorticulture.com/",
+    "phone": "(210) 494-6469",
+    "data_sources": [
+      {
+        "url": "https://hillhorticulture.com/",
+        "fetched_at": "2026-05-16T11:38:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Veteran-owned (USMC), founded by John Hill 1983. 42 years tenure. TNLA Certified Landscape Professionals on staff. Prime owner-succession candidate given founder age + tenure."
+  },
+  {
+    "legal_name": "Design Scapes Inc.",
+    "dba_name": "Design Scapes",
+    "address": "2822 N Loop 1604 W Suite 109",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78248",
+    "tpcl_license_number": "TCEQ LI0028680",
+    "estimated_crew_count": null,
+    "service_mix": "commercial — HOA / multi-site portfolio + residential",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://designscapessa.com/",
+    "phone": "(210) 897-3440",
+    "data_sources": [
+      {
+        "url": "https://designscapessa.com/",
+        "fetched_at": "2026-05-16T11:38:00Z",
+        "field": "legal_name,address,service_mix,license"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Owner 'Oscar' referenced in testimonials. HOA-specialist focus. Founded year not on website."
+  },
+  {
+    "legal_name": "Way 2 Gro Landscape & Maintenance",
+    "dba_name": "Way 2 Gro",
+    "address": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial — HOA + residential",
+    "tnla_member": null,
+    "founded_year": 2014,
+    "website": "https://way2grolandscape.net/",
+    "phone": "(210) 316-7366",
+    "data_sources": [
+      {
+        "url": "https://way2grolandscape.net/",
+        "fetched_at": "2026-05-16T11:38:00Z",
+        "field": "legal_name,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founder Tim Massey. Owner-operated. 10+ years. Stone Oak / Hill Country coverage. Younger company — may not yet hit 10-yr-tenure threshold for ETA, but worth scoring."
+  },
+  {
+    "legal_name": "J. Ponce and Son Landscaping",
+    "dba_name": "J. Ponce and Son",
+    "address": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial + residential mix",
+    "tnla_member": null,
+    "founded_year": 2000,
+    "website": "https://www.jponceandson.com/",
+    "phone": "(210) 816-0042",
+    "data_sources": [
+      {
+        "url": "https://www.jponceandson.com/",
+        "fetched_at": "2026-05-16T11:38:00Z",
+        "field": "legal_name,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded by Javier Ponce. 25 years. Family name — son in business name = generational continuity already, mid-succession candidate."
+  },
+  {
+    "legal_name": "Terra Turf Landscape",
+    "dba_name": "Terra Turf",
+    "address": "3300 Dallas Pkwy Suite 200",
+    "city": "Plano",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75093",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial maintenance + residential mix — north DFW suburbs",
+    "tnla_member": null,
+    "founded_year": 1994,
+    "website": "https://terraturf.com/",
+    "phone": "(972) 424-8873",
+    "data_sources": [
+      {
+        "url": "https://terraturf.com/",
+        "fetched_at": "2026-05-16T11:39:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned. 31 years. North DFW suburban office-park territory (Plano, Frisco, McKinney, Allen, Prosper) — high-growth commercial corridor."
+  },
+  {
+    "legal_name": "Bill Kennedy Landscape",
+    "dba_name": "Bill Kennedy",
+    "address": null,
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial property maintenance + residential",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://bklawn.com/",
+    "phone": "(972) 398-3782",
+    "data_sources": [
+      {
+        "url": "https://bklawn.com/",
+        "fetched_at": "2026-05-16T11:39:00Z",
+        "field": "legal_name,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. 'More than 100 years of combined experience' (team). Eponymous owner. Service area extends into Oklahoma."
+  },
+  {
+    "legal_name": "GrassPerson Lawn & Landscape",
+    "dba_name": "Grassperson",
+    "address": "800 East State HWY 121 Business",
+    "city": "Lewisville",
+    "county": "Denton",
+    "state": "TX",
+    "zip": "75057",
+    "tpcl_license_number": "LI0024535 (TCEQ irrigator) + Commercial Pesticide Applicator",
+    "estimated_crew_count": 50,
+    "service_mix": "commercial property + residential — North TX suburbs",
+    "tnla_member": null,
+    "founded_year": 1999,
+    "website": "https://www.grassperson.com/",
+    "phone": "(972) 318-2880",
+    "data_sources": [
+      {
+        "url": "https://www.grassperson.com/",
+        "fetched_at": "2026-05-16T11:39:00Z",
+        "field": "legal_name,address,founded_year,service_mix,crew_count,license"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Private. 26 years. 50+ employees, 5000+ clients. Denton County base. Strong recurring-revenue licensing (TCEQ + commercial pesticide)."
+  },
+  {
+    "legal_name": "Landscape Professionals of Texas (LPT Inc.)",
+    "dba_name": "LPT",
+    "address": "9822 Jamison Drive",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75220",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial-only — 280 commercial properties under mgmt",
+    "tnla_member": true,
+    "founded_year": 1984,
+    "website": "https://landscapeprotx.com/",
+    "phone": "(214) 361-7992",
+    "data_sources": [
+      {
+        "url": "https://landscapeprotx.com/about-us/",
+        "fetched_at": "2026-05-16T11:39:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Minority/Women-Owned (certified). 40+ years tenure. Pure commercial play — 280 properties. TX-licensed irrigators + pesticide applicators on staff. BOMA / Apt Assn / CAI member. Highly recurring-contract revenue."
+  },
+  {
+    "legal_name": "Prestonwood Landscape Services, LLC",
+    "dba_name": "Prestonwood",
+    "address": "1366 Round Table Drive",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75247",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial-only — industrial parks, office, retail, hospitality, corporate campuses, healthcare, HOAs/POAs, education",
+    "tnla_member": null,
+    "founded_year": 1999,
+    "website": "https://prestonwoodlandscape.com/",
+    "phone": "(214) 357-4668",
+    "data_sources": [
+      {
+        "url": "https://prestonwoodlandscape.com/",
+        "fetched_at": "2026-05-16T11:39:00Z",
+        "field": "legal_name,address,founded_year,service_mix"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "26 years. Three TX locations: Dallas, San Antonio, Fort Worth. Pure commercial. Ownership type unverified — flag for confirmation, but no PE-rollup affiliation surfaced in search. Multi-city reach via single ownership is consistent with independent operator."
+  },
+  {
+    "legal_name": "B&C Landscaping LLC",
+    "dba_name": "B&C Landscaping DFW",
+    "address": "376 Langston Ln",
+    "city": "McKinney",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75069",
+    "tpcl_license_number": "Irrigation, Herbicide, & Pesticide Licensed",
+    "estimated_crew_count": null,
+    "service_mix": "commercial grounds maintenance / construction + residential",
+    "tnla_member": null,
+    "founded_year": 2001,
+    "website": "https://bclandscapingdfw.com/",
+    "phone": "(214) 680-5296",
+    "data_sources": [
+      {
+        "url": "https://bclandscapingdfw.com/",
+        "fetched_at": "2026-05-16T11:40:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned and operated. 24 years tenure. McKinney base (Collin County) — high-growth north DFW. BBB A+."
+  },
+  {
+    "legal_name": "Fort Bend Brothers, LLC",
+    "dba_name": "Fort Bend Brothers",
+    "address": "5826 New Territory Boulevard #1139",
+    "city": "Sugar Land",
+    "county": "Fort Bend",
+    "state": "TX",
+    "zip": "77479",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "premium lawn / landscape / irrigation — commercial + residential; no weekly mow service (signals premium positioning)",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://www.fortbendbrothers.com/",
+    "phone": "(832) 963-0595",
+    "data_sources": [
+      {
+        "url": "https://www.fortbendbrothers.com/",
+        "fetched_at": "2026-05-16T11:40:00Z",
+        "field": "legal_name,address,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned and family operated. Fort Bend County base (Sugar Land) — suburban office park / HOA corridor. Premium positioning ('no weekly mow'). Year founded not on site — flag for enrichment."
+  },
+  {
+    "legal_name": "Southern Botanical, Inc.",
+    "dba_name": "Southern Botanical",
+    "address": "3151 Halifax St, Suite 100",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75247",
+    "tpcl_license_number": null,
+    "estimated_crew_count": 375,
+    "service_mix": "commercial maintenance / design / install + residential — top-100 nationally ranked",
+    "tnla_member": null,
+    "founded_year": 1995,
+    "website": "https://southernbotanical.com/",
+    "phone": "(214) 366-2103",
+    "data_sources": [
+      {
+        "url": "https://southernbotanical.com/",
+        "fetched_at": "2026-05-16T11:42:00Z",
+        "field": "legal_name,address,founded_year,service_mix,crew_count,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned and operated by a Dallas family. 30 years tenure. 375+ employees. Top-100 US ranking, 200+ industry awards. Branches in Dallas, Haltom City (Fort Worth), Carrollton. POSSIBLY TOO LARGE for SBA micro-acquisition profile but family-owned and not PE-affiliated."
+  },
+  {
+    "legal_name": "Silversand Services",
+    "dba_name": "Silversand",
+    "address": "2827 Barker Cypress Rd",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77084",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial-only — HOA, prof office buildings, retail, healthcare",
+    "tnla_member": true,
+    "founded_year": 1983,
+    "website": "https://www.silversandservices.com/",
+    "phone": "(713) 722-0336",
+    "data_sources": [
+      {
+        "url": "https://www.silversandservices.com/",
+        "fetched_at": "2026-05-16T11:42:00Z",
+        "field": "legal_name,address,founded_year,service_mix"
+      }
+    ],
+    "independence_verified": null,
+    "independence_notes": "42 years tenure. Houston + Dallas presence. NALP+TNLA managers on staff. Ownership type not disclosed on website — independence FLAGGED for verification before active outreach. No PE-rollup affiliation surfaced."
+  },
+  {
+    "legal_name": "TechScape Inc.",
+    "dba_name": "TechScape",
+    "address": "9800 Brockbank Drive",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75220",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial maintenance / install + athletic fields + residential",
+    "tnla_member": null,
+    "founded_year": 1984,
+    "website": "https://techscapeinc.com/",
+    "phone": "(972) 680-0025",
+    "data_sources": [
+      {
+        "url": "https://techscapeinc.com/our-story/",
+        "fetched_at": "2026-05-16T11:42:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned, 2nd generation. Founded 1984 by Wayne Winner; now run by son Kevin Winner. 41 years tenure. NALP-certified staff. Strong succession story — already through one generational transition; subsequent transition likely 3-7 years out."
+  },
+  {
+    "legal_name": "Lawn Management Company",
+    "dba_name": "LMC",
+    "address": "P.O. Box 55504",
+    "city": "Houston",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77255",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial-only — 1,100+ commercial accounts greater Houston",
+    "tnla_member": null,
+    "founded_year": 1980,
+    "website": "https://lmchouston.com/",
+    "phone": "(713) 688-2435",
+    "data_sources": [
+      {
+        "url": "https://lmchouston.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. 45 years tenure. 1,100+ commercial accounts — recurring contract base is the asset. Has affiliated tree-care arm (Embark Services). Prime owner-succession candidate."
+  },
+  {
+    "legal_name": "Texscape Services, LLC",
+    "dba_name": "Texscape",
+    "address": "2433 Merrell Rd (Dallas) / 5935 Griggs Rd (Houston)",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75229",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial maintenance / install / tree / irrigation / drainage",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://www.texscapeservices.com/",
+    "phone": "(972) 445-5654",
+    "data_sources": [
+      {
+        "url": "https://www.texscapeservices.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,service_mix"
+      }
+    ],
+    "independence_verified": null,
+    "independence_notes": "Two-city presence (Dallas + Houston) with full-service commercial focus. Founding year + ownership not disclosed on site — flag for verification. No PE-rollup affiliation surfaced."
+  },
+  {
+    "legal_name": "New Leaf Services",
+    "dba_name": "New Leaf Landscaping",
+    "address": "2101 Cane Island Pkwy",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77494",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial-heavy — apartments, hospitals, churches, banks, golf, hotels, industrial",
+    "tnla_member": null,
+    "founded_year": 2013,
+    "website": "https://newleafservicesinc.com/",
+    "phone": "(713) 322-3810",
+    "data_sources": [
+      {
+        "url": "https://newleafservicesinc.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,founded_year,service_mix"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "11+ years. Greater Houston (22 communities). Diverse commercial mix — hospitals/golf/hotels are sticky contracts. Private contractor, ownership not disclosed but no chain affiliation."
+  },
+  {
+    "legal_name": "Proleaf Commercial Landscape",
+    "dba_name": "Proleaf Landscape",
+    "address": "329 S. New Hope Road",
+    "city": "Kennedale",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": "76060",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial / industrial — full-service",
+    "tnla_member": null,
+    "founded_year": 2014,
+    "website": "https://proleaflandscape.com/",
+    "phone": "(817) 516-3502",
+    "data_sources": [
+      {
+        "url": "https://proleaflandscape.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,founded_year,service_mix"
+      }
+    ],
+    "independence_verified": null,
+    "independence_notes": "10+ years. South Tarrant base. Commercial-focused. Ownership not disclosed — flag for verification."
+  },
+  {
+    "legal_name": "Superscapes, Inc.",
+    "dba_name": "Superscapes",
+    "address": "1500 Capital Drive",
+    "city": "Carrollton",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75006",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial + high-end residential — design/install/maintain",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://superscapes.net/",
+    "phone": "(972) 712-0353",
+    "data_sources": [
+      {
+        "url": "https://superscapes.net/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,service_mix"
+      }
+    ],
+    "independence_verified": null,
+    "independence_notes": "20+ years. 'Official Landscape Co. of the Dallas Cowboys' — premium brand association. Multi-state (TX + NW Arkansas). Ownership not disclosed."
+  },
+  {
+    "legal_name": "Landscape Expressions",
+    "dba_name": "Landscape Expressions",
+    "address": "1608 Tantor Rd",
+    "city": "Dallas",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": "75229",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial-heavy — multi-family, churches, banks, prof offices, commercial centers, municipalities",
+    "tnla_member": null,
+    "founded_year": 1980,
+    "website": "https://www.landscapeexpressions.com/",
+    "phone": "(972) 838-4244",
+    "data_sources": [
+      {
+        "url": "https://www.landscapeexpressions.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Founded 1980 by Chris Easterling. 45 years tenure. Multi-market: DFW + Tyler + McKinney + Longview. Prime owner-succession candidate."
+  },
+  {
+    "legal_name": "Theiss Landscape Works",
+    "dba_name": "Theiss",
+    "address": "29638 Hegar Rd",
+    "city": "Hockley",
+    "county": "Waller",
+    "state": "TX",
+    "zip": "77447",
+    "tpcl_license_number": "LI#6640 (TCEQ irrigator)",
+    "estimated_crew_count": null,
+    "service_mix": "commercial design/install/sprinkler + residential — NW Houston (Cypress, Katy, Woodlands, Tomball)",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://theisslandscapeworks.com/",
+    "phone": "(936) 931-2695",
+    "data_sources": [
+      {
+        "url": "https://theisslandscapeworks.com/cypress-tx/commercial/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,service_mix,ownership,license"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned and operated. 40+ years. NW Houston commercial corridor. Founder eponymous (Theiss family)."
+  },
+  {
+    "legal_name": "Turf Plus Outdoor Living",
+    "dba_name": "Turf Plus",
+    "address": "13905 Huffmeister Rd",
+    "city": "Cypress",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77429",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "outdoor living / hardscape-heavy + commercial + residential",
+    "tnla_member": null,
+    "founded_year": 1993,
+    "website": "https://www.turfplusoutdoorliving.com/",
+    "phone": "(281) 222-5296",
+    "data_sources": [
+      {
+        "url": "https://www.turfplusoutdoorliving.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,founded_year,service_mix"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "32 years. Cypress base. Founder 'C.W.' referenced. Hardscape-heavy = lower recurring revenue than mow-and-maintain, but installs land high-margin work."
+  },
+  {
+    "legal_name": "Grass Works Austin",
+    "dba_name": "Grass Works",
+    "address": null,
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": "LI19556 (TX irrigation)",
+    "estimated_crew_count": null,
+    "service_mix": "commercial maintenance + residential — HOA / office park / retail / multi-family across Austin metro + Highland Lakes",
+    "tnla_member": null,
+    "founded_year": 2007,
+    "website": "https://www.grassworksaustin.com/",
+    "phone": "(512) 797-1640",
+    "data_sources": [
+      {
+        "url": "https://www.grassworksaustin.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,founded_year,service_mix,license"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned. 18 years. 2,000+ properties maintained. TX-licensed irrigator. Wide service area into Highland Lakes resort towns."
+  },
+  {
+    "legal_name": "Agave LD",
+    "dba_name": "Agave LD (fka Carranza Landscape Services)",
+    "address": "2720 Bee Cave Rd #223",
+    "city": "Rollingwood",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78746",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial install/management/tree + residential",
+    "tnla_member": null,
+    "founded_year": 1997,
+    "website": "https://agaveld.com/",
+    "phone": "(512) 981-5152",
+    "data_sources": [
+      {
+        "url": "https://agaveld.com/about-us/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. Founded 1997 by Miguel + Patricia Carranza; 4 children now run divisions. 28 years tenure. Already executing intra-family generational transition — owner stability + likely longer-horizon exit."
+  },
+  {
+    "legal_name": "Espinoza's Landscaping",
+    "dba_name": "Espinoza's Landscaping & Design",
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "landscape / maintenance / hardscape / tree + commercial + residential",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://espinozaslandscaping.com/",
+    "phone": "(682) 597-1246",
+    "data_sources": [
+      {
+        "url": "https://espinozaslandscaping.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned and family-operated. Owner has 20+ years experience. Fort Worth + Tarrant County."
+  },
+  {
+    "legal_name": "Ideal Landscaping Services, Inc.",
+    "dba_name": "Ideal Landscape Services",
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "design/install/maintain + outdoor living — residential + commercial",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://ideallandscapeservices.com/",
+    "phone": "(817) 457-7507",
+    "data_sources": [
+      {
+        "url": "https://ideallandscapeservices.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,service_mix"
+      }
+    ],
+    "independence_verified": null,
+    "independence_notes": "35+ years experience claimed. DFW Metroplex. Ownership not disclosed on site — flag for verification."
+  },
+  {
+    "legal_name": "SunSpot Lawns",
+    "dba_name": "SunSpot Lawns",
+    "address": null,
+    "city": "Fort Worth",
+    "county": "Tarrant",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": "LI18057 (TX Licensed Irrigator)",
+    "estimated_crew_count": null,
+    "service_mix": "commercial-heavy — HOA / office / warehouse / dealership / shopping centers / banks / churches / hospitals / multi-family",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://sunspotlawns.com/",
+    "phone": "(817) 825-8300",
+    "data_sources": [
+      {
+        "url": "https://sunspotlawns.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,service_mix,license"
+      }
+    ],
+    "independence_verified": null,
+    "independence_notes": "Multi-county TX coverage (Tarrant, Denton, Wise, Parker, Johnson, Ellis). Pure HOA / commercial focus — high recurring revenue. Ownership not disclosed."
+  },
+  {
+    "legal_name": "Blade Runner Landscapes",
+    "dba_name": "Blade Runner",
+    "address": "1912 W 37th St",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78731",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial maintenance — HOA / MUD / commercial / tree",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://bladerunneratx.com/",
+    "phone": "(512) 222-2200",
+    "data_sources": [
+      {
+        "url": "https://bladerunneratx.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,service_mix"
+      }
+    ],
+    "independence_verified": null,
+    "independence_notes": "Pure HOA / commercial / MUD focus across Greater Austin. Contact email Mike@... — owner-operator signal. In-house crews. Founding year + ownership not disclosed."
+  },
+  {
+    "legal_name": "North by Northwest",
+    "dba_name": "NxNW Landscape",
+    "address": "3801 Prairie Ln",
+    "city": "Austin",
+    "county": "Travis",
+    "state": "TX",
+    "zip": "78728",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial maintenance / design / construction / irrigation",
+    "tnla_member": null,
+    "founded_year": 2003,
+    "website": "https://www.nxnwl.com/",
+    "phone": "(512) 569-0660",
+    "data_sources": [
+      {
+        "url": "https://www.nxnwl.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. Founded 2003 by Jay + Yolanda Martin. 22 years tenure. Greater Austin coverage."
+  },
+  {
+    "legal_name": "San Antonio Landscaping Concepts Inc.",
+    "dba_name": "SA Landscaping Concepts",
+    "address": "2103 Bedford Stage",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78213",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "landscape / maintenance / sprinkler / water features / masonry — commercial + residential",
+    "tnla_member": null,
+    "founded_year": 1982,
+    "website": "https://sanantoniolandscapingconcepts.com/",
+    "phone": "(210) 725-1960",
+    "data_sources": [
+      {
+        "url": "https://sanantoniolandscapingconcepts.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. 43 years tenure. Prime owner-succession candidate given founder generation age."
+  },
+  {
+    "legal_name": "Ford Landscape and Lawn Care",
+    "dba_name": "Ford Landscape",
+    "address": null,
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial / residential — lawn maintenance / design / hardscape / xeriscape",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://www.fordlandscape.com/",
+    "phone": "(210) 885-7950",
+    "data_sources": [
+      {
+        "url": "https://www.fordlandscape.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family- and minority-owned. 10+ years. SA Current top-3 ranking claim."
+  },
+  {
+    "legal_name": "Dedicated Landscape Solutions",
+    "dba_name": "Dedicated LS",
+    "address": "P.O. Box 460189",
+    "city": "San Antonio",
+    "county": "Bexar",
+    "state": "TX",
+    "zip": "78246",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "commercial install / tree / grounds maintenance + ranches + select residential",
+    "tnla_member": true,
+    "founded_year": null,
+    "website": "https://dedicatedlandscapesolutions.com/",
+    "phone": "(210) 771-7081",
+    "data_sources": [
+      {
+        "url": "https://dedicatedlandscapesolutions.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned, founded by John 'Big John' Leifester. ISA Certified Arborist + TX Certified Landscape Professional. Commercial + ranch — unusual mix worth investigating, founder personal brand = succession candidate."
+  },
+  {
+    "legal_name": "Keane Landscaping",
+    "dba_name": "Keane",
+    "address": "2101 Parker Rd",
+    "city": "Wylie",
+    "county": "Collin",
+    "state": "TX",
+    "zip": "75098",
+    "tpcl_license_number": null,
+    "estimated_crew_count": 200,
+    "service_mix": "commercial maintenance / install / hardscape / lighting + athletic fields + residential",
+    "tnla_member": null,
+    "founded_year": 1980,
+    "website": "https://keanelandscaping.com/",
+    "phone": "(972) 424-4851",
+    "data_sources": [
+      {
+        "url": "https://keanelandscaping.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,founded_year,service_mix,crew_count,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. 45+ years tenure (founded 1980). 200+ team members. 10,000+ projects. Wylie / Collin County base. POSSIBLY TOO LARGE for SBA micro-acquisition but family-owned, not PE."
+  },
+  {
+    "legal_name": "Superior Lawn & Landscaping",
+    "dba_name": "Superior Lawn & Landscaping",
+    "address": null,
+    "city": "Frisco",
+    "county": "Collin",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "lawn maintenance / property maintenance / landscaping + hardscape — North DFW",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://www.superiorlawnandlandscapingllc.com/",
+    "phone": null,
+    "data_sources": [
+      {
+        "url": "https://www.superiorlawnandlandscapingllc.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned. Run by Jonathan + Jacob Herrera (CEO + Co-CEO). North DFW suburbs (Frisco, Plano, McKinney, Denton, Prosper)."
+  },
+  {
+    "legal_name": "Best of Texas Landscapes",
+    "dba_name": "Best of Texas Landscapes",
+    "address": "P.O. Box 1876",
+    "city": "Liberty Hill",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": "78642",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "design/install/irrigation + commercial — Austin metro + 9 surrounding counties",
+    "tnla_member": null,
+    "founded_year": 2004,
+    "website": "https://bestoftexaslandscapes.com/",
+    "phone": "(512) 260-1430",
+    "data_sources": [
+      {
+        "url": "https://bestoftexaslandscapes.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,founded_year,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family- and veteran-owned. 21 years tenure. Williamson County base, broad Austin metro reach."
+  },
+  {
+    "legal_name": "Keller Commercial & Home Services, Inc.",
+    "dba_name": "Keller Services",
+    "address": null,
+    "city": "Georgetown",
+    "county": "Williamson",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": "LI0021511 (irrigation) + Pesticide #0790319",
+    "estimated_crew_count": null,
+    "service_mix": "commercial maintenance / HOA / grounds mgmt + residential — Central TX broad reach",
+    "tnla_member": true,
+    "founded_year": 1999,
+    "website": "https://www.kellerservicestx.com/",
+    "phone": "(512) 930-4769",
+    "data_sources": [
+      {
+        "url": "https://www.kellerservicestx.com/commercial",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,founded_year,service_mix,license"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Family-owned (per prior search confirmation). 25+ years. 200+ active commercial accounts. TNLA Certified, BBB A+. Wide Central TX coverage Waco-to-SA."
+  },
+  {
+    "legal_name": "Boone's Landscaping",
+    "dba_name": "Boone's Landscaping",
+    "address": null,
+    "city": "The Woodlands",
+    "county": "Montgomery",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "design / install / hardscape / commercial + HOA + residential — Montgomery County / NW Houston",
+    "tnla_member": null,
+    "founded_year": 2010,
+    "website": "https://booneslandscaping.com/",
+    "phone": "(936) 206-7627",
+    "data_sources": [
+      {
+        "url": "https://booneslandscaping.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,founded_year,service_mix"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "15 years. Montgomery County base, serves The Woodlands / Spring / Conroe. Eponymous founder. Strong reviews (5.0 / 156)."
+  },
+  {
+    "legal_name": "Living Trees & Shrubs Inc",
+    "dba_name": "Living Trees & Shrubs",
+    "address": "22519 Park Point Dr",
+    "city": "Katy",
+    "county": "Harris",
+    "state": "TX",
+    "zip": "77450",
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "landscape / tree / hardscape / sprinkler / commercial maintenance + residential",
+    "tnla_member": null,
+    "founded_year": 1990,
+    "website": "https://www.livingtreesandshrubs.com/",
+    "phone": "(713) 464-8733",
+    "data_sources": [
+      {
+        "url": "https://www.livingtreesandshrubs.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,address,founded_year,service_mix"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Locally owned (Doug-owner per testimonials). 35 years tenure. Katy / Sugar Land / Cypress / Richmond coverage. NOTE: heavy tree-care exposure may overlap with tree-care vertical — flag for downstream filter."
+  },
+  {
+    "legal_name": "DeFeo's Landscaping & Lawn Care, Inc.",
+    "dba_name": "DeFeo's Landscaping",
+    "address": null,
+    "city": "Garland",
+    "county": "Dallas",
+    "state": "TX",
+    "zip": null,
+    "tpcl_license_number": null,
+    "estimated_crew_count": null,
+    "service_mix": "design / outdoor entertainment / lawn / commercial + residential — East Dallas / Rockwall",
+    "tnla_member": null,
+    "founded_year": null,
+    "website": "https://defeolandscaping.com/",
+    "phone": "(214) 803-5800",
+    "data_sources": [
+      {
+        "url": "https://defeolandscaping.com/",
+        "fetched_at": "2026-05-16T11:43:00Z",
+        "field": "legal_name,service_mix,ownership"
+      }
+    ],
+    "independence_verified": true,
+    "independence_notes": "Owner-operator (Eric DeFeo). 35+ years experience claimed. Family-name shop. East Dallas / Rockwall corridor."
+  }
+]
