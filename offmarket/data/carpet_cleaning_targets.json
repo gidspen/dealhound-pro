@@ -3,7 +3,7 @@
     "id": "f94863b8-60e1-4b8f-a9a4-5707143a4a4f",
     "run_label": "carpet-cleaning-tx-2026-05-16-w3c",
     "model_version": "offmarket-4layer-v0.2",
-    "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
+    "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
     "vertical": "carpet_cleaning",
     "naics_code": "561740",
     "geography": "TX — Harris/Dallas/Tarrant/Collin/Denton/Bexar/Travis/Williamson/Fort Bend/Montgomery",
@@ -44,104 +44,19 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://harpercarpet.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "owner_name",
-            "year_founded",
-            "address",
-            "phone",
-            "services",
-            "iicrc_cert",
-            "copyright"
-          ]
-        },
-        {
-          "source": "google_search_corroboration",
-          "url": "https://harpercarpet.com/about-us/ (404 on direct fetch — content surfaced via Google snippet)",
-          "fetched_at": "2026-05-16",
-          "fields": ["owner_name", "industry_tenure_30+"]
-        },
-        {
-          "source": "google_yelp_review_corroboration",
-          "url": "https://www.yelp.com/biz/harper-carpet-care-austin",
-          "fetched_at": "2026-05-16",
-          "fields": ["business_existence", "269 reviews as of Dec 2025"]
-        }
+        {"source": "live_website_fetch", "url": "https://harpercarpet.com/", "fetched_at": "2026-05-16", "fields": ["owner_name","year_founded","address","phone","services","iicrc_cert","copyright"]},
+        {"source": "google_search_corroboration", "url": "https://harpercarpet.com/about-us/ (404 on direct fetch — content surfaced via Google snippet)", "fetched_at": "2026-05-16", "fields": ["owner_name","industry_tenure_30+"]},
+        {"source": "google_yelp_review_corroboration", "url": "https://www.yelp.com/biz/harper-carpet-care-austin", "fetched_at": "2026-05-16", "fields": ["business_existence","269 reviews as of Dec 2025"]}
       ],
-      "raw_enrichment": {
-        "copyright_year_homepage": 2025,
-        "yelp_review_count_dec2025": 269,
-        "iicrc_certs": ["carpet cleaning", "water damage restoration"],
-        "service_area": "Austin + Hill Country (Driftwood, Kyle, Fischer, Canyon Lake, Johnson City, Wimberley)",
-        "pricing_model": "$.36/sqft commercial — published rate-card on site (signals direct-to-customer, no broker)"
-      },
+      "raw_enrichment": {"copyright_year_homepage": 2025, "yelp_review_count_dec2025": 269, "iicrc_certs": ["carpet cleaning","water damage restoration"], "service_area": "Austin + Hill Country (Driftwood, Kyle, Fischer, Canyon Lake, Johnson City, Wimberley)", "pricing_model": "$.36/sqft commercial — published rate-card on site (signals direct-to-customer, no broker)"},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "owner_age_proxy_industry_tenure",
-          "direction": "positive",
-          "evidence": "Harley Harper published bio states 30+ yrs in carpet cleaning industry — implies age 50-60 (started early adulthood). Confidence medium without OV65/voter cross-check.",
-          "source": "harpercarpet.com bio + Google snippet from /about-us",
-          "source_url": "https://harpercarpet.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "iicrc_certified_dual_cert",
-          "direction": "positive",
-          "evidence": "Harley Harper is IICRC certified in both carpet cleaning AND water damage restoration — top-tier industry credential. Verified via Yelp + harpercarpet.com.",
-          "source": "live_website_fetch",
-          "source_url": "https://harpercarpet.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "tenure_29_yrs",
-          "direction": "positive",
-          "evidence": "Company founded 1997 per website + Google snippet. 29 yrs of operation = settled, SBA-financeable.",
-          "source": "live_website_fetch",
-          "source_url": "https://harpercarpet.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "successor_check_live_fetch",
-          "direction": "positive",
-          "evidence": "Live homepage at https://harpercarpet.com/ (fetched 2026-05-16) emphasizes 'Harley personally oversees every job' — sole listed practitioner. About page returned 404 (couldn't deep-cross-check); confidence capped at medium. No second IICRC certified individual named, no associate/partner/manager named, no family successor language.",
-          "source": "live_website_fetch",
-          "source_url": "https://harpercarpet.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_online_booking",
-          "direction": "positive",
-          "evidence": "Quote-form only intake, no calendar/online booking. Phone-and-form workflow indicative of pre-modern operations.",
-          "source": "live_website_fetch",
-          "source_url": "https://harpercarpet.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "copyright_year_recent_2025",
-          "direction": "negative",
-          "evidence": "Copyright shows 2025 — site is being maintained, not abandoned. Reduces 'dated website' coasting tell.",
-          "source": "live_website_fetch",
-          "source_url": "https://harpercarpet.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 4,
-          "signal_key": "austin_metro_carpet_demand",
-          "direction": "positive",
-          "evidence": "Austin/Travis is hot for service-business roll-ups; carpet+restoration combo is SBA 7(a) financeable; ETA appetite medium-high for recurring-contract floor-care.",
-          "source": "market_knowledge",
-          "source_url": null,
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "owner_age_proxy_industry_tenure", "direction": "positive", "evidence": "Harley Harper published bio states 30+ yrs in carpet cleaning industry — implies age 50-60 (started early adulthood). Confidence medium without OV65/voter cross-check.", "source": "harpercarpet.com bio + Google snippet from /about-us", "source_url": "https://harpercarpet.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "iicrc_certified_dual_cert", "direction": "positive", "evidence": "Harley Harper is IICRC certified in both carpet cleaning AND water damage restoration — top-tier industry credential. Verified via Yelp + harpercarpet.com.", "source": "live_website_fetch", "source_url": "https://harpercarpet.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "tenure_29_yrs", "direction": "positive", "evidence": "Company founded 1997 per website + Google snippet. 29 yrs of operation = settled, SBA-financeable.", "source": "live_website_fetch", "source_url": "https://harpercarpet.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive", "evidence": "Live homepage at https://harpercarpet.com/ (fetched 2026-05-16) emphasizes 'Harley personally oversees every job' — sole listed practitioner. About page returned 404 (couldn't deep-cross-check); confidence capped at medium. No second IICRC certified individual named, no associate/partner/manager named, no family successor language.", "source": "live_website_fetch", "source_url": "https://harpercarpet.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_online_booking", "direction": "positive", "evidence": "Quote-form only intake, no calendar/online booking. Phone-and-form workflow indicative of pre-modern operations.", "source": "live_website_fetch", "source_url": "https://harpercarpet.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "copyright_year_recent_2025", "direction": "negative", "evidence": "Copyright shows 2025 — site is being maintained, not abandoned. Reduces 'dated website' coasting tell.", "source": "live_website_fetch", "source_url": "https://harpercarpet.com/", "observed_at": "2026-05-16"},
+        {"layer": 4, "signal_key": "austin_metro_carpet_demand", "direction": "positive", "evidence": "Austin/Travis is hot for service-business roll-ups; carpet+restoration combo is SBA 7(a) financeable; ETA appetite medium-high for recurring-contract floor-care.", "source": "market_knowledge", "source_url": null, "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 58,
       "layer1_comment": "Harley Harper, ~55 (industry tenure proxy — 30 yrs in industry per published bio), founded Harper Carpet Care in 1997 and has personally operated it for 29 yrs. Solidly in early-natural-exit window though not yet OV65. Confidence medium — need OV65 or voter DOB to confirm.",
@@ -191,110 +106,21 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://www.aladincarpetcleaning.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["owner_name", "year_founded", "address", "phone", "copyright_2018"]
-        },
-        {
-          "source": "live_website_fetch_about",
-          "url": "https://www.aladincarpetcleaning.com/about-us/",
-          "fetched_at": "2026-05-16",
-          "fields": ["owner_name_confirmed", "no_second_principal_listed"]
-        },
-        {
-          "source": "google_search_linkedin_corroboration",
-          "url": "https://www.linkedin.com/in/charles-wolfe-59b19760/",
-          "fetched_at": "2026-05-16",
-          "fields": ["owner_name_charles_wolfe_business_owner_aladin"]
-        },
-        {
-          "source": "google_search_linkedin_corroboration",
-          "url": "https://www.linkedin.com/in/william-wolfe-717a6732/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "william_wolfe_listed_as_owner_alongside_charles_per_snippet — needs cross-check"
-          ]
-        },
-        {
-          "source": "yelp",
-          "url": "https://www.yelp.com/biz/aladin-carpet-cleaning-conroe",
-          "fetched_at": "2026-05-16",
-          "fields": ["business_existence", "18 reviews as of Feb 2026 — low velocity"]
-        }
+        {"source": "live_website_fetch", "url": "https://www.aladincarpetcleaning.com/", "fetched_at": "2026-05-16", "fields": ["owner_name","year_founded","address","phone","copyright_2018"]},
+        {"source": "live_website_fetch_about", "url": "https://www.aladincarpetcleaning.com/about-us/", "fetched_at": "2026-05-16", "fields": ["owner_name_confirmed","no_second_principal_listed"]},
+        {"source": "google_search_linkedin_corroboration", "url": "https://www.linkedin.com/in/charles-wolfe-59b19760/", "fetched_at": "2026-05-16", "fields": ["owner_name_charles_wolfe_business_owner_aladin"]},
+        {"source": "google_search_linkedin_corroboration", "url": "https://www.linkedin.com/in/william-wolfe-717a6732/", "fetched_at": "2026-05-16", "fields": ["william_wolfe_listed_as_owner_alongside_charles_per_snippet — needs cross-check"]},
+        {"source": "yelp", "url": "https://www.yelp.com/biz/aladin-carpet-cleaning-conroe", "fetched_at": "2026-05-16", "fields": ["business_existence","18 reviews as of Feb 2026 — low velocity"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2018,
-        "website_design_age": "pre-2018 — visibly dated",
-        "yelp_review_count_feb2026": 18,
-        "owner_linkedin_listed": ["Charles Wolfe", "William Wolfe (possible co-owner / relative)"],
-        "toll_free_number": "877-604-2111"
-      },
+      "raw_enrichment": {"copyright_year": 2018, "website_design_age": "pre-2018 — visibly dated", "yelp_review_count_feb2026": 18, "owner_linkedin_listed": ["Charles Wolfe","William Wolfe (possible co-owner / relative)"], "toll_free_number": "877-604-2111"},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "owner_age_proxy_28yr_tenure",
-          "direction": "positive",
-          "evidence": "Charles Wolfe has run Aladin since 1998 (28 yrs). Industry-tenure proxy puts age ~58-62. LinkedIn profile exists confirming ownership.",
-          "source": "live_website_fetch + linkedin snippet",
-          "source_url": "https://www.aladincarpetcleaning.com/about-us/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "tenure_28_yrs",
-          "direction": "positive",
-          "evidence": "Founded 1998 — 28 yrs of operation. Settled, SBA-financeable.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.aladincarpetcleaning.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "small_review_velocity",
-          "direction": "negative",
-          "evidence": "Only 18 Yelp reviews as of Feb 2026 for a 28-yr business — suggests either low residential visibility or commercial-heavy work (B2B doesn't review). Could be small operation.",
-          "source": "yelp",
-          "source_url": "https://www.yelp.com/biz/aladin-carpet-cleaning-conroe",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "successor_check_live_fetch",
-          "direction": "positive",
-          "evidence": "Live About page at aladincarpetcleaning.com/about-us/ (fetched 2026-05-16) names only Charles Wolfe as owner/manager. No second principal, no associate, no family successor language on page. CAVEAT: William Wolfe surfaces in LinkedIn search snippet as also-listed-Owner at Aladin — could not directly verify (LinkedIn 999/403). If William Wolfe is a son/brother actually in the business, this would be a successor candidate. Logged as ambiguity.",
-          "source": "live_website_fetch + ambiguous_linkedin_snippet",
-          "source_url": "https://www.aladincarpetcleaning.com/about-us/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "copyright_year_2018_stale",
-          "direction": "positive",
-          "evidence": "Website copyright 2018 — 8 years stale. Strong dated-website coasting tell.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.aladincarpetcleaning.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "low_review_velocity_flat",
-          "direction": "positive",
-          "evidence": "18 Yelp reviews across 28 yrs ≈ minimal residential-funnel investment. Owner has stopped pushing the digital channel.",
-          "source": "yelp",
-          "source_url": "https://www.yelp.com/biz/aladin-carpet-cleaning-conroe",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 4,
-          "signal_key": "montgomery_county_pull",
-          "direction": "positive",
-          "evidence": "Conroe / Montgomery County = N Houston suburban growth zone. Carpet cleaning rollups (Chem-Dry / ServiceMaster) active. SBA 7(a) easy fit.",
-          "source": "market_knowledge",
-          "source_url": null,
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "owner_age_proxy_28yr_tenure", "direction": "positive", "evidence": "Charles Wolfe has run Aladin since 1998 (28 yrs). Industry-tenure proxy puts age ~58-62. LinkedIn profile exists confirming ownership.", "source": "live_website_fetch + linkedin snippet", "source_url": "https://www.aladincarpetcleaning.com/about-us/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "tenure_28_yrs", "direction": "positive", "evidence": "Founded 1998 — 28 yrs of operation. Settled, SBA-financeable.", "source": "live_website_fetch", "source_url": "https://www.aladincarpetcleaning.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "small_review_velocity", "direction": "negative", "evidence": "Only 18 Yelp reviews as of Feb 2026 for a 28-yr business — suggests either low residential visibility or commercial-heavy work (B2B doesn't review). Could be small operation.", "source": "yelp", "source_url": "https://www.yelp.com/biz/aladin-carpet-cleaning-conroe", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive", "evidence": "Live About page at aladincarpetcleaning.com/about-us/ (fetched 2026-05-16) names only Charles Wolfe as owner/manager. No second principal, no associate, no family successor language on page. CAVEAT: William Wolfe surfaces in LinkedIn search snippet as also-listed-Owner at Aladin — could not directly verify (LinkedIn 999/403). If William Wolfe is a son/brother actually in the business, this would be a successor candidate. Logged as ambiguity.", "source": "live_website_fetch + ambiguous_linkedin_snippet", "source_url": "https://www.aladincarpetcleaning.com/about-us/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "copyright_year_2018_stale", "direction": "positive", "evidence": "Website copyright 2018 — 8 years stale. Strong dated-website coasting tell.", "source": "live_website_fetch", "source_url": "https://www.aladincarpetcleaning.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "low_review_velocity_flat", "direction": "positive", "evidence": "18 Yelp reviews across 28 yrs ≈ minimal residential-funnel investment. Owner has stopped pushing the digital channel.", "source": "yelp", "source_url": "https://www.yelp.com/biz/aladin-carpet-cleaning-conroe", "observed_at": "2026-05-16"},
+        {"layer": 4, "signal_key": "montgomery_county_pull", "direction": "positive", "evidence": "Conroe / Montgomery County = N Houston suburban growth zone. Carpet cleaning rollups (Chem-Dry / ServiceMaster) active. SBA 7(a) easy fit.", "source": "market_knowledge", "source_url": null, "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 65,
       "layer1_comment": "Charles Wolfe, ~58-62 (28-yr business-tenure proxy — started Aladin 1998), still owner-operator. Approaching natural-exit window. Confidence medium — no OV65 / voter / DMV verification done.",
@@ -344,94 +170,19 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch_home",
-          "url": "https://mundae.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["address", "phone", "services", "copyright_2026"]
-        },
-        {
-          "source": "live_website_fetch_about",
-          "url": "https://mundae.com/about-us/",
-          "fetched_at": "2026-05-16",
-          "fields": ["family_owned_30yrs", "no_named_principals_on_about"]
-        },
-        {
-          "source": "google_search_snippet",
-          "url": "https://www.bbb.org/us/tx/houston/profile/mold-remediation/mundae-cleaning-restoration-services-inc-0915-57000674 (403'd direct)",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "principals_ron_saar_president_lauren_saar_vp_per_search_snippet — NOT VERIFIED ON LIVE FETCH"
-          ]
-        },
-        {
-          "source": "yelp",
-          "url": "https://www.yelp.com/biz/mundae-cleaning-and-restoration-services-houston-8",
-          "fetched_at": "2026-05-16",
-          "fields": ["business_existence", "54 reviews"]
-        }
+        {"source": "live_website_fetch_home", "url": "https://mundae.com/", "fetched_at": "2026-05-16", "fields": ["address","phone","services","copyright_2026"]},
+        {"source": "live_website_fetch_about", "url": "https://mundae.com/about-us/", "fetched_at": "2026-05-16", "fields": ["family_owned_30yrs","no_named_principals_on_about"]},
+        {"source": "google_search_snippet", "url": "https://www.bbb.org/us/tx/houston/profile/mold-remediation/mundae-cleaning-restoration-services-inc-0915-57000674 (403'd direct)", "fetched_at": "2026-05-16", "fields": ["principals_ron_saar_president_lauren_saar_vp_per_search_snippet — NOT VERIFIED ON LIVE FETCH"]},
+        {"source": "yelp", "url": "https://www.yelp.com/biz/mundae-cleaning-and-restoration-services-houston-8", "fetched_at": "2026-05-16", "fields": ["business_existence","54 reviews"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "branches": ["Southwest Houston 6101 Maple St", "Downtown Houston"],
-        "review_count_homepage_claim": "300+ 5-Star Reviews",
-        "emergency_response": "24/7"
-      },
+      "raw_enrichment": {"copyright_year": 2026, "branches": ["Southwest Houston 6101 Maple St","Downtown Houston"], "review_count_homepage_claim": "300+ 5-Star Reviews", "emergency_response": "24/7"},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "owner_age_proxy_30yr_tenure",
-          "direction": "positive",
-          "evidence": "Mundae 'family owned 30+ yrs' per Google narrative. Founder/President Ron Saar (per Google search snippet sourced from BBB profile — could not directly verify, BBB 403'd). Tenure proxy ~55.",
-          "source": "live_website + google_snippet",
-          "source_url": "https://mundae.com/about-us/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "tenure_30_yrs_multi_branch",
-          "direction": "positive",
-          "evidence": "30+ yrs, two Houston branches (SW + Downtown), 300+ reviews, 24/7 emergency response — multi-truck operation. SBA-size estimate: $1.5M-$3M+.",
-          "source": "live_website_fetch",
-          "source_url": "https://mundae.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "license_insured_text",
-          "direction": "positive",
-          "evidence": "Site states 'Licensed & Insured'. No IICRC specifically named but full restoration services indicate technical credentialing.",
-          "source": "live_website_fetch",
-          "source_url": "https://mundae.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "successor_check_live_fetch",
-          "direction": "negative",
-          "evidence": "Live About page at https://mundae.com/about-us/ (fetched 2026-05-16) confirms 'family-owned' but does NOT name principals — neither Ron Saar nor Lauren Saar appears in directly-fetched content. However, Google search snippet (sourced from BBB profile, also 403'd) reports 'President Ron Saar' and 'VP Lauren Saar' — implying a structured family-VP succession (likely father-daughter or husband-wife) ALREADY IN PLACE. Per the verifying-no-successor protocol, since the live About page itself doesn't show this, AND the snippet implies a structured next-gen owner, the safer read is: structured internal-buy-in candidate, NOT coasting-solo-to-outside. Demote L3.",
-          "source": "live_website_fetch + ambiguous_google_snippet",
-          "source_url": "https://mundae.com/about-us/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "copyright_year_current_2026",
-          "direction": "negative",
-          "evidence": "Copyright 2026 — site fresh, not abandoned.",
-          "source": "live_website_fetch",
-          "source_url": "https://mundae.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 4,
-          "signal_key": "houston_metro_pull",
-          "direction": "positive",
-          "evidence": "Harris County / Houston = top TX market for restoration + carpet roll-up. Belfor, Pye-Barker (recently expanded to carpet via Authority Brands), ServiceMaster all active.",
-          "source": "market_knowledge",
-          "source_url": null,
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "owner_age_proxy_30yr_tenure", "direction": "positive", "evidence": "Mundae 'family owned 30+ yrs' per Google narrative. Founder/President Ron Saar (per Google search snippet sourced from BBB profile — could not directly verify, BBB 403'd). Tenure proxy ~55.", "source": "live_website + google_snippet", "source_url": "https://mundae.com/about-us/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "tenure_30_yrs_multi_branch", "direction": "positive", "evidence": "30+ yrs, two Houston branches (SW + Downtown), 300+ reviews, 24/7 emergency response — multi-truck operation. SBA-size estimate: $1.5M-$3M+.", "source": "live_website_fetch", "source_url": "https://mundae.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "license_insured_text", "direction": "positive", "evidence": "Site states 'Licensed & Insured'. No IICRC specifically named but full restoration services indicate technical credentialing.", "source": "live_website_fetch", "source_url": "https://mundae.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "negative", "evidence": "Live About page at https://mundae.com/about-us/ (fetched 2026-05-16) confirms 'family-owned' but does NOT name principals — neither Ron Saar nor Lauren Saar appears in directly-fetched content. However, Google search snippet (sourced from BBB profile, also 403'd) reports 'President Ron Saar' and 'VP Lauren Saar' — implying a structured family-VP succession (likely father-daughter or husband-wife) ALREADY IN PLACE. Per the verifying-no-successor protocol, since the live About page itself doesn't show this, AND the snippet implies a structured next-gen owner, the safer read is: structured internal-buy-in candidate, NOT coasting-solo-to-outside. Demote L3.", "source": "live_website_fetch + ambiguous_google_snippet", "source_url": "https://mundae.com/about-us/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "copyright_year_current_2026", "direction": "negative", "evidence": "Copyright 2026 — site fresh, not abandoned.", "source": "live_website_fetch", "source_url": "https://mundae.com/", "observed_at": "2026-05-16"},
+        {"layer": 4, "signal_key": "houston_metro_pull", "direction": "positive", "evidence": "Harris County / Houston = top TX market for restoration + carpet roll-up. Belfor, Pye-Barker (recently expanded to carpet via Authority Brands), ServiceMaster all active.", "source": "market_knowledge", "source_url": null, "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 55,
       "layer1_comment": "Ron Saar (per BBB snippet — unverified on direct fetch), ~55, founded Mundae 30+ yrs ago. Approaching natural-exit window but younger than ideal. Confidence low-medium.",
@@ -481,65 +232,15 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://bagdadorientalrugs.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["since_1946", "address", "phone", "services"]
-        }
+        {"source": "live_website_fetch", "url": "https://bagdadorientalrugs.com/", "fetched_at": "2026-05-16", "fields": ["since_1946","address","phone","services"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "founding_decade": "1946",
-        "service_focus": "Oriental rug cleaning + repair + sales + storage — primary; carpet cleaning secondary",
-        "showroom_address": "Westheimer (premium Galleria-adjacent ZIP)"
-      },
+      "raw_enrichment": {"copyright_year": 2026, "founding_decade": "1946", "service_focus": "Oriental rug cleaning + repair + sales + storage — primary; carpet cleaning secondary", "showroom_address": "Westheimer (premium Galleria-adjacent ZIP)"},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "founding_1946_multi_gen",
-          "direction": "positive",
-          "evidence": "Founded 1946 — 80 years. Current 'Ali' identified on customer reviews; clearly multi-generational. Specific owner-age unknown without surname verification.",
-          "source": "live_website_fetch",
-          "source_url": "https://bagdadorientalrugs.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "tenure_80_yrs_premium_location",
-          "direction": "positive",
-          "evidence": "80-yr operation at premium Galleria-adjacent Westheimer ZIP. Showroom + cleaning + repair + storage = high-margin oriental rug niche. SBA-financeable.",
-          "source": "live_website_fetch",
-          "source_url": "https://bagdadorientalrugs.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_online_booking_simple",
-          "direction": "positive",
-          "evidence": "No online booking system. Phone + contact-form only.",
-          "source": "live_website_fetch",
-          "source_url": "https://bagdadorientalrugs.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_team_page_no_successor_visibility",
-          "direction": "ambiguous",
-          "evidence": "No team or about page surfaced via single-page fetch — could not confirm or deny successor presence. PER PROTOCOL: cannot promote A/B without live successor check; cap at C until team page is fetched (likely an interior page not surfaced in homepage fetch).",
-          "source": "live_website_fetch",
-          "source_url": "https://bagdadorientalrugs.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 4,
-          "signal_key": "houston_galleria_premium_micro",
-          "direction": "positive",
-          "evidence": "Westheimer/Galleria = premium sub-market ZIP. Oriental rug niche is a sub-vertical that's NOT a roll-up target (specialty, expert-dependent). Lower L4 — lower outside-buyer demand for the specialty.",
-          "source": "market_knowledge",
-          "source_url": null,
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "founding_1946_multi_gen", "direction": "positive", "evidence": "Founded 1946 — 80 years. Current 'Ali' identified on customer reviews; clearly multi-generational. Specific owner-age unknown without surname verification.", "source": "live_website_fetch", "source_url": "https://bagdadorientalrugs.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "tenure_80_yrs_premium_location", "direction": "positive", "evidence": "80-yr operation at premium Galleria-adjacent Westheimer ZIP. Showroom + cleaning + repair + storage = high-margin oriental rug niche. SBA-financeable.", "source": "live_website_fetch", "source_url": "https://bagdadorientalrugs.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_online_booking_simple", "direction": "positive", "evidence": "No online booking system. Phone + contact-form only.", "source": "live_website_fetch", "source_url": "https://bagdadorientalrugs.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_team_page_no_successor_visibility", "direction": "ambiguous", "evidence": "No team or about page surfaced via single-page fetch — could not confirm or deny successor presence. PER PROTOCOL: cannot promote A/B without live successor check; cap at C until team page is fetched (likely an interior page not surfaced in homepage fetch).", "source": "live_website_fetch", "source_url": "https://bagdadorientalrugs.com/", "observed_at": "2026-05-16"},
+        {"layer": 4, "signal_key": "houston_galleria_premium_micro", "direction": "positive", "evidence": "Westheimer/Galleria = premium sub-market ZIP. Oriental rug niche is a sub-vertical that's NOT a roll-up target (specialty, expert-dependent). Lower L4 — lower outside-buyer demand for the specialty.", "source": "market_knowledge", "source_url": null, "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 70,
       "layer1_comment": "Bagdad's 80-yr lifespan implies multi-generational ownership. Current operator 'Ali' (surname undisclosed) age proxy unknown but business-tenure puts current generation likely 50-65. Need surname + OV65 to confirm.",
@@ -554,7 +255,7 @@
       "final_comment": "Bagdad Oriental Rugs, Houston Westheimer (5869 Westheimer Rd, premium Galleria-adjacent), founded 1946 — 80 yrs, multi-generational specialty (oriental rug cleaning + sales + repair + storage). Site fresh (©2026), single-page architecture with no team page surfaced for live successor-verification fetch — cap at C_watch per skill protocol. Real value is likely in the showroom real-estate + brand. Re-score in 90 days with a team-page fetch + Comptroller + CAD on the Westheimer parcel.",
       "value_add_thesis": "If real-estate-heavy (owner owns the Westheimer showroom), a sale-leaseback acquirer or specialty rollup is the play. Operating modernization (online appraisals, digital rug-storage tracking, e-commerce rug sales) is a soft 1.2-1.4× EBITDA path. Specialty-cultural businesses are hard to transition — successor verification critical.",
       "confidence": "low",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Tex A Clean Carpet Care LLC",
@@ -589,45 +290,13 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://carpetcleanerhoustontx.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["address", "phone", "services", "copyright_2023"]
-        }
+        {"source": "live_website_fetch", "url": "https://carpetcleanerhoustontx.com/", "fetched_at": "2026-05-16", "fields": ["address","phone","services","copyright_2023"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2023,
-        "address_concern": "700 Milam Ste 1300 = downtown Houston tower address, likely virtual office / coworking — real ops elsewhere; verify"
-      },
+      "raw_enrichment": {"copyright_year": 2023, "address_concern": "700 Milam Ste 1300 = downtown Houston tower address, likely virtual office / coworking — real ops elsewhere; verify"},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "claim_20_yrs",
-          "direction": "positive",
-          "evidence": "Website states 'nearly 30 years' (over 20 verified). 20+ yr tenure.",
-          "source": "live_website_fetch",
-          "source_url": "https://carpetcleanerhoustontx.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "copyright_year_2023",
-          "direction": "positive",
-          "evidence": "Copyright 2023 — site is 3 years stale.",
-          "source": "live_website_fetch",
-          "source_url": "https://carpetcleanerhoustontx.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_owner_named",
-          "direction": "ambiguous",
-          "evidence": "Live homepage names no owner. Address is a downtown Houston office tower (700 Milam #1300) which is suspicious for a carpet cleaning company — likely virtual office. Successor / principal verification requires fetching about-us page.",
-          "source": "live_website_fetch",
-          "source_url": "https://carpetcleanerhoustontx.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "claim_20_yrs", "direction": "positive", "evidence": "Website states 'nearly 30 years' (over 20 verified). 20+ yr tenure.", "source": "live_website_fetch", "source_url": "https://carpetcleanerhoustontx.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "copyright_year_2023", "direction": "positive", "evidence": "Copyright 2023 — site is 3 years stale.", "source": "live_website_fetch", "source_url": "https://carpetcleanerhoustontx.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_owner_named", "direction": "ambiguous", "evidence": "Live homepage names no owner. Address is a downtown Houston office tower (700 Milam #1300) which is suspicious for a carpet cleaning company — likely virtual office. Successor / principal verification requires fetching about-us page.", "source": "live_website_fetch", "source_url": "https://carpetcleanerhoustontx.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 40,
       "layer1_comment": "No owner age or name visible on live site. License-tenure-equivalent proxy gives only weak signal. Confidence low.",
@@ -642,7 +311,7 @@
       "final_comment": "Tex A Clean Carpet Care LLC, Houston downtown address (700 Milam #1300 — likely virtual office, verify actual ops). 20+ yrs claimed, copyright 2023 = 3-yr-stale. No owner named on live homepage, no about-us page surfaced for successor verification. Cap at C_watch — need a deep-dive fetch of /about-us + Comptroller entity record + actual ops address before promoting.",
       "value_add_thesis": "Standard playbook IF real (modern site, online booking, route optimization). Cannot scope value-add until ownership / ops address verified.",
       "confidence": "low",
-      "data_completeness": 0.3
+      "data_completeness": 0.30
     },
     {
       "legal_name": "Sanserve Janitorial Services",
@@ -677,29 +346,11 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://sanservejanitorial.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["since_1963", "address_beaumont", "services_janitorial_commercial_only"]
-        }
+        {"source": "live_website_fetch", "url": "https://sanservejanitorial.com/", "fetched_at": "2026-05-16", "fields": ["since_1963","address_beaumont","services_janitorial_commercial_only"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "actual_county": "Jefferson — NOT on target county list",
-        "primary_naics": "561720 janitorial — NOT 561740 carpet primary",
-        "fortune_500_claim": "30+ Fortune 500 clients"
-      },
+      "raw_enrichment": {"copyright_year": 2026, "actual_county": "Jefferson — NOT on target county list", "primary_naics": "561720 janitorial — NOT 561740 carpet primary", "fortune_500_claim": "30+ Fortune 500 clients"},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "out_of_target_county_and_vertical",
-          "direction": "disqualifying",
-          "evidence": "Sanserve is Beaumont (Jefferson Co) NOT in target county list. Primary NAICS is 561720 janitorial — carpet care is secondary. Excluded from this vertical's scoring scope.",
-          "source": "live_website_fetch",
-          "source_url": "https://sanservejanitorial.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "out_of_target_county_and_vertical", "direction": "disqualifying", "evidence": "Sanserve is Beaumont (Jefferson Co) NOT in target county list. Primary NAICS is 561720 janitorial — carpet care is secondary. Excluded from this vertical's scoring scope.", "source": "live_website_fetch", "source_url": "https://sanservejanitorial.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 0,
       "layer1_comment": "Excluded — Jefferson County (not target) + primary NAICS 561720 janitorial (not 561740 carpet).",
@@ -714,7 +365,7 @@
       "final_comment": "EXCLUDED. Sanserve Janitorial is Beaumont (Jefferson Co, not in target county list) and primary NAICS is 561720 janitorial — carpet care is secondary. Out-of-scope for carpet cleaning vertical.",
       "value_add_thesis": "N/A — excluded.",
       "confidence": "high",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Serenity Floor Care",
@@ -749,46 +400,13 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://serenityfloorcare.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["over_25_yrs", "phone", "services_carpet_tile_floor", "online_booking_yes"]
-        }
+        {"source": "live_website_fetch", "url": "https://serenityfloorcare.com/", "fetched_at": "2026-05-16", "fields": ["over_25_yrs","phone","services_carpet_tile_floor","online_booking_yes"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": null,
-        "services_full_floor_care": true,
-        "online_booking": true
-      },
+      "raw_enrichment": {"copyright_year": null, "services_full_floor_care": true, "online_booking": true},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "tenure_25_yrs",
-          "direction": "positive",
-          "evidence": "25+ yrs (late 1990s founding).",
-          "source": "live_website_fetch",
-          "source_url": "https://serenityfloorcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "online_booking_present",
-          "direction": "negative",
-          "evidence": "Online booking system available (/book-online/) — modern intake = NOT coasting. Counters the L3 read.",
-          "source": "live_website_fetch",
-          "source_url": "https://serenityfloorcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "owner_not_named_no_team_page_visible",
-          "direction": "ambiguous",
-          "evidence": "Live homepage doesn't name owner; about-us page exists but full successor verification not done.",
-          "source": "live_website_fetch",
-          "source_url": "https://serenityfloorcare.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "tenure_25_yrs", "direction": "positive", "evidence": "25+ yrs (late 1990s founding).", "source": "live_website_fetch", "source_url": "https://serenityfloorcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "online_booking_present", "direction": "negative", "evidence": "Online booking system available (/book-online/) — modern intake = NOT coasting. Counters the L3 read.", "source": "live_website_fetch", "source_url": "https://serenityfloorcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "owner_not_named_no_team_page_visible", "direction": "ambiguous", "evidence": "Live homepage doesn't name owner; about-us page exists but full successor verification not done.", "source": "live_website_fetch", "source_url": "https://serenityfloorcare.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 50,
       "layer1_comment": "Tenure proxy ~25 yrs — owner-age estimate ~52-58 if started early adulthood. No verified age.",
@@ -803,7 +421,7 @@
       "final_comment": "Serenity Floor Care, Houston (77095 NW), 25+ yrs, full floor + carpet, online booking present = modern intake. No owner named on live site, no successor verification done. Final 51 → C_watch — re-score with owner ID + team-page fetch.",
       "value_add_thesis": "Already has online booking — modernization gap is smaller. Route optimization + commercial property-management portfolio expansion. Modest 1.2-1.4× EBITDA path.",
       "confidence": "low",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Bayou City Steam Cleaning",
@@ -838,54 +456,13 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://www.bayoucitysteam.com",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "address",
-            "phone",
-            "services",
-            "iicrc_cert",
-            "online_booking_yes",
-            "copyright_2026"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://www.bayoucitysteam.com", "fetched_at": "2026-05-16", "fields": ["address","phone","services","iicrc_cert","online_booking_yes","copyright_2026"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "online_booking": true,
-        "iicrc_certified_techs": true,
-        "service_area": "Memorial/Galleria Houston"
-      },
+      "raw_enrichment": {"copyright_year": 2026, "online_booking": true, "iicrc_certified_techs": true, "service_area": "Memorial/Galleria Houston"},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "iicrc_certified_techs",
-          "direction": "positive",
-          "evidence": "All technicians IICRC certified per live site.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.bayoucitysteam.com",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "modern_operation_online_booking",
-          "direction": "negative",
-          "evidence": "Online instant-quote + booking = modern intake. ©2026. Strong counter-signal to coasting.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.bayoucitysteam.com",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "kingsride_lane_address_residential_subdivision",
-          "direction": "ambiguous",
-          "evidence": "12335 Kingsride Lane #343 = residential subdivision address in Memorial/Spring Branch (77024 = premium West Houston ZIP) — possibly home-based operator with mail-drop or small office.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.bayoucitysteam.com",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "iicrc_certified_techs", "direction": "positive", "evidence": "All technicians IICRC certified per live site.", "source": "live_website_fetch", "source_url": "https://www.bayoucitysteam.com", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "modern_operation_online_booking", "direction": "negative", "evidence": "Online instant-quote + booking = modern intake. ©2026. Strong counter-signal to coasting.", "source": "live_website_fetch", "source_url": "https://www.bayoucitysteam.com", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "kingsride_lane_address_residential_subdivision", "direction": "ambiguous", "evidence": "12335 Kingsride Lane #343 = residential subdivision address in Memorial/Spring Branch (77024 = premium West Houston ZIP) — possibly home-based operator with mail-drop or small office.", "source": "live_website_fetch", "source_url": "https://www.bayoucitysteam.com", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 30,
       "layer1_comment": "No tenure date visible — can't proxy owner age. Modern site presentation suggests younger operator. Confidence low.",
@@ -935,38 +512,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://ashlyrugs.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["address_richmond_ave", "phone", "4th_gen_rug_merchants", "100_years_history"]
-        }
+        {"source": "live_website_fetch", "url": "https://ashlyrugs.com/", "fetched_at": "2026-05-16", "fields": ["address_richmond_ave","phone","4th_gen_rug_merchants","100_years_history"]}
       ],
-      "raw_enrichment": {
-        "location": "4222 Richmond Ave, Houston (River Oaks-adjacent ZIP 77027 = PREMIUM)",
-        "service_focus": "Oriental rug specialty (primary) + carpet cleaning secondary",
-        "inventory_claim": "10,000+ rugs",
-        "vertical_integration": "owns looms for Turkish Oushak, Persian Sultanabad, Modern Tibetan"
-      },
+      "raw_enrichment": {"location": "4222 Richmond Ave, Houston (River Oaks-adjacent ZIP 77027 = PREMIUM)", "service_focus": "Oriental rug specialty (primary) + carpet cleaning secondary", "inventory_claim": "10,000+ rugs", "vertical_integration": "owns looms for Turkish Oushak, Persian Sultanabad, Modern Tibetan"},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "multi_gen_rug_specialty",
-          "direction": "positive",
-          "evidence": "Site claims 4th-gen rug merchants, 100+ yrs of history. Current owners Abbas + Helena per testimonials — possibly couple.",
-          "source": "live_website_fetch",
-          "source_url": "https://ashlyrugs.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "online_booking_quote_form",
-          "direction": "negative",
-          "evidence": "Online rug-quote form present (forms.fillout.com integration) — modern intake.",
-          "source": "live_website_fetch",
-          "source_url": "https://ashlyrugs.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "multi_gen_rug_specialty", "direction": "positive", "evidence": "Site claims 4th-gen rug merchants, 100+ yrs of history. Current owners Abbas + Helena per testimonials — possibly couple.", "source": "live_website_fetch", "source_url": "https://ashlyrugs.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "online_booking_quote_form", "direction": "negative", "evidence": "Online rug-quote form present (forms.fillout.com integration) — modern intake.", "source": "live_website_fetch", "source_url": "https://ashlyrugs.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 60,
       "layer1_comment": "Multi-generational rug specialty — couple-owned (Abbas + Helena per reviews). Cannot age-verify without surnames. Tenure proxy: current generation likely 50-65.",
@@ -981,7 +532,7 @@
       "final_comment": "Ashly Fine Rugs, Richmond Ave Houston (River Oaks-adjacent premium ZIP), 4th-gen multi-generational rug specialty with own looms + 10K rug inventory. Site fresh + online quote form = NOT coasting. Specialty niche not on the carpet-cleaning roll-up wave. C_watch.",
       "value_add_thesis": "Real-estate-heavy exit if showroom owned + brand/inventory IP transferable. Not a service-business roll-up target.",
       "confidence": "low",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Better Than Ever Carpet Care",
@@ -1016,38 +567,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://betterthanevercc.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["since_2003", "address_tomball", "iicrc", "online_quote_yes", "copyright_2026"]
-        }
+        {"source": "live_website_fetch", "url": "https://betterthanevercc.com/", "fetched_at": "2026-05-16", "fields": ["since_2003","address_tomball","iicrc","online_quote_yes","copyright_2026"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "founding_year": 2003,
-        "iicrc_certified": true,
-        "online_quote": true
-      },
+      "raw_enrichment": {"copyright_year": 2026, "founding_year": 2003, "iicrc_certified": true, "online_quote": true},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "iicrc_certified_23_yrs",
-          "direction": "positive",
-          "evidence": "IICRC certified, 23 yrs, real Tomball address.",
-          "source": "live_website_fetch",
-          "source_url": "https://betterthanevercc.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "modern_site_2026_online_quote",
-          "direction": "negative",
-          "evidence": "©2026 + online quote = modern operator, NOT coasting.",
-          "source": "live_website_fetch",
-          "source_url": "https://betterthanevercc.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "iicrc_certified_23_yrs", "direction": "positive", "evidence": "IICRC certified, 23 yrs, real Tomball address.", "source": "live_website_fetch", "source_url": "https://betterthanevercc.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "modern_site_2026_online_quote", "direction": "negative", "evidence": "©2026 + online quote = modern operator, NOT coasting.", "source": "live_website_fetch", "source_url": "https://betterthanevercc.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 45,
       "layer1_comment": "23-yr tenure proxy — owner age likely 50-58. No verified age.",
@@ -1062,7 +587,7 @@
       "final_comment": "Better Than Ever Carpet Care, Tomball (N Harris), 23 yrs, IICRC certified, modern site. NOT coasting. C_watch — re-score with verified owner ID + age.",
       "value_add_thesis": "Already modernized; modest commercial-route expansion path.",
       "confidence": "low",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Queen's Carpet Care",
@@ -1097,60 +622,14 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://queenscarpetcare.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_1980",
-            "sw_houston",
-            "commercial_industrial_warehouse",
-            "copyright_2022"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://queenscarpetcare.com/", "fetched_at": "2026-05-16", "fields": ["since_1980","sw_houston","commercial_industrial_warehouse","copyright_2022"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2022,
-        "founding_year": 1980,
-        "services_commercial_industrial_warehouse": true
-      },
+      "raw_enrichment": {"copyright_year": 2022, "founding_year": 1980, "services_commercial_industrial_warehouse": true},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_46_yrs_proxy",
-          "direction": "positive",
-          "evidence": "46-yr operation — owner-age tenure proxy strongly implies 65+ if active operator (started early-mid 20s in 1980). NO verified OV65 / voter / DMV.",
-          "source": "live_website_fetch",
-          "source_url": "https://queenscarpetcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "tenure_commercial_industrial",
-          "direction": "positive",
-          "evidence": "Multi-truck commercial + industrial + warehouse + epoxy capability. Serves SW Houston (Westchase, Sharpstown area).",
-          "source": "live_website_fetch",
-          "source_url": "https://queenscarpetcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "copyright_year_2022_stale",
-          "direction": "positive",
-          "evidence": "Copyright 2022 — 4-yr-stale site. Coasting tell.",
-          "source": "live_website_fetch",
-          "source_url": "https://queenscarpetcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "successor_check_live_fetch_partial",
-          "direction": "ambiguous",
-          "evidence": "Live homepage doesn't name owner; about-us page exists but full direct fetch with team-page successor verification not completed in this run. Per protocol, cap promotability until verified.",
-          "source": "live_website_fetch",
-          "source_url": "https://queenscarpetcare.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_46_yrs_proxy", "direction": "positive", "evidence": "46-yr operation — owner-age tenure proxy strongly implies 65+ if active operator (started early-mid 20s in 1980). NO verified OV65 / voter / DMV.", "source": "live_website_fetch", "source_url": "https://queenscarpetcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "tenure_commercial_industrial", "direction": "positive", "evidence": "Multi-truck commercial + industrial + warehouse + epoxy capability. Serves SW Houston (Westchase, Sharpstown area).", "source": "live_website_fetch", "source_url": "https://queenscarpetcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "copyright_year_2022_stale", "direction": "positive", "evidence": "Copyright 2022 — 4-yr-stale site. Coasting tell.", "source": "live_website_fetch", "source_url": "https://queenscarpetcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "successor_check_live_fetch_partial", "direction": "ambiguous", "evidence": "Live homepage doesn't name owner; about-us page exists but full direct fetch with team-page successor verification not completed in this run. Per protocol, cap promotability until verified.", "source": "live_website_fetch", "source_url": "https://queenscarpetcare.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 75,
       "layer1_comment": "Founded 1980 (46 yrs). Owner-age proxy strongly implies 65+ — solidly in natural-exit window. Confidence medium (tenure-only, no OV65).",
@@ -1200,38 +679,11 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://oneofakindpros.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "address",
-            "phone",
-            "iicrc_dual_cert",
-            "housecallpro",
-            "copyright_2026",
-            "reviews_400+"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://oneofakindpros.com/", "fetched_at": "2026-05-16", "fields": ["address","phone","iicrc_dual_cert","housecallpro","copyright_2026","reviews_400+"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "founding_year": 2012,
-        "iicrc_certs": ["carpet", "upholstery", "tile/grout"],
-        "housecall_pro": true,
-        "review_count": "400+ Google",
-        "awards": "Expertise.com 2021, 2023, 2025"
-      },
+      "raw_enrichment": {"copyright_year": 2026, "founding_year": 2012, "iicrc_certs": ["carpet","upholstery","tile/grout"], "housecall_pro": true, "review_count": "400+ Google","awards": "Expertise.com 2021, 2023, 2025"},
       "signals": [
-        {
-          "layer": 3,
-          "signal_key": "modern_operation",
-          "direction": "negative",
-          "evidence": "HouseCallPro online booking, ©2026, 400+ reviews, award-winning. NOT a coasting target.",
-          "source": "live_website_fetch",
-          "source_url": "https://oneofakindpros.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 3, "signal_key": "modern_operation", "direction": "negative", "evidence": "HouseCallPro online booking, ©2026, 400+ reviews, award-winning. NOT a coasting target.", "source": "live_website_fetch", "source_url": "https://oneofakindpros.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 25,
       "layer1_comment": "14-yr tenure — owner probably 40-50. Not in natural-exit window.",
@@ -1246,7 +698,7 @@
       "final_comment": "One Of A Kind Pros, Richmond (Fort Bend) — modern award-winning IICRC-certified operator with HouseCallPro + 400+ reviews. NOT a coasting target. D_pass for this thesis.",
       "value_add_thesis": "N/A — already modernized.",
       "confidence": "medium",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Dalworth Clean",
@@ -1281,44 +733,13 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch_home",
-          "url": "https://www.dalworth.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["since_1976", "euless_HQ", "1M+_homes", "100+_cities"]
-        },
-        {
-          "source": "live_website_fetch_about",
-          "url": "https://www.dalworth.com/about-us",
-          "fetched_at": "2026-05-16",
-          "fields": ["family_owned_2_generations", "NO_PRINCIPAL_NAMED — opacity red flag"]
-        }
+        {"source": "live_website_fetch_home", "url": "https://www.dalworth.com/", "fetched_at": "2026-05-16", "fields": ["since_1976","euless_HQ","1M+_homes","100+_cities"]},
+        {"source": "live_website_fetch_about", "url": "https://www.dalworth.com/about-us", "fetched_at": "2026-05-16", "fields": ["family_owned_2_generations","NO_PRINCIPAL_NAMED — opacity red flag"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": "no year shown",
-        "sister_companies_dalworth_group": true,
-        "metric_1M_homes": true,
-        "deliberate_no_principal_listed": true
-      },
+      "raw_enrichment": {"copyright_year": "no year shown", "sister_companies_dalworth_group": true, "metric_1M_homes": true, "deliberate_no_principal_listed": true},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "50_yr_tenure_dfw_scale",
-          "direction": "positive",
-          "evidence": "50 yrs, DFW-wide, multiple sister companies (Dalworth Group). Too big for ETA SBA 7(a) ceiling (>$5M est rev).",
-          "source": "live_website_fetch",
-          "source_url": "https://www.dalworth.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "opacity_red_flag",
-          "direction": "ambiguous",
-          "evidence": "About page does NOT name founder, CEO, owner, or any individual — deliberate opacity at this scale often indicates PE / family-office ownership or recent acquisition. Per the verifying-no-successor protocol, cap promotability until ownership structure verified.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.dalworth.com/about-us",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "50_yr_tenure_dfw_scale", "direction": "positive", "evidence": "50 yrs, DFW-wide, multiple sister companies (Dalworth Group). Too big for ETA SBA 7(a) ceiling (>$5M est rev).", "source": "live_website_fetch", "source_url": "https://www.dalworth.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "opacity_red_flag", "direction": "ambiguous", "evidence": "About page does NOT name founder, CEO, owner, or any individual — deliberate opacity at this scale often indicates PE / family-office ownership or recent acquisition. Per the verifying-no-successor protocol, cap promotability until ownership structure verified.", "source": "live_website_fetch", "source_url": "https://www.dalworth.com/about-us", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 30,
       "layer1_comment": "Cannot age-verify any owner — deliberately opaque. Multi-generational at scale typically means professional management or family-office ownership, not coasting solo owner.",
@@ -1368,61 +789,14 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://redcarpetclean.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_1995",
-            "colleyville_PO_box",
-            "commercial_recurring_language",
-            "copyright_2026"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://redcarpetclean.com/", "fetched_at": "2026-05-16", "fields": ["since_1995","colleyville_PO_box","commercial_recurring_language","copyright_2026"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "founded_1995": true,
-        "po_box_address_concern": "Colleyville PO Box 892 — concerning for SBA, lack of physical operating address visible",
-        "commercial_recurring": "Scheduled and on-demand carpet cleaning for offices, retail spaces, and managed properties — Trusted by Property Managers & Businesses"
-      },
+      "raw_enrichment": {"copyright_year": 2026, "founded_1995": true, "po_box_address_concern": "Colleyville PO Box 892 — concerning for SBA, lack of physical operating address visible", "commercial_recurring": "Scheduled and on-demand carpet cleaning for offices, retail spaces, and managed properties — Trusted by Property Managers & Businesses"},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_31_yrs",
-          "direction": "positive",
-          "evidence": "31-yr operation; owner-age tenure proxy implies 55-65 if started early adulthood.",
-          "source": "live_website_fetch",
-          "source_url": "https://redcarpetclean.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "commercial_recurring_explicit",
-          "direction": "positive",
-          "evidence": "Site explicitly mentions 'Trusted by Property Managers & Businesses' and 'managed properties' commercial work. Recurring-revenue signal.",
-          "source": "live_website_fetch",
-          "source_url": "https://redcarpetclean.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_online_booking",
-          "direction": "positive",
-          "evidence": "Email + phone only — no online booking. Pre-modern intake.",
-          "source": "live_website_fetch",
-          "source_url": "https://redcarpetclean.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_team_page_no_owner_named",
-          "direction": "ambiguous",
-          "evidence": "Live homepage has no team page surfaced + no owner named; successor verification incomplete. Per protocol, cap.",
-          "source": "live_website_fetch",
-          "source_url": "https://redcarpetclean.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_31_yrs", "direction": "positive", "evidence": "31-yr operation; owner-age tenure proxy implies 55-65 if started early adulthood.", "source": "live_website_fetch", "source_url": "https://redcarpetclean.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "commercial_recurring_explicit", "direction": "positive", "evidence": "Site explicitly mentions 'Trusted by Property Managers & Businesses' and 'managed properties' commercial work. Recurring-revenue signal.", "source": "live_website_fetch", "source_url": "https://redcarpetclean.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_online_booking", "direction": "positive", "evidence": "Email + phone only — no online booking. Pre-modern intake.", "source": "live_website_fetch", "source_url": "https://redcarpetclean.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_team_page_no_owner_named", "direction": "ambiguous", "evidence": "Live homepage has no team page surfaced + no owner named; successor verification incomplete. Per protocol, cap.", "source": "live_website_fetch", "source_url": "https://redcarpetclean.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 62,
       "layer1_comment": "31-yr business-tenure proxy suggests owner ~58-65. No OV65/voter/DMV verification. Confidence medium.",
@@ -1472,64 +846,14 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://fibercaredallas.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_1981",
-            "irving_address",
-            "specialty_textile",
-            "commercial_restaurants_showrooms_clinics",
-            "copyright_2026",
-            "online_booking"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://fibercaredallas.com/", "fetched_at": "2026-05-16", "fields": ["since_1981","irving_address","specialty_textile","commercial_restaurants_showrooms_clinics","copyright_2026","online_booking"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "founded_1981": true,
-        "family_owned": true,
-        "commercial_clients": "restaurants, showrooms, clinics, retail spaces, commercial offices",
-        "specialty_services": ["acrylic backing", "flameproofing", "lamination"]
-      },
+      "raw_enrichment": {"copyright_year": 2026, "founded_1981": true, "family_owned": true, "commercial_clients": "restaurants, showrooms, clinics, retail spaces, commercial offices", "specialty_services": ["acrylic backing","flameproofing","lamination"]},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_45_yrs",
-          "direction": "positive",
-          "evidence": "45 yrs — strong natural-exit window proxy. Owner likely 65+.",
-          "source": "live_website_fetch",
-          "source_url": "https://fibercaredallas.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "specialty_commercial_45yr",
-          "direction": "positive",
-          "evidence": "Specialty textile services (acrylic backing, flameproofing) + restaurants/clinics/showrooms commercial base + 45 yrs = high-quality SBA target. Estimate $800K-$2M revenue.",
-          "source": "live_website_fetch",
-          "source_url": "https://fibercaredallas.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "online_booking_present",
-          "direction": "negative",
-          "evidence": "Online booking active. Reduces coasting read.",
-          "source": "live_website_fetch",
-          "source_url": "https://fibercaredallas.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_owner_named_on_homepage",
-          "direction": "ambiguous",
-          "evidence": "Family-owned but no principals named; about-us page exists; successor verification incomplete.",
-          "source": "live_website_fetch",
-          "source_url": "https://fibercaredallas.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_45_yrs", "direction": "positive", "evidence": "45 yrs — strong natural-exit window proxy. Owner likely 65+.", "source": "live_website_fetch", "source_url": "https://fibercaredallas.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "specialty_commercial_45yr", "direction": "positive", "evidence": "Specialty textile services (acrylic backing, flameproofing) + restaurants/clinics/showrooms commercial base + 45 yrs = high-quality SBA target. Estimate $800K-$2M revenue.", "source": "live_website_fetch", "source_url": "https://fibercaredallas.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "online_booking_present", "direction": "negative", "evidence": "Online booking active. Reduces coasting read.", "source": "live_website_fetch", "source_url": "https://fibercaredallas.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_owner_named_on_homepage", "direction": "ambiguous", "evidence": "Family-owned but no principals named; about-us page exists; successor verification incomplete.", "source": "live_website_fetch", "source_url": "https://fibercaredallas.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 75,
       "layer1_comment": "45-yr business tenure — owner-age proxy strongly implies 65+. Natural-exit window. No OV65 verified — confidence medium.",
@@ -1579,73 +903,15 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://www.sunshinefabriccleaning.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_1973",
-            "family_owned_by_women",
-            "iicrc",
-            "austin_burnet",
-            "copyright_undated"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://www.sunshinefabriccleaning.com/", "fetched_at": "2026-05-16", "fields": ["since_1973","family_owned_by_women","iicrc","austin_burnet","copyright_undated"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": null,
-        "founded_1973": true,
-        "family_owned_by_women": true,
-        "iicrc_certified": true,
-        "designer_relationship_clients": true,
-        "services": "area rugs, upholstery, carpet, drapery, tile/sealing, pet stain, leather, repairs/reweaving, installation"
-      },
+      "raw_enrichment": {"copyright_year": null, "founded_1973": true, "family_owned_by_women": true, "iicrc_certified": true, "designer_relationship_clients": true, "services": "area rugs, upholstery, carpet, drapery, tile/sealing, pet stain, leather, repairs/reweaving, installation"},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_53_yrs",
-          "direction": "positive",
-          "evidence": "53-yr operation. Owner-age tenure proxy strongly suggests 70+. No OV65 / voter / DMV verified.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.sunshinefabriccleaning.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "iicrc_53_yrs_specialty",
-          "direction": "positive",
-          "evidence": "53 yrs, IICRC certified, women-owned-and-operated, full-service specialty (rugs/carpet/upholstery/drapery/tile). Austin Burnet Rd. — central-N Austin commercial corridor.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.sunshinefabriccleaning.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_online_booking",
-          "direction": "positive",
-          "evidence": "Phone + contact form only — no online booking. Pre-modern intake.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.sunshinefabriccleaning.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_team_page_no_principal_named",
-          "direction": "ambiguous",
-          "evidence": "Family-owned-by-women but no principals named on homepage; about-us page not separately fetched; successor verification incomplete.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.sunshinefabriccleaning.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 4,
-          "signal_key": "austin_premium",
-          "direction": "positive",
-          "evidence": "Burnet Rd / N Austin commercial corridor — premium designer-relationship clientele.",
-          "source": "market_knowledge",
-          "source_url": null,
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_53_yrs", "direction": "positive", "evidence": "53-yr operation. Owner-age tenure proxy strongly suggests 70+. No OV65 / voter / DMV verified.", "source": "live_website_fetch", "source_url": "https://www.sunshinefabriccleaning.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "iicrc_53_yrs_specialty", "direction": "positive", "evidence": "53 yrs, IICRC certified, women-owned-and-operated, full-service specialty (rugs/carpet/upholstery/drapery/tile). Austin Burnet Rd. — central-N Austin commercial corridor.", "source": "live_website_fetch", "source_url": "https://www.sunshinefabriccleaning.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_online_booking", "direction": "positive", "evidence": "Phone + contact form only — no online booking. Pre-modern intake.", "source": "live_website_fetch", "source_url": "https://www.sunshinefabriccleaning.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_team_page_no_principal_named", "direction": "ambiguous", "evidence": "Family-owned-by-women but no principals named on homepage; about-us page not separately fetched; successor verification incomplete.", "source": "live_website_fetch", "source_url": "https://www.sunshinefabriccleaning.com/", "observed_at": "2026-05-16"},
+        {"layer": 4, "signal_key": "austin_premium", "direction": "positive", "evidence": "Burnet Rd / N Austin commercial corridor — premium designer-relationship clientele.", "source": "market_knowledge", "source_url": null, "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 80,
       "layer1_comment": "53-yr operation. Owner-tenure proxy implies 70+. Founder likely OV65 — needs CAD lookup to confirm.",
@@ -1695,63 +961,15 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://kandmsteamcleaning.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["since_1996", "austin_daisy_dr", "commercial_recurring", "online_booking_yes"]
-        },
-        {
-          "source": "google_search_corroboration",
-          "url": "https://kandmsteamcleaning.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "moncebaiz_family_two_gen — narrative from Google search, NOT verified on direct live fetch"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://kandmsteamcleaning.com/", "fetched_at": "2026-05-16", "fields": ["since_1996","austin_daisy_dr","commercial_recurring","online_booking_yes"]},
+        {"source": "google_search_corroboration", "url": "https://kandmsteamcleaning.com/", "fetched_at": "2026-05-16", "fields": ["moncebaiz_family_two_gen — narrative from Google search, NOT verified on direct live fetch"]}
       ],
-      "raw_enrichment": {
-        "founded_1996": true,
-        "online_booking": true,
-        "moncebaiz_family_two_generations_per_corroboration": true
-      },
+      "raw_enrichment": {"founded_1996": true, "online_booking": true, "moncebaiz_family_two_generations_per_corroboration": true},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_30_yrs",
-          "direction": "positive",
-          "evidence": "30-yr operation. Founding generation likely 60-70.",
-          "source": "live_website_fetch",
-          "source_url": "https://kandmsteamcleaning.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "tenure_30_yrs_commercial",
-          "direction": "positive",
-          "evidence": "30 yrs, family-owned, full-service. Commercial property recurring revenue language present.",
-          "source": "live_website_fetch",
-          "source_url": "https://kandmsteamcleaning.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "successor_check_via_corroboration",
-          "direction": "negative",
-          "evidence": "Google search corroboration (not on direct live-fetch) reports 'two generations of the Moncebaiz family' — implying succession-already-in-place. Per the verifying-no-successor protocol, the absence of confirmation on the live About page (kandmsteamcleaning.com/about-km/ — not fetched in this run) combined with the second-gen narrative caps L3 — likely internal-buy-in candidate, not coasting-solo-to-outside.",
-          "source": "live_website + google_corroboration",
-          "source_url": "https://kandmsteamcleaning.com/about-km/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "online_booking_present",
-          "direction": "negative",
-          "evidence": "Online booking present.",
-          "source": "live_website_fetch",
-          "source_url": "https://kandmsteamcleaning.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_30_yrs", "direction": "positive", "evidence": "30-yr operation. Founding generation likely 60-70.", "source": "live_website_fetch", "source_url": "https://kandmsteamcleaning.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "tenure_30_yrs_commercial", "direction": "positive", "evidence": "30 yrs, family-owned, full-service. Commercial property recurring revenue language present.", "source": "live_website_fetch", "source_url": "https://kandmsteamcleaning.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "successor_check_via_corroboration", "direction": "negative", "evidence": "Google search corroboration (not on direct live-fetch) reports 'two generations of the Moncebaiz family' — implying succession-already-in-place. Per the verifying-no-successor protocol, the absence of confirmation on the live About page (kandmsteamcleaning.com/about-km/ — not fetched in this run) combined with the second-gen narrative caps L3 — likely internal-buy-in candidate, not coasting-solo-to-outside.", "source": "live_website + google_corroboration", "source_url": "https://kandmsteamcleaning.com/about-km/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "online_booking_present", "direction": "negative", "evidence": "Online booking present.", "source": "live_website_fetch", "source_url": "https://kandmsteamcleaning.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 65,
       "layer1_comment": "30 yrs, two-gen family per corroboration — founder likely 60-70.",
@@ -1766,7 +984,7 @@
       "final_comment": "K&M Steam Cleaning, N Austin (Travis), founded 1996 — 30 yrs, narrative corroboration says Moncebaiz family + two generations (NOT directly verified on the live About page in this run, but the narrative + family-firm pattern is strong enough to flag as structured-succession-in-place per protocol). C_watch — fetch /about-km/ live to confirm successor structure before promoting.",
       "value_add_thesis": "If two-generation family is confirmed, this is an internal-buy-in candidate — Gideon-direct unlikely. Possible forward-tier for a buy-out-the-parent / buy-out-the-second-gen structured deal.",
       "confidence": "low",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Hart's Steam Cleaning",
@@ -1801,44 +1019,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://hartssteamcleaning.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "over_20_yrs",
-            "leander_williamson",
-            "commercial_highrise_condo",
-            "online_booking_yes",
-            "copyright_2026"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://hartssteamcleaning.com/", "fetched_at": "2026-05-16", "fields": ["over_20_yrs","leander_williamson","commercial_highrise_condo","online_booking_yes","copyright_2026"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "online_booking": true,
-        "commercial_high_rise_condo_buildings": true,
-        "team_tenure_claim": "many team members for years"
-      },
+      "raw_enrichment": {"copyright_year": 2026, "online_booking": true, "commercial_high_rise_condo_buildings": true, "team_tenure_claim": "many team members for years"},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "highrise_condo_commercial",
-          "direction": "positive",
-          "evidence": "Site emphasizes 'commercial cleaning services for high-rise and condo buildings' — premium recurring B2B revenue channel.",
-          "source": "live_website_fetch",
-          "source_url": "https://hartssteamcleaning.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "online_booking_modern",
-          "direction": "negative",
-          "evidence": "Online booking + ©2026 = NOT coasting.",
-          "source": "live_website_fetch",
-          "source_url": "https://hartssteamcleaning.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "highrise_condo_commercial", "direction": "positive", "evidence": "Site emphasizes 'commercial cleaning services for high-rise and condo buildings' — premium recurring B2B revenue channel.", "source": "live_website_fetch", "source_url": "https://hartssteamcleaning.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "online_booking_modern", "direction": "negative", "evidence": "Online booking + ©2026 = NOT coasting.", "source": "live_website_fetch", "source_url": "https://hartssteamcleaning.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 45,
       "layer1_comment": "20+ yr tenure — owner likely 50-60. No verified age.",
@@ -1888,44 +1074,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://www.wowtotalcleaning.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_2005",
-            "austin_regal_row",
-            "DKI_NADCA_OSHA",
-            "family_owned",
-            "commercial"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://www.wowtotalcleaning.com/", "fetched_at": "2026-05-16", "fields": ["since_2005","austin_regal_row","DKI_NADCA_OSHA","family_owned","commercial"]}
       ],
-      "raw_enrichment": {
-        "founded_2005": true,
-        "family_owned": true,
-        "certs": ["DKI", "NADCA", "OSHA"],
-        "services_full_restoration_carpet": true
-      },
+      "raw_enrichment": {"founded_2005": true, "family_owned": true, "certs": ["DKI","NADCA","OSHA"], "services_full_restoration_carpet": true},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "tenure_21_yrs_multi_cert",
-          "direction": "positive",
-          "evidence": "21 yrs, family-owned, multi-cert (DKI / NADCA / OSHA), full restoration + carpet.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.wowtotalcleaning.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_online_booking",
-          "direction": "positive",
-          "evidence": "Quote form only, no online booking.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.wowtotalcleaning.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "tenure_21_yrs_multi_cert", "direction": "positive", "evidence": "21 yrs, family-owned, multi-cert (DKI / NADCA / OSHA), full restoration + carpet.", "source": "live_website_fetch", "source_url": "https://www.wowtotalcleaning.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_online_booking", "direction": "positive", "evidence": "Quote form only, no online booking.", "source": "live_website_fetch", "source_url": "https://www.wowtotalcleaning.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 50,
       "layer1_comment": "21-yr tenure — owner likely 50-60. No verified age.",
@@ -1940,7 +1094,7 @@
       "final_comment": "WOW Total Cleaning & Restoration, S Austin Regal Row (Travis), founded 2005 — 21 yrs, family-owned, multi-cert (DKI/NADCA/OSHA), full restoration + carpet. No online booking but otherwise modernized. B_forward — verify owner ID + age + successor + Comptroller status.",
       "value_add_thesis": "Multi-cert restoration + carpet is a strong ETA / SBA target. Add online booking + dispatch (ServiceTitan), expand commercial property-management recurring base, push DKI/NADCA cross-sell into commercial HVAC + duct contracts. 1.4-1.6× EBITDA.",
       "confidence": "low",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Absolute Carpet & Tile",
@@ -1975,35 +1129,11 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://absolutecarpetaustin.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_2009",
-            "austin_chadbourne",
-            "family_owned",
-            "300+_reviews",
-            "copyright_2026",
-            "online_booking"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://absolutecarpetaustin.com/", "fetched_at": "2026-05-16", "fields": ["since_2009","austin_chadbourne","family_owned","300+_reviews","copyright_2026","online_booking"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "founded_2009": true,
-        "review_count_4.9stars": "300+"
-      },
+      "raw_enrichment": {"copyright_year": 2026, "founded_2009": true, "review_count_4.9stars": "300+"},
       "signals": [
-        {
-          "layer": 3,
-          "signal_key": "modern_active",
-          "direction": "negative",
-          "evidence": "©2026, online booking, 300+ reviews, 4.9-star = active modern. NOT coasting.",
-          "source": "live_website_fetch",
-          "source_url": "https://absolutecarpetaustin.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 3, "signal_key": "modern_active", "direction": "negative", "evidence": "©2026, online booking, 300+ reviews, 4.9-star = active modern. NOT coasting.", "source": "live_website_fetch", "source_url": "https://absolutecarpetaustin.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 30,
       "layer1_comment": "17-yr tenure — owner likely 40-50. Not natural-exit window yet.",
@@ -2018,7 +1148,7 @@
       "final_comment": "Absolute Carpet & Tile, S Austin, 17 yrs, ©2026, 300+ reviews 4.9★, online booking = active modern operator. D_pass.",
       "value_add_thesis": "N/A — wrong target profile.",
       "confidence": "low",
-      "data_completeness": 0.3
+      "data_completeness": 0.30
     },
     {
       "legal_name": "Kaskas Oriental Rugs",
@@ -2053,36 +1183,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://kaskasorientalrugs.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["2_showrooms", "anderson_kerbey", "import_specialty"]
-        }
+        {"source": "live_website_fetch", "url": "https://kaskasorientalrugs.com/", "fetched_at": "2026-05-16", "fields": ["2_showrooms","anderson_kerbey","import_specialty"]}
       ],
-      "raw_enrichment": {
-        "two_showrooms": true,
-        "import_specialty": "antique + new hand-woven oriental rugs"
-      },
+      "raw_enrichment": {"two_showrooms": true, "import_specialty": "antique + new hand-woven oriental rugs"},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_50_yrs_proxy",
-          "direction": "positive",
-          "evidence": "Founded ~1976 per spine notes (50 yrs). Multi-gen specialty.",
-          "source": "spine_corroboration",
-          "source_url": "https://kaskasorientalrugs.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 4,
-          "signal_key": "oriental_rug_niche",
-          "direction": "negative",
-          "evidence": "Oriental rug specialty NOT a carpet-cleaning roll-up target.",
-          "source": "market_knowledge",
-          "source_url": null,
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_50_yrs_proxy", "direction": "positive", "evidence": "Founded ~1976 per spine notes (50 yrs). Multi-gen specialty.", "source": "spine_corroboration", "source_url": "https://kaskasorientalrugs.com/", "observed_at": "2026-05-16"},
+        {"layer": 4, "signal_key": "oriental_rug_niche", "direction": "negative", "evidence": "Oriental rug specialty NOT a carpet-cleaning roll-up target.", "source": "market_knowledge", "source_url": null, "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 70,
       "layer1_comment": "50-yr operation, multi-gen specialty — proxy implies founder ~70+.",
@@ -2097,7 +1203,7 @@
       "final_comment": "Kaskas Oriental Rugs, Austin (Travis), 50 yrs, two showrooms — specialty rug import + cleaning. Wrong sub-vertical for the carpet-cleaning roll-up thesis. C_watch.",
       "value_add_thesis": "Real-estate-heavy exit OR specialty rug-network roll-up only.",
       "confidence": "low",
-      "data_completeness": 0.3
+      "data_completeness": 0.30
     },
     {
       "legal_name": "Peace Frog Specialty & Carpet Cleaning",
@@ -2132,37 +1238,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://peacefrogcarpetcleaning.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["austin_leander", "12_techs_named", "online_booking", "copyright_2026"]
-        },
-        {
-          "source": "live_website_fetch_team",
-          "url": "https://peacefrogcarpetcleaning.com/our-team/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "technicians_named:_Justin_Kyle_Noel_Angel_Evan_Josh_AJ_Anthony_Ryan_Jeremy_Richard_Guy"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://peacefrogcarpetcleaning.com/", "fetched_at": "2026-05-16", "fields": ["austin_leander","12_techs_named","online_booking","copyright_2026"]},
+        {"source": "live_website_fetch_team", "url": "https://peacefrogcarpetcleaning.com/our-team/", "fetched_at": "2026-05-16", "fields": ["technicians_named:_Justin_Kyle_Noel_Angel_Evan_Josh_AJ_Anthony_Ryan_Jeremy_Richard_Guy"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "tech_count": 12,
-        "online_booking": true,
-        "earth_friendly_branding": true
-      },
+      "raw_enrichment": {"copyright_year": 2026, "tech_count": 12, "online_booking": true, "earth_friendly_branding": true},
       "signals": [
-        {
-          "layer": 3,
-          "signal_key": "modern_active_team_visible",
-          "direction": "negative",
-          "evidence": "©2026, 12 named techs, online booking, two locations = active, modern, scaled.",
-          "source": "live_website_fetch",
-          "source_url": "https://peacefrogcarpetcleaning.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 3, "signal_key": "modern_active_team_visible", "direction": "negative", "evidence": "©2026, 12 named techs, online booking, two locations = active, modern, scaled.", "source": "live_website_fetch", "source_url": "https://peacefrogcarpetcleaning.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 35,
       "layer1_comment": "No tenure date visible; growth pattern suggests modern operator. Owner likely 40-55.",
@@ -2212,61 +1293,14 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://genesisfloorcare.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "29_yrs",
-            "hutto_williamson",
-            "owner_operated",
-            "online_booking",
-            "travis_williamson_service_area"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://genesisfloorcare.com/", "fetched_at": "2026-05-16", "fields": ["29_yrs","hutto_williamson","owner_operated","online_booking","travis_williamson_service_area"]}
       ],
-      "raw_enrichment": {
-        "owner_operated_29_yrs_self_label": true,
-        "online_booking": true,
-        "30_day_satisfaction_guarantee": true
-      },
+      "raw_enrichment": {"owner_operated_29_yrs_self_label": true, "online_booking": true, "30_day_satisfaction_guarantee": true},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_29_yrs",
-          "direction": "positive",
-          "evidence": "29-yr owner-operated business per site. Founder age proxy implies 55-65.",
-          "source": "live_website_fetch",
-          "source_url": "https://genesisfloorcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "29_yrs_owner_operated",
-          "direction": "positive",
-          "evidence": "29 yrs, owner-operated, Travis + Williamson service area.",
-          "source": "live_website_fetch",
-          "source_url": "https://genesisfloorcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "online_booking_present",
-          "direction": "negative",
-          "evidence": "Online booking active.",
-          "source": "live_website_fetch",
-          "source_url": "https://genesisfloorcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "owner_operated_solo_tell",
-          "direction": "positive",
-          "evidence": "Self-labels 'owner-operated' = solo bottleneck pattern of late-tenure operator.",
-          "source": "live_website_fetch",
-          "source_url": "https://genesisfloorcare.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_29_yrs", "direction": "positive", "evidence": "29-yr owner-operated business per site. Founder age proxy implies 55-65.", "source": "live_website_fetch", "source_url": "https://genesisfloorcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "29_yrs_owner_operated", "direction": "positive", "evidence": "29 yrs, owner-operated, Travis + Williamson service area.", "source": "live_website_fetch", "source_url": "https://genesisfloorcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "online_booking_present", "direction": "negative", "evidence": "Online booking active.", "source": "live_website_fetch", "source_url": "https://genesisfloorcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "owner_operated_solo_tell", "direction": "positive", "evidence": "Self-labels 'owner-operated' = solo bottleneck pattern of late-tenure operator.", "source": "live_website_fetch", "source_url": "https://genesisfloorcare.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 60,
       "layer1_comment": "29-yr tenure proxy — owner likely 55-65. No verified age.",
@@ -2281,7 +1315,7 @@
       "final_comment": "Genesis Floor Care LLC, Hutto (Williamson), 29 yrs owner-operated covering Travis + Williamson. Online booking + clean site = modernized intake. 'Owner-operated' self-label = solo bottleneck pattern. B_forward — verify owner ID + age + successor + Comptroller status.",
       "value_add_thesis": "Add a senior tech to break owner-operator bottleneck, build commercial property-management/HOA recurring contract pipeline in Williamson growth corridor (Hutto/Pflugerville/Round Rock new commercial), modernize PMS. 1.3-1.5× EBITDA path.",
       "confidence": "low",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Power Steam Carpet Cleaning",
@@ -2316,55 +1350,14 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://powersteamclean.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["since_1977", "fort_worth_park_vista", "online_quote", "copyright_2026"]
-        }
+        {"source": "live_website_fetch", "url": "https://powersteamclean.com/", "fetched_at": "2026-05-16", "fields": ["since_1977","fort_worth_park_vista","online_quote","copyright_2026"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "founded_1977": true,
-        "tagline": "Serving Fort Worth Since 1977"
-      },
+      "raw_enrichment": {"copyright_year": 2026, "founded_1977": true, "tagline": "Serving Fort Worth Since 1977"},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_48_yrs",
-          "direction": "positive",
-          "evidence": "48-yr operation. Owner-age tenure proxy strongly suggests 65+ if same generation. Likely OV65 candidate.",
-          "source": "live_website_fetch",
-          "source_url": "https://powersteamclean.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "tenure_48_yrs_real_address",
-          "direction": "positive",
-          "evidence": "48 yrs, real Park Vista Circle suite address, established Fort Worth N (Keller/Watauga adjacent ZIP 76244). SBA-size $400K-$900K.",
-          "source": "live_website_fetch",
-          "source_url": "https://powersteamclean.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "online_quote_form_no_booking",
-          "direction": "ambiguous",
-          "evidence": "Online quote form (not full booking calendar). Middle ground.",
-          "source": "live_website_fetch",
-          "source_url": "https://powersteamclean.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_team_page_no_owner_named",
-          "direction": "ambiguous",
-          "evidence": "Live homepage doesn't name owner; about-us page exists but full team-page successor verification not done. Per protocol, cap until verified.",
-          "source": "live_website_fetch",
-          "source_url": "https://powersteamclean.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_48_yrs", "direction": "positive", "evidence": "48-yr operation. Owner-age tenure proxy strongly suggests 65+ if same generation. Likely OV65 candidate.", "source": "live_website_fetch", "source_url": "https://powersteamclean.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "tenure_48_yrs_real_address", "direction": "positive", "evidence": "48 yrs, real Park Vista Circle suite address, established Fort Worth N (Keller/Watauga adjacent ZIP 76244). SBA-size $400K-$900K.", "source": "live_website_fetch", "source_url": "https://powersteamclean.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "online_quote_form_no_booking", "direction": "ambiguous", "evidence": "Online quote form (not full booking calendar). Middle ground.", "source": "live_website_fetch", "source_url": "https://powersteamclean.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_team_page_no_owner_named", "direction": "ambiguous", "evidence": "Live homepage doesn't name owner; about-us page exists but full team-page successor verification not done. Per protocol, cap until verified.", "source": "live_website_fetch", "source_url": "https://powersteamclean.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 78,
       "layer1_comment": "48-yr operation — owner-age tenure proxy strongly implies 65+. Strong OV65 candidate. Confidence medium pending verification.",
@@ -2414,37 +1407,11 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://snyderscarpetcare.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_2002",
-            "frisco_collin",
-            "brent_jessie_christine_snyder",
-            "iicrc",
-            "online_booking",
-            "copyright_2026"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://snyderscarpetcare.com/", "fetched_at": "2026-05-16", "fields": ["since_2002","frisco_collin","brent_jessie_christine_snyder","iicrc","online_booking","copyright_2026"]}
       ],
-      "raw_enrichment": {
-        "founded_2002": true,
-        "iicrc": true,
-        "named_principals_3": ["Brent Snyder", "Jessie Snyder", "Christine Snyder"],
-        "online_booking": true,
-        "service_area_60+_cities": true
-      },
+      "raw_enrichment": {"founded_2002": true, "iicrc": true, "named_principals_3": ["Brent Snyder","Jessie Snyder","Christine Snyder"], "online_booking": true, "service_area_60+_cities": true},
       "signals": [
-        {
-          "layer": 3,
-          "signal_key": "successor_check_live_fetch",
-          "direction": "negative",
-          "evidence": "Live homepage at https://snyderscarpetcare.com/ (fetched 2026-05-16) names THREE Snyder family principals — Brent, Jessie, Christine — confirming structured multi-principal family ownership ALREADY IN PLACE. This is an internal-buy-in / family-continuation candidate, not a coasting-solo-to-outside profile.",
-          "source": "live_website_fetch",
-          "source_url": "https://snyderscarpetcare.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "negative", "evidence": "Live homepage at https://snyderscarpetcare.com/ (fetched 2026-05-16) names THREE Snyder family principals — Brent, Jessie, Christine — confirming structured multi-principal family ownership ALREADY IN PLACE. This is an internal-buy-in / family-continuation candidate, not a coasting-solo-to-outside profile.", "source": "live_website_fetch", "source_url": "https://snyderscarpetcare.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 40,
       "layer1_comment": "Three Snyder family principals — Brent (likely founder), Jessie + Christine (likely children or spouse). Founder Brent age proxy ~50-58 (24-yr tenure).",
@@ -2494,63 +1461,14 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://drymastercleaningandrestoration.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_1990",
-            "richardson",
-            "family_owned",
-            "35_yrs_experience",
-            "online_booking",
-            "copyright_2026"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://drymastercleaningandrestoration.com/", "fetched_at": "2026-05-16", "fields": ["since_1990","richardson","family_owned","35_yrs_experience","online_booking","copyright_2026"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "founded_1990": true,
-        "family_owned": true,
-        "online_booking_book_now": true
-      },
+      "raw_enrichment": {"copyright_year": 2026, "founded_1990": true, "family_owned": true, "online_booking_book_now": true},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_36_yrs",
-          "direction": "positive",
-          "evidence": "36-yr operation. Owner-age tenure proxy implies 60-70.",
-          "source": "live_website_fetch",
-          "source_url": "https://drymastercleaningandrestoration.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "tenure_36_yrs_family_owned",
-          "direction": "positive",
-          "evidence": "36 yrs, family-owned, Richardson (premium N Dallas suburb), full-service carpet + restoration.",
-          "source": "live_website_fetch",
-          "source_url": "https://drymastercleaningandrestoration.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "online_booking_modern",
-          "direction": "negative",
-          "evidence": "'Book Now' online booking + ©2026 = modernized.",
-          "source": "live_website_fetch",
-          "source_url": "https://drymastercleaningandrestoration.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_team_page_no_owner_named",
-          "direction": "ambiguous",
-          "evidence": "No owner named, no team page on homepage; successor verification incomplete.",
-          "source": "live_website_fetch",
-          "source_url": "https://drymastercleaningandrestoration.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_36_yrs", "direction": "positive", "evidence": "36-yr operation. Owner-age tenure proxy implies 60-70.", "source": "live_website_fetch", "source_url": "https://drymastercleaningandrestoration.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "tenure_36_yrs_family_owned", "direction": "positive", "evidence": "36 yrs, family-owned, Richardson (premium N Dallas suburb), full-service carpet + restoration.", "source": "live_website_fetch", "source_url": "https://drymastercleaningandrestoration.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "online_booking_modern", "direction": "negative", "evidence": "'Book Now' online booking + ©2026 = modernized.", "source": "live_website_fetch", "source_url": "https://drymastercleaningandrestoration.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_team_page_no_owner_named", "direction": "ambiguous", "evidence": "No owner named, no team page on homepage; successor verification incomplete.", "source": "live_website_fetch", "source_url": "https://drymastercleaningandrestoration.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 68,
       "layer1_comment": "36-yr tenure → owner age proxy 60-70. Confidence medium.",
@@ -2565,7 +1483,7 @@
       "final_comment": "Dry Master Cleaning & Restoration, Richardson (Dallas Co), founded 1990 — 36 yrs family-owned multi-service. Online booking + ©2026 = modernized. No owner named on live homepage. B_forward — verify owner ID + age + successor structure + Comptroller status.",
       "value_add_thesis": "36-yr Richardson independent with modernized intake — fewer 'modernize the site' wins available. Primary lever: build out commercial property-management + apartment-turn pipeline in the Richardson/Plano/Allen corridor. 1.3-1.4× EBITDA path.",
       "confidence": "low",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Parker Brothers Carpet Cleaning",
@@ -2600,34 +1518,11 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://carpetcleaningfriscoplano.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_1985",
-            "frisco_plano",
-            "4_parker_brothers",
-            "copyright_2026",
-            "online_schedule"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://carpetcleaningfriscoplano.com/", "fetched_at": "2026-05-16", "fields": ["since_1985","frisco_plano","4_parker_brothers","copyright_2026","online_schedule"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "founded_1985": true,
-        "tagline": "Always 2 of the 4 Parker Brothers At Your Door"
-      },
+      "raw_enrichment": {"copyright_year": 2026, "founded_1985": true, "tagline": "Always 2 of the 4 Parker Brothers At Your Door"},
       "signals": [
-        {
-          "layer": 3,
-          "signal_key": "successor_check_4_sibling_owners",
-          "direction": "negative",
-          "evidence": "Live homepage names 4 Parker brothers as co-owners — sibling ownership/successor structure already in place. NOT a single-owner coasting profile.",
-          "source": "live_website_fetch",
-          "source_url": "https://carpetcleaningfriscoplano.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 3, "signal_key": "successor_check_4_sibling_owners", "direction": "negative", "evidence": "Live homepage names 4 Parker brothers as co-owners — sibling ownership/successor structure already in place. NOT a single-owner coasting profile.", "source": "live_website_fetch", "source_url": "https://carpetcleaningfriscoplano.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 60,
       "layer1_comment": "41-yr operation, 4 sibling co-owners. Eldest Parker likely 60-70, others may be younger.",
@@ -2642,7 +1537,7 @@
       "final_comment": "Parker Brothers Carpet Cleaning, Frisco/Plano — 41 yrs, 4 Parker brothers co-own. Sibling-buy-out is the natural transition, not outside acquisition. C_watch — could become target if siblings split (1 buys out 3, or all 4 sell).",
       "value_add_thesis": "If sibling-buy-out moment surfaces, premium DFW commercial pipeline + modernization play. Otherwise wrong target profile.",
       "confidence": "medium",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Case-Baldwin",
@@ -2677,52 +1572,13 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://casebaldwinjanitorial.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_1972",
-            "lewisville",
-            "commercial_only",
-            "multi_tenant_facilities",
-            "50_years_in_2022"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://casebaldwinjanitorial.com/", "fetched_at": "2026-05-16", "fields": ["since_1972","lewisville","commercial_only","multi_tenant_facilities","50_years_in_2022"]}
       ],
-      "raw_enrichment": {
-        "founded_1972": true,
-        "commercial_only": true,
-        "wholesale_janitorial_supplies": true
-      },
+      "raw_enrichment": {"founded_1972": true, "commercial_only": true, "wholesale_janitorial_supplies": true},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "primary_naics_561720_not_561740",
-          "direction": "ambiguous",
-          "evidence": "Case-Baldwin is primarily commercial janitorial NOT carpet specialty (NAICS 561720 not 561740). Carpet care implied within floor-care services. Borderline-fit for vertical scope; including with caveat.",
-          "source": "live_website_fetch",
-          "source_url": "https://casebaldwinjanitorial.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_online_booking_phone_only",
-          "direction": "positive",
-          "evidence": "Quote form / phone only, no online booking. Pre-modern intake.",
-          "source": "live_website_fetch",
-          "source_url": "https://casebaldwinjanitorial.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_owner_no_team_page",
-          "direction": "ambiguous",
-          "evidence": "No principals named on the live site; no team page surfaced. Successor verification incomplete.",
-          "source": "live_website_fetch",
-          "source_url": "https://casebaldwinjanitorial.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "primary_naics_561720_not_561740", "direction": "ambiguous", "evidence": "Case-Baldwin is primarily commercial janitorial NOT carpet specialty (NAICS 561720 not 561740). Carpet care implied within floor-care services. Borderline-fit for vertical scope; including with caveat.", "source": "live_website_fetch", "source_url": "https://casebaldwinjanitorial.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_online_booking_phone_only", "direction": "positive", "evidence": "Quote form / phone only, no online booking. Pre-modern intake.", "source": "live_website_fetch", "source_url": "https://casebaldwinjanitorial.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_owner_no_team_page", "direction": "ambiguous", "evidence": "No principals named on the live site; no team page surfaced. Successor verification incomplete.", "source": "live_website_fetch", "source_url": "https://casebaldwinjanitorial.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 80,
       "layer1_comment": "54-yr operation — owner-age tenure proxy strongly implies 70+. Strong OV65 likely.",
@@ -2737,7 +1593,7 @@
       "final_comment": "Case-Baldwin, Lewisville (Denton), founded 1972 — 54 yrs. Commercial janitorial + floor care; carpet care is a sub-service not primary (NAICS 561720 primary, 561740 secondary). No principals named, phone-only intake. Strong B_forward if Gideon's network wants a commercial janitorial play with carpet attached.",
       "value_add_thesis": "Commercial janitorial roll-up play — DFW market consolidation candidate. Modernize intake + ops, push carpet-cleaning cross-sell into the existing commercial base, dispatch/route software. 1.3-1.5× EBITDA path. Better fit for a janitorial-focused buyer than pure-carpet-cleaning ETA.",
       "confidence": "medium",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Apex Cleaning Concepts LLC",
@@ -2772,24 +1628,11 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://www.apexcleaningconceptsllc.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["20+_yrs", "arlington_roosevelt", "family_owned", "phone_text_intake"]
-        }
+        {"source": "live_website_fetch", "url": "https://www.apexcleaningconceptsllc.com/", "fetched_at": "2026-05-16", "fields": ["20+_yrs","arlington_roosevelt","family_owned","phone_text_intake"]}
       ],
-      "raw_enrichment": { "founded_~2003": true, "family_owned": true, "phone_text_85100": true },
+      "raw_enrichment": {"founded_~2003": true, "family_owned": true, "phone_text_85100": true},
       "signals": [
-        {
-          "layer": 3,
-          "signal_key": "no_online_booking_text_intake",
-          "direction": "positive",
-          "evidence": "No online booking system — appointments via phone or text only. Pre-modern intake.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.apexcleaningconceptsllc.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 3, "signal_key": "no_online_booking_text_intake", "direction": "positive", "evidence": "No online booking system — appointments via phone or text only. Pre-modern intake.", "source": "live_website_fetch", "source_url": "https://www.apexcleaningconceptsllc.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 50,
       "layer1_comment": "23-yr tenure → owner age proxy 50-58. Confidence low.",
@@ -2839,64 +1682,14 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://www.unitedcleanrestoration.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_1979",
-            "hurst",
-            "family_owned",
-            "iicrc",
-            "John_owner",
-            "Scott_long_term_team",
-            "name_change_from_united_carpet"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://www.unitedcleanrestoration.com/", "fetched_at": "2026-05-16", "fields": ["since_1979","hurst","family_owned","iicrc","John_owner","Scott_long_term_team","name_change_from_united_carpet"]}
       ],
-      "raw_enrichment": {
-        "founded_1979": true,
-        "iicrc_certified": true,
-        "name_change_to_restoration": "rebrand to include restoration",
-        "owner_first_name_only_John": true
-      },
+      "raw_enrichment": {"founded_1979": true, "iicrc_certified": true, "name_change_to_restoration": "rebrand to include restoration", "owner_first_name_only_John": true},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_47_yrs",
-          "direction": "positive",
-          "evidence": "47-yr operation. Owner-tenure proxy implies founder 70+.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.unitedcleanrestoration.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "iicrc_47_yrs",
-          "direction": "positive",
-          "evidence": "47 yrs, IICRC certified techs, family-owned, full restoration + carpet, Hurst (Tarrant) real address.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.unitedcleanrestoration.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_online_booking",
-          "direction": "positive",
-          "evidence": "No online booking system mentioned. Pre-modern intake.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.unitedcleanrestoration.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "successor_check_live_fetch_partial",
-          "direction": "ambiguous",
-          "evidence": "Live site names 'John' as owner and 'Scott' as long-time team member (Scott not titled as principal). No second principal, no family successor language. BUT recent name change (United Carpet Cleaning Systems → United Cleaning & Restoration) signals an active leadership decision to rebrand — could be founder still active or could be next-gen modernizing. Per protocol, cap at B until team page surfaced.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.unitedcleanrestoration.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_47_yrs", "direction": "positive", "evidence": "47-yr operation. Owner-tenure proxy implies founder 70+.", "source": "live_website_fetch", "source_url": "https://www.unitedcleanrestoration.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "iicrc_47_yrs", "direction": "positive", "evidence": "47 yrs, IICRC certified techs, family-owned, full restoration + carpet, Hurst (Tarrant) real address.", "source": "live_website_fetch", "source_url": "https://www.unitedcleanrestoration.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_online_booking", "direction": "positive", "evidence": "No online booking system mentioned. Pre-modern intake.", "source": "live_website_fetch", "source_url": "https://www.unitedcleanrestoration.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "successor_check_live_fetch_partial", "direction": "ambiguous", "evidence": "Live site names 'John' as owner and 'Scott' as long-time team member (Scott not titled as principal). No second principal, no family successor language. BUT recent name change (United Carpet Cleaning Systems → United Cleaning & Restoration) signals an active leadership decision to rebrand — could be founder still active or could be next-gen modernizing. Per protocol, cap at B until team page surfaced.", "source": "live_website_fetch", "source_url": "https://www.unitedcleanrestoration.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 78,
       "layer1_comment": "47-yr tenure → if same generation, owner is 70+. Strong OV65 likely. John (first-name-only on site) is named principal. No surname → can't verify OV65 / voter / DMV.",
@@ -2946,27 +1739,11 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch_blocked",
-          "url": "https://cosmopolitancarpet.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["403_forbidden — live fetch blocked"]
-        }
+        {"source": "live_website_fetch_blocked", "url": "https://cosmopolitancarpet.com/", "fetched_at": "2026-05-16", "fields": ["403_forbidden — live fetch blocked"]}
       ],
-      "raw_enrichment": {
-        "live_fetch_blocked": true,
-        "spine_corroboration": "30+ yrs Arlington TX carpet + rug specialty"
-      },
+      "raw_enrichment": {"live_fetch_blocked": true, "spine_corroboration": "30+ yrs Arlington TX carpet + rug specialty"},
       "signals": [
-        {
-          "layer": 3,
-          "signal_key": "team_page_unreachable",
-          "direction": "disqualifying",
-          "evidence": "Live site returned 403 Forbidden — could not verify owner identity, successor structure, modernization signals. Per protocol, confidence capped at low and tier capped at C_watch.",
-          "source": "live_website_fetch_blocked",
-          "source_url": "https://cosmopolitancarpet.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 3, "signal_key": "team_page_unreachable", "direction": "disqualifying", "evidence": "Live site returned 403 Forbidden — could not verify owner identity, successor structure, modernization signals. Per protocol, confidence capped at low and tier capped at C_watch.", "source": "live_website_fetch_blocked", "source_url": "https://cosmopolitancarpet.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 60,
       "layer1_comment": "31-yr tenure proxy → owner ~55-65. Can't verify without live fetch.",
@@ -3016,42 +1793,13 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://aceofclean.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["since_1993", "phone", "copyright_2020"]
-        }
+        {"source": "live_website_fetch", "url": "https://aceofclean.com/", "fetched_at": "2026-05-16", "fields": ["since_1993","phone","copyright_2020"]}
       ],
-      "raw_enrichment": { "copyright_year": 2020, "founded_1993": true, "no_online_booking": true },
+      "raw_enrichment": {"copyright_year": 2020, "founded_1993": true, "no_online_booking": true},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_33_yrs",
-          "direction": "positive",
-          "evidence": "33-yr operation. Owner ~58-65 proxy.",
-          "source": "live_website_fetch",
-          "source_url": "https://aceofclean.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "copyright_year_2020_stale_6yrs",
-          "direction": "positive",
-          "evidence": "Copyright 2020 — 6 yrs stale. Strong dated-website coasting tell.",
-          "source": "live_website_fetch",
-          "source_url": "https://aceofclean.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_online_booking",
-          "direction": "positive",
-          "evidence": "No online booking visible. Pre-modern intake.",
-          "source": "live_website_fetch",
-          "source_url": "https://aceofclean.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_33_yrs", "direction": "positive", "evidence": "33-yr operation. Owner ~58-65 proxy.", "source": "live_website_fetch", "source_url": "https://aceofclean.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "copyright_year_2020_stale_6yrs", "direction": "positive", "evidence": "Copyright 2020 — 6 yrs stale. Strong dated-website coasting tell.", "source": "live_website_fetch", "source_url": "https://aceofclean.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_online_booking", "direction": "positive", "evidence": "No online booking visible. Pre-modern intake.", "source": "live_website_fetch", "source_url": "https://aceofclean.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 65,
       "layer1_comment": "33-yr tenure → owner ~58-65 proxy.",
@@ -3066,7 +1814,7 @@
       "final_comment": "Ace of Clean, Arlington N (Tarrant 76244 corridor), founded 1993 — 33 yrs. Copyright 2020 (6-yr stale!) + no online booking + minimal site info = strong coasting profile. B_forward — owner ID + age verification + successor check is the deep-dive.",
       "value_add_thesis": "6-yr-stale site + 33-yr tenure = classic 'site has been ignored for years' coasting target. Full modernization play: site, booking, dispatch, online quoting, review-gen funnel. 1.4-1.7× EBITDA path. Tarrant N corridor commercial pipeline a strong overlay.",
       "confidence": "medium",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "All Expert Restoration",
@@ -3101,47 +1849,13 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://allexpertrestoration.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["since_1999", "burleson", "family_owned", "iicrc", "copyright_2026"]
-        }
+        {"source": "live_website_fetch", "url": "https://allexpertrestoration.com/", "fetched_at": "2026-05-16", "fields": ["since_1999","burleson","family_owned","iicrc","copyright_2026"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2026,
-        "founded_1999": true,
-        "iicrc": true,
-        "no_online_booking": true
-      },
+      "raw_enrichment": {"copyright_year": 2026, "founded_1999": true, "iicrc": true, "no_online_booking": true},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "tenure_27_yrs",
-          "direction": "positive",
-          "evidence": "27 yrs. Owner ~55-62 proxy.",
-          "source": "live_website_fetch",
-          "source_url": "https://allexpertrestoration.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "iicrc_27_yrs",
-          "direction": "positive",
-          "evidence": "IICRC certified, 27 yrs, family-owned, Burleson real address.",
-          "source": "live_website_fetch",
-          "source_url": "https://allexpertrestoration.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "no_online_booking_2026copyright",
-          "direction": "positive",
-          "evidence": "No online booking despite ©2026 update — pre-modern intake retained.",
-          "source": "live_website_fetch",
-          "source_url": "https://allexpertrestoration.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "tenure_27_yrs", "direction": "positive", "evidence": "27 yrs. Owner ~55-62 proxy.", "source": "live_website_fetch", "source_url": "https://allexpertrestoration.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "iicrc_27_yrs", "direction": "positive", "evidence": "IICRC certified, 27 yrs, family-owned, Burleson real address.", "source": "live_website_fetch", "source_url": "https://allexpertrestoration.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "no_online_booking_2026copyright", "direction": "positive", "evidence": "No online booking despite ©2026 update — pre-modern intake retained.", "source": "live_website_fetch", "source_url": "https://allexpertrestoration.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 58,
       "layer1_comment": "27-yr tenure proxy → owner ~55-62.",
@@ -3156,7 +1870,7 @@
       "final_comment": "All Expert Restoration, Burleson (Tarrant S), founded 1999 — 27 yrs IICRC certified family-owned multi-service (carpet, tile, restoration, flooring, upholstery). No online booking + ©2026 = engaged but un-modernized. B_forward.",
       "value_add_thesis": "Add online booking + dispatch (Jobber/ServiceTitan), commercial property-management contract pipeline in Burleson/S Tarrant corridor, IICRC Master-cert ladder. 1.4-1.6× EBITDA path.",
       "confidence": "low",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Pegasus Carpet Care",
@@ -3191,43 +1905,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://www.pegasuscarpetcare.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "over_20_yrs",
-            "SA_NW",
-            "7_truck_mount_commercial_vans",
-            "online_schedule",
-            "copyright_2021"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://www.pegasuscarpetcare.com/", "fetched_at": "2026-05-16", "fields": ["over_20_yrs","SA_NW","7_truck_mount_commercial_vans","online_schedule","copyright_2021"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2021,
-        "7_truck_mount_vans": true,
-        "online_scheduling": true
-      },
+      "raw_enrichment": {"copyright_year": 2021, "7_truck_mount_vans": true, "online_scheduling": true},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "fleet_7_truck_mount_vans",
-          "direction": "positive",
-          "evidence": "7 truck-mount commercial vans = significant fleet. Property-management commercial-heavy.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.pegasuscarpetcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "copyright_year_2021_stale_5yrs",
-          "direction": "positive",
-          "evidence": "©2021 = 5-yr-stale. Strong dated-website coasting tell.",
-          "source": "live_website_fetch",
-          "source_url": "https://www.pegasuscarpetcare.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "fleet_7_truck_mount_vans", "direction": "positive", "evidence": "7 truck-mount commercial vans = significant fleet. Property-management commercial-heavy.", "source": "live_website_fetch", "source_url": "https://www.pegasuscarpetcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "copyright_year_2021_stale_5yrs", "direction": "positive", "evidence": "©2021 = 5-yr-stale. Strong dated-website coasting tell.", "source": "live_website_fetch", "source_url": "https://www.pegasuscarpetcare.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 55,
       "layer1_comment": "23-yr tenure proxy → owner ~50-58.",
@@ -3277,64 +1960,14 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://lonestarcarpetcare.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "paul_walker_founder",
-            "since_1995",
-            "SA_78252",
-            "commercial_restaurants_offices_hotels",
-            "online_appointments",
-            "copyright_2018"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://lonestarcarpetcare.com/", "fetched_at": "2026-05-16", "fields": ["paul_walker_founder","since_1995","SA_78252","commercial_restaurants_offices_hotels","online_appointments","copyright_2018"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2018,
-        "founder": "Paul Walker",
-        "founded_1995": true,
-        "online_appointments": true,
-        "commercial_attractions_hotels": true
-      },
+      "raw_enrichment": {"copyright_year": 2018, "founder": "Paul Walker", "founded_1995": true, "online_appointments": true, "commercial_attractions_hotels": true},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "named_founder_31_yrs",
-          "direction": "positive",
-          "evidence": "Paul Walker named as Founder; 31-yr operation. Owner-age tenure proxy → ~55-65.",
-          "source": "live_website_fetch",
-          "source_url": "https://lonestarcarpetcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 2,
-          "signal_key": "commercial_hotel_attraction_clients",
-          "direction": "positive",
-          "evidence": "Site emphasizes 'restaurants, offices, attractions, entertainment venues, hotels' — premium SA commercial recurring revenue.",
-          "source": "live_website_fetch",
-          "source_url": "https://lonestarcarpetcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "copyright_year_2018_stale_8yrs",
-          "direction": "positive",
-          "evidence": "©2018 — 8 yrs stale! Strong dated-website coasting tell.",
-          "source": "live_website_fetch",
-          "source_url": "https://lonestarcarpetcare.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "successor_check_live_fetch",
-          "direction": "positive",
-          "evidence": "Live homepage names ONLY Paul Walker as founder/owner. No second principal, no associate, no family successor language. Page is dated 2018 so this is a 2018-vintage successor read — may need re-verify on /about-us deep-dive.",
-          "source": "live_website_fetch",
-          "source_url": "https://lonestarcarpetcare.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "named_founder_31_yrs", "direction": "positive", "evidence": "Paul Walker named as Founder; 31-yr operation. Owner-age tenure proxy → ~55-65.", "source": "live_website_fetch", "source_url": "https://lonestarcarpetcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 2, "signal_key": "commercial_hotel_attraction_clients", "direction": "positive", "evidence": "Site emphasizes 'restaurants, offices, attractions, entertainment venues, hotels' — premium SA commercial recurring revenue.", "source": "live_website_fetch", "source_url": "https://lonestarcarpetcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "copyright_year_2018_stale_8yrs", "direction": "positive", "evidence": "©2018 — 8 yrs stale! Strong dated-website coasting tell.", "source": "live_website_fetch", "source_url": "https://lonestarcarpetcare.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive", "evidence": "Live homepage names ONLY Paul Walker as founder/owner. No second principal, no associate, no family successor language. Page is dated 2018 so this is a 2018-vintage successor read — may need re-verify on /about-us deep-dive.", "source": "live_website_fetch", "source_url": "https://lonestarcarpetcare.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 68,
       "layer1_comment": "Paul Walker, named founder, 31 yrs running Lone Star. Age-tenure proxy → ~55-65. With surname + Bexar CAD lookup, OV65 verification is plausible.",
@@ -3349,7 +1982,7 @@
       "final_comment": "Lone Star Carpet Care and Restoration, San Antonio (Bexar 78252), founded by Paul Walker in 1995 — 31 yrs of solo founder ownership with premium SA commercial base (restaurants, hotels, attractions, offices). Copyright 2018 (8-yr-stale!) is the strongest dated-website coasting tell in the SA set. Live homepage lists ONLY Paul Walker — no successor named. Strong B_forward, candidate-A on deep-dive: Bexar CAD OV65 lookup on 'Paul Walker' + Comptroller status + /about-us live fetch.",
       "value_add_thesis": "Named-solo Paul Walker, 31 yrs, 8-yr-stale site, premium SA hospitality commercial base — this is the platonic coasting-near-exit profile in the SA set. Full digital rebuild + dispatch automation + customer-portal for hotel/restaurant clients + recurring-billing modernization + crew IICRC ladder. 1.7-2.0× EBITDA path. The SA hospitality recurring base (Riverwalk hotels, attractions, downtown restaurants) is a moat that's hard to replicate.",
       "confidence": "medium",
-      "data_completeness": 0.5
+      "data_completeness": 0.50
     },
     {
       "legal_name": "Beyer Carpet Cleaning",
@@ -3384,45 +2017,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://beyercarpetcleaning.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "josh_christina_beyer_founders",
-            "since_2013",
-            "SA_78239",
-            "online_booking_housecallpro",
-            "copyright_2024"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://beyercarpetcleaning.com/", "fetched_at": "2026-05-16", "fields": ["josh_christina_beyer_founders","since_2013","SA_78239","online_booking_housecallpro","copyright_2024"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2024,
-        "founded_2013": true,
-        "founders": ["Josh Beyer", "Christina Beyer"],
-        "housecallpro": true,
-        "meet_the_beyer_family_page": true
-      },
+      "raw_enrichment": {"copyright_year": 2024, "founded_2013": true, "founders": ["Josh Beyer","Christina Beyer"], "housecallpro": true, "meet_the_beyer_family_page": true},
       "signals": [
-        {
-          "layer": 1,
-          "signal_key": "founders_2013_age_estimate",
-          "direction": "negative",
-          "evidence": "Husband-wife founder team launched 2013. Mid-life founders typical → likely 35-50 currently. Not natural-exit window.",
-          "source": "live_website_fetch",
-          "source_url": "https://beyercarpetcleaning.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "modern_active",
-          "direction": "negative",
-          "evidence": "HouseCallPro online booking, ©2024 = modern active operator with family-business 'meet the Beyer family' branding.",
-          "source": "live_website_fetch",
-          "source_url": "https://beyercarpetcleaning.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 1, "signal_key": "founders_2013_age_estimate", "direction": "negative", "evidence": "Husband-wife founder team launched 2013. Mid-life founders typical → likely 35-50 currently. Not natural-exit window.", "source": "live_website_fetch", "source_url": "https://beyercarpetcleaning.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "modern_active", "direction": "negative", "evidence": "HouseCallPro online booking, ©2024 = modern active operator with family-business 'meet the Beyer family' branding.", "source": "live_website_fetch", "source_url": "https://beyercarpetcleaning.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 22,
       "layer1_comment": "Beyer founders 2013 — currently ~35-50. Not natural-exit window.",
@@ -3437,7 +2037,7 @@
       "final_comment": "Beyer Carpet Cleaning, SA NE (Bexar 78239) — Josh + Christina Beyer husband-wife founders 2013, 13 yrs, modern HouseCallPro intake, ©2024. Wrong target profile — too young + too modern. D_pass.",
       "value_add_thesis": "N/A — wrong target profile.",
       "confidence": "medium",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Terra Klean Solutions Inc.",
@@ -3472,44 +2072,12 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "live_website_fetch",
-          "url": "https://terraklean.com/",
-          "fetched_at": "2026-05-16",
-          "fields": [
-            "since_2001",
-            "SA_central_blanco",
-            "commercial_janitorial_primary",
-            "cims_certified",
-            "copyright_2010"
-          ]
-        }
+        {"source": "live_website_fetch", "url": "https://terraklean.com/", "fetched_at": "2026-05-16", "fields": ["since_2001","SA_central_blanco","commercial_janitorial_primary","cims_certified","copyright_2010"]}
       ],
-      "raw_enrichment": {
-        "copyright_year": 2010,
-        "primary_naics": "561720 janitorial — carpet/floor secondary",
-        "cims_certs": true,
-        "sysco_preferred": true
-      },
+      "raw_enrichment": {"copyright_year": 2010, "primary_naics": "561720 janitorial — carpet/floor secondary", "cims_certs": true, "sysco_preferred": true},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "primary_naics_borderline",
-          "direction": "ambiguous",
-          "evidence": "Primary services janitorial + facility maintenance + lawn — carpet/floor secondary. Borderline for vertical scope.",
-          "source": "live_website_fetch",
-          "source_url": "https://terraklean.com/",
-          "observed_at": "2026-05-16"
-        },
-        {
-          "layer": 3,
-          "signal_key": "copyright_year_2010_stale_16yrs",
-          "direction": "positive",
-          "evidence": "Copyright 2010 — 16 YEARS STALE. Strongest dated-website tell in the run.",
-          "source": "live_website_fetch",
-          "source_url": "https://terraklean.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "primary_naics_borderline", "direction": "ambiguous", "evidence": "Primary services janitorial + facility maintenance + lawn — carpet/floor secondary. Borderline for vertical scope.", "source": "live_website_fetch", "source_url": "https://terraklean.com/", "observed_at": "2026-05-16"},
+        {"layer": 3, "signal_key": "copyright_year_2010_stale_16yrs", "direction": "positive", "evidence": "Copyright 2010 — 16 YEARS STALE. Strongest dated-website tell in the run.", "source": "live_website_fetch", "source_url": "https://terraklean.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 60,
       "layer1_comment": "25-yr tenure proxy → ~55-62.",
@@ -3524,7 +2092,7 @@
       "final_comment": "Terra Klean Solutions Inc., SA central (Bexar Blanco Rd 78212), founded 2001 — 25 yrs primary commercial janitorial with carpet/floor secondary. Copyright 2010 (16-yr-stale!!) is the longest staleness in the run, strongest single coasting tell. But primary NAICS 561720 not 561740 — borderline vertical fit. C_watch — janitorial-focused buyer more natural than carpet-only ETA.",
       "value_add_thesis": "Janitorial roll-up play with carpet attached — DFW/SA commercial consolidation candidate. 1.3-1.5× EBITDA path under a janitorial-focused buyer.",
       "confidence": "low",
-      "data_completeness": 0.4
+      "data_completeness": 0.40
     },
     {
       "legal_name": "Steamatic of San Antonio",
@@ -3559,20 +2127,9 @@
       "is_distressed": false,
       "distress_reasons": ["franchise_system — EXCLUDE per skill non-negotiable"],
       "data_sources": [],
-      "raw_enrichment": {
-        "franchise_excluded": true,
-        "parent_brand": "Steamatic Inc. (Fort Worth-based franchisor — national system)"
-      },
+      "raw_enrichment": {"franchise_excluded": true, "parent_brand": "Steamatic Inc. (Fort Worth-based franchisor — national system)"},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "franchise_disqualifier",
-          "direction": "disqualifying",
-          "evidence": "Steamatic is a national franchise system (Fort Worth-based franchisor) — excluded per skill non-negotiable.",
-          "source": "market_knowledge_franchise_registry",
-          "source_url": null,
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "franchise_disqualifier", "direction": "disqualifying", "evidence": "Steamatic is a national franchise system (Fort Worth-based franchisor) — excluded per skill non-negotiable.", "source": "market_knowledge_franchise_registry", "source_url": null, "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 0,
       "layer1_comment": "Excluded — franchise.",
@@ -3587,7 +2144,7 @@
       "final_comment": "EXCLUDED — Steamatic of San Antonio is part of the national Steamatic franchise system (Fort Worth-based franchisor). Per skill non-negotiable, franchise units excluded from off-market scoring.",
       "value_add_thesis": "N/A — excluded franchise.",
       "confidence": "high",
-      "data_completeness": 0.3
+      "data_completeness": 0.30
     },
     {
       "legal_name": "Alamo Steam Team",
@@ -3622,24 +2179,11 @@
       "is_distressed": false,
       "distress_reasons": [],
       "data_sources": [
-        {
-          "source": "spine_only",
-          "url": "https://alamosteamteam.com/",
-          "fetched_at": "2026-05-16",
-          "fields": ["nearly_10_yrs_per_spine"]
-        }
+        {"source": "spine_only", "url": "https://alamosteamteam.com/", "fetched_at": "2026-05-16", "fields": ["nearly_10_yrs_per_spine"]}
       ],
-      "raw_enrichment": { "limited_enrichment": true },
+      "raw_enrichment": {"limited_enrichment": true},
       "signals": [
-        {
-          "layer": 2,
-          "signal_key": "tenure_10_yrs",
-          "direction": "ambiguous",
-          "evidence": "Just hitting 10-yr tenure. Borderline.",
-          "source": "spine_corroboration",
-          "source_url": "https://alamosteamteam.com/",
-          "observed_at": "2026-05-16"
-        }
+        {"layer": 2, "signal_key": "tenure_10_yrs", "direction": "ambiguous", "evidence": "Just hitting 10-yr tenure. Borderline.", "source": "spine_corroboration", "source_url": "https://alamosteamteam.com/", "observed_at": "2026-05-16"}
       ],
       "layer1_base_rate": 25,
       "layer1_comment": "10-yr tenure — owner likely 35-50.",
@@ -3654,7 +2198,7 @@
       "final_comment": "Alamo Steam Team, SA NE Bexar — ~10 yrs, limited enrichment in this run. C_watch — fetch homepage + about + reviews on next pass.",
       "value_add_thesis": "Cannot scope without enrichment.",
       "confidence": "low",
-      "data_completeness": 0.2
+      "data_completeness": 0.20
     }
   ]
 }

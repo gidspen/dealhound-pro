@@ -1,0 +1,349 @@
+INSERT INTO offmarket.businesses (
+  id, vertical, legal_name, dba_name, naics_code, address, city, county, state, zip,
+  phone, website, license_number, license_type, license_status, license_issue_date,
+  license_holder_name, entity_status, registered_agent, years_in_business,
+  employee_count_estimate, provider_count_estimate, employee_count_source,
+  owner_name, owner_age_estimate, owner_age_source, owner_tenure_years,
+  is_distressed, distress_reasons, data_sources, raw_enrichment, notes
+) VALUES (
+  'c19fd902-e90a-59ff-991c-f755ef72e5ce', 'plumbing', 'MAG PLUMBING AND SERVICES', NULL,
+  '238220', NULL, 'San Marcos', 'Hays',
+  'TX', '78666', '(512) 353-4024', NULL,
+  'M-38328', 'M (RMP qualifying license)', 'Current',
+  '2007-10-19', 'ROBERT ROCHA', NULL,
+  NULL, 18,
+  3, 1,
+  'website_team_page_or_buildzoom_or_dnb', 'ROBERT ROCHA',
+  55, 'license_tenure_proxy',
+  18, FALSE,
+  '[]'::jsonb, '[{"source": "TSBPE RMP CSV", "url": "https://tsbpe.texas.gov/wp-content/uploads/2015/03/RMP.csv", "fetched_at": "2026-05-15", "fields": ["legal_name", "license_number", "license_issue_date", "license_holder_name", "city"]}]'::jsonb,
+  '{"platform_check": "independent", "verification_notes": "TSBPE primary-source. San Marcos (Hays \u2014 Austin metro south edge). 18+ yrs Master Plumber tenure. Adjacent to Travis priority.", "spine_id": "plm-091"}'::jsonb,
+  'TSBPE primary-source. San Marcos (Hays — Austin metro south edge). 18+ yrs Master Plumber tenure. Adjacent to Travis priority.'
+)
+ON CONFLICT (vertical, legal_name, city, state) DO UPDATE SET
+  dba_name = EXCLUDED.dba_name, address = EXCLUDED.address, zip = EXCLUDED.zip,
+  phone = EXCLUDED.phone, website = EXCLUDED.website, license_number = EXCLUDED.license_number,
+  license_type = EXCLUDED.license_type, license_status = EXCLUDED.license_status,
+  license_issue_date = EXCLUDED.license_issue_date, license_holder_name = EXCLUDED.license_holder_name,
+  years_in_business = EXCLUDED.years_in_business, employee_count_estimate = EXCLUDED.employee_count_estimate,
+  provider_count_estimate = EXCLUDED.provider_count_estimate, owner_name = EXCLUDED.owner_name,
+  owner_age_estimate = EXCLUDED.owner_age_estimate, owner_age_source = EXCLUDED.owner_age_source,
+  owner_tenure_years = EXCLUDED.owner_tenure_years, is_distressed = EXCLUDED.is_distressed,
+  distress_reasons = EXCLUDED.distress_reasons, data_sources = EXCLUDED.data_sources,
+  raw_enrichment = EXCLUDED.raw_enrichment, notes = EXCLUDED.notes, updated_at = NOW()
+RETURNING id;
+
+INSERT INTO offmarket.businesses (
+  id, vertical, legal_name, dba_name, naics_code, address, city, county, state, zip,
+  phone, website, license_number, license_type, license_status, license_issue_date,
+  license_holder_name, entity_status, registered_agent, years_in_business,
+  employee_count_estimate, provider_count_estimate, employee_count_source,
+  owner_name, owner_age_estimate, owner_age_source, owner_tenure_years,
+  is_distressed, distress_reasons, data_sources, raw_enrichment, notes
+) VALUES (
+  '944d8995-5467-524b-a455-bc750afaa9d3', 'plumbing', 'PAISLEY PLUMBING', NULL,
+  '238220', NULL, 'Wimberley', 'Hays',
+  'TX', '78676', '(512) 618-1890', NULL,
+  'M-37469', 'M (RMP qualifying license)', 'Current',
+  '2005-09-26', 'DANIEL PATRICK MATTINGLY', NULL,
+  NULL, 20,
+  2, 1,
+  'website_team_page_or_buildzoom_or_dnb', 'DANIEL PATRICK MATTINGLY',
+  55, 'license_tenure_proxy',
+  20, FALSE,
+  '[]'::jsonb, '[{"source": "TSBPE RMP CSV", "url": "https://tsbpe.texas.gov/wp-content/uploads/2015/03/RMP.csv", "fetched_at": "2026-05-15", "fields": ["legal_name", "license_number", "license_issue_date", "license_holder_name", "city"]}]'::jsonb,
+  '{"platform_check": "independent", "verification_notes": "TSBPE primary-source. Wimberley (Hays \u2014 exurban Austin). 20+ yrs Master Plumber tenure. Exurban = L4 -5.", "spine_id": "plm-092"}'::jsonb,
+  'TSBPE primary-source. Wimberley (Hays — exurban Austin). 20+ yrs Master Plumber tenure. Exurban = L4 -5.'
+)
+ON CONFLICT (vertical, legal_name, city, state) DO UPDATE SET
+  dba_name = EXCLUDED.dba_name, address = EXCLUDED.address, zip = EXCLUDED.zip,
+  phone = EXCLUDED.phone, website = EXCLUDED.website, license_number = EXCLUDED.license_number,
+  license_type = EXCLUDED.license_type, license_status = EXCLUDED.license_status,
+  license_issue_date = EXCLUDED.license_issue_date, license_holder_name = EXCLUDED.license_holder_name,
+  years_in_business = EXCLUDED.years_in_business, employee_count_estimate = EXCLUDED.employee_count_estimate,
+  provider_count_estimate = EXCLUDED.provider_count_estimate, owner_name = EXCLUDED.owner_name,
+  owner_age_estimate = EXCLUDED.owner_age_estimate, owner_age_source = EXCLUDED.owner_age_source,
+  owner_tenure_years = EXCLUDED.owner_tenure_years, is_distressed = EXCLUDED.is_distressed,
+  distress_reasons = EXCLUDED.distress_reasons, data_sources = EXCLUDED.data_sources,
+  raw_enrichment = EXCLUDED.raw_enrichment, notes = EXCLUDED.notes, updated_at = NOW()
+RETURNING id;
+
+INSERT INTO offmarket.businesses (
+  id, vertical, legal_name, dba_name, naics_code, address, city, county, state, zip,
+  phone, website, license_number, license_type, license_status, license_issue_date,
+  license_holder_name, entity_status, registered_agent, years_in_business,
+  employee_count_estimate, provider_count_estimate, employee_count_source,
+  owner_name, owner_age_estimate, owner_age_source, owner_tenure_years,
+  is_distressed, distress_reasons, data_sources, raw_enrichment, notes
+) VALUES (
+  'f7d306c7-1962-5a25-907b-d021f0161800', 'plumbing', 'Lister Plumbing', NULL,
+  '238220', NULL, 'Galveston', 'Galveston',
+  'TX', NULL, NULL, 'https://www.listerplumbinginc.com/',
+  'M17798', 'RMP', 'Current',
+  NULL, NULL, NULL,
+  NULL, 42,
+  8, 3,
+  'website_team_page_or_buildzoom_or_dnb', NULL,
+  65, 'biz_history_proxy',
+  42, FALSE,
+  '[]'::jsonb, '[{"source": "website", "url": "https://www.listerplumbinginc.com/about-us", "fetched_at": "2026-05-15", "fields": ["legal_name", "year_established", "license_number"]}]'::jsonb,
+  '{"platform_check": "independent", "verification_notes": "Family-owned since 1984. 3rd-gen Master Plumbers. License M17798. Serves Dickinson, Texas City, La Marque, Galveston, Santa Fe.", "spine_id": "plm-093"}'::jsonb,
+  'Family-owned since 1984. 3rd-gen Master Plumbers. License M17798. Serves Dickinson, Texas City, La Marque, Galveston, Santa Fe.'
+)
+ON CONFLICT (vertical, legal_name, city, state) DO UPDATE SET
+  dba_name = EXCLUDED.dba_name, address = EXCLUDED.address, zip = EXCLUDED.zip,
+  phone = EXCLUDED.phone, website = EXCLUDED.website, license_number = EXCLUDED.license_number,
+  license_type = EXCLUDED.license_type, license_status = EXCLUDED.license_status,
+  license_issue_date = EXCLUDED.license_issue_date, license_holder_name = EXCLUDED.license_holder_name,
+  years_in_business = EXCLUDED.years_in_business, employee_count_estimate = EXCLUDED.employee_count_estimate,
+  provider_count_estimate = EXCLUDED.provider_count_estimate, owner_name = EXCLUDED.owner_name,
+  owner_age_estimate = EXCLUDED.owner_age_estimate, owner_age_source = EXCLUDED.owner_age_source,
+  owner_tenure_years = EXCLUDED.owner_tenure_years, is_distressed = EXCLUDED.is_distressed,
+  distress_reasons = EXCLUDED.distress_reasons, data_sources = EXCLUDED.data_sources,
+  raw_enrichment = EXCLUDED.raw_enrichment, notes = EXCLUDED.notes, updated_at = NOW()
+RETURNING id;
+
+INSERT INTO offmarket.businesses (
+  id, vertical, legal_name, dba_name, naics_code, address, city, county, state, zip,
+  phone, website, license_number, license_type, license_status, license_issue_date,
+  license_holder_name, entity_status, registered_agent, years_in_business,
+  employee_count_estimate, provider_count_estimate, employee_count_source,
+  owner_name, owner_age_estimate, owner_age_source, owner_tenure_years,
+  is_distressed, distress_reasons, data_sources, raw_enrichment, notes
+) VALUES (
+  '69f13874-e34f-5874-92e8-c24745b1a2d7', 'plumbing', 'Kona Plumbing', NULL,
+  '238220', NULL, 'Galveston', 'Galveston',
+  'TX', NULL, NULL, 'https://www.konaplumbing.net/',
+  NULL, 'RMP', 'Current',
+  NULL, NULL, NULL,
+  NULL, 20,
+  3, 1,
+  'website_team_page_or_buildzoom_or_dnb', NULL,
+  50, 'biz_history_proxy',
+  20, FALSE,
+  '[]'::jsonb, '[{"source": "website", "url": "https://www.konaplumbing.net/", "fetched_at": "2026-05-15", "fields": ["legal_name"]}]'::jsonb,
+  '{"platform_check": "independent", "verification_notes": "Family-owned. 20+ yrs Galveston + Houston areas.", "spine_id": "plm-094"}'::jsonb,
+  'Family-owned. 20+ yrs Galveston + Houston areas.'
+)
+ON CONFLICT (vertical, legal_name, city, state) DO UPDATE SET
+  dba_name = EXCLUDED.dba_name, address = EXCLUDED.address, zip = EXCLUDED.zip,
+  phone = EXCLUDED.phone, website = EXCLUDED.website, license_number = EXCLUDED.license_number,
+  license_type = EXCLUDED.license_type, license_status = EXCLUDED.license_status,
+  license_issue_date = EXCLUDED.license_issue_date, license_holder_name = EXCLUDED.license_holder_name,
+  years_in_business = EXCLUDED.years_in_business, employee_count_estimate = EXCLUDED.employee_count_estimate,
+  provider_count_estimate = EXCLUDED.provider_count_estimate, owner_name = EXCLUDED.owner_name,
+  owner_age_estimate = EXCLUDED.owner_age_estimate, owner_age_source = EXCLUDED.owner_age_source,
+  owner_tenure_years = EXCLUDED.owner_tenure_years, is_distressed = EXCLUDED.is_distressed,
+  distress_reasons = EXCLUDED.distress_reasons, data_sources = EXCLUDED.data_sources,
+  raw_enrichment = EXCLUDED.raw_enrichment, notes = EXCLUDED.notes, updated_at = NOW()
+RETURNING id;
+
+INSERT INTO offmarket.businesses (
+  id, vertical, legal_name, dba_name, naics_code, address, city, county, state, zip,
+  phone, website, license_number, license_type, license_status, license_issue_date,
+  license_holder_name, entity_status, registered_agent, years_in_business,
+  employee_count_estimate, provider_count_estimate, employee_count_source,
+  owner_name, owner_age_estimate, owner_age_source, owner_tenure_years,
+  is_distressed, distress_reasons, data_sources, raw_enrichment, notes
+) VALUES (
+  '91602aed-d3ba-5a47-b6af-45624baa98b6', 'plumbing', 'Beaumont Plumbing LLC', NULL,
+  '238220', NULL, 'Beaumont', 'Jefferson',
+  'TX', NULL, NULL, 'https://www.beaumontplumbingllc.com/',
+  NULL, 'RMP', 'Current',
+  NULL, NULL, NULL,
+  NULL, 21,
+  3, 1,
+  'website_team_page_or_buildzoom_or_dnb', NULL,
+  45, 'biz_history_proxy',
+  20, FALSE,
+  '[]'::jsonb, '[{"source": "website", "url": "https://www.beaumontplumbingllc.com/", "fetched_at": "2026-05-15", "fields": ["legal_name"]}]'::jsonb,
+  '{"platform_check": "independent", "verification_notes": "MP-led 20+ yrs experience. Beaumont/Jefferson \u2014 secondary metro, L4 -3 to -5.", "spine_id": "plm-095"}'::jsonb,
+  'MP-led 20+ yrs experience. Beaumont/Jefferson — secondary metro, L4 -3 to -5.'
+)
+ON CONFLICT (vertical, legal_name, city, state) DO UPDATE SET
+  dba_name = EXCLUDED.dba_name, address = EXCLUDED.address, zip = EXCLUDED.zip,
+  phone = EXCLUDED.phone, website = EXCLUDED.website, license_number = EXCLUDED.license_number,
+  license_type = EXCLUDED.license_type, license_status = EXCLUDED.license_status,
+  license_issue_date = EXCLUDED.license_issue_date, license_holder_name = EXCLUDED.license_holder_name,
+  years_in_business = EXCLUDED.years_in_business, employee_count_estimate = EXCLUDED.employee_count_estimate,
+  provider_count_estimate = EXCLUDED.provider_count_estimate, owner_name = EXCLUDED.owner_name,
+  owner_age_estimate = EXCLUDED.owner_age_estimate, owner_age_source = EXCLUDED.owner_age_source,
+  owner_tenure_years = EXCLUDED.owner_tenure_years, is_distressed = EXCLUDED.is_distressed,
+  distress_reasons = EXCLUDED.distress_reasons, data_sources = EXCLUDED.data_sources,
+  raw_enrichment = EXCLUDED.raw_enrichment, notes = EXCLUDED.notes, updated_at = NOW()
+RETURNING id;
+
+INSERT INTO offmarket.businesses (
+  id, vertical, legal_name, dba_name, naics_code, address, city, county, state, zip,
+  phone, website, license_number, license_type, license_status, license_issue_date,
+  license_holder_name, entity_status, registered_agent, years_in_business,
+  employee_count_estimate, provider_count_estimate, employee_count_source,
+  owner_name, owner_age_estimate, owner_age_source, owner_tenure_years,
+  is_distressed, distress_reasons, data_sources, raw_enrichment, notes
+) VALUES (
+  'ab50cd85-3740-522b-a2a1-c52630b39f7c', 'plumbing', 'Ballard Plumbing', NULL,
+  '238220', NULL, 'Beaumont', 'Jefferson',
+  'TX', NULL, NULL, 'https://www.ballardplumbing.net/',
+  NULL, 'RMP', 'Current',
+  NULL, NULL, NULL,
+  NULL, 15,
+  3, 1,
+  'website_team_page_or_buildzoom_or_dnb', NULL,
+  50, 'biz_history_proxy',
+  15, FALSE,
+  '[]'::jsonb, '[{"source": "website", "url": "https://www.ballardplumbing.net/", "fetched_at": "2026-05-15", "fields": ["legal_name"]}]'::jsonb,
+  '{"platform_check": "independent", "verification_notes": "Beaumont. Verify family-ownership + tenure in enrichment.", "spine_id": "plm-096"}'::jsonb,
+  'Beaumont. Verify family-ownership + tenure in enrichment.'
+)
+ON CONFLICT (vertical, legal_name, city, state) DO UPDATE SET
+  dba_name = EXCLUDED.dba_name, address = EXCLUDED.address, zip = EXCLUDED.zip,
+  phone = EXCLUDED.phone, website = EXCLUDED.website, license_number = EXCLUDED.license_number,
+  license_type = EXCLUDED.license_type, license_status = EXCLUDED.license_status,
+  license_issue_date = EXCLUDED.license_issue_date, license_holder_name = EXCLUDED.license_holder_name,
+  years_in_business = EXCLUDED.years_in_business, employee_count_estimate = EXCLUDED.employee_count_estimate,
+  provider_count_estimate = EXCLUDED.provider_count_estimate, owner_name = EXCLUDED.owner_name,
+  owner_age_estimate = EXCLUDED.owner_age_estimate, owner_age_source = EXCLUDED.owner_age_source,
+  owner_tenure_years = EXCLUDED.owner_tenure_years, is_distressed = EXCLUDED.is_distressed,
+  distress_reasons = EXCLUDED.distress_reasons, data_sources = EXCLUDED.data_sources,
+  raw_enrichment = EXCLUDED.raw_enrichment, notes = EXCLUDED.notes, updated_at = NOW()
+RETURNING id;
+
+INSERT INTO offmarket.businesses (
+  id, vertical, legal_name, dba_name, naics_code, address, city, county, state, zip,
+  phone, website, license_number, license_type, license_status, license_issue_date,
+  license_holder_name, entity_status, registered_agent, years_in_business,
+  employee_count_estimate, provider_count_estimate, employee_count_source,
+  owner_name, owner_age_estimate, owner_age_source, owner_tenure_years,
+  is_distressed, distress_reasons, data_sources, raw_enrichment, notes
+) VALUES (
+  '5a67c1a3-0f89-51f7-8334-7f6c63fd622d', 'plumbing', 'DEWolfe''s Affordable Plumbing', NULL,
+  '238220', NULL, 'Plano', 'Collin',
+  'TX', NULL, NULL, NULL,
+  NULL, 'RMP', 'Current',
+  NULL, NULL, NULL,
+  NULL, 20,
+  3, 1,
+  'website_team_page_or_buildzoom_or_dnb', NULL,
+  55, 'unverified',
+  20, FALSE,
+  '[]'::jsonb, '[{"source": "web_search_snippet", "url": "https://nextdoor.com/pages/dewolfes-affordable-plumbing-plano-tx/", "fetched_at": "2026-05-15", "fields": ["legal_name", "city"]}]'::jsonb,
+  '{"platform_check": "independent", "verification_notes": "Plano. Owner-named DBA. Need website + RMP verification.", "spine_id": "plm-097"}'::jsonb,
+  'Plano. Owner-named DBA. Need website + RMP verification.'
+)
+ON CONFLICT (vertical, legal_name, city, state) DO UPDATE SET
+  dba_name = EXCLUDED.dba_name, address = EXCLUDED.address, zip = EXCLUDED.zip,
+  phone = EXCLUDED.phone, website = EXCLUDED.website, license_number = EXCLUDED.license_number,
+  license_type = EXCLUDED.license_type, license_status = EXCLUDED.license_status,
+  license_issue_date = EXCLUDED.license_issue_date, license_holder_name = EXCLUDED.license_holder_name,
+  years_in_business = EXCLUDED.years_in_business, employee_count_estimate = EXCLUDED.employee_count_estimate,
+  provider_count_estimate = EXCLUDED.provider_count_estimate, owner_name = EXCLUDED.owner_name,
+  owner_age_estimate = EXCLUDED.owner_age_estimate, owner_age_source = EXCLUDED.owner_age_source,
+  owner_tenure_years = EXCLUDED.owner_tenure_years, is_distressed = EXCLUDED.is_distressed,
+  distress_reasons = EXCLUDED.distress_reasons, data_sources = EXCLUDED.data_sources,
+  raw_enrichment = EXCLUDED.raw_enrichment, notes = EXCLUDED.notes, updated_at = NOW()
+RETURNING id;
+
+INSERT INTO offmarket.businesses (
+  id, vertical, legal_name, dba_name, naics_code, address, city, county, state, zip,
+  phone, website, license_number, license_type, license_status, license_issue_date,
+  license_holder_name, entity_status, registered_agent, years_in_business,
+  employee_count_estimate, provider_count_estimate, employee_count_source,
+  owner_name, owner_age_estimate, owner_age_source, owner_tenure_years,
+  is_distressed, distress_reasons, data_sources, raw_enrichment, notes
+) VALUES (
+  '897ccdd9-2d99-57f2-a55b-97b5f2032ad3', 'plumbing', 'Best Quality Plumbing', NULL,
+  '238220', NULL, 'Plano', 'Collin',
+  'TX', NULL, NULL, 'https://www.bestqualityplumbingtx.com/',
+  NULL, 'RMP', 'Current',
+  NULL, NULL, NULL,
+  NULL, 25,
+  3, 1,
+  'website_team_page_or_buildzoom_or_dnb', NULL,
+  55, 'biz_history_proxy',
+  25, FALSE,
+  '[]'::jsonb, '[{"source": "website", "url": "https://www.bestqualityplumbingtx.com/", "fetched_at": "2026-05-15", "fields": ["legal_name"]}]'::jsonb,
+  '{"platform_check": "independent", "verification_notes": "Family-owned. Senior tech is MP with 25+ yrs experience. Plano/Collin.", "spine_id": "plm-098"}'::jsonb,
+  'Family-owned. Senior tech is MP with 25+ yrs experience. Plano/Collin.'
+)
+ON CONFLICT (vertical, legal_name, city, state) DO UPDATE SET
+  dba_name = EXCLUDED.dba_name, address = EXCLUDED.address, zip = EXCLUDED.zip,
+  phone = EXCLUDED.phone, website = EXCLUDED.website, license_number = EXCLUDED.license_number,
+  license_type = EXCLUDED.license_type, license_status = EXCLUDED.license_status,
+  license_issue_date = EXCLUDED.license_issue_date, license_holder_name = EXCLUDED.license_holder_name,
+  years_in_business = EXCLUDED.years_in_business, employee_count_estimate = EXCLUDED.employee_count_estimate,
+  provider_count_estimate = EXCLUDED.provider_count_estimate, owner_name = EXCLUDED.owner_name,
+  owner_age_estimate = EXCLUDED.owner_age_estimate, owner_age_source = EXCLUDED.owner_age_source,
+  owner_tenure_years = EXCLUDED.owner_tenure_years, is_distressed = EXCLUDED.is_distressed,
+  distress_reasons = EXCLUDED.distress_reasons, data_sources = EXCLUDED.data_sources,
+  raw_enrichment = EXCLUDED.raw_enrichment, notes = EXCLUDED.notes, updated_at = NOW()
+RETURNING id;
+
+INSERT INTO offmarket.businesses (
+  id, vertical, legal_name, dba_name, naics_code, address, city, county, state, zip,
+  phone, website, license_number, license_type, license_status, license_issue_date,
+  license_holder_name, entity_status, registered_agent, years_in_business,
+  employee_count_estimate, provider_count_estimate, employee_count_source,
+  owner_name, owner_age_estimate, owner_age_source, owner_tenure_years,
+  is_distressed, distress_reasons, data_sources, raw_enrichment, notes
+) VALUES (
+  '2522b234-7807-5862-8ad0-2b1e87fad8a6', 'plumbing', 'S & B Plumbing', NULL,
+  '238220', NULL, 'Sugar Land', 'Fort Bend',
+  'TX', '77478', '(281) 898-0202', 'https://www.sandbplumbing.com/',
+  'M-16885', 'M (RMP qualifying license)', 'Current',
+  '1988-03-14', 'WILLIAM K EDMUNDS', NULL,
+  NULL, 50,
+  10, 3,
+  'website_team_page_or_buildzoom_or_dnb', 'WILLIAM K EDMUNDS',
+  70, 'license_tenure_proxy',
+  37, FALSE,
+  '[]'::jsonb, '[{"source": "website", "url": "https://www.sandbplumbing.com/", "fetched_at": "2026-05-15", "fields": ["legal_name", "year_established"]}, {"source": "TSBPE RMP CSV", "url": "https://tsbpe.texas.gov/wp-content/uploads/2015/03/RMP.csv", "fetched_at": "2026-05-15", "fields": ["license_number", "license_issue_date", "license_holder_name"]}]'::jsonb,
+  '{"platform_check": "independent", "verification_notes": "Locally-owned-and-operated, three generations of Master Plumbers since 1976. 49 yrs. Sugar Land + Greater Houston. SAME-SURNAME 3-gen = INTERNAL SUCCESSOR by definition.", "spine_id": "plm-099"}'::jsonb,
+  'Locally-owned-and-operated, three generations of Master Plumbers since 1976. 49 yrs. Sugar Land + Greater Houston. SAME-SURNAME 3-gen = INTERNAL SUCCESSOR by definition.'
+)
+ON CONFLICT (vertical, legal_name, city, state) DO UPDATE SET
+  dba_name = EXCLUDED.dba_name, address = EXCLUDED.address, zip = EXCLUDED.zip,
+  phone = EXCLUDED.phone, website = EXCLUDED.website, license_number = EXCLUDED.license_number,
+  license_type = EXCLUDED.license_type, license_status = EXCLUDED.license_status,
+  license_issue_date = EXCLUDED.license_issue_date, license_holder_name = EXCLUDED.license_holder_name,
+  years_in_business = EXCLUDED.years_in_business, employee_count_estimate = EXCLUDED.employee_count_estimate,
+  provider_count_estimate = EXCLUDED.provider_count_estimate, owner_name = EXCLUDED.owner_name,
+  owner_age_estimate = EXCLUDED.owner_age_estimate, owner_age_source = EXCLUDED.owner_age_source,
+  owner_tenure_years = EXCLUDED.owner_tenure_years, is_distressed = EXCLUDED.is_distressed,
+  distress_reasons = EXCLUDED.distress_reasons, data_sources = EXCLUDED.data_sources,
+  raw_enrichment = EXCLUDED.raw_enrichment, notes = EXCLUDED.notes, updated_at = NOW()
+RETURNING id;
+
+INSERT INTO offmarket.businesses (
+  id, vertical, legal_name, dba_name, naics_code, address, city, county, state, zip,
+  phone, website, license_number, license_type, license_status, license_issue_date,
+  license_holder_name, entity_status, registered_agent, years_in_business,
+  employee_count_estimate, provider_count_estimate, employee_count_source,
+  owner_name, owner_age_estimate, owner_age_source, owner_tenure_years,
+  is_distressed, distress_reasons, data_sources, raw_enrichment, notes
+) VALUES (
+  '8c42d90a-db28-52e7-8117-f183e5fc86d7', 'plumbing', 'BARTSCH SERVICES INC', NULL,
+  '238220', NULL, 'The Woodlands', 'Montgomery',
+  'TX', '77380', '(281) 364-1944', NULL,
+  'M-37279', 'M (RMP qualifying license)', 'Current',
+  '2005-03-18', 'JEFFERY G BARTSCH', NULL,
+  NULL, 20,
+  3, 1,
+  'website_team_page_or_buildzoom_or_dnb', 'JEFFERY G BARTSCH',
+  55, 'license_tenure_proxy',
+  20, FALSE,
+  '[]'::jsonb, '[{"source": "TSBPE RMP CSV", "url": "https://tsbpe.texas.gov/wp-content/uploads/2015/03/RMP.csv", "fetched_at": "2026-05-15", "fields": ["legal_name", "license_number", "license_issue_date", "license_holder_name", "city"]}]'::jsonb,
+  '{"platform_check": "independent", "verification_notes": "TSBPE primary-source. The Woodlands (Montgomery \u2014 Houston metro N). 20+ yrs Master Plumber tenure.", "spine_id": "plm-100"}'::jsonb,
+  'TSBPE primary-source. The Woodlands (Montgomery — Houston metro N). 20+ yrs Master Plumber tenure.'
+)
+ON CONFLICT (vertical, legal_name, city, state) DO UPDATE SET
+  dba_name = EXCLUDED.dba_name, address = EXCLUDED.address, zip = EXCLUDED.zip,
+  phone = EXCLUDED.phone, website = EXCLUDED.website, license_number = EXCLUDED.license_number,
+  license_type = EXCLUDED.license_type, license_status = EXCLUDED.license_status,
+  license_issue_date = EXCLUDED.license_issue_date, license_holder_name = EXCLUDED.license_holder_name,
+  years_in_business = EXCLUDED.years_in_business, employee_count_estimate = EXCLUDED.employee_count_estimate,
+  provider_count_estimate = EXCLUDED.provider_count_estimate, owner_name = EXCLUDED.owner_name,
+  owner_age_estimate = EXCLUDED.owner_age_estimate, owner_age_source = EXCLUDED.owner_age_source,
+  owner_tenure_years = EXCLUDED.owner_tenure_years, is_distressed = EXCLUDED.is_distressed,
+  distress_reasons = EXCLUDED.distress_reasons, data_sources = EXCLUDED.data_sources,
+  raw_enrichment = EXCLUDED.raw_enrichment, notes = EXCLUDED.notes, updated_at = NOW()
+RETURNING id;

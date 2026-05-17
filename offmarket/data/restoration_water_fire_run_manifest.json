@@ -2,52 +2,20 @@
   "run_label": "restoration-water-fire-tx-2026-05-16-w2d",
   "score_run_id": "321798ac-2309-4b87-8487-cf1e009dbf72",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
   "vertical": "restoration_water_fire",
   "naics_codes": ["561790", "236220", "238990"],
   "geography": "TX — Harris/Galveston/Brazoria/Fort Bend/Montgomery (Houston coastal), Dallas/Tarrant/Collin/Denton (DFW hail), Travis/Williamson/Hays (Austin), Bexar/Comal (SA), Nueces/Cameron (coastal)",
-  "target_counties": [
-    "Harris",
-    "Galveston",
-    "Brazoria",
-    "Fort Bend",
-    "Montgomery",
-    "Dallas",
-    "Tarrant",
-    "Collin",
-    "Denton",
-    "Travis",
-    "Williamson",
-    "Hays",
-    "Bexar",
-    "Comal",
-    "Nueces",
-    "Cameron"
-  ],
+  "target_counties": ["Harris", "Galveston", "Brazoria", "Fort Bend", "Montgomery", "Dallas", "Tarrant", "Collin", "Denton", "Travis", "Williamson", "Hays", "Bexar", "Comal", "Nueces", "Cameron"],
   "started_at": "2026-05-17T04:29:46Z",
   "finished_at": null,
   "target_volume": "60-80",
   "excluded_franchises_and_pe": [
-    "ServPro / SERVPRO",
-    "ServiceMaster Restore",
-    "PuroClean",
-    "911 Restoration",
-    "BluSky Restoration",
-    "Belfor USA",
-    "First Onsite",
-    "Restoration1",
-    "Rainbow International",
-    "AllCity",
-    "DKI Services",
-    "Paul Davis Restoration",
-    "Marathon Restoration",
-    "Restoration Specialists (PE)",
-    "DRS (Disaster Restoration Services)",
-    "Cotton Holdings",
-    "Steamatic",
-    "COIT",
-    "ATI Restoration",
-    "Allegiance Restoration"
+    "ServPro / SERVPRO", "ServiceMaster Restore", "PuroClean", "911 Restoration",
+    "BluSky Restoration", "Belfor USA", "First Onsite", "Restoration1",
+    "Rainbow International", "AllCity", "DKI Services", "Paul Davis Restoration",
+    "Marathon Restoration", "Restoration Specialists (PE)", "DRS (Disaster Restoration Services)",
+    "Cotton Holdings", "Steamatic", "COIT", "ATI Restoration", "Allegiance Restoration"
   ],
   "counts": {
     "spine_rows": 0,
@@ -78,5 +46,5 @@
       "value_add_thesis_too_generic": 0
     }
   },
-  "supabase_write": { "status": "in_progress", "score_runs_inserted": true }
+  "supabase_write": {"status": "in_progress", "score_runs_inserted": true}
 }

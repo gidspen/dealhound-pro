@@ -2,7 +2,7 @@
   "run_label": "diesel-truck-repair-tx-2026-05-16-w3b",
   "score_run_id": "9dffd443-8a88-470d-852a-4842c858636c",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
   "vertical": "diesel_truck_repair",
   "naics_code": "811111/488490",
   "geography": "TX — Harris/Fort Bend/Brazoria/Galveston/Montgomery/Liberty (Houston petrochem) + Dallas/Tarrant/Collin/Denton (DFW logistics) + Bexar/Comal (SA) + Travis/Williamson (Austin) + Midland/Ector/Howard/Reeves (Permian) + Lubbock/Hale (Panhandle) + Smith/Gregg/Harrison (East TX) + Nueces (Corpus port)",
@@ -38,5 +38,5 @@
       "value_add_thesis_too_generic": 0
     }
   },
-  "supabase_write": { "status": "pending", "reason": "" }
+  "supabase_write": {"status": "pending", "reason": ""}
 }

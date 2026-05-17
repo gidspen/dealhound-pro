@@ -10,17 +10,16 @@
 
 ### Verticals with COMPLETE enrichment (full targets.json with scored 4-layer model)
 
-| Vertical               | Businesses |     A |      B |       C |      D | Notes                                                                                                              |
-| ---------------------- | ---------: | ----: | -----: | ------: | -----: | ------------------------------------------------------------------------------------------------------------------ |
-| `chiropractic`         |         69 |     1 |     10 |      58 |      0 | TBCE spine + live team-page enrichment completed                                                                   |
-| `paint_body_collision` |         64 |     2 |     32 |      29 |      1 | Independent collision (Caliber/Crash Champions/Service First excluded)                                             |
-| `carpet_cleaning`      |         39 |     0 |     18 |      15 |      6 | IICRC certified, franchise-heavy filter                                                                            |
-| `self_storage`         |         37 |   5\* |     26 |       5 |      1 | \*Tagged `A_acquire_self_candidate` — agent used non-canonical tier label; needs normalization to `A_acquire_self` |
-| `physical_therapy`     |         18 |     0 |      3 |       9 |      6 | Partial — ECPTOTE spine started, enrichment cut short                                                              |
-| **Totals**             |    **227** | **8** | **89** | **116** | **14** |                                                                                                                    |
+| Vertical | Businesses | A | B | C | D | Notes |
+|---|--:|--:|--:|--:|--:|---|
+| `chiropractic` | 69 | 1 | 10 | 58 | 0 | TBCE spine + live team-page enrichment completed |
+| `paint_body_collision` | 64 | 2 | 32 | 29 | 1 | Independent collision (Caliber/Crash Champions/Service First excluded) |
+| `carpet_cleaning` | 39 | 0 | 18 | 15 | 6 | IICRC certified, franchise-heavy filter |
+| `self_storage` | 37 | 5* | 26 | 5 | 1 | *Tagged `A_acquire_self_candidate` — agent used non-canonical tier label; needs normalization to `A_acquire_self` |
+| `physical_therapy` | 18 | 0 | 3 | 9 | 6 | Partial — ECPTOTE spine started, enrichment cut short |
+| **Totals** | **227** | **8** | **89** | **116** | **14** | |
 
 ### Verticals with SPINE captured but enrichment incomplete
-
 - `dermatology` (small spine)
 - `diesel_truck_repair` (substantial spine + manifest)
 - `fence_contractor` (spine + manifest)
@@ -35,7 +34,6 @@
 - `dry_cleaner` (raw subfolder with TCEQ XLS + multiple spine variants)
 
 ### Verticals where only score_runs row was created (Phase 1 only)
-
 `boarding_kennel`, `document_destruction`, `home_health_agency`, `med_spa`, `vet_emergency_specialty`, `propane_distribution` — opened in Supabase score_runs (visible as `business_count=0`), Phase 2 spine pull blocked or in-progress at termination.
 
 ---
@@ -45,7 +43,6 @@
 **Zero new businesses upserted to `offmarket.businesses` during this run.** All 24 newly-created `score_runs` rows (W1A through W7D) have `business_count=0`. Phase 6 (persist) requires Supabase MCP `execute_sql` calls that didn't fire before agents were terminated.
 
 **Reload path** to get local data into Supabase:
-
 ```bash
 cd offmarket
 python gen_load_sql.py --input data/chiropractic_targets.json --run-label chiropractic-tx-2026-05-16-w1a
@@ -64,16 +61,16 @@ python gen_load_sql.py --input data/physical_therapy_targets.json --run-label ph
 
 Backfilled `offmarket.score_runs.business_count` for 8 prior runs that had completed persistence but reported 0:
 
-| Run                                      | Vertical             | Backfilled count |
-| ---------------------------------------- | -------------------- | ---------------: |
-| `janitorial-tx-2026-05-16-w3c`           | janitorial           |              102 |
-| `painting-tx-2026-05-16-w2d`             | painting_contractor  |               86 |
-| `pest-control-rescore-tx-2026-05-16-w4a` | pest-control         |               20 |
-| `auto-repair-rescore-tx-2026-05-16-w4b`  | auto_repair          |               17 |
-| `hvac-commercial-tx-2026-05-16-w6a`      | hvac_commercial      |               93 |
-| `trucking-tx-2026-05-16-w6b`             | specialty_trucking   |               69 |
-| `isp-wisp-tx-2026-05-16-w6c`             | independent_isp_wisp |               68 |
-| `title-companies-tx-2026-05-16-w6d`      | title_company        |               63 |
+| Run | Vertical | Backfilled count |
+|---|---|--:|
+| `janitorial-tx-2026-05-16-w3c` | janitorial | 102 |
+| `painting-tx-2026-05-16-w2d` | painting_contractor | 86 |
+| `pest-control-rescore-tx-2026-05-16-w4a` | pest-control | 20 |
+| `auto-repair-rescore-tx-2026-05-16-w4b` | auto_repair | 17 |
+| `hvac-commercial-tx-2026-05-16-w6a` | hvac_commercial | 93 |
+| `trucking-tx-2026-05-16-w6b` | specialty_trucking | 69 |
+| `isp-wisp-tx-2026-05-16-w6c` | independent_isp_wisp | 68 |
+| `title-companies-tx-2026-05-16-w6d` | title_company | 63 |
 
 Total: **518 businesses now correctly attributed** to their score_runs.
 

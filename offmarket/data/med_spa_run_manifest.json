@@ -2,7 +2,7 @@
   "run_label": "med-spa-tx-2026-05-16-w5c",
   "score_run_id": "2f488f18-52b9-46f6-99ed-cef2004a93d9",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
   "vertical": "med_spa",
   "geography": "TX — Harris/Dallas/Tarrant/Collin/Denton/Bexar/Comal/Travis/Williamson/Hays/Fort Bend/Montgomery",
   "naics_codes_used": ["812199", "621111"],
@@ -39,10 +39,7 @@
       "value_add_thesis_too_generic": 0
     }
   },
-  "supabase_write": {
-    "status": "in_progress",
-    "score_run_id": "2f488f18-52b9-46f6-99ed-cef2004a93d9"
-  },
+  "supabase_write": {"status": "in_progress", "score_run_id": "2f488f18-52b9-46f6-99ed-cef2004a93d9"},
   "non_negotiables_followed": {
     "physician_ownership_verified": true,
     "no_fabrication": true,

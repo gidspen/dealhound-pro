@@ -2,7 +2,7 @@
   "run_label": "boarding-kennel-tx-2026-05-16-w6b",
   "score_run_id": "24f1b7c2-83f7-4dd7-8882-d895fa7938e6",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
   "vertical": "boarding_kennel",
   "naics_code": "812910",
   "geography": "TX — DFW (Dallas/Tarrant/Collin/Denton), Houston (Harris/FortBend/Brazoria/Montgomery), SA (Bexar/Comal), Austin (Travis/Williamson/Hays) + exurban Sun Belt",
@@ -13,64 +13,38 @@
     "spine_rows": 0,
     "enriched": 0,
     "scored": 0,
-    "tier_a": 0,
-    "tier_b": 0,
-    "tier_c": 0,
-    "tier_d": 0,
+    "tier_a": 0, "tier_b": 0, "tier_c": 0, "tier_d": 0,
     "distress_excluded": 0,
     "franchise_excluded": 0
   },
   "vertical_notes": {
     "spine_strategy": "No single TX-wide licensing registry exists for pet boarding (NAICS 812910). Spine assembled from: (1) IBPSA member directory TX filter, (2) PCSA / Pet Care Services Assn TX members, (3) Google Maps 'pet boarding/dog daycare/pet hotel/luxury dog resort [city]' for top metros, (4) cross-checked against TX SOS Comptroller for entity status. Manual franchise/chain exclusion list applied (Camp Bow Wow, Dogtopia, K9 Resorts, Pet Paradise, Best Friends, PetSmart/Petco daycare, Dog Stop multi-loc, Suite Paws chain, Citizen Canine, Hollywood Pet Resort).",
     "franchise_exclusion_list": [
-      "Camp Bow Wow",
-      "Dogtopia",
-      "K9 Resorts Luxury Pet Hotel",
-      "K9 Resorts",
-      "Pet Paradise Resort",
-      "Pet Paradise",
-      "Best Friends Pet Care",
-      "PetSmart Doggie Day Camp",
-      "PetSmart Pets Hotel",
-      "Petco daycare",
-      "Petco Vetco",
-      "Dogtown Resort",
-      "The Grand Pet Resort",
-      "Suite Paws Pet Resort",
-      "Citizen Canine",
-      "Hollywood Pet Resort",
-      "Dog Stop multi-loc",
-      "Banfield Pet Hospital",
-      "BluePearl",
-      "VCA",
-      "Mosaic Pet Resort multi-loc"
+      "Camp Bow Wow", "Dogtopia", "K9 Resorts Luxury Pet Hotel", "K9 Resorts",
+      "Pet Paradise Resort", "Pet Paradise", "Best Friends Pet Care",
+      "PetSmart Doggie Day Camp", "PetSmart Pets Hotel", "Petco daycare",
+      "Petco Vetco", "Dogtown Resort", "The Grand Pet Resort", "Suite Paws Pet Resort",
+      "Citizen Canine", "Hollywood Pet Resort", "Dog Stop multi-loc",
+      "Banfield Pet Hospital", "BluePearl", "VCA", "Mosaic Pet Resort multi-loc"
     ],
     "recurring_revenue_tells": [
-      "doggie daycare membership / monthly punch card",
-      "monthly grooming subscription",
-      "loyalty program",
-      "training class series subscription",
-      "vet partnership referrals",
+      "doggie daycare membership / monthly punch card", "monthly grooming subscription",
+      "loyalty program", "training class series subscription", "vet partnership referrals",
       "multi-day boarding repeat customers (vacation/business travel)",
       "holiday booking waitlists (premium recurring)"
     ],
     "coasting_tells": [
-      "sole owner who is also kennel manager",
-      "same staff 10+ yrs",
+      "sole owner who is also kennel manager", "same staff 10+ yrs",
       "website pre-2018, no online reservation booking (no Gingr/ProPet/K9-Connect/Time To Pet visible)",
       "no customer portal for vaccination records / report cards",
-      "phone-and-email reservations only",
-      "aging facility visible",
+      "phone-and-email reservations only", "aging facility visible",
       "same property since 1990s/2000s, owner-LLC holds deed",
-      "newest Google review > 60 days",
-      "no social media or last post >6 months",
-      "single location no satellite",
-      "limited services (boarding only — no daycare/grooming/training)"
+      "newest Google review > 60 days", "no social media or last post >6 months",
+      "single location no satellite", "limited services (boarding only — no daycare/grooming/training)"
     ],
     "active_acquirers": [
       "Mars Petcare (Best Friends, BluePearl, VCA spinoff)",
-      "Pet Paradise Resort (PE)",
-      "Camp Bow Wow franchise consolidator",
+      "Pet Paradise Resort (PE)", "Camp Bow Wow franchise consolidator",
       "Dogtopia franchise consolidator",
       "ETA/search-fund interest HIGH (recurring + real-estate-backed + aging owner)"
     ]
@@ -94,5 +68,5 @@
       "value_add_thesis_too_generic": 0
     }
   },
-  "supabase_write": { "status": "pending", "reason": null }
+  "supabase_write": {"status": "pending", "reason": null}
 }

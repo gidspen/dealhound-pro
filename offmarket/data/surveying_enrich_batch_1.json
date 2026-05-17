@@ -1,0 +1,251 @@
+{
+  "batch_id": "surveying_enrich_batch_1",
+  "fetched_at": "2026-05-16",
+  "notes": "Live-fetch enrichment for top 18 A-tier candidates + top 22 B-forward. Sources: company websites (live-fetch), TSPS profiles, LinkedIn, BBB, BuildZoom, Manta, OpenCorporates, RocketReach. All evidence URLs captured per-business.",
+  "results": [
+    {
+      "license_number": "10034800",
+      "legal_name": "CARLOMAGNO SURVEYING, INC.",
+      "website": "https://www.carlomagnosurveying.com",
+      "phone": "(866) 549-6515",
+      "team_page_url": "https://www.carlomagnosurveying.com",
+      "successor_found": false,
+      "successor_evidence": "Live-fetch of carlomagnosurveying.com (2026-05-16) — no staff/team page exists; no named successor or family-surname RPLS visible. Copyright 2026. Founder Dante Carlomagno (born 1936, Argentina-immigrant 1960, RPLS #1562 granted 1967) is the sole stockholder per Texas Society of Professional Surveyors profile and corporationwiki. 55+yr business per website. Limited hours (Mon-Thu 8am-5pm, Fri 8am-4pm, closed weekends) — consistent with mature owner-operator winding down.",
+      "team_page_evidence": "Carlomagnosurveying.com homepage shows: '55+ years of experience', 'fully licensed & insured', service area Brazos/Burleson/Madison/Grimes/Robertson counties; no team page visible, no associate or successor mentioned. Cross-check: TSPS profile confirms Dante Carlomagno as RPLS #1562 (granted 1967); CorporationWiki shows Dante as president/director/sole stockholder at 2714 Finfeather Rd, Bryan TX 77801; no second officer.",
+      "coasting_tells": [
+        "Born 1936 (age 90 in 2026) per published Carlomagno Resume PDF on carlomagnosurveying.com domain — well past natural exit window.",
+        "Solo RPLS for 59 years (RPLS #1562 granted 1967) — no second RPLS at firm per TBPELS roster; no associate or successor on team page or in corporate filings.",
+        "Limited hours: Mon-Thu 8am-5pm, Fri 8am-4pm, closed weekends — winding-down operating posture.",
+        "No team page, no portfolio gallery, no drone/UAV/scanning mention on website — classic surveying low-tech-marketing profile but also no modernization tells.",
+        "Personal-name firm + sole stockholder + no employees listed → likely small ($300K-$500K rev) practice, sub-SBA scale but ETA/search-fund-acquirable as solo practitioner buy-out."
+      ],
+      "owner_age_verified": 90,
+      "owner_age_source": "self_report_website_dob_argentina_1936",
+      "homestead_address": "2714 Finfeather Rd, Bryan, TX 77801 (registered agent / business address)",
+      "comptroller_status": "Active (Texas SOS file 0044025100 per OpenCorporates)",
+      "entity_sos_file_number": "0044025100",
+      "registered_agent": "Dante Carlomagno",
+      "service_specialties": ["boundary surveys", "topographic surveys", "title surveys"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "carlomagnosurveying.com homepage", "url": "https://www.carlomagnosurveying.com", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["legal_name","phone","copyright_year","service_area","experience_years"]},
+        {"source": "TSPS member profile", "url": "https://www.tsps.org/members/?id=26469361", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["rpls_number","rpls_granted_date"]},
+        {"source": "OpenCorporates TX SOS record", "url": "https://opencorporates.com/companies/us_tx/0044025100", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["entity_sos_file_number","registered_agent","entity_status"]},
+        {"source": "Carlomagno Resume PDF (firm domain)", "url": "https://mail.carlomagnosurveying.com/pdf/Carlomagno%20Resume-2010.pdf", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["dob_year","biographical"]}
+      ]
+    },
+    {
+      "license_number": "10040200",
+      "legal_name": "SURVEYING ASSOCIATES",
+      "website": "https://www.salespider.com/bp-43949936/ben-rychlik",
+      "phone": "(214) 948-3324",
+      "team_page_url": null,
+      "successor_found": false,
+      "successor_evidence": "BuildZoom + SalesPider + Alignable show Ben Rychlik (RPLS #1630) as sole listed owner. No team page found on dedicated website (firm has minimal web presence). Mid-size shop (~$700K rev, 9 employees per Manta) but no public RPLS-credentialed successor identified.",
+      "team_page_evidence": "BuildZoom listing shows Ben Rychlik as owner of Surveying Associates at 1018 S Beckley Ave, Dallas. RPLS license #1630 granted 1969. Firm est 1983 per Manta. No active company website found.",
+      "coasting_tells": [
+        "Solo RPLS Ben Rychlik for 57+ years (RPLS #1630 granted 1969) — no second RPLS at firm per TBPELS join.",
+        "Minimal web presence — no dedicated active website; reliance on directory listings (BuildZoom, Manta, SalesPider) for visibility = classic referral-driven surveying low-marketing posture.",
+        "Firm est 1983 per Manta (43yr operating) at single Dallas location (1018 S Beckley Ave) — long-tenured single-location operator.",
+        "~$700K rev / 9 employees per third-party data — substantial mid-size operation (multi-staff = real business, not solo gig), in ETA / search-fund sweet spot."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "homestead_address": null,
+      "comptroller_status": "active (assumed - third-party listings show current operation; not verified via direct Comptroller search)",
+      "entity_sos_file_number": null,
+      "registered_agent": null,
+      "service_specialties": ["land planning", "boundary", "topographic"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "Manta listing", "url": "https://www.manta.com/c/mmjs8d2/surveying-associates", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["revenue_estimate","employee_count","established_year"]},
+        {"source": "BuildZoom contractor profile", "url": "https://www.buildzoom.com/contractor/rychlik-ben-d", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["rpls_number","owner_name"]},
+        {"source": "TSPS member profile", "url": "https://www.tsps.org/members/?id=26469596", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["rpls_number","name"]}
+      ]
+    },
+    {
+      "license_number": "10194225",
+      "legal_name": "G. CURTIS SURVEYORS, LLC",
+      "website": null,
+      "phone": "(817) 334-0381",
+      "team_page_url": null,
+      "successor_found": false,
+      "successor_evidence": "LinkedIn shows Gerry Curtis as President/Owner/RPLS at Gerry Curtis Associates, Inc. (different LLC same operator). Active 50+yr RPLS. No public successor info. Single principal at 3108 W 6th, Fort Worth.",
+      "team_page_evidence": "Yelp + Manta + Blue Book confirm operating address 3108 W 6th, Fort Worth 76107; hours Mon-Fri 9am-5:30pm; Gerald Curtis President/Owner/RPLS per LinkedIn.",
+      "coasting_tells": [
+        "Solo RPLS Gerald A. Curtis for 57+ years (RPLS granted 1969) — no second RPLS at firm.",
+        "No active company website found — referral-driven low-marketing posture.",
+        "Single principal LinkedIn (Gerry Curtis Associates Inc — alternative entity); appears to be sole-owner consulting practice.",
+        "Owner age ~85+ (RPLS 1969 + 30 + 27 = est 86) — well past natural exit window."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (presumed - LinkedIn current as of 2025)",
+      "service_specialties": ["land surveying"],
+      "data_sources": [
+        {"source": "LinkedIn profile", "url": "https://www.linkedin.com/in/gerry-curtis-30751a21/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["owner_name","title","tenure"]},
+        {"source": "Yelp", "url": "https://www.yelp.com/biz/g-curtis-surveyors-fort-worth", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["address","hours"]}
+      ]
+    },
+    {
+      "license_number": "10194975",
+      "legal_name": "Gulf Coast Pipeline Services Inc.",
+      "website": "https://gulfcoastpipelineservices.com/",
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "is_distressed": false,
+      "distress_signals": [],
+      "exclusion_reason": "Excluded per skill filter: pipeline construction operator with in-house RPLS for ROW survey work — NOT a service provider / acquisition target. Per verticals.md surveying section: 'EXCLUDE: pipeline construction operators that incidentally survey for themselves — not service providers.' Gordon Hans is the firm's internal RPLS for pipeline ROW; the firm is a pipeline construction/fabrication/maintenance company per its own website.",
+      "demote_to_tier": "D_pass",
+      "team_page_evidence": "Live-fetch confirms Gulf Coast Pipeline Services is a pipeline construction/fabrication/maintenance company (gulfcoastpipelineservices.com) — 'celebrating 25 years', services: construction, fabrication, maintenance and repair, leak detection, integrity management. NOT a surveying-services-for-sale firm.",
+      "data_sources": [
+        {"source": "gulfcoastpipelineservices.com homepage", "url": "https://gulfcoastpipelineservices.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["business_nature","services"]}
+      ]
+    },
+    {
+      "license_number": "10193000",
+      "legal_name": "SHANKS ENGINEERING AND SURVEYING, INC.",
+      "website": "https://www.lsrp.com/shanks1.html",
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "successor_evidence": "Solo Billy L. Shanks (RPLS #1821 granted 1974). No second RPLS. Limited web presence on lsrp.com only. BuildZoom shows 'Shanks Engineering And Surveying, Inc currently holds license 10193000 (Land Surveying Firm Firm Headquarters), though the license status appears to be inactive according to the records checked.' BBB also lists Shank Land Surveyors LLC (separate entity, also Billy Shanks).",
+      "team_page_evidence": "Manta/Yellowpages show 'Shanks Land Surveyors' at 1414 Wavecrest Lane, Houston 77062; phone listed; started Aug 1 1967 per buildzoom; $367,893 estimated annual revenue, 6 employees per buildzoom. Multiple legal entities (Shanks Engineering and Surveying Inc, Shanks Surveyors LLC) operated by same Billy Shanks.",
+      "coasting_tells": [
+        "Solo Billy L. Shanks RPLS for 52+ years (RPLS #1821 granted 1974) — no successor RPLS at firm.",
+        "BuildZoom flags license 10193000 'appears inactive' — needs Comptroller confirmation; potential distress signal but firm est revenue $367K suggests still operating.",
+        "Sub-scale ($367K rev / 6 employees) per BuildZoom — at the SBA-low-end of acquisition target size.",
+        "Owner age ~82+ (born ~1944 if RPLS at 30 in 1974) — well past natural exit window."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "verification_needed - BuildZoom flags inactive but firm still on TBPELS roster as 'Registered'",
+      "service_specialties": ["land surveying", "elevation certificates"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "BuildZoom", "url": "https://www.buildzoom.com/contractor/shanks-engineering-and-surveying-inc", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["revenue_estimate","employee_count","license_status"]},
+        {"source": "lsrp.com profile", "url": "https://www.lsrp.com/shanks1.html", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["owner_name","established_year"]}
+      ]
+    },
+    {
+      "license_number": "10002000",
+      "legal_name": "FOREST SURVEYING AND MAPPING",
+      "website": "https://forest-surveying.com",
+      "phone": "(512) 930-5927",
+      "team_page_url": "https://forest-surveying.com/about-us/",
+      "successor_found": true,
+      "successor_evidence": "Live-fetch of forest-surveying.com/about-us/ (2026-05-16) reveals MULTI-GENERATION FAMILY OPERATION: William F. Forest Sr. (Bill) founded 1955 (RLPS #101); William F. Forest Jr. (RLPS #1847, since 1975) currently the active RPLS; Kathryn Forest Heidemann (partner, sibling); Beth Ann Forest (partner, rejoined 2005); Forrest Sasser (Field Crew Chief, Surveyor-in-Training, Beth's son); Scott Heidemann (Field Manager, Kathryn's son). 'Three of the four siblings and two of their children' currently in the business. DEMOTE A→B: clear internal-family-successor pipeline.",
+      "team_page_evidence": "forest-surveying.com/about-us/ live-fetch: 71yr family business; founder Bill Forest Sr. RPS #101 (1955); William F Forest Jr RLPS #1847 (1975, current active RPLS); two partner-siblings (Kathryn, Beth Ann); two grandchildren in operations (Forrest Sasser SIT, Scott Heidemann Field Manager). Copyright 2023. No drone/laser/RTK mentioned. No homebuilder logos.",
+      "coasting_tells": [
+        "Copyright 2023 — website 3yr stale.",
+        "No drone/UAV/RTK GPS/laser scanning/3D modeling mentioned — modern surveying tech absent.",
+        "Family-owned 71yr, traditional services (title, boundary, elevation cert) without digital modernization."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "homestead_address": null,
+      "comptroller_status": "active (presumed - operating website + family-business posture)",
+      "demote_to_tier": "B_forward",
+      "service_specialties": ["title surveys","boundary","elevation certificates"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "forest-surveying.com about page (live-fetch)", "url": "https://forest-surveying.com/about-us/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["principals","family_relationships","RPLS_numbers","copyright_year","technology_mentions"]}
+      ]
+    },
+    {
+      "license_number": "10169900",
+      "legal_name": "GRIFFITH CONSULTING",
+      "website": null,
+      "phone": null,
+      "team_page_url": null,
+      "successor_found": false,
+      "is_distressed": true,
+      "distress_signals": ["BuildZoom reports: 'Griffith Consulting holds license 10169900 (Land Surveying Firm Firm Headquarters), which was Inactive when last checked' with expiration 2014. Firm est revenue $170K with 2 employees — sub-scale and license-lapsed."],
+      "exclusion_reason": "Likely D_pass via license-lapsed distress signal. Cross-reference TBPELS roster (current as of May 2026) still shows 'Registered' — possible reactivation; needs Comptroller confirmation. Sub-scale ($170K rev) regardless.",
+      "demote_to_tier": "D_pass",
+      "team_page_evidence": "BuildZoom contractor profile flags inactive land surveying license (exp 2014). LinkedIn shows Jimmy Griffith as Owner in Round Rock. Annual revenue $170K, 2 employees — well below SBA acquisition threshold.",
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "data_sources": [
+        {"source": "BuildZoom", "url": "https://www.buildzoom.com/contractor/griffith-consulting", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["license_status","revenue_estimate","employee_count"]}
+      ]
+    },
+    {
+      "license_number": "10057100",
+      "legal_name": "C & G LAND SURVEYORS",
+      "website": "https://candgsurveyors.com/",
+      "phone": "936-756-6116",
+      "team_page_url": "https://candgsurveyors.com/",
+      "successor_found": false,
+      "successor_evidence": "Live-fetch of candgsurveyors.com (2026-05-16) shows ONLY Seth Gibson (RPLS #2000) as identified staff. No second RPLS, no family-surname successor, no associate or partner mentioned. Operating since 1977 (49yr).",
+      "team_page_evidence": "candgsurveyors.com homepage (live-fetch 2026-05-16): 'Since 1977' / Conroe and Southeast Texas service area; Seth Gibson RPLS #2000 is the sole identified staff member; services include residential/commercial, boundary, elevation certs, ALTA/ACSM, topographic, construction layout, expert witness. Copyright 2024 (2yr stale). NO drone/UAV/laser scanning/RTK technology mentioned.",
+      "coasting_tells": [
+        "Solo RPLS Seth Gibson for 48+ years (RPLS #2000 granted 1978) — no second RPLS at firm per TBPELS join + live team-page fetch.",
+        "Copyright 2024 (2yr stale).",
+        "No drone/UAV/RTK GPS/laser scanning/3D modeling/modern tech-stack on website — solo RPLS at $300-700K likely-revenue with classic low-tech-marketing.",
+        "Multi-service offering (residential + commercial + ALTA + boundary + elevation cert + construction layout) shows the operator does it all = classic owner-operator stall pattern at $300-700K rev.",
+        "Conroe area = Montgomery County, growth metro (north Houston suburbs) → high transactional volume = under-served by modernized firms."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "homestead_address": null,
+      "comptroller_status": "active (presumed - current operating website)",
+      "service_specialties": ["residential","commercial","boundary","elevation certificates","ALTA/ACSM","topographic","construction layout","expert witness"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "candgsurveyors.com homepage (live-fetch)", "url": "https://candgsurveyors.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["principal","RPLS_number","services","copyright_year","technology_mentions","established_year"]}
+      ]
+    },
+    {
+      "license_number": "10133000",
+      "legal_name": "PRIME TEXAS SURVEYS",
+      "website": "https://www.primetxsurveys.com/",
+      "phone": null,
+      "team_page_url": "https://www.primetxsurveys.com/",
+      "successor_found": false,
+      "successor_evidence": "Live-fetch of primetxsurveys.com (2026-05-16) shows no individual RPLS named on the site. Richard V. Hall (RPLS granted 1978, TBPELS-attached) is presumed-sole RPLS per spine. Multi-office structure (Houston HQ + Mission TX office) suggests a real business not a one-person shop.",
+      "team_page_evidence": "primetxsurveys.com homepage (live-fetch): Houston HQ at 2417 North Fwy 77009; second office in Mission TX 78573; serves Houston, Rockport, Rio Grande Valley; 'Order a Survey' online flow exists; 'Request a Free Quote'; modern site, copyright 2026. Services: residential, commercial, real-estate, boundary, acreage/lot, topographic, elevation cert, ALTA/ACSM, platting/replatting, builder services. References '25 years of experience'. NO individual RPLS named on site.",
+      "coasting_tells": [
+        "Solo RPLS Richard V. Hall for 48+ years (RPLS granted 1978) per TBPELS — no second RPLS at firm.",
+        "Multi-office (Houston + Mission TX) but only 1 RPLS on TBPELS records = capacity ceiling on the owner.",
+        "Owner age est ~78 (RPLS 1978 + 30 + 18 = 78) — natural exit window.",
+        "Modernized website (online ordering, 2026 copyright) suggests firm is actively managed — less classic 'coasting' tells but the owner-age proxy strong."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (current website, multi-office, online ordering)",
+      "service_specialties": ["residential","commercial","real-estate","ALTA","builder services","elevation certs"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "primetxsurveys.com homepage (live-fetch)", "url": "https://www.primetxsurveys.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["offices","services","experience_years","copyright_year","online_ordering"]}
+      ]
+    },
+    {
+      "license_number": "10118600",
+      "legal_name": "VANNOY & ASSOCIATES, INC.",
+      "website": "https://www.vannoyassoc.com/",
+      "phone": "(903) 574-1313",
+      "team_page_url": "https://www.vannoyassoc.com/",
+      "successor_found": false,
+      "successor_evidence": "Live-fetch of vannoyassoc.com (2026-05-16) reveals Ray Lynn Vannoy (RPLS #1988, since 1978) as sole identified RPLS. 'More than sixteen of his former employees have become Registered Professional Land Surveyors' — implying he mentored many but none currently on staff. No successor or family-surname principal identified. 15,000+ surveys over 90+ TX counties — high-volume operator.",
+      "team_page_evidence": "vannoyassoc.com (live-fetch 2026-05-16): Ray Lynn Vannoy RPLS #1988 (licensed 1978); services include boundary surveying, oil/gas surveys, pipeline surveys, easements/ROW, riparian boundaries, litigation/expert testimony, TX General Land Office matters, golf course surveys, consultation/training. NO drone/RTK/scanning/3D mention. Single Leander TX office. Cell phone (903) 574-1313 + Email Ray@vannoyassoc.com — extremely personal-direct contact.",
+      "coasting_tells": [
+        "Solo RPLS Ray Lynn Vannoy for 48+ years (RPLS #1988 granted 1978) — sole identified RPLS at firm per TBPELS + live team page.",
+        "Direct personal contact (cell + personal email) is the only contact method — classic solo-owner-operator posture.",
+        "16+ former employees have become RPLS elsewhere — Vannoy is a mentor/trainer, but the active firm is still solo-RPLS.",
+        "No technology tells on website (drone/RTK/scanning absent).",
+        "Specialty practice (oil/gas pipelines, riparian, litigation/expert testimony) → high-margin recurring B2B with Eagle Ford / Permian operators, but Vannoy individually is the brand.",
+        "Owner age est ~78 (RPLS 1978 + 30 + 18) — natural exit window."
+      ],
+      "owner_age_verified": null,
+      "owner_age_source": "license_tenure_proxy",
+      "comptroller_status": "active (presumed - current website)",
+      "service_specialties": ["oil/gas surveys","pipeline surveys","boundary","easements/ROW","riparian","litigation/expert witness","TX GLO"],
+      "homebuilder_logos": [],
+      "data_sources": [
+        {"source": "vannoyassoc.com (live-fetch)", "url": "https://www.vannoyassoc.com/", "fetched_at": "2026-05-16T00:00:00Z", "fields": ["principal","RPLS_number","services","specialty","experience","16_mentee_RPLS_claim"]}
+      ]
+    }
+  ]
+}

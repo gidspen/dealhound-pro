@@ -23,56 +23,22 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://jenniferkleinphysicaltherapy.com/about/",
-        "fetched_at": "2026-05-17T04:35:00Z",
-        "fields": ["founder", "tenure", "address"]
-      },
-      {
-        "source": "live_website_fetch",
-        "url": "https://jenniferkleinphysicaltherapy.com/physical-therapy/manual-therapy/",
-        "fetched_at": "2026-05-17T04:35:00Z",
-        "fields": ["practice_year"]
-      }
+      {"source": "live_website_fetch", "url": "https://jenniferkleinphysicaltherapy.com/about/", "fetched_at": "2026-05-17T04:35:00Z", "fields": ["founder", "tenure", "address"]},
+      {"source": "live_website_fetch", "url": "https://jenniferkleinphysicaltherapy.com/physical-therapy/manual-therapy/", "fetched_at": "2026-05-17T04:35:00Z", "fields": ["practice_year"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_in_retirement_window",
-        "direction": "positive",
-        "evidence": "Jennifer Klein PT, native Houstonian, 'practiced her profession here since 1987' per about page. UT Medical Branch PT grad → ~62. 38-yr tenure squarely in natural-exit window.",
-        "source": "live_website_fetch",
-        "source_url": "https://jenniferkleinphysicaltherapy.com/about/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 2,
-        "signal_key": "recurring_revenue_pilates",
-        "direction": "positive",
-        "evidence": "Practice combines outpatient PT with AATB Pilates studio. Pilates is recurring/membership revenue. Has MBA from Our Lady of the Lake, suggesting business sophistication.",
-        "source": "live_website_fetch",
-        "source_url": "https://jenniferkleinphysicaltherapy.com/about/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "positive",
-        "evidence": "Live team page fetch (jenniferkleinphysicaltherapy.com/about/, 2026-05-17): Jennifer Klein is the only PT listed. Two Pilates instructors named (Mima Leal, Patty Schnabel) — Pilates instructors are NOT successor candidates for a PT practice in TX (cannot legally own a PT practice). No 2nd PT, no DPT, no family member, no DSO branding. 38-yr solo founder profile.",
-        "source": "live_website_fetch",
-        "source_url": "https://jenniferkleinphysicaltherapy.com/about/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "single_location_no_expansion",
-        "direction": "positive",
-        "evidence": "Single Houston Heights location since founding, no satellite offices, no expansion narrative.",
-        "source": "live_website_fetch",
-        "source_url": "https://jenniferkleinphysicaltherapy.com/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_in_retirement_window", "direction": "positive",
+       "evidence": "Jennifer Klein PT, native Houstonian, 'practiced her profession here since 1987' per about page. UT Medical Branch PT grad → ~62. 38-yr tenure squarely in natural-exit window.",
+       "source": "live_website_fetch", "source_url": "https://jenniferkleinphysicaltherapy.com/about/", "observed_at": "2026-05-17"},
+      {"layer": 2, "signal_key": "recurring_revenue_pilates", "direction": "positive",
+       "evidence": "Practice combines outpatient PT with AATB Pilates studio. Pilates is recurring/membership revenue. Has MBA from Our Lady of the Lake, suggesting business sophistication.",
+       "source": "live_website_fetch", "source_url": "https://jenniferkleinphysicaltherapy.com/about/", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive",
+       "evidence": "Live team page fetch (jenniferkleinphysicaltherapy.com/about/, 2026-05-17): Jennifer Klein is the only PT listed. Two Pilates instructors named (Mima Leal, Patty Schnabel) — Pilates instructors are NOT successor candidates for a PT practice in TX (cannot legally own a PT practice). No 2nd PT, no DPT, no family member, no DSO branding. 38-yr solo founder profile.",
+       "source": "live_website_fetch", "source_url": "https://jenniferkleinphysicaltherapy.com/about/", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "single_location_no_expansion", "direction": "positive",
+       "evidence": "Single Houston Heights location since founding, no satellite offices, no expansion narrative.",
+       "source": "live_website_fetch", "source_url": "https://jenniferkleinphysicaltherapy.com/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 80,
     "layer1_comment": "Jennifer Klein, PT, MBA, est. ~62 (website self-report: 'practiced here since 1987' + UTMB PT BS implies grad year ~1986). 38-yr personally-running tenure. Tenure modifier +5 → strong base rate.",
@@ -113,47 +79,19 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://www.curnynphysicaltherapy.com/about",
-        "fetched_at": "2026-05-17T04:35:00Z",
-        "fields": ["founder", "team", "year_founded"]
-      },
-      {
-        "source": "choosept_apta_locator",
-        "url": "https://www.choosept.com/find-a-pt/c/u/dennis-j.-curnyn-pt",
-        "fetched_at": "2026-05-17T04:35:00Z",
-        "fields": ["experience"]
-      }
+      {"source": "live_website_fetch", "url": "https://www.curnynphysicaltherapy.com/about", "fetched_at": "2026-05-17T04:35:00Z", "fields": ["founder", "team", "year_founded"]},
+      {"source": "choosept_apta_locator", "url": "https://www.choosept.com/find-a-pt/c/u/dennis-j.-curnyn-pt", "fetched_at": "2026-05-17T04:35:00Z", "fields": ["experience"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_tenure_long",
-        "direction": "positive",
-        "evidence": "Founded clinic 1991 (35 yrs ago) as Sportcare PT. 'Wife of 31-35 years' per about + APTA bio. Age proxy ~58-62 (assuming first marriage at 25-27). Long-tenured.",
-        "source": "live_website_fetch",
-        "source_url": "https://www.curnynphysicaltherapy.com/about",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 2,
-        "signal_key": "multi_provider_outpatient_pt",
-        "direction": "positive",
-        "evidence": "7 DPTs + 1 PTA + 2 locations. 'Longest-running physical therapist-owned clinic in Fort Worth' per about. Plausible $2.5M–$5M revenue. SBA 7(a) financeable.",
-        "source": "live_website_fetch",
-        "source_url": "https://www.curnynphysicaltherapy.com/about",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "negative",
-        "evidence": "Live team page fetch (curnynphysicaltherapy.com/about, 2026-05-17): 7 DPT associates listed (Santoro, Griebel, Carneglia, Aguillon, Horstman, Higgins) — succession bench is deep. ALSO Cecily Curnyn (wife, VP/co-founder) and Nolan Curnyn (Marketing/Recruiting) — family-internal succession profile. Multiple DPT associates of varying tenure = structured internal buy-in candidate, NOT coasting-solo-to-outside-buyer profile.",
-        "source": "live_website_fetch",
-        "source_url": "https://www.curnynphysicaltherapy.com/about",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_tenure_long", "direction": "positive",
+       "evidence": "Founded clinic 1991 (35 yrs ago) as Sportcare PT. 'Wife of 31-35 years' per about + APTA bio. Age proxy ~58-62 (assuming first marriage at 25-27). Long-tenured.",
+       "source": "live_website_fetch", "source_url": "https://www.curnynphysicaltherapy.com/about", "observed_at": "2026-05-17"},
+      {"layer": 2, "signal_key": "multi_provider_outpatient_pt", "direction": "positive",
+       "evidence": "7 DPTs + 1 PTA + 2 locations. 'Longest-running physical therapist-owned clinic in Fort Worth' per about. Plausible $2.5M–$5M revenue. SBA 7(a) financeable.",
+       "source": "live_website_fetch", "source_url": "https://www.curnynphysicaltherapy.com/about", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "negative",
+       "evidence": "Live team page fetch (curnynphysicaltherapy.com/about, 2026-05-17): 7 DPT associates listed (Santoro, Griebel, Carneglia, Aguillon, Horstman, Higgins) — succession bench is deep. ALSO Cecily Curnyn (wife, VP/co-founder) and Nolan Curnyn (Marketing/Recruiting) — family-internal succession profile. Multiple DPT associates of varying tenure = structured internal buy-in candidate, NOT coasting-solo-to-outside-buyer profile.",
+       "source": "live_website_fetch", "source_url": "https://www.curnynphysicaltherapy.com/about", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 60,
     "layer1_comment": "Dennis Curnyn, PT, MA, AT; founded 1991. Age proxy ~58-62 (website self-report: 'wife of 31-35 years' + Grand Valley State PT BS post-Western Michigan BS+MA, grad ~1988-1990). Long tenure (35 yrs) but age is mid-career end, not retirement window.",
@@ -194,38 +132,16 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://ratnerpt.com/staff/",
-        "fetched_at": "2026-05-17T04:40:00Z",
-        "fields": ["founder", "team", "year_founded"]
-      },
-      {
-        "source": "live_website_fetch",
-        "url": "https://ratnerpt.com/",
-        "fetched_at": "2026-05-17T04:40:00Z",
-        "fields": ["year_founded_1972"]
-      }
+      {"source": "live_website_fetch", "url": "https://ratnerpt.com/staff/", "fetched_at": "2026-05-17T04:40:00Z", "fields": ["founder", "team", "year_founded"]},
+      {"source": "live_website_fetch", "url": "https://ratnerpt.com/", "fetched_at": "2026-05-17T04:40:00Z", "fields": ["year_founded_1972"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_too_young_for_natural_exit",
-        "direction": "negative",
-        "evidence": "Dr. Jennifer Ratner: BS Arizona 1995 + UT Southwestern postgrad 1999 + TWU MS 2007 + Drexel DPT 2009. Born ~1973-74, age ~52. NOT in natural-exit window. Practice itself was founded 1972 — Ratner is the 2nd-gen owner (presumably daughter of original founder).",
-        "source": "live_website_fetch",
-        "source_url": "https://ratnerpt.com/staff/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "positive",
-        "evidence": "Live team-page fetch (ratnerpt.com/staff, 2026-05-17): 9 DPTs + Clinic Director Dr. Kelsey Bagwell + Office Manager Brandi Gibson. No 3rd-gen Ratner identified. Clinic Director profile suggests internal mgmt depth.",
-        "source": "live_website_fetch",
-        "source_url": "https://ratnerpt.com/staff/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_too_young_for_natural_exit", "direction": "negative",
+       "evidence": "Dr. Jennifer Ratner: BS Arizona 1995 + UT Southwestern postgrad 1999 + TWU MS 2007 + Drexel DPT 2009. Born ~1973-74, age ~52. NOT in natural-exit window. Practice itself was founded 1972 — Ratner is the 2nd-gen owner (presumably daughter of original founder).",
+       "source": "live_website_fetch", "source_url": "https://ratnerpt.com/staff/", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive",
+       "evidence": "Live team-page fetch (ratnerpt.com/staff, 2026-05-17): 9 DPTs + Clinic Director Dr. Kelsey Bagwell + Office Manager Brandi Gibson. No 3rd-gen Ratner identified. Clinic Director profile suggests internal mgmt depth.",
+       "source": "live_website_fetch", "source_url": "https://ratnerpt.com/staff/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 25,
     "layer1_comment": "Dr. Jennifer Ratner: age ~52 (Arizona BS 1995, Drexel DPT 2009). Owns the 2nd-gen practice founded 1972 by family. She is mid-career, not in natural-exit window.",
@@ -266,50 +182,21 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://casephysicaltherapy.com/",
-        "fetched_at": "2026-05-17T04:35:00Z",
-        "fields": ["founder", "year_founded", "team"]
-      }
+      {"source": "live_website_fetch", "url": "https://casephysicaltherapy.com/", "fetched_at": "2026-05-17T04:35:00Z", "fields": ["founder", "year_founded", "team"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_in_retirement_window",
-        "direction": "positive",
-        "evidence": "Bill Case PT, 'second-generation PT with 40+ years experience' per about page. Founded Case PT 1995 → ~31 yrs Houston ownership. Age proxy ~65 (40+ yrs in PT implies grad ~1985 + age 22 = 63 minimum).",
-        "source": "live_website_fetch",
-        "source_url": "https://casephysicaltherapy.com/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 2,
-        "signal_key": "small_solo_pt_clinic",
-        "direction": "positive",
-        "evidence": "Solo PT (Bill Case) + 2 staff therapists (Amanda, Samantha — first names only, credentials unclear). Memorial-area Houston location. Plausible $500K–$900K rev (1 PT + 2 staff).",
-        "source": "live_website_fetch",
-        "source_url": "https://casephysicaltherapy.com/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "positive",
-        "evidence": "Live team-page check (casephysicaltherapy.com home, 2026-05-17): Bill Case is the only named PT. Amanda + Samantha mentioned in testimonials — credentials/role unclear. No DSO branding, no co-founder, no family successor visible. M-F 9-5 only (no weekend hours = coasting tell). Online booking present (book-appointment URL).",
-        "source": "live_website_fetch",
-        "source_url": "https://casephysicaltherapy.com/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "limited_hours_mf_only",
-        "direction": "positive",
-        "evidence": "M-F 9-5 only per about page. Closed weekends. Limits athletes / weekend warriors / working professionals. Classic coasting hours profile.",
-        "source": "live_website_fetch",
-        "source_url": "https://casephysicaltherapy.com/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_in_retirement_window", "direction": "positive",
+       "evidence": "Bill Case PT, 'second-generation PT with 40+ years experience' per about page. Founded Case PT 1995 → ~31 yrs Houston ownership. Age proxy ~65 (40+ yrs in PT implies grad ~1985 + age 22 = 63 minimum).",
+       "source": "live_website_fetch", "source_url": "https://casephysicaltherapy.com/", "observed_at": "2026-05-17"},
+      {"layer": 2, "signal_key": "small_solo_pt_clinic", "direction": "positive",
+       "evidence": "Solo PT (Bill Case) + 2 staff therapists (Amanda, Samantha — first names only, credentials unclear). Memorial-area Houston location. Plausible $500K–$900K rev (1 PT + 2 staff).",
+       "source": "live_website_fetch", "source_url": "https://casephysicaltherapy.com/", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive",
+       "evidence": "Live team-page check (casephysicaltherapy.com home, 2026-05-17): Bill Case is the only named PT. Amanda + Samantha mentioned in testimonials — credentials/role unclear. No DSO branding, no co-founder, no family successor visible. M-F 9-5 only (no weekend hours = coasting tell). Online booking present (book-appointment URL).",
+       "source": "live_website_fetch", "source_url": "https://casephysicaltherapy.com/", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "limited_hours_mf_only", "direction": "positive",
+       "evidence": "M-F 9-5 only per about page. Closed weekends. Limits athletes / weekend warriors / working professionals. Classic coasting hours profile.",
+       "source": "live_website_fetch", "source_url": "https://casephysicaltherapy.com/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 78,
     "layer1_comment": "Bill Case, PT, '40+ years experience' per about (=grad ~1985, age ~65). 31-yr personal ownership of Case PT (founded 1995). Within natural-exit window.",
@@ -351,12 +238,7 @@
     "distress_reasons": [],
     "notes": "OUT-OF-TARGET-COUNTY (Jefferson) — included as adjacency reference; remove from final A/B rankings.",
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://mabmt.com/",
-        "fetched_at": "2026-05-17T04:40:00Z",
-        "fields": ["year_founded", "team"]
-      }
+      {"source": "live_website_fetch", "url": "https://mabmt.com/", "fetched_at": "2026-05-17T04:40:00Z", "fields": ["year_founded", "team"]}
     ],
     "signals": [],
     "layer1_base_rate": 0,
@@ -372,7 +254,7 @@
     "final_comment": "Out-of-target-county (Jefferson). Tag-only; not part of run cohort. Noted as a candidate for a future Beaumont-area sweep — 37-yr practice with senior Mallgrave + Anderson DPT.",
     "value_add_thesis": "",
     "confidence": "low",
-    "data_completeness": 0.3
+    "data_completeness": 0.30
   },
   {
     "legal_name": "Bryce Olson Physical Therapy",
@@ -399,32 +281,15 @@
     "distress_reasons": [],
     "notes": "OUT-OF-TARGET-COUNTY (Lubbock) — but compelling enough to surface as adjacency.",
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://bryceolsonpt.com/about/meet-the-team/",
-        "fetched_at": "2026-05-17T04:30:00Z",
-        "fields": ["founder", "team", "tenure"]
-      }
+      {"source": "live_website_fetch", "url": "https://bryceolsonpt.com/about/meet-the-team/", "fetched_at": "2026-05-17T04:30:00Z", "fields": ["founder", "team", "tenure"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_in_retirement_window",
-        "direction": "positive",
-        "evidence": "Bryce Olson PT — 'practicing since 1983' per about page, University of Oklahoma PT BS 1983. Age proxy ~65 (1983 BS + 22 = 65 today). 43 years tenure in Lubbock.",
-        "source": "live_website_fetch",
-        "source_url": "https://bryceolsonpt.com/about/meet-the-team/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "positive",
-        "evidence": "Live team page (bryceolsonpt.com/about/meet-the-team, 2026-05-17): only 1 other PT (Rijo Abraham DPT 2020, 4+ yrs experience). 6 PTAs (Kennon, Pirkle, Dagley, Harris, Sanchez, Reyna — last is pursuing DPT at St Augustine). PTAs cannot legally own a PT clinic. Single DPT associate is 4-yr tenure — possible successor but very early stage. Family: 'Bryce + wife Jackie + 6 children' — no children in PT visible.",
-        "source": "live_website_fetch",
-        "source_url": "https://bryceolsonpt.com/about/meet-the-team/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_in_retirement_window", "direction": "positive",
+       "evidence": "Bryce Olson PT — 'practicing since 1983' per about page, University of Oklahoma PT BS 1983. Age proxy ~65 (1983 BS + 22 = 65 today). 43 years tenure in Lubbock.",
+       "source": "live_website_fetch", "source_url": "https://bryceolsonpt.com/about/meet-the-team/", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive",
+       "evidence": "Live team page (bryceolsonpt.com/about/meet-the-team, 2026-05-17): only 1 other PT (Rijo Abraham DPT 2020, 4+ yrs experience). 6 PTAs (Kennon, Pirkle, Dagley, Harris, Sanchez, Reyna — last is pursuing DPT at St Augustine). PTAs cannot legally own a PT clinic. Single DPT associate is 4-yr tenure — possible successor but very early stage. Family: 'Bryce + wife Jackie + 6 children' — no children in PT visible.",
+       "source": "live_website_fetch", "source_url": "https://bryceolsonpt.com/about/meet-the-team/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 85,
     "layer1_comment": "Bryce Olson, PT — OU PT BS 1983 (~65 yo), 43-yr Lubbock practice ownership. Squarely in natural-exit window. Tenure modifier +5 → very high base rate.",
@@ -439,7 +304,7 @@
     "final_comment": "OUT-OF-TARGET-COUNTY (Lubbock) but strong candidate profile. Bryce Olson PT, OU PT BS 1983 (~65), 43-yr Lubbock owner. Live team-page (2026-05-17): 1 junior DPT (4 yrs), 6 PTAs. Single-DPT-associate succession is early-stage but possible. Surface as B_forward for ETA/search-fund appetite; not in this run's target counties so excluded from official rankings.",
     "value_add_thesis": "Acquire from natural-exit-window solo; promote/groom Rijo Abraham (4-yr DPT) as glide-path successor; modernize PMS; add 2 more DPTs to expand caseload across Lubbock + South Plains.",
     "confidence": "medium",
-    "data_completeness": 0.5
+    "data_completeness": 0.50
   },
   {
     "legal_name": "Pyramid Physical Therapy & Pilates",
@@ -465,32 +330,15 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://pyramidpt.com/",
-        "fetched_at": "2026-05-17T04:35:00Z",
-        "fields": ["founder", "team", "address"]
-      }
+      {"source": "live_website_fetch", "url": "https://pyramidpt.com/", "fetched_at": "2026-05-17T04:35:00Z", "fields": ["founder", "team", "address"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_mid_career",
-        "direction": "negative",
-        "evidence": "Dr. Cynthia Mendez, PT, DPT, OCS — solo owner. No grad year published on site; OCS board cert typically requires 2,000+ hrs + 2.5 yrs practice. Estimate ~55 yo (mid-career, not retirement-window).",
-        "source": "live_website_fetch",
-        "source_url": "https://pyramidpt.com/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "positive",
-        "evidence": "Live home page (pyramidpt.com, 2026-05-17): only Dr. Cynthia Mendez named as PT; Bethany Roberts PTA/Pilates instructor. No 2nd PT, no DSO branding, family-status unknown. Truly solo PT.",
-        "source": "live_website_fetch",
-        "source_url": "https://pyramidpt.com/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_mid_career", "direction": "negative",
+       "evidence": "Dr. Cynthia Mendez, PT, DPT, OCS — solo owner. No grad year published on site; OCS board cert typically requires 2,000+ hrs + 2.5 yrs practice. Estimate ~55 yo (mid-career, not retirement-window).",
+       "source": "live_website_fetch", "source_url": "https://pyramidpt.com/", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive",
+       "evidence": "Live home page (pyramidpt.com, 2026-05-17): only Dr. Cynthia Mendez named as PT; Bethany Roberts PTA/Pilates instructor. No 2nd PT, no DSO branding, family-status unknown. Truly solo PT.",
+       "source": "live_website_fetch", "source_url": "https://pyramidpt.com/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 50,
     "layer1_comment": "Dr. Cynthia Mendez ~55 yo (license_tenure_proxy, OCS cert ≥ 2.5 yrs practice). Solo owner. Not in natural-exit window.",
@@ -531,44 +379,17 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://www.bercuttpt.com/",
-        "fetched_at": "2026-05-17T04:30:00Z",
-        "fields": ["founder", "address"]
-      },
-      {
-        "source": "crunchbase",
-        "url": "https://www.crunchbase.com/person/pamela-bercutt",
-        "fetched_at": "2026-05-17T04:55:00Z",
-        "fields": ["founder_bio", "year_founded"]
-      },
-      {
-        "source": "apta_pelvic_locator",
-        "url": "https://www.aptapelvichealth.org/ptlocator/pamela-bercutt",
-        "fetched_at": "2026-05-17T04:55:00Z",
-        "fields": ["credentials"]
-      }
+      {"source": "live_website_fetch", "url": "https://www.bercuttpt.com/", "fetched_at": "2026-05-17T04:30:00Z", "fields": ["founder", "address"]},
+      {"source": "crunchbase", "url": "https://www.crunchbase.com/person/pamela-bercutt", "fetched_at": "2026-05-17T04:55:00Z", "fields": ["founder_bio", "year_founded"]},
+      {"source": "apta_pelvic_locator", "url": "https://www.aptapelvichealth.org/ptlocator/pamela-bercutt", "fetched_at": "2026-05-17T04:55:00Z", "fields": ["credentials"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_mid_career",
-        "direction": "negative",
-        "evidence": "Pamela Bercutt: TWU PT MS 1995 + DPT 2010. Career switcher from accounting. Age ~53 (MS 1995 + 22 implies grad 1995 = age 22 then = 53 now). 11-yr practice ownership. Mid-career.",
-        "source": "crunchbase",
-        "source_url": "https://www.crunchbase.com/person/pamela-bercutt",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "positive",
-        "evidence": "Live home/team page (bercuttpt.com, 2026-05-17): Pamela Bercutt is the only named PT. 'Meet the Team' link exists but homepage doesn't list other DPTs.",
-        "source": "live_website_fetch",
-        "source_url": "https://www.bercuttpt.com/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_mid_career", "direction": "negative",
+       "evidence": "Pamela Bercutt: TWU PT MS 1995 + DPT 2010. Career switcher from accounting. Age ~53 (MS 1995 + 22 implies grad 1995 = age 22 then = 53 now). 11-yr practice ownership. Mid-career.",
+       "source": "crunchbase", "source_url": "https://www.crunchbase.com/person/pamela-bercutt", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "positive",
+       "evidence": "Live home/team page (bercuttpt.com, 2026-05-17): Pamela Bercutt is the only named PT. 'Meet the Team' link exists but homepage doesn't list other DPTs.",
+       "source": "live_website_fetch", "source_url": "https://www.bercuttpt.com/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 45,
     "layer1_comment": "Pamela Bercutt, PT DPT — MS 1995 + DPT 2010 → ~53 yo. 11-yr practice. Mid-career, not natural-exit window.",
@@ -610,32 +431,15 @@
     "distress_reasons": [],
     "notes": "OUT-OF-TARGET-COUNTY (El Paso) — adjacency reference.",
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://tier1pt.com/about/staff/",
-        "fetched_at": "2026-05-17T04:30:00Z",
-        "fields": ["owners", "team", "addresses"]
-      }
+      {"source": "live_website_fetch", "url": "https://tier1pt.com/about/staff/", "fetched_at": "2026-05-17T04:30:00Z", "fields": ["owners", "team", "addresses"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_in_retirement_window",
-        "direction": "positive",
-        "evidence": "Kathleen Roth PT DPT 1984 grad → ~64 yo. Robert Jones PT DPT UTSW 1990 → ~58 yo. Both co-owners. Roth squarely in natural-exit window.",
-        "source": "live_website_fetch",
-        "source_url": "https://tier1pt.com/about/staff/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "negative",
-        "evidence": "Live team page (tier1pt.com/about/staff, 2026-05-17): 2 owners + Jacob Jones DPT (likely Robert's son — same surname, no grad year) + Kandi Pester MPT 2006. Jacob Jones is a structured family/internal successor. 2 PTAs, 1 OTR. Co-owner partnership + family-successor blocks the outside-buyer wedge.",
-        "source": "live_website_fetch",
-        "source_url": "https://tier1pt.com/about/staff/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_in_retirement_window", "direction": "positive",
+       "evidence": "Kathleen Roth PT DPT 1984 grad → ~64 yo. Robert Jones PT DPT UTSW 1990 → ~58 yo. Both co-owners. Roth squarely in natural-exit window.",
+       "source": "live_website_fetch", "source_url": "https://tier1pt.com/about/staff/", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "negative",
+       "evidence": "Live team page (tier1pt.com/about/staff, 2026-05-17): 2 owners + Jacob Jones DPT (likely Robert's son — same surname, no grad year) + Kandi Pester MPT 2006. Jacob Jones is a structured family/internal successor. 2 PTAs, 1 OTR. Co-owner partnership + family-successor blocks the outside-buyer wedge.",
+       "source": "live_website_fetch", "source_url": "https://tier1pt.com/about/staff/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 75,
     "layer1_comment": "Co-owners Kathleen Roth (~64, 1984 grad) + Robert Jones (~58, UTSW 1990). Roth in natural-exit window; Jones not yet.",
@@ -650,7 +454,7 @@
     "final_comment": "OUT-OF-TARGET-COUNTY (El Paso). Tier 1 PT — co-owners Kathleen Roth (~64) + Robert Jones (~58) since 1995. Live team-page (2026-05-17): Jacob Jones DPT (likely Robert's son, family successor) + Kandi Pester MPT 2006. Family + partner co-ownership blocks the outside-buyer wedge.",
     "value_add_thesis": "Out of thesis — family successor.",
     "confidence": "medium",
-    "data_completeness": 0.5
+    "data_completeness": 0.50
   },
   {
     "legal_name": "Physical Therapy Associates LP (Liesl Olson)",
@@ -677,32 +481,15 @@
     "distress_reasons": [],
     "notes": "OUT-OF-TARGET-COUNTY (Lubbock).",
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://thephysicaltherapyassociates.com/our-team/",
-        "fetched_at": "2026-05-17T04:30:00Z",
-        "fields": ["founder", "team"]
-      }
+      {"source": "live_website_fetch", "url": "https://thephysicaltherapyassociates.com/our-team/", "fetched_at": "2026-05-17T04:30:00Z", "fields": ["founder", "team"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_late_career",
-        "direction": "positive",
-        "evidence": "Liesl Stratton Olson attended Texas Tech 1985-88 → ~58 yo. 26-yr tenure (founded 2000). Late-career, edge of natural-exit window.",
-        "source": "live_website_fetch",
-        "source_url": "https://thephysicaltherapyassociates.com/our-team/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "negative",
-        "evidence": "Live team-page (thephysicaltherapyassociates.com/our-team, 2026-05-17): 11 PTs including Burt Frank II MPT FAAOMPT (Roman-numeral suggests senior), Lex Gillean II MPT FAAOMPT, Gary Kearns ScD FAAOMPT, Becca Caffey DPT OCS, Aaron Arreola PT, Jill Bason DPT, Kenzie Brinkley DPT, Taylor McCulloch DPT, Kenny Young DPT, Kaylee Brockman DPT. 3 senior FAAOMPTs are obvious internal successors.",
-        "source": "live_website_fetch",
-        "source_url": "https://thephysicaltherapyassociates.com/our-team/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_late_career", "direction": "positive",
+       "evidence": "Liesl Stratton Olson attended Texas Tech 1985-88 → ~58 yo. 26-yr tenure (founded 2000). Late-career, edge of natural-exit window.",
+       "source": "live_website_fetch", "source_url": "https://thephysicaltherapyassociates.com/our-team/", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "negative",
+       "evidence": "Live team-page (thephysicaltherapyassociates.com/our-team, 2026-05-17): 11 PTs including Burt Frank II MPT FAAOMPT (Roman-numeral suggests senior), Lex Gillean II MPT FAAOMPT, Gary Kearns ScD FAAOMPT, Becca Caffey DPT OCS, Aaron Arreola PT, Jill Bason DPT, Kenzie Brinkley DPT, Taylor McCulloch DPT, Kenny Young DPT, Kaylee Brockman DPT. 3 senior FAAOMPTs are obvious internal successors.",
+       "source": "live_website_fetch", "source_url": "https://thephysicaltherapyassociates.com/our-team/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 55,
     "layer1_comment": "Liesl Olson ~58, founder, 26-yr tenure. Edge of natural-exit window.",
@@ -744,29 +531,13 @@
     "distress_reasons": [],
     "notes": "OUT-OF-TARGET-COUNTY (Galveston) — adjacency reference. NO LIVE WEBSITE FETCH POSSIBLE — confidence capped low per skill rule.",
     "data_sources": [
-      {
-        "source": "choosept_apta_locator",
-        "url": "https://www.choosept.com/find-a-pt/h/u/bobbie-s.-hurt-pt",
-        "fetched_at": "2026-05-17T04:30:00Z",
-        "fields": ["bio"]
-      },
-      {
-        "source": "websearch_summary",
-        "url": "https://www.chamberofcommerce.com/business-directory/texas/galveston/physical-therapist/2002059910-physical-therapy-services",
-        "fetched_at": "2026-05-17T04:30:00Z",
-        "fields": ["years_in_business", "founder"]
-      }
+      {"source": "choosept_apta_locator", "url": "https://www.choosept.com/find-a-pt/h/u/bobbie-s.-hurt-pt", "fetched_at": "2026-05-17T04:30:00Z", "fields": ["bio"]},
+      {"source": "websearch_summary", "url": "https://www.chamberofcommerce.com/business-directory/texas/galveston/physical-therapist/2002059910-physical-therapy-services", "fetched_at": "2026-05-17T04:30:00Z", "fields": ["years_in_business", "founder"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_long_tenure",
-        "direction": "positive",
-        "evidence": "Per websearch (Chamber of Commerce + Choose PT directory): Bobbie Hurt PT, 43+ yrs serving Galveston. Husband Jerry Hurt involved. Age proxy ~68 (43 yrs + grad age 25 = 68).",
-        "source": "websearch_summary",
-        "source_url": "https://www.chamberofcommerce.com/business-directory/texas/galveston/physical-therapist/2002059910-physical-therapy-services",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_long_tenure", "direction": "positive",
+       "evidence": "Per websearch (Chamber of Commerce + Choose PT directory): Bobbie Hurt PT, 43+ yrs serving Galveston. Husband Jerry Hurt involved. Age proxy ~68 (43 yrs + grad age 25 = 68).",
+       "source": "websearch_summary", "source_url": "https://www.chamberofcommerce.com/business-directory/texas/galveston/physical-therapist/2002059910-physical-therapy-services", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 70,
     "layer1_comment": "Bobbie Hurt PT ~68, 46-yr Galveston tenure. Source: directory/Chamber of Commerce summary — NOT live-fetch.",
@@ -781,7 +552,7 @@
     "final_comment": "OUT-OF-TARGET-COUNTY (Galveston) + NO LIVE WEBSITE FETCH POSSIBLE. Per skill non-negotiable §2 / verifying-no-successor.md, cannot promote on snippet-only evidence. C_watch with disqualifying-confidence note. Surface to user as known candidate for manual follow-up.",
     "value_add_thesis": "",
     "confidence": "low",
-    "data_completeness": 0.2
+    "data_completeness": 0.20
   },
   {
     "legal_name": "Hands-on Physical Therapy and Injury Recovery",
@@ -807,23 +578,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://www.handsonconroe.com/about",
-        "fetched_at": "2026-05-17T04:25:00Z",
-        "fields": ["founder", "team"]
-      }
+      {"source": "live_website_fetch", "url": "https://www.handsonconroe.com/about", "fetched_at": "2026-05-17T04:25:00Z", "fields": ["founder", "team"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_too_young_for_natural_exit",
-        "direction": "negative",
-        "evidence": "Dr. Sal: UT El Paso DPT 2015 → ~38 yo. Wife Rachel BS 2015. Young husband-wife duo. Hard miss on natural-exit window.",
-        "source": "live_website_fetch",
-        "source_url": "https://www.handsonconroe.com/about",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_too_young_for_natural_exit", "direction": "negative",
+       "evidence": "Dr. Sal: UT El Paso DPT 2015 → ~38 yo. Wife Rachel BS 2015. Young husband-wife duo. Hard miss on natural-exit window.",
+       "source": "live_website_fetch", "source_url": "https://www.handsonconroe.com/about", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 15,
     "layer1_comment": "Dr. Sal Gomez-Gould DPT 2015 (~38). Not natural-exit window.",
@@ -864,23 +624,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://rpmwoodlandspt.com/physical-therapy-conroe-tx/",
-        "fetched_at": "2026-05-17T04:25:00Z",
-        "fields": ["founder", "tenure"]
-      }
+      {"source": "live_website_fetch", "url": "https://rpmwoodlandspt.com/physical-therapy-conroe-tx/", "fetched_at": "2026-05-17T04:25:00Z", "fields": ["founder", "tenure"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_too_young",
-        "direction": "negative",
-        "evidence": "Dr. Jonathan Ruzicka graduated Woodlands HS 2004 → age ~38. Too young for natural-exit thesis.",
-        "source": "live_website_fetch",
-        "source_url": "https://rpmwoodlandspt.com/physical-therapy-conroe-tx/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_too_young", "direction": "negative",
+       "evidence": "Dr. Jonathan Ruzicka graduated Woodlands HS 2004 → age ~38. Too young for natural-exit thesis.",
+       "source": "live_website_fetch", "source_url": "https://rpmwoodlandspt.com/physical-therapy-conroe-tx/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 15,
     "layer1_comment": "Dr. Ruzicka ~38. Not retirement window.",
@@ -895,7 +644,7 @@
     "final_comment": "Dr. Jonathan Ruzicka ~38, solo PT founded 5 yrs ago. Hard gate — too young + at 5-yr-in-business edge. D_pass.",
     "value_add_thesis": "Out of thesis.",
     "confidence": "medium",
-    "data_completeness": 0.4
+    "data_completeness": 0.40
   },
   {
     "legal_name": "Sculpt U PT (Ardoin brothers)",
@@ -921,23 +670,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://sculptupt.com/",
-        "fetched_at": "2026-05-17T04:30:00Z",
-        "fields": ["owners", "team", "locations"]
-      }
+      {"source": "live_website_fetch", "url": "https://sculptupt.com/", "fetched_at": "2026-05-17T04:30:00Z", "fields": ["owners", "team", "locations"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owners_too_young",
-        "direction": "negative",
-        "evidence": "Both Ardoin brothers are mid-career (estimated ~35), co-owning across 3 locations. Active expansion mode.",
-        "source": "live_website_fetch",
-        "source_url": "https://sculptupt.com/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owners_too_young", "direction": "negative",
+       "evidence": "Both Ardoin brothers are mid-career (estimated ~35), co-owning across 3 locations. Active expansion mode.",
+       "source": "live_website_fetch", "source_url": "https://sculptupt.com/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 15,
     "layer1_comment": "Owners too young (~35).",
@@ -979,23 +717,12 @@
     "distress_reasons": [],
     "notes": "DEMOTED — founder John West died 2020. Practice was sold/succeeded. Not a coasting-solo-owner thesis any more.",
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://www.johnwestpt.com/john-west",
-        "fetched_at": "2026-05-17T04:30:00Z",
-        "fields": ["founder_history"]
-      }
+      {"source": "live_website_fetch", "url": "https://www.johnwestpt.com/john-west", "fetched_at": "2026-05-17T04:30:00Z", "fields": ["founder_history"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "founder_deceased",
-        "direction": "negative",
-        "evidence": "Founder John David West passed away 2020 per about page. Practice continues under undisclosed successor ownership. Not eligible as 'coasting solo owner near sell decision' — owner is already succeeded.",
-        "source": "live_website_fetch",
-        "source_url": "https://www.johnwestpt.com/john-west",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "founder_deceased", "direction": "negative",
+       "evidence": "Founder John David West passed away 2020 per about page. Practice continues under undisclosed successor ownership. Not eligible as 'coasting solo owner near sell decision' — owner is already succeeded.",
+       "source": "live_website_fetch", "source_url": "https://www.johnwestpt.com/john-west", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 0,
     "layer1_comment": "Founder deceased 2020. Practice already transitioned.",
@@ -1036,32 +763,15 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://www.pararehab.com/",
-        "fetched_at": "2026-05-17T04:30:00Z",
-        "fields": ["year_founded", "locations"]
-      }
+      {"source": "live_website_fetch", "url": "https://www.pararehab.com/", "fetched_at": "2026-05-17T04:30:00Z", "fields": ["year_founded", "locations"]}
     ],
     "signals": [
-      {
-        "layer": 2,
-        "signal_key": "multi_location_pt_practice",
-        "direction": "positive",
-        "evidence": "4 locations (Memorial / Sugar Land Lexington / Sugar Land Sweetwater / Katy). 27-yr practice ('serving Greater Houston since 1999').",
-        "source": "live_website_fetch",
-        "source_url": "https://www.pararehab.com/",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "disqualifying",
-        "evidence": "Live home page does NOT name founder/owner. Meet-the-team URL exists (https://www.pararehab.com/about-us/meet-the-team) but not fetched in this run — per skill rule, cap confidence at low and tier at C_watch until live team-page fetched.",
-        "source": "live_website_fetch",
-        "source_url": "https://www.pararehab.com/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 2, "signal_key": "multi_location_pt_practice", "direction": "positive",
+       "evidence": "4 locations (Memorial / Sugar Land Lexington / Sugar Land Sweetwater / Katy). 27-yr practice ('serving Greater Houston since 1999').",
+       "source": "live_website_fetch", "source_url": "https://www.pararehab.com/", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "disqualifying",
+       "evidence": "Live home page does NOT name founder/owner. Meet-the-team URL exists (https://www.pararehab.com/about-us/meet-the-team) but not fetched in this run — per skill rule, cap confidence at low and tier at C_watch until live team-page fetched.",
+       "source": "live_website_fetch", "source_url": "https://www.pararehab.com/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 0,
     "layer1_comment": "Owner not identified — cannot score.",
@@ -1076,7 +786,7 @@
     "final_comment": "Paramount PT (1999, Greater Houston). 4 locations — Memorial + 2× Sugar Land + Katy. Owner not named on live home page. Per skill rule §2, capped at C_watch until live team-page fetch confirms successor profile. Re-fetch /about-us/meet-the-team in next iteration.",
     "value_add_thesis": "Re-verify; potential B if owner age + successor confirmed.",
     "confidence": "low",
-    "data_completeness": 0.3
+    "data_completeness": 0.30
   },
   {
     "legal_name": "Carter Physiotherapy",
@@ -1102,32 +812,15 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://carterpt.com/about",
-        "fetched_at": "2026-05-17T04:25:00Z",
-        "fields": ["founder", "team"]
-      }
+      {"source": "live_website_fetch", "url": "https://carterpt.com/about", "fetched_at": "2026-05-17T04:25:00Z", "fields": ["founder", "team"]}
     ],
     "signals": [
-      {
-        "layer": 1,
-        "signal_key": "owner_mid_career",
-        "direction": "negative",
-        "evidence": "Jarod Carter DPT 2005 (UT St Augustine) → ~47 yo. Not retirement window.",
-        "source": "live_website_fetch",
-        "source_url": "https://carterpt.com/about",
-        "observed_at": "2026-05-17"
-      },
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "negative",
-        "evidence": "Live team page (carterpt.com/about, 2026-05-17): 4 PTs including Colin Broadbelt with 30+ yrs experience (FELLOW AAOMPT) — Broadbelt is an obvious senior internal successor. Plus Basimma Hammonds (FAAOMPT Fellow) + Neha Palsule DPT 13+ yrs. Multi-DPT mid-tenure bench.",
-        "source": "live_website_fetch",
-        "source_url": "https://carterpt.com/about",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 1, "signal_key": "owner_mid_career", "direction": "negative",
+       "evidence": "Jarod Carter DPT 2005 (UT St Augustine) → ~47 yo. Not retirement window.",
+       "source": "live_website_fetch", "source_url": "https://carterpt.com/about", "observed_at": "2026-05-17"},
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "negative",
+       "evidence": "Live team page (carterpt.com/about, 2026-05-17): 4 PTs including Colin Broadbelt with 30+ yrs experience (FELLOW AAOMPT) — Broadbelt is an obvious senior internal successor. Plus Basimma Hammonds (FAAOMPT Fellow) + Neha Palsule DPT 13+ yrs. Multi-DPT mid-tenure bench.",
+       "source": "live_website_fetch", "source_url": "https://carterpt.com/about", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 40,
     "layer1_comment": "Jarod Carter ~47, mid-career. Not retirement window.",
@@ -1142,7 +835,7 @@
     "final_comment": "Jarod Carter, DPT (2005, ~47), founded Carter Physiotherapy West Lake Hills 78746. Live team-page (2026-05-17): 4 PTs incl Colin Broadbelt 30+ yrs FAAOMPT (obvious senior successor) + Basimma Hammonds Fellow + Neha Palsule DPT 13+ yrs. Internal-buy-in profile + younger owner. C_watch.",
     "value_add_thesis": "Out of thesis — internal successor (Broadbelt).",
     "confidence": "medium",
-    "data_completeness": 0.5
+    "data_completeness": 0.50
   },
   {
     "legal_name": "Therapy Partners of North Texas",
@@ -1168,23 +861,12 @@
     "is_distressed": false,
     "distress_reasons": [],
     "data_sources": [
-      {
-        "source": "live_website_fetch",
-        "url": "https://therapypartnerspt.com/",
-        "fetched_at": "2026-05-17T04:40:00Z",
-        "fields": ["owners", "founded", "locations"]
-      }
+      {"source": "live_website_fetch", "url": "https://therapypartnerspt.com/", "fetched_at": "2026-05-17T04:40:00Z", "fields": ["owners", "founded", "locations"]}
     ],
     "signals": [
-      {
-        "layer": 3,
-        "signal_key": "successor_check_live_fetch",
-        "direction": "negative",
-        "evidence": "Live about page (therapypartnerspt.com, 2026-05-17): 22 locations across DFW, 6 owner-partners. This is a regional roll-up — outside the off-market thesis. Exclude.",
-        "source": "live_website_fetch",
-        "source_url": "https://therapypartnerspt.com/",
-        "observed_at": "2026-05-17"
-      }
+      {"layer": 3, "signal_key": "successor_check_live_fetch", "direction": "negative",
+       "evidence": "Live about page (therapypartnerspt.com, 2026-05-17): 22 locations across DFW, 6 owner-partners. This is a regional roll-up — outside the off-market thesis. Exclude.",
+       "source": "live_website_fetch", "source_url": "https://therapypartnerspt.com/", "observed_at": "2026-05-17"}
     ],
     "layer1_base_rate": 0,
     "layer1_comment": "Regional roll-up — owners not aligned with single-exit thesis.",
@@ -1199,6 +881,6 @@
     "final_comment": "Therapy Partners of North Texas = regional roll-up, 22 locations, 6 partner-owners. Out of off-market thesis. D_pass.",
     "value_add_thesis": "Out of thesis — already at platform scale.",
     "confidence": "high",
-    "data_completeness": 0.4
+    "data_completeness": 0.40
   }
 ]

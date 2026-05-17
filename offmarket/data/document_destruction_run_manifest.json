@@ -2,7 +2,7 @@
   "run_label": "document-destruction-tx-2026-05-16-w6c",
   "score_run_id": "a9574d7d-8b32-4f4b-bd84-c60207fea109",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
   "vertical": "document_destruction",
   "naics_codes": ["561990", "562998"],
   "geography": "TX — Harris/Dallas/Tarrant/Collin/Denton/Bexar/Travis/Fort Bend/Montgomery",
@@ -50,5 +50,5 @@
     "demoted_to_d_distress_surfaced": 0,
     "demotion_reasons": {}
   },
-  "supabase_write": { "status": "score_run_inserted_pending_businesses", "reason": "" }
+  "supabase_write": {"status": "score_run_inserted_pending_businesses", "reason": ""}
 }

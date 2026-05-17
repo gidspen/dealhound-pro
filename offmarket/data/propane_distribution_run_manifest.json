@@ -2,7 +2,7 @@
   "run_label": "propane-distribution-tx-2026-05-16-w3d",
   "score_run_id": "b37392f1-2dd3-4401-9a62-e51085bb244a",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
   "vertical": "propane_distribution",
   "naics_code": "454310",
   "geography": "TX — Hill Country, exurban DFW/Houston/SA, East TX, West TX, Permian Basin, Panhandle ag counties",
@@ -45,8 +45,5 @@
     "demoted_to_d_distress_surfaced": 0,
     "demotion_reasons": {}
   },
-  "supabase_write": {
-    "status": "in_progress",
-    "reason": "score_runs row inserted; businesses/scores/signals pending"
-  }
+  "supabase_write": {"status": "in_progress", "reason": "score_runs row inserted; businesses/scores/signals pending"}
 }

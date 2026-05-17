@@ -2,7 +2,7 @@
   "run_label": "chiropractic-tx-2026-05-16-w1a",
   "score_run_id": "cced6783-5b94-4026-a389-1b07afae75a5",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
   "vertical": "chiropractic",
   "naics_code": "621310",
   "geography": "TX — Harris/Dallas/Tarrant/Bexar/Travis/Collin/Denton/Fort Bend/Williamson/Montgomery priority",
@@ -39,10 +39,7 @@
       "value_add_thesis_too_generic": 0
     }
   },
-  "supabase_write": {
-    "status": "in_progress",
-    "reason": "score_runs row inserted; businesses pending"
-  },
+  "supabase_write": {"status": "in_progress", "reason": "score_runs row inserted; businesses pending"},
   "exclusion_list_franchise_chain": [
     "The Joint Chiropractic",
     "Chiro One Wellness Centers",

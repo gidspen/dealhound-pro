@@ -2,7 +2,7 @@
   "run_label": "foundation-repair-tx-2026-05-16-w2b",
   "score_run_id": "7c505cde-d51e-43fc-b89b-7e519b86445f",
   "model_version": "offmarket-4layer-v0.2",
-  "weights": { "layer1": 0.3, "layer2": 0.25, "layer3": 0.3, "layer4": 0.15 },
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
   "vertical": "foundation_repair",
   "naics_code": "238190",
   "geography": "TX — DFW (Dallas, Tarrant, Collin, Denton, Rockwall, Kaufman, Ellis, Johnson) + Austin (Travis, Williamson, Hays, Comal) + SA (Bexar, Comal, Guadalupe) + Houston (Harris, Fort Bend, Brazoria, Montgomery)",
@@ -38,5 +38,5 @@
       "value_add_thesis_too_generic": 0
     }
   },
-  "supabase_write": { "status": "pending", "reason": "" }
+  "supabase_write": {"status": "pending", "reason": ""}
 }

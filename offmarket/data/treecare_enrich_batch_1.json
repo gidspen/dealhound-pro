@@ -1,0 +1,39 @@
+{
+  "batch_id": 1,
+  "vertical": "tree_care",
+  "enriched_at": "2026-05-16T00:25:00Z",
+  "business_count": 25,
+  "notes": "Top-priority candidates with direct team-page fetches. Founder-age and successor signals captured per the verifying-no-successor protocol. Key surprises: (a) Champions Tree Castellanos father+son already 2nd gen; (b) Bob's Tree Service has Jeff Gabbert + two daughters; (c) Duncan Brooks Sr. deceased 2019 — distress; (d) Lindsey Tree Service Yelp shows CLOSED — likely shut; (e) Texas Tree Service Kerrville may have become Eddy Tree Service with Ryan Eddy as owner-of-record; (f) Cody's Tree has son Landon in training; (g) Tree Shepherds has 2 Geer sons; (h) Personal Touch has 2 Breaux sons. Heavy successor-in-place finding rate in TX tree care — expected for trades.",
+  "high_confidence_a_candidates_so_far": [
+    "Arborilogical Services (Steve Houser semi-retired, no visible successor, 45-yr career, 1981)",
+    "Brent Wester Professional Tree Services (Brent Wester sole owner-of-record, 1981, family but no named son/daughter)",
+    "Artistic Trees Inc. (Rene Pina sole owner-of-record 1989, no surfaced successor)",
+    "Mike Kriewaldt / Kriewaldt Tree Care (Mike sole owner ISA TX-1027A early cert = older arborist, 1987)",
+    "ArborCare & Consulting / Kevin Belter (15 yrs formal = younger — drops to C/B)"
+  ],
+  "successor_found_demote_list": [
+    "Champions Tree Preservation (Erwin + Robin Castellanos 2nd gen) — demote A",
+    "Bob's Tree Service (Jeff Gabbert + 2 daughters) — demote A",
+    "Tree Care Houston (Tim Richardson + 2nd gen) — demote A",
+    "Tree Shepherds (Scott + Clayton + Ethan Geer 3 owners) — demote A",
+    "Personal Touch (Jim + 2 sons Breaux) — demote A",
+    "Cody's Tree (Cody + son Landon) — demote A",
+    "RF Tree Service (uncle to nephew lineage) — demote A",
+    "Capitol Tree Care (James + Emily Burtchell spouses) — demote A (Emily co-owner)",
+    "Certified Arbor Care (Debbie + Lee Evans spouses) — demote A",
+    "Texas Tree Service Kerrville (Jerry + Kim Eddy → Ryan Eddy son taking over via Eddy Tree Service) — demote A",
+    "Arborist USA Fort Worth (Henry + Flor + 4 sons) — demote A",
+    "Eric Putnam BCMA (Eric + Shane 3rd-gen in training) — demote A",
+    "Superior Services Tree Care (Henke family) — demote A",
+    "ArborTrue (Brad 3rd-gen) — demote A",
+    "Kalbfleisch & Sons (in name) — demote A",
+    "Hildebrandt Tree Tech (family surname) — demote A",
+    "Thornton's Tree Service (family surname) — demote A",
+    "Dependable Lawn Pros Amarillo (Casey + son Jonas) — demote A",
+    "MG Tree Service Houston (Mario + Francisco + Yonni multi-principal) — demote A"
+  ],
+  "distress_flagged": [
+    "Lindsey's Tree Service (Yelp 'CLOSED' as of July 2025; site ECONNREFUSED) — distress: closing/exit",
+    "Duncan Brooks/Arborist (Duncan Sr. passed June 2019; Duncan Jr. now running) — distress: founder deceased + succession complete; not coasting-solo"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "run_label": "plumbing-tx-2026-05-15",
+  "score_run_id": "6cbb9025-2383-4e26-bbd2-992f0e1a906f",
+  "supabase_project_id": "gggmmjvwbbfvrtjjlqvr",
+  "schema": "offmarket",
+  "status": "written",
+  "executed_at": "2026-05-16T06:00:00Z",
+  "counts": {
+    "businesses_inserted": 100,
+    "business_scores_inserted": 100,
+    "business_signals_inserted": 6,
+    "score_runs_updated": 1
+  },
+  "tier_distribution_in_db": {
+    "A_acquire_self": 3,
+    "B_forward": 65,
+    "C_watch": 27,
+    "D_pass": 5
+  },
+  "verification_query": "SELECT final_tier, count(*) FROM offmarket.scored_targets WHERE score_run_id='6cbb9025-2383-4e26-bbd2-992f0e1a906f' GROUP BY 1 ORDER BY 1;",
+  "verification_result": [
+    {"final_tier": "A_acquire_self", "n": 3},
+    {"final_tier": "B_forward", "n": 65},
+    {"final_tier": "C_watch", "n": 27},
+    {"final_tier": "D_pass", "n": 5}
+  ],
+  "notes": "Persistence executed via Supabase MCP execute_sql tool. The 3 A-tier candidates each have a layer-3 successor_check_live_fetch signal AND a layer-1 owner_age_verification signal in business_signals (6 total). Local JSON+CSV are the canonical source; Supabase mirrors local file scoring."
+}
