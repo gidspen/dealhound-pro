@@ -2,7 +2,7 @@
 //
 // Task 5 — buy-box persistence
 //
-// Test 1: free-scan-start creates a draft buy_box row.
+// Test 1: free-scan-start creates an active buy_box row.
 // Test 2: checkout.session.completed activates draft buy_boxes for the customer.
 //
 // Hits the real Supabase test DB (service-role key).
@@ -45,9 +45,9 @@ function mockReq({ method = 'POST', body = {}, headers = {} } = {}) {
 }
 
 // ---------------------------------------------------------------------------
-// TEST 1: free-scan-start creates a draft buy_box
+// TEST 1: free-scan-start creates an active buy_box
 // ---------------------------------------------------------------------------
-describe('free-scan-start creates a draft buy_box', () => {
+describe('free-scan-start creates an active buy_box', () => {
   const testEmail = freshTestEmail('buy-box-free-scan');
   const supabase = getSupabase();
 
@@ -92,7 +92,7 @@ describe('free-scan-start creates a draft buy_box', () => {
     await supabase.from('users').delete().eq('email', testEmail);
   });
 
-  it('returns 200 and creates a draft buy_box row with correct fields', async () => {
+  it('returns 200 and creates an active buy_box row with correct fields', async () => {
     // Dynamically import the CJS handler
     const { default: handler } = await import('../../api/free-scan-start.js');
 
@@ -117,7 +117,7 @@ describe('free-scan-start creates a draft buy_box', () => {
     expect(boxes).toHaveLength(1);
 
     const box = boxes[0];
-    expect(box.status).toBe('draft');
+    expect(box.status).toBe('active'); // free-scan now creates active boxes so the scheduler picks them up immediately
     expect(box.version).toBe(1);
     expect(box.criteria).toBeTruthy();
     // criteria should mirror the buy_box shape from the handler
