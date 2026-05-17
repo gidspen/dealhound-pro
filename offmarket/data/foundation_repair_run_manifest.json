@@ -1,0 +1,42 @@
+{
+  "run_label": "foundation-repair-tx-2026-05-16-w2b",
+  "score_run_id": "7c505cde-d51e-43fc-b89b-7e519b86445f",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "foundation_repair",
+  "naics_code": "238190",
+  "geography": "TX — DFW (Dallas, Tarrant, Collin, Denton, Rockwall, Kaufman, Ellis, Johnson) + Austin (Travis, Williamson, Hays, Comal) + SA (Bexar, Comal, Guadalupe) + Houston (Harris, Fort Bend, Brazoria, Montgomery)",
+  "started_at": "2026-05-17T04:28:26Z",
+  "finished_at": null,
+  "counts": {
+    "spine_rows": 0,
+    "enriched": 0,
+    "scored": 0,
+    "tier_a": 0,
+    "tier_b": 0,
+    "tier_c": 0,
+    "tier_d": 0,
+    "distress_excluded": 0
+  },
+  "vertical_notes": "TX-specific trade — expansive clay soils across DFW/Austin/SA create the steady demand. NO state-level licensing for foundation repair in TX (unlike plumbing/electrical/HVAC) → spine must come from trade associations + BBB + Comptroller NAICS 238190 sales-tax-permit holders + Google Maps independents. AGGRESSIVE chain/franchise exclusion required (Olshan, Ram Jack, HD Foundations, Granite, TerraFirma, Atlas, Acculevel, Power Lift, Foundation Repair Texas, Brent's, Lone Star, etc.). Multiple TX cities = likely chain. Successor candidates: family member in ops, long-tenured field foreman promoted to operations manager / VP, spouse listed as co-owner. Recurring revenue tells: annual foundation inspection, lifetime transferable warranty, monitoring program, drainage maintenance, HOA contracts, engineering-report annuity.",
+  "sources_worked": [],
+  "sources_partial": [],
+  "sources_blocked": [],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 0,
+    "passed": 0,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    }
+  },
+  "supabase_write": {"status": "pending", "reason": ""}
+}

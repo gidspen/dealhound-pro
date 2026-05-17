@@ -1,0 +1,76 @@
+{
+  "run_label": "dermatology-tx-2026-05-16-w5b",
+  "score_run_id": "6086eff8-d7f3-4b59-9aa3-9973142d7d5b",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "dermatology",
+  "naics_code": "621111",
+  "npi_taxonomy": "207N00000X",
+  "geography": "TX — Harris/Dallas/Tarrant/Collin/Denton/Bexar/Comal/Travis/Williamson/Hays/Fort Bend/Montgomery",
+  "started_at": "2026-05-16T00:00:00Z",
+  "finished_at": null,
+  "counts": {
+    "spine_rows": 0,
+    "enriched": 0,
+    "scored": 0,
+    "tier_a": 0,
+    "tier_b": 0,
+    "tier_c": 0,
+    "tier_d": 0,
+    "distress_excluded": 0
+  },
+  "vertical_config": {
+    "spine_sources": [
+      "TX Medical Board (TMB) license search at profile.tmb.state.tx.us — MD/DO with dermatology specialty",
+      "AAD 'Find a Dermatologist' at aad.org/find-a-dermatologist (TX filter)",
+      "ASDS member directory",
+      "NPI registry NUCC code 207N00000X (Dermatology)"
+    ],
+    "pe_excluded_platforms": [
+      "US Dermatology Partners (USDP) — PE ABC",
+      "Advanced Dermatology and Cosmetic Surgery — PE Harvest Partners",
+      "Anne Arundel Dermatology — PE NewSpring (TX expansion)",
+      "Forefront Dermatology — PE One Equity Partners",
+      "Schweiger Dermatology — PE Edgemont",
+      "Pinnacle Dermatology — PE Chicago Pacific Founders",
+      "QualDerm Partners — PE Hildred Capital",
+      "Riverchase Dermatology — PE",
+      "DermCare Management — PE Hildred",
+      "Dermatology Associates of Texas — PE",
+      "Texas Dermatology Specialists — verify",
+      "Vitalogy Skincare — PE Skytale",
+      "Westlake Dermatology — large Austin private (verify)",
+      "Specialty Dermatology — PE"
+    ],
+    "active_acquirers": [
+      "US Dermatology Partners (most active TX)",
+      "Advanced Dermatology (Harvest)",
+      "Anne Arundel (NewSpring, TX expansion)",
+      "Forefront (One Equity)",
+      "Schweiger, Pinnacle, QualDerm, Riverchase — all expanding TX",
+      "ETA / search-fund interest: VERY HIGH (top-3 PE healthcare specialty 2024-2026)",
+      "SBA 7(a) financeable to $5M"
+    ],
+    "successor_definition": "second board-cert dermatologist MD/DO on team page (regardless of years); Mohs-trained dermatologist; long-tenured derm-specialty NP/PA-C; family-member dermatologist; PE platform branding visible"
+  },
+  "sources_worked": [],
+  "sources_partial": [],
+  "sources_blocked": [],
+  "a_tier_deep_dive": {
+    "candidates_evaluated": 0,
+    "passed": 0,
+    "demoted_to_b": 0,
+    "demoted_to_d_distress_surfaced": 0,
+    "demotion_reasons": {
+      "owner_age_proxy_only": 0,
+      "successor_found_on_live_site": 0,
+      "team_page_unreachable": 0,
+      "comptroller_forfeited": 0,
+      "disciplinary_action_surfaced": 0,
+      "lien_or_judgment_surfaced": 0,
+      "metro_pull_recomputed_down": 0,
+      "value_add_thesis_too_generic": 0
+    }
+  },
+  "supabase_write": {"status": "pending", "reason": ""}
+}

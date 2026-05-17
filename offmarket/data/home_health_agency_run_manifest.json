@@ -1,0 +1,23 @@
+{
+  "run_label": "home-health-agency-tx-2026-05-16-w6a",
+  "score_run_id": "1d01a497-0c17-5d55-82d4-df3aef250d24",
+  "model_version": "offmarket-4layer-v0.2",
+  "weights": {"layer1": 0.30, "layer2": 0.25, "layer3": 0.30, "layer4": 0.15},
+  "vertical": "home_health_agency",
+  "naics_code": "621610",
+  "geography": "TX — Harris/Dallas/Tarrant/Collin/Denton/Bexar/Travis/Fort Bend/Montgomery + East TX (Smith/Gregg/Harrison) + Hill Country (Hays/Comal) + Permian (Midland/Ector)",
+  "started_at": "2026-05-17T04:38:05Z",
+  "exclusion_list": [
+    "Encompass Health", "Amedisys", "Enhabit", "LHC Group", "Optum",
+    "Aveanna", "BAYADA", "Interim HealthCare", "VNA",
+    "Home Helpers", "Right at Home", "Comfort Keepers", "Senior Helpers",
+    "Visiting Angels", "BrightStar", "Touching Hearts at Home",
+    "HCR ManorCare", "Kindred at Home", "Humana", "Apria",
+    "AccentCare", "Help at Home", "Maxim Healthcare", "Owens & Minor"
+  ],
+  "spine_sources_attempted": [],
+  "sources_worked": [],
+  "sources_partial": [],
+  "sources_blocked": [],
+  "notes": "TX home health has SIGNIFICANT Medicare fraud incidence; aggressive distress filter on LEIE, OIG sanctions, qui tam False Claims, CCN revocations, CMS PECOS revocations, special focus facility designations."
+}

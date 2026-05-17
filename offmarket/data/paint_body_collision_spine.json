@@ -1,0 +1,60 @@
+[
+  {
+    "_meta": {
+      "vertical": "paint_body_collision",
+      "naics": "811121",
+      "state": "TX",
+      "run_label": "paint-body-collision-tx-2026-05-16-w3a",
+      "score_run_id": "55e31636-bd81-4737-a5c0-6993b4155f8e",
+      "geography_priority": [
+        "DFW (Dallas, Tarrant, Collin, Denton)",
+        "Houston (Harris, Fort Bend, Brazoria, Montgomery, Galveston)",
+        "San Antonio (Bexar, Comal)",
+        "Austin (Travis, Williamson, Hays)"
+      ],
+      "target_count": "60-90 verified",
+      "fetched_at": "2026-05-16",
+      "primary_sources_attempted": [
+        "I-CAR Gold Class directory (goldclass.i-car.com)",
+        "Carwise.com per-zip body shop directory",
+        "Google business profile searches per metro",
+        "Yelp body shops by city",
+        "Local news / Autobody News press releases on TX shops",
+        "BBB TX collision shop accredited profiles"
+      ],
+      "sourcing_notes": "TX has NO mandatory professional licensing board for collision repair shops (TX DMV salvage license is per-vehicle, not per-shop; I-CAR Gold Class is voluntary). No state CSV exists. Spine was assembled from WebSearch + per-shop website verification with strict PE/MSO exclusion. Heavy filtering removed: Caliber, Crash Champions, Classic Collision, Joe Hudson, Gerber, ABRA, Maaco, CARSTAR (incl. Ambassador Collision Houston), Fix Auto, Quality Collision Group (acquired Hance's Uptown 2024-08 + Stuart's Paint & Body), Texan Collision Centers, Texas Collision Centers (consolidator), Dealership-affiliated shops (Cavender, McDavid, Park Place BodyWerks, Frank Kent, Group 1 Collision, Gillman, Toyota of Katy, Mercedes-Benz of Sugar Land, Northside Chevrolet, Honda of Tomball), Harvey's Collision (sold to Lennox 2018), Boerne Collision Center (OpenRoad/Trivest PE), AutoNation Collision, Heritage Auto Body (suspicious — verify). Cherry-picked from initial WebSearch yields and per-shop confirmation. Where info is thin (founder name, specific tenure), conservative defaults used and flagged in confidence.",
+      "exclusion_list_active": [
+        "Caliber Collision (1500+ locations national MSO)",
+        "Crash Champions (PE Lone Star — Service King successor)",
+        "Service King (legacy — now Crash Champions)",
+        "Classic Collision (PE TSG Consumer Partners)",
+        "Joe Hudson's Collision Center (PE)",
+        "Gerber Collision & Glass (Boyd Group public)",
+        "ABRA Auto Body (now Caliber)",
+        "Maaco (Driven Brands franchise)",
+        "CARSTAR (Driven Brands franchise) — incl. Ambassador Collision Houston (CARSTAR), CARSTAR Mobility Conroe",
+        "Fix Auto USA (franchise)",
+        "Driven Brands Holdings (parent)",
+        "Quality Collision Group / QCG (PE Susquehanna Private Capital — McKinney HQ; acquired Hance's Uptown Aug 2024, Stuart's Paint & Body Plano/Fort Worth)",
+        "Texan Collision Centers (mid-size consolidator)",
+        "Texas Collision Centers Inc (multi-loc consolidator — Edward Peña)",
+        "Cavender Collision Center (Cavender Auto dealership group)",
+        "McDavid Collision (McDavid Auto Group)",
+        "Park Place BodyWerks (Park Place dealership group)",
+        "Frank Kent Body Shop (Frank Kent Honda/Acura dealership)",
+        "Group 1 Collision (Group 1 Automotive — public)",
+        "Gillman Body Shop (Gillman dealership group)",
+        "Harvey's Collision Centers (Lennox + McFadden — exited family in 2018)",
+        "Boerne Collision Center (OpenRoad / Trivest PE platform)",
+        "AutoNation Collision Center (AutoNation public)",
+        "Heritage Auto Body Group (verify — possible roll-up)",
+        "JHCC (multi-location consolidator)",
+        "Dealership-affiliated shops broadly (Toyota of Katy, Mercedes-Benz of Sugar Land, Northside Chevrolet, Honda of Tomball, MINI of the Woodlands, Wiesner Buick GMC, Gullo Toyota, etc.)",
+        "Sun Auto Tire & Service (PE but mostly tire)",
+        "1-800-Radiator (Driven Brands)",
+        "Christian Brothers Automotive (franchise)",
+        "Repair One Tire & Auto (verify — not collision)"
+      ]
+    }
+  }
+]
