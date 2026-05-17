@@ -27,7 +27,11 @@
       "verified_via": "live-fetch of melton-melton.com 2026-05-16; recent partner promotions indicate active succession buildup"
     },
     "data_sources": [
-      {"url": "https://melton-melton.com/", "fetched_at": "2026-05-16T16:00:00Z", "fields": ["partners", "year_established", "services"]}
+      {
+        "url": "https://melton-melton.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "year_established", "services"]
+      }
     ],
     "data_completeness": 0.6,
     "notes": "60-yr-old multi-generational firm. Multiple recent partner promotions (Jan 2026 + Feb 2025) suggest INTENTIONAL SUCCESSION BUILDUP — REDUCES coasting score. LIKELY B-tier, NOT A-tier (active succession path being built internally, not sale candidate)."
@@ -60,7 +64,11 @@
       "verified_via": "live-fetch of hrss.cpa/about 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://hrss.cpa/about/", "fetched_at": "2026-05-16T16:00:00Z", "fields": ["founders", "services", "client_portal"]}
+      {
+        "url": "https://hrss.cpa/about/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["founders", "services", "client_portal"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Top-25 Houston firm, 70+ professionals. Fastest-growing self-described — NOT coasting. Multi-partner with mid-career partners (Seyar 1993). LIKELY B-tier, NOT A-tier solo target. Founder Shaikh likely 60+ but growth mode = lower seller probability."
@@ -96,8 +104,16 @@
       "verified_via": "live-fetch of coopercpagroup.com 2026-05-16; LinkedIn/expertfile bio confirmed BBA Middle Tennessee State 1978, CPA 1979"
     },
     "data_sources": [
-      {"url": "https://www.coopercpagroup.com/", "fetched_at": "2026-05-16T16:00:00Z", "fields": ["partners", "services"]},
-      {"url": "https://expertfile.com/experts/gary.cooper/gary-cooper", "fetched_at": "2026-05-16T16:10:00Z", "fields": ["education_year_1978", "cpa_year_1979"]}
+      {
+        "url": "https://www.coopercpagroup.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "services"]
+      },
+      {
+        "url": "https://expertfile.com/experts/gary.cooper/gary-cooper",
+        "fetched_at": "2026-05-16T16:10:00Z",
+        "fields": ["education_year_1978", "cpa_year_1979"]
+      }
     ],
     "data_completeness": 0.85,
     "notes": "Gary Cooper: BBA Middle Tennessee State 1978, CPA 1979, ran Dallas practice 1989-2002, founded Cooper CPA Group 2004. 35+ yrs in public accounting. Age ~68 (born ~1957). Solo CPA, explicitly offers M&A/Succession Planning to clients — META SUCCESSION SIGNAL. Pre-existing rock-band 'Band Jam' hobby suggests pre-retirement lifestyle. STRONG A-TIER CANDIDATE."
@@ -130,7 +146,11 @@
       "verified_via": "live-fetch of jagcpa.com/about 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://jagcpa.com/about/", "fetched_at": "2026-05-16T16:00:00Z", "fields": ["partners", "staff_count"]}
+      {
+        "url": "https://jagcpa.com/about/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "staff_count"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Founder Joe Gallegos licensed 2013 (CPA tenure ~13 yrs). Age estimate ~42 assuming CPA-cert age 28-29. NOT an A-tier candidate — too young, recent founder, ex-Big4 partner building practice. SKIP for A-tier scoring."
@@ -163,7 +183,11 @@
       "verified_via": "live-fetch of kirkcpafirm.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://kirkcpafirm.com/", "fetched_at": "2026-05-16T16:00:00Z", "fields": ["services", "year_proxy"]}
+      {
+        "url": "https://kirkcpafirm.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["services", "year_proxy"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "25+ yr firm. Offers succession planning to clients — META SIGNAL. Founder name + age need TSBPA lookup. Possible A-tier solo. Site is sparse; possibly low engagement = coasting tell."
@@ -197,7 +221,11 @@
       "verified_via": "live-fetch of boacpas.com/about.htm 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.boacpas.com/about.htm", "fetched_at": "2026-05-16T16:00:00Z", "fields": ["partners", "services", "client_portal"]}
+      {
+        "url": "https://www.boacpas.com/about.htm",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "services", "client_portal"]
+      }
     ],
     "data_completeness": 0.45,
     "notes": "Two-partner firm with audit + advisory + virtual CFO + nonprofit niche. ProtectedXchange portal — modern tech. Year founded + ages need TSBPA. LIKELY B-tier."
@@ -230,7 +258,11 @@
       "verified_via": "live-fetch of annthomascpa.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.annthomascpa.com/", "fetched_at": "2026-05-16T16:00:00Z", "fields": ["partners", "services", "client_portal"]}
+      {
+        "url": "https://www.annthomascpa.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "services", "client_portal"]
+      }
     ],
     "data_completeness": 0.45,
     "notes": "Solo CPA Ann Thomas in NASA Pkwy / Clear Lake area. Offers estate + succession planning + CFO services. ClientAxcess portal (modern). Year founded + age need TSBPA. POSSIBLE A-tier solo pending tenure verification."
@@ -263,7 +295,11 @@
       "verified_via": "live-fetch of howardcpallc.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.howardcpallc.com/", "fetched_at": "2026-05-16T16:00:00Z", "fields": ["partners", "services", "portal"]}
+      {
+        "url": "https://www.howardcpallc.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "services", "portal"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Solo CPA Rebekah Howard. SecureFilePro portal. Nonprofit + small biz niche. Age clue: name 'Rebekah' suggests mid-career, not senior. LIKELY B-tier; A-tier unlikely without strong tenure signal."
@@ -296,7 +332,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.hookercpa.com/", "fetched_at": "2026-05-16T16:00:00Z", "fields": ["partners", "service_mix"]}
+      {
+        "url": "https://www.hookercpa.com/",
+        "fetched_at": "2026-05-16T16:00:00Z",
+        "fields": ["partners", "service_mix"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Solo CPA, virtual-first practice — likely younger owner. NOT A-tier."
@@ -332,7 +372,11 @@
       "verified_via": "live-fetch of leehuangcpa.com/meet-the-team 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.leehuangcpa.com/meet-the-team.php", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["partners", "tenure"]}
+      {
+        "url": "https://www.leehuangcpa.com/meet-the-team.php",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners", "tenure"]
+      }
     ],
     "data_completeness": 0.75,
     "notes": "43-yr firm with active 3-tier partnership succession. Winnie Huang (Senior, 30+ yrs TX experience) age ~58-60. Connie Zhang (Managing, CPA 2005) ~45. Already in transition. SecureSend e-sig + portal. LIKELY B-tier — partial succession but Huang exit-window is the watch."
@@ -365,7 +409,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.polkcpatx.com/family-owned-business-accounting.htm", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["service_mix"]}
+      {
+        "url": "https://www.polkcpatx.com/family-owned-business-accounting.htm",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Family-owned-business accounting specialty suggests multi-gen client base + senior owner. Age + tenure need TSBPA. POSSIBLE A-tier solo."
@@ -390,9 +438,7 @@
     "pcaob_registered": false,
     "year_round": true,
     "not_accepting_new_clients": false,
-    "coasting_tells": [
-      "Site redirected to cpa-houstontx.com — possible legacy domain abandon"
-    ],
+    "coasting_tells": ["Site redirected to cpa-houstontx.com — possible legacy domain abandon"],
     "successor_indicators": {
       "second_cpa_partner_present": false,
       "family_successor_present": false,
@@ -400,7 +446,11 @@
       "verified_via": "live-fetch attempt cbannoncpa.com 2026-05-16 (redirect)"
     },
     "data_sources": [
-      {"url": "https://www.cbannoncpa.com/", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["redirect_to_cpa-houstontx.com"]}
+      {
+        "url": "https://www.cbannoncpa.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["redirect_to_cpa-houstontx.com"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Site domain redirects — possible website handoff or technology lag. Clear Lake / Webster solo CPA. Age + tenure need TSBPA. POSSIBLE A-tier pending verification."
@@ -433,7 +483,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.okagbuecpa.com/", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["padgett_affiliation", "partners"]}
+      {
+        "url": "https://www.okagbuecpa.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["padgett_affiliation", "partners"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Padgett franchise — owner independent but brand-supported. Solo Bellaire CPA. Age + tenure need TSBPA. NOT a typical A-tier; Padgett succession typically franchise-internal."
@@ -466,7 +520,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.bwpcpas.com/", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["service_mix", "address"]}
+      {
+        "url": "https://www.bwpcpas.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix", "address"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Two-name Katy firm. Year founded + ages need TSBPA. POSSIBLE B-tier; A-tier viable if both Brunet + Wolfe are 60+."
@@ -499,7 +557,11 @@
       "verified_via": "live-fetch of strcpafirm.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://strcpafirm.com/", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["year_established", "services"]}
+      {
+        "url": "https://strcpafirm.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["year_established", "services"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "45-yr firm. Three-name partnership in Katy + Houston + Woodlands (3 offices). Audit + advisory + transaction-advisory. Likely STRONG B-tier — multi-partner regional. A-tier viable if oldest founder is solo-coasting."
@@ -532,7 +594,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.rasconcpafirm.com/", "fetched_at": "2026-05-16T16:15:00Z", "fields": ["year_established"]}
+      {
+        "url": "https://www.rasconcpafirm.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["year_established"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Young firm (2019), young partners. NOT A-tier. SKIP for ranking — too recent to coast."
@@ -565,7 +631,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://astrongcpa.com/", "fetched_at": "2026-05-16T16:15:00Z", "fields": ["partners", "services"]}
+      {
+        "url": "https://astrongcpa.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["partners", "services"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Solo CPA Angela Strong in The Woodlands. Multi-industry. Age + tenure need TSBPA. POSSIBLE B-tier."
@@ -598,7 +668,11 @@
       "verified_via": "live-fetch of crowlcameron.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.crowlcameron.com/", "fetched_at": "2026-05-16T16:10:00Z", "fields": ["year_established", "services"]}
+      {
+        "url": "https://www.crowlcameron.com/",
+        "fetched_at": "2026-05-16T16:10:00Z",
+        "fields": ["year_established", "services"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "42-yr Conroe firm. Property + sales tax specialty (niche). Two-name partnership. Secure Document Upload portal — modern enough. STRONG A-tier candidate IF owner ages confirm 60+. Pending TSBPA owner names."
@@ -631,7 +705,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.lindseykcpa.com/", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["partners"]}
+      {
+        "url": "https://www.lindseykcpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Solo CPA Conroe, construction industry niche. Use of first-name-only branding suggests younger / informal. NOT A-tier."
@@ -664,7 +742,11 @@
       "verified_via": "live-fetch + LinkedIn search 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.sarahjonescpa.com/", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["partners", "experience"]}
+      {
+        "url": "https://www.sarahjonescpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "experience"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Solo CPA, 20+ yrs. Authoring 'Tax Free Millionaire' + 'Fire My CPA' books — PRODUCTIZING / GROWTH MODE. NOT coasting. NOT A-tier."
@@ -697,7 +779,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.kimescpa.com/", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["service_mix"]}
+      {
+        "url": "https://www.kimescpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["service_mix"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Three-name Spring TX firm. Year founded + ages need TSBPA. LIKELY B-tier."
@@ -730,7 +816,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.mmcdanielcpa.com/", "fetched_at": "2026-05-16T16:35:00Z", "fields": ["service_mix"]}
+      {
+        "url": "https://www.mmcdanielcpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["service_mix"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Solo CPA Kingwood. Age + tenure need TSBPA. POSSIBLE B-tier."
@@ -763,7 +853,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://mathisoncpa.com/index.php", "fetched_at": "2026-05-16T16:35:00Z", "fields": ["service_mix"]}
+      {
+        "url": "https://mathisoncpa.com/index.php",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["service_mix"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Solo CPA Cypress. Age + tenure need TSBPA. POSSIBLE B-tier."
@@ -798,7 +892,11 @@
       "verified_via": "live-fetch of cpapeterson.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.cpapeterson.com/", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["partners", "family_members"]}
+      {
+        "url": "https://www.cpapeterson.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "family_members"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "FAMILY-OWNED SUCCESSION CANDIDATE. Don Peterson (founder, author of parenting book — leisure pursuits = pre-retirement signal) + multiple family members (Joe, Robert, Preston, Cheryl, Tracey). Multi-location (Friendswood + League City + Galveston). ShareFile portal. STRONG A-tier IF Don is solo-coasting and family successors not yet at controlling-partner status."
@@ -831,7 +929,7 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://rmncpa.com/", "fetched_at": "2026-05-16T16:35:00Z", "fields": ["partners"]}
+      { "url": "https://rmncpa.com/", "fetched_at": "2026-05-16T16:35:00Z", "fields": ["partners"] }
     ],
     "data_completeness": 0.3,
     "notes": "Solo Pearland CPA. Healthcare specialty. Age + tenure need TSBPA. POSSIBLE A-tier."
@@ -864,7 +962,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.michellegrahamcpa.com/about.php", "fetched_at": "2026-05-16T16:35:00Z", "fields": ["partners"]}
+      {
+        "url": "https://www.michellegrahamcpa.com/about.php",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["partners"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Solo CPA Missouri City. Age + tenure need TSBPA. POSSIBLE B-tier."
@@ -897,7 +999,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://salujaassociatescpa.com/sugar-land/", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["partners"]}
+      {
+        "url": "https://salujaassociatescpa.com/sugar-land/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Solo CPA US-Canada cross-border specialty. POSSIBLE B-tier."
@@ -930,7 +1036,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.schultzco.com/", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["address", "secondary_office_wichita_falls"]}
+      {
+        "url": "https://www.schultzco.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["address", "secondary_office_wichita_falls"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Sugar Land HQ + Wichita Falls satellite. Multi-region but small. Year founded + partners need TSBPA."
@@ -963,7 +1073,11 @@
       "verified_via": "live-fetch of davidson.cpa 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.davidson.cpa/", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["partners", "services"]}
+      {
+        "url": "https://www.davidson.cpa/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners", "services"]
+      }
     ],
     "data_completeness": 0.35,
     "notes": "Solo Sugar Land CPA. Multi-industry (construction/agri/oil-gas/medical/real-estate). Trust + estate planning offered. Age + tenure need TSBPA. POSSIBLE A-tier IF Davidson 60+."
@@ -996,7 +1110,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.slakcpa.com/", "fetched_at": "2026-05-16T16:35:00Z", "fields": ["partners"]}
+      {
+        "url": "https://www.slakcpa.com/",
+        "fetched_at": "2026-05-16T16:35:00Z",
+        "fields": ["partners"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Solo Sugar Land CPA. Age + tenure need TSBPA. POSSIBLE B-tier."
@@ -1029,7 +1147,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://moderhakassociates.com/", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["service_mix"]}
+      {
+        "url": "https://moderhakassociates.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Sugar Land firm, construction/medical/insurance specialty. Year founded + partner detail need TSBPA."
@@ -1062,7 +1184,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.cethcpa.com/", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["partners"]}
+      {
+        "url": "https://www.cethcpa.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["partners"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Sugar Land solo CPA. Forensic + succession + business valuation services — META SIGNAL but applied to clients not self. Age + tenure need TSBPA."
@@ -1098,7 +1224,11 @@
       "verified_via": "live-fetch of kenwoodpc.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.kenwoodpc.com/", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["year", "services", "bankruptcy_receivership"]}
+      {
+        "url": "https://www.kenwoodpc.com/",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["year", "services", "bankruptcy_receivership"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "40-yr Sugar Land + Memorial firm. Bankruptcy + receivership niche → senior practitioner. STRONG A-tier candidate IF founder 60+ — pending TSBPA owner name."
@@ -1137,8 +1267,16 @@
       "verified_via": "live-fetch of walshcpa.com/about + Google search 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.walshcpa.com/about", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["founders_4_generations", "partners", "tenure"]},
-      {"url": "https://www.galvnews.com/obituaries/edward-joseph-walsh-jr-cpa/article_d33d38f2-73c4-5089-b71b-0ce777af261f.html", "fetched_at": "2026-05-16T20:00:00Z", "fields": ["family_history"]}
+      {
+        "url": "https://www.walshcpa.com/about",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["founders_4_generations", "partners", "tenure"]
+      },
+      {
+        "url": "https://www.galvnews.com/obituaries/edward-joseph-walsh-jr-cpa/article_d33d38f2-73c4-5089-b71b-0ce777af261f.html",
+        "fetched_at": "2026-05-16T20:00:00Z",
+        "fields": ["family_history"]
+      }
     ],
     "data_completeness": 0.85,
     "notes": "STRONG A-TIER. 94-yr-old firm, 4 generations. Eddie Walsh III (UT 1982 grad, CPA 1985) age ~66. Was Galveston County Treasurer 2003-2023 — political career may indicate winding down public-accounting. Brother Kevin Walsh CPA 1995 (age ~52). Expat + HOA niche. NO modern tech (no portal, no e-sig). HIGH-PRIORITY DEEP-DIVE CANDIDATE. Possible 4th-gen succession but Eddie III nearing 70."
@@ -1172,7 +1310,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.lgt-cpa.com/", "fetched_at": "2026-05-16T16:20:00Z", "fields": ["primeglobal_affiliation", "year_established"]}
+      {
+        "url": "https://www.lgt-cpa.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["primeglobal_affiliation", "year_established"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Top 200 IPA firm — TOO LARGE for solo A-tier. PrimeGlobal alliance member. SKIP for A-tier ranking — institutional partnership succession path."
@@ -1206,7 +1348,11 @@
       "verified_via": "live-fetch of ptcpas.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://ptcpas.com/", "fetched_at": "2026-05-16T16:20:00Z", "fields": ["year_established", "services", "M&A_succession_planning"]}
+      {
+        "url": "https://ptcpas.com/",
+        "fetched_at": "2026-05-16T16:20:00Z",
+        "fields": ["year_established", "services", "M&A_succession_planning"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "57-yr Dallas firm. Oil & gas + private equity + HNW + M&A specialty. Offers M&A and succession planning to clients — META SIGNAL. Year founded mature; partner ages need TSBPA. POSSIBLE A-tier IF founder solo-coasting."
@@ -1240,7 +1386,11 @@
       "verified_via": "live-fetch of smtaxcpa.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.smtaxcpa.com/", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["international_tax", "expat", "client_portal"]}
+      {
+        "url": "https://www.smtaxcpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["international_tax", "expat", "client_portal"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Solo Dallas CPA, international tax + expat specialty. Client portal present. Age + tenure need TSBPA. POSSIBLE A-tier."
@@ -1273,7 +1423,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://cpa-dallas.com/", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["partners", "tenure"]}
+      {
+        "url": "https://cpa-dallas.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "tenure"]
+      }
     ],
     "data_completeness": 0.35,
     "notes": "Solo CPA North Dallas 20+ yrs. Construction + oil & gas + restaurant niche. Tenure marginal for A-tier."
@@ -1306,7 +1460,11 @@
       "verified_via": "live-fetch of lhcpafirm.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.lhcpafirm.com/", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["partners"]}
+      {
+        "url": "https://www.lhcpafirm.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "Boutique Dallas firm. Family-office + wealth-mgmt mix. Scott Henvey appears senior. Year founded + ages need TSBPA. POSSIBLE B-tier."
@@ -1339,7 +1497,11 @@
       "verified_via": "live-fetch of henrypeters.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.henrypeters.com/", "fetched_at": "2026-05-16T16:15:00Z", "fields": ["year_established_1929", "offices", "AGN_alliance", "forbes_recognition"]}
+      {
+        "url": "https://www.henrypeters.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["year_established_1929", "offices", "AGN_alliance", "forbes_recognition"]
+      }
     ],
     "data_completeness": 0.5,
     "notes": "97-yr regional firm with 3 offices (Tyler HQ + Longview + Frisco). AGN International alliance. Forbes Best-in-State + IPA Top 300. Multi-partner mid-size. B-tier — NOT A-tier solo target."
@@ -1364,9 +1526,7 @@
     "pcaob_registered": false,
     "year_round": true,
     "not_accepting_new_clients": false,
-    "coasting_tells": [
-      "Estate + biz val + succession planning offered to clients (META SIGNAL)"
-    ],
+    "coasting_tells": ["Estate + biz val + succession planning offered to clients (META SIGNAL)"],
     "successor_indicators": {
       "second_cpa_partner_present": null,
       "family_successor_present": null,
@@ -1374,7 +1534,11 @@
       "verified_via": "live-fetch of kevanscpas.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.kevanscpas.com/", "fetched_at": "2026-05-16T16:15:00Z", "fields": ["year_1951", "client_portal", "services"]}
+      {
+        "url": "https://www.kevanscpas.com/",
+        "fetched_at": "2026-05-16T16:15:00Z",
+        "fields": ["year_1951", "client_portal", "services"]
+      }
     ],
     "data_completeness": 0.45,
     "notes": "75-yr firm, Frisco. Currently named for K. Evans — possibly 2nd or 3rd generation. Year founded 1951 means original founder long deceased. Client portal + QuickBooks ProAdvisor. POSSIBLE A-tier IF K. Evans solo-coasting and elderly."
@@ -1410,7 +1574,11 @@
       "verified_via": "live-fetch of tracyburrcpa.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.tracyburrcpa.com/", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["partners", "tenure_39yrs", "services", "client_portal"]}
+      {
+        "url": "https://www.tracyburrcpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["partners", "tenure_39yrs", "services", "client_portal"]
+      }
     ],
     "data_completeness": 0.7,
     "notes": "STRONG A-TIER. Solo CPA, 39+ yrs in tax practice → age ~64 (CPA at 25 + 39). Personal financial planning + retirement + estate + elder-care + Part-Time CFO services — pre-retirement service mix. Client portal but no e-sig. NO younger partner. HIGH-PRIORITY DEEP-DIVE."
@@ -1443,7 +1611,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.cpadriskell.com/about-us.htm", "fetched_at": "2026-05-16T16:30:00Z", "fields": ["service_mix"]}
+      {
+        "url": "https://www.cpadriskell.com/about-us.htm",
+        "fetched_at": "2026-05-16T16:30:00Z",
+        "fields": ["service_mix"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Frisco firm. Multi-industry (construction/hospitality/medical/oil-gas/retail). Age + tenure need TSBPA. POSSIBLE B-tier."
@@ -1476,7 +1648,11 @@
       "verified_via": "spine_notes_only"
     },
     "data_sources": [
-      {"url": "https://www.parishfirm.cpa/", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["secondary_office_colleyville"]}
+      {
+        "url": "https://www.parishfirm.cpa/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["secondary_office_colleyville"]
+      }
     ],
     "data_completeness": 0.3,
     "notes": "Frisco + Colleyville offices. Family Office specialty. Year founded + ages need TSBPA. POSSIBLE B-tier."
@@ -1509,7 +1685,11 @@
       "verified_via": "live-fetch of carrellandcompany.com/about-us 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://carrellandcompany.com/about-us", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["leader_Elizabeth_Jain", "staff_count_16"]}
+      {
+        "url": "https://carrellandcompany.com/about-us",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["leader_Elizabeth_Jain", "staff_count_16"]
+      }
     ],
     "data_completeness": 0.55,
     "notes": "29-yr-old McKinney firm. 16 team members, AICPA peer-review, client portal. Already underwent leadership transition (Carrell→Jain). Less likely A-tier — succession partially done."
@@ -1543,7 +1723,11 @@
       "verified_via": "live-fetch of blandgarvey.com/about 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.blandgarvey.com/about", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["multi_partner_succession_history", "RIA_affiliate_BG_Wealth_Advisors_2005"]}
+      {
+        "url": "https://www.blandgarvey.com/about",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["multi_partner_succession_history", "RIA_affiliate_BG_Wealth_Advisors_2005"]
+      }
     ],
     "data_completeness": 0.85,
     "notes": "Multi-partner firm with EXTENSIVE succession history (1997 Bland retired, 2017 Garvey Sr retired→son). Currently CEO John Garvey Jr. + 4 other CPAs. 40-person staff. RIA affiliate. STRONG B-tier; NOT A-tier solo target — institutional partner succession in flight."
@@ -1576,7 +1760,11 @@
       "verified_via": "live-fetch of leakecpa.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.leakecpa.com/", "fetched_at": "2026-05-16T16:25:00Z", "fields": ["family_owned_40yrs", "3_offices"]}
+      {
+        "url": "https://www.leakecpa.com/",
+        "fetched_at": "2026-05-16T16:25:00Z",
+        "fields": ["family_owned_40yrs", "3_offices"]
+      }
     ],
     "data_completeness": 0.4,
     "notes": "40-yr family-owned. 3 offices (Mesquite + Richardson + McKinney). Family-owned succession-prone. Founder ages need TSBPA. POSSIBLE A-tier if founder solo-coasting and family successors NOT yet at controlling-partner status."

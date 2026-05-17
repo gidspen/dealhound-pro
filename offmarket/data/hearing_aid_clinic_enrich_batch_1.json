@@ -30,15 +30,30 @@
     "audiology_assistant_count": 1,
     "manufacturer_brands": ["Oticon", "all major manufacturers"],
     "manufacturer_brands_count": 2,
-    "services": ["hearing_aid_fitting", "tinnitus_management", "earwax_removal", "hearing_protection", "auditory_processing_disorder", "hearing_aid_batteries"],
+    "services": [
+      "hearing_aid_fitting",
+      "tinnitus_management",
+      "earwax_removal",
+      "hearing_protection",
+      "auditory_processing_disorder",
+      "hearing_aid_batteries"
+    ],
     "services_advanced_aud": ["tinnitus", "auditory_processing_disorder"],
     "is_va_provider": null,
     "telehealth_offered": false,
     "online_booking": true,
     "rechargeable_promoted": false,
     "coasting_tells": [
-      {"tell": "no_rechargeable_promotion", "evidence": "No rechargeable hearing aid mentions on key pages", "weight": "low"},
-      {"tell": "no_vestibular_or_cochlear", "evidence": "No vestibular or cochlear implant evaluation services listed", "weight": "low"}
+      {
+        "tell": "no_rechargeable_promotion",
+        "evidence": "No rechargeable hearing aid mentions on key pages",
+        "weight": "low"
+      },
+      {
+        "tell": "no_vestibular_or_cochlear",
+        "evidence": "No vestibular or cochlear implant evaluation services listed",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -46,8 +61,16 @@
       "verified_via": "website team page"
     },
     "data_sources": [
-      {"url": "https://allisonaudiology.com/about-us/", "fetched_at": "2026-05-16T17:00:00Z", "fields": ["owners", "services", "online_booking", "staff_count"]},
-      {"url": "https://allisonaudiology.com/meet-the-team/dr-jana-e-austin", "fetched_at": "2026-05-16T17:01:00Z", "fields": ["owner_school", "owner_role"]}
+      {
+        "url": "https://allisonaudiology.com/about-us/",
+        "fetched_at": "2026-05-16T17:00:00Z",
+        "fields": ["owners", "services", "online_booking", "staff_count"]
+      },
+      {
+        "url": "https://allisonaudiology.com/meet-the-team/dr-jana-e-austin",
+        "fetched_at": "2026-05-16T17:01:00Z",
+        "fields": ["owner_school", "owner_role"]
+      }
     ],
     "data_completeness": 0.78
   },
@@ -82,14 +105,24 @@
     "audiology_assistant_count": null,
     "manufacturer_brands": ["ReSound", "Phonak", "Signia"],
     "manufacturer_brands_count": 3,
-    "services": ["hearing_aid_fitting", "tinnitus_management", "balance_assessment", "diagnostic_audiology", "hearing_aid_repair"],
+    "services": [
+      "hearing_aid_fitting",
+      "tinnitus_management",
+      "balance_assessment",
+      "diagnostic_audiology",
+      "hearing_aid_repair"
+    ],
     "services_advanced_aud": ["tinnitus", "balance"],
     "is_va_provider": null,
     "telehealth_offered": false,
     "online_booking": true,
     "rechargeable_promoted": false,
     "coasting_tells": [
-      {"tell": "limited_manufacturer_brands", "evidence": "3 brands (ReSound/Phonak/Signia) — moderate, not professional 6+ stack", "weight": "low"}
+      {
+        "tell": "limited_manufacturer_brands",
+        "evidence": "3 brands (ReSound/Phonak/Signia) — moderate, not professional 6+ stack",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -98,8 +131,16 @@
     },
     "notes": "Owner Dr. Brooks is unusually young (42) for traditional acquisition target — but she already runs 2 separate LLCs (Heights + North Houston Hearing). Multi-practice operator, possible roll-up candidate but not classic retiring-owner play. May be a buyer rather than seller.",
     "data_sources": [
-      {"url": "https://www.heightsaudiology.com/", "fetched_at": "2026-05-16T17:02:00Z", "fields": ["audiologists", "services"]},
-      {"url": "https://www.linkedin.com/in/dr-lacey-brooks-57639131/", "fetched_at": "2026-05-16T17:02:00Z", "fields": ["AuD_grad_year", "BS_year", "current_role"]}
+      {
+        "url": "https://www.heightsaudiology.com/",
+        "fetched_at": "2026-05-16T17:02:00Z",
+        "fields": ["audiologists", "services"]
+      },
+      {
+        "url": "https://www.linkedin.com/in/dr-lacey-brooks-57639131/",
+        "fetched_at": "2026-05-16T17:02:00Z",
+        "fields": ["AuD_grad_year", "BS_year", "current_role"]
+      }
     ],
     "data_completeness": 0.82
   },
@@ -139,7 +180,11 @@
     "online_booking": null,
     "rechargeable_promoted": null,
     "coasting_tells": [
-      {"tell": "absentee_owner_pattern", "evidence": "Dr. Brooks owns separate Heights Audiology in Houston Heights — split attention", "weight": "moderate"}
+      {
+        "tell": "absentee_owner_pattern",
+        "evidence": "Dr. Brooks owns separate Heights Audiology in Houston Heights — split attention",
+        "weight": "moderate"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": false,
@@ -148,8 +193,16 @@
     },
     "notes": "Already passed succession once (Poe to Brooks in 2016). Brooks is multi-practice operator. Roll-up potential lower than spine_index=1 (Heights).",
     "data_sources": [
-      {"url": "https://northhoustonhearing.com/meet-the-team/dr-lacey-brooks", "fetched_at": "2026-05-16T17:03:00Z", "fields": ["ownership_year", "multi_practice"]},
-      {"url": "https://opennpi.com/provider/1760652838", "fetched_at": "2026-05-16T17:03:00Z", "fields": ["NPI"]}
+      {
+        "url": "https://northhoustonhearing.com/meet-the-team/dr-lacey-brooks",
+        "fetched_at": "2026-05-16T17:03:00Z",
+        "fields": ["ownership_year", "multi_practice"]
+      },
+      {
+        "url": "https://opennpi.com/provider/1760652838",
+        "fetched_at": "2026-05-16T17:03:00Z",
+        "fields": ["NPI"]
+      }
     ],
     "data_completeness": 0.55
   },
@@ -183,9 +236,25 @@
     "aud_count": 2,
     "hid_count": 0,
     "audiology_assistant_count": 1,
-    "manufacturer_brands": ["Lyric", "Oticon", "Phonak", "ReSound", "Signia", "Starkey", "Unitron", "Widex"],
+    "manufacturer_brands": [
+      "Lyric",
+      "Oticon",
+      "Phonak",
+      "ReSound",
+      "Signia",
+      "Starkey",
+      "Unitron",
+      "Widex"
+    ],
     "manufacturer_brands_count": 8,
-    "services": ["hearing_aid_fitting", "tinnitus_management", "Lenire_tinnitus", "vestibular", "cochlear_implant_consultation", "custom_earmolds"],
+    "services": [
+      "hearing_aid_fitting",
+      "tinnitus_management",
+      "Lenire_tinnitus",
+      "vestibular",
+      "cochlear_implant_consultation",
+      "custom_earmolds"
+    ],
     "services_advanced_aud": ["tinnitus", "Lenire", "vestibular", "cochlear_implant"],
     "is_va_provider": null,
     "telehealth_offered": false,
@@ -199,7 +268,11 @@
     },
     "notes": "HIGH PRIORITY — owner 30+ yrs tenure (acquisition window), broad 8-brand multi-brand stack, advanced services incl Lenire tinnitus + cochlear consultation + vestibular. Younger AuD on staff = successor in place.",
     "data_sources": [
-      {"url": "https://fortbendhearing.com/about/", "fetched_at": "2026-05-16T17:04:00Z", "fields": ["owner_experience", "second_AuD", "services", "brands"]}
+      {
+        "url": "https://fortbendhearing.com/about/",
+        "fetched_at": "2026-05-16T17:04:00Z",
+        "fields": ["owner_experience", "second_AuD", "services", "brands"]
+      }
     ],
     "data_completeness": 0.85
   },
@@ -234,7 +307,14 @@
     "audiology_assistant_count": null,
     "manufacturer_brands": [],
     "manufacturer_brands_count": null,
-    "services": ["audiometric_evaluation", "hearing_aid_fitting", "custom_earmolds", "cerumen_management", "tinnitus_management", "assistive_listening_devices"],
+    "services": [
+      "audiometric_evaluation",
+      "hearing_aid_fitting",
+      "custom_earmolds",
+      "cerumen_management",
+      "tinnitus_management",
+      "assistive_listening_devices"
+    ],
     "services_advanced_aud": ["tinnitus", "custom_earmolds"],
     "is_va_provider": null,
     "telehealth_offered": false,
@@ -243,10 +323,26 @@
     "rechargeable_promoted": false,
     "hours_pattern": "Mon-Thu 8:30-5; Fri 8:30-12 noon",
     "coasting_tells": [
-      {"tell": "limited_hours_pattern", "evidence": "Mon-Thu full day + Friday half-day only — classic semi-retired pattern", "weight": "high"},
-      {"tell": "no_brands_listed_publicly", "evidence": "No manufacturer brands disclosed on website", "weight": "moderate"},
-      {"tell": "no_rechargeable_promotion", "evidence": "No rechargeable mentions", "weight": "low"},
-      {"tell": "MA_co_audiologist_pre_AuD_era", "evidence": "Hopkins holds MA — pre-AuD (pre-2007) credential indicating multi-decade tenure", "weight": "high"}
+      {
+        "tell": "limited_hours_pattern",
+        "evidence": "Mon-Thu full day + Friday half-day only — classic semi-retired pattern",
+        "weight": "high"
+      },
+      {
+        "tell": "no_brands_listed_publicly",
+        "evidence": "No manufacturer brands disclosed on website",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_rechargeable_promotion",
+        "evidence": "No rechargeable mentions",
+        "weight": "low"
+      },
+      {
+        "tell": "MA_co_audiologist_pre_AuD_era",
+        "evidence": "Hopkins holds MA — pre-AuD (pre-2007) credential indicating multi-decade tenure",
+        "weight": "high"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -255,7 +351,11 @@
     },
     "notes": "HIGH PRIORITY COASTING — Mon-Thu/Fri half-day pattern is the textbook semi-retired-owner tell. Old-school medical center practice (TX Medical Center area). 2017 Physician Practice Quality Improvement Award suggests established credibility. Younger 3rd AuD (Sun Mi Gille) on staff = potential succession.",
     "data_sources": [
-      {"url": "https://www.medicalcenterhearingaids.com/", "fetched_at": "2026-05-16T17:05:00Z", "fields": ["hours", "online_booking", "audiologists", "services"]}
+      {
+        "url": "https://www.medicalcenterhearingaids.com/",
+        "fetched_at": "2026-05-16T17:05:00Z",
+        "fields": ["hours", "online_booking", "audiologists", "services"]
+      }
     ],
     "data_completeness": 0.72
   },
@@ -297,10 +397,26 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Mon-Fri Appointments Only",
     "coasting_tells": [
-      {"tell": "appointments_only_hours", "evidence": "Mon-Fri Appointments Only — solo-owner low-volume pattern", "weight": "high"},
-      {"tell": "solo_audiologist", "evidence": "Solo AuD with no second-chair successor", "weight": "high"},
-      {"tell": "no_advanced_services", "evidence": "No tinnitus/vestibular/cochlear listed publicly", "weight": "moderate"},
-      {"tell": "no_brands_disclosed", "evidence": "No manufacturer brand list on website", "weight": "low"}
+      {
+        "tell": "appointments_only_hours",
+        "evidence": "Mon-Fri Appointments Only — solo-owner low-volume pattern",
+        "weight": "high"
+      },
+      {
+        "tell": "solo_audiologist",
+        "evidence": "Solo AuD with no second-chair successor",
+        "weight": "high"
+      },
+      {
+        "tell": "no_advanced_services",
+        "evidence": "No tinnitus/vestibular/cochlear listed publicly",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_brands_disclosed",
+        "evidence": "No manufacturer brand list on website",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": false,
@@ -309,7 +425,11 @@
     },
     "notes": "HIGH-PRIORITY COASTING — solo AuD-owner, appointments-only schedule, boutique positioning. Classic candidate for owner who is 'managing' rather than growing. Succession risk = HIGH but seller motivation likely strong.",
     "data_sources": [
-      {"url": "https://www.thecenterforhealthyhearing.com/about-us/", "fetched_at": "2026-05-16T17:06:00Z", "fields": ["owner_bio", "school", "tenure"]}
+      {
+        "url": "https://www.thecenterforhealthyhearing.com/about-us/",
+        "fetched_at": "2026-05-16T17:06:00Z",
+        "fields": ["owner_bio", "school", "tenure"]
+      }
     ],
     "data_completeness": 0.65
   },
@@ -350,7 +470,11 @@
     "online_booking": null,
     "rechargeable_promoted": null,
     "coasting_tells": [
-      {"tell": "website_returns_403", "evidence": "centerforaud.com returns 403 — potentially aging/misconfigured infrastructure", "weight": "low"}
+      {
+        "tell": "website_returns_403",
+        "evidence": "centerforaud.com returns 403 — potentially aging/misconfigured infrastructure",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": null,
@@ -359,7 +483,11 @@
     },
     "notes": "Website access restricted (403). Spine confirms 2-location AuD-owned independent since 2008. Owner data needs additional research.",
     "data_sources": [
-      {"url": "https://www.healthyhearing.com/hearing-aids/28940-the-center-for-audiology-houston", "fetched_at": "2026-05-16T17:07:00Z", "fields": ["founder", "locations"]}
+      {
+        "url": "https://www.healthyhearing.com/hearing-aids/28940-the-center-for-audiology-houston",
+        "fetched_at": "2026-05-16T17:07:00Z",
+        "fields": ["founder", "locations"]
+      }
     ],
     "data_completeness": 0.45
   },
@@ -387,13 +515,33 @@
     "owner_tenure_years": 23,
     "family_owner_pair": false,
     "second_audiologist_present": true,
-    "second_audiologist_names": ["Dr. Crystal Wiggins, Au.D., CH-TM (Lamar U 2007)", "Dr. Erika Wilcox, Au.D., CH-TM (Texas Tech)"],
+    "second_audiologist_names": [
+      "Dr. Crystal Wiggins, Au.D., CH-TM (Lamar U 2007)",
+      "Dr. Erika Wilcox, Au.D., CH-TM (Texas Tech)"
+    ],
     "location_count": 1,
     "aud_count": 3,
     "hid_count": 0,
-    "manufacturer_brands": ["Lyric", "Widex", "ReSound", "Phonak", "Oticon", "Starkey", "Signia", "Unitron"],
+    "manufacturer_brands": [
+      "Lyric",
+      "Widex",
+      "ReSound",
+      "Phonak",
+      "Oticon",
+      "Starkey",
+      "Signia",
+      "Unitron"
+    ],
     "manufacturer_brands_count": 8,
-    "services": ["hearing_aid_fitting", "tinnitus_therapy", "Widex_Zen", "Lenire", "vestibular_balance_testing", "earwax_removal", "pediatric_audiology"],
+    "services": [
+      "hearing_aid_fitting",
+      "tinnitus_therapy",
+      "Widex_Zen",
+      "Lenire",
+      "vestibular_balance_testing",
+      "earwax_removal",
+      "pediatric_audiology"
+    ],
     "services_advanced_aud": ["tinnitus", "Lenire", "vestibular", "pediatric"],
     "is_va_provider": true,
     "va_evidence": "Staff includes V.A. Medical Center experience per about page",
@@ -409,7 +557,20 @@
     },
     "notes": "STRONG TARGET — multi-AuD, 8 brands, all advanced services (tinnitus/Lenire/vestibular/pediatric), VA-experienced. Owner Dr. Pourasef is mid-career (46) so seller motivation lower than retirement-age targets — but practice is highly transferable.",
     "data_sources": [
-      {"url": "https://www.memorialhearing.com/audiologist-houston-tx/", "fetched_at": "2026-05-16T17:08:00Z", "fields": ["owner_school", "AuD_grad_year", "founding_year", "all_audiologists", "brands", "services", "hours", "VA"]}
+      {
+        "url": "https://www.memorialhearing.com/audiologist-houston-tx/",
+        "fetched_at": "2026-05-16T17:08:00Z",
+        "fields": [
+          "owner_school",
+          "AuD_grad_year",
+          "founding_year",
+          "all_audiologists",
+          "brands",
+          "services",
+          "hours",
+          "VA"
+        ]
+      }
     ],
     "data_completeness": 0.92
   },
@@ -437,22 +598,39 @@
     "owner_tenure_years": null,
     "family_owner_pair": false,
     "second_audiologist_present": true,
-    "second_audiologist_names": ["Dr. Amanda Fontenot, Au.D. (LSUHSC 2012, joined 2022)", "Dr. Sun Mi Gille, Au.D.", "Dr. Jillian Marshall, Au.D.", "Kathryn Rogers, M.A. CCC-A (pre-AuD era)", "Christina Massey, HIS"],
+    "second_audiologist_names": [
+      "Dr. Amanda Fontenot, Au.D. (LSUHSC 2012, joined 2022)",
+      "Dr. Sun Mi Gille, Au.D.",
+      "Dr. Jillian Marshall, Au.D.",
+      "Kathryn Rogers, M.A. CCC-A (pre-AuD era)",
+      "Christina Massey, HIS"
+    ],
     "location_count": 1,
     "aud_count": 3,
     "hid_count": 1,
     "audiology_assistant_count": null,
     "manufacturer_brands": [],
     "manufacturer_brands_count": null,
-    "services": ["hearing_testing", "hearing_aid_fitting", "hearing_aid_repair", "tinnitus_relief", "hearing_protection", "earwax_management"],
+    "services": [
+      "hearing_testing",
+      "hearing_aid_fitting",
+      "hearing_aid_repair",
+      "tinnitus_relief",
+      "hearing_protection",
+      "earwax_management"
+    ],
     "services_advanced_aud": ["tinnitus"],
     "is_va_provider": null,
     "telehealth_offered": null,
     "online_booking": true,
     "rechargeable_promoted": null,
     "coasting_tells": [
-      {"tell": "no_vestibular_or_cochlear", "evidence": "No vestibular/cochlear services listed", "weight": "low"},
-      {"tell": "brands_not_disclosed", "evidence": "No public brand list", "weight": "low"}
+      {
+        "tell": "no_vestibular_or_cochlear",
+        "evidence": "No vestibular/cochlear services listed",
+        "weight": "low"
+      },
+      { "tell": "brands_not_disclosed", "evidence": "No public brand list", "weight": "low" }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -461,8 +639,16 @@
     },
     "notes": "MA-credentialed audiologist (Rogers) indicates pre-2007 practice origins. Hidden senior owner likely. Dr. Fontenot LSUHSC 2012 joined in 2022 — could be successor in-training. Strong team depth.",
     "data_sources": [
-      {"url": "https://www.thewoodlandshearingcenter.com/team/amanda-fontenot/", "fetched_at": "2026-05-16T17:09:00Z", "fields": ["Fontenot_bio", "AuD_year"]},
-      {"url": "https://www.thewoodlandshearingcenter.com/about-us/", "fetched_at": "2026-05-16T17:09:00Z", "fields": ["team_count", "services", "online_booking"]}
+      {
+        "url": "https://www.thewoodlandshearingcenter.com/team/amanda-fontenot/",
+        "fetched_at": "2026-05-16T17:09:00Z",
+        "fields": ["Fontenot_bio", "AuD_year"]
+      },
+      {
+        "url": "https://www.thewoodlandshearingcenter.com/about-us/",
+        "fetched_at": "2026-05-16T17:09:00Z",
+        "fields": ["team_count", "services", "online_booking"]
+      }
     ],
     "data_completeness": 0.6
   },
@@ -498,7 +684,14 @@
     "audiology_assistant_count": null,
     "manufacturer_brands": [],
     "manufacturer_brands_count": null,
-    "services": ["comprehensive_hearing_assessment", "tinnitus_treatment", "cochlear_implant_evaluation", "balance_vestibular", "earwax_removal", "teleaudiology"],
+    "services": [
+      "comprehensive_hearing_assessment",
+      "tinnitus_treatment",
+      "cochlear_implant_evaluation",
+      "balance_vestibular",
+      "earwax_removal",
+      "teleaudiology"
+    ],
     "services_advanced_aud": ["tinnitus", "cochlear_implant", "vestibular", "teleaudiology"],
     "is_va_provider": null,
     "telehealth_offered": true,
@@ -506,9 +699,17 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Mon-Thu 9-5, Fri 9-1:30",
     "coasting_tells": [
-      {"tell": "limited_friday_hours", "evidence": "Mon-Thu full + Fri-half pattern — suggests partner-level coast on Fridays", "weight": "moderate"},
-      {"tell": "no_online_booking", "evidence": "Callback-only request system, no scheduling widget", "weight": "moderate"},
-      {"tell": "brands_not_disclosed", "evidence": "No public brand list", "weight": "low"}
+      {
+        "tell": "limited_friday_hours",
+        "evidence": "Mon-Thu full + Fri-half pattern — suggests partner-level coast on Fridays",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_online_booking",
+        "evidence": "Callback-only request system, no scheduling widget",
+        "weight": "moderate"
+      },
+      { "tell": "brands_not_disclosed", "evidence": "No public brand list", "weight": "low" }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -517,7 +718,11 @@
     },
     "notes": "STRONG MULTI-CLINIC INDEPENDENT — 4 locations, 9 AuDs, husband-wife co-owners, all advanced services (tinnitus/cochlear/vestibular/teleaudiology). Largest AuD-only independent in NW Houston. Mon-Thu/Fri-half hint of partner-coast.",
     "data_sources": [
-      {"url": "https://hearingwithclarity.com/", "fetched_at": "2026-05-16T17:10:00Z", "fields": ["locations", "audiologists", "services", "hours", "husband_wife_pattern"]}
+      {
+        "url": "https://hearingwithclarity.com/",
+        "fetched_at": "2026-05-16T17:10:00Z",
+        "fields": ["locations", "audiologists", "services", "hours", "husband_wife_pattern"]
+      }
     ],
     "data_completeness": 0.72
   },
@@ -551,15 +756,30 @@
     "hid_count": null,
     "manufacturer_brands": ["Oticon", "Phonak", "ReSound", "Signia", "Starkey", "Unitron", "Widex"],
     "manufacturer_brands_count": 7,
-    "services": ["hearing_evaluations", "hearing_aid_fittings", "earwax_removal_earigator", "remote_hearing_care", "STAP", "hearing_aid_repair"],
+    "services": [
+      "hearing_evaluations",
+      "hearing_aid_fittings",
+      "earwax_removal_earigator",
+      "remote_hearing_care",
+      "STAP",
+      "hearing_aid_repair"
+    ],
     "services_advanced_aud": ["telehealth_remote_care"],
     "is_va_provider": null,
     "telehealth_offered": true,
     "online_booking": true,
     "rechargeable_promoted": null,
     "coasting_tells": [
-      {"tell": "no_tinnitus_vestibular_cochlear", "evidence": "No advanced AuD services listed", "weight": "moderate"},
-      {"tell": "owner_not_publicly_disclosed", "evidence": "No leadership/about page identifying owner", "weight": "low"}
+      {
+        "tell": "no_tinnitus_vestibular_cochlear",
+        "evidence": "No advanced AuD services listed",
+        "weight": "moderate"
+      },
+      {
+        "tell": "owner_not_publicly_disclosed",
+        "evidence": "No leadership/about page identifying owner",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": null,
@@ -568,7 +788,11 @@
     },
     "notes": "HID-led 4-location NW Houston independent. Modern tech (Earigator, remote care, online booking, 7 brands), but no advanced AuD services. Likely sales-volume play vs clinical-depth play. Owner identity needs further enrichment.",
     "data_sources": [
-      {"url": "https://clarkhearing.com/", "fetched_at": "2026-05-16T17:11:00Z", "fields": ["locations", "brands", "services", "online_booking"]}
+      {
+        "url": "https://clarkhearing.com/",
+        "fetched_at": "2026-05-16T17:11:00Z",
+        "fields": ["locations", "brands", "services", "online_booking"]
+      }
     ],
     "data_completeness": 0.5
   },
@@ -602,7 +826,15 @@
     "hid_count": 0,
     "manufacturer_brands": ["Starkey", "Widex", "Phonak", "Oticon"],
     "manufacturer_brands_count": 4,
-    "services": ["hearing_evaluation", "earwax_removal", "hearing_aid_fitting", "repair_programming", "real_ear_measurement", "mobile_in_home_audiology", "online_phone_consultations"],
+    "services": [
+      "hearing_evaluation",
+      "earwax_removal",
+      "hearing_aid_fitting",
+      "repair_programming",
+      "real_ear_measurement",
+      "mobile_in_home_audiology",
+      "online_phone_consultations"
+    ],
     "services_advanced_aud": ["mobile_in_home", "real_ear_measurement", "telehealth"],
     "is_va_provider": null,
     "telehealth_offered": true,
@@ -618,7 +850,11 @@
     },
     "notes": "NOT a coasting target — modern mobile-first practice, young owner, latest tech. Likely NOT a sell candidate but worth tracking as potential roll-up acquirer or comparable.",
     "data_sources": [
-      {"url": "https://novaaudiology.com/", "fetched_at": "2026-05-16T17:12:00Z", "fields": ["owner_school", "brands", "services", "mobile_model"]}
+      {
+        "url": "https://novaaudiology.com/",
+        "fetched_at": "2026-05-16T17:12:00Z",
+        "fields": ["owner_school", "brands", "services", "mobile_model"]
+      }
     ],
     "data_completeness": 0.7
   },
@@ -652,7 +888,15 @@
     "hid_count": 0,
     "manufacturer_brands": [],
     "manufacturer_brands_count": null,
-    "services": ["hearing_aid_fittings", "hearing_tests", "tinnitus_treatment", "VNG_vestibular_balance", "cochlear_implant_evaluation_and_programming", "pediatric_audiology", "earwax_removal"],
+    "services": [
+      "hearing_aid_fittings",
+      "hearing_tests",
+      "tinnitus_treatment",
+      "VNG_vestibular_balance",
+      "cochlear_implant_evaluation_and_programming",
+      "pediatric_audiology",
+      "earwax_removal"
+    ],
     "services_advanced_aud": ["tinnitus", "vestibular_VNG", "cochlear_implant", "pediatric"],
     "is_va_provider": false,
     "va_evidence": "No VA services mentioned",
@@ -661,9 +905,13 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Mon-Thu 8-5, Fri 8-2",
     "coasting_tells": [
-      {"tell": "fri_half_day_hours", "evidence": "Mon-Thu full + Fri-half — classic semi-retired owner pattern", "weight": "high"},
-      {"tell": "no_brands_disclosed", "evidence": "No public brand list", "weight": "low"},
-      {"tell": "no_telehealth", "evidence": "No telehealth/remote care offering", "weight": "low"}
+      {
+        "tell": "fri_half_day_hours",
+        "evidence": "Mon-Thu full + Fri-half — classic semi-retired owner pattern",
+        "weight": "high"
+      },
+      { "tell": "no_brands_disclosed", "evidence": "No public brand list", "weight": "low" },
+      { "tell": "no_telehealth", "evidence": "No telehealth/remote care offering", "weight": "low" }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -672,7 +920,11 @@
     },
     "notes": "STRONG ACQUISITION TARGET — 30-yr owner-AuD with MS-era origins (age ~56), Mon-Thu/Fri-half hours, full advanced AuD services (tinnitus/vestibular/cochlear/pediatric), 3x Sugar Land Readers' Choice winner, 2nd AuD on staff = succession ready.",
     "data_sources": [
-      {"url": "https://www.advancedhearingcentertx.com/about/", "fetched_at": "2026-05-16T17:13:00Z", "fields": ["owner_bio", "school", "founding_year", "hours", "services"]}
+      {
+        "url": "https://www.advancedhearingcentertx.com/about/",
+        "fetched_at": "2026-05-16T17:13:00Z",
+        "fields": ["owner_bio", "school", "founding_year", "hours", "services"]
+      }
     ],
     "data_completeness": 0.88
   },
@@ -701,12 +953,31 @@
     "family_owner_pair": null,
     "second_audiologist_present": false,
     "location_count": 12,
-    "location_list": ["Austin", "Bellaire (HQ)", "Conroe", "Dallas", "Georgetown", "Kingwood", "Pasadena", "Plano", "Spring", "Sugar Land", "Grand Junction CO", "Montrose CO"],
+    "location_list": [
+      "Austin",
+      "Bellaire (HQ)",
+      "Conroe",
+      "Dallas",
+      "Georgetown",
+      "Kingwood",
+      "Pasadena",
+      "Plano",
+      "Spring",
+      "Sugar Land",
+      "Grand Junction CO",
+      "Montrose CO"
+    ],
     "aud_count": 0,
     "hid_count": 11,
     "manufacturer_brands": ["ReSound", "Starkey"],
     "manufacturer_brands_count": 2,
-    "services": ["hearing_aid_services_fitting", "hearing_tests", "earwax_removal", "remote_hearing_care", "tinnitus_treatment"],
+    "services": [
+      "hearing_aid_services_fitting",
+      "hearing_tests",
+      "earwax_removal",
+      "remote_hearing_care",
+      "tinnitus_treatment"
+    ],
     "services_advanced_aud": ["tinnitus", "telehealth"],
     "is_va_provider": null,
     "telehealth_offered": true,
@@ -714,10 +985,26 @@
     "rechargeable_promoted": null,
     "hours_pattern": null,
     "coasting_tells": [
-      {"tell": "limited_2_brands_only", "evidence": "Only ReSound + Starkey — limited multi-brand depth despite 12 locations", "weight": "moderate"},
-      {"tell": "no_AuD_only_HID", "evidence": "11 HIS specialists, zero AuDs — sales-volume model not clinical-depth", "weight": "high"},
-      {"tell": "owner_not_publicly_disclosed", "evidence": "Owner identity not on any About page — privately held with anonymous ownership", "weight": "moderate"},
-      {"tell": "no_vestibular_cochlear", "evidence": "No advanced clinical services beyond tinnitus", "weight": "moderate"}
+      {
+        "tell": "limited_2_brands_only",
+        "evidence": "Only ReSound + Starkey — limited multi-brand depth despite 12 locations",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_AuD_only_HID",
+        "evidence": "11 HIS specialists, zero AuDs — sales-volume model not clinical-depth",
+        "weight": "high"
+      },
+      {
+        "tell": "owner_not_publicly_disclosed",
+        "evidence": "Owner identity not on any About page — privately held with anonymous ownership",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_vestibular_cochlear",
+        "evidence": "No advanced clinical services beyond tinnitus",
+        "weight": "moderate"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": null,
@@ -726,7 +1013,11 @@
     },
     "notes": "HIGH-PRIORITY LARGEST INDEPENDENT TARGET — 12 locations (10 TX + 2 CO), 35 yrs operating since 1991. Owner not publicly disclosed = enrichment priority. HID-only sales model + 2 brands suggests volume play not professional-AuD. Owner age likely 65+ — strong sell-side candidate but PE may already have offers. Spine flags as 'higher-priority enrichment'.",
     "data_sources": [
-      {"url": "https://hearingaidexpress.com/about-us/", "fetched_at": "2026-05-16T17:14:00Z", "fields": ["founding", "locations", "credentials", "brands", "services"]}
+      {
+        "url": "https://hearingaidexpress.com/about-us/",
+        "fetched_at": "2026-05-16T17:14:00Z",
+        "fields": ["founding", "locations", "credentials", "brands", "services"]
+      }
     ],
     "data_completeness": 0.55
   },
@@ -767,7 +1058,11 @@
     },
     "notes": "EXCLUDED — flagged in spine as ENT-affiliated. Do not score for off-market acquisition.",
     "data_sources": [
-      {"url": "https://www.dallasear.com/", "fetched_at": "2026-05-16T17:15:00Z", "fields": ["entity_type"]}
+      {
+        "url": "https://www.dallasear.com/",
+        "fetched_at": "2026-05-16T17:15:00Z",
+        "fields": ["entity_type"]
+      }
     ],
     "data_completeness": 0.2
   },
@@ -804,7 +1099,11 @@
     },
     "notes": "EXCLUDED — flagged in spine as ENT-affiliated. Do not score for off-market acquisition.",
     "data_sources": [
-      {"url": "https://www.owensearcenter.com/", "fetched_at": "2026-05-16T17:16:00Z", "fields": ["entity_type"]}
+      {
+        "url": "https://www.owensearcenter.com/",
+        "fetched_at": "2026-05-16T17:16:00Z",
+        "fields": ["entity_type"]
+      }
     ],
     "data_completeness": 0.15
   },
@@ -838,7 +1137,16 @@
     "hid_count": null,
     "manufacturer_brands": [],
     "manufacturer_brands_count": null,
-    "services": ["hearing_tests", "pediatric_hearing", "hearing_aid_fittings", "tinnitus_management", "hearing_aid_repair", "earwax_management", "mobile_in_home_services", "custom_earmolds"],
+    "services": [
+      "hearing_tests",
+      "pediatric_hearing",
+      "hearing_aid_fittings",
+      "tinnitus_management",
+      "hearing_aid_repair",
+      "earwax_management",
+      "mobile_in_home_services",
+      "custom_earmolds"
+    ],
     "services_advanced_aud": ["tinnitus", "pediatric", "mobile_in_home", "custom_earmolds"],
     "is_va_provider": null,
     "telehealth_offered": false,
@@ -846,9 +1154,17 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Mon-Fri 9am-5pm (all locations)",
     "coasting_tells": [
-      {"tell": "no_vestibular_or_cochlear", "evidence": "No vestibular/cochlear services listed", "weight": "moderate"},
-      {"tell": "owner_not_publicly_disclosed", "evidence": "No owner identification on website", "weight": "moderate"},
-      {"tell": "brands_not_disclosed", "evidence": "No public brand list", "weight": "low"}
+      {
+        "tell": "no_vestibular_or_cochlear",
+        "evidence": "No vestibular/cochlear services listed",
+        "weight": "moderate"
+      },
+      {
+        "tell": "owner_not_publicly_disclosed",
+        "evidence": "No owner identification on website",
+        "weight": "moderate"
+      },
+      { "tell": "brands_not_disclosed", "evidence": "No public brand list", "weight": "low" }
     ],
     "successor_indicators": {
       "second_audiologist_present": null,
@@ -857,7 +1173,11 @@
     },
     "notes": "3-location DFW independent. Self-describes as locally owned. Owner identity needs further enrichment. Full M-F hours (not coasting on hours). Tinnitus + pediatric + mobile services.",
     "data_sources": [
-      {"url": "https://www.trinityhearing.com/about-us/", "fetched_at": "2026-05-16T17:17:00Z", "fields": ["locations", "services", "hours"]}
+      {
+        "url": "https://www.trinityhearing.com/about-us/",
+        "fetched_at": "2026-05-16T17:17:00Z",
+        "fields": ["locations", "services", "hours"]
+      }
     ],
     "data_completeness": 0.55
   },
@@ -891,14 +1211,28 @@
     "audiology_assistant_count": null,
     "manufacturer_brands": ["Widex"],
     "manufacturer_brands_count": 1,
-    "services": ["hearing_tests", "hearing_aid_fittings", "hearing_aid_repairs", "earwax_management", "custom_hearing_protection", "musician_monitors", "captioned_phones", "tinnitus_treatment_Lenire", "vestibular_balance_treatment"],
+    "services": [
+      "hearing_tests",
+      "hearing_aid_fittings",
+      "hearing_aid_repairs",
+      "earwax_management",
+      "custom_hearing_protection",
+      "musician_monitors",
+      "captioned_phones",
+      "tinnitus_treatment_Lenire",
+      "vestibular_balance_treatment"
+    ],
     "services_advanced_aud": ["tinnitus", "Lenire", "vestibular_balance", "musician_monitors"],
     "is_va_provider": null,
     "telehealth_offered": null,
     "online_booking": true,
     "rechargeable_promoted": null,
     "coasting_tells": [
-      {"tell": "limited_brand_disclosure", "evidence": "Only Widex featured publicly — possibly AudigyCertified contract-bound", "weight": "low"}
+      {
+        "tell": "limited_brand_disclosure",
+        "evidence": "Only Widex featured publicly — possibly AudigyCertified contract-bound",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": null,
@@ -907,7 +1241,11 @@
     },
     "notes": "AudigyCertified + HearingLoss.com Certified — high clinical reputation. Owner Blaising solo AuD with full advanced services (tinnitus/Lenire/vestibular/musician monitors). Strong clinical practice.",
     "data_sources": [
-      {"url": "https://www.cityviewhearing.com/", "fetched_at": "2026-05-16T17:18:00Z", "fields": ["owner", "services", "brands"]}
+      {
+        "url": "https://www.cityviewhearing.com/",
+        "fetched_at": "2026-05-16T17:18:00Z",
+        "fields": ["owner", "services", "brands"]
+      }
     ],
     "data_completeness": 0.65
   },
@@ -935,21 +1273,30 @@
     "owner_tenure_years": 31,
     "family_owner_pair": false,
     "second_audiologist_present": true,
-    "second_audiologist_names": ["Rachel Garcia, HID (International Hearing Society member)", "Jordan R. King, Au.D. (University of Tennessee 2023)"],
+    "second_audiologist_names": [
+      "Rachel Garcia, HID (International Hearing Society member)",
+      "Jordan R. King, Au.D. (University of Tennessee 2023)"
+    ],
     "location_count": 2,
     "location_list": ["Allen", "Grapevine"],
     "aud_count": 2,
     "hid_count": 1,
     "manufacturer_brands": [],
     "manufacturer_brands_count": null,
-    "services": ["hearing_evaluation", "balance_disorders", "vestibular_VNG", "tinnitus_management", "concussion_training"],
+    "services": [
+      "hearing_evaluation",
+      "balance_disorders",
+      "vestibular_VNG",
+      "tinnitus_management",
+      "concussion_training"
+    ],
     "services_advanced_aud": ["balance_vestibular", "tinnitus", "concussion"],
     "is_va_provider": null,
     "telehealth_offered": null,
     "online_booking": null,
     "rechargeable_promoted": null,
     "coasting_tells": [
-      {"tell": "no_brands_disclosed", "evidence": "No public brand list", "weight": "low"}
+      { "tell": "no_brands_disclosed", "evidence": "No public brand list", "weight": "low" }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -958,7 +1305,11 @@
     },
     "notes": "STRONG ACQUISITION TARGET — owner Hinrichs age 60+, 31 yrs operating, balance-specialty practice (signature service), 4.9-star reviews (111+), young successor AuD just graduated 2023 (Jordan King). Multi-location.",
     "data_sources": [
-      {"url": "https://www.ahbctexas.com/about-us/", "fetched_at": "2026-05-16T17:19:00Z", "fields": ["owner_school", "AuD_year", "founding_year", "second_AuD"]}
+      {
+        "url": "https://www.ahbctexas.com/about-us/",
+        "fetched_at": "2026-05-16T17:19:00Z",
+        "fields": ["owner_school", "AuD_year", "founding_year", "second_AuD"]
+      }
     ],
     "data_completeness": 0.85
   },
@@ -986,13 +1337,39 @@
     "owner_tenure_years": 13,
     "family_owner_pair": false,
     "second_audiologist_present": true,
-    "second_audiologist_names": ["Dr. Caroline Adams, Au.D.", "Dr. Lydia Zarras, Au.D.", "Dr. Erin Hebert, Au.D., CCC-A, F-AAA"],
+    "second_audiologist_names": [
+      "Dr. Caroline Adams, Au.D.",
+      "Dr. Lydia Zarras, Au.D.",
+      "Dr. Erin Hebert, Au.D., CCC-A, F-AAA"
+    ],
     "location_count": 1,
     "aud_count": 4,
     "hid_count": 0,
-    "manufacturer_brands": ["Widex", "Starkey", "Lyric", "Unitron", "Signia", "Oticon", "ReSound", "Rexton", "Phonak", "CaptionCall"],
+    "manufacturer_brands": [
+      "Widex",
+      "Starkey",
+      "Lyric",
+      "Unitron",
+      "Signia",
+      "Oticon",
+      "ReSound",
+      "Rexton",
+      "Phonak",
+      "CaptionCall"
+    ],
     "manufacturer_brands_count": 10,
-    "services": ["tinnitus_relief", "audiometry", "speech_testing", "tympanometry", "ABR_auditory_brainstem", "OAE_otoacoustic_emissions", "hearing_aid_fittings", "earwax_management", "hearing_aid_repair", "hearing_protection"],
+    "services": [
+      "tinnitus_relief",
+      "audiometry",
+      "speech_testing",
+      "tympanometry",
+      "ABR_auditory_brainstem",
+      "OAE_otoacoustic_emissions",
+      "hearing_aid_fittings",
+      "earwax_management",
+      "hearing_aid_repair",
+      "hearing_protection"
+    ],
     "services_advanced_aud": ["tinnitus", "ABR", "OAE"],
     "is_va_provider": null,
     "telehealth_offered": null,
@@ -1006,7 +1383,11 @@
     },
     "notes": "NOT a classic coasting target — younger owner (45), 10-brand professional dispenser, full diagnostic battery (ABR/OAE/tympanometry), 4-AuD team. Likely operating well — possible roll-up acquirer rather than seller. NPI 1679815435.",
     "data_sources": [
-      {"url": "https://www.carsonhearing.com/about-us/", "fetched_at": "2026-05-16T17:20:00Z", "fields": ["owners", "services", "brands"]}
+      {
+        "url": "https://www.carsonhearing.com/about-us/",
+        "fetched_at": "2026-05-16T17:20:00Z",
+        "fields": ["owners", "services", "brands"]
+      }
     ],
     "data_completeness": 0.8
   },
@@ -1041,7 +1422,15 @@
     "hid_count": 0,
     "manufacturer_brands": [],
     "manufacturer_brands_count": null,
-    "services": ["hearing_testing", "hearing_aid_fitting", "hearing_aid_repair", "hearing_protection", "earwax_management", "tinnitus_relief", "in_home_services_cedar_hill"],
+    "services": [
+      "hearing_testing",
+      "hearing_aid_fitting",
+      "hearing_aid_repair",
+      "hearing_protection",
+      "earwax_management",
+      "tinnitus_relief",
+      "in_home_services_cedar_hill"
+    ],
     "services_advanced_aud": ["tinnitus", "mobile_in_home"],
     "is_va_provider": null,
     "telehealth_offered": null,
@@ -1049,11 +1438,23 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Arlington Mon-Thu 8:30-5, Fri 8:30-1",
     "coasting_tells": [
-      {"tell": "MS_owner_pre_AuD_era", "evidence": "Marylyn Koble holds MS (pre-2007 credential) — solo MS audiologist, classic retiring-owner profile", "weight": "high"},
-      {"tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "high"},
-      {"tell": "no_successor_audiologist", "evidence": "No other audiologist on staff — solo MS practitioner", "weight": "high"},
-      {"tell": "no_vestibular_cochlear", "evidence": "No advanced AuD services", "weight": "moderate"},
-      {"tell": "no_brands_disclosed", "evidence": "No public brand list", "weight": "low"}
+      {
+        "tell": "MS_owner_pre_AuD_era",
+        "evidence": "Marylyn Koble holds MS (pre-2007 credential) — solo MS audiologist, classic retiring-owner profile",
+        "weight": "high"
+      },
+      { "tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "high" },
+      {
+        "tell": "no_successor_audiologist",
+        "evidence": "No other audiologist on staff — solo MS practitioner",
+        "weight": "high"
+      },
+      {
+        "tell": "no_vestibular_cochlear",
+        "evidence": "No advanced AuD services",
+        "weight": "moderate"
+      },
+      { "tell": "no_brands_disclosed", "evidence": "No public brand list", "weight": "low" }
     ],
     "successor_indicators": {
       "second_audiologist_present": false,
@@ -1062,7 +1463,11 @@
     },
     "notes": "HIGHEST-PRIORITY COASTING TARGET — solo MS-credentialed audiologist (pre-AuD era), Fri-short hours, no successor in place. Age likely 60+. Strong sell-side candidate.",
     "data_sources": [
-      {"url": "https://www.audiologyassociates.com/", "fetched_at": "2026-05-16T17:21:00Z", "fields": ["owner_credentials", "locations", "hours", "services"]}
+      {
+        "url": "https://www.audiologyassociates.com/",
+        "fetched_at": "2026-05-16T17:21:00Z",
+        "fields": ["owner_credentials", "locations", "hours", "services"]
+      }
     ],
     "data_completeness": 0.65
   },
@@ -1106,8 +1511,16 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Mon-Thu 9-5, Fri 9-3",
     "coasting_tells": [
-      {"tell": "fri_short_hours", "evidence": "Mon-Thu 9-5 + Fri-3pm — somewhat lighter Fri", "weight": "low"},
-      {"tell": "founder_recently_transitioned", "evidence": "Just transitioned 2025 — practice in renewal phase", "weight": "low"}
+      {
+        "tell": "fri_short_hours",
+        "evidence": "Mon-Thu 9-5 + Fri-3pm — somewhat lighter Fri",
+        "weight": "low"
+      },
+      {
+        "tell": "founder_recently_transitioned",
+        "evidence": "Just transitioned 2025 — practice in renewal phase",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -1116,7 +1529,11 @@
     },
     "notes": "NOT a near-term seller — succession just completed 2025 (Fell→Gracia). Gracia now early-career owner, Fell still practicing as senior associate. Worth tracking for 5-10 year horizon. Proves succession path works for similar AuD practices.",
     "data_sources": [
-      {"url": "https://www.audiologyexperts.com/meet-our-team/", "fetched_at": "2026-05-16T17:22:00Z", "fields": ["owner_transition_year", "schools", "experience"]}
+      {
+        "url": "https://www.audiologyexperts.com/meet-our-team/",
+        "fetched_at": "2026-05-16T17:22:00Z",
+        "fields": ["owner_transition_year", "schools", "experience"]
+      }
     ],
     "data_completeness": 0.78
   },
@@ -1144,7 +1561,11 @@
     "owner_tenure_years": null,
     "family_owner_pair": false,
     "second_audiologist_present": true,
-    "second_audiologist_names": ["Debra Crawford, MA, CCC-A, F-AAA (pre-AuD era, age ~58+)", "Matthew Lee, Au.D.", "Taylor Jones, Au.D."],
+    "second_audiologist_names": [
+      "Debra Crawford, MA, CCC-A, F-AAA (pre-AuD era, age ~58+)",
+      "Matthew Lee, Au.D.",
+      "Taylor Jones, Au.D."
+    ],
     "location_count": 2,
     "location_list": ["Arlington", "Fort Worth"],
     "aud_count": 3,
@@ -1152,7 +1573,13 @@
     "hid_count": 0,
     "manufacturer_brands": ["Starkey", "all major manufacturers"],
     "manufacturer_brands_count": 2,
-    "services": ["hearing_loss_testing", "tinnitus_management_Lenire", "balance_vestibular", "hearing_aid_fittings", "custom_earplugs"],
+    "services": [
+      "hearing_loss_testing",
+      "tinnitus_management_Lenire",
+      "balance_vestibular",
+      "hearing_aid_fittings",
+      "custom_earplugs"
+    ],
     "services_advanced_aud": ["tinnitus", "Lenire", "vestibular"],
     "is_va_provider": null,
     "telehealth_offered": null,
@@ -1160,8 +1587,12 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Arlington Mon-Thu 9-5, Fri 8-1; FW Mon/Wed 8-4, Tue/Thu 8-5, Fri 8-3",
     "coasting_tells": [
-      {"tell": "fri_short_hours", "evidence": "Arlington Fri 8-1 only", "weight": "moderate"},
-      {"tell": "Kos_partner_not_present", "evidence": "Kos founder appears no longer practicing — partial succession already executed", "weight": "low"}
+      { "tell": "fri_short_hours", "evidence": "Arlington Fri 8-1 only", "weight": "moderate" },
+      {
+        "tell": "Kos_partner_not_present",
+        "evidence": "Kos founder appears no longer practicing — partial succession already executed",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -1170,7 +1601,11 @@
     },
     "notes": "STRONG MULTI-DECADE TARGET — 42 yrs operating since 1984, Danchak senior owner age ~60, Crawford MS-era senior, but 2 younger AuDs (Lee, Jones) in place = built-in succession. Lenire + vestibular advanced services. 2 locations.",
     "data_sources": [
-      {"url": "https://kdaud.com/about/", "fetched_at": "2026-05-16T17:23:00Z", "fields": ["founding_year", "audiologists", "services", "hours"]}
+      {
+        "url": "https://kdaud.com/about/",
+        "fetched_at": "2026-05-16T17:23:00Z",
+        "fields": ["founding_year", "audiologists", "services", "hours"]
+      }
     ],
     "data_completeness": 0.85
   },
@@ -1205,7 +1640,16 @@
     "hid_count": 0,
     "manufacturer_brands": [],
     "manufacturer_brands_count": null,
-    "services": ["hearing_evaluations", "hearing_aid_fittings", "tinnitus_relief", "cochlear_implant_consultations", "earwax_management", "teleaudiology", "custom_earmolds", "hearing_aid_repair"],
+    "services": [
+      "hearing_evaluations",
+      "hearing_aid_fittings",
+      "tinnitus_relief",
+      "cochlear_implant_consultations",
+      "earwax_management",
+      "teleaudiology",
+      "custom_earmolds",
+      "hearing_aid_repair"
+    ],
     "services_advanced_aud": ["tinnitus", "cochlear_implant", "teleaudiology", "custom_earmolds"],
     "is_va_provider": null,
     "telehealth_offered": true,
@@ -1213,7 +1657,7 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Mon-Thu 8-5, Fri 8-12",
     "coasting_tells": [
-      {"tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "moderate"}
+      { "tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "moderate" }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -1222,7 +1666,11 @@
     },
     "notes": "GOOD TARGET — Owner Dr. Gomer 50, founding member TX Academy of Audiology (industry leader), 2-location practice, young AuD successor (Turner 32), full advanced services (tinnitus/cochlear/teleaudiology). Mid-tenure owner — 5-10 year window.",
     "data_sources": [
-      {"url": "https://www.gomerhearing.com/about-us/", "fetched_at": "2026-05-16T17:24:00Z", "fields": ["owners", "Turner_bio", "services", "hours"]}
+      {
+        "url": "https://www.gomerhearing.com/about-us/",
+        "fetched_at": "2026-05-16T17:24:00Z",
+        "fields": ["owners", "Turner_bio", "services", "hours"]
+      }
     ],
     "data_completeness": 0.82
   },
@@ -1263,11 +1711,27 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Mon-Fri 9-5",
     "coasting_tells": [
-      {"tell": "solo_owner_no_successor", "evidence": "Solo audiologist, no second-chair audiologist on staff", "weight": "high"},
-      {"tell": "no_online_booking", "evidence": "Phone-only scheduling", "weight": "high"},
-      {"tell": "no_advanced_services", "evidence": "No tinnitus/vestibular/cochlear/teleaudiology — basic dispenser model", "weight": "high"},
-      {"tell": "no_VA_no_telehealth", "evidence": "No VA contract, no telehealth — pure retail walk-in model", "weight": "moderate"},
-      {"tell": "Medicare_advantage_focus", "evidence": "Marketing centered on insurance/Medicare patients — older demographic, classic small-town indie", "weight": "low"}
+      {
+        "tell": "solo_owner_no_successor",
+        "evidence": "Solo audiologist, no second-chair audiologist on staff",
+        "weight": "high"
+      },
+      { "tell": "no_online_booking", "evidence": "Phone-only scheduling", "weight": "high" },
+      {
+        "tell": "no_advanced_services",
+        "evidence": "No tinnitus/vestibular/cochlear/teleaudiology — basic dispenser model",
+        "weight": "high"
+      },
+      {
+        "tell": "no_VA_no_telehealth",
+        "evidence": "No VA contract, no telehealth — pure retail walk-in model",
+        "weight": "moderate"
+      },
+      {
+        "tell": "Medicare_advantage_focus",
+        "evidence": "Marketing centered on insurance/Medicare patients — older demographic, classic small-town indie",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": false,
@@ -1276,7 +1740,11 @@
     },
     "notes": "VERY HIGH COASTING SCORE — solo 35-yr operator age ~62, no online booking, no advanced services, no successor. Classic retiring-owner profile. 6-brand stack is solid but services are basic. Strong sell-side candidate but small ticket size.",
     "data_sources": [
-      {"url": "https://www.advancedaudiologycenter.com/", "fetched_at": "2026-05-16T17:25:00Z", "fields": ["owner", "tenure", "brands", "services", "online_booking"]}
+      {
+        "url": "https://www.advancedaudiologycenter.com/",
+        "fetched_at": "2026-05-16T17:25:00Z",
+        "fields": ["owner", "tenure", "brands", "services", "online_booking"]
+      }
     ],
     "data_completeness": 0.78
   },
@@ -1311,7 +1779,15 @@
     "hid_count": 0,
     "manufacturer_brands": ["all major manufacturers"],
     "manufacturer_brands_count": null,
-    "services": ["comprehensive_hearing_assessments", "advanced_hearing_aids", "tinnitus_treatment", "custom_earmolds_earplugs", "hearing_aid_repair", "hearing_protection", "earwax_removal"],
+    "services": [
+      "comprehensive_hearing_assessments",
+      "advanced_hearing_aids",
+      "tinnitus_treatment",
+      "custom_earmolds_earplugs",
+      "hearing_aid_repair",
+      "hearing_protection",
+      "earwax_removal"
+    ],
     "services_advanced_aud": ["tinnitus", "custom_earmolds"],
     "is_va_provider": null,
     "telehealth_offered": null,
@@ -1319,9 +1795,17 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Mon-Thu 8-5, Fri 8-12",
     "coasting_tells": [
-      {"tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "moderate"},
-      {"tell": "no_vestibular_cochlear", "evidence": "No vestibular/cochlear/teleaudiology services", "weight": "moderate"},
-      {"tell": "brands_not_disclosed", "evidence": "All major manufacturers — no specific brand list", "weight": "low"}
+      { "tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "moderate" },
+      {
+        "tell": "no_vestibular_cochlear",
+        "evidence": "No vestibular/cochlear/teleaudiology services",
+        "weight": "moderate"
+      },
+      {
+        "tell": "brands_not_disclosed",
+        "evidence": "All major manufacturers — no specific brand list",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -1330,7 +1814,11 @@
     },
     "notes": "STRONG MID-CAREER TARGET — Dr. McCormick age ~48, founded 2006 (20 yrs), 2-AuD team, Mon-Thu+Fri-half pattern. Tinnitus + custom earmolds but no vestibular/cochlear. Solid acquisition fit for 5-10 yr horizon.",
     "data_sources": [
-      {"url": "https://familyaud.com/", "fetched_at": "2026-05-16T17:26:00Z", "fields": ["owners", "founding_year", "services", "hours"]}
+      {
+        "url": "https://familyaud.com/",
+        "fetched_at": "2026-05-16T17:26:00Z",
+        "fields": ["owners", "founding_year", "services", "hours"]
+      }
     ],
     "data_completeness": 0.78
   },
@@ -1363,7 +1851,14 @@
     "hid_count": 0,
     "manufacturer_brands": [],
     "manufacturer_brands_count": null,
-    "services": ["hearing_testing", "hearing_aid_fitting", "tinnitus_management", "vestibular_audiologic_diagnostic_testing", "hearing_aid_repair", "hearing_conservation"],
+    "services": [
+      "hearing_testing",
+      "hearing_aid_fitting",
+      "tinnitus_management",
+      "vestibular_audiologic_diagnostic_testing",
+      "hearing_aid_repair",
+      "hearing_conservation"
+    ],
     "services_advanced_aud": ["tinnitus", "vestibular", "diagnostic_audiology"],
     "is_va_provider": null,
     "telehealth_offered": null,
@@ -1371,8 +1866,16 @@
     "rechargeable_promoted": null,
     "hours_pattern": null,
     "coasting_tells": [
-      {"tell": "solo_audiologist_no_successor", "evidence": "Solo AuD owner, no second AuD on staff", "weight": "high"},
-      {"tell": "no_phone_disclosed_on_about_page", "evidence": "Phone not surfaced in public bio", "weight": "low"}
+      {
+        "tell": "solo_audiologist_no_successor",
+        "evidence": "Solo AuD owner, no second AuD on staff",
+        "weight": "high"
+      },
+      {
+        "tell": "no_phone_disclosed_on_about_page",
+        "evidence": "Phone not surfaced in public bio",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": false,
@@ -1381,7 +1884,11 @@
     },
     "notes": "HIGH-PRIORITY COASTING — solo AuD owner age ~62, 37-yr career, 'Best Audiologist Frisco' award winner, vestibular + tinnitus advanced services, but NO successor AuD on staff. Strong sell candidate with clinical-depth premium.",
     "data_sources": [
-      {"url": "https://audiologyproviderspc.com/about", "fetched_at": "2026-05-16T17:27:00Z", "fields": ["owner_bio", "schools", "tenure", "services"]}
+      {
+        "url": "https://audiologyproviderspc.com/about",
+        "fetched_at": "2026-05-16T17:27:00Z",
+        "fields": ["owner_bio", "schools", "tenure", "services"]
+      }
     ],
     "data_completeness": 0.78
   },
@@ -1429,7 +1936,11 @@
     },
     "notes": "NOT a sell candidate — young owner (38), 7-yr practice, mobile-first emerging model. Track only.",
     "data_sources": [
-      {"url": "https://www.mobileaudiologyofnorthtexas.com/", "fetched_at": "2026-05-16T17:28:00Z", "fields": ["owner", "founding_year", "model"]}
+      {
+        "url": "https://www.mobileaudiologyofnorthtexas.com/",
+        "fetched_at": "2026-05-16T17:28:00Z",
+        "fields": ["owner", "founding_year", "model"]
+      }
     ],
     "data_completeness": 0.55
   },
@@ -1463,7 +1974,18 @@
     "hid_count": 0,
     "manufacturer_brands": ["all major manufacturers"],
     "manufacturer_brands_count": null,
-    "services": ["comprehensive_hearing_assessments", "hearing_aid_fitting", "hearing_aid_repair", "hearing_protection", "balance_disorders", "dizziness_management", "tinnitus_treatment", "earwax_removal", "auditory_processing_disorder_APD", "assistive_listening_devices"],
+    "services": [
+      "comprehensive_hearing_assessments",
+      "hearing_aid_fitting",
+      "hearing_aid_repair",
+      "hearing_protection",
+      "balance_disorders",
+      "dizziness_management",
+      "tinnitus_treatment",
+      "earwax_removal",
+      "auditory_processing_disorder_APD",
+      "assistive_listening_devices"
+    ],
     "services_advanced_aud": ["balance_vestibular", "tinnitus", "APD"],
     "is_va_provider": null,
     "telehealth_offered": null,
@@ -1471,8 +1993,12 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Mon-Thu 8:30-5, Fri 8:30-12",
     "coasting_tells": [
-      {"tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "moderate"},
-      {"tell": "brands_not_disclosed", "evidence": "All major manufacturers — no specific list", "weight": "low"}
+      { "tell": "fri_short_hours", "evidence": "Mon-Thu full + Fri-half", "weight": "moderate" },
+      {
+        "tell": "brands_not_disclosed",
+        "evidence": "All major manufacturers — no specific list",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -1481,7 +2007,11 @@
     },
     "notes": "STRONG MULTI-DECADE TARGET — 40 yrs operating since 1986 (spine inferred), self-described 'only Doctors of Audiology that have ever been in private practice in Denton'. 2-AuD team, balance/vestibular + APD specialty (rare combo). Mon-Thu/Fri-half hint of senior partner. 4.9-star reviews.",
     "data_sources": [
-      {"url": "https://dentonhearing.com/", "fetched_at": "2026-05-16T17:29:00Z", "fields": ["owners", "services", "hours", "founding_inferred"]}
+      {
+        "url": "https://dentonhearing.com/",
+        "fetched_at": "2026-05-16T17:29:00Z",
+        "fields": ["owners", "services", "hours", "founding_inferred"]
+      }
     ],
     "data_completeness": 0.78
   },
@@ -1516,7 +2046,14 @@
     "support_staff_count_named": "Michael Mische (Financial Director, former Army Ranger/Green Beret)",
     "manufacturer_brands": [],
     "manufacturer_brands_count": null,
-    "services": ["hearing_tests", "hearing_aid_fittings", "hearing_aid_optimization", "assistive_listening_devices", "hearing_protection", "tinnitus_support"],
+    "services": [
+      "hearing_tests",
+      "hearing_aid_fittings",
+      "hearing_aid_optimization",
+      "assistive_listening_devices",
+      "hearing_protection",
+      "tinnitus_support"
+    ],
     "services_advanced_aud": ["tinnitus", "musician_specialty"],
     "is_va_provider": null,
     "va_aligned_evidence": "Financial Director is former Army Ranger/Green Beret — likely veteran-friendly practice but no formal VA contract verified",
@@ -1525,9 +2062,17 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Mon-Fri 9:30-5",
     "coasting_tells": [
-      {"tell": "solo_PhD_no_successor", "evidence": "Solo PhD audiologist, no AuD successor", "weight": "high"},
-      {"tell": "no_online_booking", "evidence": "Phone-only scheduling", "weight": "moderate"},
-      {"tell": "boutique_no_advanced_services", "evidence": "No vestibular/cochlear/teleaudiology — small boutique", "weight": "moderate"}
+      {
+        "tell": "solo_PhD_no_successor",
+        "evidence": "Solo PhD audiologist, no AuD successor",
+        "weight": "high"
+      },
+      { "tell": "no_online_booking", "evidence": "Phone-only scheduling", "weight": "moderate" },
+      {
+        "tell": "boutique_no_advanced_services",
+        "evidence": "No vestibular/cochlear/teleaudiology — small boutique",
+        "weight": "moderate"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": false,
@@ -1536,7 +2081,11 @@
     },
     "notes": "HIGH-PRIORITY COASTING — solo PhD audiologist age ~55+, BBB-accredited boutique, owner herself wears hearing aids (personal mission practice). No successor, no online booking. Strong sell candidate but small. Veteran-friendly market angle.",
     "data_sources": [
-      {"url": "https://colorfulhearing.com/about/", "fetched_at": "2026-05-16T17:30:00Z", "fields": ["owner_bio", "tenure", "services", "hours"]}
+      {
+        "url": "https://colorfulhearing.com/about/",
+        "fetched_at": "2026-05-16T17:30:00Z",
+        "fields": ["owner_bio", "tenure", "services", "hours"]
+      }
     ],
     "data_completeness": 0.72
   },
@@ -1564,14 +2113,25 @@
     "owner_tenure_years": 13,
     "family_owner_pair": false,
     "second_audiologist_present": true,
-    "second_audiologist_names": ["Dr. Amanda Zappler, Au.D.", "Angela Wooten, M.S. (founder of separate Lakeview Hearing Center, retired 2018; 40 yrs experience)"],
+    "second_audiologist_names": [
+      "Dr. Amanda Zappler, Au.D.",
+      "Angela Wooten, M.S. (founder of separate Lakeview Hearing Center, retired 2018; 40 yrs experience)"
+    ],
     "location_count": 1,
     "aud_count": 2,
     "ms_credentialed_count": 1,
     "hid_count": 0,
     "manufacturer_brands": [],
     "manufacturer_brands_count": null,
-    "services": ["hearing_aid_evaluation", "hearing_aid_fitting", "hearing_aid_repair", "comprehensive_hearing_tests", "tinnitus_treatment_Lenire", "misophonia_evaluation", "hearing_protection"],
+    "services": [
+      "hearing_aid_evaluation",
+      "hearing_aid_fitting",
+      "hearing_aid_repair",
+      "comprehensive_hearing_tests",
+      "tinnitus_treatment_Lenire",
+      "misophonia_evaluation",
+      "hearing_protection"
+    ],
     "services_advanced_aud": ["tinnitus", "Lenire", "misophonia"],
     "is_va_provider": null,
     "telehealth_offered": null,
@@ -1579,10 +2139,26 @@
     "rechargeable_promoted": null,
     "hours_pattern": "Mon-Thu 9-4 only (closed Fri-Sun)",
     "coasting_tells": [
-      {"tell": "mon_thu_only_no_friday", "evidence": "Mon-Thu 9-4 only — closed Friday-Sunday. 4-day week is strong semi-retired / lifestyle-practice signal", "weight": "very_high"},
-      {"tell": "limited_hours_4_day_week", "evidence": "9am-4pm 4 days/week = 28 hr clinical week", "weight": "high"},
-      {"tell": "MS_senior_attached", "evidence": "Angela Wooten MS (40 yrs experience) — semi-retired senior", "weight": "moderate"},
-      {"tell": "founder_likely_aging_out", "evidence": "Practice founded 1983 — original founder likely Wooten or similar", "weight": "moderate"}
+      {
+        "tell": "mon_thu_only_no_friday",
+        "evidence": "Mon-Thu 9-4 only — closed Friday-Sunday. 4-day week is strong semi-retired / lifestyle-practice signal",
+        "weight": "very_high"
+      },
+      {
+        "tell": "limited_hours_4_day_week",
+        "evidence": "9am-4pm 4 days/week = 28 hr clinical week",
+        "weight": "high"
+      },
+      {
+        "tell": "MS_senior_attached",
+        "evidence": "Angela Wooten MS (40 yrs experience) — semi-retired senior",
+        "weight": "moderate"
+      },
+      {
+        "tell": "founder_likely_aging_out",
+        "evidence": "Practice founded 1983 — original founder likely Wooten or similar",
+        "weight": "moderate"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -1591,7 +2167,11 @@
     },
     "notes": "VERY HIGH-PRIORITY COASTING — 43 yrs operating since 1983, Mon-Thu 9-4 only schedule (closed Fri-Sun) is the strongest hours-pattern coast tell in this dataset. Wooten MS founder semi-retired. Archer AuD just joined 2022 as successor. Lenire + misophonia advanced clinical specialty. Strong acquisition + transition target.",
     "data_sources": [
-      {"url": "https://austinhearingaidcenter.com/about-us/", "fetched_at": "2026-05-16T17:31:00Z", "fields": ["audiologists", "Archer_school", "AuD_year", "Wooten_history", "hours"]}
+      {
+        "url": "https://austinhearingaidcenter.com/about-us/",
+        "fetched_at": "2026-05-16T17:31:00Z",
+        "fields": ["audiologists", "Archer_school", "AuD_year", "Wooten_history", "hours"]
+      }
     ],
     "data_completeness": 0.85
   },
@@ -1620,7 +2200,10 @@
     "family_owner_pair": true,
     "family_owner_pair_evidence": "Co-founder business partnership (not family — Rivers + Krueger separate surnames). Female AuD partnership.",
     "second_audiologist_present": true,
-    "second_audiologist_names": ["Dr. Victoria Villarreal, Au.D. (Lead Westlake)", "Dr. Tony Milesi, Au.D. (Lead South Austin)"],
+    "second_audiologist_names": [
+      "Dr. Victoria Villarreal, Au.D. (Lead Westlake)",
+      "Dr. Tony Milesi, Au.D. (Lead South Austin)"
+    ],
     "location_count": 2,
     "location_list": ["Westlake", "South Austin"],
     "aud_count": 4,
@@ -1628,15 +2211,30 @@
     "support_staff_named": "Venessa Rector (Director of Clinical Operations)",
     "manufacturer_brands": ["ReSound", "Lyric"],
     "manufacturer_brands_count": 2,
-    "services": ["ear_cleaning", "evaluation_consultation", "hearing_aid_care", "misophonia_treatment", "tinnitus_Lenire", "custom_hearing_protection"],
+    "services": [
+      "ear_cleaning",
+      "evaluation_consultation",
+      "hearing_aid_care",
+      "misophonia_treatment",
+      "tinnitus_Lenire",
+      "custom_hearing_protection"
+    ],
     "services_advanced_aud": ["tinnitus", "Lenire", "misophonia"],
     "is_va_provider": null,
     "telehealth_offered": null,
     "online_booking": true,
     "rechargeable_promoted": null,
     "coasting_tells": [
-      {"tell": "limited_brands_2_only", "evidence": "Only ReSound + Lyric publicly featured — limited brand depth", "weight": "moderate"},
-      {"tell": "no_vestibular_cochlear", "evidence": "No vestibular/cochlear services listed", "weight": "moderate"}
+      {
+        "tell": "limited_brands_2_only",
+        "evidence": "Only ReSound + Lyric publicly featured — limited brand depth",
+        "weight": "moderate"
+      },
+      {
+        "tell": "no_vestibular_cochlear",
+        "evidence": "No vestibular/cochlear services listed",
+        "weight": "moderate"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": true,
@@ -1645,7 +2243,11 @@
     },
     "notes": "STRONG PARTNERSHIP TARGET — 2-AuD co-owner partnership (Rivers + Krueger), 2 locations with lead AuDs (Villarreal, Milesi) as built-in successors. Lenire + misophonia clinical specialty. Both owners likely 50-60 age range. Premium Austin/Westlake market.",
     "data_sources": [
-      {"url": "https://rkaudiology.com/about-us/", "fetched_at": "2026-05-16T17:32:00Z", "fields": ["co_owners", "locations", "leads", "services", "brands"]}
+      {
+        "url": "https://rkaudiology.com/about-us/",
+        "fetched_at": "2026-05-16T17:32:00Z",
+        "fields": ["co_owners", "locations", "leads", "services", "brands"]
+      }
     ],
     "data_completeness": 0.7
   },
@@ -1686,8 +2288,16 @@
     "online_booking": null,
     "rechargeable_promoted": null,
     "coasting_tells": [
-      {"tell": "solo_AuD_no_successor", "evidence": "Solo mobile practitioner — no team, no second AuD", "weight": "moderate"},
-      {"tell": "lifestyle_practice_pattern", "evidence": "Mobile-first solo model = lifestyle business, lower acquisition multiple", "weight": "low"}
+      {
+        "tell": "solo_AuD_no_successor",
+        "evidence": "Solo mobile practitioner — no team, no second AuD",
+        "weight": "moderate"
+      },
+      {
+        "tell": "lifestyle_practice_pattern",
+        "evidence": "Mobile-first solo model = lifestyle business, lower acquisition multiple",
+        "weight": "low"
+      }
     ],
     "successor_indicators": {
       "second_audiologist_present": false,
@@ -1696,7 +2306,11 @@
     },
     "notes": "Solo AuD lifestyle practice — age ~46, mobile-only. Lower priority for acquisition (no fixed location, smaller revenue, solo). Track only.",
     "data_sources": [
-      {"url": "https://www.healthyhearing.com/hearing-aids/TX-Texas/Austin", "fetched_at": "2026-05-16T17:33:00Z", "fields": ["owner_school", "AuD_grad", "mobile_model"]}
+      {
+        "url": "https://www.healthyhearing.com/hearing-aids/TX-Texas/Austin",
+        "fetched_at": "2026-05-16T17:33:00Z",
+        "fields": ["owner_school", "AuD_grad", "mobile_model"]
+      }
     ],
     "data_completeness": 0.6
   }

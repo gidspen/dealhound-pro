@@ -37,10 +37,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "42-yr-old TX-founded independent at 25 trucks with multi-city footprint. Plausibly solo-owner approaching retirement. Verify entity + owner via Comptroller and TDLR ACR license holder lookup before outreach.",
     "data_sources": [
-      {"url": "https://www.airtexasmechanical.com/about-us", "fields": ["founded_year", "service_mix", "locations"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.airtexasmechanical.com/about-us",
+        "fields": ["founded_year", "service_mix", "locations"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.4,
-    "next_verification_steps": ["TX Comptroller franchise tax lookup", "TDLR ACR license holder lookup", "LinkedIn company page for employee count + leadership"]
+    "next_verification_steps": [
+      "TX Comptroller franchise tax lookup",
+      "TDLR ACR license holder lookup",
+      "LinkedIn company page for employee count + leadership"
+    ]
   },
   {
     "spine_index": 48,
@@ -80,10 +88,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "23-yr-old commercial+plumbing LLC, owner-operator couple (Juan/Rosie Gloria). 3-market footprint (DFW + HOU + SA) at 15 trucks is unusual scale for husband-wife — possible operator stretched thin, succession candidate.",
     "data_sources": [
-      {"url": "https://texasairmechanical.com/about-us/", "fields": ["founders", "service_mix"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://texasairmechanical.com/about-us/",
+        "fields": ["founders", "service_mix"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.55,
-    "next_verification_steps": ["TX Comptroller franchise tax lookup", "Juan Gloria LinkedIn for age proxy", "TDLR ACR license issue date"]
+    "next_verification_steps": [
+      "TX Comptroller franchise tax lookup",
+      "Juan Gloria LinkedIn for age proxy",
+      "TDLR ACR license issue date"
+    ]
   },
   {
     "spine_index": 49,
@@ -123,10 +139,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "Classic solo-owner Texas shop: eponymous brand, 28 yrs, 15 trucks, single market. Bill Casey is named TDLR license holder — succession risk is the whole business.",
     "data_sources": [
-      {"url": "https://caseysheetmetal.com/", "fields": ["founded_year", "owner"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://caseysheetmetal.com/",
+        "fields": ["founded_year", "owner"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.55,
-    "next_verification_steps": ["TX Comptroller for entity status + officers", "Bill Casey age via TDLR or property records", "TDLR ACR license issue date"]
+    "next_verification_steps": [
+      "TX Comptroller for entity status + officers",
+      "Bill Casey age via TDLR or property records",
+      "TDLR ACR license issue date"
+    ]
   },
   {
     "spine_index": 50,
@@ -165,10 +189,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "2nd-gen family with 14-yr ownership tenure (since 2012). Niche multifamily HVAC focus is desirable to PE/strategic buyers. Stacey Pearson's age proxy = approaching exit window.",
     "data_sources": [
-      {"url": "https://pearsonair.com/whoweare/", "fields": ["founder", "owner", "founded_year"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://pearsonair.com/whoweare/",
+        "fields": ["founder", "owner", "founded_year"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.6,
-    "next_verification_steps": ["TX Comptroller", "Stacey Pearson LinkedIn for grad year (owner age confirmation)", "Tarrant CAD homestead for age"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "Stacey Pearson LinkedIn for grad year (owner age confirmation)",
+      "Tarrant CAD homestead for age"
+    ]
   },
   {
     "spine_index": 51,
@@ -208,10 +240,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "Two-partner shop, both 60ish, 21 yrs in. P.E.-driven design-build is hard to staff but commands premium. Owner exit likely simultaneous (partnership pairs often sell together).",
     "data_sources": [
-      {"url": "https://www.momentummechanical.com/leadership.html", "fields": ["founders", "founded_year"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.momentummechanical.com/leadership.html",
+        "fields": ["founders", "founded_year"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.6,
-    "next_verification_steps": ["TX Comptroller for officers/registered agent", "Rutledge LinkedIn grad year (age)", "TBPE PE license lookup"]
+    "next_verification_steps": [
+      "TX Comptroller for officers/registered agent",
+      "Rutledge LinkedIn grad year (age)",
+      "TBPE PE license lookup"
+    ]
   },
   {
     "spine_index": 52,
@@ -250,10 +290,17 @@
     "is_sellable_target": false,
     "is_sellable_target_reason": "Owner Mike Trevino Jr. is too young (~50) for typical 12–36 month exit window. Revisit in 5–10 years. Defer.",
     "data_sources": [
-      {"url": "https://www.bbb.org/us/tx/dallas/profile/heating-and-air-conditioning/innovation-hvac-services-llc-0875-90945572", "fields": ["founded_year", "owner", "revenue_band"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.bbb.org/us/tx/dallas/profile/heating-and-air-conditioning/innovation-hvac-services-llc-0875-90945572",
+        "fields": ["founded_year", "owner", "revenue_band"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.55,
-    "next_verification_steps": ["Mike Trevino Jr. LinkedIn grad year", "TX Comptroller for entity officers"]
+    "next_verification_steps": [
+      "Mike Trevino Jr. LinkedIn grad year",
+      "TX Comptroller for entity officers"
+    ]
   },
   {
     "spine_index": 53,
@@ -282,9 +329,7 @@
     "nebb_tab_certified": "unknown",
     "ashrae_member": false,
     "license_class": "TDLR ACR Class A",
-    "coasting_tells": [
-      "out_of_state_770_phone_=_NOT_a_TX_independent_(possible_GA_HQ)"
-    ],
+    "coasting_tells": ["out_of_state_770_phone_=_NOT_a_TX_independent_(possible_GA_HQ)"],
     "coasting_tells_confidence": "moderate",
     "distress_signals": [],
     "is_distressed": false,
@@ -292,10 +337,17 @@
     "is_sellable_target_reason": "Phone area code 770 = Atlanta GA. Rogers Mechanical (RMC IGA) is the Atlanta-based industrial firm with a Mansfield TX office. NOT a Texas independent — disqualifying.",
     "disqualification_flag": "out_of_state_HQ_GA_based_industrial_mechanical_firm",
     "data_sources": [
-      {"url": "https://downtobid.com/contractors/hvac/dallas", "fields": ["founded_year"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://downtobid.com/contractors/hvac/dallas",
+        "fields": ["founded_year"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.3,
-    "next_verification_steps": ["Confirm RMC IGA = Rogers Mechanical Contractors of Georgia (Industrial)", "If TX-independent verify via SOS"]
+    "next_verification_steps": [
+      "Confirm RMC IGA = Rogers Mechanical Contractors of Georgia (Industrial)",
+      "If TX-independent verify via SOS"
+    ]
   },
   {
     "spine_index": 54,
@@ -335,10 +387,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "45-yr-old WBENC-certified TX shop with marquee GC client list (Turner, Rogers-O'Brien). High-quality customer base + likely owner-operator near retirement. Verify ownership identity for diligence.",
     "data_sources": [
-      {"url": "https://www.rm4hvac.com/about", "fields": ["founded_year", "WBENC", "clients"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.rm4hvac.com/about",
+        "fields": ["founded_year", "WBENC", "clients"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.5,
-    "next_verification_steps": ["TX Comptroller for officers", "WBENC public directory for owner name", "TDLR ACR license holder"]
+    "next_verification_steps": [
+      "TX Comptroller for officers",
+      "WBENC public directory for owner name",
+      "TDLR ACR license holder"
+    ]
   },
   {
     "spine_index": 55,
@@ -377,10 +437,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "Multi-decade design-build mid-size with mission-critical chops (data centers, hospitals). Multi-generation independents often sell to PE in their late-50s years-in-business window.",
     "data_sources": [
-      {"url": "https://www.handgsystems.com/", "fields": ["founded_year", "license"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.handgsystems.com/",
+        "fields": ["founded_year", "license"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.4,
-    "next_verification_steps": ["TX Comptroller for officers/registered agent", "TDLR ACR TACLA55390C license holder identity", "LinkedIn company leadership search"]
+    "next_verification_steps": [
+      "TX Comptroller for officers/registered agent",
+      "TDLR ACR TACLA55390C license holder identity",
+      "LinkedIn company leadership search"
+    ]
   },
   {
     "spine_index": 56,
@@ -420,10 +488,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "Classic A-tier target: 49-yr-old founder-led with Chris Goolsby still on license. Age proxy ~70 puts owner squarely in exit window. Solo-owner shop sized for ETA/searchfund.",
     "data_sources": [
-      {"url": "https://www.etcair.com/", "fields": ["founded_year", "owner"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.etcair.com/",
+        "fields": ["founded_year", "owner"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.6,
-    "next_verification_steps": ["TX Comptroller", "Chris Goolsby age via Dallas CAD homestead/property records", "TDLR ACR license issue date"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "Chris Goolsby age via Dallas CAD homestead/property records",
+      "TDLR ACR license issue date"
+    ]
   },
   {
     "spine_index": 57,
@@ -464,10 +540,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "A-tier: 80-yr-old shop, Doug Saffell on license for 42 yrs (age proxy 67), legacy HTTP-only website, no 3rd-gen succession visible. Textbook coasting solo-owner ready to retire.",
     "data_sources": [
-      {"url": "http://www.saffellplumbing.com/aboutus.html", "fields": ["founder", "owner", "family", "founded_year"], "fetched_at": "2026-05-16"}
+      {
+        "url": "http://www.saffellplumbing.com/aboutus.html",
+        "fields": ["founder", "owner", "family", "founded_year"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.65,
-    "next_verification_steps": ["TX Comptroller", "Doug Saffell DOB via Dallas CAD homestead", "TX Plumbing Board Master license issue date"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "Doug Saffell DOB via Dallas CAD homestead",
+      "TX Plumbing Board Master license issue date"
+    ]
   },
   {
     "spine_index": 58,
@@ -496,16 +580,18 @@
     "nebb_tab_certified": "unknown",
     "ashrae_member": false,
     "license_class": "TDLR ACR Class A",
-    "coasting_tells": [
-      "growth_signals_3_state_expansion_+_premier_dealer_=_NOT_coasting"
-    ],
+    "coasting_tells": ["growth_signals_3_state_expansion_+_premier_dealer_=_NOT_coasting"],
     "coasting_tells_confidence": "low",
     "distress_signals": [],
     "is_distressed": false,
     "is_sellable_target": false,
     "is_sellable_target_reason": "Active multi-state growth (LA, MS expansions) + Lennox Premier Dealer status + 1000+ installs/yr suggests owners are NOT in exit mode. Possible strategic buyer / acquirer, not seller. Defer.",
     "data_sources": [
-      {"url": "https://www.bellmechanical.com/about/", "fields": ["founded_year", "family_owners"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.bellmechanical.com/about/",
+        "fields": ["founded_year", "family_owners"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.55,
     "next_verification_steps": ["TX Comptroller for officers", "Bell family LinkedIn for age"]
@@ -548,10 +634,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "49-yr-old shop in Denton County with in-house fabrication. Classic coasting solo-owner profile if owner verifies as founder. Identify ownership first.",
     "data_sources": [
-      {"url": "https://www.ablemech.com/about-2/", "fields": ["founded_year", "services"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.ablemech.com/about-2/",
+        "fields": ["founded_year", "services"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.4,
-    "next_verification_steps": ["TX Comptroller", "TDLR ACR license holder lookup", "Denton CAD search for owner property"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "TDLR ACR license holder lookup",
+      "Denton CAD search for owner property"
+    ]
   },
   {
     "spine_index": 60,
@@ -590,10 +684,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "25-yr-old certified diverse business with strong public-sector pipeline. WBE/HUB cert is transferable but tied to owner identity — sellable to similar-profile buyer or PE adding diverse-cert capability.",
     "data_sources": [
-      {"url": "https://ntdmechanical.com/", "fields": ["founded_year", "certifications"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://ntdmechanical.com/",
+        "fields": ["founded_year", "certifications"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.5,
-    "next_verification_steps": ["TX Comptroller", "TX HUB directory for owner identity", "WBENC public directory"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "TX HUB directory for owner identity",
+      "WBENC public directory"
+    ]
   },
   {
     "spine_index": 61,
@@ -632,10 +734,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "39-yr-old single-market shop, niche big-box/retail HVAC focus is desirable to PE rollups. Verify owner identity for sellability.",
     "data_sources": [
-      {"url": "https://www.travishvacr.com/", "fields": ["founded_year", "license"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.travishvacr.com/",
+        "fields": ["founded_year", "license"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.4,
-    "next_verification_steps": ["TX Comptroller", "TDLR ACR TACLA14326C license holder", "TX SOS officer search"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "TDLR ACR TACLA14326C license holder",
+      "TX SOS officer search"
+    ]
   },
   {
     "spine_index": 62,
@@ -674,10 +784,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "Jamal Gharbieh, founder ~65, with sons (Mohammad VP + Zak President) running operations. Mid-succession family with named owner identity — classic 12–36 month sellability window if sons are not ready/willing to fully take over.",
     "data_sources": [
-      {"url": "https://www.q1es.com/about-us/", "fields": ["founder", "family", "owners"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.q1es.com/about-us/",
+        "fields": ["founder", "family", "owners"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.65,
-    "next_verification_steps": ["TX Comptroller for entity officers", "Jamal Gharbieh TBPE P.E. license issue date for age", "LinkedIn for Zak/Mohammad grad year"]
+    "next_verification_steps": [
+      "TX Comptroller for entity officers",
+      "Jamal Gharbieh TBPE P.E. license issue date for age",
+      "LinkedIn for Zak/Mohammad grad year"
+    ]
   },
   {
     "spine_index": 63,
@@ -706,19 +824,24 @@
     "nebb_tab_certified": "unknown",
     "ashrae_member": false,
     "license_class": "TDLR ACR Class A",
-    "coasting_tells": [
-      "actively_growing_to_150_staff_in_17_yrs_=_NOT_coasting"
-    ],
+    "coasting_tells": ["actively_growing_to_150_staff_in_17_yrs_=_NOT_coasting"],
     "coasting_tells_confidence": "low",
     "distress_signals": [],
     "is_distressed": false,
     "is_sellable_target": false,
     "is_sellable_target_reason": "Owner ~55, 150+ staff growth trajectory, statewide expansion. Acquirer profile, not exit candidate. May be revisited but too large + too young for typical ETA target.",
     "data_sources": [
-      {"url": "https://dallasmechanicalgroup.com/about", "fields": ["founded_year", "founder", "team_size"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://dallasmechanicalgroup.com/about",
+        "fields": ["founded_year", "founder", "team_size"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.5,
-    "next_verification_steps": ["TX Comptroller to verify entity + John Smith identity", "Confirm not confused with Ambient Enterprises DMG (CA)"]
+    "next_verification_steps": [
+      "TX Comptroller to verify entity + John Smith identity",
+      "Confirm not confused with Ambient Enterprises DMG (CA)"
+    ]
   },
   {
     "spine_index": 64,
@@ -758,10 +881,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "Husband-wife shop where spouse runs a separate career (DVM). Solo-operator Ricky is the business — succession risk is the entire enterprise. Veteran-owned with award recognition = attractive small acquisition.",
     "data_sources": [
-      {"url": "https://www.texastotalcomfortsystems.com/", "fields": ["owners", "family", "veteran"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.texastotalcomfortsystems.com/",
+        "fields": ["owners", "family", "veteran"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.55,
-    "next_verification_steps": ["TX Comptroller", "Ricky Cox LinkedIn / VA records for veteran status + age", "Tarrant CAD for homestead/age"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "Ricky Cox LinkedIn / VA records for veteran status + age",
+      "Tarrant CAD for homestead/age"
+    ]
   },
   {
     "spine_index": 65,
@@ -800,10 +931,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "Sub-$5M husband-wife shop, 19 yrs in, single-market. Ideal ETA / searchfund target if owners are ready in 12–36 months. Eddie's TDLR license issue date is the age proxy to verify.",
     "data_sources": [
-      {"url": "https://generationshvac.com/about-us/", "fields": ["founders", "family", "founded_year"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://generationshvac.com/about-us/",
+        "fields": ["founders", "family", "founded_year"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.65,
-    "next_verification_steps": ["TX Comptroller", "Eddie Pessin TDLR license issue date (age proxy)", "Williamson CAD homestead"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "Eddie Pessin TDLR license issue date (age proxy)",
+      "Williamson CAD homestead"
+    ]
   },
   {
     "spine_index": 66,
@@ -843,10 +982,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "27-yr commercial-pure niche shop with specialty work (kitchens, hydronic). Husband-wife at 55-60 = classic 12–36 month exit window. Niche specialty premium-priced for buyers.",
     "data_sources": [
-      {"url": "https://madcomech.com/", "fields": ["founders", "family", "experience"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://madcomech.com/",
+        "fields": ["founders", "family", "experience"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.65,
-    "next_verification_steps": ["TX Comptroller", "Matt Dunn TDLR 29654C license issue date", "Travis CAD homestead"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "Matt Dunn TDLR 29654C license issue date",
+      "Travis CAD homestead"
+    ]
   },
   {
     "spine_index": 67,
@@ -885,10 +1032,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "Dual-entity structure (Inc + Inc holding company) is classic estate planning move. 31-yr-old Austin commercial with $100M project pedigree + BAS capability = high-quality PE/strategic target.",
     "data_sources": [
-      {"url": "https://aircraftinc.net/about-us/", "fields": ["founded_year", "services"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://aircraftinc.net/about-us/",
+        "fields": ["founded_year", "services"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.5,
-    "next_verification_steps": ["TX Comptroller for both entities", "TX SOS officers for both Air Craft Inc + Consolidated Metal Technologies", "TDLR ACR license holder"]
+    "next_verification_steps": [
+      "TX Comptroller for both entities",
+      "TX SOS officers for both Air Craft Inc + Consolidated Metal Technologies",
+      "TDLR ACR license holder"
+    ]
   },
   {
     "spine_index": 68,
@@ -928,10 +1083,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "31-yr-old solo-owner. Owner is 60ish per HVAC tenure + B.S. background. ACCA leadership = signals owner is grooming exit / sees industry consolidation. Strong target if Mike Creamer's age proxy confirms.",
     "data_sources": [
-      {"url": "https://www.c2mech.com/", "fields": ["owner", "experience"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.c2mech.com/",
+        "fields": ["owner", "experience"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.6,
-    "next_verification_steps": ["TX Comptroller", "Mike Creamer LinkedIn for grad year (age)", "Williamson CAD"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "Mike Creamer LinkedIn for grad year (age)",
+      "Williamson CAD"
+    ]
   },
   {
     "spine_index": 69,
@@ -960,17 +1123,23 @@
     "nebb_tab_certified": "unknown",
     "ashrae_member": false,
     "license_class": "TDLR ACR Class A — TACLA56268E",
-    "coasting_tells": [
-      "small_shop_too_new_to_be_coasting"
-    ],
+    "coasting_tells": ["small_shop_too_new_to_be_coasting"],
     "coasting_tells_confidence": "low",
     "distress_signals": [],
     "is_distressed": false,
     "is_sellable_target": false,
     "is_sellable_target_reason": "Owner Craig Stark is too young (~50) and business too new (13 yrs) for typical exit window. Defer 5–10 years.",
     "data_sources": [
-      {"url": "https://www.orchardmechanical.com/about", "fields": ["owner", "founded_year", "license"], "fetched_at": "2026-05-16"},
-      {"url": "https://www.bbb.org/us/tx/georgetown/profile/commercial-air-conditioning-contractors/orchard-mechanical-llc-0825-1000132448", "fields": ["start_date", "owner"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.orchardmechanical.com/about",
+        "fields": ["owner", "founded_year", "license"],
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/georgetown/profile/commercial-air-conditioning-contractors/orchard-mechanical-llc-0825-1000132448",
+        "fields": ["start_date", "owner"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.6,
     "next_verification_steps": ["TX Comptroller", "Craig Stark LinkedIn grad year"]
@@ -1013,10 +1182,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "27-yr-old multi-market MEP self-claiming 'largest local' position. 'Sons' implies the founders' kids are running it — they're now the ones at exit-window age. Strong PE/searchfund candidate.",
     "data_sources": [
-      {"url": "https://www.minyardcompany.com/about", "fields": ["experience", "services", "family"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.minyardcompany.com/about",
+        "fields": ["experience", "services", "family"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.45,
-    "next_verification_steps": ["TX Comptroller for Minyard family officers", "TDLR ACR license holder", "Minyard family on Williamson CAD"]
+    "next_verification_steps": [
+      "TX Comptroller for Minyard family officers",
+      "TDLR ACR license holder",
+      "Minyard family on Williamson CAD"
+    ]
   },
   {
     "spine_index": 71,
@@ -1045,16 +1222,18 @@
     "nebb_tab_certified": "unknown",
     "ashrae_member": false,
     "license_class": "TDLR ACR Class A",
-    "coasting_tells": [
-      "too_young_to_be_coasting"
-    ],
+    "coasting_tells": ["too_young_to_be_coasting"],
     "coasting_tells_confidence": "very_low",
     "distress_signals": [],
     "is_distressed": false,
     "is_sellable_target": false,
     "is_sellable_target_reason": "Owner Mark Scarborough is ~45 with 11-yr-old business in growth mode (national GC client list = active pipeline). Defer 10+ years.",
     "data_sources": [
-      {"url": "https://texascomfortair.com/about-us/", "fields": ["founded_year", "founder"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://texascomfortair.com/about-us/",
+        "fields": ["founded_year", "founder"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.55,
     "next_verification_steps": ["TX Comptroller", "Mark Scarborough LinkedIn"]
@@ -1086,16 +1265,18 @@
     "nebb_tab_certified": "unknown",
     "ashrae_member": false,
     "license_class": "TDLR ACR Class A — TACLA140716",
-    "coasting_tells": [
-      "too_young_too_new_to_be_coasting"
-    ],
+    "coasting_tells": ["too_young_too_new_to_be_coasting"],
     "coasting_tells_confidence": "very_low",
     "distress_signals": [],
     "is_distressed": false,
     "is_sellable_target": false,
     "is_sellable_target_reason": "Founder ~40, 9-yr-old business. Outside exit window. Defer.",
     "data_sources": [
-      {"url": "https://buildpromechanical.com/about/", "fields": ["founded_year", "owner"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://buildpromechanical.com/about/",
+        "fields": ["founded_year", "owner"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.6,
     "next_verification_steps": ["TX Comptroller", "Ereli Jaramillo LinkedIn"]
@@ -1137,10 +1318,17 @@
     "is_sellable_target": false,
     "is_sellable_target_reason": "Owner ~50 + 17 yrs in business is borderline-young for typical exit window. Defer 5–10 years unless verification reveals older owner.",
     "data_sources": [
-      {"url": "https://www.guevaraairconditioningcompany.com/", "fields": ["founded_year", "family"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.guevaraairconditioningcompany.com/",
+        "fields": ["founded_year", "family"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.4,
-    "next_verification_steps": ["TX Comptroller for Guevara family officer name", "TDLR ACR license holder"]
+    "next_verification_steps": [
+      "TX Comptroller for Guevara family officer name",
+      "TDLR ACR license holder"
+    ]
   },
   {
     "spine_index": 74,
@@ -1180,10 +1368,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "22-yr-old shop with national retail GC accounts (transferable contracts = premium). Identify owner via Comptroller before further work.",
     "data_sources": [
-      {"url": "https://downtobid.com/contractors/hvac/austin", "fields": ["founded_year", "services"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://downtobid.com/contractors/hvac/austin",
+        "fields": ["founded_year", "services"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.35,
-    "next_verification_steps": ["TX Comptroller", "TDLR ACR license holder", "Millcon LinkedIn officers"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "TDLR ACR license holder",
+      "Millcon LinkedIn officers"
+    ]
   },
   {
     "spine_index": 75,
@@ -1220,7 +1416,11 @@
     "is_sellable_target_reason": "Not a field-service HVAC contractor. BIM/VDC consultancy is a different business model — design-services revenue with no truck fleet or recurring service base. DISQUALIFY for HVAC contractor acquisition thesis.",
     "disqualification_flag": "wrong_business_model_BIM_consultancy_not_field_contractor",
     "data_sources": [
-      {"url": "https://diaspherebim.com/", "fields": ["services", "specialty"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://diaspherebim.com/",
+        "fields": ["services", "specialty"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.25,
     "next_verification_steps": ["N/A — disqualified"]
@@ -1262,10 +1462,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "15-yr-old Distech/Tridium-authorized controls integrator with diverse client verticals. Controls specialists are PE-attractive (high margin, recurring service). Need owner identity + age verification.",
     "data_sources": [
-      {"url": "https://www.gotoautomation.com/", "fields": ["founded_year", "services", "clients"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.gotoautomation.com/",
+        "fields": ["founded_year", "services", "clients"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.5,
-    "next_verification_steps": ["TX Comptroller for officer identity", "TDLR ACR license holder", "LinkedIn"]
+    "next_verification_steps": [
+      "TX Comptroller for officer identity",
+      "TDLR ACR license holder",
+      "LinkedIn"
+    ]
   },
   {
     "spine_index": 77,
@@ -1305,10 +1513,18 @@
     "is_sellable_target_reason": "Multi-license MEP at 60 trucks + 26 yrs is large but family-named (Jeff + Kenneth Jr.) — typical generational transition window. Likely above ETA small-business threshold but interesting PE/strategic target. Flag size.",
     "size_flag": "above_typical_ETA_threshold_likely_$30M_plus_rev",
     "data_sources": [
-      {"url": "https://kilgoreind.com/", "fields": ["founded_year", "licenses"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://kilgoreind.com/",
+        "fields": ["founded_year", "licenses"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.6,
-    "next_verification_steps": ["TX Comptroller for LP partners", "TBPE + electrical board for Kilgore license issue dates", "Kona Equity revenue verification"]
+    "next_verification_steps": [
+      "TX Comptroller for LP partners",
+      "TBPE + electrical board for Kilgore license issue dates",
+      "Kona Equity revenue verification"
+    ]
   },
   {
     "spine_index": 78,
@@ -1347,8 +1563,16 @@
     "is_sellable_target": false,
     "is_sellable_target_reason": "3-yr-old startup is too young to acquire. Owner Donice Hartman is age-appropriate but business needs 5–7 more years of operating history to be saleable. Revisit 2030+.",
     "data_sources": [
-      {"url": "https://www.hartmancomfortsolutions.com/about-us", "fields": ["founders", "family"], "fetched_at": "2026-05-16"},
-      {"url": "https://www.bbb.org/us/tx/conroe/profile/heating-and-air-conditioning/hartman-comfort-solutions-0915-90069221", "fields": ["start_date"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.hartmancomfortsolutions.com/about-us",
+        "fields": ["founders", "family"],
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "url": "https://www.bbb.org/us/tx/conroe/profile/heating-and-air-conditioning/hartman-comfort-solutions-0915-90069221",
+        "fields": ["start_date"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.5,
     "next_verification_steps": ["Defer 5+ years"]
@@ -1390,10 +1614,18 @@
     "is_sellable_target_reason": "Possibly already PE-acquired via 'Lex Cooling' sibling entity on PrivSource Texas HVAC acquisitions list. DO NOT contact without confirming independence — high risk of duplicate-of-acquired-entity.",
     "disqualification_flag": "possible_PE_owned_via_Lex_Cooling_PrivSource_listing",
     "data_sources": [
-      {"url": "https://www.lexairconditioning.com/about-us/", "fields": ["experience", "family_ownership"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.lexairconditioning.com/about-us/",
+        "fields": ["experience", "family_ownership"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.3,
-    "next_verification_steps": ["Verify NOT same entity as Lex Cooling on PrivSource list", "TX Comptroller for officer ownership", "PitchBook / Mergr / PrivSource cross-ref"]
+    "next_verification_steps": [
+      "Verify NOT same entity as Lex Cooling on PrivSource list",
+      "TX Comptroller for officer ownership",
+      "PitchBook / Mergr / PrivSource cross-ref"
+    ]
   },
   {
     "spine_index": 80,
@@ -1433,10 +1665,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "3rd-gen family at 48 yrs in N. Dallas growth corridor (McKinney, Frisco). Strong brand + Carrier Premier dealer = premium-priced asset. Family succession to 4th gen is the question — if no 4th-gen kids in business, classic sale candidate.",
     "data_sources": [
-      {"url": "https://joplins.net/about-us/", "fields": ["founded_year", "family"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://joplins.net/about-us/",
+        "fields": ["founded_year", "family"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.5,
-    "next_verification_steps": ["TX Comptroller for Joplin family officers", "Identify current owner-operator + 4th-gen status", "Collin CAD"]
+    "next_verification_steps": [
+      "TX Comptroller for Joplin family officers",
+      "Identify current owner-operator + 4th-gen status",
+      "Collin CAD"
+    ]
   },
   {
     "spine_index": 81,
@@ -1476,10 +1716,14 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "50-yr-old Frisco/Plano shop in high-growth corridor. Family-feel + no named owner suggests legacy operator near retirement. Solid territory + brand = attractive small acquisition. Verify owner via Comptroller.",
     "data_sources": [
-      {"url": "https://www.colonyac.com/", "fields": ["experience"], "fetched_at": "2026-05-16"}
+      { "url": "https://www.colonyac.com/", "fields": ["experience"], "fetched_at": "2026-05-16" }
     ],
     "data_completeness": 0.4,
-    "next_verification_steps": ["TX Comptroller", "TDLR ACR license holder", "Collin CAD homestead for owner age"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "TDLR ACR license holder",
+      "Collin CAD homestead for owner age"
+    ]
   },
   {
     "spine_index": 82,
@@ -1519,10 +1763,17 @@
     "is_sellable_target": false,
     "is_sellable_target_reason": "Owners ~55 with 19 yrs in business — typically 5–10 years from typical exit. Borderline; revisit in 2030.",
     "data_sources": [
-      {"url": "https://goldenrulecomfort.com/", "fields": ["founded_year", "owner", "family"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://goldenrulecomfort.com/",
+        "fields": ["founded_year", "owner", "family"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.55,
-    "next_verification_steps": ["TX Comptroller", "James Miller LinkedIn (very common name — careful verification)"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "James Miller LinkedIn (very common name — careful verification)"
+    ]
   },
   {
     "spine_index": 83,
@@ -1563,10 +1814,17 @@
     "is_sellable_target": false,
     "is_sellable_target_reason": "Co-founders ~45 with 10-yr-old business in growth mode. Outside exit window. Also: requires careful verification against Chill Brothers' 'Optimal Air' acquisition (excluded per spine meta). Defer.",
     "data_sources": [
-      {"url": "https://optimalairsolutions.com/", "fields": ["founded_year", "owners"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://optimalairsolutions.com/",
+        "fields": ["founded_year", "owners"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.5,
-    "next_verification_steps": ["Verify NOT the Optimal Air on Chill Brothers acquisition list", "TX Comptroller"]
+    "next_verification_steps": [
+      "Verify NOT the Optimal Air on Chill Brothers acquisition list",
+      "TX Comptroller"
+    ]
   },
   {
     "spine_index": 84,
@@ -1609,10 +1867,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "Distress signal makes this either a) acquisition opportunity for someone willing to dig in cold or b) already-defunct. Verify entity status FIRST via Comptroller before any time investment.",
     "data_sources": [
-      {"url": "https://downtobid.com/contractors/hvac/houston", "fields": ["address", "phone"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://downtobid.com/contractors/hvac/houston",
+        "fields": ["address", "phone"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.25,
-    "next_verification_steps": ["TX Comptroller for franchise tax status (most important)", "TDLR ACR license active check", "Drive-by Schumacher Ln Houston to verify operating"]
+    "next_verification_steps": [
+      "TX Comptroller for franchise tax status (most important)",
+      "TDLR ACR license active check",
+      "Drive-by Schumacher Ln Houston to verify operating"
+    ]
   },
   {
     "spine_index": 85,
@@ -1651,10 +1917,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "Diversified client base (healthcare + govt + education) is high-quality recurring service. Need to identify ownership vs license-holder distinction and founded year. Verify entity status.",
     "data_sources": [
-      {"url": "https://www.graymechanical.com/about-us/", "fields": ["license", "services"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.graymechanical.com/about-us/",
+        "fields": ["license", "services"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.4,
-    "next_verification_steps": ["TX Comptroller", "TDLR ACR TACLA000045915C license issue date", "TX SOS officers / entity formation year"]
+    "next_verification_steps": [
+      "TX Comptroller",
+      "TDLR ACR TACLA000045915C license issue date",
+      "TX SOS officers / entity formation year"
+    ]
   },
   {
     "spine_index": 86,
@@ -1694,10 +1968,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "52-yr-old 3rd-gen Houston family. Refrigeration capability is desirable to PE rollups. Need to identify current generation operating + 4th-gen status. Verify via Comptroller for Tennyson family officers.",
     "data_sources": [
-      {"url": "https://www.tennysonac.com/about-us/", "fields": ["founded_year", "family_ownership"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.tennysonac.com/about-us/",
+        "fields": ["founded_year", "family_ownership"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.5,
-    "next_verification_steps": ["TX Comptroller for Tennyson family officers", "Identify current operating owner + age", "Harris CAD"]
+    "next_verification_steps": [
+      "TX Comptroller for Tennyson family officers",
+      "Identify current operating owner + age",
+      "Harris CAD"
+    ]
   },
   {
     "spine_index": 87,
@@ -1737,11 +2019,23 @@
     "is_sellable_target_reason": "FLAG: 'SE Acquisition Sub' in Natalia Gawlik v. Houk Air Conditioning Inc. court filing strongly suggests this entity was acquired by a PE platform 'SE' (possibly Service Experts / Service Logic / etc.) sometime in/after 2024. DO NOT contact without independence verification. Likely already PE-owned.",
     "disqualification_flag": "probable_2024_PE_acquisition_via_SE_acquisition_sub_court_co_defendant",
     "data_sources": [
-      {"url": "https://houkac.com/about/", "fields": ["founded_year", "family"], "fetched_at": "2026-05-16"},
-      {"url": "https://www.konaequity.com/company/houk-air-conditioning-inc-4391696978/", "fields": ["revenue"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://houkac.com/about/",
+        "fields": ["founded_year", "family"],
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "url": "https://www.konaequity.com/company/houk-air-conditioning-inc-4391696978/",
+        "fields": ["revenue"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.45,
-    "next_verification_steps": ["URGENT: Verify 'SE Acquisition Sub' identity via court case Natalia Gawlik v. Houk Air Conditioning Inc.", "PitchBook + Mergr + PrivSource cross-ref for Houk acquisition", "TX SOS recent ownership filings"]
+    "next_verification_steps": [
+      "URGENT: Verify 'SE Acquisition Sub' identity via court case Natalia Gawlik v. Houk Air Conditioning Inc.",
+      "PitchBook + Mergr + PrivSource cross-ref for Houk acquisition",
+      "TX SOS recent ownership filings"
+    ]
   },
   {
     "spine_index": 88,
@@ -1781,10 +2075,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "East Texas industrial HVAC niche (500-ton chillers, boilers) — high-value technical work in a market with fewer PE buyers. Identify owner identity + founded year via Comptroller.",
     "data_sources": [
-      {"url": "https://robertsonmech.com/projects/hvac/", "fields": ["services", "project_portfolio"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://robertsonmech.com/projects/hvac/",
+        "fields": ["services", "project_portfolio"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.3,
-    "next_verification_steps": ["TX Comptroller for Robertson family officers + entity formation year", "TDLR ACR license holder", "Smith CAD"]
+    "next_verification_steps": [
+      "TX Comptroller for Robertson family officers + entity formation year",
+      "TDLR ACR license holder",
+      "Smith CAD"
+    ]
   },
   {
     "spine_index": 89,
@@ -1813,20 +2115,24 @@
     "nebb_tab_certified": "unknown",
     "ashrae_member": false,
     "license_class": "TDLR ACR Class A",
-    "coasting_tells": [
-      "no_named_owner_on_public_about_page",
-      "too_young_(13_yrs)_to_be_coasting"
-    ],
+    "coasting_tells": ["no_named_owner_on_public_about_page", "too_young_(13_yrs)_to_be_coasting"],
     "coasting_tells_confidence": "low",
     "distress_signals": [],
     "is_distressed": false,
     "is_sellable_target": false,
     "is_sellable_target_reason": "13-yr-old shop. Without owner identity + age, cannot validate exit window. Defer until verification or revisit in 5–10 years.",
     "data_sources": [
-      {"url": "https://www.pandemechanical.com/", "fields": ["founded_year"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.pandemechanical.com/",
+        "fields": ["founded_year"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.3,
-    "next_verification_steps": ["TX Comptroller for P&E officers", "Identify 'P' + 'E' principal names"]
+    "next_verification_steps": [
+      "TX Comptroller for P&E officers",
+      "Identify 'P' + 'E' principal names"
+    ]
   },
   {
     "spine_index": 90,
@@ -1866,10 +2172,18 @@
     "is_sellable_target": true,
     "is_sellable_target_reason": "60+ yr-old central TX commercial/industrial mid-size at 40 trucks. Multi-generation legacy operator profile. Verify owner identity + founded year FIRST via Comptroller.",
     "data_sources": [
-      {"url": "https://www.wacoinc.net/commercial-hvac-systems/", "fields": ["services", "experience"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://www.wacoinc.net/commercial-hvac-systems/",
+        "fields": ["services", "experience"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.35,
-    "next_verification_steps": ["TX Comptroller for entity formation year + officers", "TDLR ACR license holder", "McLennan CAD"]
+    "next_verification_steps": [
+      "TX Comptroller for entity formation year + officers",
+      "TDLR ACR license holder",
+      "McLennan CAD"
+    ]
   },
   {
     "spine_index": 91,
@@ -1903,17 +2217,23 @@
       "no_named_owner_or_public_About"
     ],
     "coasting_tells_confidence": "high",
-    "distress_signals": [
-      "no_website_in_2026_=_strong_owner_disengagement_signal"
-    ],
+    "distress_signals": ["no_website_in_2026_=_strong_owner_disengagement_signal"],
     "is_distressed": false,
     "is_sellable_target": true,
     "is_sellable_target_reason": "No-website business in 2026 is a strong coasting/owner-disengaged signal. Classic 'invisible solo owner' target — but requires substantial diligence cold (phone outreach, drive-by, public records). Verify entity exists via Comptroller before time investment.",
     "data_sources": [
-      {"url": "https://downtobid.com/contractors/hvac/waco", "fields": ["family_ownership"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://downtobid.com/contractors/hvac/waco",
+        "fields": ["family_ownership"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.2,
-    "next_verification_steps": ["TX Comptroller search for 'G&M Mechanical' in Travis County", "TDLR ACR license search by city Austin", "Public phone/address lookup"]
+    "next_verification_steps": [
+      "TX Comptroller search for 'G&M Mechanical' in Travis County",
+      "TDLR ACR license search by city Austin",
+      "Public phone/address lookup"
+    ]
   },
   {
     "spine_index": 92,
@@ -1948,16 +2268,22 @@
       "no_named_owner_or_public_About"
     ],
     "coasting_tells_confidence": "high",
-    "distress_signals": [
-      "no_website_in_2026"
-    ],
+    "distress_signals": ["no_website_in_2026"],
     "is_distressed": false,
     "is_sellable_target": true,
     "is_sellable_target_reason": "No-website veteran-owned Crow Brothers small shop in central TX = classic coasting brother-pair target. Sibling owners often sell together. Sub-$2M revenue likely. Verify via Comptroller.",
     "data_sources": [
-      {"url": "https://downtobid.com/contractors/hvac/waco", "fields": ["veteran_family_ownership"], "fetched_at": "2026-05-16"}
+      {
+        "url": "https://downtobid.com/contractors/hvac/waco",
+        "fields": ["veteran_family_ownership"],
+        "fetched_at": "2026-05-16"
+      }
     ],
     "data_completeness": 0.25,
-    "next_verification_steps": ["TX Comptroller for Crow Brothers entity + officers", "TDLR ACR license holder", "McLennan CAD homestead for Crow brothers' ages"]
+    "next_verification_steps": [
+      "TX Comptroller for Crow Brothers entity + officers",
+      "TDLR ACR license holder",
+      "McLennan CAD homestead for Crow brothers' ages"
+    ]
   }
 ]

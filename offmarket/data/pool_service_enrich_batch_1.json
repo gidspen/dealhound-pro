@@ -35,7 +35,11 @@
       "verified_via": "live-fetch of rpoolsllc.com homepage 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.rpoolsllc.com/", "fetched_at": "2026-05-16", "fields": ["founding_year_2000", "owner_first_name", "service_packages", "SMS_option"]}
+      {
+        "url": "https://www.rpoolsllc.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founding_year_2000", "owner_first_name", "service_packages", "SMS_option"]
+      }
     ],
     "data_completeness": 0.55
   },
@@ -76,9 +80,13 @@
       "verified_via": "live-fetch of boardwalkpoolstx.com/about-us 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://boardwalkpoolstx.com/about-us", "fetched_at": "2026-05-16", "fields": ["family_owned_claim", "20+_years_experience", "services"]}
+      {
+        "url": "https://boardwalkpoolstx.com/about-us",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_owned_claim", "20+_years_experience", "services"]
+      }
     ],
-    "data_completeness": 0.40
+    "data_completeness": 0.4
   },
   {
     "spine_index": 2,
@@ -116,7 +124,17 @@
       "verified_via": "live-fetch of manningpoolservice.com/about 2026-05-16; 'Jeff has guided his sons to become masters in the trade' = explicit son-succession path"
     },
     "data_sources": [
-      {"url": "https://manningpoolservice.com/about", "fetched_at": "2026-05-16", "fields": ["co-founders", "founded_2001", "450_pools_weekly", "son_succession_language", "50+_yrs_combined_experience"]}
+      {
+        "url": "https://manningpoolservice.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "co-founders",
+          "founded_2001",
+          "450_pools_weekly",
+          "son_succession_language",
+          "50+_yrs_combined_experience"
+        ]
+      }
     ],
     "data_completeness": 0.85
   },
@@ -157,9 +175,13 @@
       "verified_via": "live-fetch of teampoolservice.com/about 2026-05-16; family-owned claim but no specific successor language"
     },
     "data_sources": [
-      {"url": "https://teampoolservice.com/about", "fetched_at": "2026-05-16", "fields": ["family_owned_claim", "IPSSA_member", "CPO_certified", "service_areas"]}
+      {
+        "url": "https://teampoolservice.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_owned_claim", "IPSSA_member", "CPO_certified", "service_areas"]
+      }
     ],
-    "data_completeness": 0.30
+    "data_completeness": 0.3
   },
   {
     "spine_index": 4,
@@ -196,7 +218,11 @@
       "verified_via": "live-fetch of thepoolinitiative.com/about 2026-05-16; short tenure since 2019"
     },
     "data_sources": [
-      {"url": "https://www.thepoolinitiative.com/about", "fetched_at": "2026-05-16", "fields": ["owner_Erinn_Dethloff", "founded_2019", "2021_merger"]}
+      {
+        "url": "https://www.thepoolinitiative.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Erinn_Dethloff", "founded_2019", "2021_merger"]
+      }
     ],
     "data_completeness": 0.45,
     "fit_warning": "FOUNDED 2019 + age unknown — too new and likely too young an owner for coast-and-sell ICP"
@@ -236,7 +262,11 @@
       "verified_via": "live-fetch of lonestarpoolcleaning.com/about-us 2026-05-16; no family/successor language"
     },
     "data_sources": [
-      {"url": "https://lonestarpoolcleaning.com/about-us/", "fetched_at": "2026-05-16", "fields": ["owner_Charles_McKenney", "founded_2008", "IPSSA_member", "NSPF_CPO/CPI"]}
+      {
+        "url": "https://lonestarpoolcleaning.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Charles_McKenney", "founded_2008", "IPSSA_member", "NSPF_CPO/CPI"]
+      }
     ],
     "data_completeness": 0.55
   },
@@ -266,17 +296,23 @@
       "no specific software mentioned",
       "only BBB accreditation referenced, no IPSSA"
     ],
-    "modern_tech_signals": [
-      "basic contact forms"
-    ],
+    "modern_tech_signals": ["basic contact forms"],
     "successor_indicators": {
       "second_gen_present": false,
       "family_successor_present": false,
       "verified_via": "live-fetch of alohapoolstx.com 2026-05-16; 'Brian and Chris' both listed but unclear if Chris is family successor or partner"
     },
     "data_sources": [
-      {"url": "https://alohapoolstx.com/", "fetched_at": "2026-05-16", "fields": ["40+_years_tenure", "family_operated", "two_contact_persons"]},
-      {"url": "BBB + web search May 2026", "fetched_at": "2026-05-16", "fields": ["founder_Loy_Easter", "VP_Brian_Prewitt", "founded_1982", "registered_1999"]}
+      {
+        "url": "https://alohapoolstx.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["40+_years_tenure", "family_operated", "two_contact_persons"]
+      },
+      {
+        "url": "BBB + web search May 2026",
+        "fetched_at": "2026-05-16",
+        "fields": ["founder_Loy_Easter", "VP_Brian_Prewitt", "founded_1982", "registered_1999"]
+      }
     ],
     "data_completeness": 0.65,
     "fit_signal": "STRONG — Founder Loy Easter (likely 70+, possibly retired); VP Brian Prewitt running operations; 44-year tenure, minimal modernization = high coast-and-sell probability + possible succession-driven sale"
@@ -318,9 +354,13 @@
       "verified_via": "live-fetch of aquapremierpools.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://aquapremierpools.com/", "fetched_at": "2026-05-16", "fields": ["founded_2008", "services", "online_quotes"]}
+      {
+        "url": "https://aquapremierpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_2008", "services", "online_quotes"]
+      }
     ],
-    "data_completeness": 0.40
+    "data_completeness": 0.4
   },
   {
     "spine_index": 8,
@@ -358,9 +398,13 @@
       "verified_via": "live-fetch of poolboys.com/about-us 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://poolboys.com/about-us/", "fetched_at": "2026-05-16", "fields": ["co-owners", "founded_2011", "14_vehicles", "TICL_728", "active_2025_expansion"]}
+      {
+        "url": "https://poolboys.com/about-us/",
+        "fetched_at": "2026-05-16",
+        "fields": ["co-owners", "founded_2011", "14_vehicles", "TICL_728", "active_2025_expansion"]
+      }
     ],
-    "data_completeness": 0.70,
+    "data_completeness": 0.7,
     "fit_warning": "ACTIVELY GROWING — multi-owner + 2025 fleet expansion suggests not coasting, not ready to sell"
   },
   {
@@ -399,7 +443,11 @@
       "verified_via": "live-fetch of krakenpoolservicestx.com/about 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://krakenpoolservicestx.com/about", "fetched_at": "2026-05-16", "fields": ["co-owners_firefighters", "founded_Jan_2023", "TICL_1370"]}
+      {
+        "url": "https://krakenpoolservicestx.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["co-owners_firefighters", "founded_Jan_2023", "TICL_1370"]
+      }
     ],
     "data_completeness": 0.55,
     "fit_warning": "FOUNDED 2023 — too short tenure for coast-and-sell. Side business by firefighter partners; not classic owner-tired profile"
@@ -430,17 +478,18 @@
       "no SMS reminders mentioned",
       "no specific pool route software"
     ],
-    "modern_tech_signals": [
-      "office email published",
-      "3-route fleet documented"
-    ],
+    "modern_tech_signals": ["office email published", "3-route fleet documented"],
     "successor_indicators": {
       "second_gen_present": false,
       "family_successor_present": false,
       "verified_via": "live-fetch of cepristinepools.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://cepristinepools.com/", "fetched_at": "2026-05-16", "fields": ["address", "phone", "services"]}
+      {
+        "url": "https://cepristinepools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["address", "phone", "services"]
+      }
     ],
     "data_completeness": 0.35
   },
@@ -481,7 +530,11 @@
       "verified_via": "live-fetch of pattenpool.com/about 2026-05-16; Ron Patten named but no son/daughter mentioned"
     },
     "data_sources": [
-      {"url": "https://pattenpool.com/about", "fetched_at": "2026-05-16", "fields": ["owner_Ron_Patten", "founded_1982", "1500+_customers", "TICL_802"]}
+      {
+        "url": "https://pattenpool.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Ron_Patten", "founded_1982", "1500+_customers", "TICL_802"]
+      }
     ],
     "data_completeness": 0.75,
     "fit_signal": "STRONG — Ron Patten est. age 68, 44-year tenure, 1500+ customers, minimal modernization, no visible successor"
@@ -523,7 +576,11 @@
       "verified_via": "live-fetch of yourpreferredpools.com 2026-05-16; family-owned claim, no specific names"
     },
     "data_sources": [
-      {"url": "https://yourpreferredpools.com/", "fetched_at": "2026-05-16", "fields": ["family_owned_claim", "15+_years", "staff_first_names"]}
+      {
+        "url": "https://yourpreferredpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_owned_claim", "15+_years", "staff_first_names"]
+      }
     ],
     "data_completeness": 0.35
   },
@@ -565,9 +622,13 @@
       "verified_via": "Community Impact 2023 article + live-fetch of foxfamilypools.com 2026-05-16; 1978 founding + Holbrook family operating since 1994 suggests ownership transition already happened (1978 founder → Holbrooks 1994), no third-gen named"
     },
     "data_sources": [
-      {"url": "https://www.foxfamilypools.com/", "fetched_at": "2026-05-16", "fields": ["founded_1978", "family_owned", "Top_3_Houston_builder"]}
+      {
+        "url": "https://www.foxfamilypools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_1978", "family_owned", "Top_3_Houston_builder"]
+      }
     ],
-    "data_completeness": 0.60,
+    "data_completeness": 0.6,
     "fit_signal": "MODERATE — 48-year tenure, Holbrooks ~65, no clear successor named, classic coasting profile"
   },
   {
@@ -595,19 +656,20 @@
       "no specific pool route software",
       "no IPSSA membership"
     ],
-    "modern_tech_signals": [
-      "Facebook + Google Business presence",
-      "quote form"
-    ],
+    "modern_tech_signals": ["Facebook + Google Business presence", "quote form"],
     "successor_indicators": {
       "second_gen_present": false,
       "family_successor_present": false,
       "verified_via": "live-fetch of cbwpools.com/about 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://cbwpools.com/about", "fetched_at": "2026-05-16", "fields": ["owner_Josh_Sandberg", "13+_years"]}
+      {
+        "url": "https://cbwpools.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Josh_Sandberg", "13+_years"]
+      }
     ],
-    "data_completeness": 0.40
+    "data_completeness": 0.4
   },
   {
     "spine_index": 15,
@@ -636,18 +698,20 @@
       "no specific pool route software",
       "minimal operational disclosure"
     ],
-    "modern_tech_signals": [
-      "sprinkler installation added as service (diversification)"
-    ],
+    "modern_tech_signals": ["sprinkler installation added as service (diversification)"],
     "successor_indicators": {
       "second_gen_present": false,
       "family_successor_present": false,
       "verified_via": "live-fetch of fslbluepools.com 2026-05-16; minimal public information"
     },
     "data_sources": [
-      {"url": "https://fslbluepools.com/", "fetched_at": "2026-05-16", "fields": ["location", "services"]}
+      {
+        "url": "https://fslbluepools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["location", "services"]
+      }
     ],
-    "data_completeness": 0.20,
+    "data_completeness": 0.2,
     "fit_warning": "LOW DATA — insufficient public info for confident scoring; recommend skip or deep-dive verification"
   },
   {
@@ -685,7 +749,11 @@
       "verified_via": "live-fetch of pjayspools.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://pjayspools.com/", "fetched_at": "2026-05-16", "fields": ["owner_Paul_Johnson", "15+_years", "family_owned"]}
+      {
+        "url": "https://pjayspools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Paul_Johnson", "15+_years", "family_owned"]
+      }
     ],
     "data_completeness": 0.45
   },
@@ -724,7 +792,11 @@
       "verified_via": "live-fetch of poolservicesugarlandtx.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.poolservicesugarlandtx.com/", "fetched_at": "2026-05-16", "fields": ["owner_Mason_Batchelor", "founded_2021", "Greatwood_route"]}
+      {
+        "url": "https://www.poolservicesugarlandtx.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Mason_Batchelor", "founded_2021", "Greatwood_route"]
+      }
     ],
     "data_completeness": 0.55,
     "fit_warning": "TOO YOUNG — Founded 2021, young owner. Does NOT fit coast-and-sell profile"
@@ -764,9 +836,13 @@
       "verified_via": "live-fetch of lanterrapools.com 2026-05-16; minimal public information"
     },
     "data_sources": [
-      {"url": "https://lanterrapools.com/", "fetched_at": "2026-05-16", "fields": ["services", "service_area"]}
+      {
+        "url": "https://lanterrapools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["services", "service_area"]
+      }
     ],
-    "data_completeness": 0.20,
+    "data_completeness": 0.2,
     "fit_warning": "LOW DATA — insufficient owner/age/tenure information"
   },
   {
@@ -806,7 +882,11 @@
       "verified_via": "live-fetch of richardstbs.com 2026-05-16; legal entity 'RBS Opco, LLC' suggests holdco/op-co structure used in PE/family-recap"
     },
     "data_sources": [
-      {"url": "https://richardstbs.com/", "fetched_at": "2026-05-16", "fields": ["founded_1987", "RAIC_1282", "E-Pay_portal", "two_locations"]}
+      {
+        "url": "https://richardstbs.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_1987", "RAIC_1282", "E-Pay_portal", "two_locations"]
+      }
     ],
     "data_completeness": 0.55,
     "fit_warning": "STRUCTURAL FLAG — 'RBS Opco, LLC' entity naming is non-typical for solo-owner; possible prior recapitalization or PE-affiliated — may NOT be true off-market candidate"
@@ -848,9 +928,13 @@
       "verified_via": "live-fetch of naborspools.com 2026-05-16; family-owned but no specific successor"
     },
     "data_sources": [
-      {"url": "https://naborspools.com/", "fetched_at": "2026-05-16", "fields": ["family_owned", "CPO_certified", "customer_portal", "SMS"]}
+      {
+        "url": "https://naborspools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_owned", "CPO_certified", "customer_portal", "SMS"]
+      }
     ],
-    "data_completeness": 0.40
+    "data_completeness": 0.4
   },
   {
     "spine_index": 21,
@@ -889,7 +973,11 @@
       "verified_via": "live-fetch of poolservicefriendswood.com 2026-05-16; 'family managed' but no detail"
     },
     "data_sources": [
-      {"url": "http://www.poolservicefriendswood.com/", "fetched_at": "2026-05-16", "fields": ["family_managed", "service_plans"]}
+      {
+        "url": "http://www.poolservicefriendswood.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["family_managed", "service_plans"]
+      }
     ],
     "data_completeness": 0.25
   },
@@ -928,7 +1016,11 @@
       "verified_via": "live-fetch of goodlifepoolstx.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://goodlifepoolstx.com/", "fetched_at": "2026-05-16", "fields": ["co-owners_Zientek_Disdier", "founded_2020", "pool_financing"]}
+      {
+        "url": "https://goodlifepoolstx.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["co-owners_Zientek_Disdier", "founded_2020", "pool_financing"]
+      }
     ],
     "data_completeness": 0.55,
     "fit_warning": "TOO YOUNG / TOO NEW — founded 2020, young multi-owner = does NOT fit coast-and-sell"
@@ -961,18 +1053,20 @@
       "no specific pool route software",
       "no IPSSA membership"
     ],
-    "modern_tech_signals": [
-      "two phone numbers (suggests scaled small business)"
-    ],
+    "modern_tech_signals": ["two phone numbers (suggests scaled small business)"],
     "successor_indicators": {
       "second_gen_present": false,
       "family_successor_present": false,
       "verified_via": "live-fetch of willshapools.com 2026-05-16; minimal information"
     },
     "data_sources": [
-      {"url": "https://willshapools.com/", "fetched_at": "2026-05-16", "fields": ["services", "DFW_service_area"]}
+      {
+        "url": "https://willshapools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["services", "DFW_service_area"]
+      }
     ],
-    "data_completeness": 0.20,
+    "data_completeness": 0.2,
     "fit_warning": "LOW DATA — insufficient owner/tenure information"
   },
   {
@@ -1011,9 +1105,13 @@
       "verified_via": "live-fetch of noahspoolservice.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://noahspoolservice.com/", "fetched_at": "2026-05-16", "fields": ["owner_Noah_first_name", "tiered_pricing", "referral_program"]}
+      {
+        "url": "https://noahspoolservice.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Noah_first_name", "tiered_pricing", "referral_program"]
+      }
     ],
-    "data_completeness": 0.40
+    "data_completeness": 0.4
   },
   {
     "spine_index": 25,
@@ -1034,10 +1132,7 @@
     "service_mix": "residential",
     "ipssa_member": false,
     "tpcl_license": null,
-    "coasting_tells": [
-      "surnames not disclosed",
-      "no IPSSA membership"
-    ],
+    "coasting_tells": ["surnames not disclosed", "no IPSSA membership"],
     "modern_tech_signals": [
       "technician app",
       "detailed email after each service (timestamp + breakdown)",
@@ -1051,7 +1146,16 @@
       "verified_via": "live-fetch of panthercitypools.co 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://panthercitypools.co/", "fetched_at": "2026-05-16", "fields": ["co-founders_Marine_vets", "founded_Sept_2018", "250_pools", "app_+_email_reporting"]}
+      {
+        "url": "https://panthercitypools.co/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "co-founders_Marine_vets",
+          "founded_Sept_2018",
+          "250_pools",
+          "app_+_email_reporting"
+        ]
+      }
     ],
     "data_completeness": 0.65,
     "fit_warning": "TOO NEW + MODERN TECH — founded 2018, technician app + automated reporting = active operator, NOT coasting"
@@ -1082,17 +1186,18 @@
       "no IPSSA membership",
       "no specific pool route software"
     ],
-    "modern_tech_signals": [
-      "19-zip-code service coverage",
-      "service plan structure"
-    ],
+    "modern_tech_signals": ["19-zip-code service coverage", "service plan structure"],
     "successor_indicators": {
       "second_gen_present": false,
       "family_successor_present": false,
       "verified_via": "live-fetch of poolmaintenancefortworth.com 2026-05-16; family-run claim but no detail"
     },
     "data_sources": [
-      {"url": "https://poolmaintenancefortworth.com/", "fetched_at": "2026-05-16", "fields": ["founded_2017", "family_run", "FW_coverage"]}
+      {
+        "url": "https://poolmaintenancefortworth.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_2017", "family_run", "FW_coverage"]
+      }
     ],
     "data_completeness": 0.35,
     "fit_warning": "TOO NEW — founded 2017, only 9 years tenure"
@@ -1116,9 +1221,7 @@
     "service_mix": "mixed",
     "ipssa_member": false,
     "tpcl_license": null,
-    "coasting_tells": [
-      "no IPSSA membership"
-    ],
+    "coasting_tells": ["no IPSSA membership"],
     "modern_tech_signals": [
       "free instant online quote",
       "SMS appointment notifications",
@@ -1137,7 +1240,11 @@
       "verified_via": "live-fetch of anomalypoolservices.io 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.anomalypoolservices.io/", "fetched_at": "2026-05-16", "fields": ["3_co-founders", "CPO", "customer_portal", "SMS", "video_docs"]}
+      {
+        "url": "https://www.anomalypoolservices.io/",
+        "fetched_at": "2026-05-16",
+        "fields": ["3_co-founders", "CPO", "customer_portal", "SMS", "video_docs"]
+      }
     ],
     "data_completeness": 0.65,
     "fit_warning": "FULLY MODERN + 3 CO-FOUNDERS — heavy tech stack, multi-owner structure = does NOT fit solo-owner coast-and-sell"
@@ -1168,16 +1275,18 @@
       "no SMS systems",
       "phone-only sales channel"
     ],
-    "modern_tech_signals": [
-      "IPSSA Tarrant County Chapter President (active in industry network)"
-    ],
+    "modern_tech_signals": ["IPSSA Tarrant County Chapter President (active in industry network)"],
     "successor_indicators": {
       "second_gen_present": false,
       "family_successor_present": false,
       "verified_via": "IPSSA Tarrant officer roster (ipssatc.org/officers)"
     },
     "data_sources": [
-      {"url": "https://ipssatc.org/officers", "fetched_at": "2026-05-16", "fields": ["owner_Ruben_Rodriguez", "IPSSA_president"]}
+      {
+        "url": "https://ipssatc.org/officers",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Ruben_Rodriguez", "IPSSA_president"]
+      }
     ],
     "data_completeness": 0.25,
     "fit_signal": "MODERATE — no website is a strong coasting tell; IPSSA leadership suggests scaled operation; needs phone-based qualification"
@@ -1218,7 +1327,11 @@
       "verified_via": "IPSSA Tarrant officer roster (ipssatc.org/officers)"
     },
     "data_sources": [
-      {"url": "https://ipssatc.org/officers", "fetched_at": "2026-05-16", "fields": ["owner_Andrew_Rousseau", "IPSSA_VP", "Inc_entity"]}
+      {
+        "url": "https://ipssatc.org/officers",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Andrew_Rousseau", "IPSSA_VP", "Inc_entity"]
+      }
     ],
     "data_completeness": 0.25,
     "fit_signal": "MODERATE — no website + Inc. structure suggests longer-tenure phone-only operator; classic coasting profile"
@@ -1248,18 +1361,20 @@
       "phone-only sales channel",
       "760 area code suggests CA origin (post-move, possibly retiring to TX)"
     ],
-    "modern_tech_signals": [
-      "IPSSA Tarrant County Treasurer"
-    ],
+    "modern_tech_signals": ["IPSSA Tarrant County Treasurer"],
     "successor_indicators": {
       "second_gen_present": false,
       "family_successor_present": false,
       "verified_via": "IPSSA Tarrant officer roster (ipssatc.org/officers)"
     },
     "data_sources": [
-      {"url": "https://ipssatc.org/officers", "fetched_at": "2026-05-16", "fields": ["owner_Charles_Dunbar", "IPSSA_Treasurer", "CA_origin_phone"]}
+      {
+        "url": "https://ipssatc.org/officers",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Charles_Dunbar", "IPSSA_Treasurer", "CA_origin_phone"]
+      }
     ],
-    "data_completeness": 0.20,
+    "data_completeness": 0.2,
     "fit_signal": "MODERATE — no website + likely older CA-relo owner = classic small route, needs phone outreach to qualify"
   },
   {
@@ -1281,11 +1396,7 @@
     "service_mix": "residential",
     "ipssa_member": true,
     "tpcl_license": null,
-    "coasting_tells": [
-      "no website",
-      "rural Johnson County location",
-      "phone-only sales"
-    ],
+    "coasting_tells": ["no website", "rural Johnson County location", "phone-only sales"],
     "modern_tech_signals": [
       "IPSSA Tarrant County Secretary",
       "'Kaizen' (continuous improvement) naming suggests modern-mindset operator"
@@ -1296,9 +1407,13 @@
       "verified_via": "IPSSA Tarrant officer roster"
     },
     "data_sources": [
-      {"url": "https://ipssatc.org/officers", "fetched_at": "2026-05-16", "fields": ["owner_Cody_Garrett", "IPSSA_Secretary"]}
+      {
+        "url": "https://ipssatc.org/officers",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Cody_Garrett", "IPSSA_Secretary"]
+      }
     ],
-    "data_completeness": 0.20,
+    "data_completeness": 0.2,
     "fit_warning": "INSUFFICIENT DATA — name connotes modern-mindset operator (Kaizen = continuous improvement methodology), likely younger; may not fit coast profile"
   },
   {
@@ -1320,22 +1435,21 @@
     "service_mix": "residential",
     "ipssa_member": true,
     "tpcl_license": null,
-    "coasting_tells": [
-      "no website",
-      "phone-only sales"
-    ],
-    "modern_tech_signals": [
-      "IPSSA Region 12 Chapter Representative (regional network leadership)"
-    ],
+    "coasting_tells": ["no website", "phone-only sales"],
+    "modern_tech_signals": ["IPSSA Region 12 Chapter Representative (regional network leadership)"],
     "successor_indicators": {
       "second_gen_present": false,
       "family_successor_present": false,
       "verified_via": "IPSSA Tarrant officer roster"
     },
     "data_sources": [
-      {"url": "https://ipssatc.org/officers", "fetched_at": "2026-05-16", "fields": ["owner_Dustin_Gardner", "IPSSA_chapter_rep"]}
+      {
+        "url": "https://ipssatc.org/officers",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Dustin_Gardner", "IPSSA_chapter_rep"]
+      }
     ],
-    "data_completeness": 0.20,
+    "data_completeness": 0.2,
     "fit_signal": "MODERATE — no website + IPSSA leadership = classic owner-operator route business"
   },
   {
@@ -1362,18 +1476,20 @@
       "44-year tenure without active digital presence",
       "phone-only sales"
     ],
-    "modern_tech_signals": [
-      "2nd generation has retained ownership (succession completed)"
-    ],
+    "modern_tech_signals": ["2nd generation has retained ownership (succession completed)"],
     "successor_indicators": {
       "second_gen_present": true,
       "family_successor_present": true,
       "verified_via": "spine notes (multiple search references confirming 2nd-gen status)"
     },
     "data_sources": [
-      {"url": "spine notes", "fetched_at": "2026-05-16", "fields": ["founded_1982", "2nd_gen_family"]}
+      {
+        "url": "spine notes",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_1982", "2nd_gen_family"]
+      }
     ],
-    "data_completeness": 0.30,
+    "data_completeness": 0.3,
     "fit_signal": "MODERATE — 2nd-gen + 44 years + no website = classic mature coast operation; needs more verification (URL/owner name)"
   },
   {
@@ -1414,9 +1530,13 @@
       "verified_via": "live-fetch of charliespoolservice.com 2026-05-16; per spine snippets opened 1984"
     },
     "data_sources": [
-      {"url": "https://charliespoolservice.com/", "fetched_at": "2026-05-16", "fields": ["owner_Charlie", "founded_1984", "service_areas"]}
+      {
+        "url": "https://charliespoolservice.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Charlie", "founded_1984", "service_areas"]
+      }
     ],
-    "data_completeness": 0.50,
+    "data_completeness": 0.5,
     "fit_signal": "STRONG — 42-year tenure, original founder name 'Charlie' still on biz, est. owner 65+, no visible successor — high coast-and-sell probability"
   },
   {
@@ -1457,9 +1577,13 @@
       "verified_via": "live-fetch of friscopools.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://friscopools.com/", "fetched_at": "2026-05-16", "fields": ["30+_years", "TICL_389", "warranty_center", "Inc_entity"]}
+      {
+        "url": "https://friscopools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["30+_years", "TICL_389", "warranty_center", "Inc_entity"]
+      }
     ],
-    "data_completeness": 0.50,
+    "data_completeness": 0.5,
     "fit_signal": "STRONG — 30+ year tenure, Inc. entity, early TICL license, warranty center = scaled operation; needs owner identity verification"
   },
   {
@@ -1498,9 +1622,13 @@
       "verified_via": "live-fetch of texasclearpools.com/about 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://texasclearpools.com/about", "fetched_at": "2026-05-16", "fields": ["9+_years", "family_owned"]}
+      {
+        "url": "https://texasclearpools.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["9+_years", "family_owned"]
+      }
     ],
-    "data_completeness": 0.40,
+    "data_completeness": 0.4,
     "fit_warning": "BORDERLINE TENURE — 10 years; typical for ETA target but owner identity unknown"
   },
   {
@@ -1540,7 +1668,11 @@
       "verified_via": "live-fetch of hydrapoolservices.com/about 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.hydrapoolservices.com/about", "fetched_at": "2026-05-16", "fields": ["photo_reports", "service_model", "background_checks"]}
+      {
+        "url": "https://www.hydrapoolservices.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["photo_reports", "service_model", "background_checks"]
+      }
     ],
     "data_completeness": 0.35,
     "fit_warning": "ACTIVELY MODERN — photo reports + consistency model suggest active operator, not coasting"
@@ -1583,9 +1715,20 @@
       "verified_via": "live-fetch of aandcpools.com 2026-05-16; 'treat us like family' language but no specific successor"
     },
     "data_sources": [
-      {"url": "https://aandcpools.com/", "fetched_at": "2026-05-16", "fields": ["owner_Alan", "TICL_831", "MyPoolPortal", "weekly_email", "SMS_program", "expansion_plans"]}
+      {
+        "url": "https://aandcpools.com/",
+        "fetched_at": "2026-05-16",
+        "fields": [
+          "owner_Alan",
+          "TICL_831",
+          "MyPoolPortal",
+          "weekly_email",
+          "SMS_program",
+          "expansion_plans"
+        ]
+      }
     ],
-    "data_completeness": 0.50,
+    "data_completeness": 0.5,
     "fit_warning": "ACTIVELY MODERN + EXPANDING — MyPoolPortal + expansion plans = active growth, not coasting"
   },
   {
@@ -1623,7 +1766,11 @@
       "verified_via": "live-fetch of ceruleanpro.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.ceruleanpro.com/", "fetched_at": "2026-05-16", "fields": ["owner_Josh_Bates", "founded_2016", "Alabama_origin", "luxury_niche"]}
+      {
+        "url": "https://www.ceruleanpro.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Josh_Bates", "founded_2016", "Alabama_origin", "luxury_niche"]
+      }
     ],
     "data_completeness": 0.45,
     "fit_warning": "TOO NEW + OWNER LIKELY YOUNG — 10 years tenure, founder probably 35-45, doesn't fit coast profile"
@@ -1667,7 +1814,11 @@
       "verified_via": "live-fetch of executivebluepools.com/about 2026-05-16; family business since 2014"
     },
     "data_sources": [
-      {"url": "https://executivebluepools.com/about", "fetched_at": "2026-05-16", "fields": ["founded_2013", "IPSSA_+_CPO_+_PHTA", "RAIL_license", "200+_reviews"]}
+      {
+        "url": "https://executivebluepools.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["founded_2013", "IPSSA_+_CPO_+_PHTA", "RAIL_license", "200+_reviews"]
+      }
     ],
     "data_completeness": 0.55,
     "fit_warning": "MODERATE — 13 years tenure, scaled operation; needs owner identity + age verification"
@@ -1700,17 +1851,18 @@
       "no annual contracts (suggests loose customer mgmt)",
       "7-day operation 8am-8pm = solo-operator style"
     ],
-    "modern_tech_signals": [
-      "Energy Star Approved certification",
-      "TICL 568 license"
-    ],
+    "modern_tech_signals": ["Energy Star Approved certification", "TICL 568 license"],
     "successor_indicators": {
       "second_gen_present": false,
       "family_successor_present": false,
       "verified_via": "live-fetch of aquacleanpoolservice.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://aquacleanpoolservice.com/about", "fetched_at": "2026-05-16", "fields": ["owner_Scott", "20+_years_experience", "TICL_568", "Energy_Star"]}
+      {
+        "url": "https://aquacleanpoolservice.com/about",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Scott", "20+_years_experience", "TICL_568", "Energy_Star"]
+      }
     ],
     "data_completeness": 0.55,
     "fit_signal": "STRONG — Scott owner-operator since 1997 (29 years), est. age 60, minimal modernization, no visible successor = high coast-and-sell probability"
@@ -1754,7 +1906,11 @@
       "verified_via": "live-fetch of rsbluepoolservices.com 2026-05-16; 'Family-owned · No contracts' tagline"
     },
     "data_sources": [
-      {"url": "https://rsbluepoolservices.com/", "fetched_at": "2026-05-16", "fields": ["owner_Renato", "text-first", "family_owned"]}
+      {
+        "url": "https://rsbluepoolservices.com/",
+        "fetched_at": "2026-05-16",
+        "fields": ["owner_Renato", "text-first", "family_owned"]
+      }
     ],
     "data_completeness": 0.35,
     "fit_warning": "SOLO OPERATOR — Renato appears to be solo owner-operator handling everything via text; very small route, may not have enough scale for ETA"

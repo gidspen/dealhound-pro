@@ -14,8 +14,17 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://performancegroupco.com/about-us/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://dallashousepainter.com/", "fetched_at": "2026-05-16T22:00:00Z", "fields": ["copyright_year", "online_quote_form", "memberships"]}
+      {
+        "source": "spine",
+        "url": "https://performancegroupco.com/about-us/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://dallashousepainter.com/",
+        "fetched_at": "2026-05-16T22:00:00Z",
+        "fields": ["copyright_year", "online_quote_form", "memberships"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -37,9 +46,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Copyright 2026. Online quote form. BBB A+, Good Contractors List, Apartment Association Greater Dallas, McKinney + Anna Chamber memberships. Active operator — not coasting.", "source": "live_website_fetch", "source_url": "https://dallashousepainter.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "service_diversification_risk", "direction": "negative", "evidence": "Multi-service: painting + restoration + remodeling + general contracting. Diluted painting focus — may not fit pure painting-contractor thesis.", "source": "live_website_fetch", "source_url": "https://dallashousepainter.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "owner_tenure_under_15_years", "direction": "negative", "evidence": "Founded 2013 — 13 years tenure. Below the 20+ years 'long-tenured coasting solo-owner' target window.", "source": "spine", "source_url": "https://performancegroupco.com/about-us/", "observed_at": "2026-05-16"}
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Copyright 2026. Online quote form. BBB A+, Good Contractors List, Apartment Association Greater Dallas, McKinney + Anna Chamber memberships. Active operator — not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://dallashousepainter.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "service_diversification_risk",
+        "direction": "negative",
+        "evidence": "Multi-service: painting + restoration + remodeling + general contracting. Diluted painting focus — may not fit pure painting-contractor thesis.",
+        "source": "live_website_fetch",
+        "source_url": "https://dallashousepainter.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "owner_tenure_under_15_years",
+        "direction": "negative",
+        "evidence": "Founded 2013 — 13 years tenure. Below the 20+ years 'long-tenured coasting solo-owner' target window.",
+        "source": "spine",
+        "source_url": "https://performancegroupco.com/about-us/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -57,8 +90,17 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.platinumpaintingfrisco.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://www.platinumpaintingfrisco.com/", "fetched_at": "2026-05-16T22:05:00Z", "fields": ["owner_names", "founded_year", "memberships"]}
+      {
+        "source": "spine",
+        "url": "https://www.platinumpaintingfrisco.com/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.platinumpaintingfrisco.com/",
+        "fetched_at": "2026-05-16T22:05:00Z",
+        "fields": ["owner_names", "founded_year", "memberships"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -80,9 +122,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_husband_wife_18_years", "direction": "positive", "evidence": "Husband/wife team Karl + Marjorie Pickens operating since 2008. Multi-location footprint (Frisco + Dallas) indicates scale beyond solo-owner.", "source": "live_website_fetch", "source_url": "https://www.platinumpaintingfrisco.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "strong_paint_partnership", "direction": "negative", "evidence": "Sherwin-Williams Preferred Partner, Angie's Super Service Award, Good Contractors List, BBB. Actively credentialed and award-collecting — not coasting.", "source": "live_website_fetch", "source_url": "https://www.platinumpaintingfrisco.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "multi_location_independent", "direction": "neutral", "evidence": "Two TX locations (Frisco + Dallas) under same family — independent of franchise but operationally larger than single-owner-operator profile.", "source": "spine", "source_url": "https://www.platinumpaintingfrisco.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "owner_husband_wife_18_years",
+        "direction": "positive",
+        "evidence": "Husband/wife team Karl + Marjorie Pickens operating since 2008. Multi-location footprint (Frisco + Dallas) indicates scale beyond solo-owner.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.platinumpaintingfrisco.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "strong_paint_partnership",
+        "direction": "negative",
+        "evidence": "Sherwin-Williams Preferred Partner, Angie's Super Service Award, Good Contractors List, BBB. Actively credentialed and award-collecting — not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.platinumpaintingfrisco.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "multi_location_independent",
+        "direction": "neutral",
+        "evidence": "Two TX locations (Frisco + Dallas) under same family — independent of franchise but operationally larger than single-owner-operator profile.",
+        "source": "spine",
+        "source_url": "https://www.platinumpaintingfrisco.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -100,8 +166,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://crestpainting.net/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://crestpainting.net/", "fetched_at": "2026-05-16T22:10:00Z", "fields": ["owner_first_name", "copyright_year"]}
+      { "source": "spine", "url": "https://crestpainting.net/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://crestpainting.net/",
+        "fetched_at": "2026-05-16T22:10:00Z",
+        "fields": ["owner_first_name", "copyright_year"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -123,9 +194,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_husband_wife_17_years", "direction": "positive", "evidence": "Goodwin husband/wife operating since 2009. President + CEO split common in family LLC structure.", "source": "spine", "source_url": "https://www.bbb.org/us/tx/dallas/profile/painting-contractors/crest-painting-0875-90231965", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Copyright 2026. Active site. Open 7 days a week.", "source": "live_website_fetch", "source_url": "https://crestpainting.net/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "tenure_below_target", "direction": "negative", "evidence": "17 years tenure — below the 20+ years 'long-tenured coasting' window but borderline.", "source": "spine", "source_url": "https://crestpainting.net/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "owner_husband_wife_17_years",
+        "direction": "positive",
+        "evidence": "Goodwin husband/wife operating since 2009. President + CEO split common in family LLC structure.",
+        "source": "spine",
+        "source_url": "https://www.bbb.org/us/tx/dallas/profile/painting-contractors/crest-painting-0875-90231965",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Copyright 2026. Active site. Open 7 days a week.",
+        "source": "live_website_fetch",
+        "source_url": "https://crestpainting.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "tenure_below_target",
+        "direction": "negative",
+        "evidence": "17 years tenure — below the 20+ years 'long-tenured coasting' window but borderline.",
+        "source": "spine",
+        "source_url": "https://crestpainting.net/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -143,8 +238,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.memorialpaint.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://www.memorialpaint.com/", "fetched_at": "2026-05-16T22:15:00Z", "fields": ["copyright_year", "online_quote_form", "memberships"]}
+      { "source": "spine", "url": "https://www.memorialpaint.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.memorialpaint.com/",
+        "fetched_at": "2026-05-16T22:15:00Z",
+        "fields": ["copyright_year", "online_quote_form", "memberships"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -166,8 +266,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "tenure_too_low", "direction": "disqualifying", "evidence": "Founded 2019 — only 7 years tenure. Owner Elmer Garcia likely young; ETA target is 12-36-month seller window. Misses 'about to coast/exit' thesis.", "source": "spine", "source_url": "https://www.memorialpaint.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Copyright 2026. DripJobs scheduling integration. Angi Super Service Award. Active scaling operator.", "source": "live_website_fetch", "source_url": "https://www.memorialpaint.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 2,
+        "signal_key": "tenure_too_low",
+        "direction": "disqualifying",
+        "evidence": "Founded 2019 — only 7 years tenure. Owner Elmer Garcia likely young; ETA target is 12-36-month seller window. Misses 'about to coast/exit' thesis.",
+        "source": "spine",
+        "source_url": "https://www.memorialpaint.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Copyright 2026. DripJobs scheduling integration. Angi Super Service Award. Active scaling operator.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.memorialpaint.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -185,8 +301,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.nextdoorpainting.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://nextdoorpainting.com/", "fetched_at": "2026-05-16T22:20:00Z", "fields": ["services", "memberships"]}
+      { "source": "spine", "url": "https://www.nextdoorpainting.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://nextdoorpainting.com/",
+        "fetched_at": "2026-05-16T22:20:00Z",
+        "fields": ["services", "memberships"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -208,9 +329,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_tenure_25_years", "direction": "positive", "evidence": "Founded 2001 — 25 years tenure. Inside 'long-tenured coasting' window. Owner age 50+ likely.", "source": "spine", "source_url": "https://www.nextdoorpainting.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "aged_review_platforms_listed", "direction": "positive", "evidence": "Lists Service Magic and CitySearch — both retired/legacy platforms (CitySearch shut down years ago; Service Magic rebranded as HomeAdvisor 2012). Suggests website hasn't been updated in 10+ years — coasting tell.", "source": "live_website_fetch", "source_url": "https://www.nextdoorpainting.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "multi_metro_coverage", "direction": "neutral", "evidence": "Claims service area covering Houston, Dallas/FW, SA, Austin — broad multi-metro coverage for a single shop is either marketing claim or larger crew. Verify before deep outreach.", "source": "live_website_fetch", "source_url": "https://www.nextdoorpainting.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_25_years",
+        "direction": "positive",
+        "evidence": "Founded 2001 — 25 years tenure. Inside 'long-tenured coasting' window. Owner age 50+ likely.",
+        "source": "spine",
+        "source_url": "https://www.nextdoorpainting.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "aged_review_platforms_listed",
+        "direction": "positive",
+        "evidence": "Lists Service Magic and CitySearch — both retired/legacy platforms (CitySearch shut down years ago; Service Magic rebranded as HomeAdvisor 2012). Suggests website hasn't been updated in 10+ years — coasting tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.nextdoorpainting.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "multi_metro_coverage",
+        "direction": "neutral",
+        "evidence": "Claims service area covering Houston, Dallas/FW, SA, Austin — broad multi-metro coverage for a single shop is either marketing claim or larger crew. Verify before deep outreach.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.nextdoorpainting.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -228,8 +373,17 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.wepaintdfw.com/about-us", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://www.wepaintdfw.com/about-us", "fetched_at": "2026-05-16T22:25:00Z", "fields": ["owner_name", "copyright_year", "online_quote_form"]}
+      {
+        "source": "spine",
+        "url": "https://www.wepaintdfw.com/about-us",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.wepaintdfw.com/about-us",
+        "fetched_at": "2026-05-16T22:25:00Z",
+        "fields": ["owner_name", "copyright_year", "online_quote_form"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -251,10 +405,42 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "second_generation_painter", "direction": "positive", "evidence": "Dimitri Alexandris is 2nd-generation — family lineage in trade. Reduces founder-risk and signals real craft tenure.", "source": "live_website_fetch", "source_url": "https://www.wepaintdfw.com/about-us", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "stale_copyright_2023", "direction": "positive", "evidence": "Footer copyright 2023 — website not refreshed in 2+ years. Classic coasting tell.", "source": "live_website_fetch", "source_url": "https://www.wepaintdfw.com/about-us", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "no_online_quote_form", "direction": "positive", "evidence": "No online quote/estimate form — only contact form. Phone-driven sales = coasting profile.", "source": "live_website_fetch", "source_url": "https://www.wepaintdfw.com/about-us", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "tenure_borderline", "direction": "neutral", "evidence": "16 years — borderline below 20+ years target. Combined with 2nd-gen craft + coasting tells, still viable.", "source": "spine", "source_url": "https://www.wepaintdfw.com/about-us", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "second_generation_painter",
+        "direction": "positive",
+        "evidence": "Dimitri Alexandris is 2nd-generation — family lineage in trade. Reduces founder-risk and signals real craft tenure.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.wepaintdfw.com/about-us",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "stale_copyright_2023",
+        "direction": "positive",
+        "evidence": "Footer copyright 2023 — website not refreshed in 2+ years. Classic coasting tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.wepaintdfw.com/about-us",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_online_quote_form",
+        "direction": "positive",
+        "evidence": "No online quote/estimate form — only contact form. Phone-driven sales = coasting profile.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.wepaintdfw.com/about-us",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "tenure_borderline",
+        "direction": "neutral",
+        "evidence": "16 years — borderline below 20+ years target. Combined with 2nd-gen craft + coasting tells, still viable.",
+        "source": "spine",
+        "source_url": "https://www.wepaintdfw.com/about-us",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -272,8 +458,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://bestpainteroflubbock.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://bestpainteroflubbock.com/", "fetched_at": "2026-05-16T22:30:00Z", "fields": ["copyright_year", "online_quote_form", "memberships"]}
+      { "source": "spine", "url": "https://bestpainteroflubbock.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://bestpainteroflubbock.com/",
+        "fetched_at": "2026-05-16T22:30:00Z",
+        "fields": ["copyright_year", "online_quote_form", "memberships"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -295,10 +486,42 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "four_generations_lubbock", "direction": "positive", "evidence": "Claims FOUR generations in Lubbock — very strong succession/family lineage signal if verifiable.", "source": "spine", "source_url": "https://bestpainteroflubbock.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "stale_copyright_2023", "direction": "positive", "evidence": "Footer copyright 2023 — not refreshed in 2+ years.", "source": "live_website_fetch", "source_url": "https://bestpainteroflubbock.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "no_online_quote_phone_only", "direction": "positive", "evidence": "No online quote form — directs to phone call for free estimate. Classic coasting / no-CRM tell.", "source": "live_website_fetch", "source_url": "https://bestpainteroflubbock.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "no_membership_badges", "direction": "positive", "evidence": "No PDCA, BBB, Sherwin-Williams partner badges visible on site — minimal credentialing.", "source": "live_website_fetch", "source_url": "https://bestpainteroflubbock.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "four_generations_lubbock",
+        "direction": "positive",
+        "evidence": "Claims FOUR generations in Lubbock — very strong succession/family lineage signal if verifiable.",
+        "source": "spine",
+        "source_url": "https://bestpainteroflubbock.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "stale_copyright_2023",
+        "direction": "positive",
+        "evidence": "Footer copyright 2023 — not refreshed in 2+ years.",
+        "source": "live_website_fetch",
+        "source_url": "https://bestpainteroflubbock.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_online_quote_phone_only",
+        "direction": "positive",
+        "evidence": "No online quote form — directs to phone call for free estimate. Classic coasting / no-CRM tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://bestpainteroflubbock.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_membership_badges",
+        "direction": "positive",
+        "evidence": "No PDCA, BBB, Sherwin-Williams partner badges visible on site — minimal credentialing.",
+        "source": "live_website_fetch",
+        "source_url": "https://bestpainteroflubbock.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -316,8 +539,17 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://protechpaintinganddrywall.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://protechpaintinganddrywall.com/", "fetched_at": "2026-05-16T22:35:00Z", "fields": ["owner_names", "copyright_year", "memberships"]}
+      {
+        "source": "spine",
+        "url": "https://protechpaintinganddrywall.com/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://protechpaintinganddrywall.com/",
+        "fetched_at": "2026-05-16T22:35:00Z",
+        "fields": ["owner_names", "copyright_year", "memberships"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -339,10 +571,42 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_husband_wife_20_years_plus_multigen_craft", "direction": "positive", "evidence": "Poehl husband/wife, 20+ years, Dewayne 2nd-gen drywall family + ex-Sherwin Williams store manager. Real craft lineage. Inside target tenure window.", "source": "spine", "source_url": "https://protechpaintinganddrywall.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "stale_copyright_2023", "direction": "positive", "evidence": "Footer copyright 2023 — website not updated in 2+ years. Coasting tell.", "source": "live_website_fetch", "source_url": "https://protechpaintinganddrywall.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "yahoo_email_small_shop", "direction": "positive", "evidence": "Contact email @yahoo.com (not branded domain) — extremely small-shop / minimal-IT profile typical of coast-mode owner-operator.", "source": "live_website_fetch", "source_url": "https://protechpaintinganddrywall.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "no_PDCA_no_sherwin_partner_visible", "direction": "positive", "evidence": "HUB certified is the only badge. No PDCA, no current Sherwin-Williams partner badge despite Dewayne's S-W history. Minimal credentialing.", "source": "live_website_fetch", "source_url": "https://protechpaintinganddrywall.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "owner_husband_wife_20_years_plus_multigen_craft",
+        "direction": "positive",
+        "evidence": "Poehl husband/wife, 20+ years, Dewayne 2nd-gen drywall family + ex-Sherwin Williams store manager. Real craft lineage. Inside target tenure window.",
+        "source": "spine",
+        "source_url": "https://protechpaintinganddrywall.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "stale_copyright_2023",
+        "direction": "positive",
+        "evidence": "Footer copyright 2023 — website not updated in 2+ years. Coasting tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://protechpaintinganddrywall.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "yahoo_email_small_shop",
+        "direction": "positive",
+        "evidence": "Contact email @yahoo.com (not branded domain) — extremely small-shop / minimal-IT profile typical of coast-mode owner-operator.",
+        "source": "live_website_fetch",
+        "source_url": "https://protechpaintinganddrywall.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_PDCA_no_sherwin_partner_visible",
+        "direction": "positive",
+        "evidence": "HUB certified is the only badge. No PDCA, no current Sherwin-Williams partner badge despite Dewayne's S-W history. Minimal credentialing.",
+        "source": "live_website_fetch",
+        "source_url": "https://protechpaintinganddrywall.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -360,8 +624,17 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://lubbockpaintinganddrywall.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://lubbockpaintinganddrywall.com/", "fetched_at": "2026-05-16T22:40:00Z", "fields": ["years_experience", "copyright_year"]}
+      {
+        "source": "spine",
+        "url": "https://lubbockpaintinganddrywall.com/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://lubbockpaintinganddrywall.com/",
+        "fetched_at": "2026-05-16T22:40:00Z",
+        "fields": ["years_experience", "copyright_year"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -383,9 +656,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "tenure_30_years", "direction": "positive", "evidence": "30+ years experience claim. Solidly inside long-tenured target window. If owner age 55+, exit-window thesis fits.", "source": "live_website_fetch", "source_url": "https://lubbockpaintinganddrywall.com/", "observed_at": "2026-05-16"},
-      {"layer": 1, "signal_key": "owner_anonymity", "direction": "positive", "evidence": "Owner name NOT disclosed publicly on website. Common with low-marketing, word-of-mouth coast-mode operators.", "source": "live_website_fetch", "source_url": "https://lubbockpaintinganddrywall.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "calendly_quote_form", "direction": "negative", "evidence": "Online quote via Calendly. Copyright 2025. Slightly less coasting than phone-only peers.", "source": "live_website_fetch", "source_url": "https://lubbockpaintinganddrywall.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "tenure_30_years",
+        "direction": "positive",
+        "evidence": "30+ years experience claim. Solidly inside long-tenured target window. If owner age 55+, exit-window thesis fits.",
+        "source": "live_website_fetch",
+        "source_url": "https://lubbockpaintinganddrywall.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_anonymity",
+        "direction": "positive",
+        "evidence": "Owner name NOT disclosed publicly on website. Common with low-marketing, word-of-mouth coast-mode operators.",
+        "source": "live_website_fetch",
+        "source_url": "https://lubbockpaintinganddrywall.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "calendly_quote_form",
+        "direction": "negative",
+        "evidence": "Online quote via Calendly. Copyright 2025. Slightly less coasting than phone-only peers.",
+        "source": "live_website_fetch",
+        "source_url": "https://lubbockpaintinganddrywall.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -403,8 +700,16 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://mirandapaintingeptx.com/about-us/", "fetched_at": "2026-05-16"},
-      {"source": "spine", "url": "https://www.bbb.org/us/tx/el-paso/profile/painting-contractors/miranda-painting-0895-94120057", "fetched_at": "2026-05-16"}
+      {
+        "source": "spine",
+        "url": "https://mirandapaintingeptx.com/about-us/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "spine",
+        "url": "https://www.bbb.org/us/tx/el-paso/profile/painting-contractors/miranda-painting-0895-94120057",
+        "fetched_at": "2026-05-16"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -426,9 +731,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "three_generation_painter_dba", "direction": "positive", "evidence": "DBA is literally '3rd Generation Painting' — explicit owner-broadcast of multi-generation lineage. Owner Javier Miranda likely 55-65.", "source": "spine", "source_url": "https://mirandapaintingeptx.com/about-us/", "observed_at": "2026-05-16"},
-      {"layer": 1, "signal_key": "owner_tenure_32_years", "direction": "positive", "evidence": "BBB file opened 1994 — 32 years operating. Deep inside target tenure window. Strong exit-window candidate if next-gen not in.", "source": "spine", "source_url": "https://www.bbb.org/us/tx/el-paso/profile/painting-contractors/miranda-painting-0895-94120057", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "three_locations_el_paso", "direction": "neutral", "evidence": "Three El Paso locations — moderate scale. May push above solo-operator profile but still single-metro.", "source": "spine", "source_url": "https://mirandapaintingeptx.com/about-us/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "three_generation_painter_dba",
+        "direction": "positive",
+        "evidence": "DBA is literally '3rd Generation Painting' — explicit owner-broadcast of multi-generation lineage. Owner Javier Miranda likely 55-65.",
+        "source": "spine",
+        "source_url": "https://mirandapaintingeptx.com/about-us/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_32_years",
+        "direction": "positive",
+        "evidence": "BBB file opened 1994 — 32 years operating. Deep inside target tenure window. Strong exit-window candidate if next-gen not in.",
+        "source": "spine",
+        "source_url": "https://www.bbb.org/us/tx/el-paso/profile/painting-contractors/miranda-painting-0895-94120057",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "three_locations_el_paso",
+        "direction": "neutral",
+        "evidence": "Three El Paso locations — moderate scale. May push above solo-operator profile but still single-metro.",
+        "source": "spine",
+        "source_url": "https://mirandapaintingeptx.com/about-us/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -446,8 +775,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.trimexcommercial.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://www.trimexcommercial.com/", "fetched_at": "2026-05-16T22:45:00Z", "fields": ["generation_count", "years_experience", "copyright_year", "memberships"]}
+      { "source": "spine", "url": "https://www.trimexcommercial.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.trimexcommercial.com/",
+        "fetched_at": "2026-05-16T22:45:00Z",
+        "fields": ["generation_count", "years_experience", "copyright_year", "memberships"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -469,10 +803,42 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "second_generation_38_years", "direction": "positive", "evidence": "Second-generation with 38+ years. Strong succession lineage + tenure stack.", "source": "live_website_fetch", "source_url": "https://www.trimexcommercial.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "stale_copyright_2022", "direction": "positive", "evidence": "Footer copyright 2022 — STALE, website not refreshed in 4 years. Strong coasting tell.", "source": "live_website_fetch", "source_url": "https://www.trimexcommercial.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "commercial_focus_niche_specialty", "direction": "neutral", "evidence": "Pure commercial focus (VWC, epoxy, staining). Differentiated niche but harder to roll up than residential repaint shops.", "source": "live_website_fetch", "source_url": "https://www.trimexcommercial.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "hub_certified", "direction": "positive", "evidence": "Texas HUB (Historically Underutilized Business) certification. Family-owned minority-owned profile — fits ETA narrative.", "source": "live_website_fetch", "source_url": "https://www.trimexcommercial.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "second_generation_38_years",
+        "direction": "positive",
+        "evidence": "Second-generation with 38+ years. Strong succession lineage + tenure stack.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.trimexcommercial.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "stale_copyright_2022",
+        "direction": "positive",
+        "evidence": "Footer copyright 2022 — STALE, website not refreshed in 4 years. Strong coasting tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.trimexcommercial.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "commercial_focus_niche_specialty",
+        "direction": "neutral",
+        "evidence": "Pure commercial focus (VWC, epoxy, staining). Differentiated niche but harder to roll up than residential repaint shops.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.trimexcommercial.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "hub_certified",
+        "direction": "positive",
+        "evidence": "Texas HUB (Historically Underutilized Business) certification. Family-owned minority-owned profile — fits ETA narrative.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.trimexcommercial.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -490,8 +856,20 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://wacopainting.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://wacopainting.com/", "fetched_at": "2026-05-16T22:50:00Z", "fields": ["generation_count", "founding_year", "copyright_year", "online_quote_form", "memberships", "paint_brands"]}
+      { "source": "spine", "url": "https://wacopainting.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://wacopainting.com/",
+        "fetched_at": "2026-05-16T22:50:00Z",
+        "fields": [
+          "generation_count",
+          "founding_year",
+          "copyright_year",
+          "online_quote_form",
+          "memberships",
+          "paint_brands"
+        ]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -513,10 +891,42 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "four_generation_54_years", "direction": "positive", "evidence": "Fourth-generation since 1972 — 54 years. STRONG long-tenured coasting fit. Current operator likely Gen 3 or Gen 4; succession risk + exit-window thesis both fit.", "source": "live_website_fetch", "source_url": "https://wacopainting.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "stale_copyright_2017_2024", "direction": "positive", "evidence": "Footer copyright reads '2017-24'. Site not refreshed for 2026. Multi-year stale range is mid-coasting tell.", "source": "live_website_fetch", "source_url": "https://wacopainting.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "no_membership_badges", "direction": "positive", "evidence": "No PDCA, BBB, or paint-mfr partner badges visible. Lists older paint brands (Kelly Moore, MAB — both regional/legacy). Minimal modern credentialing.", "source": "live_website_fetch", "source_url": "https://wacopainting.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "owner_anonymity", "direction": "positive", "evidence": "Owner name not disclosed. Multi-gen but anonymous current operator — common with coast-mode legacy owners.", "source": "live_website_fetch", "source_url": "https://wacopainting.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "four_generation_54_years",
+        "direction": "positive",
+        "evidence": "Fourth-generation since 1972 — 54 years. STRONG long-tenured coasting fit. Current operator likely Gen 3 or Gen 4; succession risk + exit-window thesis both fit.",
+        "source": "live_website_fetch",
+        "source_url": "https://wacopainting.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "stale_copyright_2017_2024",
+        "direction": "positive",
+        "evidence": "Footer copyright reads '2017-24'. Site not refreshed for 2026. Multi-year stale range is mid-coasting tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://wacopainting.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_membership_badges",
+        "direction": "positive",
+        "evidence": "No PDCA, BBB, or paint-mfr partner badges visible. Lists older paint brands (Kelly Moore, MAB — both regional/legacy). Minimal modern credentialing.",
+        "source": "live_website_fetch",
+        "source_url": "https://wacopainting.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "owner_anonymity",
+        "direction": "positive",
+        "evidence": "Owner name not disclosed. Multi-gen but anonymous current operator — common with coast-mode legacy owners.",
+        "source": "live_website_fetch",
+        "source_url": "https://wacopainting.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -534,8 +944,17 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://brightnestpainting.com/about-us", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://brightnestpainting.com/about-us", "fetched_at": "2026-05-16T22:55:00Z", "fields": ["owner_names", "founded_year", "services", "copyright_year"]}
+      {
+        "source": "spine",
+        "url": "https://brightnestpainting.com/about-us",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://brightnestpainting.com/about-us",
+        "fetched_at": "2026-05-16T22:55:00Z",
+        "fields": ["owner_names", "founded_year", "services", "copyright_year"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -557,8 +976,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "tenure_too_low", "direction": "disqualifying", "evidence": "Founded 2020 — only 6 years tenure. Misses 'long-tenured solo-owner about to coast/exit' thesis. Likely growth-mode operator.", "source": "spine", "source_url": "https://brightnestpainting.com/about-us", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Copyright 2025. Active online quote form. Modern operation.", "source": "live_website_fetch", "source_url": "https://brightnestpainting.com/about-us", "observed_at": "2026-05-16"}
+      {
+        "layer": 2,
+        "signal_key": "tenure_too_low",
+        "direction": "disqualifying",
+        "evidence": "Founded 2020 — only 6 years tenure. Misses 'long-tenured solo-owner about to coast/exit' thesis. Likely growth-mode operator.",
+        "source": "spine",
+        "source_url": "https://brightnestpainting.com/about-us",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Copyright 2025. Active online quote form. Modern operation.",
+        "source": "live_website_fetch",
+        "source_url": "https://brightnestpainting.com/about-us",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -576,8 +1011,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://choicepaintingwaco.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://choicepaintingwaco.com/", "fetched_at": "2026-05-16T23:00:00Z", "fields": ["owner_names", "copyright_year", "memberships"]}
+      { "source": "spine", "url": "https://choicepaintingwaco.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://choicepaintingwaco.com/",
+        "fetched_at": "2026-05-16T23:00:00Z",
+        "fields": ["owner_names", "copyright_year", "memberships"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -599,9 +1039,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 3, "signal_key": "sherwin_williams_partner", "direction": "negative", "evidence": "Sherwin-Williams partner badge. Modern copyright 2026. Active online estimate form. Operating well, not coasting.", "source": "live_website_fetch", "source_url": "https://choicepaintingwaco.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "small_review_volume", "direction": "neutral", "evidence": "Only 32 Google reviews despite 5.0 rating. Suggests young or low-volume shop. Founding year not disclosed on site.", "source": "live_website_fetch", "source_url": "https://choicepaintingwaco.com/", "observed_at": "2026-05-16"},
-      {"layer": 1, "signal_key": "founded_year_unknown", "direction": "neutral", "evidence": "Founded year not stated on site. Last names not disclosed. Verification gap.", "source": "live_website_fetch", "source_url": "https://choicepaintingwaco.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 3,
+        "signal_key": "sherwin_williams_partner",
+        "direction": "negative",
+        "evidence": "Sherwin-Williams partner badge. Modern copyright 2026. Active online estimate form. Operating well, not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://choicepaintingwaco.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "small_review_volume",
+        "direction": "neutral",
+        "evidence": "Only 32 Google reviews despite 5.0 rating. Suggests young or low-volume shop. Founding year not disclosed on site.",
+        "source": "live_website_fetch",
+        "source_url": "https://choicepaintingwaco.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "founded_year_unknown",
+        "direction": "neutral",
+        "evidence": "Founded year not stated on site. Last names not disclosed. Verification gap.",
+        "source": "live_website_fetch",
+        "source_url": "https://choicepaintingwaco.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -619,8 +1083,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://advancedpaint.com/about/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://advancedpaint.com/about/", "fetched_at": "2026-05-16T23:05:00Z", "fields": ["founded_year", "memberships", "copyright_year", "clients"]}
+      { "source": "spine", "url": "https://advancedpaint.com/about/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://advancedpaint.com/about/",
+        "fetched_at": "2026-05-16T23:05:00Z",
+        "fields": ["founded_year", "memberships", "copyright_year", "clients"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -642,9 +1111,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "size_too_large_for_target", "direction": "disqualifying", "evidence": "Industrial credentials (Rail Safe, MSHA Mine Safe, USGBC, ISN) plus enterprise clients (Coca-Cola, Ball, DFW Airport) indicate $10M+ revenue likely. Above small-business ETA threshold.", "source": "live_website_fetch", "source_url": "https://advancedpaint.com/about/", "observed_at": "2026-05-16"},
-      {"layer": 1, "signal_key": "owner_tenure_47_years", "direction": "positive", "evidence": "Founded 1979 — 47 years. Original owner if still operating would be 70+. Strong succession-window signal but size disqualifies.", "source": "spine", "source_url": "https://advancedpaint.com/about/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Copyright 2026. Online quote form. Active enterprise operator.", "source": "live_website_fetch", "source_url": "https://advancedpaint.com/about/", "observed_at": "2026-05-16"}
+      {
+        "layer": 2,
+        "signal_key": "size_too_large_for_target",
+        "direction": "disqualifying",
+        "evidence": "Industrial credentials (Rail Safe, MSHA Mine Safe, USGBC, ISN) plus enterprise clients (Coca-Cola, Ball, DFW Airport) indicate $10M+ revenue likely. Above small-business ETA threshold.",
+        "source": "live_website_fetch",
+        "source_url": "https://advancedpaint.com/about/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_tenure_47_years",
+        "direction": "positive",
+        "evidence": "Founded 1979 — 47 years. Original owner if still operating would be 70+. Strong succession-window signal but size disqualifies.",
+        "source": "spine",
+        "source_url": "https://advancedpaint.com/about/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Copyright 2026. Online quote form. Active enterprise operator.",
+        "source": "live_website_fetch",
+        "source_url": "https://advancedpaint.com/about/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -662,8 +1155,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://hahnpainting.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://hahnpainting.com/", "fetched_at": "2026-05-16T23:10:00Z", "fields": ["owner_name", "copyright_year", "experience"]}
+      { "source": "spine", "url": "https://hahnpainting.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://hahnpainting.com/",
+        "fetched_at": "2026-05-16T23:10:00Z",
+        "fields": ["owner_name", "copyright_year", "experience"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -685,9 +1183,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "named_solo_owner_jim_hahn", "direction": "positive", "evidence": "Owner Jim Hahn named. 24+ years personal trade experience implies age ~50-60. Solo-owner profile fits target.", "source": "live_website_fetch", "source_url": "https://hahnpainting.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Copyright 2025. Online quote form available. Active operator.", "source": "live_website_fetch", "source_url": "https://hahnpainting.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "tenure_borderline", "direction": "neutral", "evidence": "Company tenure 18 years — borderline below 20+ target. Personal craft tenure 24 years compensates partially.", "source": "live_website_fetch", "source_url": "https://hahnpainting.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "named_solo_owner_jim_hahn",
+        "direction": "positive",
+        "evidence": "Owner Jim Hahn named. 24+ years personal trade experience implies age ~50-60. Solo-owner profile fits target.",
+        "source": "live_website_fetch",
+        "source_url": "https://hahnpainting.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Copyright 2025. Online quote form available. Active operator.",
+        "source": "live_website_fetch",
+        "source_url": "https://hahnpainting.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "tenure_borderline",
+        "direction": "neutral",
+        "evidence": "Company tenure 18 years — borderline below 20+ target. Personal craft tenure 24 years compensates partially.",
+        "source": "live_website_fetch",
+        "source_url": "https://hahnpainting.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -705,8 +1227,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.wepainthouston.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://www.wepainthouston.com/", "fetched_at": "2026-05-16T23:15:00Z", "fields": ["generation_count", "founding_year", "services", "copyright_year"]}
+      { "source": "spine", "url": "https://www.wepainthouston.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.wepainthouston.com/",
+        "fetched_at": "2026-05-16T23:15:00Z",
+        "fields": ["generation_count", "founding_year", "services", "copyright_year"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -728,9 +1255,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "third_generation_45_years", "direction": "positive", "evidence": "Third-generation, since 1981 — 45 years. Owner John A. McDonald likely 55-70. Strong long-tenured + multi-gen + exit-window stack.", "source": "live_website_fetch", "source_url": "https://www.wepainthouston.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "agricultural_ranch_painting_niche", "direction": "positive", "evidence": "Service mix includes farm/ranch/agricultural painting + metal roof painting + brick paver sealing. Niche/durable revenue not contested by franchises like CertaPro.", "source": "live_website_fetch", "source_url": "https://www.wepainthouston.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Copyright 2026. Online quote form. Active operator despite long tenure — light coasting tell.", "source": "live_website_fetch", "source_url": "https://www.wepainthouston.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "third_generation_45_years",
+        "direction": "positive",
+        "evidence": "Third-generation, since 1981 — 45 years. Owner John A. McDonald likely 55-70. Strong long-tenured + multi-gen + exit-window stack.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.wepainthouston.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "agricultural_ranch_painting_niche",
+        "direction": "positive",
+        "evidence": "Service mix includes farm/ranch/agricultural painting + metal roof painting + brick paver sealing. Niche/durable revenue not contested by franchises like CertaPro.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.wepainthouston.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Copyright 2026. Online quote form. Active operator despite long tenure — light coasting tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.wepainthouston.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -748,8 +1299,17 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.bbb.org/us/tx/the-woodlands/profile/painting-contractors/texas-precision-painting-llc-0915-90064682", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://www.texasprecisionpainting.com/", "fetched_at": "2026-05-16T23:20:00Z", "fields": ["owners", "memberships", "services"]}
+      {
+        "source": "spine",
+        "url": "https://www.bbb.org/us/tx/the-woodlands/profile/painting-contractors/texas-precision-painting-llc-0915-90064682",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.texasprecisionpainting.com/",
+        "fetched_at": "2026-05-16T23:20:00Z",
+        "fields": ["owners", "memberships", "services"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -771,8 +1331,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "owner_first_names_only_young_profile", "direction": "negative", "evidence": "Owners listed by first name only (Cody and Tyler) — suggests younger team. BBB accredited only since 2021 = ~5 years tenure max. Misses long-tenured criterion.", "source": "live_website_fetch", "source_url": "https://www.texasprecisionpainting.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_credentialing", "direction": "negative", "evidence": "Benjamin Moore + BBB + Yelp badges. Active credentialing, online quote form. Not coasting.", "source": "live_website_fetch", "source_url": "https://www.texasprecisionpainting.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "owner_first_names_only_young_profile",
+        "direction": "negative",
+        "evidence": "Owners listed by first name only (Cody and Tyler) — suggests younger team. BBB accredited only since 2021 = ~5 years tenure max. Misses long-tenured criterion.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.texasprecisionpainting.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_credentialing",
+        "direction": "negative",
+        "evidence": "Benjamin Moore + BBB + Yelp badges. Active credentialing, online quote form. Not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.texasprecisionpainting.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -790,8 +1366,17 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.twrs-painting.com/about", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://www.twrs-painting.com/about", "fetched_at": "2026-05-16T23:25:00Z", "fields": ["parent_company", "founded_year", "services", "crew_size"]}
+      {
+        "source": "spine",
+        "url": "https://www.twrs-painting.com/about",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.twrs-painting.com/about",
+        "fetched_at": "2026-05-16T23:25:00Z",
+        "fields": ["parent_company", "founded_year", "services", "crew_size"]
+      }
     ],
     "independence_verified": false,
     "platform_affiliation_check": "parent_holding",
@@ -813,8 +1398,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "operates_under_holding_company", "direction": "disqualifying", "evidence": "Operates as part of SCM Design Group — not standalone solo-owner painter. Doesn't fit independent acquisition target profile.", "source": "live_website_fetch", "source_url": "https://www.twrs-painting.com/about", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "multiple_crews_supervised", "direction": "neutral", "evidence": "Multiple crews + foremen + supervisors. Larger operation than solo-owner-operator.", "source": "live_website_fetch", "source_url": "https://www.twrs-painting.com/about", "observed_at": "2026-05-16"}
+      {
+        "layer": 2,
+        "signal_key": "operates_under_holding_company",
+        "direction": "disqualifying",
+        "evidence": "Operates as part of SCM Design Group — not standalone solo-owner painter. Doesn't fit independent acquisition target profile.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.twrs-painting.com/about",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "multiple_crews_supervised",
+        "direction": "neutral",
+        "evidence": "Multiple crews + foremen + supervisors. Larger operation than solo-owner-operator.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.twrs-painting.com/about",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -832,8 +1433,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://streamlinepaint.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://streamlinepaint.com/", "fetched_at": "2026-05-16T23:30:00Z", "fields": ["founded_year"]}
+      { "source": "spine", "url": "https://streamlinepaint.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://streamlinepaint.com/",
+        "fetched_at": "2026-05-16T23:30:00Z",
+        "fields": ["founded_year"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -855,7 +1461,15 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "tenure_too_low", "direction": "negative", "evidence": "Founded 2015 — 11 years. Below long-tenured target window.", "source": "spine", "source_url": "https://streamlinepaint.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 2,
+        "signal_key": "tenure_too_low",
+        "direction": "negative",
+        "evidence": "Founded 2015 — 11 years. Below long-tenured target window.",
+        "source": "spine",
+        "source_url": "https://streamlinepaint.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -873,8 +1487,14 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://paintauthoritytx.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch_attempt", "url": "https://paintauthoritytx.com/", "fetched_at": "2026-05-16T23:35:00Z", "fields": [], "note": "ECONNREFUSED — site unreachable at fetch time"}
+      { "source": "spine", "url": "https://paintauthoritytx.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch_attempt",
+        "url": "https://paintauthoritytx.com/",
+        "fetched_at": "2026-05-16T23:35:00Z",
+        "fields": [],
+        "note": "ECONNREFUSED — site unreachable at fetch time"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -896,8 +1516,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 4, "signal_key": "website_unreachable_at_fetch", "direction": "positive", "evidence": "Live fetch returned ECONNREFUSED — domain DNS/host could be down or transient. If sustained, indicates neglected web presence. Worth re-checking.", "source": "live_website_fetch_attempt", "source_url": "https://paintauthoritytx.com/", "observed_at": "2026-05-16"},
-      {"layer": 1, "signal_key": "woman_owned_family_independent", "direction": "positive", "evidence": "Woman-owned/operated family business per spine. Fits HUB/MBE acquirer narrative.", "source": "spine", "source_url": "https://paintauthoritytx.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 4,
+        "signal_key": "website_unreachable_at_fetch",
+        "direction": "positive",
+        "evidence": "Live fetch returned ECONNREFUSED — domain DNS/host could be down or transient. If sustained, indicates neglected web presence. Worth re-checking.",
+        "source": "live_website_fetch_attempt",
+        "source_url": "https://paintauthoritytx.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "woman_owned_family_independent",
+        "direction": "positive",
+        "evidence": "Woman-owned/operated family business per spine. Fits HUB/MBE acquirer narrative.",
+        "source": "spine",
+        "source_url": "https://paintauthoritytx.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -915,8 +1551,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.dabspaint.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://www.dabspaint.com/", "fetched_at": "2026-05-16T23:40:00Z", "fields": ["founded_year", "memberships", "copyright_year"]}
+      { "source": "spine", "url": "https://www.dabspaint.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.dabspaint.com/",
+        "fetched_at": "2026-05-16T23:40:00Z",
+        "fields": ["founded_year", "memberships", "copyright_year"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -938,8 +1579,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "tenure_22_years_woman_owned_family", "direction": "positive", "evidence": "22 years tenure (founded 2004). Woman-led family business. Inside long-tenured target window. Acronym = Rosso family names suggests legacy/multi-member ownership.", "source": "spine", "source_url": "https://www.dabspaint.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Copyright 2026. Active contact form. 2026 award — actively marketing, not coasting.", "source": "live_website_fetch", "source_url": "https://www.dabspaint.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "tenure_22_years_woman_owned_family",
+        "direction": "positive",
+        "evidence": "22 years tenure (founded 2004). Woman-led family business. Inside long-tenured target window. Acronym = Rosso family names suggests legacy/multi-member ownership.",
+        "source": "spine",
+        "source_url": "https://www.dabspaint.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Copyright 2026. Active contact form. 2026 award — actively marketing, not coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.dabspaint.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -957,8 +1614,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://katypainting.net/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://katypainting.net/", "fetched_at": "2026-05-16T23:45:00Z", "fields": ["owner_name", "founded_year", "copyright_year", "online_quote_form"]}
+      { "source": "spine", "url": "https://katypainting.net/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://katypainting.net/",
+        "fetched_at": "2026-05-16T23:45:00Z",
+        "fields": ["owner_name", "founded_year", "copyright_year", "online_quote_form"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -980,12 +1642,60 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "founder_44_years_named", "direction": "positive", "evidence": "Larry Mikeska founded 1982 — 44 years as named owner-operator. Age likely 65+. STRONG exit-window candidate.", "source": "live_website_fetch", "source_url": "https://katypainting.net/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "stale_copyright_2023", "direction": "positive", "evidence": "Footer copyright 2023 — website not refreshed in 2+ years.", "source": "live_website_fetch", "source_url": "https://katypainting.net/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "no_online_quote_phone_only", "direction": "positive", "evidence": "No online quote form. Phone-driven sales. No digital intake = classic coasting.", "source": "live_website_fetch", "source_url": "https://katypainting.net/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "no_membership_badges", "direction": "positive", "evidence": "Zero membership badges (no PDCA, no BBB visible, no paint-mfr partner). Minimal credentialing.", "source": "live_website_fetch", "source_url": "https://katypainting.net/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "narrow_service_mix_residential_only", "direction": "positive", "evidence": "Only residential interior + exterior painting. No expansion into commercial, cabinet, repaint program, etc. Classic single-service coast.", "source": "live_website_fetch", "source_url": "https://katypainting.net/", "observed_at": "2026-05-16"},
-      {"layer": 1, "signal_key": "no_deposits_free_estimates_traditional", "direction": "positive", "evidence": "Site emphasizes 'no deposits required' and free estimates — traditional handshake model, no e-commerce sophistication.", "source": "live_website_fetch", "source_url": "https://katypainting.net/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "founder_44_years_named",
+        "direction": "positive",
+        "evidence": "Larry Mikeska founded 1982 — 44 years as named owner-operator. Age likely 65+. STRONG exit-window candidate.",
+        "source": "live_website_fetch",
+        "source_url": "https://katypainting.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "stale_copyright_2023",
+        "direction": "positive",
+        "evidence": "Footer copyright 2023 — website not refreshed in 2+ years.",
+        "source": "live_website_fetch",
+        "source_url": "https://katypainting.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_online_quote_phone_only",
+        "direction": "positive",
+        "evidence": "No online quote form. Phone-driven sales. No digital intake = classic coasting.",
+        "source": "live_website_fetch",
+        "source_url": "https://katypainting.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_membership_badges",
+        "direction": "positive",
+        "evidence": "Zero membership badges (no PDCA, no BBB visible, no paint-mfr partner). Minimal credentialing.",
+        "source": "live_website_fetch",
+        "source_url": "https://katypainting.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "narrow_service_mix_residential_only",
+        "direction": "positive",
+        "evidence": "Only residential interior + exterior painting. No expansion into commercial, cabinet, repaint program, etc. Classic single-service coast.",
+        "source": "live_website_fetch",
+        "source_url": "https://katypainting.net/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "no_deposits_free_estimates_traditional",
+        "direction": "positive",
+        "evidence": "Site emphasizes 'no deposits required' and free estimates — traditional handshake model, no e-commerce sophistication.",
+        "source": "live_website_fetch",
+        "source_url": "https://katypainting.net/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1003,7 +1713,11 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.connectpainters.com/painters-in/texas/prosper/texas-star-painting-llc?pid=114913", "fetched_at": "2026-05-16"}
+      {
+        "source": "spine",
+        "url": "https://www.connectpainters.com/painters-in/texas/prosper/texas-star-painting-llc?pid=114913",
+        "fetched_at": "2026-05-16"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1025,8 +1739,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 3, "signal_key": "no_independent_website", "direction": "positive", "evidence": "No standalone website — only directory listing on ConnectPainters. Strong coasting/minimal-IT signal but suggests very small operation.", "source": "spine", "source_url": "https://www.connectpainters.com/painters-in/texas/prosper/texas-star-painting-llc?pid=114913", "observed_at": "2026-05-16"},
-      {"layer": 1, "signal_key": "verification_gap_tenure_unknown", "direction": "neutral", "evidence": "Founded year not confirmed. Owner not identified. Significant verification gap before outreach.", "source": "spine", "source_url": "https://www.connectpainters.com/painters-in/texas/prosper/texas-star-painting-llc?pid=114913", "observed_at": "2026-05-16"}
+      {
+        "layer": 3,
+        "signal_key": "no_independent_website",
+        "direction": "positive",
+        "evidence": "No standalone website — only directory listing on ConnectPainters. Strong coasting/minimal-IT signal but suggests very small operation.",
+        "source": "spine",
+        "source_url": "https://www.connectpainters.com/painters-in/texas/prosper/texas-star-painting-llc?pid=114913",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "verification_gap_tenure_unknown",
+        "direction": "neutral",
+        "evidence": "Founded year not confirmed. Owner not identified. Significant verification gap before outreach.",
+        "source": "spine",
+        "source_url": "https://www.connectpainters.com/painters-in/texas/prosper/texas-star-painting-llc?pid=114913",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1044,7 +1774,11 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.expertise.com/home-improvement/painting/texas/plano", "fetched_at": "2026-05-16"}
+      {
+        "source": "spine",
+        "url": "https://www.expertise.com/home-improvement/painting/texas/plano",
+        "fetched_at": "2026-05-16"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1066,8 +1800,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 3, "signal_key": "no_independent_website", "direction": "positive", "evidence": "No standalone website — only Expertise.com directory listing. Classic invisible-operator profile.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/plano", "observed_at": "2026-05-16"},
-      {"layer": 1, "signal_key": "verification_gap_high", "direction": "neutral", "evidence": "No founding year, no owner name, no phone. Heavy lift to verify before outreach.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/plano", "observed_at": "2026-05-16"}
+      {
+        "layer": 3,
+        "signal_key": "no_independent_website",
+        "direction": "positive",
+        "evidence": "No standalone website — only Expertise.com directory listing. Classic invisible-operator profile.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/plano",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "verification_gap_high",
+        "direction": "neutral",
+        "evidence": "No founding year, no owner name, no phone. Heavy lift to verify before outreach.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/plano",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1085,7 +1835,11 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.expertise.com/home-improvement/painting/texas/plano", "fetched_at": "2026-05-16"}
+      {
+        "source": "spine",
+        "url": "https://www.expertise.com/home-improvement/painting/texas/plano",
+        "fetched_at": "2026-05-16"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1107,8 +1861,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "tenure_32_years_no_website", "direction": "positive", "evidence": "32 years operating since 1994 with NO standalone website. Long-tenured AND web-invisible — classic coasting solo-owner profile. Owner likely 55-70.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/plano", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "no_independent_website", "direction": "positive", "evidence": "No standalone website at 32 years tenure = extreme low-marketing profile.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/plano", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "tenure_32_years_no_website",
+        "direction": "positive",
+        "evidence": "32 years operating since 1994 with NO standalone website. Long-tenured AND web-invisible — classic coasting solo-owner profile. Owner likely 55-70.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/plano",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_independent_website",
+        "direction": "positive",
+        "evidence": "No standalone website at 32 years tenure = extreme low-marketing profile.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/plano",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1126,7 +1896,11 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.expertise.com/home-improvement/painting/texas/mckinney", "fetched_at": "2026-05-16"}
+      {
+        "source": "spine",
+        "url": "https://www.expertise.com/home-improvement/painting/texas/mckinney",
+        "fetched_at": "2026-05-16"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1148,8 +1922,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "tenure_39_years_no_website", "direction": "positive", "evidence": "39 years operating since 1987 with NO standalone website. Original founder if still operating would be 60-75. Extreme long-tenured + web-invisible coasting profile.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/mckinney", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "no_independent_website", "direction": "positive", "evidence": "No website at 39 years = extreme analog operator. Word-of-mouth book of business.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/mckinney", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "tenure_39_years_no_website",
+        "direction": "positive",
+        "evidence": "39 years operating since 1987 with NO standalone website. Original founder if still operating would be 60-75. Extreme long-tenured + web-invisible coasting profile.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/mckinney",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_independent_website",
+        "direction": "positive",
+        "evidence": "No website at 39 years = extreme analog operator. Word-of-mouth book of business.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/mckinney",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1167,7 +1957,11 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth", "fetched_at": "2026-05-16"}
+      {
+        "source": "spine",
+        "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "fetched_at": "2026-05-16"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1189,8 +1983,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "tenure_29_years_no_website", "direction": "positive", "evidence": "29 years operating since 1997. No standalone website. Likely surname-based family business (Sample family). Long-tenured profile fits target.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "mixed_construction_focus", "direction": "negative", "evidence": "'Painting and Construction' name implies diversified construction services — not pure painting. May not fit pure painter thesis.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "tenure_29_years_no_website",
+        "direction": "positive",
+        "evidence": "29 years operating since 1997. No standalone website. Likely surname-based family business (Sample family). Long-tenured profile fits target.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "mixed_construction_focus",
+        "direction": "negative",
+        "evidence": "'Painting and Construction' name implies diversified construction services — not pure painting. May not fit pure painter thesis.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1208,7 +2018,11 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth", "fetched_at": "2026-05-16"}
+      {
+        "source": "spine",
+        "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "fetched_at": "2026-05-16"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1230,7 +2044,15 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "tenure_23_years_no_website", "direction": "positive", "evidence": "23 years operating since 2003 with no standalone website. Inside long-tenured target window + web-invisible coasting profile.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "tenure_23_years_no_website",
+        "direction": "positive",
+        "evidence": "23 years operating since 2003 with no standalone website. Inside long-tenured target window + web-invisible coasting profile.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1248,7 +2070,11 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth", "fetched_at": "2026-05-16"}
+      {
+        "source": "spine",
+        "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "fetched_at": "2026-05-16"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1270,8 +2096,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 3, "signal_key": "no_independent_website", "direction": "positive", "evidence": "No standalone website. Owner-initial-named family business — small/coasting profile but verification gap.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth", "observed_at": "2026-05-16"},
-      {"layer": 1, "signal_key": "verification_gap_tenure_unknown", "direction": "neutral", "evidence": "Founding year not confirmed. Owner name not identified. Heavy verification lift before outreach.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth", "observed_at": "2026-05-16"}
+      {
+        "layer": 3,
+        "signal_key": "no_independent_website",
+        "direction": "positive",
+        "evidence": "No standalone website. Owner-initial-named family business — small/coasting profile but verification gap.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "verification_gap_tenure_unknown",
+        "direction": "neutral",
+        "evidence": "Founding year not confirmed. Owner name not identified. Heavy verification lift before outreach.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1289,7 +2131,11 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth", "fetched_at": "2026-05-16"}
+      {
+        "source": "spine",
+        "url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "fetched_at": "2026-05-16"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1311,8 +2157,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "not_pure_painting", "direction": "disqualifying", "evidence": "'Remodeling' name implies general home-improvement scope, not dedicated painting NAICS. Doesn't fit pure painting contractor thesis.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth", "observed_at": "2026-05-16"},
-      {"layer": 1, "signal_key": "tenure_29_years", "direction": "positive", "evidence": "29 years tenure if pure-painting validates, but name implies general remodeling — disqualify pending verification.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth", "observed_at": "2026-05-16"}
+      {
+        "layer": 2,
+        "signal_key": "not_pure_painting",
+        "direction": "disqualifying",
+        "evidence": "'Remodeling' name implies general home-improvement scope, not dedicated painting NAICS. Doesn't fit pure painting contractor thesis.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 1,
+        "signal_key": "tenure_29_years",
+        "direction": "positive",
+        "evidence": "29 years tenure if pure-painting validates, but name implies general remodeling — disqualify pending verification.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/fort-worth",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1330,7 +2192,11 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.expertise.com/home-improvement/painting/texas/plano", "fetched_at": "2026-05-16"}
+      {
+        "source": "spine",
+        "url": "https://www.expertise.com/home-improvement/painting/texas/plano",
+        "fetched_at": "2026-05-16"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1352,7 +2218,15 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "not_pure_painting", "direction": "disqualifying", "evidence": "'Home Improvements' name suggests general handyman/remodeling scope, not dedicated painting contractor (NAICS 238320). Doesn't fit thesis.", "source": "spine", "source_url": "https://www.expertise.com/home-improvement/painting/texas/plano", "observed_at": "2026-05-16"}
+      {
+        "layer": 2,
+        "signal_key": "not_pure_painting",
+        "direction": "disqualifying",
+        "evidence": "'Home Improvements' name suggests general handyman/remodeling scope, not dedicated painting contractor (NAICS 238320). Doesn't fit thesis.",
+        "source": "spine",
+        "source_url": "https://www.expertise.com/home-improvement/painting/texas/plano",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1370,8 +2244,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://papermoonpainting.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://papermoonpainting.com/", "fetched_at": "2026-05-16T23:50:00Z", "fields": ["owner_names", "services", "memberships", "copyright_year"]}
+      { "source": "spine", "url": "https://papermoonpainting.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://papermoonpainting.com/",
+        "fetched_at": "2026-05-16T23:50:00Z",
+        "fields": ["owner_names", "services", "memberships", "copyright_year"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1393,9 +2272,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "husband_wife_37_years", "direction": "positive", "evidence": "Peter and Lisa Moon, husband/wife founders since 1989. 37 years. Both likely 60+. Strong exit-window candidate.", "source": "live_website_fetch", "source_url": "https://papermoonpainting.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "wallpaper_specialty_niche", "direction": "positive", "evidence": "Specialty wallpaper installation (100,000+ rolls in 30 years), lime painting/Tadelakt plaster, color consulting. Differentiated craft niche, not commodity repaint.", "source": "live_website_fetch", "source_url": "https://papermoonpainting.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Copyright 2026. Active online quote form. Owners still engaged — partial coasting tell offset.", "source": "live_website_fetch", "source_url": "https://papermoonpainting.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "husband_wife_37_years",
+        "direction": "positive",
+        "evidence": "Peter and Lisa Moon, husband/wife founders since 1989. 37 years. Both likely 60+. Strong exit-window candidate.",
+        "source": "live_website_fetch",
+        "source_url": "https://papermoonpainting.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "wallpaper_specialty_niche",
+        "direction": "positive",
+        "evidence": "Specialty wallpaper installation (100,000+ rolls in 30 years), lime painting/Tadelakt plaster, color consulting. Differentiated craft niche, not commodity repaint.",
+        "source": "live_website_fetch",
+        "source_url": "https://papermoonpainting.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Copyright 2026. Active online quote form. Owners still engaged — partial coasting tell offset.",
+        "source": "live_website_fetch",
+        "source_url": "https://papermoonpainting.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1413,8 +2316,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://viginipaintanddesign.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://viginipaintanddesign.com/", "fetched_at": "2026-05-16T23:55:00Z", "fields": ["owners", "services", "copyright_year", "quote_form"]}
+      { "source": "spine", "url": "https://viginipaintanddesign.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://viginipaintanddesign.com/",
+        "fetched_at": "2026-05-16T23:55:00Z",
+        "fields": ["owners", "services", "copyright_year", "quote_form"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1436,10 +2344,42 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "named_partners_28_years_specialty", "direction": "positive", "evidence": "Vigini + Morrison partners since 1998 — 28 years. Founders likely 55-65. High-end decorative/faux specialty niche.", "source": "live_website_fetch", "source_url": "https://viginipaintanddesign.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "specialty_decorative_niche", "direction": "positive", "evidence": "Decorative/faux/gold leaf/plaster/Tadelakt/chapels — extreme specialty differentiation, not commodity painting. Sticky high-margin clients (chapels, churches, custom interiors).", "source": "live_website_fetch", "source_url": "https://viginipaintanddesign.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "no_online_quote_phone_text_email", "direction": "positive", "evidence": "No online quote form — customer texts/emails photos for estimate. Analog/personal sales process. Coasting tell.", "source": "live_website_fetch", "source_url": "https://viginipaintanddesign.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "partnership_not_family_succession", "direction": "neutral", "evidence": "Business partnership (Vigini + Morrison) rather than family — no built-in generational succession. Both partners exiting together is a possible event.", "source": "spine", "source_url": "https://viginipaintanddesign.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 1,
+        "signal_key": "named_partners_28_years_specialty",
+        "direction": "positive",
+        "evidence": "Vigini + Morrison partners since 1998 — 28 years. Founders likely 55-65. High-end decorative/faux specialty niche.",
+        "source": "live_website_fetch",
+        "source_url": "https://viginipaintanddesign.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "specialty_decorative_niche",
+        "direction": "positive",
+        "evidence": "Decorative/faux/gold leaf/plaster/Tadelakt/chapels — extreme specialty differentiation, not commodity painting. Sticky high-margin clients (chapels, churches, custom interiors).",
+        "source": "live_website_fetch",
+        "source_url": "https://viginipaintanddesign.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_online_quote_phone_text_email",
+        "direction": "positive",
+        "evidence": "No online quote form — customer texts/emails photos for estimate. Analog/personal sales process. Coasting tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://viginipaintanddesign.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "partnership_not_family_succession",
+        "direction": "neutral",
+        "evidence": "Business partnership (Vigini + Morrison) rather than family — no built-in generational succession. Both partners exiting together is a possible event.",
+        "source": "spine",
+        "source_url": "https://viginipaintanddesign.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1457,8 +2397,14 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.centexpaintingtx.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch_attempt", "url": "https://www.centexpaintingtx.com/", "fetched_at": "2026-05-17T00:00:00Z", "fields": [], "note": "ECONNREFUSED — site unreachable at fetch time"}
+      { "source": "spine", "url": "https://www.centexpaintingtx.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch_attempt",
+        "url": "https://www.centexpaintingtx.com/",
+        "fetched_at": "2026-05-17T00:00:00Z",
+        "fields": [],
+        "note": "ECONNREFUSED — site unreachable at fetch time"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1480,9 +2426,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 4, "signal_key": "website_unreachable_at_fetch", "direction": "positive", "evidence": "Live fetch returned ECONNREFUSED. Possible neglected hosting (coasting tell) or transient outage. Re-check before outreach.", "source": "live_website_fetch_attempt", "source_url": "https://www.centexpaintingtx.com/", "observed_at": "2026-05-17"},
-      {"layer": 2, "signal_key": "short_warranty_1_year", "direction": "positive", "evidence": "1-year workmanship warranty is short by industry standard (typical premium painters offer 5-10 yr). Suggests low-investment ops typical of coasting.", "source": "spine", "source_url": "https://www.centexpaintingtx.com/", "observed_at": "2026-05-16"},
-      {"layer": 2, "signal_key": "tenure_borderline", "direction": "neutral", "evidence": "16 years — borderline below 20+ target.", "source": "spine", "source_url": "https://www.centexpaintingtx.com/", "observed_at": "2026-05-16"}
+      {
+        "layer": 4,
+        "signal_key": "website_unreachable_at_fetch",
+        "direction": "positive",
+        "evidence": "Live fetch returned ECONNREFUSED. Possible neglected hosting (coasting tell) or transient outage. Re-check before outreach.",
+        "source": "live_website_fetch_attempt",
+        "source_url": "https://www.centexpaintingtx.com/",
+        "observed_at": "2026-05-17"
+      },
+      {
+        "layer": 2,
+        "signal_key": "short_warranty_1_year",
+        "direction": "positive",
+        "evidence": "1-year workmanship warranty is short by industry standard (typical premium painters offer 5-10 yr). Suggests low-investment ops typical of coasting.",
+        "source": "spine",
+        "source_url": "https://www.centexpaintingtx.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 2,
+        "signal_key": "tenure_borderline",
+        "direction": "neutral",
+        "evidence": "16 years — borderline below 20+ target.",
+        "source": "spine",
+        "source_url": "https://www.centexpaintingtx.com/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1500,8 +2470,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://familypaintingtx.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://familypaintingtx.com/", "fetched_at": "2026-05-17T00:05:00Z", "fields": ["services", "copyright_year", "bbb"]}
+      { "source": "spine", "url": "https://familypaintingtx.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://familypaintingtx.com/",
+        "fetched_at": "2026-05-17T00:05:00Z",
+        "fields": ["services", "copyright_year", "bbb"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1523,8 +2498,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "tenure_below_target", "direction": "negative", "evidence": "Founded 2013 — 13 years. Below long-tenured target window.", "source": "spine", "source_url": "https://familypaintingtx.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Copyright 2026. Online quote form. BBB accredited. Active operator.", "source": "live_website_fetch", "source_url": "https://familypaintingtx.com/", "observed_at": "2026-05-17"}
+      {
+        "layer": 2,
+        "signal_key": "tenure_below_target",
+        "direction": "negative",
+        "evidence": "Founded 2013 — 13 years. Below long-tenured target window.",
+        "source": "spine",
+        "source_url": "https://familypaintingtx.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Copyright 2026. Online quote form. BBB accredited. Active operator.",
+        "source": "live_website_fetch",
+        "source_url": "https://familypaintingtx.com/",
+        "observed_at": "2026-05-17"
+      }
     ]
   },
   {
@@ -1542,8 +2533,17 @@
     "estimated_crew_count": "8+ staff",
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://yellowrosepainting.com/about-us", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://yellowrosepainting.com/about-us", "fetched_at": "2026-05-17T00:10:00Z", "fields": ["owners", "founded_year", "sister_company", "memberships", "crew_size"]}
+      {
+        "source": "spine",
+        "url": "https://yellowrosepainting.com/about-us",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://yellowrosepainting.com/about-us",
+        "fetched_at": "2026-05-17T00:10:00Z",
+        "fields": ["owners", "founded_year", "sister_company", "memberships", "crew_size"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1565,9 +2565,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "tenure_too_low", "direction": "disqualifying", "evidence": "Founded 2021 — only 5 years. Growth-mode, not exit-mode. Misses thesis.", "source": "spine", "source_url": "https://yellowrosepainting.com/about-us", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_active_marketing", "direction": "negative", "evidence": "Multiple awards (SSA 2022, HomeAdvisor Top Rated, Locals Love), SMS-based quote, copyright 2026, Waco Chamber. Heavy active marketing.", "source": "live_website_fetch", "source_url": "https://yellowrosepainting.com/about-us", "observed_at": "2026-05-17"},
-      {"layer": 2, "signal_key": "sister_company_in_dfw", "direction": "neutral", "evidence": "Mason also founded Spray Tex Painting in DFW (spine_index 2). Multi-shop young entrepreneur — not solo-owner coast profile.", "source": "spine", "source_url": "https://yellowrosepainting.com/about-us", "observed_at": "2026-05-16"}
+      {
+        "layer": 2,
+        "signal_key": "tenure_too_low",
+        "direction": "disqualifying",
+        "evidence": "Founded 2021 — only 5 years. Growth-mode, not exit-mode. Misses thesis.",
+        "source": "spine",
+        "source_url": "https://yellowrosepainting.com/about-us",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_active_marketing",
+        "direction": "negative",
+        "evidence": "Multiple awards (SSA 2022, HomeAdvisor Top Rated, Locals Love), SMS-based quote, copyright 2026, Waco Chamber. Heavy active marketing.",
+        "source": "live_website_fetch",
+        "source_url": "https://yellowrosepainting.com/about-us",
+        "observed_at": "2026-05-17"
+      },
+      {
+        "layer": 2,
+        "signal_key": "sister_company_in_dfw",
+        "direction": "neutral",
+        "evidence": "Mason also founded Spray Tex Painting in DFW (spine_index 2). Multi-shop young entrepreneur — not solo-owner coast profile.",
+        "source": "spine",
+        "source_url": "https://yellowrosepainting.com/about-us",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1585,8 +2609,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://longviewpainting.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://longviewpainting.com/", "fetched_at": "2026-05-17T00:15:00Z", "fields": ["services", "service_area"]}
+      { "source": "spine", "url": "https://longviewpainting.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://longviewpainting.com/",
+        "fetched_at": "2026-05-17T00:15:00Z",
+        "fields": ["services", "service_area"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1608,9 +2637,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "tenure_30_years_named_founder", "direction": "positive", "evidence": "Kenny Ford operating 30 years in East Texas. Owner likely 55-65. Inside long-tenured target window.", "source": "spine", "source_url": "https://longviewpainting.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "no_membership_badges", "direction": "positive", "evidence": "No PDCA, BBB, or paint-mfr partner badges visible on site. Minimal credentialing.", "source": "live_website_fetch", "source_url": "https://longviewpainting.com/", "observed_at": "2026-05-17"},
-      {"layer": 3, "signal_key": "modest_online_presence", "direction": "neutral", "evidence": "Online quote form present but copyright year not visible. Light/aged web presence — partial coasting tell.", "source": "live_website_fetch", "source_url": "https://longviewpainting.com/", "observed_at": "2026-05-17"}
+      {
+        "layer": 1,
+        "signal_key": "tenure_30_years_named_founder",
+        "direction": "positive",
+        "evidence": "Kenny Ford operating 30 years in East Texas. Owner likely 55-65. Inside long-tenured target window.",
+        "source": "spine",
+        "source_url": "https://longviewpainting.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "no_membership_badges",
+        "direction": "positive",
+        "evidence": "No PDCA, BBB, or paint-mfr partner badges visible on site. Minimal credentialing.",
+        "source": "live_website_fetch",
+        "source_url": "https://longviewpainting.com/",
+        "observed_at": "2026-05-17"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modest_online_presence",
+        "direction": "neutral",
+        "evidence": "Online quote form present but copyright year not visible. Light/aged web presence — partial coasting tell.",
+        "source": "live_website_fetch",
+        "source_url": "https://longviewpainting.com/",
+        "observed_at": "2026-05-17"
+      }
     ]
   },
   {
@@ -1628,8 +2681,13 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://hanzelpaintco.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://hanzelpaintco.com/", "fetched_at": "2026-05-17T00:20:00Z", "fields": ["services", "insurance", "copyright_year"]}
+      { "source": "spine", "url": "https://hanzelpaintco.com/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch",
+        "url": "https://hanzelpaintco.com/",
+        "fetched_at": "2026-05-17T00:20:00Z",
+        "fields": ["services", "insurance", "copyright_year"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1651,8 +2709,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "young_owners_growth_mode", "direction": "disqualifying", "evidence": "Owners had first son in 2022 — likely early 30s. Growth/family-formation phase, not exit phase. Misses thesis.", "source": "spine", "source_url": "https://hanzelpaintco.com/", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Copyright 2025. $2M umbrella insurance — actively investing in business protection.", "source": "live_website_fetch", "source_url": "https://hanzelpaintco.com/", "observed_at": "2026-05-17"}
+      {
+        "layer": 2,
+        "signal_key": "young_owners_growth_mode",
+        "direction": "disqualifying",
+        "evidence": "Owners had first son in 2022 — likely early 30s. Growth/family-formation phase, not exit phase. Misses thesis.",
+        "source": "spine",
+        "source_url": "https://hanzelpaintco.com/",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Copyright 2025. $2M umbrella insurance — actively investing in business protection.",
+        "source": "live_website_fetch",
+        "source_url": "https://hanzelpaintco.com/",
+        "observed_at": "2026-05-17"
+      }
     ]
   },
   {
@@ -1670,8 +2744,17 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.benchmarkpaintingtx.com/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://www.benchmarkpaintingtx.com/", "fetched_at": "2026-05-17T00:25:00Z", "fields": ["owner_name", "experience", "memberships", "copyright_year"]}
+      {
+        "source": "spine",
+        "url": "https://www.benchmarkpaintingtx.com/",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.benchmarkpaintingtx.com/",
+        "fetched_at": "2026-05-17T00:25:00Z",
+        "fields": ["owner_name", "experience", "memberships", "copyright_year"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1693,9 +2776,33 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "named_solo_founder_22_plus_years_trade", "direction": "positive", "evidence": "Neal Sowers, 22+ years trade experience. Originally Sherwin-Williams + PPG, then founded Benchmark. Real craft tenure. Likely 45-55.", "source": "live_website_fetch", "source_url": "https://www.benchmarkpaintingtx.com/", "observed_at": "2026-05-17"},
-      {"layer": 3, "signal_key": "modern_tech_stack", "direction": "negative", "evidence": "Google Guaranteed, '2025 Most Trusted' award, copyright 2026, online quote form. Active marketing operator.", "source": "live_website_fetch", "source_url": "https://www.benchmarkpaintingtx.com/", "observed_at": "2026-05-17"},
-      {"layer": 1, "signal_key": "company_tenure_unclear", "direction": "neutral", "evidence": "Personal trade tenure 22+ years but company founding year not stated. Likely younger company (5-15 years). Verify before outreach.", "source": "live_website_fetch", "source_url": "https://www.benchmarkpaintingtx.com/", "observed_at": "2026-05-17"}
+      {
+        "layer": 1,
+        "signal_key": "named_solo_founder_22_plus_years_trade",
+        "direction": "positive",
+        "evidence": "Neal Sowers, 22+ years trade experience. Originally Sherwin-Williams + PPG, then founded Benchmark. Real craft tenure. Likely 45-55.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.benchmarkpaintingtx.com/",
+        "observed_at": "2026-05-17"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_tech_stack",
+        "direction": "negative",
+        "evidence": "Google Guaranteed, '2025 Most Trusted' award, copyright 2026, online quote form. Active marketing operator.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.benchmarkpaintingtx.com/",
+        "observed_at": "2026-05-17"
+      },
+      {
+        "layer": 1,
+        "signal_key": "company_tenure_unclear",
+        "direction": "neutral",
+        "evidence": "Personal trade tenure 22+ years but company founding year not stated. Likely younger company (5-15 years). Verify before outreach.",
+        "source": "live_website_fetch",
+        "source_url": "https://www.benchmarkpaintingtx.com/",
+        "observed_at": "2026-05-17"
+      }
     ]
   },
   {
@@ -1713,8 +2820,17 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.freedompaint.org/about", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://www.freedompaint.org/about", "fetched_at": "2026-05-17T00:30:00Z", "fields": ["owners", "services"]}
+      {
+        "source": "spine",
+        "url": "https://www.freedompaint.org/about",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://www.freedompaint.org/about",
+        "fetched_at": "2026-05-17T00:30:00Z",
+        "fields": ["owners", "services"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1736,8 +2852,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 2, "signal_key": "tenure_too_low", "direction": "disqualifying", "evidence": "Founded 2019 — only 7 years. Misses long-tenured criterion.", "source": "spine", "source_url": "https://www.freedompaint.org/about", "observed_at": "2026-05-16"},
-      {"layer": 3, "signal_key": "active_award_winning_5_year_run", "direction": "negative", "evidence": "NBTX 'Best House Painting Service' winner 5 years running (2020-2025). Heavily marketed, actively engaged. Not coasting.", "source": "spine", "source_url": "https://www.freedompaint.org/about", "observed_at": "2026-05-16"}
+      {
+        "layer": 2,
+        "signal_key": "tenure_too_low",
+        "direction": "disqualifying",
+        "evidence": "Founded 2019 — only 7 years. Misses long-tenured criterion.",
+        "source": "spine",
+        "source_url": "https://www.freedompaint.org/about",
+        "observed_at": "2026-05-16"
+      },
+      {
+        "layer": 3,
+        "signal_key": "active_award_winning_5_year_run",
+        "direction": "negative",
+        "evidence": "NBTX 'Best House Painting Service' winner 5 years running (2020-2025). Heavily marketed, actively engaged. Not coasting.",
+        "source": "spine",
+        "source_url": "https://www.freedompaint.org/about",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1755,8 +2887,14 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://houstonpainters.co/", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch_attempt", "url": "https://houstonpainters.co/", "fetched_at": "2026-05-17T00:35:00Z", "fields": [], "note": "ERR_TLS_CERT_ALTNAME_INVALID — SSL cert mismatch"}
+      { "source": "spine", "url": "https://houstonpainters.co/", "fetched_at": "2026-05-16" },
+      {
+        "source": "live_website_fetch_attempt",
+        "url": "https://houstonpainters.co/",
+        "fetched_at": "2026-05-17T00:35:00Z",
+        "fields": [],
+        "note": "ERR_TLS_CERT_ALTNAME_INVALID — SSL cert mismatch"
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1778,8 +2916,24 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 4, "signal_key": "invalid_ssl_cert", "direction": "positive", "evidence": "Site SSL cert returns ERR_TLS_CERT_ALTNAME_INVALID — cert covers different domain. Indicates neglected/unmaintained web infrastructure. Strong coasting tell if persistent.", "source": "live_website_fetch_attempt", "source_url": "https://houstonpainters.co/", "observed_at": "2026-05-17"},
-      {"layer": 1, "signal_key": "verification_gap_tenure_unknown", "direction": "neutral", "evidence": "Owner name, founding year not disclosed publicly. Heavy verification lift required.", "source": "spine", "source_url": "https://houstonpainters.co/", "observed_at": "2026-05-16"}
+      {
+        "layer": 4,
+        "signal_key": "invalid_ssl_cert",
+        "direction": "positive",
+        "evidence": "Site SSL cert returns ERR_TLS_CERT_ALTNAME_INVALID — cert covers different domain. Indicates neglected/unmaintained web infrastructure. Strong coasting tell if persistent.",
+        "source": "live_website_fetch_attempt",
+        "source_url": "https://houstonpainters.co/",
+        "observed_at": "2026-05-17"
+      },
+      {
+        "layer": 1,
+        "signal_key": "verification_gap_tenure_unknown",
+        "direction": "neutral",
+        "evidence": "Owner name, founding year not disclosed publicly. Heavy verification lift required.",
+        "source": "spine",
+        "source_url": "https://houstonpainters.co/",
+        "observed_at": "2026-05-16"
+      }
     ]
   },
   {
@@ -1797,8 +2951,17 @@
     "estimated_crew_count": null,
     "pdca_member": null,
     "data_sources": [
-      {"source": "spine", "url": "https://www.expertise.com/home-improvement/painting/texas/houston", "fetched_at": "2026-05-16"},
-      {"source": "live_website_fetch", "url": "https://first-choice-painting-remodeling.com/", "fetched_at": "2026-05-17T00:40:00Z", "fields": ["founded_year", "services", "copyright_year"]}
+      {
+        "source": "spine",
+        "url": "https://www.expertise.com/home-improvement/painting/texas/houston",
+        "fetched_at": "2026-05-16"
+      },
+      {
+        "source": "live_website_fetch",
+        "url": "https://first-choice-painting-remodeling.com/",
+        "fetched_at": "2026-05-17T00:40:00Z",
+        "fields": ["founded_year", "services", "copyright_year"]
+      }
     ],
     "independence_verified": true,
     "platform_affiliation_check": "independent",
@@ -1820,10 +2983,42 @@
     "is_distressed": false,
     "distress_reasons": [],
     "signals": [
-      {"layer": 1, "signal_key": "tenure_31_years_home_based_business", "direction": "positive", "evidence": "31 years operating since 1995. Business address (1507 Acorn Meadow St.) is a residential street — classic home-based owner-operator. Owner likely 55-70.", "source": "live_website_fetch", "source_url": "https://first-choice-painting-remodeling.com/", "observed_at": "2026-05-17"},
-      {"layer": 2, "signal_key": "wide_handyman_scope", "direction": "negative", "evidence": "Wide service mix (painting + remodeling + gutter cleaning + handyman). Dilutes pure-painting focus — may not fit pure NAICS 238320 thesis. Behaves as general home services.", "source": "live_website_fetch", "source_url": "https://first-choice-painting-remodeling.com/", "observed_at": "2026-05-17"},
-      {"layer": 3, "signal_key": "modern_copyright_2026", "direction": "negative", "evidence": "Copyright 2026. Online quote form. Active.", "source": "live_website_fetch", "source_url": "https://first-choice-painting-remodeling.com/", "observed_at": "2026-05-17"},
-      {"layer": 1, "signal_key": "owner_anonymity", "direction": "positive", "evidence": "Owner name not disclosed publicly despite 31-year tenure. Common with low-marketing coast-mode operators.", "source": "live_website_fetch", "source_url": "https://first-choice-painting-remodeling.com/", "observed_at": "2026-05-17"}
+      {
+        "layer": 1,
+        "signal_key": "tenure_31_years_home_based_business",
+        "direction": "positive",
+        "evidence": "31 years operating since 1995. Business address (1507 Acorn Meadow St.) is a residential street — classic home-based owner-operator. Owner likely 55-70.",
+        "source": "live_website_fetch",
+        "source_url": "https://first-choice-painting-remodeling.com/",
+        "observed_at": "2026-05-17"
+      },
+      {
+        "layer": 2,
+        "signal_key": "wide_handyman_scope",
+        "direction": "negative",
+        "evidence": "Wide service mix (painting + remodeling + gutter cleaning + handyman). Dilutes pure-painting focus — may not fit pure NAICS 238320 thesis. Behaves as general home services.",
+        "source": "live_website_fetch",
+        "source_url": "https://first-choice-painting-remodeling.com/",
+        "observed_at": "2026-05-17"
+      },
+      {
+        "layer": 3,
+        "signal_key": "modern_copyright_2026",
+        "direction": "negative",
+        "evidence": "Copyright 2026. Online quote form. Active.",
+        "source": "live_website_fetch",
+        "source_url": "https://first-choice-painting-remodeling.com/",
+        "observed_at": "2026-05-17"
+      },
+      {
+        "layer": 1,
+        "signal_key": "owner_anonymity",
+        "direction": "positive",
+        "evidence": "Owner name not disclosed publicly despite 31-year tenure. Common with low-marketing coast-mode operators.",
+        "source": "live_website_fetch",
+        "source_url": "https://first-choice-painting-remodeling.com/",
+        "observed_at": "2026-05-17"
+      }
     ]
   }
 ]

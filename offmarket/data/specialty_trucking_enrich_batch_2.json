@@ -47,8 +47,14 @@
       "verified_via": "FMCSA SAFER + carrieratlas 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1703893", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://carrieratlas.com/trucking-companies/tx/midland/rex-oilfield-services-lp/", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1703893",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      {
+        "url": "https://carrieratlas.com/trucking-companies/tx/midland/rex-oilfield-services-lp/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Permian-based oilfield carrier with 49 power units, 30 drivers, operating since 2007 (~19 yrs). No website + LP entity structure both suggest old-school owner-operator partnership. Pecos satellite office. Strong size/specialty fit but identity opacity is a blocker — needs Comptroller + carrier records search to identify owner."
@@ -101,8 +107,11 @@
       "verified_via": "live-fetch of wtxfracsandlogistics.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3115781", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://wtxfracsandlogistics.com/", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3115781",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      { "url": "https://wtxfracsandlogistics.com/", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.4,
     "notes": "40 power units, Odessa-based frac sand + hot shot. MC-1055106 issued ~2018 suggests MC date but vehicles/founding not on website. Independent unverified — flag for Comptroller lookup. Frac sand cyclicality is a sellability risk."
@@ -154,8 +163,14 @@
       "verified_via": "live-fetch + LinkedIn 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3715907", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.linkedin.com/in/cesar-carreon-ba394b54/", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3715907",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      {
+        "url": "https://www.linkedin.com/in/cesar-carreon-ba394b54/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "Cesar Carreon = President. 14 power units, Seminole HQ. USDOT was issued recent (~2020), so this is a relatively young operation — fails 5-yr soft test for sellability. DEPRIORITIZE unless deeper history surfaces."
@@ -208,8 +223,11 @@
       "verified_via": "live-fetch of viperss.net 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3276691", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://viperss.net/", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3276691",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      { "url": "https://viperss.net/", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.55,
     "notes": "30 power units. 'Family-owned with 70+ years industry experience' but no named founder/owner. Crane + heavy haul + oilfield. Solid Midland/Odessa/Hobbs footprint. Owner identity opacity is significant — could be A-tier if surface ownership skews older."
@@ -263,9 +281,15 @@
       "verified_via": "Texas Monthly + KVUE + Calf News + NBAA 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.texasmonthly.com/news-politics/cattle-trading-capitol-schwertner/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://cllnet.com/our-history/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://nbaa.org/membership/member-profiles/flying-the-range-capitol-land-livestock/", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://www.texasmonthly.com/news-politics/cattle-trading-capitol-schwertner/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      { "url": "https://cllnet.com/our-history/", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://nbaa.org/membership/member-profiles/flying-the-range-capitol-land-livestock/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.9,
     "notes": "DEPRIORITIZE — owner Jim Schwertner is only ~49 (way too young for succession), 3rd generation grandson already in pipeline, active aviation membership signals growth not exit. 80-year dynasty NOT for sale. Schwertner family is too well-capitalized for SBA-scale acquisition anyway (225 auctions/week, 150-person operation)."
@@ -317,7 +341,10 @@
       "verified_via": "FMCSA SAFER only 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2185274", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2185274",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "9 power units, no website, Hereford ag-belt. Below SBA-sweet-spot fleet size. Independent but identity opaque. Needs Comptroller lookup + cold-call to verify ownership. Low data completeness."
@@ -371,8 +398,14 @@
       "verified_via": "FMCSA SAFER + business directory 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=785769", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.dandb.com/businessdirectory/texastanktrucksco-breckenridge-tx-18131457.html", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=785769",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      {
+        "url": "https://www.dandb.com/businessdirectory/texastanktrucksco-breckenridge-tx-18131457.html",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "Classic coasting signal cluster: 33-yr operation, NO website, 1990s-era Excite email contact, phone-only. Saltwater hauling tied to declining frac region. Estimated owner ~63 if founder still operating. Strong A-tier candidate IF owner identity can be confirmed. Needs Comptroller lookup."
@@ -425,8 +458,8 @@
       "verified_via": "live-fetch wmdewey.com + web search 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://wmdewey.com/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://wmdewey.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://wmdewey.com/", "fetched_at": "2026-05-16T22:00:00Z" },
+      { "url": "https://wmdewey.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.75,
     "notes": "131-year-old Texas legend. McDowell family is 2nd+3rd generation since mid-1950s acquisition. NOT a typical coasting target — site has online inventory portal + active quote system. 40 company tractors + 110 flatbeds + owner-ops suggests SCALE exceeds SBA acquisition. Better fit for PE/strategic buyer. DEPRIORITIZE for SBA fund — but file for cross-vertical visibility."
@@ -480,8 +513,8 @@
       "verified_via": "live-fetch kimrad.com + LinkedIn 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.kimrad.com/our-story/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.kimrad.com/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://www.kimrad.com/our-story/", "fetched_at": "2026-05-16T22:00:00Z" },
+      { "url": "https://www.kimrad.com/", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.7,
     "notes": "Husband-wife founders Brad + Kimila Pohlmeier (named from company name). Both likely ~60. Multi-commodity tanker fleet, Amarillo HQ. Active industry memberships (WIT, TXTA, SmartWay) suggest engaged operators, not coasting. No visible 2nd-gen successor. Solid B-tier succession watch — verify fleet size + revenue scale via Comptroller."
@@ -535,7 +568,7 @@
       "verified_via": "live-fetch coledistributing.net 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://coledistributing.net/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://coledistributing.net/", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.45,
     "notes": "Cole family-owned bulk fuel distributor in Palestine TX. 25 vehicles. NAICS classification flag — primary revenue is likely fuel wholesale, not trucking-only. If NAICS is 424720, drops from this scoring vertical. Owner identity opaque — needs Comptroller + LinkedIn dig."
@@ -590,9 +623,15 @@
       "verified_via": "live-fetch qwtransport.com About + LinkedIn 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://qwtransport.com/about/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.linkedin.com/in/rick-golman-2567324b/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://cornercapitalpartners.com/empire-petroleum-appoints-rick-golman-as-new-ceo/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://qwtransport.com/about/", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://www.linkedin.com/in/rick-golman-2567324b/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      {
+        "url": "https://cornercapitalpartners.com/empire-petroleum-appoints-rick-golman-as-new-ceo/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "Rick Golman (~72) is in classic succession age band but with TWO sons + son-in-law as named operating partners. Internal succession likely already structured — DEPRIORITIZE for external sale unless intelligence surfaces family dissatisfaction. Strong fleet + customer relationships (1000+ c-stores). NAICS flag — fuel wholesale-adjacent."
@@ -645,8 +684,14 @@
       "verified_via": "FMCSA SAFER + TFFA member dir 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1922866", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://members.tffa.com/tffa-member-directory/Details/petroleum-express-inc-2471196", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1922866",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      {
+        "url": "https://members.tffa.com/tffa-member-directory/Details/petroleum-express-inc-2471196",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "21 power units, Houston Ship Channel. 30+ years in petroleum industry per About. Owner identity opaque. TFFA member. Reasonable fleet size; needs Comptroller + LinkedIn dig for owner ID. NOTE: duplicate entry exists at index 58 — keep one only post-dedup."
@@ -702,7 +747,7 @@
       "verified_via": "live-fetch galaxyfreightservices.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://galaxyfreightservices.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://galaxyfreightservices.com/about-us/", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.55,
     "notes": "56-yr Houston family freight forwarder + trucker. 2nd-gen confirmed; 3rd-gen ambiguous. Heavy machinery + hot shot + multi-modal. NAICS flag — freight forwarding side may dominate (488510 vs 484220). Strong succession candidate IF asset-based trucking is dominant revenue line. Verify via Comptroller + customer list."
@@ -758,8 +803,11 @@
       "verified_via": "live-fetch zamcotrucking.com + Corporation Wiki 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.zamcotrucking.com", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.corporationwiki.com/Texas/San-Antonio/zamco-trucking-llc/37754144.aspx", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://www.zamcotrucking.com", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://www.corporationwiki.com/Texas/San-Antonio/zamco-trucking-llc/37754144.aspx",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "STRONG A-tier candidate. Luis Zamora (~73) still founder of record after 46 years. Site copyright frozen at 2016 (10-yr stale = MAJOR coasting tell). Wix hosting + phone-first. Alma Zamora = family successor (likely wife or daughter). DBE/MBE/SBE/HUB cert package is sticky TxDOT revenue. San Antonio aggregate hauling has Eagle Ford + I-35 corridor pull. Owner-operator-heavy fleet limits asset base."
@@ -812,8 +860,11 @@
       "verified_via": "live-fetch sisuenergyllc.com + Bitbean interview + LinkedIn 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://sisuenergyllc.com/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.bitbean.com/ceos-speak/jim-grundy-of-sisu-energy/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://sisuenergyllc.com/", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://www.bitbean.com/ceos-speak/jim-grundy-of-sisu-energy/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.65,
     "notes": "DEPRIORITIZE — 100% owner-operator model (no fleet assets), young company (7 yrs), founder Jim Grundy actively building brand on podcasts/SiriusXM. NOT a succession target. Strong revenue but operating-leverage model unsellable to SBA-style buyer needing rolling stock collateral."
@@ -868,8 +919,11 @@
       "verified_via": "live-fetch riostruckingco.com + FMCSA SAFER 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.riostruckingco.com/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1968138", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://www.riostruckingco.com/", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1968138",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.55,
     "notes": "38-year Rios family operation in Brazos Valley. Only 7 SAFER trucks vs 20+ claimed equipment (heavy on trailers/dumps). HUB/DBE TxDOT certs valuable. Gmail contact + thin website + no team page = strong coasting signals. Owner age estimated ~65. Needs Comptroller lookup for owner ID."
@@ -923,8 +977,11 @@
       "verified_via": "live-fetch atitransports.com + FMCSA SAFER + LinkedIn 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://atitransports.com/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=728166", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://atitransports.com/", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=728166",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "159 power units EXCEEDS SBA 50-cap. Cross-vertical visibility only — too large for independent sponsor / SBA buyer. Better fit for PE/strategic buyer. DEPRIORITIZE for current scoring run."
@@ -978,8 +1035,11 @@
       "verified_via": "live-fetch loomistrucking.com + BBB 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.loomistrucking.com/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.bbb.org/us/tx/houston/profile/delivery-service/loomis-trucking-0915-90024040", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://www.loomistrucking.com/", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://www.bbb.org/us/tx/houston/profile/delivery-service/loomis-trucking-0915-90024040",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "STRONG A-tier candidate by life-stage, but fleet TOO SMALL (5 vehicles) for meaningful SBA acquisition. Judy Loomis (~68) widowed in 2023, running dispatch from home — high willingness-to-sell signal. 33-yr operation. Distressed reason flagged (co-owner death). Better fit as roll-up tuck-in, not standalone acquisition target."
@@ -1033,8 +1093,14 @@
       "verified_via": "FMCSA SAFER + Pleasanton Chamber + Blue Book 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2161206", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.thebluebook.com/iProView/1369279/atascosa-materials-llc/subcontractors/", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2161206",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      {
+        "url": "https://www.thebluebook.com/iProView/1369279/atascosa-materials-llc/subcontractors/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "27 trucks + 25 drivers Atascosa County aggregate hauler. NO WEBSITE = strong coasting + opacity signal. Mike McCauley contact. Eagle Ford corridor is a hot sub-market. Needs Comptroller + cold-call to verify ownership + age. Solid B-watch candidate if owner age band confirms succession profile."
@@ -1090,8 +1156,11 @@
       "verified_via": "live-fetch hearntrucking.com About + Oil & Gas Awards 2013 + LinkedIn 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://hearntrucking.com/about-hearn/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "http://www.oilandgasawards.com/winner/midcontinent-2013-trucking-company-of-the-year-hearn-trucking-llc/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://hearntrucking.com/about-hearn/", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "http://www.oilandgasawards.com/winner/midcontinent-2013-trucking-company-of-the-year-hearn-trucking-llc/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.8,
     "notes": "STRONG A-tier candidate. Jack Hearn Jr. (3rd-gen trucker, ~67) founded 1987, 39-yr personal tenure. Multi-service fleet of 55 trucks (just above 50-cap). No named 4th-gen successor despite 3-gen family tradition. Oil & Gas Awards 2013 winner = sellable accolade. Weatherford (DFW exurban) is hot sub-market. Verify fleet size via SAFER + family succession status."
@@ -1144,8 +1213,14 @@
       "verified_via": "live-fetch odentransport.com + FMCSA + OpenCorporates 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.odentransport.com/about-oden-transport", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://opencorporates.com/companies/us_tx/0802170648", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://www.odentransport.com/about-oden-transport",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      {
+        "url": "https://opencorporates.com/companies/us_tx/0802170648",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.5,
     "notes": "BJ Oden owner-operator, 6 trucks, Permian/Lubbock-south area. Below SBA fleet threshold. Owner age unclear but '18 yrs industry' proxy suggests 40s-50s = NOT in classic succession band. DEPRIORITIZE."
@@ -1197,8 +1272,11 @@
       "verified_via": "PCCA Commentator + PCCA news 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://lubbockcottongrowers.com/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://pcca.com/article/lubbock-cotton-growers/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://lubbockcottongrowers.com/", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://pcca.com/article/lubbock-cotton-growers/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.7,
     "notes": "DROP — Lubbock Cotton Growers is a member-owned COOPERATIVE GIN, not a private trucking business. The 6 trucks are an internal hauling arm of a 87-yr cotton ginning cooperative. Not acquirable as private SBA target. Flag as distressed/wrong-entity-type for scoring exclusion."
@@ -1244,7 +1322,10 @@
       "verified_via": "duplicate_flag_2026-05-16"
     },
     "data_sources": [
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1922866", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1922866",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.3,
     "notes": "DUPLICATE of spine_index 47 (same USDOT 1922866, MC, address, phone). DROP in scoring dedup."
@@ -1298,9 +1379,15 @@
       "verified_via": "live-fetch allstarfuel.com + Plainview Chamber + LinkedIn + TFFA 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.allstarfuel.com/about/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.linkedin.com/in/gary-garrison-4948b9b/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.plainviewtexaschamber.com/cm-business/allstar-fuel-a-fred-garrison-oil-company/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://www.allstarfuel.com/about/", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://www.linkedin.com/in/gary-garrison-4948b9b/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      {
+        "url": "https://www.plainviewtexaschamber.com/cm-business/allstar-fuel-a-fred-garrison-oil-company/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.85,
     "notes": "3rd-gen Gary Garrison (~65). 51 power units (1 above SBA cap). 78-yr operation, multi-brand fuel distributor, GPS-dispatched fleet (modern). 4th-gen succession not visible. NAICS overlap: trucking ARM of fuel wholesaler (424720). Fleet ops are likely captive — would need to carve out from parent. B-tier watch."
@@ -1354,7 +1441,10 @@
       "verified_via": "FMCSA SAFER 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1979584", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1979584",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.4,
     "notes": "DROP for SBA-scale acquisition — 2 power units (micro-operator). Todd R Mayo President since 1997. Hardin County timber region in slow decline. Below buy-able fleet threshold. Roll-up tuck-in at best."
@@ -1407,7 +1497,10 @@
       "verified_via": "carrieratlas + spine flag 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://carrieratlas.com/tx/lubbock/petroleum-transport-inc/", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://carrieratlas.com/tx/lubbock/petroleum-transport-inc/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.45,
     "notes": "DROP for distress — SAFER INACTIVE per spine flag. Even if status is recoverable, no website + low driver count + USDOT pre-1980 suggests fading or dormant operator. Hard gate fail: cannot verify operating."
@@ -1462,8 +1555,11 @@
       "verified_via": "live-fetch coastalplainsllc.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.coastalplainsllc.com/company/history/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://cptportal.net/", "fetched_at": "2026-05-16T22:00:00Z"}
+      {
+        "url": "https://www.coastalplainsllc.com/company/history/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      { "url": "https://cptportal.net/", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.6,
     "notes": "Coastal Plains is 15-yr Eagle Ford-Permian crude hauler with driver portal (modern). Owner identity opaque. Started 10 trucks 2011 — current scale undisclosed. Multi-basin (Eagle Ford + Permian + Delaware) = growth posture. C-watch with succession profile dependent on undisclosed owner age."
@@ -1519,7 +1615,7 @@
       "verified_via": "live-fetch meridian-trucking.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://meridian-trucking.com/about/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://meridian-trucking.com/about/", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.45,
     "notes": "DEPRIORITIZE — self-described 'fresh face / newer company'. Fails 5-yr soft test likely. Owner identity opaque. Named team members (Jake, Jessica, Julia) all non-owner roles. Permian generalist. Not a succession candidate."
@@ -1573,7 +1669,7 @@
       "verified_via": "live-fetch ironwheel-es.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.ironwheel-es.com/about", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://www.ironwheel-es.com/about", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.6,
     "notes": "DEPRIORITIZE — Benjamin Kail (serial trucking entrepreneur, ~40s) restarted IronWheel 2020 after exiting TegraExcel. NOT a succession candidate — Kail is actively building toward a strategic exit, not winding down. Family co-runs with brother Martin. Recent founding (6 yrs) fails sellability gate."
@@ -1628,7 +1724,7 @@
       "verified_via": "live-fetch texastruckinggroup.com 404 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://texastruckinggroup.com/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://texastruckinggroup.com/", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.2,
     "notes": "DROP for verification failure — no USDOT, no phone, no address, no founding year, about-page 404. Hard gate fail: cannot verify business is real/operating. Possibly broker shell rather than asset carrier."
@@ -1682,8 +1778,11 @@
       "verified_via": "live-fetch twistednail.com + Wacoan + Crunchbase 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://twistednail.com/about/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.crunchbase.com/person/hunter-kosar", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://twistednail.com/about/", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://www.crunchbase.com/person/hunter-kosar",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "DEPRIORITIZE — Hunter Kosar founder/owner, Baylor grad, ~40 years old (TOO YOUNG for succession band). Twisted Nail is BROKERAGE (no fleet assets) using 150+ owner-operators. Active commercial growth posture. Not acquirable as fleet-asset SBA target."
@@ -1735,8 +1834,11 @@
       "verified_via": "live-fetch ussandandgravel.com + LinkedIn + Microplex 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.ussandandgravel.com/about-us", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.microplexnews.com/u-s-sand-gravel-u-s-rental-big-state-concrete-cuts-ribbon-in-eastland/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://www.ussandandgravel.com/about-us", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://www.microplexnews.com/u-s-sand-gravel-u-s-rental-big-state-concrete-cuts-ribbon-in-eastland/",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.75,
     "notes": "DEPRIORITIZE — Casey + Celeste Raitz both Tarleton grads, ~42, founded 2015 (11 yrs), 100+ employees, MULTIPLE pit + rental + concrete sister businesses growing rapidly. Active scale-up, not coasting. Wrong life-stage for succession acquisition."
@@ -1791,7 +1893,7 @@
       "verified_via": "live-fetch nicholstrans.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.nicholstrans.com/", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://www.nicholstrans.com/", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.45,
     "notes": "31-yr East TX heavy haul. Owner identity Nichols family but specific principal opaque. Fleet size undisclosed. Multi-trade generalist (mining + energy + logging) is typical of small-shop pre-specialization. Owner age estimated ~60 if founder still active. Needs Comptroller + cold-call. B-watch pending verification."
@@ -1846,7 +1948,7 @@
       "verified_via": "live-fetch txpanhandlelogistics.com 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://www.txpanhandlelogistics.com/about", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://www.txpanhandlelogistics.com/about", "fetched_at": "2026-05-16T22:00:00Z" }
     ],
     "data_completeness": 0.4,
     "notes": "8-yr woman-owned reefer hauler in Texas Panhandle dairy belt. Owner likely 'An Lopez' (email proxy). Recent founding limits succession profile. Sister biz 'Weather Seal Insulation' shared branding suggests holding-co structure. C-watch."
@@ -1901,9 +2003,15 @@
       "verified_via": "BBB + LinkedIn + ZoomInfo + Seamless + live-fetch 2026-05-16"
     },
     "data_sources": [
-      {"url": "https://diamondbenergy.com/", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.bbb.org/us/tx/lubbock/profile/oilfield-service/diamond-b-energy-services-llc-0875-51719", "fetched_at": "2026-05-16T22:00:00Z"},
-      {"url": "https://www.linkedin.com/in/ben-burkholder-7bb66765", "fetched_at": "2026-05-16T22:00:00Z"}
+      { "url": "https://diamondbenergy.com/", "fetched_at": "2026-05-16T22:00:00Z" },
+      {
+        "url": "https://www.bbb.org/us/tx/lubbock/profile/oilfield-service/diamond-b-energy-services-llc-0875-51719",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      },
+      {
+        "url": "https://www.linkedin.com/in/ben-burkholder-7bb66765",
+        "fetched_at": "2026-05-16T22:00:00Z"
+      }
     ],
     "data_completeness": 0.8,
     "notes": "DEPRIORITIZE for SBA scale — 129 power units, $50-100M revenue. Way beyond independent-sponsor / SBA-acquisition band. Better fit for PE/strategic buyer. Cross-vertical visibility only. Ben Burkholder still active operator. Sister Salty Dawg Trucking implies holding-co rollup."

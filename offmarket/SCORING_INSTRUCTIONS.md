@@ -11,7 +11,7 @@ When all enrichment batches for a vertical are complete, the orchestrator spawns
 
 ## The scoring template
 
-```
+````
 You are a SCORING sub-agent for the off-market acquisition scorer. Score all enriched businesses for the {VERTICAL} vertical and write {VERTICAL}_targets.json + .csv.
 
 ## Input
@@ -117,9 +117,10 @@ final_score = round(0.30·L1 + 0.25·L2 + 0.30·L3 + 0.15·L4)
   "data_completeness": 0.78,
   "deep_dive_pending": false
 }
-```
+````
 
 ## Comments format
+
 - layer1_comment: 1-2 sentences citing source + URL where possible.
 - layer2_comment: 1-2 sentences with recurring revenue + size estimate.
 - layer3_comment: list specific tells + sources.
@@ -128,7 +129,11 @@ final_score = round(0.30·L1 + 0.25·L2 + 0.30·L3 + 0.15·L4)
 - value_add_thesis: 1-3 sentences (AI/ops levers + EBITDA-uplift).
 
 ## Token budget
-~150K. Read all enrichment batches, apply scoring, write {VERTICAL}_targets.json + .csv. Persist incrementally.
+
+~150K. Read all enrichment batches, apply scoring, write {VERTICAL}\_targets.json + .csv. Persist incrementally.
 
 Return one-sentence summary: tier counts, top 3 A/B candidates.
+
+```
+
 ```
