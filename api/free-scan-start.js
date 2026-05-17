@@ -112,7 +112,7 @@ module.exports = async function handler(req, res) {
         user_email: email,
         name: buyBoxName,
         criteria: buyBox,
-        status: 'draft',
+        status: 'active', // 'draft' was silently ignored by the scheduler (queries WHERE status = 'active')
         version: 1,
       })
       .select('id')
