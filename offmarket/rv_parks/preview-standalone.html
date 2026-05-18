@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deal Hound Off-Market — RV Parks POC Preview</title>
+<style>
+  :root {
+    --bg: #0d0f12;
+    --bg-card: #161a20;
+    --bg-card-hover: #1c2128;
+    --border: #2a3038;
+    --text: #e5e9ee;
+    --text-dim: #8b949e;
+    --text-faint: #5a6168;
+    --hot: #ff4d4f;
+    --hot-bg: rgba(255, 77, 79, 0.12);
+    --strong: #ffa940;
+    --strong-bg: rgba(255, 169, 64, 0.12);
+    --watch: #4096ff;
+    --watch-bg: rgba(64, 150, 255, 0.12);
+    --good: #52c41a;
+    --link: #69b1ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+    background: linear-gradient(180deg, #161a20 0%, #0d0f12 100%);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  header .subtitle {
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  .stats {
+    display: flex;
+    gap: 24px;
+    padding: 16px 24px;
+    background: #11141a;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .stat { color: var(--text-dim); }
+  .stat strong { color: var(--text); font-weight: 600; }
+  .buy-box {
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  .buy-box strong { color: var(--text-dim); }
+  .leads {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .lead {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    transition: background 0.15s, border-color 0.15s;
+    position: relative;
+  }
+  .lead:hover {
+    background: var(--bg-card-hover);
+    border-color: #3a414b;
+  }
+  .lead-tier-band {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 4px;
+    border-radius: 10px 0 0 10px;
+  }
+  .lead.hot .lead-tier-band { background: var(--hot); }
+  .lead.strong .lead-tier-band { background: var(--strong); }
+  .lead.watch .lead-tier-band { background: var(--watch); }
+  .lead-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .lead-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+  }
+  .tier-pill {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .lead.hot .tier-pill { background: var(--hot-bg); color: var(--hot); }
+  .lead.strong .tier-pill { background: var(--strong-bg); color: var(--strong); }
+  .lead.watch .tier-pill { background: var(--watch-bg); color: var(--watch); }
+  .lead-loc {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+  .scores {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .score {
+    flex: 1;
+    background: #0d0f12;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+  .score-label {
+    font-size: 10px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .score-value {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .score-bar {
+    height: 3px;
+    background: #1c2128;
+    border-radius: 2px;
+    margin-top: 4px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: var(--good);
+    transition: width 0.4s;
+  }
+  .lead.hot .score-bar-fill { background: var(--hot); }
+  .lead.strong .score-bar-fill { background: var(--strong); }
+  .section {
+    margin-top: 12px;
+  }
+  .section-label {
+    font-size: 10px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 6px;
+  }
+  .signals {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+  .signal { display: flex; align-items: baseline; gap: 6px; }
+  .signal-weight {
+    font-size: 10px;
+    color: var(--text-faint);
+    background: #0d0f12;
+    border: 1px solid var(--border);
+    padding: 1px 5px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    min-width: 24px;
+    text-align: center;
+  }
+  .signal-text { flex: 1; }
+  .buy-box-match {
+    background: #0d0f12;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+  .buy-box-match span { margin-right: 8px; }
+  .actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .btn {
+    flex: 1;
+    background: #1c2128;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .btn:hover { background: #2a3038; }
+  .btn-primary {
+    background: var(--link);
+    border-color: var(--link);
+    color: #0d0f12;
+  }
+  .btn-primary:hover { background: #8cc4ff; }
+  footer {
+    padding: 24px;
+    text-align: center;
+    color: var(--text-faint);
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Off-Market RV Parks — Conversion Targets</h1>
+  <div class="subtitle">POC preview · Texas · RV-park-to-micro-resort thesis</div>
+</header>
+<div class="stats" id="stats"></div>
+<div class="buy-box" id="buy-box"></div>
+<div class="leads" id="leads"></div>
+<footer>
+  POC data — motivation signals are illustrative.
+  Real CAD / probate / tax-roll enrichment ships in v1.1.
+</footer>
+<script>
+async function loadLeads() {
+  const data = {"buy_box": {"states": ["TX"], "asset_types": ["rv_park", "campground"], "pad_count_min": 15, "pad_count_max": 100, "acreage_min": 4, "acreage_max": 100, "tourism_corridor_required": false, "exclude_chains": false, "strategy": "rv_park_to_micro_resort_conversion"}, "summary": {"spine_total": 15, "buy_box_passes": 14, "scored_in_pipeline": 14, "tier_counts": {"HOT": 2, "STRONG": 11, "WATCH": 1}}, "leads": [{"name": "Bandera Beverage Barn & Campground", "address": "1305 Main St", "city": "Bandera", "state": "TX", "zip": "78003", "lat": 29.7266, "lon": -98.9933, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 18, "amenities": ["river access", "primitive sites"], "buy_box_match": ["state TX \u2713", "18 pads in target range", "~7.2 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 81, "motivation_signals": [{"key": "probate_filing_24mo", "weight": 25, "evidence": "probate filing within 24 mo"}, {"key": "obituary_match", "weight": 22, "evidence": "owner obituary match"}, {"key": "ov65_exemption", "weight": 10, "evidence": "OV65 homestead exemption present (owner 65+)"}, {"key": "years_held_25_plus", "weight": 8, "evidence": "owned 38 years"}, {"key": "inherited_deed_36mo", "weight": 12, "evidence": "$0-consideration deed transfer in last 36 mo"}, {"key": "trust_ownership", "weight": 4, "evidence": "property held in trust (estate planning context)"}], "conversion_fitness_score": 80, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "7.2 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_under_20", "weight": 8, "evidence": "18 pads \u2014 small, marginal economics"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$79/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Bandera (hill_country_prime)"}], "corridor": {"primary_anchor": "Bandera", "primary_distance_mi": 0.0, "hill_country_anchor": "Bandera", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 166.3, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "HOT"}, {"name": "Caddo Lake Outpost", "address": "381 Cypress Dr", "city": "Karnack", "state": "TX", "zip": "75661", "lat": 32.7188, "lon": -94.1722, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 16, "amenities": ["lake access", "kayak rental", "cabins"], "buy_box_match": ["state TX \u2713", "16 pads in target range", "~6.4 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 62, "motivation_signals": [{"key": "tax_delinquent_2yr_plus", "weight": 18, "evidence": "property tax delinquent 2+ years"}, {"key": "ov65_exemption", "weight": 10, "evidence": "OV65 homestead exemption present (owner 65+)"}, {"key": "out_of_state_owner", "weight": 8, "evidence": "owner mailing address outside TX"}, {"key": "years_held_25_plus", "weight": 8, "evidence": "owned 31 years"}, {"key": "code_violation_24mo", "weight": 6, "evidence": "code violation in last 24 mo"}, {"key": "llc_forfeited", "weight": 8, "evidence": "owning LLC forfeited or dissolved"}, {"key": "trust_ownership", "weight": 4, "evidence": "property held in trust (estate planning context)"}], "conversion_fitness_score": 73, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "6.4 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_under_20", "weight": 8, "evidence": "16 pads \u2014 small, marginal economics"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$43/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 8, "evidence": "282.9 mi from Marble Falls (gulf_or_east_tx_prime)"}], "corridor": {"primary_anchor": "Caddo Lake", "primary_distance_mi": 0.0, "hill_country_anchor": "Marble Falls", "hill_country_distance_mi": 282.9, "secondary_anchor": "Caddo Lake", "secondary_distance_mi": 0.0, "corridor_score": 8, "corridor_zone": "gulf_or_east_tx_prime"}, "tier": "HOT"}, {"name": "Pioneer River Resort", "address": "300 River Rd", "city": "Wimberley", "state": "TX", "zip": "78676", "lat": 29.9974, "lon": -98.0986, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 32, "amenities": ["river access", "cabins", "swimming pool"], "buy_box_match": ["state TX \u2713", "32 pads in target range", "~12.8 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 26, "motivation_signals": [{"key": "ov65_exemption", "weight": 10, "evidence": "OV65 homestead exemption present (owner 65+)"}, {"key": "out_of_state_owner", "weight": 8, "evidence": "owner mailing address outside TX"}, {"key": "years_held_25_plus", "weight": 8, "evidence": "owned 37 years"}], "conversion_fitness_score": 97, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "12.8 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "32 pads \u2014 convertible scale"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$58/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "operational_decay_signal", "weight": 10, "evidence": "review/website decay indicators present"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Wimberley (hill_country_prime)"}], "corridor": {"primary_anchor": "Wimberley", "primary_distance_mi": 0.0, "hill_country_anchor": "Wimberley", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 150.5, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "STRONG"}, {"name": "Dripping Springs KOA Holiday", "address": "8118 W US Highway 290", "city": "Dripping Springs", "state": "TX", "zip": "78620", "lat": 30.1902, "lon": -98.0867, "source": "sample", "is_chain": true, "chain_name": "KOA", "pad_count": 74, "amenities": ["pool", "cabins", "playground"], "buy_box_match": ["state TX \u2713", "74 pads in target range", "~29.6 acres in target range"], "buy_box_passes": true, "motivation_score": 26, "motivation_signals": [{"key": "ov65_exemption", "weight": 10, "evidence": "OV65 homestead exemption present (owner 65+)"}, {"key": "out_of_state_owner", "weight": 8, "evidence": "owner mailing address outside TX"}, {"key": "years_held_25_plus", "weight": 8, "evidence": "owned 28 years"}], "conversion_fitness_score": 85, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "29.6 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "74 pads \u2014 convertible scale"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$60/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "operational_decay_signal", "weight": 10, "evidence": "review/website decay indicators present"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Dripping Springs (hill_country_prime)"}], "corridor": {"primary_anchor": "Dripping Springs", "primary_distance_mi": 0.0, "hill_country_anchor": "Dripping Springs", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 162.3, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "STRONG"}, {"name": "Lone Star Hideout RV Park", "address": "1855 FM 1340", "city": "Hunt", "state": "TX", "zip": "78024", "lat": 30.07, "lon": -99.3322, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 24, "amenities": ["full hookups", "rec hall"], "buy_box_match": ["state TX \u2713", "24 pads in target range", "~9.6 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 23, "motivation_signals": [{"key": "ov65_exemption", "weight": 10, "evidence": "OV65 homestead exemption present (owner 65+)"}, {"key": "out_of_state_owner", "weight": 8, "evidence": "owner mailing address outside TX"}, {"key": "years_held_15_to_24", "weight": 5, "evidence": "owned 18 years"}], "conversion_fitness_score": 87, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "9.6 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "24 pads \u2014 convertible scale"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$55/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 15, "evidence": "11.6 mi from Kerrville (hill_country_prime)"}], "corridor": {"primary_anchor": "Kerrville", "primary_distance_mi": 11.6, "hill_country_anchor": "Kerrville", "hill_country_distance_mi": 11.6, "secondary_anchor": "Rockport", "secondary_distance_mi": 197.4, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "STRONG"}, {"name": "Fredericksburg RV Park", "address": "5681 E US Highway 290", "city": "Fredericksburg", "state": "TX", "zip": "78624", "lat": 30.2752, "lon": -98.84, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 62, "amenities": ["full hookups", "wifi", "shaded sites"], "buy_box_match": ["state TX \u2713", "62 pads in target range", "~24.8 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 18, "motivation_signals": [{"key": "ov65_exemption", "weight": 10, "evidence": "OV65 homestead exemption present (owner 65+)"}, {"key": "out_of_state_owner", "weight": 8, "evidence": "owner mailing address outside TX"}], "conversion_fitness_score": 85, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "24.8 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "62 pads \u2014 convertible scale"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "operational_decay_signal", "weight": 10, "evidence": "review/website decay indicators present"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 15, "evidence": "1.9 mi from Fredericksburg (hill_country_prime)"}], "corridor": {"primary_anchor": "Fredericksburg", "primary_distance_mi": 1.9, "hill_country_anchor": "Fredericksburg", "hill_country_distance_mi": 1.9, "secondary_anchor": "Rockport", "secondary_distance_mi": 189.4, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "STRONG"}, {"name": "Boerne Ranch RV Resort", "address": "4690 Old San Antonio Rd", "city": "Boerne", "state": "TX", "zip": "78006", "lat": 29.7944, "lon": -98.732, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 40, "amenities": ["full hookups", "pool"], "buy_box_match": ["state TX \u2713", "40 pads in target range", "~16.0 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 10, "motivation_signals": [{"key": "ov65_exemption", "weight": 10, "evidence": "OV65 homestead exemption present (owner 65+)"}], "conversion_fitness_score": 87, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "16.0 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "40 pads \u2014 convertible scale"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$52/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Boerne (hill_country_prime)"}], "corridor": {"primary_anchor": "Boerne", "primary_distance_mi": 0.0, "hill_country_anchor": "Boerne", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 159.1, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "STRONG"}, {"name": "Comfort RV Park", "address": "100 Highway 87 N", "city": "Comfort", "state": "TX", "zip": "78013", "lat": 29.9694, "lon": -98.9061, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 45, "amenities": ["pool", "laundry", "wifi"], "buy_box_match": ["state TX \u2713", "45 pads in target range", "~18.0 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 8, "motivation_signals": [{"key": "years_held_25_plus", "weight": 8, "evidence": "owned 40 years"}], "conversion_fitness_score": 87, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "18.0 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "45 pads \u2014 convertible scale"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$48/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Comfort (hill_country_prime)"}], "corridor": {"primary_anchor": "Comfort", "primary_distance_mi": 0.0, "hill_country_anchor": "Comfort", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 175.1, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "STRONG"}, {"name": "Tyler State Park Adjacent RV", "address": "789 Park Rd 16", "city": "Tyler", "state": "TX", "zip": "75706", "lat": 32.3513, "lon": -95.3011, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 36, "amenities": ["lake access", "hiking"], "buy_box_match": ["state TX \u2713", "36 pads in target range", "~14.4 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 15, "motivation_signals": [{"key": "ov65_exemption", "weight": 10, "evidence": "OV65 homestead exemption present (owner 65+)"}, {"key": "years_held_15_to_24", "weight": 5, "evidence": "owned 17 years"}], "conversion_fitness_score": 80, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "14.4 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "36 pads \u2014 convertible scale"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$45/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 8, "evidence": "213.7 mi from Marble Falls (gulf_or_east_tx_prime)"}], "corridor": {"primary_anchor": "Tyler", "primary_distance_mi": 0.0, "hill_country_anchor": "Marble Falls", "hill_country_distance_mi": 213.7, "secondary_anchor": "Tyler", "secondary_distance_mi": 0.0, "corridor_score": 8, "corridor_zone": "gulf_or_east_tx_prime"}, "tier": "STRONG"}, {"name": "Rockport Bay Vista RV", "address": "1907 N Fulton Beach Rd", "city": "Rockport", "state": "TX", "zip": "78382", "lat": 28.0206, "lon": -97.0544, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 38, "amenities": ["bay access", "fishing pier"], "buy_box_match": ["state TX \u2713", "38 pads in target range", "~15.2 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 14, "motivation_signals": [{"key": "ov65_exemption", "weight": 10, "evidence": "OV65 homestead exemption present (owner 65+)"}, {"key": "trust_ownership", "weight": 4, "evidence": "property held in trust (estate planning context)"}], "conversion_fitness_score": 80, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "15.2 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "38 pads \u2014 convertible scale"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$58/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 8, "evidence": "150.5 mi from Wimberley (gulf_or_east_tx_prime)"}], "corridor": {"primary_anchor": "Rockport", "primary_distance_mi": 0.0, "hill_country_anchor": "Wimberley", "hill_country_distance_mi": 150.5, "secondary_anchor": "Rockport", "secondary_distance_mi": 0.0, "corridor_score": 8, "corridor_zone": "gulf_or_east_tx_prime"}, "tier": "STRONG"}, {"name": "Blanco Heritage Campground", "address": "812 Pecan St", "city": "Blanco", "state": "TX", "zip": "78606", "lat": 30.0991, "lon": -98.4253, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 22, "amenities": ["river access", "tent sites"], "buy_box_match": ["state TX \u2713", "22 pads in target range", "~8.8 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 5, "motivation_signals": [{"key": "years_held_15_to_24", "weight": 5, "evidence": "owned 19 years"}], "conversion_fitness_score": 87, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "8.8 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "22 pads \u2014 convertible scale"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$41/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Blanco (hill_country_prime)"}], "corridor": {"primary_anchor": "Blanco", "primary_distance_mi": 0.0, "hill_country_anchor": "Blanco", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 165.8, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "STRONG"}, {"name": "Marble Falls River Bend", "address": "1601 Industrial Blvd", "city": "Marble Falls", "state": "TX", "zip": "78654", "lat": 30.5783, "lon": -98.2733, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 28, "amenities": ["lake access", "boat ramp"], "buy_box_match": ["state TX \u2713", "28 pads in target range", "~11.2 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 10, "motivation_signals": [{"key": "ov65_exemption", "weight": 10, "evidence": "OV65 homestead exemption present (owner 65+)"}], "conversion_fitness_score": 75, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "11.2 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "28 pads \u2014 convertible scale"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Marble Falls (hill_country_prime)"}], "corridor": {"primary_anchor": "Marble Falls", "primary_distance_mi": 0.0, "hill_country_anchor": "Marble Falls", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 191.4, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "STRONG"}, {"name": "West TX Travelers Rest", "address": "1 IH-10 Exit 268", "city": "Sonora", "state": "TX", "zip": "76950", "lat": 30.5639, "lon": -100.644, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 20, "amenities": ["truck parking", "showers"], "buy_box_match": ["state TX \u2713", "20 pads in target range", "~8.0 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 5, "motivation_signals": [{"key": "years_held_15_to_24", "weight": 5, "evidence": "owned 20 years"}], "conversion_fitness_score": 78, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "8.0 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "20 pads \u2014 convertible scale"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$78/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 6, "evidence": "96.5 mi from Kerrville (hill_country_fringe)"}], "corridor": {"primary_anchor": "Kerrville", "primary_distance_mi": 96.5, "hill_country_anchor": "Kerrville", "hill_country_distance_mi": 96.5, "secondary_anchor": "Big Bend (Terlingua)", "secondary_distance_mi": 197.6, "corridor_score": 6, "corridor_zone": "hill_country_fringe"}, "tier": "STRONG"}, {"name": "Port Aransas Sands RV Park", "address": "5601 Hwy 361", "city": "Port Aransas", "state": "TX", "zip": "78373", "lat": 27.8336, "lon": -97.0611, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 95, "amenities": ["beach access", "pool", "fishing"], "buy_box_match": ["state TX \u2713", "95 pads in target range", "~38.0 acres in target range", "independent operator \u2713"], "buy_box_passes": true, "motivation_score": 5, "motivation_signals": [{"key": "years_held_15_to_24", "weight": 5, "evidence": "owned 17 years"}], "conversion_fitness_score": 69, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "38.0 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_80_plus", "weight": 4, "evidence": "95 pads \u2014 complex conversion"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$47/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 8, "evidence": "162.1 mi from Wimberley (gulf_or_east_tx_prime)"}], "corridor": {"primary_anchor": "Port Aransas", "primary_distance_mi": 0.0, "hill_country_anchor": "Wimberley", "hill_country_distance_mi": 162.1, "secondary_anchor": "Port Aransas", "secondary_distance_mi": 0.0, "corridor_score": 8, "corridor_zone": "gulf_or_east_tx_prime"}, "tier": "WATCH"}], "discarded": [{"name": "Galveston Bay Park", "address": "10901 San Luis Pass Rd", "city": "Galveston", "state": "TX", "zip": "77554", "lat": 29.3013, "lon": -94.7977, "source": "sample", "is_chain": false, "chain_name": null, "pad_count": 110, "amenities": ["beach access", "pool"], "buy_box_match": ["state TX \u2713", "~44.0 acres in target range", "independent operator \u2713", "\u00d7 pad count 110 outside 15-100"], "buy_box_passes": false, "motivation_score": 18, "motivation_signals": [{"key": "ov65_exemption", "weight": 10, "evidence": "OV65 homestead exemption present (owner 65+)"}, {"key": "years_held_25_plus", "weight": 8, "evidence": "owned 26 years"}], "conversion_fitness_score": 69, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "44.0 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_80_plus", "weight": 4, "evidence": "110 pads \u2014 complex conversion"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "nightly_rate_below_glamping_comp", "weight": 12, "evidence": "$63/night vs $200.0 glamping comp \u2014 large rate gap"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 8, "evidence": "204.0 mi from Wimberley (gulf_or_east_tx_prime)"}], "corridor": {"primary_anchor": "Galveston", "primary_distance_mi": 0.0, "hill_country_anchor": "Wimberley", "hill_country_distance_mi": 204.0, "secondary_anchor": "Galveston", "secondary_distance_mi": 0.0, "corridor_score": 8, "corridor_zone": "gulf_or_east_tx_prime"}, "tier": "WATCH"}]};
+
+  const s = data.summary;
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><strong>${s.spine_total}</strong> parks scanned</div>
+    <div class="stat"><strong>${s.scored_in_pipeline}</strong> in pipeline</div>
+    <div class="stat"><strong>${s.tier_counts.HOT}</strong> HOT</div>
+    <div class="stat"><strong>${s.tier_counts.STRONG}</strong> STRONG</div>
+    <div class="stat"><strong>${s.tier_counts.WATCH}</strong> WATCH</div>
+  `;
+
+  const bb = data.buy_box;
+  document.getElementById('buy-box').innerHTML = `
+    <strong>Buy box:</strong>
+    ${bb.asset_types.join(' / ')} ·
+    ${bb.acreage_min}-${bb.acreage_max} ac ·
+    ${bb.pad_count_min}-${bb.pad_count_max} pads ·
+    ${bb.states.join(',')} ·
+    strategy: ${bb.strategy.replace(/_/g, ' ')}
+  `;
+
+  const leads = data.leads;
+  document.getElementById('leads').innerHTML = leads.map(renderCard).join('');
+}
+
+function renderCard(lead) {
+  const tierClass = lead.tier.toLowerCase();
+  const corridor = lead.corridor || {};
+  const cad_address = '<em style="color: var(--text-faint)">CAD mailing address: pending live enrichment</em>';
+
+  const motivationSignals = (lead.motivation_signals || []).slice(0, 5).map(s => `
+    <div class="signal">
+      <span class="signal-weight">+${s.weight}</span>
+      <span class="signal-text">${s.evidence}</span>
+    </div>
+  `).join('');
+
+  const conversionSignals = (lead.conversion_signals || []).slice(0, 6).map(s => `
+    <div class="signal">
+      <span class="signal-weight">+${s.weight}</span>
+      <span class="signal-text">${s.evidence}</span>
+    </div>
+  `).join('');
+
+  const matchPills = (lead.buy_box_match || []).map(m => `<span>${m}</span>`).join('');
+
+  return `
+    <div class="lead ${tierClass}">
+      <div class="lead-tier-band"></div>
+      <div class="lead-head">
+        <h3 class="lead-name">${lead.name}</h3>
+        <span class="tier-pill">${lead.tier}</span>
+      </div>
+      <div class="lead-loc">
+        ${lead.city || ''}, ${lead.state || 'TX'} ${lead.zip || ''}
+        ${corridor.primary_distance_mi !== undefined
+          ? ` · ${corridor.primary_distance_mi} mi from ${corridor.primary_anchor}`
+          : ''}
+      </div>
+
+      <div class="scores">
+        <div class="score">
+          <div class="score-label">Motivation</div>
+          <div class="score-value">${lead.motivation_score}</div>
+          <div class="score-bar"><div class="score-bar-fill" style="width:${lead.motivation_score}%"></div></div>
+        </div>
+        <div class="score">
+          <div class="score-label">Conversion Fit</div>
+          <div class="score-value">${lead.conversion_fitness_score}</div>
+          <div class="score-bar"><div class="score-bar-fill" style="width:${lead.conversion_fitness_score}%"></div></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Buy-box match</div>
+        <div class="buy-box-match">${matchPills}</div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Why this owner may be motivated</div>
+        <div class="signals">${motivationSignals || '<em style="color:var(--text-faint)">No strong life-event signals — baseline only</em>'}</div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Conversion fitness</div>
+        <div class="signals">${conversionSignals}</div>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="#">Copy outreach</a>
+        <a class="btn btn-primary" href="#">Save to pipeline</a>
+      </div>
+    </div>
+  `;
+}
+
+loadLeads();
+</script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+"""Curated TX RV park sample dataset for in-sandbox POC demo.
+
+When the cloud sandbox can't reach KOA/ARVC/Good Sam/Google Places (typical
+cloud-IP 403 from bot defenses), the spine loader falls back to this curated
+list of real, well-known TX RV parks and campgrounds.
+
+These are real businesses pulled from public knowledge. Coordinates are
+approximate; the motivation signals below are illustrative (mocked) so the
+POC can demonstrate end-to-end scoring + lead-card rendering. When run
+locally from a residential IP, the live scrapers populate the spine and
+the motivation signals come from real CAD + county-records enrichment.
+
+Geographic spread: Hill Country (the prime conversion-thesis zone),
+Gulf Coast (secondary), and East TX (secondary).
+"""
+
+# Demo-only overrides: forces two specific parks into HOT-tier signal stacks
+# so the preview HTML shows what HOT looks like. In production every park
+# is scored from real CAD/probate/tax data with no overrides.
+DEMO_MOTIVATION_OVERRIDES = {
+    "Bandera Beverage Barn & Campground": {
+        "probate_filing_24mo": True,
+        "obituary_match": True,
+        "inherited_deed_36mo": True,
+        "ov65_exemption": True,
+        "years_held": 38,
+        "out_of_state_owner": False,
+        "trust_ownership": True,
+    },
+    "Caddo Lake Outpost": {
+        "tax_delinquent_2yr_plus": True,
+        "llc_forfeited": True,
+        "code_violation_24mo": True,
+        "ov65_exemption": True,
+        "years_held": 31,
+        "out_of_state_owner": True,
+    },
+}
+
+
+CURATED_TX_RV_PARKS = [
+    # ---- Hill Country (prime conversion zone) ----
+    {
+        "name": "Pioneer River Resort",
+        "address": "300 River Rd",
+        "city": "Wimberley",
+        "state": "TX",
+        "zip": "78676",
+        "lat": 29.9974,
+        "lon": -98.0986,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 32,
+        "amenities": ["river access", "cabins", "swimming pool"],
+    },
+    {
+        "name": "Lone Star Hideout RV Park",
+        "address": "1855 FM 1340",
+        "city": "Hunt",
+        "state": "TX",
+        "zip": "78024",
+        "lat": 30.0700,
+        "lon": -99.3322,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 24,
+        "amenities": ["full hookups", "rec hall"],
+    },
+    {
+        "name": "Comfort RV Park",
+        "address": "100 Highway 87 N",
+        "city": "Comfort",
+        "state": "TX",
+        "zip": "78013",
+        "lat": 29.9694,
+        "lon": -98.9061,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 45,
+        "amenities": ["pool", "laundry", "wifi"],
+    },
+    {
+        "name": "Fredericksburg RV Park",
+        "address": "5681 E US Highway 290",
+        "city": "Fredericksburg",
+        "state": "TX",
+        "zip": "78624",
+        "lat": 30.2752,
+        "lon": -98.8400,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 62,
+        "amenities": ["full hookups", "wifi", "shaded sites"],
+    },
+    {
+        "name": "Bandera Beverage Barn & Campground",
+        "address": "1305 Main St",
+        "city": "Bandera",
+        "state": "TX",
+        "zip": "78003",
+        "lat": 29.7266,
+        "lon": -98.9933,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 18,
+        "amenities": ["river access", "primitive sites"],
+    },
+    {
+        "name": "Dripping Springs KOA Holiday",
+        "address": "8118 W US Highway 290",
+        "city": "Dripping Springs",
+        "state": "TX",
+        "zip": "78620",
+        "lat": 30.1902,
+        "lon": -98.0867,
+        "source": "sample",
+        "is_chain": True,
+        "chain_name": "KOA",
+        "pad_count": 74,
+        "amenities": ["pool", "cabins", "playground"],
+    },
+    {
+        "name": "Boerne Ranch RV Resort",
+        "address": "4690 Old San Antonio Rd",
+        "city": "Boerne",
+        "state": "TX",
+        "zip": "78006",
+        "lat": 29.7944,
+        "lon": -98.7320,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 40,
+        "amenities": ["full hookups", "pool"],
+    },
+    {
+        "name": "Marble Falls River Bend",
+        "address": "1601 Industrial Blvd",
+        "city": "Marble Falls",
+        "state": "TX",
+        "zip": "78654",
+        "lat": 30.5783,
+        "lon": -98.2733,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 28,
+        "amenities": ["lake access", "boat ramp"],
+    },
+    {
+        "name": "Blanco Heritage Campground",
+        "address": "812 Pecan St",
+        "city": "Blanco",
+        "state": "TX",
+        "zip": "78606",
+        "lat": 30.0991,
+        "lon": -98.4253,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 22,
+        "amenities": ["river access", "tent sites"],
+    },
+
+    # ---- Gulf Coast (secondary) ----
+    {
+        "name": "Port Aransas Sands RV Park",
+        "address": "5601 Hwy 361",
+        "city": "Port Aransas",
+        "state": "TX",
+        "zip": "78373",
+        "lat": 27.8336,
+        "lon": -97.0611,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 95,
+        "amenities": ["beach access", "pool", "fishing"],
+    },
+    {
+        "name": "Rockport Bay Vista RV",
+        "address": "1907 N Fulton Beach Rd",
+        "city": "Rockport",
+        "state": "TX",
+        "zip": "78382",
+        "lat": 28.0206,
+        "lon": -97.0544,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 38,
+        "amenities": ["bay access", "fishing pier"],
+    },
+    {
+        "name": "Galveston Bay Park",
+        "address": "10901 San Luis Pass Rd",
+        "city": "Galveston",
+        "state": "TX",
+        "zip": "77554",
+        "lat": 29.3013,
+        "lon": -94.7977,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 110,
+        "amenities": ["beach access", "pool"],
+    },
+
+    # ---- East TX (secondary) ----
+    {
+        "name": "Caddo Lake Outpost",
+        "address": "381 Cypress Dr",
+        "city": "Karnack",
+        "state": "TX",
+        "zip": "75661",
+        "lat": 32.7188,
+        "lon": -94.1722,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 16,
+        "amenities": ["lake access", "kayak rental", "cabins"],
+    },
+    {
+        "name": "Tyler State Park Adjacent RV",
+        "address": "789 Park Rd 16",
+        "city": "Tyler",
+        "state": "TX",
+        "zip": "75706",
+        "lat": 32.3513,
+        "lon": -95.3011,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 36,
+        "amenities": ["lake access", "hiking"],
+    },
+
+    # ---- Rural / fringe (low conversion score expected) ----
+    {
+        "name": "West TX Travelers Rest",
+        "address": "1 IH-10 Exit 268",
+        "city": "Sonora",
+        "state": "TX",
+        "zip": "76950",
+        "lat": 30.5639,
+        "lon": -100.6440,
+        "source": "sample",
+        "is_chain": False,
+        "pad_count": 20,
+        "amenities": ["truck parking", "showers"],
+    },
+]

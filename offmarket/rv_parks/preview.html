@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deal Hound Off-Market — RV Parks POC Preview</title>
+<style>
+  :root {
+    --bg: #0d0f12;
+    --bg-card: #161a20;
+    --bg-card-hover: #1c2128;
+    --border: #2a3038;
+    --text: #e5e9ee;
+    --text-dim: #8b949e;
+    --text-faint: #5a6168;
+    --hot: #ff4d4f;
+    --hot-bg: rgba(255, 77, 79, 0.12);
+    --strong: #ffa940;
+    --strong-bg: rgba(255, 169, 64, 0.12);
+    --watch: #4096ff;
+    --watch-bg: rgba(64, 150, 255, 0.12);
+    --good: #52c41a;
+    --link: #69b1ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+    background: linear-gradient(180deg, #161a20 0%, #0d0f12 100%);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  header .subtitle {
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  .stats {
+    display: flex;
+    gap: 24px;
+    padding: 16px 24px;
+    background: #11141a;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .stat { color: var(--text-dim); }
+  .stat strong { color: var(--text); font-weight: 600; }
+  .buy-box {
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  .buy-box strong { color: var(--text-dim); }
+  .leads {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .lead {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    transition: background 0.15s, border-color 0.15s;
+    position: relative;
+  }
+  .lead:hover {
+    background: var(--bg-card-hover);
+    border-color: #3a414b;
+  }
+  .lead-tier-band {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 4px;
+    border-radius: 10px 0 0 10px;
+  }
+  .lead.hot .lead-tier-band { background: var(--hot); }
+  .lead.strong .lead-tier-band { background: var(--strong); }
+  .lead.watch .lead-tier-band { background: var(--watch); }
+  .lead-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .lead-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+  }
+  .tier-pill {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .lead.hot .tier-pill { background: var(--hot-bg); color: var(--hot); }
+  .lead.strong .tier-pill { background: var(--strong-bg); color: var(--strong); }
+  .lead.watch .tier-pill { background: var(--watch-bg); color: var(--watch); }
+  .lead-loc {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+  .scores {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .score {
+    flex: 1;
+    background: #0d0f12;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+  .score-label {
+    font-size: 10px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .score-value {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .score-bar {
+    height: 3px;
+    background: #1c2128;
+    border-radius: 2px;
+    margin-top: 4px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: var(--good);
+    transition: width 0.4s;
+  }
+  .lead.hot .score-bar-fill { background: var(--hot); }
+  .lead.strong .score-bar-fill { background: var(--strong); }
+  .section {
+    margin-top: 12px;
+  }
+  .section-label {
+    font-size: 10px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 6px;
+  }
+  .signals {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+  .signal { display: flex; align-items: baseline; gap: 6px; }
+  .signal-weight {
+    font-size: 10px;
+    color: var(--text-faint);
+    background: #0d0f12;
+    border: 1px solid var(--border);
+    padding: 1px 5px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    min-width: 24px;
+    text-align: center;
+  }
+  .signal-text { flex: 1; }
+  .buy-box-match {
+    background: #0d0f12;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+  .buy-box-match span { margin-right: 8px; }
+  .actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .btn {
+    flex: 1;
+    background: #1c2128;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .btn:hover { background: #2a3038; }
+  .btn-primary {
+    background: var(--link);
+    border-color: var(--link);
+    color: #0d0f12;
+  }
+  .btn-primary:hover { background: #8cc4ff; }
+  footer {
+    padding: 24px;
+    text-align: center;
+    color: var(--text-faint);
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Off-Market RV Parks — Conversion Targets</h1>
+  <div class="subtitle">POC preview · Texas · RV-park-to-micro-resort thesis</div>
+</header>
+<div class="stats" id="stats"></div>
+<div class="buy-box" id="buy-box"></div>
+<div class="leads" id="leads"></div>
+<footer>
+  POC data — motivation signals are illustrative.
+  Real CAD / probate / tax-roll enrichment ships in v1.1.
+</footer>
+<script>
+async function loadLeads() {
+  const data = await fetch('data/poc_leads.json').then(r => r.json());
+
+  const s = data.summary;
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><strong>${s.spine_total}</strong> parks scanned</div>
+    <div class="stat"><strong>${s.scored_in_pipeline}</strong> in pipeline</div>
+    <div class="stat"><strong>${s.tier_counts.HOT}</strong> HOT</div>
+    <div class="stat"><strong>${s.tier_counts.STRONG}</strong> STRONG</div>
+    <div class="stat"><strong>${s.tier_counts.WATCH}</strong> WATCH</div>
+  `;
+
+  const bb = data.buy_box;
+  document.getElementById('buy-box').innerHTML = `
+    <strong>Buy box:</strong>
+    ${bb.asset_types.join(' / ')} ·
+    ${bb.acreage_min}-${bb.acreage_max} ac ·
+    ${bb.pad_count_min}-${bb.pad_count_max} pads ·
+    ${bb.states.join(',')} ·
+    strategy: ${bb.strategy.replace(/_/g, ' ')}
+  `;
+
+  const leads = data.leads;
+  document.getElementById('leads').innerHTML = leads.map(renderCard).join('');
+}
+
+function renderCard(lead) {
+  const tierClass = lead.tier.toLowerCase();
+  const corridor = lead.corridor || {};
+  const cad_address = '<em style="color: var(--text-faint)">CAD mailing address: pending live enrichment</em>';
+
+  const motivationSignals = (lead.motivation_signals || []).slice(0, 5).map(s => `
+    <div class="signal">
+      <span class="signal-weight">+${s.weight}</span>
+      <span class="signal-text">${s.evidence}</span>
+    </div>
+  `).join('');
+
+  const conversionSignals = (lead.conversion_signals || []).slice(0, 6).map(s => `
+    <div class="signal">
+      <span class="signal-weight">+${s.weight}</span>
+      <span class="signal-text">${s.evidence}</span>
+    </div>
+  `).join('');
+
+  const matchPills = (lead.buy_box_match || []).map(m => `<span>${m}</span>`).join('');
+
+  return `
+    <div class="lead ${tierClass}">
+      <div class="lead-tier-band"></div>
+      <div class="lead-head">
+        <h3 class="lead-name">${lead.name}</h3>
+        <span class="tier-pill">${lead.tier}</span>
+      </div>
+      <div class="lead-loc">
+        ${lead.city || ''}, ${lead.state || 'TX'} ${lead.zip || ''}
+        ${corridor.primary_distance_mi !== undefined
+          ? ` · ${corridor.primary_distance_mi} mi from ${corridor.primary_anchor}`
+          : ''}
+      </div>
+
+      <div class="scores">
+        <div class="score">
+          <div class="score-label">Motivation</div>
+          <div class="score-value">${lead.motivation_score}</div>
+          <div class="score-bar"><div class="score-bar-fill" style="width:${lead.motivation_score}%"></div></div>
+        </div>
+        <div class="score">
+          <div class="score-label">Conversion Fit</div>
+          <div class="score-value">${lead.conversion_fitness_score}</div>
+          <div class="score-bar"><div class="score-bar-fill" style="width:${lead.conversion_fitness_score}%"></div></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Buy-box match</div>
+        <div class="buy-box-match">${matchPills}</div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Why this owner may be motivated</div>
+        <div class="signals">${motivationSignals || '<em style="color:var(--text-faint)">No strong life-event signals — baseline only</em>'}</div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Conversion fitness</div>
+        <div class="signals">${conversionSignals}</div>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="#">Copy outreach</a>
+        <a class="btn btn-primary" href="#">Save to pipeline</a>
+      </div>
+    </div>
+  `;
+}
+
+loadLeads();
+</script>
+</body>
+</html>
