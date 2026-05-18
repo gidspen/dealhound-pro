@@ -188,6 +188,38 @@
     text-align: center;
   }
   .signal-text { flex: 1; }
+  .signal.pending {
+    opacity: 0.62;
+  }
+  .signal.pending .signal-weight {
+    color: var(--text-faint);
+    background: transparent;
+  }
+  .contact {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 13px;
+  }
+  .contact-link {
+    color: var(--link);
+    text-decoration: none;
+  }
+  .contact-link:hover { text-decoration: underline; }
+  .verified-block { margin-bottom: 10px; }
+  .verified-row {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  .verified-label {
+    color: var(--text-faint);
+    min-width: 70px;
+  }
+  .verified-value {
+    color: var(--text-dim);
+  }
   .buy-box-match {
     background: #0d0f12;
     border: 1px solid var(--border);
@@ -271,15 +303,41 @@ async function loadLeads() {
   `;
 
   const leads = data.leads;
-  document.getElementById('leads').innerHTML = leads.map(renderCard).join('');
+  const discarded = (data.discarded || []).filter(d => d.buy_box_passes);
+  document.getElementById('leads').innerHTML =
+    leads.map(renderCard).join('') +
+    (discarded.length ? `
+      <div style="grid-column: 1 / -1; padding: 16px 0 4px 4px; color: var(--text-dim); font-size: 13px;">
+        <strong>Below scoring threshold</strong> (${discarded.length})
+        — passed buy-box but lack enough verified signal density.
+        v1.1 CAD/probate/tax enrichment will populate the missing motivation signals.
+      </div>
+    ` : '') +
+    discarded.map(renderCard).join('');
 }
+
+const PENDING_LABEL = {
+  probate_filing_24mo: "Probate filing (last 24mo)",
+  obituary_match: "Owner obituary match",
+  lis_pendens_or_nod: "Lis pendens / NOD",
+  tax_delinquent_2yr_plus: "Tax delinquent 2+ years",
+  tax_delinquent_1yr: "Tax delinquent 1 year",
+  ov65_exemption: "OV65 homestead exemption",
+  out_of_state_owner: "Out-of-state owner",
+  years_held: "Years held (CAD acquisition date)",
+  inherited_deed_36mo: "Inherited deed ($0 transfer)",
+  code_violation_24mo: "Code violation (last 24mo)",
+  llc_forfeited: "LLC forfeited / dissolved",
+  divorce_filing_24mo: "Divorce filing",
+  bankruptcy_filing_24mo: "Bankruptcy filing",
+  trust_ownership: "Trust ownership",
+};
 
 function renderCard(lead) {
   const tierClass = lead.tier.toLowerCase();
   const corridor = lead.corridor || {};
-  const cad_address = '<em style="color: var(--text-faint)">CAD mailing address: pending live enrichment</em>';
 
-  const motivationSignals = (lead.motivation_signals || []).slice(0, 5).map(s => `
+  const motivationSignals = (lead.motivation_signals || []).map(s => `
     <div class="signal">
       <span class="signal-weight">+${s.weight}</span>
       <span class="signal-text">${s.evidence}</span>
@@ -295,6 +353,26 @@ function renderCard(lead) {
 
   const matchPills = (lead.buy_box_match || []).map(m => `<span>${m}</span>`).join('');
 
+  const pendingSignals = (lead.pending_motivation_enrichment || []).map(k => `
+    <div class="signal pending">
+      <span class="signal-weight">?</span>
+      <span class="signal-text">${PENDING_LABEL[k] || k}</span>
+    </div>
+  `).join('');
+
+  const llcInfo = lead.verified_llc_name
+    ? `<div class="verified-row">
+        <span class="verified-label">LLC:</span>
+        <span class="verified-value">${lead.verified_llc_name}${lead.verified_llc_formed_year ? ` · formed ${lead.verified_llc_formed_year}` : ''}</span>
+      </div>`
+    : '';
+  const principalInfo = lead.verified_principal_name
+    ? `<div class="verified-row">
+        <span class="verified-label">Operator:</span>
+        <span class="verified-value">${lead.verified_principal_name}</span>
+      </div>`
+    : '';
+
   return `
     <div class="lead ${tierClass}">
       <div class="lead-tier-band"></div>
@@ -303,10 +381,14 @@ function renderCard(lead) {
         <span class="tier-pill">${lead.tier}</span>
       </div>
       <div class="lead-loc">
-        ${lead.city || ''}, ${lead.state || 'TX'} ${lead.zip || ''}
+        ${lead.address ? lead.address + ' · ' : ''}${lead.city || ''}, ${lead.state || 'TX'} ${lead.zip || ''}
         ${corridor.primary_distance_mi !== undefined
           ? ` · ${corridor.primary_distance_mi} mi from ${corridor.primary_anchor}`
           : ''}
+      </div>
+      <div class="contact">
+        ${lead.phone ? `<a class="contact-link" href="tel:${lead.phone}">${lead.phone}</a>` : ''}
+        ${lead.website ? `<a class="contact-link" href="${lead.website}" target="_blank" rel="noreferrer">website</a>` : ''}
       </div>
 
       <div class="scores">
@@ -322,24 +404,37 @@ function renderCard(lead) {
         </div>
       </div>
 
+      ${llcInfo || principalInfo ? `
+      <div class="section verified-block">
+        <div class="section-label">Verified (web search)</div>
+        ${llcInfo}
+        ${principalInfo}
+      </div>` : ''}
+
       <div class="section">
         <div class="section-label">Buy-box match</div>
         <div class="buy-box-match">${matchPills}</div>
       </div>
 
       <div class="section">
-        <div class="section-label">Why this owner may be motivated</div>
-        <div class="signals">${motivationSignals || '<em style="color:var(--text-faint)">No strong life-event signals — baseline only</em>'}</div>
+        <div class="section-label">Motivation signals — verified</div>
+        <div class="signals">${motivationSignals || '<em style="color:var(--text-faint)">None surfaced from web search alone</em>'}</div>
       </div>
 
+      ${pendingSignals ? `
       <div class="section">
-        <div class="section-label">Conversion fitness</div>
+        <div class="section-label">Motivation signals — pending v1.1 (CAD/probate/tax)</div>
+        <div class="signals">${pendingSignals}</div>
+      </div>` : ''}
+
+      <div class="section">
+        <div class="section-label">Conversion fitness — verified</div>
         <div class="signals">${conversionSignals}</div>
       </div>
 
       <div class="actions">
-        <a class="btn" href="#">Copy outreach</a>
-        <a class="btn btn-primary" href="#">Save to pipeline</a>
+        <a class="btn" href="${lead.website || '#'}" target="_blank" rel="noreferrer">Open website</a>
+        <a class="btn btn-primary" href="tel:${lead.phone || ''}">Call ${lead.phone || ''}</a>
       </div>
     </div>
   `;

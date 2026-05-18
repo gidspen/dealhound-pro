@@ -16,83 +16,79 @@
     "strategy": "rv_park_to_micro_resort_conversion"
   },
   "summary": {
-    "spine_total": 15,
-    "buy_box_passes": 14,
-    "scored_in_pipeline": 14,
+    "spine_total": 9,
+    "spine_source": "real_web_search_2026_05_18",
+    "buy_box_passes": 9,
+    "scored_in_pipeline": 2,
     "tier_counts": {
-      "HOT": 2,
-      "STRONG": 11,
+      "HOT": 0,
+      "STRONG": 1,
       "WATCH": 1
-    }
+    },
+    "enrichment_note": "Motivation signals limited to LLC formed year (proxy for ownership age) from public web search. CAD owner-of-record, probate, tax delinquency, OV65, out-of-state, and inherited-deed signals require v1.1 local enrichment from a residential IP or properly allowlisted environment."
   },
   "leads": [
     {
-      "name": "Bandera Beverage Barn & Campground",
-      "address": "1305 Main St",
+      "name": "Riverside RV Park",
+      "address": "760 Hwy 16 S",
       "city": "Bandera",
       "state": "TX",
       "zip": "78003",
       "lat": 29.7266,
       "lon": -98.9933,
-      "source": "sample",
+      "phone": "(830) 796-3636",
+      "website": "https://www.riversidervbandera.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.yelp.com/biz/riverside-rv-park-bandera",
+        "https://www.aaa.com/travelinfo/texas/bandera/campgrounds/riverside-rv-park-184342.html"
+      ],
       "is_chain": false,
       "chain_name": null,
-      "pad_count": 18,
+      "pad_count": 78,
       "amenities": [
-        "river access",
-        "primitive sites"
+        "river access (Medina River)",
+        "full hookups"
       ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
       "buy_box_match": [
         "state TX \u2713",
-        "18 pads in target range",
-        "~7.2 acres in target range",
+        "78 pads in target range",
+        "~31.2 acres in target range (est. from pad count)",
         "independent operator \u2713"
       ],
       "buy_box_passes": true,
-      "motivation_score": 81,
-      "motivation_signals": [
-        {
-          "key": "probate_filing_24mo",
-          "weight": 25,
-          "evidence": "probate filing within 24 mo"
-        },
-        {
-          "key": "obituary_match",
-          "weight": 22,
-          "evidence": "owner obituary match"
-        },
-        {
-          "key": "ov65_exemption",
-          "weight": 10,
-          "evidence": "OV65 homestead exemption present (owner 65+)"
-        },
-        {
-          "key": "years_held_25_plus",
-          "weight": 8,
-          "evidence": "owned 38 years"
-        },
-        {
-          "key": "inherited_deed_36mo",
-          "weight": 12,
-          "evidence": "$0-consideration deed transfer in last 36 mo"
-        },
-        {
-          "key": "trust_ownership",
-          "weight": 4,
-          "evidence": "property held in trust (estate planning context)"
-        }
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
       ],
-      "conversion_fitness_score": 80,
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 75,
       "conversion_signals": [
         {
           "key": "acreage_5_to_50",
           "weight": 15,
-          "evidence": "7.2 acres \u2014 right-size for micro-resort"
+          "evidence": "31.2 acres \u2014 right-size for micro-resort"
         },
         {
-          "key": "pad_count_under_20",
-          "weight": 8,
-          "evidence": "18 pads \u2014 small, marginal economics"
+          "key": "pad_count_20_to_80",
+          "weight": 15,
+          "evidence": "78 pads \u2014 convertible scale"
         },
         {
           "key": "independent_not_chain",
@@ -103,11 +99,6 @@
           "key": "highway_access_within_10mi",
           "weight": 10,
           "evidence": "3.0 mi from highway"
-        },
-        {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$79/night vs $200.0 glamping comp \u2014 large rate gap"
         },
         {
           "key": "has_existing_utilities",
@@ -130,81 +121,70 @@
         "corridor_score": 15,
         "corridor_zone": "hill_country_prime"
       },
-      "tier": "HOT"
+      "tier": "STRONG"
     },
     {
-      "name": "Caddo Lake Outpost",
-      "address": "381 Cypress Dr",
-      "city": "Karnack",
+      "name": "Heritage Oaks RV Park",
+      "address": "1692 Goehmann Ln",
+      "city": "Fredericksburg",
       "state": "TX",
-      "zip": "75661",
-      "lat": 32.7188,
-      "lon": -94.1722,
-      "source": "sample",
+      "zip": "78624",
+      "lat": 30.2752,
+      "lon": -98.872,
+      "phone": "(830) 992-3057",
+      "website": "https://heritageoaksrvpark.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.yelp.com/biz/heritage-oaks-fredericksburg",
+        "https://heritageoaksrvpark.com/"
+      ],
       "is_chain": false,
       "chain_name": null,
-      "pad_count": 16,
+      "pad_count": 88,
       "amenities": [
-        "lake access",
-        "kayak rental",
-        "cabins"
+        "1.25 mi from Main St",
+        "private",
+        "newer build"
       ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": "Gwinn / Melonie",
       "buy_box_match": [
         "state TX \u2713",
-        "16 pads in target range",
-        "~6.4 acres in target range",
+        "88 pads in target range",
+        "~35.2 acres in target range (est. from pad count)",
         "independent operator \u2713"
       ],
       "buy_box_passes": true,
-      "motivation_score": 62,
-      "motivation_signals": [
-        {
-          "key": "tax_delinquent_2yr_plus",
-          "weight": 18,
-          "evidence": "property tax delinquent 2+ years"
-        },
-        {
-          "key": "ov65_exemption",
-          "weight": 10,
-          "evidence": "OV65 homestead exemption present (owner 65+)"
-        },
-        {
-          "key": "out_of_state_owner",
-          "weight": 8,
-          "evidence": "owner mailing address outside TX"
-        },
-        {
-          "key": "years_held_25_plus",
-          "weight": 8,
-          "evidence": "owned 31 years"
-        },
-        {
-          "key": "code_violation_24mo",
-          "weight": 6,
-          "evidence": "code violation in last 24 mo"
-        },
-        {
-          "key": "llc_forfeited",
-          "weight": 8,
-          "evidence": "owning LLC forfeited or dissolved"
-        },
-        {
-          "key": "trust_ownership",
-          "weight": 4,
-          "evidence": "property held in trust (estate planning context)"
-        }
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
       ],
-      "conversion_fitness_score": 73,
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 64,
       "conversion_signals": [
         {
           "key": "acreage_5_to_50",
           "weight": 15,
-          "evidence": "6.4 acres \u2014 right-size for micro-resort"
+          "evidence": "35.2 acres \u2014 right-size for micro-resort"
         },
         {
-          "key": "pad_count_under_20",
-          "weight": 8,
-          "evidence": "16 pads \u2014 small, marginal economics"
+          "key": "pad_count_80_plus",
+          "weight": 4,
+          "evidence": "88 pads \u2014 complex conversion"
         },
         {
           "key": "independent_not_chain",
@@ -215,11 +195,6 @@
           "key": "highway_access_within_10mi",
           "weight": 10,
           "evidence": "3.0 mi from highway"
-        },
-        {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$43/night vs $200.0 glamping comp \u2014 large rate gap"
         },
         {
           "key": "has_existing_utilities",
@@ -228,76 +203,83 @@
         },
         {
           "key": "tourism_corridor",
-          "weight": 8,
-          "evidence": "282.9 mi from Marble Falls (gulf_or_east_tx_prime)"
+          "weight": 15,
+          "evidence": "0.0 mi from Fredericksburg (hill_country_prime)"
         }
       ],
       "corridor": {
-        "primary_anchor": "Caddo Lake",
+        "primary_anchor": "Fredericksburg",
         "primary_distance_mi": 0.0,
-        "hill_country_anchor": "Marble Falls",
-        "hill_country_distance_mi": 282.9,
-        "secondary_anchor": "Caddo Lake",
-        "secondary_distance_mi": 0.0,
-        "corridor_score": 8,
-        "corridor_zone": "gulf_or_east_tx_prime"
+        "hill_country_anchor": "Fredericksburg",
+        "hill_country_distance_mi": 0.0,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 190.5,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
       },
-      "tier": "HOT"
-    },
+      "tier": "WATCH"
+    }
+  ],
+  "discarded": [
     {
-      "name": "Pioneer River Resort",
-      "address": "300 River Rd",
-      "city": "Wimberley",
+      "name": "Buckhorn Lake Resort",
+      "address": "2885 Goat Creek Rd",
+      "city": "Kerrville",
       "state": "TX",
-      "zip": "78676",
-      "lat": 29.9974,
-      "lon": -98.0986,
-      "source": "sample",
+      "zip": null,
+      "lat": 30.0474,
+      "lon": -99.1403,
+      "phone": "(830) 895-0007",
+      "website": "https://www.buckhornlake.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.bbb.org/us/tx/kerrville/profile/rv-parks/buckhorn-lake-resort-0825-1000165928",
+        "https://www.yelp.com/biz/buckhorn-lake-resort-kerrville"
+      ],
       "is_chain": false,
       "chain_name": null,
-      "pad_count": 32,
+      "pad_count": null,
       "amenities": [
-        "river access",
-        "cabins",
-        "swimming pool"
+        "full hookups",
+        "2 pools",
+        "2 laundry facilities",
+        "dog park"
       ],
+      "verified_llc_name": "Buckhorn Lake Resort LLC",
+      "verified_llc_formed_year": 1999,
+      "verified_principal_name": "Kathy Christiansen",
       "buy_box_match": [
         "state TX \u2713",
-        "32 pads in target range",
-        "~12.8 acres in target range",
+        "pad count: pending verification",
+        "acreage: pending verification",
         "independent operator \u2713"
       ],
       "buy_box_passes": true,
-      "motivation_score": 26,
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership"
+      ],
+      "motivation_score": 8,
       "motivation_signals": [
-        {
-          "key": "ov65_exemption",
-          "weight": 10,
-          "evidence": "OV65 homestead exemption present (owner 65+)"
-        },
-        {
-          "key": "out_of_state_owner",
-          "weight": 8,
-          "evidence": "owner mailing address outside TX"
-        },
         {
           "key": "years_held_25_plus",
           "weight": 8,
-          "evidence": "owned 37 years"
+          "evidence": "owned 27 years"
         }
       ],
-      "conversion_fitness_score": 97,
+      "conversion_fitness_score": 37,
       "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "12.8 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_20_to_80",
-          "weight": 15,
-          "evidence": "32 pads \u2014 convertible scale"
-        },
         {
           "key": "independent_not_chain",
           "weight": 12,
@@ -309,19 +291,84 @@
           "evidence": "3.0 mi from highway"
         },
         {
-          "key": "nightly_rate_below_glamping_comp",
+          "key": "tourism_corridor",
+          "weight": 15,
+          "evidence": "0.0 mi from Kerrville (hill_country_prime)"
+        }
+      ],
+      "corridor": {
+        "primary_anchor": "Kerrville",
+        "primary_distance_mi": 0.0,
+        "hill_country_anchor": "Kerrville",
+        "hill_country_distance_mi": 0.0,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 188.4,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
+      },
+      "tier": "DISCARD"
+    },
+    {
+      "name": "Horseshoe Ridge RV Resort",
+      "address": "17901 Ranch Road 12",
+      "city": "Wimberley",
+      "state": "TX",
+      "zip": "78676",
+      "lat": 29.9974,
+      "lon": -98.0986,
+      "phone": "(512) 650-8163",
+      "website": "https://horseshoeridgerv.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.yelp.com/biz/horseshoe-ridge-rv-resort-wimberley",
+        "https://horseshoeridgerv.com/"
+      ],
+      "is_chain": false,
+      "chain_name": null,
+      "pad_count": null,
+      "amenities": [
+        "luxury RV sites",
+        "cabin rentals"
+      ],
+      "verified_llc_name": "HORSESHOE RIDGE RV, LLC",
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
+      "buy_box_match": [
+        "state TX \u2713",
+        "pad count: pending verification",
+        "acreage: pending verification",
+        "independent operator \u2713"
+      ],
+      "buy_box_passes": true,
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
+      ],
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
+      "conversion_signals": [
+        {
+          "key": "independent_not_chain",
           "weight": 12,
-          "evidence": "$58/night vs $200.0 glamping comp \u2014 large rate gap"
+          "evidence": "independent operator (not a chain franchise)"
         },
         {
-          "key": "operational_decay_signal",
+          "key": "highway_access_within_10mi",
           "weight": 10,
-          "evidence": "review/website decay indicators present"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
+          "evidence": "3.0 mi from highway"
         },
         {
           "key": "tourism_corridor",
@@ -339,152 +386,59 @@
         "corridor_score": 15,
         "corridor_zone": "hill_country_prime"
       },
-      "tier": "STRONG"
+      "tier": "DISCARD"
     },
     {
-      "name": "Dripping Springs KOA Holiday",
-      "address": "8118 W US Highway 290",
-      "city": "Dripping Springs",
+      "name": "Bandera Pioneer RV River Resort",
+      "address": "1202 Maple St",
+      "city": "Bandera",
       "state": "TX",
-      "zip": "78620",
-      "lat": 30.1902,
-      "lon": -98.0867,
-      "source": "sample",
-      "is_chain": true,
-      "chain_name": "KOA",
-      "pad_count": 74,
-      "amenities": [
-        "pool",
-        "cabins",
-        "playground"
+      "zip": "78003",
+      "lat": 29.7266,
+      "lon": -98.9933,
+      "phone": "(830) 796-3751",
+      "website": "https://pioneerriverresort.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.yelp.com/biz/pioneer-river-resort-bandera",
+        "https://pioneerriverresort.com/prr/"
       ],
-      "buy_box_match": [
-        "state TX \u2713",
-        "74 pads in target range",
-        "~29.6 acres in target range"
-      ],
-      "buy_box_passes": true,
-      "motivation_score": 26,
-      "motivation_signals": [
-        {
-          "key": "ov65_exemption",
-          "weight": 10,
-          "evidence": "OV65 homestead exemption present (owner 65+)"
-        },
-        {
-          "key": "out_of_state_owner",
-          "weight": 8,
-          "evidence": "owner mailing address outside TX"
-        },
-        {
-          "key": "years_held_25_plus",
-          "weight": 8,
-          "evidence": "owned 28 years"
-        }
-      ],
-      "conversion_fitness_score": 85,
-      "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "29.6 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_20_to_80",
-          "weight": 15,
-          "evidence": "74 pads \u2014 convertible scale"
-        },
-        {
-          "key": "highway_access_within_10mi",
-          "weight": 10,
-          "evidence": "3.0 mi from highway"
-        },
-        {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$60/night vs $200.0 glamping comp \u2014 large rate gap"
-        },
-        {
-          "key": "operational_decay_signal",
-          "weight": 10,
-          "evidence": "review/website decay indicators present"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
-          "key": "tourism_corridor",
-          "weight": 15,
-          "evidence": "0.0 mi from Dripping Springs (hill_country_prime)"
-        }
-      ],
-      "corridor": {
-        "primary_anchor": "Dripping Springs",
-        "primary_distance_mi": 0.0,
-        "hill_country_anchor": "Dripping Springs",
-        "hill_country_distance_mi": 0.0,
-        "secondary_anchor": "Rockport",
-        "secondary_distance_mi": 162.3,
-        "corridor_score": 15,
-        "corridor_zone": "hill_country_prime"
-      },
-      "tier": "STRONG"
-    },
-    {
-      "name": "Lone Star Hideout RV Park",
-      "address": "1855 FM 1340",
-      "city": "Hunt",
-      "state": "TX",
-      "zip": "78024",
-      "lat": 30.07,
-      "lon": -99.3322,
-      "source": "sample",
       "is_chain": false,
       "chain_name": null,
-      "pad_count": 24,
+      "pad_count": null,
       "amenities": [
-        "full hookups",
-        "rec hall"
+        "river access"
       ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
       "buy_box_match": [
         "state TX \u2713",
-        "24 pads in target range",
-        "~9.6 acres in target range",
+        "pad count: pending verification",
+        "acreage: pending verification",
         "independent operator \u2713"
       ],
       "buy_box_passes": true,
-      "motivation_score": 23,
-      "motivation_signals": [
-        {
-          "key": "ov65_exemption",
-          "weight": 10,
-          "evidence": "OV65 homestead exemption present (owner 65+)"
-        },
-        {
-          "key": "out_of_state_owner",
-          "weight": 8,
-          "evidence": "owner mailing address outside TX"
-        },
-        {
-          "key": "years_held_15_to_24",
-          "weight": 5,
-          "evidence": "owned 18 years"
-        }
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
       ],
-      "conversion_fitness_score": 87,
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
       "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "9.6 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_20_to_80",
-          "weight": 15,
-          "evidence": "24 pads \u2014 convertible scale"
-        },
         {
           "key": "independent_not_chain",
           "weight": 12,
@@ -496,82 +450,75 @@
           "evidence": "3.0 mi from highway"
         },
         {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$55/night vs $200.0 glamping comp \u2014 large rate gap"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
           "key": "tourism_corridor",
           "weight": 15,
-          "evidence": "11.6 mi from Kerrville (hill_country_prime)"
+          "evidence": "0.0 mi from Bandera (hill_country_prime)"
         }
       ],
       "corridor": {
-        "primary_anchor": "Kerrville",
-        "primary_distance_mi": 11.6,
-        "hill_country_anchor": "Kerrville",
-        "hill_country_distance_mi": 11.6,
+        "primary_anchor": "Bandera",
+        "primary_distance_mi": 0.0,
+        "hill_country_anchor": "Bandera",
+        "hill_country_distance_mi": 0.0,
         "secondary_anchor": "Rockport",
-        "secondary_distance_mi": 197.4,
+        "secondary_distance_mi": 166.3,
         "corridor_score": 15,
         "corridor_zone": "hill_country_prime"
       },
-      "tier": "STRONG"
+      "tier": "DISCARD"
     },
     {
-      "name": "Fredericksburg RV Park",
-      "address": "5681 E US Highway 290",
+      "name": "Armadillo Farm Campground",
+      "address": "4950 Farm to Market 1376",
       "city": "Fredericksburg",
       "state": "TX",
       "zip": "78624",
       "lat": 30.2752,
-      "lon": -98.84,
-      "source": "sample",
+      "lon": -98.872,
+      "phone": "(830) 997-5371",
+      "website": null,
+      "source": "web_search",
+      "source_urls": [
+        "https://gocampingamerica.com/campgrounds-rv-parks/texas/fredericksburg/armadillo-farm-campground-rv-park-luckenbanch",
+        "https://www.yelp.com/biz/armadillo-farm-campground-fredericksburg"
+      ],
       "is_chain": false,
       "chain_name": null,
-      "pad_count": 62,
+      "pad_count": null,
       "amenities": [
         "full hookups",
-        "wifi",
-        "shaded sites"
+        "near Luckenbach"
       ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
       "buy_box_match": [
         "state TX \u2713",
-        "62 pads in target range",
-        "~24.8 acres in target range",
+        "pad count: pending verification",
+        "acreage: pending verification",
         "independent operator \u2713"
       ],
       "buy_box_passes": true,
-      "motivation_score": 18,
-      "motivation_signals": [
-        {
-          "key": "ov65_exemption",
-          "weight": 10,
-          "evidence": "OV65 homestead exemption present (owner 65+)"
-        },
-        {
-          "key": "out_of_state_owner",
-          "weight": 8,
-          "evidence": "owner mailing address outside TX"
-        }
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
       ],
-      "conversion_fitness_score": 85,
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
       "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "24.8 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_20_to_80",
-          "weight": 15,
-          "evidence": "62 pads \u2014 convertible scale"
-        },
         {
           "key": "independent_not_chain",
           "weight": 12,
@@ -583,158 +530,75 @@
           "evidence": "3.0 mi from highway"
         },
         {
-          "key": "operational_decay_signal",
-          "weight": 10,
-          "evidence": "review/website decay indicators present"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
           "key": "tourism_corridor",
           "weight": 15,
-          "evidence": "1.9 mi from Fredericksburg (hill_country_prime)"
+          "evidence": "0.0 mi from Fredericksburg (hill_country_prime)"
         }
       ],
       "corridor": {
         "primary_anchor": "Fredericksburg",
-        "primary_distance_mi": 1.9,
+        "primary_distance_mi": 0.0,
         "hill_country_anchor": "Fredericksburg",
-        "hill_country_distance_mi": 1.9,
-        "secondary_anchor": "Rockport",
-        "secondary_distance_mi": 189.4,
-        "corridor_score": 15,
-        "corridor_zone": "hill_country_prime"
-      },
-      "tier": "STRONG"
-    },
-    {
-      "name": "Boerne Ranch RV Resort",
-      "address": "4690 Old San Antonio Rd",
-      "city": "Boerne",
-      "state": "TX",
-      "zip": "78006",
-      "lat": 29.7944,
-      "lon": -98.732,
-      "source": "sample",
-      "is_chain": false,
-      "chain_name": null,
-      "pad_count": 40,
-      "amenities": [
-        "full hookups",
-        "pool"
-      ],
-      "buy_box_match": [
-        "state TX \u2713",
-        "40 pads in target range",
-        "~16.0 acres in target range",
-        "independent operator \u2713"
-      ],
-      "buy_box_passes": true,
-      "motivation_score": 10,
-      "motivation_signals": [
-        {
-          "key": "ov65_exemption",
-          "weight": 10,
-          "evidence": "OV65 homestead exemption present (owner 65+)"
-        }
-      ],
-      "conversion_fitness_score": 87,
-      "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "16.0 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_20_to_80",
-          "weight": 15,
-          "evidence": "40 pads \u2014 convertible scale"
-        },
-        {
-          "key": "independent_not_chain",
-          "weight": 12,
-          "evidence": "independent operator (not a chain franchise)"
-        },
-        {
-          "key": "highway_access_within_10mi",
-          "weight": 10,
-          "evidence": "3.0 mi from highway"
-        },
-        {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$52/night vs $200.0 glamping comp \u2014 large rate gap"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
-          "key": "tourism_corridor",
-          "weight": 15,
-          "evidence": "0.0 mi from Boerne (hill_country_prime)"
-        }
-      ],
-      "corridor": {
-        "primary_anchor": "Boerne",
-        "primary_distance_mi": 0.0,
-        "hill_country_anchor": "Boerne",
         "hill_country_distance_mi": 0.0,
         "secondary_anchor": "Rockport",
-        "secondary_distance_mi": 159.1,
+        "secondary_distance_mi": 190.5,
         "corridor_score": 15,
         "corridor_zone": "hill_country_prime"
       },
-      "tier": "STRONG"
+      "tier": "DISCARD"
     },
     {
-      "name": "Comfort RV Park",
-      "address": "100 Highway 87 N",
-      "city": "Comfort",
+      "name": "Skyline Ranch RV Park",
+      "address": "2231 Hwy 16 N",
+      "city": "Bandera",
       "state": "TX",
-      "zip": "78013",
-      "lat": 29.9694,
-      "lon": -98.9061,
-      "source": "sample",
+      "zip": "78003",
+      "lat": 29.7266,
+      "lon": -98.9933,
+      "phone": "(830) 796-4958",
+      "website": "http://www.skylineranchrvpark.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.yelp.com/biz/skyline-ranch-rv-park-bandera",
+        "https://www.banderacowboycapital.com/business/skyline-ranch-rv-park"
+      ],
       "is_chain": false,
       "chain_name": null,
-      "pad_count": 45,
+      "pad_count": null,
       "amenities": [
-        "pool",
-        "laundry",
-        "wifi"
+        "cabins",
+        "1 mi from Bandera"
       ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
       "buy_box_match": [
         "state TX \u2713",
-        "45 pads in target range",
-        "~18.0 acres in target range",
+        "pad count: pending verification",
+        "acreage: pending verification",
         "independent operator \u2713"
       ],
       "buy_box_passes": true,
-      "motivation_score": 8,
-      "motivation_signals": [
-        {
-          "key": "years_held_25_plus",
-          "weight": 8,
-          "evidence": "owned 40 years"
-        }
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
       ],
-      "conversion_fitness_score": 87,
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
       "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "18.0 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_20_to_80",
-          "weight": 15,
-          "evidence": "45 pads \u2014 convertible scale"
-        },
         {
           "key": "independent_not_chain",
           "weight": 12,
@@ -746,81 +610,75 @@
           "evidence": "3.0 mi from highway"
         },
         {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$48/night vs $200.0 glamping comp \u2014 large rate gap"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
           "key": "tourism_corridor",
           "weight": 15,
-          "evidence": "0.0 mi from Comfort (hill_country_prime)"
+          "evidence": "0.0 mi from Bandera (hill_country_prime)"
         }
       ],
       "corridor": {
-        "primary_anchor": "Comfort",
+        "primary_anchor": "Bandera",
         "primary_distance_mi": 0.0,
-        "hill_country_anchor": "Comfort",
+        "hill_country_anchor": "Bandera",
         "hill_country_distance_mi": 0.0,
         "secondary_anchor": "Rockport",
-        "secondary_distance_mi": 175.1,
+        "secondary_distance_mi": 166.3,
         "corridor_score": 15,
         "corridor_zone": "hill_country_prime"
       },
-      "tier": "STRONG"
+      "tier": "DISCARD"
     },
     {
-      "name": "Tyler State Park Adjacent RV",
-      "address": "789 Park Rd 16",
-      "city": "Tyler",
+      "name": "Hill Country Lakes RV Campground",
+      "address": "102 Pace Bend Rd S",
+      "city": "Spicewood",
       "state": "TX",
-      "zip": "75706",
-      "lat": 32.3513,
-      "lon": -95.3011,
-      "source": "sample",
+      "zip": "78669",
+      "lat": 30.4694,
+      "lon": -98.1647,
+      "phone": "(512) 698-3052",
+      "website": "https://www.hillcountrylakesrv.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.campendium.com/hill-country-lakes-rv-campground",
+        "https://www.hillcountrylakesrv.com/"
+      ],
       "is_chain": false,
       "chain_name": null,
-      "pad_count": 36,
+      "pad_count": null,
       "amenities": [
-        "lake access",
-        "hiking"
+        "near Lake Travis",
+        "near Pace Bend County Park"
       ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
       "buy_box_match": [
         "state TX \u2713",
-        "36 pads in target range",
-        "~14.4 acres in target range",
+        "pad count: pending verification",
+        "acreage: pending verification",
         "independent operator \u2713"
       ],
       "buy_box_passes": true,
-      "motivation_score": 15,
-      "motivation_signals": [
-        {
-          "key": "ov65_exemption",
-          "weight": 10,
-          "evidence": "OV65 homestead exemption present (owner 65+)"
-        },
-        {
-          "key": "years_held_15_to_24",
-          "weight": 5,
-          "evidence": "owned 17 years"
-        }
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
       ],
-      "conversion_fitness_score": 80,
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
       "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "14.4 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_20_to_80",
-          "weight": 15,
-          "evidence": "36 pads \u2014 convertible scale"
-        },
         {
           "key": "independent_not_chain",
           "weight": 12,
@@ -832,319 +690,75 @@
           "evidence": "3.0 mi from highway"
         },
         {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$45/night vs $200.0 glamping comp \u2014 large rate gap"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
-          "key": "tourism_corridor",
-          "weight": 8,
-          "evidence": "213.7 mi from Marble Falls (gulf_or_east_tx_prime)"
-        }
-      ],
-      "corridor": {
-        "primary_anchor": "Tyler",
-        "primary_distance_mi": 0.0,
-        "hill_country_anchor": "Marble Falls",
-        "hill_country_distance_mi": 213.7,
-        "secondary_anchor": "Tyler",
-        "secondary_distance_mi": 0.0,
-        "corridor_score": 8,
-        "corridor_zone": "gulf_or_east_tx_prime"
-      },
-      "tier": "STRONG"
-    },
-    {
-      "name": "Rockport Bay Vista RV",
-      "address": "1907 N Fulton Beach Rd",
-      "city": "Rockport",
-      "state": "TX",
-      "zip": "78382",
-      "lat": 28.0206,
-      "lon": -97.0544,
-      "source": "sample",
-      "is_chain": false,
-      "chain_name": null,
-      "pad_count": 38,
-      "amenities": [
-        "bay access",
-        "fishing pier"
-      ],
-      "buy_box_match": [
-        "state TX \u2713",
-        "38 pads in target range",
-        "~15.2 acres in target range",
-        "independent operator \u2713"
-      ],
-      "buy_box_passes": true,
-      "motivation_score": 14,
-      "motivation_signals": [
-        {
-          "key": "ov65_exemption",
-          "weight": 10,
-          "evidence": "OV65 homestead exemption present (owner 65+)"
-        },
-        {
-          "key": "trust_ownership",
-          "weight": 4,
-          "evidence": "property held in trust (estate planning context)"
-        }
-      ],
-      "conversion_fitness_score": 80,
-      "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "15.2 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_20_to_80",
-          "weight": 15,
-          "evidence": "38 pads \u2014 convertible scale"
-        },
-        {
-          "key": "independent_not_chain",
-          "weight": 12,
-          "evidence": "independent operator (not a chain franchise)"
-        },
-        {
-          "key": "highway_access_within_10mi",
-          "weight": 10,
-          "evidence": "3.0 mi from highway"
-        },
-        {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$58/night vs $200.0 glamping comp \u2014 large rate gap"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
-          "key": "tourism_corridor",
-          "weight": 8,
-          "evidence": "150.5 mi from Wimberley (gulf_or_east_tx_prime)"
-        }
-      ],
-      "corridor": {
-        "primary_anchor": "Rockport",
-        "primary_distance_mi": 0.0,
-        "hill_country_anchor": "Wimberley",
-        "hill_country_distance_mi": 150.5,
-        "secondary_anchor": "Rockport",
-        "secondary_distance_mi": 0.0,
-        "corridor_score": 8,
-        "corridor_zone": "gulf_or_east_tx_prime"
-      },
-      "tier": "STRONG"
-    },
-    {
-      "name": "Blanco Heritage Campground",
-      "address": "812 Pecan St",
-      "city": "Blanco",
-      "state": "TX",
-      "zip": "78606",
-      "lat": 30.0991,
-      "lon": -98.4253,
-      "source": "sample",
-      "is_chain": false,
-      "chain_name": null,
-      "pad_count": 22,
-      "amenities": [
-        "river access",
-        "tent sites"
-      ],
-      "buy_box_match": [
-        "state TX \u2713",
-        "22 pads in target range",
-        "~8.8 acres in target range",
-        "independent operator \u2713"
-      ],
-      "buy_box_passes": true,
-      "motivation_score": 5,
-      "motivation_signals": [
-        {
-          "key": "years_held_15_to_24",
-          "weight": 5,
-          "evidence": "owned 19 years"
-        }
-      ],
-      "conversion_fitness_score": 87,
-      "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "8.8 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_20_to_80",
-          "weight": 15,
-          "evidence": "22 pads \u2014 convertible scale"
-        },
-        {
-          "key": "independent_not_chain",
-          "weight": 12,
-          "evidence": "independent operator (not a chain franchise)"
-        },
-        {
-          "key": "highway_access_within_10mi",
-          "weight": 10,
-          "evidence": "3.0 mi from highway"
-        },
-        {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$41/night vs $200.0 glamping comp \u2014 large rate gap"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
           "key": "tourism_corridor",
           "weight": 15,
-          "evidence": "0.0 mi from Blanco (hill_country_prime)"
-        }
-      ],
-      "corridor": {
-        "primary_anchor": "Blanco",
-        "primary_distance_mi": 0.0,
-        "hill_country_anchor": "Blanco",
-        "hill_country_distance_mi": 0.0,
-        "secondary_anchor": "Rockport",
-        "secondary_distance_mi": 165.8,
-        "corridor_score": 15,
-        "corridor_zone": "hill_country_prime"
-      },
-      "tier": "STRONG"
-    },
-    {
-      "name": "Marble Falls River Bend",
-      "address": "1601 Industrial Blvd",
-      "city": "Marble Falls",
-      "state": "TX",
-      "zip": "78654",
-      "lat": 30.5783,
-      "lon": -98.2733,
-      "source": "sample",
-      "is_chain": false,
-      "chain_name": null,
-      "pad_count": 28,
-      "amenities": [
-        "lake access",
-        "boat ramp"
-      ],
-      "buy_box_match": [
-        "state TX \u2713",
-        "28 pads in target range",
-        "~11.2 acres in target range",
-        "independent operator \u2713"
-      ],
-      "buy_box_passes": true,
-      "motivation_score": 10,
-      "motivation_signals": [
-        {
-          "key": "ov65_exemption",
-          "weight": 10,
-          "evidence": "OV65 homestead exemption present (owner 65+)"
-        }
-      ],
-      "conversion_fitness_score": 75,
-      "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "11.2 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_20_to_80",
-          "weight": 15,
-          "evidence": "28 pads \u2014 convertible scale"
-        },
-        {
-          "key": "independent_not_chain",
-          "weight": 12,
-          "evidence": "independent operator (not a chain franchise)"
-        },
-        {
-          "key": "highway_access_within_10mi",
-          "weight": 10,
-          "evidence": "3.0 mi from highway"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
-          "key": "tourism_corridor",
-          "weight": 15,
-          "evidence": "0.0 mi from Marble Falls (hill_country_prime)"
+          "evidence": "9.9 mi from Marble Falls (hill_country_prime)"
         }
       ],
       "corridor": {
         "primary_anchor": "Marble Falls",
-        "primary_distance_mi": 0.0,
+        "primary_distance_mi": 9.9,
         "hill_country_anchor": "Marble Falls",
-        "hill_country_distance_mi": 0.0,
+        "hill_country_distance_mi": 9.9,
         "secondary_anchor": "Rockport",
-        "secondary_distance_mi": 191.4,
+        "secondary_distance_mi": 182.0,
         "corridor_score": 15,
         "corridor_zone": "hill_country_prime"
       },
-      "tier": "STRONG"
+      "tier": "DISCARD"
     },
     {
-      "name": "West TX Travelers Rest",
-      "address": "1 IH-10 Exit 268",
-      "city": "Sonora",
+      "name": "Hill Country RV Park",
+      "address": "Main St",
+      "city": "Fredericksburg",
       "state": "TX",
-      "zip": "76950",
-      "lat": 30.5639,
-      "lon": -100.644,
-      "source": "sample",
+      "zip": "78624",
+      "lat": 30.2752,
+      "lon": -98.872,
+      "phone": "(830) 997-5635",
+      "website": "https://www.hillcrvpark.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.visitfredericksburgtx.com/directory/hill-country-rv-park/",
+        "https://hillcountryrvpark.com/"
+      ],
       "is_chain": false,
       "chain_name": null,
-      "pad_count": 20,
+      "pad_count": null,
       "amenities": [
-        "truck parking",
-        "showers"
+        "on Main St",
+        "central Fredericksburg"
       ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
       "buy_box_match": [
         "state TX \u2713",
-        "20 pads in target range",
-        "~8.0 acres in target range",
+        "pad count: pending verification",
+        "acreage: pending verification",
         "independent operator \u2713"
       ],
       "buy_box_passes": true,
-      "motivation_score": 5,
-      "motivation_signals": [
-        {
-          "key": "years_held_15_to_24",
-          "weight": 5,
-          "evidence": "owned 20 years"
-        }
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
       ],
-      "conversion_fitness_score": 78,
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
       "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "8.0 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_20_to_80",
-          "weight": 15,
-          "evidence": "20 pads \u2014 convertible scale"
-        },
         {
           "key": "independent_not_chain",
           "weight": 12,
@@ -1156,202 +770,22 @@
           "evidence": "3.0 mi from highway"
         },
         {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$78/night vs $200.0 glamping comp \u2014 large rate gap"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
           "key": "tourism_corridor",
-          "weight": 6,
-          "evidence": "96.5 mi from Kerrville (hill_country_fringe)"
-        }
-      ],
-      "corridor": {
-        "primary_anchor": "Kerrville",
-        "primary_distance_mi": 96.5,
-        "hill_country_anchor": "Kerrville",
-        "hill_country_distance_mi": 96.5,
-        "secondary_anchor": "Big Bend (Terlingua)",
-        "secondary_distance_mi": 197.6,
-        "corridor_score": 6,
-        "corridor_zone": "hill_country_fringe"
-      },
-      "tier": "STRONG"
-    },
-    {
-      "name": "Port Aransas Sands RV Park",
-      "address": "5601 Hwy 361",
-      "city": "Port Aransas",
-      "state": "TX",
-      "zip": "78373",
-      "lat": 27.8336,
-      "lon": -97.0611,
-      "source": "sample",
-      "is_chain": false,
-      "chain_name": null,
-      "pad_count": 95,
-      "amenities": [
-        "beach access",
-        "pool",
-        "fishing"
-      ],
-      "buy_box_match": [
-        "state TX \u2713",
-        "95 pads in target range",
-        "~38.0 acres in target range",
-        "independent operator \u2713"
-      ],
-      "buy_box_passes": true,
-      "motivation_score": 5,
-      "motivation_signals": [
-        {
-          "key": "years_held_15_to_24",
-          "weight": 5,
-          "evidence": "owned 17 years"
-        }
-      ],
-      "conversion_fitness_score": 69,
-      "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
           "weight": 15,
-          "evidence": "38.0 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_80_plus",
-          "weight": 4,
-          "evidence": "95 pads \u2014 complex conversion"
-        },
-        {
-          "key": "independent_not_chain",
-          "weight": 12,
-          "evidence": "independent operator (not a chain franchise)"
-        },
-        {
-          "key": "highway_access_within_10mi",
-          "weight": 10,
-          "evidence": "3.0 mi from highway"
-        },
-        {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$47/night vs $200.0 glamping comp \u2014 large rate gap"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
-          "key": "tourism_corridor",
-          "weight": 8,
-          "evidence": "162.1 mi from Wimberley (gulf_or_east_tx_prime)"
+          "evidence": "0.0 mi from Fredericksburg (hill_country_prime)"
         }
       ],
       "corridor": {
-        "primary_anchor": "Port Aransas",
+        "primary_anchor": "Fredericksburg",
         "primary_distance_mi": 0.0,
-        "hill_country_anchor": "Wimberley",
-        "hill_country_distance_mi": 162.1,
-        "secondary_anchor": "Port Aransas",
-        "secondary_distance_mi": 0.0,
-        "corridor_score": 8,
-        "corridor_zone": "gulf_or_east_tx_prime"
+        "hill_country_anchor": "Fredericksburg",
+        "hill_country_distance_mi": 0.0,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 190.5,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
       },
-      "tier": "WATCH"
-    }
-  ],
-  "discarded": [
-    {
-      "name": "Galveston Bay Park",
-      "address": "10901 San Luis Pass Rd",
-      "city": "Galveston",
-      "state": "TX",
-      "zip": "77554",
-      "lat": 29.3013,
-      "lon": -94.7977,
-      "source": "sample",
-      "is_chain": false,
-      "chain_name": null,
-      "pad_count": 110,
-      "amenities": [
-        "beach access",
-        "pool"
-      ],
-      "buy_box_match": [
-        "state TX \u2713",
-        "~44.0 acres in target range",
-        "independent operator \u2713",
-        "\u00d7 pad count 110 outside 15-100"
-      ],
-      "buy_box_passes": false,
-      "motivation_score": 18,
-      "motivation_signals": [
-        {
-          "key": "ov65_exemption",
-          "weight": 10,
-          "evidence": "OV65 homestead exemption present (owner 65+)"
-        },
-        {
-          "key": "years_held_25_plus",
-          "weight": 8,
-          "evidence": "owned 26 years"
-        }
-      ],
-      "conversion_fitness_score": 69,
-      "conversion_signals": [
-        {
-          "key": "acreage_5_to_50",
-          "weight": 15,
-          "evidence": "44.0 acres \u2014 right-size for micro-resort"
-        },
-        {
-          "key": "pad_count_80_plus",
-          "weight": 4,
-          "evidence": "110 pads \u2014 complex conversion"
-        },
-        {
-          "key": "independent_not_chain",
-          "weight": 12,
-          "evidence": "independent operator (not a chain franchise)"
-        },
-        {
-          "key": "highway_access_within_10mi",
-          "weight": 10,
-          "evidence": "3.0 mi from highway"
-        },
-        {
-          "key": "nightly_rate_below_glamping_comp",
-          "weight": 12,
-          "evidence": "$63/night vs $200.0 glamping comp \u2014 large rate gap"
-        },
-        {
-          "key": "has_existing_utilities",
-          "weight": 8,
-          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
-        },
-        {
-          "key": "tourism_corridor",
-          "weight": 8,
-          "evidence": "204.0 mi from Wimberley (gulf_or_east_tx_prime)"
-        }
-      ],
-      "corridor": {
-        "primary_anchor": "Galveston",
-        "primary_distance_mi": 0.0,
-        "hill_country_anchor": "Wimberley",
-        "hill_country_distance_mi": 204.0,
-        "secondary_anchor": "Galveston",
-        "secondary_distance_mi": 0.0,
-        "corridor_score": 8,
-        "corridor_zone": "gulf_or_east_tx_prime"
-      },
-      "tier": "WATCH"
+      "tier": "DISCARD"
     }
   ]
 }

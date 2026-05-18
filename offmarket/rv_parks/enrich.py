@@ -1,23 +1,36 @@
-"""Per-park enrichment — populates the motivation + conversion signals.
+"""Per-park enrichment — populates motivation + conversion signals from real data.
 
-For each spine row:
-  - CAD lookup by address (Dallas + Bexar use existing scrapers; others
-    best-effort via cad_registry fallback paths)
-  - Tax delinquency check (county-by-county; deferred to v1.1)
-  - Probate / obituary cross-match by owner name (deferred to v1.1)
-  - Operational signals (website WHOIS, Google reviews recency) — deferred to v1.1
-  - Highway proximity from OpenStreetMap (deferred; using is-in-Texas-grid proxy)
+Each signal is in one of three states:
+  - present       (verified True from real source)
+  - absent        (verified False from real source)
+  - unknown       (no data sourced; requires v1.1 local enrichment)
 
-For the POC we attach illustrative mock signals so the scoring engine
-demonstrates end-to-end. The mock pattern reflects the real distribution
-we'd expect to see — most parks have weak signals, a few have stacked
-strong signals.
+Honesty contract: we never fabricate a positive signal. An "unknown"
+signal contributes 0 to the score; it does NOT default to a guess.
 
-Replace `mock_motivation_signals` with real CAD/probate/tax pulls in v1.1.
+What CAN be enriched from cloud-IP web search (this layer):
+  - LLC name + formed year (where SOS / BBB records are indexed)
+  - Operator name (where listed publicly)
+  - Pad count (where the park's own site/listing publishes it)
+  - Operational decay proxies: website age via WHOIS (deferred — most
+    WHOIS providers block cloud sandboxes; we use website-on-file as
+    a weak proxy)
+  - Chain affiliation (from name patterns)
+  - Hill Country corridor proximity (from city coords)
+  - Highway proximity (from rough lat/lon bbox)
+
+What REQUIRES local enrichment (v1.1, runs from user's residential IP
+or properly allowlisted infra):
+  - CAD owner of record + mailing address + acquisition date + OV65
+  - Probate filings by owner name (county-by-county)
+  - Tax delinquency rolls
+  - Deed records (lis pendens, inherited transfers)
+  - LLC current status (forfeited / dissolved) from TX Comptroller
+  - Real WHOIS lookups on park domains
 """
 from __future__ import annotations
 
-import hashlib
+from datetime import date
 from typing import Optional
 
 from offmarket.rv_parks.score import MotivationSignals, ConversionSignals
@@ -25,124 +38,82 @@ from offmarket.rv_parks.spine import RVParkSpineRow
 
 
 # ---------------------------------------------------------------------------
-# Conversion signals — derive from spine + computed fields. Mostly real.
+# Motivation signals — derived from VERIFIED fields only.
 # ---------------------------------------------------------------------------
 
-def conversion_signals(row: RVParkSpineRow,
-                       acreage_lookup: Optional[float] = None,
-                       glamping_comp_rate: float = 200.0) -> ConversionSignals:
-    """Most conversion signals derive directly from spine fields."""
+def motivation_signals_from_real_data(park: dict) -> tuple[MotivationSignals, list[str]]:
+    """Build a MotivationSignals from verified WebSearch-sourced fields.
 
-    # Highway proximity: approximate using whether the park is within 5mi of
-    # a major TX interstate. For POC we use a simple bounding-box heuristic;
-    # production uses OpenStreetMap nearest-highway query.
-    near_highway = _approx_near_highway(row.lat, row.lon)
+    Returns (signals, unknown_signal_keys) — the second value lists every
+    motivation signal that we have NOT enriched yet (requires v1.1 local
+    pull). The UI surfaces these as "Pending enrichment" instead of "Absent."
+    """
+    current_year = date.today().year
+    sig = MotivationSignals()
 
-    # Operational decay: deferred to real WHOIS/Google reviews enrichment.
-    # For POC, mock as True for ~30% of parks (matches expected real rate
-    # for established but under-managed independents).
-    decay = _stable_pseudo_random(row.name + "decay", threshold=0.30)
+    # Years held — derive from verified_llc_formed_year IF known. This is
+    # an approximation: LLC age ≈ ownership age for owner-operator parks.
+    # In v1.1 the CAD acquisition date supersedes this.
+    if park.get("verified_llc_formed_year"):
+        sig.years_held = current_year - park["verified_llc_formed_year"]
 
-    # Existing utilities: assume True for any park with > 10 pads (they
-    # all have at least basic hookups). Production: verify per parcel.
-    has_utils = (row.pad_count or 0) > 10
+    # All other motivation signals require local CAD/county enrichment.
+    # Explicitly tracked as unknown rather than defaulted to False/True.
+    unknown_signals = [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+    ]
+    if sig.years_held is None:
+        unknown_signals.append("years_held")
 
-    # Acreage: for POC, derive from pad count where lookup unavailable
-    # (rule of thumb: 0.25-0.5 acres per pad including common areas).
-    if acreage_lookup is None and row.pad_count:
-        acreage_lookup = round(row.pad_count * 0.4, 1)
+    return sig, unknown_signals
 
-    # Nightly rate proxy: for POC, mock conservatively. Production: scrape.
-    nightly_rate = _stable_pseudo_random(row.name + "rate",
-                                         min_v=35, max_v=85)
+
+# ---------------------------------------------------------------------------
+# Conversion signals — derived from VERIFIED spine fields + computed geo.
+# ---------------------------------------------------------------------------
+
+def conversion_signals_from_real_data(park: dict,
+                                       glamping_comp_rate: float = 200.0) -> ConversionSignals:
+    """Build a ConversionSignals from verified spine fields + computed geo.
+
+    All values here are derivable from real public web data:
+      - pad_count: from park's listing where published
+      - acreage: estimated from pad_count * 0.4 ac/pad rule of thumb
+                 (replaced by CAD parcel size in v1.1)
+      - independent_not_chain: from is_chain field
+      - highway_distance_mi: rough bbox check on lat/lon for I-10/I-35/I-20
+      - lat/lon: from city geocoding
+    """
+    pad_count = park.get("pad_count")
+    # Acreage is unknown unless park's listing publishes it. The 0.4ac/pad
+    # heuristic is a defensible estimate for in-pipeline conversion-fitness
+    # filtering; CAD lookup overrides in v1.1.
+    estimated_acreage = round(pad_count * 0.4, 1) if pad_count else None
 
     return ConversionSignals(
-        acreage=acreage_lookup,
-        pad_count=row.pad_count,
-        independent_not_chain=not row.is_chain,
-        highway_distance_mi=3.0 if near_highway else 22.0,
-        nightly_rate_usd=nightly_rate,
+        acreage=estimated_acreage,
+        pad_count=pad_count,
+        independent_not_chain=not park.get("is_chain", False),
+        highway_distance_mi=3.0 if _approx_near_highway(park.get("lat"), park.get("lon")) else 22.0,
+        nightly_rate_usd=None,                 # not yet enriched
         glamping_comp_rate_usd=glamping_comp_rate,
-        operational_decay=decay,
-        has_existing_utilities=has_utils,
-        lat=row.lat,
-        lon=row.lon,
+        operational_decay=None,                # requires WHOIS + Google reviews enrichment
+        has_existing_utilities=(pad_count is not None and pad_count > 10),
+        lat=park.get("lat"),
+        lon=park.get("lon"),
     )
-
-
-# ---------------------------------------------------------------------------
-# Motivation signals — MOCKED for POC. Real implementation pulls from:
-#   - DCAD/BCAD scraper (length of ownership, OV65, owner mailing addr)
-#   - County tax assessor delinquent rolls
-#   - County clerk deed records (lis pendens, inherited deed)
-#   - County probate court records
-#   - TX Comptroller (LLC forfeited)
-# ---------------------------------------------------------------------------
-
-def _apply_demo_override(row: RVParkSpineRow, sig: MotivationSignals) -> MotivationSignals:
-    """Apply a demo override if one exists for this park name."""
-    try:
-        from offmarket.rv_parks.sample_spine import DEMO_MOTIVATION_OVERRIDES
-    except ImportError:
-        return sig
-    override = DEMO_MOTIVATION_OVERRIDES.get(row.name)
-    if override:
-        for k, v in override.items():
-            setattr(sig, k, v)
-    return sig
-
-
-def mock_motivation_signals(row: RVParkSpineRow) -> MotivationSignals:
-    """Illustrative mock signals based on a deterministic hash of the park name.
-
-    In production every park has CAD-derived baseline signals (years_held,
-    ov65, owner mailing address). The mock reflects that: years_held is
-    always populated, and additional life-event / financial-pressure
-    signals stack proportionally to the bucket.
-
-    Distribution:
-      ~13% HOT (strong stack: probate / obit / tax delinquent / inherited)
-      ~27% STRONG (OV65 + long hold + secondary signal)
-      ~45% WATCH (baseline CAD signals only)
-      ~15% near-discard (short hold, in-state, no exemption)
-
-    Replace with real enrichment in v1.1.
-    """
-    h = int(hashlib.md5(row.name.encode()).hexdigest(), 16)
-    bucket = h % 100
-
-    # Baseline CAD signals — present for nearly every parcel
-    years_held = 8 + (h // 100) % 35              # 8–42 years
-    ov65 = (h // 1000) % 100 < 38                 # ~38% have OV65 (matches TX age dist for long-hold land)
-    out_of_state = (h // 10000) % 100 < 28        # ~28% absentee
-    trust = (h // 100000) % 100 < 12              # ~12% trust-held
-
-    sig = MotivationSignals(
-        years_held=years_held,
-        ov65_exemption=ov65,
-        out_of_state_owner=out_of_state,
-        trust_ownership=trust,
-    )
-
-    if bucket < 13:
-        # HOT — strong life-event or financial-pressure stack
-        sig.probate_filing_24mo = bucket < 7
-        sig.obituary_match = bucket < 4
-        sig.inherited_deed_36mo = bucket < 9
-        sig.tax_delinquent_2yr_plus = bucket < 6
-        sig.llc_forfeited = bucket < 5
-        sig.years_held = max(years_held, 28)
-        sig.ov65_exemption = True
-    elif bucket < 40:
-        # STRONG — moderate stack
-        sig.tax_delinquent_1yr = bucket % 4 == 0
-        sig.code_violation_24mo = bucket % 5 == 0
-        sig.divorce_filing_24mo = bucket % 6 == 0
-        sig.years_held = max(years_held, 18)
-    # bucket 40-100: just the baseline CAD signals (varies WATCH vs near-discard
-    # based on whether ov65/long-hold/out-of-state coincide)
-
-    return _apply_demo_override(row, sig)
 
 
 # ---------------------------------------------------------------------------
@@ -150,31 +121,16 @@ def mock_motivation_signals(row: RVParkSpineRow) -> MotivationSignals:
 # ---------------------------------------------------------------------------
 
 def _approx_near_highway(lat: Optional[float], lon: Optional[float]) -> bool:
-    """Crude bounding-box check for proximity to a major TX interstate.
+    """Rough bbox check for proximity to a major TX interstate.
 
-    Real implementation: OpenStreetMap nearest-highway query (free, headless).
+    Production: OpenStreetMap nearest-highway query (free, headless).
     """
     if lat is None or lon is None:
         return False
-    # I-10 corridor (rough longitude bounds run E-W across TX, lat ~29.5-30.5)
-    if 29.0 <= lat <= 30.8:
+    if 29.0 <= lat <= 30.8:       # I-10 corridor lat band
         return True
-    # I-35 corridor (rough lat bounds run N-S, lon ~-97.7 to -97.0)
-    if -97.7 <= lon <= -97.0:
+    if -97.7 <= lon <= -97.0:     # I-35 corridor lon band
         return True
-    # I-20 corridor (lat ~32.5)
-    if 32.0 <= lat <= 33.0:
+    if 32.0 <= lat <= 33.0:       # I-20 corridor lat band
         return True
     return False
-
-
-def _stable_pseudo_random(seed: str, threshold: float = None,
-                          min_v: int = None, max_v: int = None):
-    """Deterministic per-park value, replaces a real-data lookup for POC."""
-    h = int(hashlib.md5(seed.encode()).hexdigest(), 16)
-    if threshold is not None:
-        return (h % 100) < (threshold * 100)
-    if min_v is not None and max_v is not None:
-        span = max_v - min_v
-        return min_v + (h % (span + 1))
-    return h
