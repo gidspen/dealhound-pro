@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dealhound Strategy Hub</title>
+  <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="page">
+      <div class="crumbs">docs / strategy</div>
+      <h1>Strategy Hub</h1>
+      <div class="meta">
+        <span class="pill">Dealhound</span>
+        <span>One place for research outlines, positioning drafts, and decisions.</span>
+      </div>
+      <p class="intro">
+        Each card below is a self-contained output (research, positioning, content plan, etc.). Open one, make decisions
+        per item (Adopt / Adapt / Skip), add notes, then click <em>Generate feedback prompt</em> at the bottom to produce
+        a message you can paste back to Claude for the next deliverable. Decisions are persisted locally in your browser.
+      </p>
+    </header>
+
+    <section class="block">
+      <h2>Outputs</h2>
+      <p class="lede">Loaded from <code>registry.json</code>. To add a new output, drop the HTML in this folder and append an entry to the registry.</p>
+      <div class="hub-grid"></div>
+    </section>
+  </div>
+
+  <script src="shared.js"></script>
+  <script>DH.initHub();</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* Dealhound Strategy Hub — shared styles */
+:root {
+  --bg: #0e1116;
+  --panel: #161b22;
+  --panel-2: #1c232c;
+  --border: #2a313c;
+  --text: #e6edf3;
+  --muted: #8b95a3;
+  --accent: #7c9eff;
+  --accent-2: #5a7df5;
+  --good: #3fb950;
+  --warn: #d29922;
+  --bad: #f85149;
+  --shadow: 0 1px 0 rgba(255,255,255,0.04), 0 0 0 1px var(--border);
+}
+
+* { box-sizing: border-box; }
+html, body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; margin: 0; line-height: 1.55; }
+body { padding: 48px 24px 96px; }
+.wrap { max-width: 900px; margin: 0 auto; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.page { margin-bottom: 32px; }
+header.page .crumbs { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+header.page h1 { margin: 0 0 8px; font-size: 32px; letter-spacing: -0.02em; }
+header.page .meta { display: flex; gap: 16px; color: var(--muted); font-size: 13px; }
+header.page .meta .pill { padding: 2px 8px; border: 1px solid var(--border); border-radius: 999px; background: var(--panel); }
+header.page .intro { margin-top: 16px; color: var(--text); }
+
+section.block { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin: 20px 0; box-shadow: var(--shadow); }
+section.block h2 { margin: 0 0 6px; font-size: 20px; letter-spacing: -0.01em; }
+section.block .lede { color: var(--muted); margin: 0 0 18px; font-size: 14px; }
+
+.item { border-top: 1px solid var(--border); padding: 18px 0; }
+.item:first-of-type { border-top: 0; padding-top: 4px; }
+.item h3 { margin: 0 0 6px; font-size: 16px; }
+.item .what { color: var(--text); }
+.item .why { color: var(--muted); font-size: 14px; margin-top: 6px; }
+.item .map { margin-top: 10px; padding: 10px 12px; background: var(--panel-2); border-left: 3px solid var(--accent); border-radius: 4px; font-size: 14px; }
+.item .map strong { color: var(--accent); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; align-items: center; }
+.controls .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.controls .seg button {
+  background: transparent; color: var(--muted); border: 0; padding: 6px 12px; cursor: pointer; font: inherit;
+  border-right: 1px solid var(--border);
+}
+.controls .seg button:last-child { border-right: 0; }
+.controls .seg button.on[data-val="adopt"] { background: rgba(63,185,80,0.15); color: var(--good); }
+.controls .seg button.on[data-val="adapt"] { background: rgba(210,153,34,0.15); color: var(--warn); }
+.controls .seg button.on[data-val="skip"]  { background: rgba(248,81,73,0.15); color: var(--bad); }
+
+.controls textarea {
+  flex: 1 1 220px; min-height: 36px; max-height: 160px; background: var(--panel-2); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font: inherit; resize: vertical;
+}
+
+.section-notes { margin-top: 16px; }
+.section-notes label { display: block; color: var(--muted); font-size: 13px; margin-bottom: 6px; }
+.section-notes textarea {
+  width: 100%; min-height: 64px; background: var(--panel-2); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; font: inherit;
+}
+
+.summary { background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-top: 24px; }
+.summary h2 { margin: 0 0 12px; font-size: 18px; }
+.summary .counts { display: flex; gap: 16px; color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+.summary .counts span b { color: var(--text); margin-right: 4px; }
+
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+button.btn {
+  font: inherit; border: 1px solid var(--border); background: var(--panel); color: var(--text);
+  padding: 10px 16px; border-radius: 8px; cursor: pointer;
+}
+button.btn:hover { background: var(--panel-2); }
+button.btn.primary { background: var(--accent-2); color: white; border-color: var(--accent-2); }
+button.btn.primary:hover { background: var(--accent); }
+button.btn.ghost { background: transparent; }
+
+.toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--panel-2); color: var(--text); border: 1px solid var(--border); padding: 10px 16px; border-radius: 8px; opacity: 0; transition: opacity .2s; pointer-events: none; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.toast.show { opacity: 1; }
+
+dialog.feedback {
+  background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: 12px; padding: 0;
+  max-width: 720px; width: 92%; box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+}
+dialog.feedback::backdrop { background: rgba(0,0,0,0.6); }
+dialog.feedback .head { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+dialog.feedback .head h3 { margin: 0; font-size: 16px; }
+dialog.feedback .body { padding: 16px 20px; }
+dialog.feedback textarea { width: 100%; min-height: 320px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 12px; font: 13px/1.5 ui-monospace, "SF Mono", Menlo, monospace; }
+dialog.feedback .foot { display: flex; justify-content: flex-end; gap: 8px; padding: 12px 20px; border-top: 1px solid var(--border); }
+
+.hub-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 20px; }
+.hub-card { display: block; padding: 18px 20px; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; }
+.hub-card:hover { background: var(--panel-2); text-decoration: none; }
+.hub-card .title { color: var(--text); font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.hub-card .desc { color: var(--muted); font-size: 14px; }
+.hub-card .tags { margin-top: 8px; display: flex; gap: 6px; flex-wrap: wrap; }
+.hub-card .tag { font-size: 11px; padding: 2px 8px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 999px; color: var(--muted); }
+
+.empty { color: var(--muted); font-style: italic; padding: 24px; text-align: center; border: 1px dashed var(--border); border-radius: 10px; }
