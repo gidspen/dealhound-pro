@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dealhound Strategy Hub</title>
+  <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<div class="page-body">
+<div class="wrap">
+
+  <header class="page">
+    <div class="crumbs">docs / strategy</div>
+    <h1>Strategy Hub</h1>
+    <div class="meta">
+      <span class="pill">Dealhound</span>
+      <span class="pill">Research + decisions + outputs</span>
+    </div>
+    <p class="intro">
+      Each card is a self-contained research or strategy output. Open one, mark items
+      <strong>Adopt / Adapt / Skip</strong>, add notes, then hit <strong>Generate feedback prompt</strong>
+      at the bottom — copy the result and paste it back to Claude to produce the next deliverable.
+      Decisions persist locally in your browser.
+    </p>
+  </header>
+
+  <section class="section-block" style="margin-top:0">
+    <div class="section-header">
+      <div class="section-icon">📁</div>
+      <h2>Outputs</h2>
+      <span class="section-lede">Loaded from registry.json</span>
+    </div>
+    <div class="items-list">
+      <div style="padding:16px 20px">
+        <div class="hub-grid" id="hub-grid"></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+
+<script src="shared.js"></script>
+<script>
+  async function loadHub() {
+    const grid = document.getElementById("hub-grid");
+    try {
+      const res = await fetch("registry.json", { cache: "no-store" });
+      const reg = await res.json();
+      if (!reg.outputs || reg.outputs.length === 0) {
+        grid.innerHTML = '<div class="empty">No outputs yet.</div>';
+        return;
+      }
+      const state = JSON.parse(localStorage.getItem("dealhound.strategy.v1") || "{}");
+      grid.innerHTML = reg.outputs.map(o => {
+        const s = state[o.id] || {};
+        const updated = s.updatedAt ? "Updated " + new Date(s.updatedAt).toLocaleDateString() : "No decisions yet";
+        const items = s.items || {};
+        const decisions = Object.values(items).filter(v => v.decision).length;
+        return `
+          <a class="hub-card" href="${o.path}">
+            <div class="hc-title">${o.title}</div>
+            <div class="hc-desc">${o.description || ""}</div>
+            <div class="hc-tags">
+              <span class="hc-tag">${o.type}</span>
+              <span class="hc-tag">${o.topic}</span>
+              <span class="hc-tag">${o.status}</span>
+              ${decisions > 0 ? `<span class="hc-tag" style="color:var(--good)">${decisions} decided</span>` : `<span class="hc-tag">${updated}</span>`}
+            </div>
+          </a>`;
+      }).join("");
+    } catch (e) {
+      grid.innerHTML = `<div class="empty">Could not load registry.json. Serve over http (not file://).<br><small>${e.message}</small></div>`;
+    }
+  }
+  loadHub();
+</script>
+</body>
+</html>
