@@ -1,62 +1,112 @@
-# Off-Market Discovery Pipeline
+# Off-Market Discovery Pipeline (v2 — Skillpack)
 
-Scrapes 20+ niche broker sites that aggregators (LoopNet, Crexi, BizBuySell) don't cover.
-Surfaces listings matching a user's buy box. Source selection is buy-box-aware.
+Dynamic per-buy-box source discovery + generic LLM extraction + memory-driven self-improvement.
+
+**Why v2:** v1 used a static catalog of 24 broker URLs. Broker sites churn, new niche marketplaces appear, and the relevant pool differs per buy box. v2 discovers sources live every run, learns which ones yield, and adds cached fast paths as patterns prove out. See [`SKILL.md`](SKILL.md) for the full skill instructions (agent-editable).
 
 ## Quick Start
 
 ```bash
 # Install deps
-pip install requests beautifulsoup4
+pip install requests beautifulsoup4 anthropic
 
-# Run with example buy box (TX RV parks, $500K–$5M)
+# Required for discovery + extraction
+export ANTHROPIC_API_KEY=sk-ant-...
+
+# Run with example buy box (TX RV parks)
 python3 -m offmarket.discovery.run \
   --buy-box data/buy_box_rv_parks_tx.json \
-  --output data/discovered_listings.json \
   --no-persist
 
-# Run with broader hospitality buy box (national, all verticals)
+# Broader hospitality buy box (national, all verticals)
 python3 -m offmarket.discovery.run \
   --buy-box data/buy_box_hospitality_national.json \
-  --output data/discovered_listings.json \
   --no-persist
 ```
 
 ## CLI Options
 
 ```
-python3 -m offmarket.discovery.run --help
-
-  --buy-box PATH    Buy-box JSON (required)
-  --output PATH     Output file (default: data/discovered_listings.json)
-  --sources SRC...  Limit to specific source IDs
-  --states ST...    Override states (e.g. TX TN NC)
-  --dry-run         Skip Supabase write, still writes local JSON
-  --no-persist      Skip Supabase entirely
-  --verbose         Debug logging
+--buy-box PATH         Buy-box JSON (required)
+--output PATH          Output file (default: data/discovered_listings.json)
+--sources SRC...       Limit pinned scrapers to these IDs
+--states ST...         Override states (e.g. TX TN NC)
+--min-sources N        Minimum dynamic candidates to seek (default: 15)
+--skip-discovery       Run only pinned scrapers
+--skip-pinned          Run only dynamic discovery
+--dry-run              Skip Supabase write
+--no-persist           Skip Supabase entirely
+--verbose              Debug logging
 ```
+
+## How it works
+
+```
+buy_box.json
+     │
+     ▼
+[1] load memory  →  per-buy-box source state (yields, demotions)
+     ▼
+[2] pinned scrapers  →  scrapers/*.py (rvparkstore, businessbroker, …)
+     ▼
+[3] dynamic discovery  →  Claude + web_search → ≥15 candidate sources
+     ▼
+[4] revisit active known sources from memory
+     ▼
+[5] for each source: get(url) → extract_generic.extract_listings()
+     ▼
+[6] buy-box filter (asset_type, geo, price band, size band)
+     ▼
+[7] persist (local JSON + Supabase) + update memory
+```
+
+## Verified run (2026-05-19)
+
+```
+TX RV parks buy box, --skip-pinned (dynamic discovery only):
+  Sources attempted: 28
+  Total matched: 25
+  
+  ✓ nstarba_com                   broker         18 raw
+  ✓ naiohb_com                    broker         15 raw
+  ✓ parksandplaces_com            broker          9 raw
+  ✓ thecampgroundconnection_com   marketplace     6 raw
+  ✓ thecampgroundmarketplace_com  marketplace     5 raw
+  ✓ jtacr_com                     broker          5 raw
+  ✓ rvparksforsale_com            broker          3 raw
+  ✓ dealstream_com                marketplace     1 raw
+  ✗ 20 others (404 / 403 / gated / 0-yield → auto-demote after 3 runs)
+
+Real deals surfaced:
+  Fountain Springs RV Development   $1,950,000  Whitewright, TX
+  Central Texas RV Park             $3,150,000  Central Texas, TX
+  Blue Ridge RV Park                $1,000,000  Blue Ridge, TX
+  …plus 22 more
+```
+
+With pinned scrapers enabled (rvparkstore, businessbroker_campground), expect total matched to roughly double for TX-specific buy boxes (often 50–100+ listings).
 
 ## Normalized Listing Schema
 
 ```json
 {
-  "source": "rvparkstore",
-  "url": "https://www.rvparkstore.com/rv-parks/7035108-...",
-  "title": "Lost Buoys RV Resort",
-  "location": "1543 Farm To Market Road 1781, Rockport, TX 78382",
-  "asking_price": 1575000,
+  "source": "nstarba_com",
+  "url": "https://nstarba.com/listings/...",
+  "title": "Seven Lakes RV Resort",
+  "location": "Buchanan Dam, TX",
+  "asking_price": null,
   "asset_type": "rv_park",
-  "size_metric": "39 Lots",
+  "size_metric": "120 Lots",
   "description": null,
   "posted_date": null,
   "broker_name": null,
   "broker_phone": null,
   "broker_email": null,
-  "scraped_at": "2026-05-18T23:42:09.513Z"
+  "scraped_at": "2026-05-19T14:28:51Z"
 }
 ```
 
-**asset_type values:** `rv_park` | `campground` | `boutique_hotel` | `glamping` | `self_storage` | `inn`
+`asset_type` values: `rv_park | campground | boutique_hotel | glamping | self_storage | inn`
 
 ## Buy-Box JSON Format
 
@@ -75,114 +125,56 @@ python3 -m offmarket.discovery.run --help
 }
 ```
 
-- `states`: 2-letter codes; `null` = national
-- `regions`: substring match on location; `null` = any
-- `size_min/max`: applies to numeric part of `size_metric` (lots, acres, units)
-- `include_undisclosed_price`: include "Call for Price" listings
+## Tests (governance for self-improvement)
 
-## Source Catalog — 24 Sources Documented
-
-See [`sources.py`](sources.py) for full catalog. Summary below.
-
-### ✅ Confirmed Working (from cloud AND residential IP)
-
-| ID | Site | Asset Types | Anti-Bot | Notes |
-|----|------|------------|----------|-------|
-| `rvparkstore` | RVParkStore.com | rv_park, campground | **low** | 193 national / 46 TX listings |
-| `selfstorages` | SelfStorages.com | self_storage | **low** | 3 US listings (sister to RVParkStore) |
-| `mobilehomeparkstore` | MobileHomeParkStore.com | rv_park | **low** | 232 national listings (sister site) |
-| `businessbroker_campground` | BusinessBroker.net | campground, rv_park | **low** | `/keyword/campground-businesses-for-sale.aspx` |
-| `businessbroker_hotel` | BusinessBroker.net | boutique_hotel | **low** | 60+ hotel listings |
-
-### 🔶 Expected to Work from Residential IP (403 from cloud)
-
-| ID | Site | Asset Types | Anti-Bot | Notes |
-|----|------|------------|----------|-------|
-| `bizquest_campground` | BizQuest.com | campground, rv_park | **medium** | Category ID 67. 403 from cloud |
-| `bizquest_hotel` | BizQuest.com | boutique_hotel | **medium** | Category ID 29. 403 from cloud |
-| `bizquest_storage` | BizQuest.com | self_storage | **medium** | Category ID 77. 403 from cloud |
-| `bizquest_glamping` | BizQuest.com | glamping | **medium** | Keyword search |
-| `bedandbreakfast` | BedAndBreakfast.com | inn | **low\*** | 429 from cloud (rate limit). Residential OK |
-| `murphybusiness` | MurphyBusiness.com | multi | **medium** | 403 from cloud |
-| `sunbelt` | SunbeltNetwork.com | multi | **high** | 403 confirmed. Largest US broker |
-| `tworld` | Transworld Business Adv. | campground, hotel | **medium** | Medium bot risk |
-| `landwatch_campground` | LandWatch.com | campground, rv_park | **medium** | 403 from cloud; use residential |
-| `businessbroker_storage` | BusinessBroker.net | self_storage | **low** | Same site as hotel/campground |
-| `texashotelbrokerage` | TexasHotelBrokerage.com | boutique_hotel | **low** | TX-only, low volume, minimal bot defense |
-
-### ❌ Deferred / Not Available
-
-| ID | Site | Reason |
-|----|------|--------|
-| `campgroundsforsale` | CampgroundsForSale.com | **Subscription-gated** — confirmed 2026-05-18. No public listings |
-| `hrec` | HREC Investment Advisors | Advisory firm — not a listing marketplace |
-| `mumford` | Mumford Company | SSL cert expired as of 2026-05-18 |
-| `glampinghub` | GlampingHub | No public "for sale" marketplace |
-| `tentrr` | Tentrr | Operator transitions via relationship only |
-| `innrealty` | InnRealty.com | Tracking pixel only — no content |
-| `outdoorresorthomes` | OutdoorResortHomes.com | Low volume; defer |
-
-## Run Results (verified 2026-05-18, from cloud IP)
-
-```
-Sources run: 5
-Total listings matched: 431
-
-  ✓ rvparkstore                          170 raw  (national)
-  ✓ mobilehomeparkstore                  232 raw  (national)
-  ✓ businessbroker_hotel                  60 raw
-  ✓ businessbroker_campground             10 raw
-  ✓ selfstorages                           3 raw
-```
-
-From residential IP: add bizquest (estimated +50–100 campground/hotel), murphybusiness,
-sunbelt, tworld, landwatch, bedandbreakfast.
-
-## Supabase Schema
-
-Migration: [`supabase/migrations/20260518000000_create_discovered_listings.sql`](../../supabase/migrations/20260518000000_create_discovered_listings.sql)
-
-Table: `discovered_listings`  
-Dedup key: `(source, url)` — idempotent upserts via `loader.py`
-
-Set environment variables to enable persistence:
 ```bash
-export SUPABASE_URL=https://your-project.supabase.co
-export SUPABASE_PAT=your-personal-access-token
+# Fast, no API key needed
+pytest offmarket/discovery/tests/test_buy_box_filter.py offmarket/discovery/tests/test_new_scraper_smoke.py
 
-python3 -m offmarket.discovery.run --buy-box data/buy_box_rv_parks_tx.json
-# (no --no-persist = enables Supabase write)
+# Live (requires ANTHROPIC_API_KEY, ~$0.05–$1 each)
+pytest offmarket/discovery/tests/test_extract_generic.py
+pytest offmarket/discovery/tests/test_min_sources.py
+pytest offmarket/discovery/tests/test_novel_sources.py
+pytest offmarket/discovery/tests/test_yield.py
 ```
+
+| Test | Locks down |
+|------|-----------|
+| `test_buy_box_filter` | Filter logic (pure unit) |
+| `test_new_scraper_smoke` | Every scraper imports + `scrape()` returns list |
+| `test_extract_generic` | Generic extractor returns ≥10 listings from real HTML fixture |
+| `test_min_sources` | `discover_sources` returns ≥15 valid candidates, ≥1 marketplace |
+| `test_novel_sources` | Two runs surface ≥N new sources (N per-asset from `expected_churn.json`) |
+| `test_yield` | End-to-end ≥30 matched listings for known buy box |
 
 ## File Structure
 
 ```
 offmarket/discovery/
-├── README.md           # This file
-├── __init__.py
-├── base.py             # Listing dataclass + HTTP helpers
-├── sources.py          # 24-source catalog
-├── filter.py           # Buy-box filter (hard gates + recency sort)
-├── run.py              # CLI entry point
-├── loader.py           # Supabase persistence (idempotent upsert)
-└── scrapers/
-    ├── __init__.py
-    ├── rvparkstore.py           # RVParkStore.com (CONFIRMED)
-    ├── nicheinvestments.py      # SelfStorages.com + MobileHomeParkStore.com
-    ├── businessbroker.py        # BusinessBroker.net (CONFIRMED)
-    ├── bizquest.py              # BizQuest.com (residential IP)
-    ├── bedandbreakfast.py       # BedAndBreakfast.com (residential IP)
-    ├── campgroundsforsale.py    # CampgroundsForSale.com (gated — stub)
-    ├── murphybusiness.py        # Murphy Business Sales (residential IP)
-    ├── sunbelt.py               # Sunbelt Business Brokers (residential IP)
-    ├── tworld.py                # Transworld Business Advisors (residential IP)
-    ├── landwatch.py             # LandWatch.com (residential IP)
-    └── texashotelbrokerage.py   # Texas Hotel Brokerage (low volume)
+├── SKILL.md                # the skill — agent-editable instructions
+├── README.md               # this file
+├── run.py                  # CLI orchestrator
+├── base.py                 # Listing + HTTP helpers
+├── filter.py               # buy-box hard gates
+├── sources.py              # pinned/cached scraper catalog
+├── source_discovery.py     # Claude + web_search → CandidateSource[]
+├── source_memory.py        # per-buy-box yield/demotion state
+├── extract_generic.py      # Claude reads HTML → Listing[]
+├── loader.py               # Supabase upsert
+├── scrapers/               # cached fast paths
+└── tests/                  # governance suite + fixtures
 ```
 
-## Extending — Adding a New Source
+## Supabase persistence
 
-1. Add entry to `SOURCE_CATALOG` in `sources.py`
-2. Write `scrapers/mynewsource.py` returning `list[Listing]`
-3. Add dispatch case in `run.py → _run_scraper()`
-4. Test: `python3 -c "from offmarket.discovery.scrapers.mynewsource import scrape; print(len(scrape()))"`
+Migration: [`supabase/migrations/20260518000000_create_discovered_listings.sql`](../../supabase/migrations/20260518000000_create_discovered_listings.sql)
+
+Table: `discovered_listings`. Dedup key: `(source, url)` — idempotent upserts via `loader.py`.
+
+```bash
+export SUPABASE_URL=https://your-project.supabase.co
+export SUPABASE_PAT=your-personal-access-token
+
+python3 -m offmarket.discovery.run --buy-box data/buy_box_rv_parks_tx.json
+# (no --no-persist enables Supabase write)
+```

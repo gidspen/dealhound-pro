@@ -22,3 +22,6 @@ offmarket/**/__pycache__/
 
 # Group scan runner logs (local only)
 worker/logs/
+
+# Per-buy-box source memory (machine-local working state)
+offmarket/discovery/memory/

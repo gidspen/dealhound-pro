@@ -1,0 +1,599 @@
+{
+  "meta": {
+    "scraped_at": "2026-05-19T19:28:51.762068+00:00",
+    "partial": false,
+    "buy_box": {
+      "asset_types": [
+        "rv_park",
+        "campground"
+      ],
+      "geo": {
+        "states": [
+          "TX"
+        ],
+        "regions": null
+      },
+      "price_min": 500000,
+      "price_max": 5000000,
+      "size_min": 10,
+      "size_max": 300,
+      "include_undisclosed_price": true
+    },
+    "source_stats": {
+      "jtacr_com": {
+        "raw": 5,
+        "elapsed_s": 16.8,
+        "status": "ok",
+        "kind": "broker",
+        "url": "https://jtacr.com/multi-family/rv-parks-campground/"
+      },
+      "nstarba_com": {
+        "raw": 18,
+        "elapsed_s": 42.6,
+        "status": "ok",
+        "kind": "broker",
+        "url": "https://nstarba.com/properties/"
+      },
+      "rvparksforsale_com": {
+        "raw": 3,
+        "elapsed_s": 9.3,
+        "status": "ok",
+        "kind": "broker",
+        "url": "https://rvparksforsale.com/"
+      },
+      "thecampgroundmarketplace_com": {
+        "raw": 5,
+        "elapsed_s": 14.5,
+        "status": "ok",
+        "kind": "marketplace",
+        "url": "https://thecampgroundmarketplace.com/"
+      },
+      "thecampgroundconnection_com": {
+        "raw": 6,
+        "elapsed_s": 15.5,
+        "status": "ok",
+        "kind": "marketplace",
+        "url": "https://thecampgroundconnection.com/parks"
+      },
+      "parksandplaces_com": {
+        "raw": 9,
+        "elapsed_s": 27.1,
+        "status": "ok",
+        "kind": "broker",
+        "url": "https://www.parksandplaces.com/campgrounds-for-sale/"
+      },
+      "dealstream_com": {
+        "raw": 1,
+        "elapsed_s": 6.1,
+        "status": "ok",
+        "kind": "marketplace",
+        "url": "https://dealstream.com/texas/rv-parks-for-sale"
+      },
+      "land_com": {
+        "raw": 0,
+        "elapsed_s": 0.2,
+        "status": "empty",
+        "kind": "marketplace",
+        "url": "https://www.land.com/Texas/rv-parks/"
+      },
+      "landsearch_com": {
+        "raw": 0,
+        "elapsed_s": 0.1,
+        "status": "empty",
+        "kind": "marketplace",
+        "url": "https://www.landsearch.com/camping/texas"
+      },
+      "naiohb_com": {
+        "raw": 15,
+        "elapsed_s": 10.2,
+        "status": "ok",
+        "kind": "broker",
+        "url": "https://www.naiohb.com/listings/"
+      },
+      "marcusmillichap_com": {
+        "raw": 0,
+        "elapsed_s": 1.9,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://www.marcusmillichap.com/properties/search#q=rv+park&t=all&p=TX"
+      },
+      "bizbuysell_com": {
+        "raw": 0,
+        "elapsed_s": 0.2,
+        "status": "empty",
+        "kind": "marketplace",
+        "url": "https://www.bizbuysell.com/texas/campground-and-rv-park-business-real-estate/"
+      },
+      "northtexasrealty_com": {
+        "raw": 0,
+        "elapsed_s": 3.6,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://www.northtexasrealty.com/results/specialty-properties/rv-parks-mobile-homes-"
+      },
+      "kaplanbrokeragegroup_com": {
+        "raw": 0,
+        "elapsed_s": 0.3,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://kaplanbrokeragegroup.com/listings"
+      },
+      "campgroundtrader_com": {
+        "raw": 0,
+        "elapsed_s": 30.0,
+        "status": "empty",
+        "kind": "marketplace",
+        "url": "https://www.campgroundtrader.com/listings/"
+      },
+      "parkbrokerageinc_com": {
+        "raw": 0,
+        "elapsed_s": 1.4,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://parkbrokerageinc.com/listings/"
+      },
+      "leisureinvestmentproperties_com": {
+        "raw": 0,
+        "elapsed_s": 0.0,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://www.leisureinvestmentproperties.com/listings/"
+      },
+      "sunstonerealty_com": {
+        "raw": 0,
+        "elapsed_s": 1.7,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://sunstonerealty.com/available-listings/"
+      },
+      "uriahrealestate_com": {
+        "raw": 0,
+        "elapsed_s": 1.7,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://www.uriahrealestate.com/listings/"
+      },
+      "loopnet_com": {
+        "raw": 0,
+        "elapsed_s": 0.1,
+        "status": "empty",
+        "kind": "marketplace",
+        "url": "https://www.loopnet.com/search/listings/campgrounds/tx/for-sale/"
+      },
+      "coldwellbankercre_com": {
+        "raw": 0,
+        "elapsed_s": 0.2,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://www.coldwellbankercre.com/search?propertyType=rv-park&state=TX"
+      },
+      "svn_com": {
+        "raw": 0,
+        "elapsed_s": 2.3,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://www.svn.com/properties/?type=rv-park&state=TX"
+      },
+      "flippa_com": {
+        "raw": 0,
+        "elapsed_s": 1.2,
+        "status": "empty",
+        "kind": "marketplace",
+        "url": "https://www.flippa.com/search?type=campground+rv+park&state=TX"
+      },
+      "commercialrealestate_com": {
+        "raw": 0,
+        "elapsed_s": 0.5,
+        "status": "empty",
+        "kind": "marketplace",
+        "url": "https://www.commercialrealestate.com/texas/rv-park/for-sale/"
+      },
+      "cbre_com": {
+        "raw": 0,
+        "elapsed_s": 0.6,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://www.cbre.com/properties/properties-for-sale?type=rv-park&country=US&state=TX"
+      },
+      "har_com": {
+        "raw": 0,
+        "elapsed_s": 0.4,
+        "status": "empty",
+        "kind": "marketplace",
+        "url": "https://www.har.com/search/forsale/type_commercialland/q_rv-park,campground/state_TX"
+      },
+      "campgroundbrokers_com": {
+        "raw": 0,
+        "elapsed_s": 0.5,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://www.campgroundbrokers.com/listings/"
+      },
+      "athenareal_com": {
+        "raw": 0,
+        "elapsed_s": 1.6,
+        "status": "empty",
+        "kind": "broker",
+        "url": "https://athenareal.com/listings/"
+      }
+    },
+    "total": 25
+  },
+  "listings": [
+    {
+      "source": "naiohb_com",
+      "url": "https://www.naiohb.com/listings/fountain-springs-rv-development/",
+      "title": "Fountain Springs RV Development",
+      "location": "Whitewright, TX",
+      "asking_price": 1950000,
+      "asset_type": "rv_park",
+      "size_metric": null,
+      "description": null,
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:28:02.975253+00:00"
+    },
+    {
+      "source": "dealstream_com",
+      "url": "https://dealstream.com/d/biz-sale/rv-parks/b9v56a",
+      "title": "Well Located Blue Ridge RV Park",
+      "location": "Blue Ridge, TX",
+      "asking_price": 1000000,
+      "asset_type": "rv_park",
+      "size_metric": "40 sites, 5.5 acres",
+      "description": "Welcome to the RV Park, your ideal destination situated on 5.5 acres in Blue Ridge, Texas. Located just 30 minutes from Dallas, offers 40 spacious sites nestled among beautiful trees for a peaceful retreat. Families will enjoy the playground, and nature enthusiasts can take advantage of the proximity...",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:27:52.483589+00:00"
+    },
+    {
+      "source": "rvparksforsale_com",
+      "url": "https://rvparksforsale.com/buyer-inquiries/",
+      "title": "Central Texas #456 Newest Listing",
+      "location": "Central Texas, TX",
+      "asking_price": 3150000,
+      "asset_type": "rv_park",
+      "size_metric": "64 full hookup sites, ~8 acres",
+      "description": "Well-maintained two-year-old RV Park with 64 full hookup sites (30/50-amp), scenic water views, gated security, swimming pool, two laundry rooms, dog park, and pull-thru sites up to 85 ft. Running high occupancy, priced at a 9.5 Cap Rate.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:49.246103+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/seven-lakes-rv-resort/",
+      "title": "Seven Lakes RV Resort",
+      "location": "Buchanan Dam, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "56 pads",
+      "description": "North Star Brokerage & Advisory is pleased to exclusively offer Seven Lakes RV Resort, a 56-pad, fully gated long-term RV community located in Buchanan Dam, Texas along the Lake Buchanan corridor of the scenic Texas Hill Country. This stabilized asset delivers immediate cash flow from a verified, 100% long-term tenant base with an average tenancy of...",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/nile-valley-rv-park/",
+      "title": "Nile Valley RV Park",
+      "location": "Bay City, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "50 pads",
+      "description": "North Star Brokerage & Advisory is pleased to exclusively offer Nile Valley RV Park located in Bay City, TX. This 50-pad RV community is strategically positioned to serve the region's strong and growing workforce housing demand.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/southridge-rv-park/",
+      "title": "Southridge RV Park",
+      "location": "Big Spring, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "141 units",
+      "description": "Northstar Brokerage and Advisory is pleased to present Southridge RV Park, a strategic 141-unit workforce housing asset spanning 108 expansive acres along the vital I-20 corridor in Big Spring, Texas.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/kenedy-village-rv-park/",
+      "title": "Kenedy Village RV Park",
+      "location": "Kenedy, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "73 sites",
+      "description": "Kenedy Village RV Park is a 73 site park located in the City of Kenedy, Texas. The park sits on 4.04 acres and operates on city water and city sewer.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/stuart-place-mobile-park/",
+      "title": "Stuart Place Mobile Park",
+      "location": "Harlingen, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": null,
+      "description": "North Star Brokerage & Advisory is pleased to offer for sale Stuart Place Mobile Park, located in Harlingen, Texas. The property is a residential community catering to both mobile home owners and RV travelers.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/seaway-rv-village/",
+      "title": "Seaway RV Village",
+      "location": "Arroyo City/Rio Hondo, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "76 sites",
+      "description": "North Star Brokerage & Advisory is pleased to present Seaway RV Village, located in Arroyo City/Rio Hondo, Texas. The property is a premier riverfront destination offering 76 full-hookup RV sites (30/50 amp) and 5 furnished apartments for long-term or short-term residents.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/lhtx-rv-resort/",
+      "title": "LHTX RV Resort",
+      "location": "Liberty Hill, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "199 spaces",
+      "description": "North Star Brokerage & Advisory is pleased to exclusively offer LHTX RV Resort located in Liberty Hill, TX. The park includes 199 Class-A RV spaces and features concrete sites and roads, site covers, a clubhouse, a pool, and a four-plex.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/pecan-place-rv-storage/",
+      "title": "Pecan Place RV & Storage",
+      "location": "Crockett, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "36 sites",
+      "description": "North Star Brokerage & Advisory is pleased to exclusively present Pecan Place RV Park, a 36-site RV community located in Crockett, Texas, featuring direct frontage on Highway 19.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/valley-view-rv-park/",
+      "title": "Valley View RV Park",
+      "location": "Jarrell, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "189 spaces",
+      "description": "North Star Brokerage & Advisory is pleased to exclusively offer the Valley View RV Park, a 189-space RV community located in Jarrell, Texas (just north of Austin) with direct frontage on Interstate 35.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/domain/",
+      "title": "Domain",
+      "location": "Aransas Pass, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "30 RV sites",
+      "description": "Introducing Dome Motel & RV Park \u2013 Where RV Sites and livable Dome units offer multiple ways to stay in Aransas Pass, TX. 30 RV sites, 20 fully furnished condo units.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/indian-trails-mustang-storage/",
+      "title": "Indian Trails & Mustang Storage",
+      "location": "Ingleside, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "46 sites",
+      "description": "North Star Brokerage & Advisory is pleased to present Indian Trails RV/MH Park & Mustang Mini Storage, a unique investment opportunity in Ingleside, Texas. The property features a total of 46 sites, consisting of 31 RV sites and 15 mobile homes, along with a 39-unit mini storage facility.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/lake-waco-marina-rv-park-portfolio/",
+      "title": "Lake Waco Marina & RV Park Portfolio",
+      "location": "Waco, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": null,
+      "description": "North Star Brokerage & Advisory is pleased to present a rare opportunity to acquire Lake Waco Marina, The Cove Marina, and RV Park\u2014a premier waterfront investment with two marinas and an RV park in the heart of Central Texas.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/long-creek-rv-park/",
+      "title": "Long Creek RV Park",
+      "location": "New Braunfels, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "11 acres",
+      "description": "North Star Brokerage & Advisory is pleased to present the exclusive opportunity to acquire Long Creek RV Park, a newly developed 11-acre RV community in the heart of New Braunfels, Texas.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/guadalupe-river-outdoor-hospitality-property-business/",
+      "title": "Guadalupe River Outdoor Hospitality Property & Business",
+      "location": "New Braunfels, TX",
+      "asking_price": null,
+      "asset_type": "campground",
+      "size_metric": "52 rental units",
+      "description": "NorthStar Brokerage & Advisory presents the Guadalupe Outdoor Hospitality & River Resort\u2014a popular day-use riverfront destination that offers 52 rental units and 345 feet of river frontage along the Guadalupe River in New Braunfels, Texas.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/paluxy-rv-park/",
+      "title": "Paluxy RV Park",
+      "location": "Glen Rose, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "25 sites",
+      "description": "North Star is pleased to offer Paluxy RV Park, a 25-site RV park located just 40 minutes south of Fort Worth, positioned off Hwy 67 in Glen Rose, TX.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/san-marcos-river-campground-business-portfolio/",
+      "title": "San Marcos River Campground & Business Portfolio",
+      "location": "San Marcos, TX",
+      "asking_price": null,
+      "asset_type": "campground",
+      "size_metric": "215 rental units",
+      "description": "NorthStar Brokerage & Advisory presents the River Ranch & Blue River Camp Campground Portfolio, a rare opportunity to acquire two established resort properties in the outdoor hospitality market. River Ranch features 215 rental units and 2,500 feet of riverfront.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/creekside-rv-park/",
+      "title": "Creekside RV Park",
+      "location": "Winnsboro, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "36 sites",
+      "description": "Welcome to Creekside RV Park! This fully stabilized serene RV Park is located in the heart of Winnsboro and has room to grow. With 36 RV Sites currently at the park room to add 30 more sites.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "nstarba_com",
+      "url": "https://nstarba.com/property/villa-in-coral-gables/",
+      "title": "50-Unit Mobile Home Portfolio",
+      "location": "San Antonio, TX",
+      "asking_price": null,
+      "asset_type": "rv_park",
+      "size_metric": "50 units",
+      "description": "North Star is proud to present the Englehart RV & Mobile Home 3-Park Portfolio to qualified buyers. This portfolio comprises three parks featuring 50 units: 19 RV sites, 24 mobile homes, 2 stick-built single-family homes, and 5 cabins.",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:26:39.929583+00:00"
+    },
+    {
+      "source": "jtacr_com",
+      "url": "https://jtacr.com/listings/16614-echo-glen-dr-tyler-tx-75703/",
+      "title": "Tall Timbers RV Park",
+      "location": "Tyler, TX",
+      "asking_price": 550000,
+      "asset_type": "rv_park",
+      "size_metric": "14 sites",
+      "description": "JTACR Real Estate Group is pleased to present Tall Timbers RV Park: a 14-site community located in Tyler, TX. The community is advantageously positioned...",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:25:57.276836+00:00"
+    },
+    {
+      "source": "jtacr_com",
+      "url": "https://jtacr.com/listings/21847-fm901-gordonville-tx-76245/",
+      "title": "Camppointe Lake Texoma RV Park",
+      "location": "Gordonville, TX",
+      "asking_price": 825000,
+      "asset_type": "rv_park",
+      "size_metric": "50 sites, 8 Acres",
+      "description": "JTACR Real Estate Group is pleased to present Camppointe Lake Texoma RV Park: Open for Business, Fully TURNKEY 50-site community located in Gordonville, TX....",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:25:57.276836+00:00"
+    },
+    {
+      "source": "jtacr_com",
+      "url": "https://jtacr.com/listings/120-county-rd-42000-paris-tx-75460/",
+      "title": "GTL Paris RV Park",
+      "location": "Paris, TX",
+      "asking_price": 2450000,
+      "asset_type": "rv_park",
+      "size_metric": null,
+      "description": "JTACR Real Estate Group is pleased to present GTL Paris RV Park \u2013 a stabilized, fully turnkey business opportunity situated on the 4 lane...",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:25:57.276836+00:00"
+    },
+    {
+      "source": "jtacr_com",
+      "url": "https://jtacr.com/listings/507-co-rd-1550-alba-tx-75410/",
+      "title": "Mustang RV Resort & Boat Storage",
+      "location": "Alba, TX",
+      "asking_price": 4475000,
+      "asset_type": "rv_park",
+      "size_metric": "220 units",
+      "description": "JTACR Real Estate Group is pleased to exclusively present Mustang RV Resort & Boat Storage: a 220-unit (150 pads, 60 enclosed boat storage stalls,...",
+      "posted_date": null,
+      "broker_name": null,
+      "broker_phone": null,
+      "broker_email": null,
+      "scraped_at": "2026-05-19T19:25:57.276836+00:00"
+    }
+  ]
+}
