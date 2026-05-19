@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deal Hound Off-Market — RV Parks POC Preview</title>
+<style>
+  :root {
+    --bg: #0d0f12;
+    --bg-card: #161a20;
+    --bg-card-hover: #1c2128;
+    --border: #2a3038;
+    --text: #e5e9ee;
+    --text-dim: #8b949e;
+    --text-faint: #5a6168;
+    --hot: #ff4d4f;
+    --hot-bg: rgba(255, 77, 79, 0.12);
+    --strong: #ffa940;
+    --strong-bg: rgba(255, 169, 64, 0.12);
+    --watch: #4096ff;
+    --watch-bg: rgba(64, 150, 255, 0.12);
+    --good: #52c41a;
+    --link: #69b1ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+    background: linear-gradient(180deg, #161a20 0%, #0d0f12 100%);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  header .subtitle {
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  .stats {
+    display: flex;
+    gap: 24px;
+    padding: 16px 24px;
+    background: #11141a;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .stat { color: var(--text-dim); }
+  .stat strong { color: var(--text); font-weight: 600; }
+  .buy-box {
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  .buy-box strong { color: var(--text-dim); }
+  .leads {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .lead {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    transition: background 0.15s, border-color 0.15s;
+    position: relative;
+  }
+  .lead:hover {
+    background: var(--bg-card-hover);
+    border-color: #3a414b;
+  }
+  .lead-tier-band {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 4px;
+    border-radius: 10px 0 0 10px;
+  }
+  .lead.hot .lead-tier-band { background: var(--hot); }
+  .lead.strong .lead-tier-band { background: var(--strong); }
+  .lead.watch .lead-tier-band { background: var(--watch); }
+  .lead-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .lead-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+  }
+  .tier-pill {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .lead.hot .tier-pill { background: var(--hot-bg); color: var(--hot); }
+  .lead.strong .tier-pill { background: var(--strong-bg); color: var(--strong); }
+  .lead.watch .tier-pill { background: var(--watch-bg); color: var(--watch); }
+  .lead-loc {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+  .scores {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .score {
+    flex: 1;
+    background: #0d0f12;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+  .score-label {
+    font-size: 10px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .score-value {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .score-bar {
+    height: 3px;
+    background: #1c2128;
+    border-radius: 2px;
+    margin-top: 4px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    background: var(--good);
+    transition: width 0.4s;
+  }
+  .lead.hot .score-bar-fill { background: var(--hot); }
+  .lead.strong .score-bar-fill { background: var(--strong); }
+  .section {
+    margin-top: 12px;
+  }
+  .section-label {
+    font-size: 10px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 6px;
+  }
+  .signals {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+  .signal { display: flex; align-items: baseline; gap: 6px; }
+  .signal-weight {
+    font-size: 10px;
+    color: var(--text-faint);
+    background: #0d0f12;
+    border: 1px solid var(--border);
+    padding: 1px 5px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    min-width: 24px;
+    text-align: center;
+  }
+  .signal-text { flex: 1; }
+  .signal.pending {
+    opacity: 0.62;
+  }
+  .signal.pending .signal-weight {
+    color: var(--text-faint);
+    background: transparent;
+  }
+  .contact {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 13px;
+  }
+  .contact-link {
+    color: var(--link);
+    text-decoration: none;
+  }
+  .contact-link:hover { text-decoration: underline; }
+  .verified-block { margin-bottom: 10px; }
+  .verified-row {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  .verified-label {
+    color: var(--text-faint);
+    min-width: 70px;
+  }
+  .verified-value {
+    color: var(--text-dim);
+  }
+  .buy-box-match {
+    background: #0d0f12;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+  .buy-box-match span { margin-right: 8px; }
+  .actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .btn {
+    flex: 1;
+    background: #1c2128;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .btn:hover { background: #2a3038; }
+  .btn-primary {
+    background: var(--link);
+    border-color: var(--link);
+    color: #0d0f12;
+  }
+  .btn-primary:hover { background: #8cc4ff; }
+  footer {
+    padding: 24px;
+    text-align: center;
+    color: var(--text-faint);
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Off-Market RV Parks — Conversion Targets</h1>
+  <div class="subtitle">POC preview · Texas · RV-park-to-micro-resort thesis</div>
+</header>
+<div class="stats" id="stats"></div>
+<div class="buy-box" id="buy-box"></div>
+<div class="leads" id="leads"></div>
+<footer>
+  POC data — motivation signals are illustrative.
+  Real CAD / probate / tax-roll enrichment ships in v1.1.
+</footer>
+<script>
+async function loadLeads() {
+  const data = {"buy_box": {"states": ["TX"], "asset_types": ["rv_park", "campground"], "pad_count_min": 15, "pad_count_max": 100, "acreage_min": 4, "acreage_max": 100, "tourism_corridor_required": false, "exclude_chains": false, "strategy": "rv_park_to_micro_resort_conversion"}, "summary": {"spine_total": 9, "spine_source": "real_web_search_2026_05_18", "buy_box_passes": 9, "scored_in_pipeline": 2, "tier_counts": {"HOT": 0, "STRONG": 1, "WATCH": 1}, "enrichment_note": "Motivation signals limited to LLC formed year (proxy for ownership age) from public web search. CAD owner-of-record, probate, tax delinquency, OV65, out-of-state, and inherited-deed signals require v1.1 local enrichment from a residential IP or properly allowlisted environment."}, "leads": [{"name": "Riverside RV Park", "address": "760 Hwy 16 S", "city": "Bandera", "state": "TX", "zip": "78003", "lat": 29.7266, "lon": -98.9933, "phone": "(830) 796-3636", "website": "https://www.riversidervbandera.com/", "source": "web_search", "source_urls": ["https://www.yelp.com/biz/riverside-rv-park-bandera", "https://www.aaa.com/travelinfo/texas/bandera/campgrounds/riverside-rv-park-184342.html"], "is_chain": false, "chain_name": null, "pad_count": 78, "amenities": ["river access (Medina River)", "full hookups"], "verified_llc_name": null, "verified_llc_formed_year": null, "verified_principal_name": null, "buy_box_match": ["state TX \u2713", "78 pads in target range", "~31.2 acres in target range (est. from pad count)", "independent operator \u2713"], "buy_box_passes": true, "pending_motivation_enrichment": ["probate_filing_24mo", "obituary_match", "lis_pendens_or_nod", "tax_delinquent_2yr_plus", "tax_delinquent_1yr", "ov65_exemption", "out_of_state_owner", "inherited_deed_36mo", "code_violation_24mo", "llc_forfeited", "divorce_filing_24mo", "bankruptcy_filing_24mo", "trust_ownership", "years_held"], "motivation_score": 0, "motivation_signals": [], "conversion_fitness_score": 75, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "31.2 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_20_to_80", "weight": 15, "evidence": "78 pads \u2014 convertible scale"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Bandera (hill_country_prime)"}], "corridor": {"primary_anchor": "Bandera", "primary_distance_mi": 0.0, "hill_country_anchor": "Bandera", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 166.3, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "STRONG"}, {"name": "Heritage Oaks RV Park", "address": "1692 Goehmann Ln", "city": "Fredericksburg", "state": "TX", "zip": "78624", "lat": 30.2752, "lon": -98.872, "phone": "(830) 992-3057", "website": "https://heritageoaksrvpark.com/", "source": "web_search", "source_urls": ["https://www.yelp.com/biz/heritage-oaks-fredericksburg", "https://heritageoaksrvpark.com/"], "is_chain": false, "chain_name": null, "pad_count": 88, "amenities": ["1.25 mi from Main St", "private", "newer build"], "verified_llc_name": null, "verified_llc_formed_year": null, "verified_principal_name": "Gwinn / Melonie", "buy_box_match": ["state TX \u2713", "88 pads in target range", "~35.2 acres in target range (est. from pad count)", "independent operator \u2713"], "buy_box_passes": true, "pending_motivation_enrichment": ["probate_filing_24mo", "obituary_match", "lis_pendens_or_nod", "tax_delinquent_2yr_plus", "tax_delinquent_1yr", "ov65_exemption", "out_of_state_owner", "inherited_deed_36mo", "code_violation_24mo", "llc_forfeited", "divorce_filing_24mo", "bankruptcy_filing_24mo", "trust_ownership", "years_held"], "motivation_score": 0, "motivation_signals": [], "conversion_fitness_score": 64, "conversion_signals": [{"key": "acreage_5_to_50", "weight": 15, "evidence": "35.2 acres \u2014 right-size for micro-resort"}, {"key": "pad_count_80_plus", "weight": 4, "evidence": "88 pads \u2014 complex conversion"}, {"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "has_existing_utilities", "weight": 8, "evidence": "existing utility infrastructure (water/sewer/power hookups)"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Fredericksburg (hill_country_prime)"}], "corridor": {"primary_anchor": "Fredericksburg", "primary_distance_mi": 0.0, "hill_country_anchor": "Fredericksburg", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 190.5, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "WATCH"}], "discarded": [{"name": "Buckhorn Lake Resort", "address": "2885 Goat Creek Rd", "city": "Kerrville", "state": "TX", "zip": null, "lat": 30.0474, "lon": -99.1403, "phone": "(830) 895-0007", "website": "https://www.buckhornlake.com/", "source": "web_search", "source_urls": ["https://www.bbb.org/us/tx/kerrville/profile/rv-parks/buckhorn-lake-resort-0825-1000165928", "https://www.yelp.com/biz/buckhorn-lake-resort-kerrville"], "is_chain": false, "chain_name": null, "pad_count": null, "amenities": ["full hookups", "2 pools", "2 laundry facilities", "dog park"], "verified_llc_name": "Buckhorn Lake Resort LLC", "verified_llc_formed_year": 1999, "verified_principal_name": "Kathy Christiansen", "buy_box_match": ["state TX \u2713", "pad count: pending verification", "acreage: pending verification", "independent operator \u2713"], "buy_box_passes": true, "pending_motivation_enrichment": ["probate_filing_24mo", "obituary_match", "lis_pendens_or_nod", "tax_delinquent_2yr_plus", "tax_delinquent_1yr", "ov65_exemption", "out_of_state_owner", "inherited_deed_36mo", "code_violation_24mo", "llc_forfeited", "divorce_filing_24mo", "bankruptcy_filing_24mo", "trust_ownership"], "motivation_score": 8, "motivation_signals": [{"key": "years_held_25_plus", "weight": 8, "evidence": "owned 27 years"}], "conversion_fitness_score": 37, "conversion_signals": [{"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Kerrville (hill_country_prime)"}], "corridor": {"primary_anchor": "Kerrville", "primary_distance_mi": 0.0, "hill_country_anchor": "Kerrville", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 188.4, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "DISCARD"}, {"name": "Horseshoe Ridge RV Resort", "address": "17901 Ranch Road 12", "city": "Wimberley", "state": "TX", "zip": "78676", "lat": 29.9974, "lon": -98.0986, "phone": "(512) 650-8163", "website": "https://horseshoeridgerv.com/", "source": "web_search", "source_urls": ["https://www.yelp.com/biz/horseshoe-ridge-rv-resort-wimberley", "https://horseshoeridgerv.com/"], "is_chain": false, "chain_name": null, "pad_count": null, "amenities": ["luxury RV sites", "cabin rentals"], "verified_llc_name": "HORSESHOE RIDGE RV, LLC", "verified_llc_formed_year": null, "verified_principal_name": null, "buy_box_match": ["state TX \u2713", "pad count: pending verification", "acreage: pending verification", "independent operator \u2713"], "buy_box_passes": true, "pending_motivation_enrichment": ["probate_filing_24mo", "obituary_match", "lis_pendens_or_nod", "tax_delinquent_2yr_plus", "tax_delinquent_1yr", "ov65_exemption", "out_of_state_owner", "inherited_deed_36mo", "code_violation_24mo", "llc_forfeited", "divorce_filing_24mo", "bankruptcy_filing_24mo", "trust_ownership", "years_held"], "motivation_score": 0, "motivation_signals": [], "conversion_fitness_score": 37, "conversion_signals": [{"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Wimberley (hill_country_prime)"}], "corridor": {"primary_anchor": "Wimberley", "primary_distance_mi": 0.0, "hill_country_anchor": "Wimberley", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 150.5, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "DISCARD"}, {"name": "Bandera Pioneer RV River Resort", "address": "1202 Maple St", "city": "Bandera", "state": "TX", "zip": "78003", "lat": 29.7266, "lon": -98.9933, "phone": "(830) 796-3751", "website": "https://pioneerriverresort.com/", "source": "web_search", "source_urls": ["https://www.yelp.com/biz/pioneer-river-resort-bandera", "https://pioneerriverresort.com/prr/"], "is_chain": false, "chain_name": null, "pad_count": null, "amenities": ["river access"], "verified_llc_name": null, "verified_llc_formed_year": null, "verified_principal_name": null, "buy_box_match": ["state TX \u2713", "pad count: pending verification", "acreage: pending verification", "independent operator \u2713"], "buy_box_passes": true, "pending_motivation_enrichment": ["probate_filing_24mo", "obituary_match", "lis_pendens_or_nod", "tax_delinquent_2yr_plus", "tax_delinquent_1yr", "ov65_exemption", "out_of_state_owner", "inherited_deed_36mo", "code_violation_24mo", "llc_forfeited", "divorce_filing_24mo", "bankruptcy_filing_24mo", "trust_ownership", "years_held"], "motivation_score": 0, "motivation_signals": [], "conversion_fitness_score": 37, "conversion_signals": [{"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Bandera (hill_country_prime)"}], "corridor": {"primary_anchor": "Bandera", "primary_distance_mi": 0.0, "hill_country_anchor": "Bandera", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 166.3, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "DISCARD"}, {"name": "Armadillo Farm Campground", "address": "4950 Farm to Market 1376", "city": "Fredericksburg", "state": "TX", "zip": "78624", "lat": 30.2752, "lon": -98.872, "phone": "(830) 997-5371", "website": null, "source": "web_search", "source_urls": ["https://gocampingamerica.com/campgrounds-rv-parks/texas/fredericksburg/armadillo-farm-campground-rv-park-luckenbanch", "https://www.yelp.com/biz/armadillo-farm-campground-fredericksburg"], "is_chain": false, "chain_name": null, "pad_count": null, "amenities": ["full hookups", "near Luckenbach"], "verified_llc_name": null, "verified_llc_formed_year": null, "verified_principal_name": null, "buy_box_match": ["state TX \u2713", "pad count: pending verification", "acreage: pending verification", "independent operator \u2713"], "buy_box_passes": true, "pending_motivation_enrichment": ["probate_filing_24mo", "obituary_match", "lis_pendens_or_nod", "tax_delinquent_2yr_plus", "tax_delinquent_1yr", "ov65_exemption", "out_of_state_owner", "inherited_deed_36mo", "code_violation_24mo", "llc_forfeited", "divorce_filing_24mo", "bankruptcy_filing_24mo", "trust_ownership", "years_held"], "motivation_score": 0, "motivation_signals": [], "conversion_fitness_score": 37, "conversion_signals": [{"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Fredericksburg (hill_country_prime)"}], "corridor": {"primary_anchor": "Fredericksburg", "primary_distance_mi": 0.0, "hill_country_anchor": "Fredericksburg", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 190.5, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "DISCARD"}, {"name": "Skyline Ranch RV Park", "address": "2231 Hwy 16 N", "city": "Bandera", "state": "TX", "zip": "78003", "lat": 29.7266, "lon": -98.9933, "phone": "(830) 796-4958", "website": "http://www.skylineranchrvpark.com/", "source": "web_search", "source_urls": ["https://www.yelp.com/biz/skyline-ranch-rv-park-bandera", "https://www.banderacowboycapital.com/business/skyline-ranch-rv-park"], "is_chain": false, "chain_name": null, "pad_count": null, "amenities": ["cabins", "1 mi from Bandera"], "verified_llc_name": null, "verified_llc_formed_year": null, "verified_principal_name": null, "buy_box_match": ["state TX \u2713", "pad count: pending verification", "acreage: pending verification", "independent operator \u2713"], "buy_box_passes": true, "pending_motivation_enrichment": ["probate_filing_24mo", "obituary_match", "lis_pendens_or_nod", "tax_delinquent_2yr_plus", "tax_delinquent_1yr", "ov65_exemption", "out_of_state_owner", "inherited_deed_36mo", "code_violation_24mo", "llc_forfeited", "divorce_filing_24mo", "bankruptcy_filing_24mo", "trust_ownership", "years_held"], "motivation_score": 0, "motivation_signals": [], "conversion_fitness_score": 37, "conversion_signals": [{"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Bandera (hill_country_prime)"}], "corridor": {"primary_anchor": "Bandera", "primary_distance_mi": 0.0, "hill_country_anchor": "Bandera", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 166.3, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "DISCARD"}, {"name": "Hill Country Lakes RV Campground", "address": "102 Pace Bend Rd S", "city": "Spicewood", "state": "TX", "zip": "78669", "lat": 30.4694, "lon": -98.1647, "phone": "(512) 698-3052", "website": "https://www.hillcountrylakesrv.com/", "source": "web_search", "source_urls": ["https://www.campendium.com/hill-country-lakes-rv-campground", "https://www.hillcountrylakesrv.com/"], "is_chain": false, "chain_name": null, "pad_count": null, "amenities": ["near Lake Travis", "near Pace Bend County Park"], "verified_llc_name": null, "verified_llc_formed_year": null, "verified_principal_name": null, "buy_box_match": ["state TX \u2713", "pad count: pending verification", "acreage: pending verification", "independent operator \u2713"], "buy_box_passes": true, "pending_motivation_enrichment": ["probate_filing_24mo", "obituary_match", "lis_pendens_or_nod", "tax_delinquent_2yr_plus", "tax_delinquent_1yr", "ov65_exemption", "out_of_state_owner", "inherited_deed_36mo", "code_violation_24mo", "llc_forfeited", "divorce_filing_24mo", "bankruptcy_filing_24mo", "trust_ownership", "years_held"], "motivation_score": 0, "motivation_signals": [], "conversion_fitness_score": 37, "conversion_signals": [{"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "tourism_corridor", "weight": 15, "evidence": "9.9 mi from Marble Falls (hill_country_prime)"}], "corridor": {"primary_anchor": "Marble Falls", "primary_distance_mi": 9.9, "hill_country_anchor": "Marble Falls", "hill_country_distance_mi": 9.9, "secondary_anchor": "Rockport", "secondary_distance_mi": 182.0, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "DISCARD"}, {"name": "Hill Country RV Park", "address": "Main St", "city": "Fredericksburg", "state": "TX", "zip": "78624", "lat": 30.2752, "lon": -98.872, "phone": "(830) 997-5635", "website": "https://www.hillcrvpark.com/", "source": "web_search", "source_urls": ["https://www.visitfredericksburgtx.com/directory/hill-country-rv-park/", "https://hillcountryrvpark.com/"], "is_chain": false, "chain_name": null, "pad_count": null, "amenities": ["on Main St", "central Fredericksburg"], "verified_llc_name": null, "verified_llc_formed_year": null, "verified_principal_name": null, "buy_box_match": ["state TX \u2713", "pad count: pending verification", "acreage: pending verification", "independent operator \u2713"], "buy_box_passes": true, "pending_motivation_enrichment": ["probate_filing_24mo", "obituary_match", "lis_pendens_or_nod", "tax_delinquent_2yr_plus", "tax_delinquent_1yr", "ov65_exemption", "out_of_state_owner", "inherited_deed_36mo", "code_violation_24mo", "llc_forfeited", "divorce_filing_24mo", "bankruptcy_filing_24mo", "trust_ownership", "years_held"], "motivation_score": 0, "motivation_signals": [], "conversion_fitness_score": 37, "conversion_signals": [{"key": "independent_not_chain", "weight": 12, "evidence": "independent operator (not a chain franchise)"}, {"key": "highway_access_within_10mi", "weight": 10, "evidence": "3.0 mi from highway"}, {"key": "tourism_corridor", "weight": 15, "evidence": "0.0 mi from Fredericksburg (hill_country_prime)"}], "corridor": {"primary_anchor": "Fredericksburg", "primary_distance_mi": 0.0, "hill_country_anchor": "Fredericksburg", "hill_country_distance_mi": 0.0, "secondary_anchor": "Rockport", "secondary_distance_mi": 190.5, "corridor_score": 15, "corridor_zone": "hill_country_prime"}, "tier": "DISCARD"}]};
+
+  const s = data.summary;
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><strong>${s.spine_total}</strong> parks scanned</div>
+    <div class="stat"><strong>${s.scored_in_pipeline}</strong> in pipeline</div>
+    <div class="stat"><strong>${s.tier_counts.HOT}</strong> HOT</div>
+    <div class="stat"><strong>${s.tier_counts.STRONG}</strong> STRONG</div>
+    <div class="stat"><strong>${s.tier_counts.WATCH}</strong> WATCH</div>
+  `;
+
+  const bb = data.buy_box;
+  document.getElementById('buy-box').innerHTML = `
+    <strong>Buy box:</strong>
+    ${bb.asset_types.join(' / ')} ·
+    ${bb.acreage_min}-${bb.acreage_max} ac ·
+    ${bb.pad_count_min}-${bb.pad_count_max} pads ·
+    ${bb.states.join(',')} ·
+    strategy: ${bb.strategy.replace(/_/g, ' ')}
+  `;
+
+  const leads = data.leads;
+  const discarded = (data.discarded || []).filter(d => d.buy_box_passes);
+  document.getElementById('leads').innerHTML =
+    leads.map(renderCard).join('') +
+    (discarded.length ? `
+      <div style="grid-column: 1 / -1; padding: 16px 0 4px 4px; color: var(--text-dim); font-size: 13px;">
+        <strong>Below scoring threshold</strong> (${discarded.length})
+        — passed buy-box but lack enough verified signal density.
+        v1.1 CAD/probate/tax enrichment will populate the missing motivation signals.
+      </div>
+    ` : '') +
+    discarded.map(renderCard).join('');
+}
+
+const PENDING_LABEL = {
+  probate_filing_24mo: "Probate filing (last 24mo)",
+  obituary_match: "Owner obituary match",
+  lis_pendens_or_nod: "Lis pendens / NOD",
+  tax_delinquent_2yr_plus: "Tax delinquent 2+ years",
+  tax_delinquent_1yr: "Tax delinquent 1 year",
+  ov65_exemption: "OV65 homestead exemption",
+  out_of_state_owner: "Out-of-state owner",
+  years_held: "Years held (CAD acquisition date)",
+  inherited_deed_36mo: "Inherited deed ($0 transfer)",
+  code_violation_24mo: "Code violation (last 24mo)",
+  llc_forfeited: "LLC forfeited / dissolved",
+  divorce_filing_24mo: "Divorce filing",
+  bankruptcy_filing_24mo: "Bankruptcy filing",
+  trust_ownership: "Trust ownership",
+};
+
+function renderCard(lead) {
+  const tierClass = lead.tier.toLowerCase();
+  const corridor = lead.corridor || {};
+
+  const motivationSignals = (lead.motivation_signals || []).map(s => `
+    <div class="signal">
+      <span class="signal-weight">+${s.weight}</span>
+      <span class="signal-text">${s.evidence}</span>
+    </div>
+  `).join('');
+
+  const conversionSignals = (lead.conversion_signals || []).slice(0, 6).map(s => `
+    <div class="signal">
+      <span class="signal-weight">+${s.weight}</span>
+      <span class="signal-text">${s.evidence}</span>
+    </div>
+  `).join('');
+
+  const matchPills = (lead.buy_box_match || []).map(m => `<span>${m}</span>`).join('');
+
+  const pendingSignals = (lead.pending_motivation_enrichment || []).map(k => `
+    <div class="signal pending">
+      <span class="signal-weight">?</span>
+      <span class="signal-text">${PENDING_LABEL[k] || k}</span>
+    </div>
+  `).join('');
+
+  const llcInfo = lead.verified_llc_name
+    ? `<div class="verified-row">
+        <span class="verified-label">LLC:</span>
+        <span class="verified-value">${lead.verified_llc_name}${lead.verified_llc_formed_year ? ` · formed ${lead.verified_llc_formed_year}` : ''}</span>
+      </div>`
+    : '';
+  const principalInfo = lead.verified_principal_name
+    ? `<div class="verified-row">
+        <span class="verified-label">Operator:</span>
+        <span class="verified-value">${lead.verified_principal_name}</span>
+      </div>`
+    : '';
+
+  return `
+    <div class="lead ${tierClass}">
+      <div class="lead-tier-band"></div>
+      <div class="lead-head">
+        <h3 class="lead-name">${lead.name}</h3>
+        <span class="tier-pill">${lead.tier}</span>
+      </div>
+      <div class="lead-loc">
+        ${lead.address ? lead.address + ' · ' : ''}${lead.city || ''}, ${lead.state || 'TX'} ${lead.zip || ''}
+        ${corridor.primary_distance_mi !== undefined
+          ? ` · ${corridor.primary_distance_mi} mi from ${corridor.primary_anchor}`
+          : ''}
+      </div>
+      <div class="contact">
+        ${lead.phone ? `<a class="contact-link" href="tel:${lead.phone}">${lead.phone}</a>` : ''}
+        ${lead.website ? `<a class="contact-link" href="${lead.website}" target="_blank" rel="noreferrer">website</a>` : ''}
+      </div>
+
+      <div class="scores">
+        <div class="score">
+          <div class="score-label">Motivation</div>
+          <div class="score-value">${lead.motivation_score}</div>
+          <div class="score-bar"><div class="score-bar-fill" style="width:${lead.motivation_score}%"></div></div>
+        </div>
+        <div class="score">
+          <div class="score-label">Conversion Fit</div>
+          <div class="score-value">${lead.conversion_fitness_score}</div>
+          <div class="score-bar"><div class="score-bar-fill" style="width:${lead.conversion_fitness_score}%"></div></div>
+        </div>
+      </div>
+
+      ${llcInfo || principalInfo ? `
+      <div class="section verified-block">
+        <div class="section-label">Verified (web search)</div>
+        ${llcInfo}
+        ${principalInfo}
+      </div>` : ''}
+
+      <div class="section">
+        <div class="section-label">Buy-box match</div>
+        <div class="buy-box-match">${matchPills}</div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Motivation signals — verified</div>
+        <div class="signals">${motivationSignals || '<em style="color:var(--text-faint)">None surfaced from web search alone</em>'}</div>
+      </div>
+
+      ${pendingSignals ? `
+      <div class="section">
+        <div class="section-label">Motivation signals — pending v1.1 (CAD/probate/tax)</div>
+        <div class="signals">${pendingSignals}</div>
+      </div>` : ''}
+
+      <div class="section">
+        <div class="section-label">Conversion fitness — verified</div>
+        <div class="signals">${conversionSignals}</div>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="${lead.website || '#'}" target="_blank" rel="noreferrer">Open website</a>
+        <a class="btn btn-primary" href="tel:${lead.phone || ''}">Call ${lead.phone || ''}</a>
+      </div>
+    </div>
+  `;
+}
+
+loadLeads();
+</script>
+</body>
+</html>

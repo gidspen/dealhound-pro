@@ -1,0 +1,791 @@
+{
+  "buy_box": {
+    "states": [
+      "TX"
+    ],
+    "asset_types": [
+      "rv_park",
+      "campground"
+    ],
+    "pad_count_min": 15,
+    "pad_count_max": 100,
+    "acreage_min": 4,
+    "acreage_max": 100,
+    "tourism_corridor_required": false,
+    "exclude_chains": false,
+    "strategy": "rv_park_to_micro_resort_conversion"
+  },
+  "summary": {
+    "spine_total": 9,
+    "spine_source": "real_web_search_2026_05_18",
+    "buy_box_passes": 9,
+    "scored_in_pipeline": 2,
+    "tier_counts": {
+      "HOT": 0,
+      "STRONG": 1,
+      "WATCH": 1
+    },
+    "enrichment_note": "Motivation signals limited to LLC formed year (proxy for ownership age) from public web search. CAD owner-of-record, probate, tax delinquency, OV65, out-of-state, and inherited-deed signals require v1.1 local enrichment from a residential IP or properly allowlisted environment."
+  },
+  "leads": [
+    {
+      "name": "Riverside RV Park",
+      "address": "760 Hwy 16 S",
+      "city": "Bandera",
+      "state": "TX",
+      "zip": "78003",
+      "lat": 29.7266,
+      "lon": -98.9933,
+      "phone": "(830) 796-3636",
+      "website": "https://www.riversidervbandera.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.yelp.com/biz/riverside-rv-park-bandera",
+        "https://www.aaa.com/travelinfo/texas/bandera/campgrounds/riverside-rv-park-184342.html"
+      ],
+      "is_chain": false,
+      "chain_name": null,
+      "pad_count": 78,
+      "amenities": [
+        "river access (Medina River)",
+        "full hookups"
+      ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
+      "buy_box_match": [
+        "state TX \u2713",
+        "78 pads in target range",
+        "~31.2 acres in target range (est. from pad count)",
+        "independent operator \u2713"
+      ],
+      "buy_box_passes": true,
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
+      ],
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 75,
+      "conversion_signals": [
+        {
+          "key": "acreage_5_to_50",
+          "weight": 15,
+          "evidence": "31.2 acres \u2014 right-size for micro-resort"
+        },
+        {
+          "key": "pad_count_20_to_80",
+          "weight": 15,
+          "evidence": "78 pads \u2014 convertible scale"
+        },
+        {
+          "key": "independent_not_chain",
+          "weight": 12,
+          "evidence": "independent operator (not a chain franchise)"
+        },
+        {
+          "key": "highway_access_within_10mi",
+          "weight": 10,
+          "evidence": "3.0 mi from highway"
+        },
+        {
+          "key": "has_existing_utilities",
+          "weight": 8,
+          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
+        },
+        {
+          "key": "tourism_corridor",
+          "weight": 15,
+          "evidence": "0.0 mi from Bandera (hill_country_prime)"
+        }
+      ],
+      "corridor": {
+        "primary_anchor": "Bandera",
+        "primary_distance_mi": 0.0,
+        "hill_country_anchor": "Bandera",
+        "hill_country_distance_mi": 0.0,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 166.3,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
+      },
+      "tier": "STRONG"
+    },
+    {
+      "name": "Heritage Oaks RV Park",
+      "address": "1692 Goehmann Ln",
+      "city": "Fredericksburg",
+      "state": "TX",
+      "zip": "78624",
+      "lat": 30.2752,
+      "lon": -98.872,
+      "phone": "(830) 992-3057",
+      "website": "https://heritageoaksrvpark.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.yelp.com/biz/heritage-oaks-fredericksburg",
+        "https://heritageoaksrvpark.com/"
+      ],
+      "is_chain": false,
+      "chain_name": null,
+      "pad_count": 88,
+      "amenities": [
+        "1.25 mi from Main St",
+        "private",
+        "newer build"
+      ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": "Gwinn / Melonie",
+      "buy_box_match": [
+        "state TX \u2713",
+        "88 pads in target range",
+        "~35.2 acres in target range (est. from pad count)",
+        "independent operator \u2713"
+      ],
+      "buy_box_passes": true,
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
+      ],
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 64,
+      "conversion_signals": [
+        {
+          "key": "acreage_5_to_50",
+          "weight": 15,
+          "evidence": "35.2 acres \u2014 right-size for micro-resort"
+        },
+        {
+          "key": "pad_count_80_plus",
+          "weight": 4,
+          "evidence": "88 pads \u2014 complex conversion"
+        },
+        {
+          "key": "independent_not_chain",
+          "weight": 12,
+          "evidence": "independent operator (not a chain franchise)"
+        },
+        {
+          "key": "highway_access_within_10mi",
+          "weight": 10,
+          "evidence": "3.0 mi from highway"
+        },
+        {
+          "key": "has_existing_utilities",
+          "weight": 8,
+          "evidence": "existing utility infrastructure (water/sewer/power hookups)"
+        },
+        {
+          "key": "tourism_corridor",
+          "weight": 15,
+          "evidence": "0.0 mi from Fredericksburg (hill_country_prime)"
+        }
+      ],
+      "corridor": {
+        "primary_anchor": "Fredericksburg",
+        "primary_distance_mi": 0.0,
+        "hill_country_anchor": "Fredericksburg",
+        "hill_country_distance_mi": 0.0,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 190.5,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
+      },
+      "tier": "WATCH"
+    }
+  ],
+  "discarded": [
+    {
+      "name": "Buckhorn Lake Resort",
+      "address": "2885 Goat Creek Rd",
+      "city": "Kerrville",
+      "state": "TX",
+      "zip": null,
+      "lat": 30.0474,
+      "lon": -99.1403,
+      "phone": "(830) 895-0007",
+      "website": "https://www.buckhornlake.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.bbb.org/us/tx/kerrville/profile/rv-parks/buckhorn-lake-resort-0825-1000165928",
+        "https://www.yelp.com/biz/buckhorn-lake-resort-kerrville"
+      ],
+      "is_chain": false,
+      "chain_name": null,
+      "pad_count": null,
+      "amenities": [
+        "full hookups",
+        "2 pools",
+        "2 laundry facilities",
+        "dog park"
+      ],
+      "verified_llc_name": "Buckhorn Lake Resort LLC",
+      "verified_llc_formed_year": 1999,
+      "verified_principal_name": "Kathy Christiansen",
+      "buy_box_match": [
+        "state TX \u2713",
+        "pad count: pending verification",
+        "acreage: pending verification",
+        "independent operator \u2713"
+      ],
+      "buy_box_passes": true,
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership"
+      ],
+      "motivation_score": 8,
+      "motivation_signals": [
+        {
+          "key": "years_held_25_plus",
+          "weight": 8,
+          "evidence": "owned 27 years"
+        }
+      ],
+      "conversion_fitness_score": 37,
+      "conversion_signals": [
+        {
+          "key": "independent_not_chain",
+          "weight": 12,
+          "evidence": "independent operator (not a chain franchise)"
+        },
+        {
+          "key": "highway_access_within_10mi",
+          "weight": 10,
+          "evidence": "3.0 mi from highway"
+        },
+        {
+          "key": "tourism_corridor",
+          "weight": 15,
+          "evidence": "0.0 mi from Kerrville (hill_country_prime)"
+        }
+      ],
+      "corridor": {
+        "primary_anchor": "Kerrville",
+        "primary_distance_mi": 0.0,
+        "hill_country_anchor": "Kerrville",
+        "hill_country_distance_mi": 0.0,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 188.4,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
+      },
+      "tier": "DISCARD"
+    },
+    {
+      "name": "Horseshoe Ridge RV Resort",
+      "address": "17901 Ranch Road 12",
+      "city": "Wimberley",
+      "state": "TX",
+      "zip": "78676",
+      "lat": 29.9974,
+      "lon": -98.0986,
+      "phone": "(512) 650-8163",
+      "website": "https://horseshoeridgerv.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.yelp.com/biz/horseshoe-ridge-rv-resort-wimberley",
+        "https://horseshoeridgerv.com/"
+      ],
+      "is_chain": false,
+      "chain_name": null,
+      "pad_count": null,
+      "amenities": [
+        "luxury RV sites",
+        "cabin rentals"
+      ],
+      "verified_llc_name": "HORSESHOE RIDGE RV, LLC",
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
+      "buy_box_match": [
+        "state TX \u2713",
+        "pad count: pending verification",
+        "acreage: pending verification",
+        "independent operator \u2713"
+      ],
+      "buy_box_passes": true,
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
+      ],
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
+      "conversion_signals": [
+        {
+          "key": "independent_not_chain",
+          "weight": 12,
+          "evidence": "independent operator (not a chain franchise)"
+        },
+        {
+          "key": "highway_access_within_10mi",
+          "weight": 10,
+          "evidence": "3.0 mi from highway"
+        },
+        {
+          "key": "tourism_corridor",
+          "weight": 15,
+          "evidence": "0.0 mi from Wimberley (hill_country_prime)"
+        }
+      ],
+      "corridor": {
+        "primary_anchor": "Wimberley",
+        "primary_distance_mi": 0.0,
+        "hill_country_anchor": "Wimberley",
+        "hill_country_distance_mi": 0.0,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 150.5,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
+      },
+      "tier": "DISCARD"
+    },
+    {
+      "name": "Bandera Pioneer RV River Resort",
+      "address": "1202 Maple St",
+      "city": "Bandera",
+      "state": "TX",
+      "zip": "78003",
+      "lat": 29.7266,
+      "lon": -98.9933,
+      "phone": "(830) 796-3751",
+      "website": "https://pioneerriverresort.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.yelp.com/biz/pioneer-river-resort-bandera",
+        "https://pioneerriverresort.com/prr/"
+      ],
+      "is_chain": false,
+      "chain_name": null,
+      "pad_count": null,
+      "amenities": [
+        "river access"
+      ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
+      "buy_box_match": [
+        "state TX \u2713",
+        "pad count: pending verification",
+        "acreage: pending verification",
+        "independent operator \u2713"
+      ],
+      "buy_box_passes": true,
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
+      ],
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
+      "conversion_signals": [
+        {
+          "key": "independent_not_chain",
+          "weight": 12,
+          "evidence": "independent operator (not a chain franchise)"
+        },
+        {
+          "key": "highway_access_within_10mi",
+          "weight": 10,
+          "evidence": "3.0 mi from highway"
+        },
+        {
+          "key": "tourism_corridor",
+          "weight": 15,
+          "evidence": "0.0 mi from Bandera (hill_country_prime)"
+        }
+      ],
+      "corridor": {
+        "primary_anchor": "Bandera",
+        "primary_distance_mi": 0.0,
+        "hill_country_anchor": "Bandera",
+        "hill_country_distance_mi": 0.0,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 166.3,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
+      },
+      "tier": "DISCARD"
+    },
+    {
+      "name": "Armadillo Farm Campground",
+      "address": "4950 Farm to Market 1376",
+      "city": "Fredericksburg",
+      "state": "TX",
+      "zip": "78624",
+      "lat": 30.2752,
+      "lon": -98.872,
+      "phone": "(830) 997-5371",
+      "website": null,
+      "source": "web_search",
+      "source_urls": [
+        "https://gocampingamerica.com/campgrounds-rv-parks/texas/fredericksburg/armadillo-farm-campground-rv-park-luckenbanch",
+        "https://www.yelp.com/biz/armadillo-farm-campground-fredericksburg"
+      ],
+      "is_chain": false,
+      "chain_name": null,
+      "pad_count": null,
+      "amenities": [
+        "full hookups",
+        "near Luckenbach"
+      ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
+      "buy_box_match": [
+        "state TX \u2713",
+        "pad count: pending verification",
+        "acreage: pending verification",
+        "independent operator \u2713"
+      ],
+      "buy_box_passes": true,
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
+      ],
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
+      "conversion_signals": [
+        {
+          "key": "independent_not_chain",
+          "weight": 12,
+          "evidence": "independent operator (not a chain franchise)"
+        },
+        {
+          "key": "highway_access_within_10mi",
+          "weight": 10,
+          "evidence": "3.0 mi from highway"
+        },
+        {
+          "key": "tourism_corridor",
+          "weight": 15,
+          "evidence": "0.0 mi from Fredericksburg (hill_country_prime)"
+        }
+      ],
+      "corridor": {
+        "primary_anchor": "Fredericksburg",
+        "primary_distance_mi": 0.0,
+        "hill_country_anchor": "Fredericksburg",
+        "hill_country_distance_mi": 0.0,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 190.5,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
+      },
+      "tier": "DISCARD"
+    },
+    {
+      "name": "Skyline Ranch RV Park",
+      "address": "2231 Hwy 16 N",
+      "city": "Bandera",
+      "state": "TX",
+      "zip": "78003",
+      "lat": 29.7266,
+      "lon": -98.9933,
+      "phone": "(830) 796-4958",
+      "website": "http://www.skylineranchrvpark.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.yelp.com/biz/skyline-ranch-rv-park-bandera",
+        "https://www.banderacowboycapital.com/business/skyline-ranch-rv-park"
+      ],
+      "is_chain": false,
+      "chain_name": null,
+      "pad_count": null,
+      "amenities": [
+        "cabins",
+        "1 mi from Bandera"
+      ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
+      "buy_box_match": [
+        "state TX \u2713",
+        "pad count: pending verification",
+        "acreage: pending verification",
+        "independent operator \u2713"
+      ],
+      "buy_box_passes": true,
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
+      ],
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
+      "conversion_signals": [
+        {
+          "key": "independent_not_chain",
+          "weight": 12,
+          "evidence": "independent operator (not a chain franchise)"
+        },
+        {
+          "key": "highway_access_within_10mi",
+          "weight": 10,
+          "evidence": "3.0 mi from highway"
+        },
+        {
+          "key": "tourism_corridor",
+          "weight": 15,
+          "evidence": "0.0 mi from Bandera (hill_country_prime)"
+        }
+      ],
+      "corridor": {
+        "primary_anchor": "Bandera",
+        "primary_distance_mi": 0.0,
+        "hill_country_anchor": "Bandera",
+        "hill_country_distance_mi": 0.0,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 166.3,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
+      },
+      "tier": "DISCARD"
+    },
+    {
+      "name": "Hill Country Lakes RV Campground",
+      "address": "102 Pace Bend Rd S",
+      "city": "Spicewood",
+      "state": "TX",
+      "zip": "78669",
+      "lat": 30.4694,
+      "lon": -98.1647,
+      "phone": "(512) 698-3052",
+      "website": "https://www.hillcountrylakesrv.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.campendium.com/hill-country-lakes-rv-campground",
+        "https://www.hillcountrylakesrv.com/"
+      ],
+      "is_chain": false,
+      "chain_name": null,
+      "pad_count": null,
+      "amenities": [
+        "near Lake Travis",
+        "near Pace Bend County Park"
+      ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
+      "buy_box_match": [
+        "state TX \u2713",
+        "pad count: pending verification",
+        "acreage: pending verification",
+        "independent operator \u2713"
+      ],
+      "buy_box_passes": true,
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
+      ],
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
+      "conversion_signals": [
+        {
+          "key": "independent_not_chain",
+          "weight": 12,
+          "evidence": "independent operator (not a chain franchise)"
+        },
+        {
+          "key": "highway_access_within_10mi",
+          "weight": 10,
+          "evidence": "3.0 mi from highway"
+        },
+        {
+          "key": "tourism_corridor",
+          "weight": 15,
+          "evidence": "9.9 mi from Marble Falls (hill_country_prime)"
+        }
+      ],
+      "corridor": {
+        "primary_anchor": "Marble Falls",
+        "primary_distance_mi": 9.9,
+        "hill_country_anchor": "Marble Falls",
+        "hill_country_distance_mi": 9.9,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 182.0,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
+      },
+      "tier": "DISCARD"
+    },
+    {
+      "name": "Hill Country RV Park",
+      "address": "Main St",
+      "city": "Fredericksburg",
+      "state": "TX",
+      "zip": "78624",
+      "lat": 30.2752,
+      "lon": -98.872,
+      "phone": "(830) 997-5635",
+      "website": "https://www.hillcrvpark.com/",
+      "source": "web_search",
+      "source_urls": [
+        "https://www.visitfredericksburgtx.com/directory/hill-country-rv-park/",
+        "https://hillcountryrvpark.com/"
+      ],
+      "is_chain": false,
+      "chain_name": null,
+      "pad_count": null,
+      "amenities": [
+        "on Main St",
+        "central Fredericksburg"
+      ],
+      "verified_llc_name": null,
+      "verified_llc_formed_year": null,
+      "verified_principal_name": null,
+      "buy_box_match": [
+        "state TX \u2713",
+        "pad count: pending verification",
+        "acreage: pending verification",
+        "independent operator \u2713"
+      ],
+      "buy_box_passes": true,
+      "pending_motivation_enrichment": [
+        "probate_filing_24mo",
+        "obituary_match",
+        "lis_pendens_or_nod",
+        "tax_delinquent_2yr_plus",
+        "tax_delinquent_1yr",
+        "ov65_exemption",
+        "out_of_state_owner",
+        "inherited_deed_36mo",
+        "code_violation_24mo",
+        "llc_forfeited",
+        "divorce_filing_24mo",
+        "bankruptcy_filing_24mo",
+        "trust_ownership",
+        "years_held"
+      ],
+      "motivation_score": 0,
+      "motivation_signals": [],
+      "conversion_fitness_score": 37,
+      "conversion_signals": [
+        {
+          "key": "independent_not_chain",
+          "weight": 12,
+          "evidence": "independent operator (not a chain franchise)"
+        },
+        {
+          "key": "highway_access_within_10mi",
+          "weight": 10,
+          "evidence": "3.0 mi from highway"
+        },
+        {
+          "key": "tourism_corridor",
+          "weight": 15,
+          "evidence": "0.0 mi from Fredericksburg (hill_country_prime)"
+        }
+      ],
+      "corridor": {
+        "primary_anchor": "Fredericksburg",
+        "primary_distance_mi": 0.0,
+        "hill_country_anchor": "Fredericksburg",
+        "hill_country_distance_mi": 0.0,
+        "secondary_anchor": "Rockport",
+        "secondary_distance_mi": 190.5,
+        "corridor_score": 15,
+        "corridor_zone": "hill_country_prime"
+      },
+      "tier": "DISCARD"
+    }
+  ]
+}
